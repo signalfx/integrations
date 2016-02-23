@@ -94,6 +94,10 @@ The following conditions are cause for concern:
 
 This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
 
+### METRICS
+
+For documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository. 
+
 ### LICENSE
 
 > Include licensing information for the plugin in this section.
