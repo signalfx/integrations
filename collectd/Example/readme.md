@@ -1,8 +1,8 @@
-# Example
+# Example Python Plugin
 
->This file contains information about the example collectd plugin Example. It also contains instructions for producing similar README files for other plugins. 
+>This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
 >
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Remove them before submitting your contribution. 
+> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
