@@ -74,7 +74,8 @@ The following configuration options are *optional*. You may specify them in the 
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
-| optional_option | An example of an optional configuration property. | TRUE |
+| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
+| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
 
 ### USAGE
 
@@ -88,7 +89,7 @@ This plugin is an example that emits values on its own, and does not connect to 
 
 ![Example chart showing gauge.sine](http://fixme)
 
-The following conditions are cause for concern:
+The following conditions may be cause for concern:
 
 *You see a straight line instead of a curve.*
 
