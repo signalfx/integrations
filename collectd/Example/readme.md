@@ -50,9 +50,10 @@ Follow these steps to install this plugin:
 2. Download the sample configuration file from signalfx-integrations/helloworld/.
 3. Modify the sample configuration file to contain values that make sense for your environment, as described in the header.
 4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
-``` 
-include '/path/to/10-configfile.conf' 
-```
+
+  ``` 
+  include '/path/to/10-configfile.conf' 
+  ```
 5. Restart collectd. 
 
 ### CONFIGURATION 
