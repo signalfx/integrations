@@ -33,28 +33,31 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
 
 1. Install the Java plugin.
 
-#### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
+ #### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
-Run the following command to install the Java plugin for collectd:
+ Run the following command to install the Java plugin for collectd:
 
-`yum install collectd-java`
+ ```
+ yum install collectd-java
+ ```
 
-#### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+ #### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
-This plugin is included with SignalFx's collectd package.
+ This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-1. Download SignalFx's sample JMX configuration file and sample ActiveMQ configuration file from the following URLs:
+1. Download SignalFx's sample JMX configuration file and sample ActiveMQ configuration files:
 
-https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/10-jmx.conf
-
-https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/20-activemq.conf
+ [JMX.conf](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/10-jmx.conf)
+ [ActiveMQ.conf](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/20-activemq.conf)
 
 1. Modify 20-activemq.conf to provide values that make sense for your environment, as described in the header.
 
 1. Add the following lines to /etc/collectd.conf, replacing the example paths with the locations of the configuration files you downloaded in step 2:
 
-`include '/path/to/10-jmx.conf'`
-`include '/path/to/20-activemq.conf'`
+ ```
+ include '/path/to/10-jmx.conf'
+ include '/path/to/20-activemq.conf'
+ ```
 
 1. Restart collectd.
 
