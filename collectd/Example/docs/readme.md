@@ -1,17 +1,34 @@
----
-title: Example Plugin Metrics
-brief: Metrics collected from the Example python collectd plugin
----
-### Example Plugin Metrics
+### Metrics documentation instructions
 
-Use the [example](https://github.com/signalfx/collectd-example) collectd
-plugin to try out this plugin. An example config file for collecting
-data about Varnish using this plugin can be found [here](https://github.com/signalfx/Integrations/collectd/Example/20-example_plugin.conf).
+Each integration in this repository must include documentation of the metrics that it emits in a subdirectory called [/docs](./). Here's how to do that. 
 
-Use this plugin as a template to build python plugins for collectd.
+1. Create a file with extension .md for every metric emitted by the integration. The name of the file must match the name of the metric. For example, a metric called `gauge.sine` is documented in the file [gauge.sine.md](gauge.sine.md), which also contains these instructions. 
+  
+2. In each `.md` file, include a structured header as follows:
+  ```
+  ---
+  title: A human-understandable title of the metric.
+  brief: A brief description of what the metric measures. Specify the unit of measurement, such as bytes or percent. 
+  metric_type: One of gauge, counter or cumulative_counter. 
+  ---
+  ```
 
-### Version information
+  For example, [gauge.sine.md](gauge.sine.md) contains the following header:
+  
+  ```
+  ---
+  title: Sine
+  brief: A sine wave
+  metric_type: gauge
+  ---
+  ```
+  
+3. Below the structured header, include additional information that will help users understand the metric.
 
-| Software  | Version        |
-|-----------|----------------|
-| collectd  |  4.9 or later  |
+  For example, [gauge.sine.md](gauge.sine.md) includes the following usage information that didn't fit in the brief description:
+  
+  ```
+  A sine wave is a curve representing periodic oscillations of constant amplitude
+  as given by a sine function.  We send this in as it is a good way to show a
+  gauge.
+  ```
