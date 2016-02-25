@@ -104,7 +104,7 @@ This may indicate a period of missing data points. In the example chart shown ab
 
 ### METRICS
 
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/README.md) for formatting instructions. 
+>This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
