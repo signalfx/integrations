@@ -1,6 +1,7 @@
 ---
 title: Sine
 brief: A sine wave
+metric_type: gauge
 ---
 ### sine
 
