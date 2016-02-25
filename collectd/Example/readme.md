@@ -1,14 +1,15 @@
+---
+title: Example Python Plugin
+brief: The SignalFx Example Python plugin for collectd. 
+---
+
+> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
+
 # Example Python Plugin
 
 >This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
 >
 > In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
-
-> Fill in this structured information table to allow products like SignalFx to programmatically display this document. 
-
-|     title             |                     brief                        | 
-|-----------------------|--------------------------------------------------|
-| Example Python Plugin | The SignalFx Example Python plugin for collectd. |
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
