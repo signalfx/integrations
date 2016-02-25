@@ -34,7 +34,7 @@ The plugin also emits a notification every time it starts up.
 
 This plugin requires:
 
-- collectd v5.5.0-sfx8
+- collectd 4.9+ 
 - Python plugin for collectd (included with SignalFx collectd)
 - Python 2.6+
 
@@ -48,7 +48,7 @@ Follow these steps to install this plugin:
 
 1. Download this repository to your local machine.
 2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described in the header.
+3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
 4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
 
   ``` 
@@ -97,7 +97,9 @@ This may indicate a period of missing data points. In the example chart shown ab
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository. 
+>This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/README.md) for formatting instructions. 
+
+For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
