@@ -4,6 +4,12 @@
 >
 > In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
 
+> Fill in this structured information table to allow products like SignalFx to programmatically display this document. 
+
+|     title             |                     brief                        | 
+|-----------------------|--------------------------------------------------|
+| Example Python Plugin | The SignalFx Example Python plugin for collectd. |
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
@@ -16,7 +22,7 @@
 
 > In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
 
-This is the SignalFx Example Python plugin. Use it to send a sine wave to SignalFx. 
+This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
 
 This plugin emits 3 metrics:
 - one gauge in the form of a sine wave
