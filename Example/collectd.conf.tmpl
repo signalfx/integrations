@@ -1,0 +1,95 @@
+# Install:
+#  You can usually install with apt-get or yum
+
+# Documentation:
+#   https://collectd.org/documentation.shtml
+
+# System modifications:
+#   None
+
+# Config file modifications:
+#   If you want to use a custom source name, change
+#   the "Hostname" paramter and set
+#
+#     FQDNLookup false
+#
+#   Make sure TypesDB points to a valid file:
+#
+#     which %%%COLLECTDSHARE%%%/types.db
+#
+#   Create the directory managed_config and put
+#   extra config files there:
+#
+#     mkdir %%%COLLECTDMANAGEDCONFIG%%%
+#
+
+TypesDB "%%%TYPESDB%%%"
+
+#   If you use the Hostname parameter, you
+#   must quote ("...") the second argument
+### Hostname "<YOUR_HOSTNAME_HERE>"
+
+%%%SOURCENAMEINFO%%%
+Interval 10
+Timeout 2
+ReadThreads 5
+%%%WRITEQUEUECONFIG%%%
+
+LoadPlugin logfile
+
+<Plugin logfile>
+  LogLevel "info"
+  File %%%LOGTO%%%
+  Timestamp true
+  PrintSeverity false
+</Plugin>
+
+LoadPlugin cpu
+LoadPlugin cpufreq
+LoadPlugin df
+
+LoadPlugin disk
+<Plugin "disk">
+  Disk "/^loop\d+$/"
+  Disk "/^dm-\d+$/"
+  IgnoreSelected "true"
+</Plugin>
+
+LoadPlugin interface
+<Plugin "interface">
+  Interface "/^lo\d*$/"
+  Interface "/^docker.*/"
+  Interface "/^t(un|ap)\d*$/"
+  Interface "/^veth.*$/"
+  IgnoreSelected "true"
+</Plugin>
+
+LoadPlugin load
+LoadPlugin memory
+LoadPlugin protocols
+<Plugin "protocols">
+  Value "Icmp:InDestUnreachs"
+  Value "Tcp:CurrEstab"
+  Value "Tcp:OutSegs"
+  Value "Tcp:RetransSegs"
+  Value "TcpExt:DelayedACKs"
+  Value "TcpExt:DelayedACKs"
+
+  Value "/Tcp:.*Opens/"
+  Value "/^TcpExt:.*Octets/"
+  IgnoreSelected false
+</Plugin>
+
+LoadPlugin vmem
+<Plugin vmem>
+  Verbose false
+</Plugin>
+
+LoadPlugin uptime
+
+# Note: You will get warnings on startup if you have no *.conf files.
+#       This is ok: CollectD will still start.
+Include "%%%COLLECTDMANAGEDCONFIG%%%/*.conf"
+
+Include "%%%COLLECTDFILTERINGCONFIG%%%/*.conf"
+
