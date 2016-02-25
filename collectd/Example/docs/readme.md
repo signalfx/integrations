@@ -2,7 +2,7 @@
 
 Each integration in this repository must include documentation of the metrics that it emits in a subdirectory called [/docs](./). Here's how to do that. 
 
-1. Create a file with extension .md for every metric emitted by the integration. The name of the file must match the name of the metric. For example, a metric called `gauge.sine` is documented in the file [gauge.sine.md](gauge.sine.md), which also contains these instructions. 
+1. Create a file with extension .md for every metric emitted by the integration. The name of the file must match the name of the metric. For example, a metric called `gauge.sine` is documented in the file [gauge.sine.md](gauge.sine.md).
   
 2. In each `.md` file, include a structured header as follows:
   ```
