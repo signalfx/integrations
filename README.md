@@ -8,9 +8,9 @@ SignalFx indexes available and validated collectd plugins [here](http://signalfx
 
 In order to be added to the plugin index, SignalFx validates each collectd plugin for stability, scale, and compatibility. If you would like to contribute here is the process:
 
-1. Create and publish a plugin for collectd. To get started, [see our example plugin code](https://github.com/signalfx/collectd-example/blob/master/example_plugin.py).
+1. Create and publish a plugin for collectd. To get started, [see our example plugin code](./Example).
 1. Ensure that your plugin meets the validation requirements - more on that below.
-1. Clone [this](https://github.com/signalfx/Integrations) repository locally.
+1. Clone [this](./) repository locally.
 1. Create a directory in this repository named after your plugin.
 1. Add required documentation content to that directory. 
 1. Commit and submit a pull request to this repository. Pull request template will prompt for all required information
@@ -39,10 +39,10 @@ You're the expert in the software that you wrote the plugin for. The goal of thi
 ### Code Requirements
 Below are requirements for plugin code:
 
-1. Include a README file that matches the [prescribed format](https://github.com/signalfx/Integrations/blob/master/Example/README.md). This file should contain all the information that a user would need to install, run and derive value from your plugin.
+1. Include a README file that matches the [prescribed format](./Example/README.md). This file should contain all the information that a user would need to install, run and derive value from your plugin.
 1. Submit your performance test plan and results.
 1. Make sure that your plugin collects all the data that is necessary to monitor the software in question. 
-  - When deciding which metrics your plugin should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available in "detailed" mode. Use other validated plugins as a guide on what to include.
+  - When deciding which metrics your plugin should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available if the plugin is configured in "detailed" mode. Use other validated plugins as a guide on what to include.
 1. Include dimensions by adding key-value pairs to collectd metric names. Dimensions can include any context that a user needs to drill down or slice-and-dice metrics through their environment (ex. cluster name, node name, region). Dimensions can capture any important concepts of the software being monitored, such as _queue name_ for a message queue or _index name_ for a search utility. To read more about dimensions, see SignalFx's data model on [developers.signalfx.io](http://developers.signalfx.io).
 
 ### Documentation Requirements
@@ -90,4 +90,11 @@ In order to validate your plugin we need to know how to test it. Depending on th
 
 ### Docker Container Properties
 
-To help us recreate your test environment, provide us with a complete Docker image definition. Here are some words about what that entails. 
+To help us recreate your test environment, provide us with a Docker image that includes your plugin as well as the thing that your plugin monitors. Here's how to do that:
+
+1. Create a Dockerfile that extends quay.io/signalfuse/sf-collectd-integration-base:latest
+1. Install your application inside the Dockerfile
+1. Create an executable called 20-SOMETHING.sh and have your Dockerfile install that into /opt/setup/scripts/. Make the executable run until SIGTERM.
+1. Install the configuration file for your plugin into /etc/collectd.d/managed_config/.
+2. ???
+3. Include your completed Docker image in your pull request to this repository. 
