@@ -1,15 +1,9 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: collectd df Plugin
+brief: Disk Free metrics for collectd.
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
-
-# Example Python Plugin
-
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
+# DF (Disk Free) Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,97 +15,40 @@ brief: The SignalFx Example Python plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:DF):
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
-
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
-
-The plugin also emits a notification every time it starts up.
+The DF plugin collects file system usage information, i. e. basically how much space on a mounted partition is used and how much is available. It's named after and very similar to the df(1) UNIX command that's been around forever.
+However, not all "partitions" are of interest. For example /proc and /dev usually don't get filled and their "size" doesn't make a lot of sense. That's why the DF plugin offers to select only specific devices, mount points or filesystem types.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
-
 This plugin requires:
 
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+- collectd 3.6+
 
 ### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
+This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-Follow these steps to install this plugin:
+### CONFIGURATION
 
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+#### Optional configuration
 
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
-
-### CONFIGURATION 
-
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
-
-#### Required configuration 
-
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
-
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration 
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+| FSType | Include specific filesystem types | "ext3" |
+| IgnoreSelected  | Ignore the designation of specific filesystem types | false |
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+The primary use of this plugin is to track the available space on the systems filesystems. This can be used to set alerts and thresholds to avoid a filesystem from being filled to capacity.
 
 ### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
-
-
+This plugin is released under the Apache 2.0 license. See LICENSE for more details.

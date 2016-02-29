@@ -1,3 +1,8 @@
+---
+title: collectd Cassandra Plugin
+brief: Cassandra metrics for collectd.
+---
+
 # Cassandra Plugin
 
 - [Description](#description)
@@ -62,26 +67,26 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
 1. Restart collectd.
 
  Metrics from Cassandra will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
-### CONFIGURATION 
+### CONFIGURATION
 
 >Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
 
-#### Required configuration 
+#### Required configuration
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
+The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | required_option | An example of a required configuration property. | 12345 |
 
-#### Optional configuration 
+#### Optional configuration
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+| Frequency  | Cycles of the sine wave per minute. | 0.5 |
 
 ### USAGE
 
@@ -93,8 +98,8 @@ The following configuration options are *optional*. You may specify them in the 
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository. 
+For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
+This plugin is released under the Apache 2.0 license. See LICENSE for more details.

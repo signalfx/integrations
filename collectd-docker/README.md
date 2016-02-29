@@ -1,3 +1,8 @@
+---
+title: collectd Docker Plugin
+brief: Docker metrics for collectd.
+---
+
 # Docker Plugin
 
 - [Description](#description)
@@ -73,18 +78,18 @@ following dimensions:
 
 collectd will begin emitting metrics from Docker.
 
-### CONFIGURATION 
+### CONFIGURATION
 
-#### Optional configuration 
+#### Optional configuration
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | TypesDB | Path on disk where collectd can find the Types.db file included in this module. | "/usr/share/collectd/docker-collectd-plugin/dockerplugin.db" |
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/docker-collectd-plugin" |
 | BaseURL | URL of your Docker daemon's remote API | "unix://var/run/docker.sock" |
-| Timeout  | Time in seconds that collectd will wait for a response from Docker   | 3 | 
+| Timeout  | Time in seconds that collectd will wait for a response from Docker   | 3 |
 
 ### USAGE
 
@@ -96,8 +101,8 @@ The following configuration options are *optional*. You may specify them in the 
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository. 
+For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
+This plugin is released under the Apache 2.0 license. See LICENSE for more details.
