@@ -8,8 +8,10 @@ Each integration in this repository must include documentation of the metrics th
   ```
   ---
   title: A human-understandable title of the metric.
-  brief: A brief description of what the metric measures. Specify the unit of measurement, such as bytes or percent. 
-  metric_type: One of gauge, counter or cumulative_counter. 
+  brief: A brief description of what the metric measures. Specify the unit of
+  measurement, such as bytes or percent. 
+  metric_type: The type of metric this is. Typically this will be gauge, counter
+  or cumulative_counter. 
   ---
   ```
 

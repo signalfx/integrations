@@ -47,7 +47,7 @@
     } ],
     "version" : 1
   },
-  "sf_description" : "Default dashboard.",
+  "sf_description" : "A dashboard demonstrating the example Python plugin.",
   "sf_type" : "Dashboard",
   "marshallId" : 3,
   "marshallMemberOf" : [ 2 ]
