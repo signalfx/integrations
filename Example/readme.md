@@ -54,14 +54,13 @@ This plugin requires:
 Follow these steps to install this plugin:
 
 1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+2. Modify the sample configuration file [10-example.conf](././10-example.conf) to contain values that make sense for your environment, as described [below](#configuration).
+3. Add the following line to `collectd.conf`, replacing the path with the path to the sample configuration file you modified in step 2: 
 
   ``` 
-  include '/path/to/10-configfile.conf' 
+  include '/path/to/10-example.conf' 
   ```
-5. Restart collectd. 
+4. Restart collectd. 
 
 ### CONFIGURATION 
 
@@ -92,15 +91,25 @@ The following configuration options are *optional*. You may specify them in the 
 >- Common failure modes, and the values of metrics that will allow the user to spot them
 >- Chart images demonstrating each important condition or failure mode
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
+This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric `gauge.sine`, and counts of datapoints and notifications emitted in the metrics `counter.datapoints` and `counter.notifications` respectively.
 
-![Example chart showing gauge.sine](http://fixme)
+Below is a screen capture of an example SignalFx dashboard, illustrating the metrics emitted by this plugin. The dashboard is included in this repository, and can be imported into SignalFx or other monitoring product. [Click here to download](././Page_Example Python Plugin.json).
 
-The following conditions may be cause for concern:
+![Example dashboard showing metrics from this plugin](././img/example plugin dashboard.png)
 
-*You see a straight line instead of a curve.*
+#### Important conditions to watch out for
+
+*`gauge.sine` looks like a straight line instead of a curve.*
+
+![Example chart showing gauge.sine](././img/gauge.sine.png)
 
 This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+
+*`counter.notifications` shows a suddenly high value.*
+
+![Example chart showing counter.notifications](././img/counter.notifications.png)
+
+This plugin emits a notification at every startup. If your collectd configuration and plugins do not ordinarily emit notifications, a suddenly high value for `counter.notifications` may indicate that collectd has been restarted. In the example charts shown above, `counter.notifications` shows a spike at about the same time as data resumes in `gauge.sine`.
 
 ### METRICS
 
@@ -112,6 +121,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 > Include licensing information for the plugin in this section.
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
-
-
+This plugin is released under the Apache 2.0 license. See [LICENSE](././LICENSE) for more details. 
