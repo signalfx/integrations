@@ -66,19 +66,9 @@ Follow these steps to install this plugin:
 
 >Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
 
-#### Required configuration 
-
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
+Using the example configuration file [10-example.conf](././10-example.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration 
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
-
-| configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
 | Frequency  | Cycles of the sine wave per minute. | 0.5 | 
@@ -121,4 +111,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 > Include licensing information for the plugin in this section.
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](././LICENSE) for more details. 
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details. 
