@@ -121,4 +121,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 > Include licensing information for the plugin in this section.
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
+This plugin is released under the Apache 2.0 license. See [LICENSE](././LICENSE) for more details. 
