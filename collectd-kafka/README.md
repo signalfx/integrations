@@ -1,3 +1,8 @@
+---
+title: collectd Kafka Plugin
+brief: Kafka metrics for collectd.
+---
+
 # Kafka Plugin
 
 - [Description](#description)
@@ -12,9 +17,7 @@
 
 This is the SignalFx Kafka plugin. Follow these instructions to configure the Java plugin for collectd to monitor Kafka. This will send data about Kafka to SignalFx, enabling built-in Kafka monitoring dashboards.
 
-
 ### REQUIREMENTS AND DEPENDENCIES
-
 
 #### Version information
 

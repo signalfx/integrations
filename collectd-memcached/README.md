@@ -1,3 +1,8 @@
+---
+title: collectd Memcached Plugin
+brief: Memcached metrics for collectd.
+---
+
 # Memcached Plugin
 
 - [Description](#description)

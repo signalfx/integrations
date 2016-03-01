@@ -1,3 +1,8 @@
+---
+title: collectd Couchbase Plugin
+brief: Couchbase metrics for collectd.
+---
+
 # Couchbase Plugin
 
 - [Description](#description)
