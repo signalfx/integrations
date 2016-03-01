@@ -70,7 +70,7 @@ Apache worker threads can be in one of the following states:
  yum install collectd-apache
  ```
 
-1. Download SignalFx's [sample configuration file](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/10-apache.conf) for this plugin.
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/Integrations/collectd-apache/10-apache.conf) for this plugin.
 
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
