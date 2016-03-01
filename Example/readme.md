@@ -91,15 +91,25 @@ The following configuration options are *optional*. You may specify them in the 
 >- Common failure modes, and the values of metrics that will allow the user to spot them
 >- Chart images demonstrating each important condition or failure mode
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric `gauge.sine`. The metric should look like this:
+This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric `gauge.sine`, and counts of datapoints and notifications emitted in the metrics `counter.datapoints` and `counter.notifications` respectively.
 
-![Example chart showing gauge.sine](././img/gauge.sine.png)
+Below is a screen capture of an example SignalFx dashboard, illustrating the metrics emitted by this plugin. The dashboard is included in this repository, and can be imported into SignalFx or other monitoring product. [Click here to download](././Page_Example Python Plugin.json).
 
-The following conditions may be cause for concern:
+![Example dashboard showing metrics from this plugin](././img/example plugin dashboard.png)
+
+#### Important conditions to watch out for
 
 *`gauge.sine` looks like a straight line instead of a curve.*
 
+![Example chart showing gauge.sine](././img/gauge.sine.png)
+
 This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+
+*`counter.notifications` shows a suddenly high value.*
+
+![Example chart showing counter.notifications](././img/counter.notifications.png)
+
+This plugin emits a notification at every startup. If your collectd configuration and plugins do not ordinarily emit notifications, a suddenly high value for `counter.notifications` may indicate that collectd has been restarted. In the example charts shown above, `counter.notifications` shows a spike at about the same time as data resumes in `gauge.sine`.
 
 ### METRICS
 
