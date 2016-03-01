@@ -1,3 +1,8 @@
+---
+title: collectd Apache Webserver Plugin
+brief: Apache Webserver metrics for collectd.
+---
+
 # Apache Webserver Plugin
 
 - [Description](#description)
@@ -12,9 +17,9 @@
 Follow these instructions to install the Apache plugin for collectd. This will send data about Apache to SignalFx, enabling built-in Apache monitoring dashboards.
 
 ### REQUIREMENTS AND DEPENDENCIES
-Use the [Apache collectd plugin](https://collectd.org/wiki/index.php/Plugin:Apache) to collect metrics about Apache Webserver.  This plugin collects metrics from the module `mod_status`. 
+Use the [Apache collectd plugin](https://collectd.org/wiki/index.php/Plugin:Apache) to collect metrics about Apache Webserver.  This plugin collects metrics from the module `mod_status`.
 
-Apache worker threads can be in one of the following states: 
+Apache worker threads can be in one of the following states:
 
 | State        | Remark                                  |
 |--------------|-----------------------------------------|
@@ -57,7 +62,7 @@ Apache worker threads can be in one of the following states:
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
- #### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09 
+ #### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
  Run the following command to install this plugin:
 
@@ -65,7 +70,7 @@ Apache worker threads can be in one of the following states:
  yum install collectd-apache
  ```
 
-1. Download SignalFx's [sample configuration file](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/10-apache.conf) for this plugin.
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/Integrations/collectd-apache/10-apache.conf) for this plugin.
 
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
@@ -81,26 +86,26 @@ Apache worker threads can be in one of the following states:
 
 1. Metrics from apache will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
 
-### CONFIGURATION 
+### CONFIGURATION
 
 >Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
 
-#### Required configuration 
+#### Required configuration
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
+The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | required_option | An example of a required configuration property. | 12345 |
 
-#### Optional configuration 
+#### Optional configuration
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+| Frequency  | Cycles of the sine wave per minute. | 0.5 |
 
 ### USAGE
 
@@ -112,8 +117,8 @@ The following configuration options are *optional*. You may specify them in the 
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository. 
+For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
+This plugin is released under the Apache 2.0 license. See LICENSE for more details.

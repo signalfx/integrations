@@ -1,3 +1,8 @@
+---
+title: collectd Elasticsearch Plugin
+brief: Elasticsearch metrics for collectd.
+---
+
 # Elasticsearch Plugin
 
 - [Description](#description)
