@@ -1,15 +1,9 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: collectd disk Plugin
+brief: Disk metrics for collectd.
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
-
-# Example Python Plugin
-
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
+# Disk Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,97 +15,46 @@ brief: The SignalFx Example Python plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Disk):
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
-
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
-
-The plugin also emits a notification every time it starts up.
+The Disk plugin collects performance statistics of hard-disks and, where supported, partitions. While the “octets” and “operations” are quite straight forward, the other two datasets need a little explanation:
+ * `merged` are the number of operations, that could be merged into other, already queued operations, i. e. one physical disk access served two or more logical operations. Of course, the higher that number, the better.
+ * `time` is the average time an I/O-operation took to complete. Since this is a little messy to calculate take the actual values with a grain of salt.
+Since 5.5 there are also additional metrics on the Linux platform:
+ * `io_time` - time spent doing I/Os (ms). You can treat this metric as a device load percentage (Value of 1 sec time spent matches 100% of load).
+ * `weighted_io_time` - measure of both I/O completion time and the backlog that may be accumulating.
+ * `pending_operations` - shows queue size of pending I/O operations.
+For details about these metrics you can also read [kernel documentation](https://www.kernel.org/doc/Documentation/iostats.txt) (Explanations of fields "Field 9", "Field 10" and "Field 11").
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
-
 This plugin requires:
 
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+- collectd 1.5+
 
 ### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
+This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-Follow these steps to install this plugin:
+### CONFIGURATION
 
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+#### Optional configuration
 
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
-
-### CONFIGURATION 
-
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
-
-#### Required configuration 
-
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
-
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration 
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+| Disk | Include specific Disk(s) | "sda" "/^hd/" |
+| IgnoreSelected  | Ignore the designation of specific Disks | false |
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+The primary use of this plugin is to track the available space on the systems filesystems. This can be used to set alerts and thresholds to avoid a filesystem from being filled to capacity.
 
 ### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
-
-
+This plugin is released under the Apache 2.0 license as part of collectd
