@@ -18,7 +18,7 @@ brief: MongoDB plugin for collectd.
 Use the [mongodb](https://github.com/signalfx/collectd-mongodb) collectd
 plugin to collect metrics from MongoDB nodes.
 
-The plugin uses collectd to capture the following metrics about MongoDB generally:
+This plugin captures the following metrics about MongoDB generally:
 
 * memory
 * network input/output bytes count
@@ -44,13 +44,13 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 | collectd  |  4.9 or later  |
 | Python    |  2.4 or later  |
 | MongoDB   |  2.4 or later  |
-| PyMongo   |  2.8 or later  |
+| PyMongo   |  3.0 or later  |
 
 ### INSTALLATION
 
 1. Install the Python plugin for collectd.
 
- RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
+ **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
 
  Run the following commands to install the Python plugin for collectd, pip, and pymongo:
 
@@ -58,18 +58,18 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
  yum install -y epel-release
  yum install -y python-pip
  yum install -y collectd-python
- pip install pymongo==2.8
+ pip install pymongo==3.0.3
  ```
 
- Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+ **Ubuntu 12.04, 14.04, 15.04 and Debian 7 & 8:**
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-1. Run the following commands to install pip and pymongo:
+1. Run the following commands to install `pip` and `pymongo`:
 
  ```
  apt-get install -y python-pip python-dev build-essential
- pip install pymongo==2.8
+ pip install pymongo==3.0.3
  ```
 1. Download the [Python module for MongoDB](https://github.com/signalfx/collectd-mongodb).  
 
@@ -97,15 +97,14 @@ Using the example configuration file [`10-mongodb.conf`](././10-mongodb.conf) as
 | User | Valid mongodb user | "" |
 | Password | Associated password for valid user | "password" |
 | Database | Name(s) of database(s) that you would like metrics from. Note: the first database in this list must be "admin", as it is used to perform a `serverStatus()` command. | "admin" "db-prod" "db-dev" |
-| Instance | Name of mongodb instance | "" |
 
 #### Note: Additional instances
 
 Each MongoDB instance to be monitored is specified in a `<Module>` block within the configuration file. By default, the sample configuration file `10-mongodb.conf` contains only one such block. To monitor an additional instance of MongoDB, add another `<Module>` block immediately below the first, and configure it according to that instance's parameters. 
 
-### USAGE
+#### Note: Creating a MongoDB user for collectd
 
-If you're monitoring a secured MongoDB deployment, declaring a user with minimal read-only roles is a good practice, as follows:
+If you're monitoring a secured MongoDB deployment, it is a good practice to create a MongoDB user with minimal read-only roles, as follows:
 
 ```
 db.createUser( {
@@ -115,19 +114,17 @@ db.createUser( {
 });
 ```
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
+### USAGE
 
-![Example chart showing gauge.sine](http://fixme)
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_MongoDB.json).
 
-The following conditions may be cause for concern:
+**Monitoring MongoDB clusters**
+![Mongodb cluster dashboard](././img/mongodb cluster dashboard.png)
 
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap.
+**Monitoring MongoDB hosts**
+![Mongodb host dashboard](././img/mongodb host dashboard.png)
 
 ### METRICS
-
-
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
