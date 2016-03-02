@@ -5,6 +5,8 @@ brief: Apache Webserver metrics for collectd.
 
 # Apache Webserver Plugin
 
+![](https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png)
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
@@ -121,4 +123,8 @@ For full documentation of the metrics and dimensions emitted by this plugin, see
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 2 of the License is applicable.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
