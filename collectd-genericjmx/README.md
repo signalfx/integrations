@@ -1,15 +1,10 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: GenericJMX Plugin
+brief: GenericJMX plugin for collectd.
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
 
-# Example Python Plugin
-
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
+# GenericJMX Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,97 +16,109 @@ brief: The SignalFx Example Python plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
+The GenericJMX plugin reads Managed Beans (MBeans) from an MBeanServer using JMX. The plugin is written in Java and requires the [Java plugin](https://github.com/signalfx/Integrations/tree/master/collectd-java) to function.
 
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
+The Java Management Extensions (JMX) is a generic framework to provide and query various management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used, threads and so on. These basic performance values can therefore be collected for every Java process without any support in the Java process itself.
 
-The plugin also emits a notification every time it starts up.
+Advanced Java processes can use the JMX interface to provide performance information themselves. The Apache Tomcat application server, for example, provides information on the number of requests processed, the number of bytes sent, processing time, and thread counts.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
-
-This plugin requires:
-
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+- collectd 4.8+
+- Java 2.6+
 
 ### INSTALLATION
-
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
 
 Follow these steps to install this plugin:
 
 1. Download this repository to your local machine.
 2. Download the sample configuration file from signalfx-integrations/helloworld/.
 3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2:
 
-  ``` 
-  include '/path/to/10-configfile.conf' 
   ```
-5. Restart collectd. 
+  include '/path/to/10-configfile.conf'
+  ```
+5. Restart collectd.
 
-### CONFIGURATION 
+### CONFIGURATION
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
-#### Required configuration 
+The configuration of the GenericJMX plugin consists of two blocks:
+* _MBean blocks_ that define a mapping of MBean attributes to the “types” used by collectd
+* _Connection blocks_ which define the parameters needed to connect to an MBeanServer and what data to collect.
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
+The configuration of the SNMP plugin is similar in nature, in case you know it.
 
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
+**MBean blocks**
 
-#### Optional configuration 
+_MBean blocks_ specify what data is retrieved from MBeans and how that data is mapped on the collectd data types. The block requires one string argument, a name. This name is used in the _Connection blocks_ (see below) to refer to a specific MBean block. Therefore, the names must be unique.
+The following options are recognized within MBean blocks:
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+* **ObjectName _pattern_**
+ Sets the pattern which is used to retrieve MBeans from the MBeanServer. If more than one MBean is returned you should use the InstanceFrom option (see below) to make the [identifiers](https://collectd.org/wiki/index.php/Identifier) unique.
 
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+ See also: [ObjectName](http://java.sun.com/javase/6/docs/api/javax/management/ObjectName.html).
+* **InstancePrefix _prefix_**
+
+ Prefixes the generated plugin instance with prefix. (optional)
+* **InstanceFrom _property_**
+
+ The object names used by JMX to identify MBeans include so called “properties” which are basically key-value-pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This option is optional and may be repeated to generate the plugin instance from multiple property values.
+* **`<value />` blocks**
+
+ The value blocks map one or more attributes of an MBean to a [value list](https://collectd.org/wiki/index.php/Value_list) in _collectd_. There must be at least one Value block within each MBean block.
+
+* **Type _type_**
+
+ Sets the data set used within collectd to handle the values of the MBean attribute.
+* **InstancePrefix _prefix_**
+
+ Works like the option of the same name directly beneath the MBean block, but sets the type instance instead. (optional)
+* **InstanceFrom _prefix_**
+
+ Works like the option of the same name directly beneath the MBean block, but sets the type instance instead. (optional)
+* **Table true|false**
+
+ Set this to true if the returned attribute is a _composite_ type. If set to true, the keys within the composite type is appended to the type instance.
+* **Attribute _path_**
+
+ Sets the name of the attribute from which to read the value. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example: “attrib0.key42”. If Table is set to true path must point to a composite type, otherwise it must point to a numeric type.
+
+**Connection blocks**
+
+ Connection blocks specify how to connect to an MBeanServer and what data to retrieve. The following configuration options are available:
+* **Host _name_**
+
+ Host name used when dispatching the values to collectd. See [naming schema](https://collectd.org/wiki/index.php/Naming_schema) for details. The option sets this field only, it is not used to connect to anything and doesn't need to be a real, resolvable name.
+* **ServiceURL _URL_**
+
+ Specifies how the MBeanServer can be reached. Any string accepted by the JMXServiceURL is valid.
+ See also: [JMXServiceURL](http://java.sun.com/javase/6/docs/api/javax/management/remote/JMXServiceURL.html)
+* **User _name_**
+
+ Use name to authenticate to the server. If not configured, “monitorRole” will be used.
+* **Password _password_**
+
+ Use password to authenticate to the server. If not given, unauthenticated access is used.
+* **InstancePrefix _prefix_**
+
+ Prefixes the generated plugin instance with prefix. If a second InstancePrefix is specified in a referenced MBean block, the prefix specified in the Connection block will appear at the beginning of the plugin instance, the prefix specified in the MBean block will be appended to it. (optional, since version 5.0)
+* **Collect _mbean_ _ _block_ _ _name_**
+
+ Configures which of the _MBean_ blocks to use with this connection. May be repeated to collect multiple _MBeans_ from this server.
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
 
 ### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
-
-
+This plugin is released under the MIT license. See [header in plugin](https://github.com/collectd/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java) for more details.
