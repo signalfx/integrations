@@ -1,7 +1,7 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
+{ "display_name":"MySQL collectd Plugin",
+  "description": "MySQL collectd plugin",
+  "code": "https://github.com/collectd/collectd/blob/master/src/mysql.c",
   "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-mysql/img/integrations_mysql.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-mysql/img/integrations_mysql%402x.png"
 }

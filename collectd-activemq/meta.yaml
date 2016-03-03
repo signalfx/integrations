@@ -1,7 +1,7 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
+{ "display_name":"ActiveMQ collectd Plugin",
+  "description": "ActiveMQ collectd plugin",
+  "code": "https://github.com/signalfx/activemq-integration",
   "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_activemq%402x.png"
 }
