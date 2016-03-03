@@ -66,11 +66,11 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
  ```
 1. Restart collectd.
 
-collectd will begin emitting metrics from elasticsearch.
+collectd will begin emitting metrics from ElasticSearch.
 
 ### CONFIGURATION
 
-* set the cluster name. It is preferrable to have a unique cluster name to be able to easily distinguish between clusters. This is usually the same as the cluster name in the Elasticsearch configuration file. This defaults to "elasticsearch".
+* set the cluster name. It is preferable to have a unique cluster name to be able to easily distinguish between clusters. This is usually the same as the cluster name in the ElasticSearch configuration file. This defaults to "elasticsearch".
 * per-index and cluster statistics can be disabled. They are enabled by default.
 
 ### USAGE

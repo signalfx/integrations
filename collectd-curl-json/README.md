@@ -1,9 +1,9 @@
 ---
-title: collectd df Plugin
-brief: Disk Free metrics for collectd.
+title: collectd cURL-JSON Plugin
+brief: Use cURL on JSON formatted metrics for collectd.
 ---
 
-# DF (Disk Free) Plugin
+# cURL-JSON Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -15,16 +15,15 @@ brief: Disk Free metrics for collectd.
 
 ### DESCRIPTION
 
-From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:DF):
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:cURL-JSON):
 
-The DF plugin collects file system usage information, i. e. basically how much space on a mounted partition is used and how much is available. It's named after and very similar to the df(1) UNIX command that's been around forever.
-However, not all "partitions" are of interest. For example /proc and /dev usually don't get filled and their "size" doesn't make a lot of sense. That's why the DF plugin offers to select only specific devices, mount points or filesystem types.
+The cURL-JSON plugin queries JavaScript Object Notation (JSON) data using the cURL library and parses it according to the user's configuration using Yet Another JSON Library (YAJL). This can be used to query statistics information from a CouchDB instance, for example.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
 This plugin requires:
 
-- collectd 3.6+
+- collectd 4.8+
 
 ### INSTALLATION
 
@@ -32,23 +31,15 @@ This plugin is included with [SignalFx's collectd package](https://support.signa
 
 ### CONFIGURATION
 
-#### Optional configuration
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:cURL-JSON):
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| FSType | Include specific filesystem types | "ext3" |
-| IgnoreSelected  | Ignore the designation of specific filesystem types | false |
+This plugin is a generic plugin, i.e. it cannot work without configuration, because there is no reasonable default behavior. Please read the [Plugin curl_json section](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_curl_json) of the collectd.conf manual page for an in-depth description of the plugin's configuration.
 
 ### USAGE
 
-The primary use of this plugin is to track the available space on the systems filesystems. This can be used to set alerts and thresholds to avoid a filesystem from being filled to capacity.
 
 ### METRICS
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
