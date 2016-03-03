@@ -1,7 +1,7 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
+{ "display_name":"ElasticSearch collectd Plugin",
+  "description": "ElasticSearch collectd Plugin",
+  "code": "https://github.com/signalfx/collectd-elasticsearch",
   "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch%402x.png"
 }

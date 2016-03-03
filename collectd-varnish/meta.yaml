@@ -1,7 +1,7 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+{ "display_name":"Varnish collectd Plugin",
+  "description": "Varnish collectd plugin",
+  "code": "https://github.com/collectd/collectd/blob/master/src/varnish.c",
+  "featured": false,
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-varnish/img/integrations_varnish.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-varnish/img/integrations_varnish%402x.png"
 }
