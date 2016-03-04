@@ -3,7 +3,7 @@ title: collectd Kafka Plugin
 brief: Kafka metrics for collectd.
 ---
 
-# Kafka Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-kafka/img/integrations_kafka.png) Kafka Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

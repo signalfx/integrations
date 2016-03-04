@@ -1,9 +1,9 @@
 ---
-title: collectd Memcached Plugin
+title: Memcached collectd Plugin
 brief: Memcached metrics for collectd.
 ---
 
-# Memcached Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

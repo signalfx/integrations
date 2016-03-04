@@ -3,7 +3,7 @@ title: collectd interface Plugin
 brief: Interface metrics for collectd.
 ---
 
-# Interface collectd Plugin  ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
+#![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Interface collectd Plugin  
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -27,7 +27,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 ### CONFIGURATION
 

@@ -3,7 +3,7 @@ title: Java collectd Plugin
 brief: Java plugin for collectd.
 ---
 
-# Java collectd Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-java/img/integrations_jmx.png) Java collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -30,7 +30,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 ### CONFIGURATION
 

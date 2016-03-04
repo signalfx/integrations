@@ -1,15 +1,9 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: Protocols collectd Plugin
+brief: Protocols plugin for collectd.
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
-
-# Example Python Plugin
-
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
+#![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Protocols collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,68 +15,36 @@ brief: The SignalFx Example Python plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Protocols):
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
+The Protocols plugin collects information about the network protocols supported by the system, for example Internet Protocol (IP) and Transmission Control Protocol (TCP). Currently the plugin is only available under Linux and reads its information from the following two files in the /proc file-system:
 
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
+* `/proc/net/snmp`
+* `/proc/net/netstat`
 
-The plugin also emits a notification every time it starts up.
+Because the available information is usually far too much to be useful, the interesting values can be selected using the configuration file.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
-
 This plugin requires:
 
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+- collectd 4.7+
 
 ### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
 
-Follow these steps to install this plugin:
+### CONFIGURATION
 
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/Integrations/blob/master/collectd/collectd.conf) file.
 
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
+From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_protocols):
 
-### CONFIGURATION 
+| Configuration Option | Type | Definition |
+|----------------------|------|------------|
+|`Value`| _Selector_ | Selects whether or not to select a specific value. <ul><li>The string being matched is of the form `Protocol:ValueName` where `Protocol` will be used as the plugin instance and `ValueName` will be used as type instance. </li><li> An example of the string being used would be `Tcp:RetransSegs` </li><li> You can use regular expressions to match a large number of values with just one configuration option. </li><li> To select all "extended" TCP values, you could use the following statement: `Value "/^TcpExt:/"` </li><li> Whether only matched values are selected or all matched values are ignored depends on the **`IgnoreSelected`**. By default, only matched values are selected. If no value is configured at all, all values will be selected.</li></ui>|
+|`IgnoreSelected`| _true/false_ | If set to true, inverts the selection made by `Value`, i. e. all matching values will be ignored.|
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
-
-#### Required configuration 
-
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
-
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration 
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
 
 ### USAGE
 
@@ -100,18 +62,12 @@ The following conditions may be cause for concern:
 
 *You see a straight line instead of a curve.*
 
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap.
 
 ### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
-
-
+License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/protocols.c)

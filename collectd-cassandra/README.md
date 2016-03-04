@@ -3,7 +3,7 @@ title: collectd Cassandra Plugin
 brief: Cassandra metrics for collectd.
 ---
 
-# Cassandra collectd Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png) Cassandra collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

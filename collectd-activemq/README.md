@@ -3,7 +3,7 @@ title: collectd ActiveMQ Plugin
 brief: ActiveMQ metrics for collectd.
 ---
 
-# ActiveMQ collectd Plugin   ![](https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq.png)
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq.png) ActiveMQ collectd Plugin   
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
