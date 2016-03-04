@@ -10,7 +10,6 @@ brief: Programmatic interface in Python for SignalFx's metadata and ingest APIs
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Usage](#usage)
 - [Known Issues](#issues)
 - [License](#license)
@@ -59,26 +58,6 @@ cd signalfx-python
 python setup.py install
 ```
 
-### <a name="configuration"></a>CONFIGURATION
-
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
-
-#### Required configuration
-
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
-
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 |
 
 ### <a name="usage"></a>USAGE
 
@@ -264,16 +243,16 @@ See `examples/pyformance_usecase.py` for a complete code example using Pyformanc
 
 The Python client library is mainly targeted towards
 sending a continuous stream of metrics, and was
-implemented to be asynchronous. As a result, scripts
-that exit right after calling the send method (as in
-the case where you are sending just one datapoint)
-may not yield a datapoint in a chart on the SignalFx
-service.
+implemented to be asynchronous. As a result,
+short-lived scripts
+that exit right after calling the send method (as
+can be the case if your script is sending just one
+datapoint) may not yield a datapoint in a chart on
+the SignalFx service.
 
-To work around this problem (most common in short-lived
-scripts for example), register an `atexit` function to
-cleaning stop the datapoint sending thread when your
-program exits:
+To work around this problem, register an `atexit`
+function to cleaning stop the datapoint sending thread
+when your program exits:
 
 ```python
 import atexit
