@@ -1,117 +1,302 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: Python client library
+brief: Programmatic interface in Python for SignalFx's metadata and ingest APIs
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
 
-# Example Python Plugin
+# Python client library for SignalFx
 
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Metrics](#metrics)
+- [Known Issues](#issues)
 - [License](#license)
 
-### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+### <a name="description"></a>DESCRIPTION
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
+<code>signalfx-python</code> is a programmatic
+interface in Python for SignalFx's metadata and ingest
+APIs. It is meant to provide a base for communicating
+with SignalFx APIs that can be easily leveraged by
+scripts and applications to interact with SignalFx or
+report metric and event data to SignalFx. It is also
+the base for metric reporters that integrate with
+common Python-based metric collections tools or
+libraries.
 
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
 
-The plugin also emits a notification every time it starts up.
+### <a name="requirements-and-dependencies"></a>REQUIREMENTS AND DEPENDENCIES
 
-### REQUIREMENTS AND DEPENDENCIES
+#### Python version
 
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
+The Python client library requires Python 2.7.9 or
+higher.
 
-This plugin requires:
+#### API access token
 
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+To use this library, you need a SignalFx API access
+token, which can be obtained from the SignalFx
+organization you want to report data into.
 
-### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
+### <a name="installation"></a>INSTALLATION
 
-Follow these steps to install this plugin:
+To install from pip:
 
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+```
+pip install signalfx
+```
 
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
+To install from source:
 
-### CONFIGURATION 
+```
+git clone https://github.com/signalfx/signalfx-python.git
+cd signalfx-python
+python setup.py install
+```
+
+### <a name="configuration"></a>CONFIGURATION
 
 >Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
 
-#### Required configuration 
+#### Required configuration
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
+The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | required_option | An example of a required configuration property. | 12345 |
 
-#### Optional configuration 
+#### Optional configuration
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+| Frequency  | Cycles of the sine wave per minute. | 0.5 |
 
-### USAGE
+### <a name="usage"></a>USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+#### Sending metrics
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
+The core function of the library is to send metric data to SignalFx. For example:
 
-![Example chart showing gauge.sine](http://fixme)
+```python
+import signalfx
 
-The following conditions may be cause for concern:
+sfx = signalfx.SignalFx('MY_TOKEN')
+sfx.send(
+    gauges=[
+      {'metric': 'myfunc.time',
+       'value': 532,
+       'timestamp': 1442960607000},
+      ...
+    ],
+    counters=[
+      {'metric': 'myfunc.calls',
+       'value': 42,
+       'timestamp': 1442960607000},
+      ...
+    ],
+    cumulative_counters=[
+      {'metric': 'myfunc.calls_cumulative',
+       'value': 10,
+       'timestamp': 1442960607000},
+      ...
+    ])
 
-*You see a straight line instead of a curve.*
+# After all datapoints have been sent, flush any
+# remaining messages in the send queue and terminate
+# all connections
 
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+sfx.stop()
+```
 
-### METRICS
+The `timestamp` must be a millisecond precision
+timestamp; the number of milliseconds elapsed since
+Epoch. The `timestamp` field is optional, but
+strongly recommended. If not specified, it will be set
+by SignalFx's ingest servers automatically; in this
+situation, the timestamp of your datapoints will not
+accurately represent the time of their measurement
+(network latency, batching, etc. will all impact when
+those datapoints actually make it to SignalFx).
 
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
+When sending datapoints with multiple calls to
+`send()`, you should re-use the same SignalFx client
+object for each `send()` call.
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+If you must use multiple client objects for the same
+token, which is not recommended, it is important to
+call `stop()` after making all `send()` calls. Each
+SignalFx client object uses a background thread to send
+datapoints without blocking the caller. Calling
+`stop()` will gracefully flush the thread's send
+queue and close its TCP connections.
 
-### LICENSE
+#### Sending multi-dimensional metrics
 
-> Include licensing information for the plugin in this section.
+The SignalFx data format includes the concept of
+dimensions. Time series dimensions are custom key/value
+pairs in combination with the metric name that identify
+the metric time series. Dimensions are also useful in
+aggregating and filtering metrics. For example, sending
+an "environment" dimension with each datapoint would
+allow you to vary alerts based on the different
+environments that metrics are being sent from.
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
+Reporting dimensions for the data can be accomplished
+by specifying a `dimensions` parameter on each datapoint
+containing a dictionary of string to string key/value
+pairs representing the dimensions:
 
+```python
+import signalfx
 
+sfx = signalfx.SignalFx('MY_TOKEN')
+sfx.send(
+    gauges=[
+      {
+        'metric': 'myfunc.time',
+        'value': 532,
+        'timestamp': 1442960607000,
+        'dimensions': {'host': 'server1', 'host_ip': '1.2.3.4'}
+      },
+      ...
+    ], ...)
+sfx.stop()
+```
+
+See [`examples/generic_usecase.py`](examples/generic_usecase.py) for a
+complete code sample showing how to send data to SignalFx.
+
+#### Sending events
+
+Events can be sent to SignalFx via the `send_event` function. The
+event type must be specified, and dimensions and extra event properties
+can be supplied as well.
+
+```python
+import signalfx
+
+sfx = signalfx.SignalFx('MY_TOKEN')
+sfx.send_event(
+    event_type='deployments',
+    dimensions={
+        'host': 'myhost',
+        'service': 'myservice',
+        'instance': 'myinstance'},
+    properties={
+        'version': '2015.04.29-01'})
+```
+
+See `examples/generic_usecase.py` for a complete code example.
+
+#### Metric metadata
+
+The library includes functions that search, get, and update metric dimensions, properties and tags.  Deleting tags is also supported.
+
+```python
+import signalfx
+
+sfx = signalfx.SignalFx('MY_TOKEN')
+sfx.update_tag('some_tag_name',
+                description='an example tag',
+                custom_properties={'version':'some_number'})
+```
+
+#### AWS integration
+
+Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the AWS unique ID of the current host as an extra dimension. For example:
+
+```python
+import signalfx
+from signalfx.aws import AWS_ID_DIMENSION, get_aws_unique_id
+
+sfx = signalfx.SignalFx('your_api_token')
+sfx.add_dimensions({AWS_ID_DIMENSION: get_aws_unique_id()})
+sfx.send(
+    gauges=[
+      {
+        'metric': 'myfunc.time',
+        'value': 532,
+        'timestamp': 1442960607000
+        'dimensions': {'host': 'server1', 'host_ip': '1.2.3.4'}
+      },
+    ])
+sfx.stop()
+```
+
+#### Pyformance reporter
+
+`pyformance` is a Python library that provides CodaHale-style metrics in
+a very Pythonic way. We offer a reporter that can report the
+`pyformance` metric registry data directly to SignalFx.
+
+```python
+from pyformance import count_calls, gauge
+import signalfx.pyformance
+
+@count_calls
+def callme():
+    # whatever
+    pass
+
+sfx = signalfx.pyformance.SignalFxReporter(api_token='MY_TOKEN')
+sfx.start()
+
+callme()
+callme()
+gauge('test').set_value(42)
+...
+```
+
+See `examples/pyformance_usecase.py` for a complete code example using Pyformance.
+
+### <a name="issues"></a>KNOWN ISSUES
+
+#### Sending only 1 datapoint and not seeing it in the chart
+
+The Python client library is mainly targeted towards
+sending a continuous stream of metrics, and was
+implemented to be asynchronous. As a result, scripts
+that exit right after calling the send method (as in
+the case where you are sending just one datapoint)
+may not yield a datapoint in a chart on the SignalFx
+service.
+
+To work around this problem (most common in short-lived
+scripts for example), register an `atexit` function to
+cleaning stop the datapoint sending thread when your
+program exits:
+
+```python
+import atexit
+import signalfx
+
+sfx = signalfx.SignalFx('MY_TOKEN')
+atexit.register(sfx.stop)
+```
+
+#### SSLError when sending events by calling send_event() method
+
+```
+ERROR:root:Posting to SignalFx failed.
+SSLError: hostname 'ingest.signalfx.com' doesn't match either of
+'*.signalfuse.com', 'signalfuse.com'.
+```
+
+SignalFx's API endpoints have SSL SNI enabled and the
+`urllib3` module in Python versions prior to 2.7.8 had
+a bug that causes the above issue. This was fixed in
+later versions of Python; we recommend using Python
+2.7.9 or newer when using this library.
+
+### <a name="license"></a>LICENSE
+
+This plugin is released under the Apache 2.0 license. See LICENSE for more details.
