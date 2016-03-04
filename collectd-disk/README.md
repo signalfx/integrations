@@ -3,7 +3,7 @@ title: collectd disk Plugin
 brief: Disk metrics for collectd.
 ---
 
-# Disk Plugin
+# Disk collectd Plugin  ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

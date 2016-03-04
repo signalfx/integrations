@@ -3,7 +3,7 @@ title: collectd Cassandra Plugin
 brief: Cassandra metrics for collectd.
 ---
 
-# Cassandra Plugin
+# Cassandra collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -54,10 +54,11 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
 
 1. Download SignalFx's sample JMX configuration file and sample Cassandra configuration file from the following URLs:
 
- [JMX.conf](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/10-jmx.conf)
- [cassandra.conf](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/20-cassandra.conf)
+ [`JMX.conf`](https://github.com/signalfx/Integrations/blob/master/collectd-java/10-jmx.conf)
 
-1. Modify 20-cassandra.conf to provide values that make sense for your environment, as described in the header.
+ [`cassandra.conf`](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/20-cassandra.conf)
+
+1. Modify [`cassandra.conf`](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/20-cassandra.conf) to provide values that make sense for your environment, as described in the header.
 
  Add the following lines to /etc/collectd.conf, replacing the example paths with the locations of the configuration files you downloaded in step 2:
  ```
@@ -66,40 +67,29 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
  ```
 1. Restart collectd.
 
- Metrics from Cassandra will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
+Metrics from Cassandra will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
+
 ### CONFIGURATION
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
+#### System modifications:
 
-#### Required configuration
+Open the JMX port on your cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the [Cassandra Project site](http://wiki.apache.org/cassandra/JmxInterface). There is also a page covering a few [common issues](http://wiki.apache.org/cassandra/JmxGotchas).
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
+#### [`cassandra.conf`](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/20-cassandra.conf) file modifications:
 
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
+You must include [10-jmx.conf]() this ensures that the Java collectd plugin will properly run prior to loading the Cassandra specific configuration.
 
-#### Optional configuration
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 |
+| Value | Description |
+|-------|-------------|
+| ServiceURL | URL of your JMX application|
+| Host | The name of your host (_Please leave the identifier `[hostHasService=cassandra]`) in the host name_|
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+Since this is not an actual _plugin_ but rather a configuration of the `collectd-java plugin` there is no need for a license.

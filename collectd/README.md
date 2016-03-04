@@ -3,7 +3,7 @@ title: SignalFx collectd
 brief: SignalFx validated version of collectd.
 ---
 
-# SignalFx collectd ([based on collectd](http://collectd.org))
+# SignalFx collectd
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -15,15 +15,15 @@ brief: SignalFx validated version of collectd.
 
 ### DESCRIPTION
 
-SignalFx has always recommended the open-source data collection agent collectd to our customers, as it’s fast, performs well at scale, and enjoys great community support. We released a new SignalFx collectd package to make a great agent even better.
+SignalFx has always recommended the open-source data collection agent [collectd](http://collectd.org) to our customers, as it’s fast, performs well at scale, and enjoys great community support. We released a new [SignalFx collectd](https://github.com/signalfx/collectd) package to make a great agent even better.
 
-**SignalFx collectd** introduces the following changes:
+**[SignalFx collectd](https://github.com/signalfx/collectd)** introduces the following changes:
 
 * **Increased Character limit:** We’ve increased the number of characters that can be used in dimension key-value pairs to 1024, up from 64. In practice, this allows you to send as many dimensions as you want.
 * **Buffer Flushing** To ensure that metrics always arrive in a timely manner, we’ve added a timer to SignalFx collectd so that it transmits data to SignalFx either when the data buffer is full or when a time limit is reached, whichever happens first. This capability is particularly useful if you are only collecting small quantities of time-sensitive metrics.
 * **HTTP Error Logging** We’re providing greater visibility into how collectd itself is functioning, by logging HTTP codes from unsuccessful data transmissions by the write_http plugin, and by logging the name of every collectd plugin that is loaded at startup. In addition, we’re also updating the SignalFx metadata plugin for collectd to report the DPM transmitted by each collectd plugin installed on a host, to help you manage and keep track of your usage. Find this in the Catalog under the metric gauge.sf.host-dpm.
 
-View the full [changelog](https://github.com/signalfx/collectd/blob/collectd-5.5.0-sfx/ChangeLog)
+You can view the full [changelog](https://github.com/signalfx/collectd/blob/collectd-5.5.0-sfx/ChangeLog). All changes have also been submitted back to the [collectd project](http://collectd.org) so that everyone can benefit.
 
 ### REQUIREMENTS AND DEPENDENCIES
 

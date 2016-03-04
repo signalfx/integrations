@@ -127,8 +127,6 @@ This may indicate a period of missing data points. In the example chart shown ab
 
 ### METRICS
 
-
-
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE

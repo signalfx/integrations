@@ -4,7 +4,7 @@ brief: GenericJMX plugin for collectd.
 ---
 
 
-# GenericJMX Plugin
+# GenericJMX collectd Plugin ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
