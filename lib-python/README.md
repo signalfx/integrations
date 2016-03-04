@@ -196,7 +196,7 @@ sfx.update_tag('some_tag_name',
 
 #### <a name="AWS-integration">AWS integration
 
-Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the AWS unique ID of the current host as an extra dimension. For example:
+Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the [AWS unique ID](https://support.signalfx.com/hc/en-us/articles/201133965#aws_unique_id) of the current host as an extra dimension. For example:
 
 ```python
 import signalfx
@@ -242,7 +242,7 @@ gauge('test').set_value(42)
 ...
 ```
 
-See `examples/pyformance_usecase.py` for a complete code example using Pyformance.
+See `examples/pyformance_usecase.py` for a complete code example using PyFormance.
 
 ### <a name="issues"></a>KNOWN ISSUES
 
