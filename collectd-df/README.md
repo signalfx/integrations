@@ -3,7 +3,7 @@ title: collectd df Plugin
 brief: Disk Free metrics for collectd.
 ---
 
-# DF (Disk Free) Plugin  ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
+#![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) DF (Disk Free) Plugin  
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,7 +17,7 @@ brief: Disk Free metrics for collectd.
 
 From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:DF):
 
-The DF plugin collects file system usage information, i. e. basically how much space on a mounted partition is used and how much is available. It's named after and very similar to the df(1) UNIX command that's been around forever.
+> The DF plugin collects file system usage information, i. e. basically how much space on a mounted partition is used and how much is available. It's named after and very similar to the df(1) UNIX command that's been around forever.
 However, not all "partitions" are of interest. For example /proc and /dev usually don't get filled and their "size" doesn't make a lot of sense. That's why the DF plugin offers to select only specific devices, mount points or filesystem types.
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -28,18 +28,22 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 ### CONFIGURATION
 
-#### Optional configuration
+Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/Integrations/blob/master/collectd/collectd.conf) file.
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| FSType | Include specific filesystem types | "ext3" |
-| IgnoreSelected  | Ignore the designation of specific filesystem types | false |
+| Configuration Option | Type | Definition |
+|----------------------|------|------------|
+|`Device` | _Device_ | Select partitions based on the `devicename` |
+|`MountPoint`| _Directory_|Select partitions based on the mountpoint |
+|`FSType`| _FSType_ | Select partitions based on the filesystem type|
+|`IgnoreSelected`| _true/false_ |Invert the selection: If set to true, all partitions except the ones that match any one of the criteria are collected. By default only selected partitions are collected if a selection is made. If no selection is configured at all, all partitions are selected|
+|`ReportByDevice`| _true/false_ |Report using the device name rather than the mountpoint. i.e. with this false, (the default), it will report a disk as "root", but with it true, it will be "sda1" (or whichever)|
+|`ReportInodes`| _true/false_ | Enables or disables reporting of free, reserved and used inodes. Defaults to inode collection being disabled _Enable this option if inodes are a scarce resource for you, usually because many small files are stored on the disk. This is a usual scenario for mail transfer agents and web caches_|
+|`ValuesAbsolute`| _true/false_ | Enables or disables reporting of free and used disk space in 1K-blocks. Defaults to true|
+|`ValuesPercentage`| _true/false_ | Enables or disables reporting of free and used disk space in percentage. Defaults to false. _This is useful for deploying collectd on the cloud, where machines with different disk size may exist. Then it is more practical to configure thresholds based on relative disk size._|
 
 ### USAGE
 

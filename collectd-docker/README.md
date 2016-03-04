@@ -3,7 +3,7 @@ title: collectd Docker Plugin
 brief: Docker metrics for collectd.
 ---
 
-# Docker Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -3,7 +3,7 @@ title: collectd Apache Webserver Plugin
 brief: Apache Webserver metrics for collectd.
 ---
 
-# Apache collectd Plugin    ![](https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png)
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -3,7 +3,7 @@ title: Load collectd Plugin
 brief: Load plugin for collectd.
 ---
 
-# Example Python Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Example Python Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,6 +14,8 @@ brief: Load plugin for collectd.
 - [License](#license)
 
 ### DESCRIPTION
+
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Load):
 
 The Load plugin collects the system load. These numbers give a rough overview over the utilization of a machine, though their meaning is mostly overrated.
 The system load is defined as the number of runnable tasks in the run-queue and is provided by many operating systems as a one, five or fifteen minute average.
@@ -26,10 +28,11 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 ### CONFIGURATION
 
+The Load plugin does not have any configuration settings.
 
 ### USAGE
 

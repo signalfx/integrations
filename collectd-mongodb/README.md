@@ -3,7 +3,7 @@ title: collectd MongoDB Plugin
 brief: Use the collectd-mongodb plugin to collect metrics from MongoDB nodes.
 ---
 
-# MongoDB Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -3,7 +3,7 @@ title: collectd Elasticsearch Plugin
 brief: Elasticsearch metrics for collectd.
 ---
 
-# Elasticsearch Plugin
+#![](https://github.com/signalfx/Integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
