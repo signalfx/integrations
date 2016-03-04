@@ -285,4 +285,4 @@ later versions of Python; we recommend using Python
 
 ### <a name="license"></a>LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-python/blob/master/LICENSE) for more details.
