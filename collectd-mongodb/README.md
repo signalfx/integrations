@@ -129,7 +129,7 @@ Writes to MongoDB require the use of the global lock. If lock utilization is hig
 
 MongoDB flushes data changes from memory to disk on a timed interval, by default every 60 seconds. If background flushes begin taking longer than usual, it can indicate that the disk doesn't have enough I/O capacity to handle the load (read more below). It could also reflect a large number of writes occurring at once -- check [`counter.opcounters.insert`](././docs/counter.opcounters.insert.md) and [`counter.opcounters.update`](././docs/counter.opcounters.update.md). 
 
-Monitor average background flush time and the most recent background flush time in [`gauge.backgroundFlushing.average_ms`](././docs/gauge.backgroundFlushing.average_ms.md) and [`gauge.backgroundFlushing.last_ms`](gauge.backgroundFlushing.last_ms.md) respectively. 
+Monitor average background flush time and the most recent background flush time in [`gauge.backgroundFlushing.average_ms`](././docs/gauge.backgroundFlushing.average_ms.md) and [`gauge.backgroundFlushing.last_ms`](././docs/gauge.backgroundFlushing.last_ms.md) respectively. 
 
 ![background flush time](././img/background flushes.png) 
 
