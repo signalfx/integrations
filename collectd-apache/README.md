@@ -3,7 +3,7 @@ title: collectd Apache Webserver Plugin
 brief: Apache Webserver metrics for collectd.
 ---
 
-# Apache Webserver Plugin      ![](https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png)
+# Apache collectd Plugin    ![](https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -74,7 +74,7 @@ Apache worker threads can be in one of the following states:
 
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
- #### Note: Make sure that the URL you provide for your mod_status module ends in "?auto". This returns the status page as text/plain, which this plugin requires.
+###### Note: Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as text/plain, which this plugin requires.
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
 
@@ -88,41 +88,28 @@ Apache worker threads can be in one of the following states:
 
 ### CONFIGURATION
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
+#### System configuration:
 
-#### Required configuration
+Add the following to your apache config:
+ ```
+ ExtendedStatus on
+  <Location /mod_status>
+    SetHandler server-status
+  </Location>
+ ```
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
+#### Config file modifications:
 
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 |
+| Value | Description |
+|-------|-------------|
+| URL | The location of your `mod_status` |
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; only version 2 of the License is applicable.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/apache.c).

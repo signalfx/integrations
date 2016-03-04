@@ -3,7 +3,7 @@ title: collectd df Plugin
 brief: Disk Free metrics for collectd.
 ---
 
-# DF (Disk Free) Plugin
+# DF (Disk Free) Plugin  ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

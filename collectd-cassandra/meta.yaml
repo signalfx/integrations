@@ -2,6 +2,6 @@
   "description": "Cassandra collectd plugin",
   "code": "https://github.com/collectd/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
   "featured": true,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra%402x.png"
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra%402x.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png"
 }

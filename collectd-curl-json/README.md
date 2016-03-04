@@ -3,7 +3,7 @@ title: collectd cURL-JSON Plugin
 brief: Use cURL on JSON formatted metrics for collectd.
 ---
 
-# cURL-JSON Plugin
+# cURL-JSON Plugin  ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -37,9 +37,12 @@ This plugin is a generic plugin, i.e. it cannot work without configuration, beca
 
 ### USAGE
 
+There are many potential uses for the cURL-JSON plugin. One example is for gathering metrics from [Riak KV from Basho](http://basho.com/products/riak-kv/). You can find more details on this use case and a Riak KV configuration [here](https://github.com/signalfx/Integrations/tree/master/collectd-riak).
 
 ### METRICS
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
+
+License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/curl_json.c).

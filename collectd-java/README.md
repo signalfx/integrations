@@ -1,15 +1,9 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: Java collectd Plugin
+brief: Java plugin for collectd.
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
-
-# Example Python Plugin
-
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
+# Java collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,97 +15,75 @@ brief: The SignalFx Example Python plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java):
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
+The Java plugin embeds a Java virtual machine (JVM) into collectd and exposes the application programming interface (API) to Java programs. This allows to write own plugins in the popular language, which are then loaded and executed by the daemon without the need to start a new process and JVM every few seconds. Java classes written for the Java plugin are therefore more powerful and efficient than scripts executed by the Exec plugin.
 
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
 
-The plugin also emits a notification every time it starts up.
+The JavaDoc documentation of the API is available.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
-
 This plugin requires:
 
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+- collectd 4.7+
 
 ### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
+This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-Follow these steps to install this plugin:
+### CONFIGURATION
 
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java):
 
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
+The Java plugin makes it possible to write extensions for collectd in Java. This section only discusses the syntax and semantic of the configuration options. For more in-depth information on the Java plugin, please read [collectd-java(5)](https://collectd.org/documentation/manpages/collectd-java.5.shtml).
 
-### CONFIGURATION 
+Synopsis:
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
+```
+ <Plugin "java">
+   JVMArg "-verbose:jni"
+   JVMArg "-Djava.class.path=/opt/collectd/lib/collectd/bindings/java"
+   LoadPlugin "org.collectd.java.Foobar"
+   <Plugin "org.collectd.java.Foobar">
+     # To be parsed by the plugin
+   </Plugin>
+ </Plugin>
+```
 
-#### Required configuration 
+Available configuration options:
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
+**JVMArg _Argument_**
 
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
+ Argument that is to be passed to the Java Virtual Machine (JVM). This works exactly the way the arguments to the java binary on the command line work. Execute `java--help` for details.
 
-#### Optional configuration 
+ Please note that all these options must appear before (i. e. above) any other options! When another option is found, the JVM will be started and later options will have to be ignored!
 
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
+**LoadPlugin _JavaClass_**
 
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+ Instantiates a new JavaClass object. The constructor of this object very likely then registers one or more callback methods with the server.
+
+ See collectd-java(5) for details.
+
+ When the first such option is found, the virtual machine (JVM) is created. This means that all JVMArg options must appear before (i. e. above) all LoadPlugin options!
+
+**Plugin _Name_**
+
+ The entire block is passed to the Java plugin as an org.collectd.api.OConfigItem object.
+
+ For this to work, the plugin has to register a configuration callback first, see collectd-java(5)/"config callback". This means, that the Plugin block must appear after the appropriate LoadPlugin block. Also note, that Name depends on the (Java) plugin registering the callback and is completely independent from the JavaClass argument passed to LoadPlugin.
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+The Java collectd plugin is the swiss army knife of collectd for Java applications. For specific useage details you can take a look at some of the common Java apps that are used with collectd:
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+* [cassandra](https://github.com/signalfx/Integrations/tree/master/collectd-cassandra)
+* [kafka](https://github.com/signalfx/Integrations/tree/master/collectd-kafka)
 
 ### METRICS
 
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+The metrics for the Java collectd plugin will depend on what is generated and passed from the java application for which it is configured.
 
 ### LICENSE
 
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
-
-
+License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/java.c)

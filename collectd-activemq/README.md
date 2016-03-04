@@ -3,7 +3,7 @@ title: collectd ActiveMQ Plugin
 brief: ActiveMQ metrics for collectd.
 ---
 
-# ActiveMQ Plugin
+# ActiveMQ collectd Plugin   ![](https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq.png)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -99,8 +99,8 @@ The following configuration options are *optional*. You may specify them in the 
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/activemq-integration/blob/master/LICENSE) for more details.

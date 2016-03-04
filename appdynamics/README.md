@@ -1,30 +1,44 @@
-# SignalFx AppDynamics client agent [![Build Status](https://travis-ci.org/signalfx/appd-integration.svg)](https://travis-ci.org/signalfx/appd-integration)
+---
+title: AppDynamics Integration
+brief: For sending AppDynamics metrics to SignalFx.
+---
 
-This repository contains agent and libraries for retrieving and reporting AppDynamics metrics
-to SignalFx. You will need AppDynamics username/password and host information as well as
-SignalFx account and organization API token to report the data.
+# AppDynamics Integration   ![](https://github.com/signalfx/Integrations/blob/master/collectd-appdynamics/img/integrations_appdynamics.png)
 
-## Supported Languages
+- [Description](#description)
+- [Requirements and Dependencies](#requirements-and-dependencies)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Metrics](#metrics)
+- [License](#license)
 
-* Java 7+
+### DESCRIPTION
 
-## Sending metrics
+This is the SignalFx AppDynamics integration which brings metrics captured through AppDynamics into SignaFx.
 
-appd-report-standalone module is a standalone process that parses configurations and report
+### REQUIREMENTS AND DEPENDENCIES
+
+| Software  | Version        |
+|-----------|----------------|
+| Java  |  7.0 or later  |
+
+
+### INSTALLATION
+
+[`appd-report-standalone` module](https://github.com/signalfx/appd-integration/tree/master/appd-report-standalone) is a standalone process that parses configurations and report
 AppDynamics metric every specified intervals.
 
-To run
+To install this module
 ```
 maven install
 cd appd-report-standalone
 maven exec:java
 ```
+### CONFIGURATION
 
-### Configurations
+#### Required Environment Variables
 
-#### Environment Variables
-
-Required
 ```
 APPD_USERNAME=<AppDynamics Username>
 APPD_PASSWORD=<AppDynamics Password>
@@ -32,15 +46,18 @@ APPD_HOST=<https://AppDynamics Host>
 SIGNALFX_TOKEN=<SignalFx token>
 ```
 
-Optional
+#### Optional Environment Variables
+
 ```
 SIGNALFX_APPD_METRICS=<metric configurations filename (default to metrics.json)>
 APPD_INTERVAL=<time in minutes of metric lookup interval (default to 1 minute)>
 ```
 
-#### Metrics.json
+### USAGE
 
-Metrics.json contains configurations for list of apps, metrics inside each app and
+### METRICS
+
+[Metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) contains configurations for list of apps, metrics inside each app and
 its dimensions mapping.
 
 AppDynamics metric paths are described as a pipe-delimited string (|),
@@ -51,7 +68,7 @@ and each previous element mapped to a dimension according to the dimensionsPathM
 
 Elements can be ignored by specifying the target dimension as - (dash) in the dimensionsPathMap.
 
-Wild cards (asterisk *) can be used to specify that all matching AppDynamics metrics are
+Wild cards `*` can be used to specify that all matching AppDynamics metrics are
 to be collected. Mapping to dimensions through the dimensionsPathMap will still happen on
 the actual value of that metric path element.
 
@@ -72,6 +89,7 @@ would be mapped to
 ```
 
 Example with wildcard:
+
 ```
 MetricPath = Performance|*|Resources|CPU
 DimensionsPathMap = category|host|-
@@ -94,10 +112,10 @@ time series as
 }
 ```
 
-
 Optional extra dimensions can also be specified for each metric paths.
 
-Following is a working example of metrics.json configurations
+Following is a working example of [metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) configurations:
+
 ```
 [
   {
@@ -127,7 +145,7 @@ Following is a working example of metrics.json configurations
 ]
 ```
 
-Default metrics.json is provided with Application Infrastructure Performance metrics configured.
+Default [metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) is provided with Application Infrastructure Performance metrics configured.
 
 
 ### Process Status Metrics
@@ -139,3 +157,8 @@ That includes:
 - mtsEmpty
 - dataPointsReported
 - appdRequestFailure
+
+
+### LICENSE
+
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/appd-integration/blob/master/LICENSE) for more details.

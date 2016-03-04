@@ -2,6 +2,6 @@
   "description": "Apache collectd plugin",
   "code": "https://github.com/collectd/collectd/blob/master/src/apache.c",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache%402x.png"
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache%402x.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png"
 }

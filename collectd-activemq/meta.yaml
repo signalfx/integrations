@@ -2,6 +2,6 @@
   "description": "ActiveMQ collectd plugin",
   "code": "https://github.com/signalfx/activemq-integration",
   "featured": true,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_activemq%402x.png"
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq%402x.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq.png"
 }

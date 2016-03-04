@@ -1,7 +1,7 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
+{ "display_name":"SignalFx collectd",
+  "description": "SignalFx validated version of collectd",
+  "code": "https://github.com/signalfx/collectd",
   "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd%402x.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png"
 }
