@@ -11,6 +11,12 @@ brief: Programmatic interface in Python for SignalFx's metadata and ingest APIs
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
+ - [Sending metrics](#sending-metrics)
+ - [Sending multi-dimensional metrics](#multi-dimensional)
+ - [Sending events](#sending-events)
+ - [Metric metadata](#metric-metadata)
+ - [AWS integration](#AWS-integration)
+ - [Pyformance reporter](#pyformance-reporter)
 - [Known Issues](#issues)
 - [License](#license)
 
@@ -32,14 +38,13 @@ libraries.
 
 #### Python version
 
-The Python client library requires Python 2.7.9 or
-higher.
+Python 2.7.9 or higher is recommended.
 
 #### API access token
 
 To use this library, you need a SignalFx API access
-token, which can be obtained from the SignalFx
-organization you want to report data into.
+token, which can be [obtained from the SignalFx
+organization](https://support.signalfx.com/hc/en-us/articles/203779639#apitoken) you want to report data into.
 
 
 ### <a name="installation"></a>INSTALLATION
@@ -61,7 +66,7 @@ python setup.py install
 
 ### <a name="usage"></a>USAGE
 
-#### Sending metrics
+#### <a name="sending-metrics">Sending metrics
 
 The core function of the library is to send metric data to SignalFx. For example:
 
@@ -118,7 +123,7 @@ datapoints without blocking the caller. Calling
 `stop()` will gracefully flush the thread's send
 queue and close its TCP connections.
 
-#### Sending multi-dimensional metrics
+#### <a name="multi-dimensional">Sending multi-dimensional metrics
 
 The SignalFx data format includes the concept of
 dimensions. Time series dimensions are custom key/value
@@ -154,7 +159,7 @@ sfx.stop()
 See [`examples/generic_usecase.py`](examples/generic_usecase.py) for a
 complete code sample showing how to send data to SignalFx.
 
-#### Sending events
+#### <a name="sending-events">Sending events
 
 Events can be sent to SignalFx via the `send_event` function. The
 event type must be specified, and dimensions and extra event properties
@@ -176,7 +181,7 @@ sfx.send_event(
 
 See `examples/generic_usecase.py` for a complete code example.
 
-#### Metric metadata
+#### <a name="metric-metadata">Metric metadata
 
 The library includes functions that search, get, and update metric dimensions, properties and tags.  Deleting tags is also supported.
 
@@ -189,7 +194,7 @@ sfx.update_tag('some_tag_name',
                 custom_properties={'version':'some_number'})
 ```
 
-#### AWS integration
+#### <a name="AWS-integration">AWS integration
 
 Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the AWS unique ID of the current host as an extra dimension. For example:
 
@@ -211,11 +216,13 @@ sfx.send(
 sfx.stop()
 ```
 
-#### Pyformance reporter
+#### <a name="pyformance-reporter">Pyformance reporter
 
-`pyformance` is a Python library that provides CodaHale-style metrics in
-a very Pythonic way. We offer a reporter that can report the
-`pyformance` metric registry data directly to SignalFx.
+`pyformance` is a [Python library](https://github.com/omergertel/pyformance)
+that provides [CodaHale](http://metrics.codahale.com/)-style metrics in
+a very Pythonic way. We offer a reporter that can
+report the `pyformance` metric registry data directly
+to SignalFx.
 
 ```python
 from pyformance import count_calls, gauge
