@@ -1,0 +1,7 @@
+{ "display_name":"GenericJMX collectd Plugin",
+  "description": "collectd plugin required to use JAVA application",
+  "code": "https://github.com/collectd/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
+  "featured": false,
+  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-java/img/integrations_jmx.png",
+  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-java/img/integrations_jmx%402x.png"
+}

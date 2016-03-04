@@ -1,7 +1,7 @@
 ---
 title: Total Requests 
 brief: Requests received by the server
-metric_type: gauge
+metric_type: cumulative_counter
 ---
 
 ###Total Requests 
