@@ -15,15 +15,6 @@ brief: RabbitMQ plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect.
-
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd.
-
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
-
-The plugin also emits a notification every time it starts up.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -41,69 +32,65 @@ This plugin requires:
 
 ### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully.
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
+1. Install the Python plugin for collectd.
 
-Follow these steps to install this plugin:
+ ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2:
+ Run the following command to install the Python plugin for collectd:
+ ```
+ yum install collectd-python
+ ```
+ ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
-  ```
-  include '/path/to/10-configfile.conf'
-  ```
-5. Restart collectd.
+ This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+
+1. Download the [RabbitMQ Python module]( https://github.com/signalfx/collectd-rabbitmq/)
+
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/Integrations/collectd-docker/10-rabbitmq.conf).
+
+1. Modify the configuration file as follows:
+
+ 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
+
+ 1. Provide values that make sense for your environment, as described [below](#configuration).
+
+1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
+ ```
+ include '/path/to/10-rabbitmq.conf'
+ ```
+1. Restart collectd.
+
+collectd will begin emitting metrics from RabbitMQ.
 
 ### CONFIGURATION
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
+#### REQUIRED CONFIGURATION
 
-#### Required configuration
+| Configuration Option | Type | Definition |
+|----------------------|------|------------|
+| Username | username| name of authorized user |
+| Password | password| password for authorized user|
+|Host | host| name of host |
+|Port| number | port number to listen for RabbitMQ |
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
+#### OPTIONAL Configuration
 
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 |
+| Configuration Option | Type | Definition |
+|----------------------|------|------------|
+|CollectChannels| true/false| toggles the collection of `channels` metrics |
+|CollectConnections| true/false| toggles the collection of `connections` metrics|
+|CollectExchanges |true/false| toggles the collection of `exchanges` metrics|
+|CollectNodes |true/false| toggles the collection of `nodes` metrics|
+|CollectQueues | true/false | toggles the collection of `queues` metrics|
+| HTTPTimeout | time (seconds) | will set a timeout value for connecting to the RabbitMQ Management API|
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap.
 
 ### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions.
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-rabbitmq/blob/master/LICENSE) for more details.
