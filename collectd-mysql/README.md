@@ -3,8 +3,6 @@ title: collectd MySQL plugin
 brief: Use this plugin to collect metrics from MySQL. 
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
-
 # MySQL Plugin
 
 - [Description](#description)
@@ -44,7 +42,7 @@ Follow these steps to install and configure this plugin:
 
   **Ubuntu 12.04, 14.04, & 15.04 and Debian 7 & 8:**
 
-  This plugin is included with SignalFx's collectd package.
+  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
   **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**:
 
@@ -63,18 +61,6 @@ Follow these steps to install and configure this plugin:
   ```
 
 1. Restart collectd.
-
-Follow these steps to install this plugin:
-
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
-
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
 
 ### CONFIGURATION 
 
@@ -103,28 +89,30 @@ To illustrate the difference between these two uses of "Database", the example c
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_MySQL.json).
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
+For general reference on how to monitor MySQL performance using this plugin, see [documentation on collectd.org](https://collectd.org/wiki/index.php/Plugin:MySQL).
 
-![Example chart showing gauge.sine](http://fixme)
+**Monitoring multiple MySQL nodes**
 
-The following conditions may be cause for concern:
+![Example dashboard showing MySQL nodes](././img/MySQL nodes dashboard.png)
 
-*You see a straight line instead of a curve.*
+*Example dashboard showing performance of multiple MySQL nodes.*
 
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+**Monitoring a single MySQL node**
+
+![Example dashboard showing a single MySQL host](././img/MySQL node dashboard.png)
+
+*Example dashboard showing performance of a single MySQL node.*
 
 ### METRICS
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
-### LICENSE
+#### Note: This plugin may not emit all listed metrics
 
-> Include licensing information for the plugin in this section.
+This plugin will not emit metrics about features that are not used. For example, this plugin will not emit a count of an operation that has never occurred. For another example, this plugin will not emit metrics about the query cache if MySQL is not configured to use the query cache.
+
+### LICENSE
 
 This plugin is released under the [GNU General Public license v2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
