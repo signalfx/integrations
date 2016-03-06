@@ -1,117 +1,241 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: Node.js client library
+brief: Programmatic interface in JavaScript for SignalFx's metadata and ingest APIs
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
 
-# Example Python Plugin
+# Node.js client library for SignalFx
 
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Usage](#usage)
-- [Metrics](#metrics)
+ - [Create client](#create-client)
+ - [Sending metrics](#sending-metrics)
+ - [Sending multi-dimensional metrics](#multi-dimensional)
+ - [Sending events](#sending-events)
+- [Examples](#examples)
 - [License](#license)
 
-### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+### <a name="description"></a>DESCRIPTION
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
-
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
-
-The plugin also emits a notification every time it starts up.
-
-### REQUIREMENTS AND DEPENDENCIES
-
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
-
-This plugin requires:
-
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
-
-### INSTALLATION
-
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
-
-Follow these steps to install this plugin:
-
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
-
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
-
-### CONFIGURATION 
-
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
-
-#### Required configuration 
-
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
-
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration 
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
-
-### USAGE
-
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
-
-### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
-
-### LICENSE
-
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
+<code>signalfx-nodejs</code> is a programmatic interface in JavaScript
+for SignalFx's metadata and ingest APIs. It is meant to provide a base
+for communicating with SignalFx APIs that can be easily leveraged by
+scripts and applications to interact with SignalFx or report metric
+and event data to SignalFx.
 
 
+### <a name="requirements-and-dependencies"></a>REQUIREMENTS AND DEPENDENCIES
+
+#### API access token
+
+To use this library, you need a SignalFx API access
+token, which can be [obtained from the SignalFx
+organization](https://support.signalfx.com/hc/en-us/articles/203779639#apitoken) you want to report data into.
+
+
+### <a name="installation"></a>INSTALLATION
+
+To install using npm:
+```sh
+$ npm install signalfx --save-dev
+```
+
+
+### <a name="usage"></a>USAGE
+
+#### <a name="create-client">Create client
+
+There are two ways to create a client object:
+
++ The default constructor `SignalFx`. This constructor uses Protobuf to send data to SignalFx. If it cannot send Protobuf, it falls back to sending JSON.
++ The JSON constructor `SignalFxJson`. This constructor uses JSON format to send data to SignalFx.
+
+```js
+var signalfx = require('signalfx');
+
+// Create default client
+var client = new signalFx.SignalFx('MY_SIGNALFX_TOKEN' [, options]);
+// or create JSON client
+var clientJson = new signalFx.SignalFxJson('MY_SIGNALFX_TOKEN' [, options]);
+```
+Object `options` is an optional map and may contains following fields:
++ **enableAmazonUniqueId** - boolean, `false` by default. If `true`, library will retrieve Amazon unique identifier and set it as `AWSUniqueId` dimension for each datapoint and event. Use this option only if your application deployed to Amazon  
++ **dimensions** - object, pre-defined dimensions for each datapoint and event. This object has key-value format `{ dimension_name: dimension_value, ...}`
++ **ingestEndpoint** -  string, custom url to send datapoints in format http://custom.domain/api/path
++ **timeout** - number, sending datapoints timeout in ms (default is 1000ms)
++ **batchSize** - number, batch size to group sending datapoints
++ **userAgents** - array of strings, items from this array will be added to 'user-agent' header separated by comma
+
+
+#### <a name="sending-metrics">Sending metrics
+
+The core function of the library is to send metric data to SignalFx. For example:
+
+```js
+var signalfx = require('signalfx');
+
+var client = new signalFx.SignalFx('MY_SIGNALFX_TOKEN');
+
+client.send({
+           cumulative_counters:[
+             {  metric: 'myfunc.calls_cumulative',
+                value: 10,
+                timestamp: 1442960607000},
+             ...
+           ],
+           gauges:[
+             {  metric: 'myfunc.time',
+                value: 532,
+                timestamp: 1442960607000},
+             ...
+           ],
+           counters:[
+             {  metric: 'myfunc.calls',
+                value: 42,
+                timestamp: 1442960607000},
+             ...
+           ]});
+```
+The `timestamp` must be a millisecond precision timestamp;
+the number of milliseconds elapsed since Epoch. The `timestamp`
+field is optional, but strongly recommended. If not specified,
+it will be set by SignalFx's ingest servers automatically;
+in this situation, the timestamp of your datapoints will not
+accurately represent the time of their measurement (network
+latency, batching, etc. will all impact when those
+datapoints actually make it to SignalFx).
+
+#### <a name="multi-dimensional">Sending multi-dimensional metrics
+
+The SignalFx data format includes the concept of
+dimensions. Time series dimensions are custom key/value
+pairs in combination with the metric name that identify
+the metric time series. Dimensions are also useful in
+aggregating and filtering metrics. For example, sending
+an "environment" dimension with each datapoint would
+allow you to vary alerts based on the different
+environments that metrics are being sent from.
+
+Reporting dimensions for the data can be accomplished
+by specifying a `dimensions` parameter on each datapoint
+containing a dictionary of string to string key/value
+pairs representing the dimensions:
+
+```js
+var signalfx = require('signalfx');
+
+var client = new signalFx.SignalFx('MY_SIGNALFX_TOKEN');
+
+client.send({
+          cumulative_counters:[
+            { 'metric': 'myfunc.calls_cumulative',
+              'value': 10,
+              'dimensions': {'host': 'server1', 'host_ip': '1.2.3.4'}},
+            ...
+          ],
+          gauges:[
+            { 'metric': 'myfunc.time',
+              'value': 532,
+              'dimensions': {'host': 'server1', 'host_ip': '1.2.3.4'}},
+            ...
+          ],
+          counters:[
+            { 'metric': 'myfunc.calls',
+              'value': 42,
+              'dimensions': {'host': 'server1', 'host_ip': '1.2.3.4'}},
+            ...
+          ]});
+```
+
+#### <a name="sending-events">Sending events
+
+Events can be send to SignalFx via the `sendEvent` function. The
+event param objects must be specified. `Event` param object is an optional map and may contains following fields:
+
++ **eventType** (string) - Required field. The event type (name of the event time series).
++ **category** (int) - the category of event. Choose one from EVENT_CATEGORIES list.
+Different categories of events are supported.Available categories of events are `USER_DEFINED`, `ALERT`, `AUDIT`, `JOB`,
+`COLLECTD`, `SERVICE_DISCOVERY`, `EXCEPTION`. For mode details see
+`proto/signal_fx_protocol_buffers.proto` file. Value by default is `USER_DEFINED`
++ **dimensions**  (dict) - a map of event dimensions, empty dictionary by default
++ **properties**  (dict) - a map of extra properties on that event, empty dictionary by default
++ **timestamp** (int64) - a timestamp, by default is current time
+ Also please specify event category: for that get
+option from dictionary `client.EVENT_CATEGORIES`.
+
+```js
+var signalfx = require('signalfx');
+
+var client = new signalFx.SignalFx('MY_SIGNALFX_TOKEN');
+
+client.sendEvent({
+          category: '[event_category]',
+          eventType: '[event_type]',
+          dimensions: {
+              'host': 'myhost',
+              'service': 'myservice',
+              'instance': 'myinstance'
+          },
+          properties: {
+              'version': 'event_version'},
+          timestamp: timestamp})
+```
+
+### <a name="examples"> Examples
+
+Complete code example for Reporting data
+```js
+var signalfx = require('signalfx');
+
+var myToken = 'MY_SIGNALFX_TOKEN';
+
+var client = new signalFx.SignalFx(myToken);
+var gauges = [{
+        metric: 'test.cpu',
+        value: 10
+      }];
+
+var counters = [{
+        metric: 'cpu_cnt',
+        value:  2
+      }];
+
+client.send({gauges: gauges, counters: counters});
+```
+
+Complete code example for Sending events
+```js
+var signalfx = require('signalfx');
+
+var myToken = '[MY_SIGNALFX_TOKEN]';
+
+var client = new signalFx.SignalFx(myToken);
+
+var eventCategory = client.EVENT_CATEGORIES.USER_DEFINED
+var eventType = 'deployment'
+var dimensions = {
+     host: 'myhost',
+     service: 'myservice',
+     instance: 'myinstance'
+  };
+var properties = {version: '[EVENT-VERSION]'};
+
+client.sendEvent({category: eventCategory,
+            eventType: eventType,
+            dimensions: dimensions,
+            properties:properties});
+```
+See `example/generic_usage.js` for a complete code example for Reporting data.
+Set your SignalFx token and run example
+
+```sh
+$ node path/to/example/generic_usage.js
+```
+
+### <a name="license"></a>LICENSE
+
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-nodejs/blob/master/LICENSE) for more details.
