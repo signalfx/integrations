@@ -238,4 +238,4 @@ $ node path/to/example/generic_usage.js
 
 ### <a name="license"></a>LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-nodejs/blob/master/LICENSE) for more details.
+This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-nodejs/blob/master/LICENSE) for more details.
