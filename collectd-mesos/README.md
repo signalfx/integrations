@@ -18,7 +18,9 @@ brief: Use this plugin to collect data about Apache Mesos.
 This README describes the Mesos plugin for collectd. Use it to monitor your Mesos installation. 
 
 Use this plugin to monitor the following information about Mesos:
-  - **???**
+  - Cluster status: number of activated slaves, schedulers and tasks
+  - CPU, disk and memory usage for Mesos
+  - Tasks finished, lost, and failed
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -30,10 +32,6 @@ This plugin requires:
 - Mesos 0.19.0 or greater
 
 ### INSTALLATION
-
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
 
 Follow these steps to install this plugin:
 
@@ -52,12 +50,12 @@ Follow these steps to install this plugin:
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
 1. Download the [Python module for Mesos](https://github.com/signalfx/collectd-mesos).
-1. Download SignalFx's sample configuration files for this plugin: for [Mesos masters](././10-mesos-master.conf), and [Mesos slaves](././10-mesos-agent.conf). 
+1. Download SignalFx's sample configuration files for this plugin: for [Mesos masters](././10-mesos-master.conf), and [Mesos slaves](././10-mesos-slave.conf). 
 3. Modify the appropriate sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
 4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
 
   ``` 
-  include '/path/to/10-mesos-[agent/master].conf' 
+  include '/path/to/10-mesos-[slave/master].conf' 
   ```
 5. Restart collectd. 
 
@@ -68,9 +66,11 @@ Using the example configuration files [`10-mesos-master.conf`](././10-mesos-mast
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/collectd-mesos" |
-| Host  | The hostname or IP address of the Mesos instance to be monitored. | "%%%AGENT_IP%%%" | 
-| Port | The port on which collectd can connect to Mesos. | %%%AGENT_PORT%%% |
-| Verbose | **???** | true |
+| Cluster | The name of the cluster to which the Mesos instance belongs. Appears in the dimension `cluster`. | "cluster-0" |
+| Instance | The name of this Mesos master/slave instance. Appears in the dimension `plugin_instance`. | "master-0" / "slave-0" |
+| Host  | The hostname or IP address of the Mesos instance to be monitored. | "%%%MASTER_IP%%%" | 
+| Port | The port on which the Mesos instance is listening for connections. | %%%MASTER_PORT%%% |
+| Verbose | Enable verbose logging from this plugin to collectd's log file | false |
 | Version | The version of Mesos being monitored. | "%%%VERSION_MESOS%%%" |
 
 ### USAGE
