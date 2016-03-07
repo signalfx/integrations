@@ -1237,7 +1237,7 @@
   "marshallId" : 14,
   "marshallMemberOf" : [ 13 ]
 }, {
-  "sf_chart" : "Top Memory Filures PODs",
+  "sf_chart" : "Top Memory Failures PODs",
   "sf_uiModel" : {
     "revisionNumber" : 10,
     "chartType" : "line",
