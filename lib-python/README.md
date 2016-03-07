@@ -38,7 +38,10 @@ libraries.
 
 #### Python version
 
-Python 2.7.9 or higher is recommended.
+Python 2.7.9 or higher is recommended. If you are
+not making API calls to interact with SignalFx
+metadata, then you need only use Python 2.6.9 or
+higher.
 
 #### API access token
 
@@ -216,7 +219,7 @@ sfx.send(
 sfx.stop()
 ```
 
-#### <a name="pyformance-reporter">Pyformance reporter
+#### <a name="pyformance-reporter">PyFormance reporter
 
 `pyformance` is a [Python library](https://github.com/omergertel/pyformance)
 that provides [CodaHale](http://metrics.codahale.com/)-style metrics in
@@ -269,15 +272,15 @@ sfx = signalfx.SignalFx('MY_TOKEN')
 atexit.register(sfx.stop)
 ```
 
-#### SSLError when sending events by calling send_event() method
+#### SSLError when working with tags, metrics, dimensions, metrictimeseries, organization
 
 ```
 ERROR:root:Posting to SignalFx failed.
-SSLError: hostname 'ingest.signalfx.com' doesn't match either of
+SSLError: hostname 'api.signalfx.com' doesn't match either of
 '*.signalfuse.com', 'signalfuse.com'.
 ```
 
-SignalFx's API endpoints have SSL SNI enabled and the
+SignalFx's API endpoint (https://api.signalfx.com) has SSL SNI enabled and the
 `urllib3` module in Python versions prior to 2.7.8 had
 a bug that causes the above issue. This was fixed in
 later versions of Python; we recommend using Python
@@ -285,4 +288,4 @@ later versions of Python; we recommend using Python
 
 ### <a name="license"></a>LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-python/blob/master/LICENSE) for more details.
+This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-python/blob/master/LICENSE) for more details.
