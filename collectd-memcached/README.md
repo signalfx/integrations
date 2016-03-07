@@ -3,7 +3,7 @@ title: Memcached collectd Plugin
 brief: Memcached metrics for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached Plugin
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -49,7 +49,7 @@ Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewSta
  ```
  Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 1. Download SignalFx's sample JMX configuration file and sample Kafka configuration file from the following URLs:
 

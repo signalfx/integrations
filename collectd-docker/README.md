@@ -19,15 +19,11 @@ This is the SignalFx Docker plugin. Follow these instructions to install the Doc
 
 The [`docker-collectd`](https://github.com/signalfx/docker-collectd) plugin collects metrics about the Docker containers running on the system using Docker's stats API. It reports metrics about the CPU utilization of each container, their memory consumption, and their network and disk activity.
 
-All metrics reported by the Docker collectd plugin will contain the
-following dimensions:
+All metrics reported by the Docker collectd plugin will contain the following dimensions:
 
-* `host` will contain the hostname (as known by collectd) of the machine
-  reporting the metrics
+* `host` will contain the hostname (as known by collectd) of the machine reporting the metrics
 * `plugin` is always set to `docker`
-* `plugin_instance` will contain the name of the container the metrics
-  are from. The container name is used because that's usually a more
-  stable value than the container ID, which changes on every restart
+* `plugin_instance` will contain the name of the container the metrics are from. The container name is used because that's usually a more stable value than the container ID, which changes on every restart
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -52,7 +48,7 @@ following dimensions:
  ```
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 1. Download the Python module from the following URL:
 
@@ -105,4 +101,4 @@ For full documentation of the metrics and dimensions emitted by this plugin, see
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/docker-collectd-plugin/blob/master/LICENSE) for more details.

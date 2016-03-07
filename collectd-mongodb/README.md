@@ -3,7 +3,7 @@ title: collectd MongoDB Plugin
 brief: Use the collectd-mongodb plugin to collect metrics from MongoDB nodes.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB Plugin
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -63,7 +63,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
  **Ubuntu 12.04, 14.04, 15.04 and Debian 7 & 8:**
 
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
  Run the following commands to install `pip` and `pymongo`:
 
  ```

@@ -2,8 +2,8 @@
 title: collectd Cassandra Plugin
 brief: Cassandra metrics for collectd.
 ---
-
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png) Cassandra collectd Plugin
+![](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png)
+# Cassandra collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -27,19 +27,18 @@ Use this plugin to monitor the following types of information from Cassandra nod
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) collectd plugin to collect metrics about Apache Cassandra. An example config file for collecting data about Cassandra using this plugin can be found in our [collectd configs repo](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/20-cassandra.conf).
-
 ### Version information
 
 | Software  | Version        |
 |-----------|----------------|
-| collectd  |  4.9 or later  |
-| cassandra | 2.0.10 or later|
+| collectd  |  4.9+  |
+| java collectd plugin | 4.9+ |
+| cassandra | 2.0.10+ |
 
 
 ### INSTALLATION
 
-1. Install the Java plugin.
+1. Install the [Java plugin](https://collectd.org/wiki/index.php/Plugin:GenericJMX).
 
  RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
@@ -50,7 +49,7 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
  ```
  Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 1. Download SignalFx's sample JMX configuration file and sample Cassandra configuration file from the following URLs:
 
