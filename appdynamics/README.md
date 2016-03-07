@@ -3,8 +3,8 @@ title: AppDynamics Integration
 brief: For sending AppDynamics metrics to SignalFx.
 ---
 
-![](https://github.com/signalfx/Integrations/blob/master/appdynamics/img/integrations_appdynamics.png)
-# AppDynamics Integration   
+
+# ![](https://github.com/signalfx/Integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics Integration   
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
