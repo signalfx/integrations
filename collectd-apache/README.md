@@ -60,7 +60,7 @@ Apache worker threads can be in one of the following states:
 
  #### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
 
  #### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 

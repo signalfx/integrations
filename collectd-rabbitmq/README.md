@@ -2,8 +2,8 @@
 title: RabbitMQ collectd Plugin
 brief: RabbitMQ plugin for collectd.
 ---
-![](https://github.com/signalfx/Integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png)
-# RabbitMQ collectd Plugin
+
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png) RabbitMQ collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -42,7 +42,7 @@ This plugin requires:
  ```
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 1. Download the [RabbitMQ Python module]( https://github.com/signalfx/collectd-rabbitmq/)
 

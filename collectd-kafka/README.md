@@ -3,7 +3,7 @@ title: collectd Kafka Plugin
 brief: Kafka metrics for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-kafka/img/integrations_kafka.png) Kafka Plugin
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd-kafka/img/integrations_kafka.png) Kafka Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -39,7 +39,7 @@ This is the SignalFx Kafka plugin. Follow these instructions to configure the Ja
  ```
  Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
 
 1. Download SignalFx's sample JMX configuration file and sample Kafka configuration file from the following URLs:
 
@@ -64,7 +64,7 @@ or
 
 1. Restart collectd.
 
-collectd will begin emitting metrics from elasticsearch.
+collectd will begin emitting metrics from kafka.
 
 ### CONFIGURATION
 
@@ -74,15 +74,10 @@ collectd will begin emitting metrics from elasticsearch.
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
