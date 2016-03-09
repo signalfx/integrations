@@ -3,8 +3,8 @@ title: StatsD collectd Plugin
 brief: StatsD plugin for collectd.
 ---
 
-![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
-# StatsD collectd Plugin
+
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) StatsD collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
