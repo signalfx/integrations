@@ -48,6 +48,18 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 
 ### USAGE
 
+This is a plugin used to gather data about specific protocols in use by a host or collectd instance. By default the protocols that the SignalFx configuration gather metrics on are:
+
+| `Value` | default | Definition |
+|----------------------|------|------------|
+| Icmp |`Icmp:InDestUnreachs`| |
+|Tcp|`Tcp:CurrEstab`| The number of TCP connections for which the current state is either ESTABLISHED or CLOSE- WAIT. |
+|Tcp| `Tcp:OutSegs` | The total number of segments that have been sent, including those on current connections but excluding those containing only retransmitted octets. |
+|Tcp | `Tcp:RetransSegs` | The total number of TCP segments that have been transmitted containing one or more previously transmitted octets. |
+|TcpExt | `TcpExt:DelayedACKs` | delayed acknowledgements |
+|Tcp | `Tcp:.*Opens/`|  To select all TCP values with an extension including the variable `Opens`|
+|TcpExt| `/^TcpExt:.*Octets/` |To select all "extended" TCP values with an extension including the variable `Octets` |
+
 
 ### METRICS
 
