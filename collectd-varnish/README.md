@@ -3,7 +3,6 @@ title: Varnish collectd Plugin
 brief: Varnish plugin for collectd.
 ---
 
-
 # ![](https://github.com/signalfx/Integrations/blob/master/collectd-varnish/img/integrations_varnish.png) Varnish collectd Plugin
 
 - [Description](#description)
