@@ -37,7 +37,26 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+1. Install the collectd plugin.
+ ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+
+ ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
+ Run the following command to install this plugin:
+ ```
+ yum install collectd-statsd
+ ```
+1. Download SignalFx's [sample statsd configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-statsd/10-statsd.conf)
+
+  Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
+
+1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
+```
+include '/path/to/10-statsd.conf'
+```
+1. Restart collectd.
+
+Metrics from statsd will begin streaming into SignalFx, and new built-in dashboards will be created for you.
 
 ### CONFIGURATION
 
@@ -73,4 +92,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/statsd.c)
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/statsd.c).
