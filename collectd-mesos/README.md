@@ -28,7 +28,7 @@ This plugin requires:
 
 - collectd 4.9+ 
 - Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+ <-- **??????**
+- Python 2.3+
 - Mesos 0.19.0 or greater
 
 ### INSTALLATION
@@ -61,7 +61,7 @@ Follow these steps to install this plugin:
 
 ### CONFIGURATION 
 
-Using the example configuration files [`10-mesos-master.conf`](././10-mesos-master.conf) or [`10-mesos-agent.conf`](././10-mesos-agent.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Mesos instance to be monitored.
+Using the example configuration files [`10-mesos-master.conf`](././10-mesos-master.conf) or [`10-mesos-slave.conf`](././10-mesos-slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Mesos instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
@@ -71,7 +71,6 @@ Using the example configuration files [`10-mesos-master.conf`](././10-mesos-mast
 | Host  | The hostname or IP address of the Mesos instance to be monitored. | "%%%MASTER_IP%%%" | 
 | Port | The port on which the Mesos instance is listening for connections. | %%%MASTER_PORT%%% |
 | Verbose | Enable verbose logging from this plugin to collectd's log file | false |
-| Version | The version of Mesos being monitored. | "%%%VERSION_MESOS%%%" |
 
 ### USAGE
 
