@@ -60,8 +60,8 @@ There is no configuration required for the varnish collectd plugin. The default 
 
 If there is the desire to reduce the metrics that are sent you can update the configuration and set the desired values to `false`
 
-| Setting            | Description                                                                                                       | Default  |
-|--------------------|-------------------------------------------------------------------------------------------------------------------|----------|
+| Setting            | Description     | Default  |
+|--------------------|----------------------------|----------|
 | CollectBackend     | Back-end connection statistics, such as successful, reused, and closed connections.                               | enabled  |
 | CollectCache       | Cache hits and misses.                                                                                            | enabled  |
 | CollectConnections | Number of client connections received, accepted and dropped.                                                      | enabled  |
