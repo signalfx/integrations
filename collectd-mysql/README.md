@@ -1,6 +1,6 @@
 ---
 title: collectd MySQL plugin
-brief: Use this plugin to collect metrics from MySQL. 
+brief: Use this plugin to collect metrics from MySQL.
 ---
 
 # MySQL Plugin
@@ -15,13 +15,13 @@ brief: Use this plugin to collect metrics from MySQL.
 
 ### DESCRIPTION
 
-This file describes the MySQL plugin for collectd. Use it to monitor MySQL database performance. 
+This file describes the MySQL plugin for collectd. Use it to monitor MySQL database performance.
 
 This plugin connects to a MySQL instance and reports on the values returned by a `SHOW STATUS` command. This includes the following:
 
   - Number of commands processed
   - Table and row operations (handlers)
-  - State of the query cache 
+  - State of the query cache
   - Status of MySQL threads
   - Network traffic
 
@@ -62,30 +62,30 @@ Follow these steps to install and configure this plugin:
 
 1. Restart collectd.
 
-### CONFIGURATION 
+### CONFIGURATION
 
 Using the example configuration file [`10-mysql.conf`](././10-mysql.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MySQL instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | Database (in block declaration) | The value of the dimension `plugin_instance` that will be recorded for this database. | hostA_database1 |
-| Host  | The host on which MySQL is running. | "10.128.8.2" | 
+| Host  | The host on which MySQL is running. | "10.128.8.2" |
 | Socket | A socket that collectd can use to connect to the database. You may be able to find this value by looking at the command used to run MySQL on your server as follows: <code>ps auwxxx &#124; grep mysql<code> | "/var/run/mysqld/mysqld.sock" |
 | User | A valid username that collectd can use to connect to MySQL. | "root"
 | Password | Password for the username given in User. | "abcdABCD1." |
 | Database (within block) | The name of the MySQL database to monitor. | "mysql_one" |
 
 #### Note: Monitoring multiple instances
-The sample configuration file is configured to illustrate how to configure this plugin to monitor multiple databases, on the same host or on different hosts. 
+The sample configuration file is configured to illustrate how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
 
-To monitor just one database, include just one Database block and delete the others. 
+To monitor just one database, include just one Database block and delete the others.
 
 #### Note: Two different directives called "Database"
-This plugin configuration file uses directives called “Database” in two different places: one in each block declaration, and one within each block. 
+This plugin configuration file uses directives called “Database” in two different places: one in each block declaration, and one within each block.
 
-The value of “Database” in the block declaration indicates the value of the  `plugin_instance` dimension that will be recorded for this database. The value of “Database” within the block indicates the `db_name` of the MySQL database to monitor using this configuration. 
+The value of “Database” in the block declaration indicates the value of the  `plugin_instance` dimension that will be recorded for this database. The value of “Database” within the block indicates the `db_name` of the MySQL database to monitor using this configuration.
 
-To illustrate the difference between these two uses of "Database", the example configuration given in [`10-mysql.conf`](././10-mysql.conf) directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3. 
+To illustrate the difference between these two uses of "Database", the example configuration given in [`10-mysql.conf`](././10-mysql.conf) directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3.
 
 ### USAGE
 
@@ -115,4 +115,4 @@ This plugin will not emit metrics about features that are not used. For example,
 
 ### LICENSE
 
-This plugin is released under the [GNU General Public license v2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/mysql.c).

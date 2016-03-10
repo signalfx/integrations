@@ -17,7 +17,7 @@ brief: Load plugin for collectd.
 
 From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Load):
 
-The Load plugin collects the system load. These numbers give a rough overview over the utilization of a machine, though their meaning is mostly overrated.
+> The Load plugin collects the system load. These numbers give a rough overview over the utilization of a machine, though their meaning is mostly overrated.
 The system load is defined as the number of runnable tasks in the run-queue and is provided by many operating systems as a one, five or fifteen minute average.
 
 ### REQUIREMENTS AND DEPENDENCIES

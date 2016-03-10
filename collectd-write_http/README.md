@@ -1,15 +1,9 @@
 ---
-title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+title: Write-http collectd Plugin
+brief: Write-http plugin for collectd.
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
-
-# Example Python Plugin
-
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
->
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) write-http collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,97 +15,66 @@ brief: The SignalFx Example Python plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
-
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
-
-This plugin emits 3 metrics:
-- one gauge in the form of a sine wave
-- two counters for number of datapoints and events seen
-
-The plugin also emits a notification every time it starts up.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->In this section, list:
->- collectd version requirements
->- Version and configuration requirements for the application being monitored
->- Other plugins that this plugin depends on (like the Python or Java plugins for collectd)
->- Any other dependencies that this plugin requires in order to run successfully
-
 This plugin requires:
 
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+- collectd 4.8+
 
 ### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
->
->This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
 
-Follow these steps to install this plugin:
+### CONFIGURATION
 
-1. Download this repository to your local machine.
-2. Download the sample configuration file from signalfx-integrations/helloworld/.
-3. Modify the sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2: 
+From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_write_http):
 
-  ``` 
-  include '/path/to/10-configfile.conf' 
-  ```
-5. Restart collectd. 
+>This output plugin submits values to an HTTP server using POST requests and encoding metrics with JSON or using the PUTVAL command described in collectd-unixsock(5).
 
-### CONFIGURATION 
+```
+Synopsis:
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
+ <Plugin "write_http">
+   <Node "example">
+     URL "http://example.com/post-collectd";
+     User "collectd"
+     Password "weCh3ik0"
+     Format JSON
+   </Node>
+ </Plugin>
+```
+> The plugin can send values to multiple HTTP servers by specifying one <Node Name> block for each server. Within each Node block, the following options are available:
 
-#### Required configuration 
+| Option | type | description |
+|----------|---------|---------------------|
+|URL| URL|URL to which the values are submitted to. Mandatory.|
+|User| Username|Optional user name needed for authentication.|
+|Password| Password|Optional password needed for authentication.|
+|VerifyPeer| true/false|Enable or disable peer SSL certificate verification. See http://curl.haxx.se/docs/sslcerts.html for details. Enabled by default.|
+|VerifyHost| true/false|Enable or disable peer host name verification. If enabled, the plugin checks if the Common Name or a Subject Alternate Name field of the SSL certificate matches the host name provided by the URL option. If this identity check fails, the connection is aborted. Obviously, only works when connecting to a SSL enabled server. Enabled by default.|
+|CACert |File|File that holds one or more SSL certificates. If you want to use HTTPS you will possibly need this option. What CA certificates come bundled with libcurl and are checked by default depends on the distribution you use.|
+|CAPath| Directory|Directory holding one or more CA certificate files. You can use this if for some reason all the needed CA certificates aren't in the same file and can't be pointed to using the CACert option. Requires libcurl to be built against OpenSSL.|
+|ClientKey| File|File that holds the private key in PEM format to be used for certificate-based authentication.|
+|ClientCert| File|File that holds the SSL certificate to be used for certificate-based authentication.|
+|ClientKeyPass| Password|Password required to load the private key in ClientKey.|
+|SSLVersion | SSLv2/SSLv3/TLSv1/TLSv1_0/TLSv1_1/TLSv1_2|Define which SSL protocol version must be used. By default libcurl will attempt to figure out the remote SSL protocol version. See curl_easy_setopt(3) for more details.|
+|Format |Command/JSON|Format of the output to generate. If set to Command, will create output that is understood by the Exec and UnixSock plugins. When set to JSON, will create output in the JavaScript Object Notation (JSON). Defaults to Command.|
+|StoreRates| true/false|If set to true, convert counter values to rates. If set to false (the default) counter values are stored as is, i.e. as an increasing integer number.|
+|BufferSize| Bytes|Sets the send buffer size to Bytes. By increasing this buffer, less HTTP requests will be generated, but more metrics will be batched / metrics are cached for longer before being sent, introducing additional delay until they are available on the server side. Bytes must be at least 1024 and cannot exceed the size of an int, i.e. 2 GByte. Defaults to 4096.|
+|LowSpeedLimit| Bytes per Second|Sets the minimal transfer rate in Bytes per Second below which the connection with the HTTP server will be considered too slow and aborted. All the data submitted over this connection will probably be lost. Defaults to 0, which means no minimum transfer rate is enforced.|
+|Timeout| Timeout|Sets the maximum time in milliseconds given for HTTP POST operations to complete. When this limit is reached, the POST operation will be aborted, and all the data in the current send buffer will probably be lost. Defaults to 0, which means the connection never times out.|
 
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work. 
+>The write_http plugin regularly submits the collected values to the HTTP server. How frequently this happens depends on how much data you are collecting and the size of BufferSize. The optimal value to set Timeout to is slightly below this interval, which you can estimate by monitoring the network traffic between collectd and the HTTP server.
 
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration 
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin. 
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
 
 ### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-> Include licensing information for the plugin in this section.
-
-This plugin is released under the Apache 2.0 license. See LICENSE for more details. 
-
-
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/write_http.c)
