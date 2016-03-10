@@ -69,31 +69,11 @@ collectd will begin emitting metrics from Zookeeper.
 
 ### CONFIGURATION
 
-Add the following to your collectd config:
-
-```
-<LoadPlugin "python">
-  Globals true
-</LoadPlugin>
-
-<Plugin python>
-  ModulePath "/usr/share/collectd/collectd-zookeeper"
-  Import "zk-collectd"
-
-  <Module "zk-collectd">
-    Hosts "localhost"
-    Port 2181
-  </Module>
-
-  # You may have as many Module sections as you want
-  <Module "zk-collectd">
-    Hosts "localhost"
-    Port 2182
-    Instance "dev"
-  </Module>
-</Plugin>
-```
-
+| Setting            | Description     | Default|
+|--------------------|-----------------|-----------|
+|Hosts | host name where Zookeeper is running| `"localhost"`|
+|Port| port number for Zookeeper  | `2181`|
+|Instance | Specify a cluster name | none (commented out)|
 
 
 ### USAGE
@@ -101,20 +81,8 @@ Add the following to your collectd config:
 
 ### METRICS
 
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions.
-
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
 This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-zookeeper/blob/master/LICENSE) for more details.
-
-_______
-
-# Metrics
-
-All metrics are reported with the `plugin:zookeeper` dimension. Additionally,
-if you specify an `Instance` in your `Module` configuration block, its value
-will be reported as the `plugin_instance` dimension.
-
-zk_is_leader is a synthetic metric which is 0 if the contents of zk_server_state is 'follower'
