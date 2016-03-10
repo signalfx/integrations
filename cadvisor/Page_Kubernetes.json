@@ -87,7 +87,7 @@
           "type" : "aggregation",
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "cluster_name"
+              "value" : "cluster"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -138,13 +138,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster_name') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446747039102,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster_name') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "marshallId" : 4,
   "marshallMemberOf" : [ 3 ]
 }, {
@@ -166,7 +166,7 @@
           "type" : "aggregation",
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "cluster_name"
+              "value" : "cluster"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -234,13 +234,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster_name') -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster') -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446747712994,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster_name') -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster') -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
   "marshallId" : 5,
   "marshallMemberOf" : [ 3 ]
 }, {
@@ -262,7 +262,7 @@
           "type" : "aggregation",
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "cluster_name"
+              "value" : "cluster"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -288,10 +288,10 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "*",
-        "query" : "cluster_name:*",
-        "value" : "cluster_name:*",
+        "query" : "cluster:*",
+        "value" : "cluster:*",
         "NOT" : false
       } ],
       "metricDefinition" : { },
@@ -335,18 +335,18 @@
         },
         "label" : "# containers"
       } ],
-      "sortPreference" : "+cluster_name",
+      "sortPreference" : "+cluster",
       "stackedChart" : false
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster_name') -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster') -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446043308946,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster_name') -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('cluster') -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
   "marshallId" : 6,
   "marshallMemberOf" : [ 3 ]
 }, {
@@ -373,7 +373,7 @@
           "type" : "aggregation",
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "cluster_name"
+              "value" : "cluster"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -397,7 +397,7 @@
       } ],
       "uniqueKey" : 1,
       "type" : "plot",
-      "name" : "container_cpu_system_seconds_total - Count by cluster_name - Count"
+      "name" : "container_cpu_system_seconds_total - Count by cluster - Count"
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -433,13 +433,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('cluster_name') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('cluster') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446744182528,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('cluster_name') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('cluster') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
   "marshallId" : 7,
   "marshallMemberOf" : [ 3 ]
 }, {
@@ -529,9 +529,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       }, {
@@ -607,13 +607,13 @@
     },
     "currentUniqueKey" : 4
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5;_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_5->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5;_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_5->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446747039102,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_5->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_5->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
   "marshallId" : 9,
   "marshallMemberOf" : [ 8 ]
 }, {
@@ -636,9 +636,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       }, {
@@ -726,13 +726,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (kubernetes_pod_name:stress\\\\-load2) AND (!kubernetes_container_name:POD))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (kubernetes_pod_name:stress\\\\-load2) AND (!kubernetes_container_name:POD))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446744182528,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (kubernetes_pod_name:stress\\\\-load2) AND (!kubernetes_container_name:POD))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (kubernetes_pod_name:stress\\\\-load2) AND (!kubernetes_container_name:POD))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
   "marshallId" : 10,
   "marshallMemberOf" : [ 8 ]
 }, {
@@ -750,9 +750,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       }, {
@@ -847,13 +847,13 @@
     },
     "currentUniqueKey" : 4
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5;_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->groupby('kubernetes_container_name')->stats:!mean->_SF_PLOT_KEY_##CHARTID##_2_5->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5;_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->groupby('kubernetes_container_name')->stats:!mean->_SF_PLOT_KEY_##CHARTID##_2_5->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446747712994,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->groupby('kubernetes_container_name')->stats:!mean->_SF_PLOT_KEY_##CHARTID##_2_5->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK=[?A,!OUT]{?A / 1024 / 1024->!OUT};find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK:!OUT->groupby('kubernetes_container_name')->stats:!mean->_SF_PLOT_KEY_##CHARTID##_2_5->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_2_5_MACROBLOCK",
   "marshallId" : 11,
   "marshallMemberOf" : [ 8 ]
 }, {
@@ -887,9 +887,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       }, {
@@ -948,9 +948,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       }, {
@@ -1041,13 +1041,13 @@
     },
     "currentUniqueKey" : 5
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9;find(query='(sf_metric:container_cpu_user_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9;_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->groupby()->groupby()->select(count=5):!top->split() -> stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_9->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9;find(query='(sf_metric:container_cpu_user_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9;_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->groupby()->groupby()->select(count=5):!top->split() -> stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_9->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446043308946,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:container_cpu_user_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->groupby()->groupby()->select(count=5):!top->split() -> stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_9->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:container_cpu_user_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster) AND (!kubernetes_container_name:POD) AND (kubernetes_pod_name:stress\\\\-load2))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_container_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->groupby()->groupby()->select(count=5):!top->split() -> stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_9->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
   "marshallId" : 12,
   "marshallMemberOf" : [ 8 ]
 }, {
@@ -1137,9 +1137,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       } ],
@@ -1227,13 +1227,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446744182528,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> stats:!count -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
   "marshallId" : 14,
   "marshallMemberOf" : [ 13 ]
 }, {
@@ -1295,9 +1295,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       } ],
@@ -1347,14 +1347,14 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:container_memory_failures_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:container_memory_failures_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
   "sf_cacheProgram" : true,
   "sf_description" : "Top PODs by count of memory allocation failures.",
   "sf_chartIndex" : 1446043308946,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:container_memory_failures_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:container_memory_failures_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
   "marshallId" : 15,
   "marshallMemberOf" : [ 13 ]
 }, {
@@ -1416,9 +1416,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       } ],
@@ -1463,13 +1463,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446747039102,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:container_cpu_usage_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
   "marshallId" : 16,
   "marshallMemberOf" : [ 13 ]
 }, {
@@ -1517,9 +1517,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       } ],
@@ -1567,13 +1567,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446747712994,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:container_memory_usage_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> window(1h) -> stats:!mean -> groupby('kubernetes_pod_name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
   "marshallId" : 17,
   "marshallMemberOf" : [ 13 ]
 }, {
@@ -1621,9 +1621,9 @@
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
-        "property" : "cluster_name",
+        "property" : "cluster",
         "propertyValue" : "KubernetesDemoCluster",
-        "query" : "cluster_name:KubernetesDemoCluster",
+        "query" : "cluster:KubernetesDemoCluster",
         "value" : "KubernetesDemoCluster",
         "NOT" : false
       } ],
@@ -1668,13 +1668,13 @@
     },
     "currentUniqueKey" : 3
   },
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_namespace') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_namespace') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
   "sf_cacheProgram" : true,
   "sf_chartIndex" : 1446832115688,
   "sf_jobMaxDelay" : 0,
   "sf_type" : "Chart",
   "sf_jobResolution" : 1000,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster_name:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_namespace') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:container_cpu_system_seconds_total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((cluster:KubernetesDemoCluster))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('kubernetes_namespace') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
   "marshallId" : 18,
   "marshallMemberOf" : [ 13 ]
 } ]
