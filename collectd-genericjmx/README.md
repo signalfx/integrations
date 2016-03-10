@@ -122,4 +122,4 @@ The GenericJMX collectd plugin by itself gathers generic Java metrics. By defaul
 
 ### LICENSE
 
-This plugin is released under the MIT license. See [header in plugin](https://github.com/collectd/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java) for more details.
+This plugin is released under the MIT license. See [header in plugin](https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java) for more details.

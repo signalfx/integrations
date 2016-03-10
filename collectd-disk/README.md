@@ -57,4 +57,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/disk.c)
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/disk.c)

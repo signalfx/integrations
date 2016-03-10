@@ -86,4 +86,4 @@ The metrics for the Java collectd plugin will depend on what is generated and pa
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/java.c)
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/java.c)
