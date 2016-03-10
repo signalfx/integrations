@@ -3,8 +3,8 @@ title: vmem collectd Plugin
 brief: vmem (virtual memory) plugin for collectd.
 ---
 
-![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
-# Example Python Plugin
+
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) vmem collectd Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -16,7 +16,10 @@ brief: vmem (virtual memory) plugin for collectd.
 
 ### DESCRIPTION
 
-From [collectd wiki]()
+From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:vmem):
+
+> The vmem plugin collects information about the virtual memory subsystem of the kernel. Per default, information such as page-faults, page-in and page-out to and from memory and swap, and the total number of pages are collected. When verbose statistics are enabled, all page actions (allocations, refills, steals, …) are collected per zone (DMA, DMA32, …).
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 This plugin requires:
@@ -47,4 +50,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/collectd/collectd/blob/master/src/vmem.c)
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/vmem.c)
