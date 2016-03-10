@@ -81,4 +81,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+Since this is not an actual _plugin_ but rather a configuration of the `collectd-java plugin` there is no need for a license.

@@ -38,43 +38,30 @@ Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewSta
 
 ### INSTALLATION
 
-1. Install the Java plugin.
+1. Install the collectd plugin.
 
- RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install the Java plugin for collectd:
-
- ```
- yum install collectd-java
- ```
- Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+ ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
 
-1. Download SignalFx's sample JMX configuration file and sample Kafka configuration file from the following URLs:
+ ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
- [JMX.conf](https://github.com/signalfx/Integrations/collectd-jmx/10-jmx.conf)
- [kafka-conf](https://github.com/signalfx/Integrations/collectd-kafka/20-kafka.conf)
-
- *Note: If you're using Kafka v0.8.2, download this sample Kafka configuration file instead:*
- [kafka.conf](https://github.com/signalfx/Integrations/collectd-kafka/20-kafka_82.conf)
-
-1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
+ Run the following command to install this plugin:
  ```
- include '/path/to/10-jmx.conf'
-  include '/path/to/20-kafka.conf'
+ yum install collectd-memcached
  ```
-or
- ```
- include '/path/to/10-jmx.conf'
-  include '/path/to/20-kafka_82.conf'
- ```
+1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-memcached/10-memcached.conf)
 
+ Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
+
+1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
+ ```
+ include '/path/to/10-memcached.conf'
+ ```
 1. Restart collectd.
 
-collectd will begin emitting metrics from elasticsearch.
+Metrics from memcached will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
+
 
 ### CONFIGURATION
 
@@ -92,8 +79,8 @@ collectd will begin emitting metrics from elasticsearch.
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/memcached.c)

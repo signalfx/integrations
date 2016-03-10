@@ -87,4 +87,4 @@ For full documentation of the metrics and dimensions emitted by this plugin, see
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-elasticsearch/blob/master/LICENSE.txt) for more details.
