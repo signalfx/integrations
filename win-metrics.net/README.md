@@ -11,19 +11,26 @@ brief: The SignalFx Metrics.NET Integration.
 - [Configuration](#configuration)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
 The Metrics.NET library provides a way of instrumenting applications with custom metrics (timers, histograms, counters etc) that can be reported in various ways and can provide insights on what is happening inside a running application.
 
 This assembly provides a mechanism to report the metrics gathered by Metrics.NET to SignalFx.
 
-### REQUIREMENTS AND DEPENDENCIES
+## REQUIREMENTS AND DEPENDENCIES
 
+* .NET Framework 4+
+* Windows
+* Admin rights for installing services (the service is setup to run as NETWORK SERVICE)
+* Powershell v2 required to user the one-line installer
 
-### INSTALLATION
+Sorry Mono, this is the Win32 only club -- besides, Linux distros already have better tools for this!
 
-## Sending Dimensions
-In order to send dimensions to SignalFx with Metrics.NET you use the MetricTags object and use Metrics.Core.TaggedMetricsContext. This unfortunately(currently) means that you will to have a second context (think . in metric name). MetricTags are currently a list of strings. To send a dimension just add a string that looks like "key=value" to the MetricTags object you use to initialize your metrics. E.g
+## INSTALLATION
+
+In order to send dimensions to SignalFx with Metrics.NET you use the MetricTags object and use `Metrics.Core.TaggedMetricsContext`. This unfortunately (currently) means that you will to have a second context (think `.` in metric name). MetricTags are currently a list of strings. To send a dimension just add a string that looks like `key=value` to the MetricTags object you use to initialize your metrics.
+
+E.g
 
 ```
 csharp
@@ -38,21 +45,22 @@ public void setupCounters(string env) {
     this.purchaseAPICount = getContext().Counter("api.use", Unit.Calls, new MetricTags("environment="+env, "api_type=purchase"));
 }
 ```
-This will create a context called "app" so metrics reported will look like "yourhostname.app.api.use".
-This will allow you to see all of of your api.use metrics together or split it out by environment or by api_type.
 
+This will create a context called `app` so metrics reported will look like `yourhostname.app.api.use`.
+This will allow you to see all of of your `api.use` metrics together or split it out by `environment` or by `api_type`.
 
-### CONFIGURATION
+## CONFIGURATION
 
-## Configuring the SignalFxReporter
 To configure Metrics.Net to report you need to set up two things
  - Your SignalFX API token
  - The default source
 
 ### Your SignalFX API Token
+
 Your API SignalFX API token is available if you click on your avatar in the SignalFx UI.
 
 ### Default source name
+
 When reporting to SignalFx we need to associate the reported metrics to a "source". Some choices are:
  - NetBIOS Name
  - DNS Name
@@ -60,49 +68,51 @@ When reporting to SignalFx we need to associate the reported metrics to a "sourc
  - Custom Source
 
 ### AWS Integration
+
 If your code will be running on an AWS instance and you have integrated SignalFx with AWS. You can configure the Metrics.Net.SignalFX reporter to send the instance id as one of the dimensions so that you can use the discovered AWS instance attributes to filter and group metrics.
 
 ### Default Dimensions
-If there are dimeensions that you wish to send on all the metrics that you report to SignalFx. You can configure a set of "default dimensions" when you configure the SignalFXReporter
+If there are dimensions that you wish to send on all the metrics that you report to SignalFx. You can configure a set of _**default dimensions**_ when you configure the SignalFXReporter
 
 ### C# Configuration
+
 #### Basic Configuration
-```
-csharp
+
+```csharp
 // Configure with NetBios Name as the default source
  Metric.Config.WithReporting(report =>
       report.WithSignalFx("<your API token>", TimeSpan.FromSeconds(5)).WithNetBiosNameSource().Build());
 ```
-```
-csharp
+
+```csharp
 // Configure with DNS Name as the default source
 Metric.Config.WithReporting(report =>
      report.WithSignalFx("<your API token>", TimeSpan.FromSeconds(5)).WithDNSNameSource().Build());
 ```
-```
-csharp
+
+```csharp
 // Configure with FQDN as the default source
 Metric.Config.WithReporting(report =>
      report.WithSignalFx("<your API token>", TimeSpan.FromSeconds(5)).WithFQDNSource().Build());
 ```
-```
-csharp
+
+```csharp
 // Configure with custom source name
 Metric.Config.WithReporting(report =>
      report.WithSignalFx("<your API token>", TimeSpan.FromSeconds(5)).WithSource("<source name>").Build());
 ```
 
 #### AWS Integration
-```
-csharp
+
+```csharp
 // Add AWS Integration
 Metric.Config.WithReporting(report =>
      report.WithSignalFx("<your API token>", TimeSpan.FromSeconds(10)).WithAWSInstanceIdDimension().WithNetBiosNameSource().Build());
 ```
 
 #### Default Dimensions
-```
-csharp
+
+```csharp
 // Add default Dimensions
 IDictionary<string, string> defaultDims = new Dictionary<string, string>();
 defaultDims["environment"] = "prod";
@@ -125,8 +135,8 @@ The Metrics.NET library calculates aggregations for almost all of the metric typ
  - Timer -> count, active_sessions, rate_mean, rate_1min, rate_5min, rate_15min, last, min, mean, max, stddev, median, percent_75, percent_95, percent_98, percent_99, percent_999
 
 The client can specify which of these aggregations they wish to send. By default count,min,mean,max aggregations are sent.
-```
-csharp
+
+```csharp
 // Send the 99 percentile metrics
 Metric.Config.WithReporting(report =>
      report.WithSignalFx("<your API token>", TimeSpan.FromSeconds(10)).WithMetricDetail(MetricDetails.percent_99).Build());
@@ -136,15 +146,16 @@ Metric.Config.WithReporting(report =>
 It is also possible to use App.Config to configure the SignalFxReporter.
 
 To configure via App.Config use the following code to initialize your Metrics:
-```
-csharp
+
+```csharp
 Metric.Config.WithReporting(report => report.WithSignalFxFromAppConfig());
 ```
+
 #### Basic Configuration
 You need to first setup a section in the <configSections> portion at the
 top of your App.Config file.
-```
-xml
+
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <configSections>
@@ -156,34 +167,41 @@ xml
 
 Next you need to add a <signalFxReporter> stanza
 You must specify the following attributes:
- - apiToken - Your SignalFx token
+
+|Attribute | definition |
+|----------|------------|
+|apiToken | Your SignalFx token |
 
 The following attributes are optional
- - sourceDimension - What the name of the "source" dimension is.
- - sourceType - How you would like to configure the default source. Your choices are:
-  - netbios
-  - dns
-  - fqdn
-  - custom - If you specify this you must also specify the "sourceValue" attribute to specify the custom source.
- - sampleInterval - TimeSpan (defaults to 00:00:05, mininum 00:00:01) How often to report metrics to SignalFx
- - maxDatapointPerMessage - Integer (defaults to 10000, min 1, max 10000) The maximumum of points to report per message
-                            to SignalFx
- - awsIntegration - Boolean (default to false) If set to true then the AWS integration will be turned on.
+
+|Attribute | definition |
+|----------|------------|
+|sourceDimension | What the name of the "source" dimension is.|
+| sourceType | How you would like to configure the default source. Your choices are:<ui><li>netbios</li><li>dns</li><li>fqdn</li><li>custom - If you specify this you must also specify the "sourceValue" attribute to specify the custom source.</li></ui>|
+| sampleInterval | TimeSpan (defaults to 00:00:05, mininum 00:00:01) How often to report metrics to SignalFx |
+| maxDatapointPerMessage | Integer (defaults to 10000, min 1, max 10000) The maximumum of points to report per message to SignalFx|
+| awsIntegration | Boolean (default to false) If set to true then the AWS integration will be turned on.|
+
 E.g
-```
- xml
+
+```xml
   <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"/>
 ```
 
 ### Source Value for a Metric
-It is often useful, but not required, to identify the "source" of a metric. An example of this is a hostname. There are two things that needs to be configured:
-  - sourceDimension - The name of the "source" metric.
-  - defaultSource - The value to send when the source metric value is not specified.
 
-###Default Dimensions
+It is often useful, but not required, to identify the "source" of a metric. An example of this is a hostname. There are two things that needs to be configured:
+
+|Attribute | definition |
+|----------|------------|
+| sourceDimension | The name of the "source" metric.|
+| defaultSource | The value to send when the source metric value is not specified.|
+
+### Default Dimensions
+
 To add default dimensions add a nested <defaultDimensions> in your <signalFxReporter> stanza:
-```
- xml
+
+```xml
   <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"/>
     <defaultDimensions>
       <defaultDimension name="environment" value="prod"/>
