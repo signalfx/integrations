@@ -16,6 +16,51 @@ brief: SignalFx Metricproxy for aggregation and translation of metrics for sendi
 
 This SignalFx Metricproxy  to aggregate metrics and send then to SignalFx. The proxy is a multilingual datapoint demultiplexer that can accept time series data from the statsd, carbon, dogstatsd, or signalfx protocols and emit those datapoints to a series of servers on the statsd, carbon, or signalfx protocol. The proxy is ideally placed on the same server as either another aggregator, such as statsd, or on a central server that is already receiving datapoints, such as graphite's carbon database.
 
+#### Code layout
+
+You only need to read this if you want to develop the proxy or understand
+the proxy's code.
+
+The proxy is divided into two main components: [forwarder](protocol/carbon/carbonforwarder.go)
+and [listener](protocol/carbon/carbonlistener.go).  The forwarder and listener
+are glued together by the [demultiplexer](protocol/demultiplexer/demultiplexer.go).
+
+When a listener receives a datapoint, it converts the datapoint into a
+basic [datapoint type](datapoint/datapoint.go).  This core datapoint type is
+then sent to the multiplexer that will send a pointer to that datapoint
+to each forwarder.
+
+Sometimes there is a loss of fidelity during transmission if a listener
+and forwarder don't support the same options.  While it's impossible
+to make something understand an option it does not, we don't want to
+forget support for this option when we translate a datapoint through
+the multiplexer.  We work around this by sometimes encoding the raw
+representation of the datapoint into the Datapoint object we forward.
+For example, points from carbon are not only translated into our core
+datapoint format, but also support [ToCarbonLine](protocol/carbon/carbon.go)
+which allows us to directly convert the abstract datapoint into what it
+looked like for carbon, which allows us to forward the point to another
+carbon database exactly as we received it.
+
+All message passing between forwarders, multiplexer, and listeners
+happen on golang's built in channel abstraction.
+
+#### Development
+
+If you want to submit patches for the proxy, make sure your code passes
+[travis_check.sh](travis_check.sh) with exit code 0.  For help setting
+up your development enviroment, it should be enough to mirror the install
+steps of [.travis.yml](.travis.yml).  You may need to make sure your GOPATH
+env variable is set correctly.
+
+#### Docker
+
+The proxy comes with a [docker image](Dockerfile) that is built and deployed
+to [quay.io](https://quay.io/repository/signalfx/metricproxy).  It assumes
+you will have a sfdbconfig.json file cross mounted to
+/var/config/sfproxy/sfdbconfig.json for the docker container.
+
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 This service has no requirements or dependencies. However, the service is limited in usefulness if there is not data being sent to it. The following data types are supported:
@@ -25,7 +70,7 @@ This service has no requirements or dependencies. However, the service is limite
 | carbon | plain text protocol |
 | statsD | statsD |
 | signalfx | JSON or Protobuff |
-| DogstatsD | statsD |
+| DogstatsD | DogstatsD |
 
 ### INSTALLATION
 
@@ -455,7 +500,7 @@ dimensions = {customer=Acme, component=cassandra, identifier=bbac,
 }
 ```
 
-The following is a full list of overrideable options and their defaults:
+The following is a full list of overridable options and their defaults:
 
 ```
 // For the top level
@@ -642,18 +687,18 @@ Then, any datapoints with the "org" dimension of "dev" will be logged.
 
 ### USAGE
 
-1. To start the service
+#### Start the service
 
  ```
    /etc/init.d/metricproxy start
  ```
 
-1. To stop the service.
+#### Stop the service.
 
  ```
    /etc/init.d/metricproxy stop
  ```
-1. To debug the service
+#### Debug the service
 
  ```
   cd /var/log/sfproxy
