@@ -13,9 +13,9 @@ brief: The SignalFx Integration for Windows Performance Counter Reporter.
 
 ### DESCRIPTION
 
-Windows service for reporting Windows Perfomance Counters to SignalFx
+Windows service for reporting Windows Performance Counters to SignalFx
 
-This code is based on/inspired by PerfTap (https://github.com/Iristyle/PerfTap) as a means of sending performance data to a monitoring system.
+This code is based on/inspired by [PerfTap](https://github.com/Iristyle/PerfTap) as a means of sending performance data to a monitoring system.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -28,18 +28,23 @@ Sorry Mono, this is the Win32 only club -- besides, Linux distros already have b
 
 ### INSTALLATION
 
-Download the latest release from https://github.com/signalfx/PerfCounterReporter/releases and unzip it.
+Download the [latest release](https://github.com/signalfx/PerfCounterReporter/releases) and unzip it.
 
 At a PowerShell admin prompt
 
+```
      ./Install.ps1
+```
 
 Alternatively, specify any or all of the configuration options.
 
+```
     ./Install.ps1 @{APIToken='yourtoken';SourceType='netbios';DefinitionPaths='CounterDefinitions\system.counters','CounterDefinitions\webservice.counters';CounterNames='\Processor(*)\% Processor Time';}
+```
 
 Or if readability is your thing:
 
+```
     $config = @{
         APIToken='yourtoken';
         SourceType='netbios';
@@ -48,20 +53,21 @@ Or if readability is your thing:
         CounterNames = '\Processor(*)\% Processor Time';
     }
     ./Install.ps1 $config
+```
 
 For hash values not supplied the following defaults are used. APIToken and SourceType are required.  
 
-* APIToken - Your SignalFx API token. No default.
-* SourceType - Configuration for what the "source" of metrics will be. No default. Value must be one of:
-	* netbios - use the netbios name of the server
-	* dns - use the DNS name of the server
-	* fqdn - use the FQDN name of the server
-	* custom - use a custom value. If the is specified then a SourceValue parameter must be specified.
-* DefaultDimensions - A hashtable of default dimensions to pass to SignalFx. Default: Empty dictionary.
-* AwsIntegration - If set to "true" then AWS integration will be turned on for SignalFx reporting. Default: false
-* SampleInterval - TimeSpan of how often to send metrics to SignalFx. Default Value: 00:00:05
-* DefinitionPaths - List of file paths with counter definitions. Default Value: CounterDefinitions\system.counters
-* CounterNames - List of strings. Any additional "one off" counters to collect. Default Value: (empty list)
+* **APIToken** - Your SignalFx API token. No default.
+* **SourceType** - Configuration for what the "source" of metrics will be. No default. Value must be one of:
+	* **netbios** - use the netbios name of the server
+	* **dns** - use the DNS name of the server
+	* **fqdn** - use the FQDN name of the server
+	* **custom** - use a custom value. If the is specified then a SourceValue parameter must be specified.
+* **DefaultDimensions** - A hashtable of default dimensions to pass to SignalFx. Default: Empty dictionary.
+* **AwsIntegration** - If set to "true" then AWS integration will be turned on for SignalFx reporting. Default: false
+* **SampleInterval** - string of how often to send metrics to SignalFx. Looks supported values look like "5s", or "1m". Default Value: 5s
+* **DefinitionPaths** - List of file paths with counter definitions. Default Value: CounterDefinitions\system.counters
+* **CounterNames** - List of strings. Any additional "one off" counters to collect. Default Value: (empty list)
 
 ### CONFIGURATION
 
@@ -109,7 +115,7 @@ One-off counters may be added to the configuration file as shown in the example 
 
 The names of all counters are combined together from all the configured files and individually specified names.  However, these names have not yet been wildcard expanded.  So, if for instance, both the name `\processor(*)\% processor time` and `\processor(_total)\% processor time` have been specified, `\processor(_total)\% processor time` will be read twice.
 
-### Logging
+#### Logging
 
 NLog is used for logging, and the default configuration ships with just file logging enabled.  The logs are dumped to `%ALLUSERSPROFILE%\PerfCounterReporter\logs`.  Generally speaking, on modern Windows installations, this will be `C:\ProgramData\PerfCounterReporter\logs`.  Obviously this can be modified to do whatever you want per the NLog [documentation](http://nlog-project.org/wiki/Configuration_File).
 
