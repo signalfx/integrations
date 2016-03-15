@@ -33,7 +33,9 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:StatsD):
 
 This plugin requires:
 
-- collectd 5.4+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd |  5.4+  |
 
 ### INSTALLATION
 

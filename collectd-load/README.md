@@ -24,7 +24,9 @@ The system load is defined as the number of runnable tasks in the run-queue and 
 
 This plugin requires:
 
-- collectd 1.0+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd |  1.0+ |
 
 ### INSTALLATION
 

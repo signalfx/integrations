@@ -24,7 +24,9 @@ The configuration syntax of the PostgreSQL, DBI, and Oracle plugins is very simi
 
 This plugin requires:
 
-- collectd 4.5+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd |  4.5+  |
 
 ### INSTALLATION
 

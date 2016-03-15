@@ -21,9 +21,11 @@ This SignalFx metadata plugin for collectd configures collectd to aggregate metr
 
 This plugin requires:
 
-- collectd 4.9+
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd  |  4.9+  |
+| Python plugin for collectd | (included with SignalFx collectd) |
+| Python    |  2.6+ |
 
 ### INSTALLATION
 

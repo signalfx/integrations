@@ -30,7 +30,9 @@ For details about these metrics you can also read [kernel documentation](https:/
 
 This plugin requires:
 
-- collectd 1.5+
+| Software  | Version        |
+|-----------|----------------|
+| collectd  | 1.5+ |
 
 ### INSTALLATION
 

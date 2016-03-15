@@ -23,8 +23,11 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Redis):
 
 This plugin requires:
 
-- collectd 5.0+
-- credis, C library implementing the redis protocol.
+| Software          | Version        |
+|-------------------|----------------|
+| collectd   |  5.0+  |
+| credis (C library implementing the redis protocol)| 0.2.3+ |
+| redis | 2.8+ |
 
 From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Redis):
 
@@ -45,7 +48,8 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Redis):
 ```
 
 > * see brief notes on [configuring this under ubuntu 14.04](https://github.com/collectd/collectd/issues/755#issuecomment-57948623)
-* the following tips are useful when testing and troubleshooting
+
+> * the following tips are useful when testing and troubleshooting
 * use redis-cli ping to ensure you can connect to redis itself.
 * use credis-test to see if your compiled credis is able to talk to redis itself. If this fails, the collectd plugin will also not work.
 * use redis-cli monitor & to see what redis is receiving and sending itself.

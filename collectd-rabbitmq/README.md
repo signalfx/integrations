@@ -26,9 +26,11 @@ brief: RabbitMQ plugin for collectd.
 
 This plugin requires:
 
-- collectd 4.9+
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd | 4.9+ |
+| Python plugin for collectd | (match with collectd version) |
+| Python |  2.6+  |
 
 ### INSTALLATION
 
