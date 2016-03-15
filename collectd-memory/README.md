@@ -33,7 +33,9 @@ The values are reported by their use by the operating system. Under Linux, the c
 
 This plugin requires:
 
-- collectd 1.0+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd |  1.0+ |
 
 ### INSTALLATION
 

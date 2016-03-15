@@ -23,7 +23,9 @@ The cURL-JSON plugin queries JavaScript Object Notation (JSON) data using the cU
 
 This plugin requires:
 
-- collectd 4.8+
+| Software  | Version        |
+|-----------|----------------|
+| collectd  | 4.8+ |
 
 ### INSTALLATION
 

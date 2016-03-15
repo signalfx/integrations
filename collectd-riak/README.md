@@ -3,7 +3,7 @@ title: Riak Plugin
 brief: Riak KV metrics using collectd.
 ---
 
-# Riak KV Plugin
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd-riak/img/integrations_riak.png) Riak KV Plugin
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -23,11 +23,14 @@ Riak KV is a distributed NoSQL database with a key/value design and advanced loc
 
 This plugin requires:
 
-- collectd 4.9+
-- cURL-JSON plugin
-- Riak 1.4.0+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd | 4.9+  |
+| cURL-JSON plugin | (match with collectd version) |
+|  Riak KV  | 1.4.0+ |
 
 ### INSTALLATION
+
 
 This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
@@ -52,4 +55,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-Since this is not an actual _plugin_ but rather a configuration of the `collectd-java plugin` there is no need for a license.
+Since this is not an actual _plugin_ but rather a configuration of the `collectd-curl-json plugin` there is no need for a separate license.

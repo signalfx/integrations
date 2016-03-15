@@ -23,7 +23,9 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Uptime)
 
 This plugin requires:
 
-- collectd 4.7+
+| Software          | Version        |
+|-------------------|----------------|
+|  collectd    |  4.7+  |
 
 ### INSTALLATION
 

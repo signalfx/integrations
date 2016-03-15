@@ -61,7 +61,9 @@ Last but not least: In the previous interval, we have read to the end of the fil
 
 This plugin requires:
 
-- collectd 4.4+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd |  4.4+  |
 
 ### INSTALLATION
 

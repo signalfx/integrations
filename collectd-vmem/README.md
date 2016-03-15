@@ -24,7 +24,9 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:vmem):
 
 This plugin requires:
 
-- collectd 4.4+
+| Software          | Version        |
+|-------------------|----------------|
+|  collectd   |  4.4+  |
 
 ### INSTALLATION
 

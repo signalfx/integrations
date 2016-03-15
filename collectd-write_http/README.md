@@ -20,7 +20,9 @@ brief: Write-http plugin for collectd.
 
 This plugin requires:
 
-- collectd 4.8+
+| Software          | Version        |
+|-------------------|----------------|
+|  collectd   |  4.8+  |
 
 ### INSTALLATION
 

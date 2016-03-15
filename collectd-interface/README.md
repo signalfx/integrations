@@ -23,7 +23,9 @@ The Interface plugin collects information about the traffic (octets per second),
 
 This plugin requires:
 
-- collectd 1.0+
+| Software  | Version        |
+|-----------|----------------|
+| collectd  | 1.0+ |
 
 ### INSTALLATION
 

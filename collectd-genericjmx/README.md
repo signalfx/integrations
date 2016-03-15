@@ -28,8 +28,8 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
 | Software  | Version        |
 |-----------|----------------|
-|collectd | 4.8+ |
-| Java | 2.6+ |
+|  collectd | 4.8+ |
+| Java      | 2.6+ |
 
 ### INSTALLATION
 

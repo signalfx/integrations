@@ -28,7 +28,9 @@ Because the available information is usually far too much to be useful, the inte
 
 This plugin requires:
 
-- collectd 4.7+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd | 4.7+ |
 
 ### INSTALLATION
 

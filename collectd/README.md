@@ -29,10 +29,12 @@ You can view the full [changelog](https://github.com/signalfx/collectd/blob/coll
 
 SignalFx has built an installation script for the following versions of Linux:
 
-* Debian 7 & 8
-* Ubuntu 12.04, 14.04 & 15.04
-* RHEL/Centos 6.x & 7.x
-* Amazon Linux 2014.09 & 2015.03
+| Software  | Version        |
+|-----------|----------------|
+| Debian  | 7 & 8 |
+| Ubuntu  | 12.04, 14.04 & 15.04 |
+| RHEL/Centos | 6.x & 7.x |
+| Amazon Linux | 2014.09 & 2015.03 |
 
 To get started, you'll need your org's API token. To find it:
 

@@ -26,7 +26,9 @@ The JavaDoc documentation of the API is available.
 
 This plugin requires:
 
-- collectd 4.7+
+| Software  | Version        |
+|-----------|----------------|
+| collectd  | 4.7+ |
 
 ### INSTALLATION
 

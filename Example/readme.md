@@ -1,15 +1,15 @@
 ---
 title: Example Python Plugin
-brief: The SignalFx Example Python plugin for collectd. 
+brief: The SignalFx Example Python plugin for collectd.
 ---
 
-> Fill in the structured header above to allow products like SignalFx to programmatically display this document. 
+> Fill in the structured header above to allow products like SignalFx to programmatically display this document.
 
 # Example Python Plugin
 
->This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins. 
+>This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins.
 >
-> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution. 
+> In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,9 +21,9 @@ brief: The SignalFx Example Python plugin for collectd.
 
 ### DESCRIPTION
 
-> In this section, give a general description of what your plugin is, what it does, and what the user can expect. 
+> In this section, give a general description of what your plugin is, what it does, and what the user can expect.
 
-This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd. 
+This is the SignalFx Example Python plugin for collectd. Use it to send a sine wave metric using collectd.
 
 This plugin emits 3 metrics:
 - one gauge in the form of a sine wave
@@ -41,13 +41,15 @@ The plugin also emits a notification every time it starts up.
 
 This plugin requires:
 
-- collectd 4.9+ 
-- Python plugin for collectd (included with SignalFx collectd)
-- Python 2.6+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd          |     4.9+       |
+| Python plugin for collectd | (included with SignalFx collectd) |
+| Python            |     2.6+       |
 
 ### INSTALLATION
 
->In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully. 
+>In this section, provide step-by-step instructions that a user can follow to install this plugin. Each step should allow the user to verify that it has been completed successfully.
 >
 >This section should also contain instructions for any steps that the user must take to modify or reconfigure the software to be monitored. For instance, the plugin might collect data from an API endpoint that must be enabled by the user.
 
@@ -55,14 +57,14 @@ Follow these steps to install this plugin:
 
 1. Download this repository to your local machine.
 2. Modify the sample configuration file [10-example.conf](././10-example.conf) to contain values that make sense for your environment, as described [below](#configuration).
-3. Add the following line to `collectd.conf`, replacing the path with the path to the sample configuration file you modified in step 2: 
+3. Add the following line to `collectd.conf`, replacing the path with the path to the sample configuration file you modified in step 2:
 
-  ``` 
-  include '/path/to/10-example.conf' 
   ```
-4. Restart collectd. 
+  include '/path/to/10-example.conf'
+  ```
+4. Restart collectd.
 
-### CONFIGURATION 
+### CONFIGURATION
 
 >Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
 
@@ -71,7 +73,7 @@ Using the example configuration file [10-example.conf](././10-example.conf) as a
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 | 
+| Frequency  | Cycles of the sine wave per minute. | 0.5 |
 
 ### USAGE
 
@@ -93,7 +95,7 @@ Below is a screen capture of an example SignalFx dashboard, illustrating the met
 
 ![Example chart showing gauge.sine](././img/gauge.sine.png)
 
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap.
 
 *`counter.notifications` shows a suddenly high value.*
 
@@ -103,7 +105,7 @@ This plugin emits a notification at every startup. If your collectd configuratio
 
 ### METRICS
 
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions. 
+>This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions.
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
@@ -111,4 +113,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 > Include licensing information for the plugin in this section.
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details. 
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details.

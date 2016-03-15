@@ -20,10 +20,13 @@ https://github.com/signalfx/statsd.net/
 
 ## REQUIREMENTS AND DEPENDENCIES
 
-* .NET Framework 4+
-* Windows
+| Software          | Version        |
+|-------------------|----------------|
+| .NET Framework    |  4+ |
+| Windows   | Windows Server 2003 SP2 or later |  
+| Powershell (required to user the one-line installer) | v2+ |
+
 * Admin rights for installing services (the service is setup to run as NETWORK SERVICE)
-* Powershell v2 required to user the one-line installer
 
 Sorry Mono, this is the Win32 only club -- besides, Linux distros already have better tools for this!
 

@@ -24,7 +24,9 @@ However, not all "partitions" are of interest. For example /proc and /dev usuall
 
 This plugin requires:
 
-- collectd 3.6+
+| Software  | Version        |
+|-----------|----------------|
+| collectd  | 3.6+ |
 
 ### INSTALLATION
 

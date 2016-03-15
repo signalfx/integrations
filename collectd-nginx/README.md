@@ -20,7 +20,9 @@ This NGINX plugin. This will send data about NGINX to SignalFx, enabling built-i
 
 This plugin requires:
 
-- collectd 4.2+
+| Software          | Version        |
+|-------------------|----------------|
+| collectd |  4.2+  |
 
 ### INSTALLATION
 
