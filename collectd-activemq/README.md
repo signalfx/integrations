@@ -5,6 +5,8 @@ brief: ActiveMQ metrics for collectd.
 
 #![](https://github.com/signalfx/Integrations/blob/master/collectd-activemq/img/integrations_activemq.png) ActiveMQ collectd Plugin   
 
+_This is a directory consolidate all the metadata associated with the ActiveMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)

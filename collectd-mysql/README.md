@@ -3,7 +3,9 @@ title: collectd MySQL plugin
 brief: Use this plugin to collect metrics from MySQL.
 ---
 
-# MySQL Plugin
+# MySQL collectd Plugin
+
+_This is a directory consolidate all the metadata associated with the MySQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/mysql.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -5,6 +5,8 @@ brief: Interface metrics for collectd.
 
 #![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Interface collectd Plugin  
 
+_This is a directory consolidate all the metadata associated with the Interface collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/interface.c)_
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
