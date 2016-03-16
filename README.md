@@ -1,95 +1,100 @@
-## Validated Plugins
+# Validated Plugins
 
-SignalFx indexes available and validated plugins [here](http://signalfx-integrations.github.io). On this page, users of SignalFx can browse available plugins and find the plugin that monitors the software they care about. This also provides a single place to view all of the plugins that SignalFx has validated and for which SignalFx has provided built-in content in the SignalFx application. Each plugin has a link to the code as well as a Project repository with complete information on:
+SignalFx indexes available and validated integrations [here](http://signalfx.github.io). On this page, users can browse available integrations and find the integration that monitors the software they care about. This also provides a single place to view all of the integrations that SignalFx has validated and for which SignalFx has provided built-in content in the SignalFx application. Each integration has a link to the code as well as a Project repository with information on:
 
-- How to install, configure and use the plugin
+- How to install, configure and use the integration
 - The metrics that are emitted
 - For the given application or component, what to monitor and how
 
-In order to be added to the plugin index, SignalFx validates each plugin for stability, scale, and compatibility. If you would like to contribute here is the process:
+In order to be added to the integration index, SignalFx validates each integration for stability, scale, and compatibility. If you would like to contribute here is the process:
 
-1. Create and publish a plugin for SignalFx.
+1. Create and publish a integration for SignalFx.
  1. We have built an example [collectd-based plugin](https://github.com/signalfx/collectd-example/blob/master/example_plugin.py) to help you get started.
- 1. For other data collector types you'll just need to make sure that you can direct the [output to SignalFX and use one of our supported formats](https://developers.signalfx.com/docs/signalfx-api-overview)
+ 1. For other data collector types you'll just need to make sure that you can direct the output to SignalFX and use one of our [supported formats](https://developers.signalfx.com/docs/signalfx-api-overview)
 1. Ensure that your plugin meets the validation requirements - more on that below.
-1. Clone [this](https://github.com/signalfx/Integrations) repository locally.
+1. Clone [this repository](https://github.com/signalfx/Integrations) locally.
 1. Create a directory in this repository named after your plugin.
 1. Add required documentation content to that directory.
-1. Commit and submit a pull request to this repository. Pull request template will prompt for all required information
-  - When you change or enhance your plugin, send updates through a pull request.
+1. Commit and submit a pull request to this repository. Pull request template will prompt for all required information. When you change or enhance your plugin, send updates through a pull request.
 
 ## What is required for a new plugin
 
 Here are SignalFx's requirements for a new plugin:
 
 - **Validated plugin code**
-- **Documentation** that describes the plugin and how it operates
-  - Metadata file that points to plugin code
+- **Documentation** that describes the integration and how it operates
+  - Metadata file that points to integration code
   - Metrics docs
   - Sample Dashboard
   - Example configuration file
-  - License file
-- **Test plans and expected outcomes**
-- **Docker container definition**
+  - License file (Apache 2.0 recommended)
 - **Support information**
   - Contact info for support
 
 ## Validation Requirements
 
-You're the expert in the software that you wrote the plugin for. The goal of this exercise is to convey your expertise in the software being monitored to non-expert users. You do this by providing documentation, usage information and examples. It’s also important to make sure that your plugin performs well and collects the right data to get the job done.
+You're the expert in the software that you wrote the integration for. The goal of this exercise is to convey your expertise in the software being monitored to non-expert users. You do this by providing documentation, usage information and examples. It’s also important to make sure that your integration performs well and collects the right data to get the job done.
 
 ### Code Requirements
-Below are requirements for plugin code:
+Below are requirements for integration code:
 
-1. Include a README file that matches the [prescribed format](https://github.com/signalfx/Integrations/blob/master/Example/README.md). This file should contain all the information that a user would need to install, run and derive value from your plugin.
+1. Include a README file that matches the [prescribed format](https://github.com/signalfx/Integrations/blob/master/Example/README.md). This file should contain all the information that a user would need to install, run and derive value from your integration.
 1. Submit your performance test plan and results.
-1. Make sure that your plugin collects all the data that is necessary to monitor the software in question.
-  - When deciding which metrics your plugin should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available in "detailed" mode. Use other validated plugins as a guide on what to include.
+1. Make sure that your integration collects all the data that is necessary to monitor the software in question.
+  - When deciding which metrics your integration should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available in "detailed" mode. Use other validated integrations as a guide on what to include.
 1. Include dimensions by adding key-value pairs to metric names. Dimensions can include any context that a user needs to drill down or slice-and-dice metrics through their environment (ex. cluster name, node name, region). Dimensions can capture any important concepts of the software being monitored, such as _queue name_ for a message queue or _index name_ for a search utility. To read more about dimensions, see SignalFx's data model on [developers.signalfx.io](http://developers.signalfx.io).
 
 ### Documentation Requirements
 
-Metadata about your plugin is stored in the SignalFx plugin index to help users find the plugin they're looking for. This includes:
+Metadata about your integration is stored in the SignalFx integration index to help users find the integration they're looking for. This includes:
 
-1. A structured document that includes a link to and description of your plugin
-1. Sample configuration for your plugin
-1. Documentation of the metrics emitted by your plugin
-1. Screenshots of example charts that show how data from your plugin should be used
+1. A structured document that includes a link to and description of your integration
+1. Sample configuration for your integration
+1. Documentation of the metrics emitted by your integration
+1. Screenshots of example charts that show how data from your integration should be used
 
 An example can be found here: [github.com/signalfx/collectd-example](https://github.com/signalfx/collectd-example)
 
 #### Structured document (YAML File)
 
-We will programmatically read this document to generate a description on your plugin's page at http://link/. Please provide the following fields:
+We will programmatically read this document to generate a description on your integration for the catalog. Please provide the following fields:
 
 | field name | description |
 |------------|-------------|
-| fixme | |
+| display_name | name that will display in the integration tile|
+| description | description of integration |
+| project_url | URL of 'metadata' directory (`https://github.com/signalfx/Integrations/tree/master/[integration-foo]`)|
+| code | URL of code repository |
+| featured | flag to put integration in "Top Integrations" section |
+| logo_large | URL of 300x300 pixel logo image |
+| logo_small | URL of 150x150 pixel logo image |
 
-- Plugin name
-- Plugin URL (like a link to a Github repo)
-- A brief description of what this plugin is for, in two to three hundred words.
+
+Example:
+
+```
+{ "display_name":"AppDynamics Metrics Integration",
+  "description": "AppDynamics metrics integration",
+  "project_url": "https://github.com/signalfx/Integrations/tree/master/appdynamics",
+  "code": "https://github.com/signalfx/appd-integration",
+  "featured": false,
+  "logo_large": "/images/repos/appdynamics/img/integrations_appdynamics%402x.png",
+  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png"
+},
+```
 
 #### Sample configuration
 
-To help users get up and running quickly, provide a sample configuration for your plugin that includes sensible default values and highlights required configuration.
+To help users get up and running quickly, provide a sample configuration for your integration that includes sensible default values and highlights required configuration.
 
-An example of a sample configuration file can be found in http://sampleplugin/example.yaml.
+An example of a sample configuration file can be found in in the [Example directory](https://github.com/signalfx/Integrations/blob/master/Example/10-example.conf).
 
 #### Metrics and dimensions documentation
 
-To help users make sense of their new data, provide documentation of each metric and dimension that the plugin emits, including name, type (counter, gauge, cumulative counter) and description of what it measures.
+To help users make sense of their new data, provide documentation of each metric and dimension that the integration emits, including name, type (counter, gauge, or cumulative counter) and description of what it measures.
 
-An example metrics documentation file can be found in http://sampleplugin/metrics.md.
+An example metrics documentation file can be found in [Example "docs" directory](https://github.com/signalfx/Integrations/tree/master/Example/docs).
 
 #### Sample dashboard
 
-Include a dashboard for your users to import into their monitoring solution, so that they can get instant value out of running your plugin. SignalFx provides free accounts for plugin developers that you can use to develop your dashboard. [Contact us to learn more](mailto:support@signalfx.com).
-
-### Testing Requirements
-
-In order to validate your plugin we need to know how to test it. Depending on the service or application that you are gathering metrics for, your test plan should reflect common use as well as assumed constraints. Please articulate the tests used for unit tests as well as any scale testing you've performed.
-
-### Docker Container Properties
-
-To help us recreate your test environment, provide us with a complete Docker image definition. Here are some words about what that entails.
+Include a dashboard for your users to import into their monitoring solution, so that they can get instant value out of running your integration. SignalFx provides extended trial accounts for plugin developers that you can use to develop your dashboard. [Contact us to learn more](mailto:community@signalfx.com).
