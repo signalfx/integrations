@@ -5,6 +5,8 @@ brief: Varnish plugin for collectd.
 
 # ![](https://github.com/signalfx/Integrations/blob/master/collectd-varnish/img/integrations_varnish.png) Varnish collectd Plugin
 
+_This is a directory consolidate all the metadata associated with the Varnish collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/varnish.c)_
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)

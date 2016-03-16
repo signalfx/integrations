@@ -3,8 +3,9 @@ title: Tail collectd Plugin
 brief: Tail plugin for collectd.
 ---
 
-![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
-# Tail collectd Plugin
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Tail collectd Plugin
+
+_This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

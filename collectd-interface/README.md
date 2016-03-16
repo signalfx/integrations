@@ -46,7 +46,10 @@ The following configuration options are *optional*. You may specify them in the 
 
 ### USAGE
 
-The primary use of this plugin is to track the I/O of system interfaces. This is not only valuable data to understand the workloads on specific systems but can be combined with other systema dn application metrics to identify issues related to network and data I/O traffic.
+The primary use of this plugin is to track the I/O of system interfaces. This is not only valuable data to understand the workloads on specific systems but can be combined with other system and application metrics to identify issues related to network and data I/O traffic.
+
+The [SignalFx collectd plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx/docs).
+
 
 ### METRICS
 

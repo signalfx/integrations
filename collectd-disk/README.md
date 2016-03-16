@@ -53,7 +53,10 @@ The following configuration options are *optional*. You may specify them in the 
 
 ### USAGE
 
-The primary use of this plugin is to track the available space on the systems filesystems. This can be used to set alerts and thresholds to avoid a filesystem from being filled to capacity.
+The primary use of this plugin is to track the available space on the systems disks. This can be used to set alerts and thresholds to avoid a disks from being filled to capacity.
+
+The [SignalFx collectd plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx/docs).
+
 
 ### METRICS
 
