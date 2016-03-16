@@ -57,7 +57,6 @@ The primary use of this plugin is to track the available space on the systems di
 
 The [SignalFx collectd plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx/docs).
 
-
 ### METRICS
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).

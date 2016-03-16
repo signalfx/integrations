@@ -85,6 +85,7 @@ Directions for finding your token:
 
 ### USAGE
 
+This plugin provides additional aggregated system metrics to SignalFx.
 
 ### METRICS
 
