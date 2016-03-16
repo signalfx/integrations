@@ -5,7 +5,7 @@ brief: For sending AppDynamics metrics to SignalFx.
 
 # ![](https://github.com/signalfx/Integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics Integration   
 
-_This is a directory consolidate all the metadata associated with the AppDynamics Integration. The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration)_
+_This is a directory to consolidate all the metadata associated with the AppDynamics Integration. The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,7 +17,7 @@ _This is a directory consolidate all the metadata associated with the AppDynamic
 
 ### DESCRIPTION
 
-This is the SignalFx AppDynamics integration which brings metrics captured through AppDynamics into SignaFx.
+This is the SignalFx AppDynamics integration, which brings metrics captured through AppDynamics into SignalFx.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -28,10 +28,10 @@ This is the SignalFx AppDynamics integration which brings metrics captured throu
 
 ### INSTALLATION
 
-[`appd-report-standalone` module](https://github.com/signalfx/appd-integration/tree/master/appd-report-standalone) is a standalone process that parses configurations and report
-AppDynamics metric every specified intervals.
+The [`appd-report-standalone` module](https://github.com/signalfx/appd-integration/tree/master/appd-report-standalone) is a standalone process that parses configurations and reports
+AppDynamics metrics at specified intervals.
 
-To install this module
+To install this module:
 ```
 maven install
 cd appd-report-standalone
@@ -59,14 +59,13 @@ APPD_INTERVAL=<time in minutes of metric lookup interval (default to 1 minute)>
 
 ### METRICS
 
-[Metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) contains configurations for list of apps, metrics inside each app and
-its dimensions mapping.
+[Metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) contains configurations for the list of apps, metrics inside each app, and dimensions mapping for each app.
 
 AppDynamics metric paths are described as a pipe-delimited string (|),
 for example Performance|AppServer1|Resources|CPU.
 
 Each metric is reported to SignalFx with the last element of this path as the metric name,
-and each previous element mapped to a dimension according to the dimensionsPathMap.
+and each previous element is mapped to a dimension according to the dimensionsPathMap.
 
 Elements can be ignored by specifying the target dimension as - (dash) in the dimensionsPathMap.
 
@@ -114,7 +113,7 @@ time series as
 }
 ```
 
-Optional extra dimensions can also be specified for each metric paths.
+Optional extra dimensions can also be specified for each metric path.
 
 Following is a working example of [metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) configurations:
 
@@ -147,7 +146,7 @@ Following is a working example of [metrics.json](https://github.com/signalfx/app
 ]
 ```
 
-Default [metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) is provided with Application Infrastructure Performance metrics configured.
+A default [metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) is provided, with Application Infrastructure Performance metrics configured.
 
 
 ### Process Status Metrics
