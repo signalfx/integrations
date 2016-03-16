@@ -3,7 +3,9 @@ title: SignalFx collectd
 brief: SignalFx validated version of collectd.
 ---
 
-# SignalFx collectd
+# SignalFx collectd Agent
+
+_This is a directory consolidate all the metadata associated with the SignalFx collectd Agent. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -46,6 +48,9 @@ Click the link next to "API Token" that says "show". Your API token appears.
 
 ### INSTALLATION
 
+
+#### SignalFx Shell Script
+
 SignalFx provides a shell script that you can use to install our latest build of collectd, install and configure important plugins, and configure collectd to send metrics to SignalFx.
 
 If you have already installed collectd, this script will install the SignalFx metadata plugin and configure collectd to send metrics to SignalFx.
@@ -70,6 +75,10 @@ Follow these instructions to use the script.
  * Type 'input' and press enter to provide the hostname yourself. When prompted, type in your desired hostname and press enter.
 
 When the script successfully completes, it starts up collectd, which begins reporting metrics to SignalFx. If you encounter any errors see Troubleshooting below, or send us an email at support@signalfx.com.
+
+#### Puppet
+
+#### CHEF
 
 ### CONFIGURATION
 

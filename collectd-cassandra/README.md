@@ -1,9 +1,11 @@
 ---
 title: collectd Cassandra Plugin
-brief: Cassandra metrics for collectd.
+brief: Cassandra metrics for collectd
 ---
 
 # ![](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png) Cassandra collectd Plugin
+
+ _This is a directory consolidate all the metadata associated with the Cassandra collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -74,9 +76,9 @@ Metrics from Cassandra will begin streaming into SignalFx, and new built-in dash
 
 Open the JMX port on your cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the [Cassandra Project site](http://wiki.apache.org/cassandra/JmxInterface). There is also a page covering a few [common issues](http://wiki.apache.org/cassandra/JmxGotchas).
 
-#### [`cassandra.conf`](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/20-cassandra.conf) file modifications:
+**[`cassandra.conf`](https://github.com/signalfx/Integrations/blob/master/collectd-cassandra/20-cassandra.conf) file modifications:**
 
-You must include [10-jmx.conf]() this ensures that the Java collectd plugin will properly run prior to loading the Cassandra specific configuration.
+You must include [`JMX.conf`](https://github.com/signalfx/Integrations/blob/master/collectd-java/10-jmx.conf) this ensures that the Java collectd plugin will properly run prior to loading the Cassandra specific configuration.
 
 | Value | Description |
 |-------|-------------|
