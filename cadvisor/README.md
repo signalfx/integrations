@@ -2,9 +2,9 @@
 
 # cadvisor-integration
 ## Overview
-This tool designed to run inside of Kubernetes cluster. After installation it will auto discover cluster nodes and will query stats from them on time basis.
+This tool is designed to run inside a Kubernetes cluster. After installation it will auto-discover cluster nodes and periodically query stats from them.
 ## Installation
-You may clone and build tool by yourself but the easiest way is to use prebuild docker image. Here is an example yaml file:
+You can clone and build the tool yourself, but the easiest way to install is to use a prebuilt docker image. Here is an example yaml file:
 
 	apiVersion: v1
 	kind: Pod
@@ -25,15 +25,15 @@ You may clone and build tool by yourself but the easiest way is to use prebuild 
 	      value: 5s
 ## Full options list
 
-| Option | Default val. | Comment | Env. Var. |
+| Option | Default value | Comment | Env. Var. |
 | ------ | ------------ | ------- | --------- |
-| --ingestURL | "https://ingest.signalfx.com"  | SignalFx ingest URL. |
+| --ingestURL | "https://ingest.signalfx.com"  | SignalFx ingest URL.|
 | --apiToken |   | API token. | $SFX_SCRAPPER_API_TOKEN |
-| --clusterName | | Cluster name will appear as dimension.  | $SFX_SCRAPPER_CLUSTER_NAME |
-| --sendRate | "1s"  | Rate at which data is queried from cAdvisor and send to SignalFx. Possible values: [10s 30s 1m 5m 1h 1s 5s] | $SFX_SCRAPPER_SEND_RATE |
+| --clusterName | | Cluster name that will appear as a dimension.  | $SFX_SCRAPPER_CLUSTER_NAME |
+| --sendRate | "1s"  | Rate at which data is queried from cAdvisor and sent to SignalFx. Possible values: [1s 5s 10s 30s 1m 5m 1h] | $SFX_SCRAPPER_SEND_RATE |
 | --cadvisorPort | 4194  | Port on which cAdvisor listens. | $SFX_SCRAPPER_CADVISOR_PORT |
-| --nodeServiceDiscoveryRate | "5m" | Rate at which nodes and services will be rediscovered. Possible values: [20m 3m 5m 10m 15m] | $SFX_SCRAPPER_NODE_SERVICE_DISCOVERY_RATE |
+| --nodeServiceDiscoveryRate | "5m" | Rate at which nodes and services will be rediscovered. Possible values: [3m 5m 10m 15m 20m] | $SFX_SCRAPPER_NODE_SERVICE_DISCOVERY_RATE |
 
 ## License
 
-This tool is licensed under the Apache License, Version 2.0. See LICENSE for full license text.
+This tool is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/appd-integration/blob/master/LICENSE) for more details.
