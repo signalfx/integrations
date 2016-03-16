@@ -5,6 +5,8 @@ brief: Riak KV metrics using collectd.
 
 # ![](https://github.com/signalfx/Integrations/blob/master/collectd-riak/img/integrations_riak.png) Riak KV Plugin
 
+_This is a directory consolidate all the metadata associated with the Riak KV collectd Configuration. The relevant code for the cURL-JSON plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c)_
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
@@ -31,7 +33,6 @@ This plugin requires:
 
 ### INSTALLATION
 
-
 This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
 ### CONFIGURATION
@@ -55,4 +56,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-Since this is not an actual _plugin_ but rather a configuration of the `collectd-curl-json plugin` there is no need for a separate license.
+Since this is not an actual _plugin_ but rather a configuration of the [`collectd-curl-json plugin`](https://github.com/signalfx/collectd/blob/master/src/curl_json.c) there is no need for a separate license.

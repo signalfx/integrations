@@ -3,8 +3,9 @@ title: StatsD collectd Plugin
 brief: StatsD plugin for collectd.
 ---
 
-
 # ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) StatsD collectd Plugin
+
+_This is a directory consolidate all the metadata associated with the StatsD collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/statsd.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

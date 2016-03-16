@@ -7,6 +7,8 @@ brief: The SignalFx Example Python plugin for collectd.
 
 # Example Python Plugin
 
+_This is a directory consolidate all the metadata associated with the **Example Integration**. The relevant code for the integration can be found [here](https://github.com/signalfx/collectd-example)_
+
 >This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins.
 >
 > In this document, sections in block quotes (like this one) contain instructions for plugin authors. Follow the instructions to format your README file, then remove them before submitting your contribution.

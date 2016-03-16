@@ -5,6 +5,8 @@ brief: SignalFx plugin to configure write-http to send metrics from collectd.
 
 # SignalFx collectd Plugin
 
+_This is a directory consolidate all the metadata associated with the SignalFx collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-signalfx/)_
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
@@ -90,4 +92,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-Since this is not an actual _plugin_ but rather a configuration of the `collectd-java plugin` there is no need for a license.
+This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-collectd-plugin/blob/master/LICENSE) for more details.
