@@ -5,6 +5,8 @@ brief: Zookeeper plugin for collectd.
 
 # ![](https://github.com/signalfx/Integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper collectd Plugin
 
+_This is a directory consolidate all the metadata associated with the Zookeeper collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper)_
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
@@ -25,10 +27,10 @@ This plugin requires:
 
 | Software          | Version        |
 |-------------------|----------------|
-| collectd   |  4.9+  |
-| Python plugin for collectd | (included with SignalFx collectd) |
-| Python   |  2.6+  |
-| Zookeeper |  3.4.0+  |
+| collectd          |        4.9+    |
+| Python collectd plugin | (included with SignalFx collectd) |
+| Python            |       2.6+     |
+| Zookeeper         |       3.4.0+   |
 
  #### Note:
  - Requires ZooKeeper 3.4.0 or greater in order to use the `mntr` [four letter word command](http://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html#sc_zkCommands).

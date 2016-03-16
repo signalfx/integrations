@@ -1,9 +1,11 @@
 ---
-title: Write-http collectd Plugin
-brief: Write-http plugin for collectd.
+title: Write-HTTP collectd Plugin
+brief: Write-HTTP plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) write-http collectd Plugin
+# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Write-HTTP collectd Plugin
+
+_This is a directory consolidate all the metadata associated with the Write-HTTP collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/write_http.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -15,14 +17,15 @@ brief: Write-http plugin for collectd.
 
 ### DESCRIPTION
 
+The Write HTTP plugin sends the values collected by collectd to a web-server using HTTP POST requests. The data is formatted as PUTVAL commands, see plain text protocol. The [SignalFx collectd agent](https://github.com/signalfx/collectd) version of this plugin has been extended with **Buffer Flushing** to ensure that metrics always arrive in a timely manner, we’ve added a timer so that it transmits data to SignalFx either when the data buffer is full or when a time limit is reached, whichever happens first. This capability is particularly useful if you are only collecting small quantities of time-sensitive metrics.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
 This plugin requires:
 
-| Software          | Version        |
-|-------------------|----------------|
-|  collectd   |  4.8+  |
+| Software | Version |
+|----------|---------|
+| collectd |  4.8+   |
 
 ### INSTALLATION
 
