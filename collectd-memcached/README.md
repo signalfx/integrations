@@ -73,11 +73,9 @@ Metrics from memcached will begin streaming into SignalFx, and new built-in dash
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_memcached.png)
 
 ### METRICS
 

@@ -81,6 +81,9 @@ Reading: 6 Writing: 179 Waiting: 106
 
 ### USAGE
 
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_nginx.png)
 
 ### METRICS
 

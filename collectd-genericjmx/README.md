@@ -125,7 +125,6 @@ Sample of pre-built dashboard in SignalFx:
 
 ![](././img/dashboard_genericjmx.png)
 
-
 ### LICENSE
 
 This plugin is released under the MIT license. See [header in plugin](https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java) for more details.

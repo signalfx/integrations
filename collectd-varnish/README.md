@@ -78,7 +78,9 @@ If there is the desire to reduce the metrics that are sent you can update the co
 | CollectWorkers     | Collect statistics about worker threads.                                                                          | enabled |
 ### USAGE
 
+Sample of pre-built dashboard in SignalFx:
 
+![](././img/dashboard_varnish.png)
 
 ### METRICS
 

@@ -169,6 +169,11 @@ Starting with version 5.2, the postgresql plugin supports writing data to Postgr
 
 [PostgreSQL Documentation manual](http://www.postgresql.org/docs/manuals/).
 
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_pstgresql.png)
+
+
 ### METRICS
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
