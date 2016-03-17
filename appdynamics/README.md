@@ -11,7 +11,6 @@ _This is a directory to consolidate all the metadata associated with the AppDyna
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Metrics](#metrics)
 - [License](#license)
 
@@ -54,8 +53,6 @@ SIGNALFX_TOKEN=<SignalFx token>
 SIGNALFX_APPD_METRICS=<metric configurations filename (default to metrics.json)>
 APPD_INTERVAL=<time in minutes of metric lookup interval (default to 1 minute)>
 ```
-
-### USAGE
 
 ### METRICS
 
