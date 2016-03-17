@@ -3,7 +3,7 @@ title: GenericJMX Plugin
 brief: GenericJMX plugin for collectd.
 ---
 
-![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png)
+![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png)
 # GenericJMX collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the GenericJMX collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java)_
@@ -20,7 +20,7 @@ _This is a directory consolidate all the metadata associated with the GenericJMX
 
 From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
-> The GenericJMX plugin reads Managed Beans (MBeans) from an MBeanServer using JMX. The plugin is written in Java and requires the [Java plugin](https://github.com/signalfx/Integrations/tree/master/collectd-java) to function.
+> The GenericJMX plugin reads Managed Beans (MBeans) from an MBeanServer using JMX. The plugin is written in Java and requires the [Java plugin](https://github.com/signalfx/integrations/tree/master/collectd-java) to function.
 
 > The Java Management Extensions (JMX) is a generic framework to provide and query various management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used, threads and so on. These basic performance values can therefore be collected for every Java process without any support in the Java process itself.
 
@@ -48,7 +48,7 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-1. Download SignalFx's sample JMX configuration file [JMX.conf](https://github.com/signalfx/Integrations/collectd-java/10-jmx.conf).
+1. Download SignalFx's sample JMX configuration file [JMX.conf](https://github.com/signalfx/integrations/collectd-java/10-jmx.conf).
 
 1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
@@ -109,7 +109,7 @@ The following options are recognized within MBean blocks:
 
 ### USAGE
 
-The GenericJMX collectd plugin by itself gathers generic Java metrics. By default this plugin will collect the following metrics when using the [default configuration](https://github.com/signalfx/Integrations/collectd-genericjmx/20-javageneric.conf):
+The GenericJMX collectd plugin by itself gathers generic Java metrics. By default this plugin will collect the following metrics when using the [default configuration](https://github.com/signalfx/integrations/collectd-genericjmx/20-javageneric.conf):
 
 | configuration option | type | definition |
 | ---------------------|------------|---------------|
@@ -120,6 +120,10 @@ The GenericJMX collectd plugin by itself gathers generic Java metrics. By defaul
 |Collect "memory_pool"| mbean_block_name | Total size and use of memory pool |
 
 ### METRICS
+
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_genericjmx.png)
 
 
 ### LICENSE

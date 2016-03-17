@@ -3,7 +3,7 @@ title: Metricproxy
 brief: SignalFx Metricproxy for aggregation and translation of metrics for sending to SignalFx.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx Metricproxy
+# ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx Metricproxy
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

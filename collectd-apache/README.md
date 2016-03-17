@@ -3,7 +3,7 @@ title: collectd Apache Webserver Plugin
 brief: Apache Webserver metrics for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache collectd Plugin
+#![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Apache collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c)_
 
@@ -62,7 +62,7 @@ Apache worker threads can be in one of the following states:
 
  #### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
  #### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
@@ -72,7 +72,7 @@ Apache worker threads can be in one of the following states:
  yum install collectd-apache
  ```
 
-1. Download SignalFx's [sample configuration file](https://github.com/signalfx/Integrations/collectd-apache/10-apache.conf) for this plugin.
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/collectd-apache/10-apache.conf) for this plugin.
 
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
@@ -107,6 +107,10 @@ Add the following to your apache config:
 | URL | The location of your `mod_status` |
 
 ### USAGE
+
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_apache.png)
 
 ### METRICS
 

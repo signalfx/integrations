@@ -3,7 +3,7 @@ title: PostgreSQL collectd Plugin
 brief: PostgreSQL plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png) PostgreSQL collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png) PostgreSQL collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the PostgreSQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/postgresql.c)_
 
@@ -34,16 +34,16 @@ This plugin requires:
 
 1. Install the collectd plugin.
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
  Run the following command to install this plugin:
  ```
  yum install collectd-postgresql
  ```
-1. Download SignalFx's [sample PostgreSQL configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-postgresql/10-postgresql.conf)
+1. Download SignalFx's [sample PostgreSQL configuration file](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf)
 
- **_Note:_** _if using a version of PostgreSQL older than 0.92 use_ [_this configuration file_](https://github.com/signalfx/Integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf)
+ **_Note:_** _if using a version of PostgreSQL older than 0.92 use_ [_this configuration file_](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf)
 
  Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 

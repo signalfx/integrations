@@ -3,7 +3,7 @@ title: Varnish collectd Plugin
 brief: Varnish plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd-varnish/img/integrations_varnish.png) Varnish collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-varnish/img/integrations_varnish.png) Varnish collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Varnish collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/varnish.c)_
 
@@ -34,7 +34,7 @@ The Varnish collectd plugin collects metrics from varnish and sends them to Sign
 
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
@@ -42,7 +42,7 @@ The Varnish collectd plugin collects metrics from varnish and sends them to Sign
  ```
  yum install collectd-varnish
  ```
-1. Download SignalFx's [sample varnish configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-varnish/10-varnish.conf)
+1. Download SignalFx's [sample varnish configuration file](https://github.com/signalfx/integrations/blob/master/collectd-varnish/10-varnish.conf)
 
  Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
