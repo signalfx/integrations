@@ -74,21 +74,34 @@ Using the example configuration files [`10-mesos-master.conf`](././10-mesos-mast
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](./Page_Mesos.json).
 
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
+#### Monitoring Mesos clusters
 
-![Example chart showing gauge.sine](http://fixme)
+![task monitoring](./img/mesos cluster - task monitoring.png)
 
-The following conditions may be cause for concern:
+It’s important to keep track of the status of tasks in the cluster. An increase in failed tasks for a master or slave can indicate a problem with a framework.
 
-*You see a straight line instead of a curve.*
+![hosts and slaves](./img/mesos cluster - hosts and slaves.png)
 
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap. 
+It can be important to analyze performance per Mesos host. An increase in failed tasks for many masters and slaves on a single host may indicate a hardware problem.
+
+![week-over-week growth](./img/mesos cluster - 1w task growth.png)
+
+Track week-over-week growth of tasks in your cluster to be informed of changing workloads. 
+
+#### Monitoring Mesos masters and slaves
+
+![connected slaves](./img/mesos master - connected slaves.png)
+
+An unexpectedly low number of connected slaves on a Mesos master can indicate a network problem preventing them from connecting. To verify this, check to see if there’s an unexpectedly high number of dropped messages in [`counter.master_dropped_messages`](./docs/counter.master_dropped_messages.md).
+
+![connected frameworks and task detail](./img/mesos master - connected frameworks.png)
+
+On the Mesos master dashboard, you can view in detail the number of tasks that are finished, failed, lost or errored out. Monitoring connected and active frameworks can help you determine the health of your Mesos scheduler.
+
+For additional information on how to monitor Mesos, check out Apache's guide [here](http://mesos.apache.org/documentation/latest/monitoring/). 
+
 
 ### METRICS
 
