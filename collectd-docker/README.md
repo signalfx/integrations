@@ -3,7 +3,7 @@ title: collectd Docker Plugin
 brief: Docker metrics for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker Plugin
+#![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker Plugin
 
 _This is a directory consolidate all the metadata associated with the Docker collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin)_
 
@@ -50,7 +50,7 @@ All metrics reported by the Docker collectd plugin will contain the following di
  ```
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
 1. Download the Python module from the following URL:
 
@@ -60,7 +60,7 @@ All metrics reported by the Docker collectd plugin will contain the following di
  ```
  pip install -r /path/to/docker-collectd-plugin/requirements.txt
  ```
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/Integrations/collectd-docker/10-docker.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/collectd-docker/10-docker.conf).
 
 1. Modify the configuration file as follows:
 
@@ -91,11 +91,9 @@ The following configuration options are *optional*. You may specify them in the 
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_docker.png)
 
 ### METRICS
 

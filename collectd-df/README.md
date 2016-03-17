@@ -3,7 +3,7 @@ title: collectd df Plugin
 brief: Disk Free metrics for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) DF (Disk Free) Plugin  
+#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) DF (Disk Free) Plugin  
 
 _This is a directory consolidate all the metadata associated with the df collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/df.c)_
 
@@ -32,11 +32,11 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/integrations/tree/master/collectd).
 
 ### CONFIGURATION
 
-Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/Integrations/blob/master/collectd/collectd.conf) file.
+Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/integrations/blob/master/collectd/collectd.conf) file.
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
@@ -53,7 +53,7 @@ Configuration for this plugin is kept in the main [collectd.conf](https://github
 
 The primary use of this plugin is to track the available space on the systems filesystems. This can be used to set alerts and thresholds to avoid a filesystem from being filled to capacity.
 
-The [SignalFx collectd plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/Integrations/blob/master/collectd-signalfx/docs/disk.utilization.md).
+The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/integrations/blob/master/collectd-signalfx/docs/disk.utilization.md).
 
 ### METRICS
 

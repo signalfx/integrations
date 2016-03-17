@@ -396,22 +396,22 @@ class {'send_collectd_metrics':
 Use this cookbook to install and configure collectd to send data to SignalFx. It can perform the following tasks:
 
 - Install [SignalFx's build of collectd](https://github.com/signalfx/collectd), an open-source monitoring daemon.
-- Install and configure [SignalFx's metadata plugin for collectd](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx)
-- Configure collectd's [write_http plugin](https://github.com/signalfx/Integrations/tree/master/collectd-write_http) to send data to SignalFx
+- Install and configure [SignalFx's metadata plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-signalfx)
+- Configure collectd's [write_http plugin](https://github.com/signalfx/integrations/tree/master/collectd-write_http) to send data to SignalFx
 - Install and configure collectd plugins for data collection from the following software:
-  - [Apache webserver](https://github.com/signalfx/Integrations/tree/master/collectd-apache)
-  - [Docker](https://github.com/signalfx/Integrations/tree/master/collectd-docker)
-  - [Cassandra](https://github.com/signalfx/Integrations/tree/master/collectd-cassandra)
-  - [ElasticSearch](https://github.com/signalfx/Integrations/tree/master/collectd-elasticsearch)
-  - [Kafka](https://github.com/signalfx/Integrations/tree/master/collectd-kafka)
-  - [Memcached](https://github.com/signalfx/Integrations/tree/master/collectd-memcached)
-  - [MySQL](https://github.com/signalfx/Integrations/tree/master/collectd-mysql)
-  - [Nginx](https://github.com/signalfx/Integrations/tree/master/collectd-nginx)
-  - [Varnish](https://github.com/signalfx/Integrations/tree/master/collectd-varnish)
-  - [Zookeeper](https://github.com/signalfx/Integrations/tree/master/collectd-zookeeper)
-  - [Postgres](https://github.com/signalfx/Integrations/tree/master/collectd-postgresql)
-  - [Redis](https://github.com/signalfx/Integrations/tree/master/collectd-redis)
-  - [MongoDB](https://github.com/signalfx/Integrations/tree/master/collectd-mongodb)
+  - [Apache webserver](https://github.com/signalfx/integrations/tree/master/collectd-apache)
+  - [Docker](https://github.com/signalfx/integrations/tree/master/collectd-docker)
+  - [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)
+  - [ElasticSearch](https://github.com/signalfx/integrations/tree/master/collectd-elasticsearch)
+  - [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)
+  - [Memcached](https://github.com/signalfx/integrations/tree/master/collectd-memcached)
+  - [MySQL](https://github.com/signalfx/integrations/tree/master/collectd-mysql)
+  - [Nginx](https://github.com/signalfx/integrations/tree/master/collectd-nginx)
+  - [Varnish](https://github.com/signalfx/integrations/tree/master/collectd-varnish)
+  - [Zookeeper](https://github.com/signalfx/integrations/tree/master/collectd-zookeeper)
+  - [Postgres](https://github.com/signalfx/integrations/tree/master/collectd-postgresql)
+  - [Redis](https://github.com/signalfx/integrations/tree/master/collectd-redis)
+  - [MongoDB](https://github.com/signalfx/integrations/tree/master/collectd-mongodb)
 
 ### System Requirements
 

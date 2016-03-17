@@ -3,7 +3,7 @@ title: Java collectd Plugin
 brief: Java plugin for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-java/img/integrations_jmx.png) Java collectd Plugin
+#![](https://github.com/signalfx/integrations/blob/master/collectd-java/img/integrations_java.png) Java collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Java collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
@@ -34,7 +34,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/integrations/tree/master/collectd).
 
 ### CONFIGURATION
 
@@ -81,8 +81,8 @@ Available configuration options:
 
 The Java collectd plugin is the swiss army knife of collectd for Java applications. For specific useage details you can take a look at some of the common Java apps that are used with collectd:
 
-* [cassandra](https://github.com/signalfx/Integrations/tree/master/collectd-cassandra)
-* [kafka](https://github.com/signalfx/Integrations/tree/master/collectd-kafka)
+* [cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)
+* [kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)
 
 ### METRICS
 

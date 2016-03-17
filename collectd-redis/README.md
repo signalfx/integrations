@@ -3,7 +3,7 @@ title: Redis collectd Plugin
 brief: Redis plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd-redis/img/integrations_redis.png) Redis collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-redis/img/integrations_redis.png) Redis collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Redis collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/redis.c)_
 
@@ -60,7 +60,7 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Redis):
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+This plugin is included with [SignalFx collectd](https://github.com/signalfx/integrations/tree/master/collectd).
 
 ### CONFIGURATION
 

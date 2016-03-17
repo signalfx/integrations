@@ -3,7 +3,7 @@ title: collectd Kafka Plugin
 brief: Kafka metrics for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd-kafka/img/integrations_kafka.png) Kafka Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-kafka/img/integrations_kafka.png) Kafka Plugin
 
 _This is a directory consolidate all the metadata associated with the Kafka collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
@@ -40,15 +40,15 @@ This is the SignalFx Kafka plugin. Follow these instructions to configure the Ja
  ```
  Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
 1. Download SignalFx's sample JMX configuration file and sample Kafka configuration file from the following URLs:
 
- [JMX.conf](https://github.com/signalfx/Integrations/collectd-jmx/10-jmx.conf)
- [kafka-conf](https://github.com/signalfx/Integrations/collectd-kafka/20-kafka.conf)
+ [JMX.conf](https://github.com/signalfx/integrations/collectd-jmx/10-jmx.conf)
+ [kafka-conf](https://github.com/signalfx/integrations/collectd-kafka/20-kafka.conf)
 
  *Note: If you're using Kafka v0.8.2, download this sample Kafka configuration file instead:*
- [kafka.conf](https://github.com/signalfx/Integrations/collectd-kafka/20-kafka_82.conf)
+ [kafka.conf](https://github.com/signalfx/integrations/collectd-kafka/20-kafka_82.conf)
 
 1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
