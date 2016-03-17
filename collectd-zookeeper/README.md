@@ -82,6 +82,9 @@ collectd will begin emitting metrics from Zookeeper.
 
 ### USAGE
 
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_zookeeper.png)
 
 ### METRICS
 

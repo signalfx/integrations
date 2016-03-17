@@ -29,7 +29,8 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+
 
 ### CONFIGURATION
 

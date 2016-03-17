@@ -75,6 +75,9 @@ collectd will begin emitting metrics from kafka.
 
 ### USAGE
 
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_kafka.png)
 
 ### METRICS
 
