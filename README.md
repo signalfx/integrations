@@ -1,4 +1,4 @@
-# Validated Plugins
+# Validated Integrations
 
 SignalFx indexes available and validated integrations [here](http://signalfx.github.io). On this page, users can browse available integrations and find the integration that monitors the software they care about. This also provides a single place to view all of the integrations that SignalFx has validated and for which SignalFx has provided built-in content in the SignalFx application. Each integration has a link to the code as well as a Project repository with information on:
 
@@ -17,11 +17,11 @@ In order to be added to the integration index, SignalFx validates each integrati
 1. Add required documentation content to that directory.
 1. Commit and submit a pull request to this repository. Pull request template will prompt for all required information. When you change or enhance your plugin, send updates through a pull request.
 
-## What is required for a new plugin
+## What is required for a new integration
 
 Here are SignalFx's requirements for a new plugin:
 
-- **Validated plugin code**
+- **Validated integration code**
 - **Documentation** that describes the integration and how it operates
   - Metadata file that points to integration code
   - Metrics docs
