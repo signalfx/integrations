@@ -63,7 +63,7 @@ This plugin requires:
 
 1. Download the [RabbitMQ Python module]( https://github.com/signalfx/collectd-rabbitmq/)
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/collectd-docker/10-rabbitmq.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf).
 
 1. Modify the configuration file as follows:
 

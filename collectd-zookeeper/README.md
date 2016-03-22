@@ -55,7 +55,7 @@ This plugin requires:
 
  https://github.com/signalfx/collectd-zookeeper
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/collectd-elasticsearch/20-zookeeper.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf).
 
 1. Modify the configuration file as follows:
 

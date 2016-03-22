@@ -60,7 +60,7 @@ All metrics reported by the Docker collectd plugin will contain the following di
  ```
  pip install -r /path/to/docker-collectd-plugin/requirements.txt
  ```
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/collectd-docker/10-docker.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf).
 
 1. Modify the configuration file as follows:
 
