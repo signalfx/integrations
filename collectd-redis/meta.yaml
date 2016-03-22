@@ -1,7 +1,8 @@
-{ "display_name":"Redis collectd Plugin",
+{ "display_name":"Redis collectd plugin",
   "description": "Redis collectd plugin",
-  "code": "https://github.com/collectd/collectd/blob/master/src/redis.c",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-redis",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/redis.c",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-redis/img/integrations_redis.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-redis/img/integrations_redis%402x.png"
-}
+  "logo_large": "/images/repos/collectd-redis/img/integrations_redis.png",
+  "logo_small": "/images/repos/collectd-redis/img/integrations_redis%402x.png"
+},

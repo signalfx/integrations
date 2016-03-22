@@ -1,7 +1,8 @@
-{ "display_name":"Couchbase collectd Plugin",
+{ "display_name":"Couchbase collectd plugin",
   "description": "Couchbase collectd plugin",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-couchbase",
   "code": "https://github.com/signalfx/collectd-couchbase",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-couchbase/img/integrations_couchbase%402x.png"
-}
+  "logo_large": "/images/repos/collectd-couchbase/img/integrations_couchbase.png",
+  "logo_small": "/images/repos/collectd-couchbase/img/integrations_couchbase%402x.png"
+},

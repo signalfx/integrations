@@ -1,7 +1,8 @@
-{ "display_name":"AppDynamics Metrics Integration",
-  "description": "AppDynamics metrics integration",
+{ "display_name":"AppDynamics Integration",
+  "description": "AppDynamics integration",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/appdynamics",
   "code": "https://github.com/signalfx/appd-integration",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-appdynamics/img/integrations_appdynamics%402x.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-appdynamics/img/integrations_appdynamics.png"
-}
+  "logo_large": "/images/repos/appdynamics/img/integrations_appdynamics%402x.png",
+  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png"
+},

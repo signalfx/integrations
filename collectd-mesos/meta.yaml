@@ -1,7 +1,8 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
+{ "display_name":"Mesos collectd plugin",
+  "description": "A collectd plugin for Apache Mesos using collectd's Python plugin.",
+  "project_url": "https://github.com/signalfx/collectd-mesos",
+  "code": "https://github.com/signalfx/integrations/tree/master/collectd-mesos",
   "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
-}
+  "logo_large": "/images/repos/collectd-mesos/img/integrations_mesos%402x.png",
+  "logo_small": "/images/repos/collectd-mesos/img/integrations_mesos.png"
+},

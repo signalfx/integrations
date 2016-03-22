@@ -1,7 +1,8 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
-}
+{ "display_name":"Protocols collectd plugin",
+  "description": "The Protocols plugin collects information about the network protocols supported by the system, for example Internet Protocol (IP) and Transmission Control Protocol (TCP).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-protocols",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/protocols.c",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-protocols/img/integrations_collectd%402x.png",
+  "logo_small": "/images/repos/collectd-protocols/img/integrations_collectd.png"
+},

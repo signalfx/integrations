@@ -1,7 +1,8 @@
-{ "display_name":"Memcached collectd Plugin",
+{ "display_name":"Memcached collectd plugin",
   "description": "Memcached collectd plugin",
-  "code": "https://github.com/collectd/collectd/blob/master/src/memcached.c",
-  "featured": true,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-memcached/img/integrations_memcached.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-memcached/img/integrations_memcached%402x.png"
-}
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-memcached",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/memcached.c",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-memcached/img/integrations_memcached.png",
+  "logo_small": "/images/repos/collectd-memcached/img/integrations_memcached%402x.png"
+},
