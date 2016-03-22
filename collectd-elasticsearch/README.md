@@ -54,7 +54,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
  https://github.com/signalfx/collectd-elasticsearch
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/collectd-elasticsearch/20-elasticsearch.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf).
 
 1. Modify the configuration file as follows:
 

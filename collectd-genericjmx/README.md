@@ -48,7 +48,7 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-1. Download SignalFx's sample JMX configuration file [JMX.conf](https://github.com/signalfx/integrations/collectd-java/10-jmx.conf).
+1. Download SignalFx's sample JMX configuration file [JMX.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf).
 
 1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
@@ -109,7 +109,7 @@ The following options are recognized within MBean blocks:
 
 ### USAGE
 
-The GenericJMX collectd plugin by itself gathers generic Java metrics. By default this plugin will collect the following metrics when using the [default configuration](https://github.com/signalfx/integrations/collectd-genericjmx/20-javageneric.conf):
+The GenericJMX collectd plugin by itself gathers generic Java metrics. By default this plugin will collect the following metrics when using the [default configuration](https://github.com/signalfx/integrations/blob/master/collectd-genericjmx/20-javageneric.conf):
 
 | configuration option | type | definition |
 | ---------------------|------------|---------------|

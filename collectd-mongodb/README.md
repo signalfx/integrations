@@ -159,7 +159,7 @@ This plugin reports page faults in [`counter.extra_info.page_faults`](././docs/c
 
 *This MongoDB instance has a low rate of page faults. This means that most of the data MongoDB needs to access is in memory, and doesn't need to be fetched from disk.*
 
-You can monitor disk I/O utilization for your MongoDB host using the [`disk_ops.write`](https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/derive.disk_ops.write.md) and [`disk_ops.read`](https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/derive.disk_ops.read.md) metrics emitted by the `disk` plugin for collectd, which is included and enabled by default in most packages of collectd. [Click here to learn more about the `collectd-disk`](https://github.com/signalfx/integrations/collectd-disk/) plugin.
+You can monitor disk I/O utilization for your MongoDB host using the [`disk_ops.write`](https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/derive.disk_ops.write.md) and [`disk_ops.read`](https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/derive.disk_ops.read.md) metrics emitted by the `disk` plugin for collectd, which is included and enabled by default in most packages of collectd. [Click here to learn more about the `collectd-disk`](https://github.com/signalfx/integrations/blob/master/collectd-disk/) plugin.
 
 ### METRICS
 
