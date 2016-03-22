@@ -49,14 +49,14 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Redis):
                         &(rhnd->version.patch));
 ```
 
-> * see brief notes on [configuring this under ubuntu 14.04](https://github.com/collectd/collectd/issues/755#issuecomment-57948623)
+> * see brief notes on [configuring this under ubuntu 14.04](https://github.com/signalfx/collectd/issues/755#issuecomment-57948623)
 
 > * the following tips are useful when testing and troubleshooting
 * use redis-cli ping to ensure you can connect to redis itself.
 * use credis-test to see if your compiled credis is able to talk to redis itself. If this fails, the collectd plugin will also not work.
 * use redis-cli monitor & to see what redis is receiving and sending itself.
 * use sudo ngrep -texd lo port 6379 to see raw traffic goin to/from redis on the loopback adapter. You may need to use eth0 or similar depending on your setup. This may show up more information on why certain credis commands do not get through to redis itself.
-* Finally, users comfortable with compiling their own versions from scratch may want to follow the hiredis alternative mentioned in [current issues](https://github.com/collectd/collectd/issues?q=hiredis+)
+* Finally, users comfortable with compiling their own versions from scratch may want to follow the hiredis alternative mentioned in [current issues](https://github.com/signalfx/collectd/issues?q=hiredis+)
 
 ### INSTALLATION
 

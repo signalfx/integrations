@@ -6,7 +6,7 @@ brief: Metrics collected from Postgresql
 
 This document describes the Postgresql metrics as reported by SignalFx.
 
-collectd-postgresql is preconfigured with basic postgresql statistics query [(postgresql_default.conf)](https://github.com/collectd/collectd/blob/master/src/postgresql_default.conf) which utilizes the statistics available in postgres documented [here](http://www.postgresql.org/docs/9.3/static/monitoring-stats.html).
+collectd-postgresql is preconfigured with basic postgresql statistics query [(postgresql_default.conf)](https://github.com/signalfx/collectd/blob/master/src/postgresql_default.conf) which utilizes the statistics available in postgres documented [here](http://www.postgresql.org/docs/9.3/static/monitoring-stats.html).
 
 ### Requirements
 

@@ -1,7 +1,8 @@
-{ "display_name":"Docker collectd Plugin",
-  "description": "Docker collectd Plugin",
+{ "display_name":"Docker collectd plugin",
+  "description": "Docker collectd plugin",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-docker",
   "code": "https://github.com/signalfx/docker-collectd-plugin",
   "featured": true,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-docker/img/integrations_docker.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-docker/img/integrations_docker%402x.png"
-}
+  "logo_large": "/images/repos/collectd-docker/img/integrations_docker.png",
+  "logo_small": "/images/repos/collectd-docker/img/integrations_docker%402x.png"
+},

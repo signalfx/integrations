@@ -1,7 +1,8 @@
-{ "display_name":"PostgreSQL collectd Plugin",
+{ "display_name":"PostgreSQL collectd plugin",
   "description": "PostgreSQL collectd plugin",
-  "code": "https://github.com/collectd/collectd/blob/master/src/postgresql.c",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-postgresql",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/postgresql.c",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-postgresql/img/integrations_postgresql%402x.png"
-}
+  "logo_large": "/images/repos/collectd-postgresql/img/integrations_postgresql.png",
+  "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png"
+},

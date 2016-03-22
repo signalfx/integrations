@@ -1,7 +1,8 @@
-{ "display_name":"cURL-JSON collectd Plugin",
+{ "display_name":"cURL-JSON collectd plugin",
   "description": "collectd plugin to gather metrics through cURL in JSON format ",
-  "code": "https://github.com/collectd/collectd/blob/master/src/curl_json.c",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-curl-json",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/curl_json.c",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd%402x.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png"
-}
+  "logo_large": "/images/repos/collectd/img/integrations_collectd%402x.png",
+  "logo_small": "/images/repos/collectd/img/integrations_collectd.png"
+},
