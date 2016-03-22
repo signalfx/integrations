@@ -44,11 +44,11 @@ This is the SignalFx Kafka plugin. Follow these instructions to configure the Ja
 
 1. Download SignalFx's sample JMX configuration file and sample Kafka configuration file from the following URLs:
 
- [JMX.conf](https://github.com/signalfx/integrations/collectd-jmx/10-jmx.conf)
- [kafka-conf](https://github.com/signalfx/integrations/collectd-kafka/20-kafka.conf)
+ [JMX.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+ [kafka-conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka.conf)
 
  *Note: If you're using Kafka v0.8.2, download this sample Kafka configuration file instead:*
- [kafka.conf](https://github.com/signalfx/integrations/collectd-kafka/20-kafka_82.conf)
+ [kafka.conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka_82.conf)
 
 1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
