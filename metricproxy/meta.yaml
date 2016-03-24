@@ -1,7 +1,8 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+{ "display_name":"Metricproxy",
+  "description": "SignalFx Metricproxy",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/metricproxy",
+  "code": "https://github.com/signalfx/metricproxy",
+  "featured": false,
+  "logo_large": "/images/repos/metricproxy/img/integrations_metricproxy.png",
+  "logo_small": "/images/repos/metricproxy/img/integrations_metricproxy%402x.png"
 }

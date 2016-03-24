@@ -1,7 +1,8 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+{ "display_name":"Perfcounter Reporter",
+  "description": "SignalFx Integration for Windows Perfcounter",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/win-perfcounter",
+  "code": "https://github.com/signalfx/PerfCounterReporter",
+  "featured": false,
+  "logo_large": "/images/repos/win-perfcounter/img/integrations_windows.png",
+  "logo_small": "/images/repos/win-perfcounter/img/integrations_windows%402x.png"
 }

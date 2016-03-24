@@ -1,7 +1,8 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+{ "display_name":"SignalFx node.js Library",
+  "description": "node.js Library for SignalFx",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/lib-node",
+  "code": "https://github.com/signalfx/signalfx-nodejs",
+  "featured": false,
+  "logo_large": "/images/repos/lib-node/img/integrations_nodejs.png",
+  "logo_small": "/images/repos/lib-node/img/integrations_nodejs%402x.png"
 }
