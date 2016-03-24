@@ -4,7 +4,7 @@ brief: Metrics collected from Redis nodes
 ---
 ### Redis Metrics
 
-Use the [redis-collectd-plugin](https://github.com/powdahound/redis-collectd-plugin) collectd plugin to collect metrics for Redis.
+Use the [redis-collectd-plugin](https://github.com/signalfx/redis-collectd-plugin) collectd plugin to collect metrics for Redis.
 
 Use this plugin to monitor the following types of information from a Redis node:
 
