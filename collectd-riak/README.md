@@ -80,21 +80,6 @@ Using the example configuration file [`10-riak.conf`](././10-riak.conf) as a gui
 
 Replication is part of the Riak KV [enterprise](http://docs.basho.com/riakee/latest/cookbooks/Multi-Data-Center-Replication-Architecture/) package. Unless this feature is enabled, all the metrics available at ../riak-repl/stats will be empty.
 
-#### Note: Discover Available Riak Metrics
-
-There are nearly 400 metrics that can be sent to SignalFx using curl. The configurations here include some commonly used stats. The exhaustive list can be obtained by curling any Riak KV node.
-
-```
-curl -X GET http://localhost:8098/stats
-```
-
-Optionally, use jsonpp to produce an easily parsable list:
-
-```
-brew install jsonpp
-curl -X GET http://localhost:8098/stats | jsonpp
-```
-
 ### USAGE
 
 Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
@@ -144,7 +129,22 @@ This is not an exhaustive list of metrics, there are dozens of metrics that are 
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the frequently used metrics and dimensions emitted by this plugin, [click here](././docs).
+
+#### Note: Discover _all_ Available Riak Metrics
+
+There are nearly 400 metrics that can be sent to SignalFx using curl. The configurations here include some commonly used stats. The exhaustive list can be obtained by curling any Riak KV node.
+
+```
+curl -X GET http://localhost:8098/stats
+```
+
+Optionally, use jsonpp to produce an easily parsable list:
+
+```
+brew install jsonpp
+curl -X GET http://localhost:8098/stats | jsonpp
+```
 
 ### LICENSE
 
