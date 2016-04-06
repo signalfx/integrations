@@ -2,7 +2,7 @@
   "marshallScope" : 1
 }, {
   "sf_detectorTemplate" : "Memory utilization % rate of change above normal population",
-  "sf_description" : "This template creates a detector to detect when memory utilization % rate of change is greater then the normal population",
+  "sf_description" : "This template creates a detector to detect when memory utilization % rate of change is greater then the normal population for a duration of at least one minute",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "memory.utilization" ],
   "sf_detectorTemplateSourceId" : "Ce-q16_AIAE",
