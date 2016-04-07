@@ -28,7 +28,7 @@ collects statistics from Couchbase.
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | python | 2.7 or later |
-| couchbase | 4.1 or later |
+| couchbase | 3.0 or later |
 
 
 ### INSTALLATION
