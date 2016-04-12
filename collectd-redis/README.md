@@ -80,6 +80,8 @@ collectd will begin emitting metrics to SignalFx.
 
 ### CONFIGURATION
 
+Using the example configuration files [`10-redis_master.conf`](././10-redis_master.conf) or [`10-redis_slave.conf`](././10-redis_slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Redis instance to be monitored.
+
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
 | Node | Nodename | The Node block identifies a new Redis node, that is a new Redis instance running in an specified host and port. The name for node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.|
