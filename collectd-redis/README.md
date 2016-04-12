@@ -60,7 +60,9 @@ This plugin requires:
 
  https://github.com/signalfx/redis-collectd-plugin
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-redis/redis.conf)
+1. SignalFx provides sample configuration files for both a Redis master and a Redis slave. Download SignalFx's sample configuration files for this module from the following URLs:
+  - [MASTER](https://github.com/signalfx/integrations/blob/master/collectd-redis/10-redis_master.conf)
+  - [SLAVE](https://github.com/signalfx/integrations/blob/master/collectd-redis/10-redis_slave.conf)
 
 1. Modify the configuration file(s) as follows:
 
@@ -70,7 +72,7 @@ This plugin requires:
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
  ```
- include '/path/to/redis.conf'
+ include '/path/to/10-redis_(master or slave).conf'
  ```
 1. Restart collectd.
 
