@@ -72,7 +72,7 @@ Follow these instructions to use the script.
 
 When the script successfully completes, it starts up collectd, which begins reporting metrics to SignalFx. If you encounter any errors see Troubleshooting below, or send us an email at support@signalfx.com.
 
-## INSTALL WITH PUPPET
+## ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_puppet.png)INSTALL WITH PUPPET
 
 ### Overview
 
@@ -391,7 +391,7 @@ class {'send_collectd_metrics':
 |ppa | Change this value if you want to install the signalfx plugin from your local PPA. Applies only to Ubuntu systems. Default value is appropriate up-to-date ppa hosted by SignalFx.|
 |debian_ppa | Change this value if you want to install the signalfx plugin from your local PPA. Applies only to Debian GNU/Linux 7 and 8 systems. Default value is appropriate up-to-date ppa hosted by SignalFx.|
 
-## INSTALL WITH CHEF
+## ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_chef.png)INSTALL WITH CHEF
 
 Use this cookbook to install and configure collectd to send data to SignalFx. It can perform the following tasks:
 
