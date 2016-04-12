@@ -80,50 +80,12 @@ collectd will begin emitting metrics to SignalFx.
 
 ### CONFIGURATION
 
-Add the following to your collectd config **or** use the included redis.conf.
-
-```
-    # Configure the redis_info-collectd-plugin
-
-    <LoadPlugin python>
-      Globals true
-    </LoadPlugin>
-
-    <Plugin python>
-      ModulePath "/opt/collectd/lib/collectd/plugins/python"
-      Import "redis_info"
-
-      <Module redis_info>
-        Host "localhost"
-        Port 6379
-        # Un-comment to use AUTH
-        #Auth "1234"
-        Verbose false
-        #Instance "instance_1"
-        # Redis metrics to collect (prefix with Redis_)
-        Redis_db0_keys "gauge"
-        Redis_uptime_in_seconds "gauge"
-        Redis_uptime_in_days "gauge"
-        Redis_lru_clock "counter"
-        Redis_connected_clients "gauge"
-        Redis_connected_slaves "gauge"
-        Redis_blocked_clients "gauge"
-        Redis_evicted_keys "gauge"
-        Redis_used_memory "bytes"
-        Redis_used_memory_peak "bytes"
-        Redis_changes_since_last_save "gauge"
-        Redis_instantaneous_ops_per_sec "gauge"
-        Redis_rdb_bgsave_in_progress "gauge"
-        Redis_total_connections_received "counter"
-        Redis_total_commands_processed "counter"
-        Redis_keyspace_hits "derive"
-        Redis_keyspace_misses "derive"
-        #Redis_master_repl_offset "gauge"
-        #Redis_master_last_io_seconds_ago "gauge"
-        #Redis_slave_repl_offset "gauge"
-      </Module>
-    </Plugin>
-```
+| Configuration Option | Type | Definition |
+|----------------------|------|------------|
+| Node | Nodename | The Node block identifies a new Redis node, that is a new Redis instance running in an specified host and port. The name for node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.|
+| Host | Hostname |The Host option is the hostname or IP-address where the Redis instance is running on.|
+|Port |Port| The Port option is the TCP port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.|
+|Instance |Type instance|Within a query definition, an optional type instance to use when submitting the result of the query. When not supplied will default to the escaped command, up to 64 chars.|
 
 ### Multiple Redis instances
 
@@ -176,7 +138,7 @@ These 3 redis instances listen on different ports, they have different plugin_in
 "plugin_instance" => "127.0.0.1:9102",
 ```
 
-These values will be part of the metric name emitted by collectd, e.g. ```collectd.redis_info.127.0.0.1:9100.bytes.used_memory```
+These values will be part of the metric name emitted by collectd, e.g. `collectd.redis_info.127.0.0.1:9100.bytes.used_memory`
 
 If you want to set a static value for the plugin instance, use the ```Instance``` configuration option:
 
@@ -189,9 +151,10 @@ If you want to set a static value for the plugin instance, use the ```Instance``
   </Module>
 ...
 ```
-This will result in metric names like: ```collectd.redis_info.redis-prod.bytes.used_memory```
 
-```Instance``` can be empty, in this case the name of the metric will not contain any reference to the host/port. If it is omitted, the host:port value is added to the metric name.
+This will result in metric names like: `collectd.redis_info.redis-prod.bytes.used_memory`
+
+`Instance` can be empty, in this case the name of the metric will not contain any reference to the host/port. If it is omitted, the host:port value is added to the metric name.
 
 ### Multiple Data source types
 You can send multiple data source types from same key by specifying it in the Module:
@@ -209,13 +172,6 @@ You can send multiple data source types from same key by specifying it in the Mo
   </Module>
 ...
 ```
-
-| Configuration Option | Type | Definition |
-|----------------------|------|------------|
-| Node | Nodename | The Node block identifies a new Redis node, that is a new Redis instance running in an specified host and port. The name for node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.|
-| Host | Hostname |The Host option is the hostname or IP-address where the Redis instance is running on.|
-|Port |Port| The Port option is the TCP port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.|
-|Instance |Type instance|Within a query definition, an optional type instance to use when submitting the result of the query. When not supplied will default to the escaped command, up to 64 chars.|
 
 ### USAGE
 
