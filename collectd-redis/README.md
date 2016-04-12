@@ -36,43 +36,46 @@ This plugin requires:
 
 | Software          | Version        |
 |-------------------|----------------|
-| collectd   |  5.0+  |
-| credis (C library implementing the redis protocol)| 0.2.3+ |
+| collectd   |  4.9+  |
+| Python plugin for collectd | (included with SignalFx collectd) |
+| Python    |  2.6+ |
 | redis | 2.8+ |
 
-From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Redis):
-
-> The credis library is lagging support for current redis, and requires at least the following patch:
-
-> ```
---- ../credis_2/credis-0.2.3/credis.c   2010-08-27 01:57:25.000000000 -0700
-+++ ../credis-0.2.3/credis.c    2014-01-28 22:39:42.000000000 -0800
-@@ -754,7 +754,7 @@
-    * first 1.1.0 release(?), e.g. stable releases 1.02 and 1.2.6 */
-   if (cr_sendfandreceive(rhnd, CR_BULK, "INFO\r\n") == 0) {
-     int items = sscanf(rhnd->reply.bulk,
--                       "redis_version:%d.%d.%d\r\n",
-+                       "# Server\r\nredis_version:%d.%d.%d\r\n",
-                        &(rhnd->version.major),
-                        &(rhnd->version.minor),
-                        &(rhnd->version.patch));
-```
-
-> * see brief notes on [configuring this under ubuntu 14.04](https://github.com/signalfx/collectd/issues/755#issuecomment-57948623)
-
-> * the following tips are useful when testing and troubleshooting
-* use redis-cli ping to ensure you can connect to redis itself.
-* use credis-test to see if your compiled credis is able to talk to redis itself. If this fails, the collectd plugin will also not work.
-* use redis-cli monitor & to see what redis is receiving and sending itself.
-* use sudo ngrep -texd lo port 6379 to see raw traffic goin to/from redis on the loopback adapter. You may need to use eth0 or similar depending on your setup. This may show up more information on why certain credis commands do not get through to redis itself.
-* Finally, users comfortable with compiling their own versions from scratch may want to follow the hiredis alternative mentioned in [current issues](https://github.com/signalfx/collectd/issues?q=hiredis+)
 
 ### INSTALLATION
 
- 1. Place redis_info.py in /opt/collectd/lib/collectd/plugins/python (assuming you have collectd installed to /opt/collectd).
- 1. Configure the plugin (see below).
- 1. Restart collectd.
- 
+1. Install the Python plugin for collectd.
+
+ ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
+
+ Run the following command to install the Python plugin for collectd:
+ ```
+ yum install collectd-python
+ ```
+ ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+
+ This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+
+1. Download the Python module from the following URL:
+
+ https://github.com/signalfx/redis-collectd-plugin
+
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-redis/redis.conf)
+
+1. Modify the configuration file(s) as follows:
+
+ 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
+
+ 1. Provide values that make sense for your environment, as described [below](#configuration).
+
+1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
+ ```
+ include '/path/to/redis.conf'
+ ```
+1. Restart collectd.
+
+collectd will begin emitting metrics to SignalFx.
+
 ### CONFIGURATION
 
 Add the following to your collectd config **or** use the included redis.conf.
