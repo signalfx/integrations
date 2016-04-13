@@ -1,0 +1,8 @@
+{ "display_name":"HBase collectd plugin",
+  "description": "HBase collectd plugin",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-hbase",
+  "code": "https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-hbase/img/integrations_hbase%402x.png",
+  "logo_small": "/images/repos/collectd-hbase/img/integrations_hbase.png"
+},

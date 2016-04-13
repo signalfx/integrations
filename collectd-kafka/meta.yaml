@@ -1,7 +1,8 @@
-{ "display_name":"Kafka collectd Plugin",
+{ "display_name":"Kafka collectd plugin",
   "description": "Kafka collectd plugin",
-  "code": "https://github.com/collectd/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-kafka",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/write_kafka.c",
   "featured": true,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-kafka/img/integrations_kafka.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-kafka/img/integrations_kafka%402x.png"
-}
+  "logo_large": "/images/repos/collectd-kafka/img/integrations_kafka.png",
+  "logo_small": "/images/repos/collectd-kafka/img/integrations_kafka%402x.png"
+},

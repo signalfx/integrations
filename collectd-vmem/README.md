@@ -3,7 +3,7 @@ title: vmem collectd Plugin
 brief: vmem (virtual memory) plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) vmem collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) vmem collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the vmem collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/vmem.c)_
 
@@ -31,11 +31,12 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+
 
 ### CONFIGURATION
 
-Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/Integrations/blob/master/collectd/collectd.conf) file.
+Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/integrations/blob/master/collectd/collectd.conf) file.
 
 From the [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_vmem):
 

@@ -3,7 +3,7 @@ title: collectd interface Plugin
 brief: Interface metrics for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Interface collectd Plugin  
+#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Interface collectd Plugin  
 
 _This is a directory consolidate all the metadata associated with the Interface collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/interface.c)_
 
@@ -31,7 +31,8 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+
 
 ### CONFIGURATION
 
@@ -48,8 +49,7 @@ The following configuration options are *optional*. You may specify them in the 
 
 The primary use of this plugin is to track the I/O of system interfaces. This is not only valuable data to understand the workloads on specific systems but can be combined with other system and application metrics to identify issues related to network and data I/O traffic.
 
-The [SignalFx collectd plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/Integrations/tree/master/collectd-signalfx/docs).
-
+The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/integrations/tree/master/collectd-signalfx/docs).
 
 ### METRICS
 

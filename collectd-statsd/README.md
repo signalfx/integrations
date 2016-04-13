@@ -3,7 +3,7 @@ title: StatsD collectd Plugin
 brief: StatsD plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) StatsD collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) StatsD collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the StatsD collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/statsd.c)_
 
@@ -42,14 +42,14 @@ This plugin requires:
 
 1. Install the collectd plugin.
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
  Run the following command to install this plugin:
  ```
  yum install collectd-statsd
  ```
-1. Download SignalFx's [sample statsd configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-statsd/10-statsd.conf)
+1. Download SignalFx's [sample statsd configuration file](https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf)
 
   Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
@@ -63,7 +63,7 @@ Metrics from statsd will begin streaming into SignalFx, and new built-in dashboa
 
 ### CONFIGURATION
 
-Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/Integrations/blob/master/collectd/collectd.conf) file.
+Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/integrations/blob/master/collectd/collectd.conf) file.
 
 From the [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd):
 

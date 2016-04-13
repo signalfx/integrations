@@ -1,7 +1,8 @@
-{ "display_name":"MongoDB collectd Plugin",
+{ "display_name":"MongoDB collectd plugin",
   "description": "MongoDB collectd plugin",
+  "project_url": "https://github.com/signalfx/collectd-mongodb",
   "code": "https://github.com/signalfx/collectd-mongodb",
   "featured": true,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-mongodb/img/integrations_mongodb%402x.png"
-}
+  "logo_large": "/images/repos/collectd-mongodb/img/integrations_mongodb.png",
+  "logo_small": "/images/repos/collectd-mongodb/img/integrations_mongodb%402x.png"
+},

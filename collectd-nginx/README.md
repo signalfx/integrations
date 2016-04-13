@@ -2,7 +2,7 @@
 title: NGINX collectd Plugin
 brief: NGINX plugin for collectd.
 ---
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd-nginx/img/integrations_nginx.png) NGINX collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-nginx/img/integrations_nginx.png) NGINX collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the NGINX collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/nginx.c)_
 
@@ -40,9 +40,9 @@ This plugin requires:
  ```
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-nginx/10-nginx.conf)
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf)
 
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
@@ -75,12 +75,15 @@ server accepts handled requests
 Reading: 6 Writing: 179 Waiting: 106
 ```
 
-#### [nginx collectd configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-nginx/10-nginx.conf)
+#### [nginx collectd configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf)
 
 - Change the URL parameter to the location you setup above.
 
 ### USAGE
 
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_nginx.png)
 
 ### METRICS
 

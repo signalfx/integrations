@@ -1,7 +1,8 @@
-{ "display_name":"cAdvisor Metrics Plugin",
+{ "display_name":"cAdvisor Metrics plugin",
   "description": "cAdvisor metrics plugin",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/cadvisor",
   "code": "https://github.com/signalfx/cadvisor-integration",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-cadvisor/img/integrations_cadvisor.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-cadvisor/img/integrations_cadvisor%402x.png"
-}
+  "logo_large": "/images/repos/cadvisor/img/integrations_kubernetes%402x.png",
+  "logo_small": "/images/repos/cadvisor/img/integrations_kubernetes.png"
+},

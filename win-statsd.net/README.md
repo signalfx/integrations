@@ -3,7 +3,7 @@ title: StatsD.NET Integration
 brief: The SignalFx Integration for Windows StatsD.NET.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/win-statsd.net/img/integrations_windows.png) SignalFx StatsD.NET Integration
+# ![](https://github.com/signalfx/integrations/blob/master/win-statsd.net/img/integrations_windows.png) SignalFx StatsD.NET Integration
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

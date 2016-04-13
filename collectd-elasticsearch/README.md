@@ -3,7 +3,7 @@ title: collectd Elasticsearch Plugin
 brief: Elasticsearch metrics for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch Plugin
+#![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch Plugin
 
 _This is a directory consolidate all the metadata associated with the Elasticsearch collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch)_
 
@@ -54,7 +54,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
  https://github.com/signalfx/collectd-elasticsearch
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/Integrations/collectd-elasticsearch/20-elasticsearch.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf).
 
 1. Modify the configuration file as follows:
 
@@ -77,11 +77,9 @@ collectd will begin emitting metrics from ElasticSearch.
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_elasticsearch.png)
 
 ### METRICS
 

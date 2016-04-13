@@ -1,7 +1,8 @@
-{ "display_name":"GenericJMX collectd Plugin",
+{ "display_name":"GenericJMX collectd plugin",
   "description": "collectd plugin required to use JAVA application",
-  "code": "https://github.com/collectd/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-genericjmx",
+  "code": "https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-java/img/integrations_jmx.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-java/img/integrations_jmx%402x.png"
-}
+  "logo_large": "/images/repos/collectd-java/img/integrations_jmx.png",
+  "logo_small": "/images/repos/collectd-java/img/integrations_jmx%402x.png"
+},

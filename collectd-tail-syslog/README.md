@@ -3,7 +3,7 @@ title: Tail collectd Plugin
 brief: Tail plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Tail collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Tail collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c)_
 
@@ -11,8 +11,6 @@ _This is a directory consolidate all the metadata associated with the Tail colle
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
-- [Metrics](#metrics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -68,7 +66,8 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+
 
 ### CONFIGURATION
 
@@ -112,30 +111,6 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 |DSType |Type|Sets how the values are cumulated. Type is one of:<ui><li>`GaugeAverage`: Calculate the average.</li><li>`GaugeMin`: Use the smallest number only.<?li><li>`GaugeMax`: Use the greatest number only.</li><li>`GaugeLast`: Use the last number found.</li><li>`CounterSet`</li><li>`DeriveSet`</li><li>`AbsoluteSet`: The matched number is a counter. Simply sets the internal counter to this value. Variants exist for `COUNTER`, `DERIVE`, and `ABSOLUTE` data sources.</li><li>`GaugeAdd`</li><li>`CounterAdd`</li><li>`DeriveAdd`: Add the matched value to the internal counter. In case of `DeriveAdd`, the matched number may be negative, which will effectively subtract from the internal counter.</li><li>`GaugeInc`</li><li>`CounterInc`</li><li>`DeriveInc`: Increase the internal counter by one. These DSType are the only ones that do not use the matched subexpression, but simply count the number of matched lines. Thus, you may use a regular expression without submatch in this case. </li></ui>As you'd expect the _Gauge_ types interpret the submatch as a floating point number, using _strtod(3)_. The Counter* and AbsoluteSet types interpret the submatch as an unsigned integer using _strtoull(3)_. The _Derive_ types interpret the submatch as a signed integer using _strtoll(3)_. CounterInc and DeriveInc do not use the submatch at all and it may be omitted in this case.|
 |Type |Type|Sets the type used to dispatch this value. Detailed information about types and their configuration can be found in types.db(5).|
 |Instance |TypeInstance|This optional setting sets the type instance to use.|
-
-### USAGE
-
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
-
-This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric gauge.sine. The metric should look like this:
-
-![Example chart showing gauge.sine](http://fixme)
-
-The following conditions may be cause for concern:
-
-*You see a straight line instead of a curve.*
-
-This may indicate a period of missing data points. In the example chart shown above, some data points are missing between 16:40 and 16:41, and SignalFx is interpolating a straight line through the gap.
-
-### METRICS
-
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions.
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 

@@ -1,7 +1,8 @@
-{ "display_name":"RabbitMQ collectd Plugin",
+{ "display_name":"RabbitMQ collectd plugin",
   "description": "RabbitMQ collectd plugin",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-rabbitmq",
   "code": "https://github.com/signalfx/collectd-rabbitmq",
   "featured": false,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq%402x.png"
-}
+  "logo_large": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq.png",
+  "logo_small": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq%402x.png"
+},

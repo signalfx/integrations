@@ -1,7 +1,8 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
+{ "display_name":"Heka SignalFx Filter",
+  "description": "Heka Filter for SignalFx",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/heka-filter-signalfx",
+  "code": "https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua",
+  "featured": false,
+  "logo_large": "/images/repos/heka-filter-signalfx/img/integrations_heka.png",
+  "logo_small": "/images/repos/heka-filter-signalfx/img/integrations_heka%402x.png"
 }

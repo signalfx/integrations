@@ -3,7 +3,7 @@ title: Memcached collectd Plugin
 brief: Memcached metrics for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached Plugin
 
 _This is a directory consolidate all the metadata associated with the Memcached collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c)_
 
@@ -44,7 +44,7 @@ Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewSta
 
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/Integrations/tree/master/collectd).
+ This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
@@ -52,7 +52,7 @@ Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewSta
  ```
  yum install collectd-memcached
  ```
-1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/Integrations/blob/master/collectd-memcached/10-memcached.conf)
+1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf)
 
  Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
@@ -73,11 +73,9 @@ Metrics from memcached will begin streaming into SignalFx, and new built-in dash
 
 ### USAGE
 
->This section contains information about how best to monitor the software in question, using the data from this plugin. In this section, the plugin author shares experience and expertise with the software to be monitored, for the benefit of users of the plugin. This section includes:
->
->- Important conditions to watch out for in the software
->- Common failure modes, and the values of metrics that will allow the user to spot them
->- Chart images demonstrating each important condition or failure mode
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_memcached.png)
 
 ### METRICS
 

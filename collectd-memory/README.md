@@ -3,7 +3,7 @@ title: Memory collectd Plugin
 brief: Memory plugin for collectd.
 ---
 
-#![](https://github.com/signalfx/Integrations/blob/master/collectd/img/integrations_collectd.png) Memory collectd Plugin
+#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Memory collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Memory collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memory.c)_
 
@@ -29,7 +29,7 @@ The values are reported by their use by the operating system. Under Linux, the c
 
 > Free memory is memory you paid for, that's using power and that doesn't do anything useful. It is normal that the operating system puts that memory to use, for example by caching files it has accessed (reported as Cached under Linux).
 
-> Virtual memory statistics can be collected with the [vmem plugin](https://github.com/signalfx/Integrations/tree/master/collectd-vmem) under Linux.
+> Virtual memory statistics can be collected with the [vmem plugin](https://github.com/signalfx/integrations/tree/master/collectd-vmem) under Linux.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -41,7 +41,8 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is included with [SignalFx collectd](https://github.com/signalfx/Integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+
 
 ### CONFIGURATION
 

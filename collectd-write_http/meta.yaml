@@ -1,7 +1,8 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif"
-}
+{ "display_name":"write-http collectd plugin",
+  "description": "This output plugin submits values to an HTTP server using POST requests and encoding metrics with JSON or using the PUTVAL command described in collectd-unixsock(5).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-write_http",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/write_http.c",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-write_http/img/integrations_collectd%402x.png",
+  "logo_small": "/images/repos/collectd-write_http/img/integrations_collectd.png"
+},

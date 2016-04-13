@@ -3,7 +3,7 @@ title: AppDynamics Integration
 brief: For sending AppDynamics metrics to SignalFx.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics Integration   
+# ![](https://github.com/signalfx/integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics Integration   
 
 _This is a directory to consolidate all the metadata associated with the AppDynamics Integration. The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration)_
 
@@ -11,7 +11,6 @@ _This is a directory to consolidate all the metadata associated with the AppDyna
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Metrics](#metrics)
 - [License](#license)
 
@@ -54,8 +53,6 @@ SIGNALFX_TOKEN=<SignalFx token>
 SIGNALFX_APPD_METRICS=<metric configurations filename (default to metrics.json)>
 APPD_INTERVAL=<time in minutes of metric lookup interval (default to 1 minute)>
 ```
-
-### USAGE
 
 ### METRICS
 

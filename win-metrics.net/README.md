@@ -3,7 +3,7 @@ title: Metrics.NET Integration
 brief: The SignalFx Metrics.NET Integration.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/win-metrics.net/img/integrations_windows.png) Metrics.NET Integration
+# ![](https://github.com/signalfx/integrations/blob/master/win-metrics.net/img/integrations_windows.png) Metrics.NET Integration
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

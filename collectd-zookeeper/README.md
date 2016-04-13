@@ -3,7 +3,7 @@ title: Zookeeper Plugin
 brief: Zookeeper plugin for collectd.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Zookeeper collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper)_
 
@@ -55,7 +55,7 @@ This plugin requires:
 
  https://github.com/signalfx/collectd-zookeeper
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/Integrations/collectd-elasticsearch/20-zookeeper.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf).
 
 1. Modify the configuration file as follows:
 
@@ -82,6 +82,9 @@ collectd will begin emitting metrics from Zookeeper.
 
 ### USAGE
 
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_zookeeper.png)
 
 ### METRICS
 

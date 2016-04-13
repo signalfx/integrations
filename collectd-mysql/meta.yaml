@@ -1,7 +1,8 @@
-{ "display_name":"MySQL collectd Plugin",
+{ "display_name":"MySQL collectd plugin",
   "description": "MySQL collectd plugin",
-  "code": "https://github.com/collectd/collectd/blob/master/src/mysql.c",
-  "featured": true,
-  "logo_large": "https://github.com/signalfx/Integrations/blob/master/collectd-mysql/img/integrations_mysql.png",
-  "logo_small": "https://github.com/signalfx/Integrations/blob/master/collectd-mysql/img/integrations_mysql%402x.png"
-}
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-mysql",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/mysql.c",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-mysql/img/integrations_mysql.png",
+  "logo_small": "/images/repos/collectd-mysql/img/integrations_mysql%402x.png"
+},

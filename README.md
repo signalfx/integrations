@@ -1,4 +1,4 @@
-# Validated Plugins
+# Validated Integrations
 
 SignalFx indexes available and validated integrations [here](http://signalfx.github.io). On this page, users can browse available integrations and find the integration that monitors the software they care about. This also provides a single place to view all of the integrations that SignalFx has validated and for which SignalFx has provided built-in content in the SignalFx application. Each integration has a link to the code as well as a Project repository with information on:
 
@@ -17,11 +17,11 @@ In order to be added to the integration index, SignalFx validates each integrati
 1. Add required documentation content to that directory.
 1. Commit and submit a pull request to this repository. Pull request template will prompt for all required information. When you change or enhance your plugin, send updates through a pull request.
 
-## What is required for a new plugin
+## What is required for a new integration
 
 Here are SignalFx's requirements for a new plugin:
 
-- **Validated plugin code**
+- **Validated integration code**
 - **Documentation** that describes the integration and how it operates
   - Metadata file that points to integration code
   - Metrics docs
@@ -38,7 +38,7 @@ You're the expert in the software that you wrote the integration for. The goal o
 ### Code Requirements
 Below are requirements for integration code:
 
-1. Include a README file that matches the [prescribed format](https://github.com/signalfx/Integrations/blob/master/Example/README.md). This file should contain all the information that a user would need to install, run and derive value from your integration.
+1. Include a README file that matches the [prescribed format](https://github.com/signalfx/integrations/blob/master/Example/README.md). This file should contain all the information that a user would need to install, run and derive value from your integration.
 1. Submit your performance test plan and results.
 1. Make sure that your integration collects all the data that is necessary to monitor the software in question.
   - When deciding which metrics your integration should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available in "detailed" mode. Use other validated integrations as a guide on what to include.
@@ -63,7 +63,7 @@ We will programmatically read this document to generate a description on your in
 |------------|-------------|
 | display_name | name that will display in the integration tile|
 | description | description of integration |
-| project_url | URL of 'metadata' directory (`https://github.com/signalfx/Integrations/tree/master/[integration-foo]`)|
+| project_url | URL of 'metadata' directory (`https://github.com/signalfx/integrations/tree/master/[integration-foo]`)|
 | code | URL of code repository |
 | featured | flag to put integration in "Top Integrations" section |
 | logo_large | URL of 300x300 pixel logo image |
@@ -75,7 +75,7 @@ Example:
 ```
 { "display_name":"AppDynamics Metrics Integration",
   "description": "AppDynamics metrics integration",
-  "project_url": "https://github.com/signalfx/Integrations/tree/master/appdynamics",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/appdynamics",
   "code": "https://github.com/signalfx/appd-integration",
   "featured": false,
   "logo_large": "/images/repos/appdynamics/img/integrations_appdynamics%402x.png",
@@ -87,13 +87,13 @@ Example:
 
 To help users get up and running quickly, provide a sample configuration for your integration that includes sensible default values and highlights required configuration.
 
-An example of a sample configuration file can be found in in the [Example directory](https://github.com/signalfx/Integrations/blob/master/Example/10-example.conf).
+An example of a sample configuration file can be found in in the [Example directory](https://github.com/signalfx/integrations/blob/master/Example/10-example.conf).
 
 #### Metrics and dimensions documentation
 
 To help users make sense of their new data, provide documentation of each metric and dimension that the integration emits, including name, type (counter, gauge, or cumulative counter) and description of what it measures.
 
-An example metrics documentation file can be found in [Example "docs" directory](https://github.com/signalfx/Integrations/tree/master/Example/docs).
+An example metrics documentation file can be found in [Example "docs" directory](https://github.com/signalfx/integrations/tree/master/Example/docs).
 
 #### Sample dashboard
 

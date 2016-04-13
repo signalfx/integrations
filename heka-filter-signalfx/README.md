@@ -3,7 +3,7 @@ title: Heka Integration
 brief: Heka Integration for SignalFx.
 ---
 
-# ![](https://github.com/signalfx/Integrations/blob/master/heka-filter-signalfx/img/integrations_heka.png) Heka Filter for SignalFx
+# ![](https://github.com/signalfx/integrations/blob/master/heka-filter-signalfx/img/integrations_heka.png) Heka Filter for SignalFx
 
 _This is a directory consolidate all the metadata associated with the Heka filter integration. The relevant code for the integration can be found [here](https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua)_
 
@@ -33,6 +33,7 @@ This filter requires:
 
 | Software          | Version        |
 |-------------------|----------------|
+| Heka | 0.10+ |
 
 ### INSTALLATION
 
@@ -87,8 +88,8 @@ Configuration for the SignalFx filter:
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+Documentation of the metrics and dimensions emitted by this integration, are available in the [Heka docs](https://hekad.readthedocs.org/en/v0.10.0/config/outputs/index.html#common-output-parameters).
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/Clever/heka-clever-plugins/blob/master/LICENSE) for more details.
