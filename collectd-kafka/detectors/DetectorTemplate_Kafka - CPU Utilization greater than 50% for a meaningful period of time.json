@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "Kafka - CPU Utilization greater than 50% for a meaningful period of time",
-  "sf_description" : "This template creates a detector that is designed to issue alerts when the host with kafka service has cpu utilization % greater than 50% for 5 minutes",
+  "sf_detectorTemplate" : "Kafka - CPU Utilization higher than 50% for 5 minutes",
+  "sf_description" : "Alerts when CPU usage for the host running the Kafka service was higher than 50% for 5 minutes",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "cpu.utilization", "aws_tag_service:\"kafka\"" ],
   "sf_detectorTemplateSourceId" : "CfOpYA5AgAM",

@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "Zero available disk-space within 24 hours",
-  "sf_description" : "Template to detect when host is trending to run out of disk space within 24 hours",
+  "sf_detectorTemplate" : "Zero available disk space within 24 hours",
+  "sf_description" : "Detects when the host is trending to run out of disk space within 24 hours",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "df_complex.free", "df_complex.used" ],
   "sf_detectorTemplateSourceId" : "Ce6ESzRAIAA",
