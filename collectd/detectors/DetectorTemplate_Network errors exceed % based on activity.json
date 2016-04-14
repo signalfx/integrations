@@ -2,7 +2,7 @@
   "marshallScope" : 1
 }, {
   "sf_detectorTemplate" : "Network errors exceed % based on activity",
-  "sf_description" : "This template creates a detector that is designed to issue alerts at various severity levels as the % of network errors based on packet activity increases past meaningful thresholds\nCritical - 20% errors\nMajor - 15% errors\nMinor - 10% errors\nWarning - 5% errors",
+  "sf_description" : "Alerts at various severity levels as the % of network errors based on packet activity increases past meaningful thresholds\nCritical - 20% errors\nMajor - 15% errors\nMinor - 10% errors\nWarning - 5% errors",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "if_packets.rx", "if_errors.rx", "if_packets.tx", "if_errors.tx" ],
   "sf_detectorTemplateSourceId" : "CepQxpZAEAQ",

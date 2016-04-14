@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "Memory utilization % greater than normal population",
-  "sf_description" : "Issues a critical alert if the last ten minutes of memory usage % is greater than the norm population",
+  "sf_detectorTemplate" : "Memory utilization % higher than normal compared to all hosts",
+  "sf_description" : "Alerts if memory usage was significantly higher than normal for the last 10 minutes, as compared to all hosts",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "memory.utilization" ],
   "sf_detectorTemplateSourceId" : "Ce9sVPfAEAI",

@@ -2,7 +2,7 @@
   "marshallScope" : 1
 }, {
   "sf_detectorTemplate" : "High Disk Space Utilization %",
-  "sf_description" : "Issues alerts when disk space utilization % increases past 98% of capacity",
+  "sf_description" : "Alerts when disk space utilization % increases past 98% of capacity",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "disk.summary_utilization" ],
   "sf_detectorTemplateSourceId" : "Cf8v1ORAEAY",
