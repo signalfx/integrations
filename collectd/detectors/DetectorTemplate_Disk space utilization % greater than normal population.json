@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "Disk space utilization % greater than normal population",
-  "sf_description" : "This template creates a detector to issue a major alert if the last ten minutes of disk usage % is greater than the norm population",
+  "sf_detectorTemplate" : "Disk space utilization % higher than normal compared to all hosts",
+  "sf_description" : "Alerts if disk space usage was significantly higher than normal for the last 10 minutes, as compared to all hosts",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "disk.summary_utilization" ],
   "sf_detectorTemplateSourceId" : "Ce4RoGeAAAE",

@@ -2,7 +2,7 @@
   "marshallScope" : 1
 }, {
   "sf_detectorTemplate" : "High CPU Utilization %",
-  "sf_description" : "Issues alert when host cpu utilization is at 100% for 10 minutes",
+  "sf_description" : "Alerts when CPU utilization is at 100% for 10 minutes",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "cpu.utilization" ],
   "sf_detectorTemplateSourceId" : "Cf8c0pHAIAA",

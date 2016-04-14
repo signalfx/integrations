@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "Memory utilization % rate of change above normal population",
-  "sf_description" : "Issues alerts when memory utilization % rate of change is greater then the normal population for a duration of at least ten minutes",
+  "sf_detectorTemplate" : "Memory utilization % rate of change higher than normal compared to all hosts",
+  "sf_description" : "Alerts when memory utilization % rate of change is significantly higher than normal, as compared to all hosts, for at least ten minutes",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "memory.utilization" ],
   "sf_detectorTemplateSourceId" : "Cf8-jS8AEx4",

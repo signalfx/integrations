@@ -2,7 +2,7 @@
   "marshallScope" : 1
 }, {
   "sf_detectorTemplate" : "No Memory Paging",
-  "sf_description" : "This template creates a detector that is designed to issue alerts when memory is paging between backing store",
+  "sf_description" : "Alerts when memory is paging between backing store",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "vmpage_io.swap.in", "vmpage_io.swap.out" ],
   "sf_detectorTemplateSourceId" : "Cep00oiAAAA",

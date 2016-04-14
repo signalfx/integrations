@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "CPU Utilization % less than the normal population",
-  "sf_description" : "This template creates a detector to issue a major alert if the last ten minutes of cpu usage % is less than the norm population",
+  "sf_detectorTemplate" : "CPU Utilization % lower than normal compared to all hosts",
+  "sf_description" : "Alerts if CPU usage for the last 10 minutes was significantly lower than normal, as compared to all hosts",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "cpu.utilization" ],
   "sf_detectorTemplateSourceId" : "Ce5b1gtAAAA",

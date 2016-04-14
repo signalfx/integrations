@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "CPU utilization % greater than historical norm",
-  "sf_description" : "Issue a major alert if the last 10 minutes of cpu usage % is greater than the historical norm for last 24 hours",
+  "sf_detectorTemplate" : "CPU Utilization % higher than normal compared to the last 24 hours",
+  "sf_description" : "Alerts when CPU usage for this host for the last 10 minutes was significantly higher than normal, as compared to the last 24 hours",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "cpu.utilization" ],
   "sf_detectorTemplateSourceId" : "Cf7eKKaAEAQ",
