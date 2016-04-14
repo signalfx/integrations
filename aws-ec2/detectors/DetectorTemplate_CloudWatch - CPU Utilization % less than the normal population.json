@@ -2,7 +2,7 @@
   "marshallScope" : 1
 }, {
   "sf_detectorTemplate" : "CloudWatch - CPU Utilization % lower than normal compared to all hosts",
-  "sf_description" : "Alerts if CPU usage for the last minute was significantly lower than normal, as compared to all hosts",
+  "sf_description" : "Alerts if CPU usage for the last 10 minutes was significantly lower than normal, as compared to all hosts",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "CPUUtilization" ],
   "sf_detectorTemplateSourceId" : "Ce5b1gtAAAA",
