@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "CloudWatch - CPU Utilization % less than historical norm",
-  "sf_description" : "This template creates a detector to issue a major alert if the last 10 minutes of cpu usage % is less than the norm for last 24 hours",
+  "sf_detectorTemplate" : "CloudWatch - CPU Utilization % lower than normal compared to the last 24 hours",
+  "sf_description" : "Alerts when CPU usage for this host for the last five minutes, as compared to the last 24 hours, was significantly lower than normal",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "CPUUtilization" ],
   "sf_detectorTemplateSourceId" : "Ce5VqgvAAAI",
