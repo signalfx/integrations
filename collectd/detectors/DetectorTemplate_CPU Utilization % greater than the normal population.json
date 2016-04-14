@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "CPU Utilization % higher than normal compared to all hosts",
-  "sf_description" : "Alerts if CPU usage was significantly higher than normal for the last 10 minutes, as compared to all hosts",
+  "sf_detectorTemplate" : "CPU Utilization % greater than the normal population",
+  "sf_description" : "Alerts if CPU usage was significantly greater than the normal population for the last 10 minutes",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "cpu.utilization" ],
   "sf_detectorTemplateSourceId" : "Ce5aXIgAAAg",

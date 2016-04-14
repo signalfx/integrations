@@ -1,7 +1,7 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "Memory utilization % higher than normal compared to the last 24 hours",
+  "sf_detectorTemplate" : "Memory utilization % greater than historical norm",
   "sf_description" : "Alerts when memory usage for this host for the last 10 minutes was significantly higher than normal, as compared to the last 24 hours",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "memory.utilization" ],
