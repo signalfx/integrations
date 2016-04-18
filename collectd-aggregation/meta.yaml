@@ -1,0 +1,8 @@
+{ "display_name":"Aggregation collectd plugin",
+  "description": "The Disk plugin aggregates other metrics.  Our default configuration uses it to aggregate per-cpu metrics into overall sum and average. ",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-aggregation",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/aggregation.c",
+  "featured": false,
+  "logo_large": "/images/repos/collectd/img/integrations_collectd%402x.png",
+  "logo_small": "/images/repos/collectd/img/integrations_collectd.png"
+},
