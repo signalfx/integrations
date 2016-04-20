@@ -1,7 +1,7 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "High CPU Utilization %",
+  "sf_detectorTemplate" : "High CPU utilization %",
   "sf_description" : "Alerts when CPU utilization is at 100% for 10 minutes",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "cpu.utilization" ],
