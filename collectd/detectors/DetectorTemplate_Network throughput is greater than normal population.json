@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "Network Throughput is greater than normal population",
-  "sf_description" : "Alerts if the network throughput is significantly greater than the normal population",
+  "sf_detectorTemplate" : "Network throughput is greater than normal population",
+  "sf_description" : "Alerts if the network throughput is significantly greater than other hosts",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "if_octets.tx", "if_octets.rx" ],
   "sf_detectorTemplateSourceId" : "Ce-PLaEAAAA",

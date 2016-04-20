@@ -1,8 +1,8 @@
 [ {
   "marshallScope" : 1
 }, {
-  "sf_detectorTemplate" : "CloudWatch - CPU Utilization % greater than the normal population",
-  "sf_description" : "Alerts if CPU usage for the last 10 minutes was significantly higher than the normal population",
+  "sf_detectorTemplate" : "CloudWatch - CPU utilization % greater than the normal population",
+  "sf_description" : "Alerts if CPU usage for the last 10 minutes was significantly higher than other hosts",
   "sf_type" : "DetectorTemplate",
   "sf_sourceSelectors" : [ "CPUUtilization" ],
   "sf_detectorTemplateSourceId" : "Ce5aXIgAAAg",
