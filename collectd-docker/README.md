@@ -60,6 +60,12 @@ All metrics reported by the Docker collectd plugin will contain the following di
  ```
  pip install -r /path/to/docker-collectd-plugin/requirements.txt
  ```
+ 
+ *Note*: Amazon Linux users must install a version of pip that will correctly install this module's dependencies. If you're installing this plugin on an Amazon Linux system, run the following commands instead:
+ ```
+ yum install python26-pip
+ pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
+ ```
 1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf).
 
 1. Modify the configuration file as follows:
