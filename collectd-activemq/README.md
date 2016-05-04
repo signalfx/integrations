@@ -54,8 +54,8 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
 
 1. Download SignalFx's sample JMX configuration file and sample ActiveMQ configuration files:
 
- [JMX.conf](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/10-jmx.conf)
- [ActiveMQ.conf](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/20-activemq.conf)
+ - [JMX.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+ - [ActiveMQ.conf](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
 
 1. Modify 20-activemq.conf to provide values that make sense for your environment, as described in the header.
 
@@ -72,24 +72,12 @@ Metrics from ActiveMQ will begin streaming into SignalFx, and new built-in dashb
 
 ### CONFIGURATION
 
->Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
-
-#### Required configuration
-
-The following configuration options are *required* and have no defaults. This means that you must supply values for them in configuration in order for the plugin to work.
+The following configuration options are *required* and have generic defaults. This means that you must update values in configuration for production use.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
-| required_option | An example of a required configuration property. | 12345 |
-
-#### Optional configuration
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
-
-| configuration option | definition | default value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/example" |
-| Frequency  | Cycles of the sine wave per minute. | 0.5 |
+| Host | This is the host that is running the ActiveMQ service | `Host "ActiveMQ_Host1[hostHasService=activemq]"` |
+| ServiceURL | This is the URL for where the service is running | `ServiceURL "service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi"` |
 
 ### USAGE
 
