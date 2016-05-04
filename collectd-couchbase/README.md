@@ -71,6 +71,7 @@ Using the example configuration file [`10-couchbase.conf`](././10-couchbase.conf
 | CollectBucket | If CollectTarget is "BUCKET", the name of the bucket that this Module block will monitor. | "custom_bucket" |
 | Host | Hostname or IP address of the Couchbase server. | "localhost" |
 | Port | Port at which the Couchbase server can be reached. | "8091" |
+| ClusterName | Name of this Couchbase cluster. | "default" |
 | CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See [`metric_info.py`](https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py) for more information. | "default" |
 | Interval | Number of seconds between calls to Couchbase API. | 10 |
 | Username | If CollectTarget is "BUCKET" and this bucket requires authentication, username to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "USERNAME" |
@@ -82,6 +83,12 @@ Using the example configuration file [`10-couchbase.conf`](././10-couchbase.conf
 Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_Couchbase.json).
 
 For general reference on how to monitor Couchbase, see [Couchbase Monitoring](http://blog.couchbase.com/monitoring-couchbase-cluster) and [Monitor using the REST API](http://developer.couchbase.com/documentation/server/4.0/monitoring/monitoring-rest.html).
+
+**Note on bucket metrics**
+
+This plugin emits some metrics about the bucket's performance across the cluster, and some metrics about the bucket's performance per node.
+
+Metrics beginning with `gauge.bucket.basic.​*` and `gauge.bucket.quota.*`​ are reported once per cluster. All other bucket metrics (`gauge.bucket.*`) are reported by every node that hosts that bucket. In order to analyze bucket performance for the entire bucket, apply functions like Sum or Mean to group node-level metrics together by bucket.
 
 **Monitoring a Couchbase cluster**
 
