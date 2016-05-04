@@ -3,7 +3,7 @@ title: HaProxy Metrics
 brief: Metrics collected from HaProxy 1.5 or above
 ---
 
-#![](https://github.com/signalfx/integrations/blob/master/collectd-activemq/img/integrations_activemq.png) HAProxy collectd Plugin   
+# HAProxy collectd Plugin   
 
 _This is a directory consolidate all the metadata associated with the HAProxy collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy)_
 
