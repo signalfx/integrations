@@ -48,8 +48,8 @@ collects statistics from Couchbase.
 
 2. Download the [Python module for Couchbase](https://github.com/signalfx/collectd-couchbase).
 
-3. Download SignalFx's [sample configuration file](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/10-couchbase.conf) for this plugin.
- 
+3. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin.
+
 4. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
 5. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
@@ -57,9 +57,9 @@ collects statistics from Couchbase.
   ```
   Include "/path/to/10-couchbase.conf"
   ```
- 
+
 6. Restart collectd.
- 
+
 ### CONFIGURATION
 
 Using the example configuration file [`10-couchbase.conf`](././10-couchbase.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
@@ -70,11 +70,11 @@ Using the example configuration file [`10-couchbase.conf`](././10-couchbase.conf
 | CollectTarget | Define what this Module block will monitor: "NODE", for a Couchbase node, or "BUCKET" for a Couchbase bucket. | "BUCKET" |
 | CollectBucket | If CollectTarget is "BUCKET", the name of the bucket that this Module block will monitor. | "custom_bucket" |
 | Host | Hostname or IP address of the Couchbase server. | "localhost" |
-| Port | Port at which the Couchbase server can be reached. | "8091" | 
+| Port | Port at which the Couchbase server can be reached. | "8091" |
 | CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See [`metric_info.py`](https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py) for more information. | "default" |
-| Interval | Number of seconds between calls to Couchbase API. | 10 | 
+| Interval | Number of seconds between calls to Couchbase API. | 10 |
 | Username | If CollectTarget is "BUCKET" and this bucket requires authentication, username to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "USERNAME" |
-| Password | f CollectTarget is "BUCKET" and this bucket requires authentication, password to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "PASSWORD" | 
+| Password | f CollectTarget is "BUCKET" and this bucket requires authentication, password to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "PASSWORD" |
 | FieldLength | The number of characters used to encode dimension data. **CAUTION**: Modify this value only if you specifically compiled collectd with a non-default value for `DATA_MAX_NAME_LEN` in `plugin.h`. |  "1024" |
 
 ### USAGE
@@ -85,13 +85,13 @@ For general reference on how to monitor Couchbase, see [Couchbase Monitoring](ht
 
 **Monitoring a Couchbase cluster**
 
-On the Couchbase Nodes overview dashboard, you can see at a glance the status the nodes and buckets in a given cluster. Nodes in the cluster should be seeing balanced activity. Buckets in the cluster should each have adequate memory remaining. 
+On the Couchbase Nodes overview dashboard, you can see at a glance the status the nodes and buckets in a given cluster. Nodes in the cluster should be seeing balanced activity. Buckets in the cluster should each have adequate memory remaining.
 
 ![Couchbase - Nodes and buckets in a cluster](././img/couchbase - nodes and buckets snapshot.png)
 
 *This cluster's three nodes have roughly the same number of gets per second, and its two buckets have plenty of headroom.*
 
-This dashboard also includes a percentile distribution of CPU utilization per node, allowing quick identification of unusually hot nodes. This chart shows minimum, 10th percentile, median (50th percentile), 90th percentile, and maximum CPU utilization for each node in the cluster. 
+This dashboard also includes a percentile distribution of CPU utilization per node, allowing quick identification of unusually hot nodes. This chart shows minimum, 10th percentile, median (50th percentile), 90th percentile, and maximum CPU utilization for each node in the cluster.
 
 ![Nodes CPU distribution](././img/couchbase - nodes cpu.png)
 
@@ -99,21 +99,21 @@ This dashboard also includes a percentile distribution of CPU utilization per no
 
 **Monitoring a Couchbase node**
 
-Zooming in to an individual node shows that node's activity, cache performance, and compute resource usage. 
+Zooming in to an individual node shows that node's activity, cache performance, and compute resource usage.
 
 ![Node overview](././img/couchbase - node.png)
 
 *This node is lightly loaded. To compare its activity to other nodes in this cluster, we'd use the Couchbase Nodes dashboard above.*
 
-We can check the node's cache performance using a graph that shows the number of gets per second in yellow, overlaid on the number of cache hits in blue. The ratio between gets and cache hits is computed as "hit ratio" and is shown as a dotted line. When every get request results in a cache hit, the graph is green and the dotted line remains high. When there are fewer cache hits than gets, the graph shows yellow areas and the dotted line drops. 
+We can check the node's cache performance using a graph that shows the number of gets per second in yellow, overlaid on the number of cache hits in blue. The ratio between gets and cache hits is computed as "hit ratio" and is shown as a dotted line. When every get request results in a cache hit, the graph is green and the dotted line remains high. When there are fewer cache hits than gets, the graph shows yellow areas and the dotted line drops.
 
 ![Gets and hits](././img/couchbase - node gets and hits.png)
 
 *This lightly-loaded node has a 100% cache hit ratio: it can serve every get request that it receives from memory.*
 
-**Monitoring Couchbase buckets** 
+**Monitoring Couchbase buckets**
 
-The Couchbase Buckets overview shows activity for all buckets being monitored. 
+The Couchbase Buckets overview shows activity for all buckets being monitored.
 
 ![Buckets overview](././img/couchbase - buckets activity.png)
 
@@ -121,7 +121,7 @@ The Couchbase Buckets overview shows activity for all buckets being monitored.
 
 **Monitoring a single Couchbase bucket**
 
-Selecting a particular bucket to show on the Couchbase Bucket dashboard lets us go deep on that bucket's performance. 
+Selecting a particular bucket to show on the Couchbase Bucket dashboard lets us go deep on that bucket's performance.
 
 Resident items ratio and cache miss rate are inversely related: as the ratio of items in this bucket that are resident in memory drops, the number of get requests that require a fetch from disk will increase.
 
