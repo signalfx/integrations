@@ -17,7 +17,7 @@ _This is a directory consolidate all the metadata associated with the Elasticsea
 
 ### DESCRIPTION
 
-This is the SignalFx elasticserach plugin. Follow these instructions to install the Elasticsearch Python module for collectd. This will send data about Elasticsearch to SignalFx, enabling built-in Elasticsearch monitoring dashboards.
+This is the SignalFx Elasticsearch plugin. This will send data about Elasticsearch to SignalFx, enabling built-in Elasticsearch monitoring dashboards.
 
 Use this plugin to monitor the following types of information from an Elasticsearch node:
   * node statistics (cpu, os, jvm, indexing, search, thread pools, etc..)
@@ -27,7 +27,6 @@ Use this plugin to monitor the following types of information from an Elasticsea
 Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
 
 ### REQUIREMENTS AND DEPENDENCIES
-
 
 #### Version information
 
@@ -72,8 +71,22 @@ collectd will begin emitting metrics from ElasticSearch.
 
 ### CONFIGURATION
 
-* set the cluster name. It is preferable to have a unique cluster name to be able to easily distinguish between clusters. This is usually the same as the cluster name in the ElasticSearch configuration file. This defaults to "elasticsearch".
-* per-index and cluster statistics can be disabled. They are enabled by default.
+Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored.
+
+| configuration option | definition | default value |
+| ---------------------|------------|---------------|
+| ModulePath | Path on disk where collectd can find this module. | "/opt/setup/scripts" |
+| Verbose | Enable verbose logging. | false |
+| Cluster | A name for this cluster. Appears in the dimension `cluster`. | "elasticsearch" |
+| Indexes | Identifies the indexes for which the plugin should collect statistics. See note below. | ["_all"] |
+| EnableIndexStats | Enable or disable collection of index statistics. | false |
+| EnableClusterHealth | Enable or disable collection of cluster health statistics. | true |
+
+#### Note: Collecting index statistics
+
+By default, the configuration parameter Indexes is set to `"_all"`. This means that when EnableIndexStats is set to `true`, the plugin will collect statistics about all indexes. To collect statistics from only one index, set the configuration parameter Indexes to the name of that index: for example, `["index1"]`. To collect statistics from multiple indexes (but not all), include them as a comma-separated list: for example, `["index1", "index2"]`. 
+ 
+SignalFx recommends enabling index statistics collection only on master-eligible ElasticSearch nodes.
 
 ### USAGE
 
