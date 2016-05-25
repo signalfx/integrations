@@ -685,6 +685,16 @@ curl -XPOST -d '{"org":"dev"}' localhost:6060/debug/dims
 
 Then, any datapoints with the "org" dimension of "dev" will be logged.
 
+### ROUTING THROUGH A PROXY
+
+#### HTTP_PROXY
+
+metricproxy can use the environment variables set for HTTP(S) Proxy to route traffic. 
+If you want to expose it for a specific shell running inside a terminal, you can export the proxy locally. As an example - you could do something like this - 
+  ```
+     export HTTP_PROXY="http://PROXY_HOST:PROXY_PORT"
+  ```
+
 ### USAGE
 
 #### Start the service
