@@ -15,6 +15,7 @@ _This is a directory consolidate all the metadata associated with the SignalFx c
  - [Installation - Puppet](././install_puppet.md)
  - [Installation - CHEF](././install_chef.md)
 - [License](#license)
+- [HTTP Proxy](#http-proxy)
 
 ## DESCRIPTION
 
@@ -83,3 +84,23 @@ When the script successfully completes, it starts up collectd, which begins repo
 ## LICENSE
 
 SignalFx version of collectd is released under the Apache 2.0 license. See LICENSE for more details.
+
+## HTTP Proxy
+
+Collectd can talk through an http proxy if needed. The changes would need to be made on files that are sourced by the init scripts.
+
+On CentOS:
+* Modify/Create either of the following files: '/etc/sysconfig/collectd' or '/etc/default/collectd'
+
+On RHEL:
+* Modify/Create the following file: '/etc/sysconfig/collectd'
+
+On Debian/Ubuntu:
+* Modify/Create the following file: '/etc/default/collectd'
+
+Sample contents of the file:
+```
+export http_proxy="http://HTTP_PROXY:PROXY_PORT"
+export https_proxy="https://HTTPS_PROXY:PROXY_PORT"
+```
+
