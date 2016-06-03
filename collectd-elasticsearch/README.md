@@ -67,7 +67,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
  ```
 1. Restart collectd.
 
-collectd will begin emitting metrics from ElasticSearch.
+collectd will begin emitting metrics from Elasticsearch.
 
 ### CONFIGURATION
 
@@ -83,11 +83,22 @@ Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsea
 | EnableClusterHealth | Enable or disable collection of cluster health statistics. | true |
 | Interval | The interval in seconds at which the plugin will report metrics, independent of the overall collectd collection interval. | 10 |
 
+ If you are running the Elasticsearch plugin via a collectd deployment within a container, please configure the Host and Port values inside of the 20-elasticsearch.conf file that correspond to the desired Elasticsearch instance.
+ 
+ ex:
+```
+   <Module "elasticsearch_collectd">
+       Host "XXX.XXX.XXX.XXX"
+       Port "XXXX"
+   </Module>
+```
+
+
 #### Note: Collecting index statistics
 
 By default, the configuration parameter Indexes is set to `"_all"`. This means that when EnableIndexStats is set to `true`, the plugin will collect statistics about all indexes. To collect statistics from only one index, set the configuration parameter Indexes to the name of that index: for example, `["index1"]`. To collect statistics from multiple indexes (but not all), include them as a comma-separated list: for example, `["index1", "index2"]`. 
  
-SignalFx recommends enabling index statistics collection only on master-eligible ElasticSearch nodes.
+SignalFx recommends enabling index statistics collection only on master-eligible Elasticsearch nodes.
 
 The call to collect index statistics can be CPU-intensive. For this reason SignalFx recommends using the `Interval` configuration parameter to decrease the reporting interval for nodes that report index statistics. 
 
