@@ -5,7 +5,7 @@ brief: Elasticsearch metrics for collectd.
 
 #![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch Plugin
 
-_This is a directory consolidate all the metadata associated with the Elasticsearch collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch)_
+_This directory consolidates all the metadata associated with the Elasticsearch collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -53,7 +53,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
  https://github.com/signalfx/collectd-elasticsearch
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf). 
 
 1. Modify the configuration file as follows:
 
@@ -82,6 +82,10 @@ Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsea
 | EnableIndexStats | Enable or disable collection of index statistics. | false |
 | EnableClusterHealth | Enable or disable collection of cluster health statistics. | true |
 | Interval | The interval in seconds at which the plugin will report metrics, independent of the overall collectd collection interval. | 10 |
+| Host | The hostname of this instance of Elasticsearch. | "localhost" |
+| Port | The port number of this instance of Elasticsearch. | "9200" |
+
+#### Note: Using this plugin from a container deployment
 
  If you are running the Elasticsearch plugin via a collectd deployment within a container, please configure the Host and Port values inside of the 20-elasticsearch.conf file that correspond to the desired Elasticsearch instance.
  
