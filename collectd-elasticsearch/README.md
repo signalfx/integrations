@@ -84,6 +84,19 @@ Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsea
 | Interval | The interval in seconds at which the plugin will report metrics, independent of the overall collectd collection interval. | 10 |
 | Host | The hostname of this instance of Elasticsearch. | "localhost" |
 | Port | The port number of this instance of Elasticsearch. | "9200" |
+| DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false) | false |
+| IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greaterthan or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
+| AdditionalDefaultMetrics | A python list of additional default metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file | \[""\] |
+| ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. | \["search","index"\] |
+
+```
+The following additional threadpools can be added the variable: AdditionalThreadPools
+     Common:   generic get snapshot bulk warmer flush refresh
+     1.x only: merge, optimize
+     ES 2.0 +: suggest percolate management listener fetch_shard_store fetch_shard_started
+     ES 2.1 +: force_merge
+```
+
 
 #### Note: Using this plugin from a container deployment
 
