@@ -132,3 +132,11 @@ For full documentation of the metrics and dimensions emitted by this plugin, see
 ### LICENSE
 
 This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-elasticsearch/blob/master/LICENSE.txt) for more details.
+
+
+### CHANGELOG
+
+| Date | Summary of Changes | Special Notes |
+|---------------------|------------|---------------|
+| June 24, 2016 | The plugin was updated to address: <br> \* Dimensionalizing thread_pool metrics <br> \* Configuration to disable non-essential metrics <br> \* Configuring a secondary collection interval for index stats <br> \* Address missing metric mappings in recent elastic search versions | That thread_pool metrics have been changed.  The old metric name of ```<metric_type>.thread_pool.<thread_pool_name>...``` has been changed to ```<metric_type>.thread_pool...``` and the thread_pool names have been expressed as dimensions.  Custom charts and dectectors will need to be updated accordingly |
+|  |  |  |
