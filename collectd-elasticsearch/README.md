@@ -84,6 +84,8 @@ Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsea
 | Interval | The interval in seconds at which the plugin will report metrics, independent of the overall collectd collection interval. | 10 |
 | Host | The hostname of this instance of Elasticsearch. | "localhost" |
 | Port | The port number of this instance of Elasticsearch. | "9200" |
+| Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
+| Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
 
 #### Note: Using this plugin from a container deployment
 
@@ -96,7 +98,8 @@ Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsea
        Port "XXXX"
    </Module>
 ```
-
+#### Note: Authentication
+Currently only Basic Authentication is supported for the plugin.
 
 #### Note: Collecting index statistics
 
