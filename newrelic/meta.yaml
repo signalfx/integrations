@@ -1,0 +1,7 @@
+{ "display_name":"New Relic",
+  "description": "SignalFx's integration with New Relic",
+  "code": "https://github.com/signalfx",
+  "featured": false,
+  "logo_large": "/images/repos/newrelic/img/integrations_newrelic.png",
+  "logo_small": "/images/repos/newrelic/img/integrations_newrelic.png"
+}
