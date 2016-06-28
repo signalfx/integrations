@@ -84,8 +84,21 @@ Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsea
 | Interval | The interval in seconds at which the plugin will report metrics, independent of the overall collectd collection interval. | 10 |
 | Host | The hostname of this instance of Elasticsearch. | "localhost" |
 | Port | The port number of this instance of Elasticsearch. | "9200" |
+| DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false) | false |
+| IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greaterthan or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
+| AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file | \[""\] |
 | Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
 | Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
+| ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. | \["search","index"\] |
+
+```
+The following additional threadpools can be added the variable: AdditionalThreadPools
+     Common:   generic get snapshot bulk warmer flush refresh
+     1.x only: merge, optimize
+     ES 2.0 +: suggest percolate management listener fetch_shard_store fetch_shard_started
+     ES 2.1 +: force_merge
+```
+
 
 #### Note: Using this plugin from a container deployment
 
@@ -122,3 +135,12 @@ For full documentation of the metrics and dimensions emitted by this plugin, see
 ### LICENSE
 
 This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-elasticsearch/blob/master/LICENSE.txt) for more details.
+
+
+### CHANGELOG
+
+| Date | Summary of Changes | Special Notes |
+|---------------------|------------|---------------|
+| June 27, 2016 | The plugin was updated to support basic authentication with Elasticsearch installations |   |
+| June 28, 2016 | The plugin was updated to: <br> \* Disable non-essential metrics via the conf file<br> \* Specify secondary collection interval for index stats <br> \* Address missing metric mappings in recent elastic search versions |   |
+|  |  |  |
