@@ -87,6 +87,8 @@ Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsea
 | DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false) | false |
 | IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greaterthan or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
 | AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file | \[""\] |
+| Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
+| Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
 | ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. | \["search","index"\] |
 
 ```
@@ -109,7 +111,8 @@ The following additional threadpools can be added the variable: AdditionalThread
        Port "XXXX"
    </Module>
 ```
-
+#### Note: Authentication
+Currently only Basic Authentication is supported for the plugin.
 
 #### Note: Collecting index statistics
 
@@ -138,5 +141,6 @@ This plugin is released under the Apache 2.0 license. See [LICENSE](https://gith
 
 | Date | Summary of Changes | Special Notes |
 |---------------------|------------|---------------|
-| June 24, 2016 | The plugin was updated to address: <br> \* Dimensionalizing thread_pool metrics <br> \* Configuration to disable non-essential metrics <br> \* Configuring a secondary collection interval for index stats <br> \* Address missing metric mappings in recent elastic search versions | That thread_pool metrics have been changed.  The old metric name of ```<metric_type>.thread_pool.<thread_pool_name>...``` has been changed to ```<metric_type>.thread_pool...``` and the thread_pool names have been expressed as dimensions.  Custom charts and dectectors will need to be updated accordingly |
+| June 27, 2016 | The plugin was updated to support basic authentication with Elasticsearch installations |   |
+| June 28, 2016 | The plugin was updated to: <br> \* Disable non-essential metrics via the conf file<br> \* Specify secondary collection interval for index stats <br> \* Address missing metric mappings in recent elastic search versions |   |
 |  |  |  |
