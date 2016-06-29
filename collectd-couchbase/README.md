@@ -94,13 +94,13 @@ Metrics beginning with `gauge.bucket.basic.​*` and `gauge.bucket.quota.*`​ a
 
 On the Couchbase Nodes overview dashboard, you can see at a glance the status the nodes and buckets in a given cluster. Nodes in the cluster should be seeing balanced activity. Buckets in the cluster should each have adequate memory remaining.
 
-![Couchbase - Nodes and buckets in a cluster](././img/couchbase - nodes and buckets snapshot.png)
+![Couchbase - Nodes and buckets in a cluster](././img/nodes_and_buckets_snapshot.png)
 
 *This cluster's three nodes have roughly the same number of gets per second, and its two buckets have plenty of headroom.*
 
 This dashboard also includes a percentile distribution of CPU utilization per node, allowing quick identification of unusually hot nodes. This chart shows minimum, 10th percentile, median (50th percentile), 90th percentile, and maximum CPU utilization for each node in the cluster.
 
-![Nodes CPU distribution](././img/couchbase - nodes cpu.png)
+![Nodes CPU distribution](././img/nodes_cpu.png)
 
 *This cluster's CPU utilization distribution shows only a small amount of variation in utilization, suggesting that each of the nodes is using about the same amount.*
 
@@ -108,13 +108,13 @@ This dashboard also includes a percentile distribution of CPU utilization per no
 
 Zooming in to an individual node shows that node's activity, cache performance, and compute resource usage.
 
-![Node overview](././img/couchbase - node.png)
+![Node overview](././img/node.png)
 
 *This node is lightly loaded. To compare its activity to other nodes in this cluster, we'd use the Couchbase Nodes dashboard above.*
 
 We can check the node's cache performance using a graph that shows the number of gets per second in yellow, overlaid on the number of cache hits in blue. The ratio between gets and cache hits is computed as "hit ratio" and is shown as a dotted line. When every get request results in a cache hit, the graph is green and the dotted line remains high. When there are fewer cache hits than gets, the graph shows yellow areas and the dotted line drops.
 
-![Gets and hits](././img/couchbase - node gets and hits.png)
+![Gets and hits](././img/node_gets_and_hits.png)
 
 *This lightly-loaded node has a 100% cache hit ratio: it can serve every get request that it receives from memory.*
 
@@ -122,7 +122,7 @@ We can check the node's cache performance using a graph that shows the number of
 
 The Couchbase Buckets overview shows activity for all buckets being monitored.
 
-![Buckets overview](././img/couchbase - buckets activity.png)
+![Buckets overview](././img/buckets_activity.png)
 
 *The buckets in this cluster happen to have about the same number of items and are serving about the same number of operations per second.*
 
@@ -132,19 +132,19 @@ Selecting a particular bucket to show on the Couchbase Bucket dashboard lets us 
 
 Resident items ratio and cache miss rate are inversely related: as the ratio of items in this bucket that are resident in memory drops, the number of get requests that require a fetch from disk will increase.
 
-![Bucket cache performance](././img/couchbase - bucket cache miss rate.png)
+![Bucket cache performance](././img/bucket_cache_miss_rate.png)
 
 *This bucket has a 100% resident items ratio: all of the items that it contains can be served from memory, instead of disk.*
 
 The performance of Couchbase buckets is bound by memory. When memory is exhausted, new items can be stored only by ejecting old items. An attempt to store a new item in a bucket with insufficient memory headroom produces an out-of-memory error: either a "temp" error (an old item will be ejected, try again) or a "non-temp" error (this item cannot be stored at all). Any out-of-memory error is cause for concern.
 
-![Bucket memory usage](././img/couchbase - bucket memory.png)
+![Bucket memory usage](././img/bucket_memory.png)
 
 *This bucket has available memory, and shows no out-of-memory errors.*
 
 Couchbase persists in-memory items to disk. This graph shows the number of items that have been added to the disk write queue in yellow, and the number of items that have been successfully written in blue. When Couchbase is able to keep up with disk writes, these metrics are equal and the graph is green. When the disk queue is filling faster than it can be drained, this graph shows yellow areas.  
 
-![Bucket write queue](././img/couchbase - bucket write queue.png)
+![Bucket write queue](././img/bucket_write_queue.png)
 
 *This bucket is keeping up with disk writes: the number of items added to the queue is about equal to the number of items successfully written to disk.*
 
