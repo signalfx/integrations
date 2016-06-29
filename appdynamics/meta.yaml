@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/appd-integration",
   "featured": false,
   "logo_large": "/images/repos/appdynamics/img/integrations_appdynamics%402x.png",
-  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png"
-},
+  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png",
+  "in_app_categories": ["Monitoring Services"] 
+}

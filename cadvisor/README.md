@@ -40,7 +40,7 @@ You can clone and build the tool yourself, but the easiest way to install is to 
 	      value: 5s
 ```
 
-## CONFIGURATION
+### CONFIGURATION
 
 | Option | Default value | Comment | Env. Var. |
 | ------ | ------------ | ------- | --------- |

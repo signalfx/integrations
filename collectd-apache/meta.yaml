@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/apache.c",
   "featured": false,
   "logo_large": "/images/repos/collectd-apache/img/integrations_apache%402x.png",
-  "logo_small": "/images/repos/collectd-apache/img/integrations_apache.png"
+  "logo_small": "/images/repos/collectd-apache/img/integrations_apache.png",
+  "in_app_categories": ["Monitoring Services"] 
 },

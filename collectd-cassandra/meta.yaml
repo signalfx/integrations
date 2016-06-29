@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
   "featured": true,
   "logo_large": "/images/repos/collectd-cassandra/img/integrations_cassandra%402x.png",
-  "logo_small": "/images/repos/collectd-cassandra/img/integrations_cassandra.png"
+  "logo_small": "/images/repos/collectd-cassandra/img/integrations_cassandra.png",
+  "in_app_categories": ["Monitoring Services"] 
 },

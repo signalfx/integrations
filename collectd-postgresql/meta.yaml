@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/postgresql.c",
   "featured": false,
   "logo_large": "/images/repos/collectd-postgresql/img/integrations_postgresql.png",
-  "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png"
-},
+  "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png",
+  "in_app_categories": ["Monitoring Services"] 
+}

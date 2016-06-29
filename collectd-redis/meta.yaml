@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/redis.c",
   "featured": false,
   "logo_large": "/images/repos/collectd-redis/img/integrations_redis.png",
-  "logo_small": "/images/repos/collectd-redis/img/integrations_redis%402x.png"
-},
+  "logo_small": "/images/repos/collectd-redis/img/integrations_redis%402x.png",
+  "in_app_categories": ["Monitoring Services"] 
+}

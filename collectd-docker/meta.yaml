@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/docker-collectd-plugin",
   "featured": true,
   "logo_large": "/images/repos/collectd-docker/img/integrations_docker.png",
-  "logo_small": "/images/repos/collectd-docker/img/integrations_docker%402x.png"
-},
+  "logo_small": "/images/repos/collectd-docker/img/integrations_docker%402x.png",
+  "in_app_categories": ["Monitoring Services"]
+}
