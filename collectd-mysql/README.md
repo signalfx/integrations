@@ -97,13 +97,13 @@ For general reference on how to monitor MySQL performance using this plugin, see
 
 **Monitoring multiple MySQL nodes**
 
-![Example dashboard showing MySQL nodes](././img/MySQL nodes dashboard.png)
+![Example dashboard showing MySQL nodes](././img/MySQL_nodes_dashboard.png)
 
 *Example dashboard showing performance of multiple MySQL nodes.*
 
 **Monitoring a single MySQL node**
 
-![Example dashboard showing a single MySQL host](././img/MySQL node dashboard.png)
+![Example dashboard showing a single MySQL host](././img/MySQL_node_dashboard.png)
 
 *Example dashboard showing performance of a single MySQL node.*
 

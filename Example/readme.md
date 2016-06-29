@@ -89,7 +89,7 @@ This plugin is an example that emits values on its own, and does not connect to 
 
 Below is a screen capture of an example SignalFx dashboard, illustrating the metrics emitted by this plugin. The dashboard is included in this repository, and can be imported into SignalFx or other monitoring product. [Click here to download](././Page_Example Python Plugin.json).
 
-![Example dashboard showing metrics from this plugin](././img/example plugin dashboard.png)
+![Example dashboard showing metrics from this plugin](././img/example_plugin_dashboard.png)
 
 #### Important conditions to watch out for
 

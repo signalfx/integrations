@@ -79,25 +79,25 @@ Below are screen captures of dashboards created for this plugin by SignalFx, ill
 
 #### Monitoring Mesos clusters
 
-![task monitoring](./img/mesos cluster - task monitoring.png)
+![task monitoring](./img/task_monitoring.png)
 
 It’s important to keep track of the status of tasks in the cluster. An increase in failed tasks for a master or slave can indicate a problem with a framework.
 
-![hosts and slaves](./img/mesos cluster - hosts and slaves.png)
+![hosts and slaves](./img/hosts_and_slaves.png)
 
 It can be important to analyze performance per Mesos host. An increase in failed tasks for many masters and slaves on a single host may indicate a hardware problem.
 
-![week-over-week growth](./img/mesos cluster - 1w task growth.png)
+![week-over-week growth](./img/1w_task_growth.png)
 
 Track week-over-week growth of tasks in your cluster to be informed of changing workloads.
 
 #### Monitoring Mesos masters and slaves
 
-![connected slaves](./img/mesos master - connected slaves.png)
+![connected slaves](./img/connected_slaves.png)
 
 An unexpectedly low number of connected slaves on a Mesos master can indicate a network problem preventing them from connecting. To verify this, check to see if there’s an unexpectedly high number of dropped messages in [`counter.master_dropped_messages`](./docs/counter.master_dropped_messages.md).
 
-![connected frameworks and task detail](./img/mesos master - connected frameworks.png)
+![connected frameworks and task detail](./img/connected_frameworks.png)
 
 On the Mesos master dashboard, you can view in detail the number of tasks that are finished, failed, lost or errored out. Monitoring connected and active frameworks can help you determine the health of your Mesos scheduler.
 
