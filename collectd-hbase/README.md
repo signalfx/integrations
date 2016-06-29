@@ -20,7 +20,7 @@ brief: HBase metrics for collectd
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-### Version information
+#### Version information
 
 | Software  | Version        |
 |-----------|----------------|

@@ -36,7 +36,7 @@ Apache worker threads can be in one of the following states:
 | Finishing    | Finishing as part of graceful shutdown  |
 | Starting     | Starting up to serve                    |
 
-### Version information
+#### Version information
 
 | Software  | Version        |
 |-----------|----------------|

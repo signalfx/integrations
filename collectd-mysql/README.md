@@ -29,7 +29,7 @@ This plugin connects to a MySQL instance and reports on the values returned by a
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-### Version information
+#### Version information
 
 | Software  | Version        |
 |-----------|----------------|

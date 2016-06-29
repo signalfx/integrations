@@ -39,7 +39,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-### Version information
+#### Version information
 
 | Software  | Version        |
 |-----------|----------------|
