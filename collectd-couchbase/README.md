@@ -22,7 +22,7 @@ collects statistics from Couchbase.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-### Version information
+#### Version information
 
 | Software  | Version        |
 |-----------|----------------|

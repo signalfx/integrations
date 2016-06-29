@@ -6,7 +6,7 @@ brief: Filtering Metrics using the match_regex plugin
 
 Use the [match_regex](https://collectd.org/wiki/index.php/Match:RegEx) to filter metrics.
 
-### Version information
+#### Version information
 
 | Software           | Version               |
 |--------------------|-----------------------|

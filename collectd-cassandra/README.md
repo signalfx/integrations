@@ -29,7 +29,7 @@ Use this plugin to monitor the following types of information from Cassandra nod
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-### Version information
+#### Version information
 
 | Software  | Version        |
 |-----------|----------------|
