@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/memcached.c",
   "featured": false,
   "logo_large": "/images/repos/collectd-memcached/img/integrations_memcached.png",
-  "logo_small": "/images/repos/collectd-memcached/img/integrations_memcached%402x.png"
-},
+  "logo_small": "/images/repos/collectd-memcached/img/integrations_memcached%402x.png",
+  "in_app_categories": ["servicesMonitored"]
+}

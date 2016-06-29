@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/write_kafka.c",
   "featured": true,
   "logo_large": "/images/repos/collectd-kafka/img/integrations_kafka.png",
-  "logo_small": "/images/repos/collectd-kafka/img/integrations_kafka%402x.png"
-},
+  "logo_small": "/images/repos/collectd-kafka/img/integrations_kafka%402x.png",
+  "in_app_categories": ["servicesMonitored"]
+}
