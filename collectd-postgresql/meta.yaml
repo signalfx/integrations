@@ -5,5 +5,5 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-postgresql/img/integrations_postgresql.png",
   "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png",
-  "in_app_categories": ["servicesMonitored"] 
+  "in_app_categories": ["servicesMonitored"]
 }

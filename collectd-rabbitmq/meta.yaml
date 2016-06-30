@@ -5,5 +5,5 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq.png",
   "logo_small": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq%402x.png",
-  "in_app_categories": ["servicesMonitored"] 
+  "in_app_categories": ["servicesMonitored"]
 }
