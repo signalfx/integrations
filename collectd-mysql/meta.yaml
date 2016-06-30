@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/mysql.c",
   "featured": false,
   "logo_large": "/images/repos/collectd-mysql/img/integrations_mysql.png",
-  "logo_small": "/images/repos/collectd-mysql/img/integrations_mysql%402x.png"
+  "logo_small": "/images/repos/collectd-mysql/img/integrations_mysql%402x.png",
+  "in_app_categories": ["servicesMonitored"]
 },

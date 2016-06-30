@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd-couchbase",
   "featured": false,
   "logo_large": "/images/repos/collectd-couchbase/img/integrations_couchbase.png",
-  "logo_small": "/images/repos/collectd-couchbase/img/integrations_couchbase%402x.png"
+  "logo_small": "/images/repos/collectd-couchbase/img/integrations_couchbase%402x.png",
+  "in_app_categories": ["servicesMonitored"]
 },

@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/cadvisor-integration",
   "featured": false,
   "logo_large": "/images/repos/cadvisor/img/integrations_kubernetes%402x.png",
-  "logo_small": "/images/repos/cadvisor/img/integrations_kubernetes.png"
-},
+  "logo_small": "/images/repos/cadvisor/img/integrations_kubernetes.png",
+  "in_app_categories": ["servicesMonitored"]
+}

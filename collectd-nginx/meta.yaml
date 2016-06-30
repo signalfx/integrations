@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/nginx.c",
   "featured": false,
   "logo_large": "/images/repos/collectd-nginx/img/integrations_nginx.png",
-  "logo_small": "/images/repos/collectd-nginx/img/integrations_nginx%402x.png"
-},
+  "logo_small": "/images/repos/collectd-nginx/img/integrations_nginx%402x.png",
+  "in_app_categories": ["servicesMonitored"]
+}

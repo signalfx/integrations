@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/integrations/tree/master/collectd-mesos",
   "featured": true,
   "logo_large": "/images/repos/collectd-mesos/img/integrations_mesos%402x.png",
-  "logo_small": "/images/repos/collectd-mesos/img/integrations_mesos.png"
-},
+  "logo_small": "/images/repos/collectd-mesos/img/integrations_mesos.png",
+  "in_app_categories": ["servicesMonitored"]
+}
