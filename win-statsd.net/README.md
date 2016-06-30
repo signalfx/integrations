@@ -11,14 +11,14 @@ brief: The SignalFx Integration for Windows StatsD.NET.
 - [Configuration](#configuration)
 - [License](#license)
 
-## DESCRIPTION
+### DESCRIPTION
 
 Plugin for statsd.net (https://github.com/lukevenediger/statsd.net/) to send metrics to SignalFx
 
 You can find the SignalFx version of statsd.net that is released here:
 https://github.com/signalfx/statsd.net/
 
-## REQUIREMENTS AND DEPENDENCIES
+### REQUIREMENTS AND DEPENDENCIES
 
 | Software          | Version        |
 |-------------------|----------------|
@@ -30,7 +30,7 @@ https://github.com/signalfx/statsd.net/
 
 Sorry Mono, this is the Win32 only club -- besides, Linux distros already have better tools for this!
 
-## INSTALLATION
+### INSTALLATION
 
 Download the latest release from https://github.com/signalfx/signalfx-statsd.net-plugin/releases and unzip it.
 
@@ -69,9 +69,9 @@ For hash values not supplied the following defaults are used. APIToken and Sourc
 * **AwsIntegration** - If set to "true" then AWS integration will be turned on for SignalFx reporting. Default: false
 * **SampleInterval** - string of how often to send metrics to SignalFx. Looks supported values look like "5s", or "1m". Default Value: 5s
 
-## CONFIGURATION
+### CONFIGURATION
 
-### Extensions to statsd protocol to support Dimensions
+#### Extensions to statsd protocol to support Dimensions
 There are two ways you can add dimensions to your metrics:
   * tags
   * metric name
@@ -98,6 +98,6 @@ This server also supports sending in dimensions in the metric names. In this cas
 
  will give you a metric `api.count` with two dimensions `apiType` and `success`.
 
-## LICENSE
+### LICENSE
 
 This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/PerfCounterReporter/blob/master/LICENSE) for more details.
