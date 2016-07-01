@@ -44,7 +44,7 @@ You can clone and build the tool yourself, but the easiest way to install is to 
 
 | Option | Default value | Comment | Env. Var. |
 | ------ | ------------ | ------- | --------- |
-| ingestURL | "https://ingest.signalfx.com"  | SignalFx ingest URL.|
+| ingestURL | "https://ingest.signalfx.com"  | SignalFx ingest URL.| |
 | apiToken |   | API token. | $SFX_SCRAPPER_API_TOKEN |
 | clusterName | | Cluster name that will appear as a dimension.  | $SFX_SCRAPPER_CLUSTER_NAME |
 | sendRate | "1s"  | Rate at which data is queried from cAdvisor and sent to SignalFx. Possible values: [1s 5s 10s 30s 1m 5m 1h] | $SFX_SCRAPPER_SEND_RATE |
