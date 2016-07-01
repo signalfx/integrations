@@ -27,10 +27,10 @@ This plugin requires:
 
 | Software          | Version        |
 |-------------------|----------------|
-| collectd          |        4.9+    |
+| collectd          | 4.9+    |
 | Python collectd plugin | (included with SignalFx collectd) |
-| Python            |       2.6+     |
-| Zookeeper         |       3.4.0+   |
+| Python            | 2.6+     |
+| Zookeeper         | 3.4.0+   |
 
  #### Note:
  - Requires ZooKeeper 3.4.0 or greater in order to use the `mntr` [four letter word command](http://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html#sc_zkCommands).
