@@ -34,7 +34,7 @@ The SignalFx collectd agent is supported on the following operating systems:
 |-----------|----------------|
 | Amazon Linux | 2014.09, 2015.03, 2015.09, & 2016.03 |
 | Debian  | 7 & 8 |
-| Mac OS X | 10.8+ (requires Python 2.7) |
+| Mac OS X | 10.8+ |
 | RHEL/Centos | 6.x & 7.x |
 | Ubuntu  | 12.04, 14.04 & 15.04 |
 
@@ -75,6 +75,10 @@ If you have already installed collectd on your own, this script will install the
  * Type `input` and press enter to provide the hostname yourself. When prompted, type in your desired hostname and press enter.
 
 When the script successfully completes, the SignalFx collectd agent starts up and begins reporting metrics to SignalFx. 
+
+##### Note: Additional installer options
+
+The instructions above apply to most installation scenarios. For more information on available configuration options for this script, please see complete documentation here on Github: https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md 
 
 ##### Note: Uninstalling from Mac OS X
 
