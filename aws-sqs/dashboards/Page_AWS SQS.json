@@ -1,0 +1,2330 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_description" : "Metrics about Amazon Simple Queue Service (SQS).",
+  "sf_type" : "Service",
+  "sf_service" : "AWS SQS",
+  "marshallId" : 1
+}, {
+  "sf_page" : "AWS SQS",
+  "sf_description" : "Dashboards about Amazon Simple Queue Service (SQS).",
+  "sf_type" : "Page",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ]
+}, {
+  "sf_dashboard" : "SQS Queues",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "type" : "chart",
+      "row" : 0,
+      "sizeX" : 4,
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441933455247,
+        "id" : 1
+      },
+      "col" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441933618685,
+        "id" : 2
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442464343593,
+        "id" : 3
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442007919876,
+        "id" : 4
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442465275381,
+        "id" : 5
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442465444962,
+        "id" : 6
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442465738391,
+        "id" : 7
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442465915580,
+        "id" : 8
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442468501458,
+        "id" : 9
+      },
+      "row" : 2
+    } ],
+    "version" : 1
+  },
+  "sf_discoverySelectors" : [ "namespace:AWS/SQS", "sf_key:QueueName" ],
+  "sf_description" : "",
+  "sf_type" : "Dashboard",
+  "sf_discoveryQuery" : "namespace:\"AWS/SQS\" AND _exists_:QueueName",
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Top Queues #Msg Recv / Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 14,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "QueueName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesReceived"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : "-value",
+      "forcedResolution" : "0"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby('QueueName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442465275381,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby('QueueName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Appx #Msg Not Visible",
+  "sf_uiModel" : {
+    "revisionNumber" : 12,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "ApproximateNumberOfMessagesNotVisible",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "QueueName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "ApproximateNumberOfMessagesNotVisible"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "absoluteEnd" : null,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# messages",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesNotVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:mean) AND (namespace:AWS\\\\/SQS))') -> fetch -> groupby('QueueName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442468501458,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesNotVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:mean) AND (namespace:AWS\\\\/SQS))') -> fetch -> groupby('QueueName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Total #Msg Deleted / Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 13,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "NumberOfMessagesDeleted",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : null,
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesDeleted"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_13",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# messages",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "min" : 0,
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "received - RED"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:NumberOfMessagesDeleted AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_13 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442465444962,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:NumberOfMessagesDeleted AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Top Queues #Msg Sent / Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 13,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "QueueName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesSent"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_13",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : "-value",
+      "forcedResolution" : "0"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby('QueueName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split -> _SF_PLOT_KEY_##CHARTID##_1_13 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442007919876,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby('QueueName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split -> _SF_PLOT_KEY_##CHARTID##_1_13 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Total Sent Bytes / Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 10,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "SentMessageSize - Scale:60 - Sum",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : null,
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "SentMessageSize"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_10",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# bytes",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "min" : 0,
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "received - RED"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:SentMessageSize AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442464343593,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:SentMessageSize AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Total #Msg / Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "chartType" : "column",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "NumberOfMessagesSent",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0077c2",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesSent"
+      }
+    }, {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "NumberOfMessagesReceived",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 1,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#b04600",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesReceived"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 3,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "sent - BLUE",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "min" : 0,
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "received - RED"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_2_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441933618685,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((stat:sum) AND (namespace:AWS\\\\/SQS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_2_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "# Active Queues",
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "NumberOfMessagesSent - Mean(15m) - Count by QueueName - Count",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "amount" : 15,
+            "transformTimeRange" : "15m",
+            "unit" : "m"
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "QueueName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesSent"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : "",
+      "forcedResolution" : "0"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:NumberOfMessagesSent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (stat:sum))') -> fetch -> split -> stats:!mean -> window(15m) -> stats:!mean -> groupby('QueueName') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441933455247,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:NumberOfMessagesSent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (stat:sum))') -> fetch -> split -> stats:!mean -> window(15m) -> stats:!mean -> groupby('QueueName') -> stats:!count -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Appx #Msg Delayed",
+  "sf_uiModel" : {
+    "revisionNumber" : 12,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "ApproximateNumberOfMessagesDelayed - Mean by QueueName",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "QueueName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "ApproximateNumberOfMessagesDelayed"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "absoluteEnd" : null,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# messages",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesDelayed AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:mean) AND (namespace:AWS\\\\/SQS))') -> fetch -> groupby('QueueName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442465738391,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesDelayed AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:mean) AND (namespace:AWS\\\\/SQS))') -> fetch -> groupby('QueueName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Appx #Msg Visible",
+  "sf_uiModel" : {
+    "revisionNumber" : 12,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "ApproximateNumberOfMessagesVisible",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "QueueName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "ApproximateNumberOfMessagesVisible"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "absoluteEnd" : null,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# messages",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:mean) AND (namespace:AWS\\\\/SQS))') -> fetch -> groupby('QueueName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442465915580,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:mean) AND (namespace:AWS\\\\/SQS))') -> fetch -> groupby('QueueName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "QueueName",
+        "alias" : "queue name",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "SQS Queue name",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
+  "sf_dashboard" : "SQS Queue",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442469340652,
+        "id" : 1
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442469460609,
+        "id" : 2
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442469648973,
+        "id" : 3
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442470147385,
+        "id" : 4
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442470299071,
+        "id" : 5
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442471087922,
+        "id" : 6
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1443740409781,
+        "id" : 7
+      },
+      "row" : 2
+    } ],
+    "version" : 1
+  },
+  "sf_discoverySelectors" : [ "_exists_:QueueName" ],
+  "sf_type" : "Dashboard",
+  "sf_discoveryQuery" : "namespace:\"AWS/SQS\" AND _exists_:QueueName",
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Queue Size Metrics",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "AppxMessagesDelayed",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "ApproximateNumberOfMessagesDelayed"
+      }
+    }, {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "AppxMessagesVisible",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "ApproximateNumberOfMessagesVisible"
+      }
+    }, {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "AppxMessagesNotVisible",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "ApproximateNumberOfMessagesNotVisible"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 4,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : "+sf_metric",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_7=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesDelayed AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:mean))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');B => find(query='(sf_metric:ApproximateNumberOfMessagesVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:mean))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');C => find(query='(sf_metric:ApproximateNumberOfMessagesNotVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:mean))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442471087922,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_7=id(report=1);A => find(query='(sf_metric:ApproximateNumberOfMessagesDelayed AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:mean))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');B => find(query='(sf_metric:ApproximateNumberOfMessagesVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:mean))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');C => find(query='(sf_metric:ApproximateNumberOfMessagesNotVisible AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:mean))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 13 ]
+}, {
+  "sf_chart" : "Messages Sent/Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "NumberOfMessagesSent - Scale:60",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesSent"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442469340652,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 13 ]
+}, {
+  "sf_chart" : "Sent & Received Messages/Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 8,
+    "chartType" : "column",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "NumberOfMessagesSent - Scale:60",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0077c2",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesSent"
+      }
+    }, {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "NumberOfMessagesReceived - Scale:60",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 1,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#b04600",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesReceived"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 3,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "sent - BLUE",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "min" : 0,
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "received - RED"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_8 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_2_8 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442470147385,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);find(query='(sf_metric:NumberOfMessagesSent AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_2_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 13 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 10,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "stat"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "SentMessageSize"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_10",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : "+stat",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);A => find(query='(sf_metric:SentMessageSize AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue))') -> fetch(extrapolation='ZERO_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('stat') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "sf_description" : "last reported interval",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 13 ],
+  "sf_chart" : "Sent Message Size Stats",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442469648973,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);A => find(query='(sf_metric:SentMessageSize AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue))') -> fetch(extrapolation='ZERO_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('stat') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')"
+}, {
+  "sf_chart" : "Notes",
+  "sf_uiModel" : {
+    "markdownText" : "Empty charts indicate no activity of that category\n\nDocs for [SQS CloudWatch metrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/sqs-metricscollected.html)",
+    "revisionNumber" : 2,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ ],
+      "uniqueKey" : 1,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1443740409781,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "",
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 13 ]
+}, {
+  "sf_chart" : "Messages Deleted/Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "NumberOfMessagesDeleted - Scale:60",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : null,
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesDeleted"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# messages",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "min" : 0,
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "received - RED"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:NumberOfMessagesDeleted AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442470299071,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:NumberOfMessagesDeleted AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 13 ]
+}, {
+  "sf_chart" : "Messages Received/Min",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "metricDefinition" : { },
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/SQS",
+        "propertyValue" : "AWS/SQS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/SQS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "MyQueue",
+        "propertyValue" : "MyQueue",
+        "NOT" : false,
+        "query" : "QueueName:MyQueue",
+        "property" : "QueueName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "NumberOfMessagesReceived - Scale:60",
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "seriesData" : {
+        "metric" : "NumberOfMessagesReceived"
+      }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "metricDefinition" : { },
+      "type" : "plot",
+      "seriesData" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "min" : null
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442469460609,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:NumberOfMessagesReceived AND _missing_:sf_programId) AND ((namespace:AWS\\\\/SQS) AND (QueueName:MyQueue) AND (stat:sum))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 13 ]
+} ]
