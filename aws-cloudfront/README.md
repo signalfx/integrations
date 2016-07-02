@@ -21,10 +21,12 @@ Use SignalFx to monitor Amazon CloudFront via Amazon CloudWatch.
 
 ##### Built-in dashboards
 
-| Dashboard title | Description | Preview (click for bigger) |
-|----------|----------|------------|
-| **CloudFront Distributions** | Overview of all data from CloudFront. |  [<img src='./img/dashboard_cloudfront_distributions.png' width=200px>](./img/dashboard_cloudfront_distributions.png) |
-| **CloudFront Distribution** | Focus on a single CloudFront distribution. |  [<img src='./img/dashboard_cloudfront_distribution.png' width=200px>](./img/dashboard_cloudfront_distribution.png) |
+- **CloudFront Distributions**: Overview of all data from CloudFront.
+  
+  [<img src='./img/dashboard_cloudfront_distributions.png' width=200px>](./img/dashboard_cloudfront_distributions.png)
+- **CloudFront Distribution**: Focus on a single CloudFront distribution.
+  
+  [<img src='./img/dashboard_cloudfront_distribution.png' width=200px>](./img/dashboard_cloudfront_distribution.png)
 
 ### INSTALLATION
 
