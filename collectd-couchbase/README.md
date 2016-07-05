@@ -5,7 +5,7 @@ brief: Couchbase metrics for collectd.
 
 #![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase Plugin
 
-_This is a directory consolidate all the metadata associated with the Couchbase collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase)_
+_This is a directory that consolidates all the metadata associated with the Couchbase collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -19,6 +19,30 @@ _This is a directory consolidate all the metadata associated with the Couchbase 
 
 `collectd-couchbase` is a [collectd](http://www.collectd.org/) plugin that
 collects statistics from Couchbase.
+
+#### FEATURES
+
+##### Built-in dashboards
+
+- **Couchbase Nodes**: Overview of all data from Couchbase nodes.
+  
+  [<img src='./img/dashboard_couchbase_nodes.png' width=200px>](./img/dashboard_couchbase_nodes.png)
+
+- **Couchbase Node**: Focus on a single Couchbase node.
+  
+  [<img src='./img/dashboard_couchbase_node.png' width=200px>](./img/dashboard_couchbase_node.png)
+
+- **Couchbase Clusters**: Overview of data from all Couchbase clusters reporting.
+
+  [<img src='./img/dashboard_couchbase_clusters.png' width=200px>](./img/dashboard_couchbase_clusters.png)
+
+- **Couchbase Buckets**: Performance and activity of Couchbase buckets.
+  
+  [<img src='./img/dashboard_couchbase_buckets.png' width=200px>](./img/dashboard_couchbase_buckets.png)
+
+- **Couchbase Bucket**: Focus on a single Couchbase bucket.
+
+  [<img src='./img/dashboard_couchbase_bucket.png' width=200px>](./img/dashboard_couchbase_bucket.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -144,7 +168,7 @@ The performance of Couchbase buckets is bound by memory. When memory is exhauste
 
 Couchbase persists in-memory items to disk. This graph shows the number of items that have been added to the disk write queue in yellow, and the number of items that have been successfully written in blue. When Couchbase is able to keep up with disk writes, these metrics are equal and the graph is green. When the disk queue is filling faster than it can be drained, this graph shows yellow areas.  
 
-![Bucket write queue](././img/bucket_write_queue.png)
+![Bucket write queue](././img/bucket_write_clusters.png)
 
 *This bucket is keeping up with disk writes: the number of items added to the queue is about equal to the number of items successfully written to disk.*
 

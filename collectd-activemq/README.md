@@ -5,7 +5,7 @@ brief: ActiveMQ metrics for collectd.
 
 #![](https://github.com/signalfx/integrations/blob/master/collectd-activemq/img/integrations_activemq.png) ActiveMQ collectd Plugin   
 
-_This is a directory consolidate all the metadata associated with the ActiveMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
+_This is a directory that consolidates all the metadata associated with the ActiveMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -25,6 +25,29 @@ Use this plugin to monitor the following types of information from ActiveMQ:
 * Queue (Queue status)
 * Topic (Topic status)
 
+#### FEATURES
+
+##### Built-in dashboards
+
+- **ActiveMQ Hosts**: Overview of all data from ActiveMQ hosts.
+  
+  [<img src='./img/dashboard_activemq_hosts.png' width=200px>](./img/dashboard_activemq_hosts.png)
+
+- **ActiveMQ Host**: Focus on a single ActiveMQ host.
+  
+  [<img src='./img/dashboard_activemq_host.png' width=200px>](./img/dashboard_activemq_host.png)
+
+- **ActiveMQ Queue**: Focus on a single ActiveMQ queue.
+
+  [<img src='./img/dashboard_activemq_queue.png' width=200px>](./img/dashboard_activemq_queue.png)
+
+- **ActiveMQ Topic**: Focus on a single ActiveMQ topic.
+  
+  [<img src='./img/dashboard_activemq_topic.png' width=200px>](./img/dashboard_activemq_topic.png)
+
+- **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues.
+
+  [<img src='./img/dashboard_activemq_messageage.png' width=200px>](./img/dashboard_activemq_messageage.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 

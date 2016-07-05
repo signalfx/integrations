@@ -21,14 +21,23 @@ This is the SignalFx Docker plugin. Follow these instructions to install the Doc
 
 The [`docker-collectd`](https://github.com/signalfx/docker-collectd) plugin collects metrics about the Docker containers running on the system using Docker's stats API. It reports metrics about the CPU utilization of each container, their memory consumption, and their network and disk activity.
 
-All metrics reported by the Docker collectd plugin will contain the following dimensions:
+#### FEATURES
 
-* `host` will contain the hostname (as known by collectd) of the machine reporting the metrics
-* `plugin` is always set to `docker`
-* `plugin_instance` will contain the name of the container the metrics are from. The container name is used because that's usually a more stable value than the container ID, which changes on every restart
+##### Built-in dashboards
+
+- **Docker Hosts**: Overview of all data from Docker hosts.
+  
+  [<img src='./img/dashboard_docker_hosts.png' width=200px>](./img/dashboard_docker_hosts.png)
+
+- **Docker Host**: Focus on a single Docker host.
+  
+  [<img src='./img/dashboard_docker_host.png' width=200px>](./img/dashboard_docker_host.png)
+
+- **Docker Container**: Focus further on a single running Docker container.
+
+  [<img src='./img/dashboard_docker_container.png' width=200px>](./img/dashboard_docker_container.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
-
 
 #### Version information
 
@@ -96,6 +105,12 @@ The following configuration options are *optional*. You may specify them in the 
 | Timeout  | Time in seconds that collectd will wait for a response from Docker   | 3 |
 
 ### USAGE
+
+All metrics reported by the Docker collectd plugin will contain the following dimensions:
+
+* `host` will contain the hostname (as known by collectd) of the machine reporting the metrics
+* `plugin` is always set to `docker`
+* `plugin_instance` will contain the name of the container the metrics are from. The container name is used because that's usually a more stable value than the container ID, which changes on every restart.
 
 Sample of pre-built dashboard in SignalFx:
 

@@ -5,7 +5,7 @@ brief: Apache Webserver metrics for collectd.
 
 #![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Apache collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c)_
+_This is a directory that consolidates all the metadata associated with the Apache collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -16,25 +16,24 @@ _This is a directory consolidate all the metadata associated with the Apache col
 - [License](#license)
 
 ### DESCRIPTION
-Follow these instructions to install the Apache plugin for collectd. This will send data about Apache to SignalFx, enabling built-in Apache monitoring dashboards.
+
+The Apache plugin for collectd monitors Apache Webserver using the information provided in the module `mod_status`.
+
+#### FEATURES
+
+##### Built-in dashboards
+
+- **Apache Webservers**: Overview of data from all Apache webserver instances.
+  
+  [<img src='./img/dashboard_apache_webservers.png' width=200px>](./img/dashboard_apache_webservers.png)
+
+- **Apache Webserver**: Focus on a single Apache webserver instance.
+  
+  [<img src='./img/dashboard_apache_webserver.png' width=200px>](./img/dashboard_apache_webserver.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
-Use the [Apache collectd plugin](https://collectd.org/wiki/index.php/Plugin:Apache) to collect metrics about Apache Webserver.  This plugin collects metrics from the module `mod_status`.
 
-Apache worker threads can be in one of the following states:
-
-| State        | Remark                                  |
-|--------------|-----------------------------------------|
-| Open         | Open (unused) slot - no process         |
-| Waiting      | Idle and waiting for request            |
-| Sending      | Serving response                        |
-| KeepAlive    | Kept alive for possible next request    |
-| Idle_cleanup | Idle and marked for cleanup             |
-| Closing      | Closing connection                      |
-| Logging      | Writing to log file                     |
-| Reading      | Reading request                         |
-| Finishing    | Finishing as part of graceful shutdown  |
-| Starting     | Starting up to serve                    |
+This plugin collects metrics from the module `mod_status`.
 
 #### Version information
 
@@ -107,6 +106,21 @@ Add the following to your apache config:
 | URL | The location of your `mod_status` |
 
 ### USAGE
+
+Apache worker threads can be in one of the following states:
+
+| State        | Remark                                  |
+|--------------|-----------------------------------------|
+| Open         | Open (unused) slot - no process         |
+| Waiting      | Idle and waiting for request            |
+| Sending      | Serving response                        |
+| KeepAlive    | Kept alive for possible next request    |
+| Idle_cleanup | Idle and marked for cleanup             |
+| Closing      | Closing connection                      |
+| Logging      | Writing to log file                     |
+| Reading      | Reading request                         |
+| Finishing    | Finishing as part of graceful shutdown  |
+| Starting     | Starting up to serve                    |
 
 Sample of pre-built dashboard in SignalFx:
 

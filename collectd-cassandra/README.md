@@ -19,13 +19,25 @@ brief: Cassandra metrics for collectd
 
 Follow these instructions to configure the Java plugin for collectd to monitor Cassandra. This will send data about Cassandra to SignalFx, enabling built-in Cassandra monitoring dashboards.
 
-Use this plugin to monitor the following types of information from Cassandra nodes:
+Use this integration to monitor the following types of information from Cassandra nodes:
 
 * read/write/range-slice requests
 * read/write/range-slice errors (timeouts and unavailable)
 * read/write/range-slice latency (median, 99th percentile, maximum)
 * compaction activity
 * hint activity
+
+#### FEATURES
+
+##### Built-in dashboards
+
+- **Cassandra Nodes**: Overview of data from all Cassandra nodes.
+  
+  [<img src='./img/dashboard_cassandra_nodes.png' width=200px>](./img/dashboard_cassandra_nodes.png)
+
+- **Cassandra Node**: Focus on a single Cassandra node.
+  
+  [<img src='./img/dashboard_cassandra_node.png' width=200px>](./img/dashboard_cassandra_node.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 
