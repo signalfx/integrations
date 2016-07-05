@@ -5,7 +5,7 @@ brief: Varnish plugin for collectd.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-varnish/img/integrations_varnish.png) Varnish collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Varnish collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/varnish.c)_
+_This is a directory that consolidates all the metadata associated with the Varnish collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/varnish.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -20,6 +20,18 @@ _This is a directory consolidate all the metadata associated with the Varnish co
 Varnish Cache is a web application accelerator also known as a caching HTTP reverse proxy. You install it in front of any server that speaks HTTP and configure it to cache the contents. Varnish Cache is really, really fast. It typically speeds up delivery with a factor of 300 - 1000x, depending on your architecture.
 
 The Varnish collectd plugin collects metrics from varnish and sends them to SignalFx.
+
+#### FEATURES
+
+##### Built-in dashboards
+
+- **Varnish (a)**: Overview of data from all Varnish servers.
+  
+  [<img src='./img/dashboard_varnish_a.png' width=200px>](./img/dashboard_varnish_a.png)
+
+- **Varnish**: Focus on a single Varnish server.
+  
+  [<img src='./img/dashboard_varnish.png' width=200px>](./img/dashboard_varnish.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 

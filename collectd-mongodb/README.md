@@ -37,6 +37,20 @@ The plugin also captures the following DB-specific metrics:
 
 Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
+#### FEATURES
+
+##### Built-in dashboards
+
+- **MongoDB Hosts**: Overview of data from all MongoDB hosts.
+  
+  [<img src='./img/dashboard_mongodb_hosts.png' width=200px>](./img/dashboard_mongodb_hosts.png)
+
+- **MongoDB Host**: Focus on a single MongoDB host.
+  
+  [<img src='./img/dashboard_mongodb_host.png' width=200px>](./img/dashboard_mongodb_host.png)
+  
+- **MongoDB Cluster**: Overview of a MongoDB cluster.
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 #### Version information

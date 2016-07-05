@@ -1,0 +1,1824 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_type" : "Service",
+  "marshallId" : 1,
+  "sf_service" : "JMX",
+  "sf_description" : "Metrics about JMX."
+}, {
+  "sf_updatedBy" : "B1sTOsnAAAA",
+  "sf_type" : "Page",
+  "sf_page" : "JMX (collectd)",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_description" : "Dashboards about JMX."
+}, {
+  "sf_type" : "Dashboard",
+  "sf_dashboard" : "Generic Java stats",
+  "marshallId" : 3,
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 2,
+        "name" : "New Text Block",
+        "id" : 1
+      }
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1426182789909,
+        "name" : "",
+        "id" : 2
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 9,
+        "name" : "New Text Block",
+        "id" : 4
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1424973012412,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 6,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 4,
+        "name" : "New Text Block",
+        "id" : 6
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 6,
+        "name" : "New Text Block",
+        "id" : 5
+      }
+    }, {
+      "col" : 6,
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 3,
+        "name" : "New Text Block",
+        "id" : 8
+      }
+    }, {
+      "col" : 0,
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 5,
+        "name" : "New Text Block",
+        "id" : 7
+      }
+    }, {
+      "col" : 6,
+      "row" : 4,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1424973378282,
+        "name" : "",
+        "id" : 10
+      }
+    }, {
+      "col" : 0,
+      "row" : 4,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1424973193272,
+        "name" : "",
+        "id" : 9
+      }
+    }, {
+      "col" : 6,
+      "row" : 5,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1424973510380,
+        "name" : "",
+        "id" : 12
+      }
+    }, {
+      "col" : 0,
+      "row" : 5,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1424973295414,
+        "name" : "",
+        "id" : 11
+      }
+    }, {
+      "col" : 6,
+      "row" : 6,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1424973112066,
+        "name" : "",
+        "id" : 13
+      }
+    } ],
+    "version" : 1
+  },
+  "marshallMemberOf" : [ 2 ],
+  "sf_description" : "Generic JMX stats"
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : false,
+  "sf_chart" : "GC: CMS collection time",
+  "marshallId" : 4,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 5,
+    "allPlots" : [ {
+      "name" : "msec",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "gc-ConcurrentMarkSweep",
+        "query" : "plugin_instance:gc\\-ConcurrentMarkSweep",
+        "value" : "gc-ConcurrentMarkSweep",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "total_time_in_ms.collection_time"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gc-ConcurrentMarkSweep.total_time_in_ms.collection_time AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_2_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_2_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_2_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_2_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Duration (ms)"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 4,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:gc\\\\-ConcurrentMarkSweep)) AND (sf_metric:total_time_in_ms.collection_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_programTextRegex" : "find(query='((plugin_instance:gc\\\\-ConcurrentMarkSweep)) AND (sf_metric:total_time_in_ms.collection_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Eden space",
+  "marshallId" : 5,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 8,
+    "allPlots" : [ {
+      "name" : "max bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Par Eden Space",
+        "query" : "plugin_instance:memory_pool\\-Par\\ Eden\\ Space",
+        "value" : "memory_pool-Par Eden Space",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.max"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "commited bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Par Eden Space",
+        "query" : "plugin_instance:memory_pool\\-Par\\ Eden\\ Space",
+        "value" : "memory_pool-Par Eden Space",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.committed"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "used bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Par Eden Space",
+        "query" : "plugin_instance:memory_pool\\-Par\\ Eden\\ Space",
+        "value" : "memory_pool-Par Eden Space",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.used"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "% used",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*C/A",
+      "sf_programText" : ""
+    }, {
+      "name" : "% committed",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "valid" : true,
+      "focusNext" : false,
+      "sf_programText" : "",
+      "expressionText" : "100*C/B"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 7,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "currentUniqueKey" : 8,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.memory-heap.jmx_memory.max AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "% Eden used"
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "% committed in Eden"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "10000"
+    }
+  },
+  "sf_chartIndex" : 1424973378282,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Eden\\\\ Space)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Eden\\\\ Space)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Eden\\\\ Space)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK",
+  "sf_jobResolution" : 10000,
+  "sf_programTextRegex" : "find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Eden\\\\ Space)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Eden\\\\ Space)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Eden\\\\ Space)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : false,
+  "sf_chart" : "Loaded classes",
+  "marshallId" : 6,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 5,
+    "allPlots" : [ {
+      "name" : "gauge.loaded_classes",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "gauge.loaded_classes"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gauge.loaded_classes AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_0_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_0_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_0_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_0_3')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Classes"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_description" : "Number of classes loaded in the JVM",
+  "sf_chartIndex" : 2,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='(sf_metric:gauge.loaded_classes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_programTextRegex" : "find(query='(sf_metric:gauge.loaded_classes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Heap usage",
+  "marshallId" : 7,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 8,
+    "allPlots" : [ {
+      "name" : "max bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory-heap",
+        "query" : "plugin_instance:memory\\-heap",
+        "value" : "memory-heap",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.max"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "used bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory-heap",
+        "query" : "plugin_instance:memory\\-heap",
+        "value" : "memory-heap",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.used"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_B_SF_REPLACED_DASH_zAV2qAEAA_3_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_B_SF_REPLACED_DASH_zAV2qAEAA_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='B_SF_REPLACED_DASH_zAV2qAEAA_5')"
+    }, {
+      "name" : "% used",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*C/A",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 8,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "currentUniqueKey" : 9,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.memory-heap.jmx_memory.max AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Heap usage"
+      }, {
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : ""
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 9,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Non-heap memory",
+  "marshallId" : 8,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 9,
+    "allPlots" : [ {
+      "name" : "max bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory-nonheap",
+        "query" : "plugin_instance:memory\\-nonheap",
+        "value" : "memory-nonheap",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.max"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "commited bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory-nonheap",
+        "query" : "plugin_instance:memory\\-nonheap",
+        "value" : "memory-nonheap",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.committed"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "used bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory-nonheap",
+        "query" : "plugin_instance:memory\\-nonheap",
+        "value" : "memory-nonheap",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.used"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "% used",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*C/A",
+      "sf_programText" : "",
+      "configuration" : {
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "visualization" : "line"
+      }
+    }, {
+      "name" : "% of committed",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "valid" : true,
+      "focusNext" : false,
+      "sf_programText" : "",
+      "expressionText" : "100*C/B"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 7,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "currentUniqueKey" : 8,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.memory-heap.jmx_memory.max AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "% non-heap used"
+      }, {
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "% of committed"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 1424973012412,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:memory\\\\-nonheap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='((plugin_instance:memory\\\\-nonheap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='((plugin_instance:memory\\\\-nonheap)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "find(query='((plugin_instance:memory\\\\-nonheap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='((plugin_instance:memory\\\\-nonheap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);find(query='((plugin_instance:memory\\\\-nonheap)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : false,
+  "sf_chart" : "GC: CMS invocations",
+  "marshallId" : 9,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 4,
+    "allPlots" : [ {
+      "name" : "invocations",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "gc-ConcurrentMarkSweep",
+        "query" : "plugin_instance:gc\\-ConcurrentMarkSweep",
+        "value" : "gc-ConcurrentMarkSweep",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "invocations"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gc-ConcurrentMarkSweep.invocations AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_1_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_1_1_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_1_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_1_2')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Invocations/sec"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 3,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:gc\\\\-ConcurrentMarkSweep)) AND (sf_metric:invocations AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_programTextRegex" : "find(query='((plugin_instance:gc\\\\-ConcurrentMarkSweep)) AND (sf_metric:invocations AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : false,
+  "sf_chart" : "GC: ParNew collection time",
+  "marshallId" : 10,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 5,
+    "allPlots" : [ {
+      "name" : "msec",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "gc-ParNew",
+        "query" : "plugin_instance:gc\\-ParNew",
+        "value" : "gc-ParNew",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "total_time_in_ms.collection_time"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gc-ParNew.total_time_in_ms.collection_time AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_3_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_3_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_3_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_3_3')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Duration (ms)"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 6,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:gc\\\\-ParNew)) AND (sf_metric:total_time_in_ms.collection_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_programTextRegex" : "find(query='((plugin_instance:gc\\\\-ParNew)) AND (sf_metric:total_time_in_ms.collection_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:gauge.jvm.threads.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_programTextRegex" : "find(query='(sf_metric:gauge.jvm.threads.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "Threads",
+  "marshallId" : 11,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "Threads",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "gauge.jvm.threads.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Threads"
+      } ]
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 1426182789909
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Perm",
+  "marshallId" : 12,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 8,
+    "allPlots" : [ {
+      "name" : "max bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-CMS Perm Gen",
+        "query" : "plugin_instance:memory_pool\\-CMS\\ Perm\\ Gen",
+        "value" : "memory_pool-CMS Perm Gen",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.max"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "commited bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-CMS Perm Gen",
+        "query" : "plugin_instance:memory_pool\\-CMS\\ Perm\\ Gen",
+        "value" : "memory_pool-CMS Perm Gen",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.committed"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "used bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-CMS Perm Gen",
+        "query" : "plugin_instance:memory_pool\\-CMS\\ Perm\\ Gen",
+        "value" : "memory_pool-CMS Perm Gen",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.used"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "% used",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*C/A",
+      "sf_programText" : ""
+    }, {
+      "name" : "100*C/B",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "valid" : true,
+      "focusNext" : false,
+      "sf_programText" : "",
+      "expressionText" : "100*C/B"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 7,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "currentUniqueKey" : 8,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.memory-heap.jmx_memory.max AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "PermGen utilization"
+      }, {
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "% PermGen committed"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_description" : "Permanent generation (PermGen) usage metrics",
+  "sf_chartIndex" : 1424973193272,
+  "sf_viewProgramText" : "find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Perm\\\\ Gen)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Perm\\\\ Gen)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Perm\\\\ Gen)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK",
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Perm\\\\ Gen)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Perm\\\\ Gen)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Perm\\\\ Gen)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Tenured space (oldgen)",
+  "marshallId" : 13,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 9,
+    "allPlots" : [ {
+      "name" : "max bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-CMS Old Gen",
+        "query" : "plugin_instance:memory_pool\\-CMS\\ Old\\ Gen",
+        "value" : "memory_pool-CMS Old Gen",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.max"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "commited bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-CMS Old Gen",
+        "query" : "plugin_instance:memory_pool\\-CMS\\ Old\\ Gen",
+        "value" : "memory_pool-CMS Old Gen",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.committed"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "used bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-CMS Old Gen",
+        "query" : "plugin_instance:memory_pool\\-CMS\\ Old\\ Gen",
+        "value" : "memory_pool-CMS Old Gen",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.used"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "% used",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*C/A",
+      "sf_programText" : ""
+    }, {
+      "name" : "% committed",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "valid" : true,
+      "focusNext" : false,
+      "sf_programText" : "",
+      "expressionText" : "100*C/B"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 7,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "currentUniqueKey" : 8,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.memory-heap.jmx_memory.max AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Tenured utilization"
+      }, {
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "% tenured committed"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_description" : "Tenured generation (oldgen) stats",
+  "sf_chartIndex" : 1424973112066,
+  "sf_viewProgramText" : "find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Old\\\\ Gen)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Old\\\\ Gen)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Old\\\\ Gen)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Old\\\\ Gen)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Old\\\\ Gen)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);find(query='((plugin_instance:memory_pool\\\\-CMS\\\\ Old\\\\ Gen)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Code cache",
+  "marshallId" : 14,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 8,
+    "allPlots" : [ {
+      "name" : "max bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Code Cache",
+        "query" : "plugin_instance:memory_pool\\-Code\\ Cache",
+        "value" : "memory_pool-Code Cache",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.max"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "used bytes",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Code Cache",
+        "query" : "plugin_instance:memory_pool\\-Code\\ Cache",
+        "value" : "memory_pool-Code Cache",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.used"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "% used",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*C/A",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "valid" : false,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 7,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.memory-heap.jmx_memory.max AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Cache size (bytes)"
+      }, {
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "Cache utilization"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 1424973295414,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:memory_pool\\\\-Code\\\\ Cache)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='((plugin_instance:memory_pool\\\\-Code\\\\ Cache)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "find(query='((plugin_instance:memory_pool\\\\-Code\\\\ Cache)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='((plugin_instance:memory_pool\\\\-Code\\\\ Cache)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_8=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_5_8_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Survivor space",
+  "marshallId" : 15,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 9,
+    "allPlots" : [ {
+      "name" : "max bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Par Survivor Space",
+        "query" : "plugin_instance:memory_pool\\-Par\\ Survivor\\ Space",
+        "value" : "memory_pool-Par Survivor Space",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.max"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "commited bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Par Survivor Space",
+        "query" : "plugin_instance:memory_pool\\-Par\\ Survivor\\ Space",
+        "value" : "memory_pool-Par Survivor Space",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.committed"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "used bytes",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-Par Survivor Space",
+        "query" : "plugin_instance:memory_pool\\-Par\\ Survivor\\ Space",
+        "value" : "memory_pool-Par Survivor Space",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "jmx_memory.used"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='((plugin_instance:memory\\\\-heap)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_5')"
+    }, {
+      "name" : "% used",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*C/A",
+      "sf_programText" : ""
+    }, {
+      "name" : "% committed",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "valid" : true,
+      "focusNext" : false,
+      "sf_programText" : "",
+      "expressionText" : "100*C/B"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 7,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "currentUniqueKey" : 8,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.memory-heap.jmx_memory.max AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_5_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_5_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Survivor utilization"
+      }, {
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "% survivor committed"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_description" : "Survivor generation stats",
+  "sf_chartIndex" : 1424973510380,
+  "sf_viewProgramText" : "find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Survivor\\\\ Space)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Survivor\\\\ Space)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Survivor\\\\ Space)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_9=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Survivor\\\\ Space)) AND (sf_metric:jmx_memory.max AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Survivor\\\\ Space)) AND (sf_metric:jmx_memory.committed AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);find(query='((plugin_instance:memory_pool\\\\-Par\\\\ Survivor\\\\ Space)) AND (sf_metric:jmx_memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK=[?C,?A,!OUT]{100 * ?C / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_5_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?C,?B,!OUT]{100 * ?C / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9->?C:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_updatedBy" : "BtLG1GHAEAA",
+  "sf_cacheProgram" : false,
+  "sf_chart" : "GC: ParNew invocations",
+  "marshallId" : 16,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 5,
+    "allPlots" : [ {
+      "name" : "invocations",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "gc-ParNew",
+        "query" : "plugin_instance:gc\\-ParNew",
+        "value" : "gc-ParNew",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "invocations"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gc-ParNew.invocations AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_4_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_4_1_3',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_4_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_4_3')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Invocations/sec"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 5,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='((plugin_instance:gc\\\\-ParNew)) AND (sf_metric:invocations AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_programTextRegex" : "find(query='((plugin_instance:gc\\\\-ParNew)) AND (sf_metric:invocations AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+} ]

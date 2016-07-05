@@ -15,12 +15,30 @@ brief: Use this plugin to collect data about Apache Mesos.
 
 ### DESCRIPTION
 
-This README describes the Mesos plugin for collectd. Use it to monitor your Mesos installation.
-
-Use this plugin to monitor the following information about Mesos:
+Use the Mesos plugin for collectd to monitor the following information about Mesos:
   - Cluster status: number of activated slaves, schedulers and tasks
   - CPU, disk and memory usage for Mesos
   - Tasks finished, lost, and failed
+  
+#### FEATURES
+
+##### Built-in dashboards
+
+- **Mesos Clusters**: Overview of data from all Mesos clusters.
+  
+  [<img src='./img/dashboard_mesos_clusters.png' width=200px>](./img/dashboard_mesos_clusters.png)
+
+- **Mesos Cluster**: Focus on a single Mesos cluster.
+  
+  [<img src='./img/dashboard_mesos_cluster.png' width=200px>](./img/dashboard_mesos_cluster.png)
+
+- **Mesos Master**: Focus further on a single Mesos master.
+  
+  [<img src='./img/dashboard_mesos_master.png' width=200px>](./img/dashboard_mesos_master.png)
+
+- **Mesos Slave**: Focus further on a single Mesos slave.
+  
+  [<img src='./img/dashboard_mesos_slave.png' width=200px>](./img/dashboard_mesos_slave.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 

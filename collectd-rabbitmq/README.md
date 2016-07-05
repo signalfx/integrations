@@ -5,7 +5,7 @@ brief: RabbitMQ plugin for collectd.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png) RabbitMQ collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the RabbitMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-rabbitmq)_
+_This is a directory that consolidates all the metadata associated with the RabbitMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-rabbitmq)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -19,19 +19,17 @@ _This is a directory consolidate all the metadata associated with the RabbitMQ c
 
 The RabbitMQ plugin that collects statistics from RabbitMQ. The plugin uses the [RabbitMQ Management HTTP API](http://hg.rabbitmq.com/rabbitmq-management/raw-file/rabbitmq_v3_3_4/priv/www/api/index.html) to poll for statistics on a RabbitMQ server, then reports them to collectd.
 
-When collectd is configured to publish metrics to SignalFx, metrics from this plugin will be named according to the format:
+#### FEATURES
 
-```
-<metric type>.<category>.<statistic>
-```
+##### Built-in dashboards
 
-For example:
+- **RabbitMQ**: Overview of data from all RabbitMQ nodes.
+  
+  [<img src='./img/dashboard_rabbitmq.png' width=200px>](./img/dashboard_rabbitmq.png)
 
-```
-gauge.connection.recv_oct_details.rate
-counter.connection.send_oct
-gauge.queue.message_stats.deliver_get_details.rate
-```
+- **RabbitMQ Node**: Focus on a single RabbitMQ node.
+  
+  [<img src='./img/dashboard_rabbitmq_node.png' width=200px>](./img/dashboard_rabbitmq_node.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -108,6 +106,22 @@ collectd will begin emitting metrics from RabbitMQ.
 Sample of pre-built dashboard in SignalFx:
 
 ![](././img/dashboard_rabbitmq.png)
+
+#### Metric naming
+
+When collectd is configured to publish metrics to SignalFx, metrics from this plugin will be named according to the format:
+
+```
+<metric type>.<category>.<statistic>
+```
+
+For example:
+
+```
+gauge.connection.recv_oct_details.rate
+counter.connection.send_oct
+gauge.queue.message_stats.deliver_get_details.rate
+```
 
 ### METRICS
 

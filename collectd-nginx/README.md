@@ -4,7 +4,7 @@ brief: NGINX plugin for collectd.
 ---
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-nginx/img/integrations_nginx.png) NGINX collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the NGINX collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/nginx.c)_
+_This is a directory that consolidates all the metadata associated with the NGINX collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/nginx.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -16,7 +16,19 @@ _This is a directory consolidate all the metadata associated with the NGINX coll
 
 ### DESCRIPTION
 
-This NGINX plugin. This will send data about NGINX to SignalFx, enabling built-in NGINX monitoring dashboards.
+Use the NGINX plugin for collectd to send data about NGINX to SignalFx, enabling built-in NGINX monitoring dashboards.
+
+#### FEATURES
+
+##### Built-in dashboards
+
+- **NGINX Servers**: Overview of data from all NGINX servers.
+  
+  [<img src='./img/dashboard_nginx_servers.png' width=200px>](./img/dashboard_nginx_servers.png)
+
+- **NGINX Server**: Focus on a single NGINX server.
+  
+  [<img src='./img/dashboard_nginx_server.png' width=200px>](./img/dashboard_nginx_server.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
 

@@ -5,7 +5,7 @@ brief: PostgreSQL plugin for collectd.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png) PostgreSQL collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the PostgreSQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/postgresql.c)_
+_This is a directory that consolidates all the metadata associated with the PostgreSQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/postgresql.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,6 +21,18 @@ From [collectd wiki:](https://collectd.org/wiki/index.php/Plugin:PostgreSQL)
 
 >The PostgreSQL plugin connects to and executes SQL statements on a PostgreSQL database. It then reads back the results and, depending on the configuration, the returned values are then converted into collectd “value lists” (the data structure used internally to pass statistics around). This plugin is a generic plugin, i.e. it cannot work without configuration, because there is no reasonable default behavior. Please read the Plugin postgresql section of the collectd.conf(5) manual page for an in-depth description of the plugin's configuration.
 The configuration syntax of the PostgreSQL, DBI, and Oracle plugins is very similar, because the configuration of those plugins is handled by the same module. Also, we tried to keep the syntax similar to that of the SNMP plugin. So if you use any of those plugins already, most of the following will look familiar.)
+
+#### FEATURES
+
+##### Built-in dashboards
+
+- **PostgreSQL Nodes**: Overview of data from all PostgreSQL nodes.
+  
+  [<img src='./img/dashboard_postgresql_nodes.png' width=200px>](./img/dashboard_postgresql_nodes.png)
+
+- **PostgreSQL Node**: Focus on a single PostgreSQL node.
+  
+  [<img src='./img/dashboard_postgresql_node.png' width=200px>](./img/dashboard_postgresql_node.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -76,7 +88,7 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 
 > In each Query block, there is one or more Result blocks. Result blocks define how to handle the values returned from the query. They define which column holds which value and how to dispatch that value to the daemon. Multiple Result blocks may be used to extract multiple values from a single query.
 
->| configuration option | type | definition |
+| configuration option | type | definition |
 |----------------------|------------|---------------|
 |`Statement`| sql query statement|<ui><li>Specify the sql query statement which the plugin should execute. The string may contain the tokens $1, $2, etc. which are used to reference the first, second, etc. parameter. The value of the parameters is specified by the Param configuration option - see below for details. To include a literal $ character followed by a number, surround it with single quotes (').</li><li>Any SQL command which may return data (such as SELECT or SHOW) is allowed. Note, however, that only a single command may be used. Semicolons are allowed as long as a single non-empty command has been specified only.</li><li>The returned lines will be handled separately one after another.</li></ui>|
 |`Param hostname`|hostname|Specify the parameters which should be passed to the SQL query. The parameters are referred to in the SQL query as $1, $2, etc. in the same order as they appear in the configuration file.The configured hostname of the database connection. If a UNIX domain socket is used, the parameter expands to "localhost".|
@@ -94,7 +106,7 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 
 > The following predefined queries are available (the definitions can be found in the postgresql_default.conf file which, by default, is available at prefix/share/collectd/):
 
-> |query| action|
+|query| action|
 |----------|---------|
 |backends|This query collects the number of backends, i. e. the number of connected clients. |
 |transactions|This query collects the numbers of committed and rolled-back transactions of the user tables.|
@@ -106,7 +118,7 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 
 > In addition, the following detailed queries are available by default. Please note that each of those queries collects information by table, thus, potentially producing a lot of data. For details see the description of the non-by_table queries above.
 
-> |additional queries|
+|additional queries|
 |-------------|
 |queries_by_table|
 |query_plans_by_table|
@@ -115,13 +127,13 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 
 > The Writer block defines a PostgreSQL writer backend. It accepts a single mandatory argument specifying the name of the writer. This will then be used in the Database specification in order to activate the writer instance. The names of all writers have to be unique. The following options may be specified:
 
-> |Writer Block | type| definition|
+|Writer Block | type| definition|
 |-------------|---------|-------------------|
 |Statement| sql statement|<ui><li>This mandatory option specifies the SQL statement that will be executed for each submitted value. A single SQL statement is allowed only. Anything after the first semicolon will be ignored.</li><li> Nine parameters will be passed to the statement and should be specified as tokens $1, $2, through $9 in the statement string. |
 
 > The following values are made available through those parameters:
 
-> |value |definition|
+|value |definition|
 |-------|------------|
 |$1|The timestamp of the queried value as a floating point number.|
 |$2|The hostname of the queried value.|
@@ -135,13 +147,13 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 
 > In general, it is advisable to create and call a custom function in the PostgreSQL database for this purpose. Any procedural language supported by PostgreSQL will do (see chapter "Server Programming" in the PostgreSQL manual for details).
 
-> |Writer Block | type| definition|
+|Writer Block | type| definition|
 |-------------|---------|-------------------|
 |StoreRates | false/true|If set to true (the default), convert counter values to rates. If set to false counter values are stored as is, i. e. as an increasing integer number.|
 
 >The **Database block** defines one PostgreSQL database for which to collect statistics. It accepts a single mandatory argument which specifies the database name. None of the other options are required. PostgreSQL will use default values as documented in the section "CONNECTING TO A DATABASE" in the psql(1) manpage. However, be aware that those defaults may be influenced by the user collectd is run as and special environment variables. See the manpage for details.
 
-> |Database Block | type| definition|
+|Database Block | type| definition|
 |-------------|---------|-------------------|
 |Interval |seconds|Specify the interval with which the database should be queried. The default is to use the global Interval setting.|
 |CommitInterval |seconds|This option may be used for database connections which have "writers" assigned (see above). If specified, it causes a writer to put several updates into a single transaction. This transaction will last for the specified amount of time. By default, each update will be executed in a separate transaction. Each transaction generates a fair amount of overhead which can, thus, be reduced by activating this option. The draw-back is, that data covering the specified amount of time will be lost, for example, if a single statement within the transaction fails or if the database server crashes.|

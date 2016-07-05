@@ -5,7 +5,7 @@ brief: Kafka metrics for collectd.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-kafka/img/integrations_kafka.png) Kafka Plugin
 
-_This is a directory consolidate all the metadata associated with the Kafka collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
+_This is a directory that consolidates all the metadata associated with the Kafka collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,7 +17,19 @@ _This is a directory consolidate all the metadata associated with the Kafka coll
 
 ### DESCRIPTION
 
-This is the SignalFx Kafka plugin. Follow these instructions to configure the Java plugin for collectd to monitor Kafka. This will send data about Kafka to SignalFx, enabling built-in Kafka monitoring dashboards.
+This is the SignalFx Kafka plugin. It will send data about Kafka to SignalFx, enabling built-in Kafka monitoring dashboards.
+
+#### FEATURES
+
+##### Built-in dashboards
+
+- **Kafka**: Overview of data from all Kafka brokers.
+  
+  [<img src='./img/dashboard_kafka.png' width=200px>](./img/dashboard_kafka.png)
+
+- **Kafka Broker**: Focus on a single Kafka broker.
+  
+  [<img src='./img/dashboard_kafka_broker.png' width=200px>](./img/dashboard_kafka_broker.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -91,7 +103,7 @@ Common metrics to monitor:
 | Byte out rate | `kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec` |  |
 | Log flush rate and time | `kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs` |  |
 | # of under replicated partitions <code> &#124; ISR &#124; < &#124; all replicas &#124; </code> | `kafka.server:type=ReplicaManager,name=UnderReplicatedPartitions` | 0 |
-| Is controller active on broker | `kafka.controller:type=KafkaController,name=ActiveControllerCount` | only one broker in the cluster should have 1 |
+| Is controller active on broker | `kafka.controller:type=KafkaController,name=ActiveControllerCount` | only one broker in the broker should have 1 |
 | Leader election rate | `kafka.controller:type=ControllerStats,name=LeaderElectionRateAndTimeMs` | non-zero when there are broker failures |
 | Unclean leader election rate | `kafka.controller:type=ControllerStats,name=UncleanLeaderElectionsPerSec` | 0 |
 | Partition counts | `kafka.server:type=ReplicaManager,name=PartitionCount` | mostly even across brokers |

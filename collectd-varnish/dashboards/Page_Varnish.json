@@ -1,0 +1,4360 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_description" : "Metrics about Varnish.",
+  "sf_type" : "Service",
+  "sf_service" : "Varnish",
+  "marshallId" : 1
+}, {
+  "sf_page" : "Varnish",
+  "sf_description" : "Dashboards about Varnish.",
+  "sf_type" : "Page",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ]
+}, {
+  "sf_dashboard" : "Varnish (a)",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440618403043,
+        "id" : 1
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441044802676,
+        "id" : 3
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441301459735,
+        "id" : 2
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441232963548,
+        "id" : 4
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441233341000,
+        "id" : 5
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441302803911,
+        "id" : 6
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440618213590,
+        "id" : 7
+      },
+      "type" : "chart",
+      "col" : 4,
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 2,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441302597692,
+        "id" : 8
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440618052144,
+        "id" : 9
+      },
+      "type" : "chart",
+      "col" : 8,
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440781506039,
+        "id" : 10
+      },
+      "row" : 3
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440781311595,
+        "id" : 11
+      },
+      "row" : 3
+    } ],
+    "version" : 1
+  },
+  "sf_discoverySelectors" : [ "_exists_:aws_region", "sf_hostHasService:varnish", "_exists_:aws_availability_zone", "_exists_:aws_instance_type", "plugin:varnish" ],
+  "sf_description" : "Multiple varnish servers",
+  "sf_type" : "Dashboard",
+  "sf_discoveryQuery" : "plugin:varnish",
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Total Bytes/sec",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "chartType" : "column",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "total_bytes.resp_body - Sum",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_body"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "total_bytes.resp_header - Sum",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_header"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "Response bytes",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "expressionText" : "A+B",
+      "transient" : false,
+      "yAxisIndex" : 1,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0077c2",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 4,
+      "name" : "total_bytes.req_body - Sum",
+      "seriesData" : {
+        "metric" : "total_bytes.req_body"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 5,
+      "name" : "total_bytes.req_header - Sum",
+      "seriesData" : {
+        "metric" : "total_bytes.req_header"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 6,
+      "name" : "Request bytes",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "expressionText" : "D+E",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#b04600",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 7,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "useKMG2" : true,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "request - RED",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "max" : null,
+        "label" : "response - BLUE",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "min" : 0
+      } ],
+      "sortPreference" : "",
+      "forcedResolution" : "0"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 8
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_4_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?D,?E,!OUT]{?D + ?E->!OUT};find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9;find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9;_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_9->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_4_9;find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_5_9;_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_4_9->?D:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_9->?E:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441301459735,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_4_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK=[?D,?E,!OUT]{?D + ?E->!OUT};find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_9->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_4_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_5_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_5_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_9->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_4_9->?D:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_9->?E:_SF_PLOT_KEY_##CHARTID##_6_9_MACROBLOCK",
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Connection States",
+  "sf_uiModel" : {
+    "revisionNumber" : 4,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "connections.*"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "connections / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:connections.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440781311595,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:connections.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Worker Thread Distribution",
+  "sf_uiModel" : {
+    "revisionNumber" : 11,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "min",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MIN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "D",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#007c1d",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "median",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 50
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "D",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0077c2",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "max",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MAX",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "D",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#bd468d",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 4,
+      "name" : "threads.worker",
+      "seriesData" : {
+        "metric" : "threads.worker"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 5,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_11",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : false,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# threads",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 12
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_7_11=id(report=1);G => _SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK=[?J,!OUT]{?J->!OUT};_SF_PLOT_KEY_##CHARTID##_8_11=id(report=1);H => _SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK=[?J,!OUT]{?J->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11=id(report=1);I => _SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?J,!OUT]{?J->!OUT};_SF_PLOT_KEY_##CHARTID##_10_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_7_11->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_10_11->?J:_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_8_11->publish(metric='_SF_PLOT_KEY_##CHARTID##_8_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_10_11->?J:_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_9_11->publish(metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_10_11->?J:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;J => find(query='(sf_metric:threads.worker AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_10_11",
+  "sf_cacheProgram" : false,
+  "sf_description" : "percentiles",
+  "sf_chartIndex" : 1441233341000,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_7_11=id(report=1);G => _SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK=[?J,!OUT]{?J->!OUT};_SF_PLOT_KEY_##CHARTID##_8_11=id(report=1);H => _SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK=[?J,!OUT]{?J->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11=id(report=1);I => _SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?J,!OUT]{?J->!OUT};_SF_PLOT_KEY_##CHARTID##_10_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_7_11->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_10_11->?J:_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_8_11->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_8_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_10_11->?J:_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_9_11->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_10_11->?J:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;J => find(query='(sf_metric:threads.worker AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_10_11 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_10_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11')",
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Cache Results",
+  "sf_uiModel" : {
+    "revisionNumber" : 5,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "cache_hit",
+      "seriesData" : {
+        "metric" : "cache_result.hit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#007c1d",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "cache_miss",
+      "seriesData" : {
+        "metric" : "cache_result.miss"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#b04600",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "cache_hitpass",
+      "seriesData" : {
+        "metric" : "cache_result.hitpass"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#876ff3",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 4,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "count / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);A => find(query='(sf_metric:cache_result.hit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:cache_result.miss AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');C => find(query='(sf_metric:cache_result.hitpass AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_3_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440618213590,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);A => find(query='(sf_metric:cache_result.hit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:cache_result.miss AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');C => find(query='(sf_metric:cache_result.hitpass AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_3_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Session Operations / sec",
+  "sf_uiModel" : {
+    "revisionNumber" : 4,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "total_operations.*"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "+sf_originatingMetric",
+      "disableThrottle" : false
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441302597692,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Shared Memory Operations",
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "total_operations.*"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : null,
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "ops / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(maxExtrapolations=-1) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440781506039,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(maxExtrapolations=-1) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "# Servers",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "Server count",
+      "seriesData" : {
+        "metric" : "uptime.client_uptime"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : 5,
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);B => find(query='(sf_metric:uptime.client_uptime AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('host') -> stats:!sum -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_2_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441044802676,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);B => find(query='(sf_metric:uptime.client_uptime AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('host') -> stats:!sum -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Overall Hit Rate %",
+  "sf_uiModel" : {
+    "revisionNumber" : 10,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "cache_result.hit - Sum",
+      "seriesData" : {
+        "metric" : "cache_result.hit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "cache_result.miss - Sum",
+      "seriesData" : {
+        "metric" : "cache_result.miss",
+        "regExStyle" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "hit rate percentage",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "expressionText" : "A/(A+B) * 100",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 5,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_10",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : false,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : 110,
+        "label" : "hit %",
+        "plotlines" : {
+          "high" : 100,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 7
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK=[?A,?B,!OUT]{?A / (?A + ?B)  *  100->!OUT};find(query='(sf_metric:cache_result.hit AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10;find(query='(sf_metric:cache_result.miss AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10;_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_10->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440618403043,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK=[?A,?B,!OUT]{?A / (?A + ?B)  *  100->!OUT};find(query='(sf_metric:cache_result.hit AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');find(query='(sf_metric:cache_result.miss AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_10->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK",
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Hit Rate %",
+  "sf_uiModel" : {
+    "revisionNumber" : 13,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "cache_result.hit - Sum by host",
+      "seriesData" : {
+        "metric" : "cache_result.hit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "cache_result.miss - Sum by host",
+      "seriesData" : {
+        "metric" : "cache_result.miss",
+        "regExStyle" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "hit rate percentage",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "expressionText" : "A/(A+B) * 100",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 4,
+      "name" : "cache_result.hitpass - Sum by host",
+      "seriesData" : {
+        "metric" : "cache_result.hitpass"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 5,
+      "name" : "min",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MIN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "C",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 6,
+      "name" : "median",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 50
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "C",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#00b9ff",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 7,
+      "name" : "max",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MAX",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "C",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#bd468d",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 8,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_13",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : false,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : 110,
+        "label" : "hit rate %",
+        "plotlines" : {
+          "high" : 100,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 11
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK=[?A,?B,!OUT]{?A / (?A + ?B)  *  100->!OUT};_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_13_MACROBLOCK=[?C,!OUT]{?C->!OUT};_SF_PLOT_KEY_##CHARTID##_6_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_13_MACROBLOCK=[?C,!OUT]{?C->!OUT};_SF_PLOT_KEY_##CHARTID##_7_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_13_MACROBLOCK=[?C,!OUT]{?C->!OUT};find(query='(sf_metric:cache_result.hit AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_13;find(query='(sf_metric:cache_result.miss AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_13;_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_13->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK;find(query='(sf_metric:cache_result.hitpass AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_4_13;_SF_PLOT_KEY_##CHARTID##_5_13_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_5_13->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_5_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_13_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_6_13->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_6_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_13_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_13->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_7_13_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_description" : "percentile distribution",
+  "sf_chartIndex" : 1441232963548,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK=[?A,?B,!OUT]{?A / (?A + ?B)  *  100->!OUT};_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_13_MACROBLOCK=[?C,!OUT]{?C->!OUT};_SF_PLOT_KEY_##CHARTID##_6_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_13_MACROBLOCK=[?C,!OUT]{?C->!OUT};_SF_PLOT_KEY_##CHARTID##_7_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_13_MACROBLOCK=[?C,!OUT]{?C->!OUT};find(query='(sf_metric:cache_result.hit AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(query='(sf_metric:cache_result.miss AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_13->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK;find(query='(sf_metric:cache_result.hitpass AND _missing_:sf_programId) AND ((plugin:varnish))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_4_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_5_13_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_5_13->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_5_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_13_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_6_13->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_6_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_13_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_13->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_7_13_MACROBLOCK",
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Connection Rate/sec",
+  "sf_uiModel" : {
+    "revisionNumber" : 11,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "connections.received - Sum by host",
+      "seriesData" : {
+        "metric" : "connections.received"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "min",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MIN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "median",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 50
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#00b9ff",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 4,
+      "name" : "max",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MAX",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#bd468d",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 5,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_11",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : false,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "conns/sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 11
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_2_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_8_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?B,!OUT]{?B->!OUT};find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11;_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_7_11->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_8_11->publish(metric='_SF_PLOT_KEY_##CHARTID##_8_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_9_11->publish(metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_description" : "percentile distribution",
+  "sf_chartIndex" : 1441302803911,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_2_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_8_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?B,!OUT]{?B->!OUT};find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_7_11->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_7_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_8_11->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_8_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_8_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_9_11->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK",
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Total Connection Rate/sec",
+  "sf_uiModel" : {
+    "revisionNumber" : 5,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "connections.received - Sum",
+      "seriesData" : {
+        "metric" : "connections.received"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "forcedResolution" : "0",
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "conns / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "disableThrottle" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440618052144,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish))') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "host",
+      "alias" : "host",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "Varnish node",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
+  "sf_dashboard" : "Varnish",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440618403043,
+        "id" : 1
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440781311595,
+        "id" : 2
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440618213590,
+        "id" : 3
+      },
+      "type" : "chart",
+      "col" : 4,
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440618052144,
+        "id" : 4
+      },
+      "type" : "chart",
+      "col" : 8,
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440781752695,
+        "id" : 6
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440782296628,
+        "id" : 5
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441040394089,
+        "id" : 7
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440780940034,
+        "id" : 9
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440780872072,
+        "id" : 8
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441231423837,
+        "id" : 11
+      },
+      "row" : 3
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 2,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441232232693,
+        "id" : 12
+      },
+      "row" : 3
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441231853402,
+        "id" : 10
+      },
+      "row" : 3
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441041836777,
+        "id" : 13
+      },
+      "row" : 4
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1440781506039,
+        "id" : 14
+      },
+      "row" : 4
+    } ],
+    "version" : 1
+  },
+  "sf_discoverySelectors" : [ "_exists_:host" ],
+  "sf_description" : "Single host",
+  "sf_type" : "Dashboard",
+  "sf_discoveryQuery" : "plugin:varnish",
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Total Response Bytes",
+  "sf_uiModel" : {
+    "revisionNumber" : 5,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "total_bytes.resp_body",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_body"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "total_bytes.resp_header",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_header"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 3,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : null,
+        "max" : null,
+        "label" : "bytes / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);A => find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440780940034,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);A => find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Cache Results/sec",
+  "sf_uiModel" : {
+    "revisionNumber" : 10,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "cache_hit",
+      "seriesData" : {
+        "metric" : "cache_result.hit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "cache_miss",
+      "seriesData" : {
+        "metric" : "cache_result.miss"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#b04600",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "cache_hitpass",
+      "seriesData" : {
+        "metric" : "cache_result.hitpass"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#00b9ff",
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 4,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_10",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "results / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10=id(report=1);A => find(query='(sf_metric:cache_result.hit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');B => find(query='(sf_metric:cache_result.miss AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');C => find(query='(sf_metric:cache_result.hitpass AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_3_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440618213590,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10=id(report=1);A => find(query='(sf_metric:cache_result.hit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');B => find(query='(sf_metric:cache_result.miss AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');C => find(query='(sf_metric:cache_result.hitpass AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_3_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Connection States",
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "plugin_instance:*-backend",
+        "propertyValue" : "*-backend",
+        "NOT" : false,
+        "query" : "plugin_instance:*\\-backend",
+        "property" : "plugin_instance",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "connections.*"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : null,
+        "max" : null,
+        "label" : "connections / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);A => find(query='(sf_metric:connections.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0) AND (plugin_instance:*\\\\-backend))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_cacheProgram" : false,
+  "sf_description" : "",
+  "sf_chartIndex" : 1440781311595,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);A => find(query='(sf_metric:connections.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0) AND (plugin_instance:*\\\\-backend))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Session Operations/sec",
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "plugin_instance:*-session",
+        "propertyValue" : "*-session",
+        "NOT" : false,
+        "query" : "plugin_instance:*\\-session",
+        "property" : "plugin_instance",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "total_operations.*"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "+sf_originatingMetric"
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0) AND (plugin_instance:*\\\\-session))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441232232693,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0) AND (plugin_instance:*\\\\-session))') -> fetch -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "VCL on Host",
+  "sf_uiModel" : {
+    "revisionNumber" : 5,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "Total VCL",
+      "seriesData" : {
+        "metric" : "vcl.total_vcl"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "Available VCL",
+      "seriesData" : {
+        "metric" : "vcl.avail_vcl"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "Discarded VCL",
+      "seriesData" : {
+        "metric" : "vcl.discarded_vcl"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 4,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "VCL count",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);A => find(query='(sf_metric:vcl.total_vcl AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:vcl.avail_vcl AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');C => find(query='(sf_metric:vcl.discarded_vcl AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441041836777,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);A => find(query='(sf_metric:vcl.total_vcl AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:vcl.avail_vcl AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');C => find(query='(sf_metric:vcl.discarded_vcl AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Total Request Bytes",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "total_bytes.req_body",
+      "seriesData" : {
+        "metric" : "total_bytes.req_body"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "total_bytes.req_header",
+      "seriesData" : {
+        "metric" : "total_bytes.req_header"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 3,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : null,
+        "max" : null,
+        "label" : "bytes / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);A => find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');B => find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440780872072,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);A => find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');B => find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Backend count",
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "Backend count",
+      "seriesData" : {
+        "metric" : "backends.n_backends"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:backends.n_backends AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440782296628,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:backends.n_backends AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Bytes/request",
+  "sf_uiModel" : {
+    "revisionNumber" : 8,
+    "chartType" : "column",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "total_bytes.resp_body",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_body"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "total_bytes.resp_header",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_header"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "response bytes/request",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "(A+B)/G",
+      "transient" : false,
+      "yAxisIndex" : 1,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0077c2",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 4,
+      "name" : "total_bytes.req_body",
+      "seriesData" : {
+        "metric" : "total_bytes.req_body"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 5,
+      "name" : "total_bytes.req_header",
+      "seriesData" : {
+        "metric" : "total_bytes.req_header"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 6,
+      "name" : "request bytes/request",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "(D+E)/G",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#b04600",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 7,
+      "name" : "connections.received - Mean",
+      "seriesData" : {
+        "metric" : "connections.received"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 8,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "request - RED",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "max" : null,
+        "label" : "response - BLUE",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "min" : 0
+      } ],
+      "sortPreference" : "",
+      "forcedResolution" : "0"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 11
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK=[?A,?B,?G,!OUT]{(?A + ?B) / ?G->!OUT};_SF_PLOT_KEY_##CHARTID##_4_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?D,?E,?G,!OUT]{(?D + ?E) / ?G->!OUT};_SF_PLOT_KEY_##CHARTID##_7_8=id(report=1);find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8;find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_8;_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK:!OUT->groupby()->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_8->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_8->?G:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_8;find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_5_8;_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->groupby()->stats:!mean->_SF_PLOT_KEY_##CHARTID##_6_8->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_8->?E:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_8->?G:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_7_8",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441231853402,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK=[?A,?B,?G,!OUT]{(?A + ?B) / ?G->!OUT};_SF_PLOT_KEY_##CHARTID##_4_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?D,?E,?G,!OUT]{(?D + ?E) / ?G->!OUT};_SF_PLOT_KEY_##CHARTID##_7_8=id(report=1);find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK:!OUT->groupby()->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_8->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_8->?G:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_5_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->groupby()->stats:!mean->_SF_PLOT_KEY_##CHARTID##_6_8->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_8->?E:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_8->?G:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_7_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_7_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Bytes/sec",
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "chartType" : "column",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "total_bytes.resp_body",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_body"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "total_bytes.resp_header",
+      "seriesData" : {
+        "metric" : "total_bytes.resp_header"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "response bytes/sec",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "expressionText" : "A+B",
+      "transient" : false,
+      "yAxisIndex" : 1,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0077c2",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 4,
+      "name" : "total_bytes.req_body",
+      "seriesData" : {
+        "metric" : "total_bytes.req_body"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 5,
+      "name" : "total_bytes.req_header",
+      "seriesData" : {
+        "metric" : "total_bytes.req_header"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 6,
+      "name" : "request bytes/sec",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "expressionText" : "D+E",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#b04600",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 7,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "request - RED",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      }, {
+        "max" : null,
+        "label" : "response - BLUE",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "min" : 0
+      } ],
+      "sortPreference" : "",
+      "forcedResolution" : "0"
+    },
+    "currentUniqueKey" : 8
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_4_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK=[?D,?E,!OUT]{?D + ?E->!OUT};find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6;find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_6;_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_6->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_6;find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_5_6;_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_6->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_4_6->?D:_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_6->?E:_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441231423837,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK=[?A,?B,!OUT]{?A + ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_4_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK=[?D,?E,!OUT]{?D + ?E->!OUT};find(query='(sf_metric:total_bytes.resp_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(query='(sf_metric:total_bytes.resp_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_6->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;find(query='(sf_metric:total_bytes.req_body AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(query='(sf_metric:total_bytes.req_header AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_5_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_5_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_6_6->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_4_6->?D:_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_6->?E:_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK",
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Uptime",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "Seconds",
+      "seriesData" : {
+        "metric" : "uptime.client_uptime"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "Days",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "expressionText" : "A/(60*60*24)",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 3,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "maxDecimalPlaces" : 2,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "+value"
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);B => _SF_PLOT_KEY_##CHARTID##_2_7_MACROBLOCK=[?A,!OUT]{?A / (60 * 60 * 24)->!OUT};A => find(query='(sf_metric:uptime.client_uptime AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_2_7_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_7->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_2_7_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441040394089,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);B => _SF_PLOT_KEY_##CHARTID##_2_7_MACROBLOCK=[?A,!OUT]{?A / (60 * 60 * 24)->!OUT};A => find(query='(sf_metric:uptime.client_uptime AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_2_7_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_7->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_2_7_MACROBLOCK",
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Cache Hit Rate %",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "cache_result.hit - Sum by host",
+      "seriesData" : {
+        "metric" : "cache_result.hit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 2,
+      "name" : "cache_result.miss - Sum by host",
+      "seriesData" : {
+        "metric" : "cache_result.miss",
+        "regExStyle" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 3,
+      "name" : "hit / received",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "amount" : 1,
+            "transformTimeRange" : "1m",
+            "unit" : "m"
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A/(A+B) * 100",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 5,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : null,
+        "max" : null,
+        "label" : "hit %",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 6
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A / (?A + ?B)  *  100->!OUT};find(query='(sf_metric:cache_result.hit AND _missing_:sf_programId) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9;find(query='(sf_metric:cache_result.miss AND _missing_:sf_programId) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9;_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->window(1m)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_9->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440618403043,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?A,?B,!OUT]{?A / (?A + ?B)  *  100->!OUT};find(query='(sf_metric:cache_result.hit AND _missing_:sf_programId) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:cache_result.miss AND _missing_:sf_programId) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->window(1m)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_9->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "# Worker Threads",
+  "sf_uiModel" : {
+    "revisionNumber" : 5,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "Worker thread count",
+      "seriesData" : {
+        "metric" : "threads.worker"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:threads.worker AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440781752695,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:threads.worker AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallId" : 27,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Connections Received",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "connections.received",
+      "seriesData" : {
+        "metric" : "connections.received"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "conns/sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "forcedResolution" : "0"
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1440618052144,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:connections.received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 28,
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_chart" : "Shared Memory Operations",
+  "sf_uiModel" : {
+    "revisionNumber" : 5,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "plugin:varnish",
+        "propertyValue" : "varnish",
+        "NOT" : false,
+        "query" : "plugin:varnish",
+        "property" : "plugin",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "propertyValue" : "integration-test-varnish-4.0.3-0",
+        "NOT" : false,
+        "query" : "host:\"integration-test-varnish-4.0.3-0\"",
+        "property" : "host",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "plugin_instance:*-shm",
+        "propertyValue" : "*-shm",
+        "NOT" : false,
+        "query" : "plugin_instance:*\\-shm",
+        "property" : "plugin_instance",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "total_operations.*"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : null,
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "AUTO"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "stackedChart" : true,
+      "colorByMetric" : true,
+      "range" : -3600000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "ops / sec",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0) AND (plugin_instance:*\\\\-shm))') -> fetch(maxExtrapolations=-1) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_cacheProgram" : false,
+  "sf_description" : "",
+  "sf_chartIndex" : 1440781506039,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:total_operations.* AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:varnish) AND (host:integration\\\\-test\\\\-varnish\\\\-4.0.3\\\\-0) AND (plugin_instance:*\\\\-shm))') -> fetch(maxExtrapolations=-1) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallId" : 29,
+  "marshallMemberOf" : [ 15 ]
+} ]

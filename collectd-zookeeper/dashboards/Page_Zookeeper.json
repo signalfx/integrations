@@ -1,0 +1,3573 @@
+[
+    {
+        "marshallScope": 3
+    },
+    {
+        "marshallId": 1,
+        "sf_type": "Service",
+        "sf_description": "Metrics about Zookeeper.",
+        "sf_service": "Zookeeper"
+    },
+    {
+        "sf_tags": [
+            "inactive"
+        ],
+        "marshallId": 2,
+        "sf_tag": "inactive",
+        "sf_type": "Tag"
+    },
+    {
+        "sf_page": "Zookeeper",
+        "marshallId": 3,
+        "marshallMemberOf": [
+            1,
+            2
+        ],
+        "sf_type": "Page",
+        "sf_description": "Dashboards about Zookeeper."
+    },
+    {
+        "marshallId": 4,
+        "sf_uiModel": {
+            "widgets": [
+                {
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441049929630,
+                        "id": 1
+                    },
+                    "row": 0
+                },
+                {
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "col": 8,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441052140144,
+                        "id": 2
+                    },
+                    "row": 0
+                },
+                {
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "col": 4,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1443049797730,
+                        "id": 3
+                    },
+                    "row": 0
+                },
+                {
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "col": 8,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441052211436,
+                        "id": 4
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441048828380,
+                        "id": 5
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "col": 4,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1440604257218,
+                        "id": 6
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441051096306,
+                        "id": 7
+                    },
+                    "row": 2
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1443050720538,
+                        "id": 8
+                    },
+                    "row": 2
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441049642821,
+                        "id": 9
+                    },
+                    "row": 3
+                },
+                {
+                    "sizeX": 6,
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1440603437601,
+                        "id": 10
+                    },
+                    "type": "chart",
+                    "col": 6,
+                    "row": 3
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441051605123,
+                        "id": 11
+                    },
+                    "row": 4
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441301076856,
+                        "id": 12
+                    },
+                    "row": 4
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441051672944,
+                        "id": 13
+                    },
+                    "row": 5
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441300989578,
+                        "id": 14
+                    },
+                    "row": 5
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441339061554,
+                        "id": 15
+                    },
+                    "row": 6
+                }
+            ],
+            "version": 1
+        },
+        "sf_description": "",
+        "sf_discoveryQuery": "plugin:zookeeper",
+        "sf_discoverySelectors": [
+            "plugin:zookeeper",
+            "sf_hostHasService:zookeeper",
+            "_exists_:aws_region",
+            "_exists_:aws_availability_zone",
+            "hostHasService:zookeeper",
+            "_exists_:aws_instance_type"
+        ],
+        "sf_type": "Dashboard",
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_dashboard": "Zookeeper Nodes"
+    },
+    {
+        "marshallId": 5,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "maxDecimalPlaces": 3,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": 0,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_5",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "counter.zk_packets_sent - Mean",
+                    "seriesData": {
+                        "metric": "counter.zk_packets_sent"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "counter.zk_packets_sent - Standard Deviation",
+                    "seriesData": {
+                        "metric": "counter.zk_packets_sent"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "STDDEV",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 3,
+                    "name": "B/A * 100",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "expressionText": "B/A * 100",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1441052140144,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?B,?A,!OUT]{?B / ?A  *  100->!OUT};A => find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5;B => find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_5;_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_5->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?B,?A,!OUT]{?B / ?A  *  100->!OUT};A => find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_5->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "% Variation In Requests/Host",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 6,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "-value",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_4",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "gauge.zk_num_alive_connections"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1441048828380,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('host') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('host') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top Hosts by Alive Connections",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 7,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_5",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "nodes",
+                    "seriesData": {
+                        "metric": "gauge.zk_znode_count"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1441051672944,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Nodes Per Host",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 8,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": true,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "% change",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.zk_approximate_data_size - Sum - Maximum(1h)",
+                    "seriesData": {
+                        "metric": "gauge.zk_approximate_data_size"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "transformation",
+                                "options": {
+                                    "amount": 1,
+                                    "transformTimeRange": "1h",
+                                    "unit": "h"
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "gauge.zk_approximate_data_size - Sum - Maximum(1h) - Timeshift 1d",
+                    "seriesData": {
+                        "metric": "gauge.zk_approximate_data_size"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "transformation",
+                                "options": {
+                                    "amount": 1,
+                                    "transformTimeRange": "1h",
+                                    "unit": "h"
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TIMESHIFT",
+                                "options": {
+                                    "milliseconds": 86400000
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 3,
+                    "name": "% change",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SCALE",
+                                "options": {
+                                    "scaleAmount": 100
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A/B - 1",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1441301076856,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_7=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  -  1->!OUT};A => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7;B => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(offset=-86400000) -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7;_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->_SF_PLOT_KEY_##CHARTID##_3_7->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_7=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  -  1->!OUT};A => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');B => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(offset=-86400000) -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->_SF_PLOT_KEY_##CHARTID##_3_7->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Data Size 24h Change %",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 9,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "disableThrottle": false,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": 0,
+                        "max": null,
+                        "label": "received - RED",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    },
+                    {
+                        "max": null,
+                        "label": "sent - BLUE",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "title": {
+                            "text": ""
+                        },
+                        "min": 0
+                    }
+                ],
+                "sortPreference": "",
+                "forcedResolution": "0"
+            },
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_7",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "zk packets sent",
+                    "seriesData": {
+                        "metric": "counter.zk_packets_sent"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 1,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#0077c2",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "zk packets received",
+                    "seriesData": {
+                        "metric": "counter.zk_packets_received"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#b04600",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "column",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1443049797730,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(query='(sf_metric:counter.zk_packets_received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(query='(sf_metric:counter.zk_packets_received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Total Requests/Sec",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 10,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "-value",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_4",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.zk_max_file_descriptor_count",
+                    "seriesData": {
+                        "metric": "gauge.zk_max_file_descriptor_count"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "gauge.zk_open_file_descriptor_count",
+                    "seriesData": {
+                        "metric": "gauge.zk_open_file_descriptor_count"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 3,
+                    "name": "",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "B/A * 100",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1441049642821,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_4=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK=[?B,?A,!OUT]{?B / ?A  *  100->!OUT};A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4;B => find(query='(sf_metric:gauge.zk_open_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_4;_SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK:!OUT->groupby()->groupby()->select(count=5):!top->split() -> stats:!mean->groupby('host')->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_4->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');_SF_PLOT_KEY_##CHARTID##_2_4->?B:_SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_4->?A:_SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_4=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK=[?B,?A,!OUT]{?B / ?A  *  100->!OUT};A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');B => find(query='(sf_metric:gauge.zk_open_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');_SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK:!OUT->groupby()->groupby()->select(count=5):!top->split() -> stats:!mean->groupby('host')->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_4->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');_SF_PLOT_KEY_##CHARTID##_2_4->?B:_SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_4->?A:_SF_PLOT_KEY_##CHARTID##_3_4_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top Hosts by File Descriptor % Used",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 11,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "useKMG2": true,
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_5",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "bytes",
+                    "seriesData": {
+                        "metric": "gauge.zk_approximate_data_size"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1441051605123,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);A => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Data Size Per Host (bytes)",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 12,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "-value",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_4",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "gauge.zk_avg_latency"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1441051096306,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:gauge.zk_avg_latency AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('host') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);A => find(query='(sf_metric:gauge.zk_avg_latency AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('host') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top Hosts by Avg Request Latency (ms)",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 13,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "stackedChart": false,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": 0,
+                        "max": null,
+                        "label": "# FDs",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    },
+                    {
+                        "max": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "title": {
+                            "text": ""
+                        },
+                        "min": null
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_9",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "maximum file desciptors",
+                    "seriesData": {
+                        "metric": "gauge.zk_max_file_descriptor_count"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#05ce00",
+                        "visualization": "area",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": 5,
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "used file descriptors",
+                    "seriesData": {
+                        "metric": "gauge.zk_open_file_descriptor_count"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#b04600",
+                        "visualization": "area",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": 5,
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 9
+        },
+        "sf_description": "",
+        "sf_chartIndex": 1440603437601,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');B => find(query='(sf_metric:gauge.zk_open_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');B => find(query='(sf_metric:gauge.zk_open_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "File Descriptors Used And Total",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 14,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "maxDecimalPlaces": 3,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": 0,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_8",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.zk_num_alive_connections - Mean",
+                    "seriesData": {
+                        "metric": "gauge.zk_num_alive_connections"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "gauge.zk_num_alive_connections - Standard Deviation",
+                    "seriesData": {
+                        "metric": "gauge.zk_num_alive_connections"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "STDDEV",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 3,
+                    "name": "",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "transformation",
+                                "options": {
+                                    "amount": 5,
+                                    "transformTimeRange": "5m",
+                                    "unit": "m"
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "B/A * 100",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 8
+        },
+        "sf_chartIndex": 1441052211436,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_8=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK=[?B,?A,!OUT]{?B / ?A  *  100->!OUT};A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8;B => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_8;_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK:!OUT->window(5m)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_8->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_8=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK=[?B,?A,!OUT]{?B / ?A  *  100->!OUT};A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');B => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK:!OUT->window(5m)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_8->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_3_8_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "% Variation In Connections/Host",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 15,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_5",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "followers",
+                    "seriesData": {
+                        "metric": "gauge.zk_followers"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "synced followers",
+                    "seriesData": {
+                        "metric": "gauge.zk_synced_followers"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1441339061554,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);A => find(query='(sf_metric:gauge.zk_followers AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('host') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:gauge.zk_synced_followers AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('host') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);A => find(query='(sf_metric:gauge.zk_followers AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('host') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:gauge.zk_synced_followers AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('host') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Current Leader and # Followers",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 16,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "latency (ms)",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 8,
+            "uiHelperValue": "##CHARTID##_6",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.zk_avg_latency",
+                    "seriesData": {
+                        "metric": "gauge.zk_avg_latency"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "min",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MIN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#05ce00",
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "p10",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "PERCENTILE",
+                                "options": {
+                                    "percentile": 10
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#0dba8f",
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "median",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "PERCENTILE",
+                                "options": {
+                                    "percentile": 50
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#00b9ff",
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 5,
+                    "name": "p90",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "PERCENTILE",
+                                "options": {
+                                    "percentile": 90
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#f47e00",
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 6,
+                    "name": "max",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#bd468d",
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 7,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 6
+        },
+        "sf_description": "percentile distribution",
+        "sf_chartIndex": 1443050720538,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_6=id(report=1);B => _SF_PLOT_KEY_##CHARTID##_2_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_6=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_6=id(report=1);D => _SF_PLOT_KEY_##CHARTID##_4_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_6=id(report=1);E => _SF_PLOT_KEY_##CHARTID##_5_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_6_6=id(report=1);F => _SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};A => find(query='(sf_metric:gauge.zk_avg_latency AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6;_SF_PLOT_KEY_##CHARTID##_2_6_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_2_6->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_2_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK:!OUT->groupby()->stats:!p10->_SF_PLOT_KEY_##CHARTID##_3_6->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_6_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_4_6->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_4_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_6_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_5_6->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_5_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_6_6->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_6=id(report=1);B => _SF_PLOT_KEY_##CHARTID##_2_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_6=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_6=id(report=1);D => _SF_PLOT_KEY_##CHARTID##_4_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_6=id(report=1);E => _SF_PLOT_KEY_##CHARTID##_5_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_6_6=id(report=1);F => _SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK=[?A,!OUT]{?A->!OUT};A => find(query='(sf_metric:gauge.zk_avg_latency AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_2_6_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_2_6->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_2_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK:!OUT->groupby()->stats:!p10->_SF_PLOT_KEY_##CHARTID##_3_6->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_6_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_4_6->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_4_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_6_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_5_6->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_5_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_6_6->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_6_6_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Request Latency (ms)",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 17,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": true,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "% change",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_5",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.zk_znode_count - Sum - Maximum(1h)",
+                    "seriesData": {
+                        "metric": "gauge.zk_znode_count"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "transformation",
+                                "options": {
+                                    "amount": 1,
+                                    "transformTimeRange": "1h",
+                                    "unit": "h"
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "gauge.zk_znode_count - Sum - Maximum(1h) - Timeshift 1d",
+                    "seriesData": {
+                        "metric": "gauge.zk_znode_count"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "transformation",
+                                "options": {
+                                    "amount": 1,
+                                    "transformTimeRange": "1h",
+                                    "unit": "h"
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TIMESHIFT",
+                                "options": {
+                                    "milliseconds": 86400000
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 3,
+                    "name": "% change",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SCALE",
+                                "options": {
+                                    "scaleAmount": 100
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A/B - 1",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1441300989578,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  -  1->!OUT};A => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5;B => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(offset=-86400000) -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5;_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->_SF_PLOT_KEY_##CHARTID##_3_5->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_5=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  -  1->!OUT};A => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');B => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch(offset=-86400000) -> groupby() -> stats:!sum -> window(1h) -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->_SF_PLOT_KEY_##CHARTID##_3_5->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Node Count 24h Change %",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 18,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "-value",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_8",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.zk_max_file_descriptor_count - Maximum(5m) - Count",
+                    "seriesData": {
+                        "metric": "gauge.zk_max_file_descriptor_count"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "transformation",
+                                "options": {
+                                    "amount": 5,
+                                    "transformTimeRange": "5m",
+                                    "unit": "m"
+                                }
+                            },
+                            "fn": {
+                                "type": "MAX",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 8
+        },
+        "sf_description": "That have reported in the last 5 min",
+        "sf_chartIndex": 1441049929630,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> window(5m) -> stats:!max -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> window(5m) -> stats:!max -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Active Hosts",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 19,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "stackedChart": true,
+                "forcedResolution": "0",
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "# connections",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "disableThrottle": false
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_7",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "alive connections",
+                    "seriesData": {
+                        "metric": "gauge.zk_num_alive_connections"
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "transformation",
+                                "options": {
+                                    "amount": 1,
+                                    "transformTimeRange": "1m",
+                                    "unit": "m"
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1440604257218,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> window(1m) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:zookeeper))') -> fetch -> split -> stats:!mean -> window(1m) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Alive Connection Count",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            4
+        ]
+    },
+    {
+        "marshallId": 20,
+        "sf_uiModel": {
+            "widgets": [
+                {
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1440603437601,
+                        "id": 1
+                    },
+                    "type": "chart",
+                    "col": 6,
+                    "row": 0
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1440604086516,
+                        "id": 2
+                    },
+                    "row": 0
+                },
+                {
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1440602324459,
+                        "id": 3
+                    },
+                    "type": "chart",
+                    "col": 0,
+                    "row": 1
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1440604257218,
+                        "id": 4
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1440605839176,
+                        "id": 5
+                    },
+                    "row": 2
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1441054168875,
+                        "id": 6
+                    },
+                    "row": 2
+                }
+            ],
+            "version": 1
+        },
+        "sf_description": "",
+        "sf_discoveryQuery": "plugin:zookeeper",
+        "sf_discoverySelectors": [
+            "_exists_:host"
+        ],
+        "sf_type": "Dashboard",
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "node",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Zookeeper node",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
+        "sf_dashboard": "Zookeeper Node"
+    },
+    {
+        "marshallId": 21,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "stackedChart": false,
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": 0,
+                        "max": null,
+                        "label": "# FDs",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    },
+                    {
+                        "max": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "title": {
+                            "text": ""
+                        },
+                        "min": null
+                    }
+                ],
+                "sortPreference": "",
+                "forcedResolution": "0"
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_10",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "max file descriptors",
+                    "seriesData": {
+                        "metric": "gauge.zk_max_file_descriptor_count"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#05ce00",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "AUTO"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "open file descriptors",
+                    "seriesData": {
+                        "metric": "gauge.zk_open_file_descriptor_count"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#b04600",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "AUTO"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 10
+        },
+        "sf_description": "",
+        "sf_chartIndex": 1440603437601,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');B => find(query='(sf_metric:gauge.zk_open_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);A => find(query='(sf_metric:gauge.zk_max_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');B => find(query='(sf_metric:gauge.zk_open_file_descriptor_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "File Descriptor Used and Total",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            20
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 22,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "stackedChart": true,
+                "colorByMetric": true,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": 0,
+                        "max": null,
+                        "label": "# connections",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "forcedResolution": "0"
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "# connections",
+                    "seriesData": {
+                        "metric": "gauge.zk_num_alive_connections"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1440604257218,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:gauge.zk_num_alive_connections AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "# Alive Connections",
+        "sf_jobResolution": 1000,
+        "sf_disallowCachedProgram": true,
+        "marshallMemberOf": [
+            20
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 23,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "colorByMetric": true,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": 0,
+                        "max": null,
+                        "label": "received - RED",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    },
+                    {
+                        "max": null,
+                        "label": "sent - BLUE",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "title": {
+                            "text": ""
+                        },
+                        "min": 0
+                    }
+                ],
+                "sortPreference": "",
+                "forcedResolution": "0"
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_13",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "requests sent/sec",
+                    "seriesData": {
+                        "metric": "counter.zk_packets_sent"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 1,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#0077c2",
+                        "visualization": "column",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "AUTO"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "requests received/sec",
+                    "seriesData": {
+                        "metric": "counter.zk_packets_received"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#b04600",
+                        "visualization": "column",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 13
+        },
+        "sf_chartIndex": 1440605839176,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_13 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(query='(sf_metric:counter.zk_packets_received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_13 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);find(query='(sf_metric:counter.zk_packets_sent AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(query='(sf_metric:counter.zk_packets_received AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Requests/sec",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            20
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 24,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "stackedChart": true,
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": 0,
+                        "max": null,
+                        "label": "# watches",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "forcedResolution": "0"
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_6",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "active watches",
+                    "seriesData": {
+                        "metric": "gauge.zk_watch_count"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 6
+        },
+        "sf_description": "Number of active watches per host",
+        "sf_chartIndex": 1440604086516,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);A => find(query='(sf_metric:gauge.zk_watch_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);A => find(query='(sf_metric:gauge.zk_watch_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Active Watches",
+        "sf_jobResolution": 1000,
+        "sf_disallowCachedProgram": true,
+        "marshallMemberOf": [
+            20
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 25,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "useKMG2": true,
+                "colorByMetric": false,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "bytes",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "forcedResolution": "0"
+            },
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_3",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "appx. data size",
+                    "seriesData": {
+                        "metric": "gauge.zk_approximate_data_size"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "line",
+            "revisionNumber": 3
+        },
+        "sf_chartIndex": 1441054168875,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);A => find(query='(sf_metric:gauge.zk_approximate_data_size AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Data Size (bytes)",
+        "sf_jobResolution": 1000,
+        "sf_disallowCachedProgram": true,
+        "marshallMemberOf": [
+            20
+        ]
+    },
+    {
+        "marshallId": 26,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "chartconfig": {
+                "absoluteEnd": null,
+                "rangeEnd": 0,
+                "absoluteStart": null,
+                "stackedChart": true,
+                "colorByMetric": true,
+                "range": -3600000,
+                "updateInterval": "",
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "nodes",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "forcedResolution": "0"
+            },
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "Total Z-Nodes",
+                    "seriesData": {
+                        "metric": "gauge.zk_znode_count"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "propertyValue": "integration-test-zookeeper-3.4.6-0",
+                            "NOT": false,
+                            "query": "host:\"integration-test-zookeeper-3.4.6-0\"",
+                            "property": "host",
+                            "type": "property"
+                        },
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "plugin:zookeeper",
+                            "propertyValue": "zookeeper",
+                            "NOT": false,
+                            "query": "plugin:zookeeper",
+                            "property": "plugin",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "ephemeral nodes",
+                    "seriesData": {
+                        "metric": "gauge.zk_ephemerals_count"
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#0077c2",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "non-ephemeral nodes",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "expressionText": "A-B",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#b04600",
+                        "maxExtrapolations": -1,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION"
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "chartType": "area",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1440602324459,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_7=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A - ?B->!OUT};A => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7;B => find(query='(sf_metric:gauge.zk_ephemerals_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_7->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_7=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A - ?B->!OUT};A => find(query='(sf_metric:gauge.zk_znode_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');B => find(query='(sf_metric:gauge.zk_ephemerals_count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((host:integration\\\\-test\\\\-zookeeper\\\\-3.4.6\\\\-0) AND (plugin:zookeeper))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_7->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "# ZNodes",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            20
+        ],
+        "sf_throttledProgramText": ""
+    }
+]

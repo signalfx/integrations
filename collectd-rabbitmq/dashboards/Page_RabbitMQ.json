@@ -1,0 +1,3036 @@
+[
+    {
+        "marshallScope": 2
+    },
+    {
+        "marshallId": 1,
+        "sf_type": "Service",
+        "sf_description": "Metrics about RabbitMQ.",
+        "sf_service": "RabbitMQ"
+    },
+    {
+        "sf_page": "RabbitMQ",
+        "marshallId": 2,
+        "marshallMemberOf": [
+            1
+        ],
+        "sf_type": "Page",
+        "sf_description": "Dashboards about RabbitMQ."
+    }, 
+    {
+        "marshallId": 3,
+        "sf_uiModel": {
+            "widgets": [
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448478588112,
+                        "id": 1
+                    },
+                    "row": 0
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448478781064,
+                        "id": 2
+                    },
+                    "row": 0
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448480172128,
+                        "id": 3
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448478428988,
+                        "id": 4
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448416962908,
+                        "id": 5
+                    },
+                    "row": 2
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448417376949,
+                        "id": 6
+                    },
+                    "row": 2
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448413781849,
+                        "id": 7
+                    },
+                    "row": 3
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448418795198,
+                        "id": 8
+                    },
+                    "row": 3
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448478910819,
+                        "id": 9
+                    },
+                    "row": 4
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448904497856,
+                        "id": 10
+                    },
+                    "row": 4
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448415785600,
+                        "id": 11
+                    },
+                    "row": 5
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448416840019,
+                        "id": 12
+                    },
+                    "row": 5
+                }
+            ],
+            "version": 1
+        },
+        "sf_discoveryQuery": "plugin:rabbitmq",
+        "sf_discoverySelectors": [
+            "_exists_:host"
+        ],
+        "sf_type": "Dashboard",
+        "marshallMemberOf": [
+            2
+        ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "node",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "RabbitMQ node",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
+        "sf_dashboard": "RabbitMQ Node"
+    },
+    {
+        "marshallId": 4,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "queue consumers",
+                    "seriesData": {
+                        "metric": "gauge.queue.consumers",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_4",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "consumers",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "area",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1448418795198,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.queue.consumers AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.queue.consumers AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Total Queue Consumers",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 5,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "number of exchanges",
+                    "seriesData": {
+                        "metric": "counter.exchange.message_stats.publish_in",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "visualization": "area",
+                        "maxExtrapolations": -1,
+                        "colorOverride": "#b04600",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "exchanges",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1448416962908,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Number of Exchanges",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 6,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "gauge.queue.messages_ready",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "name"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_5",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1448416840019,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top 5 Queues - Messages Ready",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 7,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "gauge.node.mem_used",
+                    "seriesData": {
+                        "metric": "gauge.node.mem_used",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "gauge.node.mem_limit",
+                    "seriesData": {
+                        "metric": "gauge.node.mem_limit",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "A/B * 100",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "expressionText": "A/B * 100",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_11",
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "percent",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "maxDecimalPlaces": 4
+            },
+            "chartType": "line",
+            "revisionNumber": 11
+        },
+        "sf_description": "Usage by RabbitMQ process",
+        "sf_chartIndex": 1448480172128,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};find(query='(sf_metric:gauge.node.mem_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_11;find(query='(sf_metric:gauge.node.mem_limit AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_11;_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_11->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};find(query='(sf_metric:gauge.node.mem_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_11 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(query='(sf_metric:gauge.node.mem_limit AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_11 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_11->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Memory Usage - Percent of Alarm Level",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            3
+        ]
+    },
+    {
+        "marshallId": 8,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "I/O write time",
+                    "seriesData": {
+                        "metric": "gauge.node.io_write_avg_time",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "I/O read time",
+                    "seriesData": {
+                        "metric": "gauge.node.io_read_avg_time",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "I/O sync time",
+                    "seriesData": {
+                        "metric": "gauge.node.io_sync_avg_time",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 5,
+            "uiHelperValue": "##CHARTID##_4",
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "milliseconds",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": ""
+            },
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1448478910819,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_4=id(report=1);find(query='(sf_metric:gauge.node.io_write_avg_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:gauge.node.io_read_avg_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:gauge.node.io_sync_avg_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_4=id(report=1);find(query='(sf_metric:gauge.node.io_write_avg_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:gauge.node.io_read_avg_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:gauge.node.io_sync_avg_time AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "I/O Latency",
+        "sf_jobResolution": 1000,
+        "sf_disallowCachedProgram": true,
+        "marshallMemberOf": [
+            3
+        ]
+    },
+    {
+        "marshallId": 9,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "gauge.node.fd_used",
+                    "seriesData": {
+                        "metric": "gauge.node.fd_used",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#b04600",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "gauge.node.fd_total",
+                    "seriesData": {
+                        "metric": "gauge.node.fd_total",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "percent",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SCALE",
+                                "options": {
+                                    "scaleAmount": 100
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A/B",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#f47e00",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "maxExtrapolations": -1,
+                        "aliases": {}
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 8,
+            "uiHelperValue": "##CHARTID##_8",
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": 0,
+                        "max": 100,
+                        "label": "percent",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": ""
+            },
+            "chartType": "area",
+            "revisionNumber": 8
+        },
+        "sf_chartIndex": 1448478781064,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_4_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?D,?E,!OUT]{?D / ?E->!OUT};find(query='(sf_metric:gauge.node.fd_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_8;find(query='(sf_metric:gauge.node.fd_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_5_8;_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->_SF_PLOT_KEY_##CHARTID##_6_8->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_8->?E:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_4_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK=[?D,?E,!OUT]{?D / ?E->!OUT};find(query='(sf_metric:gauge.node.fd_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(query='(sf_metric:gauge.node.fd_total AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_5_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_5_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->_SF_PLOT_KEY_##CHARTID##_6_8->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_8->?E:_SF_PLOT_KEY_##CHARTID##_6_8_MACROBLOCK",
+        "sf_discoveryQuery": "sf_hostHasService:rabbitmq",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Percent of Available File Descriptors Used",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            3
+        ]
+    },
+    {
+        "marshallId": 10,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "bytes used",
+                    "seriesData": {
+                        "metric": "gauge.node.mem_used",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#0dba8f",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_7",
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "bytes",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": ""
+            },
+            "chartType": "area",
+            "revisionNumber": 7
+        },
+        "sf_description": "Usage by RabbitMQ process",
+        "sf_chartIndex": 1448478428988,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:gauge.node.mem_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:gauge.node.mem_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Memory Usage - Bytes",
+        "sf_jobResolution": 1000,
+        "sf_disallowCachedProgram": true,
+        "marshallMemberOf": [
+            3
+        ]
+    },
+    {
+        "marshallId": 11,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.queue.messages_ready",
+                    "seriesData": {
+                        "metric": "gauge.queue.messages_ready",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "gauge.queue.messages_ready - Timeshift 1h",
+                    "seriesData": {
+                        "metric": "gauge.queue.messages_ready",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TIMESHIFT",
+                                "options": {
+                                    "milliseconds": 3600000
+                                }
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "1 hour change",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A -A",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#e9008a",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "maxExtrapolations": -1,
+                        "aliases": {}
+                    },
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 4,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 6,
+            "uiHelperValue": "##CHARTID##_13",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "messages ready",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "area",
+            "revisionNumber": 13
+        },
+        "sf_chartIndex": 1448413781849,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_2_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK=[?C,?B,!OUT]{?C  - ?B->!OUT};find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_13;find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1,offset=-3600000) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_13;_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK:!OUT->groupby()->stats:!sum->_SF_PLOT_KEY_##CHARTID##_4_13->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_2_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK=[?C,?B,!OUT]{?C  - ?B->!OUT};find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1,offset=-3600000) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK:!OUT->groupby()->stats:!sum->_SF_PLOT_KEY_##CHARTID##_4_13->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK",
+        "sf_discoveryQuery": "sf_hostHasService:rabbitmq",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Node Queues Messages Ready - 1h Change",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 12,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "number of queues",
+                    "seriesData": {
+                        "metric": "gauge.queue.memory",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "visualization": "area",
+                        "maxExtrapolations": -1,
+                        "colorOverride": "#e5b312",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_5",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "queues",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1448417376949,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:gauge.queue.memory AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);find(query='(sf_metric:gauge.queue.memory AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Number of Queues",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 13,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "counter.queue.message_stats.deliver",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "name"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_6",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 6
+        },
+        "sf_chartIndex": 1448415785600,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:counter.queue.message_stats.deliver AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:counter.queue.message_stats.deliver AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top 5 Queues - Messages Delivered / sec",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            3
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 14,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "disk free",
+                    "seriesData": {
+                        "metric": "gauge.node.disk_free",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": "#05ce00",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "disk free limit",
+                    "seriesData": {
+                        "metric": "gauge.node.disk_free_limit",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "colorOverride": null,
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "maxExtrapolations": -1,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_5",
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "bytes",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": ""
+            },
+            "chartType": "area",
+            "revisionNumber": 5
+        },
+        "sf_chartIndex": 1448904497856,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);find(query='(sf_metric:gauge.node.disk_free AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(query='(sf_metric:gauge.node.disk_free_limit AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_5 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_5=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_5=id(report=1);find(query='(sf_metric:gauge.node.disk_free AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(query='(sf_metric:gauge.node.disk_free_limit AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_5 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Disk Free and Alarm Limit",
+        "sf_jobResolution": 1000,
+        "sf_disallowCachedProgram": true,
+        "marshallMemberOf": [
+            3
+        ]
+    },
+    {
+        "marshallId": 15,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "gauge.node.uptime",
+                    "seriesData": {
+                        "metric": "gauge.node.uptime",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "A / 3600 / 1000",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "expressionText": "A / 3600 / 1000",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_4",
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "maxDecimalPlaces": 6
+            },
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1448478588112,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4_MACROBLOCK=[?A,!OUT]{?A  /  3600  /  1000->!OUT};find(query='(sf_metric:gauge.node.uptime AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4;_SF_PLOT_KEY_##CHARTID##_2_4_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_4->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');_SF_PLOT_KEY_##CHARTID##_1_4->?A:_SF_PLOT_KEY_##CHARTID##_2_4_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4_MACROBLOCK=[?A,!OUT]{?A  /  3600  /  1000->!OUT};find(query='(sf_metric:gauge.node.uptime AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');_SF_PLOT_KEY_##CHARTID##_2_4_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_4->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');_SF_PLOT_KEY_##CHARTID##_1_4->?A:_SF_PLOT_KEY_##CHARTID##_2_4_MACROBLOCK",
+        "sf_discoveryQuery": "sf_hostHasService:rabbitmq",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Node Uptime (hours)",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            3
+        ]
+    },
+    {
+        "marshallId": 16,
+        "sf_uiModel": {
+            "widgets": [
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448413225154,
+                        "id": 1
+                    },
+                    "row": 0
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448417920794,
+                        "id": 2
+                    },
+                    "row": 0
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448417376949,
+                        "id": 3
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448416962908,
+                        "id": 4
+                    },
+                    "row": 1
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448418795198,
+                        "id": 5
+                    },
+                    "row": 2
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448413781849,
+                        "id": 6
+                    },
+                    "row": 2
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448415545049,
+                        "id": 7
+                    },
+                    "row": 3
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448414908800,
+                        "id": 8
+                    },
+                    "row": 3
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 6,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448416840019,
+                        "id": 9
+                    },
+                    "row": 4
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448491775778,
+                        "id": 10
+                    },
+                    "row": 4
+                },
+                {
+                    "sizeX": 6,
+                    "sizeY": 1,
+                    "col": 0,
+                    "type": "chart",
+                    "options": {
+                        "type": "chart",
+                        "name": "",
+                        "chartIndex": 1448900105586,
+                        "id": 11
+                    },
+                    "row": 5
+                }
+            ],
+            "version": 1
+        },
+        "sf_discoveryQuery": "plugin:rabbitmq",
+        "sf_discoverySelectors": [
+            "sf_hostHasService:rabbitmq",
+            "plugin:rabbitmq"
+        ],
+        "sf_type": "Dashboard",
+        "marshallMemberOf": [
+            2
+        ],
+        "sf_dashboard": "RabbitMQ"
+    },
+    {
+        "marshallId": 17,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "queue consumers",
+                    "seriesData": {
+                        "metric": "gauge.queue.consumers",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_4",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "consumers",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1448418795198,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.queue.consumers AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.queue.consumers AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Total Queue Consumers",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 18,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "gauge.queue.messages_ready",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_12",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 12
+        },
+        "sf_description": "",
+        "sf_chartIndex": 1448900105586,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('host') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top 5 Nodes - Total Messages Ready in Queues",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 19,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "number of queues",
+                    "seriesData": {
+                        "metric": "gauge.queue.memory",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "visualization": "area",
+                        "maxExtrapolations": -1,
+                        "colorOverride": "#e5b312",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_4",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "queues",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1448417376949,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.queue.memory AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.queue.memory AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Number of Queues",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 20,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.node.uptime - Count",
+                    "seriesData": {
+                        "metric": "gauge.node.uptime",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_2",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 2
+        },
+        "sf_chartIndex": 1448413225154,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:gauge.node.uptime AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:gauge.node.uptime AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Number of Nodes",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 21,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "counter.exchange.message_stats.publish_in",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "name"
+                                        },
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1448415545049,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('name','host') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('name','host') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top 5 Exchanges - Messages In",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 22,
+        "sf_uiModel": {
+            "chartMode": "single",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "gauge.channel.number - Count by vhost,host",
+                    "seriesData": {
+                        "metric": "gauge.channel.number",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "vhost"
+                                        },
+                                        {
+                                            "value": "host"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": true,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "Number of VHosts",
+                    "seriesData": {},
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "expressionText": "A",
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "ratio",
+                    "valid": true,
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 3,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_2",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 2
+        },
+        "sf_chartIndex": 1448417920794,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK=[?A,!OUT]{?A->!OUT};find(query='(sf_metric:gauge.channel.number AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('vhost','host') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2;_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK:!OUT->groupby()->stats:!count->_SF_PLOT_KEY_##CHARTID##_2_2->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');_SF_PLOT_KEY_##CHARTID##_1_2->?A:_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK=[?A,!OUT]{?A->!OUT};find(query='(sf_metric:gauge.channel.number AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('vhost','host') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK:!OUT->groupby()->stats:!count->_SF_PLOT_KEY_##CHARTID##_2_2->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');_SF_PLOT_KEY_##CHARTID##_1_2->?A:_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Number of VHosts",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 23,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "number of exchanges",
+                    "seriesData": {
+                        "metric": "counter.exchange.message_stats.publish_in",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "COUNT",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "visualization": "area",
+                        "maxExtrapolations": -1,
+                        "colorOverride": "#b04600",
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION",
+                        "rollupPolicy": null,
+                        "aliases": {}
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "exchanges",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1448416962908,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Number of Exchanges",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 24,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "allPlots": [
+                {
+                    "queryItems": [],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "gauge.node.mem_used",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "name"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_4",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 4
+        },
+        "sf_chartIndex": 1448414908800,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.node.mem_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:gauge.node.mem_used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top 5 Nodes - Memory Used (bytes)",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 25,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "gauge.queue.messages_ready",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "name"
+                                        },
+                                        {
+                                            "value": "node"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_6",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 6
+        },
+        "sf_chartIndex": 1448416840019,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name','node') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:gauge.queue.messages_ready AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name','node') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top 5 Queues - Messages Ready",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 26,
+        "sf_uiModel": {
+            "chartMode": "list",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "",
+                    "seriesData": {
+                        "metric": "counter.queue.message_stats.deliver",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "TOPN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        },
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "name"
+                                        },
+                                        {
+                                            "value": "node"
+                                        }
+                                    ],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "MEAN",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 3,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "max": null,
+                        "min": null,
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "name": "yAxis0",
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 7
+        },
+        "sf_description": "",
+        "sf_chartIndex": 1448491775778,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.queue.message_stats.deliver AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name','node') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:counter.queue.message_stats.deliver AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> groupby('name','node') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Top 5 Queues - Messages Delivered (messages/sec)",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 10000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    },
+    {
+        "marshallId": 27,
+        "sf_uiModel": {
+            "chartMode": "graph",
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties",
+                            "value": "rabbitmq",
+                            "propertyValue": "rabbitmq",
+                            "NOT": false,
+                            "query": "sf_hostHasService:rabbitmq",
+                            "property": "sf_hostHasService",
+                            "type": "property"
+                        }
+                    ],
+                    "uniqueKey": 1,
+                    "name": "total messages",
+                    "seriesData": {
+                        "metric": "counter.exchange.message_stats.publish_in",
+                        "regExStyle": null
+                    },
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation",
+                                "options": {
+                                    "aggregateGroupBy": [],
+                                    "collapseGroups": false,
+                                    "transformTimeRange": null
+                                }
+                            },
+                            "fn": {
+                                "type": "SUM",
+                                "options": {}
+                            },
+                            "showMe": false
+                        }
+                    ],
+                    "transient": false,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "configuration": {
+                        "rollupPolicy": null
+                    },
+                    "type": "plot",
+                    "metricDefinition": {}
+                },
+                {
+                    "queryItems": [],
+                    "uniqueKey": 2,
+                    "name": "New Plot",
+                    "seriesData": {},
+                    "dataManipulations": [],
+                    "transient": true,
+                    "yAxisIndex": 0,
+                    "invisible": false,
+                    "focusNext": false,
+                    "type": "plot",
+                    "metricDefinition": {}
+                }
+            ],
+            "currentUniqueKey": 4,
+            "uiHelperValue": "##CHARTID##_7",
+            "relatedDetectors": [],
+            "chartconfig": {
+                "range": -7200000,
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0",
+                        "min": null,
+                        "max": null,
+                        "label": "messages/sec",
+                        "plotlines": {
+                            "high": null,
+                            "low": null
+                        },
+                        "id": "yAxis0"
+                    }
+                ],
+                "sortPreference": "",
+                "colorByMetric": false
+            },
+            "chartType": "line",
+            "revisionNumber": 7
+        },
+        "sf_chartIndex": 1448413781849,
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);find(query='(sf_metric:counter.exchange.message_stats.publish_in AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((sf_hostHasService:rabbitmq))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+        "sf_jobMaxDelay": 0,
+        "sf_cacheProgram": false,
+        "sf_type": "Chart",
+        "sf_chart": "Total Messages Into All Exchanges/Second",
+        "sf_disallowCachedProgram": true,
+        "sf_jobResolution": 1000,
+        "marshallMemberOf": [
+            16
+        ],
+        "sf_throttledProgramText": ""
+    }
+]

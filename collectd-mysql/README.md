@@ -5,7 +5,7 @@ brief: Use this plugin to collect metrics from MySQL.
 
 # MySQL collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the MySQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/mysql.c)_
+_This is a directory that consolidates all the metadata associated with the MySQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/mysql.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,7 +17,7 @@ _This is a directory consolidate all the metadata associated with the MySQL coll
 
 ### DESCRIPTION
 
-This file describes the MySQL plugin for collectd. Use it to monitor MySQL database performance.
+Use the MySQL plugin for collectd to monitor MySQL database performance.
 
 This plugin connects to a MySQL instance and reports on the values returned by a `SHOW STATUS` command. This includes the following:
 
@@ -26,6 +26,18 @@ This plugin connects to a MySQL instance and reports on the values returned by a
   - State of the query cache
   - Status of MySQL threads
   - Network traffic
+  
+#### FEATURES
+
+##### Built-in dashboards
+
+- **MySQL Nodes**: Overview of data from all MySQL nodes.
+  
+  [<img src='./img/dashboard_mysql_nodes.png' width=200px>](./img/dashboard_mysql_nodes.png)
+
+- **MySQL Node**: Focus on a single MySQL node.
+  
+  [<img src='./img/dashboard_mysql_node.png' width=200px>](./img/dashboard_mysql_node.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
 

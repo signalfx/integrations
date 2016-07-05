@@ -17,7 +17,7 @@ _This is a directory consolidate all the metadata associated with the Memcached 
 
 ### DESCRIPTION
 
-This is the SignalFx Memcached plugin. Follow these instructions to install the Memcached plugin for collectd. This will send data about Memcached to SignalFx, enabling built-in Memcached monitoring dashboards.
+This is the SignalFx Memcached plugin. It will send data about Memcached to SignalFx, enabling built-in Memcached monitoring dashboards.
 
 Use this plugin to monitor the following types of information from a Memcached node:
 
@@ -28,8 +28,19 @@ Use this plugin to monitor the following types of information from a Memcached n
 
 Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewStart
 
-### REQUIREMENTS AND DEPENDENCIES
+#### FEATURES
 
+##### Built-in dashboards
+
+- **Memcached (a)**: Overview of data from all Memcached hosts.
+  
+  [<img src='./img/dashboard_memcached_a.png' width=200px>](./img/dashboard_memcached_a.png)
+
+- **Memcached**: Focus on a single Memcached host.
+  
+  [<img src='./img/dashboard_memcached.png' width=200px>](./img/dashboard_memcached.png)
+
+### REQUIREMENTS AND DEPENDENCIES
 
 #### Version information
 
@@ -69,7 +80,7 @@ Metrics from memcached will begin streaming into SignalFx, and new built-in dash
 
 * Make sure ServiceURL points to your jmx app.
 * Modify the "Host" parameter to what you want your source name to be.
-* Please leave the identifier [hostHasService=kafka] in the hostname.
+* Please leave the identifier [hostHasService=memcached] in the hostname.
 
 ### USAGE
 

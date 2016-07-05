@@ -5,7 +5,7 @@ brief: Zookeeper plugin for collectd.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Zookeeper collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper)_
+_This is a directory that consolidates all the metadata associated with the Zookeeper collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -21,6 +21,18 @@ This is a collectd plugin for getting metrics and information from
 [ZooKeeper](http://zookeeper.apache.org) servers. Based off the ZooKeeper monitoring script
 [check_zookeeper.py](https://svn.apache.org/repos/asf/zookeeper/trunk/src/contrib/monitoring/check_zookeeper.py).
 
+#### FEATURES
+
+##### Built-in dashboards
+
+- **Zookeeper Nodes**: Overview of data from all Zookeeper nodes.
+  
+  [<img src='./img/dashboard_zookeeper_nodes.png' width=200px>](./img/dashboard_zookeeper_nodes.png)
+
+- **Zookeeper Node**: Focus on a single Zookeeper node.
+  
+  [<img src='./img/dashboard_zookeeper_node.png' width=200px>](./img/dashboard_zookeeper_node.png)  
+  
 ### REQUIREMENTS AND DEPENDENCIES
 
 This plugin requires:
@@ -32,7 +44,7 @@ This plugin requires:
 | Python            | 2.6+     |
 | Zookeeper         | 3.4.0+   |
 
- #### Note:
+#### Note:
  - Requires ZooKeeper 3.4.0 or greater in order to use the `mntr` [four letter word command](http://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html#sc_zkCommands).
  - If support for earlier versions is needed, add `srvr` command, available in since 3.3.0, or `stat` (fetches extra uneeded data but available pre-3.3).
 

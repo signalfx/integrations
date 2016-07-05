@@ -5,7 +5,7 @@ brief: Redis plugin for collectd.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-redis/img/integrations_redis.png) Redis collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Redis collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/redis-collectd-plugin)_
+_This is a directory that consolidates all the metadata associated with the Redis collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/redis-collectd-plugin)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -29,7 +29,19 @@ You can capture any kind of Redis metrics like:
  * Uptime
  * Changes since last save
  * Replication delay (per slave)
+ 
+#### FEATURES
 
+##### Built-in dashboards
+
+- **Redis Instances**: Overview of data from all Redis instances.
+ 
+ [<img src='./img/dashboard_redis_instances.png' width=200px>](./img/dashboard_redis_instances.png)
+
+- **Redis Instance**: Focus on a single Redis instance.
+ 
+ [<img src='./img/dashboard_redis_instance.png' width=200px>](./img/dashboard_redis_instance.png)  
+ 
 ### REQUIREMENTS AND DEPENDENCIES
 
 This plugin requires:
@@ -84,7 +96,7 @@ Using the example configuration files [`10-redis_master.conf`](././10-redis_mast
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
-| Node | Nodename | The Node block identifies a new Redis node, that is a new Redis instance running in an specified host and port. The name for node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.|
+| Instance | Nodename | The Node block identifies a new Redis node, that is a new Redis instance running in an specified host and port. The name for node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.|
 | Host | Hostname |The Host option is the hostname or IP-address where the Redis instance is running on.|
 |Port |Port| The Port option is the TCP port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.|
 |Instance |Type instance|Within a query definition, an optional type instance to use when submitting the result of the query. When not supplied will default to the escaped command, up to 64 chars.|
