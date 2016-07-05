@@ -1,0 +1,3601 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_description" : "Metrics about Amazon EC2 Container Service (ECS).",
+  "sf_type" : "Service",
+  "sf_service" : "Amazon EC2 Container Service",
+  "marshallId" : 1
+}, {
+  "sf_page" : "AWS ECS",
+  "sf_description" : "Dashboards about Amazon EC2 Container Service (ECS).",
+  "sf_type" : "Page",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ]
+}, {
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "ServiceName",
+      "alias" : "service",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "ECS service",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    }, {
+      "dimension" : "ClusterName",
+      "alias" : "cluster",
+      "globalScope" : true,
+      "required" : false,
+      "description" : "ECS cluster",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
+  "sf_dashboard" : "ECS Service",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955740171,
+        "id" : 1
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442874265704,
+        "id" : 2
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955334264,
+        "id" : 3
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955400588,
+        "id" : 4
+      },
+      "row" : 1
+    } ],
+    "version" : 1
+  },
+  "sf_discoverySelectors" : [ "_exists_:ServiceName" ],
+  "sf_description" : "",
+  "sf_type" : "Dashboard",
+  "sf_discoveryQuery" : "namespace:\"AWS/ECS\" AND _exists_:ServiceName AND _exists_:ClusterName",
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "# Running Tasks",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "count",
+        "propertyValue" : "count",
+        "NOT" : false,
+        "query" : "stat:count",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ElastiCache-Service-REDIS",
+        "propertyValue" : "ElastiCache-Service-REDIS",
+        "NOT" : false,
+        "query" : "ServiceName:\"ElastiCache-Service-REDIS\"",
+        "property" : "ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "absoluteEnd" : null
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (stat:count) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_16 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442874265704,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (stat:count) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "# Running Tasks",
+  "sf_uiModel" : {
+    "revisionNumber" : 18,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "count",
+        "propertyValue" : "count",
+        "NOT" : false,
+        "query" : "stat:count",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ElastiCache-Service-REDIS",
+        "propertyValue" : "ElastiCache-Service-REDIS",
+        "NOT" : false,
+        "query" : "ServiceName:\"ElastiCache-Service-REDIS\"",
+        "property" : "ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "# tasks",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_18",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# tasks",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_18=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (stat:count) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_18 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_18',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_18')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955740171,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_18=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (stat:count) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> { ?in * 60 -> !out } -> _SF_PLOT_KEY_##CHARTID##_1_18 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_18',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_18')",
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "CPU %",
+  "sf_uiModel" : {
+    "revisionNumber" : 17,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ElastiCache-Service-REDIS",
+        "propertyValue" : "ElastiCache-Service-REDIS",
+        "NOT" : false,
+        "query" : "ServiceName:\"ElastiCache-Service-REDIS\"",
+        "property" : "ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "CPUUtilization",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_17",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 2,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "cpu %",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_17 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955334264,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_17 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')",
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Memory %",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ElastiCache-Service-REDIS",
+        "propertyValue" : "ElastiCache-Service-REDIS",
+        "NOT" : false,
+        "query" : "ServiceName:\"ElastiCache-Service-REDIS\"",
+        "property" : "ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "MemoryUtilization",
+      "seriesData" : {
+        "metric" : "MemoryUtilization"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 2,
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "memory %",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955400588,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:ElastiCache\\\\-Service\\\\-REDIS))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "ClusterName",
+      "alias" : "cluster",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "ECS cluster",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
+  "sf_dashboard" : "ECS Cluster",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441741810939,
+        "id" : 1
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442874265704,
+        "id" : 2
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955400588,
+        "id" : 3
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955334264,
+        "id" : 4
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955740171,
+        "id" : 5
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442954171435,
+        "id" : 6
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441393246611,
+        "id" : 7
+      },
+      "row" : 3
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441393077783,
+        "id" : 8
+      },
+      "row" : 3
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442957487004,
+        "id" : 9
+      },
+      "row" : 4
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442957611888,
+        "id" : 10
+      },
+      "row" : 4
+    } ],
+    "version" : 1
+  },
+  "sf_discoverySelectors" : [ "_exists_:ClusterName" ],
+  "sf_description" : "",
+  "sf_type" : "Dashboard",
+  "sf_discoveryQuery" : "namespace:\"AWS/ECS\" AND _exists_:ServiceName AND _exists_:ClusterName",
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Memory % by Service",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "MemoryUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "min",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MIN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 3,
+      "name" : "p10",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 10
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0dba8f",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 4,
+      "name" : "median",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 50
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#00b9ff",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 5,
+      "name" : "p90",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#ff8dd1",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 6,
+      "name" : "max",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MAX",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#bd468d",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 7,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 4,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "memory %",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 9
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_16=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_16=id(report=1);D => _SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_16=id(report=1);E => _SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_6_16=id(report=1);F => _SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_7_16=id(report=1);G => _SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16;_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_3_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK:!OUT->groupby()->stats:!p10->_SF_PLOT_KEY_##CHARTID##_4_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_5_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_6_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_description" : "percentile distribution",
+  "sf_chartIndex" : 1442957611888,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_16=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_16=id(report=1);D => _SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_16=id(report=1);E => _SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_6_16=id(report=1);F => _SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_7_16=id(report=1);G => _SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_3_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK:!OUT->groupby()->stats:!p10->_SF_PLOT_KEY_##CHARTID##_4_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_5_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_6_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK",
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "# Running Tasks",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "count",
+        "propertyValue" : "count",
+        "NOT" : false,
+        "query" : "stat:count",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "absoluteEnd" : null
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_16 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442874265704,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "# Running Services",
+  "sf_uiModel" : {
+    "revisionNumber" : 8,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "# running services",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# services",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "forcedResolution" : "0"
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:mean) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION') -> groupby('ServiceName') -> stats:!mean -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442954171435,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:mean) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION') -> groupby('ServiceName') -> stats:!mean -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "CPU % by Service",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : true,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "min",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MIN",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#05ce00",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 3,
+      "name" : "p10",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 10
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#0dba8f",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 4,
+      "name" : "median",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 50
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#00b9ff",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 5,
+      "name" : "p90",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#ff8dd1",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 6,
+      "name" : "max",
+      "seriesData" : { },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MAX",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "colorOverride" : "#bd468d",
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "ratio",
+      "valid" : true,
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 7,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 4,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "cpu %",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 9
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_16=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_16=id(report=1);D => _SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_16=id(report=1);E => _SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_6_16=id(report=1);F => _SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_7_16=id(report=1);G => _SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16;_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_3_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK:!OUT->groupby()->stats:!p10->_SF_PLOT_KEY_##CHARTID##_4_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_5_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_6_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK",
+  "sf_cacheProgram" : false,
+  "sf_description" : "percentile distribution",
+  "sf_chartIndex" : 1442957487004,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_16=id(report=1);C => _SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_16=id(report=1);D => _SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_16=id(report=1);E => _SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_6_16=id(report=1);F => _SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_7_16=id(report=1);G => _SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK=[?A,!OUT]{?A->!OUT};A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_3_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_3_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK:!OUT->groupby()->stats:!p10->_SF_PLOT_KEY_##CHARTID##_4_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_5_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_6_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK",
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "# Running Tasks",
+  "sf_uiModel" : {
+    "revisionNumber" : 17,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "count",
+        "propertyValue" : "count",
+        "NOT" : false,
+        "query" : "stat:count",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "# running tasks",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_17",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# tasks",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_17 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955740171,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_17 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')",
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "CPU %",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "*",
+        "propertyValue" : "*",
+        "key" : "!ServiceName",
+        "query" : "!ServiceName:*",
+        "property" : "!ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "CPUUtilization",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 2,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "cpu %",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955334264,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "# Running Services",
+  "sf_uiModel" : {
+    "revisionNumber" : 11,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "CPUUtilization - Count by ServiceName - Sum",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_11",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "absoluteEnd" : null
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_11=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((ServiceName:*) AND (stat:mean) AND (namespace:AWS\\\\/ECS) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!count -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_11 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441741810939,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_11=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((ServiceName:*) AND (stat:mean) AND (namespace:AWS\\\\/ECS) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!count -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_11 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11')",
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "Top Services by CPU %",
+  "sf_uiModel" : {
+    "revisionNumber" : 14,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441393077783,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "Top Services by Memory %",
+  "sf_uiModel" : {
+    "revisionNumber" : 12,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "MemoryUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "forcedResolution" : "0"
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:sum) AND (namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441393246611,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:sum) AND (namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_chart" : "Memory %",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "area",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "*",
+        "propertyValue" : "*",
+        "key" : "!ServiceName",
+        "query" : "!ServiceName:*",
+        "property" : "!ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:default",
+        "propertyValue" : "default",
+        "NOT" : false,
+        "query" : "ClusterName:default",
+        "property" : "ClusterName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "MemoryUtilization",
+      "seriesData" : {
+        "metric" : "MemoryUtilization"
+      },
+      "dataManipulations" : [ ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 2,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "memory %",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955400588,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*) AND (ClusterName:default))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 8 ]
+}, {
+  "sf_dashboard" : "ECS",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442954773018,
+        "id" : 3
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 4,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441741810939,
+        "id" : 1
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "col" : 8,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442874265704,
+        "id" : 2
+      },
+      "row" : 0
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955400588,
+        "id" : 4
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955334264,
+        "id" : 5
+      },
+      "row" : 1
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442954171435,
+        "id" : 7
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1442955740171,
+        "id" : 6
+      },
+      "row" : 2
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 6,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441393246611,
+        "id" : 8
+      },
+      "row" : 3
+    }, {
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "col" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "name" : "",
+        "chartIndex" : 1441393077783,
+        "id" : 9
+      },
+      "row" : 3
+    } ],
+    "version" : 1
+  },
+  "sf_discoverySelectors" : [ "sf_key:ServiceName", "sf_key:ClusterName", "namespace:AWS/ECS" ],
+  "sf_description" : "",
+  "sf_type" : "Dashboard",
+  "sf_discoveryQuery" : "namespace:\"AWS/ECS\" AND _exists_:ServiceName AND _exists_:ClusterName",
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Top Clusters by Memory %",
+  "sf_uiModel" : {
+    "revisionNumber" : 14,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "*",
+        "propertyValue" : "*",
+        "key" : "!ServiceName",
+        "query" : "!ServiceName:*",
+        "property" : "!ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "MemoryUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ClusterName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : 5,
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955400588,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "# Running Tasks by Cluster",
+  "sf_uiModel" : {
+    "revisionNumber" : 16,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "count",
+        "propertyValue" : "count",
+        "NOT" : false,
+        "query" : "stat:count",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "# running tasks",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ClusterName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# tasks",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby('ClusterName') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_16 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955740171,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> { ?in * 60 -> !out } -> groupby('ClusterName') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "Top Services by Memory %",
+  "sf_uiModel" : {
+    "revisionNumber" : 12,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "sum",
+        "propertyValue" : "sum",
+        "NOT" : false,
+        "query" : "stat:sum",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "MemoryUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            }, {
+              "value" : "ClusterName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "forcedResolution" : "0"
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:sum) AND (namespace:AWS\\\\/ECS) AND (ServiceName:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName','ClusterName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441393246611,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);A => find(query='(sf_metric:MemoryUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((stat:sum) AND (namespace:AWS\\\\/ECS) AND (ServiceName:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('ServiceName','ClusterName') -> stats:!sum -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "Top Services by CPU %",
+  "sf_uiModel" : {
+    "revisionNumber" : 14,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ServiceName"
+            }, {
+              "value" : "ClusterName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION') -> groupby('ServiceName','ClusterName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441393077783,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (ServiceName:*))') -> fetch(extrapolation='NULL_EXTRAPOLATION') -> groupby('ServiceName','ClusterName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "# Running Tasks",
+  "sf_uiModel" : {
+    "revisionNumber" : 15,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "count",
+        "propertyValue" : "count",
+        "NOT" : false,
+        "query" : "stat:count",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 60
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : 5,
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_15",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "absoluteEnd" : null
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442874265704,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);find(query='(sf_metric:CPUUtilization AND _missing_:sf_programId) AND ((namespace:AWS\\\\/ECS) AND (ServiceName:*) AND (stat:count))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> split -> { ?in * 60 -> !out } -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "# Running Services",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ClusterName:*",
+        "property" : "ClusterName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "CPUUtilization - Count by ClusterName,ServiceName - Sum",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ClusterName"
+            }, {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : 5,
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "",
+      "absoluteEnd" : null
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((ClusterName:*) AND (ServiceName:*) AND (stat:mean) AND (namespace:AWS\\\\/ECS))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName','ServiceName') -> stats:!count -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1441741810939,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((ClusterName:*) AND (ServiceName:*) AND (stat:mean) AND (namespace:AWS\\\\/ECS))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName','ServiceName') -> stats:!count -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "Top Clusters by CPU %",
+  "sf_uiModel" : {
+    "revisionNumber" : 14,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "*",
+        "propertyValue" : "*",
+        "key" : "!ServiceName",
+        "query" : "!ServiceName:*",
+        "property" : "!ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ClusterName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : 5,
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "maxDelay" : "",
+      "forcedResolution" : "0",
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "maxDecimalPlaces" : 3,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "absoluteEnd" : null
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442955334264,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (stat:mean) AND (!ServiceName:*))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName') -> stats:!mean -> groupby() -> groupby() -> select(count=5):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "# Active Clusters",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ClusterName:*",
+        "property" : "ClusterName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "*",
+        "propertyValue" : "*",
+        "key" : "!ServiceName",
+        "query" : "!ServiceName:*",
+        "property" : "!ServiceName",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ClusterName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "maxExtrapolations" : 5,
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "name" : "yAxis0",
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "forcedResolution" : "0"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (ClusterName:*) AND (stat:mean) AND (!ServiceName:*))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName') -> stats:!mean -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442954773018,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (ClusterName:*) AND (stat:mean) AND (!ServiceName:*))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> groupby('ClusterName') -> stats:!mean -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 27,
+  "marshallMemberOf" : [ 19 ]
+}, {
+  "sf_chart" : "# Running Services by Cluster",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "value" : "AWS/ECS",
+        "propertyValue" : "AWS/ECS",
+        "NOT" : false,
+        "query" : "namespace:\"AWS/ECS\"",
+        "property" : "namespace",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ClusterName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ClusterName:*",
+        "property" : "ClusterName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "ServiceName:*",
+        "propertyValue" : "*",
+        "NOT" : false,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "type" : "property"
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "mean",
+        "propertyValue" : "mean",
+        "NOT" : false,
+        "query" : "stat:mean",
+        "property" : "stat",
+        "type" : "property"
+      } ],
+      "uniqueKey" : 1,
+      "name" : "# running services",
+      "seriesData" : {
+        "metric" : "CPUUtilization"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ClusterName"
+            }, {
+              "value" : "ServiceName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "ClusterName"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "showMe" : false
+      } ],
+      "transient" : false,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION"
+      },
+      "type" : "plot",
+      "metricDefinition" : { }
+    }, {
+      "queryItems" : [ ],
+      "uniqueKey" : 2,
+      "name" : "New Plot",
+      "seriesData" : { },
+      "dataManipulations" : [ ],
+      "transient" : true,
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "type" : "plot",
+      "metricDefinition" : { }
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : -7200000,
+      "updateInterval" : "",
+      "disableThrottle" : false,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "min" : 0,
+        "max" : null,
+        "label" : "# services",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "id" : "yAxis0"
+      } ],
+      "sortPreference" : "-value",
+      "forcedResolution" : "0"
+    },
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (ClusterName:*) AND (ServiceName:*) AND (stat:mean))') -> fetch(extrapolation='NULL_EXTRAPOLATION') -> groupby('ClusterName','ServiceName') -> stats:!mean -> groupby('ClusterName') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1442954171435,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);A => find(query='(sf_metric:CPUUtilization AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ECS) AND (ClusterName:*) AND (ServiceName:*) AND (stat:mean))') -> fetch(extrapolation='NULL_EXTRAPOLATION') -> groupby('ClusterName','ServiceName') -> stats:!mean -> groupby('ClusterName') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 28,
+  "marshallMemberOf" : [ 19 ]
+} ]
