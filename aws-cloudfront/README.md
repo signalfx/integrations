@@ -6,9 +6,7 @@ brief: SignalFx's integration with Amazon CloudFront
 # Amazon CloudFront
 
 - [Description](#description)
-- [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Usage](#usage)
 - [Metrics](#metrics)
 - [License](#license)
