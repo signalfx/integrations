@@ -54,9 +54,7 @@ This plugin is included with [SignalFx's collectd package](https://support.signa
 
 1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
 
- ```
- include '/path/to/10-riak.conf'
- ```
+          include '/path/to/10-riak.conf'
 
 1. Restart collectd.
 

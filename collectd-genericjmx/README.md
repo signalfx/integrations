@@ -41,9 +41,9 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
  Run the following command to install the Java plugin for collectd:
 
- ```
- yum install collectd-java
- ```
+
+         yum install collectd-java
+
  Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
@@ -53,9 +53,9 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
- ```
- include '/path/to/10-jmx.conf'
- ```
+
+         include '/path/to/10-jmx.conf'
+
 1. Restart collectd.
 
 collectd will be ready to be configured for your Java-based application.

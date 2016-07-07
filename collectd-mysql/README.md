@@ -26,17 +26,17 @@ This plugin connects to a MySQL instance and reports on the values returned by a
   - State of the query cache
   - Status of MySQL threads
   - Network traffic
-  
+
 #### FEATURES
 
 ##### Built-in dashboards
 
 - **MySQL Nodes**: Overview of data from all MySQL nodes.
-  
+
   [<img src='./img/dashboard_mysql_nodes.png' width=200px>](./img/dashboard_mysql_nodes.png)
 
 - **MySQL Node**: Focus on a single MySQL node.
-  
+
   [<img src='./img/dashboard_mysql_node.png' width=200px>](./img/dashboard_mysql_node.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -62,17 +62,13 @@ Follow these steps to install and configure this plugin:
 
   Run the following command to install this plugin:
 
-  ```
-  yum install collectd-mysql
-  ```
+          yum install collectd-mysql
 
 1. Download SignalFx's [sample configuration file](./10-mysql.conf) for this plugin.
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
 1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
 
-  ```
-  include '/path/to/10-mysql.conf'
-  ```
+          include '/path/to/10-mysql.conf'
 
 1. Restart collectd.
 

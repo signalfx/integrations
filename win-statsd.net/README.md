@@ -48,14 +48,14 @@ Alternatively, specify any or all of the configuration options.
 
 Or if readability is your thing:
 
- ```
+```
     $config = @{
         APIToken='yourtoken';
         SourceType='netbios';
         SampleInterval = '5s';
     }
     ./Install.ps1 $config
- ```
+```
 
 For hash values not supplied the following defaults are used. APIToken and SourceType are required.  
 

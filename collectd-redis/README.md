@@ -29,19 +29,19 @@ You can capture any kind of Redis metrics like:
  * Uptime
  * Changes since last save
  * Replication delay (per slave)
- 
+
 #### FEATURES
 
 ##### Built-in dashboards
 
 - **Redis Instances**: Overview of data from all Redis instances.
- 
+
  [<img src='./img/dashboard_redis_instances.png' width=200px>](./img/dashboard_redis_instances.png)
 
 - **Redis Instance**: Focus on a single Redis instance.
- 
+
  [<img src='./img/dashboard_redis_instance.png' width=200px>](./img/dashboard_redis_instance.png)  
- 
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 This plugin requires:
@@ -61,9 +61,9 @@ This plugin requires:
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
  Run the following command to install the Python plugin for collectd:
- ```
- yum install collectd-python
- ```
+
+         yum install collectd-python
+
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
@@ -83,9 +83,9 @@ This plugin requires:
  1. Provide values that make sense for your environment, as described [below](#configuration).
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
- ```
- include '/path/to/10-redis_(master or slave).conf'
- ```
+
+         include '/path/to/10-redis_(master or slave).conf'
+
 1. Restart collectd.
 
 collectd will begin emitting metrics to SignalFx.

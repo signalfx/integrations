@@ -25,11 +25,11 @@ collects statistics from Couchbase.
 ##### Built-in dashboards
 
 - **Couchbase Nodes**: Overview of all data from Couchbase nodes.
-  
+
   [<img src='./img/dashboard_couchbase_nodes.png' width=200px>](./img/dashboard_couchbase_nodes.png)
 
 - **Couchbase Node**: Focus on a single Couchbase node.
-  
+
   [<img src='./img/dashboard_couchbase_node.png' width=200px>](./img/dashboard_couchbase_node.png)
 
 - **Couchbase Clusters**: Overview of data from all Couchbase clusters reporting.
@@ -37,7 +37,7 @@ collects statistics from Couchbase.
   [<img src='./img/dashboard_couchbase_clusters.png' width=200px>](./img/dashboard_couchbase_clusters.png)
 
 - **Couchbase Buckets**: Performance and activity of Couchbase buckets.
-  
+
   [<img src='./img/dashboard_couchbase_buckets.png' width=200px>](./img/dashboard_couchbase_buckets.png)
 
 - **Couchbase Bucket**: Focus on a single Couchbase bucket.
@@ -62,9 +62,8 @@ collects statistics from Couchbase.
   **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
 
   Run the following command to install the Python plugin for collectd:
-  ```
-   yum install collectd-python
-  ```
+
+        yum install collectd-python
 
   **Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8**:
 
@@ -78,9 +77,7 @@ collects statistics from Couchbase.
 
 5. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
 
-  ```
-  Include "/path/to/10-couchbase.conf"
-  ```
+        Include "/path/to/10-couchbase.conf"
 
 6. Restart collectd.
 

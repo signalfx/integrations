@@ -31,11 +31,11 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 ##### Built-in dashboards
 
 - **Elasticsearch**: Overview of all data from Elasticsearch hosts.
-  
+
   [<img src='./img/dashboard_elasticsearch.png' width=200px>](./img/dashboard_elasticsearch.png)
 
 - **Elasticsearch Cluster**: Focus on a single Elasticsearch cluster.
-  
+
   [<img src='./img/dashboard_elasticsearch_cluster.png' width=200px>](./img/dashboard_elasticsearch_cluster.png)
 
 - **Elasticsearch Node**: Focus further on a single Elasticsearch node.
@@ -66,9 +66,9 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
  Run the following command to install the Python plugin for collectd:
- ```
- yum install collectd-python
- ```
+
+         yum install collectd-python
+
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
@@ -77,7 +77,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
  https://github.com/signalfx/collectd-elasticsearch
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf). 
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf).
 
 1. Modify the configuration file as follows:
 
@@ -86,9 +86,9 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
  1. Provide values that make sense for your environment, as described [below](#configuration).
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
- ```
- include '/path/to/20-elasticsearch.conf'
- ```
+
+         include '/path/to/20-elasticsearch.conf'
+
 1. Restart collectd.
 
 collectd will begin emitting metrics from Elasticsearch.
@@ -127,7 +127,7 @@ The following additional threadpools can be added the variable: AdditionalThread
 #### Note: Using this plugin from a container deployment
 
  If you are running the Elasticsearch plugin via a collectd deployment within a container, please configure the Host and Port values inside of the 20-elasticsearch.conf file that correspond to the desired Elasticsearch instance.
- 
+
  ex:
 ```
    <Module "elasticsearch_collectd">
@@ -140,11 +140,11 @@ Currently only Basic Authentication is supported for the plugin.
 
 #### Note: Collecting index statistics
 
-By default, the configuration parameter Indexes is set to `"_all"`. This means that when EnableIndexStats is set to `true`, the plugin will collect statistics about all indexes. To collect statistics from only one index, set the configuration parameter Indexes to the name of that index: for example, `["index1"]`. To collect statistics from multiple indexes (but not all), include them as a comma-separated list: for example, `["index1", "index2"]`. 
- 
+By default, the configuration parameter Indexes is set to `"_all"`. This means that when EnableIndexStats is set to `true`, the plugin will collect statistics about all indexes. To collect statistics from only one index, set the configuration parameter Indexes to the name of that index: for example, `["index1"]`. To collect statistics from multiple indexes (but not all), include them as a comma-separated list: for example, `["index1", "index2"]`.
+
 SignalFx recommends enabling index statistics collection only on master-eligible Elasticsearch nodes.
 
-The call to collect index statistics can be CPU-intensive. For this reason SignalFx recommends using the `Interval` configuration parameter to decrease the reporting interval for nodes that report index statistics. 
+The call to collect index statistics can be CPU-intensive. For this reason SignalFx recommends using the `Interval` configuration parameter to decrease the reporting interval for nodes that report index statistics.
 
 ### USAGE
 

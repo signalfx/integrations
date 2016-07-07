@@ -26,11 +26,11 @@ The Varnish collectd plugin collects metrics from varnish and sends them to Sign
 ##### Built-in dashboards
 
 - **Varnish (a)**: Overview of data from all Varnish servers.
-  
+
   [<img src='./img/dashboard_varnish_a.png' width=200px>](./img/dashboard_varnish_a.png)
 
 - **Varnish**: Focus on a single Varnish server.
-  
+
   [<img src='./img/dashboard_varnish.png' width=200px>](./img/dashboard_varnish.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -51,17 +51,17 @@ The Varnish collectd plugin collects metrics from varnish and sends them to Sign
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
  Run the following command to install this plugin:
- ```
- yum install collectd-varnish
- ```
+
+         yum install collectd-varnish
+
 1. Download SignalFx's [sample varnish configuration file](https://github.com/signalfx/integrations/blob/master/collectd-varnish/10-varnish.conf)
 
  Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
- ```
- include '/path/to/10-varnish.conf'
- ```
+
+         include '/path/to/10-varnish.conf'
+
 1. Restart collectd.
 
 Metrics from Varnish will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
