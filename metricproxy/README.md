@@ -1,11 +1,11 @@
 ---
-title: SignalFx Metric Proxy
+title: SignalFx metric proxy
 brief: Aggregate and translate metrics before forwarding to SignalFx.
 ---
 
-# ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx Metric Proxy
+# ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx metric proxy
 
-_This is a directory that consolidates metadata associated with the SignalFx Metric Proxy. The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy)_
+_This is a directory that consolidates metadata associated with the SignalFx metric proxy. The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -16,7 +16,7 @@ _This is a directory that consolidates metadata associated with the SignalFx Met
 
 ### DESCRIPTION
 
-Use the SignalFx Metric Proxy to aggregate metrics and send them to SignalFx. It is a multilingual datapoint demultiplexer that can accept time series data from the carbon (Graphite), collectd or SignalFx protocols and emit those datapoints to a series of servers using the carbon, collectd or SignalFx protocols. 
+Use the SignalFx metric proxy to aggregate metrics and send them to SignalFx. It is a multilingual datapoint demultiplexer that can accept time series data from the carbon (Graphite), collectd or SignalFx protocols and emit those datapoints to a series of servers using the carbon, collectd or SignalFx protocols. 
 
 ### REQUIREMENTS AND DEPENDENCIES
 
