@@ -1,9 +1,11 @@
 ---
-title: Metricproxy
-brief: SignalFx Metricproxy for aggregation and translation of metrics for sending to SignalFx.
+title: SignalFx Metric Proxy
+brief: Aggregate and translate metrics before forwarding to SignalFx.
 ---
 
-# ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx Metricproxy
+# ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx Metric Proxy
+
+_This is a directory that consolidates metadata associated with the SignalFx Metric Proxy. The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,67 +16,21 @@ brief: SignalFx Metricproxy for aggregation and translation of metrics for sendi
 
 ### DESCRIPTION
 
-This SignalFx Metricproxy  to aggregate metrics and send then to SignalFx. The proxy is a multilingual datapoint demultiplexer that can accept time series data from the statsd, carbon, dogstatsd, or signalfx protocols and emit those datapoints to a series of servers on the statsd, carbon, or signalfx protocol. The proxy is ideally placed on the same server as either another aggregator, such as statsd, or on a central server that is already receiving datapoints, such as graphite's carbon database.
-
-#### Code layout
-
-You only need to read this if you want to develop the proxy or understand
-the proxy's code.
-
-The proxy is divided into two main components: [forwarder](protocol/carbon/carbonforwarder.go)
-and [listener](protocol/carbon/carbonlistener.go).  The forwarder and listener
-are glued together by the [demultiplexer](protocol/demultiplexer/demultiplexer.go).
-
-When a listener receives a datapoint, it converts the datapoint into a
-basic [datapoint type](datapoint/datapoint.go).  This core datapoint type is
-then sent to the multiplexer that will send a pointer to that datapoint
-to each forwarder.
-
-Sometimes there is a loss of fidelity during transmission if a listener
-and forwarder don't support the same options.  While it's impossible
-to make something understand an option it does not, we don't want to
-forget support for this option when we translate a datapoint through
-the multiplexer.  We work around this by sometimes encoding the raw
-representation of the datapoint into the Datapoint object we forward.
-For example, points from carbon are not only translated into our core
-datapoint format, but also support [ToCarbonLine](protocol/carbon/carbon.go)
-which allows us to directly convert the abstract datapoint into what it
-looked like for carbon, which allows us to forward the point to another
-carbon database exactly as we received it.
-
-All message passing between forwarders, multiplexer, and listeners
-happen on golang's built in channel abstraction.
-
-#### Development
-
-If you want to submit patches for the proxy, make sure your code passes
-[travis_check.sh](travis_check.sh) with exit code 0.  For help setting
-up your development enviroment, it should be enough to mirror the install
-steps of [.travis.yml](.travis.yml).  You may need to make sure your GOPATH
-env variable is set correctly.
-
-#### Docker
-
-The proxy comes with a [docker image](Dockerfile) that is built and deployed
-to [quay.io](https://quay.io/repository/signalfx/metricproxy).  It assumes
-you will have a sfdbconfig.json file cross mounted to
-/var/config/sfproxy/sfdbconfig.json for the docker container.
-
+Use the SignalFx Metric Proxy to aggregate metrics and send them to SignalFx. It is a multilingual datapoint demultiplexer that can accept time series data from the carbon (Graphite), collectd or SignalFx protocols and emit those datapoints to a series of servers using the carbon, collectd or SignalFx protocols. 
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-This service has no requirements or dependencies. However, the service is limited in usefulness if there is not data being sent to it. The following data types are supported:
+All dependencies for this Go project are included in `/Godeps` in the project repository. 
 
-| Data type | Format |
-|---------|---------|
-| carbon | plain text protocol |
-| statsD | statsD |
-| signalfx | JSON or Protobuff |
-| DogstatsD | DogstatsD |
+We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's carbon database.
+
+The size of the machine that hosts the proxy depends on the amount of data that will be transmitted through it. The key performance indicator for the host is CPU idle (higher is better). A host comparable to AWS's c3.2xlarge is known to handle up to approximately 7 million DPM (data points per minute) while reporting 70% CPU idle. For safety, we recommend large margins here - running close to resource limits risks delayed data transmission, especially if the rate of data points is variable. 
 
 ### INSTALLATION
 
-1. To install the SignalFx Metricproxy you can use the [install script](https://github.com/signalfx/metricproxy/blob/master/install.sh). The same script should be used to upgrade the service.
+1. Identify a server on which to deploy the SignalFx Metric Proxy will run.
+1. Edit the file `sfdbconfig.conf` to configure the proxy. Example configurations are given [below](#configuration).
+1. Use the [install script](https://github.com/signalfx/metricproxy/blob/master/install.sh) to install or upgrade the proxy, as follows. 
 
  ```
   curl -s https://raw.githubusercontent.com/signalfx/metricproxy/master/install.sh | sudo sh
@@ -83,15 +39,29 @@ This service has no requirements or dependencies. However, the service is limite
   # Logs at      /var/log/sfproxy
   # PID file at  /var/run/metricproxy.pid
  ```
+1. Start the proxy as follows:
 
+  ```
+    /etc/init.d/metricproxy start
+  ```
+  
+1. Begin transmitting data to the host and port on which the proxy is running. The data will be transformed and forwarded as specified in the [configuration](#configuration). 
+
+#### Note: Deploying using Docker
+
+ The proxy is packaged as a Docker image that is built and deployed
+ to [quay.io](https://quay.io/repository/signalfx/metricproxy). This image does not include configuration. To use this image, ensure that you have a sfdbconfig.json file cross-mounted to
+ `/var/config/sfproxy/sfdbconfig.json` for the container to use.
 
 ### CONFIGURATION
 
 #### Config file format
 
-See the [example config](exampleSfdbproxy.conf) file for an example of how
+See the [example configuration](exampleSfdbproxy.conf) file for an example of how
 configuration looks.  Configuration is a JSON file with two important fields:
-ListenFrom and ForwardTo.
+`ListenFrom` and `ForwardTo`.
+
+`ListenFrom` defines the data format that the proxy will receive, and on what port. It also defines the transformation that the data will undergo, if any. `ForwardTo` defines the data format that the proxy will transmit, and to where. 
 
 ##### ListenFrom
 
@@ -568,7 +538,7 @@ messages.  Only use debug logging temporarily.
 
 ### CollectD listener dimensions
 
-The CollectD listener supports setting dimensions on all recieved metrics with
+The CollectD listener supports setting dimensions on all received metrics with
 the Dimensions attribute which expects a map of string => string.
 
 ```
@@ -687,24 +657,45 @@ Then, any datapoints with the "org" dimension of "dev" will be logged.
 
 ### USAGE
 
-#### Start the service
+There are several scenarios in which the SignalFx metric proxy can help you get the right data to the right destination. 
 
- ```
-   /etc/init.d/metricproxy start
- ```
+#### Sending data to multiple destinations
 
-#### Stop the service.
+You can use the proxy to duplicate a data stream to multiple destinations. Add each destination to the `ForwardTo` block as in the following example.
 
- ```
-   /etc/init.d/metricproxy stop
- ```
-#### Debug the service
+```
+"ForwardTo": [
+  {
+    "type": "signalfx-json",
+    "DefaultAuthToken": "ABCD",
+    "Name": "signalfxforwarder",
+  },
+  {
+    "Filename": "/tmp/filewrite.csv",
+    "Name": "filelocal",
+    "type": "csv"
+  }
+] 
+```
 
- ```
-  cd /var/log/sfproxy
-  tail -F *
- ```
+#### Transforming carbon dot-delimited metric names into metrics with dimensions
+
+SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However it may be more efficient to define dimensions once before transmission, rather than many times afterward in charts. Use the proxy's MetricDeconstructor features to transform carbon (Graphite)'s long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. 
+
+Note that you can apply MetricDeconstructor in individual `ForwardTo` destinations. 
+
+#### Concentrate outgoing HTTP connections
+
+SignalFx recommends instrumenting each host with the SignalFx collectd agent, which transmits data to SignalFx over HTTP using the `write_http` plugin. In some environments it is not desirable for every host to maintain its own out-of-network HTTP connection: for instance, when a firewall is in use. In this scenario, you can deploy the metric proxy, configure each collectd instance to transmit to the metric proxy instead of directly to SignalFx, then authorize just the metric proxy to transmit outside the firewall. 
+
+#### Buffer outgoing traffic
+
+To guard against dropped data from network disruption, the metric proxy can be used as data buffer external to the SignalFx collectd agent. If collectd is unable to transmit data, it will buffer data points in memory which may impact the host being monitored. If collectd always transmits to the metric proxy within network, the metric proxy host assumes the risk of buffering points to memory when external transmissions are disrupted. This ensures that the inability to transmit data alone will not impact performance of services monitored. 
+
+#### Simplify configuration of collectd
+
+Because the metric proxy can apply dimensions to all outgoing data points, you can use it to annotate metrics from many instances of collectd at once, with information of which individual collectd hosts may not be aware. This can make it easier to add new context to your metrics. 
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/metricproxy/blob/master/LICENSE) for more details.
+This product is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/metricproxy/blob/master/LICENSE) for more details.
