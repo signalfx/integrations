@@ -20,7 +20,7 @@ Use the SignalFx Metric Proxy to aggregate metrics and send them to SignalFx. It
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-All dependencies for this Go project are included in `/Godeps` in the project repository. 
+The SignalFx metric proxy must be deployed on a Linux system that is capable of running Go v1.6. All dependencies for this Go project are included in `/Godeps` in the project repository. 
 
 We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's carbon database.
 
@@ -61,12 +61,17 @@ See the [example configuration](exampleSfdbproxy.conf) file for an example of ho
 configuration looks.  Configuration is a JSON file with two important fields:
 `ListenFrom` and `ForwardTo`.
 
-`ListenFrom` defines the data format that the proxy will receive, and on what port. It also defines the transformation that the data will undergo, if any. `ForwardTo` defines the data format that the proxy will transmit, and to where. 
+`ForwardTo` defines the data format that the proxy will transmit, and to where. 
 
 ##### ListenFrom
 
-ListenFrom is where you define what services the proxy will pretend to be and
-what ports to listen for those services on.
+`ListenFrom` defines the data format that the proxy will receive, and on what port. It also defines the transformation that the data will undergo, if any. 
+
+|| Configuration property || Definition || Example values ||
+| `ListenAddr` | Defines the port on which to listen for incoming data. | "0.0.0.0:18080" |
+| `Type` | Defines the listener that will handle the incoming data. Possible listeners are `signalfx`, `carbon`, and `collectd`. | "carbon"
+| `Dimensions` | A map of dimension-value pairs that adds the specified dimension to every data point sent by the listener. | { "env": "prod" }
+
 
 ##### signalfx
 
@@ -687,10 +692,6 @@ Note that you can apply MetricDeconstructor in individual `ForwardTo` destinatio
 #### Concentrate outgoing HTTP connections
 
 SignalFx recommends instrumenting each host with the SignalFx collectd agent, which transmits data to SignalFx over HTTP using the `write_http` plugin. In some environments it is not desirable for every host to maintain its own out-of-network HTTP connection: for instance, when a firewall is in use. In this scenario, you can deploy the metric proxy, configure each collectd instance to transmit to the metric proxy instead of directly to SignalFx, then authorize just the metric proxy to transmit outside the firewall. 
-
-#### Buffer outgoing traffic
-
-To guard against dropped data from network disruption, the metric proxy can be used as data buffer external to the SignalFx collectd agent. If collectd is unable to transmit data, it will buffer data points in memory which may impact the host being monitored. If collectd always transmits to the metric proxy within network, the metric proxy host assumes the risk of buffering points to memory when external transmissions are disrupted. This ensures that the inability to transmit data alone will not impact performance of services monitored. 
 
 #### Simplify configuration of collectd
 
