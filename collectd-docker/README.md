@@ -103,6 +103,7 @@ The following configuration options are *optional*. You may specify them in the 
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/docker-collectd-plugin" |
 | BaseURL | URL of your Docker daemon's remote API | "unix://var/run/docker.sock" |
 | Timeout  | Time in seconds that collectd will wait for a response from Docker   | 3 |
+| Verbose | Turns on verbose log statements | false |
 
 ### USAGE
 
