@@ -19,18 +19,13 @@ _This is a directory that consolidates all the metadata associated with the Stat
 
 The StatsD plugin for collectd listens for StatsD events, aggregates them and transmits them according to collectd's configuration. Use this plugin to send data from StatsD to SignalFx.
 
-From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:StatsD):
+From [collectd's manpage](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd):
 
-> The StatsD plugin implements the StatsD network protocol to allow clients to report "events", such as the serving of a web page. These events are aggregated by collectd and dispatched regularly.
+> The statsd plugin listens to a UDP socket, reads "events" in the statsd protocol and dispatches rates or other aggregates of these numbers periodically.
 
-> The plugin supports four event types:
+> The plugin implements the `Counter`, `Timer`, `Gauge` and `Set` types which are dispatched as the collectd types `derive`, `latency`, `gauge` and `objects` respectively.
 
-> * Counter
-* Timer
-* Gauge
-* Set
-
-> It also supports "multi metric packets", i.e. packets containing multiple metrics and different metric types with the same name.
+For more information about StatsD, see https://github.com/etsy/statsd/.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
