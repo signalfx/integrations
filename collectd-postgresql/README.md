@@ -27,11 +27,11 @@ The configuration syntax of the PostgreSQL, DBI, and Oracle plugins is very simi
 ##### Built-in dashboards
 
 - **PostgreSQL Nodes**: Overview of data from all PostgreSQL nodes.
-  
+
   [<img src='./img/dashboard_postgresql_nodes.png' width=200px>](./img/dashboard_postgresql_nodes.png)
 
 - **PostgreSQL Node**: Focus on a single PostgreSQL node.
-  
+
   [<img src='./img/dashboard_postgresql_node.png' width=200px>](./img/dashboard_postgresql_node.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -50,9 +50,9 @@ This plugin requires:
 
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
  Run the following command to install this plugin:
- ```
- yum install collectd-postgresql
- ```
+
+         yum install collectd-postgresql
+
 1. Download SignalFx's [sample PostgreSQL configuration file](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf)
 
  **_Note:_** _if using a version of PostgreSQL older than 0.92 use_ [_this configuration file_](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf)
@@ -60,9 +60,9 @@ This plugin requires:
  Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
-```
-include '/path/to/10-postgresql.conf'
-```
+
+         include '/path/to/10-postgresql.conf'
+
 1. Restart collectd.
 
 Metrics from PostgreSQL will begin streaming into SignalFx, and new built-in dashboards will be created for you.

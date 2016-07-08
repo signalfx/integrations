@@ -42,13 +42,13 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 ##### Built-in dashboards
 
 - **MongoDB Hosts**: Overview of data from all MongoDB hosts.
-  
+
   [<img src='./img/dashboard_mongodb_hosts.png' width=200px>](./img/dashboard_mongodb_hosts.png)
 
 - **MongoDB Host**: Focus on a single MongoDB host.
-  
+
   [<img src='./img/dashboard_mongodb_host.png' width=200px>](./img/dashboard_mongodb_host.png)
-  
+
 - **MongoDB Cluster**: Overview of a MongoDB cluster.
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -70,22 +70,19 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
  Run the following commands to install the Python plugin for collectd, `pip`, and `pymongo`:
 
- ```
- yum install -y epel-release
- yum install -y python-pip
- yum install -y collectd-python
- pip install pymongo==3.0.3
- ```
+        yum install -y epel-release
+        yum install -y python-pip
+        yum install -y collectd-python
+        pip install pymongo==3.0.3
 
  **Ubuntu 12.04, 14.04, 15.04 and Debian 7 & 8:**
 
  This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
  Run the following commands to install `pip` and `pymongo`:
 
- ```
- apt-get install -y python-pip python-dev build-essential
- pip install pymongo==3.0.3
- ```
+        apt-get install -y python-pip python-dev build-essential
+        pip install pymongo==3.0.3
+
 1. Download the [Python module for MongoDB](https://github.com/signalfx/collectd-mongodb).  
 
 1. Download SignalFx's [sample configuration file ](././10-mongodb.conf) for this plugin.
@@ -94,9 +91,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
 1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
 
- ```
- include '/path/to/10-mongodb.conf'
- ```
+        include '/path/to/10-mongodb.conf'
 
 1. Restart collectd.
 

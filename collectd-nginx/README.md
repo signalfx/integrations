@@ -23,11 +23,11 @@ Use the NGINX plugin for collectd to send data about NGINX to SignalFx, enabling
 ##### Built-in dashboards
 
 - **NGINX Servers**: Overview of data from all NGINX servers.
-  
+
   [<img src='./img/dashboard_nginx_servers.png' width=200px>](./img/dashboard_nginx_servers.png)
 
 - **NGINX Server**: Focus on a single NGINX server.
-  
+
   [<img src='./img/dashboard_nginx_server.png' width=200px>](./img/dashboard_nginx_server.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -47,9 +47,9 @@ This plugin requires:
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
  Run the following command to install the collectd plugin:
- ```
- yum install collectd-nginx
- ```
+
+         yum install collectd-nginx
+
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
@@ -59,9 +59,9 @@ This plugin requires:
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
- ```
- include '/path/to/10-nginx.conf'
- ```
+
+        include '/path/to/10-nginx.conf'
+
 1. Restart collectd.
 
 ### CONFIGURATION

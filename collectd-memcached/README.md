@@ -33,11 +33,11 @@ Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewSta
 ##### Built-in dashboards
 
 - **Memcached (a)**: Overview of data from all Memcached hosts.
-  
+
   [<img src='./img/dashboard_memcached_a.png' width=200px>](./img/dashboard_memcached_a.png)
 
 - **Memcached**: Focus on a single Memcached host.
-  
+
   [<img src='./img/dashboard_memcached.png' width=200px>](./img/dashboard_memcached.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -60,17 +60,17 @@ Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewSta
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
  Run the following command to install this plugin:
- ```
- yum install collectd-memcached
- ```
+
+         yum install collectd-memcached
+
 1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf)
 
  Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
- ```
- include '/path/to/10-memcached.conf'
- ```
+
+         include '/path/to/10-memcached.conf'
+
 1. Restart collectd.
 
 Metrics from memcached will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.

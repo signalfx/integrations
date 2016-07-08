@@ -24,11 +24,11 @@ The Apache plugin for collectd monitors Apache Webserver using the information p
 ##### Built-in dashboards
 
 - **Apache Webservers**: Overview of data from all Apache webserver instances.
-  
+
   [<img src='./img/dashboard_apache_webservers.png' width=200px>](./img/dashboard_apache_webservers.png)
 
 - **Apache Webserver**: Focus on a single Apache webserver instance.
-  
+
   [<img src='./img/dashboard_apache_webserver.png' width=200px>](./img/dashboard_apache_webserver.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -48,12 +48,10 @@ This plugin collects metrics from the module `mod_status`.
 
 1. Add the following configuration to your Apache server:
 
- ```
- ExtendedStatus on
- <Location /mod_status>
-   SetHandler server-status
- </Location>
- ```
+        ExtendedStatus on
+        <Location /mod_status>
+          SetHandler server-status
+        </Location>
 
 1. Restart apache.
 
@@ -67,9 +65,7 @@ This plugin collects metrics from the module `mod_status`.
 
  Run the following command to install this plugin:
 
- ```
- yum install collectd-apache
- ```
+        yum install collectd-apache
 
 1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin.
 
@@ -79,9 +75,7 @@ This plugin collects metrics from the module `mod_status`.
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
 
- ```
- include '/path/to/10-apache.conf'
- ```
+        include '/path/to/10-apache.conf'
 
 1. Restart collectd.
 
@@ -92,12 +86,12 @@ This plugin collects metrics from the module `mod_status`.
 #### System configuration:
 
 Add the following to your apache config:
- ```
- ExtendedStatus on
+```
+ExtendedStatus on
   <Location /mod_status>
     SetHandler server-status
   </Location>
- ```
+```
 
 #### Config file modifications:
 

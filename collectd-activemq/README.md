@@ -30,11 +30,11 @@ Use this plugin to monitor the following types of information from ActiveMQ:
 ##### Built-in dashboards
 
 - **ActiveMQ Hosts**: Overview of all data from ActiveMQ hosts.
-  
+
   [<img src='./img/dashboard_activemq_hosts.png' width=200px>](./img/dashboard_activemq_hosts.png)
 
 - **ActiveMQ Host**: Focus on a single ActiveMQ host.
-  
+
   [<img src='./img/dashboard_activemq_host.png' width=200px>](./img/dashboard_activemq_host.png)
 
 - **ActiveMQ Queue**: Focus on a single ActiveMQ queue.
@@ -42,7 +42,7 @@ Use this plugin to monitor the following types of information from ActiveMQ:
   [<img src='./img/dashboard_activemq_queue.png' width=200px>](./img/dashboard_activemq_queue.png)
 
 - **ActiveMQ Topic**: Focus on a single ActiveMQ topic.
-  
+
   [<img src='./img/dashboard_activemq_topic.png' width=200px>](./img/dashboard_activemq_topic.png)
 
 - **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues.
@@ -67,9 +67,7 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
 
  Run the following command to install the Java plugin for collectd:
 
- ```
- yum install collectd-java
- ```
+        yum install collectd-java
 
  #### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
@@ -84,10 +82,8 @@ Use the [generic-jmx](https://collectd.org/wiki/index.php/Plugin:GenericJMX) col
 
 1. Add the following lines to /etc/collectd.conf, replacing the example paths with the locations of the configuration files you downloaded in step 2:
 
- ```
- include '/path/to/10-jmx.conf'
- include '/path/to/20-activemq.conf'
- ```
+        include '/path/to/10-jmx.conf'
+        include '/path/to/20-activemq.conf'
 
 1. Restart collectd.
 

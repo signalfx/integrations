@@ -24,11 +24,11 @@ This is the SignalFx Kafka plugin. It will send data about Kafka to SignalFx, en
 ##### Built-in dashboards
 
 - **Kafka**: Overview of data from all Kafka brokers.
-  
+
   [<img src='./img/dashboard_kafka.png' width=200px>](./img/dashboard_kafka.png)
 
 - **Kafka Broker**: Focus on a single Kafka broker.
-  
+
   [<img src='./img/dashboard_kafka_broker.png' width=200px>](./img/dashboard_kafka_broker.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -47,9 +47,9 @@ This is the SignalFx Kafka plugin. It will send data about Kafka to SignalFx, en
 
  Run the following command to install the Java plugin for collectd:
 
- ```
- yum install collectd-java
- ```
+
+         yum install collectd-java
+
  Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
@@ -65,15 +65,14 @@ This is the SignalFx Kafka plugin. It will send data about Kafka to SignalFx, en
 1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
- ```
- include '/path/to/10-jmx.conf'
-  include '/path/to/20-kafka.conf'
- ```
-or
- ```
- include '/path/to/10-jmx.conf'
-  include '/path/to/20-kafka_82.conf'
- ```
+
+        include '/path/to/10-jmx.conf'
+        include '/path/to/20-kafka.conf'
+
+ or
+
+        include '/path/to/10-jmx.conf'
+        include '/path/to/20-kafka_82.conf'
 
 1. Restart collectd.
 

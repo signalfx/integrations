@@ -26,13 +26,13 @@ This is a collectd plugin for getting metrics and information from
 ##### Built-in dashboards
 
 - **Zookeeper Nodes**: Overview of data from all Zookeeper nodes.
-  
+
   [<img src='./img/dashboard_zookeeper_nodes.png' width=200px>](./img/dashboard_zookeeper_nodes.png)
 
 - **Zookeeper Node**: Focus on a single Zookeeper node.
-  
+
   [<img src='./img/dashboard_zookeeper_node.png' width=200px>](./img/dashboard_zookeeper_node.png)  
-  
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 This plugin requires:
@@ -56,9 +56,9 @@ This plugin requires:
  ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
 
  Run the following command to install the Python plugin for collectd:
- ```
- yum install collectd-python
- ```
+
+         yum install collectd-python
+
  ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
@@ -76,9 +76,9 @@ This plugin requires:
  1. Provide values that make sense for your environment, as described [below](#configuration).
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
- ```
- include '/path/to/20-zookeeper.conf'
- ```
+
+        include '/path/to/20-zookeeper.conf'
+
 1. Restart collectd.
 
 collectd will begin emitting metrics from Zookeeper.

@@ -39,17 +39,14 @@ Follow these steps to install and configure this plugin:
 
   Run the following command to install this plugin:
 
-  ```
-  yum install collectd-haproxy
-  ```
+         yum install collectd-haproxy
+
 
 1. Download SignalFx's [sample configuration file](./10-haproxy.conf) for this plugin.
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
 1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
 
-  ```
-  include '/path/to/10-haproxy.conf'
-  ```
+         include '/path/to/10-haproxy.conf'
 
 1. Restart collectd.
 

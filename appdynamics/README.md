@@ -36,6 +36,7 @@ maven install
 cd appd-report-standalone
 maven exec:java
 ```
+
 ### CONFIGURATION
 
 #### Required Environment Variables

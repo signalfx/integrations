@@ -32,11 +32,11 @@ Use this integration to monitor the following types of information from Cassandr
 ##### Built-in dashboards
 
 - **Cassandra Nodes**: Overview of data from all Cassandra nodes.
-  
+
   [<img src='./img/dashboard_cassandra_nodes.png' width=200px>](./img/dashboard_cassandra_nodes.png)
 
 - **Cassandra Node**: Focus on a single Cassandra node.
-  
+
   [<img src='./img/dashboard_cassandra_node.png' width=200px>](./img/dashboard_cassandra_node.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -58,9 +58,8 @@ Use this integration to monitor the following types of information from Cassandr
 
  Run the following command to install the Java plugin for collectd:
 
- ```
- yum install collectd-java
- ```
+        yum install collectd-java
+
  Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
 
  This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
@@ -74,10 +73,10 @@ Use this integration to monitor the following types of information from Cassandr
 1. Modify [`cassandra.conf`](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf) to provide values that make sense for your environment, as described in the header.
 
  Add the following lines to /etc/collectd.conf, replacing the example paths with the locations of the configuration files you downloaded in step 2:
- ```
- include '/path/to/10-jmx.conf'
- include '/path/to/20-cassandra.conf'
- ```
+
+        include '/path/to/10-jmx.conf'
+        include '/path/to/20-cassandra.conf'
+
 1. Restart collectd.
 
 Metrics from Cassandra will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.

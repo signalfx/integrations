@@ -24,11 +24,11 @@ The RabbitMQ plugin that collects statistics from RabbitMQ. The plugin uses the 
 ##### Built-in dashboards
 
 - **RabbitMQ**: Overview of data from all RabbitMQ nodes.
-  
+
   [<img src='./img/dashboard_rabbitmq.png' width=200px>](./img/dashboard_rabbitmq.png)
 
 - **RabbitMQ Node**: Focus on a single RabbitMQ node.
-  
+
   [<img src='./img/dashboard_rabbitmq_node.png' width=200px>](./img/dashboard_rabbitmq_node.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -51,9 +51,8 @@ This plugin requires:
 
  Run the following command to install the Python plugin for collectd:
 
- ```
- yum install collectd-python
- ```
+         yum install collectd-python
+
 
  **Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:**
 
@@ -70,9 +69,9 @@ This plugin requires:
  1. Provide values that make sense for your environment, as described [below](#configuration).
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
- ```
- include '/path/to/10-rabbitmq.conf'
- ```
+
+         include '/path/to/10-rabbitmq.conf'
+
 1. Restart collectd.
 
 collectd will begin emitting metrics from RabbitMQ.

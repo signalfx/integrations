@@ -19,25 +19,25 @@ Use the Mesos plugin for collectd to monitor the following information about Mes
   - Cluster status: number of activated slaves, schedulers and tasks
   - CPU, disk and memory usage for Mesos
   - Tasks finished, lost, and failed
-  
+
 #### FEATURES
 
 ##### Built-in dashboards
 
 - **Mesos Clusters**: Overview of data from all Mesos clusters.
-  
+
   [<img src='./img/dashboard_mesos_clusters.png' width=200px>](./img/dashboard_mesos_clusters.png)
 
 - **Mesos Cluster**: Focus on a single Mesos cluster.
-  
+
   [<img src='./img/dashboard_mesos_cluster.png' width=200px>](./img/dashboard_mesos_cluster.png)
 
 - **Mesos Master**: Focus further on a single Mesos master.
-  
+
   [<img src='./img/dashboard_mesos_master.png' width=200px>](./img/dashboard_mesos_master.png)
 
 - **Mesos Slave**: Focus further on a single Mesos slave.
-  
+
   [<img src='./img/dashboard_mesos_slave.png' width=200px>](./img/dashboard_mesos_slave.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -59,9 +59,7 @@ Follow these steps to install this plugin:
 
  Run the following commands to install the Python plugin for collectd:
 
- ```
- yum install collectd-python
- ```
+         yum install collectd-python
 
  **Ubuntu 12.04, 14.04, 15.04 and Debian 7 & 8:**
 
@@ -72,9 +70,8 @@ Follow these steps to install this plugin:
 3. Modify the appropriate sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
 4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2:
 
-  ```
-  include '/path/to/10-mesos-[slave/master].conf'
-  ```
+         include '/path/to/10-mesos-[slave/master].conf'
+
 5. Restart collectd.
 
 ### CONFIGURATION
