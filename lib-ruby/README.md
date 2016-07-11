@@ -39,8 +39,7 @@ This library supports Ruby 2.x.
 #### API access token
 
 To use this library, you need a SignalFx API access
-token, which can be [obtained from the SignalFx
-organization](https://support.signalfx.com/hc/en-us/articles/203779639#apitoken) you want to report data into.
+token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview).
 
 
 ### <a name="installation"></a>INSTALLATION
