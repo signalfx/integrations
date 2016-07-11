@@ -46,9 +46,7 @@ higher.
 #### API access token
 
 To use this library, you need a SignalFx API access
-token, which can be [obtained from the SignalFx
-organization](https://support.signalfx.com/hc/en-us/articles/203779639#apitoken) you want to report data into.
-
+token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview).
 
 ### <a name="installation"></a>INSTALLATION
 
@@ -199,7 +197,7 @@ sfx.update_tag('some_tag_name',
 
 #### <a name="AWS-integration">AWS integration
 
-Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the [AWS unique ID](https://support.signalfx.com/hc/en-us/articles/201133965#aws_unique_id) of the current host as an extra dimension. For example:
+Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the [AWS unique ID](https://signalfx-product-docs.readthedocs-hosted.com/en/latest/integrations/aws-info.html#uniquely-identifying-aws-instances) of the current host as an extra dimension. For example:
 
 ```python
 import signalfx
