@@ -16,7 +16,7 @@ _This is a directory that consolidates all the metadata associated with the NGIN
 
 ### DESCRIPTION
 
-Use the NGINX plugin for collectd to send data about NGINX to SignalFx.
+Use the NGINX plugin for collectd to monitor NGINX webserver performance.
 
 #### FEATURES
 

@@ -5,7 +5,7 @@ brief: Use the collectd-mongodb plugin to collect metrics from MongoDB nodes.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB Plugin
 
-_This is a directory consolidate all the metadata associated with the MongoDB collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-mongodb)_
+_This directory consolidates all the metadata associated with the MongoDB collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-mongodb)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -117,7 +117,7 @@ db.createUser( {
 
 ### USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_MongoDB.json).
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. 
 
 For general reference on how to monitor MongoDB performance, see [Analyzing MongoDB Performance](https://docs.mongodb.org/manual/administration/analyzing-mongodb-performance/).
 

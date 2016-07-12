@@ -71,8 +71,6 @@ This plugin collects metrics from the module `mod_status`.
 
 1. Restart collectd.
 
-1. Metrics from apache will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
-
 ### CONFIGURATION
 
 Using the example configuration file [`10-apache.conf`](././10-apache.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.

@@ -54,7 +54,7 @@ This plugin requires:
 
 1. Download SignalFx's [sample PostgreSQL configuration file](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf) to `/etc/collectd/managed_config`.
 
- **_Note:_** _if using a version of PostgreSQL older than 0.92 use_ [_this configuration file_](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf) instead.
+ **_Note:_** _For versions of PostgreSQL older than 0.92, use_ [_this configuration file_](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf) instead.
 
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 

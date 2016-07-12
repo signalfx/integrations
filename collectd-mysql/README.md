@@ -78,7 +78,7 @@ Using the example configuration file [`10-mysql.conf`](././10-mysql.conf) as a g
 | Database (within block) | The name of the MySQL database to monitor. | `Database "mysql_one"`|
 
 #### Note: Monitoring multiple instances
-The sample configuration file is configured to illustrate how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
+The sample configuration file [`10-mysql.conf`](././10-mysql.conf) illustrates how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
 
 To monitor just one database, include just one `Database` block and delete the others.
 
@@ -91,7 +91,7 @@ To illustrate the difference between these two uses of "Database", the example c
 
 ### USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_MySQL.json).
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. 
 
 For general reference on how to monitor MySQL performance using this plugin, see [documentation on collectd.org](https://collectd.org/wiki/index.php/Plugin:MySQL).
 

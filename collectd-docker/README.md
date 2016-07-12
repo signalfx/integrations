@@ -5,7 +5,7 @@ brief: Docker metrics for collectd.
 
 #![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker Plugin
 
-_This is a directory consolidate all the metadata associated with the Docker collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin)_
+_This is a directory that consolidates all the metadata associated with the Docker collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -19,7 +19,7 @@ _This is a directory consolidate all the metadata associated with the Docker col
 
 This is the SignalFx Docker plugin. Follow these instructions to install the Docker plugin for collectd.
 
-The [`docker-collectd`](https://github.com/signalfx/docker-collectd) plugin collects metrics about the Docker containers running on the system using Docker's stats API. It reports metrics about the CPU utilization of each container, their memory consumption, and their network and disk activity.
+The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plugin collects metrics about the Docker containers running on the system using Docker's stats API. It reports metrics about the CPU utilization of each container, their memory consumption, and their network and disk activity.
 
 #### FEATURES
 
@@ -55,13 +55,13 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd) plugin coll
 
  https://github.com/signalfx/docker-collectd-plugin
 
-1. Run the following command to install the module’s dependencies using pip, replacing the example path with the location of the module you downloaded in step 2:
+1. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the location of the module you downloaded in step 2:
 
  ```
  pip install -r /path/to/docker-collectd-plugin/requirements.txt
  ```
 
- **On Amazon Linux**: Run the following commands instead (click here for details):
+ **On Amazon Linux**: Run the following commands instead:
 
   ```
   yum install python26-pip
@@ -70,7 +70,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd) plugin coll
 
 1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf) for this plugin to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file to provide values that make sense for your environment, as described [below](#configuration).
+1. Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
 1. Restart collectd.
 

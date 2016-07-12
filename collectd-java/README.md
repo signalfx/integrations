@@ -5,7 +5,7 @@ brief: Java plugin for collectd.
 
 #![](https://github.com/signalfx/integrations/blob/master/collectd-java/img/integrations_java.png) Java collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Java collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
+_This directory consolidates all the metadata associated with the Java collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -45,7 +45,7 @@ From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java):
 
 No additional configuration is required if using the example configuration file [`10-jmx.conf`](./10-jmx.conf).
 
-Full configuration details are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
+Full configuration details for this plugin are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
 
 ### USAGE
 
@@ -57,7 +57,7 @@ Use the Java collectd plugin to collect metrics from Java applications using JMX
 
 ### METRICS
 
-The metrics for the Java collectd plugin will depend on what is generated and passed from the java application for which it is configured.
+The metrics emitted by this plugin depend on its configuration and the metrics emitted by the Java application that it is configured to monitor. Examples of SignalFx integrations that rely on this plugin are [ActiveMQ](../collectd-activemq), [Cassandra](../collectd-cassandra) and [Kafka](../collectd-kafka).
 
 ### LICENSE
 

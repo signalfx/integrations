@@ -17,7 +17,7 @@ _This is a directory that consolidates all the metadata associated with the Redi
 
 ### DESCRIPTION
 
-A [Redis](http://redis.io) plugin for [collectd](http://collectd.org) using collectd's [Python plugin](http://collectd.org/documentation/manpages/collectd-python.5.shtml).
+A [Redis](http://redis.io) plugin for [collectd](http://collectd.org) using collectd's [Python plugin](../collectd-python).
 
 You can capture any kind of Redis metrics like:
 
@@ -72,14 +72,14 @@ Using the example configuration files [`10-redis_master.conf`](././10-redis_mast
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
-| Instance | Nodename | The Node block identifies a new Redis node, that is a new Redis instance running in an specified host and port. The name for node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.|
-| Host | Hostname |The Host option is the hostname or IP-address where the Redis instance is running on.|
+| Instance | Nodename | The Module block identifies a Redis instance running in an specified host and port. The name for node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.|
+| Host | Hostname |The Host option is the hostname or IP-address where the Redis instance is running.|
 |Port |Port| The Port option is the TCP port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.|
-|Instance |Type instance|Within a query definition, an optional type instance to use when submitting the result of the query. When not supplied will default to the escaped command, up to 64 chars.|
+| Auth | Password | Optionally specify a password to use for AUTH. |
 
-### Multiple Redis instances
+#### Note: Monitoring multiple Redis instances on one host
 
-You can configure to monitor multiple redis instances by the same machine by repeating the <Module> section, such as:
+You can configure this plugin to monitor multiple Redis instances on the same machine by repeating the <Module> section, as in the following example:
 
 ```
 <Plugin python>
@@ -120,49 +120,15 @@ You can configure to monitor multiple redis instances by the same machine by rep
 </Plugin>
 ```
 
-These 3 redis instances listen on different ports, they have different plugin_instance combined by Host and Port:
+#### Note: value of plugin_instance
+
+In the example above, 3 redis instances on the same host listen on different ports and `Instance` is used to supply a static value for the dimension `plugin_instance`. If `Instance` was not specified, the value of `plugin_instance` reported by collectd would contain the combination of `Host` and `Port` as follows:
 
 ```
 "plugin_instance" => "127.0.0.1:9100",
 "plugin_instance" => "127.0.0.1:9101",
 "plugin_instance" => "127.0.0.1:9102",
 ```
-
-These values will be part of the metric name emitted by collectd, e.g. `collectd.redis_info.127.0.0.1:9100.bytes.used_memory`
-
-If you want to set a static value for the plugin instance, use the ```Instance``` configuration option:
-
-```
-...
-  <Module redis_info>
-    Host "127.0.0.1"
-    Port 9102
-    Instance "redis-prod"
-  </Module>
-...
-```
-
-This will result in metric names like: `collectd.redis_info.redis-prod.bytes.used_memory`
-
-`Instance` can be empty, in this case the name of the metric will not contain any reference to the host/port. If it is omitted, the host:port value is added to the metric name.
-
-### Multiple Data source types
-You can send multiple data source types from same key by specifying it in the Module:
-
-```
-...
-  <Module redis_info>
-    Host "localhost"
-    Port 6379
-
-    Redis_total_net_input_bytes "bytes"
-    Redis_total_net_output_bytes "bytes"
-    Redis_total_net_input_bytes "derive"
-    Redis_total_net_output_bytes "derive"
-  </Module>
-...
-```
-
 ### USAGE
 
 Sample of pre-built dashboard in SignalFx:

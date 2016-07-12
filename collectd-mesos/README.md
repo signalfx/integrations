@@ -76,7 +76,7 @@ Using the example configuration files [`10-mesos-master.conf`](././10-mesos-mast
 
 ### USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](./Page_Mesos.json).
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
 
 #### Monitoring Mesos clusters
 
