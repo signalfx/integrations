@@ -105,4 +105,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-rabbitmq/blob/master/LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

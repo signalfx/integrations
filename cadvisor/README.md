@@ -53,4 +53,4 @@ You can clone and build the tool yourself, but the easiest way to install is to 
 
 ### LICENSE
 
-This tool is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/cadvisor-integration/blob/master/LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

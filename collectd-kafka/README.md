@@ -170,4 +170,4 @@ Documentation of the metrics and dimensions emitted by this plugin, segmented by
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-kafka/blob/master/LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

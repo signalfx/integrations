@@ -129,4 +129,4 @@ Replace `HTTP_PROXY` and `HTTPS_PROXY` with the hostname of the HTTP proxy to be
 
 ### LICENSE
 
-The SignalFx collectd agent is released under the Apache 2.0 license. See LICENSE for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

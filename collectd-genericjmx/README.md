@@ -127,4 +127,4 @@ Sample of pre-built dashboard in SignalFx:
 
 ### LICENSE
 
-This plugin is released under the MIT license. See [header in plugin](https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

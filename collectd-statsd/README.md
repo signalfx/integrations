@@ -115,4 +115,4 @@ SignalFx's default configuration for this plugin sets all `Delete[Type]s` config
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/statsd.c).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -61,4 +61,4 @@ The metrics for the Java collectd plugin will depend on what is generated and pa
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/java.c)
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

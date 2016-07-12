@@ -117,4 +117,4 @@ This plugin will not emit metrics about features that are not used. For example,
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/mysql.c).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

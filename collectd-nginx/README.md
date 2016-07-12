@@ -108,4 +108,4 @@ For metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/nginx.c).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
