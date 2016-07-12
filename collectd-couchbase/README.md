@@ -53,33 +53,18 @@ collects statistics from Couchbase.
 | collectd  |  4.9 or later  |
 | python | 2.7 or later |
 | couchbase | 3.0 or later |
+| Python plugin for collectd | (match with collectd version) |
 
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
+1. Download the [Python module for Couchbase](https://github.com/signalfx/collectd-couchbase).
 
-  **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin to `/etc/collectd/managed_config`.
 
-  Run the following command to install the Python plugin for collectd:
+1. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
-        yum install collectd-python
-
-  **Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8**:
-
-  This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
-2. Download the [Python module for Couchbase](https://github.com/signalfx/collectd-couchbase).
-
-3. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin.
-
-4. Modify the sample configuration file as described in [Configuration](#configuration), below.
-
-5. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
-
-        Include "/path/to/10-couchbase.conf"
-
-6. Restart collectd.
+1. Restart collectd.
 
 ### CONFIGURATION
 

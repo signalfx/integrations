@@ -61,37 +61,28 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 | Python    |  2.4 or later  |
 | MongoDB   |  2.4 or later  |
 | PyMongo   |  3.0 or later  |
+| Python plugin for collectd | (match with collectd version) |
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
+1. Install `pip` and `pymongo`.
 
- **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
-
- Run the following commands to install the Python plugin for collectd, `pip`, and `pymongo`:
+ **RHEL/CentOS and Amazon Linux**
 
         yum install -y epel-release
         yum install -y python-pip
-        yum install -y collectd-python
         pip install pymongo==3.0.3
 
- **Ubuntu 12.04, 14.04, 15.04 and Debian 7 & 8:**
-
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
- Run the following commands to install `pip` and `pymongo`:
+ **Ubuntu and Debian:**
 
         apt-get install -y python-pip python-dev build-essential
         pip install pymongo==3.0.3
 
 1. Download the [Python module for MongoDB](https://github.com/signalfx/collectd-mongodb).  
 
-1. Download SignalFx's [sample configuration file ](././10-mongodb.conf) for this plugin.
+1. Download SignalFx's [sample configuration file ](././10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
 
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
-
-1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
-
-        include '/path/to/10-mongodb.conf'
 
 1. Restart collectd.
 

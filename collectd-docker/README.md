@@ -43,59 +43,40 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd) plugin coll
 
 | Software | Version      |
 |----------|--------------|
-| collectd | 5.x or later |
+| collectd | 5.0 or later |
 | Python   | 2.6 or later |
 | Docker   | 1.5 or later |
+| Python plugin for collectd | (match with collectd version) |
+
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install the Python plugin for collectd:
-
-         yum install collectd-python
-
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
-1. Download the Python module from the following URL:
+1. Download the Python module for Docker from the following URL:
 
  https://github.com/signalfx/docker-collectd-plugin
 
 1. Run the following command to install the module’s dependencies using pip, replacing the example path with the location of the module you downloaded in step 2:
 
-         pip install -r /path/to/docker-collectd-plugin/requirements.txt
+ ```
+ pip install -r /path/to/docker-collectd-plugin/requirements.txt
+ ```
 
+ **On Amazon Linux**: Run the following commands instead (click here for details):
 
- *Note*: Amazon Linux users must install a version of pip that will correctly install this module's dependencies. If you're installing this plugin on an Amazon Linux system, run the following commands instead:
+  ```
+  yum install python26-pip
+  pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
+  ```
 
-         yum install python26-pip
-         pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf) for this plugin to `/etc/collectd/managed_config`.
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf).
-
-1. Modify the configuration file as follows:
-
- 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
-
- 1. Provide values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
-
-         include '/path/to/10-docker.conf'
+1. Modify the configuration file to provide values that make sense for your environment, as described [below](#configuration).
 
 1. Restart collectd.
 
-collectd will begin emitting metrics from Docker.
-
 ### CONFIGURATION
 
-#### Optional configuration
-
-The following configuration options are *optional*. You may specify them in the configuration file in order to override default values provided by the plugin.
+Using the example configuration file [`10-docker.conf`](././10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

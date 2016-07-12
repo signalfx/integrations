@@ -5,7 +5,7 @@ brief: Memcached metrics for collectd.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached Plugin
 
-_This is a directory consolidate all the metadata associated with the Memcached collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c)_
+_This is a directory that consolidates all the metadata associated with the Memcached plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,16 +17,14 @@ _This is a directory consolidate all the metadata associated with the Memcached 
 
 ### DESCRIPTION
 
-This is the SignalFx Memcached plugin. It will send data about Memcached to SignalFx, enabling built-in Memcached monitoring dashboards.
-
-Use this plugin to monitor the following types of information from a Memcached node:
+Use the Memcached plugin for collectd to monitor the following types of information from a Memcached node:
 
 * request information (including hits, misses & evictions)
 * current connections
 * net input/output bytes
 * number of items cached
 
-Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewStart
+Documentation for Memcached can be found here: https://code.google.com/p/memcached/wiki/NewStart
 
 #### FEATURES
 
@@ -51,36 +49,26 @@ Original Memcached Documentation https://code.google.com/p/memcached/wiki/NewSta
 
 ### INSTALLATION
 
-1. Install the collectd plugin.
-
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install this plugin:
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
          yum install collectd-memcached
+         
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
+   
+1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf) to `/etc/collectd/managed_config`.
 
-1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf)
-
- Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
-
-         include '/path/to/10-memcached.conf'
+1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
 1. Restart collectd.
 
-Metrics from memcached will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
-
-
 ### CONFIGURATION
 
-* Make sure ServiceURL points to your jmx app.
-* Modify the "Host" parameter to what you want your source name to be.
-* Please leave the identifier [hostHasService=memcached] in the hostname.
+Using the example configuration file [`10-memcached.conf`](././10-memcached.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Memcached instance to be monitored.
+
+| configuration option | definition | example value |
+| ---------------------|------------|---------------|
+| Host | Hostname at which collectd can connect to Memcached. | 127.0.0.1 |
+| Port | Port at which collectd can connect to Memcached. | 11211 |
 
 ### USAGE
 

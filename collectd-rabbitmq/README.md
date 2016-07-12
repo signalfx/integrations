@@ -40,41 +40,18 @@ This plugin requires:
 | collectd | 4.9+ |
 | Python plugin for collectd | (match with collectd version) |
 | Python |  2.6+  |
-|RabbitMQ | 3.0+ |
-|RabbitMQ Management plugin | (match with RabbitMQ version)|
+| RabbitMQ | 3.0+ |
+| RabbitMQ Management plugin | (match with RabbitMQ version)|
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
-
- **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
-
- Run the following command to install the Python plugin for collectd:
-
-         yum install collectd-python
-
-
- **Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:**
-
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
 1. Download the [RabbitMQ Python module]( https://github.com/signalfx/collectd-rabbitmq/)
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file as follows:
-
- 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
-
- 1. Provide values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
-
-         include '/path/to/10-rabbitmq.conf'
+1. Modify the configuration file as described in [Configuration](#configuration) below.
 
 1. Restart collectd.
-
-collectd will begin emitting metrics from RabbitMQ.
 
 ### CONFIGURATION
 
@@ -84,7 +61,7 @@ collectd will begin emitting metrics from RabbitMQ.
 |----------------------|------|------------|
 | Username | username| name of authorized user |
 | Password | password| password for authorized user|
-|Host | host| name of host |
+| Host | host| name of host |
 |Port| number | port number to listen for RabbitMQ |
 
 #### OPTIONAL Configuration

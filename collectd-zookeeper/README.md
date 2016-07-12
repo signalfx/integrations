@@ -40,7 +40,7 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd          | 4.9+    |
-| Python collectd plugin | (included with SignalFx collectd) |
+| Python plugin for collectd | (included with SignalFx collectd) |
 | Python            | 2.6+     |
 | Zookeeper         | 3.4.0+   |
 
@@ -51,46 +51,25 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install the Python plugin for collectd:
-
-         yum install collectd-python
-
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
-
-1. Download the Python module from the following URL:
+1. Download the module from the following URL:
 
  https://github.com/signalfx/collectd-zookeeper
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file as follows:
-
- 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
-
- 1. Provide values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
-
-        include '/path/to/20-zookeeper.conf'
+1. Modify the configuration file as described in [Configuration](#configuration) below.
 
 1. Restart collectd.
 
-collectd will begin emitting metrics from Zookeeper.
-
 ### CONFIGURATION
+
+Using the example configuration file [`20-zookeeper.conf`](././20-zookeeper.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Zookeeper instance to be monitored.
 
 | Setting            | Description     | Default|
 |--------------------|-----------------|-----------|
-|Hosts | host name where Zookeeper is running| `"localhost"`|
+|Hosts | Hostname where Zookeeper is running | `"localhost"`|
 |Port| port number for Zookeeper  | `2181`|
 |Instance | Specify a cluster name | none (commented out)|
-
 
 ### USAGE
 

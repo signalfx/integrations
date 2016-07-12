@@ -56,39 +56,15 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install the Python plugin for collectd:
-
-         yum install collectd-python
-
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
-
 1. Download the Python module from the following URL:
 
  https://github.com/signalfx/redis-collectd-plugin
 
-1. SignalFx provides sample configuration files for both a Redis master and a Redis slave. Download SignalFx's sample configuration files for this module from the following URLs:
-  - [MASTER](https://github.com/signalfx/integrations/blob/master/collectd-redis/10-redis_master.conf)
-  - [SLAVE](https://github.com/signalfx/integrations/blob/master/collectd-redis/10-redis_slave.conf)
+1. Download SignalFx's sample configuration files for a [Redis master](././10-redis_master.conf) or [Redis slave](././10-redis_slave.conf) to `/etc/collectd/managed_config`. 
 
-1. Modify the configuration file(s) as follows:
-
- 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
-
- 1. Provide values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
-
-         include '/path/to/10-redis_(master or slave).conf'
+1. Modify the sample configuration file as described in  [Configuration](#configuration), below.
 
 1. Restart collectd.
-
-collectd will begin emitting metrics to SignalFx.
 
 ### CONFIGURATION
 

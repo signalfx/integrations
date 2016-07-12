@@ -58,44 +58,25 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 |-------------------|----------------|
 | collectd          | 4.9 or later   |
 | Elasticsearch     | 1.0.0 or later |
+| Python plugin for collectd | (match with collectd version) |
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install the Python plugin for collectd:
-
-         yum install collectd-python
-
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
-
-1. Download the Python module from the following URL:
+1. Download the module from the following URL:
 
  https://github.com/signalfx/collectd-elasticsearch
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file as follows:
-
- 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
-
- 1. Provide values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
-
-         include '/path/to/20-elasticsearch.conf'
+1. Modify the configuration file to provide values that make sense for your environment, as described [below](#configuration).
 
 1. Restart collectd.
 
-collectd will begin emitting metrics from Elasticsearch.
-
 ### CONFIGURATION
 
-Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored. The plugin is intended to be run on a per-node basis, so you should utilize only one "Module" element definition in the 20-elasticsearch.conf configuration file.
+Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored. 
+
+The plugin is intended to be run on a per-node basis, so you should utilize only one "Module" element definition per `20-elasticsearch.conf` configuration file.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

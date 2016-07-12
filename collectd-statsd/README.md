@@ -37,26 +37,17 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Install the collectd plugin.
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
- Run the following command to install this plugin:
- ```
- yum install collectd-statsd
- ```
-1. Download SignalFx's [sample statsd configuration file](https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf)
+         yum install collectd-statsd
+         
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
 
-  Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+1. Download SignalFx's [sample StatsD configuration file](https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf) to `/etc/collectd/managed_config`.
 
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
-```
-include '/path/to/10-statsd.conf'
-```
 1. Restart collectd.
 
-collectd will now listen for metrics from StatsD on the configured port.
+collectd will now listen for metrics from StatsD on the configured port and forward the aggregated metrics to SignalFx.
 
 #### Verifying installation
 

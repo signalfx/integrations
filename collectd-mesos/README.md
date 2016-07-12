@@ -51,28 +51,14 @@ This plugin requires:
 
 ### INSTALLATION
 
-Follow these steps to install this plugin:
+1. Download the Python module for Mesos from the following URL:
+  https://github.com/signalfx/collectd-mesos
+  
+1. Download SignalFx's sample configuration files for a [Mesos master](././10-mesos-master.conf) or [Mesos slave](././10-mesos-slave.conf) to `/etc/collectd/managed_config`.
 
-1. Install the Python plugin for collectd.
+1. Modify the configuration file to contain values that make sense for your environment, as described [below](#configuration).
 
- **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
-
- Run the following commands to install the Python plugin for collectd:
-
-         yum install collectd-python
-
- **Ubuntu 12.04, 14.04, 15.04 and Debian 7 & 8:**
-
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
-
-1. Download the [Python module for Mesos](https://github.com/signalfx/collectd-mesos).
-1. Download SignalFx's sample configuration files for this plugin: for [Mesos masters](././10-mesos-master.conf), and [Mesos slaves](././10-mesos-slave.conf).
-3. Modify the appropriate sample configuration file to contain values that make sense for your environment, as described [below](#configuration).
-4. Add the following line to collectd.conf, replacing the path with the path to the sample configuration file you downloaded in step 2:
-
-         include '/path/to/10-mesos-[slave/master].conf'
-
-5. Restart collectd.
+1. Restart collectd.
 
 ### CONFIGURATION
 
