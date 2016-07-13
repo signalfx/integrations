@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: "cadvisor-signalfx"
+spec:
+  replicas: 1
+  selector:
+    app: "cadvisor-signalfx"
+  template:
+    metadata:
+      name: "cadvisor-signalfx"
+      labels:
+        app: "cadvisor-signalfx"
+    spec:
+      containers:
+      - name: "cadvisor-signalfx"
+        image: "quay.io/signalfx/cadvisor-integration:latest"
+        env:
+        - name: SFX_SCRAPPER_API_TOKEN
+          value: <API TOKEN>
+        - name: SFX_SCRAPPER_CLUSTER_NAME
+          value: <CLUSTER NAME>
+        - name: SFX_SCRAPPER_SEND_RATE
+          value: 5s
