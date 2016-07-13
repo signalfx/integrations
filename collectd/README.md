@@ -36,7 +36,7 @@ The SignalFx collectd agent is supported on the following operating systems:
 | Debian  | 7 & 8 |
 | Mac OS X | 10.8+ |
 | RHEL/Centos | 6.x & 7.x |
-| Ubuntu  | 12.04, 14.04 & 15.04 |
+| Ubuntu  | 12.04, 14.04, 15.04 & 16.04 |
 
 ### FEATURES
 
