@@ -1,5 +1,5 @@
-{ "display_name":"Memory collectd plugin",
-  "description": "The Memory plugin collects physical memory utilization.",
+{ "display_name":"Memory",
+  "description": "The Memory plugin for collectd monitors physical memory utilization.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-memory",
   "code": "https://github.com/signalfx/collectd/blob/master/src/memory.c",
   "featured": false,

@@ -1,9 +1,4 @@
----
-title: Amazon ElastiCache
-brief: SignalFx's integration with Amazon ElastiCache
----
-
-# Amazon ElastiCache
+# ![](./img/integration_awselasticache.png) Amazon ElastiCache
 
 - [Description](#description)
 - [Installation](#installation)

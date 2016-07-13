@@ -1,9 +1,4 @@
----
-title: AWS OpsWorks
-brief: SignalFx's integration with AWS OpsWorks
----
-
-# AWS OpsWorks
+# ![](./img/integration_awsopsworks.png) AWS OpsWorks
 
 - [Description](#description)
 - [Installation](#installation)

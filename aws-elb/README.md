@@ -1,9 +1,4 @@
----
-title: Amazon ELB
-brief: SignalFx's integration with Elastic Load Balancing (ELB)
----
-
-# Elastic Load Balancing (ELB)
+# ![](./img/integration_awselb.png) Elastic Load Balancing (ELB)
 
 - [Description](#description)
 - [Installation](#installation)

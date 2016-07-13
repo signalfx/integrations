@@ -1,11 +1,6 @@
----
-title: Java collectd Plugin
-brief: Java plugin for collectd.
----
+#![](https://github.com/signalfx/integrations/blob/master/collectd-java/img/integrations_java.png) Java
 
-#![](https://github.com/signalfx/integrations/blob/master/collectd-java/img/integrations_java.png) Java collectd Plugin
-
-_This directory consolidates all the metadata associated with the Java collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
+_This directory consolidates all the metadata associated with the Java plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

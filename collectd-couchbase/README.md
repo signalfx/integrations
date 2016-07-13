@@ -1,11 +1,6 @@
----
-title: collectd Couchbase Plugin
-brief: Couchbase metrics for collectd.
----
+#![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase
 
-#![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase Plugin
-
-_This is a directory that consolidates all the metadata associated with the Couchbase collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase)_
+_This is a directory that consolidates all the metadata associated with SignalFx's Couchbase integration. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

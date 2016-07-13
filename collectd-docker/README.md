@@ -1,11 +1,6 @@
----
-title: collectd Docker Plugin
-brief: Docker metrics for collectd.
----
+#![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker
 
-#![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker Plugin
-
-_This is a directory that consolidates all the metadata associated with the Docker collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin)_
+_This directory consolidates all the metadata associated with the Docker plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -1,0 +1,9 @@
+{ "display_name":"Amazon ECS",
+  "description": "SignalFx's integration with Amazon EC2 Container Service (ECS).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-ecs",
+  "code": "https://aws.amazon.com/ecs/",
+  "featured": false,
+  "logo_large": "integration_awsecs.png",
+  "logo_small": "integration_awsecs.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

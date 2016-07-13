@@ -1,8 +1,3 @@
----
-title: Heka Integration
-brief: Heka Integration for SignalFx.
----
-
 # ![](https://github.com/signalfx/integrations/blob/master/heka-filter-signalfx/img/integrations_heka.png) Heka Filter for SignalFx
 
 _This is a directory consolidate all the metadata associated with the Heka filter integration. The relevant code for the integration can be found [here](https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua)_

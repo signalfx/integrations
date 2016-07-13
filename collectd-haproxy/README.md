@@ -1,11 +1,6 @@
----
-title: HaProxy Metrics
-brief: Metrics collected from HaProxy 1.5 or above
----
+# HAProxy
 
-# HAProxy collectd Plugin   
-
-_This is a directory consolidate all the metadata associated with the HAProxy collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy)_
+_This directory consolidates all the metadata associated with the HAProxy collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

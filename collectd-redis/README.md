@@ -1,9 +1,4 @@
----
-title: Redis collectd Plugin
-brief: Redis plugin for collectd.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-redis/img/integrations_redis.png) Redis collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-redis/img/integrations_redis.png) Redis
 
 _This is a directory that consolidates all the metadata associated with the Redis collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/redis-collectd-plugin)_
 

@@ -1,0 +1,9 @@
+{ "display_name":"Amazon Route 53",
+  "description": "SignalFx's integration with Amazon Route 53.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-route53",
+  "code": "https://aws.amazon.com/route53/",
+  "featured": false,
+  "logo_large": "integration_awsroute53.png",
+  "logo_small": "integration_awsroute53.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

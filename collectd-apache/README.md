@@ -1,9 +1,4 @@
----
-title: collectd Apache Webserver Plugin
-brief: Apache Webserver metrics for collectd.
----
-
-#![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache collectd Plugin
+#![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache
 
 _This is a directory that consolidates all the metadata associated with the Apache collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c)_
 

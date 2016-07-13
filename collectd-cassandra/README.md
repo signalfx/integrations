@@ -1,11 +1,6 @@
----
-title: collectd Cassandra Plugin
-brief: Cassandra metrics for collectd
----
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png) Cassandra
 
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png) Cassandra collectd Plugin
-
- _This is a directory consolidate all the metadata associated with the Cassandra collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
+ _This directory consolidates all the metadata associated with SignalFx's Cassandra integration with collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

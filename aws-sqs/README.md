@@ -1,9 +1,4 @@
----
-title: Amazon SQS
-brief: SignalFx's integration with Amazon Simple Queue Service (SQS)
----
-
-# Amazon Simple Queue Service (SQS)
+# ![](./img/integration_awssqs.png) Amazon Simple Queue Service (SQS)
 
 - [Description](#description)
 - [Installation](#installation)

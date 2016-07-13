@@ -1,5 +1,5 @@
-{ "display_name":"Metricproxy",
-  "description": "SignalFx Metricproxy",
+{ "display_name":"SignalFx metric proxy",
+  "description": "Aggregate metrics from collectd or Graphite (carbon) and forward them to SignalFx.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/metricproxy",
   "code": "https://github.com/signalfx/metricproxy",
   "featured": false,

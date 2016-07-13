@@ -1,9 +1,4 @@
----
-title: Amazon SNS
-brief: SignalFx's integration with Amazon Simple Notification Service (SNS)
----
-
-# Amazon Simple Notification Service (SNS)
+# ![](./img/integration_awssns.png) Amazon Simple Notification Service (SNS)
 
 - [Description](#description)
 - [Installation](#installation)

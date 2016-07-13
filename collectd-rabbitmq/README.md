@@ -1,9 +1,4 @@
----
-title: RabbitMQ collectd Plugin
-brief: RabbitMQ plugin for collectd.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png) RabbitMQ collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png) RabbitMQ
 
 _This is a directory that consolidates all the metadata associated with the RabbitMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-rabbitmq)_
 

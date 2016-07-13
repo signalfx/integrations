@@ -1,5 +1,5 @@
 { "display_name":"SignalFx Python Library",
-  "description": "Python Library for SignalFx",
+  "description": "Programmatic interface in Python for SignalFx APIs.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-python",
   "code": "https://github.com/signalfx/signalfx-python",
   "featured": false,

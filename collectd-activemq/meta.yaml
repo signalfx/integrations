@@ -1,5 +1,5 @@
-{ "display_name":"ActiveMQ collectd plugin",
-  "description": "ActiveMQ collectd plugin",
+{ "display_name":"ActiveMQ",
+  "description": "Monitor ActiveMQ using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-activemq",
   "code": "https://github.com/signalfx/activemq-integration",
   "featured": true,

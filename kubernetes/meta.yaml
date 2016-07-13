@@ -1,9 +1,9 @@
-{ "display_name":"cAdvisor Metrics plugin",
-  "description": "cAdvisor metrics plugin",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/cadvisor",
+{ "display_name":"Kubernetes",
+  "description": "Monitor Kubernetes using SignalFx's integration with cAdvisor and the Kubernetes API.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/kubernetes",
   "code": "https://github.com/signalfx/cadvisor-integration",
   "featured": false,
-  "logo_large": "/images/repos/cadvisor/img/integrations_kubernetes%402x.png",
-  "logo_small": "/images/repos/cadvisor/img/integrations_kubernetes.png",
+  "logo_large": "/images/repos/kubernetes/img/integrations_kubernetes%402x.png",
+  "logo_small": "/images/repos/kubernetes/img/integrations_kubernetes.png",
   "in_app_categories": ["servicesMonitored"]
 }

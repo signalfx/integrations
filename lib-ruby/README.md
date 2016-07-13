@@ -1,9 +1,3 @@
----
-title: Ruby client library
-brief: Programmatic interface in Ruby for SignalFx's metadata and ingest APIs
----
-
-
 # Ruby client library for SignalFx
 
 

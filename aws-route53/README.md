@@ -1,9 +1,4 @@
----
-title: Amazon Route 53
-brief: SignalFx's integration with Amazon Route 53
----
-
-# Amazon Route 53
+# ![](./img/integration_awsroute53.png) Amazon Route 53
 
 - [Description](#description)
 - [Installation](#installation)

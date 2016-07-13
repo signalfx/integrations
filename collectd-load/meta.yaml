@@ -1,5 +1,5 @@
-{ "display_name":"Load collectd plugin",
-  "description": "Load collectd plugin",
+{ "display_name":"Load",
+  "description": "Monitor system load with the Load collectd plugin",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-load",
   "code": "https://github.com/signalfx/collectd/blob/master/src/load.c",
   "featured": false,

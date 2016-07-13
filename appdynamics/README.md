@@ -1,9 +1,4 @@
----
-title: AppDynamics Integration
-brief: For sending AppDynamics metrics to SignalFx.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics Integration   
+# ![](https://github.com/signalfx/integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics   
 
 _This is a directory to consolidate all the metadata associated with the AppDynamics Integration. The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration)_
 

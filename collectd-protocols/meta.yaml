@@ -1,5 +1,5 @@
-{ "display_name":"Protocols collectd plugin",
-  "description": "The Protocols plugin collects information about the network protocols supported by the system, for example Internet Protocol (IP) and Transmission Control Protocol (TCP).",
+{ "display_name":"Protocols",
+  "description": "The Protocols plugin collects information about the network protocols supported by the system, like IP and TCP.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-protocols",
   "code": "https://github.com/signalfx/collectd/blob/master/src/protocols.c",
   "featured": false,

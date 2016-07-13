@@ -1,5 +1,5 @@
-{ "display_name":"MongoDB collectd plugin",
-  "description": "MongoDB collectd plugin",
+{ "display_name":"MongoDB",
+  "description": "Monitor MongoDB using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/collectd-mongodb",
   "code": "https://github.com/signalfx/collectd-mongodb",
   "featured": true,

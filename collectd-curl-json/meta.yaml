@@ -1,5 +1,5 @@
 { "display_name":"cURL-JSON collectd plugin",
-  "description": "collectd plugin to gather metrics through cURL in JSON format ",
+  "description": "collectd plugin to gather metrics through cURL in JSON format",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-curl-json",
   "code": "https://github.com/signalfx/collectd/blob/master/src/curl_json.c",
   "featured": false,

@@ -1,0 +1,9 @@
+{ "display_name":"Amazon EBS",
+  "description": "SignalFx's integration with Amazon Elastic Block Store (EBS).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-ebs",
+  "code": "https://aws.amazon.com/ebs/",
+  "featured": false,
+  "logo_large": "integration_awsebs.png",
+  "logo_small": "integration_awsebs.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

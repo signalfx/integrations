@@ -1,11 +1,6 @@
----
-title: collectd disk Plugin
-brief: Disk metrics for collectd.
----
+#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Disk
 
-#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Disk collectd Plugin  
-
-_This is a directory consolidate all the metadata associated with the Disk collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/disk.c)_
+_This directory consolidates all the metadata associated with the Disk collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/disk.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

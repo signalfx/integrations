@@ -1,9 +1,4 @@
----
-title: Amazon EBS
-brief: SignalFx's integration with Amazon Elastic Block Store (EBS)
----
-
-# Amazon Elastic Block Store (EBS)
+# ![](./img/integration_awsebs.png) Amazon Elastic Block Store (EBS)
 
 - [Description](#description)
 - [Installation](#installation)

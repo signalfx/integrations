@@ -1,9 +1,4 @@
----
-title: Amazon CloudFront
-brief: SignalFx's integration with Amazon CloudFront
----
-
-# Amazon CloudFront
+# ![](./img/integration_awscloudfront.png) Amazon CloudFront
 
 - [Description](#description)
 - [Installation](#installation)

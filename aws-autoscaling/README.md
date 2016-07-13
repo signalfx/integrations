@@ -1,9 +1,4 @@
----
-title: AWS Auto Scaling
-brief: SignalFx's integration with AWS Auto Scaling
----
-
-# AWS Auto Scaling
+# ![](./img/integration_awsautoscaling.png)  AWS Auto Scaling
 
 - [Description](#description)
 - [Installation](#installation)

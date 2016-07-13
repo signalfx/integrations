@@ -1,5 +1,5 @@
-{ "display_name":"Redis collectd plugin",
-  "description": "Redis collectd plugin",
+{ "display_name":"Redis",
+  "description": "Monitor Redis using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-redis",
   "code": "https://github.com/signalfx/collectd/blob/master/src/redis.c",
   "featured": false,

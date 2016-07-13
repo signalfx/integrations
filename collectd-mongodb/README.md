@@ -1,9 +1,4 @@
----
-title: collectd MongoDB Plugin
-brief: Use the collectd-mongodb plugin to collect metrics from MongoDB nodes.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB
 
 _This directory consolidates all the metadata associated with the MongoDB collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-mongodb)_
 

@@ -1,9 +1,4 @@
----
-title: PerfCounter Reporter Integration
-brief: The SignalFx Integration for Windows Performance Counter Reporter.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/win-perfcounter/img/integrations_windows.png) Metrics.NET Integration
+# ![](https://github.com/signalfx/integrations/blob/master/win-perfcounter/img/integrations_windows.png) PerfCounterReporter
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -13,7 +8,7 @@ brief: The SignalFx Integration for Windows Performance Counter Reporter.
 
 ### DESCRIPTION
 
-Windows service for reporting Windows Performance Counters to SignalFx
+PerfCounterReporter is a Windows service for reporting Windows Performance Counters to SignalFx.
 
 This code is based on/inspired by [PerfTap](https://github.com/Iristyle/PerfTap) as a means of sending performance data to a monitoring system.
 

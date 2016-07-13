@@ -1,9 +1,4 @@
----
-title: Memcached collectd Plugin
-brief: Memcached metrics for collectd.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached
 
 _This is a directory that consolidates all the metadata associated with the Memcached plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c)_
 
@@ -24,7 +19,7 @@ Use the Memcached plugin for collectd to monitor the following types of informat
 * net input/output bytes
 * number of items cached
 
-Documentation for Memcached can be found here: https://code.google.com/p/memcached/wiki/NewStart
+Documentation for Memcached can be found here: https://github.com/memcached/memcached/wiki
 
 #### FEATURES
 

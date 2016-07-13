@@ -1,0 +1,9 @@
+{ "display_name":"AWS Auto Scaling",
+  "description": "SignalFx's integration with AWS Auto Scaling.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-autoscaling",
+  "code": "https://aws.amazon.com/autoscaling/",
+  "featured": false,
+  "logo_large": "integration_awsautoscaling.png",
+  "logo_small": "integration_awsautoscaling.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

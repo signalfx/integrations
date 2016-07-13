@@ -1,5 +1,5 @@
-{ "display_name":"Perfcounter Reporter",
-  "description": "SignalFx Integration for Windows Perfcounter",
+{ "display_name":"PerfCounterReporter",
+  "description": "Monitor Windows infrastructure metrics.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/win-perfcounter",
   "code": "https://github.com/signalfx/PerfCounterReporter",
   "featured": false,

@@ -1,5 +1,5 @@
-{ "display_name":"Docker collectd plugin",
-  "description": "Docker collectd plugin",
+{ "display_name":"Docker",
+  "description": "Monitor Docker using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-docker",
   "code": "https://github.com/signalfx/docker-collectd-plugin",
   "featured": true,

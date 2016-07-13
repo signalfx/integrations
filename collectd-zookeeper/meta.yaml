@@ -1,5 +1,5 @@
-{ "display_name":"ZooKeeper collectd plugin",
-  "description": "ZooKeeper collectd plugin",
+{ "display_name":"ZooKeeper",
+  "description": "Monitor ZooKeeper using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-zookeeper",
   "code": "https://github.com/signalfx/collectd/blob/master/src/zookeeper.c",
   "featured": false,

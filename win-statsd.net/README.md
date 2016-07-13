@@ -1,9 +1,4 @@
----
-title: StatsD.NET Integration
-brief: The SignalFx Integration for Windows StatsD.NET.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/win-statsd.net/img/integrations_windows.png) SignalFx StatsD.NET Integration
+# ![](https://github.com/signalfx/integrations/blob/master/win-statsd.net/img/integrations_windows.png) StatsD.NET
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -27,8 +22,6 @@ https://github.com/signalfx/statsd.net/
 | Powershell (required to user the one-line installer) | v2+ |
 
 * Admin rights for installing services (the service is setup to run as NETWORK SERVICE)
-
-Sorry Mono, this is the Win32 only club -- besides, Linux distros already have better tools for this!
 
 ### INSTALLATION
 

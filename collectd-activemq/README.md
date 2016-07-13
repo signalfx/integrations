@@ -1,11 +1,6 @@
----
-title: collectd ActiveMQ Plugin
-brief: ActiveMQ metrics for collectd.
----
+#![](https://github.com/signalfx/integrations/blob/master/collectd-activemq/img/integrations_activemq.png) ActiveMQ
 
-#![](https://github.com/signalfx/integrations/blob/master/collectd-activemq/img/integrations_activemq.png) ActiveMQ collectd Plugin   
-
-_This is a directory that consolidates all the metadata associated with the ActiveMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
+_This is a directory that consolidates all the metadata associated with SignalFx's integration with ActiveMQ. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,7 +12,7 @@ _This is a directory that consolidates all the metadata associated with the Acti
 
 ### DESCRIPTION
 
-This is the SignalFx ActiveMQ plugin. Follow these instructions to configure the Java plugin for collectd to monitor ActiveMQ. This will send data about ActiveMQ to SignalFx, enabling built-in ActiveMQ monitoring dashboards.
+SignalFx's integration with ActiveMQ configures the Java plugin for collectd to monitor ActiveMQ.
 
 Use this plugin to monitor the following types of information from ActiveMQ:
 

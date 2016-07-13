@@ -1,11 +1,6 @@
----
-title: SignalFx Plugin
-brief: SignalFx plugin to configure write-http to send metrics from collectd.
----
+# SignalFx plugin for collectd
 
-# SignalFx collectd Plugin
-
-_This is a directory consolidate all the metadata associated with the SignalFx collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-signalfx/)_
+_This directory consolidates all the metadata associated with the SignalFx plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-signalfx/)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,7 +12,7 @@ _This is a directory consolidate all the metadata associated with the SignalFx c
 
 ### DESCRIPTION
 
-This SignalFx metadata plugin for collectd configures collectd to aggregate metrics and send then to SignalFx. This plugin also handles the association to a specific SignalFx org to the data that is being sent through the org's API token.
+This SignalFx plugin for collectd configures collectd to aggregate metrics and send them to SignalFx. This plugin also handles the association to a specific SignalFx org to the data that is being sent through the org's API token.
 
 ### REQUIREMENTS AND DEPENDENCIES
 

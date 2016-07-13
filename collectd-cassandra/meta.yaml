@@ -1,5 +1,5 @@
-{ "display_name":"Cassandra collectd plugin",
-  "description": "Cassandra collectd plugin",
+{ "display_name":"Cassandra",
+  "description": "Monitor Cassandra using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-cassandra",
   "code": "https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
   "featured": true,

@@ -1,5 +1,5 @@
 { "display_name":"SignalFx Ruby Library",
-  "description": "Ruby Library for SignalFx",
+  "description": "Programmatic interface in Ruby for SignalFx APIs.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-ruby",
   "code": "https://github.com/signalfx/signalfx-ruby",
   "featured": false,

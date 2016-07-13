@@ -1,0 +1,9 @@
+{ "display_name":"AWS CloudFront",
+  "description": "SignalFx's integration with AWS CloudFront.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-cloudfront",
+  "code": "https://aws.amazon.com/cloudfront/",
+  "featured": false,
+  "logo_large": "integration_awscloudfront.png",
+  "logo_small": "integration_awscloudfront.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},
