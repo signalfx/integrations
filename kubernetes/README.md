@@ -61,22 +61,21 @@ This integration runs as a pod within the Kubernetes cluster. SignalFx provides 
 
 ### CONFIGURATION
 
-Using the example [cadvisor-signalfx.yaml](./cadvisor-signalfx.yaml) as a guide, provide values for the parameters below that make sense for your environment. 
+Using the example [cadvisor-signalfx.yaml](./cadvisor-signalfx.yaml) as a guide, provide values for the parameters below that make sense for your environment. Each of the following configuration options sets an environment variable with that name. 
 
 **Note**: The example deployment file specifies using a replication controller to ensure at most 1 cadvisor-integration pod to oversee the entire cluster. 
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
-| `SFX_SCRAPPER_API_TOKEN` | Your SignalFx API token. To avoid storing this value in a file you can also pass it in environment variables as noted below. | MY_API_TOKEN |
-| `SFX_SCRAPPER_CLUSTER_NAME` | The name of the cluster to be monitored. Appears in SignalFx as the dimension `cluster`. | my_cluster |
-
-#### Passing configuration in command-line flags
-
-Many configuration values can be passed to the pod by command-line flags and environment variables, including your SignalFx API token. For a complete list of command-line parameters available for deploying the service, see the [main project's documentation](https://github.com/signalfx/cadvisor-integration/blob/master/README.md).
+| `SFX_SCRAPPER_API_TOKEN` | Your SignalFx API token. | MY_API_TOKEN |
+| `SFX_SCRAPPER_CLUSTER_NAME` | The name of the cluster to be monitored. Appears in SignalFx as the dimension `cluster`. | my_k8s_cluster |
+| `SFX_SCRAPPER_CADVISOR_PORT` | The port on which the Kubernetes cAdvisor listens.	| 4194 |
+| `SFX_SCRAPPER_SEND_RATE` | The rate at which data is queried from cAdvisor and sent to SignalFx. Possible values: [10s 30s 1m 5m 1h 1s 5s] | "1s" |
+| `SFX_SCRAPPER_NODE_SERVICE_DISCOVERY_RATE` | The rate at which data is queried from cAdvisor and sent to SignalFx. Possible values: [10s 30s 1m 5m 1h 1s 5s] | "5m" |
 
 #### Accessing the Kubernetes API
 
-The default configuration for this integration uses the credentials of the pod to communicate securely with the Kubernetes API server. If your Kubernetes cluster is not configured to accept API access from a pod, then additional configuration is required.  Provide a host and port at which the integration can access the Kubernetes API in the `cadvisor-signalfx.yaml` configuration file, as follows:
+The default configuration for this integration uses the credentials of the pod to communicate securely with the Kubernetes API server. If your Kubernetes cluster is not configured to accept API access from a pod, then additional configuration is required. Provide a host and port at which the integration can access the Kubernetes API in the `cadvisor-signalfx.yaml` configuration file, as follows:
 
 ```
 name:  SFX_SCRAPPER_KUBERNETES_URL
@@ -89,7 +88,7 @@ This integration gathers data about the Kubernetes cluster to which it is deploy
 
 #### Monitoring infrastructure underlying Kubernetes
  
-We support a [Docker image for the SignalFx collectd agent](https://github.com/signalfx/docker-collectd) that you can easily deploy to Kubernetes nodes as a daemon set. Using a daemon set, Kubernetes will ensure that the agent pod is deployed to every new node, and is destroyed when a node is removed. [Click here to read more about daemon sets in Kubernetes](http://kubernetes.io/docs/admin/daemons/). 
+We support a [Docker image for the SignalFx collectd agent](https://github.com/signalfx/docker-collectd) that you can deploy to Kubernetes nodes as a daemon set. Using a daemon set, Kubernetes will ensure that the agent pod is deployed to every new node, and is destroyed when a node is removed. [Click here to read more about daemon sets in Kubernetes](http://kubernetes.io/docs/admin/daemons/). 
 
 #### Monitoring applications running in a Kubernetes cluster
 
