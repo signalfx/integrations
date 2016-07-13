@@ -44,7 +44,7 @@ For values not supplied the following defaults are used. You must supply values 
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|
 | APIToken | Your SignalFx API token. | No default. |
-| SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value. If this is specified then a `SourceValue` parameter must be specified also.) | No default. |
+| SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value specified in a parameter `SourceValue`.) | No default. |
 | DefaultDimensions | A hashtable of default dimensions to pass to SignalFx. | Empty dictionary. |
 | AwsIntegration | If set to "true" then AWS integration will be turned on for SignalFx reporting. | false |
 | SampleInterval | string of how often to send metrics to SignalFx. Supported values look like "5s" (every 5 seconds), or "1m" (every 1 minute). | 5s |
