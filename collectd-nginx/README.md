@@ -16,7 +16,7 @@ _This is a directory that consolidates all the metadata associated with the NGIN
 
 ### DESCRIPTION
 
-Use the NGINX plugin for collectd to send data about NGINX to SignalFx, enabling built-in NGINX monitoring dashboards.
+Use the NGINX plugin for collectd to monitor NGINX webserver performance.
 
 #### FEATURES
 
@@ -40,33 +40,29 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Enable the `stub_status` module in your nginx server as described [below](#configuration).
-
-1. Install the collectd plugin.
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install the collectd plugin:
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
          yum install collectd-nginx
+         
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
+         
+1. Enable the `stub_status` module in your NGINX server as described [below](#configuration).
 
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) to `/etc/collectd/managed_config`.
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf)
-
-1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
-
-        include '/path/to/10-nginx.conf'
+1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below..
 
 1. Restart collectd.
 
 ### CONFIGURATION
 
-#### NGINX service configuration:
+Using the example configuration file [`10-nginx.conf`](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the NGINX instance to be monitored.
+
+| configuration option | definition | default value |
+| ---------------------|------------|---------------|
+| URL | URL at which collectd can access the output of the NGINX status module.  | "http://localhost:80/nginx_status" |
+
+#### NGINX service configuration
 
 From [nginx docs](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html):
 >The `ngx_http_stub_status_module` module provides access to basic status information.
@@ -86,10 +82,6 @@ server accepts handled requests
  16630948 16630948 31070465
 Reading: 6 Writing: 179 Waiting: 106
 ```
-
-#### [nginx collectd configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf)
-
-- Change the URL parameter to the location you setup above.
 
 ### USAGE
 
@@ -112,8 +104,8 @@ The following status information is provided:
 |Waiting|The current number of idle client connections waiting for a request.|
 
 
-Segmented metrics and dimensions emitted by this plugin, [click here](././docs).
+For metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/nginx.c).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

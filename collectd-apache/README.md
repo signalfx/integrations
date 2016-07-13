@@ -44,7 +44,7 @@ This plugin collects metrics from the module `mod_status`.
 
 ### INSTALLATION
 
-1. [Enable the `mod_status` module](http://httpd.apache.org/docs/2.4/mod/mod_status.html) in your Apache server.
+1. Enable the [`mod_status`](http://httpd.apache.org/docs/2.4/mod/mod_status.html) module in your Apache server.
 
 1. Add the following configuration to your Apache server:
 
@@ -53,25 +53,17 @@ This plugin collects metrics from the module `mod_status`.
           SetHandler server-status
         </Location>
 
-1. Restart apache.
+1. Restart Apache.
 
-1. Install the apache collectd plugin.
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
- #### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
- #### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install this plugin:
-
-        yum install collectd-apache
+         yum install collectd-apache
+         
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
 
 1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin.
 
-1. Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
-
-###### Note: Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as text/plain, which this plugin requires.
+1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
 
@@ -79,25 +71,16 @@ This plugin collects metrics from the module `mod_status`.
 
 1. Restart collectd.
 
-1. Metrics from apache will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
-
 ### CONFIGURATION
 
-#### System configuration:
+Using the example configuration file [`10-apache.conf`](././10-apache.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
-Add the following to your apache config:
-```
-ExtendedStatus on
-  <Location /mod_status>
-    SetHandler server-status
-  </Location>
-```
+| configuration option | definition | example value |
+| ---------------------|------------|---------------|
+| Instance | The name of the server to be monitored. This value appears in the dimension `plugin_instance`. | myapacheinstance |
+| URL | The location at which collectd can retrieve output of `mod_status`. | "http://localhost/mod_status?auto" |
 
-#### Config file modifications:
-
-| Value | Description |
-|-------|-------------|
-| URL | The location of your `mod_status` |
+_Note_: Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which this plugin requires.
 
 ### USAGE
 
@@ -126,4 +109,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/apache.c).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

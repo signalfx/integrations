@@ -5,7 +5,7 @@ brief: Java plugin for collectd.
 
 #![](https://github.com/signalfx/integrations/blob/master/collectd-java/img/integrations_java.png) Java collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Java collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
+_This directory consolidates all the metadata associated with the Java collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -17,16 +17,13 @@ _This is a directory consolidate all the metadata associated with the Java colle
 
 ### DESCRIPTION
 
+The Java plugin for collectd is required to use SignalFx's integrations with Java applications like [ActiveMQ](../collectd-activemq), [Cassandra](../collectd-cassandra) and [Kafka](../collectd-kafka).
+
 From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java):
 
-The Java plugin embeds a Java virtual machine (JVM) into collectd and exposes the application programming interface (API) to Java programs. This allows to write own plugins in the popular language, which are then loaded and executed by the daemon without the need to start a new process and JVM every few seconds. Java classes written for the Java plugin are therefore more powerful and efficient than scripts executed by the Exec plugin.
-
-
-The JavaDoc documentation of the API is available.
+> The Java plugin embeds a Java virtual machine (JVM) into collectd and exposes the application programming interface (API) to Java programs. This allows to write own plugins in the popular language, which are then loaded and executed by the daemon without the need to start a new process and JVM every few seconds. Java classes written for the Java plugin are therefore more powerful and efficient than scripts executed by the Exec plugin.
 
 ### REQUIREMENTS AND DEPENDENCIES
-
-This plugin requires:
 
 | Software  | Version        |
 |-----------|----------------|
@@ -34,61 +31,34 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
+         yum install collectd-java
+         
+    On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
+
+1. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+
+1. Restart collectd. 
 
 ### CONFIGURATION
 
-From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java):
+No additional configuration is required if using the example configuration file [`10-jmx.conf`](./10-jmx.conf).
 
-The Java plugin makes it possible to write extensions for collectd in Java. This section only discusses the syntax and semantic of the configuration options. For more in-depth information on the Java plugin, please read [collectd-java(5)](https://collectd.org/documentation/manpages/collectd-java.5.shtml).
-
-Synopsis:
-
-```
- <Plugin "java">
-   JVMArg "-verbose:jni"
-   JVMArg "-Djava.class.path=/opt/collectd/lib/collectd/bindings/java"
-   LoadPlugin "org.collectd.java.Foobar"
-   <Plugin "org.collectd.java.Foobar">
-     # To be parsed by the plugin
-   </Plugin>
- </Plugin>
-```
-
-Available configuration options:
-
-**JVMArg _Argument_**
-
- Argument that is to be passed to the Java Virtual Machine (JVM). This works exactly the way the arguments to the java binary on the command line work. Execute `java--help` for details.
-
- Please note that all these options must appear before (i. e. above) any other options! When another option is found, the JVM will be started and later options will have to be ignored!
-
-**LoadPlugin _JavaClass_**
-
- Instantiates a new JavaClass object. The constructor of this object very likely then registers one or more callback methods with the server.
-
- See collectd-java(5) for details.
-
- When the first such option is found, the virtual machine (JVM) is created. This means that all JVMArg options must appear before (i. e. above) all LoadPlugin options!
-
-**Plugin _Name_**
-
- The entire block is passed to the Java plugin as an org.collectd.api.OConfigItem object.
-
- For this to work, the plugin has to register a configuration callback first, see collectd-java(5)/"config callback". This means, that the Plugin block must appear after the appropriate LoadPlugin block. Also note, that Name depends on the (Java) plugin registering the callback and is completely independent from the JavaClass argument passed to LoadPlugin.
+Full configuration details for this plugin are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
 
 ### USAGE
 
-The Java collectd plugin is the swiss army knife of collectd for Java applications. For specific useage details you can take a look at some of the common Java apps that are used with collectd:
+Use the Java collectd plugin to collect metrics from Java applications using JMX. SignalFx supports several integrations that depend on this plugin:
 
-* [cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)
-* [kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)
+* [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq) 
+* [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)
+* [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)
 
 ### METRICS
 
-The metrics for the Java collectd plugin will depend on what is generated and passed from the java application for which it is configured.
+The metrics emitted by this plugin depend on its configuration and the metrics emitted by the Java application that it is configured to monitor. Examples of SignalFx integrations that rely on this plugin are [ActiveMQ](../collectd-activemq), [Cassandra](../collectd-cassandra) and [Kafka](../collectd-kafka).
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/java.c)
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

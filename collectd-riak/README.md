@@ -146,4 +146,4 @@ curl -X GET http://localhost:8098/stats | jsonpp
 
 ### LICENSE
 
-Since this is not an actual _plugin_ but rather a configuration of the [`collectd-curl-json plugin`](https://github.com/signalfx/collectd/blob/master/src/curl_json.c) there is no need for a separate license.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

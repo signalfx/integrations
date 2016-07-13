@@ -16,7 +16,7 @@ _This is a directory consolidate all the metadata associated with the HAProxy co
 
 ### DESCRIPTION
 
-Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collectd plugin to collect metrics about HaProxy. An example config file for collecting data about HaProxy using this plugin can be found in our [collectd configs repo](https://github.com/signalfx/integrations/blob/master/collectd-haproxy/10-haproxy.conf).
+Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collectd plugin to collect metrics about HaProxy. 
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -27,32 +27,25 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
 
 ### INSTALLATION
 
-Follow these steps to install and configure this plugin:
-
-1. Install the plugin.
-
-  **Ubuntu 12.04, 14.04, & 15.04 and Debian 7 & 8:**
-
-  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
-
-  **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**:
-
-  Run the following command to install this plugin:
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
          yum install collectd-haproxy
-
-
-1. Download SignalFx's [sample configuration file](./10-haproxy.conf) for this plugin.
+         
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
+1. Download SignalFx's [sample configuration file](./10-haproxy.conf) for this plugin to `/etc/collectd/managed_config`.
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
-1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
-
-         include '/path/to/10-haproxy.conf'
-
 1. Restart collectd.
 
 ### CONFIGURATION
 
-Change the Socket parameter to point to the haproxy socket file. The location of the file is defined in the haproxy config file. Here is the example:
+Using the example configuration file [`10-haproxy.conf`](././10-haproxy.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
+
+| configuration option | definition | example value |
+| ---------------------|------------|---------------|
+| Socket | Location of the HAProxy socket file | Socket "/var/run/haproxy.sock" |
+| ProxyMonitor | A list of all the pxname(s) or svname(s) that you want to monitor | <ui><li>ProxyMonitor "http-in"</li><li>ProxyMonitor "server1"</li><li>ProxyMonitor "backend"</li></ui> |
+
+The location of the HAProxy socket file is defined in the HAProxy config file, as in the following example:
 
 ```
 global
@@ -61,10 +54,6 @@ global
     stats timeout 2m
 ```
 
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| Socket | This is the location of the HAProxy socket file | `Socket "/var/run/haproxy.sock"` |
-| ProxyMonitor | list all the pxname(s) or svname(s) that you want to monitor | <ui><li>ProxyMonitor "http-in"</li><li>ProxyMonitor "server1"</li><li>ProxyMonitor "backend"</li></ui> |
 
 ### METRICS
 
@@ -72,4 +61,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-This plugin is released under the following [LICENSE](https://github.com/signalfx/collectd-haproxy/blob/master/LICENSE).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

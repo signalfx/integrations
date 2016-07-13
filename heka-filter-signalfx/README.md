@@ -92,4 +92,4 @@ Documentation of the metrics and dimensions emitted by this integration, are ava
 
 ### LICENSE
 
-This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/Clever/heka-clever-plugins/blob/master/LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

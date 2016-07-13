@@ -17,7 +17,7 @@ _This is a directory that consolidates all the metadata associated with the Kafk
 
 ### DESCRIPTION
 
-This is the SignalFx Kafka plugin. It will send data about Kafka to SignalFx, enabling built-in Kafka monitoring dashboards.
+This is the Kafka plugin for collectd. It will send data about Kafka to SignalFx, enabling built-in Kafka monitoring dashboards.
 
 #### FEATURES
 
@@ -41,48 +41,37 @@ This is the SignalFx Kafka plugin. It will send data about Kafka to SignalFx, en
 
 ### INSTALLATION
 
-1. Install the Java plugin.
+#### RHEL/CentOS and Amazon Linux: Install Java plugin for collectd
 
- RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
+This integration requires the [Java plugin for collectd](../collectd-java/), which is not included with the SignalFx collectd agent on RHEL/CentOS or Amazon Linux. 
 
- Run the following command to install the Java plugin for collectd:
+1. Run the following command to install the Java plugin for collectd:
 
+  `yum install collectd-java`
 
-         yum install collectd-java
+1. Download SignalFx's example configuration file for the Java plugin to `etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
 
- Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+1. Restart collectd. 
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
+#### Install Kafka integration 
 
-1. Download SignalFx's sample JMX configuration file and sample Kafka configuration file from the following URLs:
+1. Download SignalFx's example Kafka configuration file to `/etc/collectd/managed_config`:  [20-kafka.conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka.conf)
 
- [JMX.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
- [kafka-conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka.conf)
+  *Note: If you're using Kafka v0.8.2, download this sample Kafka configuration file instead:*
+[20-kafka_82.conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka_82.conf)
 
- *Note: If you're using Kafka v0.8.2, download this sample Kafka configuration file instead:*
- [kafka.conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka_82.conf)
-
-1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
-
-        include '/path/to/10-jmx.conf'
-        include '/path/to/20-kafka.conf'
-
- or
-
-        include '/path/to/10-jmx.conf'
-        include '/path/to/20-kafka_82.conf'
+1. Modify `20-kafka.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
 1. Restart collectd.
 
-collectd will begin emitting metrics from kafka.
-
 ### CONFIGURATION
 
-* Make sure ServiceURL points to your jmx app.
-* Modify the "Host" parameter to what you want your source name to be.
-* Please leave the identifier [hostHasService=kafka] in the hostname.
+Using the example configuration file [`20-kafka.conf`](././20-kafka.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Kafka instance to be monitored.
+
+| Value | Description |
+|-------|-------------|
+| ServiceURL | URL of your JMX application. |
+| Host | The name of your host (_Please leave the identifier `[hostHasService=kafka]`) in the host name._|
 
 ### USAGE
 
@@ -181,4 +170,4 @@ Documentation of the metrics and dimensions emitted by this plugin, segmented by
 
 ### LICENSE
 
-Since this is not an actual _plugin_ but rather a configuration of the `collectd-java plugin` there is no need for a license.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

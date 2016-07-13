@@ -18,3 +18,7 @@ See the [cpu](https://github.com/signalfx/Integrations/collectd-cpu) plugin for 
 
 ### Configuration
 By default the CPU plugin will assign each CPU a number and use that as the plugin_instance. This gives a very detailed report of CPU usage, but it is not generally useful. Use the [following configuration](https://github.com/signalfx/Integrations/blob/master/collectd-aggregation/10-aggregation-cpu.conf) to aggregate CPU metrics.
+
+### LICENSE
+
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

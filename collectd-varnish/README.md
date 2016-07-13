@@ -19,7 +19,7 @@ _This is a directory that consolidates all the metadata associated with the Varn
 
 Varnish Cache is a web application accelerator also known as a caching HTTP reverse proxy. You install it in front of any server that speaks HTTP and configure it to cache the contents. Varnish Cache is really, really fast. It typically speeds up delivery with a factor of 300 - 1000x, depending on your architecture.
 
-The Varnish collectd plugin collects metrics from varnish and sends them to SignalFx.
+The Varnish collectd plugin collects metrics from Varnish and sends them to SignalFx.
 
 #### FEATURES
 
@@ -42,37 +42,21 @@ The Varnish collectd plugin collects metrics from varnish and sends them to Sign
 
 ### INSTALLATION
 
-1. Install the collectd plugin.
-
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install this plugin:
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
          yum install collectd-varnish
 
-1. Download SignalFx's [sample varnish configuration file](https://github.com/signalfx/integrations/blob/master/collectd-varnish/10-varnish.conf)
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-varnish/10-varnish.conf) to `/etc/collectd/managed_config`.
 
- Modify the sample configuration file to provide values that make sense for your environment, as described in the header.
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
-
-         include '/path/to/10-varnish.conf'
+1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
 1. Restart collectd.
-
-Metrics from Varnish will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
 
 ### CONFIGURATION
 
 There is no configuration required for the varnish collectd plugin. The default configuration is setup to bring in data on a large variety of metrics.
 
-#### Optional configuration
-
-If there is the desire to reduce the metrics that are sent you can update the configuration and set the desired values to `false`
+If using the sample configuration file [`10-varnish.conf`](./10-varnish.conf), no additional configuration is required. The following optional settings allow you to configure the metrics that will be sent using this plugin:
 
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|
@@ -88,6 +72,7 @@ If there is the desire to reduce the metrics that are sent you can update the co
 | CollectSMS         | synth (synthetic content) storage statistics. This storage component is used internally only.                     | enabled |
 | CollectTotals      | Collects overview counters, such as the number of sessions created, the number of requests and bytes transferred. | enabled |
 | CollectWorkers     | Collect statistics about worker threads.                                                                          | enabled |
+
 ### USAGE
 
 Sample of pre-built dashboard in SignalFx:
@@ -200,4 +185,4 @@ For segmented metrics and dimensions emitted by this plugin, [click here](././do
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/varnish.c)
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -52,23 +52,15 @@ This plugin connects to a MySQL instance and reports on the values returned by a
 
 Follow these steps to install and configure this plugin:
 
-1. Install the plugin.
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
-  **Ubuntu 12.04, 14.04, & 15.04 and Debian 7 & 8:**
+         yum install collectd-mysql
+         
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
 
-  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
+1. Download SignalFx's [sample configuration file](./10-mysql.conf) for this plugin to `/etc/collectd/managed_config`.
 
-  **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**:
-
-  Run the following command to install this plugin:
-
-          yum install collectd-mysql
-
-1. Download SignalFx's [sample configuration file](./10-mysql.conf) for this plugin.
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
-1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
-
-          include '/path/to/10-mysql.conf'
 
 1. Restart collectd.
 
@@ -78,28 +70,28 @@ Using the example configuration file [`10-mysql.conf`](././10-mysql.conf) as a g
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
-| Database (in block declaration) | The value of the dimension `plugin_instance` that will be recorded for this database. | hostA_database1 |
+| Database (in block declaration) | The value of the dimension `plugin_instance` that will be recorded for this database. | `<Database hostA_database1>` |
 | Host  | The host on which MySQL is running. | "10.128.8.2" |
 | Socket | A socket that collectd can use to connect to the database. You may be able to find this value by looking at the command used to run MySQL on your server as follows: <code>ps auwxxx &#124; grep mysql<code> | "/var/run/mysqld/mysqld.sock" |
 | User | A valid username that collectd can use to connect to MySQL. | "root"
 | Password | Password for the username given in User. | "abcdABCD1." |
-| Database (within block) | The name of the MySQL database to monitor. | "mysql_one" |
+| Database (within block) | The name of the MySQL database to monitor. | `Database "mysql_one"`|
 
 #### Note: Monitoring multiple instances
-The sample configuration file is configured to illustrate how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
+The sample configuration file [`10-mysql.conf`](././10-mysql.conf) illustrates how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
 
-To monitor just one database, include just one Database block and delete the others.
+To monitor just one database, include just one `Database` block and delete the others.
 
 #### Note: Two different directives called "Database"
 This plugin configuration file uses directives called “Database” in two different places: one in each block declaration, and one within each block.
 
-The value of “Database” in the block declaration indicates the value of the  `plugin_instance` dimension that will be recorded for this database. The value of “Database” within the block indicates the `db_name` of the MySQL database to monitor using this configuration.
+The value of “Database” in the _block declaration_ (`<Database foo>`) indicates the value of the  `plugin_instance` dimension that will be recorded for this database. The value of “Database” within the block (`Database "my_database"`) indicates the `db_name` of the MySQL database to monitor using this configuration.
 
 To illustrate the difference between these two uses of "Database", the example configuration given in [`10-mysql.conf`](././10-mysql.conf) directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3.
 
 ### USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_MySQL.json).
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. 
 
 For general reference on how to monitor MySQL performance using this plugin, see [documentation on collectd.org](https://collectd.org/wiki/index.php/Plugin:MySQL).
 
@@ -125,4 +117,4 @@ This plugin will not emit metrics about features that are not used. For example,
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/mysql.c).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

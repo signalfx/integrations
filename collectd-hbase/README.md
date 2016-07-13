@@ -26,8 +26,6 @@ brief: HBase metrics for collectd
 |-----------|----------------|
 | collectd  |  4.9+  |
 | java collectd plugin | 4.9+ |
-| HBase | XXXXXXXXXXXX |
-
 
 ### INSTALLATION
 
@@ -82,4 +80,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-Since this is not an actual _plugin_ but rather a configuration of the `collectd-java plugin` there is no need for a license.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -53,33 +53,18 @@ collects statistics from Couchbase.
 | collectd  |  4.9 or later  |
 | python | 2.7 or later |
 | couchbase | 3.0 or later |
+| Python plugin for collectd | (match with collectd version) |
 
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
+1. Download the [Python module for Couchbase](https://github.com/signalfx/collectd-couchbase).
 
-  **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin to `/etc/collectd/managed_config`.
 
-  Run the following command to install the Python plugin for collectd:
+1. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
-        yum install collectd-python
-
-  **Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8**:
-
-  This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
-
-2. Download the [Python module for Couchbase](https://github.com/signalfx/collectd-couchbase).
-
-3. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin.
-
-4. Modify the sample configuration file as described in [Configuration](#configuration), below.
-
-5. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
-
-        Include "/path/to/10-couchbase.conf"
-
-6. Restart collectd.
+1. Restart collectd.
 
 ### CONFIGURATION
 
@@ -96,7 +81,7 @@ Using the example configuration file [`10-couchbase.conf`](././10-couchbase.conf
 | CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See [`metric_info.py`](https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py) for more information. | "default" |
 | Interval | Number of seconds between calls to Couchbase API. | 10 |
 | Username | If CollectTarget is "BUCKET" and this bucket requires authentication, username to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "USERNAME" |
-| Password | f CollectTarget is "BUCKET" and this bucket requires authentication, password to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "PASSWORD" |
+| Password | If CollectTarget is "BUCKET" and this bucket requires authentication, password to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "PASSWORD" |
 | FieldLength | The number of characters used to encode dimension data. **CAUTION**: Modify this value only if you specifically compiled collectd with a non-default value for `DATA_MAX_NAME_LEN` in `plugin.h`. |  "1024" |
 
 ### USAGE
@@ -165,14 +150,14 @@ The performance of Couchbase buckets is bound by memory. When memory is exhauste
 
 Couchbase persists in-memory items to disk. This graph shows the number of items that have been added to the disk write queue in yellow, and the number of items that have been successfully written in blue. When Couchbase is able to keep up with disk writes, these metrics are equal and the graph is green. When the disk queue is filling faster than it can be drained, this graph shows yellow areas.  
 
-![Bucket write queue](././img/bucket_write_clusters.png)
+![Bucket write queue](././img/bucket_write_queue.png)
 
 *This bucket is keeping up with disk writes: the number of items added to the queue is about equal to the number of items successfully written to disk.*
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+For full documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See LICENSE for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

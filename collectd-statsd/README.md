@@ -37,26 +37,15 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Install the collectd plugin.
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
+1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
- Run the following command to install this plugin:
- ```
- yum install collectd-statsd
- ```
-1. Download SignalFx's [sample statsd configuration file](https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf)
+         yum install collectd-statsd
+         
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
 
-  Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+1. Download SignalFx's [sample StatsD configuration file](https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf) to `/etc/collectd/managed_config`.
 
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
-```
-include '/path/to/10-statsd.conf'
-```
 1. Restart collectd.
-
-collectd will now listen for metrics from StatsD on the configured port.
 
 #### Verifying installation
 
@@ -68,7 +57,7 @@ $ echo "statsd.test:1|g" | nc -w 1 -u 127.0.0.1 8125
 
 ### CONFIGURATION
 
-SignalFx's example configuration file for this plugin can be used as-is, without modification. To read more about available configuration options, please see the [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd).
+SignalFx's example configuration file for this plugin can be used as-is, without modification. To read more about available configuration options, see [collectd's manpage for this plugin](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd).
 
 ### USAGE
 
@@ -116,7 +105,7 @@ or
 
 #### Using StatsD metrics in SignalFx
 
-SignalFx supports using the components of dot-delimited metric names as dimensions for the purposes of filtering and aggregation in a chart. [Click here to read more](https://signalfx-product-docs.readthedocs-hosted.com/en/latest/charts/chart-advanced-config.html#graphite-options-for-plots). However, it may be more efficient to use the SignalFx metric proxy to transform StatsD's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. This allows you to specify the transformation once at transmission, rather than many times during chart building. [Click here to read more about the SignalFx metric proxy](https://signalfx.github.com/integrations/tree/master/metricproxy).
+SignalFx supports using the components of dot-delimited metric names as dimensions for the purposes of filtering and aggregation in a chart. [Click here to read more](http://docs.signalfx.com/en/latest/charts/chart-advanced-config.html#graphite-options-for-plots). However, it may be more efficient to use the SignalFx metric proxy to transform StatsD's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. This allows you to specify the transformation once at transmission, rather than many times during chart building. [Click here to read more about the SignalFx metric proxy](https://signalfx.github.com/integrations/tree/master/metricproxy).
 
 #### Deleting unused metric names from collectd's internal cache
 
@@ -124,4 +113,4 @@ SignalFx's default configuration for this plugin sets all `Delete[Type]s` config
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/statsd.c).
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

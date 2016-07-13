@@ -5,7 +5,7 @@ brief: Use the collectd-mongodb plugin to collect metrics from MongoDB nodes.
 
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB Plugin
 
-_This is a directory consolidate all the metadata associated with the MongoDB collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-mongodb)_
+_This directory consolidates all the metadata associated with the MongoDB collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-mongodb)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -61,37 +61,28 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 | Python    |  2.4 or later  |
 | MongoDB   |  2.4 or later  |
 | PyMongo   |  3.0 or later  |
+| Python plugin for collectd | (match with collectd version) |
 
 ### INSTALLATION
 
-1. Install the Python plugin for collectd.
+1. Install `pip` and `pymongo`.
 
- **RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09**
-
- Run the following commands to install the Python plugin for collectd, `pip`, and `pymongo`:
+ **RHEL/CentOS and Amazon Linux**
 
         yum install -y epel-release
         yum install -y python-pip
-        yum install -y collectd-python
         pip install pymongo==3.0.3
 
- **Ubuntu 12.04, 14.04, 15.04 and Debian 7 & 8:**
-
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
- Run the following commands to install `pip` and `pymongo`:
+ **Ubuntu and Debian:**
 
         apt-get install -y python-pip python-dev build-essential
         pip install pymongo==3.0.3
 
 1. Download the [Python module for MongoDB](https://github.com/signalfx/collectd-mongodb).  
 
-1. Download SignalFx's [sample configuration file ](././10-mongodb.conf) for this plugin.
+1. Download SignalFx's [sample configuration file ](././10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
 
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
-
-1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
-
-        include '/path/to/10-mongodb.conf'
 
 1. Restart collectd.
 
@@ -126,7 +117,7 @@ db.createUser( {
 
 ### USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_MongoDB.json).
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. 
 
 For general reference on how to monitor MongoDB performance, see [Analyzing MongoDB Performance](https://docs.mongodb.org/manual/administration/analyzing-mongodb-performance/).
 
@@ -176,4 +167,4 @@ For complete documentation of the metrics and dimensions emitted by this plugin,
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-mongodb/blob/master/LICENSE.txt) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

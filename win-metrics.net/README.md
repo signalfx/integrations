@@ -215,4 +215,4 @@ To add default dimensions add a nested <defaultDimensions> in your <signalFxRepo
 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/Metrics.NET.SignalFX/blob/master/LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

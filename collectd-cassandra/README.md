@@ -17,7 +17,7 @@ brief: Cassandra metrics for collectd
 
 ### DESCRIPTION
 
-Follow these instructions to configure the Java plugin for collectd to monitor Cassandra. This will send data about Cassandra to SignalFx, enabling built-in Cassandra monitoring dashboards.
+Monitor Cassandra using SignalFx's configuration of the Java plugin for collectd.
 
 Use this integration to monitor the following types of information from Cassandra nodes:
 
@@ -52,49 +52,38 @@ Use this integration to monitor the following types of information from Cassandr
 
 ### INSTALLATION
 
-1. Install the [Java plugin](https://collectd.org/wiki/index.php/Plugin:GenericJMX).
+#### System modifications
 
- RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
+Open the JMX port on your Cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the [Cassandra Project site](http://wiki.apache.org/cassandra/JmxInterface). There is also a page covering a few [common issues](http://wiki.apache.org/cassandra/JmxGotchas).
 
- Run the following command to install the Java plugin for collectd:
+#### RHEL/CentOS and Amazon Linux: Install Java plugin for collectd
 
-        yum install collectd-java
+This integration requires the [Java plugin for collectd](../collectd-java/), which is not included with the SignalFx collectd agent on RHEL/CentOS or Amazon Linux. 
 
- Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+1. Run the following command to install the Java plugin for collectd:
 
- This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
+  `yum install collectd-java`
 
-1. Download SignalFx's sample JMX configuration file and sample Cassandra configuration file from the following URLs:
+1. Download SignalFx's example configuration file for the Java plugin to `etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
 
- [`JMX.conf`](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+1. Restart collectd. 
 
- [`cassandra.conf`](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf)
+#### Install Cassandra integration 
 
-1. Modify [`cassandra.conf`](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf) to provide values that make sense for your environment, as described in the header.
+1. Download SignalFx's example Cassandra configuration file to `/etc/collectd/managed_config`:  [20-cassandra.conf](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf)
 
- Add the following lines to /etc/collectd.conf, replacing the example paths with the locations of the configuration files you downloaded in step 2:
-
-        include '/path/to/10-jmx.conf'
-        include '/path/to/20-cassandra.conf'
+1. Modify `20-cassandra.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
 1. Restart collectd.
 
-Metrics from Cassandra will begin streaming into SignalFx, and new built-in dashboards will be created for you. Check the status of your new integration on the Integrations page.
-
 ### CONFIGURATION
 
-#### System modifications:
-
-Open the JMX port on your cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the [Cassandra Project site](http://wiki.apache.org/cassandra/JmxInterface). There is also a page covering a few [common issues](http://wiki.apache.org/cassandra/JmxGotchas).
-
-**[`cassandra.conf`](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf) file modifications:**
-
-You must include [`JMX.conf`](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf) this ensures that the Java collectd plugin will properly run prior to loading the Cassandra specific configuration.
+Using the example configuration file [`20-cassandra.conf`](././20-cassandra.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Cassandra instance to be monitored.
 
 | Value | Description |
 |-------|-------------|
-| ServiceURL | URL of your JMX application|
-| Host | The name of your host (_Please leave the identifier `[hostHasService=cassandra]`) in the host name_|
+| ServiceURL | URL of your JMX application. |
+| Host | The name of your host (_Please leave the identifier `[hostHasService=cassandra]`) in the host name._|
 
 ### USAGE
 
@@ -108,4 +97,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-Since this is not an actual _plugin_ but rather a configuration of the `collectd-java plugin` there is no need for a license.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
