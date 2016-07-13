@@ -1,4 +1,4 @@
-# Node.js client library for SignalFx
+# ![](./img/integrations_nodejs.png) Node.js client library for SignalFx
 
 
 - [Description](#description)

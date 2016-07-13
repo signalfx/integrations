@@ -1,4 +1,4 @@
-# Python client library for SignalFx
+# ![](./img/integrations_python.png) Python client library for SignalFx
 
 
 - [Description](#description)

@@ -1,8 +1,3 @@
----
-title: Cisco IOS XR integration
-brief: Cisco IOS XR telemetry integration.
----
-
 # ![](https://github.com/signalfx/integrations/blob/master/logstash-ciscoxr/img/integrations_ciscoiosxr.png) Cisco IOS XR integration
 
 - [Description](#description)

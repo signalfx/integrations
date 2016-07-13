@@ -1,4 +1,4 @@
-# Java client library for SignalFx
+# ![](./img/integrations_java.png) Java client library for SignalFx
 
 
 - [Description](#description)

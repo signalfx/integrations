@@ -1,8 +1,3 @@
----
-title: GenericJMX Plugin
-brief: GenericJMX plugin for collectd.
----
-
 ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png)
 # GenericJMX collectd Plugin
 
