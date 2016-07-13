@@ -13,7 +13,7 @@ brief: The SignalFx Integration for Windows Performance Counter Reporter.
 
 ### DESCRIPTION
 
-PerfCounterReporter is a Windows service for reporting Windows Performance Counters to SignalFx.
+PerfCounterReporter is a Windows service for reporting Windows Performance Counters to SignalFx. Use this to monitor infrastructure of Windows hosts, including CPU, disk, memory and network. 
 
 This code is based on/inspired by [PerfTap](https://github.com/Iristyle/PerfTap) as a means of sending performance data to a monitoring system.
 
