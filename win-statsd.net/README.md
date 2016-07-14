@@ -13,10 +13,7 @@ brief: The SignalFx Integration for Windows StatsD.NET.
 
 ### DESCRIPTION
 
-Plugin for statsd.net (https://github.com/lukevenediger/statsd.net/) to send metrics to SignalFx
-
-You can find the SignalFx version of statsd.net that is released here:
-https://github.com/signalfx/statsd.net/
+statsd.net is a high-performance stats collection service based on etsy's statsd service and written in c#.net. [SignalFx's release of statsd.net](https://github.com/signalfx/statsd.net/) adds support for dimensions, and includes a plugin to send metrics to SignalFx.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -24,80 +21,55 @@ https://github.com/signalfx/statsd.net/
 |-------------------|----------------|
 | .NET Framework    |  4+ |
 | Windows   | Windows Server 2003 SP2 or later |  
-| Powershell (required to user the one-line installer) | v2+ |
+| Powershell (required to use the one-line installer) | v2+ |
 
-* Admin rights for installing services (the service is setup to run as NETWORK SERVICE)
-
-Sorry Mono, this is the Win32 only club -- besides, Linux distros already have better tools for this!
+You must have admin privileges in order to install statsd.net. It will run as NETWORK SERVICE.
 
 ### INSTALLATION
 
-Download the latest release from https://github.com/signalfx/signalfx-statsd.net-plugin/releases and unzip it.
+1. Download the latest release from https://github.com/signalfx/signalfx-statsd.net-plugin/releases and unzip it.
 
-At a PowerShell admin prompt
-
-```     
-./Install.ps1
-```
-
-Alternatively, specify any or all of the configuration options.
+1. At a PowerShell admin prompt, run the following command to install statsd.net including the SignalFx statsd.net plugin:
 
 ```
-./Install.ps1 @{APIToken='yourtoken';SourceType='netbios';}
+./Install.ps1 @{APIToken='YOUR_SIGNALFX_API_TOKEN';SourceType='netbios';}
 ```
 
-Or if readability is your thing:
-
-```
-    $config = @{
-        APIToken='yourtoken';
-        SourceType='netbios';
-        SampleInterval = '5s';
-    }
-    ./Install.ps1 $config
-```
-
-For hash values not supplied the following defaults are used. APIToken and SourceType are required.  
-
-* **APIToken** - Your SignalFx API token. No default.
-* **SourceType** - Configuration for what the "source" of metrics will be. No default. Value must be one of:
-	* **netbios** - use the netbios name of the server
-	* **dns** - use the DNS name of the server
-	* **fqdn** - use the FQDN name of the server
-	* **custom** - use a custom value. If the is specified then a SourceValue parameter must be specified.
-* **DefaultDimensions** - A hashtable of default dimensions to pass to SignalFx. Default: Empty dictionary.
-* **AwsIntegration** - If set to "true" then AWS integration will be turned on for SignalFx reporting. Default: false
-* **SampleInterval** - string of how often to send metrics to SignalFx. Looks supported values look like "5s", or "1m". Default Value: 5s
+See below for additional configuration options.
 
 ### CONFIGURATION
 
-#### Extensions to statsd protocol to support Dimensions
-There are two ways you can add dimensions to your metrics:
-  * tags
-  * metric name
+For values not supplied the following defaults are used. You must supply values for `APIToken` and `SourceType`.
 
-#### Tags
-In additon to the standard statsd protocol. This version of the listener also supports tags being sent on metrics. Adding a `|#tag1=value1,tag2=value2,...` to the end of the normal statsd lines sent will make the tags available to the server. With the SignalFx reporter, these tags will be turned into Dimensions on the metric.
+| Setting            | Description     | Default  |
+|--------------------|----------------------------|----------|
+| APIToken | Your SignalFx API token. | No default. |
+| SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value specified in a parameter `SourceValue`.) | No default. |
+| DefaultDimensions | A hashtable of default dimensions to pass to SignalFx. | Empty dictionary. |
+| AwsIntegration | If set to "true" then AWS integration will be turned on for SignalFx reporting. | false |
+| SampleInterval | string of how often to send metrics to SignalFx. Supported values look like "5s" (every 5 seconds), or "1m" (every 1 minute). | 5s |
 
- E.g.
+### USAGE
+
+#### Adding dimensions using tags
+SignalFx's release of statsd.net supports tags being sent on metrics. To use tags, add a `|#tag1=value1,tag2=value2,...` to the end of the normal statsd lines sent. The SignalFx statsd.net listener will transform these tags into dimensions on the metric.
+
+For example, the following statsd line produces a metric `api.count` with two dimensions: `apiType` and `success`.
 
  ```
  api.count:1|c|#apiType=login,success=true
  ```
 
- will give you a metric `api.count` with two dimensions `apiType` and `success`.
+#### Adding dimensions as a list appended to metric name
 
-#### Metric Name
-This server also supports sending in dimensions in the metric names. In this case you put your `metric name` followed by `[name1=value1,name2=value2]` at the *end* of the metric name.
+This plugin supports sending in dimensions in the metric name. In this case you put your `metric name` followed by `[name1=value1,name2=value2]` at the *end* of the metric name.
 
- E.g.
-
+For example, the following metric name produces a metric `api.count` with two dimensions: `apiType` and `success`.
+ 
  ```
  api.count[apiType=Login,success=true]:1|c
  ```
-
- will give you a metric `api.count` with two dimensions `apiType` and `success`.
-
+ 
 ### LICENSE
 
-This plugin is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/PerfCounterReporter/blob/master/LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
