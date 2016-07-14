@@ -21,11 +21,10 @@ This code is based on/inspired by [PerfTap](https://github.com/Iristyle/PerfTap)
 
 | Software          | Version        |
 |-------------------|----------------|
-| .NET Framework    |  4+ |
-| Windows   | Windows Server 2003 SP2 or later |  
-| Powershell (required to user the one-line installer) | v2+ |
+| .NET Framework    |  4.5+ |
+| Windows   | Windows 7+ (Desktop) or Windows Server 2008+ (Server) |  
 
-You must have admin privileges in order to install PerfCounterReporter. It will run as NETWORK SERVICE.
+You must have admin privileges in order to install PerfCounterReporter. It will run as LOCAL SERVICE.
 
 ### INSTALLATION
 
