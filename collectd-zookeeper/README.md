@@ -35,7 +35,7 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd          | 4.9+    |
-| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd)) |
 | Python            | 2.6+     |
 | Zookeeper         | 3.4.0+   |
 

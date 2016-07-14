@@ -53,7 +53,7 @@ Open the JMX port on your Cassandra app. Cassandra will listen for connections o
 
 #### Install Cassandra integration 
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)<!--sfx_link:collectd-java --> if it is not already installed. 
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
 
 1. Download SignalFx's example Cassandra configuration file to `/etc/collectd/managed_config`:  [20-cassandra.conf](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf)
 

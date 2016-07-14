@@ -36,7 +36,7 @@ This is the Kafka plugin for collectd. It will send data about Kafka to SignalFx
 
 ### INSTALLATION
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)<!--sfx_link:collectd-java --> if it is not already installed. 
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
 
 1. Download SignalFx's example Kafka configuration file to `/etc/collectd/managed_config`:  [20-kafka.conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka.conf)
 
