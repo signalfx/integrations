@@ -35,11 +35,17 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 ### USAGE
 
-SignalFx provides built-in dashboards for this service. Examples are shown below. 
+#### Uniquely identifying ELBs
 
-![](./img/dashboard_elb_instances.png)
+SignalFx synthesizes a unique ID for each ELB in the dimension `AWSUniqueId`.
 
-![](./img/dashboard_elb_instance.png)
+#### ELB metadata 
+
+For ELB, SignalFx will scan every load balancer name from your AWS account and pull out properties of the load balancer and any tags set on the load balancer.
+
+| ELB Filter Name |	Custom Property |	Description |
+|-----------------|-----------------|-------------|
+| create-time |	aws_create_time	| The time stamp when the load balancer was created |
 
 ### METRICS
 
