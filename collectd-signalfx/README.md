@@ -21,22 +21,10 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd  |  4.9+  |
-| [Python plugin for collectd](../collectd-python)<!-- sfx_link:collectd-python --> | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
 | Python    |  2.6+ |
 
 ### INSTALLATION
-
-1. Install the Python plugin for collectd.
-
- ##### RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09
-
- Run the following command to install the Python plugin for collectd:
- ```
- yum install collectd-python
- ```
- ##### Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
-
- This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
 1. Download the Python module from the following URL:
 

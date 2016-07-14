@@ -12,7 +12,7 @@ _This is a directory that consolidates all the metadata associated with the Redi
 
 ### DESCRIPTION
 
-A [Redis](http://redis.io) plugin for [collectd](http://collectd.org) using the [Python plugin for collectd](../collectd-python)<!-- sfx_link:collectd-python -->.
+A [Redis](http://redis.io) plugin for [collectd](http://collectd.org) using the Python plugin for collectd.
 
 You can capture any kind of Redis metrics like:
 
@@ -44,7 +44,7 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd   |  4.9+  |
-| [Python plugin for collectd](../collectd-python)<!-- sfx_link:collectd-python --> | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
 | Python    |  2.6+ |
 | redis | 2.8+ |
 

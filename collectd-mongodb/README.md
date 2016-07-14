@@ -56,7 +56,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 | Python    |  2.4 or later  |
 | MongoDB   |  2.4 or later  |
 | PyMongo   |  3.0 or later  |
-| [Python plugin for collectd](../collectd-python)<!-- sfx_link:collectd-python --> | (match with collectd version) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
 
 ### INSTALLATION
 

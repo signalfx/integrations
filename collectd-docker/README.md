@@ -41,7 +41,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 | collectd | 5.0 or later |
 | Python   | 2.6 or later |
 | Docker   | 1.5 or later |
-| [Python plugin for collectd](../collectd-python)<!-- sfx_link:collectd-python --> | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
 
 
 ### INSTALLATION
