@@ -1,0 +1,9 @@
+{ "display_name":"ActiveMQ message age listener",
+  "description": "Measures the age of messages in ActiveMQ queues, and publishes the results to SignalFx.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/amq-message-age",
+  "code": "https://github.com/signalfx/activemq-integration",
+  "featured": true,
+  "logo_large": "integrations_activemq%402x.png",
+  "logo_small": "integrations_activemq.png",
+  "in_app_categories": ["servicesMonitored"]
+},
