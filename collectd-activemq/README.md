@@ -25,6 +25,8 @@ Use this plugin to monitor the following types of information from ActiveMQ:
 * Queue (Queue status)
 * Topic (Topic status)
 
+To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age listener](../amq-message-age).
+
 #### FEATURES
 
 ##### Built-in dashboards
@@ -45,13 +47,11 @@ Use this plugin to monitor the following types of information from ActiveMQ:
 
   [<img src='./img/dashboard_activemq_topic.png' width=200px>](./img/dashboard_activemq_topic.png)
 
-- **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues.
+- **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues. See [ActiveMQ message age listener](../amq-message-age).
 
   [<img src='./img/dashboard_activemq_messageage.png' width=200px>](./img/dashboard_activemq_messageage.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
-
-Use SignalFx's configuration of the collectd Java plugin to collect metrics about Apache ActiveMQ. An example config file for collecting data about ActiveMQ using this plugin can be found in our [collectd configs repo](https://github.com/signalfx/signalfx-collectd-configs/blob/master/managed_config/20-activemq.conf).
 
 | Software  | Version        |
 |-----------|----------------|
