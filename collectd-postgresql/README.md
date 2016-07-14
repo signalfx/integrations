@@ -1,9 +1,4 @@
----
-title: PostgreSQL collectd Plugin
-brief: PostgreSQL plugin for collectd.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png) PostgreSQL collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png) PostgreSQL
 
 _This is a directory that consolidates all the metadata associated with the PostgreSQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/postgresql.c)_
 

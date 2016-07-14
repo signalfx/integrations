@@ -1,11 +1,6 @@
----
-title: Zookeeper Plugin
-brief: Zookeeper plugin for collectd.
----
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper
 
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper collectd Plugin
-
-_This is a directory that consolidates all the metadata associated with the Zookeeper collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper)_
+_This is a directory that consolidates all the metadata associated with SignalFx's integration with Zookeeper. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper)_
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

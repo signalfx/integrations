@@ -1,5 +1,5 @@
-{ "display_name":"Mesos collectd plugin",
-  "description": "A collectd plugin for Apache Mesos using collectd's Python plugin.",
+{ "display_name":"Mesos",
+  "description": "Monitor Apache Mesos using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/collectd-mesos",
   "code": "https://github.com/signalfx/integrations/tree/master/collectd-mesos",
   "featured": true,

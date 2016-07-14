@@ -1,5 +1,5 @@
-{ "display_name":"SignalFx collectd plugin",
-  "description": "SignalFx collectd plugin",
+{ "display_name":"SignalFx plugin for collectd",
+  "description": "The SignalFx plugin for collectd sends metadata about its host to SignalFx.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-signalfx",
   "code": "https://github.com/signalfx/collectd-signalfx",
   "featured": false,

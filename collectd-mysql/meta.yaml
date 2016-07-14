@@ -1,5 +1,5 @@
-{ "display_name":"MySQL collectd plugin",
-  "description": "MySQL collectd plugin",
+{ "display_name":"MySQL",
+  "description": "Monitor MySQL using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-mysql",
   "code": "https://github.com/signalfx/collectd/blob/master/src/mysql.c",
   "featured": false,

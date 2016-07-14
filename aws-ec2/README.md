@@ -1,9 +1,4 @@
----
-title: Amazon EC2
-brief: SignalFx's integration with Amazon Elastic Compute Cloud (EC2)
----
-
-# Amazon Elastic Compute Cloud (EC2)
+# ![](./img/integration_awsec2.png) Amazon Elastic Compute Cloud (EC2)
 
 - [Description](#description)
 - [Installation](#installation)

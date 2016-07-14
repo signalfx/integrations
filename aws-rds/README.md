@@ -1,9 +1,4 @@
----
-title: Amazon RDS
-brief: SignalFx's integration with Amazon Relational Database Service (RDS)
----
-
-# Amazon Relational Database Service (RDS)
+# ![](./img/integration_awsrds.png) Amazon Relational Database Service (RDS)
 
 - [Description](#description)
 - [Installation](#installation)

@@ -1,5 +1,5 @@
-{ "display_name":"PostgreSQL collectd plugin",
-  "description": "PostgreSQL collectd plugin",
+{ "display_name":"PostgreSQL",
+  "description": "Monitor PostgreSQL using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-postgresql",
   "code": "https://github.com/signalfx/collectd/blob/master/src/postgresql.c",
   "featured": false,

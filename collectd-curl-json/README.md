@@ -1,8 +1,3 @@
----
-title: collectd cURL-JSON Plugin
-brief: Use cURL on JSON formatted metrics for collectd.
----
-
 #![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) cURL-JSON Plugin  
 
 _This is a directory consolidate all the metadata associated with the cURL-JSON collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c)_

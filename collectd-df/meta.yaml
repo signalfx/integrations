@@ -1,5 +1,5 @@
-{ "display_name":"DF (Disk Free) plugin",
-  "description": "The DF plugin collects file system usage information, i. e. basically how much space on a mounted partition is used and how much is available. ",
+{ "display_name":"DF (Disk Free)",
+  "description": "The DF plugin for collectd collects file system usage information: how much space on a mounted partition is used and how much is available. ",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-df",
   "code": "https://github.com/signalfx/collectd/blob/master/src/df.c",
   "featured": false,

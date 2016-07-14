@@ -1,5 +1,5 @@
-{ "display_name":"Elasticsearch collectd plugin",
-  "description": "Elasticsearch collectd plugin",
+{ "display_name":"Elasticsearch",
+  "description": "Monitor Elasticsearch using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-elasticsearch",
   "code": "https://github.com/signalfx/collectd-elasticsearch",
   "featured": true,

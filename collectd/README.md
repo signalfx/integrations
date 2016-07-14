@@ -1,8 +1,3 @@
----
-title: SignalFx collectd agent
-brief: SignalFx's build of collectd, the open-source metrics collection agent.
----
-
 # SignalFx collectd agent
 
 _This is a directory that consolidates all the metadata associated with the SignalFx collectd agent. The code repository for this project can be found [here](https://github.com/signalfx/collectd/)._

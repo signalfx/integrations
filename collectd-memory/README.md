@@ -1,9 +1,4 @@
----
-title: Memory collectd Plugin
-brief: Memory plugin for collectd.
----
-
-#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Memory collectd Plugin
+#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Memory
 
 _This is a directory consolidate all the metadata associated with the Memory collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memory.c)_
 

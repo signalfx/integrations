@@ -1,9 +1,4 @@
----
-title: PerfCounter Reporter Integration
-brief: The SignalFx Integration for Windows Performance Counter Reporter.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/win-perfcounter/img/integrations_windows.png) Metrics.NET Integration
+# ![](https://github.com/signalfx/integrations/blob/master/win-perfcounter/img/integrations_windows.png) PerfCounterReporter
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

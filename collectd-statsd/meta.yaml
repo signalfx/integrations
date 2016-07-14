@@ -1,5 +1,5 @@
-{ "display_name":"StatsD collectd plugin",
-  "description": "The StatsD plugin pulls metrics and statistics from StatsD into collectd",
+{ "display_name":"StatsD",
+  "description": "The StatsD plugin for collectd aggregates and transmits metrics from StatsD.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-statsd",
   "code": "https://github.com/signalfx/collectd/blob/master/src/statsd.c",
   "featured": false,

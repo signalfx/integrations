@@ -1,10 +1,4 @@
----
-title: Java client library
-brief: Libraries for instrumenting Java applications and reporting metrics to SignalFx
----
-
-
-# Java client library for SignalFx
+# ![](./img/integrations_java.png) Java client library for SignalFx
 
 
 - [Description](#description)

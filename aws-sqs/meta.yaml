@@ -1,0 +1,9 @@
+{ "display_name":"Amazon SQS",
+  "description": "SignalFx's integration with Amazon Simple Queue Service (SQS).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-sqs",
+  "code": "https://aws.amazon.com/sqs/",
+  "featured": false,
+  "logo_large": "integration_awssqs.png",
+  "logo_small": "integration_awssqs.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

@@ -1,5 +1,5 @@
-{ "display_name":"Couchbase collectd plugin",
-  "description": "Couchbase collectd plugin",
+{ "display_name":"Couchbase",
+  "description": "Monitor Couchbase using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-couchbase",
   "code": "https://github.com/signalfx/collectd-couchbase",
   "featured": false,

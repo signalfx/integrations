@@ -1,10 +1,4 @@
----
-title: Python client library
-brief: Programmatic interface in Python for SignalFx's metadata and ingest APIs
----
-
-
-# Python client library for SignalFx
+# ![](./img/integrations_python.png) Python client library for SignalFx
 
 
 - [Description](#description)

@@ -1,9 +1,4 @@
----
-title: Amazon ECS
-brief: SignalFx's integration with Amazon EC2 Container Service (ECS)
----
-
-# Amazon EC2 Container Service (ECS)
+# ![](./img/integration_awsecs.png) Amazon EC2 Container Service (ECS)
 
 - [Description](#description)
 - [Installation](#installation)

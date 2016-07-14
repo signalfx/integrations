@@ -1,5 +1,5 @@
-{ "display_name":"Disk collectd plugin",
-  "description": "The Disk plugin collects performance statistics of hard-disks and, where supported, partitions. ",
+{ "display_name":"Disk",
+  "description": "The Disk plugin for collectd collects performance statistics of hard disks and partitions. ",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-disk",
   "code": "https://github.com/signalfx/collectd/blob/master/src/disk.c",
   "featured": false,

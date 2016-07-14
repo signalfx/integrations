@@ -1,0 +1,9 @@
+{ "display_name":"Amazon RDS",
+  "description": "SignalFx's integration with Amazon Relational Database Service (RDS).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-rds",
+  "code": "https://aws.amazon.com/rds/",
+  "featured": false,
+  "logo_large": "integration_awsrds.png",
+  "logo_small": "integration_awsrds.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

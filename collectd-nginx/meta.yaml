@@ -1,5 +1,5 @@
-{ "display_name":"NGINX collectd plugin",
-  "description": "NGINX collectd plugin",
+{ "display_name":"NGINX",
+  "description": "Monitor NGINX using the SignalFx collectd plugin.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-nginx",
   "code": "https://github.com/signalfx/collectd/blob/master/src/nginx.c",
   "featured": false,

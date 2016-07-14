@@ -1,0 +1,9 @@
+{ "display_name":"Amazon ELB",
+  "description": "SignalFx's integration with Elastic Load Balancing (ELB).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-elb",
+  "code": "https://aws.amazon.com/elasticloadbalancing/",
+  "featured": false,
+  "logo_large": "integration_awselb.png",
+  "logo_small": "integration_awselb.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

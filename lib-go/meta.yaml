@@ -1,5 +1,5 @@
 { "display_name":"SignalFx Go Library",
-  "description": "Go Library for SignalFx",
+  "description": "Programmatic interface in Go for SignalFx's metadata and ingest APIs",
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-go",
   "code": "https://github.com/signalfx/golib/tree/master/sfxclient",
   "featured": false,

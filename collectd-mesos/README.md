@@ -1,9 +1,4 @@
----
-title: collectd Mesos plugin
-brief: Use this plugin to collect data about Apache Mesos.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-mesos/img/integrations_mesos.png) Mesos collectd plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-mesos/img/integrations_mesos.png) Mesos
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

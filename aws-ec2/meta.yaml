@@ -1,0 +1,9 @@
+{ "display_name":"Amazon EC2",
+  "description": "SignalFx's integration with Amazon Elastic Compute Cloud (EC2).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-ec2",
+  "code": "https://aws.amazon.com/ec2/",
+  "featured": false,
+  "logo_large": "integration_awsec2.png",
+  "logo_small": "integration_awsec2.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

@@ -1,5 +1,5 @@
-{ "display_name":"Riak collectd plugin",
-  "description": "Riak collectd plugin by Tapjoy",
+{ "display_name":"Riak",
+  "description": "Monitor Riak using this plugin by Tapjoy for the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-riak",
   "code": "https://github.com/signalfx/collectd/blob/master/src/curl_json.c",
   "featured": true,

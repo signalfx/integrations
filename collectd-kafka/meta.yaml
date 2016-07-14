@@ -1,5 +1,5 @@
-{ "display_name":"Kafka collectd plugin",
-  "description": "Kafka collectd plugin",
+{ "display_name":"Kafka",
+  "description": "Monitor Kafka using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-kafka",
   "code": "https://github.com/signalfx/collectd/blob/master/src/write_kafka.c",
   "featured": true,

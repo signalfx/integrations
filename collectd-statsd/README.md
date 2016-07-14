@@ -1,9 +1,4 @@
----
-title: StatsD collectd Plugin
-brief: StatsD plugin for collectd.
----
-
-# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) StatsD collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) StatsD
 
 _This is a directory that consolidates all the metadata associated with the StatsD collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/statsd.c)_
 

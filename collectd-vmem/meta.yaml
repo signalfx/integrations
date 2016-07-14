@@ -1,5 +1,5 @@
-{ "display_name":"vmem collectd plugin",
-  "description": "The vmem plugin collects information about the virtual memory subsystem of the kernel.",
+{ "display_name":"vmem",
+  "description": "The vmem plugin for collectd collects information about the virtual memory subsystem of the kernel.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-vmem",
   "code": "https://github.com/signalfx/collectd/blob/master/src/vmem.c",
   "featured": false,

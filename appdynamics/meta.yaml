@@ -1,5 +1,5 @@
-{ "display_name":"AppDynamics Integration",
-  "description": "AppDynamics integration",
+{ "display_name":"AppDynamics",
+  "description": "The SignalFx AppDynamics integration brings metrics captured through AppDynamics into SignalFx.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/appdynamics",
   "code": "https://github.com/signalfx/appd-integration",
   "featured": false,

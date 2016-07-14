@@ -1,0 +1,9 @@
+{ "display_name":"HAProxy",
+  "description": "Monitor HAProxy using the SignalFx collectd agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-haproxy",
+  "code": "https://github.com/signalfx/collectd-haproxy",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-haproxy/img/integrations_haproxy.png",
+  "logo_small": "/images/repos/collectd-haproxy/img/integrations_haproxy%402x.png",
+  "in_app_categories": ["servicesMonitored"]
+}

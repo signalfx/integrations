@@ -1,5 +1,5 @@
-{ "display_name":"Java collectd plugin",
-  "description": "The Java plugin embeds a Java virtual machine (JVM) into collectd and exposes the application programming interface (API) to Java programs.",
+{ "display_name":"Java",
+  "description": "The Java plugin for collectd embeds a Java virtual machine (JVM) into collectd and exposes the application programming interface (API) to Java programs.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-java",
   "code": "https://github.com/signalfx/collectd/blob/master/src/java.c",
   "featured": false,

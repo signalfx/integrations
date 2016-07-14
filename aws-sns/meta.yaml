@@ -1,0 +1,9 @@
+{ "display_name":"Amazon SNS",
+  "description": "SignalFx's integration with Amazon Simple Notification Service (SNS).",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-sns",
+  "code": "https://aws.amazon.com/sns/",
+  "featured": false,
+  "logo_large": "integration_awssns.png",
+  "logo_small": "integration_awssns.png",
+  "in_app_categories": ["AWSservicesMonitored"]
+},

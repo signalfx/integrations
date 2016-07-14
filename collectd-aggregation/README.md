@@ -1,8 +1,4 @@
----
-title: Aggregated CPU Metrics
-brief: Metrics collected about CPU usage as a whole instead of per-cpu
----
-### Aggregated CPU Metrics
+### Aggregation
 
 Use the [aggregation](https://collectd.org/wiki/index.php/Plugin:Aggregation) to aggregate metrics.
 

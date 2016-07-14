@@ -1,5 +1,5 @@
-{ "display_name":"Varnish collectd plugin",
-  "description": "Varnish collectd plugin",
+{ "display_name":"Varnish",
+  "description": "Monitor Varnish using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-varnish",
   "code": "https://github.com/signalfx/collectd/blob/master/src/varnish.c",
   "featured": false,

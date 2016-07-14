@@ -1,10 +1,4 @@
----
-title: Node.js client library
-brief: Programmatic interface in JavaScript for SignalFx's metadata and ingest APIs
----
-
-
-# Node.js client library for SignalFx
+# ![](./img/integrations_nodejs.png) Node.js client library for SignalFx
 
 
 - [Description](#description)

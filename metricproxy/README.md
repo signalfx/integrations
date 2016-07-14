@@ -1,8 +1,3 @@
----
-title: SignalFx metric proxy
-brief: Aggregate and translate metrics before forwarding to SignalFx.
----
-
 # ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx metric proxy
 
 _This is a directory that consolidates metadata associated with the SignalFx metric proxy. The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy)_

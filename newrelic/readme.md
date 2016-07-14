@@ -1,8 +1,3 @@
----
-title: New Relic
-brief: SignalFx's integration with New Relic
----
-
 #![](././img/integration_newrelic.png) New Relic
 
 - [Description](#description)

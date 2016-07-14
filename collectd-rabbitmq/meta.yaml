@@ -1,5 +1,5 @@
-{ "display_name":"RabbitMQ collectd plugin",
-  "description": "RabbitMQ collectd plugin",
+{ "display_name":"RabbitMQ",
+  "description": "Monitor RabbitMQ using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-rabbitmq",
   "code": "https://github.com/signalfx/collectd-rabbitmq",
   "featured": false,

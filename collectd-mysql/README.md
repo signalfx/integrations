@@ -1,9 +1,4 @@
----
-title: collectd MySQL plugin
-brief: Use this plugin to collect metrics from MySQL.
----
-
-# MySQL collectd Plugin
+# ![](./img/integrations_mysql.png) MySQL
 
 _This is a directory that consolidates all the metadata associated with the MySQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/mysql.c)_
 
