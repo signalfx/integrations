@@ -52,11 +52,11 @@ Use SignalFx's configuration of the collectd Java plugin to collect metrics abou
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | ActiveMQ  | 5.8.0 or later |
-| [Java plugin for collectd](../collectd-java) <!--sfx_link:collectd-java --> |  (match collectd version) | 
+| [Java plugin for collectd](../collectd-java) <!-- sfx_link:collectd-java --> |  (match collectd version) | 
        
 ### INSTALLATION
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)<!--sfx_link:collectd-java --> if it is not already installed. 
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)<!-- sfx_link:collectd-java --> if it is not already installed. 
 
 1. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [`20-activemq.conf`](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
 
