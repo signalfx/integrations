@@ -33,7 +33,7 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd | 4.9+ |
-| Python plugin for collectd | (match with collectd version) |
+| [Python plugin for collectd](../collectd-python)<!-- sfx_link:collectd-python --> | (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->) |
 | Python |  2.6+  |
 | RabbitMQ | 3.0+ |
 | RabbitMQ Management plugin | (match with RabbitMQ version)|

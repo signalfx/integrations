@@ -1,4 +1,4 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd-activemq/img/integrations_activemq.png) ActiveMQ
+# ![](./img/integrations_activemq.png) ActiveMQ
 
 _This is a directory that consolidates all the metadata associated with SignalFx's integration with ActiveMQ. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
 
@@ -52,25 +52,13 @@ Use SignalFx's configuration of the collectd Java plugin to collect metrics abou
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | ActiveMQ  | 5.8.0 or later |
-| Java plugin for collectd |  (match collectd version) | 
+| [Java plugin for collectd](../collectd-java) <!--sfx_link:collectd-java --> |  (match collectd version) | 
        
 ### INSTALLATION
 
-#### RHEL/CentOS and Amazon Linux: Install Java plugin for collectd
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)<!--sfx_link:collectd-java --> if it is not already installed. 
 
-This integration requires the [Java plugin for collectd](../collectd-java/), which is not included with the SignalFx collectd agent on RHEL/CentOS or Amazon Linux. 
-
-1. Run the following command to install the Java plugin for collectd:
-
-  `yum install collectd-java`
-
-1. Download SignalFx's example configuration file for the Java plugin to `etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
-
-1. Restart collectd. 
-
-#### Install ActiveMQ integration 
-
-1. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [20-activemq.conf](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
+1. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [`20-activemq.conf`](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
 
 1. Modify `20-activemq.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -82,7 +70,7 @@ Using the example configuration file [`20-activemq.conf`](././20-activemq.conf) 
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
-| Host | The name of this ActiveMQ broker. Appears as dimension `host` in SignalFx. Note: Do not modify or remove the `[hostHasService=activemq]` section. | `"ActiveMQ_Host1[hostHasService=activemq]"` |
+| Host | The name of this ActiveMQ broker. Appears as dimension `host` in SignalFx. </p> Note: Do not modify or remove the `[hostHasService=activemq]` section. | `"ActiveMQ_Host1[hostHasService=activemq]"` |
 | ServiceURL | URL of the ActiveMQ service. | `ServiceURL "service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi"` |
 
 ### USAGE

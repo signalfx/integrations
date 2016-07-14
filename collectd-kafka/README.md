@@ -36,19 +36,7 @@ This is the Kafka plugin for collectd. It will send data about Kafka to SignalFx
 
 ### INSTALLATION
 
-#### RHEL/CentOS and Amazon Linux: Install Java plugin for collectd
-
-This integration requires the [Java plugin for collectd](../collectd-java/), which is not included with the SignalFx collectd agent on RHEL/CentOS or Amazon Linux. 
-
-1. Run the following command to install the Java plugin for collectd:
-
-  `yum install collectd-java`
-
-1. Download SignalFx's example configuration file for the Java plugin to `etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
-
-1. Restart collectd. 
-
-#### Install Kafka integration 
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)<!--sfx_link:collectd-java --> if it is not already installed. 
 
 1. Download SignalFx's example Kafka configuration file to `/etc/collectd/managed_config`:  [20-kafka.conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka.conf)
 
@@ -66,7 +54,7 @@ Using the example configuration file [`20-kafka.conf`](././20-kafka.conf) as a g
 | Value | Description |
 |-------|-------------|
 | ServiceURL | URL of your JMX application. |
-| Host | The name of your host (_Please leave the identifier `[hostHasService=kafka]`) in the host name._|
+| Host | The name of your host. Appears as dimension `host` in SignalFx.  </p> Note: (Please leave the identifier `[hostHasService=kafka]`) in the host name. |
 
 ### USAGE
 

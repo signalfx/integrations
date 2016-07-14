@@ -40,7 +40,7 @@ Use the Mesos plugin for collectd to monitor the following information about Mes
 This plugin requires:
 
 - collectd 4.9+
-- Python plugin for collectd (included with SignalFx collectd)
+- | [Python plugin for collectd](../collectd-python)<!-- sfx_link:collectd-python --> (included with [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->)
 - Python 2.3+
 - Mesos 0.19.0 or greater
 
