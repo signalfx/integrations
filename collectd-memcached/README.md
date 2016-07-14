@@ -48,7 +48,7 @@ Documentation for Memcached can be found here: https://github.com/memcached/memc
 
          yum install collectd-memcached
          
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd). 
    
 1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf) to `/etc/collectd/managed_config`.
 

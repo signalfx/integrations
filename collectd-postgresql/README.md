@@ -45,7 +45,7 @@ This plugin requires:
 
          yum install collectd-postgresql
          
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd). 
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd). 
 
 1. Download SignalFx's [sample PostgreSQL configuration file](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf) to `/etc/collectd/managed_config`.
 

@@ -17,8 +17,8 @@ Connecting to CloudWatch allows you to take advantage of SignalFx’s extensive 
 - The SignalFx Hosts page visualizes EC2 instances.
   
   [<img src='./img/hosts_aws.png' width=200px>](./img/hosts_aws.png)
-- SignalFx can sync metadata about your AWS hosts to enrich metrics reported by CloudWatch or the [SignalFx collectd agent](../collectd)<!-- sfx_link:collectd -->. 
-- SignalFx provides built-in dashboards for many Amazon web services that report to CloudWatch, such as [EC2](../aws-ec2)<!-- sfx_link:aws-ec2 --> and [ELB](../aws-elb)<!-- sfx_link:aws-elb-->.
+- SignalFx can sync metadata about your AWS hosts to enrich metrics reported by CloudWatch or the [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd). 
+- SignalFx provides built-in dashboards for many Amazon web services that report to CloudWatch, such as [EC2](../aws-ec2)[](sfx_link:aws-ec2) and [ELB](../aws-elb)[](sfx_link:aws-elb).
 
 
 
@@ -42,7 +42,7 @@ SignalFx automatically imports relevant dimensions for each CloudWatch metric. F
 
 ##### Importing account metadata and custom tags
 
-SignalFx can apply or sync other AWS metadata with metrics reported, allowing it to be used as filters or in group-bys when visualizing metrics. Metadata is available for [EC2](../aws-ec2)<!-- sfx_link:aws-ec2 -->, [EBS](../aws-ebs)<!-- sfx_link:aws-ebs --> and [ELB](../aws-elb)<!-- sfx_link:aws-elb --> services. It may take up to 15 minutes for metadata to be synced to your SignalFx data.
+SignalFx can apply or sync other AWS metadata with metrics reported, allowing it to be used as filters or in group-bys when visualizing metrics. Metadata is available for [EC2](../aws-ec2)[](sfx_link:aws-ec2), [EBS](../aws-ebs)[](sfx_link:aws-ebs) and [ELB](../aws-elb)[](sfx_link:aws-elb) services. It may take up to 15 minutes for metadata to be synced to your SignalFx data.
 
 The following metadata is available for filtering metrics:
 

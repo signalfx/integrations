@@ -14,11 +14,11 @@ _This is a directory that consolidates all the metadata associated with the Acti
 
 This tool measures the age of messages in ActiveMQ queues, and publishes the results to SignalFx. It actively inspects the messages that are waiting to be delivered in each queue, and therefore is especially useful for detecting messages that are "stuck" in ActiveMQ queues and unable to be delivered. 
 
-To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration](../collectd-activemq).
+To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration](../collectd-activemq)[](sfx_link:collectd-activemq).
 
 #### FEATURES
 
-##### Built-in dashboards (accompanying [SignalFx's ActiveMQ integration](../collectd-activemq))
+##### Built-in dashboards (accompanying [SignalFx's ActiveMQ integration](../collectd-activemq)[](sfx_link:collectd-activemq))
 
 - **ActiveMQ Message Age**: Shows the average age of messages in ActiveMQ queues.
 

@@ -48,7 +48,7 @@ collects statistics from Couchbase.
 | collectd  |  4.9 or later  |
 | python | 2.7 or later |
 | couchbase | 3.0 or later |
-| Python plugin for collectd | (match with collectd version) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd)) |
 
 
 ### INSTALLATION

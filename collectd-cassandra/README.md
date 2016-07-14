@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/img/integrations_cassandra.png) Cassandra
+# ![](./img/integrations_cassandra.png) Cassandra
 
  _This directory consolidates all the metadata associated with SignalFx's Cassandra integration with collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
 
@@ -51,19 +51,9 @@ Use this integration to monitor the following types of information from Cassandr
 
 Open the JMX port on your Cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the [Cassandra Project site](http://wiki.apache.org/cassandra/JmxInterface). There is also a page covering a few [common issues](http://wiki.apache.org/cassandra/JmxGotchas).
 
-#### RHEL/CentOS and Amazon Linux: Install Java plugin for collectd
-
-This integration requires the [Java plugin for collectd](../collectd-java/), which is not included with the SignalFx collectd agent on RHEL/CentOS or Amazon Linux. 
-
-1. Run the following command to install the Java plugin for collectd:
-
-  `yum install collectd-java`
-
-1. Download SignalFx's example configuration file for the Java plugin to `etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
-
-1. Restart collectd. 
-
 #### Install Cassandra integration 
+
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
 
 1. Download SignalFx's example Cassandra configuration file to `/etc/collectd/managed_config`:  [20-cassandra.conf](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf)
 
@@ -75,10 +65,10 @@ This integration requires the [Java plugin for collectd](../collectd-java/), whi
 
 Using the example configuration file [`20-cassandra.conf`](././20-cassandra.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Cassandra instance to be monitored.
 
-| Value | Description |
-|-------|-------------|
-| ServiceURL | URL of your JMX application. |
-| Host | The name of your host (_Please leave the identifier `[hostHasService=cassandra]`) in the host name._|
+| Configuration Option | Description | Default |
+|-------|-------------|------------|
+| ServiceURL | URL of your JMX application. | `service:jmx:rmi:///jndi/rmi://localhost:7199/jmxrmi` |
+| Host | The name of your host. Appears as dimension `host` in SignalFx.  </p> Note: (Please leave the identifier `[hostHasService=cassandra]`) in the host name. | `testcassandraserver[hostHasService=cassandra]` |
 
 ### USAGE
 

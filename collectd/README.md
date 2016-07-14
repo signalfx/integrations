@@ -40,7 +40,7 @@ Sending data using collectd allows you to take advantage of SignalFx’s extensi
 - The SignalFx Hosts page visualizes hosts that are monitored using the SignalFx collectd agent.
 - SignalFx provides built-in dashboards to show infrastructure data as reported by the SignalFx collectd agent.
 - SignalFx provides validated plugins for collectd to help you monitor specific software in your environment. Browse plugins that have been validated by SignalFx [here on Github](http://signalfx.github.io), or on the Integrations page in SignalFx.
-- The [SignalFx metadata plugin for collectd](../collectd-signalfx) is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s collectd packages.
+- The [SignalFx plugin for collectd](../collectd-signalfx) is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s collectd packages.
 
 ![](./img/collectdhostspage.png)
 
@@ -52,7 +52,7 @@ Sending data using collectd allows you to take advantage of SignalFx’s extensi
 
 SignalFx provides a shell script that you can use to install the SignalFx collectd agent, including important plugins. Follow these instructions to install the SignalFx collectd agent on a system for which you have administrator (sudo) privileges.
 
-If you have already installed collectd on your own, this script will install the [SignalFx metadata plugin](../collectd-signalfx) and configure collectd to send metrics to SignalFx.
+If you have already installed collectd on your own, this script will install the [SignalFx plugin for collectd](../collectd-signalfx) and configure collectd to send metrics to SignalFx.
 
 **1. Download and run the script**
 

@@ -53,7 +53,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 |-------------------|----------------|
 | collectd          | 4.9 or later   |
 | Elasticsearch     | 1.0.0 or later |
-| Python plugin for collectd | (match with collectd version) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
 
