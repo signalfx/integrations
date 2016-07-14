@@ -13,7 +13,7 @@ brief: SignalFx's integration with Amazon EC2 Container Service (ECS)
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Amazon EC2 Container Service (ECS) via Amazon CloudWatch. 
+Use SignalFx to monitor Amazon EC2 Container Service (ECS) via [Amazon CloudWatch](../aws)<!-- sfx_link:aws -->. 
 
 #### FEATURES
 
@@ -33,7 +33,7 @@ Use SignalFx to monitor Amazon EC2 Container Service (ECS) via Amazon CloudWatch
 
 ### INSTALLATION
 
-To access this integration, connect to CloudWatch on the SignalFx Integrations page. 
+To access this integration, [connect to CloudWatch](../aws)<!-- sfx_link:aws --> on the SignalFx Integrations page. 
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page. 
 
