@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Elastic Load Balancing (ELB) via Amazon CloudWatch. 
+Use SignalFx to monitor Elastic Load Balancing (ELB) via [Amazon CloudWatch](../aws)<!-- sfx_link:aws -->. 
 
 #### FEATURES
 
@@ -24,17 +24,23 @@ Use SignalFx to monitor Elastic Load Balancing (ELB) via Amazon CloudWatch.
 
 ### INSTALLATION
 
-To access this integration, connect to CloudWatch on the SignalFx Integrations page. 
+To access this integration, [connect to CloudWatch](../aws)<!-- sfx_link:aws --> on the SignalFx Integrations page. 
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page. 
 
 ### USAGE
 
-SignalFx provides built-in dashboards for this service. Examples are shown below. 
+#### Uniquely identifying ELBs
 
-![](./img/dashboard_elb_instances.png)
+SignalFx synthesizes a unique ID for each ELB in the dimension `AWSUniqueId`.
 
-![](./img/dashboard_elb_instance.png)
+#### ELB metadata 
+
+For ELB, SignalFx will scan every load balancer name from your AWS account and pull out properties of the load balancer and any tags set on the load balancer.
+
+| ELB Filter Name |	Custom Property |	Description |
+|-----------------|-----------------|-------------|
+| create-time |	aws_create_time	| The time stamp when the load balancer was created |
 
 ### METRICS
 
