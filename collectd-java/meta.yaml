@@ -4,6 +4,6 @@
   "code": "https://github.com/signalfx/collectd/blob/master/src/java.c",
   "featured": false,
   "logo_large": "/images/repos/collectd-java/img/integrations_java.png",
-  "logo_small": "/images/repos/collectd-java/img/integrations_java%402x.png"
+  "logo_small": "/images/repos/collectd-java/img/integrations_java%402x.png",
   "in_app_categories": ["servicesMonitored"]
 },
