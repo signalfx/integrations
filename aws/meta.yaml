@@ -5,5 +5,5 @@
    "featured": false,
    "logo_large": "integration_aws.png",
    "logo_small": "integration_aws.png",
-   "in_app_categories": "essential","AWSservicesMonitored"]
+   "in_app_categories": ["AWSservicesMonitored"]
  }
