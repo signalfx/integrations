@@ -44,7 +44,7 @@ Provide configuration to this process by setting environment variables as follow
 | APPD_PASSWORD | AppDynamics password |
 | APPD_HOST | AppDynamics hostname |
 | SIGNALFX_TOKEN | Your SignalFx API token |
-| SIGNALFX_APPD_METRICS | Name of the metrics configuration file (default: metrics.json) |
+| SIGNALFX\_APPD_METRICS | Name of the metrics configuration file (default: metrics.json) |
 | APPD_INTERVAL | Frequency in minutes with which metrics will be sent to SignalFx (default: 1 minute) |
 
 ### USAGE

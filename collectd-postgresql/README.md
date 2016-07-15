@@ -17,7 +17,7 @@ From [collectd wiki:](https://collectd.org/wiki/index.php/Plugin:PostgreSQL)
 
 >The PostgreSQL plugin connects to and executes SQL statements on a PostgreSQL database. It then reads back the results and, depending on the configuration, the returned values are then converted into collectd “value lists” (the data structure used internally to pass statistics around).
 
-Documentation for PostgreSQL can be found at http://www.postgresql.org/docs/manuals/.
+Documentation for PostgreSQL can be found at [http://www.postgresql.org/docs/manuals/](http://www.postgresql.org/docs/manuals/).
 
 #### FEATURES
 

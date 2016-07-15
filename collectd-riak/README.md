@@ -57,7 +57,6 @@ This plugin is included with [SignalFx's collectd package](https://support.signa
 
 Using the example configuration file [10-riak.conf](https://github.com/signalfx/integrations/tree/master/collectd-riak/10-riak.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Riak KV instance to be monitored.
 
-
 | Setting	| Value |
 |----------|----------|
 | Hostname	| riak1 |

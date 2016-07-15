@@ -39,8 +39,8 @@ This plugin requires:
 | RabbitMQ Management plugin | (match with RabbitMQ version)|
 
 ### INSTALLATION
-
-1. Download the [RabbitMQ Python module]( https://github.com/signalfx/collectd-rabbitmq/)
+  
+1. Download the [collectd-rabbitmq Python module]( https://github.com/signalfx/collectd-rabbitmq/)
 
 1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf) to `/etc/collectd/managed_config`.
 
@@ -75,19 +75,13 @@ Sample of pre-built dashboard in SignalFx:
 
 #### Metric naming
 
-When collectd is configured to publish metrics to SignalFx, metrics from this plugin will be named according to the format:
-
-```
-<metric type>.<category>.<statistic>
-```
+When collectd is configured to publish metrics to SignalFx, metrics from this plugin will be named according to the format: `<metric type>.<category>.<statistic>`
 
 For example:
 
-```
-gauge.connection.recv_oct_details.rate
-counter.connection.send_oct
-gauge.queue.message_stats.deliver_get_details.rate
-```
+- `gauge.connection.recv_oct_details.rate`
+- `counter.connection.send_oct`
+- `gauge.queue.message_stats.deliver_get_details.rate`
 
 ### METRICS
 

@@ -45,7 +45,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
   [<img src='./img/dashboard_mongodb_host.png' width=200px>](./img/dashboard_mongodb_host.png)
 
 - **MongoDB Cluster**: Overview of a MongoDB cluster.
-
+  
 ### REQUIREMENTS AND DEPENDENCIES
 
 #### Version information
@@ -73,7 +73,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
         apt-get install -y python-pip python-dev build-essential
         pip install pymongo==3.0.3
 
-1. Download the [Python module for MongoDB](https://github.com/signalfx/collectd-mongodb).  
+1. Download the [collectd-mongodb Python module](https://github.com/signalfx/collectd-mongodb).  
 
 1. Download SignalFx's [sample configuration file ](https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
 
