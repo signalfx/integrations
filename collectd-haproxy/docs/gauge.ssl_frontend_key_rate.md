@@ -1,8 +1,8 @@
 ---
 title: Ssl frontend key rate
-brief: Corresponds to haproxy's SslFrontendKeyRate metric. 
+brief: Corresponds to HAProxy's `SslFrontendKeyRate` metric. 
 metric_type: gauge
 ---
 ### Ssl frontend key rate
 
-Corresponds to haproxy's SslFrontendKeyRate metric. 
+Corresponds to HAProxy's `SslFrontendKeyRate` metric. 

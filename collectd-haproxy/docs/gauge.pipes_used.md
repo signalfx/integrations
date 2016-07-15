@@ -1,8 +1,8 @@
 ---
 title: Pipes used
-brief: Corresponds to haproxy's PipesUsed metric. 
+brief: Corresponds to HAProxy's `PipesUsed` metric. 
 metric_type: gauge
 ---
 ### Pipes used
 
-Corresponds to haproxy's PipesUsed metric. 
+Corresponds to HAProxy's `PipesUsed` metric. 

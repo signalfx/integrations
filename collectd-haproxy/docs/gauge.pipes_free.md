@@ -1,8 +1,8 @@
 ---
 title: Pipes free
-brief: Corresponds to haproxy's PipesFree metric. 
+brief: Corresponds to HAProxy's `PipesFree` metric. 
 metric_type: gauge
 ---
 ### Pipes free
 
-Corresponds to haproxy's PipesFree metric. 
+Corresponds to HAProxy's `PipesFree` metric. 

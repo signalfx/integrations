@@ -1,8 +1,8 @@
 ---
 title: Compress bps out
-brief: Corresponds to haproxy's CompressBpsOut metric. 
+brief: Corresponds to HAProxy's `CompressBpsOut` metric. 
 metric_type: derive
 ---
 ### Compress bps out
 
-Corresponds to haproxy's CompressBpsOut metric. 
+Corresponds to HAProxy's `CompressBpsOut` metric. 

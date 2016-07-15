@@ -1,8 +1,8 @@
 ---
 title: Requests
-brief: Corresponds to haproxy's CumReq metric. 
+brief: Corresponds to HAProxy's `CumReq` metric. 
 metric_type: derive
 ---
 ### Requests
 
-Corresponds to haproxy's CumReq metric. 
+Corresponds to HAProxy's `CumReq` metric. 

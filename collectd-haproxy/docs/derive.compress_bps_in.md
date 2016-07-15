@@ -1,8 +1,8 @@
 ---
 title: Compress bps in
-brief: Corresponds to haproxy's CompressBpsIn metric. 
+brief: Corresponds to HAProxy's `CompressBpsIn` metric. 
 metric_type: derive
 ---
 ### Compress bps in
 
-Corresponds to haproxy's CompressBpsIn metric. 
+Corresponds to HAProxy's `CompressBpsIn` metric. 

@@ -1,8 +1,8 @@
 ---
 title: Max ssl connections
-brief: Corresponds to haproxy's MaxSslConns metric. 
+brief: Corresponds to HAProxy's `MaxSslConns` metric. 
 metric_type: gauge
 ---
 ### Max ssl connections
 
-Corresponds to haproxy's MaxSslConns metric. 
+Corresponds to HAProxy's `MaxSslConns` metric. 

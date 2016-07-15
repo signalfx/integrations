@@ -1,8 +1,8 @@
 ---
 title: Max pipes
-brief: Corresponds to haproxy's MaxPipes metric. 
+brief: Corresponds to HAProxy's `MaxPipes` metric. 
 metric_type: gauge
 ---
 ### Max pipes
 
-Corresponds to haproxy's MaxPipes metric. 
+Corresponds to HAProxy's `MaxPipes` metric. 
