@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### curr_items gauge
 
-This is bucket related metric. total number of stored items per bucket.
+total number of stored items per bucket.

@@ -1,8 +1,8 @@
 ---
 title: mcdMemoryReserved
-brief: Amount of memcached memory reserved (bytes) - available in detailed mode
+brief: Amount of memcached memory reserved (bytes).
 metric_type: gauge
 ---
 ### mcdMemoryReserved gauge
 
-This is nodes related metric. Amount of memcached memory reserved (bytes) - available in detailed mode.
+Amount of memcached memory reserved (bytes)..

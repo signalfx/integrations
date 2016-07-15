@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### ep_num_value_ejects gauge
 
-This is bucket related metric. number of objects ejected out of the bucket.
+number of objects ejected out of the bucket.

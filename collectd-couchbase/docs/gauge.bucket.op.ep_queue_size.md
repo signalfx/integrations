@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### ep_queue_size gauge
 
-This is bucket related metric. number of items queued for storage.
+number of items queued for storage.

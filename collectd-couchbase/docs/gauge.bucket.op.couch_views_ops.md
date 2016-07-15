@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### couch_views_ops gauge
 
-This is bucket related metric. view operations per second.
+view operations per second.

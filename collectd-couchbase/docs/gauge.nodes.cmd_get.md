@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### cmd_get gauge
 
-This is nodes related metric. Number of get commands.
+Number of get commands.

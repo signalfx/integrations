@@ -1,8 +1,8 @@
 ---
 title: rawRAM
-brief: Amount of raw RAM used by the bucket (bytes) - available in detailed mode
+brief: Amount of raw RAM used by the bucket (bytes).
 metric_type: gauge
 ---
 ### rawRAM gauge
 
-This is bucket related metric. Amount of raw RAM used by the bucket (bytes) - available in detailed mode.
+Amount of raw RAM used by the bucket (bytes)..

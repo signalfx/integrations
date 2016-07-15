@@ -1,8 +1,8 @@
 ---
 title: memoryFree
-brief: Amount of memory free for the node (bytes) - available in detailed mode
+brief: Amount of memory free for the node (bytes).
 metric_type: gauge
 ---
 ### memoryFree gauge
 
-This is nodes related metric. Amount of memory free for the node (bytes) - available in detailed mode.
+Amount of memory free for the node (bytes)..

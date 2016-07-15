@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### mem_free gauge
 
-This is nodes related metric. Free memory available to the node (bytes).
+Free memory available to the node (bytes).

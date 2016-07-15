@@ -1,8 +1,8 @@
 ---
 title: couch_docs_fragmentation
-brief: ??
+brief: Percent fragmentation of documents in this bucket.
 metric_type: gauge
 ---
 ### couch_docs_fragmentation gauge
 
-This is bucket related metric. ??.
+Percent fragmentation of documents in this bucket.

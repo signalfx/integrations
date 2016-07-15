@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### curr_connections gauge
 
-This is bucket related metric. open connection per bucket.
+open connection per bucket.

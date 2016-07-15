@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### quotaPercentUsed gauge
 
-This is bucket related metric. Percentage of RAM used (for active objects) against the configure bucket size (%).
+Percentage of RAM used (for active objects) against the configure bucket size (%).

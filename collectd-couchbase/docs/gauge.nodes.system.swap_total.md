@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### swap_total gauge
 
-This is nodes related metric. Total swap size allocated (bytes).
+Total swap size allocated (bytes).

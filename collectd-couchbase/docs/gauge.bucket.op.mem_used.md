@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### mem_used gauge
 
-This is bucket related metric. memory used.
+memory used.

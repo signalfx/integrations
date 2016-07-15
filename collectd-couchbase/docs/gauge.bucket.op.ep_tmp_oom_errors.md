@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### ep_tmp_oom_errors gauge
 
-This is bucket related metric. request rejected - couchbase is making room by ejecting objects, try again later.
+request rejected - couchbase is making room by ejecting objects, try again later.
