@@ -44,7 +44,7 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd   |  4.9+  |
-| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd)) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 | Python    |  2.6+ |
 | redis | 2.8+ |
 

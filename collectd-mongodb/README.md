@@ -56,7 +56,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 | Python    |  2.4 or later  |
 | MongoDB   |  2.4 or later  |
 | PyMongo   |  3.0 or later  |
-| Python plugin for collectd | (included with [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd)) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
 
@@ -142,7 +142,7 @@ When analyzing the performance of a MongoDB cluster, it's also important to veri
 
 On an individual instance level, it's important to monitor system statistics like memory usage, page faults, and disk I/O utilization.
 
-MongoDB uses memory-mapped files to store data, so it is important to compare the amount of memory that MongoDB has allocated to the amount of system memory. This plugin reports resident memory usage in [`gauge.mem.resident`](././docs/gauge.mem.resident.md) and mapped memory usage in [`gauge.mem.mapped`](././docs/gauge.mem.mapped.md). If either of these quantities exceed the amount of system memory (reported by the [`memory`](../collectd-memory) plugin for collectd), the system may be at or over capacity.
+MongoDB uses memory-mapped files to store data, so it is important to compare the amount of memory that MongoDB has allocated to the amount of system memory. This plugin reports resident memory usage in [`gauge.mem.resident`](././docs/gauge.mem.resident.md) and mapped memory usage in [`gauge.mem.mapped`](././docs/gauge.mem.mapped.md). If either of these quantities exceed the amount of system memory (reported by the [`memory`](https://github.com/signalfx/integrations/tree/master/collectd-memory) plugin for collectd), the system may be at or over capacity.
 
 ![Memory statistics from MongoDB](././img/mongodb_memory.png)
 

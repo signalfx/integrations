@@ -40,7 +40,7 @@ This plugin requires:
 
          yum install collectd-nginx
          
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd). 
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
          
 1. Enable the `stub_status` module in your NGINX server as described [below](#configuration).
 
