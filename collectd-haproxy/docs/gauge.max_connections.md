@@ -1,8 +1,8 @@
 ---
 title: Max connections
-brief: Corresponds to haproxy's MaxConn metric. 
+brief: Corresponds to HAProxy's `MaxConn` metric. 
 metric_type: gauge
 ---
 ### Max connections
 
-Corresponds to haproxy's MaxConn metric. 
+Corresponds to HAProxy's `MaxConn` metric. 

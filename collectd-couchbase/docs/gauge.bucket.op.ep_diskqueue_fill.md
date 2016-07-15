@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### ep_diskqueue_fill gauge
 
-This is bucket related metric. enqueued items on disk queue.
+enqueued items on disk queue.

@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### mem_total gauge
 
-This is nodes related metric. Total memory available to the node (bytes).
+Total memory available to the node (bytes).

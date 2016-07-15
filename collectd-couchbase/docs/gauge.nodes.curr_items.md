@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### curr_items gauge
 
-This is nodes related metric. Number of current items.
+Number of current items.

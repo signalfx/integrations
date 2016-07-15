@@ -1,8 +1,8 @@
 ---
 title: Ssl cache misses
-brief: Corresponds to haproxy's SslCacheMisses metric. 
+brief: Corresponds to HAProxy's `SslCacheMisses` metric. 
 metric_type: derive
 ---
 ### Ssl cache misses
 
-Corresponds to haproxy's SslCacheMisses metric. 
+Corresponds to HAProxy's `SslCacheMisses` metric. 

@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### cmd_get gauge
 
-This is bucket related metric. requested objects.
+requested objects.

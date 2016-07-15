@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### ops gauge
 
-This is nodes related metric. Number of operations performed on Couchbase.
+Number of operations performed on Couchbase.

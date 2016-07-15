@@ -1,8 +1,8 @@
 ---
 title: couch_spatial_disk_size
-brief: ??	- available in detailed mode
+brief: Amount of disk space occupied by spatial views, in bytes.
 metric_type: gauge
 ---
 ### couch_spatial_disk_size gauge
 
-This is nodes related metric. ??	- available in detailed mode.
+Amount of disk space occupied by spatial views, in bytes.

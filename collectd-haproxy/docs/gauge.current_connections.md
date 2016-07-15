@@ -1,8 +1,8 @@
 ---
 title: Current connections
-brief: Corresponds to haproxy's CurrConns metric. 
+brief: Corresponds to HAProxy's `CurrConns` metric. 
 metric_type: gauge
 ---
 ### Current connections
 
-Corresponds to haproxy's CurrConns metric. 
+Corresponds to HAProxy's `CurrConns` metric. 

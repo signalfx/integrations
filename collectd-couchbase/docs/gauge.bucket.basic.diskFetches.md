@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### diskFetches gauge
 
-This is bucket related metric. Number of disk fetches.
+Number of disk fetches.

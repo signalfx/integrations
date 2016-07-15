@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### swap_used gauge
 
-This is nodes related metric. Amount of swap space used (bytes).
+Amount of swap space used (bytes).

@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### diskUsed gauge
 
-This is bucket related metric. Amount of disk used (bytes).
+Amount of disk used (bytes).

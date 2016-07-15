@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### cpu_utilization_rate gauge
 
-This is nodes related metric. The CPU utilization rate (%).
+The CPU utilization rate (%).
