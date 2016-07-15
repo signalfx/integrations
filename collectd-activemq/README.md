@@ -20,7 +20,7 @@ Use this plugin to monitor the following types of information from ActiveMQ:
 * Queue (Queue status)
 * Topic (Topic status)
 
-To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age listener](../amq-message-age).
+To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age).
 
 #### FEATURES
 
@@ -42,7 +42,7 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 
   [<img src='./img/dashboard_activemq_topic.png' width=200px>](./img/dashboard_activemq_topic.png)
 
-- **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues. See [ActiveMQ message age listener](../amq-message-age).
+- **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues. See [ActiveMQ message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age).
 
   [<img src='./img/dashboard_activemq_messageage.png' width=200px>](./img/dashboard_activemq_messageage.png)
 
@@ -52,11 +52,11 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | ActiveMQ  | 5.8.0 or later |
-| [Java plugin for collectd](../collectd-java)[](sfx_link:collectd-java) |  (match collectd version) | 
+| [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) |  (match collectd version) | 
        
 ### INSTALLATION
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](../collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
 
 1. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [`20-activemq.conf`](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
 

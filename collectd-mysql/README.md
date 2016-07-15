@@ -51,7 +51,7 @@ Follow these steps to install and configure this plugin:
 
          yum install collectd-mysql
          
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](../collectd)[](sfx_link:sfxcollectd). 
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
 
 1. Download SignalFx's [sample configuration file](./10-mysql.conf) for this plugin to `/etc/collectd/managed_config`.
 
