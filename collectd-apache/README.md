@@ -56,13 +56,9 @@ This plugin collects metrics from the module `mod_status`.
          
    On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
 
-1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin.
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin to `/etc/collectd/managed_config`.
 
 1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 2:
-
-        include '/path/to/10-apache.conf'
 
 1. Restart collectd.
 
