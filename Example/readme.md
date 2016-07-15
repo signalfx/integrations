@@ -51,7 +51,7 @@ This plugin requires:
 Follow these steps to install this plugin:
 
 1. Download this repository to your local machine.
-2. Modify the sample configuration file [10-example.conf](././10-example.conf) to contain values that make sense for your environment, as described [below](#configuration).
+2. Modify the sample configuration file [10-example.conf](https://github.com/signalfx/integrations/tree/master/collectd-example/10-example.conf) to contain values that make sense for your environment, as described [below](#configuration).
 3. Add the following line to `collectd.conf`, replacing the path with the path to the sample configuration file you modified in step 2:
 
   ```
@@ -63,7 +63,7 @@ Follow these steps to install this plugin:
 
 >Provide in this section instructions on how to configure the plugin, before and after installation. If this plugin has a configuration file with properties, list each property, define its purpose and give an example or list the default value.
 
-Using the example configuration file [10-example.conf](././10-example.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file [10-example.conf](https://github.com/signalfx/integrations/tree/master/collectd-example/10-example.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

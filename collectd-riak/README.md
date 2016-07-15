@@ -43,7 +43,7 @@ This plugin requires:
 
 This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-1. Download SignalFx's [sample configuration file ](././10-riak.conf) for this plugin.
+1. Download SignalFx's [sample configuration file ](https://github.com/signalfx/integrations/tree/master/collectd-riak/10-riak.conf) for this plugin.
 
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
@@ -55,8 +55,7 @@ This plugin is included with [SignalFx's collectd package](https://support.signa
 
 ### CONFIGURATION
 
-Using the example configuration file [10-riak.conf](././10-riak.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Riak KV instance to be monitored.
-
+Using the example configuration file [10-riak.conf](https://github.com/signalfx/integrations/tree/master/collectd-riak/10-riak.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Riak KV instance to be monitored.
 
 | Setting	| Value |
 |----------|----------|

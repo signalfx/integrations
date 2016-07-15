@@ -36,7 +36,7 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 
 ### CONFIGURATION
 
-No additional configuration is required if using the example configuration file [10-jmx.conf](./10-jmx.conf).
+No additional configuration is required if using the example configuration file [10-jmx.conf](https://github.com/signalfx/integrations/tree/master/collectd-java/10-jmx.conf).
 
 Full configuration details for this plugin are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
 

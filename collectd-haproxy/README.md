@@ -27,13 +27,13 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
          yum install collectd-haproxy
          
    On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
-1. Download SignalFx's [sample configuration file](./10-haproxy.conf) for this plugin to `/etc/collectd/managed_config`.
+1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) for this plugin to `/etc/collectd/managed_config`.
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
 1. Restart collectd.
 
 ### CONFIGURATION
 
-Using the example configuration file [10-haproxy.conf](././10-haproxy.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
+Using the example configuration file [10-haproxy.conf](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

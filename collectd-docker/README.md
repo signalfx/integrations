@@ -66,7 +66,7 @@ pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
 
 ### CONFIGURATION
 
-Using the example configuration file [10-docker.conf](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file [10-docker.conf](https://github.com/signalfx/integrations/tree/master/collectd-docker/10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

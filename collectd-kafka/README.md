@@ -49,7 +49,7 @@ This is the Kafka plugin for collectd. It will send data about Kafka to SignalFx
 
 ### CONFIGURATION
 
-Using the example configuration file [20-kafka.conf](https://github.com/signalfx/integrations/blob/master/collectd-kafka/20-kafka.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Kafka instance to be monitored.
+Using the example configuration file [20-kafka.conf](https://github.com/signalfx/integrations/tree/master/collectd-kafka/20-kafka.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Kafka instance to be monitored.
 
 | Value | Description |
 |-------|-------------|

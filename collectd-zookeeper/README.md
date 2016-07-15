@@ -56,7 +56,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [20-zookeeper.conf](././20-zookeeper.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Zookeeper instance to be monitored.
+Using the example configuration file [20-zookeeper.conf](https://github.com/signalfx/integrations/tree/master/collectd-zookeeper/20-zookeeper.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Zookeeper instance to be monitored.
 
 | Setting            | Description     | Default|
 |--------------------|-----------------|-----------|

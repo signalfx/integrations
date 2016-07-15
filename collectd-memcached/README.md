@@ -58,7 +58,7 @@ Documentation for Memcached can be found here: [https://github.com/memcached/mem
 
 ### CONFIGURATION
 
-Using the example configuration file [10-memcached.conf](././10-memcached.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Memcached instance to be monitored.
+Using the example configuration file [10-memcached.conf](https://github.com/signalfx/integrations/tree/master/collectd-memcached/10-memcached.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Memcached instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

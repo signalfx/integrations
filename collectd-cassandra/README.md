@@ -63,7 +63,7 @@ Open the JMX port on your Cassandra app. Cassandra will listen for connections o
 
 ### CONFIGURATION
 
-Using the example configuration file [20-cassandra.conf](././20-cassandra.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Cassandra instance to be monitored.
+Using the example configuration file [20-cassandra.conf](https://github.com/signalfx/integrations/tree/master/collectd-cassandra/20-cassandra.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Cassandra instance to be monitored.
 
 | Configuration Option | Description | Default |
 |-------|-------------|------------|
