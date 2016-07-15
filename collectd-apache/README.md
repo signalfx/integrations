@@ -68,7 +68,7 @@ This plugin collects metrics from the module `mod_status`.
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-apache.conf`](././10-apache.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file [10-apache.conf](https://github.com/signalfx/integrations/tree/master/collectd-apache/10-apache.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

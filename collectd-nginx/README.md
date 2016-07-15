@@ -52,7 +52,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-nginx.conf`](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the NGINX instance to be monitored.
+Using the example configuration file [10-nginx.conf](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the NGINX instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

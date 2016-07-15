@@ -51,7 +51,7 @@ Varnish Cache is a web application accelerator also known as a caching HTTP reve
 
 There is no configuration required for the varnish collectd plugin. The default configuration is setup to bring in data on a large variety of metrics.
 
-If using the sample configuration file [`10-varnish.conf`](./10-varnish.conf), no additional configuration is required. The following optional settings allow you to configure the metrics that will be sent using this plugin:
+If using the sample configuration file [10-varnish.conf](https://github.com/signalfx/integrations/tree/master/collectd-varnish/10-varnish.conf), no additional configuration is required. The following optional settings allow you to configure the metrics that will be sent using this plugin:
 
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|

@@ -57,7 +57,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-postgresql.conf`](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf) or [`10-postgresql_pre92.conf`](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the PostgreSQL database to be monitored.
+Using the example configuration file [10-postgresql.conf](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf) or [10-postgresql_pre92.conf](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the PostgreSQL database to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

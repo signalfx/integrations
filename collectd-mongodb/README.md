@@ -75,7 +75,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
 1. Download the [Python module for MongoDB](https://github.com/signalfx/collectd-mongodb).  
 
-1. Download SignalFx's [sample configuration file ](././10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
+1. Download SignalFx's [sample configuration file ](https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
 
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
@@ -83,7 +83,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-mongodb.conf`](././10-mongodb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MongoDB instance to be monitored.
+Using the example configuration file [10-mongodb.conf](https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MongoDB instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

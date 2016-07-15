@@ -63,7 +63,7 @@ collects statistics from Couchbase.
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-couchbase.conf`](././10-couchbase.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
+Using the example configuration file [10-couchbase.conf](https://github.com/signalfx/integrations/tree/master/collectd-couchbase/10-couchbase.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
