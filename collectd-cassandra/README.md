@@ -41,7 +41,7 @@ Use this integration to monitor the following types of information from Cassandr
 | Software  | Version        |
 |-----------|----------------|
 | collectd  |  4.9+  |
-| java collectd plugin | 4.9+ |
+| [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java) | (match with collectd version) |
 | cassandra | 2.0.10+ |
 
 

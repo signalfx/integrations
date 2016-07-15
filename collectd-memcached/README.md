@@ -19,7 +19,7 @@ Use the Memcached plugin for collectd to monitor the following types of informat
 * net input/output bytes
 * number of items cached
 
-Documentation for Memcached can be found here: https://github.com/memcached/memcached/wiki
+Documentation for Memcached can be found here: [https://github.com/memcached/memcached/wiki](https://github.com/memcached/memcached/wiki)
 
 #### FEATURES
 

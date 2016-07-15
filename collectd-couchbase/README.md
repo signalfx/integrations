@@ -19,6 +19,10 @@ collects statistics from Couchbase.
 
 ##### Built-in dashboards
 
+- **Couchbase Clusters**: Overview of data from all Couchbase clusters reporting.
+
+  [<img src='./img/dashboard_couchbase_clusters.png' width=200px>](./img/dashboard_couchbase_clusters.png)
+  
 - **Couchbase Nodes**: Overview of all data from Couchbase nodes.
 
   [<img src='./img/dashboard_couchbase_nodes.png' width=200px>](./img/dashboard_couchbase_nodes.png)
@@ -26,10 +30,6 @@ collects statistics from Couchbase.
 - **Couchbase Node**: Focus on a single Couchbase node.
 
   [<img src='./img/dashboard_couchbase_node.png' width=200px>](./img/dashboard_couchbase_node.png)
-
-- **Couchbase Clusters**: Overview of data from all Couchbase clusters reporting.
-
-  [<img src='./img/dashboard_couchbase_clusters.png' width=200px>](./img/dashboard_couchbase_clusters.png)
 
 - **Couchbase Buckets**: Performance and activity of Couchbase buckets.
 
@@ -53,7 +53,7 @@ collects statistics from Couchbase.
 
 ### INSTALLATION
 
-1. Download the [Python module for Couchbase](https://github.com/signalfx/collectd-couchbase).
+1. Download the [collectd-couchbase Python module](https://github.com/signalfx/collectd-couchbase).
 
 1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin to `/etc/collectd/managed_config`.
 
@@ -81,7 +81,7 @@ Using the example configuration file [10-couchbase.conf](././10-couchbase.conf) 
 
 ### USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin. The dashboards are included in this repository and can be imported into SignalFx or other monitoring products. [Click here to download](././Page_Couchbase.json).
+Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
 
 For general reference on how to monitor Couchbase, see [Couchbase Monitoring](http://blog.couchbase.com/monitoring-couchbase-cluster) and [Monitor using the REST API](http://developer.couchbase.com/documentation/server/4.0/monitoring/monitoring-rest.html).
 

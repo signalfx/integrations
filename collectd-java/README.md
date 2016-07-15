@@ -14,9 +14,7 @@ _This directory consolidates all the metadata associated with the Java plugin fo
 
 The Java plugin for collectd is required to use SignalFx's integrations with Java applications like [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq), [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)[](sfx_link:collectd-cassandra) and [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka).
 
-From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java):
-
-> The Java plugin embeds a Java virtual machine (JVM) into collectd and exposes the application programming interface (API) to Java programs. This allows to write own plugins in the popular language, which are then loaded and executed by the daemon without the need to start a new process and JVM every few seconds. Java classes written for the Java plugin are therefore more powerful and efficient than scripts executed by the Exec plugin.
+Read more about the Java plugin for collectd on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
 
 ### REQUIREMENTS AND DEPENDENCIES
 
