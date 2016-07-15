@@ -56,7 +56,7 @@ This integration runs as a pod within the Kubernetes cluster. SignalFx provides 
 
 ### CONFIGURATION
 
-Using the example [cadvisor-signalfx.yaml](./cadvisor-signalfx.yaml) as a guide, provide values for the parameters below that make sense for your environment. Each of the following configuration options sets an environment variable with that name. 
+Using the example [cadvisor-signalfx.yaml](https://github.com/signalfx/integrations/tree/master/kubernetes/cadvisor-signalfx.yaml) as a guide, provide values for the parameters below that make sense for your environment. Each of the following configuration options sets an environment variable with that name. 
 
 **Note**: The example deployment file specifies using a replication controller to ensure at most 1 cadvisor-integration pod to oversee the entire cluster. 
 

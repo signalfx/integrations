@@ -53,7 +53,7 @@ This plugin requires:
 
 1. Download the [redis-collectd-plugin Python module](https://github.com/signalfx/redis-collectd-plugin).
 
-1. Download SignalFx's sample configuration files for a [Redis master](././10-redis_master.conf) or [Redis slave](././10-redis_slave.conf) to `/etc/collectd/managed_config`. 
+1. Download SignalFx's sample configuration files for a [Redis master](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf) or [Redis slave](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf) to `/etc/collectd/managed_config`. 
 
 1. Modify the sample configuration file as described in  [Configuration](#configuration), below.
 
