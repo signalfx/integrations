@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/metricproxy",
   "featured": false,
   "logo_large": "/images/repos/metricproxy/img/integrations_metricproxy.png",
-  "logo_small": "/images/repos/metricproxy/img/integrations_metricproxy%402x.png"
+  "logo_small": "/images/repos/metricproxy/img/integrations_metricproxy%402x.png",
+  "in_app_categories": ["essential"]
 }
