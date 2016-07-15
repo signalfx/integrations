@@ -55,7 +55,7 @@ This plugin is included with [SignalFx's collectd package](https://support.signa
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-riak.conf`](././10-riak.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Riak KV instance to be monitored.
+Using the example configuration file [10-riak.conf](././10-riak.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Riak KV instance to be monitored.
 
 
 | Setting	| Value |

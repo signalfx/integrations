@@ -33,7 +33,7 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-haproxy.conf`](././10-haproxy.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
+Using the example configuration file [10-haproxy.conf](././10-haproxy.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

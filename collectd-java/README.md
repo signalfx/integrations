@@ -32,13 +32,13 @@ From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java):
          
     On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
 
-1. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [`10-jmx.conf`](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+1. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
 
 1. Restart collectd. 
 
 ### CONFIGURATION
 
-No additional configuration is required if using the example configuration file [`10-jmx.conf`](./10-jmx.conf).
+No additional configuration is required if using the example configuration file [10-jmx.conf](./10-jmx.conf).
 
 Full configuration details for this plugin are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
 

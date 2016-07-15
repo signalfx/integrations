@@ -61,7 +61,7 @@ Follow these steps to install and configure this plugin:
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-mysql.conf`](././10-mysql.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MySQL instance to be monitored.
+Using the example configuration file [10-mysql.conf](././10-mysql.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MySQL instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
@@ -73,7 +73,7 @@ Using the example configuration file [`10-mysql.conf`](././10-mysql.conf) as a g
 | Database (within block) | The name of the MySQL database to monitor. | `Database "mysql_one"`|
 
 #### Note: Monitoring multiple instances
-The sample configuration file [`10-mysql.conf`](././10-mysql.conf) illustrates how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
+The sample configuration file [10-mysql.conf](././10-mysql.conf) illustrates how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
 
 To monitor just one database, include just one `Database` block and delete the others.
 
@@ -82,7 +82,7 @@ This plugin configuration file uses directives called “Database” in two diff
 
 The value of “Database” in the _block declaration_ (`<Database foo>`) indicates the value of the  `plugin_instance` dimension that will be recorded for this database. The value of “Database” within the block (`Database "my_database"`) indicates the `db_name` of the MySQL database to monitor using this configuration.
 
-To illustrate the difference between these two uses of "Database", the example configuration given in [`10-mysql.conf`](././10-mysql.conf) directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3.
+To illustrate the difference between these two uses of "Database", the example configuration given in [10-mysql.conf](././10-mysql.conf) directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3.
 
 ### USAGE
 

@@ -50,7 +50,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-rabbitmq.conf`](./10-rabbitmq.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the RabbitMQ instance to be monitored.
+Using the example configuration file [10-rabbitmq.conf](./10-rabbitmq.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the RabbitMQ instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

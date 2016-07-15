@@ -83,7 +83,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-mongodb.conf`](././10-mongodb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MongoDB instance to be monitored.
+Using the example configuration file [10-mongodb.conf](././10-mongodb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MongoDB instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
