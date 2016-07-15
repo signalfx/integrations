@@ -34,7 +34,7 @@ To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration]
        
 ### INSTALLATION
 
-1. Download SignalFx's ActiveMQ message age listener from https://github.com/signalfx/activemq-integration. 
+1. Download SignalFx's ActiveMQ message age listener from [https://github.com/signalfx/activemq-integration](https://github.com/signalfx/activemq-integration). 
 
 1. Modify `/activemq-integration/amq-message-age/properties` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -50,7 +50,7 @@ Supply values for the following properties in the `/activemq-integration/amq-mes
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
-| path | Filesystem path to ActiveMQ executable | <Path-To-ActiveMQ-Executable>/activemq
+| path | Filesystem path to ActiveMQ executable | <Path-To-ActiveMQ-Executable>/activemq |
 | token | SignalFx API token | <SignalFX-API-TOKEN> |
 | sfx_host | Host to which to transmit data | `https://ingest.signalfx.com` |
 | interval | Interval at which to measure message age, in milliseconds. | 3000 |

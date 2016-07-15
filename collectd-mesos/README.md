@@ -40,7 +40,7 @@ Use the Mesos plugin for collectd to monitor the following information about Mes
 This plugin requires:
 
 - collectd 4.9+
-- | Python plugin for collectd (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd))
+- Python plugin for collectd (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd))
 - Python 2.3+
 - Mesos 0.19.0 or greater
 
@@ -49,7 +49,7 @@ This plugin requires:
 1. Download the Python module for Mesos from the following URL:
   https://github.com/signalfx/collectd-mesos
   
-1. Download SignalFx's sample configuration files for a [Mesos master](././10-mesos-master.conf) or [Mesos slave](././10-mesos-slave.conf) to `/etc/collectd/managed_config`.
+1. Download SignalFx's sample configuration files for a [Mesos master](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-master.conf) or [Mesos slave](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-slave.conf) to `/etc/collectd/managed_config`.
 
 1. Modify the configuration file to contain values that make sense for your environment, as described [below](#configuration).
 

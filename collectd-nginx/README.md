@@ -46,13 +46,13 @@ This plugin requires:
 
 1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below..
+1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
 1. Restart collectd.
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-nginx.conf`](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the NGINX instance to be monitored.
+Using the example configuration file [10-nginx.conf](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the NGINX instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
@@ -60,24 +60,7 @@ Using the example configuration file [`10-nginx.conf`](https://github.com/signal
 
 #### NGINX service configuration
 
-From [nginx docs](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html):
->The `ngx_http_stub_status_module` module provides access to basic status information.
-
->This module is not built by default, it should be enabled with the `--with-http_stub_status_module` configuration parameter.
-
->Example Configuration:
-```
-location /basic_status {
-   stub_status;
-}
-```
-This configuration creates a simple web page with basic status data which may look like as follows:
-```
-Active connections: 291
-server accepts handled requests
- 16630948 16630948 31070465
-Reading: 6 Writing: 179 Waiting: 106
-```
+Please see [nginx docs](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) for a guide to configuring the NGINX stats module `ngx_http_stub_status_module`.
 
 ### USAGE
 
@@ -90,7 +73,7 @@ Sample of pre-built dashboard in SignalFx:
 The following status information is provided:
 
 | Metric | definition |
-| ---------------------|-------------|
+| -------|-------------|
 |Active connections| The current number of active client connections including Waiting connections.|
 |accepts|The total number of accepted client connections.|
 |handled|The total number of handled connections. Generally, the parameter value is the same as accepts unless some resource limits have been reached (for example, the worker_connections limit).|

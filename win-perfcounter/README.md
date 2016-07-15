@@ -101,7 +101,7 @@ One-off counters may be added to `PerfCounterReporter.exe.config` as shown below
 
 The names of all counters to be reported are combined together from all the configured files and individually specified names.  However, these names have not yet been wildcard-expanded.  For instance, if both `\processor(*)\% processor time` and `\processor(_total)\% processor time` have been specified to be collected, `\processor(_total)\% processor time` will be read twice.
 
-### USAGE 
+### USAGE
 
 #### Logging
 

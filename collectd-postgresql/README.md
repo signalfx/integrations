@@ -17,7 +17,7 @@ From [collectd wiki:](https://collectd.org/wiki/index.php/Plugin:PostgreSQL)
 
 >The PostgreSQL plugin connects to and executes SQL statements on a PostgreSQL database. It then reads back the results and, depending on the configuration, the returned values are then converted into collectd “value lists” (the data structure used internally to pass statistics around).
 
-Documentation for PostgreSQL can be found at http://www.postgresql.org/docs/manuals/.
+Documentation for PostgreSQL can be found at [http://www.postgresql.org/docs/manuals/](http://www.postgresql.org/docs/manuals/).
 
 #### FEATURES
 
@@ -57,7 +57,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-postgresql.conf`](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf) or [`10-postgresql_pre92.conf`](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the PostgreSQL database to be monitored.
+Using the example configuration file [10-postgresql.conf](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql.conf) or [`10-postgresql_pre92.conf`](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/10-postgresql_pre92.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the PostgreSQL database to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

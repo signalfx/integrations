@@ -46,9 +46,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Download the module from the following URL:
-
- https://github.com/signalfx/collectd-zookeeper
+1. Download the [collectd-zookeeper Python module](https://github.com/signalfx/collectd-zookeeper).
 
 1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf) to `/etc/collectd/managed_config`.
 
@@ -58,7 +56,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [`20-zookeeper.conf`](././20-zookeeper.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Zookeeper instance to be monitored.
+Using the example configuration file [20-zookeeper.conf](././20-zookeeper.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Zookeeper instance to be monitored.
 
 | Setting            | Description     | Default|
 |--------------------|-----------------|-----------|

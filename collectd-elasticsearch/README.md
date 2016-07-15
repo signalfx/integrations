@@ -15,6 +15,7 @@ _This directory consolidates all the metadata associated with the Elasticsearch 
 This is the SignalFx Elasticsearch plugin. This will send data about Elasticsearch to SignalFx, enabling built-in Elasticsearch monitoring dashboards.
 
 Use this plugin to monitor the following types of information from an Elasticsearch node:
+
   * node statistics (cpu, os, jvm, indexing, search, thread pools, etc..)
   * per-index statistics
   * cluster statistics
@@ -57,9 +58,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
 ### INSTALLATION
 
-1. Download the module from the following URL:
-
- https://github.com/signalfx/collectd-elasticsearch
+1. Download the [collectd-elasticsearch]( https://github.com/signalfx/collectd-elasticsearch) Python module.
 
 1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf) to `/etc/collectd/managed_config`.
 
@@ -69,7 +68,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
 ### CONFIGURATION
 
-Using the example configuration file [`20-elasticsearch.conf`](././20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored. 
+Using the example configuration file [20-elasticsearch.conf](././20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored. 
 
 The plugin is intended to be run on a per-node basis. Define only one "Module" element per `20-elasticsearch.conf` configuration file.
 
@@ -89,7 +88,7 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file | \[""\] |
 | Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
 | Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
-| ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. See [note](#note-available-thread-pools) below. | \["search","index"\] |
+| ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. See [note regarding available thread pools](#note-available-thread-pools) below. | \["search","index"\] |
 
 #### Note: Available thread pools
 
@@ -106,8 +105,8 @@ The following table indicates thread pools that can be monitored by this plugin 
 | snapshot         |&#x2713;     |&#x2713;     |&#x2713;     |
 | warmer           |&#x2713;     |&#x2713;     |&#x2713;     |
 | refresh          |&#x2713;     |&#x2713;     |&#x2713;     |
-| fetch_shard_started|      |&#x2713;     |&#x2713;     |
-| fetch_shard_store|        |&#x2713;     |&#x2713;     |
+| fetch\_shard_started|      |&#x2713;     |&#x2713;     |
+| fetch\_shard_store|        |&#x2713;     |&#x2713;     |
 | listener         |        |&#x2713;     |&#x2713;     |
 | management       |        |&#x2713;     |&#x2713;     |
 | percolate        |        |&#x2713;     |&#x2713;     |

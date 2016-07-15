@@ -19,7 +19,7 @@ Use the Memcached plugin for collectd to monitor the following types of informat
 * net input/output bytes
 * number of items cached
 
-Documentation for Memcached can be found here: https://github.com/memcached/memcached/wiki
+Documentation for Memcached can be found here: [https://github.com/memcached/memcached/wiki](https://github.com/memcached/memcached/wiki)
 
 #### FEATURES
 
@@ -58,7 +58,7 @@ Documentation for Memcached can be found here: https://github.com/memcached/memc
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-memcached.conf`](././10-memcached.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Memcached instance to be monitored.
+Using the example configuration file [10-memcached.conf](././10-memcached.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Memcached instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

@@ -1,4 +1,4 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker
 
 _This directory consolidates all the metadata associated with the Docker plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin)_
 
@@ -46,22 +46,17 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
 ### INSTALLATION
 
-1. Download the Python module for Docker from the following URL:
-
- https://github.com/signalfx/docker-collectd-plugin
+1. Download the [docker-collectd-plugin](https://github.com/signalfx/docker-collectd-plugin) Python module.
 
 1. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the location of the module you downloaded in step 2:
 
- ```
- pip install -r /path/to/docker-collectd-plugin/requirements.txt
- ```
+        pip install -r /path/to/docker-collectd-plugin/requirements.txt
 
  **On Amazon Linux**: Run the following commands instead:
-
-  ```
-  yum install python26-pip
-  pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
-  ```
+```
+yum install python26-pip
+pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
+```
 
 1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf) for this plugin to `/etc/collectd/managed_config`.
 
@@ -71,7 +66,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
 ### CONFIGURATION
 
-Using the example configuration file [`10-docker.conf`](././10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file [10-docker.conf](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

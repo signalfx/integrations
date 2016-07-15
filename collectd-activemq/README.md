@@ -58,7 +58,7 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 
 1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
 
-1. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [`20-activemq.conf`](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
+1. Download SignalFx's example configuration file to `/etc/collectd/managed_config`:  [20-activemq.conf](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
 
 1. Modify `20-activemq.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -66,7 +66,7 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 
 ### CONFIGURATION
 
-Using the example configuration file [`20-activemq.conf`](././20-activemq.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the ActiveMQ instance to be monitored.
+Using the example configuration file [20-activemq.conf](././20-activemq.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the ActiveMQ instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

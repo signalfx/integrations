@@ -22,19 +22,19 @@ This tool uses the Kubernetes API to discover pods, nodes, and containers, queri
 
 - **K8s Clusters**: Overview of data from all Kubernetes clusters reporting.
 
-	[<img src='./img/dashboard_k8s_clusters.png' width=200px>](./img/dashboard_k8s_clusters.png)
+  [<img src='./img/dashboard_k8s_clusters.png' width=200px>](./img/dashboard_k8s_clusters.png)
 
 - **K8s Cluster**: Overview of one Kubernetes cluster.
 
-	[<img src='./img/dashboard_k8s_cluster.png' width=200px>](./img/dashboard_k8s_cluster.png)
+  [<img src='./img/dashboard_k8s_cluster.png' width=200px>](./img/dashboard_k8s_cluster.png)
 	
 - **K8s Node**: Focus on health of a single Kubernetes node. 
 
-	[<img src='./img/dashboard_k8s_node.png' width=200px>](./img/dashboard_k8s_node.png)
+  [<img src='./img/dashboard_k8s_node.png' width=200px>](./img/dashboard_k8s_node.png)
 
 - **K8s Pod**: Focus on health of a single Kubernetes pod.
 
-	[<img src='./img/dashboard_k8s_pod.png' width=200px>](./img/dashboard_k8s_pod.png)  
+  [<img src='./img/dashboard_k8s_pod.png' width=200px>](./img/dashboard_k8s_pod.png)  
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -44,9 +44,9 @@ This tool uses the Kubernetes API to discover pods, nodes, and containers, queri
 
 ### INSTALLATION
 
-This integration runs as a pod within the Kubernetes cluster. SignalFx provides a Docker image for this integration [hosted on quay.io](quay.io/signalfx/cadvisor-integration:latest). 
+This integration runs as a pod within the Kubernetes cluster. SignalFx provides a Docker image for this integration [hosted on quay.io](https://quay.io/repository/signalfx/cadvisor-integration?tag=latest). 
 
-1. Create a configuration file `cadvisor-signalfx.yaml` for this service, and supply values according to [Configuration](#configuration) below.
+1. Create a configuration file `cadvisor-signalfx.yaml` for this service (or download SignalFx's [example configuration file](https://github.com/signalfx/integrations/tree/master/kubernetes/cadvisor-signalfx.yaml)), and supply values according to [Configuration](#configuration) below.
 
 2. Run the following command to deploy the service to your cluster:
 
@@ -62,8 +62,8 @@ Using the example [cadvisor-signalfx.yaml](./cadvisor-signalfx.yaml) as a guide,
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
-| `SFX_SCRAPPER_API_TOKEN` | Your SignalFx API token. | MY_API_TOKEN |
-| `SFX_SCRAPPER_CLUSTER_NAME` | The name of the cluster to be monitored. Appears in SignalFx as the dimension `cluster`. | my_k8s_cluster |
+| `SFX_SCRAPPER_API_TOKEN` | Your SignalFx API token. | MY\_API_TOKEN |
+| `SFX_SCRAPPER_CLUSTER_NAME` | The name of the cluster to be monitored. Appears in SignalFx as the dimension `cluster`. | my\_k8s_cluster |
 | `SFX_SCRAPPER_CADVISOR_PORT` | The port on which the Kubernetes cAdvisor listens.	| 4194 |
 | `SFX_SCRAPPER_SEND_RATE` | The rate at which data is queried from cAdvisor and sent to SignalFx. Possible values: [10s 30s 1m 5m 1h 1s 5s] | "1s" |
 | `SFX_SCRAPPER_NODE_SERVICE_DISCOVERY_RATE` | The rate at which data is queried from cAdvisor and sent to SignalFx. Possible values: [10s 30s 1m 5m 1h 1s 5s] | "5m" |
