@@ -1,8 +1,8 @@
 ---
 title: Response 2xx
-brief: Corresponds to HAProxy's `hrsp_2xx` metric: Http responses with 2xx code
+brief: Corresponds to HAProxy's `hrsp_2xx` metric -  Http responses with 2xx code
 metric_type: derive
 ---
 ### Response 2xx
 
-Corresponds to HAProxy's `hrsp_2xx` metric: Http responses with 2xx code
+Corresponds to HAProxy's `hrsp_2xx` metric -  Http responses with 2xx code
