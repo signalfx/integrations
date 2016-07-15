@@ -71,6 +71,7 @@ configuration looks.  Configuration is a JSON file with two important fields:
 **Graphite options**
 
 For incoming carbon (Graphite) data only, the proxy supports transforming long dot-delimited metric names into metrics and dimensions for transmission to SignalFx. For details on how to use these options, see https://github.com/signalfx/metricproxy/blob/master/README.md#graphite-options.
+For carbon listeners we support either TCP or UDP with the default being TCP.  For more information see https://github.com/signalfx/metricproxy/blob/master/README.md#carbon-for-read.
 
 ##### ForwardTo
 
