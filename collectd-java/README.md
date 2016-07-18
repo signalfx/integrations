@@ -36,9 +36,9 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 
 ### CONFIGURATION
 
-No additional configuration is required if using the example configuration file [10-jmx.conf](https://github.com/signalfx/integrations/tree/master/collectd-java/10-jmx.conf).
+Download [`signalfx_types_db`](https://github.com/signalfx/integrations/tree/master/collectd-java/signalfx_types_db) and configure its location as described inside of the `10-jmx.conf` configuration file.
 
-Full configuration details for this plugin are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
+No additional configuration is required, however full configuration details for this plugin are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
 
 ### USAGE
 
