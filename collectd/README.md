@@ -37,74 +37,71 @@ The SignalFx collectd agent is supported on the following operating systems:
 
 Sending data using collectd allows you to take advantage of SignalFx’s extensive collectd support.
 
-- The SignalFx Hosts page visualizes hosts that are monitored using the SignalFx collectd agent.
-- SignalFx provides built-in dashboards to show infrastructure data as reported by the SignalFx collectd agent.
-- SignalFx provides validated plugins for collectd to help you monitor specific software in your environment. Browse plugins that have been validated by SignalFx [here on Github](http://signalfx.github.io), or on the Integrations page in SignalFx.
+- The [SignalFx Hosts page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html) visualizes hosts that are monitored using the SignalFx collectd agent.
+
+  [<img src='./img/collectdhostspage.png' width=200px>](./img/collectdhostspage.png) [<img src='./img/hostspagesinglehost.png' width=200px>](./img/hostspagesinglehost.png)
+  
+- SignalFx provides [recommended detectors](http://docs.signalfx.com/en/latest/built-in-content/recommended-detectors.html) for hosts instrumented with the SignalFx collectd agent. These built-in templates allow you to instantly create intelligent detectors based on SignalFx’s powerful analytics.
+  
+- SignalFx provides validated plugins for collectd that help you monitor specific software in your environment. Integrations include built-in dashboards, recommended detectors, and metrics documentation. Browse plugins that have been validated by SignalFx on the Integrations page, or [here on Github](http://signalfx.github.io).
 - The [SignalFx plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s collectd packages.
-
-![](./img/collectdhostspage.png)
-
-![](./img/hostspagesinglehost.png)
 
 ### INSTALLATION
 
 #### Install with shell script
 
-SignalFx provides a shell script that you can use to install the SignalFx collectd agent, including important plugins. Follow these instructions to install the SignalFx collectd agent on a system for which you have administrator (sudo) privileges.
+To install the SignalFx collectd agent on a system for which you have administrator privileges, run the following command:
 
-If you have already installed collectd on your own, this script will install the [SignalFx plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) and configure collectd to send metrics to SignalFx.
+        sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN
+        
+To read more about this script's available configuration options, [click here for complete documentation on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md).
 
-**1. Download and run the script**
+#### Install in a privileged container
 
- Run the following command in your command-line, replacing `API_TOKEN` with your API token. To view the API token for your organization, open [your profile page in SignalFx](https://app.signalfx.com/#/myprofile) and click "Show" next to the API token for the corresponding organization.
+SignalFx supports a Docker image of the SignalFx collectd agent for containerized environments. Run the following command to start the container:
 
-        sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s API_TOKEN
+        docker run --privileged \
+          -e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
+          -v /etc/hostname:/mnt/hostname:ro \
+          -v /proc:/mnt/proc:ro \
+          -v /etc:/mnt/etc:ro \
+          quay.io/signalfuse/collectd
 
- This command will download and run the script. On startup, the script will ask you to confirm that you want to proceed.
-
-**2. Provide your hostname**
-
- During the configuration phase, the script will ask you to provide your system's hostname.
-
- * Type `dns` and press enter to automatically collect this system's hostname from DNS.
- * Type `input` and press enter to provide the hostname yourself. When prompted, type in your desired hostname and press enter.
-
-When the script successfully completes, the SignalFx collectd agent starts up and begins reporting metrics to SignalFx.
-
-##### Note: Additional installer options
-
-The instructions above apply to most installation scenarios. For more information on available configuration options for this script, please see complete documentation here on Github: https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md
-
-##### Note: Uninstalling from Mac OS X
-
-When the install script installs the SignalFx collectd agent on a Mac OS X system, an `uninstall.sh` script is laid down in the directory `/usr/local/share/collectd`. Run this script with administrative privileges to remove collectd and all related configuration from the host. Run the script with `–help` option for detailed instructions, including how to perform a dry run and keep configuration in place after uninstalling.
+To read more about the SignalFx collectd agent Docker image, [click here for complete documentation on Github](https://github.com/signalfx/docker-collectd). 
 
 #### Additional installation options
 
-##### Chef cookbook: `chef_install_configure_collectd`
+##### Chef cookbook: [chef_install_configure_collectd](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd)
 
-SignalFx supports a Chef cookbook that installs the SignalFx collectd agent and validated plugins. Access it here on Supermarket: https://supermarket.chef.io/cookbooks/chef_install_configure_collectd
+SignalFx supports a Chef cookbook that installs the SignalFx collectd agent and important plugins. [Click here to access it on Chef Supermarket](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd).
 
-##### Puppet module: `signalfx/collectd`
+##### Puppet module: [signalfx/collectd](https://forge.puppet.com/signalfx/collectd)
 
-SignalFx provides Puppet modules to install the SignalFx collectd agent and important plugins. Access it here on Puppet Forge:
-https://forge.puppet.com/signalfx/collectd
+SignalFx provides Puppet modules to install the SignalFx collectd agent and important plugins. [Click here to access it on Puppet Forge](https://forge.puppet.com/signalfx/collectd).
 
 ##### Manual step-by-step installation
 
-If you wish to manually complete the steps that SignalFx's shell script performs automatically, check out the source here on Github: https://github.com/signalfx/signalfx-collectd-installer/blob/master/install.sh
+To manually complete the steps that SignalFx's shell script performs automatically, [check out the source here on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/install.sh). 
 
 ### CONFIGURATION
 
-The SignalFx collectd agent is accompanied by a default configuration file, `collectd.conf`, that does not need to be modified in order to function.
+The SignalFx collectd agent is accompanied by a default configuration file, `collectd.conf`, that does not need to be modified in order to function. [Click here to read an example configuration file for the SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd/collectd.conf). 
 
-An example configuration file for the SignalFx collectd agent can be found [here](./collectd.conf) in this repository.
+### USAGE
 
-#### Using the SignalFx metrics proxy
+To use the data transmitted by the SignalFx collectd agent, check out the Hosts page in SignalFx. On this page you'll find a visualization of all transmitting hosts, built-in dashboards to show the health of your infrastructure, and recommended detectors to send intelligent alerts. 
 
-If instances of collectd are unable to transmit outside the network, the SignalFx metrics proxy can be used to receive connections from many instances of collectd, and forward transmissions to SignalFx using a single outgoing HTTP connection. This is suitable for environments in which transmissions exiting a network are highly restricted.
+[<img src='./img/collectdhostspage.png' width=200px>](./img/collectdhostspage.png) [<img src='./img/hostspagesinglehost.png' width=200px>](./img/hostspagesinglehost.png)
 
-[Click here to read more about the SignalFx metrics proxy](https://github.com/signalfx/integrations/tree/master/metricproxy).
+Installing the SignalFx collectd agent allows you to install many of the integrations that SignalFx supports. Browse available plugins for collectd on the Integrations page. 
+
+[<img src='./img/integrationspagecollectd.png' width=200px>](./img/integrationspagecollectd.png)
+
+#### Transmitting outside a network
+
+If instances of collectd are unable to transmit outside the network, the [SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy) can be used to receive connections from many instances of collectd, and forward transmissions to SignalFx using a single outgoing HTTP connection. This is suitable for environments in which transmissions exiting a network are highly restricted.
+
+[Click here for more information about the SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy).
 
 #### Transmitting through an existing HTTP proxy
 
@@ -121,6 +118,10 @@ export https_proxy="https://HTTPS_PROXY:PROXY_PORT"
 ```
 
 Replace `HTTP_PROXY` and `HTTPS_PROXY` with the hostname of the HTTP proxy to be used, and `PROXY_PORT` with the port at which to access it.
+
+##### Note: Uninstalling from Mac OS X systems
+
+When the install script installs the SignalFx collectd agent on a Mac OS X system, an `uninstall.sh` script is laid down in the directory `/usr/local/share/collectd`. Run this script with administrative privileges to remove collectd and all related configuration from the host. Run the script with `–help` option for detailed instructions, including how to perform a dry run and keep configuration in place after uninstalling.
 
 ### LICENSE
 
