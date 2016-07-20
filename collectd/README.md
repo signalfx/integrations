@@ -91,11 +91,9 @@ The SignalFx collectd agent is accompanied by a default configuration file, `col
 
 To use the data transmitted by the SignalFx collectd agent, check out the Hosts page in SignalFx. On this page you'll find a visualization of all transmitting hosts, built-in dashboards to show the health of your infrastructure, and recommended detectors to send intelligent alerts. 
 
-[<img src='./img/collectdhostspage.png' width=200px>](./img/collectdhostspage.png) [<img src='./img/hostspagesinglehost.png' width=200px>](./img/hostspagesinglehost.png)
+![](./img/hostspagesinglehost.png)
 
 Installing the SignalFx collectd agent allows you to install many of the integrations that SignalFx supports. Browse available plugins for collectd on the Integrations page. 
-
-[<img src='./img/integrationspagecollectd.png' width=200px>](./img/integrationspagecollectd.png)
 
 #### Transmitting outside a network
 
@@ -118,10 +116,6 @@ export https_proxy="https://HTTPS_PROXY:PROXY_PORT"
 ```
 
 Replace `HTTP_PROXY` and `HTTPS_PROXY` with the hostname of the HTTP proxy to be used, and `PROXY_PORT` with the port at which to access it.
-
-##### Note: Uninstalling from Mac OS X systems
-
-When the install script installs the SignalFx collectd agent on a Mac OS X system, an `uninstall.sh` script is laid down in the directory `/usr/local/share/collectd`. Run this script with administrative privileges to remove collectd and all related configuration from the host. Run the script with `–help` option for detailed instructions, including how to perform a dry run and keep configuration in place after uninstalling.
 
 ### LICENSE
 
