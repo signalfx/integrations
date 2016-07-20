@@ -13,6 +13,8 @@ _This is a directory that consolidates metadata associated with the SignalFx met
 
 Use the SignalFx metric proxy to aggregate metrics and send them to SignalFx. It is a multilingual datapoint demultiplexer that can accept time series data from the carbon (Graphite), collectd or SignalFx protocols and emit those datapoints to a series of servers using the carbon, collectd or SignalFx protocols. 
 
+The SignalFx metric proxy can help you get the right data to the right destination in many different scenarios. For details, see [Usage](#usage).
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 The SignalFx metric proxy must be deployed on a system that is capable of running Go. All dependencies for this Go project are included in `/Godeps` in the project repository. 
@@ -49,13 +51,11 @@ The size of the machine that hosts the proxy depends on the amount of data that 
 
 ### CONFIGURATION
 
-#### Config file format
-
-See the [example configuration](exampleSfdbproxy.conf) file for an example of how
+See the [example configuration](https://github.com/signalfx/metricproxy/blob/master/exampleSfdbproxy.conf) file for an example of how
 configuration looks.  Configuration is a JSON file with two important fields:
 `ListenFrom` and `ForwardTo`.
 
-##### ListenFrom
+#### ListenFrom
 
 `ListenFrom` defines the data format that the proxy will receive, and on what port. It also defines the transformation that the data will undergo, if any. 
 
@@ -65,12 +65,13 @@ configuration looks.  Configuration is a JSON file with two important fields:
 | `Type` | Defines the listener that will handle the incoming data. Possible listeners are `signalfx`, `carbon`, and `collectd`. | "carbon" |
 | `Dimensions` | A map of dimension-value pairs that adds the specified dimension to every data point sent by the listener. | { "env": "prod" } |
 
-**Graphite options**
+##### Graphite options
 
-For incoming carbon (Graphite) data only, the proxy supports transforming long dot-delimited metric names into metrics and dimensions for transmission to SignalFx. For details on how to use these options, see https://github.com/signalfx/metricproxy/blob/master/README.md#graphite-options.
-For carbon listeners we support either TCP or UDP with the default being TCP.  For more information see https://github.com/signalfx/metricproxy/blob/master/README.md#carbon-for-read.
+For incoming carbon (Graphite) data only, the proxy supports transforming long dot-delimited metric names into metrics and dimensions for transmission to SignalFx. [Click here to read more on Github](https://github.com/signalfx/metricproxy/blob/master/README.md#graphite-options) about how to use these options.
 
-##### ForwardTo
+For carbon listeners we support either TCP or UDP, with the default being TCP. [Click here to read more on Github](https://github.com/signalfx/metricproxy/blob/master/README.md#carbon-for-read).
+
+#### ForwardTo
 
 `ForwardTo` defines the data format that the proxy will transmit, and to where. 
 
@@ -81,20 +82,20 @@ For carbon listeners we support either TCP or UDP with the default being TCP.  F
 
 Additional configuration properties differ depending on the type of data being written. 
 
-**"type": "signalfx-json"**
+##### "type": "signalfx-json"
 
 | Configuration property | Definition | Example values |
 |--------|----------|--------|
 | `DefaultAuthToken` | A SignalFx API token that the proxy will use to transmit data to SignalFx. | "ABCD" |
 
-**"type": "carbon"** 
+##### "type": "carbon" 
 
 | Configuration property | Definition | Example values |
 |--------|----------|--------|
 | `Host` | Hostname of a carbon server. | "example.com" |
 | `Port` | Port at which carbon is running on `Host`. | 2003 |
 
-**"type": "csv"** 
+##### "type": "csv"
 
 | Configuration property | Definition | Example values |
 |--------|----------|--------|
@@ -125,7 +126,7 @@ You can use the proxy to duplicate a data stream to multiple destinations. Add e
 
 #### Transforming carbon dot-delimited metric names into metrics with dimensions
 
-SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx metric proxy's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. 
+SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx metric proxy's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. [Click here to read more on Github about MetricDeconstructor options](https://github.com/signalfx/metricproxy#graphite-dimensions).
 
 Note that you can apply different MetricDeconstructor rules in each `ForwardTo` destination. 
 
