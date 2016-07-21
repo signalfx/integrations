@@ -48,42 +48,42 @@ The SignalFx collectd agent is supported on the following operating systems:
 | RHEL/Centos | 6.x & 7.x |
 | Ubuntu  | 12.04, 14.04, 15.04 & 16.04 |
 
+You must have administrator (sudo) privileges to install this agent. 
+
 ### INSTALLATION
 
-#### Install with shell script
+#### Install on a host
 
-To install the SignalFx collectd agent on a system for which you have administrator privileges, run the following command:
+Run the following command to install the SignalFx collectd agent ([click here to read about available configuration options](https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md)):
 
-        sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN
-
-To read more about this script's available configuration options, [click here for complete documentation on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md).
+          sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN
 
 #### Install in a privileged container
 
 SignalFx supports a Docker image of the SignalFx collectd agent for containerized environments. Run the following command to start the container:
 
-        docker run --privileged \
-          -e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
-          -v /etc/hostname:/mnt/hostname:ro \
-          -v /proc:/mnt/proc:ro \
-          -v /etc:/mnt/etc:ro \
-          quay.io/signalfuse/collectd
+          docker run --privileged \
+            -e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
+            -v /etc/hostname:/mnt/hostname:ro \
+            -v /proc:/mnt/proc:ro \
+            -v /etc:/mnt/etc:ro \
+            quay.io/signalfuse/collectd
 
 To read more about the SignalFx collectd agent Docker image, [click here for complete documentation on Github](https://github.com/signalfx/docker-collectd).
 
 #### Additional installation options
 
-##### Chef cookbook: [chef_install_configure_collectd](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd)
+- **[Chef cookbook: chef\_install\_configure\_collectd](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd)**
 
-SignalFx supports a Chef cookbook that installs the SignalFx collectd agent and important plugins. [Click here to access it on Chef Supermarket](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd).
+  SignalFx supports a Chef cookbook that installs the SignalFx collectd agent and important plugins on a host. [Click here to access it on Chef Supermarket](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd).
 
-##### Puppet module: [signalfx/collectd](https://forge.puppet.com/signalfx/collectd)
+- **[Puppet module: signalfx/collectd](https://forge.puppet.com/signalfx/collectd)**
 
-SignalFx provides Puppet modules to install the SignalFx collectd agent and important plugins. [Click here to access it on Puppet Forge](https://forge.puppet.com/signalfx/collectd).
+  SignalFx provides Puppet modules to install the SignalFx collectd agent and important plugins on a host. [Click here to access it on Puppet Forge](https://forge.puppet.com/signalfx/collectd).
 
-##### Manual step-by-step installation
+- **Manual step-by-step installation**
 
-To manually complete the steps that SignalFx's shell script performs automatically, [check out the source here on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/install.sh).
+  To manually complete the steps that SignalFx's install script performs automatically, [check out the source here on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/install.sh).
 
 ### CONFIGURATION
 
