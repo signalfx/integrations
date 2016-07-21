@@ -21,6 +21,21 @@ The [SignalFx collectd agent](https://github.com/signalfx/collectd) introduces t
 
 All changes have been submitted back to the [collectd project](http://collectd.org) for the benefit of the community at large.
 
+#### FEATURES
+
+Sending data using collectd allows you to take advantage of SignalFx’s extensive collectd support.
+
+- The [SignalFx Hosts page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html) visualizes hosts that are monitored using the SignalFx collectd agent.
+
+  [<img src='./img/collectdhostspage.png' width=200px>](./img/collectdhostspage.png)
+
+  [<img src='./img/hostspagesinglehost.png' width=200px>](./img/hostspagesinglehost.png)
+
+- SignalFx provides [recommended detectors](http://docs.signalfx.com/en/latest/built-in-content/recommended-detectors.html) for hosts instrumented with the SignalFx collectd agent. These built-in templates allow you to instantly create intelligent detectors based on SignalFx’s powerful analytics.
+
+- SignalFx provides validated plugins for collectd that help you monitor specific software in your environment. Integrations include built-in dashboards, recommended detectors, and metrics documentation. Browse plugins that have been validated by SignalFx on the Integrations page, or [here on Github](http://signalfx.github.io).
+- The [SignalFx plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s collectd packages.
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 The SignalFx collectd agent is supported on the following operating systems:
@@ -33,19 +48,6 @@ The SignalFx collectd agent is supported on the following operating systems:
 | RHEL/Centos | 6.x & 7.x |
 | Ubuntu  | 12.04, 14.04, 15.04 & 16.04 |
 
-### FEATURES
-
-Sending data using collectd allows you to take advantage of SignalFx’s extensive collectd support.
-
-- The [SignalFx Hosts page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html) visualizes hosts that are monitored using the SignalFx collectd agent.
-
-  [<img src='./img/collectdhostspage.png' width=200px>](./img/collectdhostspage.png) [<img src='./img/hostspagesinglehost.png' width=200px>](./img/hostspagesinglehost.png)
-  
-- SignalFx provides [recommended detectors](http://docs.signalfx.com/en/latest/built-in-content/recommended-detectors.html) for hosts instrumented with the SignalFx collectd agent. These built-in templates allow you to instantly create intelligent detectors based on SignalFx’s powerful analytics.
-  
-- SignalFx provides validated plugins for collectd that help you monitor specific software in your environment. Integrations include built-in dashboards, recommended detectors, and metrics documentation. Browse plugins that have been validated by SignalFx on the Integrations page, or [here on Github](http://signalfx.github.io).
-- The [SignalFx plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s collectd packages.
-
 ### INSTALLATION
 
 #### Install with shell script
@@ -53,7 +55,7 @@ Sending data using collectd allows you to take advantage of SignalFx’s extensi
 To install the SignalFx collectd agent on a system for which you have administrator privileges, run the following command:
 
         sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN
-        
+
 To read more about this script's available configuration options, [click here for complete documentation on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md).
 
 #### Install in a privileged container
@@ -67,7 +69,7 @@ SignalFx supports a Docker image of the SignalFx collectd agent for containerize
           -v /etc:/mnt/etc:ro \
           quay.io/signalfuse/collectd
 
-To read more about the SignalFx collectd agent Docker image, [click here for complete documentation on Github](https://github.com/signalfx/docker-collectd). 
+To read more about the SignalFx collectd agent Docker image, [click here for complete documentation on Github](https://github.com/signalfx/docker-collectd).
 
 #### Additional installation options
 
@@ -81,19 +83,19 @@ SignalFx provides Puppet modules to install the SignalFx collectd agent and impo
 
 ##### Manual step-by-step installation
 
-To manually complete the steps that SignalFx's shell script performs automatically, [check out the source here on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/install.sh). 
+To manually complete the steps that SignalFx's shell script performs automatically, [check out the source here on Github](https://github.com/signalfx/signalfx-collectd-installer/blob/master/install.sh).
 
 ### CONFIGURATION
 
-The SignalFx collectd agent is accompanied by a default configuration file, `collectd.conf`, that does not need to be modified in order to function. [Click here to read an example configuration file for the SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd/collectd.conf). 
+The SignalFx collectd agent is accompanied by a default configuration file, `collectd.conf`, that does not need to be modified in order to function. [Click here to read an example configuration file for the SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd/collectd.conf).
 
 ### USAGE
 
-To use the data transmitted by the SignalFx collectd agent, check out the Hosts page in SignalFx. On this page you'll find a visualization of all transmitting hosts, built-in dashboards to show the health of your infrastructure, and recommended detectors to send intelligent alerts. 
+To use the data transmitted by the SignalFx collectd agent, check out the Hosts page in SignalFx. On this page you'll find a visualization of all transmitting hosts, built-in dashboards to show the health of your infrastructure, and recommended detectors to send intelligent alerts.
 
 ![](./img/hostspagesinglehost.png)
 
-Installing the SignalFx collectd agent allows you to install many of the integrations that SignalFx supports. Browse available plugins for collectd on the Integrations page. 
+Installing the SignalFx collectd agent allows you to install many of the integrations that SignalFx supports. Browse available plugins for collectd on the Integrations page.
 
 #### Transmitting outside a network
 
