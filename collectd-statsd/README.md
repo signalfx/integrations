@@ -20,7 +20,7 @@ From [collectd's manpage](https://collectd.org/documentation/manpages/collectd.c
 
 > The plugin implements the `Counter`, `Timer`, `Gauge` and `Set` types which are dispatched as the collectd types `derive`, `latency`, `gauge` and `objects` respectively.
 
-For more information about StatsD, see https://github.com/etsy/statsd/.
+For more information about StatsD, see [https://github.com/etsy/statsd/](https://github.com/etsy/statsd/).
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -75,7 +75,7 @@ LoadPlugin statsd
 
 #### Adding dimensions to StatsD metrics
 
-Add dimensions to your metrics by adding key-value pairs to your statsd metric names as follows:
+Add dimensions to your metrics by adding key-value pairs to your StatsD metric names as follows:
 
 ```
 $ echo "statsd.[foo=bar,dim=val]test:1|g" | nc -w 1 -u 127.0.0.1 8125
@@ -100,7 +100,7 @@ or
 
 #### Using StatsD metrics in SignalFx
 
-SignalFx supports using the components of dot-delimited metric names as dimensions for the purposes of filtering and aggregation in a chart. [Click here to read more](http://docs.signalfx.com/en/latest/charts/chart-advanced-config.html#graphite-options-for-plots). However, it may be more efficient to use the SignalFx metric proxy to transform StatsD's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. This allows you to specify the transformation once at transmission, rather than many times during chart building. [Click here to read more about the SignalFx metric proxy](https://signalfx.github.com/integrations/tree/master/metricproxy).
+SignalFx supports using the components of dot-delimited metric names as dimensions for the purposes of filtering and aggregation in a chart. [Click here to read more](http://docs.signalfx.com/en/latest/charts/chart-advanced-config.html#graphite-options-for-plots). However, it may be more efficient to use the SignalFx metric proxy to transform StatsD's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. This allows you to specify the transformation once at transmission, rather than many times during chart building. [Click here to read more about the SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy).
 
 #### Deleting unused metric names from collectd's internal cache
 
