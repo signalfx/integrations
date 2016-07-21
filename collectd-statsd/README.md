@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) StatsD
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-statsd/img/integrations_collectd.png) StatsD
 
 _This is a directory that consolidates all the metadata associated with the StatsD collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/statsd.c)_
 
@@ -54,11 +54,9 @@ $ echo "statsd.test:1|g" | nc -w 1 -u 127.0.0.1 8125
 
 SignalFx's example configuration file for this plugin can be used as-is, without modification. To read more about available configuration options, see [collectd's manpage for this plugin](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd).
 
-### USAGE
-
 #### Deployment options
 
-SignalFx recommends deploying the SignalFx collectd agent including this plugin on every host that is reporting StatsD metrics. Having done so, configure all StatsD clients to direct metrics from individual reporters to `localhost`, on the port specified in `10-statsd.conf` (by default: 8125). In this scenario, all metrics are aggregated locally, reducing network traffic.
+SignalFx recommends deploying the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd), including this plugin, on every host that is reporting StatsD metrics. Having done so, configure all StatsD clients to direct metrics from individual reporters to `localhost`, on the port specified in `10-statsd.conf` (by default: 8125). In this scenario, all metrics are aggregated locally, reducing network traffic.
 
 This plugin can also listen for and aggregate StatsD metrics from remote hosts. By default, SignalFx's default configuration of the StatsD plugin only opens the StatsD port for local processes. To listen for StatsD metrics sent from remote hosts, configure the StatsD plugin to open the port publicly by modifying `10-statsd.conf` as follows:
 
@@ -72,6 +70,8 @@ LoadPlugin statsd
  # ...
 </Plugin>
 ```
+
+### USAGE
 
 #### Adding dimensions to StatsD metrics
 
