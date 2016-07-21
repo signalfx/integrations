@@ -4,5 +4,6 @@
   "code": "https://github.com/signalfx/collectd",
   "featured": true,
   "logo_large": "/images/repos/collectd/img/integrations_collectd%402x.png",
-  "logo_small": "/images/repos/collectd/img/integrations_collectd.png"
+  "logo_small": "/images/repos/collectd/img/integrations_collectd.png",
+  "in_app_categories": ["essential", "servicesMonitored"]
 },
