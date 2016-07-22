@@ -40,8 +40,8 @@ The `signalFxReporter` block includes the following options:
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|
 | APIToken | Your SignalFx API token. | No default. |
-| SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value specified in a parameter `SourceValue`.) | No default. |
-| DefaultDimensions | A hashtable of default dimensions to pass to SignalFx | Empty dictionary |
+| SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value specified in a parameter `SourceValue`). | No default. |
+| DefaultDimensions | A hashtable of default dimensions to pass to SignalFx (see [Adding Default Dimensions](#adding-default-dimensions) below). | Empty dictionary |
 | AwsIntegration | If set to "true" then AWS metadata will accompany metrics. | false |
 | SampleInterval | Controls the interval at which to send metrics to SignalFx, as hh:mm:ss. | 00:00:05 |
 
@@ -50,18 +50,6 @@ The `signalFxReporter` block includes the following options:
 ```xml
 <signalFxReporter apiToken="<yourtoken>" sampleInterval="00:00:05" sourceType="netbios"/>
 ```
-
-###Default Dimensions
-To add default dimensions add a nested `<defaultDimensions>` in your `<signalFxReporter>` stanza:
-```xml
-  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"> 
-    <defaultDimensions>
-      <defaultDimension name="environment" value="prod"/>
-      <defaultDimension name="serverType" value="API"/>
-    </defaultDimensions>
-  </signalFxReporter>
-```
-
 
 The `counterSampling` block includes the following options:
 
@@ -87,6 +75,18 @@ The `counterSampling` block includes the following options:
   </counterNames>
   -->
 </counterSampling>
+```
+
+#### Adding Default Dimensions
+To add dimensions that will be included in every metric emitted by PerfCounterReporter, add a nested `<defaultDimensions>` block in your `<signalFxReporter>` stanza. In the following example, dimensions "environment:prod" and "serverType:API" will be included in all metrics:
+
+```xml
+  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"> 
+    <defaultDimensions>
+      <defaultDimension name="environment" value="prod"/>
+      <defaultDimension name="serverType" value="API"/>
+    </defaultDimensions>
+  </signalFxReporter>
 ```
 
 #### Selecting counter sets
