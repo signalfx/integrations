@@ -1,7 +1,7 @@
 { "display_name":"SignalFx plugin for collectd",
   "description": "The SignalFx plugin for collectd sends metadata about its host to SignalFx.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-signalfx",
-  "code": "https://github.com/signalfx/collectd-signalfx",
+  "code": "https://github.com/signalfx/signalfx-collectd-plugin",
   "featured": false,
   "logo_large": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin.png",
   "logo_small": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin%402x.png"
