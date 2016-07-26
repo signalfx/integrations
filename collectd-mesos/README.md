@@ -47,7 +47,7 @@ This plugin requires:
 ### INSTALLATION
 
 1. Download the Python module for Mesos from the following URL:
-  https://github.com/signalfx/collectd-mesos
+  [https://github.com/signalfx/collectd-mesos](https://github.com/signalfx/collectd-mesos)
   
 1. Download SignalFx's sample configuration files for a [Mesos master](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-master.conf) or [Mesos slave](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-slave.conf) to `/etc/collectd/managed_config`.
 
