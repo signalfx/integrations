@@ -66,6 +66,7 @@ SignalFx supports a Docker image of the SignalFx collectd agent for containerize
             -e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
             -v /etc/hostname:/mnt/hostname:ro \
             -v /proc:/mnt/proc:ro \
+            -v /var/run/docker.sock:/var/run/docker.sock \
             -v /etc:/mnt/etc:ro \
             quay.io/signalfuse/collectd
 
