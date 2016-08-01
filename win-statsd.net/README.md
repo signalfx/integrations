@@ -36,15 +36,31 @@ See below for additional configuration options.
 
 For values not supplied the following defaults are used. You must supply values for `APIToken` and `SourceType`.
 
+These values are stored in the configuration file `statsdnet.config` within the `<signalfx>` stanza.
+
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|
 | APIToken | Your SignalFx API token. | No default. |
-| SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value specified in a parameter `SourceValue`.) | No default. |
-| DefaultDimensions | A hashtable of default dimensions to pass to SignalFx. | Empty dictionary. |
+| SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value specified in a parameter `SourceValue`). | No default. |
+| DefaultDimensions | A hashtable of default dimensions to pass to SignalFx (see [Adding Default Dimensions](#adding-default-dimensions) below). | Empty dictionary. |
 | AwsIntegration | If set to "true" then AWS integration will be turned on for SignalFx reporting. | false |
 | SampleInterval | string of how often to send metrics to SignalFx. Supported values look like "5s" (every 5 seconds), or "1m" (every 1 minute). | 5s |
 
 ### USAGE
+
+#### Adding Default Dimensions
+To add dimensions that will be included in every metric emitted by statsd.net, add a nested `<defaultDimensions>` block to the `<signalfx>` stanza in `statsdnet.config` as follows. In the following example, dimensions "environment:prod" and "serverType:API" will be included in all metrics:
+
+```xml
+  <backends>
+    <signalfx apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"> 
+      <defaultDimensions>
+        <defaultDimension name="environment" value="prod"/>
+        <defaultDimension name="serverType" value="API"/>
+      </defaultDimensions>
+    </signalfx>
+  </backends>
+```
 
 #### Adding dimensions using tags
 SignalFx's release of statsd.net supports tags being sent on metrics. To use tags, add a `|#tag1=value1,tag2=value2,...` to the end of the normal statsd lines sent. The SignalFx statsd.net listener will transform these tags into dimensions on the metric.
