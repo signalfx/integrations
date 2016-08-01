@@ -51,12 +51,26 @@ The `signalFxReporter` block includes the following options:
 <signalFxReporter apiToken="<yourtoken>" sampleInterval="00:00:05" sourceType="netbios"/>
 ```
 
+#### Adding default dimensions
+To add dimensions that will be included in every metric emitted by PerfCounterReporter, add a nested `<defaultDimensions>` block in your `<signalFxReporter>` stanza. In the following example, dimensions "environment:prod" and "serverType:API" will be included in all metrics:
+
+```xml
+  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"> 
+    <defaultDimensions>
+      <defaultDimension name="environment" value="prod"/>
+      <defaultDimension name="serverType" value="API"/>
+    </defaultDimensions>
+  </signalFxReporter>
+```
+
+#### Selecting counter sets
+
 The `counterSampling` block includes the following options:
 
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|
 | definitionFilePaths | List of file paths with counter definitions (see [Selecting counter sets](#selecting-counter-sets) below) |  CounterDefinitions\system.counters |
-| counterNames | Names of indiviual counters to collect (see [Extra counter definitions](#extra-counter-definitions) below) | No default. |
+| counterNames | Names of individual counters to collect (see [Extra counter definitions](#extra-counter-definitions) below) | No default. |
 
 **Example:** 
 
@@ -76,20 +90,6 @@ The `counterSampling` block includes the following options:
   -->
 </counterSampling>
 ```
-
-#### Adding Default Dimensions
-To add dimensions that will be included in every metric emitted by PerfCounterReporter, add a nested `<defaultDimensions>` block in your `<signalFxReporter>` stanza. In the following example, dimensions "environment:prod" and "serverType:API" will be included in all metrics:
-
-```xml
-  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"> 
-    <defaultDimensions>
-      <defaultDimension name="environment" value="prod"/>
-      <defaultDimension name="serverType" value="API"/>
-    </defaultDimensions>
-  </signalFxReporter>
-```
-
-#### Selecting counter sets
 
 Counter files (`*.counter`) define the metrics that PerfCounterReporter will collect. The following counter sets accompany this tool. Enable them by adding entries to `definitionFilePaths` in `PerfCounterReporter.exe.config`: 
 
