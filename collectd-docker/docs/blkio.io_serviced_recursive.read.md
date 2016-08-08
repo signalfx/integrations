@@ -5,7 +5,8 @@ metric_type: cumulative_counter
 ---
 ### Read requests from block devices
 
-Superseded by `blkio.io_serviced_recursive.read`.
-
 Tracks the number of read requests from block devices serviced in that
 container.
+
+This metric is reported with dimensions `device_major` and `device_minor` to 
+indicate the major and minor device numbers respectively.
