@@ -5,6 +5,7 @@ metric_type: cumulative_counter
 ---
 ### Write volume to block devices
 
-Superseded by `blkio.io_service_bytes_recursive.write`.
-
 Tracks the volume, in bytes, written to block devices by that container.
+
+This metric is reported with dimensions `device_major` and `device_minor` to 
+indicate the major and minor device numbers respectively.
