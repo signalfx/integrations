@@ -98,6 +98,20 @@ To use the data transmitted by the SignalFx collectd agent, check out the Hosts 
 
 Installing the SignalFx collectd agent allows you to install many of the integrations that SignalFx supports. Browse available plugins for collectd on the Integrations page.
 
+#### Adding dimensions to all datapoints
+
+You can add a dimension to every datapoint that collectd sends to SignalFx by adding HTTP query parameters to the SignalFx ingest URL, part of the configuration for the `write_http` plugin. This allows you to add information about the host or environment to every metric. For instance, you could identify all metrics coming from production boxes with a dimension like `environment=prod`.
+
+The SignalFx URL to which collectd will transmit data is specified in `10-write_http-plugin.conf` and by default has a value like https://ingest.signalfx.com/v1/collectd. 
+
+Append dimensions to the  URL as `sfxdim_[DIMENSION NAME]=[DIMENSION VALUE]`. Multiple dimensions may be specified. 
+
+For example, the following URL sends data points to SignalFx with the added dimensions `serverType=API` and `tier=middleware`.
+
+```
+    URL "https://ingest.signalfx.com/v1/collectd?sfxdim_serverType=API&sfxdim_tier=middleware"
+```
+
 #### Transmitting outside a network
 
 If instances of collectd are unable to transmit outside the network, the [SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy) can be used to receive connections from many instances of collectd, and forward transmissions to SignalFx using a single outgoing HTTP connection. This is suitable for environments in which transmissions exiting a network are highly restricted.
