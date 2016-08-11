@@ -12,15 +12,11 @@ This document describes SignalFx's integration with [New Relic](https://www.newr
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-This integration requires a New Relic account. 
+This integration requires a New Relic account. You must be an administrator of your SignalFx organization to create or modify this integration. 
 
 ### INSTALLATION
 
-You can easily connect your New Relic account to SignalFx from the Integrations page. To integrate SignalFx with New Relic, you must be an administrator of your SignalFx organization.
-
 1. Follow [New Relic's instructions](https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys) to obtain a REST API key for your account. 
-
-1. Open the SignalFx Integrations page and click on the **New Relic** icon, or click the New Relic link in the left-hand nav bar.
 
 1. Click the **New Integration** button, and in the new field labelled **API key** enter the API key that you obtained in step 1. 
 
@@ -36,7 +32,7 @@ This section includes information that can help you build SignalFx charts from N
 
 #### Example New Relic dashboards
 
-This repository contains example dashboards that you can use as a baseline for creating your own New Relic charts in SignalFx. You can import them to SignalFx by [clicking here to download the JSON file](././dashboards/Page_SignalFx collectd + New Relic.json). In SignalFx, open the menu in the top right-hand corner of the app next to your profile image, and selecting **Import dashboard group**. This will create a new dashboard group called "SignalFx + New Relic" that contains two example dashboards:
+SignalFx provides example dashboards that you can use as a baseline for creating your own New Relic charts in SignalFx. You can import them to SignalFx by [clicking here to download the JSON file](https://github.com/signalfx/integrations/blob/master/newrelic/dashboards/Page_SignalFx%20collectd%20%2B%20New%20Relic.json). In SignalFx, open the menu in the top right-hand corner of the app next to your profile image, and selecting **Import dashboard group**. This will create a new dashboard group called "SignalFx + New Relic" that contains two example dashboards:
 
 * **"New Relic Applications Overview"** - This shows how to display metrics for multiple New Relic applications at once, like response time and requests per minute. 
   ![](././img/dashboard_newrelic.png)
