@@ -72,9 +72,9 @@ Using the example configuration file [20-elasticsearch.conf](https://github.com/
 
 The plugin is intended to be run on a per-node basis. Define only one "Module" element per `20-elasticsearch.conf` configuration file.
 
-| configuration option | definition | default value |
+| configuration option | definition | example value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/setup/scripts" |
+| ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-elasticsearch" |
 | Verbose | Enable verbose logging. | false |
 | Cluster | A name for this cluster. Appears in the dimension `cluster`. | "elasticsearch" |
 | Indexes | Identifies the indexes for which the plugin should collect statistics. See note below. | ["_all"] |
@@ -84,7 +84,7 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | Host | The hostname of this instance of Elasticsearch. | "localhost" |
 | Port | The port number of this instance of Elasticsearch. | "9200" |
 | DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false) | false |
-| IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greaterthan or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
+| IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greater than or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
 | AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file | \[""\] |
 | Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
 | Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
