@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-statsd.net is a high-performance stats collection service based on etsy's statsd service and written in c#.net. [SignalFx's release of statsd.net](https://github.com/signalfx/statsd.net/) adds support for dimensions, and includes a plugin to send metrics to SignalFx.
+statsd.net is a high-performance stats collection service based on etsy's statsd service and written in c#.net. SignalFx's release of statsd.net (included with this plugin package) adds support for dimensions, and includes a plugin to send metrics to SignalFx.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
