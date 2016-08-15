@@ -68,6 +68,7 @@ Using the example configuration file [10-mysql.conf](https://github.com/signalfx
 | Database (in block declaration) | The value of the dimension `plugin_instance` that will be recorded for this database. | `<Database hostA_database1>` |
 | Host  | The host on which MySQL is running. | "10.128.8.2" |
 | Socket | A socket that collectd can use to connect to the database. You may be able to find this value by looking at the command used to run MySQL on your server as follows: <code>ps auwxxx &#124; grep mysql<code> | "/var/run/mysqld/mysqld.sock" |
+| Port | Can be used to connect to the database in lieu of specifying a Socket | 3306 |
 | User | A valid username that collectd can use to connect to MySQL. | "root" |
 | Password | Password for the username given in User. | "abcdABCD1." |
 | Database (within block) | The name of the MySQL database to monitor. | `Database "mysql_one"` |
@@ -84,6 +85,9 @@ This plugin configuration file uses directives called “Database” in two diff
 The value of “Database” in the _block declaration_ (`<Database foo>`) indicates the value of the  `plugin_instance` dimension that will be recorded for this database. The value of “Database” within the block (`Database "my_database"`) indicates the `db_name` of the MySQL database to monitor using this configuration.
 
 To illustrate the difference between these two uses of "Database", the example configuration given in [10-mysql.conf](https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf) directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3.
+
+#### Note: Monitoring a MySQL environment that is configured for replication
+If you have configured MySQL to use replication you may want to collect information relevant to the performance and status of your master and/or slave nodes. This can be achieved by utilizing the `MasterStats`, `SlaveStats`, and `SlaveNotifications` options as described in [10-mysql.conf](https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf)
 
 ### USAGE
 
