@@ -8,25 +8,25 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Elastic Load Balancing (ELB) via [Amazon CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws). 
+Use SignalFx to monitor Elastic Load Balancing (ELB) via [Amazon CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 #### FEATURES
 
 ##### Built-in dashboards
 
 - **ELB Instances**: Overview of all data from ELB.
-  
+
   [<img src='./img/dashboard_elb_instances.png' width=200px>](./img/dashboard_elb_instances.png)
 
 - **ELB Instance**: Focus on a single ELB load balancer.
-  
+
   [<img src='./img/dashboard_elb_instance.png' width=200px>](./img/dashboard_elb_instance.png)
 
 ### INSTALLATION
 
-To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws) on the SignalFx Integrations page. 
+To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws) on the SignalFx Integrations page.
 
-By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page. 
+By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
 ### USAGE
 
@@ -34,13 +34,13 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 SignalFx synthesizes a unique ID for each ELB in the dimension `AWSUniqueId`.
 
-#### ELB metadata 
+#### ELB metadata
 
 For ELB, SignalFx will scan every load balancer name from your AWS account and pull out properties of the load balancer and any tags set on the load balancer.
 
 | ELB Filter Name |	Custom Property |	Description |
 |-----------------|-----------------|-------------|
-| create-time |	aws_create_time	| The time stamp when the load balancer was created |
+| create-time | aws\_create\_time | The time stamp when the load balancer was created |
 
 ### METRICS
 
