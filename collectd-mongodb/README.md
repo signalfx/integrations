@@ -87,7 +87,7 @@ Using the example configuration file [10-mongodb.conf](https://github.com/signal
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/setup/scripts" |
+| ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/mongodb-collectd-plugin" |
 | Host | Host IP | "127.0.0.1" |
 | Port | Port number for IP connection | "27017" |
 | User | Valid mongodb user | "" |
