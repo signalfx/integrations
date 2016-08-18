@@ -27,12 +27,12 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
          yum install collectd-java
-         
-    On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
+
+    On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
 1. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
 
-1. Restart collectd. 
+1. Restart collectd.
 
 ### CONFIGURATION
 
@@ -44,9 +44,9 @@ No additional configuration is required, however full configuration details for 
 
 Use the Java collectd plugin to collect metrics from Java applications using JMX. SignalFx supports several integrations that depend on this plugin:
 
-* [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq)<!-- sfx_link:collectd-activemq --> 
-* [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)<!-- sfx_link:collectd-cassandra -->
-* [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)<!-- sfx_link:collectd-kafka -->
+* [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq)
+* [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)[](sfx_link:collectd-cassandra)
+* [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka)
 
 ### METRICS
 
