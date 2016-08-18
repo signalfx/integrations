@@ -16,11 +16,11 @@ Use SignalFx to monitor AWS OpsWorks via [Amazon CloudWatch](https://github.com/
 
 - **OpsWorks (a)**: Overview of all data from OpsWorks.
 
-  [<img src='./img/dashboard_opsworks_a.png' width=200px>](./img/dashboard_OpsWorks_a.png)
+  [<img src='./img/dashboard_opsworks_a.png' width=200px>](./img/dashboard_opsworks_a.png)
 
 - **OpsWorks**: Focus on a single OpsWorks instance, layer or stack.
 
-  [<img src='./img/dashboard_opsworks_instance.png' width=200px>](./img/dashboard_OpsWorks_instance.png)
+  [<img src='./img/dashboard_opsworks_instance.png' width=200px>](./img/dashboard_opsworks_instance.png)
 
 ### INSTALLATION
 
