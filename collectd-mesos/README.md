@@ -61,7 +61,7 @@ Using the example configuration files [`10-mesos-master.conf`](././10-mesos-mast
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/collectd-mesos" |
+| ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/mesos-collectd-plugin" |
 | Cluster | The name of the cluster to which the Mesos instance belongs. Appears in the dimension `cluster`. | "cluster-0" |
 | Instance | The name of this Mesos master/slave instance. Appears in the dimension `plugin_instance`. | "master-0" / "slave-0" |
 | Path | The location of the mesos-master/mesos-slave binary. | "/usr/sbin" |
