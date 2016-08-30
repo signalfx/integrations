@@ -8,27 +8,35 @@
 
 ### DESCRIPTION
 
-This document describes SignalFx's integration with [New Relic](https://www.newrelic.com). Use this integration to view New Relic metrics in SignalFx. With this integration, you can apply SignalFx's analytics to New Relic data, use New Relic data in alerts, and enrich your infrastructure data with data about your New Relic-instrumented applications.  
+This document describes SignalFx's integration with [New Relic](https://www.newrelic.com). Use this integration to view New Relic metrics in SignalFx. With this integration, you can apply SignalFx's analytics to New Relic data, use New Relic data in alerts, and enrich your infrastructure data with data about your New Relic-instrumented applications.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-This integration requires a New Relic account. 
+This integration requires a New Relic account.
 
 ### INSTALLATION
 
 You can easily connect your New Relic account to SignalFx from the Integrations page. To integrate SignalFx with New Relic, you must be an administrator of your SignalFx organization.
 
-1. Follow [New Relic's instructions](https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys) to obtain a REST API key for your account. 
+1. Follow [New Relic's instructions](https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys) to obtain a REST API key for your account.
 
 1. Open the SignalFx Integrations page and click on the **New Relic** icon, or click the New Relic link in the left-hand nav bar.
 
-1. Click the **New Integration** button, and in the new field labelled **API key** enter the API key that you obtained in step 1. 
+1. Click the **New Integration** button. In the new field labelled **API key** enter the API key that you obtained in step 1, then click **Validate**..
 
-1. Optionally, select the individual New Relic modules for which you want metrics to appear in SignalFx. By default, SignalFx collects data from APM, Mobile, and Servers modules. 
+1. A message appears that says **Validated!**. If a different message appears, contact support@signalfx.com for help.
 
-1. Click **Save**. A message appears that says **Validated!**. If a different message appears, contact support@signalfx.com for help. 
+1. Select at least one New Relic module for which you want metrics to appear in SignalFx (APM, Mobile, or Servers). You can create sync rules for each of them.
 
-Your New Relic account is now connected and ready to use. Data from New Relic will arrive at SignalFx within minutes. 
+1. Use typeahead to select at least one app to monitor; you can copy and paste results from the Sample Matches list. Click **+** to add each app to the list. When you have chosen all the apps you wish to monitor, click **Done**.
+
+1. (recommended) Select metrics and stats to monitor. By default, all are monitored.
+
+1. (optional) Repeat steps n-n for each module.
+
+1. Click **Save**. The choices you made for each module are saved as individual sync rules. You can later reopen the New Relic integration to add, edit, or delete sync rules.
+
+Your New Relic account is now connected and ready to use. Data from New Relic will arrive at SignalFx within minutes.
 
 ### USAGE
 
@@ -38,10 +46,10 @@ This section includes information that can help you build SignalFx charts from N
 
 This repository contains example dashboards that you can use as a baseline for creating your own New Relic charts in SignalFx. You can import them to SignalFx by [clicking here to download the JSON file](././dashboards/Page_SignalFx collectd + New Relic.json). In SignalFx, open the menu in the top right-hand corner of the app next to your profile image, and selecting **Import dashboard group**. This will create a new dashboard group called "SignalFx + New Relic" that contains two example dashboards:
 
-* **"New Relic Applications Overview"** - This shows how to display metrics for multiple New Relic applications at once, like response time and requests per minute. 
+* **"New Relic Applications Overview"** - This shows how to display metrics for multiple New Relic applications at once, like response time and requests per minute.
   ![](././img/dashboard_newrelic.png)
 
-* **"New Relic APM + collectd infrastructure metrics"** - This shows how to display data from New Relic applications data alongside infrastructure metrics from collectd. 
+* **"New Relic APM + collectd infrastructure metrics"** - This shows how to display data from New Relic applications data alongside infrastructure metrics from collectd.
   ![](././img/dashboard_newrelic_infra.png)
 
 #### Recognizing New Relic metrics in SignalFx
@@ -85,9 +93,9 @@ In regular wildcard mode you can use `*` for wildcarding, and the wildcard appli
 
 New Relic mode appears as an option only after a New Relic integration has been set up in your SignalFx organization. Regular SignalFx dimensions are not available in New Relic mode. You cannot dynamically filter a chart that uses New Relic mode.
 
-This mode is different from a regular wildcard query using `*` because it treats the slash `/` character as a special delimiter. The New Relic wildcard search `System/*` will only return a metric that has no subsequent slash characters in the name. See the next section for an example.  
+This mode is different from a regular wildcard query using `*` because it treats the slash `/` character as a special delimiter. The New Relic wildcard search `System/*` will only return a metric that has no subsequent slash characters in the name. See the next section for an example.
 
-In New Relic mode, you can filter and aggregate metrics based only on the contents of the metric name. To help with this, SignalFx supports on-the-fly dimension aliasing in New Relic mode. Node aliasing allows you to assign names to the slash-delimited components of a metric name, and use the value of each component for aggregation and analytics. When using New Relic mode, you can find aliasing controls in the Y-axis configuration menu in the chart builder. 
+In New Relic mode, you can filter and aggregate metrics based only on the contents of the metric name. To help with this, SignalFx supports on-the-fly dimension aliasing in New Relic mode. Node aliasing allows you to assign names to the slash-delimited components of a metric name, and use the value of each component for aggregation and analytics. When using New Relic mode, you can find aliasing controls in the Y-axis configuration menu in the chart builder.
 
 #### Comparing Regular wildcard mode to New Relic wildcard mode
 
