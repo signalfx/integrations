@@ -22,7 +22,7 @@ This integration requires a New Relic account. You must be an administrator of y
 
 1. A message appears that says **Validated!**. If a different message appears, contact support@signalfx.com for help.
 
-1. Select at least one New Relic module for which you want metrics to appear in SignalFx (APM, Mobile, or Servers). You can create sync rules for each of them.
+1. Next, create sync rules to control which metrics SignalFx will sync from New Relic. Select at least one New Relic module for which you want metrics to appear in SignalFx (APM, Mobile, or Servers). You can create sync rules for each module.
 
 1. Use typeahead to select at least one app to monitor; you can copy and paste results from the Sample Matches list. Click the **+** button to add each app to the list. When you have chosen all the apps you wish to monitor, click **Done**.
 
