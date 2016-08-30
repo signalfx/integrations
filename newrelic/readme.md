@@ -18,15 +18,15 @@ This integration requires a New Relic account. You must be an administrator of y
 
 1. Follow [New Relic's instructions](https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys) to obtain a REST API key for your account.
 
-1. Click the **New Integration** button. In the new field labelled **API key** enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!**. If a different message appears, contact support@signalfx.com for help.
+1. Click the **New Integration** button. In the field labelled **API key**, enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!** If a different message appears, contact support@signalfx.com for help.
 
-1. Next, create sync rules to control which metrics SignalFx will sync from New Relic. Select at least one New Relic module for which you want metrics to appear in SignalFx (APM, Mobile, or Servers). You can create sync rules for each module.
+1. Select at least one New Relic module for which you want metrics to appear in SignalFx (APM, Mobile, or Servers). A sync rule is created to control which metrics SignalFx will sync from New Relic; you can create sync rules for each module.
 
-1. Use typeahead to select at least one app to monitor; you can copy and paste results from the Sample Matches list. Click the **+** button to add each app to the list. When you have chosen all the apps you wish to monitor, click **Done**.
+1. Click **Add Apps** or (for the Servers module) **Add Servers**. Use typeahead to select at least one item to monitor; you can copy and paste results from the Sample Matches list. Click the blue **+** button to add each item to the list. When you have added all the items you wish to monitor, click **Done**.
 
 1. (optional) Select metrics and stats to monitor. By default, all are monitored.
 
-1. (optional) Repeat steps 3-5 for each module.
+1. (optional) Click **New Sync Rule** and repeat steps 3-5 for other modules.
 
 1. Click **Save**. The choices you made for each module are saved as individual sync rules. You can later reopen the New Relic integration to add, edit, or delete sync rules.
 
