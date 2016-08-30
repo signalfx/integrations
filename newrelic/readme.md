@@ -18,9 +18,7 @@ This integration requires a New Relic account. You must be an administrator of y
 
 1. Follow [New Relic's instructions](https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys) to obtain a REST API key for your account.
 
-1. Open the SignalFx Integrations page and click the **New Relic** icon.
-
-1. Click the **New Integration** button. In the new field labelled **API key** enter the API key that you obtained in step 1, then click **Validate**..
+1. Click the **New Integration** button. In the new field labelled **API key** enter the API key that you obtained in step 1, then click **Validate**.
 
 1. A message appears that says **Validated!**. If a different message appears, contact support@signalfx.com for help.
 
@@ -28,9 +26,9 @@ This integration requires a New Relic account. You must be an administrator of y
 
 1. Use typeahead to select at least one app to monitor; you can copy and paste results from the Sample Matches list. Click the **+** button to add each app to the list. When you have chosen all the apps you wish to monitor, click **Done**.
 
-1. (recommended) Select metrics and stats to monitor. By default, all are monitored.
+1. (optional) Select metrics and stats to monitor. By default, all are monitored.
 
-1. (optional) Repeat steps 5-7 for each module.
+1. (optional) Repeat steps 4-6 for each module.
 
 1. Click **Save**. The choices you made for each module are saved as individual sync rules. You can later reopen the New Relic integration to add, edit, or delete sync rules.
 
