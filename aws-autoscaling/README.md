@@ -25,7 +25,7 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 ### USAGE
 
-SignalFx provides built-in dashboards for this service. Examples are shown below. 
+SignalFx provides built-in dashboards for this service. Find them on the Dashboards page in SignalFx. 
 
 ### METRICS
 
