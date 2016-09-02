@@ -18,11 +18,11 @@ This integration requires a New Relic account. You must be an administrator of y
 
 1. Follow [New Relic's instructions](https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys) to obtain a REST API key for your account.
 
-1. Click the **New Integration** button. In the field labelled **API key**, enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!** If a different message appears, contact support@signalfx.com for help.
+1. Click the **New Integration** button. In the field labelled **API key**, enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!** If a different message appears, contact [support@signalfx.com](mailto:support@signalfx.com) for help.
 
-1. Select at least one New Relic module for which you want metrics to appear in SignalFx (APM, Mobile, or Servers). A sync rule is created to control which metrics SignalFx will sync from New Relic; you can create sync rules for each module. 
+1. Select a New Relic module to sync to SignalFx (APM, Mobile, or Servers). You will create a sync rule for that module to control which metrics SignalFx will sync from New Relic.
 
-1. Click **Add Apps** or (for the Servers module) **Add Servers**. Use typeahead to select at least one item to monitor; you can copy and paste results from the Sample Matches list.  Click the blue **+** button to add each item to the list. (**Note:** Because the volume of available metrics from New Relic may be large, SignalFx recommends choosing just one or a few items to start.) When you have added all the items you wish to monitor, click **Done**. 
+1. Click **Add Apps** or (for the Servers module) **Add Servers**. Use typeahead to include at least one filter string, checking results of the filter on the Sample Matches list.  Click the blue **+** button to add a string to the list of filters. (**Note:** Because the volume of available metrics from New Relic may be large, SignalFx recommends filtering down to just one or a few items to start). When your filter includes all the items you wish to monitor, click **Done**. 
 
 1. (optional) Select metrics and stats to monitor. By default, all are monitored.
 
