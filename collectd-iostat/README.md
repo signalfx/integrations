@@ -36,7 +36,7 @@ At this time there are no built in dashboards.  You may find metrics reported by
 5.  Restart collectd.
 
 ### CONFIGURATION
-Using the example configuration file [10-docker.conf](https://github.com/signalfx/integrations/tree/master/collectd-docker/10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file [10-iostat.conf](https://github.com/signalfx/integrations/tree/master/collectd-iostat/10-iostat.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
