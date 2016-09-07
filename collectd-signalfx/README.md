@@ -64,6 +64,7 @@ Directions for finding your token:
 | LogTraces | Enable log traces | true |
 | Notifications | Enable notification on this plugin | true |
 | NotifyLevel | Set the notification level | "OKAY" |
+| PerCoreCPUUtil | Enable cpu utilization per core metrics.  This requires the [filtering.conf](../collectd-match_regex/filtering.conf) file| false |
 
 
 ### USAGE
