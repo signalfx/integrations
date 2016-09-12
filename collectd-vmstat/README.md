@@ -42,7 +42,7 @@ Using the example configuration file [10-vmstat.conf](https://github.com/signalf
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/vmstat-collectd" |
-| Import | Path to the name of the pythom module with out the .py extension | `vmstat-collectd` |
+| Import | Path to the name of the pythom module with out the .py extension | `vmstat_collectd` |
 | Path | Path to the vmstat executable | "/usr/bin/vmstat" |
 | Verbose | Turns on verbose log statements | false |
 | Include | Explicit list of metrics to report.  If no metrics are specified to be included then all metrics will be reported. | `"r", "b", "swpd", "free", "buff", "cache", "inact", "active", "si", "so", "bi", "bo", "in", "cs", "us", "sy", "id", "wa", "st"`|
