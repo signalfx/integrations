@@ -25,11 +25,11 @@ At this time there are no built in dashboards.  You may find metrics reported by
 |----------|--------------|
 | collectd | 5.0 or later |
 | Python   | 2.6 or later |
-| systat  | 10.0.3 or later |
+| sysstat  | 10.0.3 or later |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
-1.  Ensure that systat is installed on the host.
+1.  Ensure that sysstat is installed on the host.
 2.  Download the [iostat-collectd-python](https://github.com/signalfx/iostat-collectd-python) Python module.
 3.  Place the contents of the repo in /usr/share/collectd/iostat-collectd-python
 4.  Download SignalFx’s [sample configuration file](./10-iostat.conf) for this plugin to `/etc/collectd/managed_config`.
