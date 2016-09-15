@@ -29,7 +29,7 @@ At this time there are no built in dashboards.  You may find metrics reported by
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
-1.  Ensure that systat is installed on the host.
+1.  Ensure that vmstat is installed on the host.
 2.  Download the [vmstat-collectd](https://github.com/signalfx/vmstat-collectd) Python module
 3.  Place the contents of the repo in /usr/share/collectd/vmstat-collectd
 4.  Download SignalFx’s [sample configuration file](./10-vmstat.conf) for this plugin to `/etc/collectd/managed_config`.
