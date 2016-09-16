@@ -15,22 +15,22 @@ Use SignalFx to monitor AWS services via Amazon CloudWatch. This integration ena
 Connecting to CloudWatch allows you to take advantage of SignalFx’s extensive CloudWatch support.
 
 - The SignalFx Hosts page visualizes EC2 instances.
-  
+
   [<img src='./img/hosts_aws.png' width=200px>](./img/hosts_aws.png)
-- SignalFx can sync metadata about your AWS hosts to enrich metrics reported by CloudWatch or the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
+- SignalFx can sync metadata about your AWS hosts to enrich metrics reported by CloudWatch or the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 - SignalFx provides built-in dashboards for many Amazon web services that report to CloudWatch, such as [EC2](https://github.com/signalfx/integrations/tree/master/aws-ec2)[](sfx_link:aws-ec2) and [ELB](https://github.com/signalfx/integrations/tree/master/aws-elb)[](sfx_link:aws-elb).
 
 
 
-### CONFIGURATION 
+### CONFIGURATION
 
-Connect to CloudWatch on the Integrations page in SignalFx. 
+Connect to CloudWatch on the Integrations page in SignalFx.
 
-To connect SignalFx to CloudWatch, you’ll create a new IAM role in AWS for SignalFx to use, provide information from SignalFx to that new role, then provide SignalFx with the role’s ARN. You must be an administrator of your SignalFx account to connect SignalFx to CloudWatch. [Click here for detailed instructions](http://docs.signalfx.com/en/latest/getting-started/send-data.html#cloudwatch). 
+To connect SignalFx to CloudWatch, you’ll create a new IAM role in AWS for SignalFx to use, provide information from SignalFx to that new role, then provide SignalFx with the role’s ARN. You must be an administrator of your SignalFx account to connect SignalFx to CloudWatch. [Click here for detailed instructions](http://docs.signalfx.com/en/latest/getting-started/send-data.html#cloudwatch).
 
 ### USAGE
 
-#### Data available from CloudWatch 
+#### Data available from CloudWatch
 
 ##### Importing CloudWatch metrics and dimensions
 
@@ -46,11 +46,11 @@ SignalFx can apply or sync other AWS metadata with metrics reported, allowing it
 
 The following metadata is available for filtering metrics:
 
-| Custom Property	| Description | 
+| Custom Property	| Description |
 |-----------------|-------------|
-| `aws_account_alias`	| AWS account alias that the instance, volume or load balancer is running under | 
-| `aws_account_id`	| AWS account ID that the instance, volume or load balancer is running under | 
-| `aws_tag_[Name of tag]` |	Custom tags applied to the instance, volume or load balancer (e.g., aws_tag_Name)| 
+| `aws_account_alias` | AWS account alias that the instance, volume or load balancer is running under |
+| `aws_account_id` | AWS account ID that the instance, volume or load balancer is running under |
+| `aws_tag_[Name of tag]` | Custom tags applied to the instance, volume or load balancer (e.g., aws\_tag\_Name)|
 
 Account alias and ID can be useful because SignalFx allows you to import metrics from more than one AWS account. To distinguish between metrics from different accounts, the account alias and account ID are added as properties to the relevant metric time series.
 
@@ -64,11 +64,11 @@ Much like SignalFx, AWS CloudWatch uses rollups to summarize metrics, and it ref
 
 | AWS Statistic	| SignalFx dimension |	Definition |
 |---------------|--------------------|-------------|
-| Average	| stat:mean	| Mean value of metric over the sampling period | 
-| Maximum	| stat:upper	| Maximum value of metric over the sampling period | 
-| Minimum	| stat:lower	| Minimum value of metric over the sampling period | 
-| Data Samples	| stat:count	| Number of samples over the sampling period | 
-| Sum	| stat:sum	| Sum of all values that occurred over the sampling period | 
+| Average	| stat:mean	| Mean value of metric over the sampling period |
+| Maximum	| stat:upper	| Maximum value of metric over the sampling period |
+| Minimum	| stat:lower	| Minimum value of metric over the sampling period |
+| Data Samples	| stat:count	| Number of samples over the sampling period |
+| Sum	| stat:sum	| Sum of all values that occurred over the sampling period |
 
 To use a CloudWatch metric in a plot, you must always specify the metric name along with a filter for `stat` that is appropriate to the metric you have chosen. For example, if you are using the metric `NetworkPacketsIn`, per the AWS CloudWatch documentation for EC2 metrics, the only statistics that are meaningful are Minimum, Maximum and Average, so you should choose the dimension stat with a value of either `lower`, `upper` or `mean`, respectively, depending on which statistic you want to use.
 
@@ -80,7 +80,7 @@ SignalFx imports the namespace for AWS services using the dimension `namespace`.
 
 ##### Uniquely identifying AWS instances
 
-Amazon services that report to CloudWatch do not always provide unique identifiers. For example, the EC2 dimension `InstanceID` is not guaranteed to be unique across all availability zones. SignalFx synthesizes unique identifiers for [EC2](https://github.com/signalfx/integrations/tree/master/aws-ec2)<!-- sfx_link:aws-ec2 -->, [EBS](https://github.com/signalfx/integrations/tree/master/aws-ebs)<!-- sfx_link:aws-ebs --> and [ELB](https://github.com/signalfx/integrations/tree/master/aws-elb)<!-- sfx_link:aws-elb --> instances, in the dimension called `AWSUniqueId`. This allows us to attach metadata to CloudWatch metrics from these services. 
+Amazon services that report to CloudWatch do not always provide unique identifiers. For example, the EC2 dimension `InstanceID` is not guaranteed to be unique across all availability zones. SignalFx synthesizes unique identifiers for [EC2](https://github.com/signalfx/integrations/tree/master/aws-ec2)[](sfx_link:aws-ec2), [EBS](https://github.com/signalfx/integrations/tree/master/aws-ebs)[](sfx_link:aws-ebs) and [ELB](https://github.com/signalfx/integrations/tree/master/aws-elb)[](sfx_link:aws-elb) instances, in the dimension called `AWSUniqueId`. This allows us to attach metadata to CloudWatch metrics from these services.
 
 ### METRICS
 
