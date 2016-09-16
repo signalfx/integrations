@@ -21,7 +21,7 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd  |  4.9+  |
-| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)<!-- sfx_link:collectd -->) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:collectd)) |
 | Python    |  2.6+ |
 
 ### INSTALLATION
