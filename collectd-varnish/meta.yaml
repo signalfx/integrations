@@ -5,5 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-varnish/img/integrations_varnish.png",
   "logo_small": "/images/repos/collectd-varnish/img/integrations_varnish%402x.png",
+  "data_signature": "plugin:varnish",
   "in_app_categories": ["servicesMonitored"]
 }

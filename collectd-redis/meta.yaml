@@ -5,5 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-redis/img/integrations_redis.png",
   "logo_small": "/images/repos/collectd-redis/img/integrations_redis%402x.png",
+  "data_signature": "plugin:redis_info",
   "in_app_categories": ["servicesMonitored"]
 }

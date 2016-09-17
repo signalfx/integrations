@@ -5,5 +5,6 @@
   "featured": false,
   "logo_large": "integration_awsebs.png",
   "logo_small": "integration_awsebs.png",
+  "data_signature": "namespace:\"AWS/EBS\"",
   "in_app_categories": ["AWSservicesMonitored"]
 },
