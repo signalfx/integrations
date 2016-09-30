@@ -79,6 +79,7 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | Cluster | A name for this cluster. Appears in the dimension `cluster`. | "elasticsearch" |
 | Indexes | Identifies the indexes for which the plugin should collect statistics. See note below. | ["_all"] |
 | EnableIndexStats | Enable or disable collection of index statistics. | false |
+| IndexStatsMasterOnly | When `true`, index stats will only be sent if the node is the active master.  When `false`, index stats will be sent if the node is master eligible.  This requires EnableIndexStats to be `true` | false |
 | EnableClusterHealth | Enable or disable collection of cluster health statistics. | true |
 | Interval | The interval in seconds at which the plugin will report metrics, independent of the overall collectd collection interval. | 10 |
 | Host | The hostname of this instance of Elasticsearch. | "localhost" |
