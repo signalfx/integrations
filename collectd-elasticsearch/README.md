@@ -79,16 +79,16 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | Cluster | A name for this cluster. Appears in the dimension `cluster`. | "elasticsearch" |
 | Indexes | Identifies the indexes for which the plugin should collect statistics. See note below. | ["_all"] |
 | EnableIndexStats | Enable or disable collection of index statistics. | false |
-| IndexStatsMasterOnly | When `true`, index stats will only be sent if the node is the active master.  When `false`, index stats will be sent if the node is master eligible.  This requires EnableIndexStats to be `true` | false |
+| IndexStatsMasterOnly | When `true`, index stats will only be sent if the node is the active master.  When `false`, index stats will be sent if the node is master eligible.  This requires EnableIndexStats to be `true`. | false |
 | EnableClusterHealth | Enable or disable collection of cluster health statistics. | true |
 | Interval | The interval in seconds at which the plugin will report metrics, independent of the overall collectd collection interval. | 10 |
 | Host | The hostname of this instance of Elasticsearch. | "localhost" |
 | Port | The port number of this instance of Elasticsearch. | "9200" |
-| DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false) | false |
+| DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false). | false |
 | IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greater than or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
-| AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file | \[""\] |
-| Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
-| Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only)| ```Unconfigured``` |
+| AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file. | \[""\] |
+| Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only). | ```Unconfigured``` |
+| Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only). | ```Unconfigured``` |
 | ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. See [note regarding available thread pools](#note-available-thread-pools) below. | \["search","index"\] |
 
 #### Note: Available thread pools
