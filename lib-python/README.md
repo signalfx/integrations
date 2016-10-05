@@ -47,7 +47,7 @@ token. [Click here for more information on retrieving your API token](https://de
 To install from pip:
 
 ```
-pip install signalfx
+sudo pip install signalfx
 ```
 
 To install from source:

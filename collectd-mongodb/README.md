@@ -66,12 +66,12 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
         yum install -y epel-release
         yum install -y python-pip
-        pip install pymongo==3.0.3
+        sudo pip install pymongo==3.0.3
 
  **Ubuntu and Debian:**
 
         apt-get install -y python-pip python-dev build-essential
-        pip install pymongo==3.0.3
+        sudo pip install pymongo==3.0.3
 
 1. Download the [collectd-mongodb Python module](https://github.com/signalfx/collectd-mongodb).  
 
