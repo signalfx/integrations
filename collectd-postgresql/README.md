@@ -65,7 +65,7 @@ Using the example configuration file [10-postgresql.conf](https://github.com/sig
 | User  | Username that collectd will use to access PostgreSQL | collectd_user |
 | Password  | Password for the user specified in User | Password123 |
 
-No additional configuration is necessary if using SignalFx's example configuration file. For complete documentation of configuration options, see [collectd's manpage for this plugin](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_postgresql).
+No additional configuration is necessary if you are using SignalFx's example configuration file. However, you may wish to change the name of the database from the default of "postgres" within the starting tag of the `<Database>` block. This name is what will be reported on the plugin_instance dimension for metrics coming from this database. For complete documentation of configuration options, see [collectd's manpage for this plugin](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_postgresql).
 
 #### System modifications
 
