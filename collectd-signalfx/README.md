@@ -21,7 +21,7 @@ This plugin requires:
 | Software          | Version        |
 |-------------------|----------------|
 | collectd  |  4.9+  |
-| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)<!-- sfx_link:collectd -->) |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:collectd)) |
 | Python    |  2.6+ |
 
 ### INSTALLATION
@@ -64,6 +64,7 @@ Directions for finding your token:
 | LogTraces | Enable log traces | true |
 | Notifications | Enable notification on this plugin | true |
 | NotifyLevel | Set the notification level | "OKAY" |
+| PerCoreCPUUtil | Enable cpu utilization per core metrics.  This requires the [filtering.conf](../collectd-match_regex/filtering.conf) file| false |
 
 
 ### USAGE
