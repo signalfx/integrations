@@ -5,5 +5,5 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin.png",
   "logo_small": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin%402x.png",
-  "data_signature": "plugin:signalfx-metadata"
+  "data_signature": "plugin:\"signalfx-metadata\""
 },

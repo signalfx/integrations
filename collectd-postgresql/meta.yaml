@@ -5,6 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-postgresql/img/integrations_postgresql.png",
   "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png",
-  "data_signature": "plugin:postgresql",
+  "data_signature": "plugin:\"postgresql\"",
   "in_app_categories": ["servicesMonitored"]
 }
