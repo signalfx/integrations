@@ -5,6 +5,6 @@
   "featured": true,
   "logo_large": "/images/repos/collectd-kafka/img/integrations_kafka.png",
   "logo_small": "/images/repos/collectd-kafka/img/integrations_kafka%402x.png",
-  "data_signature": "sf_hostHasService:kafka",
+  "data_signature": "sf_metric:\"counter.kafka-messages-in\"",
   "in_app_categories": ["servicesMonitored"]
 }
