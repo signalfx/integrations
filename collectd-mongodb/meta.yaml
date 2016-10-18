@@ -5,6 +5,6 @@
   "featured": true,
   "logo_large": "/images/repos/collectd-mongodb/img/integrations_mongodb.png",
   "logo_small": "/images/repos/collectd-mongodb/img/integrations_mongodb%402x.png",
-  "data_signature": "plugin:mongo",
+  "data_signature": "plugin:\"mongo\"",
   "in_app_categories": ["servicesMonitored"]
 }

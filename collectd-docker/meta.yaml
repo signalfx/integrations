@@ -5,6 +5,6 @@
   "featured": true,
   "logo_large": "/images/repos/collectd-docker/img/integrations_docker.png",
   "logo_small": "/images/repos/collectd-docker/img/integrations_docker%402x.png",
-  "data_signature": "plugin:docker",
+  "data_signature": "plugin:\"docker\"",
   "in_app_categories": ["servicesMonitored"]
 }

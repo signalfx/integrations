@@ -5,6 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-statsd/img/integrations_statsd%402x.png",
   "logo_small": "/images/repos/collectd-statsd/img/integrations_statsd.png",
-  "data_signature": "plugin:statsd",
+  "data_signature": "plugin:\"statsd\"",
   "in_app_categories": ["servicesMonitored"]
 },

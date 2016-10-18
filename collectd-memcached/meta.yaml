@@ -5,6 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-memcached/img/integrations_memcached.png",
   "logo_small": "/images/repos/collectd-memcached/img/integrations_memcached%402x.png",
-  "data_signature": "plugin:memcached",
+  "data_signature": "plugin:\"memcached\"",
   "in_app_categories": ["servicesMonitored"]
 }
