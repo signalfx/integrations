@@ -5,6 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/win-perfcounter/img/integrations_windows.png",
   "logo_small": "/images/repos/win-perfcounter/img/integrations_windows%402x.png",
-  "data_signature": "sf_metric:signalfx.usedmemory",
+  "data_signature": "sf_metric:\"signalfx.usedmemory\"",
   "in_app_categories": ["servicesMonitored"]
 }
