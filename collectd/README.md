@@ -68,6 +68,7 @@ SignalFx supports two Docker images of the SignalFx collectd agent for container
 Run the following command to start the container, replacing `IMAGE_URL` with the URL of the desired image:
 
           docker run --privileged \
+            --net="host" \
             -e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
             -v /etc/hostname:/mnt/hostname:ro \
             -v /proc:/mnt/proc:ro \
