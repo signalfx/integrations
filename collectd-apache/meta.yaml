@@ -5,6 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-apache/img/integrations_apache%402x.png",
   "logo_small": "/images/repos/collectd-apache/img/integrations_apache.png",
-  "data_signature": "plugin:apache",
+  "data_signature": "plugin:\"apache\"",
   "in_app_categories": ["servicesMonitored"]
 },
