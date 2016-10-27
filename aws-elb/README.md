@@ -1,4 +1,4 @@
-# ![](./img/integration_awselb.png) Elastic Load Balancing (ELB)
+# ![](./img/integration_awselb.png) Amazon Elastic Load Balancing (ELB)
 
 - [Description](#description)
 - [Installation](#installation)
