@@ -46,10 +46,10 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Download the Python module for Mesos from the following URL:
-  [https://github.com/signalfx/collectd-mesos](https://github.com/signalfx/collectd-mesos)
+1. Download the three Python modules for Mesos from the following URL:
+  [https://github.com/signalfx/collectd-mesos](https://github.com/signalfx/collectd-mesos). Place them in a convenient spot (e.g. in `/usr/share/collectd/mesos-collectd-plugin`)
   
-1. Download SignalFx's sample configuration files for a [Mesos master](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-master.conf) or [Mesos slave](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-slave.conf) to `/etc/collectd/managed_config`.
+1. Download SignalFx's sample configuration files for a [Mesos master](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-master.conf) or a [Mesos slave](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-slave.conf) to `/etc/collectd/managed_config`.
 
 1. Modify the configuration file to contain values that make sense for your environment, as described [below](#configuration).
 
@@ -61,7 +61,7 @@ Using the example configuration files [`10-mesos-master.conf`](././10-mesos-mast
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/mesos-collectd-plugin" |
+| ModulePath | Path on disk where collectd can find the Mesos python modules. | "/usr/share/collectd/mesos-collectd-plugin" |
 | Cluster | The name of the cluster to which the Mesos instance belongs. Appears in the dimension `cluster`. | "cluster-0" |
 | Instance | The name of this Mesos master/slave instance. Appears in the dimension `plugin_instance`. | "master-0" / "slave-0" |
 | Path | The location of the mesos-master/mesos-slave binary. | "/usr/sbin" |
