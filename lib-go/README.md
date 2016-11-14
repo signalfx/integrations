@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/lib-go/img/integratons_golang.png) SignalFx Go library
 
-_This is a directory consolidate all the metadata associated with the Go library for SignalFx. The relevant code for the library can be found [here](https://github.com/signalfx/golib/tree/master/sfxclient)_
+_This directory consolidates all the metadata associated with the Go library for SignalFx. The relevant code for the library can be found [here](https://github.com/signalfx/golib/tree/master/sfxclient)_
 
 ```
     import "github.com/signalfx/golib/sfxclient"
