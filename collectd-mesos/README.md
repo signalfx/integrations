@@ -68,6 +68,7 @@ Using the example configuration files [`10-mesos-master.conf`](././10-mesos-mast
 | Host  | The hostname or IP address of the Mesos instance to be monitored. | "%%%MASTER_IP%%%" |
 | Port | The port on which the Mesos instance is listening for connections. | %%%MASTER_PORT%%% |
 | Verbose | Enable verbose logging from this plugin to collectd's log file | false |
+| IncludeSystemHealth | Enable the sending of DC/OS System Service Health Metrics (this option is only applicable for a DC/OS master) | false |
 
 ### USAGE
 
