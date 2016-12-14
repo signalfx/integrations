@@ -69,13 +69,6 @@ Synopsis:
 >The write_http plugin regularly submits the collected values to the HTTP server. How frequently this happens depends on how much data you are collecting and the size of BufferSize. The optimal value to set Timeout to is slightly below this interval, which you can estimate by monitoring the network traffic between collectd and the HTTP server.
 
 
-### USAGE
-
-
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
-
 ### LICENSE
 
 License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/write_http.c)
