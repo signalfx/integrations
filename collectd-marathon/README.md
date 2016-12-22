@@ -15,7 +15,22 @@ A collectd python based plugin for collecting metrics from Marathon.
 
 #### Features
 ##### Built-in dashboards
-At this time there are no built in dashboards.  You may find metrics reported by this plugin in the catalog.
+
+- **Marathon**: Overview of Marathon environment.
+
+  [<img src='./img/dashboard_marathon_overview.png' width=200px>](./img/dashboard_marathon_verview_a.png)
+
+- **Marathon Application**: Focus on a Marathon Applications.
+
+  [<img src='./img/dashboard_marathon_application.png' width=200px>](./img/dashboard_marathon_application.png)
+
+- **Marathon Resources**: Focus on a Marathon Resource Allocation.
+
+  [<img src='./img/dashboard_marathon_resources.png' width=200px>](./img/dashboard_marathon_resources.png)
+
+- **Marathon Task**: Focus on a Marathon Tasks.
+
+  [<img src='./img/dashboard_marathon_task.png' width=200px>](./img/dashboard_marathon_task.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -49,7 +64,7 @@ Using the example configuration file [20-collectd-marathon.conf](./20-collectd-m
 | Import | Path to the name of the pythom module with out the .py extension | `marathon` |
 | LogTraces | Logs traces from the plugin's execution | `true` |
 | verbose | Turns on verbose log statements | `False` |
-| host | A python list of `["<host>", "<port>"]` | - |
+| host | A python list of `["<host>", "<port>", "username", "password"]`.  The `username` and `password` are only required for Basic Authentication with the Marathon Api.| - |
 
 ### Usage
 All metrics reported by the Marathon collectd plugin will contain the following dimensions:
