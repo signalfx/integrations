@@ -68,6 +68,7 @@ Using the sample configuration file [20-collectd-marathon.conf](https://github.c
 
 ### USAGE
 All metrics reported by the Marathon collectd plugin will contain the following dimensions:
+
 - `host` will contain the hostname (as known by collectd) of the machine reporting the metrics.
 - `plugin` is always set to `marathon`.
 - `plugin_instance` will always be `marathon` concated with `.` and the Mesos agent id. Ex. `marathon.<mesos agent id>`.
