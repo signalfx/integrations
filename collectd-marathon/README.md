@@ -18,7 +18,7 @@ A collectd python based plugin for collecting metrics from Marathon.
 
 - **Marathon**: Overview of Marathon environment.
 
-  [<img src='./img/dashboard_marathon_overview.png' width=200px>](./img/dashboard_marathon_verview_a.png)
+  [<img src='./img/dashboard_marathon_overview.png' width=200px>](./img/dashboard_marathon_overview.png)
 
 - **Marathon Application**: Focus on a Marathon Applications.
 
@@ -51,12 +51,12 @@ A collectd python based plugin for collecting metrics from Marathon.
     $ pip install -r requirements.txt
     ```
 4.  Place the contents of the repo in /usr/share/collectd/collectd-marathon
-5.  Download SignalFx’s [sample configuration file](./20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
+5.  Download SignalFx’s [sample configuration file](./https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
 6.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 7.  Restart collectd.
 
 ### CONFIGURATION
-Using the example configuration file [20-collectd-marathon.conf](./20-collectd-marathon.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the sample configuration file [20-collectd-marathon.conf](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
@@ -64,13 +64,17 @@ Using the example configuration file [20-collectd-marathon.conf](./20-collectd-m
 | Import | Path to the name of the pythom module with out the .py extension | `marathon` |
 | LogTraces | Logs traces from the plugin's execution | `true` |
 | verbose | Turns on verbose log statements | `False` |
-| host | A python list of `["<host>", "<port>", "username", "password"]`.  The `username` and `password` are only required for Basic Authentication with the Marathon Api.| - |
+| host | A python list of `["<host>", "<port>", "username", "password"]`.  The `username` and `password` are only required for Basic Authentication with the Marathon Api.|  |
 
-### Usage
+### USAGE
 All metrics reported by the Marathon collectd plugin will contain the following dimensions:
 * `host` will contain the hostname (as known by collectd) of the machine reporting the metrics.
 * `plugin` is always set to `marathon`.
-* `plugin_instance` will always be 'marathon' concated with the Mesos agent id `marathon<mesos agent id>`.
+* `plugin_instance` will always be `marathon` concated with `.` and the Mesos agent id. Ex. `marathon.<mesos agent id>`.
+
+Sample of pre-built dashboard in SignalFx:
+
+![](././img/dashboard_marathon_overview.png)
 
 ### METRICS
 For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
