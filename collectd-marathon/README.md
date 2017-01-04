@@ -44,7 +44,7 @@ A collectd python based plugin for collecting metrics from Marathon.
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
-1.  Ensure that the Marathon api is accessible from the host running the plugin.
+1.  Install this on a host that has access to the Marathon API.
 2.  Download the [collectd-marathon](https://github.com/signalfx/collectd-marathon) Python module
 3.  Install the pip `requirements.txt` file contained in the collectd-marathon repository
     ```
