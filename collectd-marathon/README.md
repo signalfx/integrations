@@ -51,7 +51,7 @@ A collectd python based plugin for collecting metrics from Marathon.
     $ pip install -r requirements.txt
     ```
 4.  Place the contents of the repo in /usr/share/collectd/collectd-marathon
-5.  Download SignalFx’s [sample configuration file](./https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
+5.  Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
 6.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 7.  Restart collectd.
 
@@ -68,9 +68,9 @@ Using the sample configuration file [20-collectd-marathon.conf](https://github.c
 
 ### USAGE
 All metrics reported by the Marathon collectd plugin will contain the following dimensions:
-* `host` will contain the hostname (as known by collectd) of the machine reporting the metrics.
-* `plugin` is always set to `marathon`.
-* `plugin_instance` will always be `marathon` concated with `.` and the Mesos agent id. Ex. `marathon.<mesos agent id>`.
+- `host` will contain the hostname (as known by collectd) of the machine reporting the metrics.
+- `plugin` is always set to `marathon`.
+- `plugin_instance` will always be `marathon` concated with `.` and the Mesos agent id. Ex. `marathon.<mesos agent id>`.
 
 Sample of pre-built dashboard in SignalFx:
 
