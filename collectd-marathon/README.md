@@ -11,7 +11,10 @@ _This directory consolidates all the metadata associated with the Marathon plugi
 - [License](#license)
 
 ### DESCRIPTION
-A collectd python based plugin for collecting metrics from Marathon.
+
+This is the SignalFx Marathon plugin. Follow these instructions to install the Marathon plugin for collectd.
+
+The [`collectd-marathon`](https://github.com/signalfx/collectd-marathon) plugin collects metrics about Marathon applications and tasks. 
 
 #### Features
 ##### Built-in dashboards
@@ -20,7 +23,7 @@ A collectd python based plugin for collecting metrics from Marathon.
 
   [<img src='./img/dashboard_marathon_overview.png' width=200px>](./img/dashboard_marathon_overview.png)
 
-- **Marathon Application**: Focus on a Marathon Applications.
+- **Marathon Application**: Focus on Marathon Applications.
 
   [<img src='./img/dashboard_marathon_application.png' width=200px>](./img/dashboard_marathon_application.png)
 
@@ -28,7 +31,7 @@ A collectd python based plugin for collecting metrics from Marathon.
 
   [<img src='./img/dashboard_marathon_resources.png' width=200px>](./img/dashboard_marathon_resources.png)
 
-- **Marathon Task**: Focus on a Marathon Tasks.
+- **Marathon Task**: Focus on a Marathon Task.
 
   [<img src='./img/dashboard_marathon_task.png' width=200px>](./img/dashboard_marathon_task.png)
 
@@ -44,16 +47,20 @@ A collectd python based plugin for collecting metrics from Marathon.
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
-1.  Install this on a host that has access to the Marathon API.
-2.  Download the [collectd-marathon](https://github.com/signalfx/collectd-marathon) Python module
-3.  Install the pip `requirements.txt` file contained in the collectd-marathon repository
+
+1.  Download the [collectd-marathon](https://github.com/signalfx/collectd-marathon) Python module onto a host that has access to the Marathon API.
+
+1.  Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `collectd-marathon` module: 
+
     ```
-    $ pip install -r requirements.txt
+    sudo pip install -r /path/to/collectd-marathon/requirements.txt
     ```
-4.  Place the contents of the repo in /usr/share/collectd/collectd-marathon
-5.  Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
-6.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
-7.  Restart collectd.
+    
+1.  Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
+
+1.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+
+1.  Restart collectd.
 
 ### CONFIGURATION
 Using the sample configuration file [20-collectd-marathon.conf](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
@@ -64,7 +71,7 @@ Using the sample configuration file [20-collectd-marathon.conf](https://github.c
 | Import | Path to the name of the pythom module with out the .py extension | `marathon` |
 | LogTraces | Logs traces from the plugin's execution | `true` |
 | verbose | Turns on verbose log statements | `False` |
-| host | A python list of `["<host>", "<port>", "username", "password"]`.  The `username` and `password` are only required for Basic Authentication with the Marathon Api.|  |
+| host | A python list of `["<host>", "<port>", "username", "password"]`.  The `username` and `password` are only required for Basic Authentication with the Marathon API. |  no default |
 
 ### USAGE
 All metrics reported by the Marathon collectd plugin will contain the following dimensions:
