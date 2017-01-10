@@ -58,8 +58,8 @@ Using the example configuration file [10-rabbitmq.conf](https://github.com/signa
 | Password | Password for user indicated in `Username` | "guest" |
 | Host | Hostname at which collectd can connect to RabbitMQ | "localhost" |
 |Port | Port number at which collectd can connect to RabbitMQ | "15672" |
-|CollectChannels| Toggles the collection of `channels` metrics | true |
-|CollectConnections| Toggles the collection of `connections` metrics| true |
+|CollectChannels| Toggles the collection of `channels` metrics | false |
+|CollectConnections| Toggles the collection of `connections` metrics| false |
 |CollectExchanges | Toggles the collection of `exchanges` metrics| true |
 |CollectNodes | Toggles the collection of `nodes` metrics| true |
 |CollectQueues | Toggles the collection of `queues` metrics| true |
