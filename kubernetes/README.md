@@ -1,4 +1,4 @@
-#![](https://github.com/signalfx/Integrations/blob/master/cadvisor/img/integrations_kubernetes.png) Kubernetes   
+#![](https://github.com/signalfx/Integrations/blob/master/kubernetes/img/integrations_kubernetes.png) Kubernetes   
 
 _This is a directory that consolidates all the metadata associated with the Kubernetes integration. The relevant code for the project can be found [here](https://github.com/signalfx/cadvisor-integration)_
 
