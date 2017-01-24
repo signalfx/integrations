@@ -43,13 +43,13 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
  This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
-1. Download SignalFx's sample JMX configuration file [JMX.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf).
+1. Download SignalFx's sample JMX configuration file [20-javageneric.conf](https://github.com/signalfx/integrations/blob/master/collectd-genericjmx/20-javageneric.conf)
 
 1. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
 1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
 
-         include '/path/to/10-jmx.conf'
+         include '/path/to/20-javageneric.conf'
 
 1. Restart collectd.
 
