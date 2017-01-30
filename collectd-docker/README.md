@@ -86,7 +86,7 @@ All metrics reported by the Docker collectd plugin will contain the following di
 * `plugin` is always set to `docker`
 * `plugin_instance` will contain the name of the container the metrics are from. The container name is used because that's usually a more stable value than the container ID, which changes on every restart.
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_docker.png)
 
