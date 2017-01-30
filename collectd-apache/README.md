@@ -90,7 +90,7 @@ Apache worker threads can be in one of the following states:
 | Finishing    | Finishing as part of graceful shutdown  |
 | Starting     | Starting up to serve                    |
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_apache.png)
 
