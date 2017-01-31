@@ -14,7 +14,7 @@ Use SignalFx to monitor Amazon Elastic Compute Cloud (EC2) via [Amazon CloudWatc
 
 ##### Hosts Page
 
-- **Host Navigator**: On the Hosts page in SignalFx, the Host Navigator visualizes EC2 instances as squares, colored by CloudWatch metrics including CPU, disk, and network. Group and filter instances by AWS metadata like availability zone or service tag in order to discover trends and correlations. [Click here to read more about the Hosts Page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html). 
+- **Host Navigator**: On the Hosts page in SignalFx, the Host Navigator visualizes EC2 instances as squares, colored by CloudWatch metrics including CPU, disk, and network. Group and filter instances by AWS metadata like availability zone or service tag in order to discover trends and correlations. [Click here to read more about the Hosts Page](http://docs.signalfx.com/en/latest/built-in-content/infra-nav.html). 
 
   [<img src='./img/hosts_aws_instances.png' width=200px>](./img/hosts_aws_instances.png)
 
