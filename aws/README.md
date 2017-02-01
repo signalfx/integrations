@@ -14,7 +14,7 @@ Use SignalFx to monitor AWS services via Amazon CloudWatch. This integration ena
 
 Connecting to CloudWatch allows you to take advantage of SignalFx’s extensive CloudWatch support.
 
-- The SignalFx Hosts page visualizes EC2 instances.
+- The SignalFx Infrastructure page visualizes EC2 instances.
 
   [<img src='./img/hosts_aws.png' width=200px>](./img/hosts_aws.png)
 - SignalFx can sync metadata about your AWS hosts to enrich metrics reported by CloudWatch or the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
