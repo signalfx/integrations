@@ -1,13 +1,13 @@
 [ {
   "marshallScope" : 2
 }, {
-  "sf_description" : "Metrics about Amazon Elastic Load Balancing (EBS).",
+  "sf_description" : "Metrics about Amazon Elastic Load Balancing (ELB).",
   "sf_type" : "Service",
   "sf_service" : "ELB",
   "marshallId" : 1
 }, {
   "sf_page" : "AWS ELB",
-  "sf_description" : "Dashboards about Amazon Elastic Load Balancing (EBS).",
+  "sf_description" : "Dashboards about Amazon Elastic Load Balancing (ELB).",
   "sf_type" : "Page",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
