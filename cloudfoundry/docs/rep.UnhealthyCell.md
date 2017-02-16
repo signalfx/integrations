@@ -1,7 +1,7 @@
 ---
 title: Unhealthy cells
 brief: Number of unhealthy Diego cells
-metric_type: gauage
+metric_type: gauge
 ---
 
 ### Unhealthy cells
