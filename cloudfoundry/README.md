@@ -31,7 +31,7 @@ Follow these steps to enable this integration:
 1. Install the [JMX Bridge](https://network.pivotal.io/products/ops-metrics/) tile on your Pivotal Cloud Foundry instance and configure it by following the [Pivotal documentation](https://docs.pivotal.io/jmx-bridge/index.html).
 2. If you just installed JMX Bridge for the first time apply your changes in Ops Manager before continuing so that you will know the IP address of the deployed JMX Bridge for later use.
 3. Install the SignalFx Agent tile:
-    1. Download the SignalFx Agent tile to your local machine. (TODO: link)
+    1. Download the [SignalFx Agent tile](https://github.com/signalfx/cloudfoundry-integration/releases/download/v1.0.0/signalfx-agent-1.0.0.pivotal) to your local machine.
     2. Log into your Ops Manager instance.
     3. Click **Import a Product** and select the SignalFx Agent tile previously downloaded.
 4. Configure the SignalFx Agent as described [below](#configuration).
