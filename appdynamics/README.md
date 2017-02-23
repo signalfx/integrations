@@ -21,7 +21,7 @@ This is the SignalFx AppDynamics integration, which brings metrics captured thro
 
 ### INSTALLATION
 
-The [`appd-report-standalone`](https://github.com/signalfx/appd-integration/tree/master/appd-report-standalone) module is a standalone process that parses configurations and reports
+The [appd-report-standalone](https://github.com/signalfx/appd-integration/tree/master/appd-report-standalone) module is a standalone process that parses configurations and reports
 AppDynamics metrics at specified intervals.
 
 Install this module as follows:
