@@ -130,15 +130,21 @@ The SignalFx collectd agent can be configured to use an HTTP proxy if needed. Th
 
 On CentOS/RHEL: `/etc/sysconfig/collectd`
 
+Sample contents of the file:
+```
+HTTP_PROXY="http://YOUR_HTTP_PROXY:PROXY_PORT"
+HTTPS_PROXY="https://YOUR_HTTPS_PROXY:PROXY_PORT"
+```
+
 On Debian/Ubuntu: `/etc/default/collectd`
 
 Sample contents of the file:
 ```
-export http_proxy="http://HTTP_PROXY:PROXY_PORT"
-export https_proxy="https://HTTPS_PROXY:PROXY_PORT"
+export http_proxy="http://YOUR_HTTP_PROXY:PROXY_PORT"
+export https_proxy="https://YOUR_HTTPS_PROXY:PROXY_PORT"
 ```
 
-Replace `HTTP_PROXY` and `HTTPS_PROXY` with the hostname of the HTTP proxy to be used, and `PROXY_PORT` with the port at which to access it.
+Replace `YOUR_HTTP_PROXY` and `YOUR_HTTPS_PROXY` with the hostname of the HTTP proxy to be used, and `PROXY_PORT` with the port at which to access it.
 
 ### LICENSE
 
