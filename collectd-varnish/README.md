@@ -186,7 +186,7 @@ Sample of pre-built dashboard in SignalFx:
 | hcb_lock          | HCB Lookups with lock         | Yes                |                    |
 | hcb_insert        | HCB Inserts                   | Yes                |                    |
 | esi_parse         | Objects ESI parsed (unlock)   | Yes                | CollectESI         |
-| esi_errors        | ESI parse errors (unlock)     | Yes                |    |                |
+| esi_errors        | ESI parse errors (unlock)     | Yes                |                    |
 
 For segmented metrics and dimensions emitted by this plugin, [click here](././docs).
 
