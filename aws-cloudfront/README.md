@@ -37,7 +37,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon CloudFront, click here or visit the service's homepage at https://aws.amazon.com/cloudfront/.
+For more information about the metrics emitted by Amazon CloudFront, visit the service's homepage at https://aws.amazon.com/cloudfront/.
 
 ### LICENSE
 
