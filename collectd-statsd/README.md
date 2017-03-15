@@ -32,11 +32,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
-
-         yum install collectd-statsd
-         
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
+NOTE: This plugin is included by default with all versions of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
 
 1. Download SignalFx's [sample StatsD configuration file](https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf) to `/etc/collectd/managed_config`.
 
