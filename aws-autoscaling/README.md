@@ -29,7 +29,7 @@ SignalFx provides built-in dashboards for this service. Find them on the Dashboa
 
 ### METRICS
 
-For more information about the metrics emitted by AWS Auto Scaling, click here or visit the service's homepage at https://aws.amazon.com/autoscaling/.
+For more information about the metrics emitted by AWS Auto Scaling, visit the service's homepage at https://aws.amazon.com/autoscaling/.
 
 ### LICENSE
 

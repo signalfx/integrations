@@ -69,7 +69,7 @@ For more information about the filters, see http://docs.aws.amazon.com/AWSEC2/la
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon EC2, click here or visit the service's homepage at https://aws.amazon.com/ec2/.
+For more information about the metrics emitted by Amazon EC2, visit the service's homepage at https://aws.amazon.com/ec2/.
 
 ### LICENSE
 
