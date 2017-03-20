@@ -16,7 +16,7 @@ Use this integration to monitor a Pivotal Cloud Foundry deployment. This integra
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-This plugin requires administrative access to a Pivotal Cloud Foundry deployment with the JMX Bridge installed. Pivotal Web Services is not supported. Versions known to work are:
+This integration requires administrative access to a Pivotal Cloud Foundry deployment with the JMX Bridge installed. Pivotal Web Services is not supported. Versions known to work are:
 
 | Software                | Version        |
 |-------------------------|----------------|
@@ -28,31 +28,35 @@ This plugin requires administrative access to a Pivotal Cloud Foundry deployment
 
 Follow these steps to enable this integration:
 
-1. Install the [JMX Bridge](https://network.pivotal.io/products/ops-metrics/) tile on your Pivotal Cloud Foundry instance and configure it by following the [Pivotal documentation](https://docs.pivotal.io/jmx-bridge/index.html).
-2. If you just installed JMX Bridge for the first time apply your changes in Ops Manager before continuing so that you will know the IP address of the deployed JMX Bridge for later use.
-3. Install the SignalFx Agent tile:
-    1. Download the [SignalFx Agent tile](https://github.com/signalfx/cloudfoundry-integration/releases/download/v1.0.0/signalfx-agent-1.0.0.pivotal) to your local machine.
-    2. Log into your Ops Manager instance.
-    3. Click **Import a Product** and select the SignalFx Agent tile previously downloaded.
-4. Configure the SignalFx Agent as described [below](#configuration).
-5. Apply changes in Ops Manager to deploy and configure the SignalFx Agent.
+1. Download the product file from [Pivotal Network](https://network.pivotal.io/) or from [SignalFx's Github repository](https://github.com/signalfx/cloudfoundry-integration/releases/download/v0.9.0/signalfx-agent-0.9.0.pivotal) .
+1. Navigate to the Ops Manager Installation Dashboard and click **Import a Product** to upload the product file. 
+1. Under the **Import a Product** button, click **+** next to the version number of SignalFx Monitoring and Alerting for PCF. 
+This adds the tile to your staging area.
+1. Click the newly added **SignalFx Monitoring and Alerting for PCF** tile.
+1. In the **SignalFx** section, enter your SignalFx [access token](http://docs.signalfx.com/en/latest/admin-guide/tokens.html#tokens). Leave the SignalFx ingestion URL unchanged.
+1. In the **Pivotal JMX Bridge** section, copy configuration values from the JMX Bridge tile. 
+  * To find the JMX IP Address, select the JMX Bridge tile in PCF Ops Manager and choose the **Status** tab. Copy the IP address from the job called **JMX Provider**. 
+  * To find JMX username, JMX password, and (if applicable) JMX SSL certificate, select the JMX Bridge tile in PCF Ops Manager and choose the **Settings** tab. Select the **JMX Provider** section, then copy over the JMX credentials and SSL certificate. 
+1. Click **Save**.
+1. Return to the Ops Manager Installation Dashboard and click **Apply Changes** to install the SignalFx Monitoring and Alerting for PCF tile.
 
-### CONFIGURATION
+Metrics from Pivotal Cloud Foundry will begin streaming into SignalFx. 
 
-Configure the SignalFx Agent by logging into Ops Manager and clicking the **SignalFx Agent** tile. There are two sections that must be configured before deploying.
+#### Troubleshooting
 
-Under the **SignalFx** section enter your SignalFx access key. The ingestion URL should be left as the default.
+If metrics from Pivotal Cloud Foundry don't appear in SignalFx after more than a few minutes, check the following:
 
-Under the **Pivotal JMX Bridge** section configure the IP of the deployed JMX Bridge. You can find the IP address of your JMX Bridge instance by selecting the **JMX Bridge** tile in Ops Manager and then selecting the **Status** tab. Use the IP from the **JMX Provider** job. Configure the remaining options by entering the configuration values you used when you configured JMX Bridge.
+* Verify that the values in the **Pivotal JMX Bridge** settings section of the SignalFx tile match the settings of the JMX Bridge tile.
+* Check the logs of the deployed SignalFx Agent for errors, such as connection issues to the JMX Bridge, SSL certificate errors with the JMX Bridge, or errors reporting metrics to SignalFx. 
+* Ensure that the app called **signalfx-agent** is running. 
+  1. Log into [Pivotal Apps Manager](https://docs.pivotal.io/pivotalcf/1-9/customizing/console-login.html). 
+  1. Inside the space **signalfx-agent-space** there will be an app named **signalfx-agent**. 
+  1. Ensure that signalfx-agent is in the "running" state. 
 
 ### USAGE
 
 Sample of pre-built dashboard in SignalFx:
 ![](././img/example_dashboard.png)
-
-#### TROUBLESHOOTING
-
-If after deploying data is not appearing in SignalFx check the logs of the deployed SignalFx Agent. You can do this by logging into **Pivotal Apps Manager**. Inside the space named signalfx-agent-space there will be an app named signalfx-agent. Ensure that it is in the running state. Next examine the logs for clues, such as connection issues to the JMX Bridge, SSL certificate errors with the JMX Bridge, or errors reporting metrics to SignalFx. Check that the JMX configuration in SignalFx matches the JMX Bridge configuration.
 
 ### METRICS
 
