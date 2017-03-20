@@ -54,8 +54,8 @@ This adds the tile to your staging area.
 1. Click the newly added **SignalFx Monitoring and Alerting for PCF** tile.
 1. In the **SignalFx** section, enter your SignalFx [access token](http://docs.signalfx.com/en/latest/admin-guide/tokens.html#tokens). Leave the SignalFx ingestion URL unchanged.
 1. In the **Pivotal JMX Bridge** section, copy configuration values from the JMX Bridge tile. 
-  * To find the JMX IP Address, select the JMX Bridge tile in PCF Ops Manager and choose the **Status** tab. Copy the IP address from the job called **JMX Provider**. 
-  * To find JMX username, JMX password, and (if applicable) JMX SSL certificate, select the JMX Bridge tile in PCF Ops Manager and choose the **Settings** tab. Select the **JMX Provider** section, then copy over the JMX credentials and SSL certificate. 
+  1. To find the JMX IP Address, select the JMX Bridge tile in PCF Ops Manager and choose the **Status** tab. Copy the IP address from the job called **JMX Provider**. 
+  1. To find JMX username, JMX password, and (if applicable) JMX SSL certificate, select the JMX Bridge tile in PCF Ops Manager and choose the **Settings** tab. Select the **JMX Provider** section, then copy over the JMX credentials and SSL certificate. 
 1. Click **Save**.
 1. Return to the Ops Manager Installation Dashboard and click **Apply Changes** to install the SignalFx Monitoring and Alerting for PCF tile.
 
