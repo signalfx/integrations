@@ -6,13 +6,32 @@ _This directory consolidates all the metadata associated with the **Pivotal Clou
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Metrics](#metrics)
 - [License](#license)
 
 ### DESCRIPTION
 
 Use this integration to monitor a Pivotal Cloud Foundry deployment. This integration provides metrics about the performance of the various components that make up Pivotal Cloud Foundry.
+
+### FEATURES
+
+##### Infrastructure Page
+
+- **Infrastructure Navigator**: On the Infrastructure page in SignalFx, the Infrastructure Navigator visualizes Cloud Foundry instances as squares, colored by metrics including CPU, disk, and network. Additional views are provided for focus on the health and performance of specific Cloud Foundry services. [Click here to read more about the Infrastructure Page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html). 
+
+  [<img src='./img/infra_pcf_instances.png' width=200px>](./img/infra_pcf_instances.png)
+
+##### Built-in dashboards
+
+This integration includes built-in dashboards listed under **Pivotal Cloud Foundry** on the Dashboards page in SignalFx. A sample include:
+
+- **Cloud Foundry Overview**: Overview of all activity in your Cloud Foundry environment.
+  
+  [<img src='./img/dashboard_cloud_foundry_overview.png' width=200px>](./img/dashboard_cloud_foundry_overview.png)
+
+- **Cloud Foundry Instance**: Focus on a single Cloud Foundry instance.
+  
+  [<img src='./img/dashboard_cloud_foundry_instance.png' width=200px>](./img/dashboard_cloud_foundry_instance.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -52,11 +71,6 @@ If metrics from Pivotal Cloud Foundry don't appear in SignalFx after more than a
   1. Log into [Pivotal Apps Manager](https://docs.pivotal.io/pivotalcf/1-9/customizing/console-login.html). 
   1. Inside the space **signalfx-agent-space** there will be an app named **signalfx-agent**. 
   1. Ensure that signalfx-agent is in the "running" state. 
-
-### USAGE
-
-Sample of pre-built dashboard in SignalFx:
-![](././img/example_dashboard.png)
 
 ### METRICS
 
