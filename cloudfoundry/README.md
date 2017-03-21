@@ -13,7 +13,7 @@ _This directory consolidates all the metadata associated with the **Pivotal Clou
 
 Use this integration to monitor a Pivotal Cloud Foundry deployment. This integration provides metrics about the performance of the various components that make up Pivotal Cloud Foundry.
 
-### FEATURES
+#### FEATURES
 
 ##### Infrastructure Page
 
@@ -39,9 +39,9 @@ This integration requires administrative access to a Pivotal Cloud Foundry deplo
 
 | Software                | Version        |
 |-------------------------|----------------|
-| Pivotal Ops Manager     |    1.9.1+      |
-| Pivotal Elastic Runtime |    1.9.0+      |
-| Pivotal JMX Bridge      |    1.8.11+     |
+| Pivotal Ops Manager     | 1.9.1+ |
+| Pivotal Elastic Runtime | 1.9.0+ |
+| Pivotal JMX Bridge      | 1.8.11+ |
 
 ### INSTALLATION
 
