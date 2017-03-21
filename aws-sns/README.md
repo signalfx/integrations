@@ -32,7 +32,7 @@ SignalFx provides a built-in dashboard for this service, as shown below.
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon Simple Notification Service, click here or visit the service's homepage at https://aws.amazon.com/sns/.
+For more information about the metrics emitted by Amazon Simple Notification Service, visit the service's homepage at https://aws.amazon.com/sns/.
 
 ### LICENSE
 

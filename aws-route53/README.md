@@ -38,7 +38,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon Route 53, click here or visit the service's homepage at https://aws.amazon.com/route53/.
+For more information about the metrics emitted by Amazon Route 53, visit the service's homepage at https://aws.amazon.com/route53/.
 
 ### LICENSE
 

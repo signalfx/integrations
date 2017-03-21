@@ -34,7 +34,7 @@ Sending data using collectd allows you to take advantage of SignalFx’s extensi
 - SignalFx provides [recommended detectors](http://docs.signalfx.com/en/latest/built-in-content/recommended-detectors.html) for hosts instrumented with the SignalFx collectd agent. These built-in templates allow you to instantly create intelligent detectors based on SignalFx’s powerful analytics.
 
 - SignalFx provides validated plugins for collectd that help you monitor specific software in your environment. Integrations include built-in dashboards, recommended detectors, and metrics documentation. Browse plugins that have been validated by SignalFx on the Integrations page, or [here on Github](http://signalfx.github.io).
-- The [SignalFx plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s collectd packages.
+- The [SignalFx plugin for collectd](https://github.com/signalfx/integrations/tree/master/signalfx-metadata) is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s collectd packages.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -130,15 +130,21 @@ The SignalFx collectd agent can be configured to use an HTTP proxy if needed. Th
 
 On CentOS/RHEL: `/etc/sysconfig/collectd`
 
+Sample contents of the file:
+```
+HTTP_PROXY="http://YOUR_HTTP_PROXY:PROXY_PORT"
+HTTPS_PROXY="https://YOUR_HTTPS_PROXY:PROXY_PORT"
+```
+
 On Debian/Ubuntu: `/etc/default/collectd`
 
 Sample contents of the file:
 ```
-export http_proxy="http://HTTP_PROXY:PROXY_PORT"
-export https_proxy="https://HTTPS_PROXY:PROXY_PORT"
+export http_proxy="http://YOUR_HTTP_PROXY:PROXY_PORT"
+export https_proxy="https://YOUR_HTTPS_PROXY:PROXY_PORT"
 ```
 
-Replace `HTTP_PROXY` and `HTTPS_PROXY` with the hostname of the HTTP proxy to be used, and `PROXY_PORT` with the port at which to access it.
+Replace `YOUR_HTTP_PROXY` and `YOUR_HTTPS_PROXY` with the hostname of the HTTP proxy to be used, and `PROXY_PORT` with the port at which to access it.
 
 ### LICENSE
 

@@ -53,7 +53,7 @@ For EBS, SignalFx will scan every volume ID from your AWS account and pull out p
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon Elastic Block Store, click here or visit the service's homepage at https://aws.amazon.com/ebs/.
+For more information about the metrics emitted by Amazon Elastic Block Store, visit the service's homepage at https://aws.amazon.com/ebs/.
 
 ### LICENSE
 
