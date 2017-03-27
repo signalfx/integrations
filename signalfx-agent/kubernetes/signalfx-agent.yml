@@ -15,8 +15,7 @@ spec:
                 app: signalfx-agent
                 version: v0.1.0
         spec:
-            nodeSelector:
-              signalfx-monitor: ""
+            hostNetwork: true
             imagePullSecrets:
             - name: quay-pull-secret
             containers:
@@ -49,10 +48,12 @@ spec:
                   name: etc
                   readOnly: true
               env:
-              - name: KUBERNETES_NODE_NAME
-                valueFrom:
-                    fieldRef:
+              # Please remove this environment variable for Kubernetes versions prior to v1.4
+              - name: KUBERNETES_NODE_NAME		
+                valueFrom:		
+                    fieldRef:		
                         fieldPath: spec.nodeName
+              # Please remove this environment variable for Kubernetes versions prior to v1.4
               - name: SFX_PLUGINS_KUBERNETES_HOSTURL
                 value: https://$(KUBERNETES_NODE_NAME):10250
               - name: SFX_API_TOKEN
@@ -60,15 +61,18 @@ spec:
                     secretKeyRef:
                         name: signalfx
                         key: api-token
-              - name: SFX_HOSTNAME
-                value: $(KUBERNETES_NODE_NAME)
               - name: SFX_MERGE_CONFIG
                 value: /etc/signalfx/kubernetes-defaults.yaml:/mnt/config/merge.yml
-              ## Configure HTTP and HTTPS proxy addresses
+              # # uncomment and configure HTTP proxy addresses
               # - name: http_proxy
               #   value: https://YOUR_HTTP_PROXY:PROXY_PORT
+              # - name: HTTP_PROXY
+              #   value: $(http_proxy)
+              # # uncomment and configure https proxy address 
               # - name: https_proxy
               #   value: https://YOUR_HTTPS_PROXY:PROXY_PORT
+              # - name: HTTPS_PROXY
+              #   value: $(https_proxy)
             volumes:
               - name: templates
                 configMap:
