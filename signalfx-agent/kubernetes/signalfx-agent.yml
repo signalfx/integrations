@@ -64,6 +64,11 @@ spec:
                 value: $(KUBERNETES_NODE_NAME)
               - name: SFX_MERGE_CONFIG
                 value: /etc/signalfx/kubernetes-defaults.yaml:/mnt/config/merge.yml
+              ## Configure HTTP and HTTPS proxy addresses
+              # - name: http_proxy
+              #   value: https://YOUR_HTTP_PROXY:PROXY_PORT
+              # - name: https_proxy
+              #   value: https://YOUR_HTTPS_PROXY:PROXY_PORT
             volumes:
               - name: templates
                 configMap:
