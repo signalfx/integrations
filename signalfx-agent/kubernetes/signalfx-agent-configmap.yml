@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  merge.yml: |
+    # plugins:
+    #   kubernetes:
+    #     # Set to true to ignore certificate verification checks connecting to kubelet.
+    #     ignoreTLSVerify: false
+    #   collectd:
+    #     staticPlugins:
+    #       writehttp-default:
+    #         # Replace CLUSTER_NAME with the name of your cluster to
+    #         # be attached as a dimension to all metrics.
+    #         dimensions: sfxdim_kubernetes_cluster=CLUSTER_NAME
+kind: ConfigMap
+metadata:
+  name: signalfx-agent

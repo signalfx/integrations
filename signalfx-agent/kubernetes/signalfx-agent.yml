@@ -1,0 +1,88 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+    name: signalfx-agent
+    labels:
+        version: v0.1.0
+        app: signalfx-agent
+spec:
+    selector:
+        matchLabels:
+            app: signalfx-agent
+    template:
+        metadata:
+            labels:
+                app: signalfx-agent
+                version: v0.1.0
+        spec:
+            nodeSelector:
+              signalfx-monitor: ""
+            imagePullSecrets:
+            - name: quay-pull-secret
+            containers:
+            - name: signalfx-agent
+              # XXX: This has to be Always when a tag that isn't latest is
+              # changed, such as with dev builds. For released versions tags
+              # never change so the image never needs to be repulled.
+              imagePullPolicy: Always
+              image: quay.io/signalfuse/signalfx-agent:master
+              securityContext:
+                privileged: true
+              volumeMounts:
+                - mountPath: /mnt/templates
+                  name: templates
+                - mountPath: /mnt/config
+                  name: config
+                - mountPath: /hostfs
+                  name: hostfs
+                  readOnly: true
+                - mountPath: /mnt/hostname
+                  name: hostname
+                  readOnly: true
+                - mountPath: /mnt/proc
+                  name: proc
+                  readOnly: true
+                - mountPath: /var/run/docker.sock
+                  name: docker
+                  readOnly: true
+                - mountPath: /mnt/etc
+                  name: etc
+                  readOnly: true
+              env:
+              - name: KUBERNETES_NODE_NAME
+                valueFrom:
+                    fieldRef:
+                        fieldPath: spec.nodeName
+              - name: SFX_PLUGINS_KUBERNETES_HOSTURL
+                value: https://$(KUBERNETES_NODE_NAME):10250
+              - name: SFX_API_TOKEN
+                valueFrom:
+                    secretKeyRef:
+                        name: signalfx
+                        key: api-token
+              - name: SFX_HOSTNAME
+                value: $(KUBERNETES_NODE_NAME)
+              - name: SFX_MERGE_CONFIG
+                value: /etc/signalfx/kubernetes-defaults.yaml:/mnt/config/merge.yml
+            volumes:
+              - name: templates
+                configMap:
+                  name: signalfx-templates
+              - name: config
+                configMap:
+                  name: signalfx-agent
+              - hostPath:
+                  path: /
+                name: hostfs
+              - hostPath:
+                  path: /etc/hostname
+                name: hostname
+              - hostPath:
+                  path: /proc
+                name: proc
+              - hostPath:
+                  path: /var/run/docker.sock
+                name: docker
+              - hostPath:
+                  path: /etc
+                name: etc
