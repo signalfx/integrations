@@ -30,6 +30,8 @@ spec:
               volumeMounts:
                 - mountPath: /mnt/templates
                   name: templates
+                - mountPath: /mnt/services
+                  name: services
                 - mountPath: /mnt/config
                   name: config
                 - mountPath: /hostfs
@@ -49,9 +51,9 @@ spec:
                   readOnly: true
               env:
               # Please remove this environment variable for Kubernetes versions prior to v1.4
-              - name: KUBERNETES_NODE_NAME		
-                valueFrom:		
-                    fieldRef:		
+              - name: KUBERNETES_NODE_NAME
+                valueFrom:
+                    fieldRef:
                         fieldPath: spec.nodeName
               # Please remove this environment variable for Kubernetes versions prior to v1.4
               - name: SFX_PLUGINS_KUBERNETES_HOSTURL
@@ -68,7 +70,7 @@ spec:
               #   value: https://YOUR_HTTP_PROXY:PROXY_PORT
               # - name: HTTP_PROXY
               #   value: $(http_proxy)
-              # # uncomment and configure https proxy address 
+              # # uncomment and configure https proxy address
               # - name: https_proxy
               #   value: https://YOUR_HTTPS_PROXY:PROXY_PORT
               # - name: HTTPS_PROXY
@@ -77,6 +79,9 @@ spec:
               - name: templates
                 configMap:
                   name: signalfx-templates
+              - name: services
+                configMap:
+                  name: signalfx-services
               - name: config
                 configMap:
                   name: signalfx-agent
