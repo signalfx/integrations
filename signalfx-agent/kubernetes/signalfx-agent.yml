@@ -24,7 +24,7 @@ spec:
               # changed, such as with dev builds. For released versions tags
               # never change so the image never needs to be repulled.
               imagePullPolicy: Always
-              image: quay.io/signalfuse/signalfx-agent:master
+              image: quay.io/signalfx/signalfx-agent:1.0.0-beta-1
               securityContext:
                 privileged: true
               volumeMounts:
