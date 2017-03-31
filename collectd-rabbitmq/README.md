@@ -12,7 +12,7 @@ _This is a directory that consolidates all the metadata associated with the Rabb
 
 ### DESCRIPTION
 
-The RabbitMQ plugin that collects statistics from RabbitMQ. The plugin uses the [RabbitMQ Management HTTP API](http://hg.rabbitmq.com/rabbitmq-management/raw-file/rabbitmq_v3_3_4/priv/www/api/index.html) to poll for statistics on a RabbitMQ server, then reports them to collectd.
+The RabbitMQ plugin that collects statistics from RabbitMQ. The plugin uses the [RabbitMQ Management HTTP API](https://www.rabbitmq.com/management.html) to poll for statistics on a RabbitMQ server, then reports them to collectd.
 
 #### FEATURES
 
