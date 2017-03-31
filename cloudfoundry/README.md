@@ -47,7 +47,7 @@ This integration requires administrative access to a Pivotal Cloud Foundry deplo
 
 Follow these steps to enable this integration:
 
-1. Download the product file from [SignalFx's Github repository](https://github.com/signalfx/cloudfoundry-integration/releases/download/v0.9.0/signalfx-agent-0.9.0.pivotal).
+1. Download the product file from [Pivotal Network](https://network.pivotal.io) or from [SignalFx's Github repository](https://github.com/signalfx/cloudfoundry-integration/releases/download/v0.9.0/signalfx-agent-0.9.0.pivotal).
 
 1. Navigate to the Ops Manager Installation Dashboard and click "Import a Product" to upload the product file. 
 
