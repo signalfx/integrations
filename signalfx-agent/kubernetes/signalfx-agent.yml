@@ -56,16 +56,6 @@ spec:
                         key: api-token
               - name: SFX_MERGE_CONFIG
                 value: /etc/signalfx/kubernetes-defaults.yaml:/mnt/config/merge.yml
-              # # uncomment and configure HTTP proxy addresses
-              # - name: http_proxy
-              #   value: https://YOUR_HTTP_PROXY:PROXY_PORT
-              # - name: HTTP_PROXY
-              #   value: $(http_proxy)
-              # # uncomment and configure https proxy address
-              # - name: https_proxy
-              #   value: https://YOUR_HTTPS_PROXY:PROXY_PORT
-              # - name: HTTPS_PROXY
-              #   value: $(https_proxy)
             volumes:
               - name: templates
                 configMap:
