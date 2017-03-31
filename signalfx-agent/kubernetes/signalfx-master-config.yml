@@ -1,0 +1,4 @@
+dimensions:
+    # Replace CLUSTER_NAME with the name of your cluster to be
+    # attached as a dimension to all metrics.
+    kubernetes_cluster: CLUSTER_NAME
