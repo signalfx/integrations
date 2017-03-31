@@ -6,6 +6,16 @@ data:
        # attached as a dimension to all metrics.
        kubernetes_cluster: CLUSTER_NAME
     plugins:
+      proxy:
+          # Uncomment and enter value below to configure HTTP proxy.
+          # http:
+
+          # Uncomment and enter value below to configure HTTPS proxy.
+          # https:
+
+          # Uncomment below and enter IP or domains to exclude from proxying.
+          # Multiple entries can be entered as a comma-separated list.
+          # skip:
       kubernetes:
         # Set to true to ignore certificate verification checks connecting to kubelet.
         # ignoreTLSVerify: false
