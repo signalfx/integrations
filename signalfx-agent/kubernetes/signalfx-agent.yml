@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
     name: signalfx-agent
     labels:
-        version: v0.1.0
+        version: v1.0.0-beta-1
         app: signalfx-agent
 spec:
     selector:
@@ -13,17 +13,11 @@ spec:
         metadata:
             labels:
                 app: signalfx-agent
-                version: v0.1.0
+                version: v1.0.0-beta-1
         spec:
             hostNetwork: true
-            imagePullSecrets:
-            - name: quay-pull-secret
             containers:
             - name: signalfx-agent
-              # XXX: This has to be Always when a tag that isn't latest is
-              # changed, such as with dev builds. For released versions tags
-              # never change so the image never needs to be repulled.
-              imagePullPolicy: Always
               image: quay.io/signalfx/signalfx-agent:1.0.0-beta-1
               securityContext:
                 privileged: true
@@ -36,9 +30,6 @@ spec:
                   name: config
                 - mountPath: /hostfs
                   name: hostfs
-                  readOnly: true
-                - mountPath: /mnt/hostname
-                  name: hostname
                   readOnly: true
                 - mountPath: /mnt/proc
                   name: proc
@@ -88,9 +79,6 @@ spec:
               - hostPath:
                   path: /
                 name: hostfs
-              - hostPath:
-                  path: /etc/hostname
-                name: hostname
               - hostPath:
                   path: /proc
                 name: proc
