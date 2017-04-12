@@ -7,4 +7,4 @@
   "logo_small": "integration_awsroute53.png",
   "data_signature": "namespace:\"AWS/Route53\"",
   "in_app_categories": ["AWSservicesMonitored"]
-},
+}

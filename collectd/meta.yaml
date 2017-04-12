@@ -7,4 +7,4 @@
   "logo_small": "/images/repos/collectd/img/integration_signalfx.png",
   "data_signature": "plugin:\"signalfx-metadata\"",
   "in_app_categories": ["essential", "servicesMonitored"]
-},
+}

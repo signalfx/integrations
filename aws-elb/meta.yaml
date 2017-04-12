@@ -7,4 +7,4 @@
   "logo_small": "integration_awselb.png",
   "data_signature": "namespace:\"AWS/ELB\"",
   "in_app_categories": ["AWSservicesMonitored"]
-},
+}

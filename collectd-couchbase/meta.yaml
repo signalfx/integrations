@@ -7,4 +7,4 @@
   "logo_small": "/images/repos/collectd-couchbase/img/integrations_couchbase%402x.png",
   "data_signature": "plugin:\"couchbase\"",
   "in_app_categories": ["servicesMonitored"]
-},
+}
