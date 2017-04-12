@@ -7,4 +7,4 @@
   "logo_small": "/images/repos/collectd-java/img/integrations_java%402x.png",
   "data_signature": "plugin:\"GenericJMX\"",
   "in_app_categories": ["servicesMonitored"]
-},
+}
