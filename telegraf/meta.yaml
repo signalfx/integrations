@@ -7,4 +7,4 @@
   "logo_small": "/images/repos/telegraf/img/integrations_telegraf%402x.png",
   "data_signature": "agent:\"telegraf\"",
   "in_app_categories": ["essential", "servicesMonitored"]
-},
+}
