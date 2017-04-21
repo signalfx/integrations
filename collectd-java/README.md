@@ -32,7 +32,7 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 
 1. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
 
-1. Download [signalfx_types_db](https://github.com/signalfx/integrations/tree/master/collectd-java/signalfx_types_db) and configure its location as described inside of the `10-jmx.conf` configuration file (Default location is - /usr/share/collectd/java-collectd-plugin/signalfx_types_db).
+1. Download [signalfx_types_db](https://github.com/signalfx/integrations/tree/master/collectd-java/signalfx_types_db) and configure its location as described inside of the `10-jmx.conf` configuration file (Default location is  `/usr/share/collectd/java-collectd-plugin/signalfx_types_db`).
 
 1. Restart collectd.
 
