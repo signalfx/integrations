@@ -11,9 +11,10 @@
 ### DESCRIPTION
 
 Use the Mesos plugin for collectd to monitor the following information about Mesos:
-  - Cluster status: number of activated slaves, schedulers and tasks
-  - CPU, disk and memory usage for Mesos
-  - Tasks finished, lost, and failed
+
+- Cluster status: number of activated slaves, schedulers and tasks
+- CPU, disk and memory usage for Mesos
+- Tasks finished, lost, and failed
 
 #### FEATURES
 
