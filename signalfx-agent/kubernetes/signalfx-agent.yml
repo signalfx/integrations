@@ -47,7 +47,7 @@ spec:
                         name: signalfx
                         key: api-token
               - name: SFX_MERGE_CONFIG
-                value: /etc/signalfx/kubernetes-defaults.yaml:/mnt/config/merge.yml
+                value: /etc/signalfx/kubernetes-defaults.yaml
               - name: SFX_USER_CONFIG
                 value: /mnt/config/user.yml
             volumes:
