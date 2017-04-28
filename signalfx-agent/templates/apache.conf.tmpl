@@ -1,0 +1,8 @@
+{{define "apache"}}
+LoadPlugin "apache"
+<Plugin "apache">
+  {{range $instance := .}}
+    {{RenderPlugin $instance}}
+  {{end}}
+</Plugin>
+{{end}}

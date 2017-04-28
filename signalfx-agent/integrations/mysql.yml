@@ -1,0 +1,19 @@
+integrations:
+  mysql:
+    labels:
+    - app
+    rule: NetworkPrivatePort == 3306
+    vars:
+      Username:
+      Password:
+      Database:
+    template: |
+      <Database "{{.Name}}[{{.Dims}}]">
+        Host "{{.Host}}"
+        Port {{.Port}}
+        User "{{.Vars.Username}}"
+        {{with .Vars.Password}}
+        Password "{{.}}"
+        {{end}}
+        Database "{{.Vars.Database}}"
+      </Database>
