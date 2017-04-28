@@ -1,0 +1,20 @@
+integrations:
+  mongodb:
+    labels:
+    - app
+    rule: NetworkPrivatePort == 27017
+    vars:
+      Username:
+      Password:
+      Database:
+    template: |
+      <Module mongodb>
+        Host "{{.Host}}"
+        Port {{.Port}}
+        User "{{.Vars.Username}}"
+        {{with .Vars.Password}}
+        Password "{{.}}"
+        {{end}}
+        Database "{{.Vars.Database}}"
+        Dimensions "{{.Dims}}"
+      </Module>
