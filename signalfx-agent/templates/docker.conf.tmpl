@@ -9,7 +9,7 @@ LoadPlugin python
   {{range $instance := .}}
   <Module dockerplugin>
     BaseURL "{{$instance.Vars.url}}"
-    Timeout 3
+    Timeout 30
     Verbose false
     {{range $key, $value := $instance.Vars.extradimensions -}}
     Dimension "{{$key}}" "{{$value}}"
