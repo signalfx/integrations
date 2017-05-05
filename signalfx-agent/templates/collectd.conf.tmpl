@@ -1,0 +1,30 @@
+TypesDB "{{Globals.PluginRoot}}/types.db"
+
+{{- with .AgentConfig -}}
+{{if .Hostname}}
+Hostname "{{.Hostname}}"
+FQDNLookup false
+{{else}}
+FQDNLookup true
+{{end}}
+Interval {{ .Interval }}
+Timeout {{ .Timeout }}
+ReadThreads {{ .ReadThreads }}
+WriteQueueLimitHigh {{ .WriteQueueLimitHigh }}
+WriteQueueLimitLow  {{ .WriteQueueLimitLow }}
+CollectInternalStats {{ .CollectInternalStats }}
+{{end}}
+
+LoadPlugin logfile
+
+<Plugin logfile>
+        LogLevel "info"
+        Timestamp true
+        PrintSeverity false
+</Plugin>
+
+{{template "default-plugins.conf.tmpl"}}
+
+{{range $plugin, $instances := .Plugins}}
+{{RenderTemplate $plugin $instances}}
+{{end}}

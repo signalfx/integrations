@@ -41,11 +41,11 @@ spec:
                   name: etc
                   readOnly: true
               env:
-              - name: SFX_API_TOKEN
+              - name: SFX_ACCESS_TOKEN
                 valueFrom:
                     secretKeyRef:
                         name: signalfx
-                        key: api-token
+                        key: access-token
               - name: SFX_MERGE_CONFIG
                 value: /etc/signalfx/kubernetes-defaults.yaml
               - name: SFX_USER_CONFIG
