@@ -23,6 +23,9 @@ data:
       # dimension to all metrics.
       cluster: CLUSTER_NAME
 
+      # Set the cadvisor url
+      # cadvisorURL: http://localhost:4194
+
 kind: ConfigMap
 metadata:
   name: signalfx-agent
