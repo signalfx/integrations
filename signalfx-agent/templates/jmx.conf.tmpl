@@ -1,0 +1,84 @@
+{{define "jmx"}}
+TypesDB "/usr/share/collectd/java/signalfx_types_db"
+LoadPlugin java
+
+<Plugin java>
+    JVMArg "-verbose:jni"
+    JVMArg "-Djava.class.path=/usr/share/collectd/java/collectd-api.jar:/usr/share/collectd/java/generic-jmx.jar"
+
+    LoadPlugin "org.collectd.java.GenericJMX"
+    <Plugin "GenericJMX">
+        <MBean "classes">
+            ObjectName "java.lang:type=ClassLoading"
+            <Value>
+                Type "gauge"
+                InstancePrefix "loaded_classes"
+                Table false
+                Attribute "LoadedClassCount"
+            </Value>
+        </MBean>
+
+        <MBean "garbage_collector">
+            ObjectName "java.lang:type=GarbageCollector,*"
+            InstancePrefix "gc-"
+            InstanceFrom "name"
+            <Value>
+                Type "invocations"
+                Table false
+                Attribute "CollectionCount"
+            </Value>
+            <Value>
+                Type "total_time_in_ms"
+                InstancePrefix "collection_time"
+                Table false
+                Attribute "CollectionTime"
+            </Value>
+        </MBean>
+
+        <MBean "memory-heap">
+            ObjectName "java.lang:type=Memory"
+            InstancePrefix "memory-heap"
+            <Value>
+                Type "jmx_memory"
+                Table true
+                Attribute "HeapMemoryUsage"
+            </Value>
+        </MBean>
+
+        <MBean "memory-nonheap">
+            ObjectName "java.lang:type=Memory"
+            InstancePrefix "memory-nonheap"
+            <Value>
+                Type "jmx_memory"
+                Table true
+                Attribute "NonHeapMemoryUsage"
+            </Value>
+        </MBean>
+
+        <MBean "memory_pool">
+            ObjectName "java.lang:type=MemoryPool,*"
+            InstancePrefix "memory_pool-"
+            InstanceFrom "name"
+            <Value>
+                Type "jmx_memory"
+                Table true
+                Attribute "Usage"
+            </Value>
+        </MBean>
+        <MBean "threading">
+            ObjectName "java.lang:type=Threading"
+            <Value>
+                Type "gauge"
+                Table false
+                InstancePrefix "jvm.threads.count"
+                Attribute "ThreadCount"
+            </Value>
+       </MBean>
+    </Plugin>
+</Plugin>
+
+{{range $instance := .}}
+{{RenderPlugin $instance}}
+{{end}}
+
+{{end}}
