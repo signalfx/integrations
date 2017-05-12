@@ -1,0 +1,37 @@
+integrations:
+    rabbitmq:
+        labels:
+        - app
+        vars:
+            CollectChannels: false # toggles the collection of channels metrics
+            CollectConnections: false # toggles the collection of connections metrics
+            CollectExchanges: true # toggles the collection of exchanges metrics
+            CollectNodes: true # toggles the collection of nodes metrics
+            CollectQueues: true # toggles the collection of queues metrics
+            HTTPTimeout: 60 # timeout in seconds for connecting to the rabbitmq management api
+            Password: guest # password for user indicated in username
+            Username: guest # username that collectd will use to connect to rabbitmq management api
+            VerbosityLevel: # enable verbose logging (info, debug, trace)
+
+        rule: ContainerImage =~ "rabbitmq" && NetworkPrivatePort == 15672
+        template: |
+            <Module "rabbitmq">
+              CollectChannels {{.Vars.CollectChannels}}
+              CollectConnections {{.Vars.CollectConnections}}
+              CollectExchanges {{.Vars.CollectExchanges}}
+              CollectNodes {{.Vars.CollectNodes}}
+              CollectQueues {{.Vars.CollectQueues}}
+              Dimensions "{{.Dims}}"
+              Host {{.Host}}
+              HTTPTimeout {{.Vars.HTTPTimeout}}
+              {{with .Vars.Password}}
+              Password "{{.}}"
+              {{end}}
+              Port "{{.Port}}"
+              {{with .Vars.Username}}
+              Username "{{.}}"
+              {{end}}
+              {{with .Vars.VerbosityLevel}}
+              VerbosityLevel "{{.}}"
+              {{end}}
+            </Module>
