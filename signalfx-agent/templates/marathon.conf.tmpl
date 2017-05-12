@@ -1,0 +1,17 @@
+{{define "marathon"}}
+<LoadPlugin "python">
+  Globals true
+</LoadPlugin>
+
+<Plugin "python">
+  ModulePath "{{Globals.PluginRoot}}/marathon-collectd-plugin"
+  Import "marathon"
+  LogTraces true
+  <Module "marathon">
+    {{range $instance := .}}
+    host  ["{{$instance.Vars.host}}", "{{$instance.Vars.port}}", "{{$instance.Vars.username}}", "{{$instance.Vars.password}}"]
+    {{end}}
+    verbose False
+  </Module>
+</Plugin>
+{{end}}

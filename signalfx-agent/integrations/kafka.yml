@@ -1,0 +1,205 @@
+integrations:
+  kafka:
+    labels:
+    - app
+    plugin: jmx
+    vars:
+      Username:
+      Password:
+    rule: ContainerImage =~ "kafka" && NetworkPrivatePort == 7099 && !Contains(ContainerLabels, "signalfx-integration")
+    template: |
+      <Plugin java>
+        <Plugin "GenericJMX">
+
+          <MBean "kafka-all-messages">
+              ObjectName "kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec"
+              InstancePrefix "all"
+              <Value>
+                  InstancePrefix "kafka-messages-in"
+                  Type "counter"
+                  Table false
+                  Attribute "Count"
+                </Value>
+          </MBean>
+
+          <MBean "kafka-all-bytes-in">
+              ObjectName "kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec"
+              InstancePrefix "all"
+              <Value>
+                  InstancePrefix "kafka-bytes-in"
+                  Type "counter"
+                  Table false
+                  Attribute "Count"
+                </Value>
+          </MBean>
+
+          <MBean "kafka-all-bytes-out">
+              ObjectName "kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec"
+              InstancePrefix "all"
+              <Value>
+                  InstancePrefix "kafka-bytes-out"
+                  Type "counter"
+                  Table false
+                  Attribute "Count"
+              </Value>
+          </MBean>
+
+          <MBean "kafka-log-flush">
+              ObjectName "kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs"
+              <Value>
+                  Type "counter"
+                  Table false
+                  Attribute "Count"
+                  InstancePrefix "kafka-log-flushes"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "Mean"
+                  InstancePrefix "kafka-log-flush-time-ms"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "95thPercentile"
+                  InstancePrefix "kafka-log-flush-time-ms-p95"
+              </Value>
+          </MBean>
+
+          <MBean "kafka-active-controllers">
+              ObjectName "kafka.controller:type=KafkaController,name=ActiveControllerCount"
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "Value"
+                  InstancePrefix "kafka-active-controllers"
+              </Value>
+          </MBean>
+
+          <MBean "kafka-offline-partitions-count">
+              ObjectName "kafka.controller:type=KafkaController,name=OfflinePartitionsCount"
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "Value"
+                  InstancePrefix "kafka-offline-partitions-count"
+              </Value>
+          </MBean>
+
+          <MBean "kafka-underreplicated-partitions">
+              ObjectName "kafka.server:type=ReplicaManager,name=UnderReplicatedPartitions"
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "Value"
+                  InstancePrefix "kafka-underreplicated-partitions"
+              </Value>
+          </MBean>
+
+          <MBean "kafka-request-queue">
+              ObjectName "kafka.network:type=RequestChannel,name=RequestQueueSize"
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "Value"
+                  InstancePrefix "kafka-request-queue"
+              </Value>
+          </MBean>
+
+          <MBean "kafka.fetch-consumer.total-time">
+              ObjectName "kafka.network:type=RequestMetrics,name=TotalTimeMs,request=FetchConsumer"
+              <Value>
+                  Type "counter"
+                  Table false
+                  Attribute "Count"
+                  InstancePrefix "kafka.fetch-consumer.total-time.count"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "50thPercentile"
+                  InstancePrefix "kafka.fetch-consumer.total-time.median"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "99thPercentile"
+                  InstancePrefix "kafka.fetch-consumer.total-time.99th"
+              </Value>
+          </MBean>
+
+          <MBean "kafka.fetch-follower.total-time">
+              ObjectName "kafka.network:type=RequestMetrics,name=TotalTimeMs,request=FetchFollower"
+              <Value>
+                  Type "counter"
+                  Table false
+                  Attribute "Count"
+                  InstancePrefix "kafka.fetch-follower.total-time.count"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "50thPercentile"
+                  InstancePrefix "kafka.fetch-follower.total-time.median"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "99thPercentile"
+                  InstancePrefix "kafka.fetch-follower.total-time.99th"
+              </Value>
+          </MBean>
+
+          <MBean "kafka.produce.total-time">
+              ObjectName "kafka.network:type=RequestMetrics,name=TotalTimeMs,request=Produce"
+              <Value>
+                  Type "counter"
+                  Table false
+                  Attribute "Count"
+                  InstancePrefix "kafka.produce.total-time.count"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "50thPercentile"
+                  InstancePrefix "kafka.produce.total-time.median"
+              </Value>
+              <Value>
+                  Type "gauge"
+                  Table false
+                  Attribute "99thPercentile"
+                  InstancePrefix "kafka.fetchproducetotal-time.99th"
+              </Value>
+          </MBean>
+
+          <Connection>
+            ServiceURL "service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi"
+            Host "{{.Name}}[hostHasService=kafka,{{.Dims}}]"
+            {{with .Vars.Username}}
+            User "{{.}}"
+            {{end}}
+
+            {{with .Vars.Password}}
+            Password "{{.}}"
+            {{end}}
+
+            Collect "classes"
+            Collect "garbage_collector"
+            Collect "memory-heap"
+            Collect "memory-nonheap"
+            Collect "memory_pool"
+
+            Collect "kafka-all-messages"
+            Collect "kafka-all-bytes-in"
+            Collect "kafka-all-bytes-out"
+            Collect "kafka-log-flush"
+            Collect "kafka-active-controllers"
+            Collect "kafka-offline-partitions-count"
+            Collect "kafka-underreplicated-partitions"
+            Collect "kafka-request-queue"
+            Collect "kafka.fetch-consumer.total-time"
+            Collect "kafka.fetch-follower.total-time"
+            Collect "kafka.produce.total-time"
+          </Connection>
+        </Plugin>
+      </Plugin>

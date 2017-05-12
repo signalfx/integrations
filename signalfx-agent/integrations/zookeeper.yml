@@ -1,0 +1,11 @@
+integrations:
+  zookeeper:
+    labels:
+    - app
+    rule: NetworkPrivatePort == 2181
+    template: |
+      <Module "zk-collectd">
+        Hosts "{{.Host}}"
+        Port {{.Port}}
+        Instance "{{.Name}}[{{.Dims}}]"
+      </Module>
