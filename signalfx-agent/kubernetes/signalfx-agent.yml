@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
     name: signalfx-agent
     labels:
-        version: v1.0.0-beta-5
+        version: v1.0.0-beta-6
         app: signalfx-agent
 spec:
     selector:
@@ -13,19 +13,19 @@ spec:
         metadata:
             labels:
                 app: signalfx-agent
-                version: v1.0.0-beta-5
+                version: v1.0.0-beta-6
         spec:
             hostNetwork: true
             containers:
             - name: signalfx-agent
-              image: quay.io/signalfx/signalfx-agent:1.0.0-beta-5
+              image: quay.io/signalfx/signalfx-agent:1.0.0-beta-6
               securityContext:
                 privileged: true
               volumeMounts:
                 - mountPath: /mnt/templates
                   name: templates
-                - mountPath: /mnt/services
-                  name: services
+                - mountPath: /mnt/integrations
+                  name: integrations
                 - mountPath: /mnt/config
                   name: config
                 - mountPath: /hostfs
@@ -41,28 +41,22 @@ spec:
                   name: etc
                   readOnly: true
               env:
-              # Please remove this environment variable for Kubernetes versions prior to v1.4
-              - name: KUBERNETES_NODE_NAME
-                valueFrom:
-                    fieldRef:
-                        fieldPath: spec.nodeName
-              # Please remove this environment variable for Kubernetes versions prior to v1.4
-              - name: SFX_PLUGINS_KUBERNETES_HOSTURL
-                value: https://$(KUBERNETES_NODE_NAME):10250
-              - name: SFX_API_TOKEN
+              - name: SFX_ACCESS_TOKEN
                 valueFrom:
                     secretKeyRef:
                         name: signalfx
-                        key: api-token
+                        key: access-token
               - name: SFX_MERGE_CONFIG
-                value: /etc/signalfx/kubernetes-defaults.yaml:/mnt/config/merge.yml
+                value: /etc/signalfx/kubernetes-defaults.yaml
+              - name: SFX_USER_CONFIG
+                value: /mnt/config/user.yml
             volumes:
               - name: templates
                 configMap:
                   name: signalfx-templates
-              - name: services
+              - name: integrations
                 configMap:
-                  name: signalfx-services
+                  name: signalfx-integrations
               - name: config
                 configMap:
                   name: signalfx-agent

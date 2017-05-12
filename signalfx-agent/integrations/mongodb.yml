@@ -6,7 +6,7 @@ integrations:
     vars:
       Username:
       Password:
-      Database:
+      Databases:
     template: |
       <Module mongodb>
         Host "{{.Host}}"
@@ -15,6 +15,6 @@ integrations:
         {{with .Vars.Password}}
         Password "{{.}}"
         {{end}}
-        Database "{{.Vars.Database}}"
+        Database {{range $database := .Vars.Databases}} "{{$database}}" {{end}}
         Dimensions "{{.Dims}}"
       </Module>

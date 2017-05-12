@@ -6,14 +6,16 @@ integrations:
     vars:
       Username:
       Password:
-      Database:
+      Databases:
     template: |
-      <Database "{{.Name}}[{{.Dims}}]">
-        Host "{{.Host}}"
-        Port {{.Port}}
-        User "{{.Vars.Username}}"
-        {{with .Vars.Password}}
+      {{range $database := .Vars.Databases}}
+      <Database "{{$.Name}}[{{$.Dims}}]">
+        Host "{{$.Host}}"
+        Port {{$.Port}}
+        User "{{$.Vars.Username}}"
+        {{with $.Vars.Password}}
         Password "{{.}}"
         {{end}}
-        Database "{{.Vars.Database}}"
+        Database "{{$database}}"
       </Database>
+      {{end}}
