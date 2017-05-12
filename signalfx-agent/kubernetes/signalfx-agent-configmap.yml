@@ -13,8 +13,18 @@ data:
         # skip:
 
     kubernetes:
-      # Set to true to ignore certificate verification checks connecting to kubelet.
-      # ignoreTLSVerify: false
+      # tls:
+      #   # Set to true to ignore certificate verification checks connecting to kubelet.
+      #   # skipVerify: false
+      #
+      #   # Set to file path of CA certificate used for signing kubelet TLS certificate.
+      #   # caCert:
+      #
+      #   # Set to file path of client certificate used to authenticate with kubelet.
+      #   # clientCert:
+      #
+      #   # Set to file path of client private key used to authenticate with kubelet.
+      #   # clientKey:
 
       # Set to one of master or worker.
       role: worker
