@@ -1,6 +1,6 @@
 ---
 title: Stream Upstream Peer Active Connections
-brief: The current number of connections for a stream upstream peer
+brief: The current number of connections for a stream upstream server
 metric_type: cumulative_counter
 ---
 ### Stream Upstream Peer Active Connections

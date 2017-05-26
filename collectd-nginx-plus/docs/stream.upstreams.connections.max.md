@@ -1,6 +1,6 @@
 ---
 title: Stream Upstream Peer Max Connections
-brief: Maximum number of simultaneous connections to a stream upstream peer
+brief: Maximum number of simultaneous connections to a stream upstream server
 metric_type: cumulative_counter
 ---
 ### Stream Upstream Max Connections
