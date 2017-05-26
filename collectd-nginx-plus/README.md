@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/img/integrations_nginx_plus.png) NGINX Plus
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/img/nginx-plus-icon.png) NGINX Plus
 
 _This directory consolidates all the metadata associated with the NGINX Plus plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-nginx-plus)_
 
@@ -50,9 +50,36 @@ Using the example configuration file [10-nginx-plus.conf](https://github.com/sig
 | StatusPort | Port the NGINX+ status endpoint can be reached at. | `8080` |
 | DebugLogLevel | `true` to enable logging at DEBUG level. | `false` |
 
-By default only a small subset of the available metrics are published by default. The remaining metrics can be enabled
-by opting-in to additional metric groups. The metrics in each group are listed below, along with the dimensions added
-to each group.
+By default only a small subset of the available metrics are published by default. The remaining metrics can be enabled by opting-in to additional metric groups. See [Metrics](#metrics) for more details on each metric group
+and how to enable them.
+
+### USAGE
+
+All metrics reported by the NGINX Plus collectd plugin will contain the following dimensions:
+
+* `nginx.version` will contain the version number of the NGINX Plus instance being monitored
+* `plugin` is always set to `nginx-plus`
+* `plugin_instance` will contain the IP address of the NGINX Plus instance as given in the `/status/address` response.
+
+
+### METRICS
+By default only a small subset of the available metrics are published by default. The remaining metrics can be enabled by opting-in to additional metric groups.
+
+#### Default Metrics
+The default metrics report high-level connection, request and SSL information.
+
+##### Metrics
+* connections.accepted
+* connections.dropped
+* connections.idle
+* ssl.handshakes.successful
+* ssl.handshakes.failed
+* requests.total
+* requests.current
+* server.zone.requests
+* upstreams.requests
+* stream.server.zone.connections
+* stream.upstreams.connections
 
 #### Server Zone Metrics
 Server Zone metrics are emitted for each server in each [status zone](http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone).
@@ -169,16 +196,6 @@ To include these metrics, add `StreamUpstream true` to the plugin configuration,
 * stream.upstreams.health.checks.checks
 * stream.upstreams.health.checks.fails
 * stream.upstreams.health.checks.unhealthy
-
-### USAGE
-
-All metrics reported by the NGINX Plus collectd plugin will contain the following dimensions:
-
-* `plugin` is always set to `nginx-plus`
-* `plugin_instance` will contain the IP address of the NGINX Plus instance as given in the `/status/address` response.
-
-
-### METRICS
 
 For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
 
