@@ -1,6 +1,6 @@
 ---
 title: Stream Upstream Peer Connections
-brief: Total number of connections forwarded to a stream upstream peer
+brief: Total number of connections forwarded to a stream upstream server
 metric_type: cumulative_counter
 ---
 ### Stream Upstream Connections

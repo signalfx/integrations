@@ -1,6 +1,6 @@
 ---
 title: Stream Upstream Peer Bytes Received
-brief: Total number of bytes received from a stream upstream peer
+brief: Total number of bytes received from a stream upstream server
 metric_type: cumulative_counter
 ---
 ### Stream Upstream Bytes Received

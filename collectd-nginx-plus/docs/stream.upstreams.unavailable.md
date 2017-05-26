@@ -1,6 +1,6 @@
 ---
 title: Stream Upstream Peer Unavailable
-brief: Number of times a stream upstream peer server became unavailable for client connections
+brief: Number of times a stream upstream server server became unavailable for client connections
 metric_type: cumulative_counter
 ---
 ### Stream Upstream Peer Unavailable
