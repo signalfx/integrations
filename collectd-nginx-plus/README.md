@@ -49,6 +49,31 @@ Using the example configuration file [10-nginx-plus.conf](https://github.com/sig
 | StatusHost | IP address or DNS of the NGINX+ instance to retrieve status information from | `localhost` |
 | StatusPort | Port the NGINX+ status endpoint can be reached at. | `8080` |
 | DebugLogLevel | `true` to enable logging at DEBUG level. | `false` |
+| Username | Username to use for username/password authentication. | None |
+| Password | Password to use for username/password authentication. | None |
+| Dimension | A single additional dimension decorating to each metric. There are two values, the first for the name,
+the second for the value. | None |
+
+Example addition to the collectd configuration:
+
+```apache
+LoadPlugin python
+
+<Plugin python>
+  ModulePath "/usr/share/collectd/collectd-nginx-plus/plugin"
+  Import nginx_plus_collectd
+
+  <Module nginx_plus_collectd>
+    StatusHost "localhost"
+    StatusPort 8080
+    DebugLogLevel true
+    Username "user_1"
+    Password "my_password"
+    Dimension "extra_dimension_name_1" "extra_dimension_value_1"
+    Dimension "extra_dimension_name_2" "extra_dimension_value_2"
+  </Module>
+</Plugin>
+```
 
 By default only a small subset of the available metrics are published by default. The remaining metrics can be enabled by opting-in to additional metric groups. See [Metrics](#metrics) for more details on each metric group
 and how to enable them.
@@ -78,8 +103,6 @@ The default metrics report high-level connection, request and SSL information.
 * requests.current
 * server.zone.requests
 * upstreams.requests
-* stream.server.zone.connections
-* stream.upstreams.connections
 
 #### Server Zone Metrics
 Server Zone metrics are emitted for each server in each [status zone](http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone).
@@ -168,6 +191,7 @@ To include these metrics, add `StreamServerZone true` to the plugin configuratio
   </Module>
 ```
 ##### Metrics
+* stream.server.zone.connections
 * stream.server.zone.processing
 * stream.server.zone.sessions.2xx
 * stream.server.zone.sessions.4xx
@@ -187,6 +211,7 @@ To include these metrics, add `StreamUpstream true` to the plugin configuration,
   </Module>
 ```
 ##### Metrics
+* stream.upstreams.connections
 * stream.upstreams.active
 * stream.upstreams.connections.max
 * stream.upstreams.bytes.sent
