@@ -10,9 +10,6 @@ proxy:
     # skip:
 
 kubernetes:
-  # Set to true to ignore certificate verification checks connecting to kubelet.
-  # ignoreTLSVerify: false
-
   # Set to one of master or worker.
   role: master
 
