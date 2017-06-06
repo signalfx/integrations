@@ -65,7 +65,7 @@ LoadPlugin python
 
   <Module nginx_plus_collectd>
     StatusHost "localhost"
-    StatusPort 8080
+    StatusPort "8080"
     DebugLogLevel true
     Username "user_1"
     Password "my_password"
@@ -88,21 +88,39 @@ All metrics reported by the NGINX Plus collectd plugin will contain the followin
 
 
 ### METRICS
-By default only a small subset of the available metrics are published by default. The remaining metrics can be enabled by opting-in to additional metric groups.
+By default only a subset (26) of the available metrics (87) are published by default. The remaining metrics can be enabled by opting-in to additional metric groups.
 
 #### Default Metrics
-The default metrics report high-level connection, request and SSL information.
+The default metrics report the values necessary to power the default dashboards. This includes high-level connection
+information, cache, server zone and upstreams metrics.
 
 ##### Metrics
 * connections.accepted
 * connections.dropped
 * connections.idle
+* connections.active
 * ssl.handshakes.successful
 * ssl.handshakes.failed
+* ssl.handshakes.reuses
 * requests.total
 * requests.current
 * server.zone.requests
+* server.zone.responses.4xx
+* server.zone.responses.5xx
+* server.zone.responses.total
+* server.zone.responses.received
+* server.zone.bytes.received
+* server.zone.bytes.sent
+* caches.size
+* caches.size.max
 * upstreams.requests
+* upstreams.responses.4xx
+* upstreams.responses.5xx
+* upstreams.responses.total
+* upstreams.downtime
+* upstreams.response.time
+* upstreams.bytes.received
+* upstreams.bytes.sent
 
 #### Server Zone Metrics
 Server Zone metrics are emitted for each server in each [status zone](http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone).
@@ -110,21 +128,16 @@ To include these metrics, add `ServerZone true` to the plugin configuration, e.g
 ```apache
   <Module nginx_plus_collectd>
     StatusHost "localhost"
-    StatusPort 8080
+    StatusPort "8080"
     ServerZone true
   </Module>
 ```
 ##### Metrics
 * server.zone.processing
 * server.zone.discarded
-* server.zone.responses.total
 * server.zone.responses.1xx
 * server.zone.responses.2xx
 * server.zone.responses.3xx
-* server.zone.responses.4xx
-* server.zone.responses.5xx
-* server.zone.bytes.received
-* server.zone.bytes.sent
 
 #### Memory Zone Metrics
 Memory Zone metrics are emitted for each shared memory zone that uses a slab allocator.
@@ -132,7 +145,7 @@ To include these metrics, add `MemoryZone true` to the plugin configuration, e.g
 ```apache
   <Module nginx_plus_collectd>
     StatusHost "localhost"
-    StatusPort 8080
+    StatusPort "8080"
     MemoryZone true
   </Module>
 ```
@@ -146,23 +159,23 @@ To include these metrics, add `Upstream true` to the plugin configuration, e.g.
 ```apache
   <Module nginx_plus_collectd>
     StatusHost "localhost"
-    StatusPort 8080
+    StatusPort "8080"
     Upstream true
   </Module>
 ```
 ##### Metrics
 * upstreams.active
-* upstreams.responses.total
 * upstreams.responses.1xx
 * upstreams.responses.2xx
 * upstreams.responses.3xx
-* upstreams.responses.4xx
-* upstreams.responses.5xx
 * upstreams.fails
 * upstreams.unavailable
 * upstreams.health.checks.checks
 * upstreams.health.checks.fails
 * upstreams.health.checks.unhealthy
+* upstreams.header.time
+* upstreams.keepalive
+* upstreams.zombies
 
 #### Cache Metrics
 Cache metrics are emitted for each cache, e.g. [proxy cache](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_path).
@@ -170,15 +183,31 @@ To include these metrics, add `Cache true` to the plugin configuration, e.g.
 ```apache
   <Module nginx_plus_collectd>
     StatusHost "localhost"
-    StatusPort 8080
+    StatusPort "8080"
     Cache true
   </Module>
 ```
 ##### Metrics
-* caches.size
-* caches.size.max
-* caches.hits
-* caches.misses
+* caches.hit.responses
+* caches.miss.responses
+* caches.stale.responses
+* caches.updating.responses
+* caches.revalidated.responses
+* caches.expired.responses
+* caches.bypass.responses
+* caches.hit.bytes
+* caches.miss.bytes
+* caches.stale.bytes
+* caches.updating.bytes
+* caches.revalidated.bytes
+* caches.expired.bytes
+* caches.bypass.bytes
+* caches.miss.responses.written
+* caches.expired.responses.written
+* caches.bypass.responses.written
+* caches.miss.bytes.written
+* caches.expired.bytes.written
+* caches.bypass.bytes.written
 
 #### Stream Server Zone Metrics
 Stream Server Zone metrics are emitted for each server in each stream-context [status zone](http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone).
@@ -186,7 +215,7 @@ To include these metrics, add `StreamServerZone true` to the plugin configuratio
 ```apache
   <Module nginx_plus_collectd>
     StatusHost "localhost"
-    StatusPort 8080
+    StatusPort "8080"
     StreamServerZone true
   </Module>
 ```
@@ -206,7 +235,7 @@ To include these metrics, add `StreamUpstream true` to the plugin configuration,
 ```apache
   <Module nginx_plus_collectd>
     StatusHost "localhost"
-    StatusPort 8080
+    StatusPort "8080"
     StreamUpstream true
   </Module>
 ```
@@ -221,6 +250,24 @@ To include these metrics, add `StreamUpstream true` to the plugin configuration,
 * stream.upstreams.health.checks.checks
 * stream.upstreams.health.checks.fails
 * stream.upstreams.health.checks.unhealthy
+* stream.upstreams.response.time
+* stream.upstreams.downtime
+* stream.upstreams.bytes.received
+* stream.upstreams.bytes.sent
+* stream.upstreams.zombies
+
+### Processes Metrics
+Process metrics only include the default dimensions.
+To include these metrics, add `Processes true` to the plugin configuration, e.g.
+```apache
+  <Module nginx_plus_collectd>
+    StatusHost "localhost"
+    StatusPort "8080"
+    Processes true
+  </Module>
+```
+##### Metrics
+* processes.respawned
 
 For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
 
