@@ -29,58 +29,36 @@ This integration includes built-in dashboards listed under **Pivotal Cloud Found
   
   [<img src='./img/dashboard_cloud_foundry_overview.png' width=200px>](./img/dashboard_cloud_foundry_overview.png)
 
-- **Cloud Foundry Instance**: Focus on a single Cloud Foundry instance.
+- **Cloud Foundry Architecture**: Focus on a single Cloud Foundry instance.
   
   [<img src='./img/dashboard_cloud_foundry_instance.png' width=200px>](./img/dashboard_cloud_foundry_instance.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 
-This integration requires administrative access to a Pivotal Cloud Foundry deployment with the JMX Bridge installed. Pivotal Web Services is not supported. Versions known to work are:
+This integration requires administrative access to a Pivotal Cloud Foundry deployment. Pivotal Web Services is not supported. Versions known to work are:
 
 | Software                | Version        |
 |-------------------------|----------------|
 | Pivotal Ops Manager     | 1.9.1+ |
 | Pivotal Elastic Runtime | 1.9.0+ |
-| Pivotal JMX Bridge      | 1.8.11+ |
 
 ### INSTALLATION
 
 Follow these steps to enable this integration:
 
-1. Download the product file from [Pivotal Network](https://network.pivotal.io) or from [SignalFx's Github repository](https://github.com/signalfx/cloudfoundry-integration/releases/download/v0.9.0/signalfx-agent-0.9.0.pivotal).
+1. Download the product file from [Pivotal Network](https://network.pivotal.io/products/signalfx-monitoring-alerting/).
 
-1. Navigate to the Ops Manager Installation Dashboard and click "Import a Product" to upload the product file. 
+1. Follow the [installation instructions for the tile](http://docs.pivotal.io/partners/signalfx/installing.html).
 
-1. Under "Import a Product", click "+" next to the version number of SignalFx Monitoring and Alerting for PCF. This adds the tile to your staging area.
+Metrics from Pivotal Cloud Foundry should begin streaming into SignalFx.
 
-1. Click the newly added SignalFx Monitoring and Alerting for PCF tile.
+To monitor services running within **Garden containers** (e.g. webservers) you will
+need to use [our buildpack
+decorator](https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator)
+along with the CF meta-buildpack.
 
-1. In the SignalFx section, enter your SignalFx [access token](http://docs.signalfx.com/en/latest/admin-guide/tokens.html#tokens). Leave the SignalFx ingestion URL unchanged.
-
-1. In the Pivotal JMX Bridge section, copy configuration values from the JMX Bridge tile. 
-
-  1. To find the JMX IP Address, select the JMX Bridge tile in PCF Ops Manager and choose the Status tab. Copy the IP address from the job called "JMX Provider". 
-
-  1. To find JMX username, JMX password, and (if applicable) JMX SSL certificate, select the JMX Bridge tile in PCF Ops Manager and choose the "Settings" tab. Select the "JMX Provider" section, then copy over the JMX credentials and SSL certificate. 
-
-1. Click Save.
-
-1. Return to the Ops Manager Installation Dashboard and click "Apply Changes" to install the SignalFx Monitoring and Alerting for PCF tile.
-
-Metrics from Pivotal Cloud Foundry will begin streaming into SignalFx. 
-
-#### Troubleshooting
-
-If metrics from Pivotal Cloud Foundry don't appear in SignalFx after more than a few minutes, check the following:
-
-* Verify that the values in the Pivotal JMX Bridge settings section of the SignalFx tile match the settings of the JMX Bridge tile.
-
-* Check the logs of the deployed SignalFx Agent for errors, such as connection issues to the JMX Bridge, SSL certificate errors with the JMX Bridge, or errors reporting metrics to SignalFx. 
-
-* Ensure that the app called signalfx-agent is running. 
-  1. Log into [Pivotal Apps Manager](https://docs.pivotal.io/pivotalcf/1-9/customizing/console-login.html). 
-  1. Inside the space signalfx-agent-space there will be an app named `signalfx-agent`. 
-  1. Ensure that `signalfx-agent` is in the "running" state. 
+To get our agent on to your own **BOSH deployments**, you can use [our BOSH
+release](https://github.com/signalfx/agent-boshrelease).
 
 ### METRICS
 
