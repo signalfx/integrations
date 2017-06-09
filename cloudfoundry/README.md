@@ -29,7 +29,7 @@ This integration includes built-in dashboards listed under **Pivotal Cloud Found
   
   [<img src='./img/dashboard_cloud_foundry_overview.png' width=200px>](./img/dashboard_cloud_foundry_overview.png)
 
-- **Cloud Foundry Instance**: Focus on a single Cloud Foundry instance.
+- **Cloud Foundry Architecture**: Focus on a single Cloud Foundry instance.
   
   [<img src='./img/dashboard_cloud_foundry_instance.png' width=200px>](./img/dashboard_cloud_foundry_instance.png)
 
@@ -51,6 +51,14 @@ Follow these steps to enable this integration:
 1. Follow the [installation instructions for the tile](http://docs.pivotal.io/partners/signalfx/installing.html).
 
 Metrics from Pivotal Cloud Foundry should begin streaming into SignalFx.
+
+To monitor services running within **Garden containers** (e.g. webservers) you will
+need to use [our buildpack
+decorator](https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator)
+along with the CF meta-buildpack.
+
+To get our agent on to your own **BOSH deployments**, you can use [our BOSH
+release](https://github.com/signalfx/agent-boshrelease).
 
 ### METRICS
 
