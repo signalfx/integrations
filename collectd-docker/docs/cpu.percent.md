@@ -1,7 +1,7 @@
 ---
 title: CPU Utilization Percent
 brief: Percentage of host CPU resources used by the container
-metric_type: guage
+metric_type: gauge
 ---
 ### CPU Utilization Percent
 
