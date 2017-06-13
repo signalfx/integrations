@@ -88,7 +88,7 @@ All metrics reported by the NGINX Plus collectd plugin will contain the followin
 
 
 ### METRICS
-By default only a subset (26) of the available metrics (87) are published by default. The remaining metrics can be enabled by opting-in to additional metric groups.
+By default only a subset (32) of the available metrics (87) are published by default. The remaining metrics can be enabled by opting-in to additional metric groups.
 
 #### Default Metrics
 The default metrics report the values necessary to power the default dashboards. This includes high-level connection
@@ -105,6 +105,9 @@ information, cache, server zone and upstreams metrics.
 * requests.total
 * requests.current
 * server.zone.requests
+* server.zone.responses.1xx
+* server.zone.responses.2xx
+* server.zone.responses.3xx
 * server.zone.responses.4xx
 * server.zone.responses.5xx
 * server.zone.responses.total
@@ -114,6 +117,9 @@ information, cache, server zone and upstreams metrics.
 * caches.size
 * caches.size.max
 * upstreams.requests
+* upstreams.responses.1xx
+* upstreams.responses.2xx
+* upstreams.responses.3xx
 * upstreams.responses.4xx
 * upstreams.responses.5xx
 * upstreams.responses.total
@@ -135,9 +141,6 @@ To include these metrics, add `ServerZone true` to the plugin configuration, e.g
 ##### Metrics
 * server.zone.processing
 * server.zone.discarded
-* server.zone.responses.1xx
-* server.zone.responses.2xx
-* server.zone.responses.3xx
 
 #### Memory Zone Metrics
 Memory Zone metrics are emitted for each shared memory zone that uses a slab allocator.
@@ -165,9 +168,6 @@ To include these metrics, add `Upstream true` to the plugin configuration, e.g.
 ```
 ##### Metrics
 * upstreams.active
-* upstreams.responses.1xx
-* upstreams.responses.2xx
-* upstreams.responses.3xx
 * upstreams.fails
 * upstreams.unavailable
 * upstreams.health.checks.checks
