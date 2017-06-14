@@ -21,7 +21,21 @@ using the `/status` endpoints exposed with the [ngx_http_status_module](http://n
 
 ##### Built-in dashboards
 
-**Coming Soon**
+- **NGINX+ Overview**: Provides a high-level overview of key metrics for each NGINX Plus instance.
+
+  [<img src='./img/overview_dashboard.png' width=200px>](./img/overview_dashboard.png)
+
+- **NGINX+ Server Connections**: Provides connection and SSL metrics for a single NIGNX Plus instance.
+
+  [<img src='./img/connections_dashboard.png' width=200px>](./img/connections_dashboard.png)  
+
+- **NGINX+ Server Server Zones**: Provides server zone metrics for a single NGINX Plus instance.
+
+  [<img src='./img/server_zones_dashboard.png' width=200px>](./img/server_zones_dashboard.png)  
+
+- **NGINX+ Server Upstreams**: Provides upstream group metrics for a single NGINX Plus instance.
+
+  [<img src='./img/server_zones_dashboard.png' width=200px>](./img/server_zones_dashboard.png)  
 
 ### Installation
 
@@ -51,8 +65,7 @@ Using the example configuration file [10-nginx-plus.conf](https://github.com/sig
 | DebugLogLevel | `true` to enable logging at DEBUG level. | `false` |
 | Username | Username to use for username/password authentication. | None |
 | Password | Password to use for username/password authentication. | None |
-| Dimension | A single additional dimension decorating to each metric. There are two values, the first for the name,
-the second for the value. | None |
+| Dimension | A single additional dimension decorating to each metric. There are two values, the first for the name, the second for the value. | None |
 
 Example addition to the collectd configuration:
 
@@ -84,7 +97,7 @@ All metrics reported by the NGINX Plus collectd plugin will contain the followin
 
 * `nginx.version` will contain the version number of the NGINX Plus instance being monitored
 * `plugin` is always set to `nginx-plus`
-* `plugin_instance` will contain the IP address of the NGINX Plus instance as given in the `/status/address` response.
+* `plugin_instance` will contain the IP address of the NGINX Plus instance as given in the `/status/address` response and the port given in the `StatusPort` configuration property.
 
 
 ### METRICS
