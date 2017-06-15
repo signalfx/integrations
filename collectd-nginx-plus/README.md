@@ -15,7 +15,7 @@ _This directory consolidates all the metadata associated with the NGINX Plus plu
 This is the SignalFx NGINX Plus plugin. Follow these instructions to install the NGINX Plus plugin for collectd.
 
 The [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) plugin collects metrics about a single NGINX Plus instance,
-using the `/status` endpoints exposed with the [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html).
+using the `/status` endpoints exposed with the [nginx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html).
 
 #### FEATURES
 
@@ -37,7 +37,7 @@ using the `/status` endpoints exposed with the [ngx_http_status_module](http://n
 
   [<img src='./img/server_zones_dashboard.png' width=200px>](./img/server_zones_dashboard.png)  
 
-### Installation
+### INSTALLATION
 
 1. Download the [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) project.
 
@@ -53,7 +53,7 @@ using the `/status` endpoints exposed with the [ngx_http_status_module](http://n
 
 1. Restart collectd.
 
-### Configuration
+### CONFIGURATION
 
 Using the example configuration file [10-nginx-plus.conf](https://github.com/signalfx/integrations/tree/master/collectd-nginx-plus/10-nginx-plus.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
@@ -91,17 +91,16 @@ LoadPlugin python
 By default only a small subset of the available metrics are published by default. The remaining metrics can be enabled by opting-in to additional metric groups. See [Metrics](#metrics) for more details on each metric group
 and how to enable them.
 
-### USAGE
 
+### METRICS
+By default only a subset (32) of the available metrics (87) are published by default. The remaining metrics can be enabled by opting-in to additional metric groups.
+
+### USAGE
 All metrics reported by the NGINX Plus collectd plugin will contain the following dimensions:
 
 * `nginx.version` will contain the version number of the NGINX Plus instance being monitored
 * `plugin` is always set to `nginx-plus`
 * `plugin_instance` will contain the IP address of the NGINX Plus instance as given in the `/status/address` response and the port given in the `StatusPort` configuration property.
-
-
-### METRICS
-By default only a subset (32) of the available metrics (87) are published by default. The remaining metrics can be enabled by opting-in to additional metric groups.
 
 #### Default Metrics
 The default metrics report the values necessary to power the default dashboards. This includes high-level connection
@@ -269,7 +268,7 @@ To include these metrics, add `StreamUpstream true` to the plugin configuration,
 * stream.upstreams.bytes.sent
 * stream.upstreams.zombies
 
-### Processes Metrics
+#### Processes Metrics
 Process metrics only include the default dimensions.
 To include these metrics, add `Processes true` to the plugin configuration, e.g.
 ```apache
