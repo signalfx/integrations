@@ -3,7 +3,6 @@
 _This directory consolidates all the metadata associated with the NGINX Plus plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-nginx-plus)_
 
 - [Description](#description)
-- [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
@@ -15,7 +14,7 @@ _This directory consolidates all the metadata associated with the NGINX Plus plu
 This is the SignalFx NGINX Plus plugin. Follow these instructions to install the NGINX Plus plugin for collectd.
 
 The [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) plugin collects metrics about a single NGINX Plus instance,
-using the `/status` endpoints exposed with the [nginx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html).
+using the `/status` endpoints exposed with the [http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html).
 
 #### FEATURES
 
@@ -59,7 +58,7 @@ Using the example configuration file [10-nginx-plus.conf](https://github.com/sig
 
 | Configuration Option | Definition | Default Value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | ``/usr/share/collectd/niginx-plus-collectd/plugin` |
+| ModulePath | Path where collectd can find this module. | `/usr/share/collectd/niginx-plus-collectd/plugin` |
 | StatusHost | IP address or DNS of the NGINX+ instance to retrieve status information from | `localhost` |
 | StatusPort | Port the NGINX+ status endpoint can be reached at. | `8080` |
 | DebugLogLevel | `true` to enable logging at DEBUG level. | `false` |
@@ -67,7 +66,7 @@ Using the example configuration file [10-nginx-plus.conf](https://github.com/sig
 | Password | Password to use for username/password authentication. | None |
 | Dimension | A single additional dimension decorating to each metric. There are two values, the first for the name, the second for the value. | None |
 
-Example addition to the collectd configuration:
+Example configuration:
 
 ```apache
 LoadPlugin python
@@ -88,7 +87,7 @@ LoadPlugin python
 </Plugin>
 ```
 
-By default only a small subset of the available metrics are published by default. The remaining metrics can be enabled by opting-in to additional metric groups. See [Metrics](#metrics) for more details on each metric group
+By default only a subset of the available metrics are published by default. The remaining metrics can be enabled by opting-in to additional metric groups. See [Usage](#usage) for more details on each metric group
 and how to enable them.
 
 
@@ -280,8 +279,6 @@ To include these metrics, add `Processes true` to the plugin configuration, e.g.
 ```
 ##### Metrics
 * processes.respawned
-
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
 
 ### LICENSE
 
