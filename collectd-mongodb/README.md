@@ -73,6 +73,11 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
         apt-get install -y python-pip python-dev build-essential
         sudo pip install pymongo==3.0.3
 
+1. If you want to use SSL/TLS to connect to Mongo, install the PyMongo TLS
+   dependencies as well:
+
+        sudo pip install pymongo[tls]
+
 1. Download the [collectd-mongodb Python module](https://github.com/signalfx/collectd-mongodb).  
 
 1. Download SignalFx's [sample configuration file ](https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
