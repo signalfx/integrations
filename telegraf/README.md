@@ -11,13 +11,13 @@ _This is a directory that consolidates all the metadata associated with the Sign
 
 ### DESCRIPTION
 
-[Telegraf](https://github.com/influxdata/telegraf) is an open source daemon that collects statistics from a system and publishes them to a destination of your choice. You can use Telegraf to monitor infrastructure metrics, and enable Telegraf plugins that monitor a wide range of software. 
+[Telegraf](https://github.com/influxdata/telegraf) is an open source daemon that collects statistics from a system and publishes them to a destination of your choice. You can use Telegraf to monitor infrastructure metrics, and enable Telegraf plugins that monitor a wide range of software.
 
 #### FEATURES
 
 Sending data using Telegraf allows you to take advantage of the following features:
 
-- The [SignalFx Infrastructure page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html) visualizes hosts that are monitored using the SignalFx Telegraf Agent.
+- The [SignalFx Infrastructure page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html) visualizes hosts that are monitored using the SignalFx Telegraf Agent.
 
   [<img src='./img/telegrafhostspage.png' width=200px>](./img/telegrafhostspage.png)
 
@@ -52,7 +52,7 @@ unzip Linux-x86_64.zip
 ```bash
 ./telegraf config > telegraf.conf
 ```
-1. Modify the resulting configuration file to provide values that make sense for your environment, as described [below](#configuration). 
+1. Modify the resulting configuration file to provide values that make sense for your environment, as described [below](#configuration).
 1. Start the SignalFx Telegraf Agent, specifying the configuration file you generated in step 4.
 ```
 ./telegraf --config <path to the telegraf config file>
@@ -61,7 +61,7 @@ Note: This command only starts an executable. To ensure that the SignalFx Telegr
 
 ### CONFIGURATION
 
-Edit the configuration file `telegraf.conf` as shown below to configure the agent for use with SignalFx. 
+Edit the configuration file `telegraf.conf` as shown below to configure the agent for use with SignalFx.
 
 #### Enable required plugins
 
@@ -73,7 +73,7 @@ By default, the following plugin sections are listed in the configuration file b
 
 If you are not using InfluxDB, comment out the InfluxDB plugin configuration section `[[outputs.influxdb]]`.
 
-#### Set configuration values 
+#### Set configuration values
 
 In `telegraf.conf`, provide values for the configuration options listed below that make sense for your environment.
 

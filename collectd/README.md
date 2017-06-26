@@ -25,7 +25,7 @@ All changes have been submitted back to the [collectd project](http://collectd.o
 
 Sending data using collectd allows you to take advantage of SignalFx’s extensive collectd support.
 
-- The [SignalFx Hosts page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html) visualizes hosts that are monitored using the SignalFx collectd agent.
+- The [SignalFx Infrastructure page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html) visualizes hosts that are monitored using the SignalFx collectd agent.
 
   [<img src='./img/collectdhostspage.png' width=200px>](./img/collectdhostspage.png)
 
@@ -48,7 +48,7 @@ The SignalFx collectd agent is supported on the following operating systems:
 | RHEL/Centos | 6.x & 7.x |
 | Ubuntu  | 12.04, 14.04, 15.04 & 16.04 |
 
-You must have administrator (sudo) privileges to install this agent. 
+You must have administrator (sudo) privileges to install this agent.
 
 ### INSTALLATION
 
@@ -108,9 +108,9 @@ Installing the SignalFx collectd agent allows you to install many of the integra
 
 You can add a dimension to every datapoint that collectd sends to SignalFx by adding HTTP query parameters to the SignalFx ingest URL, part of the configuration for the `write_http` plugin. This allows you to add information about the host or environment to every metric. For instance, you could identify all metrics coming from production boxes with a dimension like `environment=prod`.
 
-The SignalFx URL to which collectd will transmit data is specified in `10-write_http-plugin.conf` and by default has a value like https://ingest.signalfx.com/v1/collectd. 
+The SignalFx URL to which collectd will transmit data is specified in `10-write_http-plugin.conf` and by default has a value like https://ingest.signalfx.com/v1/collectd.
 
-Append dimensions to the  URL as `sfxdim_[DIMENSION NAME]=[DIMENSION VALUE]`. Multiple dimensions may be specified. 
+Append dimensions to the  URL as `sfxdim_[DIMENSION NAME]=[DIMENSION VALUE]`. Multiple dimensions may be specified.
 
 For example, the following URL sends data points to SignalFx with the added dimensions `serverType=API` and `tier=middleware`.
 

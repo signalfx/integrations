@@ -17,7 +17,7 @@ Use this integration to monitor a Pivotal Cloud Foundry deployment. This integra
 
 ##### Infrastructure Page
 
-- **Infrastructure Navigator**: On the Infrastructure page in SignalFx, the Infrastructure Navigator visualizes Cloud Foundry instances as squares, colored by metrics including CPU, disk, and network. Additional views are provided for focus on the health and performance of specific Cloud Foundry services. [Click here to read more about the Infrastructure Page](http://docs.signalfx.com/en/latest/built-in-content/host-nav.html). 
+- **Infrastructure Navigator**: On the Infrastructure page in SignalFx, the Infrastructure Navigator visualizes Cloud Foundry instances as squares, colored by metrics including CPU, disk, and network. Additional views are provided for focus on the health and performance of specific Cloud Foundry services. [Click here to read more about the Infrastructure Page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html). 
 
   [<img src='./img/infra_pcf_instances.png' width=200px>](./img/infra_pcf_instances.png)
 
@@ -26,11 +26,11 @@ Use this integration to monitor a Pivotal Cloud Foundry deployment. This integra
 This integration includes built-in dashboards listed under **Pivotal Cloud Foundry** on the Dashboards page in SignalFx. A sample include:
 
 - **Cloud Foundry Overview**: Overview of all activity in your Cloud Foundry environment.
-  
+
   [<img src='./img/dashboard_cloud_foundry_overview.png' width=200px>](./img/dashboard_cloud_foundry_overview.png)
 
 - **Cloud Foundry Architecture**: Focus on a single Cloud Foundry instance.
-  
+
   [<img src='./img/dashboard_cloud_foundry_instance.png' width=200px>](./img/dashboard_cloud_foundry_instance.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
