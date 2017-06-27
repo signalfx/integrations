@@ -1,0 +1,10 @@
+{ "display_name": "Pivotal Cloud Foundry",
+  "description": "Monitor Pivotal Cloud Foundry using multiple SignalFx integration options.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/cloudfoundry-pivotal",
+  "code": "https://github.com/search?q=topic%3Acloud-foundry+org%3Asignalfx+fork%3Atrue",
+  "featured": true,
+  "data_signature": "metric_source:\"cloudfoundry\"",
+  "logo_large": "/images/repos/cloudfoundry/img/integrations_pivotalcloudfoundry%402x.png",
+  "logo_small": "/images/repos/cloudfoundry/img/integrations_pivotalcloudfoundry.png",
+  "in_app_categories": ["servicesMonitored"]
+}
