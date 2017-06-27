@@ -24,7 +24,11 @@ Use this integration to monitor a Pivotal Cloud Foundry deployment. This integra
     services, as well as Garden Containers. [Click here to read more about the
     Infrastructure
     Page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html).
-    Here is a sample of the view for Garden Containers:
+
+  You can quickly see the status of all of the VMs in your Cloud Foundry cluster:
+  [<img src='./img/arch-infra.png' width=200px>](./img/arch-infra.png)
+
+  Here is a sample of the view for Garden Containers:
 
   [<img src='./img/garden-infra.png' width=200px>](./img/garden-infra.png)
 
