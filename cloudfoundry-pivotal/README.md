@@ -17,21 +17,35 @@ Use this integration to monitor a Pivotal Cloud Foundry deployment. This integra
 
 ##### Infrastructure Page
 
-- **Infrastructure Navigator**: On the Infrastructure page in SignalFx, the Infrastructure Navigator visualizes Cloud Foundry instances as squares, colored by metrics including CPU, disk, and network. Additional views are provided for focus on the health and performance of specific Cloud Foundry services. [Click here to read more about the Infrastructure Page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html). 
+- **Infrastructure Navigator**: On the Infrastructure page in SignalFx, the
+    Infrastructure Navigator visualizes Cloud Foundry instances as squares,
+    colored by metrics including CPU, disk, and network. Additional views are
+    provided for focus on the health and performance of specific Cloud Foundry
+    services, as well as Garden Containers. [Click here to read more about the
+    Infrastructure
+    Page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html).
+    Here is a sample of the view for Garden Containers:
 
-  [<img src='./img/infra_pcf_instances.png' width=200px>](./img/infra_pcf_instances.png)
+  [<img src='./img/garden-infra.png' width=200px>](./img/garden-infra.png)
 
 ##### Built-in dashboards
 
-This integration includes built-in dashboards listed under **Pivotal Cloud Foundry** on the Dashboards page in SignalFx. A sample include:
+This integration includes built-in dashboards listed under **Cloud Foundry** on the Dashboards page in SignalFx. Here are some examples:
 
-- **Cloud Foundry Overview**: Overview of all activity in your Cloud Foundry environment.
+- **Key Capacity Scaling Indicators**: Helps you figure out whether you need to
+    add resources to your cluster.
 
-  [<img src='./img/dashboard_cloud_foundry_overview.png' width=200px>](./img/dashboard_cloud_foundry_overview.png)
+  [<img src='./img/key-cap-dashboard.png' width=200px>](./img/key-cap-dashboard.png)
 
-- **Cloud Foundry Architecture**: Focus on a single Cloud Foundry instance.
+- **Diego**: Metrics around Diego, including many KPIs
 
-  [<img src='./img/dashboard_cloud_foundry_instance.png' width=200px>](./img/dashboard_cloud_foundry_instance.png)
+  [<img src='./img/diego-dashboard.png' width=200px>](./img/diego-dashboard.png)
+
+- **Garden Containers**: High-level look at the Garden container system
+
+  [<img src='./img/garden-containers-dashboard.png' width=200px>](./img/garden-containers-dashboard.png)
+
+  And many more...
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -53,8 +67,7 @@ Follow these steps to enable this integration:
 Metrics from Pivotal Cloud Foundry should begin streaming into SignalFx.
 
 To monitor services running within **Garden containers** (e.g. webservers) you will
-need to use [our buildpack
-decorator](https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator)
+need to use [our buildpack decorator](https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator)
 along with the CF meta-buildpack.
 
 To get our agent on to your own **BOSH deployments**, you can use [our BOSH
