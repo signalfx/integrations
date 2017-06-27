@@ -107,6 +107,11 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 |Type |Type|Sets the type used to dispatch this value. Detailed information about types and their configuration can be found in types.db(5).|
 |Instance |TypeInstance|This optional setting sets the type instance to use.|
 
+### CAVEATS
+
+This plugin was created by the collectd community to satisfy “modest” log tailing use cases that typically involve monitoring a handful of logs for matches with up to a couple dozen regular expressions in each log. (See https://collectd.org/wiki/index.php/Plugin:Tail/Config for several examples). Its creators haven’t specifically noted any caveats related to its usage or performance, possibly due to the difficulty in doing so given the number of variables involved. It is reasonable to expect that at some point this plugin will have difficulty scaling under typical regex configuration once the number of logs it is tasked with monitoring increases into double digits, especially if the logs are very active.
+
+
 ### LICENSE
 
 License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/tail.c)
