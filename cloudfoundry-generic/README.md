@@ -26,6 +26,7 @@ Use this integration to monitor a Cloud Foundry deployment. This integration pro
     Page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html).
 
   You can quickly see the status of all of the VMs in your Cloud Foundry cluster:
+
   [<img src='./img/arch-infra.png' width=200px>](./img/arch-infra.png)
 
   Here is a sample of the view for Garden Containers:
