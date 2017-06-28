@@ -61,52 +61,19 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+This plugin is automatically bundled with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd), but it is not enabled by default. 
 
 
 ### CONFIGURATION
 
-From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_tail):
+Please see the [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_tail) for information on how to configure this plugin.
 
-> The tail plugin follows logfiles, just like tail(1) does, parses each line and dispatches found values. What is matched can be configured by the user using (extended) regular expressions, as described in regex(7).
-> ```
-  <Plugin "tail">
-    <File "/var/log/exim4/mainlog">
-      Instance "exim"
-      Interval 60
-      <Match>
-        Regex "S=([1-9][0-9]*)"
-        DSType "CounterAdd"
-        Type "ipt_bytes"
-        Instance "total"
-      </Match>
-      <Match>
-        Regex "\\<R=local_user\\>"
-        ExcludeRegex "\\<R=local_user\\>.*mail_spool defer"
-        DSType "CounterInc"
-        Type "counter"
-        Instance "local_user"
-      </Match>
-    </File>
-  </Plugin>
-```
+Additionally, some sample configurations can be found [here](https://collectd.org/wiki/index.php/Plugin:Tail/Config).
 
-> The config consists of one or more **_File_** blocks, each of which configures one logfile to parse. Within each **_File_** block, there are one or more **_Match_** blocks, which configure a regular expression to search for.
+### CAVEATS
 
-> The Instance option in the **_File_** block may be used to set the plugin instance. So in the above example the plugin name tail-foo would be used. This plugin instance is for all **_Match_** blocks that follow it, until the next **_Instance_** option. This way you can extract several plugin instances from one logfile, handy when parsing syslog and the like.
-
-> The **_Interval_** option allows you to define the length of time between reads. If this is not set, the default Interval will be used.
-
-> Each **_Match_** block has the following options to describe how the match should be performed:
-
-| Configuration Option | Type | Definition |
-|----------------------|------|------------|
-|Regex| regex|Sets the regular expression to use for matching against a line. The first subexpression has to match something that can be turned into a number by strtoll(3) or strtod(3), depending on the value of CounterAdd, see below. Because extended regular expressions are used, you do not need to use backslashes for subexpressions! If in doubt, please consult regex(7). Due to collectd's config parsing you need to escape backslashes, though. So if you want to match literal parentheses you need to do the following:<ui><li>`Regex "SPAM \\(Score: (-?[0-9]+\\.[0-9]+)\\)"`</li></ui>|
-|ExcludeRegex| regex| Sets an optional regular expression to use for excluding lines from the match. An example which excludes all connections from localhost from the match:<ui><li>`ExcludeRegex "127\\.0\\.0\\.1"`</li></ui>|
-|DSType |Type|Sets how the values are cumulated. Type is one of:<ui><li>`GaugeAverage`: Calculate the average.</li><li>`GaugeMin`: Use the smallest number only.<?li><li>`GaugeMax`: Use the greatest number only.</li><li>`GaugeLast`: Use the last number found.</li><li>`CounterSet`</li><li>`DeriveSet`</li><li>`AbsoluteSet`: The matched number is a counter. Simply sets the internal counter to this value. Variants exist for `COUNTER`, `DERIVE`, and `ABSOLUTE` data sources.</li><li>`GaugeAdd`</li><li>`CounterAdd`</li><li>`DeriveAdd`: Add the matched value to the internal counter. In case of `DeriveAdd`, the matched number may be negative, which will effectively subtract from the internal counter.</li><li>`GaugeInc`</li><li>`CounterInc`</li><li>`DeriveInc`: Increase the internal counter by one. These DSType are the only ones that do not use the matched subexpression, but simply count the number of matched lines. Thus, you may use a regular expression without submatch in this case. </li></ui>As you'd expect the _Gauge_ types interpret the submatch as a floating point number, using _strtod(3)_. The Counter* and AbsoluteSet types interpret the submatch as an unsigned integer using _strtoull(3)_. The _Derive_ types interpret the submatch as a signed integer using _strtoll(3)_. CounterInc and DeriveInc do not use the submatch at all and it may be omitted in this case.|
-|Type |Type|Sets the type used to dispatch this value. Detailed information about types and their configuration can be found in types.db(5).|
-|Instance |TypeInstance|This optional setting sets the type instance to use.|
+This plugin was created by the collectd community to satisfy “modest” log tailing use cases that typically involve monitoring at most a small handful of logs for matches with up to a couple dozen regular expressions in each log. (See [here](https://collectd.org/wiki/index.php/Plugin:Tail/Config) for several examples). Its creators haven’t specifically noted any caveats related to its usage or performance, possibly due to the difficulty in doing so given the number of variables involved. It is reasonable to expect that at some point this plugin will have difficulty scaling under typical regex configuration once the number of logs it is tasked with monitoring increases into double digits, especially if the logs are very active.
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/tail.c)
+License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/tail.c).
