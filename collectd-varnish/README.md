@@ -54,7 +54,11 @@ Follow these steps to add varnish 3 plugin support:
 
 1. Copy the [varnish3.so](https://dl.signalfx.com/debs/collectd-varnish/varnish3.so) file to the collectd library directory `/usr/lib/collectd/`.
 
-2. Update the configuration file `10-varnish.conf` in your `/etc/collectd/managed_config` directory to show `varnish3` instead of `varnish` as the name used by the LoadPlugin.
+1. Update the configuration file `10-varnish.conf` in your `/etc/collectd/managed_config` directory to show `varnish3` instead of `varnish` as the name used by the LoadPlugin.
+
+1. Restart collectd.
+
+Example configuration for Varnish 3 on Ubuntu
 ```apache
 LoadPlugin varnish3
 <Plugin "varnish">
@@ -80,9 +84,6 @@ LoadPlugin varnish3
   </Instance>
 </Plugin>
 ```
-
-3. Restart collectd.
-
 
 ### CONFIGURATION
 
