@@ -82,12 +82,12 @@ data:
     filterContianerMetrics:
       # filter containers with kubernetes pod names matching the following patterns
       kubernetesPodNames:
-      - "^signalfx-agent*" # do not report metrics on the signalfx-agent container
+      # - "^signalfx-agent*" # do not report metrics on the signalfx-agent container
 
       # filter containers with image names matching the following patterns
       # NOTE: the docker engine reports image tags in the image name i.e. "elasticsearch:latest"
       images:
-      - "^gcr.io/google_containers/pause-amd64*" # ignore kubernetes puase containers
+      - "^gcr\\.io/google_containers/pause-amd64*" # ignore kubernetes puase containers
 
       # # filter containers with names matching the following patterns
       # dockerContainerNames:
