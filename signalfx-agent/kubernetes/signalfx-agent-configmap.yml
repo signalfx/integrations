@@ -87,7 +87,7 @@ data:
       # filter containers with image names matching the following patterns
       # NOTE: the docker engine reports image tags in the image name i.e. "elasticsearch:latest"
       images:
-      - "^gcr\\.io/google_containers/pause-amd64*" # ignore kubernetes puase containers
+      - "^grc\\.io/google_containers/pause-*" # ignore kubernetes puase containers
 
       # # filter containers with names matching the following patterns
       # dockerContainerNames:
