@@ -7,4 +7,4 @@
   "logo_small": "/images/repos/collectd-activemq/img/integrations_activemq.png",
   "data_signature": "sf_metric:\"gauge.amq.TotalConsumerCount\"",
   "in_app_categories": ["servicesMonitored"]
-},
+}

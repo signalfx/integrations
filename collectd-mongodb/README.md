@@ -73,6 +73,11 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
         apt-get install -y python-pip python-dev build-essential
         sudo pip install pymongo==3.0.3
 
+1. If you want to use SSL/TLS to connect to Mongo, install the PyMongo TLS
+   dependencies as well:
+
+        sudo pip install pymongo[tls]
+
 1. Download the [collectd-mongodb Python module](https://github.com/signalfx/collectd-mongodb).  
 
 1. Download SignalFx's [sample configuration file ](https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
@@ -93,6 +98,12 @@ Using the example configuration file [10-mongodb.conf](https://github.com/signal
 | User | Valid mongodb user | "" |
 | Password | Associated password for valid user | "password" |
 | Database | Name(s) of database(s) that you would like metrics from. Note: the first database in this list must be "admin", as it is used to perform a `serverStatus()` command. | "admin" "db-prod" "db-dev" |
+| UseTLS | Set this to `true` if you want to connect to Mongo using TLS/x509/SSL. | false |
+| CACerts | Path to a CA cert that will be used to verify the certificate that Mongo presents (not needed if not using TLS or if Mongo's cert is signed by a globally trusted issuer already installed in the default location on your OS) | "" |
+| TLSClientCert | Path to a client certificate (not needed unless your Mongo instance requires x509 client verification) | "" |
+| User | (**same as above `User` field but required for TLS client auth**) The username associated with the client cert (this is the *subject* field of the client cert, formatted according to RFC2253 **and in the same order that was specified when creating the user in the Mongo `$external` database**).  You can get this value by running the following command: `openssl x509 -in <pathToClient PEM> -inform PEM -subject -nameopt RFC2253`. | "" |
+| TLSClientKey | Path to a client certificate key (not needed unless your Mongo instance requires x509 client verification, or if your client cert above has the key included) | "" |
+| TLSClientKeyPassphrase | Passphrase for the TLSClientKey above (requires Python 2.7.9+) | "" |
 
 #### Note: Monitoring multiple instances
 

@@ -1,0 +1,10 @@
+{ "display_name":"NGINX Plus",
+  "description": "Monitor NGINX Plus using the SignalFx collectd plugin.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-nginx-plus",
+  "code": "https://github.com/signalfx/collectd-nginx-plus",
+  "featured": false,
+  "logo_small": "/images/repos/collectd-nginx-plus/img/integrations_nginxplus.png",
+  "logo_large": "/images/repos/collectd-nginx-plus/img/integrations_nginxplus%402x.png",
+  "data_signature": "plugin:\"nginx-plus\"",
+  "in_app_categories": ["servicesMonitored"]
+}

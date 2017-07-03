@@ -7,4 +7,4 @@
   "logo_small": "integration_awsrds.png",
   "data_signature": "namespace:\"AWS/RDS\"",
   "in_app_categories": ["AWSservicesMonitored"]
-},
+}

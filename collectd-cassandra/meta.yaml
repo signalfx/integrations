@@ -7,4 +7,4 @@
   "logo_small": "/images/repos/collectd-cassandra/img/integrations_cassandra.png",
   "data_signature": "sf_metric:\"gauge.cassandra.ClientRequest.Read.Latency.50thPercentile\"",
   "in_app_categories": ["servicesMonitored"]
-},
+}

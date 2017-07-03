@@ -52,12 +52,38 @@ Varnish Cache is a web application accelerator also known as a caching HTTP reve
 Starting with collectd 5.6.1-sfx0, the varnish plugin provided within the SignalFx Package only supports varnish 4.
 Follow these steps to add varnish 3 plugin support:
 
-1. Copy the [varnish3.so](https://dl.signalfx.com/debs/collectd-varnish/varnish3.so) file to the library directory at /usr/lib/share/collectd/.
+1. Copy the [varnish3.so](https://dl.signalfx.com/debs/collectd-varnish/varnish3.so) file to the collectd library directory `/usr/lib/collectd/`.
 
-1. Update the configuration file `10-varnish.conf` in your `/etc/collectd/managed_config` directory to show varnish3 instead of varnish as the name used by the LoadPlugin and Plugin lines.
+1. Update the configuration file `10-varnish.conf` in your `/etc/collectd/managed_config` directory to show `varnish3` instead of `varnish` as the name used by the LoadPlugin.
 
 1. Restart collectd.
 
+Example configuration for Varnish 3 on Ubuntu
+```apache
+LoadPlugin varnish3
+<Plugin "varnish">
+  <Instance>
+    CollectCache       true
+    CollectConnections true
+    CollectBackend     true
+    CollectSHM         true
+    CollectESI         true
+    CollectFetch       true
+    CollectHCB         true
+    CollectSMA         true
+    CollectSMS         true
+    CollectSM          true
+    CollectTotals      true
+    CollectWorkers     true
+    CollectUptime      true
+    CollectVCL         true
+    CollectStruct      true
+    CollectObjects     true
+    CollectSession     true
+    CollectVSM         true
+  </Instance>
+</Plugin>
+```
 
 ### CONFIGURATION
 
