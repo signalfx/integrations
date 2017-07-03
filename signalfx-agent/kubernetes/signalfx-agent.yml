@@ -46,6 +46,10 @@ spec:
                     secretKeyRef:
                         name: signalfx
                         key: access-token
+              - name: MY_POD_NAME
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.name
               - name: SFX_MERGE_CONFIG
                 value: /etc/signalfx/kubernetes-defaults.yaml
               - name: SFX_USER_CONFIG
