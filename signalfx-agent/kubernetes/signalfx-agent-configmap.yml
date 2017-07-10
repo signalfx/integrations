@@ -3,28 +3,29 @@ data:
   user.yml: |
     proxy:
         # Uncomment and enter value below to configure HTTP proxy.
-        # http:
+        #http:
 
         # Uncomment and enter value below to configure HTTPS proxy.
-        # https:
+        #https:
 
         # Uncomment below and enter IP or domains to exclude from proxying.
         # Multiple entries can be entered as a comma-separated list.
-        # skip:
+        #skip:
 
     kubernetes:
-      # tls:
-      #   # Set to true to ignore certificate verification checks connecting to kubelet.
-      #   # skipVerify: false
-      #
-      #   # Set to file path of CA certificate used for signing kubelet TLS certificate.
-      #   # caCert:
-      #
-      #   # Set to file path of client certificate used to authenticate with kubelet.
-      #   # clientCert:
-      #
-      #   # Set to file path of client private key used to authenticate with kubelet.
-      #   # clientKey:
+      kubeletAPI:
+        # tls:
+            # Set to true to ignore certificate verification checks connecting to kubelet.
+            #skipVerify: false
+
+            # Set to file path of CA certificate used for signing kubelet TLS certificate.
+            #caCert:
+
+            # Set to file path of client certificate used to authenticate with kubelet.
+            #clientCert:
+
+            # Set to file path of client private key used to authenticate with kubelet.
+            #clientKey:
 
       # Set to one of master or worker.
       role: worker
@@ -35,6 +36,34 @@ data:
 
       # Set the cadvisor url
       # cadvisorURL: http://localhost:4194
+
+      kubernetesAPI:
+        # Set ‘authType’ to ‘tls’ and set the below values if you don’t want to use service accounts.  Service accounts require no additional config in the agent.
+        authType: serviceAccount
+        #tls:
+          # Set to file path of CA certificate used for signing K8s API TLS certificate.
+          #caCert:
+
+          # Set to file path of client certificate used to authenticate with the K8s API.
+          #clientCert:
+
+          # Set to file path of client private key used to authenticate with the K8s API.
+          #clientKey:
+
+      clusterMetrics:
+        # How often to report k8s cluster metrics
+        intervalSeconds: 10
+        # Set to true to always report cluster metrics, otherwise the agents
+        # will decide among themselves which agent will report cluster
+        # metrics automatically
+        #alwaysClusterReporter: false
+        # List cluster metrics we should or should not collect
+        #metricFilter:
+        #- "!kubernetes.replica_set.available"
+        #- "!kubernetes.replica_set.desired"
+        # only include metrics from the default namespace (as well as non-namespaced metrics)
+        #namespaceFilter:
+        #- default
 
 kind: ConfigMap
 metadata:
