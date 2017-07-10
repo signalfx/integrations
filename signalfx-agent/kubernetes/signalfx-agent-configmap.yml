@@ -24,7 +24,7 @@ data:
       cluster: CLUSTER_NAME
 
       kubeletAPI:
-        tls:
+        # tls:
         #   # Set to true to ignore certificate verification checks connecting to kubelet.
         #   skipVerify: false
 
