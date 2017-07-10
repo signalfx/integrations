@@ -5,36 +5,65 @@ data:
     # ingestURL: https://ingest.signalfx.com
 
     proxy:
-      # Uncomment and enter value below to configure HTTP proxy.
-      # http:
+        ## Uncomment and enter value below to configure HTTP proxy.
+        # http:
 
-      # Uncomment and enter value below to configure HTTPS proxy.
-      # https:
+        ## Uncomment and enter value below to configure HTTPS proxy.
+        # https:
 
-      # Uncomment below and enter IP or domains to exclude from proxying.
-      # Multiple entries can be entered as a comma-separated list.
-      # skip:
+        ## Uncomment below and enter IP or domains to exclude from proxying.
+        # Multiple entries can be entered as a comma-separated list.
+        # skip:
 
     kubernetes:
-      # tls:
-      #   # Set to true to ignore certificate verification checks connecting to kubelet.
-      #   # skipVerify: false
-      
-      #   # Set to file path of CA certificate used for signing kubelet TLS certificate.
-      #   # caCert:
-      
-      #   # Set to file path of client certificate used to authenticate with kubelet.
-      #   # clientCert:
-      
-      #   # Set to file path of client private key used to authenticate with kubelet.
-      #   # clientKey:
-
       # Set to one of master or worker.
       role: worker
 
       # Replace CLUSTER_NAME with the name of your cluster to be attached as a
       # dimension to all metrics.
       cluster: CLUSTER_NAME
+
+      kubeletAPI:
+        # tls:
+        ##  Set to true to ignore certificate verification checks connecting to kubelet.
+        #   skipVerify: false
+
+        #   Set to file path of CA certificate used for signing kubelet TLS certificate.
+        #   caCert:
+
+        #   Set to file path of client certificate used to authenticate with kubelet.
+        #   clientCert:
+
+        #   Set to file path of client private key used to authenticate with kubelet.
+        #   clientKey:
+
+      kubernetesAPI:
+        # Set ‘authType’ to ‘tls’ and set the below values if you don’t want to use service accounts.  Service accounts require no additional config in the agent.
+        authType: serviceAccount
+        # tls:
+          ## Set to file path of CA certificate used for signing K8s API TLS certificate.
+          # caCert:
+
+          ## Set to file path of client certificate used to authenticate with the K8s API.
+          # clientCert:
+
+          ## Set to file path of client private key used to authenticate with the K8s API.
+          # clientKey:
+
+      clusterMetrics:
+        # # How often to report k8s cluster metrics
+        intervalSeconds: 10
+        # # Set to true to always report cluster metrics, otherwise the agents
+        # # will decide among themselves which agent will report cluster
+        # # metrics automatically
+        # alwaysClusterReporter: false
+        ## List cluster metrics we should or should not collect
+        # metricFilter:
+        # - "!kubernetes.replica_set.available"
+        # - "!kubernetes.replica_set.desired"
+        ## only include metrics from the default namespace (as well as non-namespaced metrics)
+        # namespaceFilter:
+        # - default
 
       # # Set the cadvisor url
       # cadvisorURL: http://localhost:4194
@@ -77,6 +106,25 @@ data:
       # # - pod_network_transmit_errors_total
       # # - container_tasks_state
 
+    collectd:
+      # # Set the collectd interval
+      # interval: 15
+
+      # # Set the collectd timeout
+      # timeout: 2
+
+      # # Set the number of read threads for collectd
+      # readThreads: 5
+
+      # # Set whether to collect internal stats about collectd
+      # collectInternalStats: true
+
+      # # Set the upperbound limit for the collectd write queue
+      # writeQueueLimitHigh: 500000
+
+      # # Set the lowerbound limit for the collectd write queue
+      # writeQueueLimitLow: 400000
+
     # Filters to prevent the cadvisor and collectd-docker plugins from reporting
     # on containers matching the specified regexp patterns
     filterContianerMetrics:
@@ -108,25 +156,6 @@ data:
       #   value: "^dev$"
       # - key: "^environment$"
       #   value: "^test$"
-
-    collectd:
-      # # Set the collectd interval
-      # interval: 15
-
-      # # Set the collectd timeout
-      # timeout: 2
-
-      # # Set the number of read threads for collectd
-      # readThreads: 5
-
-      # # Set whether to collect internal stats about collectd
-      # collectInternalStats: true
-
-      # # Set the upperbound limit for the collectd write queue
-      # writeQueueLimitHigh: 500000
-
-      # # Set the lowerbound limit for the collectd write queue
-      # writeQueueLimitLow: 400000
 
 kind: ConfigMap
 metadata:
