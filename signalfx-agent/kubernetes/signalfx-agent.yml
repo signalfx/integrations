@@ -18,7 +18,7 @@ spec:
             hostNetwork: true
             containers:
             - name: signalfx-agent
-              image: quay.io/signalfuse/signalfx-agent:master
+              image: quay.io/signalfuse/signalfx-agent:1.0.0-beta-9
               securityContext:
                 privileged: true
               volumeMounts:
