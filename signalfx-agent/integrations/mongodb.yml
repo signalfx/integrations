@@ -1,0 +1,22 @@
+integrations:
+  mongodb:
+    labels:
+    - app
+    rule: NetworkPrivatePort == 27017
+    vars:
+      Username:
+      Password:
+      Databases:
+      # - exampledatabase123 # specify the name of a database to monitor
+      # - exampledatabase321 # specify the name of a database to monitor
+    template: |
+      <Module mongodb>
+        Host "{{.Host}}"
+        Port {{.Port}}
+        User "{{.Vars.Username}}"
+        {{with .Vars.Password}}
+        Password "{{.}}"
+        {{end}}
+        Database {{range $database := .Vars.Databases}} "{{$database}}" {{end}}
+        Dimensions "{{.Dims}}"
+      </Module>

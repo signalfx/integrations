@@ -1,0 +1,163 @@
+apiVersion: v1
+data:
+  user.yml: |
+    # Set the ingestURL to forward metrics to SignalFx
+    # ingestURL: https://ingest.signalfx.com
+
+    proxy:
+        # Uncomment and enter value below to configure HTTP proxy.
+        #http:
+
+        # Uncomment and enter value below to configure HTTPS proxy.
+        #https:
+
+        # Uncomment below and enter IP or domains to exclude from proxying.
+        # Multiple entries can be entered as a comma-separated list.
+        #skip:
+
+    kubernetes:
+      # Set to one of master or worker.
+      role: worker
+
+      # Replace CLUSTER_NAME with the name of your cluster to be attached as a
+      # dimension to all metrics.
+      cluster: CLUSTER_NAME
+
+      kubeletAPI:
+        # tls:
+        #   # Set to true to ignore certificate verification checks connecting to kubelet.
+        #   skipVerify: false
+
+        # # Set to file path of CA certificate used for signing kubelet TLS certificate.
+        #   caCert:
+
+        # # Set to file path of client certificate used to authenticate with kubelet.
+        #   clientCert:
+
+        # # Set to file path of client private key used to authenticate with kubelet.
+        #   clientKey:
+
+      kubernetesAPI:
+        # Set ‘authType’ to ‘tls’ and set the below values if you don’t want to use service accounts.  Service accounts require no additional config in the agent.
+        authType: serviceAccount
+        # tls:
+        #   # Set to file path of CA certificate used for signing K8s API TLS certificate.
+        #   caCert:
+
+        #   # Set to file path of client certificate used to authenticate with the K8s API.
+        #   clientCert:
+
+        #   # Set to file path of client private key used to authenticate with the K8s API.
+        #   clientKey:
+
+      clusterMetrics:
+        # How often to report k8s cluster metrics
+        intervalSeconds: 10
+        # # Set to true to always report cluster metrics, otherwise the agents
+        # # will decide among themselves which agent will report cluster
+        # # metrics automatically
+        # alwaysClusterReporter: false
+        # # List cluster metrics we should or should not collect
+        # metricFilter:
+        # - "!kubernetes.replica_set.available"
+        # - "!kubernetes.replica_set.desired"
+        # # only include metrics from the default namespace (as well as non-namespaced metrics)
+        # namespaceFilter:
+        # - default
+
+      # # Set the cadvisor url
+      # cadvisorURL: http://localhost:4194
+
+      # # Set the interval at which cadvisor reports metrics
+      # cadvisorSendRate: 30
+
+      # # List metrics cadvisor should not collect
+      cadvisorDisabledMetrics:
+         - container_last_seen
+         - container_cpu_user_seconds_total
+         - container_cpu_system_seconds_total
+         - container_cpu_usage_seconds_total
+      #   - container_cpu_utilization
+         - container_cpu_utilization_per_core
+      #   - container_memory_failcnt
+      #   - container_memory_usage_bytes
+      #   - container_memory_working_set_bytes
+      #   - container_memory_failures_total
+      #   - container_fs_limit_bytes
+      #   - container_fs_usage_bytes
+         - container_fs_reads_total
+         - container_fs_sector_reads_total
+         - container_fs_reads_merged_total
+         - container_fs_read_seconds_total
+         - container_fs_writes_total
+         - container_fs_sector_writes_total
+         - container_fs_writes_merged_total
+         - container_fs_write_seconds_total
+         - container_fs_io_current
+         - container_fs_io_time_seconds_total
+         - container_fs_io_time_weighted_seconds_total
+         - pod_network_receive_bytes_total
+         - pod_network_receive_packets_total
+         - pod_network_receive_packets_dropped_total
+         - pod_network_receive_errors_total
+         - pod_network_transmit_bytes_total
+         - pod_network_transmit_packets_total
+         - pod_network_transmit_packets_dropped_total
+         - pod_network_transmit_errors_total
+      #   - container_tasks_state
+         - machine_cpu_frequency_khz
+
+    collectd:
+      # # Set the collectd interval
+      # interval: 15
+
+      # # Set the collectd timeout
+      # timeout: 2
+
+      # # Set the number of read threads for collectd
+      # readThreads: 5
+
+      # # Set whether to collect internal stats about collectd
+      # collectInternalStats: true
+
+      # # Set the upperbound limit for the collectd write queue
+      # writeQueueLimitHigh: 500000
+
+      # # Set the lowerbound limit for the collectd write queue
+      # writeQueueLimitLow: 400000
+
+    # Filters to prevent the cadvisor and collectd-docker plugins from reporting
+    # on containers matching the specified regexp patterns
+    filterContianerMetrics:
+      # filter containers with kubernetes pod names matching the following patterns
+      kubernetesPodNames:
+      # - "^signalfx-agent*" # do not report metrics on the signalfx-agent container
+
+      # filter containers with image names matching the following patterns
+      # NOTE: the docker engine reports image tags in the image name i.e. "elasticsearch:latest"
+      images:
+      - "^grc\\.io/google_containers/pause-*" # ignore kubernetes puase containers
+
+      # # filter containers with names matching the following patterns
+      # dockerContainerNames:
+      # - ".*"
+
+      # # filter containers with kubernetes container names matching the following patterns
+      # kubernetesContainerNames:
+      # - ".*"
+
+      # # filter containers with kubernetes namespaces matching the following patterns
+      # kubernetesNamespaces:
+      # - "^dev$"
+      # - "^test$"
+
+      # # filter containers with label keys and values matching the following patterns
+      # labels:
+      # - key: "^environment$"
+      #   value: "^dev$"
+      # - key: "^environment$"
+      #   value: "^test$"
+
+kind: ConfigMap
+metadata:
+  name: signalfx-agent
