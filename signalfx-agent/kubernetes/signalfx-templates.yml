@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+# Override templates here by using the file as the key name and including its contents. For example:
+#
+# default-plugins.conf.tmpl: |
+#   LoadPlugin disk
+#   <Plugin "disk">
+#     Disk "/^loop\d+$/"
+#     Disk "/^dm-\d+$/"
+#     IgnoreSelected "true"
+#   </Plugin>
+kind: ConfigMap
+metadata:
+  name: signalfx-templates
