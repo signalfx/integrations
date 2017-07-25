@@ -1,5 +1,5 @@
 { "display_name":"Kubernetes",
-  "description": "Monitor Kubernetes using SignalFx's integration with cAdvisor and the Kubernetes API.",
+  "description": "Monitor Kubernetes using the SignalFx integration with cAdvisor and the Kubernetes API.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/kubernetes",
   "code": "https://github.com/signalfx/cadvisor-integration",
   "featured": false,
