@@ -22,14 +22,22 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
 
 ### INSTALLATION
 
-1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
-
-         yum install collectd-haproxy
-         
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
+1. Download the [collectd-haproxy-plugin](https://github.com/signalfx/collectd-haproxy) git repo to `/usr/share/collectd/collectd-haproxy`
 1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) for this plugin to `/etc/collectd/managed_config`.
 1. Modify the sample configuration file as described in [Configuration](#configuration), below.
+1. `SELINUX ONLY` Create a SELinux policy package using the supplied type enforcement file.  Enter the commands below to create and install the policy package.
+
+        $ cd /usr/share/collectd/collectd-haproxy/selinux
+        $ checkmodule -M -m -o collectd-haproxy.mod collectd-haproxy.te
+        checkmodule:  loading policy configuration from collectd-haproxy.te
+        checkmodule:  policy configuration loaded
+        checkmodule:  writing binary representation (version 17) to collectd-haproxy.mod
+        $ semodule_package -o collectd-haproxy.pp -m collectd-haproxy.mod
+        $ sudo semodule -i collectd-haproxy.pp
+        $ sudo reboot
+
 1. Restart collectd.
+
 
 ### CONFIGURATION
 
