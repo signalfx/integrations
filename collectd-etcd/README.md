@@ -1,4 +1,4 @@
-[](https://github.com/signalfx/integrations/blob/master/collectd-etcd/img/integrations_etcd.png) etcd
+#![](https://github.com/signalfx/integrations/blob/master/collectd-etcd/img/integrations_etcd.png) etcd
 
 _This directory consolidates all the metadata associated with the etcd plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-etcd)_
 
