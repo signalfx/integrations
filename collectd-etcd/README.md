@@ -14,7 +14,7 @@ _This directory consolidates all the metadata associated with the etcd plugin fo
 
 This is the SignalFx etcd plugin. Follow these instructions to install the etcd plugin for collectd.
 
-The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metric](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
+The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metrics](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -151,7 +151,7 @@ By default, metrics about a member, leader and store are provided. Click [here](
 
 
 #### Metric naming
-`<metric type>.etcd.<endpoint name>.<name of metric>`. This is the format of default metric names reported by the plugin. The optional metrics are named as available from the `/metrics` endpoint with `_` replaced by `.`.
+`<metric type>.etcd.<endpoint name>.<name of metric>`. This is the format of default metric names reported by the plugin. Optional metrics are named as available from the `/metrics` endpoint with `_` replaced by `.`.
 
 
 ### LICENSE
