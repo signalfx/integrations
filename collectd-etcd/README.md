@@ -64,7 +64,7 @@ Using the example configuration file [10-etcd.conf](https://github.com/signalfx/
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-etcd/" |
 | Host | Define the host name of the etcd member | "localhost" |
 | Port | Define the port at which the member can be reached | "2379" |
-| Cluster | Name of this etcd cluster. | 1 |
+| Cluster | Name of this etcd cluster. | "1" |
 | EnhancedMetrics | Takes a boolean indicated whether stats from ```/metrics``` are needed | "false" |
 | IncludeMetric | Takes a metric name from the ```/metric``` endpoint that has to included | metric_name_from_metrics_endpoint |
 | ExcludeMetric | Takes a metric name from the ```/metric``` endpoint that has to excluded | metric_name_from_metrics_endpoint |
