@@ -23,7 +23,7 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 | Software  | Version        |
 |-----------|----------------|
 | collectd  |  4.9 or later  |
-| python | 2.7 or later |
+| python | 2.6 or later |
 | etcd | 2.0.8 or later |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
@@ -95,7 +95,6 @@ LoadPlugin python
     ssl_certificate "/Users/as001/work/play/etcd/etcd-ca/etcd-ca/certs/etcd-client.crt"
     ssl_ca_certs "/Users/as001/work/play/etcd/etcd-ca/etcd-ca/certs/ca.crt"
     ssl_cert_validation True
-    Verbose true
   </Module>
 </Plugin>
 ```
