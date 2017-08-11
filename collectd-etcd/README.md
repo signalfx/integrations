@@ -68,7 +68,7 @@ Using the example configuration file [10-etcd.conf](https://github.com/signalfx/
 | EnhancedMetrics | Takes a boolean indicated whether stats from ```/metrics``` are needed | "false" |
 | IncludeMetric | Takes a metric name from the ```/metric``` endpoint that has to included | metric_name_from_metrics_endpoint |
 | ExcludeMetric | Takes a metric name from the ```/metric``` endpoint that has to excluded | metric_name_from_metrics_endpoint |
-| Dimension | Takes space separated key-value pair for a user-defined dimension | "dimension_name dimension_value" |
+| Dimension | Takes space separated key-value pair for a user-defined dimension | dimension_name dimension_value |
 | Interval | Number of seconds between calls to etcd API. | 10 |
 | ssl_keyfile | Path to the keyfile | path to file |
 | ssl_certificate | Path to the certificate | path to file |
