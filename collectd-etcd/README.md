@@ -87,7 +87,7 @@ LoadPlugin python
     Host "localhost"
     Port "2379"
     Interval 10
-    Cluster 1
+    Cluster "1"
     Dimension dimension_name dimension_value
     EnhancedMetrics False
     IncludeMetric metric_name_from_metrics_endpoint
