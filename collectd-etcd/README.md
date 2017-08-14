@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-etcd/img/integrations_etcd.png) etcd
+# ![](./img/integrations_etcd.png) etcd
 
 _This directory consolidates all the metadata associated with the etcd plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-etcd)_
 
@@ -31,7 +31,7 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 
 1. Download [collectd-etcd](https://github.com/signalfx/collectd-etcd). Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`.
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-etcd/10-etcd.conf) for this plugin to `/etc/collectd/managed_config`.
+2. Modify the [sample configuration file](./10-etcd.conf) for this plugin to `/etc/collectd/managed_config`.
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
@@ -57,7 +57,7 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 
 ### CONFIGURATION
 
-Using the example configuration file [10-etcd.conf](https://github.com/signalfx/integrations/tree/master/collectd-etcd/10-etcd.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the etcd members
+Using the example configuration file [10-etcd.conf](./10-etcd.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the etcd members
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
