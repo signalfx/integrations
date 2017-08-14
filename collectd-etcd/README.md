@@ -147,7 +147,7 @@ A few other details:
 
 
 ### METRICS
-By default, metrics about a member, leader and store are provided. Click [here](./docs) for details. Metrics from ```/metrics``` endpoint can be activated through the configuration file. See [usage](#usage) for details.
+By default, metrics about a member, leader and store are provided. Click [here](./docs) for details. Metrics from ```/metrics``` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
 
 
 #### Metric naming
