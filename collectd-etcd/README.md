@@ -38,27 +38,6 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 4. Restart collectd.
 
 
-### FEATURES
-
-#### Built-in dashboards
-
-- **ETCD CLUSTER**: Provides a high-level overview of metrics for a single etcd cluster.
-
-  [<img src='./img/etcd_member.png' width=200px>](./img/etcd_cluster.png)
-
-  Below is a brief description for each of the charts on this dashboard.
-
-  - **Number of followers**: test
-
-- **ETCD INSTANCE**: Provides metrics from a single etcd instance.
-
-  [<img src='./img/etcd_leader.png' width=200px>](./img/etcd_instance.png)  
-
-- **ETCD INSTANCES**: Provides metrics from hosts on a particular host.
-
-  [<img src='./img/etcd_store.png' width=200px>](./img/etcd_instacnes.png)
-
-
 ### CONFIGURATION
 
 Using the example configuration file [10-etcd.conf](./10-etcd.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the etcd members
@@ -137,6 +116,46 @@ LoadPlugin python
 ```
 
 ### USAGE
+
+#### Built-in dashboards
+
+- **ETCD CLUSTER**: Provides a high-level overview of metrics for a single etcd cluster.
+
+  [<img src='./img/etcd_member.png' width=200px>](./img/etcd_cluster.png)
+
+  Below is a brief description for each of the charts on this dashboard.
+
+  - **Number of Followers**: Shows the number of followers in the cluster. A cluster that is expected to have 2n + 1 members, can tolerate failure of n members. By virtue of raft consensus algorithm, a cluster should have at least 3 members
+
+  - **Number of Watchers**: Shows the total number of watchers on all the members of the cluster put together. Gives an overview of memory consumption by the watchers on the cluster as a whole
+
+  - **Top Watchers**: Get an overview of the members that are being requested for watching. Watching is consumes memory
+
+  - **Top Current Latency**: Gives an overview of the followers with max current latency with the leader. Since raft relies on log replication throughout all the members, this is helps in flushing out followers that logo_large
+
+  - **Total RPC Requests (successful/failed)**: A stacked chart that shows successful (in green) and failed (in red) RPC requests per second across all the followers. Leader sends RPC requests and followers receive
+
+  - **Per Member Failed RPCs**: A stacked chart showing failed RPC requests per second on a per follower basis. On comparing this chart with one above, followers that cause more failures can be flushed out
+
+  - **Top RPC Requests**: Followers with top RPC requests, both successful and failed
+
+  - **Store operations (successful/failed)**: This includes the next 6 charts: Creates, Sets, Updates, Deletes, Compare-and-Swaps and Compare-and-Deletes. These charts are stacked charts that show successful operations (in green) and failed operations (in red) per second. This gives an idea of the ratio between success and failure
+
+  - **Receive Packet Rate**: Stacked chart of the packets received per second for each follower. At given point in time, followers receive packets from the leader (leader sends information as part of log replication)
+
+  - **Receive Append Requests**: Stacked chart of the append requests received per second for each follower. At given point in time, followers receive append requests from the leader (leader sends information as part of log replication)
+
+  - **Send Packet Rate**: Chart for the packets sent per second for the leader. At given point in time, only leader sends packets. In the ideal world, every packet sent by the leader should be received by one of the followers. Comparing this chart with **Receive Packet Rate** would explain if packets are not received by followers (or an individual follower). Latency can also be observed through these charts
+
+  - **Send Append Requests**: Chart for the append requests sent per second for the leader. At given point in time, only leader sends append requests. In the ideal world, all append requests sent by the leader should be received by one of the followers. Comparing this chart with **Receive Append Requests** would explain if append requests are not received by followers (or an individual follower). Latency can also be observed through these charts
+
+- **ETCD INSTANCE**: Provides metrics from a single etcd instance.
+
+  [<img src='./img/etcd_leader.png' width=200px>](./img/etcd_instance.png)  
+
+- **ETCD INSTANCES**: Provides metrics from hosts on a particular host.
+
+  [<img src='./img/etcd_store.png' width=200px>](./img/etcd_instacnes.png)
 All metrics reported by the etcd collectd plugin will contain the following dimensions by default:
 
 * `state`, whether the member is a follower or a leader
