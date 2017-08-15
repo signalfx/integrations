@@ -142,13 +142,13 @@ LoadPlugin python
 
   - **Number of Followers**: Shows the number of followers in the cluster. A cluster that is expected to have 2n + 1 members, can tolerate failure of n members. By virtue of raft consensus algorithm, a cluster should have at least 3 members
 
-    [<img src='./img/chart-etcd-cluster-number-followers.png' >](./img/chart-etcd-cluster-number-followers.png)
+    [<img src='./img/chart-etcd-cluster-number-followers.png' width=200px>](./img/chart-etcd-cluster-number-followers.png)
 
   - **Number of Watchers**: Shows the total number of watchers on all the members of the cluster put together. Gives an overview of memory consumption by the watchers on the cluster as a whole
 
     [<img src='./img/chart-etcd-cluster-number-watchers.png' width=200px>](./img/chart-etcd-cluster-number-watchers.png)
 
-  - **Top Watchers**: Get an overview of the members that are being requested for watching. Watching is memory intensive
+  - **Top Watchers**: Get an overview of the members that are being requested for watching. Watching is memory intensive. The list gives information about the members and the corresponding states
 
     [<img src='./img/chart-etcd-cluster-Max-Watchers.png' width=200px>](./img/chart-etcd-cluster-Max-Watchers.png)
 
@@ -197,37 +197,69 @@ LoadPlugin python
 
   - **Number of Watchers**: Shows the number of watchers on this particular instance. Watching is memory intensive
 
+    [<img src='./img/chart-etcd-instance-number-watchers.png' width=200px>](./img/chart-etcd-instance-number-watchers.png)
+
   - **Expire Rate**: The number of keys and directories that expire per second. This is common to store. However, when a member leaves the cluster, this metric becomes instance specific
+
+    [<img src='./img/chart-etcd-instance-expire-rate.png' width=200px>](./img/chart-etcd-instance-expire-rate.png)
 
   - **Gets (successful/failed)**: A stacked chart that shows successful gets (in green) and failed gets (in red) per second. This gives insight to the ratio between successful and failed get requests per second
 
+    [<img src='./img/chart-etcd-instance-gets.png' width=200px>](./img/chart-etcd-instance-gets.png)
+
   - **Receive / Send Bandwidth Rate** A line graph showing both, sent (in blue) and received (in green) bandwidth rate for the instance. Followers receive and Leader sends
 
+    [<img src='./img/chart-etcd-instance-bandwidth.png' width=200px>](./img/chart-etcd-instance-bandwidth.png)
+
   - **Receive / Send Append Requests** A line graph showing both, sent (in blue) and received (in green) append requests per second for the instance. Followers receive and Leader sends
+
+    [<img src='./img/chart-etcd-instance-appends.png' width=200px>](./img/chart-etcd-instance-appends.png)
 
 - **ETCD INSTANCES**: Provides metrics from hosts on a particular host.
 
   - **Number of instances**: The total number of etcd isntances running on the host, group by type (follower/leader)
 
+    [<img src='./img/chart-etcd-instances-number-instances.png' width=200px>](./img/chart-etcd-instances-number-instances.png)
+
   - **Instances by Number of Watchers**: A line graph that shows number of watchers on each of the instances on the host. Instances with more number of watchers consume more memory
+
+    [<img src='./img/chart-etcd-instances-number-watchers.png' width=200px>](./img/chart-etcd-instances-number-watchers.png)
 
   - **Instances with Most Number of Wacthers**: Shows the instances with most number of watchers. Watching is memory intensive
 
+    [<img src='./img/chart-etcd-instances-most-watchers.png' width=200px>](./img/chart-etcd-instances-most-watchers.png)
+
   - **Packets Exchange Trend**: A stack chart showing packets sent (in blue) and received (in green) across all instances on the host. Gives an idea of bandwidth usage
+
+    [<img src='./img/chart-etcd-instances-packets.png' width=200px>](./img/chart-etcd-instances-packets.png)
 
   - **Bandwidth Trend Rate**: A stack chart showing send bandwidth (in blue) and receive bandwidth (in green) rates across all instances on the host. Gives an idea of bandwidth usage and should shows similar trends as the above chart
 
+    [<img src='./img/chart-etcd-instances-bandwidth.png' width=200px>](./img/chart-etcd-instances-bandwidth.png)
+
   - **Top Bandwidth Rate**: Gives a list of the instances that consume max bandwidth, both for sending and receiving put together
+
+    [<img src='./img/chart-etcd-instances-top-bandwidth.png' width=200px>](./img/chart-etcd-instances-top-bandwidth.png)
 
   - **Gets Successful Trend**: A stack chart showing the number of successful get operations per second
 
+    [<img src='./img/chart-etcd-instances-gets-success.png' width=200px>](./img/chart-etcd-instances-gets-success.png)
+
   - **Gets Failed Trend**: A stack chart showing the number of failed get operations per second. Compare with above chart to analyze the success ratio
+
+    [<img src='./img/chart-etcd-instances-gets-fail.png' width=200px>](./img/chart-etcd-instances-gets-fail.png)
 
   - **Top Gets per second** A list of the instances on the host that perform the max number of gets per second, both successful and failed gets put together
 
+    [<img src='./img/chart-etcd-instances-gets-top.png' width=200px>](./img/chart-etcd-instances-gets-top.png)
+
   - **Expire Rate Trend**: A line chart showing the rate of expiry of keys/directories for each of the instances
 
+  [<img src='./img/chart-etcd-instances-expire-trend.png' width=200px>](./img/chart-etcd-instances-expire-trend.png)
+
   - **Top Expire Rate**: A list of the instances with top expire rates. Can be used analyze if gets fail due to a high expiry rate
+
+    [<img src='./img/chart-etcd-instances-top-expire.png' width=200px>](./img/chart-etcd-instances-top-expire.png)
 
 All metrics reported by the etcd collectd plugin will contain the following dimensions by default:
 
