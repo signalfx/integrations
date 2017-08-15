@@ -46,6 +46,10 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 
   [<img src='./img/etcd_member.png' width=200px>](./img/etcd_cluster.png)
 
+  Below is a brief description for each of the charts on this dashboard.
+
+  - *Number of followers*: test
+
 - **ETCD INSTANCE**: Provides metrics from a single etcd instance.
 
   [<img src='./img/etcd_leader.png' width=200px>](./img/etcd_instance.png)  
