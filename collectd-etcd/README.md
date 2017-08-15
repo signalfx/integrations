@@ -150,7 +150,7 @@ LoadPlugin python
 
     [<img src='./img/chart-etcd-cluster-number-watchers.png' width=200px>](./img/chart-etcd-cluster-number-watchers.png)
 
-  - **Top Watchers**: Get an overview of the members that are being requested for watching. Watching is memory intensive. The list gives information about the members (```host:port``` information) and the corresponding states
+  - **Followers with Max Number of Watchers**: Get an overview of the members that are being requested for watching. Watching is memory intensive. The list gives information about the members (```host:port``` information) and the corresponding states
 
     [<img src='./img/chart-etcd-cluster-Max-Watchers.png' width=200px>](./img/chart-etcd-cluster-Max-Watchers.png)
 
