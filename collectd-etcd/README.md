@@ -77,7 +77,6 @@ Using the example configuration file [10-etcd.conf](./10-etcd.conf) as a guide, 
 | ssl_keyfile | Path to the keyfile | path to file |
 | ssl_certificate | Path to the certificate | path to file |
 | ssl_ca_certs | Path to the ca file | path to file |
-| ssl_cert_validation | Takes a boolean to enable cert validation | "false" |
 
 Example configuration:
 
@@ -98,7 +97,6 @@ LoadPlugin python
     ssl_keyfile "/Users/as001/work/play/etcd/etcd-ca/etcd-ca/private/etcd-client.key"
     ssl_certificate "/Users/as001/work/play/etcd/etcd-ca/etcd-ca/certs/etcd-client.crt"
     ssl_ca_certs "/Users/as001/work/play/etcd/etcd-ca/etcd-ca/certs/ca.crt"
-    ssl_cert_validation True
   </Module>
 </Plugin>
 ```
