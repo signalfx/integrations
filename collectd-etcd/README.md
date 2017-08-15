@@ -142,7 +142,7 @@ LoadPlugin python
 
   - **Number of Followers**: Shows the number of followers in the cluster. A cluster that is expected to have 2n + 1 members, can tolerate failure of n members. By virtue of raft consensus algorithm, a cluster should have at least 3 members
 
-    [<img src='./img/chart-etcd-cluster-number-followers.png' width=200px>](./img/chart-etcd-cluster-number-followers.png)
+    [<img src='./img/chart-etcd-cluster-number-followers.png' >](./img/chart-etcd-cluster-number-followers.png)
 
   - **Number of Watchers**: Shows the total number of watchers on all the members of the cluster put together. Gives an overview of memory consumption by the watchers on the cluster as a whole
 
