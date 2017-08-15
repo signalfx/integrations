@@ -16,6 +16,23 @@ This is the SignalFx etcd plugin. Follow these instructions to install the etcd 
 
 The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metrics](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
 
+#### FEATURES
+
+#### Built-in dashboards
+
+- **ETCD CLUSTER**: Provides a high-level overview of metrics for a single etcd cluster.
+
+  [<img src='./img/etcd_member.png' width=200px>](./img/etcd_cluster.png)
+
+- **ETCD INSTANCE**: Provides metrics from a single etcd instance.
+
+  [<img src='./img/etcd_leader.png' width=200px>](./img/etcd_instance.png)  
+
+- **ETCD INSTANCES**: Provides metrics from hosts on a particular host.
+
+  [<img src='./img/etcd_store.png' width=200px>](./img/etcd_instacnes.png)
+
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 #### Version information
@@ -119,11 +136,7 @@ LoadPlugin python
 
 #### Built-in dashboards
 
-- **ETCD CLUSTER**: Provides a high-level overview of metrics for a single etcd cluster.
-
-  [<img src='./img/etcd_member.png' width=200px>](./img/etcd_cluster.png)
-
-  Below is a brief description for each of the charts on this dashboard.
+- **ETCD CLUSTER**: Below is a brief description for each of the charts on this dashboard.
 
   - **Number of Followers**: Shows the number of followers in the cluster. A cluster that is expected to have 2n + 1 members, can tolerate failure of n members. By virtue of raft consensus algorithm, a cluster should have at least 3 members
 
@@ -151,11 +164,9 @@ LoadPlugin python
 
 - **ETCD INSTANCE**: Provides metrics from a single etcd instance.
 
-  [<img src='./img/etcd_leader.png' width=200px>](./img/etcd_instance.png)  
-
 - **ETCD INSTANCES**: Provides metrics from hosts on a particular host.
 
-  [<img src='./img/etcd_store.png' width=200px>](./img/etcd_instacnes.png)
+
 All metrics reported by the etcd collectd plugin will contain the following dimensions by default:
 
 * `state`, whether the member is a follower or a leader
