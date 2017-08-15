@@ -22,15 +22,17 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 
 - **ETCD CLUSTER**: Provides a high-level overview of metrics for a single etcd cluster.
 
-  [<img src='./img/etcd_member.png' width=200px>](./img/etcd_cluster.png)
+  [<img src='./img/etcd-cluster-dashboard-top.png' width=200px>](./img/etcd-cluster-dashboard-top.png)
+
+  [<img src='./img/etcd-cluster-dashboard-bottom.png' width=200px>](./img/etcd-cluster-dashboard-bottom.png)  
 
 - **ETCD INSTANCE**: Provides metrics from a single etcd instance.
 
-  [<img src='./img/etcd_leader.png' width=200px>](./img/etcd_instance.png)  
+  [<img src='./img/etcd-instance-dashboard.png' width=200px>](./img/etcd-instance-dashboard.png)  
 
 - **ETCD INSTANCES**: Provides metrics from hosts on a particular host.
 
-  [<img src='./img/etcd_store.png' width=200px>](./img/etcd_instacnes.png)
+  [<img src='./img/etcd-instances-dashboard.png' width=200px>](./img/etcd-instance-dashboard.png)
 
 
 ### REQUIREMENTS AND DEPENDENCIES
