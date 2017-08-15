@@ -48,13 +48,15 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 
 ### INSTALLATION
 
-1. Download [collectd-etcd](https://github.com/signalfx/collectd-etcd). Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`.
+1. Download [collectd-etcd](https://github.com/signalfx/collectd-etcd). Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`
 
-2. Modify the [sample configuration file](./10-etcd.conf) for this plugin to `/etc/collectd/managed_config`.
+2. Modify the [sample configuration file](./10-etcd.conf) for this plugin to `/etc/collectd/managed_config`
 
-3. Modify the sample configuration file as described in [Configuration](#configuration), below.
+3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
-4. Restart collectd.
+4. Install the Python requirements with sudo ```pip install -r requirements.txt```
+
+5. Restart collectd
 
 
 ### CONFIGURATION
