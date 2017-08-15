@@ -142,27 +142,56 @@ LoadPlugin python
 
   - **Number of Followers**: Shows the number of followers in the cluster. A cluster that is expected to have 2n + 1 members, can tolerate failure of n members. By virtue of raft consensus algorithm, a cluster should have at least 3 members
 
+    [<img src='./img/chart-etcd-cluster-number-followers.png' width=200px>](./img/chart-etcd-cluster-number-followers.png)
+
   - **Number of Watchers**: Shows the total number of watchers on all the members of the cluster put together. Gives an overview of memory consumption by the watchers on the cluster as a whole
 
-  - **Top Watchers**: Get an overview of the members that are being requested for watching. Watching is consumes memory
+    [<img src='./img/chart-etcd-cluster-number-watchers.png' width=200px>](./img/chart-etcd-cluster-number-watchers.png)
+
+  - **Top Watchers**: Get an overview of the members that are being requested for watching. Watching is memory intensive
+
+    [<img src='./img/chart-etcd-cluster-Max-Watchers.png' width=200px>](./img/chart-etcd-cluster-Max-Watchers.png)
 
   - **Top Current Latency**: Gives an overview of the followers with max current latency with the leader. Since raft relies on log replication throughout all the members, this is helps in flushing out followers that logo_large
 
+    [<img src='./img/chart-etcd-cluster-top-latency.png' width=200px>](./img/chart-etcd-cluster-top-latency.png)
+
   - **Total RPC Requests (successful/failed)**: A stacked chart that shows successful (in green) and failed (in red) RPC requests per second across all the followers. Leader sends RPC requests and followers receive
+
+    [<img src='./img/chart-etcd-cluster-total-rpcs.png' width=200px>](./img/chart-etcd-cluster-total-rpcs.png)
 
   - **Per Member Failed RPCs**: A stacked chart showing failed RPC requests per second on a per follower basis. On comparing this chart with one above, followers that cause more failures can be flushed out
 
+    [<img src='./img/chart-etcd-cluster-member-rpc-failure.png' width=200px>](./img/chart-etcd-cluster-member-rpc-failure.png)
+
   - **Top RPC Requests**: Followers with top RPC requests, both successful and failed
+
+    [<img src='./img/chart-etcd-cluster-top-rpcs.png' width=200px>](./img/chart-etcd-cluster-top-rpcs.png)
 
   - **Store operations (successful/failed)**: This includes the following charts: Creates, Sets, Updates, Deletes, Compare-and-Swaps and Compare-and-Deletes. These charts are stacked charts that show successful operations (in green) and failed operations (in red) per second. This gives an idea of the ratio between success and failure for each operation type
 
+    [<img src='./img/chart-etcd-cluster-creates.png' width=200px>](./img/chart-etcd-cluster-creates.png)
+    [<img src='./img/chart-etcd-cluster-sets.png' width=200px>](./img/chart-etcd-cluster-sets.png)
+    [<img src='./img/chart-etcd-cluster-updates.png' width=200px>](./img/chart-etcd-cluster-updates.png)
+    [<img src='./img/chart-etcd-cluster-deletes.png' width=200px>](./img/chart-etcd-cluster-deletes.png)
+    [<img src='./img/chart-etcd-cluster-cas.png' width=200px>](./img/chart-etcd-cluster-cas.png)
+    [<img src='./img/chart-etcd-cluster-cad.png' width=200px>](./img/chart-etcd-cluster-cad.png)
+
   - **Receive Packet Rate**: Stacked chart of the packets received per second for each follower. At given point in time, followers receive packets from the leader (leader sends information as part of log replication)
+
+    [<img src='./img/chart-etcd-cluster-packet-recv.png' width=200px>](./img/chart-etcd-cluster-packet-recv.png)
 
   - **Receive Append Requests**: Stacked chart of the append requests received per second for each follower. At given point in time, followers receive append requests from the leader (leader sends information as part of log replication)
 
+    [<img src='./img/chart-etcd-cluster-append-recv.png' width=200px>](./img/chart-etcd-cluster-append-recv.png)
+
   - **Send Packet Rate**: Chart for the packets sent per second for the leader. At given point in time, only leader sends packets. In the ideal world, every packet sent by the leader should be received by one of the followers. Comparing this chart with **Receive Packet Rate** would explain if packets are not received by followers (or an individual follower). Latency can also be observed through these charts
 
+    [<img src='./img/chart-etcd-cluster-packet-sent.png' width=200px>](./img/chart-etcd-cluster-packet-sent.png)
+
   - **Send Append Requests**: Chart for the append requests sent per second for the leader. At given point in time, only leader sends append requests. In the ideal world, all append requests sent by the leader should be received by one of the followers. Comparing this chart with **Receive Append Requests** would explain if append requests are not received by followers (or an individual follower). Latency can also be observed through these charts
+
+    [<img src='./img/chart-etcd-cluster-append-sent.png' width=200px>](./img/chart-etcd-cluster-append-sent.png)
 
 - **ETCD INSTANCE**:
 
