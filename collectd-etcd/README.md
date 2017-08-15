@@ -134,9 +134,9 @@ LoadPlugin python
 
 ### USAGE
 
-#### Built-in dashboards
+#### Interpreting Built-in dashboards
 
-- **ETCD CLUSTER**: Below is a brief description for each of the charts on this dashboard.
+- **ETCD CLUSTER**:
 
   - **Number of Followers**: Shows the number of followers in the cluster. A cluster that is expected to have 2n + 1 members, can tolerate failure of n members. By virtue of raft consensus algorithm, a cluster should have at least 3 members
 
@@ -152,7 +152,7 @@ LoadPlugin python
 
   - **Top RPC Requests**: Followers with top RPC requests, both successful and failed
 
-  - **Store operations (successful/failed)**: This includes the next 6 charts: Creates, Sets, Updates, Deletes, Compare-and-Swaps and Compare-and-Deletes. These charts are stacked charts that show successful operations (in green) and failed operations (in red) per second. This gives an idea of the ratio between success and failure
+  - **Store operations (successful/failed)**: This includes the following charts: Creates, Sets, Updates, Deletes, Compare-and-Swaps and Compare-and-Deletes. These charts are stacked charts that show successful operations (in green) and failed operations (in red) per second. This gives an idea of the ratio between success and failure for each operation type
 
   - **Receive Packet Rate**: Stacked chart of the packets received per second for each follower. At given point in time, followers receive packets from the leader (leader sends information as part of log replication)
 
@@ -162,10 +162,41 @@ LoadPlugin python
 
   - **Send Append Requests**: Chart for the append requests sent per second for the leader. At given point in time, only leader sends append requests. In the ideal world, all append requests sent by the leader should be received by one of the followers. Comparing this chart with **Receive Append Requests** would explain if append requests are not received by followers (or an individual follower). Latency can also be observed through these charts
 
-- **ETCD INSTANCE**: Provides metrics from a single etcd instance.
+- **ETCD INSTANCE**:
+
+  - **Number of Watchers**: Shows the number of watchers on this particular instance. Watching is memory intensive
+
+  - **Expire Rate**: The number of keys and directories that expire per second. This is common to store. However, when a member leaves the cluster, this metric becomes instance specific
+
+  - **Gets (successful/failed)**: A stacked chart that shows successful gets (in green) and failed gets (in red) per second. This gives insight to the ratio between successful and failed get requests per second
+
+  - **Receive / Send Bandwidth Rate** A line graph showing both, sent (in blue) and received (in green) bandwidth rate for the instance. Followers receive and Leader sends
+
+  - **Receive / Send Append Requests** A line graph showing both, sent (in blue) and received (in green) append requests per second for the instance. Followers receive and Leader sends
 
 - **ETCD INSTANCES**: Provides metrics from hosts on a particular host.
 
+  - **Number of instances**: The total number of etcd isntances running on the host, group by type (follower/leader)
+
+  - **Instances by Number of Watchers**: A line graph that shows number of watchers on each of the instances on the host. Instances with more number of watchers consume more memory
+
+  - **Instances with Most Number of Wacthers**: Shows the instances with most number of watchers. Watching is memory intensive
+
+  - **Packets Exchange Trend**: A stack chart showing packets sent (in blue) and received (in green) across all instances on the host. Gives an idea of bandwidth usage
+
+  - **Bandwidth Trend Rate**: A stack chart showing send bandwidth (in blue) and receive bandwidth (in green) rates across all instances on the host. Gives an idea of bandwidth usage and should shows similar trends as the above chart
+
+  - **Top Bandwidth Rate**: Gives a list of the instances that consume max bandwidth, both for sending and receiving put together
+
+  - **Gets Successful Trend**: A stack chart showing the number of successful get operations per second
+
+  - **Gets Failed Trend**: A stack chart showing the number of failed get operations per second. Compare with above chart to analyze the success ratio
+
+  - **Top Gets per second** A list of the instances on the host that perform the max number of gets per second, both successful and failed gets put together
+
+  - **Expire Rate Trend**: A line chart showing the rate of expiry of keys/directories for each of the instances
+
+  - **Top Expire Rate**: A list of the instances with top expire rates. Can be used analyze if gets fail due to a high expiry rate
 
 All metrics reported by the etcd collectd plugin will contain the following dimensions by default:
 
