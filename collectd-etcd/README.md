@@ -50,7 +50,7 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 
 1. Download [collectd-etcd](https://github.com/signalfx/collectd-etcd). Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`
 
-2. Modify the [sample configuration file](./10-etcd.conf) for this plugin to `/etc/collectd/managed_config`
+2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf) for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
@@ -61,7 +61,7 @@ The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects
 
 ### CONFIGURATION
 
-Using the example configuration file [10-etcd.conf](./10-etcd.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the etcd members
+Using the example configuration file [10-etcd.conf](https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the etcd members
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
@@ -70,13 +70,13 @@ Using the example configuration file [10-etcd.conf](./10-etcd.conf) as a guide, 
 | Port | Port at which the member can be reached | "2379" |
 | Cluster | Name of this etcd cluster. | "1" |
 | EnhancedMetrics | Boolean to indicate whether stats from ```/metrics``` are needed | "false" |
-| IncludeMetric | Metric name from the ```/metric``` endpoint to include(valid when EnhancedMetrics is "false") | "etcd_debugging_mvcc_slow_watcher_total" |
-| ExcludeMetric | Metric name from the ```/metric``` endpoint to exclude(valid when EnhancedMetrics is "true") | "etcd_server_has_leader" |
-| Dimension | Space separated key-value pair for a user-defined dimension | dimension_name dimension_value |
+| IncludeMetric | Metric name from the ```/metric``` endpoint to include(valid when EnhancedMetrics is "false") | "etcd\_debugging\_mvcc\_slow\_watcher\_total" |
+| ExcludeMetric | Metric name from the ```/metric``` endpoint to exclude(valid when EnhancedMetrics is "true") | "etcd\_server\_has\_leader" |
+| Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to etcd API. | 10 |
-| ssl_keyfile | Path to the keyfile | "path/to/file" |
-| ssl_certificate | Path to the certificate | "path/to/file" |
-| ssl_ca_certs | Path to the ca file | "path/to/file" |
+| ssl\_keyfile | Path to the keyfile | "path/to/file" |
+| ssl\_certificate | Path to the certificate | "path/to/file" |
+| ssl\_ca\_certs | Path to the ca file | "path/to/file" |
 
 Example configuration:
 

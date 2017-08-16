@@ -3,12 +3,12 @@
 }, {
   "marshallId" : 1,
   "sf_description" : "",
-  "sf_service" : "Etcd",
+  "sf_service" : "etcd",
   "sf_type" : "Service"
 }, {
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_page" : "Etcd",
+  "sf_page" : "etcd",
   "sf_type" : "Page"
 }, {
   "marshallId" : 3,
