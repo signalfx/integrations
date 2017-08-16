@@ -66,13 +66,13 @@ Using the example configuration file [10-etcd.conf](./10-etcd.conf) as a guide, 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-etcd/" |
-| Host | Define the host name of the etcd member | "localhost" |
-| Port | Define the port at which the member can be reached | "2379" |
+| Host | Host name of the etcd member | "localhost" |
+| Port | Port at which the member can be reached | "2379" |
 | Cluster | Name of this etcd cluster. | "1" |
-| EnhancedMetrics | Takes a boolean indicated whether stats from ```/metrics``` are needed | "false" |
-| IncludeMetric | Takes a metric name from the ```/metric``` endpoint that has to included | "etcd_debugging_mvcc_slow_watcher_total" |
-| ExcludeMetric | Takes a metric name from the ```/metric``` endpoint that has to excluded | "etcd_server_has_leader" |
-| Dimension | Takes space separated key-value pair for a user-defined dimension | dimension_name dimension_value |
+| EnhancedMetrics | Boolean to indicate whether stats from ```/metrics``` are needed | "false" |
+| IncludeMetric | Metric name from the ```/metric``` endpoint to include | "etcd_debugging_mvcc_slow_watcher_total" |
+| ExcludeMetric | Metric name from the ```/metric``` endpoint to exclude | "etcd_server_has_leader" |
+| Dimension | Space separated key-value pair for a user-defined dimension | dimension_name dimension_value |
 | Interval | Number of seconds between calls to etcd API. | 10 |
 | ssl_keyfile | Path to the keyfile | "path/to/file" |
 | ssl_certificate | Path to the certificate | "path/to/file" |

@@ -1650,7 +1650,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "etcd cluster",
   "sf_description" : "An overview of your etcd cluster",
-  "sf_discoveryQuery" : "plugin:etcd",
+  "sf_discoveryQuery" : "",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -1686,15 +1686,6 @@
       "sizeX" : 3,
       "sizeY" : 1
     }, {
-      "col" : 9,
-      "options" : {
-        "chartIndex" : 1501353788669,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 3,
-      "sizeY" : 1
-    }, {
       "col" : 3,
       "options" : {
         "chartIndex" : 1502581619546,
@@ -1707,6 +1698,15 @@
       "col" : 6,
       "options" : {
         "chartIndex" : 1502672898840,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 3,
+      "sizeY" : 1
+    }, {
+      "col" : 9,
+      "options" : {
+        "chartIndex" : 1501353788669,
         "id" : 0
       },
       "row" : 0,
@@ -2685,15 +2685,6 @@
         "query" : "plugin:\"test-etcd\"",
         "type" : "property",
         "value" : ""
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "cluster",
-        "propertyValue" : "1",
-        "query" : "cluster:1",
-        "type" : "property",
-        "value" : "1"
       } ],
       "seriesData" : {
         "metric" : "gauge.etcd.store.watchers"
@@ -2780,8 +2771,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
   "marshallId" : 23,
@@ -2848,15 +2839,6 @@
         "query" : "state:StateLeader",
         "type" : "dimension",
         "value" : "StateLeader"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "cluster",
-        "propertyValue" : "1",
-        "query" : "cluster:1",
-        "type" : "property",
-        "value" : "1"
       } ],
       "seriesData" : {
         "metric" : "counter.etcd.leader.counts.success"
@@ -2923,15 +2905,6 @@
         "query" : "state:StateLeader",
         "type" : "dimension",
         "value" : "StateLeader"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "cluster",
-        "propertyValue" : "1",
-        "query" : "cluster:1",
-        "type" : "property",
-        "value" : "1"
       } ],
       "seriesData" : {
         "metric" : "counter.etcd.leader.counts.fail",
@@ -3050,8 +3023,8 @@
     },
     "currentUniqueKey" : 9,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 30,
-    "uiHelperValue" : "##CHARTID##_30"
+    "revisionNumber" : 31,
+    "uiHelperValue" : "##CHARTID##_31"
   }
 }, {
   "marshallId" : 24,
@@ -4693,7 +4666,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "etcd instance",
   "sf_description" : "An overview of an etcd instance",
-  "sf_discoveryQuery" : "plugin:etcd",
+  "sf_discoveryQuery" : "",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
