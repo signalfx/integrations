@@ -1,0 +1,10 @@
+{ "display_name":"etcd",
+  "description": "Monitor etcd using the SignalFx collectd agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-etcd",
+  "code": "https://github.com/signalfx/collectd-etcd",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-etcd/img/integrations_etcd.png",
+  "logo_small": "/images/repos/collectd-etcd/img/integrations_etcd%402x.png",
+  "data_signature": "plugin:\"etcd\"",
+  "in_app_categories": ["servicesMonitored"]
+}
