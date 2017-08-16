@@ -1,4 +1,4 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch
 
 _This directory consolidates all the metadata associated with the Elasticsearch collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch)_
 
@@ -68,7 +68,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
 ### CONFIGURATION
 
-Using the example configuration file [20-elasticsearch.conf](https://github.com/signalfx/integrations/tree/master/collectd-elasticsearch/20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored. 
+Using the example configuration file [20-elasticsearch.conf](https://github.com/signalfx/integrations/tree/master/collectd-elasticsearch/20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored.
 
 The plugin is intended to be run on a per-node basis. Define only one "Module" element per `20-elasticsearch.conf` configuration file.
 
@@ -113,7 +113,7 @@ The following table indicates thread pools that can be monitored by this plugin 
 | percolate        |        |&#x2713;     |&#x2713;     |
 | suggest          |        |&#x2713;     |&#x2713;     |
 | force_merge      |        |        |&#x2713;     |
- 
+
 
 #### Note: Using this plugin from a container deployment
 

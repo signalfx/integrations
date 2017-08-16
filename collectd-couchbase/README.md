@@ -1,4 +1,4 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase
 
 _This is a directory that consolidates all the metadata associated with SignalFx's Couchbase integration. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase)_
 
@@ -22,7 +22,7 @@ collects statistics from Couchbase.
 - **Couchbase Clusters**: Overview of data from all Couchbase clusters reporting.
 
   [<img src='./img/dashboard_couchbase_clusters.png' width=200px>](./img/dashboard_couchbase_clusters.png)
-  
+
 - **Couchbase Nodes**: Overview of all data from Couchbase nodes.
 
   [<img src='./img/dashboard_couchbase_nodes.png' width=200px>](./img/dashboard_couchbase_nodes.png)
