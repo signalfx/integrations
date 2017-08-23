@@ -15,7 +15,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (i) Running Jobs",
   "sf_description" : "",
-  "sf_discoveryQuery" : "something",
+  "sf_discoveryQuery" : "",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -2039,7 +2040,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Apache Spark Application",
   "sf_description" : "Default dashboard.",
-  "sf_discoveryQuery" : "something",
+  "sf_discoveryQuery" : "",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
