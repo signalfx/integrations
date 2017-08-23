@@ -15,6 +15,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Worker Process",
   "sf_description" : "",
+  "sf_discoveryQuery" : "something",
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -36,25 +37,25 @@
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 3,
+      "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 3,
-      "options" : {
-        "chartIndex" : 1501228653753,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 3,
-      "sizeY" : 1
-    }, {
-      "col" : 6,
+      "col" : 8,
       "options" : {
         "chartIndex" : 1501228653751,
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1501228653753,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
       "sizeY" : 1
     }, {
       "col" : 0,
@@ -63,16 +64,16 @@
         "id" : 0
       },
       "row" : 1,
-      "sizeX" : 5,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
-      "col" : 5,
+      "col" : 6,
       "options" : {
         "chartIndex" : 1501226700118,
         "id" : 0
       },
       "row" : 1,
-      "sizeX" : 4,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
       "col" : 0,
@@ -233,23 +234,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.jvm.non-heap.committed",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "spark_process",
-        "propertyValue" : "worker",
-        "query" : "spark_process:master",
-        "type" : "dimension",
-        "value" : ""
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "ip-172-31-15-190.us-west-2.compute.internal",
-        "query" : "host:\"ip-172-31-15-190.us-west-2.compute.internal\"",
-        "type" : "dimension",
-        "value" : "ip-172-31-15-190.us-west-2.compute.internal"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.jvm.non-heap.committed"
       },
@@ -298,7 +283,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 6,
@@ -318,23 +304,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.jvm.non-heap.used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "spark_process",
-        "propertyValue" : "worker",
-        "query" : "spark_process:master",
-        "type" : "dimension",
-        "value" : ""
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "ip-172-31-15-190.us-west-2.compute.internal",
-        "query" : "host:\"ip-172-31-15-190.us-west-2.compute.internal\"",
-        "type" : "dimension",
-        "value" : "ip-172-31-15-190.us-west-2.compute.internal"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.jvm.non-heap.used"
       },
@@ -383,7 +353,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 7,
@@ -403,23 +374,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.jvm.heap.used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "spark_process",
-        "propertyValue" : "worker",
-        "query" : "spark_process:master",
-        "type" : "dimension",
-        "value" : ""
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "ip-172-31-15-190.us-west-2.compute.internal",
-        "query" : "host:\"ip-172-31-15-190.us-west-2.compute.internal\"",
-        "type" : "dimension",
-        "value" : "ip-172-31-15-190.us-west-2.compute.internal"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.jvm.heap.used"
       },
@@ -468,7 +423,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 8,
@@ -599,15 +555,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.worker.coresUsed",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "ip-172-31-15-190.us-west-2.compute.internal",
-        "query" : "host:\"ip-172-31-15-190.us-west-2.compute.internal\"",
-        "type" : "dimension",
-        "value" : "ip-172-31-15-190.us-west-2.compute.internal"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.worker.coresUsed"
       },
@@ -657,7 +605,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 5
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
   "marshallId" : 10,
@@ -1024,6 +973,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Cluster Instance",
   "sf_description" : "",
+  "sf_discoveryQuery" : "something",
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "host",
@@ -1559,8 +1509,10 @@
 }, {
   "marshallId" : 24,
   "marshallMemberOf" : [ 2 ],
-  "sf_dashboard" : "Spark Cluster",
+  "sf_dashboard" : "Spark Overview",
   "sf_description" : "",
+  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoverySelectors" : [ "_exists_:hosts", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -1695,141 +1647,9 @@
       } ],
       "invisible" : false,
       "name" : "counter.spark.executor.total_shuffle_write - Top 10 by app_name,user",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.executor.total_shuffle_write"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : [ {
-        "enabled" : true,
-        "property" : "app_name"
-      }, {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "cluster"
-      }, {
-        "enabled" : false,
-        "property" : "dsname"
-      }, {
-        "enabled" : false,
-        "property" : "host"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "plugin"
-      }, {
-        "enabled" : true,
-        "property" : "user"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
-  }
-}, {
-  "marshallId" : 26,
-  "marshallMemberOf" : [ 24 ],
-  "sf_chart" : "Top Applications by Disk Usage",
-  "sf_chartIndex" : 1502818930652,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "app_name"
-            }, {
-              "value" : "user"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 10
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "name" : "counter.spark.executor.disk_used - Top 10 by app_name,user",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
-      "seriesData" : {
-        "metric" : "counter.spark.executor.disk_used",
-        "regExStyle" : null
       },
       "transient" : false,
       "type" : "plot",
@@ -1905,6 +1725,122 @@
     "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 24 ],
+  "sf_chart" : "Top Applications by Disk Usage",
+  "sf_chartIndex" : 1502818930652,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "app_name"
+            }, {
+              "value" : "user"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 10
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "counter.spark.executor.disk_used - Top 10 by app_name,user",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.spark.executor.disk_used",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "app_name"
+      }, {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "cluster"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : true,
+        "property" : "user"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
   "marshallId" : 27,
   "marshallMemberOf" : [ 24 ],
   "sf_chart" : "Top Applications by Executor Count",
@@ -1941,15 +1877,7 @@
       } ],
       "invisible" : false,
       "name" : "gauge.spark.executor.count - Top 10 by app_name,user",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.executor.count"
       },
@@ -2023,8 +1951,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 28,
@@ -2044,15 +1972,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "cores free",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.worker.coresFree"
       },
@@ -2123,8 +2043,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
   "marshallId" : 29,
@@ -2164,15 +2084,7 @@
       } ],
       "invisible" : false,
       "name" : "memory bytes spilled",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.memory_bytes_spilled"
       },
@@ -2249,8 +2161,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 30,
@@ -2289,15 +2201,7 @@
       } ],
       "invisible" : false,
       "name" : "total shuffle read",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.executor.total_shuffle_read"
       },
@@ -2371,8 +2275,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
   "marshallId" : 31,
@@ -2412,15 +2316,7 @@
       } ],
       "invisible" : false,
       "name" : "memory used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.executor.memory_used",
         "regExStyle" : null
@@ -2496,8 +2392,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 32,
@@ -2518,15 +2414,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "memory free",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.worker.memFree_MB",
         "regExStyle" : null
@@ -2574,8 +2462,8 @@
       } ]
     },
     "currentUniqueKey" : 4,
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 33,
@@ -2595,15 +2483,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "disk bytes spilled",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.disk_bytes_spilled"
       },
@@ -2680,14 +2560,15 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 2,
-    "uiHelperValue" : "##CHARTID##_2"
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
   }
 }, {
   "marshallId" : 34,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Master Process",
   "sf_description" : "",
+  "sf_discoveryQuery" : "",
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -2727,7 +2608,7 @@
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 4,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
       "col" : 3,
@@ -2754,7 +2635,7 @@
         "id" : 0
       },
       "row" : 1,
-      "sizeX" : 4,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
       "col" : 0,
@@ -2885,23 +2766,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.jvm.heap.committed",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "spark_process",
-        "propertyValue" : "master",
-        "query" : "spark_process:master",
-        "type" : "dimension",
-        "value" : "master"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "ip-172-31-15-190.us-west-2.compute.internal",
-        "query" : "host:\"ip-172-31-15-190.us-west-2.compute.internal\"",
-        "type" : "dimension",
-        "value" : "ip-172-31-15-190.us-west-2.compute.internal"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.jvm.heap.committed"
       },
@@ -2950,7 +2815,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 37,
@@ -3302,23 +3168,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.jvm.non-heap.used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "spark_process",
-        "propertyValue" : "master",
-        "query" : "spark_process:master",
-        "type" : "dimension",
-        "value" : "master"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "ip-172-31-15-190.us-west-2.compute.internal",
-        "query" : "host:\"ip-172-31-15-190.us-west-2.compute.internal\"",
-        "type" : "dimension",
-        "value" : "ip-172-31-15-190.us-west-2.compute.internal"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.jvm.non-heap.used"
       },
@@ -3367,7 +3217,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 5
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
   "marshallId" : 42,
@@ -3387,23 +3238,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.jvm.non-heap.committed",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "spark_process",
-        "propertyValue" : "master",
-        "query" : "spark_process:master",
-        "type" : "dimension",
-        "value" : "master"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "ip-172-31-15-190.us-west-2.compute.internal",
-        "query" : "host:\"ip-172-31-15-190.us-west-2.compute.internal\"",
-        "type" : "dimension",
-        "value" : "ip-172-31-15-190.us-west-2.compute.internal"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.jvm.non-heap.committed"
       },
@@ -3452,7 +3287,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 5
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
   "marshallId" : 43,
@@ -3472,15 +3308,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "gauge.jvm.total.used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "spark_process",
-        "propertyValue" : "master",
-        "query" : "spark_process:master",
-        "type" : "dimension",
-        "value" : "master"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.jvm.total.used"
       },
@@ -3532,7 +3360,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 9
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
   }
 }, {
   "marshallId" : 44,

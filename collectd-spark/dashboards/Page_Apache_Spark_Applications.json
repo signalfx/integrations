@@ -15,6 +15,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (i) Running Jobs",
   "sf_description" : "",
+  "sf_discoveryQuery" : "something",
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -737,6 +738,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (ii) Active Stages",
   "sf_description" : "",
+  "sf_discoveryQuery" : "",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -1313,6 +1316,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (v) Streaming Statistics",
   "sf_description" : "",
+  "sf_discoveryQuery" : "",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -2034,6 +2039,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Apache Spark Application",
   "sf_description" : "Default dashboard.",
+  "sf_discoveryQuery" : "something",
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -2055,39 +2061,39 @@
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 3,
+      "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 3,
+      "col" : 4,
       "options" : {
         "chartIndex" : 1502670442744,
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 3,
+      "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 6,
+      "col" : 8,
       "options" : {
         "chartIndex" : 1502670451699,
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 3,
+      "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 6,
+      "col" : 0,
       "options" : {
-        "chartIndex" : 1502670776963,
+        "chartIndex" : 1502670919807,
         "id" : 0
       },
       "row" : 1,
       "sizeX" : 6,
       "sizeY" : 1
     }, {
-      "col" : 0,
+      "col" : 6,
       "options" : {
-        "chartIndex" : 1502670919807,
+        "chartIndex" : 1502670776963,
         "id" : 0
       },
       "row" : 1,
@@ -3361,6 +3367,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (iv) Executors",
   "sf_description" : "",
+  "sf_discoveryQuery" : "",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -3863,6 +3871,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (iii) Driver Executor",
   "sf_description" : "",
+  "sf_discoveryQuery" : "",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },

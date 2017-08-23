@@ -20,9 +20,11 @@ The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collec
 
 #### Built-in dashboards
 
-- **Spark Cluster**: Overview of Spark cluster.
+- **Spark Overview**: Overview of Spark cluster.
 
   [<img src='./img/dashboard_spark_cluster_top.png' width=200px>](./img/dashboard_spark_cluster_top.png)
+
+  [<img src='./img/dashboard_spark_cluster_middle.png' width=200px>](./img/dashboard_spark_cluster_middle.png)
 
   [<img src='./img/dashboard_spark_cluster_bottom.png' width=200px>](./img/dashboard_spark_cluster_bottom.png)
 
