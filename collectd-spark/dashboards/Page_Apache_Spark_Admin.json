@@ -45,7 +45,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "host=host:ip-172-31-15-190.us-west-2.compute.internal", "worker_port=worker_port:8081" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -1191,7 +1191,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "host=host:ip-172-31-15-190.us-west-2.compute.internal" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -2787,7 +2787,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "host=host:ip-172-31-15-190.us-west-2.compute.internal" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",

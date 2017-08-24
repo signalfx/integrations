@@ -39,7 +39,7 @@
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : [ "app_name=app_name:Spark Pi" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -773,7 +773,7 @@
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : [ "app_name=app_name:Spark Pi" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -1361,7 +1361,7 @@
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : [ "app_name=app_name:JavaNetworkWordCount" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -2090,7 +2090,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "app_name=app_name:Spark Pi" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -3433,7 +3433,7 @@
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : [ "app_name=app_name:Spark Pi" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -3947,7 +3947,7 @@
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : [ "app_name=app_name:Spark Pi" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
