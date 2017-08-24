@@ -15,21 +15,31 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (i) Running Jobs",
   "sf_description" : "",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin: apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [ {
+      "alias" : "app_name",
+      "description" : "",
+      "dimension" : "app_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
   },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "app_name:JavaNetworkWordCount", "user:root" ],
+    "sources" : null,
     "time" : {
       "end" : "Now",
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : null
+    "variables" : [ "app_name=app_name:Spark Pi" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -739,21 +749,31 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (ii) Active Stages",
   "sf_description" : "",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin: apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [ {
+      "alias" : "app_name",
+      "description" : "",
+      "dimension" : "app_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
   },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "app_name:JavaNetworkWordCount", "user:root" ],
+    "sources" : null,
     "time" : {
       "end" : "Now",
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : null
+    "variables" : [ "app_name=app_name:Spark Pi" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -1317,21 +1337,31 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (v) Streaming Statistics",
   "sf_description" : "",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin: apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [ {
+      "alias" : "app_name",
+      "description" : "",
+      "dimension" : "app_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
   },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "app_name:JavaNetworkWordCount", "user:root" ],
+    "sources" : null,
     "time" : {
       "end" : "Now",
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : null
+    "variables" : [ "app_name=app_name:JavaNetworkWordCount" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -2040,17 +2070,27 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Apache Spark Application",
   "sf_description" : "Default dashboard.",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin: apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [ {
+      "alias" : "app_name",
+      "description" : "",
+      "dimension" : "app_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
   },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "app_name:JavaNetworkWordCount", "user:root" ],
+    "sources" : null,
     "time" : null,
-    "variables" : null
+    "variables" : [ "app_name=app_name:Spark Pi" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -3369,21 +3409,31 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (iv) Executors",
   "sf_description" : "",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin: apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [ {
+      "alias" : "app_name",
+      "description" : "",
+      "dimension" : "app_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
   },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "app_name:JavaNetworkWordCount", "user:root" ],
+    "sources" : null,
     "time" : {
       "end" : "Now",
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : null
+    "variables" : [ "app_name=app_name:Spark Pi" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -3873,21 +3923,31 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (iii) Driver Executor",
   "sf_description" : "",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin: apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [ {
+      "alias" : "app_name",
+      "description" : "",
+      "dimension" : "app_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
   },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "app_name:JavaNetworkWordCount", "user:root" ],
+    "sources" : null,
     "time" : {
       "end" : "Now",
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : null
+    "variables" : [ "app_name=app_name:Spark Pi" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
