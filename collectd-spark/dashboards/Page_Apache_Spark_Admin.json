@@ -15,7 +15,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Worker Process",
   "sf_description" : "",
-  "sf_discoveryQuery" : "something",
+  "sf_discoveryQuery" : "",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
