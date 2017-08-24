@@ -187,7 +187,7 @@ Metrics at the application level (endpoint /api/v1/applications) will contain th
 
 Additional details:
 
-* `plugin` is always set to `Apache Spark`
+* `plugin` is always set to `apache_spark`
 
 
 ### METRICS
