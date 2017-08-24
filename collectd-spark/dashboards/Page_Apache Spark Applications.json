@@ -15,7 +15,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (i) Running Jobs",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -120,15 +120,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "job tasks",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.job.num_tasks",
         "regExStyle" : null
@@ -179,8 +171,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
   "marshallId" : 5,
@@ -273,15 +265,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "active_stages",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.job.num_active_stages"
       },
@@ -424,7 +408,8 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 11
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
   }
 }, {
   "marshallId" : 7,
@@ -445,15 +430,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "running jobs",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.num_running_jobs",
         "regExStyle" : null
@@ -504,8 +481,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
   "marshallId" : 8,
@@ -749,7 +726,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (ii) Active Stages",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -852,15 +829,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.stage.input_records",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.input_records"
       },
@@ -930,7 +899,8 @@
     },
     "currentUniqueKey" : 4,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 3
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
   "marshallId" : 12,
@@ -949,15 +919,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.stage.input_bytes",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.input_bytes"
       },
@@ -1027,7 +989,8 @@
     },
     "currentUniqueKey" : 4,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 13,
@@ -1046,15 +1009,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.stage.executor_run_time",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.executor_run_time"
       },
@@ -1103,7 +1058,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 14,
@@ -1195,15 +1151,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.stage.disk_bytes_spilled",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.disk_bytes_spilled"
       },
@@ -1249,8 +1197,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 2,
-    "uiHelperValue" : "##CHARTID##_2"
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
   }
 }, {
   "marshallId" : 16,
@@ -1270,15 +1218,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.num_total_stages",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.num_active_stages",
         "regExStyle" : null
@@ -1329,15 +1269,15 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 17,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (v) Streaming Statistics",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -2070,7 +2010,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Apache Spark Application",
   "sf_description" : "Default dashboard.",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -2347,15 +2287,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "running jobs",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.num_running_jobs",
         "regExStyle" : null
@@ -2403,8 +2335,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 30,
@@ -2424,15 +2356,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "active stages",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.num_active_stages",
         "regExStyle" : null
@@ -2480,8 +2404,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 31,
@@ -2501,33 +2425,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.stage.input_records",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.input_records"
       },
@@ -2547,25 +2445,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "spark.stage.output_records",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.stage.output_records",
         "regExStyle" : null
@@ -2584,353 +2464,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "New Plot",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "hideTimestamp" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "app_name"
-      }, {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "cluster"
-      }, {
-        "enabled" : false,
-        "property" : "dsname"
-      }, {
-        "enabled" : false,
-        "property" : "host"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : true,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "plugin"
-      }, {
-        "enabled" : false,
-        "property" : "status"
-      }, {
-        "enabled" : false,
-        "property" : "user"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
-  }
-}, {
-  "marshallId" : 32,
-  "marshallMemberOf" : [ 27 ],
-  "sf_chart" : "Job Tasks",
-  "sf_chartIndex" : 1502671295642,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "job tasks",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
-      "seriesData" : {
-        "metric" : "gauge.spark.job.num_tasks"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "hideTimestamp" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "app_name"
-      }, {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "cluster"
-      }, {
-        "enabled" : false,
-        "property" : "dsname"
-      }, {
-        "enabled" : false,
-        "property" : "host"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : true,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "plugin"
-      }, {
-        "enabled" : false,
-        "property" : "status"
-      }, {
-        "enabled" : false,
-        "property" : "user"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
-  }
-}, {
-  "marshallId" : 33,
-  "marshallMemberOf" : [ 27 ],
-  "sf_chart" : "Stage Input/Output Bytes",
-  "sf_chartIndex" : 1502671621419,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#00b9ff",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "spark.stage.input_bytes",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
-      "seriesData" : {
-        "metric" : "gauge.spark.stage.input_bytes"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#05ce00",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "spark.stage.output_bytes",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
-      "seriesData" : {
-        "metric" : "gauge.spark.stage.output_bytes",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
@@ -2996,6 +2530,228 @@
     "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
+  "marshallId" : 32,
+  "marshallMemberOf" : [ 27 ],
+  "sf_chart" : "Job Tasks",
+  "sf_chartIndex" : 1502671295642,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "job tasks",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.spark.job.num_tasks"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "app_name"
+      }, {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "cluster"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "status"
+      }, {
+        "enabled" : false,
+        "property" : "user"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 33,
+  "marshallMemberOf" : [ 27 ],
+  "sf_chart" : "Stage Input/Output Bytes",
+  "sf_chartIndex" : 1502671621419,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#00b9ff",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "spark.stage.input_bytes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.spark.stage.input_bytes"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "spark.stage.output_bytes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.spark.stage.output_bytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "app_name"
+      }, {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "cluster"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "status"
+      }, {
+        "enabled" : false,
+        "property" : "user"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
   "marshallId" : 34,
   "marshallMemberOf" : [ 27 ],
   "sf_chart" : "Driver Disk/Mem Usage",
@@ -3014,15 +2770,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "disk used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.driver.disk_used",
         "regExStyle" : null
@@ -3042,15 +2790,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "mem used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "dimension",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.driver.memory_used",
         "regExStyle" : null
@@ -3071,25 +2811,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "disk/mem usage",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
       },
@@ -3108,25 +2830,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "New Plot",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
@@ -3184,8 +2888,8 @@
     },
     "currentUniqueKey" : 5,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
   "marshallId" : 35,
@@ -3204,15 +2908,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "executor count",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.executor.count"
       },
@@ -3260,8 +2956,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 2,
-    "uiHelperValue" : "##CHARTID##_2"
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
   }
 }, {
   "marshallId" : 36,
@@ -3280,33 +2976,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "total tasks",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.driver.total_tasks"
       },
@@ -3324,25 +2994,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "New Plot",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "app_name",
-        "propertyValue" : "JavaNetworkWordCount",
-        "query" : "app_name:JavaNetworkWordCount",
-        "type" : "property",
-        "value" : "JavaNetworkWordCount"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "user",
-        "propertyValue" : "root",
-        "query" : "user:root",
-        "type" : "property",
-        "value" : "root"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
@@ -3401,15 +3053,15 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
   "marshallId" : 37,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (iv) Executors",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -3494,15 +3146,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.executor.total_input_bytes",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.executor.total_input_bytes"
       },
@@ -3551,7 +3195,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 39,
@@ -3923,7 +3568,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Application - (iii) Driver Executor",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -4129,15 +3774,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.executor.count",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.spark.executor.count"
       },
@@ -4187,7 +3824,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 2
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
   }
 }, {
   "marshallId" : 45,
@@ -4207,15 +3845,7 @@
       "dataManipulations" : [ ],
       "invisible" : true,
       "name" : "spark.driver.disk_used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.driver.disk_used",
         "regExStyle" : null
@@ -4235,15 +3865,7 @@
       "invisible" : true,
       "metricDefinition" : { },
       "name" : "spark.driver.memory_used",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "dimension",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.driver.memory_used",
         "regExStyle" : null
@@ -4355,8 +3977,8 @@
     },
     "currentUniqueKey" : 7,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 46,
@@ -4375,15 +3997,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "spark.driver.total_input_bytes",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "plugin",
-        "propertyValue" : "Apache Spark",
-        "query" : "plugin:\"Apache Spark\"",
-        "type" : "property",
-        "value" : "Apache Spark"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.spark.driver.total_input_bytes"
       },
@@ -4432,8 +4046,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 10,
-    "uiHelperValue" : "##CHARTID##_10"
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
   }
 }, {
   "marshallId" : 47,

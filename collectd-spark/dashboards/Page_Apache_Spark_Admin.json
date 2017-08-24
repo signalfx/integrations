@@ -15,7 +15,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Worker Process",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark AND spark_process: worker",
+  "sf_discoveryQuery" : "plugin:apache_spark AND spark_process:worker",
   "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -1171,7 +1171,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Cluster Instance",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -1710,7 +1710,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Overview",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark",
+  "sf_discoveryQuery" : "plugin:apache_spark",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
@@ -2767,7 +2767,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spark Master Process",
   "sf_description" : "",
-  "sf_discoveryQuery" : "plugin: apache_spark AND spark_process: master",
+  "sf_discoveryQuery" : "plugin:apache_spark AND spark_process:master",
   "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
