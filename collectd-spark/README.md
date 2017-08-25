@@ -1,8 +1,8 @@
 # ![](./img/integrations_apachespark.png) Apache Spark  
 
-_This directory consolidates all the metadata associated with the spark plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-spark)_ 
-
 **Plugin currently supports cluster modes Standalone and Mesos**
+
+_This directory consolidates all the metadata associated with the spark plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-spark)_ 
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
