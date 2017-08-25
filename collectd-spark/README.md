@@ -12,7 +12,7 @@ _This directory consolidates all the metadata associated with the spark plugin f
 
 ### DESCRIPTION
 
-This is the SignalFx Apache Spark plugin. Follow these instructions to install the Apache Spark plugin for collectd.
+This is the SignalFx Apache Spark plugin. **Note**: we currently only support cluster modes Standalone and Mesos. Follow these instructions to install the Apache Spark plugin for collectd. 
 
 The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: [`Metrics`](https://spark.apache.org/docs/latest/monitoring.html)
 
@@ -110,7 +110,7 @@ Using the example configuration file [10-spark.conf](https://github.com/signalfx
 | WorkerPorts | Space separated worker (webui) ports to query for metrics | 8081 8082 |
 | Applications | Boolean indicating whether to collect application level metrics | "False" |
 | Master | URL for master application | "http://localhost:8080" |
-| Cluster | Your Spark cluster mode | "Standalone" |
+| Cluster | Your Spark cluster mode - only standalone and mesos supported | "Standalone" |
 | EnhancedMetrics | Flag to specify whether to include additional metrics | "False" |
 | IncludeMetrics | Metrics from enhanced metrics that can be included individually | "metric_name_1,metric_name_2" |
 | ExcludeMetrics | Metrics from enhanced metrics that can be excluded individually | "metric_name_1,metric_name2" |
