@@ -106,8 +106,8 @@ Using the example configuration file [10-spark.conf](https://github.com/signalfx
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-spark/" |
 | MetricsURL | URL for master or worker node if Metrics source (and therefore, by default Metrics HTTP Servlet Sink) are enabled | "http://localhost" |
-| MasterPort | Master (webui) port to query for metrics  | "8080" |
-| WorkerPorts | Comma separated worker (webui) ports to query for metrics | "8081,8082" |
+| MasterPort | Master (webui) port to query for metrics  | 8080 |
+| WorkerPorts | Space separated worker (webui) ports to query for metrics | 8081 8082 |
 | Applications | Boolean indicating whether to collect application level metrics | "False" |
 | Master | URL for master application | "http://localhost:8080" |
 | Cluster | Your Spark cluster mode | "Standalone" |
@@ -128,8 +128,8 @@ LoadPlugin python
 
   <Module spark_plugin>
   MetricsURL "http://127.0.0.1"
-  MasterPort "8080"
-  WorkerPorts "8081,8082"
+  MasterPort 8080
+  WorkerPorts 8081 8082
   Applications "True"
   Master "http://127.0.0.1:8080"
   Cluster "Standalone"
@@ -150,7 +150,7 @@ LoadPlugin python
   
   <Module spark_plugin>
     MetricsURL "http://master"
-    MasterPort "8080"
+    MasterPort 8080
     Applications "True"
     Master "http://master:8080"
     Cluster "Standalone"
@@ -160,7 +160,7 @@ LoadPlugin python
   
   <Module spark_plugin>
     MetricsURL "http://worker"
-    WorkerPorts "8081,8082"
+    WorkerPorts 8081 8082
     Applications "False"
     Master "http://master:8080"
     Dimension "name=WORKER1TEST"
