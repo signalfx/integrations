@@ -1,6 +1,8 @@
 # ![](./img/integrations_apachespark.png) Apache Spark  
 
-_This directory consolidates all the metadata associated with the spark plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-spark)_
+_This directory consolidates all the metadata associated with the spark plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-spark)_ 
+
+**Plugin currently supports cluster modes Standalone and Mesos**
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,7 +14,7 @@ _This directory consolidates all the metadata associated with the spark plugin f
 
 ### DESCRIPTION
 
-This is the SignalFx Apache Spark plugin. **Note**: we currently only support cluster modes Standalone and Mesos. Follow these instructions to install the Apache Spark plugin for collectd. 
+This is the SignalFx Apache Spark plugin. Note we currently only support cluster modes Standalone and Mesos. Follow these instructions to install the Apache Spark plugin for collectd. 
 
 The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: [`Metrics`](https://spark.apache.org/docs/latest/monitoring.html)
 
