@@ -296,10 +296,11 @@ LoadPlugin python
 
   [<img src='./img/chart_dns_queries.png' width=200px>](./img/chart_dns_queries.png)
 
-**CONSUL SERVER**
+ - **CONSUL SERVER**
 All charts metioned in the Client dashboard are also present in the Server dashboard. In addition to those, below charts are also present -
 
  - **Raft candidate state**: This chart tracks if the selected Consul server starts an election. If this metric increments without a leadership change occurring it could indicate that a single server is overloaded or is experiencing network connectivity issues.
+ 
  [<img src='./img/chart_raft_candidate.png' width=200px>](./img/chart_raft_candidate.png)
 
 All metrics reported by the Consul collectd plugin will contain the following dimensions by default:
