@@ -101,7 +101,7 @@ AclToken | Consul ACL token. | None
 TelemetryServer | Possible values - *true* or *false*<br>Set to *true* to enable collecting Consul's internal metrics via UDP from Consul's telemetry.<br>If set to *false* and Consul version is 0.9.1 and above, the metrics will be collected from API.<br>If set to *false* and Consul version is less than 0.9.1, Consul's internal metrics will not be available. | `false`
 TelemetryHost | IP address or DNS to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. | `localhost`
 TelemetryPort | Port to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. |  `8125`
-EnhancedMetrics | Possible values - *true* or *false*<br>Set to *true* to enable collecting all metrics from Consul's runtime telemetry send via UDP or /agent/metrics endpoint. | `false`
+EnhancedMetrics | Possible values - *true* or *false*<br>Set to *true* to enable collecting all metrics from Consul's runtime telemetry send via UDP or from the `/agent/metrics` endpoint. | `false`
 ExcludeMetric | Blocks metrics by prefix matching, if *EnhancedMetrics* is true. This can be used to exclude metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None
 IncludeMetric | Allows metrics by prefix matching, if *EnhancedMetrics* is false. This can be used to include metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None
 SfxToken |  SignalFx org access token. If added to the config, an event is sent to SignalFx on leader transition and can be viewed on the Consul dashboard. | None
@@ -310,7 +310,8 @@ All metrics reported by the Consul collectd plugin will contain the following di
 
 The metric `consul.is_leader` is reported by consul servers and have the dimension - `consul_server_state` which can be either leader or follower.
 
-Additional default metrics to track -
+Additional default metrics to track
+
 **consul.memberlist.msg.suspect** - This metric counts the number of times an agent suspects another as failed when executing random probes as part of the gossip protocol. These can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
 
 **consul.serf.member.flap** -  This metric tracks when an agent is marked dead and then recovers within a short time period. This can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
