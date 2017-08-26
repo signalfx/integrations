@@ -82,9 +82,12 @@ The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin coll
 
 If running Consul version below 0.9.1, configure the Consul agents that are to be monitored to send telemetry by adding the below configuration to Consul agents configuration file.
 
+```
 {"telemetry":
   {"statsd_address": "host:port"}
 }
+```
+
 This plugin will start a UDP server listening at above host and port.
 
 Using the example configuration file [10-consul.conf](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
