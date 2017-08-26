@@ -14,7 +14,16 @@ _This directory consolidates all the metadata associated with the consul plugin 
 
 This is the SignalFx Consul plugin. Follow these instructions to install the Consul plugin for collectd.
 
-The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints: [agent/self](https://www.consul.io/api/agent.html#read-configuration), [agent/metrics](https://www.consul.io/api/agent.html#view-metrics), [catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes), [catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node), [status/leader](https://www.consul.io/api/status.html#get-raft-leader), [status/peers](https://www.consul.io/api/status.html#list-raft-peers),  [coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates) and [coordinate/nodes](https://www.consul.io/api/coordinate.html#read-lan-coordinates), [health/state/any](https://www.consul.io/api/health.html#list-checks-in-state).
+The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints:
+  - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)
+  - [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)
+  - [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)
+  - [/catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node)
+  - [/status/leader](https://www.consul.io/api/status.html#get-raft-leader)
+  - [/status/peers](https://www.consul.io/api/status.html#list-raft-peers)
+  - [/coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates)
+  - [/coordinate/nodes](https://www.consul.io/api/coordinate.html#read-lan-coordinates)
+  - [/health/state/any](https://www.consul.io/api/health.html#list-checks-in-state).
 
 #### FEATURES
 
@@ -60,7 +69,7 @@ The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin coll
 
 1. Download [collectd-consul](https://github.com/signalfx/collectd-consul). Place the `consul_plugin.py` file in `/usr/share/collectd/collectd-consul`
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) for this plugin to `/etc/collectd/managed_config`
+2. Place the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
@@ -247,11 +256,11 @@ LoadPlugin python
 
     [<img src='./img/chart_leader_reconcile.png' width=200px>](./img/chart_leader_reconcile.png)
 
-  - **Serf Events**: Consul’s provides an event feature by which custom events can be propagated across your entire datacenter. This chart shows the number of events processed by Consul per interval.
+  - **Serf Events**: Consul provides an event feature by which custom events can be propagated across your entire datacenter. This chart shows the number of events processed by Consul agents per interval. Using this chart you can track if triggered events were processed by a consul node. Additinally, you can also easily setup a chart to track events for a selected node in the CLIENT and SERVER dashboard.
 
     [<img src='./img/chart_serf_event.png' width=200px>](./img/chart_serf_event.png)
 
-  - **Serf Event Queue**: Shows the avg and max number of backlog of serf events in queue.
+  - **Serf Event Queue**: Shows the avg and max number of backlog of serf events in queue of Consul agents.
 
     [<img src='./img/chart_serf_event_queue.png' width=200px>](./img/chart_serf_event_queue.png)
 
@@ -273,7 +282,7 @@ LoadPlugin python
 
   [<img src='./img/chart_network_latency.png' width=200px>](./img/chart_network_latency.png)
 
-  - **Time to service DNS queries**: Consul provides DNS and HTTP interfaces for service discovery. This shows the time it takes to service forward and reverse DNS lookups by the selected node.
+  - **Time to service DNS queries**: Consul provides both DNS and HTTP interfaces for service discovery. This shows the time it takes to service forward and reverse DNS lookups by the selected node.
 
   [<img src='./img/chart_dns_queries.png' width=200px>](./img/chart_dns_queries.png)
 
@@ -283,7 +292,6 @@ All charts metioned in the Client dashboard are also present in the Server dashb
  - **Raft candidate state**: This chart tracks if the selected Consul server starts an election. If this metric increments without a leadership change occurring it could indicate that a single server is overloaded or is experiencing network connectivity issues.
  [<img src='./img/chart_raft_candidate.png' width=200px>](./img/chart_raft_candidate.png)
 
-
 All metrics reported by the Consul collectd plugin will contain the following dimensions by default:
 
 * `datacenter`
@@ -291,6 +299,11 @@ All metrics reported by the Consul collectd plugin will contain the following di
 * `consul_mode`, consul agent is in client or server mode
 
 The metric `consul.is_leader` is reported by consul servers and have the dimension - `consul_server_state` which can be either leader or follower.
+
+Additional default metrics to track -
+**consul.memberlist.msg.suspect** - This metric counts the number of times an agent suspects another as failed when executing random probes as part of the gossip protocol. These can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
+
+**consul.serf.member.flap** -  This metric tracks when an agent is marked dead and then recovers within a short time period. This can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
 
 A few other details:
 
@@ -306,7 +319,7 @@ List of default metrics collected from telemetry stream or `agent/metrics` endpo
  - consul.raft.leader.dispatchLog
  - consul.raft.commitTime
  - consul.raft.apply
- - consul.raft.replication.appendEntries.rpc
+ - consul.raft.replication.appendEntries.rpc.<FOLLOWER_IP>
  - consul.rpc.query
  - consul.consul.leader.reconcile
  - consul.serf.events
@@ -314,12 +327,12 @@ List of default metrics collected from telemetry stream or `agent/metrics` endpo
  - consul.serf.queue.Query
  - consul.serf.member.join
  - consul.serf.member.left
- - consul.HOST.runtime.heap_objects
- - consul.HOST.runtime.alloc_bytes
- - consul.HOST.runtime.num_goroutines
- - consul.dns.domain_query.HOST
- - consul.dns.ptr_query.HOST
- - consul.dns.stale_queries.HOST
+ - consul.runtime.heap_objects
+ - consul.runtime.alloc_bytes
+ - consul.runtime.num_goroutines
+ - consul.dns.domain_query.<HOST>
+ - consul.dns.ptr_query.<HOST>
+ - consul.dns.stale_queries.<HOST>
  - consul.serf.member.flap
  - consul.memberlist.msg.suspect
 
