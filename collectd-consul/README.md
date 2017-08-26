@@ -80,6 +80,13 @@ The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin coll
 
 ### CONFIGURATION
 
+If running Consul version below 0.9.1, configure the Consul agents that are to be monitored to send telemetry by adding the below configuration to Consul agents configuration file.
+
+{"telemetry":
+  {"statsd_address": "host:port"}
+}
+This plugin will start a UDP server listening at above host and port.
+
 Using the example configuration file [10-consul.conf](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
 
 **Configuration Option** | **Description** | **Default Value**
@@ -258,7 +265,7 @@ LoadPlugin python
 
   - **Serf Events**: Consul provides an event feature by which custom events can be propagated across your entire datacenter. This chart shows the number of events processed by Consul agents per interval. Using this chart you can track if triggered events were processed by a consul node. Additinally, you can also easily setup a chart to track events for a selected node in the CLIENT and SERVER dashboard.
 
-    [<img src='./img/chart_serf_event.png' width=200px>](./img/chart_serf_event.png)
+    [<img src='./img/chart_serf_events.png' width=200px>](./img/chart_serf_events.png)
 
   - **Serf Event Queue**: Shows the avg and max number of backlog of serf events in queue of Consul agents.
 
