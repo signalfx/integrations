@@ -294,14 +294,14 @@ LoadPlugin python
 
   - **Time to service DNS queries**: Consul provides both DNS and HTTP interfaces for service discovery. This shows the time it takes to service forward and reverse DNS lookups by the selected node.
 
-   [<img src='./img/chart_dns_queries.png' width=200px>](./img/chart_dns_queries.png)
+    [<img src='./img/chart_dns_queries.png' width=200px>](./img/chart_dns_queries.png)
 
 - **CONSUL SERVER**
 All charts metioned in the Client dashboard are also present in the Server dashboard. In addition to those, below charts are also present -
 
   - **Raft candidate state**: This chart tracks if the selected Consul server starts an election. If this metric increments without a leadership change occurring it could indicate that a single server is overloaded or is experiencing network connectivity issues.
  
-   [<img src='./img/chart_raft_candidate.png' width=200px>](./img/chart_raft_candidate.png)
+    [<img src='./img/chart_raft_candidate.png' width=200px>](./img/chart_raft_candidate.png)
 
 All metrics reported by the Consul collectd plugin will contain the following dimensions by default:
 
@@ -313,15 +313,18 @@ The metric `consul.is_leader` is reported by consul servers and have the dimensi
 
 Additional default metrics to track
 
-**consul.memberlist.msg.suspect** - This metric counts the number of times an agent suspects another as failed when executing random probes as part of the gossip protocol. These can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
+  - `consul.memberlist.msg.suspect` - This metric counts the number of times an agent suspects another as failed when executing random probes as part of the gossip protocol. These can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
 
-**consul.serf.member.flap** -  This metric tracks when an agent is marked dead and then recovers within a short time period. This can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
+  - `consul.serf.member.flap` -  This metric tracks when an agent is marked dead and then recovers within a short time period. This can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
+
+  - `consul.dns.stale_queries` - This metric tracks when an agent serves a DNS query based on information from a server that is more than 5 seconds out of date.
+
 
 A few other details:
 
 * `plugin` is always set to `consul`
-* To add additional metrics from the telemetry stream or ```agent/metrics``` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give valid prefixes.
-* The metrics from `agent/metric` endpoint are aggregated over an interval of 10 seconds. Keep this in mind when changing the default collectd interval from 10 seconds.
+* To add additional metrics from the telemetry stream or ```/agent/metrics``` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give valid prefixes. For e.g., to add metrics which track time taken to serve http requests, Consul emits these metrics in the form `consul.http.<verb>.<path>`. So to enable metrics which track time taken to service GET requests on Key/Value endpoint, add this `consul.http.GET.v1.kv` to the IncludeMetric cofiguration. If you want to allow metrics which track time taken to service all GET requests, add `consul.http.GET` to the configuration. When enhance metrics are enabled, you can block metrics in a similar manner.
+* The metrics from `/agent/metric` endpoint are aggregated over an interval of 10 seconds. Keep this in mind when changing the default collectd interval from 10 seconds.
 
 ### METRICS
 List of default metrics collected from telemetry stream or `agent/metrics` endpoint- 
