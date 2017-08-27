@@ -290,18 +290,18 @@ LoadPlugin python
 
   - **Network Latency**: Shows the avg, max and min network latency between the node and other nodes in the datacenter.
 
-  [<img src='./img/chart_network_latency.png' width=200px>](./img/chart_network_latency.png)
+    [<img src='./img/chart_network_latency.png' width=200px>](./img/chart_network_latency.png)
 
   - **Time to service DNS queries**: Consul provides both DNS and HTTP interfaces for service discovery. This shows the time it takes to service forward and reverse DNS lookups by the selected node.
 
-  [<img src='./img/chart_dns_queries.png' width=200px>](./img/chart_dns_queries.png)
+   [<img src='./img/chart_dns_queries.png' width=200px>](./img/chart_dns_queries.png)
 
- - **CONSUL SERVER**
+- **CONSUL SERVER**
 All charts metioned in the Client dashboard are also present in the Server dashboard. In addition to those, below charts are also present -
 
- - **Raft candidate state**: This chart tracks if the selected Consul server starts an election. If this metric increments without a leadership change occurring it could indicate that a single server is overloaded or is experiencing network connectivity issues.
+  - **Raft candidate state**: This chart tracks if the selected Consul server starts an election. If this metric increments without a leadership change occurring it could indicate that a single server is overloaded or is experiencing network connectivity issues.
  
- [<img src='./img/chart_raft_candidate.png' width=200px>](./img/chart_raft_candidate.png)
+   [<img src='./img/chart_raft_candidate.png' width=200px>](./img/chart_raft_candidate.png)
 
 All metrics reported by the Consul collectd plugin will contain the following dimensions by default:
 
