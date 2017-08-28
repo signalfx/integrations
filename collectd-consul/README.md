@@ -14,16 +14,16 @@ _This directory consolidates all the metadata associated with the consul plugin 
 
 This is the SignalFx Consul plugin. Follow these instructions to install the Consul plugin for collectd.
 
-The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints:
-  - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)
-  - [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)
-  - [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)
-  - [/catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node)
-  - [/status/leader](https://www.consul.io/api/status.html#get-raft-leader)
-  - [/status/peers](https://www.consul.io/api/status.html#list-raft-peers)
-  - [/coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates)
-  - [/coordinate/nodes](https://www.consul.io/api/coordinate.html#read-lan-coordinates)
-  - [/health/state/any](https://www.consul.io/api/health.html#list-checks-in-state).
+The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints:  
+  - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)  
+  - [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)  
+  - [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)  
+  - [/catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node)  
+  - [/status/leader](https://www.consul.io/api/status.html#get-raft-leader)  
+  - [/status/peers](https://www.consul.io/api/status.html#list-raft-peers)  
+  - [/coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates)  
+  - [/coordinate/nodes](https://www.consul.io/api/coordinate.html#read-lan-coordinates)  
+  - [/health/state/any](https://www.consul.io/api/health.html#list-checks-in-state)  
 
 #### FEATURES
 
@@ -92,25 +92,25 @@ This plugin will start a UDP server listening at above host and port.
 
 Using the example configuration file [10-consul.conf](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
 
-**Configuration Option** | **Description** | **Default Value**
-:------------------------|:----------------|:------------------
-ApiHost | IP address or DNS to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `localhost`
-ApiPort | Port to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `8500`
-ApiProtocol | Possible values - *http* or *https* | `http`
-AclToken | Consul ACL token. | None
-TelemetryServer | Possible values - *true* or *false*<br>Set to *true* to enable collecting Consul's internal metrics via UDP from Consul's telemetry.<br>If set to *false* and Consul version is 0.9.1 and above, the metrics will be collected from API.<br>If set to *false* and Consul version is less than 0.9.1, Consul's internal metrics will not be available. | `false`
-TelemetryHost | IP address or DNS to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. | `localhost`
-TelemetryPort | Port to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. |  `8125`
-EnhancedMetrics | Possible values - *true* or *false*<br>Set to *true* to enable collecting all metrics from Consul's runtime telemetry send via UDP or from the `/agent/metrics` endpoint. | `false`
-ExcludeMetric | Blocks metrics by prefix matching, if *EnhancedMetrics* is true. This can be used to exclude metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None
-IncludeMetric | Allows metrics by prefix matching, if *EnhancedMetrics* is false. This can be used to include metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None
-SfxToken |  SignalFx org access token. If added to the config, an event is sent to SignalFx on leader transition and can be viewed on the Consul dashboard. | None
-Dimension | Add single custom global dimension to your metrics, formatted as "key=value" | None
-Dimensions | Add multiple global dimensions, formatted as "key1=value1,key2=value2,..." | None
-CaCertificate | If Consul server has https enabled for the API, provide the path to the CA Certificate. | None
-ClientCertificate | If client-side authentication is enabled, provide the path to the certificate file. | None
-ClientKey | If client-side authentication is enabled, provide the path to the key file. | None
-Debug | Possible values - *true* or *false*<br> | `false`
+| **Configuration Option** | **Description** | **Default Value** |
+|:------------------------|:----------------|:------------------|
+| ApiHost | IP address or DNS to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `localhost` |
+| ApiPort | Port to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `8500` |
+| ApiProtocol | Possible values - *http* or *https* | `http` |
+AclToken | Consul ACL token. | None |
+| TelemetryServer | Possible values - *true* or *false*<br>Set to *true* to enable collecting Consul's internal metrics via UDP from Consul's telemetry.<br>If set to *false* and Consul version is 0.9.1 and above, the metrics will be collected from API.<br>If set to *false* and Consul version is less than 0.9.1, Consul's internal metrics will not be available. | `false` |
+| TelemetryHost | IP address or DNS to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. | `localhost` |
+| TelemetryPort | Port to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. |  `8125` |
+| EnhancedMetrics | Possible values - *true* or *false*<br>Set to *true* to enable collecting all metrics from Consul's runtime telemetry send via UDP or from the `/agent/metrics` endpoint. | `false` |
+| ExcludeMetric | Blocks metrics by prefix matching, if *EnhancedMetrics* is true. This can be used to exclude metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None |
+| IncludeMetric | Allows metrics by prefix matching, if *EnhancedMetrics* is false. This can be used to include metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None |
+| SfxToken |  SignalFx org access token. If added to the config, an event is sent to SignalFx on leader transition and can be viewed on the Consul dashboard. | None |
+| Dimension | Add single custom global dimension to your metrics, formatted as "key=value" | None |
+| Dimensions | Add multiple global dimensions, formatted as "key1=value1,key2=value2,..." | None |
+| CaCertificate | If Consul server has https enabled for the API, provide the path to the CA Certificate. | None |
+| ClientCertificate | If client-side authentication is enabled, provide the path to the certificate file. | None |
+| ClientKey | If client-side authentication is enabled, provide the path to the key file. | None |
+| Debug | Possible values - *true* or *false*<br> | `false` |
 
 Example configuration:
 
