@@ -15,15 +15,15 @@ _This directory consolidates all the metadata associated with the consul plugin 
 This is the SignalFx Consul plugin. Follow these instructions to install the Consul plugin for collectd.
 
 The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints:  
-  - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)  
-  - [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)  
-  - [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)  
-  - [/catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node)  
-  - [/status/leader](https://www.consul.io/api/status.html#get-raft-leader)  
-  - [/status/peers](https://www.consul.io/api/status.html#list-raft-peers)  
-  - [/coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates)  
-  - [/coordinate/nodes](https://www.consul.io/api/coordinate.html#read-lan-coordinates)  
-  - [/health/state/any](https://www.consul.io/api/health.html#list-checks-in-state)  
+- [/agent/self](https://www.consul.io/api/agent.html#read-configuration)  
+- [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)  
+- [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)  
+- [/catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node)  
+- [/status/leader](https://www.consul.io/api/status.html#get-raft-leader)  
+- [/status/peers](https://www.consul.io/api/status.html#list-raft-peers)  
+- [/coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates)  
+- [/coordinate/nodes](https://www.consul.io/api/coordinate.html#read-lan-coordinates)  
+- [/health/state/any](https://www.consul.io/api/health.html#list-checks-in-state)  
 
 #### FEATURES
 
@@ -92,7 +92,7 @@ This plugin will start a UDP server listening at above host and port.
 
 Using the example configuration file [10-consul.conf](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
 
-| **Configuration Option** | **Description** | **Default Value** |
+| Configuration Option | Description | Default Value |
 |------------------------|----------------|------------------|
 | ApiHost | IP address or DNS to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `localhost` |
 | ApiPort | Port to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `8500` |
