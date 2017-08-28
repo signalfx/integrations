@@ -24,7 +24,7 @@ The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collec
 
 - **Spark Overview**: Overview of Spark cluster.
 
-  [<img src='./img/dashboard_spark_cluster_top.png'](./img/dashboard_spark_cluster_top.png)
+  [<img src='./img/dashboard_spark_cluster_top.png'>](./img/dashboard_spark_cluster_top.png)
 
   [<img src='./img/dashboard_spark_cluster_middle.png'>](./img/dashboard_spark_cluster_middle.png)
 
