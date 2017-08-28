@@ -1,0 +1,10 @@
+{ "display_name":"Apache Spark",
+  "description": "Monitor Spark cluster and applications using the SignalFx collectd agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-spark",
+  "code": "https://github.com/signalfx/collectd-spark",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-spark/img/integrations_apachespark.png",
+  "logo_small": "/images/repos/collectd-spark/img/integrations_apachespark%402x.png",
+  "data_signature": "plugin:\"apache_spark\"",
+  "in_app_categories": ["servicesMonitored"]
+}
