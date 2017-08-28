@@ -16,7 +16,7 @@ _This directory consolidates all the metadata associated with the spark plugin f
 
 This is the SignalFx Apache Spark plugin. Note we currently only support cluster modes Standalone and Mesos. Follow these instructions to install the Apache Spark plugin for collectd. 
 
-The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: [`Metrics`](https://spark.apache.org/docs/latest/monitoring.html)
+The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: [`Spark documentation`](https://spark.apache.org/docs/latest/monitoring.html)
 
 #### FEATURES
 
@@ -26,15 +26,7 @@ The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collec
 
   [<img src='./img/dashboard_spark_cluster_top.png' width=200px>](./img/dashboard_spark_cluster_top.png)
 
-  [<img src='./img/dashboard_spark_cluster_middle.png' width=200px>](./img/dashboard_spark_cluster_middle.png)
-
   [<img src='./img/dashboard_spark_cluster_bottom.png' width=200px>](./img/dashboard_spark_cluster_bottom.png)
-
-- **Spark Cluster Instance**: Overview of data from all Spark nodes (generic collectd data).
-
-  [<img src='./img/dashboard_spark_cluster_instance_top.png' width=200px>](./img/dashboard_spark_cluster_instance_top.png)
-
-  [<img src='./img/dashboard_spark_cluster_instance_bottom.png' width=200px>](./img/dashboard_spark_cluster_instance_bottom.png)
 
 - **Master Process**: Overview of master process (data captured from Metrics sink).
 
