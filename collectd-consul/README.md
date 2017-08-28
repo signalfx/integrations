@@ -67,7 +67,7 @@ The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin coll
 
 ### INSTALLATION
 
-1. Download [collectd-consul](https://github.com/signalfx/collectd-consul). Place the `consul_plugin.py` file in `/usr/share/collectd/collectd-consul`
+1. Download [collectd-consul](https://github.com/signalfx/collectd-consul). Place the `consul_plugin.py` and `urllib_ssl_handler.py` file in `/usr/share/collectd/collectd-consul`
 
 2. Place the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) for this plugin to `/etc/collectd/managed_config`
 
@@ -204,7 +204,7 @@ LoadPlugin python
 
     [<img src='./img/chart_service_health_check.png' width=200px>](./img/chart_service_health_check.png)
 
-  - **Node health check results**: Node checks are done on the individual host level. If a host fails a check, all services registered with that it are marked as failed and Consul no longer returns the node in service discovery requests. The chart is a list showing the results of node health checks. Checks can result in 3 states - passing, warning and critical.
+  - **Node health check results**: Node checks are done on the individual host level. If a host fails a check, all services registered with it are marked as failed and Consul no longer returns the node in service discovery requests. The chart is a list showing the results of node health checks. Checks can result in 3 states - passing, warning and critical.
 
     [<img src='./img/chart_node_health_check.png' width=200px>](./img/chart_node_health_check.png)
 
@@ -297,7 +297,7 @@ LoadPlugin python
     [<img src='./img/chart_dns_queries.png' width=200px>](./img/chart_dns_queries.png)
 
 - **CONSUL SERVER**
-All charts metioned in the Client dashboard are also present in the Server dashboard. In addition to those, below charts are also present -
+All charts metioned in the Client dashboard are also present in the Server dashboard. In addition to those, the following charts are present
 
   - **Raft candidate state**: This chart tracks if the selected Consul server starts an election. If this metric increments without a leadership change occurring it could indicate that a single server is overloaded or is experiencing network connectivity issues.
  
@@ -305,7 +305,7 @@ All charts metioned in the Client dashboard are also present in the Server dashb
 
 All metrics reported by the Consul collectd plugin will contain the following dimensions by default:
 
-* `datacenter`
+* `datacenter`, this is the datacenter to which the Consul agent belongs to. The value for this dimension is read from the agents configuration
 * `consul_node`, this is the Consul node name as seen in Consul agents configuration
 * `consul_mode`, consul agent is in client or server mode
 
