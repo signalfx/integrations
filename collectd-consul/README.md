@@ -93,11 +93,11 @@ This plugin will start a UDP server listening at above host and port.
 Using the example configuration file [10-consul.conf](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
 
 | **Configuration Option** | **Description** | **Default Value** |
-|:------------------------|:----------------|:------------------|
+|------------------------|----------------|------------------|
 | ApiHost | IP address or DNS to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `localhost` |
 | ApiPort | Port to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `8500` |
 | ApiProtocol | Possible values - *http* or *https* | `http` |
-AclToken | Consul ACL token. | None |
+| AclToken | Consul ACL token. | None |
 | TelemetryServer | Possible values - *true* or *false*<br>Set to *true* to enable collecting Consul's internal metrics via UDP from Consul's telemetry.<br>If set to *false* and Consul version is 0.9.1 and above, the metrics will be collected from API.<br>If set to *false* and Consul version is less than 0.9.1, Consul's internal metrics will not be available. | `false` |
 | TelemetryHost | IP address or DNS to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. | `localhost` |
 | TelemetryPort | Port to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. |  `8125` |
