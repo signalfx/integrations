@@ -107,7 +107,7 @@ IncludeMetric | Allows metrics by prefix matching, if *EnhancedMetrics* is false
 SfxToken |  SignalFx org access token. If added to the config, an event is sent to SignalFx on leader transition and can be viewed on the Consul dashboard. | None
 Dimension | Add single custom global dimension to your metrics, formatted as "key=value" | None
 Dimensions | Add multiple global dimensions, formatted as "key1=value1,key2=value2,..." | None
-CACertificate | If Consul server has https enabled for the API, provide the path to the CA Certificate. | None
+CaCertificate | If Consul server has https enabled for the API, provide the path to the CA Certificate. | None
 ClientCertificate | If client-side authentication is enabled, provide the path to the certificate file. | None
 ClientKey | If client-side authentication is enabled, provide the path to the key file. | None
 Debug | Possible values - *true* or *false*<br> | `false`
@@ -135,7 +135,7 @@ LoadPlugin python
     ExcludeMetric "consul.memberlist"
     Dimension "foo=bar"
     Dimensions "foo=bar,bar=baz"
-    CACertificate "path/to/ca_cert"
+    CaCertificate "path/to/ca_cert"
     ClientKey "path/to/client_key"
     ClientCertificate "path/to/client/certificate"
     Debug true
