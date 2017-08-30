@@ -96,9 +96,9 @@ etcd members
 +------------------------+---------------+------------------+
 | configuration option   | definition    | example value    |
 +========================+===============+==================+
-| ModulePath             | Path on disk  | "/usr/share/collectd/collectd-etcd/" |
-|                        | where         |  |
-|                        | collectd can  |              |
+| ModulePath             | Path on disk  | "/usr/share/coll |
+|                        | where         |  ectd/collectd-et|
+|                        | collectd can  |  cd/"            |
 |                        | find this     |                  |
 |                        | module.       |                  |
 +------------------------+---------------+------------------+
