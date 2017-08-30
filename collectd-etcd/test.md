@@ -259,7 +259,7 @@ LoadPlugin python
 
   - **Top Expire Rate**: A list of instances with top expire rates. Can be used to analyze if gets fail due to a high expiry rate.
 
-    [width=200px>](./img/chart-etcd-instances-top-expire.png)
+    ![width=200px](./img/chart-etcd-instances-top-expire.png)
 
 All metrics reported by the etcd collectd plugin will contain the following dimensions by default:
 

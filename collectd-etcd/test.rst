@@ -419,7 +419,8 @@ Interpreting Built-in dashboards
 -  **Top Expire Rate**: A list of instances with top expire rates. Can
    be used to analyze if gets fail due to a high expiry rate.
 
-   `width=200px> <./img/chart-etcd-instances-top-expire.png>`__
+   .. figure:: ./img/chart-etcd-instances-top-expire.png
+      :alt:
 
 All metrics reported by the etcd collectd plugin will contain the
 following dimensions by default:
@@ -466,4 +467,3 @@ This integration is released under the Apache 2.0 license. See
 `LICENSE <./LICENSE>`__ for more details.
 
 .. |image0| image:: ./img/integrations_etcd.png
-
