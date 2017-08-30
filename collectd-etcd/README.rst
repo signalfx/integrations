@@ -96,11 +96,7 @@ etcd members
 +------------------------+---------------+------------------+
 | configuration option   | definition    | example value    |
 +========================+===============+==================+
-| ModulePath             | Path on disk  | "/usr/share/coll |
-|                        | where         |  ectd/collectd-et|
-|                        | collectd can  |  cd/"            |
-|                        | find this     |                  |
-|                        | module.       |                  |
+| ModulePath             | Path on disk where collectd can find this module.| "/usr/share/collectd/collectd-etcd/" |
 +------------------------+---------------+------------------+
 | Host                   | Host name of  | "localhost"      |
 |                        | the etcd      |                  |
