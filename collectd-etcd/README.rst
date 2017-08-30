@@ -403,5 +403,5 @@ This integration is released under the Apache 2.0 license. See
 
 .. |image0| image:: ./img/integrations_etcd.png
 .. |image1| image:: https://github.com/signalfx/integrations/blob/akash/collectd-etcd/img/chart-etcd-instances-expire-trend.png
-            :width: 200 px
+   :width: 200 px
 
