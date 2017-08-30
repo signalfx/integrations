@@ -93,71 +93,11 @@ as a guide, provide values for the configuration options listed below
 that make sense for your environment and allow you to connect to the
 etcd members
 
-+------------------------+---------------+------------------+
-| configuration option   | definition    | example value    |
-+========================+===============+==================+
++------------------------+--------------------------------------------------+--------------------------------------+
+| configuration option   | definition                                       | example value                        |
++========================+==================================================+======================================+
 | ModulePath             | Path on disk where collectd can find this module.| "/usr/share/collectd/collectd-etcd/" |
-+------------------------+---------------+------------------+
-| Host                   | Host name of  | "localhost"      |
-|                        | the etcd      |                  |
-|                        | member        |                  |
-+------------------------+---------------+------------------+
-| Port                   | Port at which | "2379"           |
-|                        | the member    |                  |
-|                        | can be        |                  |
-|                        | reached       |                  |
-+------------------------+---------------+------------------+
-| Cluster                | Name of this  | "1"              |
-|                        | etcd cluster. |                  |
-+------------------------+---------------+------------------+
-| EnhancedMetrics        | Boolean to    | "false"          |
-|                        | indicate      |                  |
-|                        | whether stats |                  |
-|                        | from          |                  |
-|                        | ``/metrics``  |                  |
-|                        | are needed    |                  |
-+------------------------+---------------+------------------+
-| IncludeMetric          | Metric name   | "etcd\_debugging |
-|                        | from the      | \_mvcc\_slow\_wa |
-|                        | ``/metric``   | tcher\_total"    |
-|                        | endpoint to   |                  |
-|                        | include(valid |                  |
-|                        | when          |                  |
-|                        | EnhancedMetri |                  |
-|                        | cs            |                  |
-|                        | is "false")   |                  |
-+------------------------+---------------+------------------+
-| ExcludeMetric          | Metric name   | "etcd\_server\_h |
-|                        | from the      | as\_leader"      |
-|                        | ``/metric``   |                  |
-|                        | endpoint to   |                  |
-|                        | exclude(valid |                  |
-|                        | when          |                  |
-|                        | EnhancedMetri |                  |
-|                        | cs            |                  |
-|                        | is "true")    |                  |
-+------------------------+---------------+------------------+
-| Dimension              | Space         | dimension\_name  |
-|                        | separated     | dimension\_value |
-|                        | key-value     |                  |
-|                        | pair for a    |                  |
-|                        | user-defined  |                  |
-|                        | dimension     |                  |
-+------------------------+---------------+------------------+
-| Interval               | Number of     | 10               |
-|                        | seconds       |                  |
-|                        | between calls |                  |
-|                        | to etcd API.  |                  |
-+------------------------+---------------+------------------+
-| ssl\_keyfile           | Path to the   | "path/to/file"   |
-|                        | keyfile       |                  |
-+------------------------+---------------+------------------+
-| ssl\_certificate       | Path to the   | "path/to/file"   |
-|                        | certificate   |                  |
-+------------------------+---------------+------------------+
-| ssl\_ca\_certs         | Path to the   | "path/to/file"   |
-|                        | ca file       |                  |
-+------------------------+---------------+------------------+
++------------------------+--------------------------------------------------+--------------------------------------+
 
 Example configuration:
 
