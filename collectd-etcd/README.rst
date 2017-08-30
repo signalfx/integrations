@@ -454,7 +454,7 @@ these will be skipped if provided in the configuration). See
 Metric naming
 ^^^^^^^^^^^^^
 
-``<metric type>.etcd.<endpoint name>.<name of metric>``. This is the
+``<metric\_type>.etcd.<endpoint\_name>.<name\_of\_metric>``. This is the
 format of default metric names reported by the plugin. Optional metrics
 are named as available from the ``/metrics`` endpoint with ``_``
 replaced by ``.``.
