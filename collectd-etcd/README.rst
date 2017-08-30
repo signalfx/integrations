@@ -62,7 +62,7 @@ Version information
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 | etcd                         | 2.0.8 or later                                                                                                                             |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| Python plugin for collectd   | (included with `SignalFx collectd agent <https://github.com/signalfx/integrations/tree/master/collectd>`__\ ` <sfx_link:sfxcollectd>`__)   |
+| Python plugin for collectd   | (included with `SignalFx collectd agent <https://github.com/signalfx/integrations/tree/master/collectd>`__)   |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
 INSTALLATION
