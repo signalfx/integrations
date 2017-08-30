@@ -350,7 +350,7 @@ Interpreting Built-in dashboards
 -  **Expire Rate Trend**: A line chart showing the rate of expiry of
    keys/directories for all the instances on host.
 
-` <./img/chart-etcd-instances-expire-trend.png>`__
+   |image1|
 
 -  **Top Expire Rate**: A list of instances with top expire rates. Can
    be used to analyze if gets fail due to a high expiry rate.
@@ -402,4 +402,5 @@ This integration is released under the Apache 2.0 license. See
 `LICENSE <./LICENSE>`__ for more details.
 
 .. |image0| image:: ./img/integrations_etcd.png
+.. |image1| image:: | ./img/chart-etcd-instances-expire-trend.png
 
