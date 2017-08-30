@@ -421,6 +421,7 @@ Interpreting Built-in dashboards
 
    .. figure:: ./img/chart-etcd-instances-top-expire.png
       :alt:
+      :figwidth: 200 px
 
 All metrics reported by the etcd collectd plugin will contain the
 following dimensions by default:
