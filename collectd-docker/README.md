@@ -32,7 +32,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
   [<img src='./img/dashboard_docker_container.png' width=200px>](./img/dashboard_docker_container.png)
 
-- **Docker Neighbours**: (Optional Dashboard) Focus on resource allocation metrics.
+- **Docker Neighbours**: (Optional Dashboard) Focused on resource allocation metrics.
 
   [<img src='./img/dashboard_docker_neighbours.png' width=200px>](./img/dashboard_docker_neighbours.png)
 
@@ -72,7 +72,10 @@ Minimum requirement for emitting metrics related to `cpu quota` is Docker Engine
 
 1. Restart collectd.
 
-1. Only required if interested in optional dashboard. Import the [dashboard](https://github.com/signalfx/integrations/blob/master/collectd-docker/dashboards/Page_Docker.json) json into your org and set required options in the configuration.
+1. This step is relevant only if you are looking to report optional metrics: CPU quota and CPU shares. We have an optional dashboard that visualizes these metrics. To view this dashboard, you will need to import the dashboard group json file to your org. This will give you existing default dashboards along with `Docker Neighbours` (dashboard visualizing optional metrics). To have the docker plugin report and visualize the optional metrics:
+  * Set the configuration options as shown below to enable CPU quota and shares metrics
+  * Make sure that the filter in the config also emits the required metrics. See configuration details [here](https://github.com/signalfx/docker-collectd-plugin/blob/master/README.md#configuration).
+  * In your org in the app, select import from the hamburger menu and import this [file](https://github.com/signalfx/integrations/tree/master/collectd-docker/dashboards/Page_Docker.json).
 
 ### CONFIGURATION
 
@@ -85,6 +88,8 @@ Using the example configuration file [10-docker.conf](https://github.com/signalf
 | BaseURL | URL of your Docker daemon's remote API | "unix://var/run/docker.sock" |
 | Timeout  | Time in seconds that collectd will wait for a response from Docker   | 3 |
 | Verbose | Turns on verbose log statements | false |
+| CpuQuotaPercent | Turns on cpu quota metric | false |
+| CpuSharesPercent | Turns on cpu shares metric | false |
 
 ### USAGE
 
