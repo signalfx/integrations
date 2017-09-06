@@ -32,6 +32,10 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
   [<img src='./img/dashboard_docker_container.png' width=200px>](./img/dashboard_docker_container.png)
 
+- **Docker Neighbours**: (Optional Dashboard) Focus on resource allocation metrics.
+
+  [<img src='./img/dashboard_docker_neighbours.png' width=200px>](./img/dashboard_docker_neighbours.png)
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 #### Version information
@@ -67,6 +71,8 @@ Minimum requirement for emitting metrics related to `cpu quota` is Docker Engine
 1. Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
 1. Restart collectd.
+
+1. Only required if interested in optional dashboard. Import the [dashboard](https://github.com/signalfx/integrations/blob/master/collectd-docker/dashboards/Page_Docker.json) json into your org and set required options in the configuration.
 
 ### CONFIGURATION
 
