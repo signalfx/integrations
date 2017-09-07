@@ -32,7 +32,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
   [<img src='./img/dashboard_docker_container.png' width=200px>](./img/dashboard_docker_container.png)
 
-- **Docker Neighbours**: (Optional Dashboard) Focused on resource allocation metrics.
+- **Docker Neighbours**: (Optional Dashboard) Container resource allocation metrics.
 
   [<img src='./img/dashboard_docker_neighbours.png' width=200px>](./img/dashboard_docker_neighbours.png)
 
@@ -46,8 +46,6 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 | Python   | 2.6 or later |
 | Docker   | 1.9 or later |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
-
-Minimum requirement for emitting metrics related to `cpu quota` is Docker Engine API v1.19 (Docker 1.7+)
 
 
 ### INSTALLATION
@@ -72,10 +70,16 @@ Minimum requirement for emitting metrics related to `cpu quota` is Docker Engine
 
 1. Restart collectd.
 
-1. This step is relevant only if you are looking to report optional metrics: CPU quota and CPU shares. We have an optional dashboard that visualizes these metrics. To view this dashboard, you will need to import the dashboard group json file to your org. This will give you existing default dashboards along with `Docker Neighbours` (dashboard visualizing optional metrics). To have the docker plugin report and visualize the optional metrics:
-  * Set the configuration options as shown below to enable CPU quota and shares metrics
-  * Make sure that the filter in the config also emits the required metrics. See configuration details [here](https://github.com/signalfx/docker-collectd-plugin/blob/master/README.md#configuration).
-  * In your org in the app, select import from the hamburger menu and import this [file](https://github.com/signalfx/integrations/tree/master/collectd-docker/dashboards/Page_Docker.json).
+1. Optional metrics regarding CPU quota and CPU shares can be enabled in the plugin configuration file. To enable the optional metrics:
+  * Set the CpuQuotaPercent and CpuSharesPercent configuration options to true
+  * Configure the filter to emit the optional metrics. Please see the configuration details [here](#configuration).
+
+1. The optional dashboard Docker Neighbours offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
+  * Manually import the dashboard into your organization in SignalFx.
+    * Download the dashboard
+    * In SignalFx, select hamburger menu -> import -> Dashboard Group
+    * Specify the path to the downloaded Page_Docker.json file
+    * The new dashboard group should appear under Custom Dashboard Groups
 
 ### CONFIGURATION
 
@@ -90,6 +94,33 @@ Using the example configuration file [10-docker.conf](https://github.com/signalf
 | Verbose | Turns on verbose log statements | false |
 | CpuQuotaPercent | Turns on cpu quota metric | false |
 | CpuSharesPercent | Turns on cpu shares metric | false |
+
+
+#### How to send metrics about resource allocation
+
+If a filter has been configured, then additional resource allocation metrics can be gathered by adding the following snippet to the plugin's filter configuration.
+
+```apache
+<Rule "Cpu">
+  <Match "regex">
+    Type "^cpu$"
+  </Match>
+  Target "return"
+</Rule>
+<Rule "CpuThrottlingData">
+  <Match "regex">
+    Type "^cpu.throttling_data$"
+  </Match>
+  Target "return"
+</Rule>
+<Rule "MemoryStats">
+  <Match "regex">
+    Type "^memory.stats$"
+    TypeInstance "^swap"
+  </Match>
+  Target "return"
+</Rule>
+```
 
 ### USAGE
 

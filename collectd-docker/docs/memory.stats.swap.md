@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### Swap Memory Used
 
-(Optional metric) Tracks swap memory. Provides the number of bytes of swap memory used by a container.
+(Optional metric) The number of bytes of swap memory used by a container.
