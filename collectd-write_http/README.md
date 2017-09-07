@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Write-HTTP
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_collectd.png) Write-HTTP
 
 _This directory consolidates all the metadata associated with the Write-HTTP collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/write_http.c)_
 
@@ -24,7 +24,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
