@@ -74,7 +74,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
   * Set the CpuQuotaPercent and CpuSharesPercent configuration options to true
   * Configure the filter to emit the optional metrics. Please see the configuration details [here](#configuration)
 
-1. The optional dashboard `Docker Neighbours` offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
+5. The optional dashboard `Docker Neighbours` offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
   * Manually import the dashboard into your organization in SignalFx.
     * Download the dashboard
     * In SignalFx, select `hamburger menu` -> `import` -> `Dashboard Group`
