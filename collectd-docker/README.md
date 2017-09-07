@@ -44,7 +44,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 |----------|--------------|
 | collectd | 5.0 or later |
 | Python   | 2.6 or later |
-| Docker   | 1.5 or later |
+| Docker   | 1.9 or later |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 Minimum requirement for emitting metrics related to `cpu quota` is Docker Engine API v1.19 (Docker 1.7+)
