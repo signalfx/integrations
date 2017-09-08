@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
     name: signalfx-agent
     labels:
-        version: v1.0.0
+        version: v1.0.1
         app: signalfx-agent
 spec:
     selector:
@@ -13,12 +13,12 @@ spec:
         metadata:
             labels:
                 app: signalfx-agent
-                version: v1.0.0
+                version: v1.0.1
         spec:
             hostNetwork: true
             containers:
             - name: signalfx-agent
-              image: quay.io/signalfx/signalfx-agent:1.0.0
+              image: quay.io/signalfx/signalfx-agent:1.0.1
               securityContext:
                 privileged: true
               volumeMounts:
