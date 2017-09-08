@@ -32,6 +32,10 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
   [<img src='./img/dashboard_docker_container.png' width=200px>](./img/dashboard_docker_container.png)
 
+- **Docker Neighbours**: (Optional Dashboard) Container resource allocation metrics.
+
+  [<img src='./img/dashboard_docker_neighbours.png' width=200px>](./img/dashboard_docker_neighbours.png)
+
 ### REQUIREMENTS AND DEPENDENCIES
 
 #### Version information
@@ -40,7 +44,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 |----------|--------------|
 | collectd | 5.0 or later |
 | Python   | 2.6 or later |
-| Docker   | 1.5 or later |
+| Docker   | 1.9 or later |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 
@@ -66,6 +70,17 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
 1. Restart collectd.
 
+1. Optional metrics regarding CPU quota and CPU shares can be enabled in the plugin configuration file. To enable the optional metrics:
+  * Set the CpuQuotaPercent and CpuSharesPercent configuration options to true
+  * Configure the filter to emit the optional metrics. Please see the configuration details [here](#configuration)
+
+5. The optional dashboard `Docker Neighbours` offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
+  * Manually import the dashboard into your organization in SignalFx.
+    * Download the dashboard
+    * Click to open the Actions menu, hover over Import, then select Dashboard Group
+    * Specify the path to the downloaded `Page_Docker.json` file
+    * The new dashboard group should appear under Custom Dashboard Groups
+
 ### CONFIGURATION
 
 Using the example configuration file [10-docker.conf](https://github.com/signalfx/integrations/tree/master/collectd-docker/10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
@@ -77,6 +92,35 @@ Using the example configuration file [10-docker.conf](https://github.com/signalf
 | BaseURL | URL of your Docker daemon's remote API | "unix://var/run/docker.sock" |
 | Timeout  | Time in seconds that collectd will wait for a response from Docker   | 3 |
 | Verbose | Turns on verbose log statements | false |
+| CpuQuotaPercent | Turns on cpu quota metric | false |
+| CpuSharesPercent | Turns on cpu shares metric | false |
+
+
+#### How to send metrics about resource allocation
+
+If a filter has been configured, then additional resource allocation metrics can be gathered by adding the following snippet to the plugin's filter configuration.
+
+```apache
+<Rule "Cpu">
+  <Match "regex">
+    Type "^cpu$"
+  </Match>
+  Target "return"
+</Rule>
+<Rule "CpuThrottlingData">
+  <Match "regex">
+    Type "^cpu.throttling_data$"
+  </Match>
+  Target "return"
+</Rule>
+<Rule "MemoryStats">
+  <Match "regex">
+    Type "^memory.stats$"
+    TypeInstance "^swap"
+  </Match>
+  Target "return"
+</Rule>
+```
 
 ### USAGE
 

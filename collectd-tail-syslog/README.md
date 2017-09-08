@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Tail collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_collectd.png) Tail collectd Plugin
 
 _This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c)_
 
@@ -61,7 +61,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is automatically bundled with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd), but it is not enabled by default. 
+This plugin is automatically bundled with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd), but it is not enabled by default.
 
 
 ### CONFIGURATION

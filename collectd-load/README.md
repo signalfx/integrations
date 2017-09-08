@@ -1,4 +1,4 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Load
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_collectd.png) Load
 
 _This directory consolidates all the metadata associated with the Load collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/load.c)_
 
@@ -27,7 +27,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
