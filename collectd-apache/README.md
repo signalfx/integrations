@@ -69,7 +69,7 @@ Using the example configuration file [10-apache.conf](https://github.com/signalf
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | Instance | The name of the server to be monitored. This value appears in the dimension `plugin_instance`. | myapacheinstance |
-| URL | The location at which collectd can retrieve output of `mod_status`. | "http://localhost/mod_status?auto" |
+| URL | The location at which collectd can retrieve output of `mod_status`. | `http://localhost/mod_status?auto` |
 
 _Note_: Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which this plugin requires.
 
