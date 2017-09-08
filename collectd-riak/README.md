@@ -94,7 +94,7 @@ Riak Search throughput can be measured separately in terms of number of document
 
 Latency metrics are useful to determine if Riak is slowing down requests from  applications. Riak should respond to PUTs and GETs very quickly - single digit milliseconds - otherwise applications start to suffer. If there is a serious issue with Riak, this is most likely the first indicator that something is going wrong. Keeping an eye on the 95/99 percentile metrics are also useful to uncover issues unseen in the mean latency times.
 
-[node put mean](././img/node_putmean.png) [node put95](././img/node_put95.png)
+![node put mean](././img/node_putmean.png) ![node put95](././img/node_put95.png)
 
 *Put mean times below 5ms means our applications are very happy*
 

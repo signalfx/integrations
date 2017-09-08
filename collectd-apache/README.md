@@ -1,4 +1,4 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache
 
 _This is a directory that consolidates all the metadata associated with the Apache collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c)_
 
@@ -53,8 +53,8 @@ This plugin collects metrics from the module `mod_status`.
 1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
          yum install collectd-apache
-         
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd). 
+
+   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
 1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin to `/etc/collectd/managed_config`.
 
@@ -69,7 +69,7 @@ Using the example configuration file [10-apache.conf](https://github.com/signalf
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | Instance | The name of the server to be monitored. This value appears in the dimension `plugin_instance`. | myapacheinstance |
-| URL | The location at which collectd can retrieve output of `mod_status`. | "http://localhost/mod_status?auto" |
+| URL | The location at which collectd can retrieve output of `mod_status`. | `http://localhost/mod_status?auto` |
 
 _Note_: Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which this plugin requires.
 
