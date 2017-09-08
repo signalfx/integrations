@@ -1,8 +1,6 @@
 # Aggregation
 
-Use the [aggregation](https://collectd.org/wiki/index.php/Plugin:Aggregation) plugin to aggregate metrics.
-
-See the [cpu](https://github.com/signalfx/integrations/tree/master/collectd-cpu) plugin for information on the specific metrics.  This plugin provides aggregates, by default average and summary.
+Use the [aggregation](https://collectd.org/wiki/index.php/Plugin:Aggregation) plugin to aggregate metrics. This plugin provides aggregates, by default average and summary.
 
 #### Version information
 
