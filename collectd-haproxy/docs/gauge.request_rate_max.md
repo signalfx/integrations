@@ -1,8 +1,8 @@
 ---
 title: Request Rate Max
-brief: max number of HTTP requests per second observed
+brief: Max number of HTTP requests per second observed. Corresponds to HAProxy's "req_rate_max" metric.
 metric_type: gauge
 ---
 ### Request Rate Max
 
-max number of HTTP requests per second observed
+Max number of HTTP requests per second observed. Corresponds to HAProxy's "req_rate_max" metric.

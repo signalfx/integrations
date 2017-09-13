@@ -1,8 +1,8 @@
 ---
 title: Last Session
-brief: number of seconds since last session was assigned to server/backend
+brief: Number of seconds since last session was assigned to server/backend. This corresponds to HAProxy's "lastsess" metric.
 metric_type: gauge
 ---
 ### Last Session
 
-number of seconds since last session was assigned to server/backend
+Number of seconds since last session was assigned to server/backend. This corresponds to HAProxy's "lastsess" metric.
