@@ -47,7 +47,7 @@ Using the example configuration file [10-haproxy.conf](https://github.com/signal
 | ---------------------|------------|---------------|
 | Socket | Location of the HAProxy socket file. The default socket is `/var/run/haproxy.sock` | Socket "/var/run/haproxy.sock" |
 | ProxyMonitor | A list of all the pxname(s) or svname(s) that you want to monitor | <ui><li>ProxyMonitor "http-in"</li><li>ProxyMonitor "server1"</li><li>ProxyMonitor "backend"</li></ui> |
-| Interval | Interval between collectd to get HAProxy metrics. Default is 10s | 10 |
+| Interval | Interval between collectd to get HAProxy metrics. | 10 |
 | EnhancedMetrics | Enable sending all metrics, not just the default metrics. Defaults to false| EnhancedMetrics 'True' |
 | ExcludeMetric | Do not send a specific metric. Metric names can be found in the docs repo | ExcludeMetric 'response_1xx' |
 
@@ -91,31 +91,31 @@ frontend stats-frontend
 ### METRICS
 #### Default metrics
 - **HAProxy Overview**
-  - **Connection Rate**
-  - **Requests per Second**
-  - **Idle Percent**
-  - **Current Sessions**
-  - **Sessions Rate**
-  - **Top Servers Selected**
-  - **Highest Bytes Out**
-  - **Average Session Time**
+  - Connection Rate
+  - Requests per Second
+  - Idle Percent
+  - Current Sessions
+  - Sessions Rate
+  - Top Servers Selected
+  - Highest Bytes Out
+  - Average Session Time
 - **HAProxy Frontend**
-  - **Request Rate**
-  - **Session Rate**
-  - **Response 2xx, 4xx, 5xx**
-  - **Request Errors**
-  - **Denied Requests**
-  - **Bytes Out**
-  - **Bytes In**
+  - Request Rate
+  - Session Rate
+  - Response 2xx, 4xx, 5xx
+  - Request Errors
+  - Denied Requests
+  - Bytes Out
+  - Bytes In
 - **HAProxy Backend**
-  - **Current Queue Size**
-  - **Average Response Time**
-  - **Average Queue Time**
-  - **Top Servers Selected**
-  - **Response Errors**
-  - **Server Retries and Redispatches**
-  - **Connection Errors**
-  - **Denied Responses**
+  - Current Queue Size
+  - Average Response Time
+  - Average Queue Time
+  - Top Servers Selected
+  - Response Errors
+  - Server Retries and Redispatches
+  - Connection Errors
+  - Denied Responses
 
 #### Enhanced Metrics
 For documentation of the all metrics and dimensions emitted by this plugin, [click here](././docs). Non-default metrics can be enabled in the plugin configuration file, by setting EnhancedMetrics to "True". Any metric can be excluded from being sent by adding ExcludeMetric "metric_name" in the plugin configuration file. Metric names are found in the [docs](././docs).
