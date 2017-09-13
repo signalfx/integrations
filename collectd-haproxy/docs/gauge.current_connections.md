@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### Current connections
 
-Current number of conncetions. Corresponds to HAProxy's "CurrConns" metric.
+Current number of connections. Corresponds to HAProxy's "CurrConns" metric.
