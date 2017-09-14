@@ -4,5 +4,7 @@
   "code": "https://github.com/signalfx/collectd-haproxy",
   "featured": false,
   "logo_large": "/images/repos/collectd-haproxy/img/integrations_haproxy.png",
-  "logo_small": "/images/repos/collectd-haproxy/img/integrations_haproxy%402x.png"
+  "logo_small": "/images/repos/collectd-haproxy/img/integrations_haproxy%402x.png",
+  "data_signature": "plugin:\"haproxy\"",
+  "in_app_categories": ["servicesMonitored"]
 }
