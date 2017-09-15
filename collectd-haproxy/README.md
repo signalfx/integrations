@@ -44,10 +44,13 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
 
 Using the example configuration file [10-haproxy.conf](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
 
-| configuration option | definition | example value |
+| Configuration Option | Definition | Example Value |
 | ---------------------|------------|---------------|
-| Socket | Location of the HAProxy socket file | Socket "/var/run/haproxy.sock" |
+| Socket | Location of the HAProxy socket file. The default socket is `/var/run/haproxy.sock` | Socket "/var/run/haproxy.sock" |
 | ProxyMonitor | A list of all the pxname(s) or svname(s) that you want to monitor | <ui><li>ProxyMonitor "http-in"</li><li>ProxyMonitor "server1"</li><li>ProxyMonitor "backend"</li></ui> |
+| Interval | Interval between collectd to get HAProxy metrics. | 10 |
+| EnhancedMetrics | Enable sending all metrics, not just the default metrics. Defaults to false| EnhancedMetrics 'True' |
+| ExcludeMetric | Do not send a specific metric. Metric names can be found in the docs repo | ExcludeMetric 'response_1xx' |
 
 The location of the HAProxy socket file is defined in the HAProxy config file, as in the following example:
 
@@ -58,10 +61,67 @@ global
     stats timeout 2m
 ```
 
+Note: it is possible to use a tcp socket for stats in HAProxy. Users will first need to define in their collectd-haproxy plugin config file the tcp address for the socket, for example `localhost:9000`, and then in the haproxy.cfg file change the stats socket to listen on the same address
+```
+global
+    daemon
+    stats socket localhost:9000
+    stats timeout 2m
+```
+
+For a more restricted tcp socket, a backend server can be defined to listen to stats on localhost. A frontend proxy can use the backend server on a different port, with ACLs to restrict access. See below for example.
+
+```
+global
+    daemon
+    stats socket localhost:9000
+    stats timeout 2m
+
+backend stats-backend
+    mode tcp
+    server stats-localhost localhost:9000
+
+frontend stats-frontend
+    bind *:9001
+    default_backend stats-backend
+    acl ...
+    acl ...
+```
+
 
 ### METRICS
+#### Default metrics
+- **HAProxy Overview**
+  - Connection Rate
+  - Requests per Second
+  - Idle Percent
+  - Current Sessions
+  - Sessions Rate
+  - Top Servers Selected
+  - Highest Bytes Out
+  - Average Session Time
+- **HAProxy Frontend**
+  - Request Rate
+  - Session Rate
+  - Response 2xx, 4xx, 5xx
+  - Request Errors
+  - Denied Requests
+  - Bytes Out
+  - Bytes In
+- **HAProxy Backend**
+  - Current Queue Size
+  - Average Response Time
+  - Average Queue Time
+  - Top Servers Selected
+  - Response Errors
+  - Server Retries and Redispatches
+  - Connection Errors
+  - Denied Responses
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
+#### Enhanced Metrics
+
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Non-default metrics can be enabled in the plugin configuration file, by setting EnhancedMetrics to "True". Any metric can be excluded from being sent by adding ExcludeMetric "metric_name" in the plugin configuration file. Metric names are found in the [docs](./docs).
+
 
 ### LICENSE
 
