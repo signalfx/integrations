@@ -7,5 +7,4 @@ metric_type: cumulative_counter
 
 Superseded by `blkio.io_serviced_recursive.read`.
 
-Tracks the number of read requests from block devices serviced in that
-container.
+Tracks the number of read requests from block devices serviced in that container.

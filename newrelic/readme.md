@@ -1,4 +1,4 @@
-#![](././img/integration_newrelic.png) New Relic
+# ![](././img/integrations_newrelic.png) New Relic
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -18,17 +18,17 @@ This integration requires a New Relic account. You must be an administrator of y
 
 1. Follow [New Relic's instructions](https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys) to obtain a REST API key for your account.
 
-1. Click the **New Integration** button. In the field labelled **API key**, enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!** If a different message appears, contact [support@signalfx.com](mailto:support@signalfx.com) for help.
+2. Click the **New Integration** button. In the field labelled **API key**, enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!** If a different message appears, contact [support@signalfx.com](mailto:support@signalfx.com) for help.
 
-1. Select a New Relic module to sync to SignalFx (APM, Mobile, or Servers). You will create a sync rule for that module to control which metrics SignalFx will sync from New Relic.
+3. Select a New Relic module to sync to SignalFx (APM, Mobile, or Servers). You will create a sync rule for that module to control which metrics SignalFx will sync from New Relic.
 
-1. Click **Add Apps** or (for the Servers module) **Add Servers**. Use typeahead to include at least one filter string, checking results of the filter on the Sample Matches list.  Click the blue **+** button to add a string to the list of filters. (**Note:** Because the volume of available metrics from New Relic may be large, SignalFx recommends filtering down to just one or a few items to start). When your filter includes all the items you wish to monitor, click **Done**. 
+4. Click **Add Apps** or (for the Servers module) **Add Servers**. Use typeahead to include at least one filter string, checking results of the filter on the Sample Matches list.  Click the blue **+** button to add a string to the list of filters. (**Note:** Because the volume of available metrics from New Relic may be large, SignalFx recommends filtering down to just one or a few items to start). When your filter includes all the items you wish to monitor, click **Done**.
 
-1. (optional) Select metrics and stats to monitor. By default, all are monitored.
+5. (optional) Select metrics and stats to monitor. By default, all are monitored.
 
-1. (optional) Click **New Sync Rule** and repeat steps 3-5 for other modules.
+6. (optional) Click **New Sync Rule** and repeat steps 3-5 for other modules.
 
-1. Click **Save**. The choices you made for each module are saved as individual sync rules. You can later reopen the New Relic integration to add, edit, or delete sync rules.
+7. Click **Save**. The choices you made for each module are saved as individual sync rules. You can later reopen the New Relic integration to add, edit, or delete sync rules.
 
 Your New Relic account is now connected and ready to use. Data from New Relic will arrive at SignalFx within minutes.
 

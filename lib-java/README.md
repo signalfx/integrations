@@ -4,30 +4,25 @@
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
-- [CodaHale Metrics 3.0.x](#codahale3)
-- [Yammer Metrics](#yammer)
+- [CodaHale Metrics 3.0.x](#codahale-metrics-30x)
+- [Yammer Metrics](#yammer-metrics)
 - [Example Project](#example-project)
-- [Sending Metrics Without CodaHale](#nocoda)
+- [Sending Metrics Without CodaHale](#sending-metrics-without-codahale)
 - [License](#license)
 
 
-### <a name="description"></a>DESCRIPTION
+### DESCRIPTION
 
-This repository contains libraries for instrumenting Java applications and
-reporting metrics to SignalFx, using Codahale Metrics.
+This repository contains libraries for instrumenting Java applications and reporting metrics to SignalFx, using Codahale Metrics.
 
-You can also use the module `signalfx-java` to send metrics directly to SignalFx
-using protocol buffers, without using Codahale or Yammer metrics.
+You can also use the module `signalfx-java` to send metrics directly to SignalFx using protocol buffers, without using Codahale or Yammer metrics.
 
 
-### <a name="requirements-and-dependencies"></a>REQUIREMENTS AND DEPENDENCIES
+### REQUIREMENTS AND DEPENDENCIES
 
 #### Codahale, Yammer and Dropwizard Metrics version
 
-We recommend sending metrics with Java using Codahale Metrics version 3.0+. You
-can also use Yammer Metrics 2.0.x (an earlier version of Codahale Metrics). More
-information on the Codahale Metrics library can be found on the
-[Codahale Metrics website](https://dropwizard.github.io/metrics/).
+We recommend sending metrics with Java using Codahale Metrics version 3.0+. You can also use Yammer Metrics 2.0.x (an earlier version of Codahale Metrics). More information on the Codahale Metrics library can be found on the [Codahale Metrics website](https://dropwizard.github.io/metrics/).
 
 #### Supported languages
 
@@ -36,11 +31,10 @@ Java 6+ with `signalfx-metrics`.
 
 #### API access token
 
-To use this library, you need a SignalFx API access
-token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview). 
+To use this library, you need a SignalFx API access token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview).
 
 
-### <a name="installation"></a>INSTALLATION
+### INSTALLATION
 
 #### Using this library in your project with Maven
 
@@ -84,9 +78,7 @@ libraryDependencies += "com.signalfx.public" % "signalfx-yammer" % "0.0.23"
 
 #### From source
 
-You can also install this library from source by cloning the repo and using
-`mvn install` as follows. However, we strongly recommend using the automated
-mechanisms described above.
+You can also install this library from source by cloning the repo and using `mvn install` as follows. However, we strongly recommend using the automated mechanisms described above.
 
 ```
 $ git clone https://github.com/signalfx/signalfx-java.git
@@ -116,7 +108,7 @@ $ mvn install
 ```
 
 
-### <a name="codahale3"></a>CODAHALE METRICS 3.0.x
+### CODAHALE METRICS 3.0.x
 
 #### 1. Set up the Codahale reporter
 
@@ -143,13 +135,9 @@ metricRegistry.register("gauge", new Gauge<Long>() {
 
 #### 3. Add existing dimensions and metadata to metrics
 
-You can add SignalFx specific metadata to Codahale metrics by first gathering
-available metadata using `getMetricMetadata()`, then attaching the
-MetricMetadata to the metric.
+You can add SignalFx specific metadata to Codahale metrics by first gathering available metadata using `getMetricMetadata()`, then attaching the to the metric.
 
-When you use MetricMetadata, call the .register() method you get from the call
-forMetric() rather than registering your metric directly with the
-metricRegistry.  This will construct a unique Codahale string for your metric.
+When you use MetricMetadata, call the .register() method you get from the call () rather than registering your metric directly with the metricRegistry.  This will construct a unique Codahale string for your metric.
 
 ```java
 /*
@@ -168,13 +156,9 @@ metricMetadata.forMetric(new Gauge<Long>() {
 
 #### 4. (optional) Add dimensions without knowing if they already exist
 
-We recommend creating your Codahale object as a field of your class, as a
-counter or gauge, then using that field to increment values. If you don't want
-to maintain this for reasons of code cleanliness, you can create it on the fly
-with our builders.
+We recommend creating your Codahale object as a field of your class, as a counter or gauge, then using that field to increment values. If you don't want to maintain this for reasons of code cleanliness, you can create it on the fly with our builders.
 
-For example, if you wanted a timer that included a dimension indicating which
-store it is from, you could use code like this.
+For example, if you wanted a timer that included a dimension indicating which store it is from, you could use code like this.
 
 ```java
 Timer t = metricMetadata
@@ -201,25 +185,13 @@ try {
 
 #### After setting up Codahale
 
-After setting up a SignalFxReporter, you can use Codahale metrics as you
-normally would, reported at the frequency configured by the `SignalFxReporter`.
+After setting up a SignalFxReporter, you can use Codahale metrics as you normally would, reported at the frequency configured by the `SignalFxReporter`.
 
 #### Default Dimensions
-Sometimes there is a desire to set one or more dimension key/value pairs
-on every datapoint that is reported by this library. In order to do this
-call `addDimension(String key, String value)` or
-`addDimensions(Map<String,String> dimensions)` on the `SignalFxReport.Builder`
-object. Note that if IncrementalCounter is used to create a distributed
-counter you will want to make sure that none of the dimensions passed
-to addDimension/addDimensions are unique to the reporting source
-(e.g. hostname, AWSUniqueId) as this will make make the counter
-non-distributed. For such dimensions use `addUniqueDimensions/addUniqueDimension`
-on the `SignalFxReport.Builder` object.
+Sometimes there is a desire to set one or more dimension key/value pairs on every datapoint that is reported by this library. In order to do this call `addDimension(String key, String value)` or `addDimensions(Map<String,String> dimensions)` on the `SignalFxReport.Builder` object. Note that if IncrementalCounter is used to create a distributed counter you will want to make sure that none of the dimensions passed to addDimension/addDimensions are unique to the reporting source (e.g. hostname, AWSUniqueId) as this will make make the counter non-distributed. For such dimensions use `addUniqueDimensions/addUniqueDimension` on the `SignalFxReport.Builder` object.
 
 #### AWS Integration
-To enable AWS integration in SignalFx (i.e aws tag/property syncing) to a metric
-you can use `com.signalfx.metrics.aws.AWSInstanceInfo`. And either add it as
-a dimension in `MetricMetadata` or add it as a default dimension.
+To enable AWS integration in SignalFx (i.e aws tag/property syncing) to a metric you can use `com.signalfx.metrics.aws.AWSInstanceInfo`. And either add it as a dimension in `MetricMetadata` or add it as a default dimension.
 
 ```java
 String instanceInfo = AWSInstanceInfo.get()
@@ -238,7 +210,7 @@ final SignalFxReporter signalfxReporter = new SignalFxReporter.Builder(
 ).addUniqueDimension(AWSInstanceInfo.DIMENSION_NAME, instanceInfo).build();
 ```
 
-### <a name="yammer"></a>YAMMER METRICS
+### YAMMER METRICS
 
 You can also use this library with Yammer metrics 2.0.x as shown in the
 following examples.
@@ -293,10 +265,7 @@ This is not supported in Yammer Metrics 2.0.x.
 
 #### Changing the default source
 
-The default source name for metrics is discovered by [SourceNameHelper]
-(signalfx-java/src/main/java/com/signalfx/metrics/SourceNameHelper.java).
-If you want to override the default behavior, you can pass a third parameter to
-your Builder and that String is then used as the source.
+The default source name for metrics is discovered by [SourceNameHelper] (signalfx-java/src/main/java/com/signalfx/metrics/SourceNameHelper.java). If you want to override the default behavior, you can pass a third parameter to your Builder and that String is then used as the source.
 
 For example:
 
@@ -309,16 +278,10 @@ final SignalFxReporter signalfxReporter = new SignalFxReporter.Builder(
 ```
 
 #### Default Dimensions
-Sometimes there is a desire to set one or more dimension key/value pairs
-on every datapoint that is reported by this library. In order to do this
-call `addDimension(String key, String value)` or
-`addDimensions(Map<String,String> dimensions) on the `SignalFxReport.Builder`
-object.
+Sometimes there is a desire to set one or more dimension key/value pairs on every datapoint that is reported by this library. In order to do this call `addDimension(String key, String value)` or `addDimensions(Map<String,String> dimensions)` on the `SignalFxReport.Builder` object.
 
 #### AWS Integration
-To enable AWS integration in SignalFx (i.e aws tag/property syncing) to a metric
-you can use `com.signalfx.metrics.aws.AWSInstanceInfo`. And either add it as
-a dimension in `MetricMetadata` or add it as a default dimension.
+To enable AWS integration in SignalFx (i.e aws tag/property syncing) to a metric you can use `com.signalfx.metrics.aws.AWSInstanceInfo`. And either add it as a dimension in `MetricMetadata` or add it as a default dimension.
 
 ```java
 String instanceInfo = AWSInstanceInfo.get()
@@ -337,24 +300,20 @@ final SignalFxReporter signalfxReporter = new SignalFxReporter.Builder(
 ).addDimension(AWSInstanceInfo.DIMENSION_NAME, instanceInfo).build();
 ```
 
-### <a name="example-project"></a>EXAMPLE PROJECT
+### EXAMPLE PROJECT
 
-You can find a full-stack example project called "signalfx-yammer-example" in
-the repo.
+You can find a full-stack example project called "signalfx-yammer-example" in the repo.
 
 Run it as follows:
 
-1. Download the code and create an "auth" file in the "signalfx-yammer-example"
-   directory. The auth file should contain the following:
+1. Download the code and create an "auth" file in the "signalfx-yammer-example" directory. The auth file should contain the following:
 
     ```
     auth=<signalfx API Token>
     host=https://ingest.signalfx.com
     ```
 
-2. Run the following commands in your terminal to install and run the example
-   project, replacing `path/to/signalfx-yammer-example` with the location of the
-   example project code in your environment. You must have Maven installed.
+2. Run the following commands in your terminal to install and run the example project, replacing `path/to/signalfx-yammer-example` with the location of the example project code in your environment. You must have Maven installed.
 
     ```
     cd path/to/signalfx-yammer-example
@@ -364,12 +323,9 @@ Run it as follows:
 
 New metrics from the example project should appear in SignalFx.
 
-### <a name="nocoda"></a>SENDING METRICS WITHOUT CODAHALE
+### SENDING METRICS WITHOUT CODAHALE
 
-We recommend sending metrics using Codahale as shown above. You can also
-interact with our Java library directly if you do not want to use Codahale. To
-do this, you will need to build the metric manually using protocol buffers as
-shown in the following example.
+We recommend sending metrics using Codahale as shown above. You can also interact with our Java library directly if you do not want to use Codahale. To do this, you will need to build the metric manually using protocol buffers as shown in the following example.
 
 ```java
 DataPointReceiverEndpoint dataPointEndpoint = new DataPointEndpoint();
@@ -398,6 +354,6 @@ try (AggregateMetricSender.Session i = mf.createSession()) {
 }
 ```
 
-### <a name="license"></a>LICENSE
+### LICENSE
 
 This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-java/blob/master/LICENSE)for more details.

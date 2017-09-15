@@ -1,6 +1,6 @@
 # ![](./img/integrations_activemq.png) ActiveMQ
 
-_This is a directory that consolidates all the metadata associated with SignalFx's integration with ActiveMQ. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
+This is a directory that consolidates all the metadata associated with SignalFx's integration with ActiveMQ. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -52,17 +52,17 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | ActiveMQ  | 5.8.0 or later |
-| [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) |  (match collectd version) | 
-       
+| [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) |  (match collectd version) |
+
 ### INSTALLATION
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
 
-1. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [20-activemq.conf](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
+2. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [20-activemq.conf](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
 
-1. Modify `20-activemq.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+3. Modify `20-activemq.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -81,7 +81,7 @@ Sample of pre-built dashboard in SignalFx:
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

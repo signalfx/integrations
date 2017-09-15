@@ -1,12 +1,11 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) vmem
 
-_This is a directory consolidate all the metadata associated with the vmem collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/vmem.c)_
+This is a directory consolidate all the metadata associated with the vmem collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/vmem.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Metrics](#metrics)
 - [License](#license)
 
@@ -26,7 +25,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
@@ -41,11 +40,9 @@ From the [collectd wiki](https://collectd.org/documentation/manpages/collectd.co
 |----------------------|------|------------|
 |Verbose| true/false|Enables verbose collection of information. This will start collecting page "actions", e. g. page allocations, (de)activations, steals and so on. Part of these statistics are collected on a "per zone" basis.|
 
-### USAGE
-
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

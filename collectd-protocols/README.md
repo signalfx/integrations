@@ -1,7 +1,6 @@
-![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png)
-# Protocols
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Protocols
 
-_This is a directory consolidate all the metadata associated with the Protocols collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/protocols.c)_
+This is a directory consolidate all the metadata associated with the Protocols collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/protocols.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -32,7 +31,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
@@ -43,8 +42,8 @@ From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
-|`Value`| _Selector_ | Selects whether or not to select a specific value. <ul><li>The string being matched is of the form `Protocol:ValueName` where `Protocol` will be used as the plugin instance and `ValueName` will be used as type instance. </li><li> An example of the string being used would be `Tcp:RetransSegs` </li><li> You can use regular expressions to match a large number of values with just one configuration option. </li><li> To select all "extended" TCP values, you could use the following statement: `Value "/^TcpExt:/"` </li><li> Whether only matched values are selected or all matched values are ignored depends on the **`IgnoreSelected`**. By default, only matched values are selected. If no value is configured at all, all values will be selected.</li></ui>|
-|`IgnoreSelected`| _true/false_ | If set to true, inverts the selection made by `Value`, i. e. all matching values will be ignored.|
+| `Value` | _Selector_ | Selects whether or not to select a specific value. <ul><li>The string being matched is of the form `Protocol:ValueName` where `Protocol` will be used as the plugin instance and `ValueName` will be used as type instance. </li><li> An example of the string being used would be `Tcp:RetransSegs` </li><li> You can use regular expressions to match a large number of values with just one configuration option. </li><li> To select all "extended" TCP values, you could use the following statement: `Value "/^TcpExt:/"` </li><li> Whether only matched values are selected or all matched values are ignored depends on the **IgnoreSelected**. By default, only matched values are selected. If no value is configured at all, all values will be selected.</li></ui> |
+| `IgnoreSelected` | _true/false_ | If set to true, inverts the selection made by `Value`, i. e. all matching values will be ignored. |
 
 
 ### USAGE
@@ -64,7 +63,7 @@ This is a plugin used to gather data about specific protocols in use by a host o
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

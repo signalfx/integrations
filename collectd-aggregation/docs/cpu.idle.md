@@ -1,6 +1,7 @@
 ---
 title: Idle CPU time
 brief: CPU time spent not in any other state (in jiffies)
+metric_type: cumulative_counter
 ---
 ### Idle CPU time
 

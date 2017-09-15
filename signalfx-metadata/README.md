@@ -1,6 +1,6 @@
 # SignalFx plugin for collectd
 
-_This directory consolidates all the metadata associated with the SignalFx plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-signalfx/)_
+This directory consolidates all the metadata associated with the SignalFx plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-signalfx/).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -27,22 +27,23 @@ This plugin requires:
 ### INSTALLATION
 
 1. Download the Python module from the following URL:
+    ```
+    https://github.com/signalfx/signalfx-collectd-plugin
+    ```
 
- https://github.com/signalfx/signalfx-collectd-plugin
+2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-signalfx/10-signalfx.conf).
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-signalfx/10-signalfx.conf).
+3. Modify the configuration file as follows:
 
-1. Modify the configuration file as follows:
+    1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
 
- 1. Modify the fields “TypesDB and “ModulePath” to point to the location on disk where you downloaded the Python module in step 2.
+    2. Provide values that make sense for your environment, as described [below](#configuration).
 
- 1. Provide values that make sense for your environment, as described [below](#configuration).
-
-1. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
- ```
- include '/path/to/10-signalfx.conf'
- ```
-1. Restart collectd.
+4. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
+    ```
+    include '/path/to/10-signalfx.conf'
+    ```
+5. Restart collectd.
 
 collectd will begin emitting metrics to SignalFx.
 
@@ -52,9 +53,9 @@ You will need to add your API Token to allow the metric data to be sent to the S
 
 Directions for finding your token:
 1. Open your SignalFx profile page at https://app.signalfx.com/#/myprofile.
-1. Locate the words "API Token" on the page.
-1. Click the link next to "API Token" that says "show". Your API token appears.
-1. Copy the value of the token to the "Token" field in this config.
+2. Locate the words "API Token" on the page.
+3. Click the link next to "API Token" that says "show". Your API token appears.
+4. Copy the value of the token to the "Token" field in this config.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
@@ -64,7 +65,7 @@ Directions for finding your token:
 | LogTraces | Enable log traces | true |
 | Notifications | Enable notification on this plugin | true |
 | NotifyLevel | Set the notification level | "OKAY" |
-| PerCoreCPUUtil | Enable cpu utilization per core metrics.  This requires the [filtering.conf](../collectd-match_regex/filtering.conf) file| false |
+| PerCoreCPUUtil | Enable cpu utilization per core metrics.  This requires the [filtering.conf](../collectd-match\_regex/filtering.conf) file| false |
 
 
 ### USAGE
@@ -73,7 +74,7 @@ This plugin provides additional aggregated system metrics to SignalFx.
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

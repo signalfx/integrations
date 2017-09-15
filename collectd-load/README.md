@@ -1,12 +1,11 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Load
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Load
 
-_This directory consolidates all the metadata associated with the Load collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/load.c)_
+This directory consolidates all the metadata associated with the Load collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/load.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Metrics](#metrics)
 - [License](#license)
 
@@ -27,18 +26,16 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
 
 The Load plugin does not have any configuration settings.
 
-### USAGE
-
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

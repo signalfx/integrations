@@ -1,6 +1,6 @@
 # VMStat
 
-_This directory consolidates all the metadata associated with the VMStat plugin for collectd.  The relevant code for the plugin can be found [here](https://github.com/signalfx/vmstat-collectd)_
+This directory consolidates all the metadata associated with the VMStat plugin for collectd.  The relevant code for the plugin can be found [here](https://github.com/signalfx/vmstat-collectd).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -25,7 +25,7 @@ At this time there are no built in dashboards.  You may find metrics reported by
 |----------|--------------|
 | collectd | 5.0 or later |
 | Python   | 2.6 or later |
-| vmstat  | - |
+| vmstat  |   |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
@@ -54,7 +54,8 @@ All metrics reported by the VMStat collectd plugin will contain the following di
 * `plugin_instance` will always be `vmstat`.
 
 ### METRICS
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

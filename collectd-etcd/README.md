@@ -1,6 +1,6 @@
 # ![](./img/integrations_etcd.png) etcd
 
-_This directory consolidates all the metadata associated with the etcd plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-etcd)_
+This directory consolidates all the metadata associated with the etcd plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-etcd).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,7 +14,7 @@ _This directory consolidates all the metadata associated with the etcd plugin fo
 
 This is the SignalFx etcd plugin. Follow these instructions to install the etcd plugin for collectd.
 
-The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metrics](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
+The [etcd-collectd](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metrics](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
 
 #### FEATURES
 
@@ -271,11 +271,11 @@ A few other details:
 
 * `plugin` is always set to `etcd`
 * `plugin_instance` will contain the IP address and the port of the member given in the configuration
-* To add metrics from the ```/metrics``` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid. For example, ```etcd_debugging_mvcc_slow_watcher_total``` or ```etcd_network_peer_sent_bytes_total```
+* To add metrics from the `/metrics` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid. For example, `etcd_debugging_mvcc_slow_watcher_total` or `etcd_network_peer_sent_bytes_total`
 
 
 ### METRICS
-By default, metrics about a member, leader and store are provided. Click [here](./docs) for details. Metrics from ```/metrics``` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
+By default, metrics about a member, leader and store are provided. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Metrics from `/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
 
 
 #### Metric naming

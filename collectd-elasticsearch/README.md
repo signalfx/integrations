@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch
 
-_This directory consolidates all the metadata associated with the Elasticsearch collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch)_
+This directory consolidates all the metadata associated with the Elasticsearch collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -60,11 +60,11 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
 1. Download the [collectd-elasticsearch]( https://github.com/signalfx/collectd-elasticsearch) Python module.
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file to provide values that make sense for your environment, as described [below](#configuration).
+3. Modify the configuration file to provide values that make sense for your environment, as described [below](#configuration).
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -86,7 +86,7 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | Port | The port number of this instance of Elasticsearch. | "9200" |
 | DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false). | false |
 | IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greater than or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
-| AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch_collectd.py file. | \[""\] |
+| AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch\_collectd.py file. | \[""\] |
 | Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only). | ```Unconfigured``` |
 | Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only). | ```Unconfigured``` |
 | ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. See [note regarding available thread pools](#note-available-thread-pools) below. | \["search","index"\] |
@@ -106,13 +106,13 @@ The following table indicates thread pools that can be monitored by this plugin 
 | snapshot         |&#x2713;     |&#x2713;     |&#x2713;     |
 | warmer           |&#x2713;     |&#x2713;     |&#x2713;     |
 | refresh          |&#x2713;     |&#x2713;     |&#x2713;     |
-| fetch\_shard_started|      |&#x2713;     |&#x2713;     |
-| fetch\_shard_store|        |&#x2713;     |&#x2713;     |
+| fetch\_shard\_started|      |&#x2713;     |&#x2713;     |
+| fetch\_shard\_store|        |&#x2713;     |&#x2713;     |
 | listener         |        |&#x2713;     |&#x2713;     |
 | management       |        |&#x2713;     |&#x2713;     |
 | percolate        |        |&#x2713;     |&#x2713;     |
 | suggest          |        |&#x2713;     |&#x2713;     |
-| force_merge      |        |        |&#x2713;     |
+| force\_merge      |        |        |&#x2713;     |
 
 
 #### Note: Using this plugin from a container deployment
@@ -146,7 +146,7 @@ Sample of pre-built dashboard in SignalFx:
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

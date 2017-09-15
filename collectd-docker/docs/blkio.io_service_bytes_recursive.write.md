@@ -7,5 +7,4 @@ metric_type: cumulative_counter
 
 Tracks the volume, in bytes, written to block devices by that container.
 
-This metric is reported with dimensions `device_major` and `device_minor` to 
-indicate the major and minor device numbers respectively.
+This metric is reported with dimensions `device_major` and `device_minor` to indicate the major and minor device numbers respectively.

@@ -1,6 +1,6 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Interface
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Interface
 
-_This directory consolidates all the metadata associated with the Interface plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/interface.c)_
+This directory consolidates all the metadata associated with the Interface plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/interface.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -26,7 +26,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
@@ -48,7 +48,7 @@ The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/mas
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

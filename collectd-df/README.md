@@ -1,6 +1,6 @@
-#![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) DF (Disk Free)
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) DF (Disk Free)
 
-_This is a directory consolidate all the metadata associated with the df collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/df.c)_
+This is a directory consolidate all the metadata associated with the df collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/df.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -27,7 +27,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
@@ -36,14 +36,14 @@ Configuration for this plugin is kept in the main [collectd.conf](https://github
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
-|`Device` | _Device_ | Select partitions based on the `devicename` |
-|`MountPoint`| _Directory_|Select partitions based on the mountpoint |
+|`Device` | _Device_ | Select partitions based on the devicename |
+|`MountPoint`| _Directory_ |Select partitions based on the mountpoint |
 |`FSType`| _FSType_ | Select partitions based on the filesystem type|
 |`IgnoreSelected`| _true/false_ |Invert the selection: If set to true, all partitions except the ones that match any one of the criteria are collected. By default only selected partitions are collected if a selection is made. If no selection is configured at all, all partitions are selected|
 |`ReportByDevice`| _true/false_ |Report using the device name rather than the mountpoint. i.e. with this false, (the default), it will report a disk as "root", but with it true, it will be "sda1" (or whichever)|
-|`ReportInodes`| _true/false_ | Enables or disables reporting of free, reserved and used inodes. Defaults to inode collection being disabled _Enable this option if inodes are a scarce resource for you, usually because many small files are stored on the disk. This is a usual scenario for mail transfer agents and web caches_|
+|`ReportInodes`| _true/false_ | Enables or disables reporting of free, reserved and used inodes. Defaults to inode collection being disabled. _Enable this option if inodes are a scarce resource for you, usually because many small files are stored on the disk. This is a usual scenario for mail transfer agents and web caches_ |
 |`ValuesAbsolute`| _true/false_ | Enables or disables reporting of free and used disk space in 1K-blocks. Defaults to true|
-|`ValuesPercentage`| _true/false_ | Enables or disables reporting of free and used disk space in percentage. Defaults to false. _This is useful for deploying collectd on the cloud, where machines with different disk size may exist. Then it is more practical to configure thresholds based on relative disk size._|
+|`ValuesPercentage`| _true/false_ | Enables or disables reporting of free and used disk space in percentage. Defaults to false. _This is useful for deploying collectd on the cloud, where machines with different disk size may exist. Then it is more practical to configure thresholds based on relative disk size._ |
 
 ### USAGE
 
@@ -53,7 +53,7 @@ The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/mas
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

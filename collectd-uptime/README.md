@@ -1,6 +1,6 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-uptime/img/integrations_collectd.png) Uptime collectd Plugin
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Uptime collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/uptime.c)_
+This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/uptime.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -26,7 +26,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd). 
+Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
 
 
 ### CONFIGURATION
@@ -39,7 +39,7 @@ This plugin provide the time that an individual host has been up since last boot
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

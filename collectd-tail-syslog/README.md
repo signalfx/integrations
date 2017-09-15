@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Tail collectd Plugin
 
-_This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c)_
+This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -26,7 +26,7 @@ There are currently (\d+) users
 
 As you can see the actual number of users is stored in the first "sub match". This value can then be used by collectd as a gauge value.
 
-And there's even more: Per default, Exim logs the size of each email in its logfile. You can match this size and add all the values up. So you'll end up with a typical octet-counter which you can use with the ipt_bytes type, for example. Such a regular expression would look like this:
+And there's even more: Per default, Exim logs the size of each email in its logfile. You can match this size and add all the values up. So you'll end up with a typical octet-counter which you can use with the ipt\_bytes type, for example. Such a regular expression would look like this:
 
 ```
 \<S=(\d+)\>
@@ -38,10 +38,10 @@ This plugin is a generic plugin, i.e. it cannot work without configuration, beca
 To “follow” files, the Tail plugin does the following each interval:
 
 1. Read and handle each line of an already opened file descriptor until the end of the file is reached.
-1. Check if the file has been truncated. If so, seek to the beginning of the file and start processing the file from there.
-1. Retrieve the inode number associated with the file name that should be followed. This number is compared to the inode of the currently open file descriptor.
-1. If the inodes differ, the originally opened file has been moved or replaced. The file descriptor is closed and the file name is (re)opened.
-1. If no file had been open in step 1 (usually only true on the first iteration), open the file name, seek to the end but do not handle any lines.
+2. Check if the file has been truncated. If so, seek to the beginning of the file and start processing the file from there.
+3. Retrieve the inode number associated with the file name that should be followed. This number is compared to the inode of the currently open file descriptor.
+4. If the inodes differ, the originally opened file has been moved or replaced. The file descriptor is closed and the file name is (re)opened.
+5. If no file had been open in step 1 (usually only true on the first iteration), open the file name, seek to the end but do not handle any lines.
 
 To understand what's going on completely, you need to have a basic understanding of UNIX file systems. Especially: An inode is a number that determines the position of data on the disk (or whatever storage medium is in use). It's similar to an IP address, for example. A file name is basically a human readable name for an inode, similar to a domain name. A file descriptor is the representation of an opened file to a running program. To complete the analogy, it's similar to a TCP connection.
 
@@ -61,7 +61,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is automatically bundled with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd), but it is not enabled by default. 
+This plugin is automatically bundled with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd), but it is not enabled by default.
 
 
 ### CONFIGURATION

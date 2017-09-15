@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper
 
-_This is a directory that consolidates all the metadata associated with SignalFx's integration with Zookeeper. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper)_
+This is a directory that consolidates all the metadata associated with SignalFx's integration with Zookeeper. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,9 +12,7 @@ _This is a directory that consolidates all the metadata associated with SignalFx
 
 ### DESCRIPTION
 
-This is a collectd plugin for getting metrics and information from
-[ZooKeeper](http://zookeeper.apache.org) servers, based on the ZooKeeper monitoring script
-[check_zookeeper.py](https://svn.apache.org/repos/asf/zookeeper/trunk/src/contrib/monitoring/check_zookeeper.py).
+This is a collectd plugin for getting metrics and information from [ZooKeeper](http://zookeeper.apache.org) servers, based on the ZooKeeper monitoring script [check\_zookeeper.py](https://svn.apache.org/repos/asf/zookeeper/trunk/src/contrib/monitoring/check_zookeeper.py).
 
 #### FEATURES
 
@@ -48,11 +46,11 @@ This plugin requires:
 
 1. Download the [collectd-zookeeper Python module](https://github.com/signalfx/collectd-zookeeper).
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file as described in [Configuration](#configuration) below.
+3. Modify the configuration file as described in [Configuration](#configuration) below.
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -72,7 +70,7 @@ Sample of pre-built dashboard in SignalFx:
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

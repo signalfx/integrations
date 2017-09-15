@@ -1,6 +1,6 @@
 # ![](./img/integrations_activemq.png) ActiveMQ Message Age Listener
 
-_This is a directory that consolidates all the metadata associated with the ActiveMQ message age listener. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
+This is a directory that consolidates all the metadata associated with the ActiveMQ message age listener. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,7 +12,7 @@ _This is a directory that consolidates all the metadata associated with the Acti
 
 ### DESCRIPTION
 
-This tool measures the age of messages in ActiveMQ queues, and publishes the results to SignalFx. It actively inspects the messages that are waiting to be delivered in each queue, and therefore is especially useful for detecting messages that are "stuck" in ActiveMQ queues and unable to be delivered. 
+This tool measures the age of messages in ActiveMQ queues, and publishes the results to SignalFx. It actively inspects the messages that are waiting to be delivered in each queue, and therefore is especially useful for detecting messages that are "stuck" in ActiveMQ queues and unable to be delivered.
 
 To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq).
 
@@ -31,18 +31,18 @@ To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration]
 | ActiveMQ  | 5.8.0 or later |
 | Java | 1.5 or later |
 | Maven | (match with Java version) |
-       
+
 ### INSTALLATION
 
-1. Download SignalFx's ActiveMQ message age listener from [https://github.com/signalfx/activemq-integration](https://github.com/signalfx/activemq-integration). 
+1. Download SignalFx's ActiveMQ message age listener from [https://github.com/signalfx/activemq-integration](https://github.com/signalfx/activemq-integration).
 
-1. Modify `/activemq-integration/amq-message-age/properties` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+2. Modify `/activemq-integration/amq-message-age/properties` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
-1. Run the tool as follows, replacing `path/to/` with the location of the files you downloaded in step 1: 
-
-        cd path/to/activemq-integration/amq-message-age
-        ./run.sh
-
+3. Run the tool as follows, replacing `path/to/` with the location of the files you downloaded in step 1:
+    ```
+    cd path/to/activemq-integration/amq-message-age
+    ./run.sh
+    ```
 
 ### CONFIGURATION
 
@@ -52,19 +52,19 @@ Supply values for the following properties in the `/activemq-integration/amq-mes
 | ---------------------|------------|---------------|
 | path | Filesystem path to ActiveMQ executable | <Path-To-ActiveMQ-Executable>/activemq |
 | token | SignalFx API token | <SignalFX-API-TOKEN> |
-| sfx_host | Host to which to transmit data | `https://ingest.signalfx.com` |
+| sfx\_host | Host to which to transmit data | `https://ingest.signalfx.com` |
 | interval | Interval at which to measure message age, in milliseconds. | 3000 |
 | host | URL at which to connect to ActiveMQ broker. | `tcp://localhost:61616` |
-| host_name | Name of this ActiveMQ host. This value appears in the dimension `host` in SignalFx. | ActiveMQ_Host1 |
-| broker_name | Name of this ActiveMQ broker. This value appears in the dimension `broker` in SignalFx. | Broker1 |
+| host\_name | Name of this ActiveMQ host. This value appears in the dimension `host` in SignalFx. | ActiveMQ_Host1 |
+| broker\_name | Name of this ActiveMQ broker. This value appears in the dimension `broker` in SignalFx. | Broker1 |
 
 ### USAGE
 
-In some versions of ActiveMQ, messages sometimes get “stuck” in the queue, and message consumers won’t pick them up even if they have available capacity. This bug causes messages to never be delivered. Monitoring tools are typically unable to detect this condition due to a lack of visibility into the messages that never make it out of the queue. 
+In some versions of ActiveMQ, messages sometimes get “stuck” in the queue, and message consumers won’t pick them up even if they have available capacity. This bug causes messages to never be delivered. Monitoring tools are typically unable to detect this condition due to a lack of visibility into the messages that never make it out of the queue.
 
-This tool provides visibility into "stuck" messages in ActiveMQ by inspecting each enqueued message, calculating the average and maximum age of messages per queue, and reporting those metrics to SignalFx using our [Java client library](https://github.com/signalfx/integrations/tree/master/lib-java). 
+This tool provides visibility into "stuck" messages in ActiveMQ by inspecting each enqueued message, calculating the average and maximum age of messages per queue, and reporting those metrics to SignalFx using our [Java client library](https://github.com/signalfx/integrations/tree/master/lib-java).
 
-Our built-in dashboard for this data makes it immediately visible when messages have been waiting a long time to be delivered. 
+Our built-in dashboard for this data makes it immediately visible when messages have been waiting a long time to be delivered.
 
 ![](./img/dashboard_activemq_messageage.png)
 
@@ -80,7 +80,7 @@ In this example, rate of change tells us how much older the oldest message in ea
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

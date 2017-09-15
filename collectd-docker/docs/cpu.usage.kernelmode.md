@@ -5,5 +5,4 @@ metric_type: cumulative_counter
 ---
 ### Kernel CPU usage
 
-Tracks how much CPU time, in jiffies, is spent by the container while
-executing kernel code.
+Tracks how much CPU time, in jiffies, is spent by the container while executing kernel code.

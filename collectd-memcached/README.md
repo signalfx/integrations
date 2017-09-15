@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached
 
-_This is a directory that consolidates all the metadata associated with the Memcached plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c)_
+This is a directory that consolidates all the metadata associated with the Memcached plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -46,9 +46,9 @@ Documentation for Memcached can be found here: [https://github.com/memcached/mem
 
 1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+2. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
-1. Restart collectd.
+3. Restart collectd.
 
 ### CONFIGURATION
 
@@ -67,7 +67,7 @@ Sample of pre-built dashboard in SignalFx:
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

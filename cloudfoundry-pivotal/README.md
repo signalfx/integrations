@@ -1,6 +1,6 @@
-# ![](././img/integrations_cloudfoundry.png) Pivotal Cloud Foundry
+# ![](././img/integrations_pivotalcloudfoundry.png) Pivotal Cloud Foundry
 
-_This directory consolidates all the metadata associated with the **Pivotal Cloud Foundry Integration**. The relevant code for the integration can be found [here](https://github.com/signalfx/cloudfoundry-integration)_
+This directory consolidates all the metadata associated with the **Pivotal Cloud Foundry Integration**. The relevant code for the integration can be found [here](https://github.com/signalfx/cloudfoundry-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -67,7 +67,7 @@ Follow these steps to enable this integration:
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/products/signalfx-monitoring-alerting/).
 
-1. Follow the [installation instructions for the tile](http://docs.pivotal.io/partners/signalfx/installing.html).
+2. Follow the [installation instructions for the tile](http://docs.pivotal.io/partners/signalfx/installing.html).
 
 Metrics from Pivotal Cloud Foundry should begin streaming into SignalFx.
 
@@ -80,7 +80,7 @@ release](https://github.com/signalfx/agent-boshrelease).
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 
