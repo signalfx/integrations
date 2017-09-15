@@ -1,9 +1,9 @@
 ---
-title: Active Connections 
+title: Active Connections
 brief: Total number of active client connections
 metric_type: gauge
 ---
 
-###Total
+### Total
 
 Number of active client connections to the database.

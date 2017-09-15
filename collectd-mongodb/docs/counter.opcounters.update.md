@@ -1,9 +1,9 @@
 ---
-title: DB Operations 
+title: DB Operations
 brief: Number of updates per second
 metric_type: cumulative counter
 ---
 
-###Update
+### Update
 
 Total number of update operations per second.
