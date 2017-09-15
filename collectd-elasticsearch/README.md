@@ -87,8 +87,8 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | DetailedMetrics | Turns on additional metric time series. Acceptable values: (true/false). | false |
 | IndexInterval | Interval in seconds at which the plugin will report index metrics.  Must be greater than or equal and divisible by the Interval.  Incorrect values are automatically rounded to a compatible value. | 300 |
 | AdditionalMetrics | A python list of additional metrics to be emitted.  The names provided must match a metric defined in the elasticsearch\_collectd.py file. | \[""\] |
-| Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only). | ```Unconfigured``` |
-| Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only). | ```Unconfigured``` |
+| Username | The plain text username for accessing the Elasticsearch installation (Basic Authentication Only). | `Unconfigured` |
+| Password | The plain text password for accessing the Elasticsearch installation (Basic Authentication Only). | `Unconfigured` |
 | ThreadPools | "search" and "index" thread pools are required, but additional threadpools can be specified in the list. See [note regarding available thread pools](#note-available-thread-pools) below. | \["search","index"\] |
 
 #### Note: Available thread pools

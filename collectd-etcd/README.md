@@ -69,9 +69,9 @@ Using the example configuration file [10-etcd.conf](https://github.com/signalfx/
 | Host | Host name of the etcd member | "localhost" |
 | Port | Port at which the member can be reached | "2379" |
 | Cluster | Name of this etcd cluster. | "1" |
-| EnhancedMetrics | Boolean to indicate whether stats from ```/metrics``` are needed | "false" |
-| IncludeMetric | Metric name from the ```/metric``` endpoint to include(valid when EnhancedMetrics is "false") | "etcd\_debugging\_mvcc\_slow\_watcher\_total" |
-| ExcludeMetric | Metric name from the ```/metric``` endpoint to exclude(valid when EnhancedMetrics is "true") | "etcd\_server\_has\_leader" |
+| EnhancedMetrics | Boolean to indicate whether stats from `/metrics` are needed | "false" |
+| IncludeMetric | Metric name from the `/metric` endpoint to include(valid when EnhancedMetrics is "false") | "etcd\_debugging\_mvcc\_slow\_watcher\_total" |
+| ExcludeMetric | Metric name from the `/metric` endpoint to exclude(valid when EnhancedMetrics is "true") | "etcd\_server\_has\_leader" |
 | Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to etcd API. | 10 |
 | ssl\_keyfile | Path to the keyfile | "path/to/file" |
