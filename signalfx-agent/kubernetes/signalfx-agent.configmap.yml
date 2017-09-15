@@ -1,0 +1,120 @@
+apiVersion: v1
+data:
+  agent.yaml: |
+    signalFxAccessToken: ${SFX_ACCESS_TOKEN}
+
+    intervalSeconds: 15
+    procFSPath: /hostfs/proc
+
+    logging:
+      level: info
+
+    globalDimensions:
+      kubernetes_cluster: 'CLUSTER_NAME'
+      kubernetes_role: worker
+
+    observers:
+      - type: k8s-kubelet
+        kubeletAPI:
+          skipVerify: true
+
+    monitors:
+      - type: collectd/signalfx-metadata
+
+      - type: cadvisor
+        intervalSeconds: 30
+        cadvisorURL: http://localhost:4194
+
+      # Collects k8s cluster-level metrics
+      - type: kubernetes-cluster
+        intervalSeconds: 15
+
+      - type: collectd/docker
+        dimensions:
+          container_image: inspect:Config.Image
+          container_name: inspect:Name
+          container_spec_name: inspect:Config.Labels['io.kubernetes.container.name']
+          kubernetes_pod_name: inspect:Config.Labels['io.kubernetes.pod.name']
+          kubernetes_pod_uid: inspect:Config.Labels['io.kubernetes.pod.uid']
+          kubernetes_namespace: inspect:Config.Labels['io.kubernetes.pod.namespace']
+        serviceEndpoints:
+          - dockerURL: unix:///var/run/docker.sock
+
+      - type: collectd/activemq
+        discoveryRule: containerImage =~ "activemq" && privatePort == 1099
+
+      - type: collectd/apache
+        discoveryRule: containerImage =~ "apache" && privatePort == 80
+
+      - type: collectd/cassandra
+        discoveryRule: containerImage =~ "cassandra" && privatePort == 7199
+
+      - type: collectd/elasticsearch
+        discoveryRule: containerImage =~ "elasticsearch" && port == 9200
+
+      - type: collectd/kafka
+        discoveryRule: containerImage =~ "kafka" && privatePort == 9092
+
+      - type: collectd/memcached
+        discoveryRule: containerImage =~ "memcache" && privatePort == 11211
+
+      - type: collectd/mongodb
+        discoveryRule: containerImage =~ "mongo" && privatePort == 27017
+        # REQUIRED
+        #databases:
+        #- admin
+
+      - type: collectd/mysql
+        discoveryRule: containerImage =~ "mysql" && privatePort == 3306
+        # REQUIRED
+        #username: admin
+        #password: passwd
+        #databases:
+        #- name: mydb
+
+      - type: collectd/nginx
+        discoveryRule: containerImage =~ "nginx" && privatePort == 80
+
+      - type: collectd/rabbitmq
+        discoveryRule: containerImage =~ "rabbitmq" && privatePort == 15672
+
+      - type: collectd/redis
+        discoveryRule: containerImage =~ "redis" && privatePort == 6379
+
+      - type: collectd/zookeeper
+        discoveryRule: containerImage =~ "zookeeper" && privatePort == 2181
+
+    collectd:
+      readThreads: 5
+      writeQueueLimitHigh: 500000
+      writeQueueLimitLow: 400000
+      timeout: 40
+      logLevel: notice
+
+    metricsToExclude:
+      - metricNames:
+        - container_cpu_user_seconds_total
+        - container_cpu_system_seconds_total
+        - container_cpu_usage_seconds_total
+        - container_cpu_utilization_per_core
+        - container_fs_reads_total
+        - container_fs_sector_reads_total
+        - container_fs_reads_merged_total
+        - container_fs_read_seconds_total
+        - container_fs_writes_total
+        - container_fs_sector_writes_total
+        - container_fs_writes_merged_total
+        - container_fs_write_seconds_total
+        - container_fs_io_current
+        - container_fs_io_time_seconds_total
+        - container_fs_io_time_weighted_seconds_total
+        - container_last_seen
+        - container_tasks_state
+        - pod_network_receive_packets_total
+        - pod_network_receive_packets_dropped_total
+        - pod_network_transmit_packets_total
+        - pod_network_transmit_packets_dropped_total
+        - machine_cpu_frequency_khz
+kind: ConfigMap
+metadata:
+  name: signalfx-agent

@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
     name: signalfx-agent
     labels:
-        version: v1.0.1
+        version: v2.0.0
         app: signalfx-agent
 spec:
     selector:
@@ -13,19 +13,20 @@ spec:
         metadata:
             labels:
                 app: signalfx-agent
-                version: v1.0.1
+                version: v2.0.0
         spec:
             hostNetwork: true
             containers:
             - name: signalfx-agent
-              image: quay.io/signalfx/signalfx-agent:1.0.1
+              image: quay.io/signalfx/signalfx-agent:2.0.0
+              restartPolicy: always
               securityContext:
                 privileged: true
+              command:
+              - /usr/bin/signalfx-agent
+              - -config
+              - /mnt/config/agent.yaml
               volumeMounts:
-                - mountPath: /mnt/templates
-                  name: templates
-                - mountPath: /mnt/integrations
-                  name: integrations
                 - mountPath: /mnt/config
                   name: config
                 - mountPath: /hostfs
@@ -37,9 +38,6 @@ spec:
                 - mountPath: /var/run/docker.sock
                   name: docker
                   readOnly: true
-                - mountPath: /mnt/etc
-                  name: etc
-                  readOnly: true
               env:
               - name: SFX_ACCESS_TOKEN
                 valueFrom:
@@ -50,17 +48,17 @@ spec:
                 valueFrom:
                   fieldRef:
                     fieldPath: metadata.name
-              - name: SFX_MERGE_CONFIG
-                value: /etc/signalfx/kubernetes-defaults.yaml
-              - name: SFX_USER_CONFIG
-                value: /mnt/config/user.yml
+              - name: MY_NODE_NAME
+                valueFrom:
+                  fieldRef:
+                    apiVersion: v1
+                    fieldPath: spec.nodeName
+              - name: MY_NAMESPACE
+                valueFrom:
+                  fieldRef:
+                    apiVersion: v1
+                    fieldPath: metadata.namespace
             volumes:
-              - name: templates
-                configMap:
-                  name: signalfx-templates
-              - name: integrations
-                configMap:
-                  name: signalfx-integrations
               - name: config
                 configMap:
                   name: signalfx-agent
@@ -73,6 +71,3 @@ spec:
               - hostPath:
                   path: /var/run/docker.sock
                 name: docker
-              - hostPath:
-                  path: /etc
-                name: etc

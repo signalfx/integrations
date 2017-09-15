@@ -1,9 +1,0 @@
-apiVersion: v1
-data:
-  redis.yml: |
-    # integrations:
-    #   redis:
-    #     ...
-kind: ConfigMap
-metadata:
-  name: signalfx-integrations
