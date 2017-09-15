@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_collectd.png) vmem
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) vmem
 
 This is a directory consolidate all the metadata associated with the vmem collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/vmem.c).
 
