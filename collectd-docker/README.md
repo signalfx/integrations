@@ -100,11 +100,17 @@ Using the example configuration file [10-docker.conf](https://github.com/signalf
 If a filter has been configured, then additional resource allocation metrics can be gathered by adding the following snippet to the plugin's filter configuration.
 
 ```apache
-<Rule "Cpu">
+<Rule "CpuShares">
   <Match "regex">
-    Type "^cpu$"
+    Type "^cpu.shares$"
   </Match>
   Target "return"
+</Rule>
+<Rule "CpuQuota">
+<Match "regex">
+  Type "^cpu.quota$"
+</Match>
+Target "return"
 </Rule>
 <Rule "CpuThrottlingData">
   <Match "regex">

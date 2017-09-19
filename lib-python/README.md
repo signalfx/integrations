@@ -202,7 +202,7 @@ See `examples/pyformance_usecase.py` for a complete code example using PyFormanc
 
 The Python client library is mainly targeted towards sending a continuous stream of metrics, and was implemented to be asynchronous. As a result, short-lived scripts that exit right after calling the send method (as can be the case if your script is sending just one datapoint) may not yield a datapoint in a chart on the SignalFx service.
 
-To work around this problem, register an `atexit` function to cleaning stop the datapoint sending thread when your program exits:
+To work around this problem, register an `atexit` function to cleanly stop the datapoint sending thread when your program exits:
 
 ```python
 import atexit
