@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-riak/img/integrations_riak.png) Riak KV
 
-This is a directory consolidate all the metadata associated with the Riak KV collectd Configuration. The relevant code for the cURL-JSON plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c).
+This directory consolidates all the metadata associated with the Riak KV collectd Configuration. The relevant code for the cURL-JSON plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

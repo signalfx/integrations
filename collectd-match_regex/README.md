@@ -1,4 +1,4 @@
-# Filtering Metrics
+# match_regex
 
 Filtering Metrics using the match_regex plugin.
 
