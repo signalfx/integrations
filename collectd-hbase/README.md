@@ -64,7 +64,7 @@ You must include [`JMX.conf`](https://github.com/signalfx/integrations/blob/mast
 | Value | Description |
 |-------|-------------|
 | ServiceURL | URL of your JMX application|
-| Host | The name of your host (_Please leave the identifier `[hostHasService=hbase]`) in the host name_|
+| Host | The name of your host (_Please leave the identifier `[hostHasService=hbase]` in the host name)_|
 
 ### USAGE
 
