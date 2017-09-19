@@ -43,9 +43,8 @@ This plugin requires:
 
 1. Installing the plugin:
     * On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
-        ```
-        yum install collectd-postgresql
-        ```
+
+            yum install collectd-postgresql
 
     * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 

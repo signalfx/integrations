@@ -26,9 +26,7 @@ You must have admin privileges in order to install statsd.net. It will run as NE
 
 2. At a PowerShell admin prompt, run the following command to install statsd.net including the SignalFx statsd.net plugin:
 
-    ```
-    ./Install.ps1 @{APIToken='YOUR_SIGNALFX_API_TOKEN';SourceType='netbios';}
-    ```
+        ./Install.ps1 @{APIToken='YOUR_SIGNALFX_API_TOKEN';SourceType='netbios';}
 
 See below for additional configuration options.
 

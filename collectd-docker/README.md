@@ -53,15 +53,13 @@ The [docker-collectd](https://github.com/signalfx/docker-collectd-plugin) plugin
 1. Download the [docker-collectd-plugin](https://github.com/signalfx/docker-collectd-plugin) Python module.
 
 2. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `docker-collectd-plugin` module:
-    ```
-    sudo pip install -r /path/to/docker-collectd-plugin/requirements.txt
-    ```
+
+        sudo pip install -r /path/to/docker-collectd-plugin/requirements.txt
 
     * **On Amazon Linux**: Run the following commands instead:
-        ```
-        yum install python26-pip
-        sudo pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
-        ```
+
+            yum install python26-pip
+            sudo pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
 
 3. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf) for this plugin to `/etc/collectd/managed_config`.
 

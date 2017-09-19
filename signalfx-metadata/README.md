@@ -27,9 +27,8 @@ This plugin requires:
 ### INSTALLATION
 
 1. Download the Python module from the following URL:
-    ```
-    https://github.com/signalfx/signalfx-collectd-plugin
-    ```
+
+        https://github.com/signalfx/signalfx-collectd-plugin
 
 2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-signalfx/10-signalfx.conf).
 
@@ -40,9 +39,9 @@ This plugin requires:
     2. Provide values that make sense for your environment, as described [below](#configuration).
 
 4. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 4:
-    ```
-    include '/path/to/10-signalfx.conf'
-    ```
+
+        include '/path/to/10-signalfx.conf'
+
 5. Restart collectd.
 
 collectd will begin emitting metrics to SignalFx.

@@ -30,18 +30,17 @@ The size of the machine that hosts the proxy depends on the amount of data that 
 1. Identify a server on which to deploy the SignalFx metric proxy.
 2. Edit the file `sfdbconfig.conf` to configure the proxy. Configuration options are defined [below](#configuration), and example configurations are available in the [main project documentation](https://github.com/signalfx/metricproxy).
 3. Use the [install script](https://github.com/signalfx/metricproxy/blob/master/install.sh) to install or upgrade the proxy, as follows.
-    ```
-     curl -s https://raw.githubusercontent.com/signalfx/metricproxy/master/install.sh | sudo sh
-     # Config at    /etc/sfdbconfig.conf
-     # Binary at    /opt/sfproxy/bin/metricproxy
-     # Logs at      /var/log/sfproxy
-     # PID file at  /var/run/metricproxy.pid
-    ```
+
+        curl -s https://raw.githubusercontent.com/signalfx/metricproxy/master/install.sh | sudo sh
+        # Config at    /etc/sfdbconfig.conf
+        # Binary at    /opt/sfproxy/bin/metricproxy
+        # Logs at      /var/log/sfproxy
+        # PID file at  /var/run/metricproxy.pid
 
 4. Start the proxy as follows:
-    ```
-    /etc/init.d/metricproxy start
-    ```
+
+        /etc/init.d/metricproxy start
+
 
 5. Begin transmitting data to the host and port on which the proxy is running. The data will be transformed and forwarded as specified in the [configuration](#configuration).
 

@@ -21,9 +21,9 @@ This directory consolidates all the metadata associated with the HBase collectd 
 1. Install the [Java plugin](https://collectd.org/wiki/index.php/Plugin:GenericJMX).
 
     * RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09. Run the following command to install the Java plugin for collectd:
-        ```
-        yum install collectd-java
-        ```
+
+            yum install collectd-java
+
 
     * Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
       - This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
@@ -37,10 +37,9 @@ This directory consolidates all the metadata associated with the HBase collectd 
 3. Modify [hbase.conf](https://github.com/signalfx/integrations/blob/master/collectd-hbase/20-hbase.conf) to provide values that make sense for your environment, as described in the header.
 
     * Add the following lines to /etc/collectd.conf, replacing the example paths with the locations of the configuration files you downloaded in step 2:
-        ```
-        include '/path/to/10-jmx.conf'
-        include '/path/to/20-hbase.conf'
-        ```
+
+            include '/path/to/10-jmx.conf'
+            include '/path/to/20-hbase.conf'
 
 4. Restart collectd.
 

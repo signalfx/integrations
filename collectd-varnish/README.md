@@ -38,9 +38,8 @@ Varnish Cache is a web application accelerator also known as a caching HTTP reve
 ### INSTALLATION
 
 1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
-    ```
-    yum install collectd-varnish
-    ```
+
+        yum install collectd-varnish
 
 2. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-varnish/10-varnish.conf) to `/etc/collectd/managed_config`.
 

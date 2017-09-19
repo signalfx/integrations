@@ -63,23 +63,22 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 1. Install `pip` and `pymongo`.
 
     * **RHEL/CentOS and Amazon Linux**
-        ```
-        yum install -y epel-release
-        yum install -y python-pip
-        sudo pip install pymongo==3.0.3
-        ```
+
+            yum install -y epel-release
+            yum install -y python-pip
+            sudo pip install pymongo==3.0.3
 
     * **Ubuntu and Debian:**
-        ```
-        apt-get install -y python-pip python-dev build-essential
-        sudo pip install pymongo==3.0.3
-        ```
+
+            apt-get install -y python-pip python-dev build-essential
+            sudo pip install pymongo==3.0.3
+
+
 
 2. If you want to use SSL/TLS to connect to Mongo, install the PyMongo TLS
    dependencies as well:
-    ```
-    sudo pip install pymongo[tls]
-    ```
+
+        sudo pip install pymongo[tls]
 
 3. Download the [collectd-mongodb Python module](https://github.com/signalfx/collectd-mongodb).  
 

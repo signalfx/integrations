@@ -32,9 +32,8 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 1. Install the Java plugin.
 
     * RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09. Run the following command to install the Java plugin for collectd:
-    ```
-    yum install collectd-java
-    ```
+
+            yum install collectd-java
 
     * Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
         - This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
@@ -44,9 +43,8 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 3. Modify the configuration file providing values that make sense for your environment, as described [below](#configuration).
 
 4. Add the following line to /etc/collectd.conf, replacing the example path with the location of the configuration file you downloaded in step 3:
-    ```
-    include '/path/to/20-javageneric.conf'
-    ```
+
+        include '/path/to/20-javageneric.conf'
 
 5. Restart collectd.
 

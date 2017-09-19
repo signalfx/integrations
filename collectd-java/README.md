@@ -27,9 +27,9 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 1. Install the plugin:
 
     * On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
-        ```
-        yum install collectd-java
-        ```
+
+            yum install collectd-java
+
 
     * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 

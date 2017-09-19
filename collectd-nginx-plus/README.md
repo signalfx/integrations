@@ -41,9 +41,8 @@ using the `/status` endpoints exposed with the ngx\_http\_status\_module, docume
 1. Download the [niginx-plus-collectd](https://github.com/signalfx/collectd-nginx-plus) project.
 
 2. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `niginx-plus-collectd` project:
-    ```
-    sudo pip install -r install_requirements.txt
-    ```
+
+        sudo pip install -r install_requirements.txt
 
 3. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/10-nginx-plus.conf) for this plugin to `/etc/collectd/managed_config`.
 

@@ -34,17 +34,16 @@ token. [Click here for more information on retrieving your API token](https://de
 ### INSTALLATION
 
 Add this line to your application's Gemfile:
-    ```
-    gem 'signalfx'
-    ```
+
+        gem 'signalfx'
+
 And then execute:
-    ```
-    $ bundle
-    ```
+
+        $ bundle
+
 Or install it yourself as:
-    ```
-    $ gem install signalfx
-    ```
+
+        $ gem install signalfx
 
 ### USAGE
 
