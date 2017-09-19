@@ -1,6 +1,6 @@
 # ![](./img/integrations_jenkins.png) Jenkins
 
-_This directory consolidates all the metadata associated with the jenkins plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-jenkins)_
+This directory consolidates all the metadata associated with the jenkins plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-jenkins)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,7 +14,7 @@ _This directory consolidates all the metadata associated with the jenkins plugin
 
 This is the SignalFx Jenkins plugin. Follow these instructions to install the Jenkins plugin for collectd.
 
-The [`collectd-jenkins`](https://github.com/signalfx/collectd-jenkins) plugin collects metrics from jenkins instances hitting these endpoints: [../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api) (job metrics)  and [metrics/<api_key>/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin) (default and optional Codahale/Dropwizard JVM metrics).
+The [collectd-jenkins](https://github.com/signalfx/collectd-jenkins) plugin collects metrics from jenkins instances hitting these endpoints: [../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api) (job metrics)  and [metrics/<MetricsKey>/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin) (default and optional Codahale/Dropwizard JVM metrics).
 
 #### FEATURES
 
@@ -67,9 +67,9 @@ Using the example configuration file [10-jenkins.conf](https://github.com/signal
 | MetricsKey | Access key required to fetch Codahale metrics | "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg" |
 | Username | User with security access if configured | "admin" |
 | APIToken | API Token of the user | "f04fff7c860d884f2ef00a2b2d481c2f" |
-| EnhancedMetrics | Boolean to indicate whether advanced stats from ```/metrics/<MetricsKey>/metrics``` are needed | "false" |
-| IncludeMetric | Metric name from the ```/metrics/<MetricsKey>/metrics``` endpoint to include(valid when EnhancedMetrics is "false") | "vm.daemon.count" |
-| ExcludeMetric | Metric name from the ```/metrics/<MetricsKey>/metrics``` endpoint to exclude(valid when EnhancedMetrics is "true") | "vm.terminated.count" |
+| EnhancedMetrics | Boolean to indicate whether advanced stats from `/metrics/<MetricsKey>/metrics` are needed | "false" |
+| IncludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to include(valid when EnhancedMetrics is "false") | "vm.daemon.count" |
+| ExcludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to exclude(valid when EnhancedMetrics is "true") | "vm.terminated.count" |
 | Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to Jenkins API. | 10 |
 
@@ -213,11 +213,11 @@ A few other details:
 
 * `plugin` is always set to `jenkins`
 * `plugin_instance` will contain the IP address and the port of the member given in the configuration
-* To add metrics from the ```/metrics/<MetricsKey>/metrics``` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid. For example, ```vm.daemon.count``` or ```vm.terminated.count```
+* To add metrics from the `/metrics/<MetricsKey>/metrics` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid. For example, `vm.daemon.count` or `vm.terminated.count`
 
 
 ### METRICS
-By default, metrics about a job and instance are provided. Click [here](./docs) for details. Metrics from ```/metrics/<MetricsKey>/metrics``` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins and also values of type string and list(hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
+By default, metrics about a job and instance are provided. Click [here](./docs) for details. Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins and also values of type string and list(hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
 
 
 #### Metric naming
