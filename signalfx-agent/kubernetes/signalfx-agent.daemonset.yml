@@ -16,10 +16,10 @@ spec:
                 version: v2.0.0
         spec:
             hostNetwork: true
+            restartPolicy: Always
             containers:
             - name: signalfx-agent
-              image: quay.io/signalfx/signalfx-agent:2.0.0
-              restartPolicy: always
+              image: quay.io/signalfx/signalfx-agent:v2.0.0
               securityContext:
                 privileged: true
               command:
