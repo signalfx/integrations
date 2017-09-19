@@ -92,31 +92,31 @@ frontend stats-frontend
 ### METRICS
 #### Default metrics
 - **HAProxy Overview**
-  - Connection Rate
-  - Requests per Second
-  - Idle Percent
-  - Current Sessions
-  - Sessions Rate
-  - Top Servers Selected
-  - Highest Bytes Out
-  - Average Session Time
+    - Connection Rate
+    - Requests per Second
+    - Idle Percent
+    - Current Sessions
+    - Sessions Rate
+    - Top Servers Selected
+    - Highest Bytes Out
+    - Average Session Time
 - **HAProxy Frontend**
-  - Request Rate
-  - Session Rate
-  - Response 2xx, 4xx, 5xx
-  - Request Errors
-  - Denied Requests
-  - Bytes Out
-  - Bytes In
+    - Request Rate
+    - Session Rate
+    - Response 2xx, 4xx, 5xx
+    - Request Errors
+    - Denied Requests
+    - Bytes Out
+    - Bytes In
 - **HAProxy Backend**
-  - Current Queue Size
-  - Average Response Time
-  - Average Queue Time
-  - Top Servers Selected
-  - Response Errors
-  - Server Retries and Redispatches
-  - Connection Errors
-  - Denied Responses
+    - Current Queue Size
+    - Average Response Time
+    - Average Queue Time
+    - Top Servers Selected
+    - Response Errors
+    - Server Retries and Redispatches
+    - Connection Errors
+    - Denied Responses
 
 #### Enhanced Metrics
 
