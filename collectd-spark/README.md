@@ -165,7 +165,7 @@ LoadPlugin python
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_spark_cluster_top.png)
 

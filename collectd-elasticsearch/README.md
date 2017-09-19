@@ -140,7 +140,7 @@ The call to collect index statistics can be CPU-intensive. For this reason Signa
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_elasticsearch.png)
 

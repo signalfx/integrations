@@ -6,8 +6,7 @@ This directory consolidates all the metadata associated with the Go library for 
     import "github.com/signalfx/golib/sfxclient"
 ```
 
-Package <code>[signalfx](https://github.com/signalfx/golib/tree/master/sfxclient)</code> creates convenient Go functions and wrappers to send metrics to
-SignalFx.
+Package [signalfx](https://github.com/signalfx/golib/tree/master/sfxclient) creates convenient Go functions and wrappers to send metrics to SignalFx.
 
 The core of the library is HTTPDatapointSink which allows users to send metrics to SignalFx ad-hoc. A Scheduler is built on top of this to facility easy management of metrics for multiple SignalFx reporters at once in more complex libraries.
 
@@ -173,7 +172,7 @@ var DefaultUserAgent = fmt.Sprintf("golib-sfxclient/%s (gover %s)", ClientVersio
 
 DefaultUserAgent is the UserAgent string sent to signalfx
 
-#### func  [Cumulative](#cumulative)
+#### func  Cumulative
 
 ```go
 func Cumulative(metricName string, dimensions map[string]string, val int64) *datapoint.Datapoint
@@ -181,7 +180,7 @@ func Cumulative(metricName string, dimensions map[string]string, val int64) *dat
 
 Cumulative creates a SignalFx cumulative counter for integer values.
 
-#### func  [CumulativeF](#cumulativef)
+#### func  CumulativeF
 
 ```go
 func CumulativeF(metricName string, dimensions map[string]string, val float64) *datapoint.Datapoint
@@ -189,7 +188,7 @@ func CumulativeF(metricName string, dimensions map[string]string, val float64) *
 
 CumulativeF creates a SignalFx cumulative counter for float values.
 
-#### func  [CumulativeP](#cumulativep)
+#### func  CumulativeP
 
 ```go
 func CumulativeP(metricName string, dimensions map[string]string, val *int64) *datapoint.Datapoint
@@ -197,7 +196,7 @@ func CumulativeP(metricName string, dimensions map[string]string, val *int64) *d
 
 CumulativeP creates a SignalFx cumulative counter for integer values from a pointer that is loaded atomically.
 
-#### func  [Gauge](#gauge)
+#### func  Gauge
 
 ```go
 func Gauge(metricName string, dimensions map[string]string, val int64) *datapoint.Datapoint
@@ -205,7 +204,7 @@ func Gauge(metricName string, dimensions map[string]string, val int64) *datapoin
 
 Gauge creates a SignalFx gauge for integer values.
 
-#### func  [GaugeF](#gaugef)
+#### func  GaugeF
 
 ```go
 func GaugeF(metricName string, dimensions map[string]string, val float64) *datapoint.Datapoint
@@ -213,7 +212,7 @@ func GaugeF(metricName string, dimensions map[string]string, val float64) *datap
 
 GaugeF creates a SignalFx gauge for floating point values.
 
-#### type [Collector](#collector)
+#### type Collector
 
 ```go
 type Collector interface {
@@ -229,7 +228,7 @@ var GoMetricsSource Collector = &goMetrics{}
 
 GoMetricsSource is a singleton Collector that collects basic go system stats. It currently collects from runtime.ReadMemStats and adds a few extra metrics like uptime of the process and other runtime package functions.
 
-#### func  [NewMultiCollector](#newmulticollector)
+#### func  NewMultiCollector
 
 ```go
 func NewMultiCollector(collectors ...Collector) Collector
@@ -237,7 +236,7 @@ func NewMultiCollector(collectors ...Collector) Collector
 
 NewMultiCollector returns a collector that is the aggregate of every given collector. It can be used to turn multiple collectors into a single collector.
 
-#### type [CumulativeBucket](#cumulativebucket)
+#### type CumulativeBucket
 
 ```go
 type CumulativeBucket struct {
@@ -248,7 +247,7 @@ type CumulativeBucket struct {
 
 A CumulativeBucket tracks groups of values, reporting the count/sum/sum of squares as a cumulative counter.
 
-#### func (\*CumulativeBucket) [Add](#add)
+#### func (\*CumulativeBucket) Add
 
 ```go
 func (b *CumulativeBucket) Add(val int64)
@@ -256,7 +255,7 @@ func (b *CumulativeBucket) Add(val int64)
 
 Add an item to the bucket, later reporting the result in the next report cycle.
 
-#### func (\*CumulativeBucket) [Datapoints](#datapoints)
+#### func (\*CumulativeBucket) Datapoints
 
 ```go
 func (b *CumulativeBucket) Datapoints() []*datapoint.Datapoint
@@ -264,7 +263,7 @@ func (b *CumulativeBucket) Datapoints() []*datapoint.Datapoint
 
 Datapoints returns the count/sum/sumsquare datapoints, or nil if there is no set metric name
 
-#### func (\*CumulativeBucket) [MultiAdd](#multiadd)
+#### func (\*CumulativeBucket) MultiAdd
 
 ```go
 func (b *CumulativeBucket) MultiAdd(res *Result)
@@ -272,7 +271,7 @@ func (b *CumulativeBucket) MultiAdd(res *Result)
 
 MultiAdd many items into the bucket at once using a Result. This can be more efficient as it involves only a constant number of atomic operations.
 
-#### type [HTTPDatapointSink](#httpdatapointsink)
+#### type HTTPDatapointSink
 
 ```go
 type HTTPDatapointSink struct {
@@ -285,21 +284,21 @@ type HTTPDatapointSink struct {
 
 HTTPDatapointSink will accept signalfx datapoints and forward them to SignalFx via HTTP.
 
-#### func  [NewHTTPDatapointSink](#newhttpdatapointsink)
+#### func  NewHTTPDatapointSink
 
 ```go
 func NewHTTPDatapointSink() *HTTPDatapointSink
 ```
 NewHTTPDatapointSink creates a default NewHTTPDatapointSink using package level constants as defaults, including an empty auth token. If sending directly to SiganlFx, you will be required to explicitly set the AuthToken
 
-#### func (\*HTTPDatapointSink) [AddDatapoints](#adddatapoints)
+#### func (\*HTTPDatapointSink) AddDatapoints
 
 ```go
 func (h *HTTPDatapointSink) AddDatapoints(ctx context.Context, points []*datapoint.Datapoint) (err error)
 ```
 AddDatapoints forwards the datapoints to SignalFx.
 
-#### type [HashableCollector](#hashablecollector)
+#### type HashableCollector
 
 ```go
 type HashableCollector struct {
@@ -309,21 +308,21 @@ type HashableCollector struct {
 
 HashableCollector is a Collector function that can be inserted into a hashmap. You can use it to wrap a functional callback and insert it into a Scheduler.
 
-#### func  [CollectorFunc](#collectorfunc)
+#### func  CollectorFunc
 
 ```go
 func CollectorFunc(callback func() []*datapoint.Datapoint) *HashableCollector
 ```
 CollectorFunc wraps a function to make it a Collector.
 
-#### func (\*HashableCollector) [Datapoints](#datapoints)
+#### func (\*HashableCollector) Datapoints
 
 ```go
 func (h *HashableCollector) Datapoints() []*datapoint.Datapoint
 ```
 Datapoints calls the wrapped function.
 
-#### type [MultiCollector](#multicollector)
+#### type MultiCollector
 
 ```go
 type MultiCollector []Collector
@@ -331,14 +330,14 @@ type MultiCollector []Collector
 
 MultiCollector acts like a datapoint collector over multiple collectors.
 
-#### func (MultiCollector) [Datapoints](#datapoints)
+#### func (MultiCollector) Datapoints
 
 ```go
 func (m MultiCollector) Datapoints() []*datapoint.Datapoint
 ```
 Datapoints returns the datapoints from every collector.
 
-#### type [Result](#result)
+#### type Result
 
 ```go
 type Result struct {
@@ -351,14 +350,14 @@ type Result struct {
 Result is a cumulated result of items that can be added to a CumulativeBucket at
 once
 
-#### func (\Result) [Add](#add)
+#### func (\Result) Add
 
 ```go
 func (r *Result) Add(val int64)
 ```
 Add a single number to the bucket. This does not use atomic operations and is not thread safe, but adding a finished Result into a CumulativeBucket is thread safe.
 
-#### type [RollingBucket](#rollingbucket)
+#### type RollingBucket
 
 ```go
 type RollingBucket struct {
@@ -383,35 +382,35 @@ type RollingBucket struct {
 
 RollingBucket keeps histogram style metrics over a BucketWidth window of time. It allows users to collect and report percentile metrics like like median or p99, as well as min/max/sum/count and sum of square from a set of points.
 
-#### func  [NewRollingBucket](#newrollingbucket)
+#### func  NewRollingBucket
 
 ```go
 func NewRollingBucket(metricName string, dimensions map[string]string) *RollingBucket
 ```
 NewRollingBucket creates a new RollingBucket using default values for Quantiles, BucketWidth, and the histogram tracker.
 
-#### func (\*RollingBucket) [Add](#add)
+#### func (\*RollingBucket) Add
 
 ```go
 func (r *RollingBucket) Add(v float64)
 ```
 Add a value to the rolling bucket histogram. If the current time is already calculated, it may be more efficient to call AddAt in order to save another time.Time() call.
 
-#### func (\*RollingBucket) [AddAt](#addat)
+#### func (\*RollingBucket) AddAt
 
 ```go
 func (r *RollingBucket) AddAt(v float64, t time.Time)
 ```
 AddAt is like Add but also takes a time to pretend the value comes at.
 
-#### func (\*RollingBucket) [Datapoints](#datapoints)
+#### func (\*RollingBucket) Datapoints
 
 ```go
 func (r *RollingBucket) Datapoints() []*datapoint.Datapoint
 ```
 Datapoints returns basic bucket stats every time and will only the first time called for each window return that window's points. For efficiency sake, Datapoints() will only return histogram window values once. Because of this, it is suggested to always forward datapoints returned by this call to SignalFx.
 
-#### type [Scheduler](#scheduler)
+#### type Scheduler
 
 ```go
 type Scheduler struct {
@@ -425,7 +424,7 @@ type Scheduler struct {
 
 A Scheduler reports metrics to SignalFx at some timely manner.
 
-#### func  [NewScheduler](#newscheduler)
+#### func  NewScheduler
 
 ```go
 func NewScheduler() *Scheduler
@@ -433,7 +432,7 @@ func NewScheduler() *Scheduler
 NewScheduler creates a default SignalFx scheduler that can report metrics to
 SignalFx at some interval.
 
-#### func (\*Scheduler) [AddCallback](#addcallback)
+#### func (\*Scheduler) AddCallback
 
 ```go
 func (s *Scheduler) AddCallback(db Collector)
@@ -441,7 +440,7 @@ func (s *Scheduler) AddCallback(db Collector)
 
 AddCallback adds a collector to the default group.
 
-#### func (\*Scheduler) [AddGroupedCallback](#addgroupedcallback)
+#### func (\*Scheduler) AddGroupedCallback
 
 ```go
 func (s *Scheduler) AddGroupedCallback(group string, db Collector)
@@ -449,7 +448,7 @@ func (s *Scheduler) AddGroupedCallback(group string, db Collector)
 
 AddGroupedCallback adds a collector to a specific group.
 
-#### func (\*Scheduler) [DefaultDimensions](#defaultdimensions)
+#### func (\*Scheduler) DefaultDimensions
 
 ```go
 func (s *Scheduler) DefaultDimensions(dims map[string]string)
@@ -458,7 +457,7 @@ func (s *Scheduler) DefaultDimensions(dims map[string]string)
 DefaultDimensions adds a dimension map that are appended to all metrics in the
 default group.
 
-#### func (\*Scheduler) [GroupedDefaultDimensions](#groupeddefaultdimensions)
+#### func (\*Scheduler) GroupedDefaultDimensions
 
 ```go
 func (s *Scheduler) GroupedDefaultDimensions(group string, dims map[string]string)
@@ -466,7 +465,7 @@ func (s *Scheduler) GroupedDefaultDimensions(group string, dims map[string]strin
 
 GroupedDefaultDimensions adds default dimensions to a specific group.
 
-#### func (\*Scheduler) [RemoveCallback](#removecallback)
+#### func (\*Scheduler) RemoveCallback
 
 ```go
 func (s *Scheduler) RemoveCallback(db Collector)
@@ -474,7 +473,7 @@ func (s *Scheduler) RemoveCallback(db Collector)
 
 RemoveCallback removes a collector from the default group.
 
-#### func (\*Scheduler) [RemoveGroupedCallback](#removegroupedcallback)
+#### func (\*Scheduler) RemoveGroupedCallback
 
 ```go
 func (s *Scheduler) RemoveGroupedCallback(group string, db Collector)
@@ -482,7 +481,7 @@ func (s *Scheduler) RemoveGroupedCallback(group string, db Collector)
 
 RemoveGroupedCallback removes a collector from a specific group.
 
-#### func (\*Scheduler) [ReportOnce](#reportonce)
+#### func (\*Scheduler) ReportOnce
 
 ```go
 func (s *Scheduler) ReportOnce(ctx context.Context) error
@@ -490,7 +489,7 @@ func (s *Scheduler) ReportOnce(ctx context.Context) error
 
 ReportOnce will report any metrics saved in this reporter to SignalFx
 
-#### func (\*Scheduler) [ReportingDelay](#reportingdelay)
+#### func (\*Scheduler) ReportingDelay
 
 ```go
 func (s *Scheduler) ReportingDelay(delay time.Duration)
@@ -498,7 +497,7 @@ func (s *Scheduler) ReportingDelay(delay time.Duration)
 
 ReportingDelay sets the interval metrics are reported to SignalFx.
 
-#### func (\*Scheduler) [Schedule](#schedule)
+#### func (\*Scheduler) Schedule
 
 ```go
 func (s *Scheduler) Schedule(ctx context.Context) error
@@ -506,7 +505,7 @@ func (s *Scheduler) Schedule(ctx context.Context) error
 
 Schedule will run until either the ErrorHandler returns an error or the context is canceled. This is intended to be run inside a goroutine.
 
-#### func (\*Scheduler) [Var](#var)
+#### func (\*Scheduler) Var
 
 ```go
 func (s *Scheduler) Var() expvar.Var
@@ -514,7 +513,7 @@ func (s *Scheduler) Var() expvar.Var
 
 Var returns an expvar variable that prints the values of the previously reported datapoints.
 
-#### type [Sink](#sink)
+#### type Sink
 
 ```go
 type Sink interface {
@@ -524,7 +523,7 @@ type Sink interface {
 
 Sink is anything that can receive points collected by a Scheduler. This can be useful for stubbing out your collector to test the points that will be sent to SignalFx.
 
-#### type [WithDimensions](#withdimensions)
+#### type WithDimensions
 
 ```go
 type WithDimensions struct {
@@ -535,7 +534,7 @@ type WithDimensions struct {
 
 WithDimensions adds dimensions on top of the datapoints of a collector. This can be used to take an existing Collector and include extra dimensions.
 
-#### func (\*WithDimensions) [Datapoints](#datapoints)
+#### func (\*WithDimensions) Datapoints
 
 ```go
 func (w *WithDimensions) Datapoints() []*datapoint.Datapoint

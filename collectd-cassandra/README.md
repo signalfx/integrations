@@ -72,7 +72,7 @@ Using the example configuration file [20-cassandra.conf](https://github.com/sign
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_cassandra.png)
 

@@ -78,7 +78,7 @@ All metrics reported by the Marathon collectd plugin will contain the following 
 - `plugin` is always set to `marathon`.
 - `plugin_instance` will always be `marathon` concated with `.` and the Mesos agent id. Ex. `marathon.<mesos agent id>`.
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_marathon_overview.png)
 

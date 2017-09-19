@@ -65,7 +65,7 @@ Please see [nginx docs](http://nginx.org/en/docs/http/ngx_http_stub_status_modul
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_nginx.png)
 

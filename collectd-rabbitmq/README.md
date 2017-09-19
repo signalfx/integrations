@@ -69,7 +69,7 @@ Using the example configuration file [10-rabbitmq.conf](https://github.com/signa
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_rabbitmq.png)
 

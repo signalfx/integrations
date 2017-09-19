@@ -123,7 +123,7 @@ In the example above, 3 redis instances on the same host listen on different por
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_redis.png)
 

@@ -72,7 +72,7 @@ PostgreSQL plugin uses PostgreSQL's statistics collector which should be enabled
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_postgresql.png)
 

@@ -108,7 +108,7 @@ If using the sample configuration file [10-varnish.conf](https://github.com/sign
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_varnish.png)
 

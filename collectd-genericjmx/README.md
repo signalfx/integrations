@@ -111,7 +111,7 @@ The GenericJMX collectd plugin by itself gathers generic Java metrics. By defaul
 
 ### METRICS
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_genericjmx.png)
 
