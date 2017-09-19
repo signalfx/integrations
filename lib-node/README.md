@@ -26,8 +26,7 @@ and event data to SignalFx.
 
 #### API access token
 
-To use this library, you need a SignalFx API access
-token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview).
+To use this library, you need a SignalFx API access token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication).
 
 
 ### <a name="installation"></a>INSTALLATION
