@@ -163,7 +163,7 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
+        "maxExtrapolations" : 1,
         "rollupPolicy" : "LATEST_ROLLUP"
       },
       "dataManipulations" : [ ],
@@ -248,8 +248,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
   "marshallId" : 5,
@@ -1234,7 +1234,7 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
+        "maxExtrapolations" : 1,
         "rollupPolicy" : "LATEST_ROLLUP"
       },
       "dataManipulations" : [ ],
@@ -1307,8 +1307,8 @@
     },
     "currentUniqueKey" : 4,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
   }
 }, {
   "marshallId" : 16,
@@ -1705,7 +1705,7 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
+        "maxExtrapolations" : 1,
         "rollupPolicy" : null
       },
       "dataManipulations" : [ ],
@@ -1780,8 +1780,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 20,
