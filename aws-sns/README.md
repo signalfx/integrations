@@ -8,25 +8,25 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Amazon Simple Notification Service (SNS) via [Amazon CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws). 
+Use SignalFx to monitor Amazon Simple Notification Service (SNS) via [Amazon CloudWatch](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.cloudwatch.html).
 
 #### FEATURES
 
 ##### Built-in dashboards
 
 - **SNS**: Overview of all data from SNS.
-  
+
   [<img src='./img/dashboard_sns.png' width=200px>](./img/dashboard_sns.png)
 
 ### INSTALLATION
 
-To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws) on the SignalFx Integrations page. 
+To access this integration, [connect to CloudWatch](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.cloudwatch.html). 
 
-By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page. 
+By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
 ### USAGE
 
-SignalFx provides a built-in dashboard for this service, as shown below. 
+SignalFx provides a built-in dashboard for this service, as shown below.
 
 ![](./img/dashboard_sns.png)
 

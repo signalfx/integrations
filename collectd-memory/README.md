@@ -23,7 +23,7 @@ The values are reported by their use by the operating system. Under Linux, the c
 
 > Free memory is memory you paid for, that's using power and that doesn't do anything useful. It is normal that the operating system puts that memory to use, for example by caching files it has accessed (reported as Cached under Linux).
 
-> Virtual memory statistics can be collected with the [vmem plugin](https://github.com/signalfx/integrations/tree/master/collectd-vmem) under Linux.
+> Virtual memory statistics can be collected with the [vmem plugin](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.vmem.html) under Linux.
 
 ### REQUIREMENTS AND DEPENDENCIES
 

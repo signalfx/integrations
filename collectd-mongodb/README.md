@@ -155,7 +155,7 @@ When analyzing the performance of a MongoDB cluster, it's also important to veri
 
 On an individual instance level, it's important to monitor system statistics like memory usage, page faults, and disk I/O utilization.
 
-MongoDB uses memory-mapped files to store data, so it is important to compare the amount of memory that MongoDB has allocated to the amount of system memory. This plugin reports resident memory usage in [gauge.mem.resident](./docs/gauge.mem.resident.md) and mapped memory usage in [gauge.mem.mapped](./docs/gauge.mem.mapped.md). If either of these quantities exceed the amount of system memory (reported by the [memory](https://github.com/signalfx/integrations/tree/master/collectd-memory) plugin for collectd), the system may be at or over capacity.
+MongoDB uses memory-mapped files to store data, so it is important to compare the amount of memory that MongoDB has allocated to the amount of system memory. This plugin reports resident memory usage in [gauge.mem.resident](./docs/gauge.mem.resident.md) and mapped memory usage in [gauge.mem.mapped](./docs/gauge.mem.mapped.md). If either of these quantities exceed the amount of system memory (reported by the [memory](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.memory.html) plugin for collectd), the system may be at or over capacity.
 
 ![Memory statistics from MongoDB](././img/mongodb_memory.png)
 
@@ -167,7 +167,7 @@ This plugin reports page faults in [counter.extra\_info.page\_faults](./docs/cou
 
 *This MongoDB instance has a low rate of page faults. This means that most of the data MongoDB needs to access is in memory, and doesn't need to be fetched from disk.*
 
-You can monitor disk I/O utilization for your MongoDB host using the [disk\_ops.write](https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/derive.disk_ops.write.md) and [disk\_ops.read](https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/derive.disk_ops.read.md) metrics emitted by the `disk` plugin for collectd, which is included and enabled by default in most packages of collectd. [Click here to learn more about the collectd-disk](https://github.com/signalfx/integrations/blob/master/collectd-disk/) plugin.
+You can monitor disk I/O utilization for your MongoDB host using the [disk\_ops.write](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html#derive-disk-ops-write) and [disk\_ops.read](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html#derive-disk-ops-read) metrics emitted by the `disk` plugin for collectd, which is included and enabled by default in most packages of collectd. [Click here to learn more about the collectd-disk](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html) plugin.
 
 ### METRICS
 

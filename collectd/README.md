@@ -120,9 +120,9 @@ For example, the following URL sends data points to SignalFx with the added dime
 
 #### Transmitting outside a network
 
-If instances of collectd are unable to transmit outside the network, the [SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy) can be used to receive connections from many instances of collectd, and forward transmissions to SignalFx using a single outgoing HTTP connection. This is suitable for environments in which transmissions exiting a network are highly restricted.
+If instances of collectd are unable to transmit outside the network, the [SignalFx metric proxy](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.metric.proxy.html) can be used to receive connections from many instances of collectd, and forward transmissions to SignalFx using a single outgoing HTTP connection. This is suitable for environments in which transmissions exiting a network are highly restricted.
 
-[Click here for more information about the SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy).
+[Click here for more information about the SignalFx metric proxy](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.metric.proxy.html).
 
 #### Transmitting through an existing HTTP proxy
 

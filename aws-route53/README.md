@@ -8,29 +8,29 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Amazon Route 53 via [Amazon CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws). 
+Use SignalFx to monitor Amazon Route 53 via [Amazon CloudWatch](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.cloudwatch.html).
 
 #### FEATURES
 
 ##### Built-in dashboards
 
 - **Route53**: Overview of all data from Route 53.
-  
+
   [<img src='./img/dashboard_route53.png' width=200px>](./img/dashboard_route53.png)
 
 - **Route53 HealthCheck**: Focus on a single Route 53 health check.
-  
+
   [<img src='./img/dashboard_route53_healthcheck.png' width=200px>](./img/dashboard_route53_healthcheck.png)
 
 ### INSTALLATION
 
-To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws) on the SignalFx Integrations page. 
+To access this integration, [connect to CloudWatch](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.cloudwatch.html).
 
-By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page. 
+By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
 ### USAGE
 
-SignalFx provides built-in dashboards for this service. Examples are shown below. 
+SignalFx provides built-in dashboards for this service. Examples are shown below.
 
 ![](./img/dashboard_route53.png)
 

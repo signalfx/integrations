@@ -12,8 +12,7 @@ This is a directory that consolidates all the metadata associated with SignalFx'
 
 ### DESCRIPTION
 
-`collectd-couchbase` is a [collectd](http://www.collectd.org/) plugin that
-collects statistics from Couchbase.
+`collectd-couchbase` is a [collectd](http://www.collectd.org/) plugin that collects statistics from Couchbase.
 
 #### FEATURES
 

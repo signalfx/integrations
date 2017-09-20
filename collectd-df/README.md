@@ -49,7 +49,7 @@ Configuration for this plugin is kept in the main [collectd.conf](https://github
 
 The primary use of this plugin is to track the available space on the systems filesystems. This can be used to set alerts and thresholds to avoid a filesystem from being filled to capacity.
 
-The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/integrations/blob/master/collectd-signalfx/docs/disk.utilization.md).
+The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/master/signalfx-metadata) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/integrations/tree/master/signalfx-metadata/docs/disk.utilization.md).
 
 ### METRICS
 

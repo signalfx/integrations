@@ -50,11 +50,13 @@ This plugin collects metrics from the module `mod_status`.
 
 3. Restart Apache.
 
-4. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
+4. Install the plugin:
 
-        yum install collectd-apache
+    * On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
+            yum install collectd-apache
+
+    * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
 5. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin to `/etc/collectd/managed_config`.
 
