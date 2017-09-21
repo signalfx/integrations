@@ -57,21 +57,19 @@ Note that sometimes, as in this example, the delimiter `/` appears in the metric
 
 SignalFx has made two changes to the names of metrics as we collect them from New Relic, in order to enhance the ability to perform [wildcard searches](#regular-wildcard-mode):
 
-**All New Relic metrics have their appropriate object id appended to the metric name.** For metrics from the Applications module, this is an application ID. For metrics from the Servers module, this is a server ID. The same value can be found in the id dimension associated with that metric.
+* **All New Relic metrics have their appropriate object id appended to the metric name.** For metrics from the Applications module, this is an application ID. For metrics from the Servers module, this is a server ID. The same value can be found in the id dimension associated with that metric.
 
-Examples:
+  Examples:
 
-* New Relic application metric as obtained from API:
-`Apdex/Expressjs/GET//*/score`
-* As it appears in SignalFx with application id 12345678 appended:
-`Apdex/Expressjs/GET//*/score/12345678`
+  * New Relic application metric as obtained from API: `Apdex/Expressjs/GET//*/score`
+  * As it appears in SignalFx with application id 12345678 appended: `Apdex/Expressjs/GET//*/score/12345678`
 
-**Server metrics have their account ID prepended in front of the metric name.** This only occurs for Server metrics because account ID information is only available for Server metrics. The same value can be found in the account dimension.
+* **Server metrics have their account ID prepended in front of the metric name.** This only occurs for Server metrics because account ID information is only available for Server metrics. The same value can be found in the account dimension.
 
-Examples:
+  Examples:
 
-* New Relic server metric as obtained from API: `System/CPU/System/percent/average_exclusive_time`
-* As it appears in SignalFx, with account id 7654321 prepended and server id 12345678 appended: `7654321/System/CPU/System/percent/average_exclusive_time/12345678`
+  * New Relic server metric as obtained from API: `System/CPU/System/percent/average_exclusive_time`
+  * As it appears in SignalFx, with account id 7654321 prepended and server id 12345678 appended: `7654321/System/CPU/System/percent/average_exclusive_time/12345678`
 
 To help you compose charts with New Relic metrics, SignalFx supports two kinds of wildcard searching: regular wildcard mode, and New Relic wildcard mode.
 

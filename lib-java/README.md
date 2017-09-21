@@ -37,7 +37,7 @@ Java 6+ with `signalfx-metrics`.
 #### API access token
 
 To use this library, you need a SignalFx API access
-token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview). 
+token. [Click here for more information on retrieving an API token](https://developers.signalfx.com/docs/authentication). 
 
 
 ### <a name="installation"></a>INSTALLATION
@@ -400,4 +400,4 @@ try (AggregateMetricSender.Session i = mf.createSession()) {
 
 ### <a name="license"></a>LICENSE
 
-This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-java/blob/master/LICENSE)for more details.
+This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-java/blob/master/LICENSE) for more details.

@@ -12,8 +12,7 @@ _This directory consolidates all the metadata associated with the MongoDB collec
 
 ### DESCRIPTION
 
-Use the [mongodb](https://github.com/signalfx/collectd-mongodb) collectd
-plugin to collect metrics from MongoDB nodes.
+Use the [mongodb](https://github.com/signalfx/collectd-mongodb) collectd plugin to collect metrics from MongoDB nodes.
 
 This plugin captures the following metrics about MongoDB generally:
 
