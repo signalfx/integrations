@@ -32,7 +32,7 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
 
   [<img src='./img/dashboard_docker_container.png' width=200px>](./img/dashboard_docker_container.png)
 
-- **Docker Neighbours**: (Optional Dashboard) Container resource allocation metrics.
+- **Docker Neighbors**: (Optional Dashboard) Container resource allocation metrics.
 
   [<img src='./img/dashboard_docker_neighbours.png' width=200px>](./img/dashboard_docker_neighbours.png)
 
@@ -74,9 +74,9 @@ The [`docker-collectd`](https://github.com/signalfx/docker-collectd-plugin) plug
   * Set the CpuQuotaPercent and CpuSharesPercent configuration options to true
   * Configure the filter to emit the optional metrics. Please see the configuration details [here](#configuration)
 
-5. The optional dashboard `Docker Neighbours` offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
+5. The optional dashboard `Docker Neighbors` offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
   * Manually import the dashboard into your organization in SignalFx.
-    * Download the dashboard
+    * Download the [dashboard group](https://github.com/signalfx/integrations/blob/master/collectd-docker/dashboards/Page_Docker.json) with the optional dashboard
     * Click to open the Actions menu, hover over Import, then select Dashboard Group
     * Specify the path to the downloaded `Page_Docker.json` file
     * The new dashboard group should appear under Custom Dashboard Groups
