@@ -14,7 +14,7 @@ This directory consolidates all the metadata associated with the jenkins plugin 
 
 This is the SignalFx Jenkins plugin. Follow these instructions to install the Jenkins plugin for collectd.
 
-The [collectd-jenkins](https://github.com/signalfx/collectd-jenkins) plugin collects metrics from jenkins instances hitting these endpoints: [../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api) (job metrics)  and [metrics/<MetricsKey>/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin) (default and optional Codahale/Dropwizard JVM metrics).
+The [collectd-jenkins](https://github.com/signalfx/collectd-jenkins) plugin collects metrics from jenkins instances hitting these endpoints: [../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api) (job metrics)  and [metrics/&lt;MetricsKey&gt;/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin) (default and optional Codahale/Dropwizard JVM metrics).
 
 #### FEATURES
 
@@ -58,6 +58,8 @@ The [collectd-jenkins](https://github.com/signalfx/collectd-jenkins) plugin coll
 ### CONFIGURATION
 
 Using the example configuration file [10-jenkins.conf](https://github.com/signalfx/integrations/tree/release/collectd-jenkins/10-jenkins.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the jenkins instances
+
+Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins and also values of type string and list(hence, metrics of these will be skipped if provided in the configuration)
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
