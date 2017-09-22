@@ -1,0 +1,231 @@
+# ![](./img/integrations_jenkins.png) Jenkins
+
+This directory consolidates all the metadata associated with the jenkins plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-jenkins)
+
+- [Description](#description)
+- [Requirements and Dependencies](#requirements-and-dependencies)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Metrics](#metrics)
+- [License](#license)
+
+### DESCRIPTION
+
+This is the SignalFx Jenkins plugin. Follow these instructions to install the Jenkins plugin for collectd.
+
+The [collectd-jenkins](https://github.com/signalfx/collectd-jenkins) plugin collects metrics from jenkins instances hitting these endpoints: [../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api) (job metrics)  and [metrics/&lt;MetricsKey&gt;/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin) (default and optional Codahale/Dropwizard JVM metrics).
+
+#### FEATURES
+
+#### Built-in dashboards
+
+- **Jenkins**: Provides a high-level overview of metrics for a jenkins cluster.
+
+  [<img src='./img/jenkins-dashboard-top.png' width=200px>](./img/jenkins-dashboard-top.png)
+
+  [<img src='./img/jenkins-dashboard-bottom.png' width=200px>](./img/jenkins-dashboard-bottom.png)  
+
+- **Jenkins MASTER**: Provides metrics from jenkins instance(s) on a particular host.
+
+  [<img src='./img/jenkins-master-dashboard.png' width=200px>](./img/jenkins-master-dashboard.png)  
+
+
+### REQUIREMENTS AND DEPENDENCIES
+
+#### Version information
+
+| Software  | Version        |
+|-----------|----------------|
+| collectd  |  4.9 or later  |
+| python | 2.6 or later |
+| Jenkins | 1.580.3 or later |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
+
+### INSTALLATION
+
+1. Download [collectd-jenkins](https://github.com/signalfx/collectd-jenkins). Place the `jenkins.py` file in `/usr/share/collectd/collectd-jenkins`
+
+2. Copy the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-jenkins/10-jenkins.conf) for this plugin in `/etc/collectd/managed_config`
+
+3. Modify the sample configuration file as described in [Configuration](#configuration), below
+
+4. Install the Metrics Plugin in Jenkins. `Manage Jenkins > Manage Plugins > Available > Search "Metrics Plugin"`
+
+5. Restart collectd
+
+
+### CONFIGURATION
+
+Using the example configuration file [10-jenkins.conf](https://github.com/signalfx/integrations/tree/release/collectd-jenkins/10-jenkins.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the jenkins instances
+
+Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins and also values of type string and list(hence, metrics of these will be skipped if provided in the configuration)
+
+| configuration option | definition | example value |
+| ---------------------|------------|---------------|
+| ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-jenkins/" |
+| Host | Host name of the jenkins instance | "localhost" |
+| Port | Port at which the instance can be reached | "2379" |
+| MetricsKey | Access key required to fetch Codahale metrics | "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg" |
+| Username | User with security access if configured | "admin" |
+| APIToken | API Token of the user | "f04fff7c860d884f2ef00a2b2d481c2f" |
+| EnhancedMetrics | Boolean to indicate whether advanced stats from `/metrics/<MetricsKey>/metrics` are needed | "false" |
+| IncludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to include(valid when EnhancedMetrics is "false") | "vm.daemon.count" |
+| ExcludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to exclude(valid when EnhancedMetrics is "true") | "vm.terminated.count" |
+| Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
+| Interval | Number of seconds between calls to Jenkins API. | 10 |
+
+Example configuration:
+
+```apache
+LoadPlugin python
+<Plugin python>
+    ModulePath "/usr/share/collectd/collectd-jenkins"
+    Import jenkins
+    <Module jenkins>
+        Host "127.0.0.1"
+        Port "8080"
+        Username "admin"
+        APIToken "f04fff7c860d884f2ef00a2b2d481c2f"
+        MetricsKey "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg"
+        Interval 60
+    </Module>
+</Plugin>
+```
+
+The plugin can be configured to collect metrics from multiple instances in the following manner.
+
+```apache
+LoadPlugin python
+<Plugin python>
+    ModulePath "/usr/share/collectd/collectd-jenkins"
+    Import jenkins
+    <Module jenkins>
+        Host "127.0.0.1"
+        Port "8080"
+        Username "admin"
+        APIToken "f04fff7c860d884f2ef00a2b2d481c2f"
+        MetricsKey "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg"
+        Interval 10
+    </Module>
+    <Module jenkins>
+        Host "127.0.0.1"
+        Port "8010"
+        Username "admin"
+        APIToken "f04bbb7c860d8b4f1ef00a2b2d481c2f"
+        MetricsKey "6Z76HwGBHOj4uBOlsxbFenpfz_g2UAh0-ocmK-CvdHLSRdmg"
+        EnhancedMetrics False
+        IncludeMetric "vm.daemon.count"
+        IncludeMetric "vm.terminated.count"
+    </Module>
+    <Module jenkins>
+        Host "127.0.0.1"
+        Port "8000"
+        MetricsKey "6Z95HwOj4uBOakGR91dxbFenpfz_g2wBlUAh0-ocmK-CvdSvE1LGRdmg"
+        EnhancedMetrics True
+        ExcludeMetric "vm.terminated.count"
+        ExcludeMetric "vm.daemon.count"
+        Dimension foo bar
+    </Module>
+</Plugin>
+```
+
+### USAGE
+
+#### Interpreting Built-in dashboards
+
+- **Jenkins**:
+
+  - **Alive Status**: Shows the number of Jenkins Masters that are alive.
+
+    [<img src='./img/chart-jenkins-alive-status.png' width=200px>](./img/chart-jenkins-alive-status.png)
+
+  - **Health Score**: Shows the mean health score of each Jenkins instance on all hosts.
+
+    [<img src='./img/chart-jenkins-health-score.png' width=200px>](./img/chart-jenkins-health-score.png)
+
+  - **Job Failure Rate**: Shows the rate of jobs failed in the past day.
+
+    [<img src='./img/chart-jenkins-job-failure-rate.png' width=200px>](./img/chart-jenkins-job-failure-rate.png)
+
+  - **Executor Usage**: Shows the usage pattern of the executors. Gives an overview of the load on the Jenkins instances.
+
+    [<img src='./img/chart-jenkins-executor-usage.png' width=200px>](./img/chart-jenkins-executor-usage.png)
+
+  - **Top 5 Failed Jobs**: Shows the top 5 failed jobs over the past day based on the total failure count.
+
+    [<img src='./img/chart-jenkins-top-5-failed-jobs.png' width=200px>](./img/chart-jenkins-top-5-failed-jobs.png)
+
+  - **Busy Executors vs Pending Jobs**: A line graph showing comparison between in-use executors and pending jobs in queue. On comparing this chart with two above, reason for job failures can be narrowed down further quickly.
+
+    [<img src='./img/chart-jenkins-busy-executors-vs-pending-jobs.png' width=200px>](./img/chart-jenkins-busy-executors-vs-pending-jobs.png)
+
+  - **Average Duration - Past Day**: Shows average duration of top 5 jobs that are taking the most time.
+
+    [<img src='./img/chart-jenkins-average-duration-past-day.png' width=200px>](./img/chart-jenkins-average-duration-past-day.png)
+
+  - **Slave Status**: Shows the number of slave agents that are alive.
+
+    [<img src='./img/chart-jenkins-slave-status.png' width=200px>](./img/chart-jenkins-slave-status.png)
+
+  - **VM Memory Utilization**: Area graph of the memory used by each Jenkins JVM.
+
+    [<img src='./img/chart-jenkins-vm-memory-utilization.png' width=200px>](./img/chart-jenkins-vm-memory-utilization.png)
+
+  - **Heap Usage**: Line graph of the utilization percentage of Heap memory by each Jenkins instance.
+
+    [<img src='./img/chart-jenkins-cluster-append-recv.png' width=200px>](./img/chart-jenkins-cluster-append-recv.png)
+
+  - **Non-Heap Used**: Line graph of the non-heap memory used by each Jenkins instance.
+
+    [<img src='./img/chart-jenkins-non-heap-used.png' width=200px>](./img/chart-jenkins-non-heap-used.png)
+
+- **Jenkins Master**:
+
+  - **Top 5 Failed Jobs**: Shows the top 5 failed jobs over the past day based on the total failure count in an instance(s).
+    
+    [<img src='./img/chart-jenkins-master-top-5-failed-jobs.png' width=200px>](./img/chart-jenkins-master-top-5-failed-jobs.png)
+
+  - **Health Checks**: The status of each health check as reported by DropWizard Metrics. This gives a quick overview of what's wrong with the instance.
+
+    [<img src='./img/chart-jenkins-master-health-checks.png' width=200px>](./img/chart-jenkins-master-health-checks.png)
+
+  - **Slave Status**: Shows the number of slave agents of the instance(s) that are alive.
+  
+      [<img src='./img/chart-jenkins-master-slave-status.png' width=200px>](./img/chart-jenkins-master-slave-status.png)
+
+  - **Busy Executors vs Pending Jobs**: A line chart showing comparison between in-use executors and pending jobs in queue in an instance(s). On comparing this chart with two above, reason for job failures can be narrowed down further quickly.
+  
+      [<img src='./img/chart-jenkins-master-busy-executors-vs-pending-jobs.png' width=200px>](./img/chart-jenkins-busy-executors-vs-pending-jobs.png)
+
+  - **System CPU Utilization** A line graph showing system CPU utilization by a particular host.
+
+    [<img src='./img/chart-jenkins-master-system-cpu-utilization.png' width=200px>](./img/chart-jenkins-master-system-cpu-utilization.png)
+  
+  - **VM Memory Utilization**: Area chart of the memory used by the Jenkins JVM instance(s) on a host.
+  
+      [<img src='./img/chart-jenkins-master-vm-memory-utilization.png' width=200px>](./img/chart-jenkins-vm-memory-utilization.png)
+
+All DropWizard metrics reported by the jenkins collectd plugin will not contain any dimensions by default. Whereas, the job metrics sent will contain the following dimensions by default:
+
+* `Job`, name of the job
+* `Result`, the status of the job
+
+A few other details:
+
+* `plugin` is always set to `jenkins`
+* `plugin_instance` will contain the IP address and the port of the member given in the configuration
+* To add metrics from the `/metrics/<MetricsKey>/metrics` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid. For example, `vm.daemon.count` or `vm.terminated.count`
+
+
+### METRICS
+By default, metrics about a job and instance are provided. Click [here](./docs) for details. Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins and also values of type string and list(hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
+
+
+#### Metric naming
+`<metric type>.jenkins.node.<name of metric>`. This is the format of default metric names reported by the plugin. Optional metrics are named as available from the `/metrics/<MetricsKey>/metrics` endpoint.
+
+
+### LICENSE
+
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
