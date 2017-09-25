@@ -197,10 +197,6 @@ LoadPlugin python
   - **Busy Executors vs Pending Jobs**: A line chart showing comparison between in-use executors and pending jobs in queue in an instance(s). On comparing this chart with two above, reason for job failures can be narrowed down further quickly.
   
       [<img src='./img/chart-jenkins-master-busy-executors-vs-pending-jobs.png' width=200px>](./img/chart-jenkins-busy-executors-vs-pending-jobs.png)
-
-  - **System CPU Utilization** A line graph showing system CPU utilization by a particular host.
-
-    [<img src='./img/chart-jenkins-master-system-cpu-utilization.png' width=200px>](./img/chart-jenkins-master-system-cpu-utilization.png)
   
   - **VM Memory Utilization**: Area chart of the memory used by the Jenkins JVM instance(s) on a host.
   
