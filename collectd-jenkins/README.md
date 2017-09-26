@@ -174,7 +174,7 @@ LoadPlugin python
 
   - **Heap Usage**: Line graph of the utilization percentage of Heap memory by each Jenkins instance.
 
-    [<img src='./img/chart-jenkins-cluster-append-recv.png' width=200px>](./img/chart-jenkins-cluster-append-recv.png)
+    [<img src='./img/chart-jenkins-heap-usage.png' width=200px>](./img/chart-jenkins-heap-usage.png)
 
   - **Non-Heap Used**: Line graph of the non-heap memory used by each Jenkins instance.
 
