@@ -3,12 +3,12 @@
 }, {
   "marshallId" : 1,
   "sf_description" : "",
-  "sf_service" : "Jenkins-Nishant",
+  "sf_service" : "Jenkins",
   "sf_type" : "Service"
 }, {
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Monitoring  sigle or multiple Jenkins instances deployed in the organization",
+  "sf_description" : "Monitoring single or multiple Jenkins instances deployed in the organization",
   "sf_page" : "Jenkins",
   "sf_type" : "Page"
 }, {
@@ -192,10 +192,10 @@
         "iconClass" : "icon-properties",
         "optional" : false,
         "property" : "host",
-        "propertyValue" : "nishant",
-        "query" : "host:nishant",
+        "propertyValue" : "i-072d492adaeaa4d05",
+        "query" : "host:i-072d492adaeaa4d05",
         "type" : "property",
-        "value" : "nishant"
+        "value" : "i-072d492adaeaa4d05"
       } ],
       "seriesData" : { },
       "transient" : true,
@@ -959,10 +959,10 @@
         "iconClass" : "icon-properties",
         "optional" : false,
         "property" : "host",
-        "propertyValue" : "nishant",
-        "query" : "host:nishant",
+        "propertyValue" : "i-072d492adaeaa4d05",
+        "query" : "host:i-072d492adaeaa4d05",
         "type" : "property",
-        "value" : "nishant"
+        "value" : "i-072d492adaeaa4d05"
       } ],
       "seriesData" : { },
       "transient" : true,
@@ -1547,6 +1547,16 @@
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
+      "alias" : "instance",
+      "description" : "",
+      "dimension" : "plugin_instance",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    }, {
       "alias" : "host",
       "description" : "Hosts on which the jenkins plugin is running",
       "dimension" : "host",
@@ -1563,7 +1573,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "host=host:nishant" ]
+    "variables" : null
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -1597,22 +1607,13 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1504218630508,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
+      "col" : 6,
       "options" : {
         "chartIndex" : 1505329417035,
         "id" : 0
       },
       "row" : 1,
-      "sizeX" : 4,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
       "col" : 0,
@@ -1621,80 +1622,12 @@
         "id" : 0
       },
       "row" : 1,
-      "sizeX" : 4,
+      "sizeX" : 6,
       "sizeY" : 1
     } ]
   }
 }, {
   "marshallId" : 18,
-  "marshallMemberOf" : [ 17 ],
-  "sf_chart" : "System CPU Utilization",
-  "sf_chartIndex" : 1504218630508,
-  "sf_description" : "Host System CPU Utilization",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "cpu.utilization",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "cpu.utilization"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "usage in %",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
-  }
-}, {
-  "marshallId" : 19,
   "marshallMemberOf" : [ 17 ],
   "sf_chart" : "Slave Status",
   "sf_chartIndex" : 1504642639711,
@@ -1784,7 +1717,7 @@
     "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
-  "marshallId" : 20,
+  "marshallId" : 19,
   "marshallMemberOf" : [ 17 ],
   "sf_chart" : "Health Checks",
   "sf_chartIndex" : 1504212625135,
@@ -1946,7 +1879,7 @@
     "uiHelperValue" : "##CHARTID##_12"
   }
 }, {
-  "marshallId" : 21,
+  "marshallId" : 20,
   "marshallMemberOf" : [ 17 ],
   "sf_chart" : "VM Memory Utilization",
   "sf_chartIndex" : 1505329417035,
@@ -2016,7 +1949,7 @@
     "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
-  "marshallId" : 22,
+  "marshallId" : 21,
   "marshallMemberOf" : [ 17 ],
   "sf_chart" : "Top 5 Failed Jobs",
   "sf_chartIndex" : 1504807336160,
@@ -2155,7 +2088,7 @@
     "uiHelperValue" : "##CHARTID##_20"
   }
 }, {
-  "marshallId" : 23,
+  "marshallId" : 22,
   "marshallMemberOf" : [ 17 ],
   "sf_chart" : "Busy Executors vs Pending Jobs",
   "sf_chartIndex" : 1505329559775,
@@ -2246,10 +2179,10 @@
         "iconClass" : "icon-properties",
         "optional" : false,
         "property" : "host",
-        "propertyValue" : "nishant",
-        "query" : "host:nishant",
+        "propertyValue" : "i-072d492adaeaa4d05",
+        "query" : "host:i-072d492adaeaa4d05",
         "type" : "property",
-        "value" : "nishant"
+        "value" : "i-072d492adaeaa4d05"
       } ],
       "seriesData" : { },
       "transient" : true,
