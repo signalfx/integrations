@@ -32,9 +32,6 @@ spec:
                 - mountPath: /hostfs
                   name: hostfs
                   readOnly: true
-                - mountPath: /mnt/proc
-                  name: proc
-                  readOnly: true
                 - mountPath: /var/run/docker.sock
                   name: docker
                   readOnly: true
@@ -65,9 +62,6 @@ spec:
               - hostPath:
                   path: /
                 name: hostfs
-              - hostPath:
-                  path: /proc
-                name: proc
               - hostPath:
                   path: /var/run/docker.sock
                 name: docker

@@ -30,6 +30,7 @@ data:
         intervalSeconds: 15
 
       - type: collectd/docker
+        dockerURL: unix:///var/run/docker.sock
         dimensions:
           container_image: inspect:Config.Image
           container_id: inspect:Id
@@ -39,8 +40,6 @@ data:
           kubernetes_pod_name: inspect:Config.Labels['io.kubernetes.pod.name']
           kubernetes_pod_uid: inspect:Config.Labels['io.kubernetes.pod.uid']
           kubernetes_namespace: inspect:Config.Labels['io.kubernetes.pod.namespace']
-        serviceEndpoints:
-          - dockerURL: unix:///var/run/docker.sock
 
       - type: collectd/activemq
         discoveryRule: containerImage =~ "activemq" && privatePort == 1099
@@ -51,8 +50,19 @@ data:
       - type: collectd/cassandra
         discoveryRule: containerImage =~ "cassandra" && privatePort == 7199
 
+      - type: collectd/consul
+        discoveryRule: containerImage =~ "consul" && privatePort == 8500
+
       - type: collectd/elasticsearch
         discoveryRule: containerImage =~ "elasticsearch" && port == 9200
+
+      - type: collectd/etcd
+        discoveryRule: containerImage =~ "etcd" && port == 2379
+        # REQUIRED
+        clusterName: my-cluster
+
+      - type: collectd/haproxy
+        discoveryRule: containerImage =~ "haproxy" && port == 9000
 
       - type: collectd/kafka
         discoveryRule: containerImage =~ "kafka" && privatePort == 9092
@@ -63,16 +73,16 @@ data:
       - type: collectd/mongodb
         discoveryRule: containerImage =~ "mongo" && privatePort == 27017
         # REQUIRED
-        #databases:
-        #- admin
+        username: admin
+        databases:
+        - mydatabase
 
       - type: collectd/mysql
         discoveryRule: containerImage =~ "mysql" && privatePort == 3306
         # REQUIRED
-        #username: admin
-        #password: passwd
-        #databases:
-        #- name: mydb
+        username: admin
+        databases:
+        - name: mydb
 
       - type: collectd/nginx
         discoveryRule: containerImage =~ "nginx" && privatePort == 80
@@ -83,8 +93,20 @@ data:
       - type: collectd/redis
         discoveryRule: containerImage =~ "redis" && privatePort == 6379
 
+      - type: collectd/spark
+        discoveryRule: containerImage =~ "spark" && privatePort == 8080
+        isMaster: true
+        collectApplicationMetrics: true
+        clusterType: Standalone
+
+      - type: collectd/spark
+        discoveryRule: containerImage =~ "spark" && privatePort >= 8081
+        isMaster: false
+        clusterType: Standalone
+
       - type: collectd/zookeeper
         discoveryRule: containerImage =~ "zookeeper" && privatePort == 2181
+
 
     collectd:
       readThreads: 5
