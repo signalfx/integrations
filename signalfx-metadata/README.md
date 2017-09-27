@@ -30,7 +30,7 @@ This plugin requires:
 
  https://github.com/signalfx/signalfx-collectd-plugin
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-signalfx/10-signalfx.conf).
+1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/signalfx-metadata/10-signalfx.conf).
 
 1. Modify the configuration file as follows:
 
