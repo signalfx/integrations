@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase
 
-This is a directory that consolidates all the metadata associated with SignalFx's Couchbase integration. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase).
+Metadata associated with SignalFx's Couchbase integration can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-couchbase). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

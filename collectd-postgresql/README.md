@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png) PostgreSQL
 
-This is a directory that consolidates all the metadata associated with the PostgreSQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/postgresql.c).
+Metadata associated with the PostgreSQL collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-postgresql). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/postgresql.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

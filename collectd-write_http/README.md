@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Write-HTTP
 
-This directory consolidates all the metadata associated with the Write-HTTP collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/write_http.c).
+Metadata associated with the Write-HTTP collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-write_http). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/write_http.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

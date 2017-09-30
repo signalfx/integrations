@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) cURL-JSON Plugin
 
-This directory consolidates all the metadata associated with the cURL-JSON collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c).
+Metadata associated with the cURL-JSON collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-curl-json). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

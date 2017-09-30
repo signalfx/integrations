@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/img/integrations_nginxplus.png) NGINX Plus
 
-This directory consolidates all the metadata associated with the NGINX Plus plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-nginx-plus).
+Metadata associated with the NGINX Plus plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-nginx-plus). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-nginx-plus).
 
 - [Description](#description)
 - [Installation](#installation)

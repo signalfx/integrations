@@ -1,6 +1,6 @@
 # ![](./img/integrations_mysql.png) MySQL
 
-This is a directory that consolidates all the metadata associated with the MySQL collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/mysql.c).
+Metadata associated with the MySQL collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-mysql). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/mysql.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

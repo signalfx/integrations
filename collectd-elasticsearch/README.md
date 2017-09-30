@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch
 
-This directory consolidates all the metadata associated with the Elasticsearch collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch).
+Metadata associated with the Elasticsearch collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-elasticsearch). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

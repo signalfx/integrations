@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_signalfx.png) SignalFx collectd agent
 
-This is a directory that consolidates all the metadata associated with the SignalFx collectd agent. The code repository for this project can be found [here](https://github.com/signalfx/collectd/).
+Metadata associated with the SignalFx collectd agent can be found [here](https://github.com/signalfx/integrations/tree/release/collectd). The code repository for this project can be found [here](https://github.com/signalfx/collectd/).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

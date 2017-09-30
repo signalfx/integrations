@@ -1,6 +1,6 @@
 # HAProxy
 
-This directory consolidates all the metadata associated with the HAProxy collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy).
+Metadata associated with the HAProxy collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-haproxy). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

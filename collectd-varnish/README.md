@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-varnish/img/integrations_varnish.png) Varnish
 
-This is a directory that consolidates all the metadata associated with the Varnish collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/varnish.c).
+Metadata associated with the Varnish collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-varnish). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/varnish.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

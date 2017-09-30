@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics   
 
-This is a directory to consolidate all the metadata associated with the AppDynamics Integration. The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration).
+Metadata associated with the AppDynamics Integration can be found [here](https://github.com/signalfx/integrations/tree/release/appdynamics). The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

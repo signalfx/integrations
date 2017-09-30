@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Load
 
-This directory consolidates all the metadata associated with the Load collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/load.c).
+Metadata associated with the Load collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-load). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/load.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

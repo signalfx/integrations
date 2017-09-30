@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker
 
-This directory consolidates all the metadata associated with the Docker plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin).
+Metadata associated with the Docker plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-docker). The relevant code for the plugin can be found [here](https://github.com/signalfx/docker-collectd-plugin).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

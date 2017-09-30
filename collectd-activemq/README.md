@@ -1,6 +1,6 @@
 # ![](./img/integrations_activemq.png) ActiveMQ
 
-This is a directory that consolidates all the metadata associated with SignalFx's integration with ActiveMQ. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration).
+Metadata associated with SignalFx's integration with ActiveMQ can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-activemq). The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

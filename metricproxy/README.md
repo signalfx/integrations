@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx metric proxy
 
-This is a directory that consolidates metadata associated with the SignalFx metric proxy. The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy).
+Metadata associated with the SignalFx metric proxy can be found [here](https://github.com/signalfx/integrations/tree/release/metricproxy). The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

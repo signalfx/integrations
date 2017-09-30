@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Tail collectd Plugin
 
-This is a directory consolidate all the metadata associated with the Tail collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c).
+Metadata associated with the Tail collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-tail-syslog). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

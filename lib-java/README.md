@@ -13,7 +13,7 @@
 
 ### DESCRIPTION
 
-This repository contains libraries for instrumenting Java applications and reporting metrics to SignalFx, using Codahale Metrics.
+This [repository](https://github.com/signalfx/integrations/tree/release/lib-java) contains libraries for instrumenting Java applications and reporting metrics to SignalFx, using Codahale Metrics.
 
 You can also use the module `signalfx-java` to send metrics directly to SignalFx using protocol buffers, without using Codahale or Yammer metrics.
 

@@ -1,6 +1,6 @@
 # ![](./img/integrations_consul.png) Consul
 
-This directory consolidates all the metadata associated with the consul plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-consul).
+Metadata associated with the consul plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-consul). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-consul).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

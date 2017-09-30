@@ -1,6 +1,6 @@
 # VMStat
 
-This directory consolidates all the metadata associated with the VMStat plugin for collectd.  The relevant code for the plugin can be found [here](https://github.com/signalfx/vmstat-collectd).
+Metadata associated with the VMStat plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-vmstat).  The relevant code for the plugin can be found [here](https://github.com/signalfx/vmstat-collectd).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

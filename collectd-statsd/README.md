@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-statsd/img/integrations_statsd.png) StatsD
 
-This is a directory that consolidates all the metadata associated with the StatsD collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/statsd.c).
+Metadata associated with the StatsD collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-statsd). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/statsd.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -1,6 +1,6 @@
 # IOStat
 
-This directory consolidates all the metadata associated with the IOStat plugin for collectd.  The relevant code for the plugin can be found [here](https://github.com/signalfx/iostat-collectd-python).
+Metadata associated with the IOStat plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-iostat).  The relevant code for the plugin can be found [here](https://github.com/signalfx/iostat-collectd-python).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

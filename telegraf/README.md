@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/telegraf/img/integrations_telegraf.png) SignalFx Telegraf Agent
 
-This is a directory that consolidates all the metadata associated with the SignalFx Telegraf Agent. The code repository for this project can be found [here](https://github.com/signalfx/telegraf/).
+Metadata associated with the SignalFx Telegraf Agent can be found [here](https://github.com/signalfx/integrations/tree/release/telegraf). The code repository for this project can be found [here](https://github.com/signalfx/telegraf/).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

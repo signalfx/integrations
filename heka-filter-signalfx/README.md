@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/heka-filter-signalfx/img/integrations_heka.png) Heka Filter for SignalFx
 
-This is a directory consolidate all the metadata associated with the Heka filter integration. The relevant code for the integration can be found [here](https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua).
+Metadata associated with the Heka filter integration can be found [here](https://github.com/signalfx/integrations/tree/release/heka-filter-signalfx). The relevant code for the integration can be found [here](https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

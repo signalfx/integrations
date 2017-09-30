@@ -1,6 +1,6 @@
 # ![](./img/integrations_activemq.png) ActiveMQ Message Age Listener
 
-This is a directory that consolidates all the metadata associated with the ActiveMQ message age listener. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration).
+Metadata associated with the ActiveMQ message age listener can be found [here](https://github.com/signalfx/integrations/tree/release/amq-message-age). The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

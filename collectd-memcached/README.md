@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-memcached/img/integrations_memcached.png) Memcached
 
-This is a directory that consolidates all the metadata associated with the Memcached plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c).
+Metadata associated with the Memcached plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-memcached). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/memcached.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
