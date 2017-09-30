@@ -14,11 +14,11 @@ Metadata associated with the ActiveMQ message age listener can be found [here](h
 
 This tool measures the age of messages in ActiveMQ queues, and publishes the results to SignalFx. It actively inspects the messages that are waiting to be delivered in each queue, and therefore is especially useful for detecting messages that are "stuck" in ActiveMQ queues and unable to be delivered.
 
-To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.activemq.html).
+To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq).
 
 #### FEATURES
 
-##### Built-in dashboards (accompanying [SignalFx's ActiveMQ integration](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.activemq.html))
+##### Built-in dashboards (accompanying [SignalFx's ActiveMQ integration](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq))
 
 - **ActiveMQ Message Age**: Shows the average age of messages in ActiveMQ queues.
 
@@ -62,7 +62,7 @@ Supply values for the following properties in the `/activemq-integration/amq-mes
 
 In some versions of ActiveMQ, messages sometimes get “stuck” in the queue, and message consumers won’t pick them up even if they have available capacity. This bug causes messages to never be delivered. Monitoring tools are typically unable to detect this condition due to a lack of visibility into the messages that never make it out of the queue.
 
-This tool provides visibility into "stuck" messages in ActiveMQ by inspecting each enqueued message, calculating the average and maximum age of messages per queue, and reporting those metrics to SignalFx using our [Java client library](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.java.client.library.for.signalfx.html).
+This tool provides visibility into "stuck" messages in ActiveMQ by inspecting each enqueued message, calculating the average and maximum age of messages per queue, and reporting those metrics to SignalFx using our [Java client library](https://github.com/signalfx/integrations/tree/master/lib-java).
 
 Our built-in dashboard for this data makes it immediately visible when messages have been waiting a long time to be delivered.
 

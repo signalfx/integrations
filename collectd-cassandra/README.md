@@ -41,7 +41,7 @@ Use this integration to monitor the following types of information from Cassandr
 | Software  | Version        |
 |-----------|----------------|
 | collectd  |  4.9+  |
-| [Java plugin for collectd](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.java.html) | (match with collectd version) |
+| [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) | (match with collectd version) |
 | Cassandra | 2.0.10+ |
 
 
@@ -53,7 +53,7 @@ Open the JMX port on your Cassandra app. Cassandra will listen for connections o
 
 #### Install Cassandra integration
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.java.html) if it is not already installed.
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
 
 2. Download SignalFx's example Cassandra configuration file to `/etc/collectd/managed_config`:  [20-cassandra.conf](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf)
 

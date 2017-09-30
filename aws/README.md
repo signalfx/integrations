@@ -18,7 +18,7 @@ Connecting to CloudWatch allows you to take advantage of SignalFx’s extensive 
 
   [<img src='./img/hosts_aws.png' width=200px>](./img/hosts_aws.png)
 - SignalFx can sync metadata about your AWS hosts to enrich metrics reported by CloudWatch or the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
-- SignalFx provides built-in dashboards for many Amazon web services that report to CloudWatch, such as [EC2](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.compute.cloud.(ec2).html) and [ELB](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.load.balancing.(elb).html).
+- SignalFx provides built-in dashboards for many Amazon web services that report to CloudWatch, such as [EC2](https://github.com/signalfx/integrations/tree/master/aws-ec2)[](sfx_link:aws-ec2) and [ELB](https://github.com/signalfx/integrations/tree/master/aws-elb)[](sfx_link:aws-elb).
 
 
 
@@ -42,7 +42,7 @@ SignalFx automatically imports relevant dimensions for each CloudWatch metric. F
 
 ##### Importing account metadata and custom tags
 
-SignalFx can apply or sync other AWS metadata with metrics reported, allowing it to be used as filters or in group-bys when visualizing metrics. Metadata is available for [EC2](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.compute.cloud.(ec2).html), [EBS](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.block.store.(ebs).html) and [ELB](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.load.balancing.(elb).html) services. It may take up to 15 minutes for metadata to be synced to your SignalFx data.
+SignalFx can apply or sync other AWS metadata with metrics reported, allowing it to be used as filters or in group-bys when visualizing metrics. Metadata is available for [EC2](https://github.com/signalfx/integrations/tree/master/aws-ec2)[](sfx_link:aws-ec2), [EBS](https://github.com/signalfx/integrations/tree/master/aws-ebs)[](sfx_link:aws-ebs) and [ELB](https://github.com/signalfx/integrations/tree/master/aws-elb)[](sfx_link:aws-elb) services. It may take up to 15 minutes for metadata to be synced to your SignalFx data.
 
 The following metadata is available for filtering metrics:
 
@@ -80,7 +80,7 @@ SignalFx imports the namespace for AWS services using the dimension `namespace`.
 
 ##### Uniquely identifying AWS instances
 
-Amazon services that report to CloudWatch do not always provide unique identifiers. For example, the EC2 dimension `InstanceID` is not guaranteed to be unique across all availability zones. SignalFx synthesizes unique identifiers for [EC2](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.compute.cloud.(ec2).html), [EBS](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.block.store.(ebs).html) and [ELB](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.elastic.load.balancing.(elb).html) instances, in the dimension called `AWSUniqueId`. This allows us to attach metadata to CloudWatch metrics from these services.
+Amazon services that report to CloudWatch do not always provide unique identifiers. For example, the EC2 dimension `InstanceID` is not guaranteed to be unique across all availability zones. SignalFx synthesizes unique identifiers for [EC2](https://github.com/signalfx/integrations/tree/master/aws-ec2)[](sfx_link:aws-ec2), [EBS](https://github.com/signalfx/integrations/tree/master/aws-ebs)[](sfx_link:aws-ebs) and [ELB](https://github.com/signalfx/integrations/tree/master/aws-elb)[](sfx_link:aws-elb) instances, in the dimension called `AWSUniqueId`. This allows us to attach metadata to CloudWatch metrics from these services.
 
 ### METRICS
 

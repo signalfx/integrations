@@ -36,7 +36,7 @@ This plugin is a generic plugin, i.e. it cannot work without configuration, beca
 
 ### USAGE
 
-There are many potential uses for the cURL-JSON plugin. One example is for gathering metrics from [Riak KV from Basho](http://basho.com/products/riak-kv/). You can find more details on this use case and a Riak KV configuration [here](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.riak.kv.html).
+There are many potential uses for the cURL-JSON plugin. One example is for gathering metrics from [Riak KV from Basho](http://basho.com/products/riak-kv/). You can find more details on this use case and a Riak KV configuration [here](https://github.com/signalfx/integrations/tree/master/collectd-riak)[](sfx_link:collectd-riak).
 
 ### LICENSE
 

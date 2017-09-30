@@ -14,7 +14,7 @@ Metadata associated with the GenericJMX collectd plugin can be found [here](http
 
 From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
-> The GenericJMX plugin reads Managed Beans (MBeans) from an MBeanServer using JMX. The plugin is written in Java and requires the [Java plugin](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.java.html) to function.
+> The GenericJMX plugin reads Managed Beans (MBeans) from an MBeanServer using JMX. The plugin is written in Java and requires the [Java plugin](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) to function.
 
 > The Java Management Extensions (JMX) is a generic framework to provide and query various management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used, threads and so on. These basic performance values can therefore be collected for every Java process without any support in the Java process itself.
 
