@@ -3638,7 +3638,7 @@
 }, {
   "marshallId" : 30,
   "marshallMemberOf" : [ 2 ],
-  "sf_dashboard" : "Docker Neighbours",
+  "sf_dashboard" : "Docker Neighbors",
   "sf_description" : "",
   "sf_discoveryQuery" : "plugin:docker",
   "sf_discoverySelectors" : [ "_exists_:plugin_instance" ],

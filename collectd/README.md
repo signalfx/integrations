@@ -70,10 +70,8 @@ Run the following command to start the container, replacing `IMAGE_URL` with the
           docker run --privileged \
             --net="host" \
             -e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
-            -v /etc/hostname:/mnt/hostname:ro \
-            -v /proc:/mnt/proc:ro \
+            -v /:/hostfs:ro \
             -v /var/run/docker.sock:/var/run/docker.sock \
-            -v /etc:/mnt/etc:ro \
             IMAGE_URL
 ```
 To read more about the SignalFx collectd agent Docker image, [click here for complete documentation on Github](https://github.com/signalfx/docker-collectd).

@@ -56,7 +56,12 @@ You must include [JMX.conf](https://github.com/signalfx/integrations/blob/master
 | Value | Description |
 |-------|-------------|
 | ServiceURL | URL of your JMX application|
-| Host | The name of your host (Please leave the identifier `[hostHasService=hbase]`) in the host name|
+| Host | The name of your host (_Please leave the identifier `[hostHasService=hbase]` in the host name)_|
+
+
+### METRICS
+
+For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
 
 ### LICENSE
 

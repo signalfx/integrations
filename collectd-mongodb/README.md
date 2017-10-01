@@ -12,8 +12,7 @@ Metadata associated with the MongoDB collectd plugin can be found [here](https:/
 
 ### DESCRIPTION
 
-Use the [mongodb](https://github.com/signalfx/collectd-mongodb) collectd
-plugin to collect metrics from MongoDB nodes.
+Use the [mongodb](https://github.com/signalfx/collectd-mongodb) collectd plugin to collect metrics from MongoDB nodes.
 
 This plugin captures the following metrics about MongoDB generally:
 
