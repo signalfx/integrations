@@ -1,6 +1,7 @@
 ---
 title: Hardware Interrupt CPU time
 brief: CPU time spent servicing hardware interrupts (in jiffies)
+metric_type: cumulative_counter
 ---
 ### Hardware Interrupt CPU time
 

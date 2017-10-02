@@ -1,6 +1,6 @@
 # HAProxy
 
-_This directory consolidates all the metadata associated with the HAProxy collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy)_
+Metadata associated with the HAProxy collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-haproxy). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -24,9 +24,9 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
 ### INSTALLATION
 
 1. Download the [collectd-haproxy-plugin](https://github.com/signalfx/collectd-haproxy) git repo to `/usr/share/collectd/collectd-haproxy`
-1. Create a collectd configuration for the plugin file. If you installed collectd using the SignalFx installer, you should place your HAProxy configuration file in the `/etc/collectd/managed_config` directory. SignalFx's [sample configuration file](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) is available as an example.
-1. Modify the sample configuration file as described in [Configuration](#configuration), below.
-1. `SELINUX ONLY` Create a SELinux policy package using the supplied type enforcement file.  Enter the commands below to create and install the policy package.
+2. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) for this plugin to `/etc/collectd/managed_config`.
+3. Modify the sample configuration file as described in [Configuration](#configuration), below.
+4. `SELINUX ONLY` Create a SELinux policy package using the supplied type enforcement file.  Enter the commands below to create and install the policy package.
 
         $ cd /usr/share/collectd/collectd-haproxy/selinux
         $ checkmodule -M -m -o collectd-haproxy.mod collectd-haproxy.te
@@ -37,7 +37,7 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
         $ sudo semodule -i collectd-haproxy.pp
         $ sudo reboot
 
-1. Restart collectd.
+5. Restart collectd.
 
 
 ### CONFIGURATION
@@ -117,9 +117,11 @@ frontend stats-frontend
   - Connection Errors - The rate of connection errors includes both failed backend requests and general backend errors. Correlate with response errors and response codes to track down an issue.
   - Denied Responses - The rate of denied responses by the backend. Most denied responses will come from an ACL and can be correlated with 5xx responses.
 
+
 ### METRICS
 #### Enhanced Metrics
-For documentation of the all metrics and dimensions emitted by this plugin, [click here](././docs). Non-default metrics can be enabled in the plugin configuration file, by setting EnhancedMetrics to "True". Any metric can be excluded from being sent by adding ExcludeMetric "metric_name" in the plugin configuration file. Metric names are found in the [docs](././docs).
+
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Non-default metrics can be enabled in the plugin configuration file, by setting EnhancedMetrics to "True". Any metric can be excluded from being sent by adding ExcludeMetric "metric_name" in the plugin configuration file. Metric names are found in the [docs](./docs).
 
 
 ### LICENSE

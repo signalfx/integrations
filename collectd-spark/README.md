@@ -2,7 +2,7 @@
 
 **Plugin currently supports cluster modes Standalone and Mesos**
 
-_This directory consolidates all the metadata associated with the spark plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-spark)_ 
+Metadata associated with the spark plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-spark). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-spark).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,9 +14,9 @@ _This directory consolidates all the metadata associated with the spark plugin f
 
 ### DESCRIPTION
 
-This is the SignalFx Apache Spark plugin. Note we currently only support cluster modes Standalone and Mesos. Follow these instructions to install the Apache Spark plugin for collectd. 
+This is the SignalFx Apache Spark plugin. Note we currently only support cluster modes Standalone and Mesos. Follow these instructions to install the Apache Spark plugin for collectd.
 
-The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: [`Spark documentation`](https://spark.apache.org/docs/latest/monitoring.html)
+The [spark-collectd](https://github.com/signalfx/collectd-spark) plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: [Spark documentation](https://spark.apache.org/docs/latest/monitoring.html)
 
 #### FEATURES
 
@@ -94,7 +94,7 @@ The [`spark-collectd`](https://github.com/signalfx/collectd-spark) plugin collec
 
 ### CONFIGURATION
 
-Using the example configuration file [10-spark.conf](https://github.com/signalfx/integrations/tree/release/collectd-spark/10-spark.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and the metrics you want to be collected and reported. 
+Using the example configuration file [10-spark.conf](https://github.com/signalfx/integrations/tree/release/collectd-spark/10-spark.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and the metrics you want to be collected and reported.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
@@ -106,8 +106,8 @@ Using the example configuration file [10-spark.conf](https://github.com/signalfx
 | Master | URL for master application | "http://localhost:8080" |
 | Cluster | Your Spark cluster mode - only standalone and mesos supported | "Standalone" |
 | EnhancedMetrics | Flag to specify whether to include additional metrics | "False" |
-| IncludeMetrics | Metrics from enhanced metrics that can be included individually | "metric_name_1,metric_name_2" |
-| ExcludeMetrics | Metrics from enhanced metrics that can be excluded individually | "metric_name_1,metric_name2" |
+| IncludeMetrics | Metrics from enhanced metrics that can be included individually | "metric\_name\_1,metric\_name\_2" |
+| ExcludeMetrics | Metrics from enhanced metrics that can be excluded individually | "metric\_name\_1,metric\_name2" |
 | Dimension | Key-value pair for a user-defined dimension | "dimension\_key=dimension\_value" |
 | Dimension | Comma separated key-value pairs for user-defined dimensions | "dimension\_key1=dimension\_value1,dimension\_key2=dimension\_value2" |
 
@@ -116,7 +116,7 @@ Example configuration:
 ```apache
 LoadPlugin python
 <Plugin python>
-  ModulePath "/opt/collectd-spark"
+  ModulePath "/usr/share/collectd/collectd-spark"
 
   Import spark_plugin
 
@@ -138,10 +138,10 @@ The plugin can be configured to collect metrics from multiple instances in the f
 ```apache
 LoadPlugin python
 <Plugin python>
-  ModulePath "/opt/collectd-spark"
+  ModulePath "/usr/share/collectd/collectd-spark"
 
   Import spark_plugin
-  
+
   <Module spark_plugin>
     MetricsURL "http://master"
     MasterPort 8080
@@ -151,7 +151,7 @@ LoadPlugin python
     Dimension "name=MASTERTEST"
     IncludeMetrics "jvm.pools.Code-Cache.committed"
   </Module>
-  
+
   <Module spark_plugin>
     MetricsURL "http://worker"
     WorkerPorts 8081 8082
@@ -165,7 +165,7 @@ LoadPlugin python
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_spark_cluster_top.png)
 
@@ -173,11 +173,11 @@ Sample of pre-built dashboard in SignalFx:
 
 Metrics corresponding to Metrics sink will contain the following dimension by default:
 
-* `spark_process`, either master or worker to differentiate master- and worker- specific metrics like master.apps and worker.coresFree 
+* `spark_process`, either master or worker to differentiate master- and worker- specific metrics like master.apps and worker.coresFree
 
 Metrics at the application level (endpoint /api/v1/applications) will contain the following dimension by default:
 
-* `cluster`, set to value corresponding to key "Cluster" in configuration file 
+* `cluster`, set to value corresponding to key "Cluster" in configuration file
 
 Additional details:
 
@@ -185,9 +185,9 @@ Additional details:
 
 
 ### METRICS
-To emphasize, metrics will only be collected if MetricsURL is provided and/or Applications is set to True in 10-spark.conf (please read the example configuration file for associated required keys). Click [here](./docs) for a list of metrics that the plugin can collect and send as well as metric definitions. See [usage](#usage) for details.
+To emphasize, metrics will only be collected if MetricsURL is provided and/or Applications is set to True in 10-spark.conf (please read the example configuration file for associated required keys). For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). See [usage](#usage) for details.
 
-The following are default metrics captured and sent if Metrics Sink and Applications are enabled: 
+The following are default metrics captured and sent if Metrics Sink and Applications are enabled:
 
 * jvm.total.used
 * jvm.total.committed
@@ -197,7 +197,7 @@ The following are default metrics captured and sent if Metrics Sink and Applicat
 * jvm.non-heap.committed
 * jvm.MarkSweepCompact.count
 * jvm.MarkSweepCompact.time
-* worker.coresFree 
+* worker.coresFree
 * worker.coresUsed
 * worker.executors
 * worker.memFree_MB
@@ -244,7 +244,7 @@ The following are default metrics captured and sent if Metrics Sink and Applicat
 * spark.streaming.avg_scheduling_delay
 * spark.streaming.avg_total_delay
 
-The following are metrics that can be collected and sent if EnhancedMetrics is set to "True" in configurations (see [CONFIGURATION](#configuration) for more information): 
+The following are metrics that can be collected and sent if EnhancedMetrics is set to "True" in configurations (see [CONFIGURATION](#configuration) for more information):
 
 * jvm.pools.Code-Cache.used
 * jvm.pools.Code-Cache.committed
@@ -281,7 +281,7 @@ The following are metrics that can be collected and sent if EnhancedMetrics is s
 * spark.executor.total_duration
 
 #### Metric naming
-`<metric type>.spark.<name of metric>` or `<metric type><name of metric>`. This is the format of default metric names reported by the plugin. 
+`<metric type>.spark.<name of metric>` or `<metric type><name of metric>`. This is the format of default metric names reported by the plugin.
 
 
 ### LICENSE

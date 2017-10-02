@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-riak/img/integrations_riak.png) Riak KV
 
-_This is a directory consolidate all the metadata associated with the Riak KV collectd Configuration. The relevant code for the cURL-JSON plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c)_
+Metadata associated with the Riak KV collectd Configuration can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-riak). The relevant code for the cURL-JSON plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/curl_json.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -45,13 +45,13 @@ This plugin is included with [SignalFx's collectd package](https://support.signa
 
 1. Download SignalFx's [sample configuration file ](https://github.com/signalfx/integrations/tree/master/collectd-riak/10-riak.conf) for this plugin.
 
-1. Modify the sample configuration file as described in [Configuration](#configuration), below.
+2. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
-1. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
+3. Add the following line to `/etc/collectd.conf`, replacing the example path with the location of the configuration file:
 
-          include '/path/to/10-riak.conf'
+        include '/path/to/10-riak.conf'
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -121,7 +121,7 @@ This is not an exhaustive list of metrics, there are dozens of metrics that are 
 
 ### METRICS
 
-For documentation of the frequently used metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 #### Note: Discover _all_ Available Riak Metrics
 

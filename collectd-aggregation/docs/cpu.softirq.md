@@ -1,6 +1,7 @@
 ---
 title: Software Interrupt CPU time
 brief: CPU time spent servicing software interrupts (in jiffies)
+metric_type: cumulative_counter
 ---
 ### Software Interrupt CPU time
 

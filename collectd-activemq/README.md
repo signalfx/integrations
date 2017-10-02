@@ -1,6 +1,6 @@
 # ![](./img/integrations_activemq.png) ActiveMQ
 
-_This is a directory that consolidates all the metadata associated with SignalFx's integration with ActiveMQ. The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration)_
+Metadata associated with SignalFx's integration with ActiveMQ can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-activemq). The relevant code for the plugin can be found [here](https://github.com/signalfx/activemq-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -20,7 +20,7 @@ Use this plugin to monitor the following types of information from ActiveMQ:
 * Queue (Queue status)
 * Topic (Topic status)
 
-To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age).
+To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age)[](sfx_link:amq-message-age).
 
 #### FEATURES
 
@@ -42,7 +42,7 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 
   [<img src='./img/dashboard_activemq_topic.png' width=200px>](./img/dashboard_activemq_topic.png)
 
-- **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues. See [ActiveMQ message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age).
+- **ActiveMQ Message Age**: (if enabled) Shows the average age of messages in ActiveMQ queues. See [ActiveMQ message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age)[](sfx_link:amq-message-age).
 
   [<img src='./img/dashboard_activemq_messageage.png' width=200px>](./img/dashboard_activemq_messageage.png)
 
@@ -52,17 +52,17 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | ActiveMQ  | 5.8.0 or later |
-| [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) |  (match collectd version) | 
-       
+| [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) |  (match collectd version) |
+
 ### INSTALLATION
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed. 
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
 
-1. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [20-activemq.conf](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
+2. Download SignalFx's example ActiveMQ configuration file to `/etc/collectd/managed_config`:  [20-activemq.conf](https://github.com/signalfx/integrations/blob/master/collectd-activemq/20-activemq.conf)
 
-1. Modify `20-activemq.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+3. Modify `20-activemq.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -75,13 +75,13 @@ Using the example configuration file [20-activemq.conf](https://github.com/signa
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_activemq.png)
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

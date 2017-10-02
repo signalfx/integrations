@@ -1,10 +1,15 @@
----
-title: Filtering Metrics
-brief: Filtering Metrics using the match_regex plugin
----
-### Filtering Metrics
+# Match Regex
 
-Use the [match_regex](https://collectd.org/wiki/index.php/Match:RegEx) to filter metrics.
+Filtering Metrics using the match_regex plugin.
+
+- [Description](#description)
+- [Requirements and Dependencies](#requirements-and-dependencies)
+
+### DESCRIPTION
+
+Use the [match\_regex](https://collectd.org/wiki/index.php/Match:RegEx) to filter metrics.
+
+### REQUIREMENTS AND DEPENDENCIES
 
 #### Version information
 

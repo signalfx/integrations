@@ -1,6 +1,6 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_collectd.png) Disk
+# ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Disk
 
-_This directory consolidates all the metadata associated with the Disk collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/disk.c)_
+Metadata associated with the Disk collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-disk). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/disk.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -51,11 +51,11 @@ The following configuration options are *optional*. You may specify them in the 
 
 The primary use of this plugin is to track the available space on the systems disks. This can be used to set alerts and thresholds to avoid a disks from being filled to capacity.
 
-The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/master/collectd-signalfx) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/integrations/tree/master/collectd-signalfx/docs).
+The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/master/signalfx-metadata) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/integrations/tree/master/signalfx-metadata/docs).
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

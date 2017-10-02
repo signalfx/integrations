@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache
 
-_This is a directory that consolidates all the metadata associated with the Apache collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c)_
+Metadata associated with the Apache collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-apache). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -39,28 +39,30 @@ This plugin collects metrics from the module `mod_status`.
 
 ### INSTALLATION
 
-1. Enable the [`mod_status`](http://httpd.apache.org/docs/2.4/mod/mod_status.html) module in your Apache server.
+1. Enable the [mod\_status](http://httpd.apache.org/docs/2.4/mod/mod_status.html) module in your Apache server.
 
-1. Add the following configuration to your Apache server:
+2. Add the following configuration to your Apache server:
 
         ExtendedStatus on
         <Location /mod_status>
-          SetHandler server-status
+        SetHandler server-status
         </Location>
 
-1. Restart Apache.
+3. Restart Apache.
 
-1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
+4. Install the plugin:
 
-         yum install collectd-apache
+    * On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
-   On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
+            yum install collectd-apache
 
-1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin to `/etc/collectd/managed_config`.
+    * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
-1. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+5. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin to `/etc/collectd/managed_config`.
 
-1. Restart collectd.
+6. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+
+7. Restart collectd.
 
 ### CONFIGURATION
 
@@ -83,7 +85,7 @@ Apache worker threads can be in one of the following states:
 | Waiting      | Idle and waiting for request            |
 | Sending      | Serving response                        |
 | KeepAlive    | Kept alive for possible next request    |
-| Idle_cleanup | Idle and marked for cleanup             |
+| Idle\_cleanup | Idle and marked for cleanup             |
 | Closing      | Closing connection                      |
 | Logging      | Writing to log file                     |
 | Reading      | Reading request                         |
@@ -96,7 +98,7 @@ Sample of built-in dashboard in SignalFx:
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

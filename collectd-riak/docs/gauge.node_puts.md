@@ -4,6 +4,6 @@ brief: Writes coordinated by this node in the last minute
 metric_type: gauge
 ---
 
-###Node Puts
+### Node Puts
 
 Writes coordinated by this node in the last minute

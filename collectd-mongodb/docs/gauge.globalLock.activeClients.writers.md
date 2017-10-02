@@ -1,9 +1,9 @@
 ---
-title: Active Connections 
+title: Active Connections
 brief: Number of active client connections performing writes
 metric_type: gauge
 ---
 
-###Writers
+### Writers
 
 Number of active client connections performing write operation.

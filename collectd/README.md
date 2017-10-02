@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_signalfx.png) SignalFx collectd agent
 
-_This is a directory that consolidates all the metadata associated with the SignalFx collectd agent. The code repository for this project can be found [here](https://github.com/signalfx/collectd/)._
+Metadata associated with the SignalFx collectd agent can be found [here](https://github.com/signalfx/integrations/tree/release/collectd). The code repository for this project can be found [here](https://github.com/signalfx/collectd/).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -55,9 +55,9 @@ You must have administrator (sudo) privileges to install this agent.
 #### Install on a host
 
 Run the following command to install the SignalFx collectd agent ([click here to read about available configuration options](https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md)):
-
+```
           sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN
-
+```
 #### Install in a privileged container
 
 SignalFx supports two Docker images of the SignalFx collectd agent for containerized environments:
@@ -66,23 +66,23 @@ SignalFx supports two Docker images of the SignalFx collectd agent for container
 - Ubuntu: [quay.io/signalfuse/collectd](quay.io/signalfuse/collectd)
 
 Run the following command to start the container, replacing `IMAGE_URL` with the URL of the desired image:
-
+```
           docker run --privileged \
             --net="host" \
             -e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
             -v /:/hostfs:ro \
             -v /var/run/docker.sock:/var/run/docker.sock \
             IMAGE_URL
-
+```
 To read more about the SignalFx collectd agent Docker image, [click here for complete documentation on Github](https://github.com/signalfx/docker-collectd).
 
 #### Additional installation options
 
-- **[Chef cookbook: chef\_install\_configure\_collectd](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd)**
+- **Chef cookbook: chef\_install\_configure\_collectd**
 
   SignalFx supports a Chef cookbook that installs the SignalFx collectd agent and important plugins on a host. [Click here to access it on Chef Supermarket](https://supermarket.chef.io/cookbooks/chef_install_configure_collectd).
 
-- **[Puppet module: signalfx/collectd](https://forge.puppet.com/signalfx/collectd)**
+- **Puppet module: signalfx/collectd**
 
   SignalFx provides Puppet modules to install the SignalFx collectd agent and important plugins on a host. [Click here to access it on Puppet Forge](https://forge.puppet.com/signalfx/collectd).
 
@@ -118,9 +118,9 @@ For example, the following URL sends data points to SignalFx with the added dime
 
 #### Transmitting outside a network
 
-If instances of collectd are unable to transmit outside the network, the [SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy) can be used to receive connections from many instances of collectd, and forward transmissions to SignalFx using a single outgoing HTTP connection. This is suitable for environments in which transmissions exiting a network are highly restricted.
+If instances of collectd are unable to transmit outside the network, the [SignalFx metric proxy](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.metric.proxy.html) can be used to receive connections from many instances of collectd, and forward transmissions to SignalFx using a single outgoing HTTP connection. This is suitable for environments in which transmissions exiting a network are highly restricted.
 
-[Click here for more information about the SignalFx metric proxy](https://github.com/signalfx/integrations/tree/master/metricproxy)[](sfx_link:metricproxy).
+[Click here for more information about the SignalFx metric proxy](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.metric.proxy.html).
 
 #### Transmitting through an existing HTTP proxy
 

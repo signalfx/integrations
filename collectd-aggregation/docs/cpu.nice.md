@@ -1,6 +1,7 @@
 ---
 title: Nice CPU time
 brief: CPU time spent in userspace running 'nice'-ed processes (in jiffies)
+metric_type: cumulative_counter
 ---
 ### Hardware Interrupt CPU usage
 

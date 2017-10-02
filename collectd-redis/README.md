@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-redis/img/integrations_redis.png) Redis
 
-_This is a directory that consolidates all the metadata associated with the Redis collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/redis-collectd-plugin)_
+Metadata associated with the Redis collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-redis). The relevant code for the plugin can be found [here](https://github.com/signalfx/redis-collectd-plugin).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -53,15 +53,15 @@ This plugin requires:
 
 1. Download the [redis-collectd-plugin Python module](https://github.com/signalfx/redis-collectd-plugin).
 
-1. Download SignalFx's sample configuration files for a [Redis master](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf) or [Redis slave](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf) to `/etc/collectd/managed_config`. 
+2. Download SignalFx's sample configuration files for a [Redis master](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf) or [Redis slave](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the sample configuration file as described in  [Configuration](#configuration), below.
+3. Modify the sample configuration file as described in  [Configuration](#configuration), below.
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
-Using the example configuration files [`10-redis_master.conf`](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf) or [`10-redis_slave.conf`](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Redis instance to be monitored.
+Using the example configuration files [10-redis\_master.conf](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf) or [10-redis\_slave.conf](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Redis instance to be monitored.
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
@@ -117,19 +117,19 @@ You can configure this plugin to monitor multiple Redis instances on the same ma
 
 In the example above, 3 redis instances on the same host listen on different ports and `Instance` is used to supply a static value for the dimension `plugin_instance`. If `Instance` was not specified, the value of `plugin_instance` reported by collectd would contain the combination of `Host` and `Port` as follows:
 
-- "plugin_instance" => "127.0.0.1:9100"
-- "plugin_instance" => "127.0.0.1:9101"
-- "plugin_instance" => "127.0.0.1:9102"
+- "plugin\_instance" => "127.0.0.1:9100"
+- "plugin\_instance" => "127.0.0.1:9101"
+- "plugin\_instance" => "127.0.0.1:9102"
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_redis.png)
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

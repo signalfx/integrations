@@ -7,29 +7,25 @@
 - [Usage](#usage)
  - [Create client](#create-client)
  - [Sending metrics](#sending-metrics)
- - [Sending multi-dimensional metrics](#multi-dimensional)
+ - [Sending multi-dimensional metrics](#sending-multi-dimensional-metrics)
  - [Sending events](#sending-events)
 - [Examples](#examples)
 - [License](#license)
 
 
-### <a name="description"></a>DESCRIPTION
+### DESCRIPTION
 
-<code>signalfx-nodejs</code> is a programmatic interface in JavaScript
-for SignalFx's metadata and ingest APIs. It is meant to provide a base
-for communicating with SignalFx APIs that can be easily leveraged by
-scripts and applications to interact with SignalFx or report metric
-and event data to SignalFx.
+<code>signalfx-nodejs</code> is a programmatic interface in JavaScript for SignalFx's metadata and ingest APIs. It is meant to provide a base for communicating with SignalFx APIs that can be easily leveraged by scripts and applications to interact with SignalFx or report metric and event data to SignalFx.
 
 
-### <a name="requirements-and-dependencies"></a>REQUIREMENTS AND DEPENDENCIES
+### REQUIREMENTS AND DEPENDENCIES
 
 #### API access token
 
 To use this library, you need a SignalFx API access token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication).
 
 
-### <a name="installation"></a>INSTALLATION
+### INSTALLATION
 
 To install using npm:
 ```sh
@@ -37,9 +33,9 @@ $ npm install signalfx --save-dev
 ```
 
 
-### <a name="usage"></a>USAGE
+### USAGE
 
-#### <a name="create-client">Create client
+#### Create client
 
 There are two ways to create a client object:
 
@@ -63,7 +59,7 @@ Object `options` is an optional map and may contains following fields:
 + **userAgents** - array of strings, items from this array will be added to 'user-agent' header separated by comma
 
 
-#### <a name="sending-metrics">Sending metrics
+#### Sending metrics
 
 The core function of the library is to send metric data to SignalFx. For example:
 
@@ -92,30 +88,13 @@ client.send({
              ...
            ]});
 ```
-The `timestamp` must be a millisecond precision timestamp;
-the number of milliseconds elapsed since Epoch. The `timestamp`
-field is optional, but strongly recommended. If not specified,
-it will be set by SignalFx's ingest servers automatically;
-in this situation, the timestamp of your datapoints will not
-accurately represent the time of their measurement (network
-latency, batching, etc. will all impact when those
-datapoints actually make it to SignalFx).
+The `timestamp` must be a millisecond precision timestamp; the number of milliseconds elapsed since Epoch. The `timestamp` field is optional, but strongly recommended. If not specified, it will be set by SignalFx's ingest servers automatically; in this situation, the timestamp of your datapoints will not accurately represent the time of their measurement (network latency, batching, etc. will all impact when those datapoints actually make it to SignalFx).
 
-#### <a name="multi-dimensional">Sending multi-dimensional metrics
+#### Sending multi-dimensional metrics
 
-The SignalFx data format includes the concept of
-dimensions. Time series dimensions are custom key/value
-pairs in combination with the metric name that identify
-the metric time series. Dimensions are also useful in
-aggregating and filtering metrics. For example, sending
-an "environment" dimension with each datapoint would
-allow you to vary alerts based on the different
-environments that metrics are being sent from.
+The SignalFx data format includes the concept of dimensions. Time series dimensions are custom key/value pairs in combination with the metric name that identify the metric time series. Dimensions are also useful in aggregating and filtering metrics. For example, sending an "environment" dimension with each datapoint would allow you to vary alerts based on the different environments that metrics are being sent from.
 
-Reporting dimensions for the data can be accomplished
-by specifying a `dimensions` parameter on each datapoint
-containing a dictionary of string to string key/value
-pairs representing the dimensions:
+Reporting dimensions for the data can be accomplished by specifying a `dimensions` parameter on each datapoint containing a dictionary of string to string key/value pairs representing the dimensions:
 
 ```js
 var signalfx = require('signalfx');
@@ -143,13 +122,13 @@ client.send({
           ]});
 ```
 
-#### <a name="sending-events">Sending events
+#### Sending events
 
 Events can be send to SignalFx via the `sendEvent` function. The
 event param objects must be specified. `Event` param object is an optional map and may contains following fields:
 
 + **eventType** (string) - Required field. The event type (name of the event time series).
-+ **category** (int) - the category of event. Choose one from EVENT_CATEGORIES list.
++ **category** (int) - the category of event. Choose one from EVENT\_CATEGORIES list.
 Different categories of events are supported.Available categories of events are `USER_DEFINED`, `ALERT`, `AUDIT`, `JOB`,
 `COLLECTD`, `SERVICE_DISCOVERY`, `EXCEPTION`. For mode details see
 `proto/signal_fx_protocol_buffers.proto` file. Value by default is `USER_DEFINED`
@@ -177,7 +156,7 @@ client.sendEvent({
           timestamp: timestamp})
 ```
 
-### <a name="examples"> Examples
+### Examples
 
 Complete code example for Reporting data
 ```js
@@ -228,6 +207,6 @@ Set your SignalFx token and run example
 $ node path/to/example/generic_usage.js
 ```
 
-### <a name="license"></a>LICENSE
+### LICENSE
 
 This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-nodejs/blob/master/LICENSE) for more details.

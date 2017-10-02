@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png) RabbitMQ
 
-_This is a directory that consolidates all the metadata associated with the RabbitMQ collectd plugin. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-rabbitmq)_
+Metadata associated with the RabbitMQ collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-rabbitmq). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-rabbitmq).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -42,11 +42,11 @@ This plugin requires:
 
 1. Download the [collectd-rabbitmq Python module]( https://github.com/signalfx/collectd-rabbitmq/)
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf) to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file as described in [Configuration](#configuration) below.
+3. Modify the configuration file as described in [Configuration](#configuration) below.
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -69,7 +69,7 @@ Using the example configuration file [10-rabbitmq.conf](https://github.com/signa
 
 ### USAGE
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_rabbitmq.png)
 
@@ -85,7 +85,7 @@ For example:
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

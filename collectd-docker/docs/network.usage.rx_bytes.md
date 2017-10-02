@@ -5,5 +5,4 @@ metric_type: cumulative_counter
 ---
 ### Network bytes received
 
-The amount of inbound network traffic, in bytes, received by the
-container via its network interface.
+The amount of inbound network traffic, in bytes, received by the container via its network interface.

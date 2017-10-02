@@ -1,6 +1,6 @@
 # Example Python Plugin
 
-_This directory consolidates all the metadata associated with the **Example Integration**. The relevant code for the integration can be found [here](https://github.com/signalfx/collectd-example)_
+Metadata associated with the **Example Integration** can be found [here](https://github.com/signalfx/integrations/tree/release/Example). The relevant code for the integration can be found [here](https://github.com/signalfx/collectd-example).
 
 >This file contains information about our example Python plugin. It also contains instructions for producing similar README files for other plugins.
 >
@@ -54,9 +54,8 @@ Follow these steps to install this plugin:
 2. Modify the sample configuration file [10-example.conf](https://github.com/signalfx/integrations/tree/master/collectd-example/10-example.conf) to contain values that make sense for your environment, as described [below](#configuration).
 3. Add the following line to `collectd.conf`, replacing the path with the path to the sample configuration file you modified in step 2:
 
-  ```
-  include '/path/to/10-example.conf'
-  ```
+        include '/path/to/10-example.conf'
+
 4. Restart collectd.
 
 ### CONFIGURATION
@@ -100,9 +99,9 @@ This plugin emits a notification at every startup. If your collectd configuratio
 
 ### METRICS
 
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [`/docs/README.md`](././docs/readme.md) for formatting instructions.
+>This section refers to the metrics documentation found in the `/docs` subdirectory. See [/docs/README.md](./docs/readme.md) for formatting instructions.
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

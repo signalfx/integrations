@@ -4,6 +4,6 @@ brief: Number of times the database has been flushed
 metric_type: gauge
 ---
 
-###Flushes
+### Flushes
 
 Number of times the database has been flushed.

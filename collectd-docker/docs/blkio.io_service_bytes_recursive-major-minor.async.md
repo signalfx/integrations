@@ -7,5 +7,4 @@ metric_type: cumulative_counter
 
 Superseded by `blkio.io_service_bytes_recursive.async`.
 
-Tracks the volume, in bytes, of serviced asynchronous block I/O requests
-in that container.
+Tracks the volume, in bytes, of serviced asynchronous block I/O requests in that container.

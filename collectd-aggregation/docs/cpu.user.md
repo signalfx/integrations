@@ -1,6 +1,7 @@
 ---
 title: User CPU time
 brief: CPU time spent running in userspace (in jiffies)
+metric_type: cumulative_counter
 ---
 ### User CPU time
 

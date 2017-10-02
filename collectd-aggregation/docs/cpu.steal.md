@@ -1,6 +1,7 @@
 ---
 title: Steal CPU time
 brief: CPU time spent by a hypervisor handling requests in other virtual machines (in jiffies)
+metric_type: cumulative_counter
 ---
 ### Steal CPU usage
 

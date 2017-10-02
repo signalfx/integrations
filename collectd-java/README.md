@@ -1,6 +1,6 @@
 # ![](./img/integrations_java.png) Java
 
-_This directory consolidates all the metadata associated with the Java plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c)_
+Metadata associated with the Java plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-java). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -24,17 +24,20 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 
 ### INSTALLATION
 
-1. On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
+1. Install the plugin:
 
-         yum install collectd-java
+    * On RHEL/CentOS and Amazon Linux systems, run the following command to install this plugin:
 
-    On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
+            yum install collectd-java
 
-1. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
 
-1. Download [signalfx_types_db](https://github.com/signalfx/integrations/tree/master/collectd-java/signalfx_types_db) and configure its location as described inside of the `10-jmx.conf` configuration file (Default location is  `/usr/share/collectd/java-collectd-plugin/signalfx_types_db`).
+    * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
-1. Restart collectd.
+2. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+
+3. Download [signalfx\_types\_db](https://github.com/signalfx/integrations/tree/master/collectd-java/signalfx_types_db) and configure its location as described inside of the `10-jmx.conf` configuration file (Default location is  `/usr/share/collectd/java-collectd-plugin/signalfx_types_db`).
+
+4. Restart collectd.
 
 ### CONFIGURATION
 

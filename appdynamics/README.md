@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics   
 
-_This is a directory to consolidate all the metadata associated with the AppDynamics Integration. The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration)_
+Metadata associated with the AppDynamics Integration can be found [here](https://github.com/signalfx/integrations/tree/release/appdynamics). The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -38,14 +38,14 @@ Provide configuration to this process by setting environment variables as follow
 
 #### Required Environment Variables
 
-| Variable name | Definition | 
+| Variable name | Definition |
 |---------------|------------|
-| APPD_USERNAME | AppDynamics username | 
+| APPD_USERNAME | AppDynamics username |
 | APPD_PASSWORD | AppDynamics password |
 | APPD_HOST | AppDynamics hostname |
-| SIGNALFX_TOKEN | Your SignalFx API token |
-| SIGNALFX\_APPD_METRICS | Name of the metrics configuration file (default: metrics.json) |
-| APPD_INTERVAL | Frequency in minutes with which metrics will be sent to SignalFx (default: 1 minute) |
+| SIGNALFX\_TOKEN | Your SignalFx API token |
+| SIGNALFX\_APPD\_METRICS | Name of the metrics configuration file (default: metrics.json) |
+| APPD\_INTERVAL | Frequency in minutes with which metrics will be sent to SignalFx (default: 1 minute) |
 
 ### USAGE
 

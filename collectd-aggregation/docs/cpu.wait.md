@@ -1,6 +1,7 @@
 ---
 title: I/O Wait CPU time
 brief: CPU time spent idle while waiting for an I/O operation to complete (in jiffies)
+metric_type: cumulative_counter
 ---
 ### I/O CPU time
 
