@@ -24,11 +24,9 @@ You must have admin privileges in order to install statsd.net. It will run as NE
 
 1. Download the latest release from https://github.com/signalfx/signalfx-statsd.net-plugin/releases and unzip it.
 
-1. At a PowerShell admin prompt, run the following command to install statsd.net including the SignalFx statsd.net plugin:
+2. At a PowerShell admin prompt, run the following command to install statsd.net including the SignalFx statsd.net plugin:
 
-```
-./Install.ps1 @{APIToken='YOUR_SIGNALFX_API_TOKEN';SourceType='netbios';}
-```
+        ./Install.ps1 @{APIToken='YOUR_SIGNALFX_API_TOKEN';SourceType='netbios';}
 
 See below for additional configuration options.
 
@@ -53,7 +51,7 @@ To add dimensions that will be included in every metric emitted by statsd.net, a
 
 ```xml
   <backends>
-    <signalfx apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"> 
+    <signalfx apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05">
       <defaultDimensions>
         <defaultDimension name="environment" value="prod"/>
         <defaultDimension name="serverType" value="API"/>
@@ -76,11 +74,11 @@ For example, the following statsd line produces a metric `api.count` with two di
 This plugin supports sending in dimensions in the metric name. In this case you put your `metric name` followed by `[name1=value1,name2=value2]` at the *end* of the metric name.
 
 For example, the following metric name produces a metric `api.count` with two dimensions: `apiType` and `success`.
- 
+
  ```
  api.count[apiType=Login,success=true]:1|c
  ```
- 
+
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

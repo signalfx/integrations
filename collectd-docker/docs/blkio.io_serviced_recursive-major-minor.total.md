@@ -7,5 +7,4 @@ metric_type: cumulative_counter
 
 Superseded by `blkio.io_serviced_recursive.total`.
 
-Tracks of the total number of block I/O requests serviced in that
-container.
+Tracks of the total number of block I/O requests serviced in that container.

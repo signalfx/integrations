@@ -1,10 +1,9 @@
 ---
-title: Queued Operations 
+title: Queued Operations
 brief: Write operations currently in queue
 metric_type: gauge
 ---
 
-###Writers
+### Writers
 
 Number of operations queued for the write lock.
-     

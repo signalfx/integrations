@@ -124,13 +124,13 @@ The Metrics.NET library calculates aggregations for almost all of the metric typ
 
  - Counter(with items) -> percentage
 
- - Histogram -> count, last, min, mean, max, stddev, median, percent_75, percent_95, percent_98, percent_99, percent_999
+ - Histogram -> count, last, min, mean, max, stddev, median, percent\_75, percent\_95, percent\_98, percent\_99, percent\_999
 
- - Meter(no items) -> rate_mean, rate_1min, rate_5min, rate_15min
- - Meter(with items) -> per Item: percent, rate_mean, rate_1min, rate_5min, rate_15min
+ - Meter(no items) -> rate\_mean, rate\_1min, rate\_5min, rate\_15min
+ - Meter(with items) -> per Item: percent, rate\_mean, rate\_1min, rate\_5min, rate\_15min
 
 
- - Timer -> count, active_sessions, rate_mean, rate_1min, rate_5min, rate_15min, last, min, mean, max, stddev, median, percent_75, percent_95, percent_98, percent_99, percent_999
+ - Timer -> count, active\_sessions, rate\_mean, rate\_1min, rate\_5min, rate\_15min, last, min, mean, max, stddev, median, percent\_75, percent\_95, percent\_98, percent\_99, percent\_999
 
 The client can specify which of these aggregations they wish to send. By default count,min,mean,max aggregations are sent.
 

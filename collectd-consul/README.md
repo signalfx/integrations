@@ -1,6 +1,6 @@
 # ![](./img/integrations_consul.png) Consul
 
-_This directory consolidates all the metadata associated with the consul plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-consul)_
+Metadata associated with the consul plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-consul). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-consul).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,7 +14,7 @@ _This directory consolidates all the metadata associated with the consul plugin 
 
 This is the SignalFx Consul plugin. Follow these instructions to install the Consul plugin for collectd.
 
-The [`consul-collectd`](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints:  
+The [consul-collectd](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints:  
 - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)  
 - [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)  
 - [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)  
@@ -216,18 +216,18 @@ LoadPlugin python
 
     [<img src='./img/chart_consul_server_map.png' width=200px>](./img/chart_consul_server_map.png)
 
-  - **Mean node network latency**: Shows the average latency of a given node from other nodes in the Consul cluster. The dimension consul_node corresponds to the source node. The maximum and minimum values for this metric are also available.
+  - **Mean node network latency**: Shows the average latency of a given node from other nodes in the Consul cluster. The dimension consul\_node corresponds to the source node. The maximum and minimum values for this metric are also available.
 
     [<img src='./img/chart_mean_node_latency.png' width=200px>](./img/chart_mean_node_latency.png)
 
-  - **Mean datacenter latency**: Average datacenter latency between 2 datacenters. This metric has the additional dimension destination_dc dimension. The latency is calculated between this destination datacenter and the agent's datacenter given by the datacenter dimension. The maximum and minimum values for this metric are also available.
+  - **Mean datacenter latency**: Average datacenter latency between 2 datacenters. This metric has the additional dimension destination\_dc dimension. The latency is calculated between this destination datacenter and the agent's datacenter given by the datacenter dimension. The maximum and minimum values for this metric are also available.
 
     [<img src='./img/chart_mean_dc_latency.png' width=200px>](./img/chart_mean_dc_latency.png)
 
 - **CONSUL HEALTH**:
 
   - **Leadership Change Event**: Event feed showing leader tranisiton events. The event has the new and old leader node name as dimensions.
-  
+
     [<img src='./img/chart_leader_change_event.png' width=200px>](./img/chart_leader_change_event.png)
 
   - **Leadership Transitions**: Tracks number of leadership transitions. If there are frequent leadership changes this may be an indication that the servers are overloaded and aren't meeting the soft real-time requirements for Raft, or that there are networking problems between the servers.
@@ -238,7 +238,7 @@ LoadPlugin python
 
     [<img src='./img/chart_leader_last_contact.png' width=200px>](./img/chart_leader_last_contact.png)
 
-  - **Leader latency to commit to disk**: Time it takes for the leader to write log entries to disk. 
+  - **Leader latency to commit to disk**: Time it takes for the leader to write log entries to disk.
 
     [<img src='./img/chart_leader_disk_commit.png' width=200px>](./img/chart_leader_disk_commit.png)
 
@@ -258,7 +258,7 @@ LoadPlugin python
 
     [<img src='./img/chart_number_of_rpc_queries.png' width=200px>](./img/chart_number_of_rpc_queries.png)
 
-  - **Cluster Joins and Leaves**: This chart tracks successful node joins and leaves in the Serf memberlist. 
+  - **Cluster Joins and Leaves**: This chart tracks successful node joins and leaves in the Serf memberlist.
 
     [<img src='./img/chart_join_leave.png' width=200px>](./img/chart_join_leave.png)
 
@@ -281,7 +281,7 @@ LoadPlugin python
     [<img src='./img/chart_heap_objects.png' width=200px>](./img/chart_heap_objects.png)
 
   - **Allocated Bytes**: Number of allocated bytes to the Consul process.
-  
+
     [<img src='./img/chart_allocated_bytes.png' width=200px>](./img/chart_allocated_bytes.png)
 
   - **Number of GO routines**: The number of GO routines Consul is running. This is a general load pressure indicator for Consul agent.
@@ -300,7 +300,7 @@ LoadPlugin python
 All charts metioned in the Client dashboard are also present in the Server dashboard. In addition to those, the following charts are present
 
   - **Raft candidate state**: This chart tracks if the selected Consul server starts an election. If this metric increments without a leadership change occurring it could indicate that a single server is overloaded or is experiencing network connectivity issues.
- 
+
     [<img src='./img/chart_raft_candidate.png' width=200px>](./img/chart_raft_candidate.png)
 
 All metrics reported by the Consul collectd plugin will contain the following dimensions by default:
@@ -327,14 +327,14 @@ A few other details:
 * The metrics from `/agent/metric` endpoint are aggregated over an interval of 10 seconds. Keep this in mind when changing the default collectd interval from 10 seconds.
 
 ### METRICS
-List of default metrics collected from telemetry stream or `agent/metrics` endpoint- 
+List of default metrics collected from telemetry stream or `agent/metrics` endpoint-
  - consul.raft.state.leader
  - consul.raft.state.candidate
  - consul.raft.leader.lastContact
  - consul.raft.leader.dispatchLog
  - consul.raft.commitTime
  - consul.raft.apply
- - consul.raft.replication.appendEntries.rpc.<FOLLOWER_IP>
+ - consul.raft.replication.appendEntries.rpc.<FOLLOWER\_IP>
  - consul.rpc.query
  - consul.consul.leader.reconcile
  - consul.serf.events
@@ -342,22 +342,22 @@ List of default metrics collected from telemetry stream or `agent/metrics` endpo
  - consul.serf.queue.Query
  - consul.serf.member.join
  - consul.serf.member.left
- - consul.runtime.heap_objects
- - consul.runtime.alloc_bytes
- - consul.runtime.num_goroutines
- - consul.dns.domain_query.<HOST>
- - consul.dns.ptr_query.<HOST>
- - consul.dns.stale_queries.<HOST>
+ - consul.runtime.heap\_objects
+ - consul.runtime.alloc\_bytes
+ - consul.runtime.num\_goroutines
+ - consul.dns.domain\_query.<HOST>
+ - consul.dns.ptr\_query.<HOST>
+ - consul.dns.stale\_queries.<HOST>
  - consul.serf.member.flap
  - consul.memberlist.msg.suspect
 
 List of default metrics collected from additional endpoints -
- - consul.is_leader
+ - consul.is\_leader
  - consul.peers
  - consul.catalog.nodes.total
  - consul.catalog.service.total
- - consul.catalog.nodes_by_service
- - consul.catalog.services_by_node
+ - consul.catalog.nodes\_by\_service
+ - consul.catalog.services\_by\_node
  - consul.health.nodes.passing
  - consul.health.nodes.warning
  - consul.health.nodes.critical
@@ -366,7 +366,7 @@ List of default metrics collected from additional endpoints -
  - consul.health.services.critical
  - consul.network.node.latency
  - consul.network.dc.latency
- 
+
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

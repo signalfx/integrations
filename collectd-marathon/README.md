@@ -1,6 +1,6 @@
-# Marathon
+# ![](https://github.com/signalfx/integrations/blob/master/collectd-marathon/img/integrations_marathon.png) Marathon
 
-_This directory consolidates all the metadata associated with the Marathon plugin for collectd.  The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-marathon)_
+Metadata associated with the Marathon plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-marathon).  The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-marathon).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,7 +14,7 @@ _This directory consolidates all the metadata associated with the Marathon plugi
 
 This is the SignalFx Marathon plugin. Follow these instructions to install the Marathon plugin for collectd.
 
-The [`collectd-marathon`](https://github.com/signalfx/collectd-marathon) plugin collects metrics about Marathon applications and tasks. 
+The [collectd-marathon](https://github.com/signalfx/collectd-marathon) plugin collects metrics about Marathon applications and tasks.
 
 #### Features
 ##### Built-in dashboards
@@ -50,17 +50,15 @@ The [`collectd-marathon`](https://github.com/signalfx/collectd-marathon) plugin 
 
 1.  Download the [collectd-marathon](https://github.com/signalfx/collectd-marathon) Python module onto a host that has access to the Marathon API.
 
-1.  Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `collectd-marathon` module: 
+2.  Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `collectd-marathon` module:
 
-    ```
-    sudo pip install -r /path/to/collectd-marathon/requirements.txt
-    ```
-    
-1.  Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
+        sudo pip install -r /path/to/collectd-marathon/requirements.txt
 
-1.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+3.  Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
 
-1.  Restart collectd.
+4.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+
+5.  Restart collectd.
 
 ### CONFIGURATION
 Using the sample configuration file [20-collectd-marathon.conf](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
@@ -80,12 +78,13 @@ All metrics reported by the Marathon collectd plugin will contain the following 
 - `plugin` is always set to `marathon`.
 - `plugin_instance` will always be `marathon` concated with `.` and the Mesos agent id. Ex. `marathon.<mesos agent id>`.
 
-Sample of pre-built dashboard in SignalFx:
+Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_marathon_overview.png)
 
 ### METRICS
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

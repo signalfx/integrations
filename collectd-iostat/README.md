@@ -1,6 +1,6 @@
 # IOStat
 
-_This directory consolidates all the metadata associated with the IOStat plugin for collectd.  The relevant code for the plugin can be found [here](https://github.com/signalfx/iostat-collectd-python)_
+Metadata associated with the IOStat plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-iostat).  The relevant code for the plugin can be found [here](https://github.com/signalfx/iostat-collectd-python).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -54,7 +54,8 @@ All metrics reported by the IOStat collectd plugin will contain the following di
 * `plugin_instance` will contain the name of the disk the metrics relevant to.
 
 ### METRICS
-For full documentation of the metrics and dimensions emitted by this plugin, see the `docs` directory in this repository.
+
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

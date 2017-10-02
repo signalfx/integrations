@@ -1,12 +1,11 @@
 # ![](https://github.com/signalfx/integrations/blob/master/heka-filter-signalfx/img/integrations_heka.png) Heka Filter for SignalFx
 
-_This is a directory consolidate all the metadata associated with the Heka filter integration. The relevant code for the integration can be found [here](https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua)_
+Metadata associated with the Heka filter integration can be found [here](https://github.com/signalfx/integrations/tree/release/heka-filter-signalfx). The relevant code for the integration can be found [here](https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Metrics](#metrics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -42,11 +41,11 @@ Configuration for the SignalFx filter:
 
 | Setting            | type  |   default   | description          |
 |--------------------|-------|-------------|----------------------|
-|metric_name | string | (required) no default set | String to use as the `metric` name in SignalFX. Supports interpolation of field values from the processed message, using `%{fieldname}`. Any `fieldname` values of "Type", "Payload", "Hostname", "Pid", "Logger", "Severity", or "EnvVersion" will be extracted from the the base message schema, any other values will be assumed to refer to a dynamic message field. Only the first value of the first instance of a dynamic message field can be used for series name interpolation. If the dynamic field doesn't exist, the uninterpolated value will be left in the series name. Note that it is not possible to interpolate either the "Timestamp" or the "Uuid" message fields into the series name, those values will be interpreted as referring to dynamic message fields.|
+|metric\_name | string | (required) no default set | String to use as the `metric` name in SignalFX. Supports interpolation of field values from the processed message, using `%{fieldname}`. Any `fieldname` values of "Type", "Payload", "Hostname", "Pid", "Logger", "Severity", or "EnvVersion" will be extracted from the the base message schema, any other values will be assumed to refer to a dynamic message field. Only the first value of the first instance of a dynamic message field can be used for series name interpolation. If the dynamic field doesn't exist, the uninterpolated value will be left in the series name. Note that it is not possible to interpolate either the "Timestamp" or the "Uuid" message fields into the series name, those values will be interpreted as referring to dynamic message fields.|
 | value_field | string | (optional) defaults to `"value"` | The `fieldname` to use as the value for the metric in signalfx. If the `value` field is not present this encoder will set one as the value for counters: `1`. A value of `0` will be used for `gauges`. |
-| msg_type | string | (optional) defaults to `"signalfxbatch"` | `Type` of the message outputted from this filter. |
-| max_count | int  | (optional) defaults to `"20"` | Max number of messages before a batch is flushed from the filter.|
-| dimensions | string | (optional) defaults to `"" ` | A space delimited list of field names. Each of these will be written as "dimensions" on the SignalFx data point, which you can filter by in SignalFx.*|
+| msg\_type | string | (optional) defaults to `"signalfxbatch"` | `Type` of the message outputted from this filter. |
+| max\_count | int  | (optional) defaults to `"20"` | Max number of messages before a batch is flushed from the filter.|
+| dimensions | string | (optional) defaults to `""` | A space delimited list of field names. Each of these will be written as "dimensions" on the SignalFx data point, which you can filter by in SignalFx.*|
 
 `dimentions` example: a value of "Hostname Severity" would write the field:
 

@@ -1,6 +1,6 @@
 # ![](./img/integrations_etcd.png) etcd
 
-_This directory consolidates all the metadata associated with the etcd plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-etcd)_
+Metadata associated with the etcd plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-etcd). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-etcd).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,7 +14,7 @@ _This directory consolidates all the metadata associated with the etcd plugin fo
 
 This is the SignalFx etcd plugin. Follow these instructions to install the etcd plugin for collectd.
 
-The [`etcd-collectd`](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metrics](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
+The [etcd-collectd](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metrics](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
 
 #### FEATURES
 
@@ -69,9 +69,9 @@ Using the example configuration file [10-etcd.conf](https://github.com/signalfx/
 | Host | Host name of the etcd member | "localhost" |
 | Port | Port at which the member can be reached | "2379" |
 | Cluster | Name of this etcd cluster. | "1" |
-| EnhancedMetrics | Boolean to indicate whether stats from ```/metrics``` are needed | "false" |
-| IncludeMetric | Metric name from the ```/metric``` endpoint to include(valid when EnhancedMetrics is "false") | "etcd\_debugging\_mvcc\_slow\_watcher\_total" |
-| ExcludeMetric | Metric name from the ```/metric``` endpoint to exclude(valid when EnhancedMetrics is "true") | "etcd\_server\_has\_leader" |
+| EnhancedMetrics | Boolean to indicate whether stats from `/metrics` are needed | "false" |
+| IncludeMetric | Metric name from the `/metric` endpoint to include(valid when EnhancedMetrics is "false") | "etcd\_debugging\_mvcc\_slow\_watcher\_total" |
+| ExcludeMetric | Metric name from the `/metric` endpoint to exclude(valid when EnhancedMetrics is "true") | "etcd\_server\_has\_leader" |
 | Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to etcd API. | 10 |
 | ssl\_keyfile | Path to the keyfile | "path/to/file" |
@@ -271,11 +271,11 @@ A few other details:
 
 * `plugin` is always set to `etcd`
 * `plugin_instance` will contain the IP address and the port of the member given in the configuration
-* To add metrics from the ```/metrics``` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid. For example, ```etcd_debugging_mvcc_slow_watcher_total``` or ```etcd_network_peer_sent_bytes_total```
+* To add metrics from the `/metrics` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid. For example, `etcd_debugging_mvcc_slow_watcher_total` or `etcd_network_peer_sent_bytes_total`
 
 
 ### METRICS
-By default, metrics about a member, leader and store are provided. Click [here](./docs) for details. Metrics from ```/metrics``` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
+By default, metrics about a member, leader and store are provided. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Metrics from `/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
 
 
 #### Metric naming

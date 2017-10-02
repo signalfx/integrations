@@ -5,5 +5,4 @@ metric_type: cumulative_counter
 ---
 ### Per-core CPU usage
 
-How much CPU time is spent by the container, per CPU core. This metric
-is reported with a dimension `core` that indicates the number of the core. 
+How much CPU time is spent by the container, per CPU core. This metric is reported with a dimension `core` that indicates the number of the core. 

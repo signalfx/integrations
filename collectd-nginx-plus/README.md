@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/img/integrations_nginxplus.png) NGINX Plus
 
-_This directory consolidates all the metadata associated with the NGINX Plus plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-nginx-plus)_
+Metadata associated with the NGINX Plus plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-nginx-plus). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-nginx-plus).
 
 - [Description](#description)
 - [Installation](#installation)
@@ -14,6 +14,7 @@ _This directory consolidates all the metadata associated with the NGINX Plus plu
 This is the SignalFx NGINX Plus plugin. Follow these instructions to install the NGINX Plus plugin for collectd.
 
 The [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) plugin collects metrics about a single NGINX Plus instance, using the `/status` endpoints exposed with the ngx_http_status_module, documentation [here](http://nginx.org/en/docs/http/ngx_http_status_module.html).
+
 
 #### FEATURES
 
@@ -37,19 +38,17 @@ The [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) pl
 
 ### INSTALLATION
 
-1. Download the [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) project.
+1. Download the [niginx-plus-collectd](https://github.com/signalfx/collectd-nginx-plus) project.
 
-1. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `niginx-plus-collectd` project:
+2. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `niginx-plus-collectd` project:
 
-  ```
-  sudo pip install -r install_requirements.txt
-  ```
+        sudo pip install -r install_requirements.txt
 
-1. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/10-nginx-plus.conf) for this plugin to `/etc/collectd/managed_config`.
+3. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/10-nginx-plus.conf) for this plugin to `/etc/collectd/managed_config`.
 
-1. Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
+4. Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
-1. Restart collectd.
+5. Restart collectd.
 
 ### CONFIGURATION
 

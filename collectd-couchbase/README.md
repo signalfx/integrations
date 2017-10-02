@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase
 
-_This is a directory that consolidates all the metadata associated with SignalFx's Couchbase integration. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase)_
+Metadata associated with SignalFx's Couchbase integration can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-couchbase). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchbase).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,8 +12,7 @@ _This is a directory that consolidates all the metadata associated with SignalFx
 
 ### DESCRIPTION
 
-`collectd-couchbase` is a [collectd](http://www.collectd.org/) plugin that
-collects statistics from Couchbase.
+`collectd-couchbase` is a [collectd](http://www.collectd.org/) plugin that collects statistics from Couchbase.
 
 #### FEATURES
 
@@ -55,11 +54,11 @@ collects statistics from Couchbase.
 
 1. Download the [collectd-couchbase Python module](https://github.com/signalfx/collectd-couchbase).
 
-1. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin to `/etc/collectd/managed_config`.
+2. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin to `/etc/collectd/managed_config`.
 
-1. Modify the sample configuration file as described in [Configuration](#configuration), below.
+3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
-1. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -73,7 +72,7 @@ Using the example configuration file [10-couchbase.conf](https://github.com/sign
 | Host | Hostname or IP address of the Couchbase server. | "localhost" |
 | Port | Port at which the Couchbase server can be reached. | "8091" |
 | ClusterName | Name of this Couchbase cluster. | "default" |
-| CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See [`metric_info.py`](https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py) for more information. | "default" |
+| CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See [metric\_info.py](https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py) for more information. | "default" |
 | Interval | Number of seconds between calls to Couchbase API. | 10 |
 | Username | If CollectTarget is "BUCKET" and this bucket requires authentication, username to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "USERNAME" |
 | Password | If CollectTarget is "BUCKET" and this bucket requires authentication, password to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "PASSWORD" |
@@ -151,7 +150,7 @@ Couchbase persists in-memory items to disk. This graph shows the number of items
 
 ### METRICS
 
-For full documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
+For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

@@ -42,7 +42,7 @@ Below are requirements for integration code:
 1. Submit your performance test plan and results.
 1. Make sure that your integration collects all the data that is necessary to monitor the software in question.
   - When deciding which metrics your integration should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available in "detailed" mode. Use other validated integrations as a guide on what to include.
-1. Include dimensions by adding key-value pairs to metric names. Dimensions can include any context that a user needs to drill down or slice-and-dice metrics through their environment (ex. cluster name, node name, region). Dimensions can capture any important concepts of the software being monitored, such as _queue name_ for a message queue or _index name_ for a search utility. To read more about dimensions, see SignalFx's data model on [developers.signalfx.io](http://developers.signalfx.io).
+1. Include dimensions by adding key-value pairs to metric names. Dimensions can include any context that a user needs to drill down or slice-and-dice metrics through their environment (ex. cluster name, node name, region). Dimensions can capture any important concepts of the software being monitored, such as *queue name* for a message queue or *index name* for a search utility. To read more about dimensions, see SignalFx's data model on [developers.signalfx.io](http://developers.signalfx.io).
 
 ### Documentation Requirements
 
@@ -61,13 +61,13 @@ We will programmatically read this document to generate a description on your in
 
 | field name | description |
 |------------|-------------|
-| display_name | name that will display in the integration tile|
+| display\_name | name that will display in the integration tile|
 | description | description of integration |
-| project_url | URL of 'metadata' directory (`https://github.com/signalfx/integrations/tree/master/[integration-foo]`)|
+| project\_url | URL of 'metadata' directory (`https://github.com/signalfx/integrations/tree/master/[integration-foo]`)|
 | code | URL of code repository |
 | featured | flag to put integration in "Top Integrations" section |
-| logo_large | URL of 300x300 pixel logo image |
-| logo_small | URL of 150x150 pixel logo image |
+| logo\_large | URL of 300x300 pixel logo image |
+| logo\_small | URL of 150x150 pixel logo image |
 
 
 Example:

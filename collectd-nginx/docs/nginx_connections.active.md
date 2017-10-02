@@ -3,7 +3,7 @@ title: Nginx Connections Active
 brief: Connections active in Nginx Web Server
 metric_type: gauge
 ---
-###Nginx Connections Active
+### Nginx Connections Active
 
 > How many connections are active in Nginx
 
