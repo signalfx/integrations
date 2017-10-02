@@ -1,0 +1,33 @@
+apiVersion: v1
+data:
+  agent.yaml: |
+    signalFxAccessToken: ${SFX_ACCESS_TOKEN}
+
+    intervalSeconds: 15
+    procFSPath: /hostfs/proc
+
+    logging:
+      level: info
+
+    globalDimensions:
+      kubernetes_cluster: 'CLUSTER_NAME'
+      kubernetes_role: worker
+
+    observers:
+      - type: k8s-api
+
+    monitors:
+      - type: collectd/signalfx-metadata
+
+      - type: kubelet-stats
+        intervalSeconds: 30
+        kubeletAPI:
+          authType: serviceAccount
+
+      # Collects k8s cluster-level metrics
+      - type: kubernetes-cluster
+        intervalSeconds: 15
+
+kind: ConfigMap
+metadata:
+  name: signalfx-agent
