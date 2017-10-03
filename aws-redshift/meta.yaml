@@ -1,0 +1,10 @@
+{ "display_name":"Amazon Redshift",
+  "description": "SignalFx's integration with Amazon Redshift.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-redshift",
+  "code": "https://aws.amazon.com/redshift/",
+  "featured": false,
+  "logo_large": "integration_awsredshift@2x.png",
+  "logo_small": "integration_awsredshift.png",
+  "data_signature": "namespace:\"AWS/Redshift\"",
+  "in_app_categories": ["AWSservicesMonitored"]
+}
