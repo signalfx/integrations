@@ -5,6 +5,6 @@
   "featured": false,
   "logo_large": "integration_awsautoscaling.png",
   "logo_small": "integration_awsautoscaling.png",
-  "data_signature": "namespace:\"AWS/Autoscaling\"",
+  "data_signature": "namespace:\"AWS/AutoScaling\"",
   "in_app_categories": ["AWSservicesMonitored"]
 }
