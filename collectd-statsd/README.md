@@ -78,7 +78,7 @@ $ echo "statsd.[foo=bar,dim=val]test:1|g" | nc -w 1 -u 127.0.0.1 8125
 
 This creates a metric called `statsd.test` of type gauge, with dimensions `foo=bar` and `dim=val`.
 
-StatsD's python API allows you to construct your StatsClient with a prefix. This can simplify the configuration of dimensions. Note that you may specify the bracketed dimensions either in the prefix, or on each metric, but not both: SignalFx supports only one bracketed dimension section and will use the one closest to the right.
+StatsD's python API allows you to construct your StatsClient with a prefix. This can simplify the configuration of dimensions. 
 
 The examples below produce the same metric and dimensions.
 
@@ -91,6 +91,15 @@ or
 ```python
 >>> c = statsd.StatsClient('localhost', 8125, prefix="test")
 >>> c.gauge("[dim1=val1]gaugor", 400)
+```
+
+Note that you may specify dimensions by adding bracketed key-value pairs either in the prefix, or on each metric, but not both. If bracketed dimension sections are included in both the prefix and metric name, SignalFx will use the one specified in the metric name.
+
+The following example produces a metric called `test.gaugor` of type gauge, with dimension `foo=bar`. Dimension `dim=val`, specified in the prefix, is ignored.
+
+```python
+>>> c = statsd.StatsClient('localhost', 8125, prefix="test[dim=val]")
+>>> c.gauge("[foo=bar]gaugor", 400)
 ```
 
 #### Using StatsD metrics in SignalFx
