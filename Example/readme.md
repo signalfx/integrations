@@ -1,3 +1,13 @@
+# Writing docs for integrations
+
+This file contains a sample readme which would be surfaced both as the docs [here](https://app.signalfx.com/#/organization/CO5Uf1QAcAA/integrations) in the app and also on the [docs site](https://docs.signalfx.com/en/latest/integrations/integrations-reference/index.html). Following the guidelines mentioned below would ensure that the docs are rendered and formatted correctly in both places.
+
+- use tabs for lists and sublists
+    - two tabs for sublists
+    - four tabs for code blocks inside list (**DO NOT** use the \`\`\` pattern for code block within lists/sublists)
+- while referring to another integration readme add this `[](sfx_link:collectd-<integration-name>)` to the link. For example, if you want to link to the readme of `SignalFx's ActiveMQ integration` do: `[text you want](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq)`. This will ensure that the readme opens within the app and not from github
+- avoid hard returns
+
 # Example Python Plugin
 
 Metadata associated with the **Example Integration** can be found [here](https://github.com/signalfx/integrations/tree/release/Example). The relevant code for the integration can be found [here](https://github.com/signalfx/collectd-example).
