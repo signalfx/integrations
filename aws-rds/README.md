@@ -92,7 +92,7 @@ You will want to create 1 or 2 environment variables. The access token for your 
 Another environment variable is necessary only if you are certain that you want a subset of the available metrics. The full list can be found [here](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html). You can provide the names of the metric groups that you want either included or excluded. The key for this environment variable is `groups` for the inclusive group or `groups_out` for the exclusive group. The list should simply be the names of the groups, spelled exactly as they are in the documentation (including capitals), separated by a single space. If you create both lists, only the `groups` list will be used.
 
 E.g.
-`cpuUtilization diskIO memory`
+`cpuUtilization diskIO memory OSprocesses`
 
 Available Metric Groups (all but SQL Server):
 
@@ -116,6 +116,8 @@ Available Metric Groups (SQL Server):
 - OSprocesses
 - RDSprocesses
 - system
+
+NOTE: While 'OSprocesses' and 'RDSprocesses' are not listed groups in the AWS documentation, they are metric groups that we provide.
 
 ###### Execution role
 
