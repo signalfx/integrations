@@ -61,7 +61,7 @@ After running this sequence of commands, you will have a copy of `enhanced_rds.z
 
 You must enable enhanced monitoring on each instance for which you wish to report metrics. To do so, go to the list of instances on the RDS dashboard, select the instance, display the `Instance Actions` dropdown, and select Modify. The Enable Enhanced Monitoring section is towards the bottom. After selecting Yes, you will have options for which monitoring role to use, as well as the resolution of your data points. If there is no role available on the dropdown you can allow one to be created for you by selecting a checkbox, or reuse a preexisting one.
 
-[<img src='./img/enable-enhanced-mon.png' width=200px>](./img/enable-enhanced-mon.png)
+![](./img/enable-enhanced-mon.png)
 
 Each instance will take a few minutes to change its configuration, after which the metrics will be sent to a CloudWatch Logs stream.
 
@@ -75,15 +75,15 @@ Creating an Encryption Key allows you to keep your SignalFx access token encrypt
 
 You can create a new Lambda from the Functions page of the Lambda Management Console. The name of the function itself will be how it appears on the list in the Management Console, so choose one accordingly. For the function permissions, the only requirement is KMS decryption permissions. You can either use a preexisting role that already has those permissions, or create a new role from the templates that AWS provides. If you choose this route, select `Create new role from template(s)` from the Role dropdown, create a descriptive name for the role, and under Policy templates, select `KMS decryption permissions`.
 
-[<img src='./img/function-name-and-role.png' width=200px>](./img/function-name-and-role.png)
+![](./img/function-name-and-role.png)
 
 ##### Configuration tab
 
-[<img src='./img/lambda-configuration.png' width=200px](./img/lambda-configuration.png)
+![](./img/lambda-configuration.png)
 
 ###### Function code
 
-Under 'Code entry type' select `Upload a .ZIP file`. Set the runtime to `Python 2.7`. Set 'Handler' to be `lambda_script.lambda_handler`. Click 'Upload', and find the `enhanced_rds.zip` file you built earlier. The file should be about 2.9 MB; if it isn't, the archive may not be built correctly, so you should try going through the process described above again.
+Under 'Code entry type' select `Upload a .ZIP file`. Set the runtime to `Python 2.7`. Set 'Handler' to be `lambda_script.lambda_handler`. Click 'Upload', and find the `enhanced_rds.zip` file you built earlier. The file should be about 3 MB; if it isn't, the archive may not be built correctly, so you should try going through the process described above again.
 
 ###### Environment variables
 
@@ -93,6 +93,29 @@ Another environment variable is necessary only if you are certain that you want 
 
 E.g.
 `cpuUtilization diskIO memory`
+
+Available Metric Groups (all but SQL Server):
+
+- cpuUtilization
+- diskIO
+- fileSys
+- loadAverageMinute
+- memory
+- network
+- OSprocesses
+- RDSprocesses
+- swap
+- tasks
+
+Available Metric Groups (SQL Server):
+
+- cpuUtilization
+- disks
+- memory
+- network
+- OSprocesses
+- RDSprocesses
+- system
 
 ###### Execution role
 
@@ -104,11 +127,11 @@ Change the default 3 seconds timeout to 5 seconds.
 
 ##### Triggers tab
 
-[<img src='./img/trigger-before.png' width=200px>](./img/trigger-before.png)
+![](./img/trigger-before.png)
 
 Click on the perforated box and select CloudWatch Logs from the list. A number of additional options will appear. Select `RDSOSMetrics` under 'Log Group', and select an appropriate 'Filter Name'. Leave 'Filter Pattern' empty. We recommend that you deselect the 'Enable trigger' option so that you can review your settings before activating your Lambda. You can enable the trigger from the Triggers tab at any time.
 
-[<img src='./img/trigger-after.png' width=200px>](./img/trigger-after.png)
+![](./img/trigger-after.png)
 
 When you are satisfied with your configuration settings, enable the trigger, and you're good to go! Your metrics will shortly be on their way to SignalFx ingest.
   
