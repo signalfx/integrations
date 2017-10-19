@@ -28,14 +28,6 @@ To access this integration, [connect to CloudWatch](https://github.com/signalfx/
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
-### USAGE
-
-SignalFx provides built-in dashboards for this service. Examples are shown below.
-
-![](./img/dashboard_rds_instances.png)
-
-![](./img/dashboard_rds_instance.png)
-
 #### ENHANCED MONITORING
 
 SignalFx now offers a Lambda-based integration of enhanced monitoring from RDS. This integration can be used regardless of whether the standard RDS integration is in use. Setup only requires a bit of configuration on AWS to start sending enhanced metrics to SignalFx at the desired granularity.
@@ -125,10 +117,17 @@ Click on the perforated box and select CloudWatch Logs from the list. A number o
 
 When you are satisfied with your configuration settings, enable the trigger, and you're good to go! Your metrics will shortly be on their way to SignalFx ingest.
 
+### USAGE
+
+SignalFx provides built-in dashboards for this service. Examples are shown below.
+
+![](./img/dashboard_rds_instances.png)
+
+![](./img/dashboard_rds_instance.png)
+
 ### METRICS
 
 For more information about the metrics emitted by Amazon Relational Database Service, visit the service's homepage at https://aws.amazon.com/rds/.
-
   
 ### LICENSE
 
