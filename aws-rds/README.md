@@ -32,6 +32,13 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 SignalFx now offers a Lambda-based integration of enhanced monitoring from RDS. This integration can be used regardless of whether the standard RDS integration is in use. Setup only requires a bit of configuration on AWS to start sending enhanced metrics to SignalFx at the desired granularity.
 
+##### Procedure
+
+1. Download and build the archive
+2. Enable Enhanced Monitoring on the AWS RDS management console
+3. Create an encryption key
+4. Create the Lambda function
+
 ##### Download and build the archive
 
 First things first, you need to get the code into a zip archive. In a bash shell:
@@ -91,7 +98,7 @@ Available Metric Groups (all but SQL Server):
 - swap
 - tasks
 
-Available Metric Groups (SQL Server):
+Available Metric Groups (SQL Server only):
 
 - cpuUtilization
 - disks
