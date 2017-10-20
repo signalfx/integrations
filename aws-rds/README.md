@@ -65,19 +65,19 @@ Go to the Configuration tab.
 
 Under 'Code entry type' select `Upload a .ZIP file`. Set the runtime to `Python 2.7`. Set 'Handler' to be `lambda_script.lambda_handler`. Click 'Upload', and find the `enhanced_rds.zip` file you built earlier. The file should be about 3 MB; if it isn't, the archive may not be built correctly, so you should try going through the process described above again.
 
-###### 4. Supply your SignalFx access token
+###### Supply your SignalFx access token
 
 Under 'Environment Variables', create an environment variable named `access_token` and add your SignalFx access token. [Click here for more information about SignalFx access tokens](https://docs.signalfx.com/en/latest/admin-guide/tokens.html#managing-access-tokens). 
 
 Expand the 'Encryption configuration' section and check the box under 'Enable helpers for encryption in transit'. From the 'KMS key to encrypt in transit' and 'KMS key to encrypt at rest' dropdown menus, select the encryption key you created earlier. An 'Encrypt' button will appear next to your environment variables. Click it to activate the encryption.
 
-###### 5. Finish up configuration 
+###### Finish up configuration 
 
 For Execution role, select `Choose an existing role` and select a role with the required permissions (see Basic Information, above). 
 
 Change the default 3 second timeout to 5 seconds.
 
-###### 6. Add a trigger
+##### 4. Add a trigger
 
 On the Triggers tab, click Add Trigger. 
 
