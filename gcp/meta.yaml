@@ -1,4 +1,4 @@
-{ "display_name":"Google StackDriver",
+{ "display_name":"Google Cloud Platform",
    "description": "SignalFx's integration with Google Cloud Platform's StackDriver.",
    "project_url": "https://github.com/signalfx/integrations/tree/master/gcp",
    "code": "https://cloud.google.com/stackdriver/",
