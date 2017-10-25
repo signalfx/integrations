@@ -6,5 +6,5 @@
    "logo_large": "integration_gcp.png",
    "logo_small": "integration_gcp.png",
    "data_signature": "_exists_:gcp_id",
-   "in_app_categories": ["essential", "servicesMonitored", "GCPservicesMonitored"]
+   "in_app_categories": ["essential", "servicesMonitored", "GCPServicesMonitored"]
  }
