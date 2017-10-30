@@ -1,6 +1,6 @@
 { "display_name":"Google Compute Engine",
   "description": "SignalFx's integration with Google Compute Engine",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-computeengine",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/google-compute-engine",
   "code": "https://cloud.google.com/compute",
   "featured": false,
   "logo_large": "integration_googlecomputeengine.png",
