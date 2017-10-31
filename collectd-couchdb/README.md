@@ -28,8 +28,7 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 
 - **COUCHDB NODE**: Provides metrics from a single couchdb node.
 
-  [<img src='./img/couchdb-node-dashboard-top.png' width=200px>](./img/couchdb-node-dashboard-top.png)
-  [<img src='./img/couchdb-node-dashboard-bottom.png' width=200px>](./img/couchdb-node-dashboard-bottom.png)  
+  [<img src='./img/couchdb-node-dashboard.png' width=200px>](./img/couchdb-node-dashboard-top.png)
 
 - **COUCHDB NODES**: Provides metrics from couchdb nodes on a particular host.
 
@@ -168,13 +167,10 @@ LoadPlugin python
 
     [<img src='./img/chart-couchdb-cluster-active-data-usage.png' width=200px>](./img/chart-couchdb-cluster-active-data-usage.png)
 
-  - **Active Docs**: Shows the total number of active docs present in the couchdb cluster.
+  - **Active Docs vs Deleted Docs**: Shows the total number of active and deleted docs present in the cluster.
 
-    [<img src='./img/chart-couchdb-cluster-active-docs.png' width=200px>](./img/chart-couchdb-cluster-active-docs.png)
+    [<img src='./img/chart-couchdb-cluster-active-del-docs.png' width=200px>](./img/chart-couchdb-cluster-active-del-docs.png)
 
-  - **Deleted Docs**: Shows the total number of deleted docs present in the couchdb cluster.
-
-    [<img src='./img/chart-couchdb-cluster-deleted-docs.png' width=200px>](./img/chart-couchdb-cluster-deleted-docs.png)
 
 - **COUCHDB NODE**:
 
@@ -182,7 +178,7 @@ LoadPlugin python
 
     [<img src='./img/chart-couchdb-node-requests.png' width=200px>](./img/chart-couchdb-node-requests.png)
 
- - **Request Processing Time**: Show the average request processing time of the node.
+  - **Request Processing Time**: Show the average request processing time of the node.
 
     [<img src='./img/chart-couchdb-node-request-time.png' width=200px>](./img/chart-couchdb-node-request-time.png)
 
@@ -190,13 +186,13 @@ LoadPlugin python
 
     [<img src='./img/chart-couchdb-node-db-reads-writes.png' width=200px>](./img/chart-couchdb-node-db-reads-writes.png)  
 
-  - **Auth Cache Hits**: The total number of auth cache hits per minute on the node.
+  - **Auth Cache Hits vs Misses**: Shows the stack chart of auth cache hits and misses.
     
-    [<img src='./img/chart-couchdb-node-auth-hits.png' width=200px>](./img/chart-couchdb-node-auth-hits.png)
+    [<img src='./img/chart-couchdb-node-auth-hits-misses.png' width=200px>](./img/chart-couchdb-node-auth-hits-misses.png)
 
-  - **Auth Cache Misses**: The total number of auth cache misses per minute on the node.
+  - **Shard Cache Hits vs Misses**: Shows the stack chart of shard cache hits and misses.
     
-    [<img src='./img/chart-couchdb-node-auth-misses.png' width=200px>](./img/chart-couchdb-node-auth-misses.png)
+    [<img src='./img/chart-couchdb-node-shard-hits-misses.png' width=200px>](./img/chart-couchdb-node-shard-hits-misses.png)
 
 - **COUCHDB NODES**: Provides metrics from nodes on a particular host.
 
