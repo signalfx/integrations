@@ -36,7 +36,17 @@ To access this integration, [connect to Google Stackdriver](https://github.com/s
 
 ### USAGE
 
-#### METRICS
+SignalFx provides built-in dashboards for this service. Examples are shown below.
+
+![](./img/appengine_system.png)
+
+![](./img/appengine_flex.png)
+
+![](./img/appengine_memcache.png)
+
+![](./img/appengine_http.png)
+
+### METRICS
 
 For more information about the metrics emitted by Google App Engine, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-appengine
 

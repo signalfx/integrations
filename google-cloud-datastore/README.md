@@ -24,8 +24,11 @@ Use SignalFx to monitor Google Cloud Datastore via [Google Stackdriver](https://
 To access this integration, [connect to Google Stackdriver](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
 ### USAGE
+SignalFx provides built-in dashboards for this service. Examples are shown below.
 
-#### METRICS
+![](./img/datastore_overview.png)
+
+### METRICS
 
 For more information about the metrics emitted by Google Cloud Datastore, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-datastore
 
