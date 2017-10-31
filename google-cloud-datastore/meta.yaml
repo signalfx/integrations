@@ -1,0 +1,10 @@
+{ "display_name":"Google Cloud Datastore",
+  "description": "SignalFx's integration with Google Cloud Datastore",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-datastore",
+  "code": "https://cloud.google.com/datastore",
+  "featured": false,
+  "logo_large": "integration_googleclouddatastore.png",
+  "logo_small": "integration_googleclouddatastore@2x.png",
+  "data_signature": "service:\"datastore\"",
+  "in_app_categories": ["GCPServicesMonitored"]
+}
