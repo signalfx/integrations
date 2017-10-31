@@ -1,0 +1,10 @@
+{ "display_name":"Google Cloud Pub/Sub",
+  "description": "SignalFx's integration with Google Cloud Pub/Sub",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-pubsub",
+  "code": "https://cloud.google.com/pubsub",
+  "featured": false,
+  "logo_large": "integration_googlecloudpubsub.png",
+  "logo_small": "integration_googlecloudpubsub@2x.png",
+  "data_signature": "service:\"pubsub\"",
+  "in_app_categories": ["GCPServicesMonitored"]
+}
