@@ -1,0 +1,10 @@
+{ "display_name":"Google App Engine",
+  "description": "SignalFx's integration with Google App Engine",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/google-appengine",
+  "code": "https://cloud.google.com/appengine",
+  "featured": false,
+  "logo_large": "integration_googleappengine.png",
+  "logo_small": "integration_googleappengine@2x.png",
+  "data_signature": "service:\"appengine\"",
+  "in_app_categories": ["GCPServicesMonitored"]
+}

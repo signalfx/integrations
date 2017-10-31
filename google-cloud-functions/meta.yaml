@@ -1,0 +1,10 @@
+{ "display_name":"Google Cloud Functions",
+  "description": "SignalFx's integration with Google Cloud Functions",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-functions",
+  "code": "https://cloud.google.com/functions",
+  "featured": false,
+  "logo_large": "integration_googlecloudfunctions.png",
+  "logo_small": "integration_googlecloudfunctions@2x.png",
+  "data_signature": "service:\"cloudfunctions\"",
+  "in_app_categories": ["GCPServicesMonitored"]
+}
