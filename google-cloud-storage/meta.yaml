@@ -1,0 +1,10 @@
+{ "display_name":"Google Cloud Storage",
+  "description": "SignalFx's integration with Google Cloud Storage",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-storage",
+  "code": "https://cloud.google.com/storage",
+  "featured": false,
+  "logo_large": "integration_googlecloudstorage.png",
+  "logo_small": "integration_googlecloudstorage@2x.png",
+  "data_signature": "service:\"storage\"",
+  "in_app_categories": ["GCPServicesMonitored"]
+}
