@@ -28,7 +28,7 @@ Use SignalFx to monitor Google Cloud Bigtable via [Google Stackdriver](https://g
 
 ### INSTALLATION
 
-To access this integration, [connect to Stackdriver](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Stackdriver](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
 ### USAGE
 
