@@ -27,8 +27,13 @@ Use SignalFx to monitor Google Compute Engine via [Google Stackdriver](https://g
 To access this integration, [connect to Google Stackdriver](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
 ### USAGE
+SignalFx provides built-in dashboards for this service. Examples are shown below.
 
-#### METRICS
+![](./img/compute_instances.png)
+
+![](./img/compute_instance.png)
+
+### METRICS
 
 For more information about the metrics emitted by Google Compute Engine, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-compute
 

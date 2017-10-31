@@ -31,8 +31,15 @@ Use SignalFx to monitor Google Cloud Bigtable via [Google Stackdriver](https://g
 To access this integration, [connect to Google Stackdriver](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
 ### USAGE
+SignalFx provides built-in dashboards for this service. Examples are shown below.
 
-#### METRICS
+![](./img/bigtable_overview.png)
+
+![](./img/bigtable_cluster.png)
+
+![](./img/bigtable_table.png)
+
+### METRICS
 
 For more information about the metrics emitted by Google Cloud Bigtable, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-bigtable
 
