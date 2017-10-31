@@ -16,15 +16,12 @@ that report to StackDriver.
 
 Connecting to GCP allows you to take advantage of SignalFx’s extensive GCP support.
 
-- The SignalFx Infrastructure page visualizes GCP Compute instances.
-
-  [<img src='./img/hosts_gcp.png' width=200px>](./img/hosts_gcp.png)
 - SignalFx can sync metadata about your GCP hosts to enrich metrics reported by
     StackDriver or the [SignalFx collectd
     agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 - SignalFx provides built-in dashboards for many GCP services that report to
-    StackDriver, such as [Firebase](https://fixme.com)[](sfx_link:gcp-firebase)
-    and [Datastore](https://fixme.com)[](sfx_link:gcp-datastore).
+    StackDriver, such as [Google Compute Engine](https://github.com/signalfx/integrations/tree/master/google-compute-engine)[](sfx_link:google-compute-engine)
+    and [Google Cloud Datastore](https://github.com/signalfx/integrations/tree/master/google-cloud-datastore)[](sfx_link:google-cloud-datastore).
 
 
 
