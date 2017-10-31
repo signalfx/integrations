@@ -12,25 +12,25 @@ Metadata associated with the couchdb plugin for collectd can be found [here](htt
 
 ### DESCRIPTION
 
-This is the SignalFx couchdb plugin. Follow these instructions to install the couchdb plugin for collectd.
+This is the SignalFx CouchDB plugin. Follow these instructions to install the CouchDB plugin for collectd.
 
-The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin collects metrics from couchdb instances by calling the api endpoint: [stats](http://docs.couchdb.org/en/2.1.0/api/server/common.html#stats)
+The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin collects metrics from CouchDB instances by calling the api endpoint: [stats](http://docs.couchdb.org/en/2.1.0/api/server/common.html#stats)
 
 #### FEATURES
 
 #### Built-in dashboards
 
-- **COUCHDB CLUSTER**: Provides a high-level overview of metrics for a single couchdb cluster.
+- **COUCHDB CLUSTER**: Provides a high-level overview of metrics for a single CouchDB cluster.
 
   [<img src='./img/couchdb-cluster-dashboard-top.png' width=200px>](./img/couchdb-cluster-dashboard-top.png)
 
   [<img src='./img/couchdb-cluster-dashboard-bottom.png' width=200px>](./img/couchdb-cluster-dashboard-bottom.png)  
 
-- **COUCHDB NODE**: Provides metrics from a single couchdb node.
+- **COUCHDB NODE**: Provides metrics from a single CouchDB node.
 
   [<img src='./img/couchdb-node-dashboard.png' width=200px>](./img/couchdb-node-dashboard-top.png)
 
-- **COUCHDB NODES**: Provides metrics from couchdb nodes on a particular host.
+- **COUCHDB NODES**: Provides metrics from CouchDB nodes on a particular host.
 
   [<img src='./img/couchdb-nodes-dashboard.png' width=200px>](./img/couchdb-nodes-dashboard.png)
 
@@ -43,7 +43,7 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | python | 2.6 or later |
-| couchdb | 2.0.0 or later |
+| CouchDB | 2.0.0 or later |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
@@ -61,19 +61,19 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 
 ### CONFIGURATION
 
-Using the example configuration file [10-couchdb.conf](https://github.com/signalfx/integrations/tree/release/collectd-couchdb/10-couchdb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the couchdb members
+Using the example configuration file [10-couchdb.conf](https://github.com/signalfx/integrations/tree/release/collectd-couchdb/10-couchdb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and lets you to connect to the CouchDB members
 
-| configuration option | definition | example value |
+| Configuration option | Definition | Example value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-couchdb/" |
-| Host | Host name of the couchdb member | "localhost" |
+| Host | Host name of the CouchDB member | "localhost" |
 | Port | Port at which the member can be reached | "5984" |
-| Node | Name of the couchdb node in the cluster | "couchdb@test\_node" |
-| EnhancedMetrics | Boolean to indicate if the uncommented enhanced metrics in couchdb_metrics.py are needed. | "false" |
-| Username | Username required for authentication of couchdb | "admin" |
-| Password | Password required for authentication of couhcdb | "admin" |
+| Node | Name of the CouchDB node in the cluster | "couchdb@test\_node" |
+| EnhancedMetrics | Boolean; `true` to indicate if the uncommented enhanced metrics in couchdb_metrics.py are needed. | "false" |
+| Username | Username required for authentication of CouchDB | "admin" |
+| Password | Password required for authentication of CouchDB | "admin" |
 | Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
-| Interval | Number of seconds between calls to couchdb API. | 10 |
+| Interval | Number of seconds between calls to CouchDB API. | 10 |
 | ssl\_keyfile | Path to the keyfile | "path/to/file" |
 | ssl\_certificate | Path to the certificate | "path/to/file" |
 | ssl\_ca\_certs | Path to the ca file | "path/to/file" |
@@ -147,34 +147,34 @@ LoadPlugin python
 
 - **COUCHDB CLUSTER**:
 
-  - **Number of Nodes**: Shows the toal number of active nodes in the cluster.
+  - **Number of Nodes**: Total number of active nodes in the cluster.
 
     [<img src='./img/chart-couchdb-cluster-active-nodes.png' width=200px>](./img/chart-couchdb-cluster-active-nodes.png)
 
-  - **Number of Requests**: Shows the total number of requests handled per second by all the nodes in the cluster.
+  - **Number of Requests**: Total number of requests handled per second by all the nodes in the cluster.
 
     [<img src='./img/chart-couchdb-cluster-total-requests.png' width=200px>](./img/chart-couchdb-cluster-total-requests.png)
 
-  - **Request Processing Time**: Show the average request processing time of all the nodes in the cluster.
+  - **Request Processing Time**: Average request processing time of all the nodes in the cluster.
 
     [<img src='./img/chart-couchdb-cluster-request-time.png' width=200px>](./img/chart-couchdb-cluster-request-time.png)
 
-  - **Database Reads and Writes**: The total number of database reads and writes performed by all the nodes in the cluster.
+  - **Database Reads and Writes**: Total number of database reads and writes performed by all the nodes in the cluster.
 
     [<img src='./img/chart-couchdb-cluster-db-reads-writes.png' width=200px>](./img/chart-couchdb-cluster-db-reads-writes.png)
 
-  - **Active Data Usage**: Shows the active data usage percentage. As the couchdb does only soft deletes, all the deleted records are still present in the database. This chart will indicate the percentage of active data in the database. It is advisable to compact database when the value is below 50%
+  - **Active Data Usage**: Active data usage percentage. As the CouchDB does only soft deletes, all the deleted records are still present in the database. This chart will indicate the percentage of active data in the database. It is advisable to compact database when the value is below 50%
 
     [<img src='./img/chart-couchdb-cluster-active-data-usage.png' width=200px>](./img/chart-couchdb-cluster-active-data-usage.png)
 
-  - **Active Docs vs Deleted Docs**: Shows the total number of active and deleted docs present in the cluster.
+  - **Active Docs vs Deleted Docs**: Total number of active and deleted docs present in the cluster.
 
     [<img src='./img/chart-couchdb-cluster-active-del-docs.png' width=200px>](./img/chart-couchdb-cluster-active-del-docs.png)
 
 
 - **COUCHDB NODE**:
 
-  - **Number of Requests**: Shows the total number of requests handled by the node per second.
+  - **Number of Requests**: Total number of requests handled by the node per second.
 
     [<img src='./img/chart-couchdb-node-requests.png' width=200px>](./img/chart-couchdb-node-requests.png)
 
@@ -186,17 +186,17 @@ LoadPlugin python
 
     [<img src='./img/chart-couchdb-node-db-reads-writes.png' width=200px>](./img/chart-couchdb-node-db-reads-writes.png)  
 
-  - **Auth Cache Hits vs Misses**: Shows the stack chart of auth cache hits and misses.
+  - **Auth Cache Hits vs Misses**: Stack chart of auth cache hits and misses.
     
     [<img src='./img/chart-couchdb-node-auth-hits-misses.png' width=200px>](./img/chart-couchdb-node-auth-hits-misses.png)
 
-  - **Shard Cache Hits vs Misses**: Shows the stack chart of shard cache hits and misses.
+  - **Shard Cache Hits vs Misses**: Stack chart of shard cache hits and misses.
     
     [<img src='./img/chart-couchdb-node-shard-hits-misses.png' width=200px>](./img/chart-couchdb-node-shard-hits-misses.png)
 
 - **COUCHDB NODES**: Provides metrics from nodes on a particular host.
 
-  - **Number of Nodes**: The total number of couchdb nodes running on the host.
+  - **Number of Nodes**: Total number of CouchDB nodes running on the host.
 
     [<img src='./img/chart-couchdb-nodes-active-nodes.png' width=200px>](./img/chart-couchdb-nodes-active-nodes.png)
 
@@ -217,16 +217,16 @@ LoadPlugin python
     [<img src='./img/chart-couchdb-nodes-db-writes.png' width=200px>](./img/chart-couchdb-nodes-db-writes.png)
 
 
-All metrics reported by the couchdb collectd plugin will contain the following dimensions by default:
+All metrics reported by the CouchDB collectd plugin will contain the following dimensions by default:
 
 * `node`, name of the node as in the cluster
 * `cluster`, human readable cluster name
-
+* `plugin` is always set to `couchdb`
+* `plugin_instance` will contain the IP address and the port of the member given in the configuration
 
 A few other details:
 
-* `plugin` is always set to `couchdb`
-* `plugin_instance` will contain the IP address and the port of the member given in the configuration
+
 * To add enhanced metrics, use the configuration options mentioned in [configuration](#configuration).
 
 
