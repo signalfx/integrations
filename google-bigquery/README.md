@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google BigQuery via [Google Stackdriver](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+Use SignalFx to monitor Google BigQuery via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
 #### FEATURES
 
@@ -21,7 +21,7 @@ Use SignalFx to monitor Google BigQuery via [Google Stackdriver](https://github.
 
 ### INSTALLATION
 
-To access this integration, [connect to Google Stackdriver](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
 ### USAGE
 SignalFx provides built-in dashboards for this service. Examples are shown below.
