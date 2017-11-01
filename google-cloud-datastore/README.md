@@ -31,19 +31,19 @@ To access this integration, [connect to Google Stackdriver](https://github.com/s
 
 - **Read Sizes by Type of Read** - Average sizes of read entities by type.
 
-[<img src='./img/datastore_overview.png' width=200px>](./img/datastore-overview-read-sizes-type.png)
+[<img src='./img/datastore-overview-read-sizes-type.png' width=200px>](./img/datastore-overview-read-sizes-type.png)
 
 - **Number of Requests per API Method Call** - Number of requests made by method.
 
- [<img src='./img/datastore_overview.png' width=200px>](./img/datastore-overview-number-of-requests-per-method.png)
+ [<img src='./img/datastore-overview-number-of-requests-per-method.png' width=200px>](./img/datastore-overview-number-of-requests-per-method.png)
 
 - **Number of Writes** - Number of Datastore index writes.
 
- [<img src='./img/datastore_overview.png' width=200px>](./img/datastore-overview-number-of-writes.png)
+ [<img src='./img/datastore-overview-number-of-writes.png' width=200px>](./img/datastore-overview-number-of-writes.png)
 
 - **Write Sizes by Operation Type** - Average size of written entites by operation.
 
- [<img src='./img/datastore_overview.png' width=200px>](./img/datastore-overview-read-sizes-type.png)
+ [<img src='./img/datastore-overview-read-sizes-type.png' width=200px>](./img/datastore-overview-read-sizes-type.png)
 
 ### METRICS
 
