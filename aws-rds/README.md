@@ -79,13 +79,13 @@ On the Triggers tab, click Add Trigger.
 
 ![](./img/trigger-before.png)
 
-Click on the perforated box and select CloudWatch Logs from the list. A number of additional options will appear. Select `RDSOSMetrics` under 'Log Group', and select an appropriate 'Filter Name'. Leave 'Filter Pattern' empty.
+Select CloudWatch Logs from the list. A number of additional options will appear. Select `RDSOSMetrics` under 'Log Group', and select an appropriate 'Filter Name'. Leave 'Filter Pattern' empty.
 
 We recommend that you deselect the 'Enable trigger' option so that you can review your settings before activating your Lambda. You can enable the trigger from the Triggers tab at any time.
 
 ![](./img/trigger-after.png)
 
-When you are satisfied with your configuration settings, enable the trigger, and you're good to go! Your metrics will shortly be on their way to SignalFx ingest, and built-in dashboards for RDS Enhanced Monitoring will appear on the Dashboards page in SignalFx.
+When you are satisfied with your configuration settings, enable the trigger, and you're good to go! Your metrics will shortly be on their way to SignalFx, and built-in dashboards for RDS Enhanced Monitoring will appear on the Dashboards page in SignalFx.
 
 ###### Optional: Specify a subset of available metrics to send to SignalFx
 To specify that SignalFx should collect only a subset of the metrics available from Enhanced Monitoring, create an environment variable to store the desired list. You can either include only the specified groups, or exclude all but the specified groups.
@@ -120,7 +120,7 @@ Available Metric Groups (SQL Server only):
 - `RDSprocesses`
 - `system`
 
-NOTE: While '`OSprocesses`' and '`RDSprocesses`' are not listed groups in the AWS documentation, they are metric groups that we provide.
+NOTE: While `OSprocesses` and `RDSprocesses` are not listed groups in the AWS documentation, they are metric groups that we provide.
 
 ### USAGE
 
