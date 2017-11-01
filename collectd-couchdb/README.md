@@ -72,6 +72,8 @@ Using the example configuration file [10-couchdb.conf](https://github.com/signal
 | EnhancedMetrics | Boolean; `true` to indicate if the uncommented enhanced metrics in couchdb_metrics.py are needed. | "false" |
 | Username | Username required for authentication of CouchDB | "admin" |
 | Password | Password required for authentication of CouchDB | "admin" |
+| IncludeMetric | Metric emitted by `_stats` api to be enabled. | "metric listed in docs" |
+| ExcludeMetric | Metric emitted by `_stats` api to be disabled. | "metric listed in docs"
 | Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to CouchDB API. | 10 |
 | ssl\_keyfile | Path to the keyfile | "path/to/file" |
