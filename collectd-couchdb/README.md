@@ -78,69 +78,6 @@ Using the example configuration file [10-couchdb.conf](https://github.com/signal
 | ssl\_certificate | Path to the certificate | "path/to/file" |
 | ssl\_ca\_certs | Path to the ca file | "path/to/file" |
 
-Example configuration:
-
-```apache
-LoadPlugin python
-<Plugin python>
-  ModulePath "/usr/share/collectd/collectd-couchdb/"
-
-  Import couchdb_plugin
-  <Module couchdb_plugin>
-    Host "localhost"
-    Port "5984"
-    Node "couchdb@test_node"
-    Interval 10
-    Username "admin"
-    Password "admin"
-    Cluster "dev"
-    EnhancedMetrics False
-    Dimension "version" "2.0.0"
-    ssl_keyfile "/Users/ec2/couchdb/couchdb-ca/couchdb-ca/private/couchdb-client.key"
-    ssl_certificate "/Users/ec2/couchdb/couchdb-ca/couchdb-ca/certs/couchdb-client.crt"
-    ssl_ca_certs "/Users/ec2/couchdb/couchdb-ca/couchdb-ca/certs/ca.crt"
-  </Module>
-</Plugin>
-```
-
-The plugin can be configured to collect metrics from multiple instances in the following manner.
-
-```apache
-LoadPlugin python
-
-<Plugin python>
-  ModulePath "/usr/share/collectd/collectd-couchdb/"
-  Import couchdb_plugin
-  <Module couchdb_plugin>
-    Host "localhost"
-    Port "15984"
-    Interval 10
-    Node "couchdb@test_node1"
-    Username "admin"
-    Password "admin"
-    Cluster "dev"
-  </Module>
-  <Module couchdb_plugin>
-    Host "localhost"
-    Port "25984"
-    Interval 10
-    Node "couchdb@test_node2"
-    Username "admin"
-    Password "admin"
-    Cluster "dev"
-  </Module>
-  <Module couchdb_plugin>
-    Host "localhost"
-    Port "35984"
-    Interval 10
-    Node "couchdb@test_node3"
-    Username "admin"
-    Password "admin"
-    Cluster "dev"
-  </Module>
-</Plugin>
-```
-
 ### USAGE
 
 #### Interpreting Built-in dashboards
@@ -163,7 +100,7 @@ LoadPlugin python
 
     [<img src='./img/chart-couchdb-cluster-db-reads-writes.png' width=200px>](./img/chart-couchdb-cluster-db-reads-writes.png)
 
-  - **Active Data Usage**: Active data usage percentage. As the CouchDB does only soft deletes, all the deleted records are still present in the database. This chart will indicate the percentage of active data in the database. It is advisable to compact database when the value is below 50%
+  - **Active Data Usage**: Active data usage percentage. As the CouchDB does only soft deletes, all the deleted records are still present in the database. This chart will indicate the percentage of active data in the database. We recommend you to compact database when the value is below 50%.
 
     [<img src='./img/chart-couchdb-cluster-active-data-usage.png' width=200px>](./img/chart-couchdb-cluster-active-data-usage.png)
 
@@ -178,11 +115,11 @@ LoadPlugin python
 
     [<img src='./img/chart-couchdb-node-requests.png' width=200px>](./img/chart-couchdb-node-requests.png)
 
-  - **Request Processing Time**: Show the average request processing time of the node.
+  - **Request Processing Time**: Average request processing time of the node.
 
     [<img src='./img/chart-couchdb-node-request-time.png' width=200px>](./img/chart-couchdb-node-request-time.png)
 
-  - **Database Reads and Writes**: The total number of database reads and writes performed by the node.
+  - **Database Reads and Writes**: Total number of database reads and writes performed by the node.
 
     [<img src='./img/chart-couchdb-node-db-reads-writes.png' width=200px>](./img/chart-couchdb-node-db-reads-writes.png)  
 
@@ -223,11 +160,6 @@ All metrics reported by the CouchDB collectd plugin will contain the following d
 * `cluster`, human readable cluster name
 * `plugin` is always set to `couchdb`
 * `plugin_instance` will contain the IP address and the port of the member given in the configuration
-
-A few other details:
-
-
-* To add enhanced metrics, use the configuration options mentioned in [configuration](#configuration).
 
 
 ### METRICS
