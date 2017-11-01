@@ -31,7 +31,7 @@ Connect to GCP on the Integrations page in SignalFx.
 
 To connect SignalFx to GCP, you’ll create a new IAM member and role in GCP for
 SignalFx to use, provide information from SignalFx to a GCP label, then specify
-services and projects to monitor in SignalFx. You must be an administrator of
+services to monitor in SignalFx. You must be an administrator of
 your SignalFx account to connect SignalFx to GCP.
 
 You must be an administrator of your SignalFx account to connect SignalFx to
