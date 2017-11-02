@@ -40,9 +40,9 @@ instructions](http://docs.signalfx.com/en/latest/getting-started/send-data.html#
 
 ### USAGE
 
-#### Data available from GCP
-
-##### Importing GCP metrics and dimensions
+See [our detailed GCP integration
+guide](https://docs.signalfx.com/en/latest/integrations/gcp-info.html) for more
+information.
 
 ### METRICS
 
