@@ -16,6 +16,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "CouchDB Cluster",
   "sf_description" : "Default dashboard.",
+  "sf_discoveryQuery" : "plugin:couchdb",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "Cluster",
@@ -54,15 +56,6 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1507899553641,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
       "col" : 8,
       "options" : {
         "chartIndex" : 1508154299233,
@@ -74,7 +67,25 @@
     }, {
       "col" : 0,
       "options" : {
+        "chartIndex" : 1507899553641,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
         "chartIndex" : 1508226374264,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1508249978784,
         "id" : 0
       },
       "row" : 1,
@@ -92,24 +103,6 @@
     }, {
       "col" : 8,
       "options" : {
-        "chartIndex" : 1508249978784,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1508241389699,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
         "chartIndex" : 1508226560456,
         "id" : 0
       },
@@ -126,9 +119,18 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 0,
+      "col" : 4,
       "options" : {
         "chartIndex" : 1508227566094,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1508241389699,
         "id" : 0
       },
       "row" : 3,
@@ -136,15 +138,6 @@
       "sizeY" : 1
     }, {
       "col" : 8,
-      "options" : {
-        "chartIndex" : 1507896933979,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
       "options" : {
         "chartIndex" : 1508309934653,
         "id" : 0
@@ -153,21 +146,12 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 0,
+      "col" : 4,
       "options" : {
         "chartIndex" : 1507897040532,
         "id" : 0
       },
-      "row" : 4,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1508244324834,
-        "id" : 0
-      },
-      "row" : 4,
+      "row" : 3,
       "sizeX" : 4,
       "sizeY" : 1
     }, {
@@ -180,9 +164,27 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1507896933979,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
       "col" : 0,
       "options" : {
         "chartIndex" : 1507898850487,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1508244324834,
         "id" : 0
       },
       "row" : 5,
@@ -193,7 +195,7 @@
 }, {
   "marshallId" : 4,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Request Types / Sec",
+  "sf_chart" : "Requests / Sec by Type",
   "sf_chartIndex" : 1508226907396,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -360,6 +362,7 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 2,
       "range" : -900000,
       "rangeEnd" : null,
       "sortPreference" : "-value",
@@ -376,8 +379,8 @@
       } ]
     },
     "currentUniqueKey" : 7,
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
   "marshallId" : 5,
@@ -817,7 +820,7 @@
 }, {
   "marshallId" : 7,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Top nodes by Requests / Sec",
+  "sf_chart" : "Top Nodes by Requests / Sec",
   "sf_chartIndex" : 1508249694460,
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -902,6 +905,7 @@
         "enabled" : false,
         "property" : "plugin_instance"
       } ],
+      "maxDecimalPlaces" : 1,
       "range" : -900000,
       "rangeEnd" : null,
       "sortPreference" : "",
@@ -918,8 +922,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 8,
@@ -1834,7 +1838,7 @@
 }, {
   "marshallId" : 14,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Top nodes by Most Request Processing Time(ms)",
+  "sf_chart" : "Top Nodes by Most Request Processing Time(ms)",
   "sf_chartIndex" : 1508249978784,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -1932,6 +1936,7 @@
         "enabled" : false,
         "property" : "plugin_instance"
       } ],
+      "maxDecimalPlaces" : 2,
       "range" : -900000,
       "rangeEnd" : null,
       "sortPreference" : "",
@@ -1949,8 +1954,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
   "marshallId" : 15,
@@ -1983,7 +1988,7 @@
         "showMe" : false
       } ],
       "invisible" : false,
-      "name" : "Doc inserts",
+      "name" : "Doc Inserts",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.couchdb.couchdb.document_inserts"
@@ -2017,7 +2022,7 @@
       } ],
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Doc writes",
+      "name" : "Doc Writes",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.couchdb.couchdb.document_writes",
@@ -2097,8 +2102,8 @@
     },
     "currentUniqueKey" : 4,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
   "marshallId" : 16,
@@ -2199,6 +2204,7 @@
         "enabled" : false,
         "property" : "Cluster"
       } ],
+      "maxDecimalPlaces" : 3,
       "range" : -900000,
       "rangeEnd" : null,
       "sortPreference" : "-value",
@@ -2216,13 +2222,13 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 11,
-    "uiHelperValue" : "##CHARTID##_11"
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
   }
 }, {
   "marshallId" : 17,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Request processing time",
+  "sf_chart" : "Request Processing Time (ms)",
   "sf_chartIndex" : 1508154299233,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -2319,8 +2325,8 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 27,
-    "uiHelperValue" : "##CHARTID##_27"
+    "revisionNumber" : 29,
+    "uiHelperValue" : "##CHARTID##_29"
   }
 }, {
   "marshallId" : 18,
@@ -2537,10 +2543,12 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "CouchDB Node",
   "sf_description" : "",
+  "sf_discoveryQuery" : "plugin:couchdb",
+  "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "Cluster",
-      "description" : "null",
+      "description" : null,
       "dimension" : "Cluster",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
@@ -2550,7 +2558,7 @@
       "value" : ""
     }, {
       "alias" : "Node",
-      "description" : "null",
+      "description" : null,
       "dimension" : "node",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
@@ -2563,7 +2571,7 @@
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "plugin_instance:127.0.0.1:15984(Cluster=CouchDB-Cluster-ec2)" ],
+    "sources" : null,
     "time" : null,
     "variables" : [ "Cluster=Cluster:CouchDB-Cluster-ec2", "Node=node:couchdb@couchdb1" ]
   },
@@ -2659,7 +2667,7 @@
   "marshallMemberOf" : [ 20 ],
   "sf_chart" : "Auth Cache Hits vs Misses",
   "sf_chartIndex" : 1507635222927,
-  "sf_description" : "Stack chart of Auth Cache Hits and Misses",
+  "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -2746,8 +2754,8 @@
       } ]
     },
     "currentUniqueKey" : 4,
-    "revisionNumber" : 9,
-    "uiHelperValue" : "##CHARTID##_9"
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
   }
 }, {
   "marshallId" : 22,
@@ -2875,7 +2883,7 @@
   "marshallMemberOf" : [ 20 ],
   "sf_chart" : "Shard Cache Hits vs Misses",
   "sf_chartIndex" : 1507900115896,
-  "sf_description" : "Stack Chart of Shard Cache Hits and Misses",
+  "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -2965,8 +2973,8 @@
       } ]
     },
     "currentUniqueKey" : 4,
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
   "marshallId" : 24,
@@ -3269,7 +3277,7 @@
 }, {
   "marshallId" : 26,
   "marshallMemberOf" : [ 20 ],
-  "sf_chart" : "Request Types / Sec",
+  "sf_chart" : "Requests / Sec by Type",
   "sf_chartIndex" : 1507635577302,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -3439,6 +3447,7 @@
         "enabled" : false,
         "property" : "Cluster"
       } ],
+      "maxDecimalPlaces" : 1,
       "range" : -3600000,
       "rangeEnd" : 0,
       "showDots" : false,
@@ -3457,8 +3466,8 @@
       } ]
     },
     "currentUniqueKey" : 8,
-    "revisionNumber" : 18,
-    "uiHelperValue" : "##CHARTID##_18"
+    "revisionNumber" : 19,
+    "uiHelperValue" : "##CHARTID##_19"
   }
 }, {
   "marshallId" : 27,
@@ -3477,7 +3486,7 @@
       },
       "dataManipulations" : [ ],
       "invisible" : false,
-      "name" : "Doc inserts",
+      "name" : "Doc Inserts",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.couchdb.couchdb.document_inserts"
@@ -3497,7 +3506,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Doc writes",
+      "name" : "Doc Writes",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "counter.couchdb.couchdb.document_writes",
@@ -3549,8 +3558,8 @@
       } ]
     },
     "currentUniqueKey" : 4,
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
   "marshallId" : 28,
@@ -3730,7 +3739,7 @@
 }, {
   "marshallId" : 29,
   "marshallMemberOf" : [ 20 ],
-  "sf_chart" : "Request Processing Time",
+  "sf_chart" : "Request Processing Time (ms)",
   "sf_chartIndex" : 1508150542298,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -3805,14 +3814,16 @@
       } ]
     },
     "currentUniqueKey" : 7,
-    "revisionNumber" : 12,
-    "uiHelperValue" : "##CHARTID##_12"
+    "revisionNumber" : 13,
+    "uiHelperValue" : "##CHARTID##_13"
   }
 }, {
   "marshallId" : 30,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "CouchDB Nodes",
   "sf_description" : "",
+  "sf_discoveryQuery" : "plugin:couchdb",
+  "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -3904,7 +3915,7 @@
 }, {
   "marshallId" : 31,
   "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "Top nodes by Requests / Sec",
+  "sf_chart" : "Top Nodes by Requests / Sec",
   "sf_chartIndex" : 1509182068820,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -3990,6 +4001,7 @@
         "enabled" : false,
         "property" : "plugin_instance"
       } ],
+      "maxDecimalPlaces" : 1,
       "range" : -900000,
       "rangeEnd" : null,
       "sortPreference" : "",
@@ -4007,8 +4019,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 32,
@@ -4766,7 +4778,7 @@
 }, {
   "marshallId" : 35,
   "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "Top nodes by Request Processing Time",
+  "sf_chart" : "Top Nodes by Request Processing Time (ms)",
   "sf_chartIndex" : 1509185050317,
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -4851,6 +4863,7 @@
         "enabled" : false,
         "property" : "plugin_instance"
       } ],
+      "maxDecimalPlaces" : 1,
       "range" : -900000,
       "rangeEnd" : null,
       "sortPreference" : "",
@@ -4867,8 +4880,8 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
   "marshallId" : 36,
