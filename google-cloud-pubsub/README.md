@@ -37,75 +37,75 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 #### Interpreting Built-in dashboards
 
-##### Pub/Sub Overview
+**Pub/Sub Overview**
 
 - **Unacknowledged Messages Count** - Number of unacknowledged messages aggregated by subscription.
 
-[<img src='./img/overview-unack-messages-count.png' width=200px>](./img/overview-unack-messages-count.png)
+  [<img src='./img/overview-unack-messages-count.png' width=200px>](./img/overview-unack-messages-count.png)
 
 - **Oldest Unacknowledged Message(s)** - Age, in seconds, of the oldest unacknowledged message for each subscription.
 
-[<img src='./img/overview-oldest-unack-message.png' width=200px>](./img/overview-oldest-unack-message.png)
+  [<img src='./img/overview-oldest-unack-message.png' width=200px>](./img/overview-oldest-unack-message.png)
 
 - **Outstanding Messages Count** - Number of messages delivered to a subscription's push endpoint, but not yet acknowledged.
 
 - **Backlog Size** - Total size in bytes of unacknowledged messages aggregated by subscription.
 
-[<img src='./img/overview-backlog-size.png' width=200px>](./img/overview-backlog-size.png)
+  [<img src='./img/overview-backlog-size.png' width=200px>](./img/overview-backlog-size.png)
 
 - **Subscription Pull Ack. Requests** - Cumulative counts of acknowledge requests aggregated by subscription.
 
-[<img src='./img/overview-subscription-pull-ack-req.png' width=200px>](./img/overview-subscription-pull-ack-req.png)
+  [<img src='./img/overview-subscription-pull-ack-req.png' width=200px>](./img/overview-subscription-pull-ack-req.png)
 
 - **Subscription Pull Ack. Message Ops** - Cumulative counts of acknowledge message ops aggregated by subscription.
 
-[<img src='./img/overview-subscription-pull-ack-ops.png' width=200px>](./img/overview-subscription-pull-ack-ops.png)
+  [<img src='./img/overview-subscription-pull-ack-ops.png' width=200px>](./img/overview-subscription-pull-ack-ops.png)
 
 - **Subscription Pull Message Ops** - Cumulative counts of pull message ops aggregated by subscription.
 
-[<img src='./img/overview-subscription-pull-message-ops.png' width=200px>](./img/overview-subscription-pull-message-ops.png)
+  [<img src='./img/overview-subscription-pull-message-ops.png' width=200px>](./img/overview-subscription-pull-message-ops.png)
 
 - **Subscription Pull Requests** - Cumulative counts of pull requests aggregated by subscription.
 
-[<img src='./img/overview-subscription-pull-request.png' width=200px>](./img/overview-subscription-pull-request.png)
+  [<img src='./img/overview-subscription-pull-request.png' width=200px>](./img/overview-subscription-pull-request.png)
 
-##### Pub/Sub Subscription
+**Pub/Sub Subscription**
 
 - **Backlog Size** - Total byte size of the unacknowledged messages in a subscription.
 
-[<img src='./img/subscription-backlog-size.png' width=200px>](./img/subscription-backlog-size.png)
+  [<img src='./img/subscription-backlog-size.png' width=200px>](./img/subscription-backlog-size.png)
 
 - **Cost per Operation** - Cumulative cost of operations per subscription, measured in bytes. This is used to measure utilization for quotas.
 
-[<img src='./img/subscription-cost-per-operation.png' width=200px>](./img/subscription-cost-per-operatione.png)
+  [<img src='./img/subscription-cost-per-operation.png' width=200px>](./img/subscription-cost-per-operation.png)
 
 - **Undelivered Messages** - Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.
 
-[<img src='./img/subscription-undelivered-messages-size.png' width=200px>](./img/subscription-undelivered-messages.png)
+  [<img src='./img/subscription-undelivered-messages-size.png' width=200px>](./img/subscription-undelivered-messages.png)
 
 - **Outstanding Messages** - Number of messages delivered to a subscription's push endpoint, but not yet acknowledged.
 
 - **Oldest Unacknowledged Message(s)** - Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog message) in a subscription.
 
-[<img src='./img/subscription-unack-messages.png' width=200px>](./img/subscription-unack-messages.png)
+  [<img src='./img/subscription-unack-messages.png' width=200px>](./img/subscription-unack-messages.png)
 
-##### Pub/Sub Topic
+**Pub/Sub Topic**
 
 - **Send Requests** - Number of publish requests.
 
-[<img src='./img/topic-send-requests.png' width=200px>](./img/topic-send-requests.png)
+  [<img src='./img/topic-send-requests.png' width=200px>](./img/topic-send-requests.png)
 
 - **Send Message Ops** - Number of publish message operations.
 
-[<img src='./img/topic-send-message-ops.png' width=200px>](./img/topic-send-message-ops.png)
+  [<img src='./img/topic-send-message-ops.png' width=200px>](./img/topic-send-message-ops.png)
 
 - **Bytes per Operation** - Cost of operations per topic, measured in bytes. This is used to measure utilization for quotas.
 
-[<img src='./img/topic-bytes-per-opertation.png' width=200px>](./img/topic-bytes-per-opertation.png)
+  [<img src='./img/topic-bytes-per-opertation.png' width=200px>](./img/topic-bytes-per-opertation.png)
 
 - **Average Message Size** - Average of publish message sizes (in bytes).
 
-[<img src='./img/topic-average-message-size.png' width=200px>](./img/topic-average-message-size.png)
+  [<img src='./img/topic-average-message-size.png' width=200px>](./img/topic-average-message-size.png)
 
 
 ### METRICS

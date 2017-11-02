@@ -31,41 +31,41 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 #### Interpreting Built-in dashboards
 
-##### Cloud Function
+**Cloud Function**
 
 - **Executions / min** - Count of function executions per minute.
 
-[<img src='./img/function-exces-per-min.png' width=200px>](./img/function-exces-per-min.png)
+  [<img src='./img/function-exces-per-min.png' width=200px>](./img/function-exces-per-min.png)
 
 - **Executions / min Trend** - Trend of function executions per minute.
 
- [<img src='./img/function-exces-per-min-trend.png' width=200px>](./img/function-exces-per-min-trend.png)
+  [<img src='./img/function-execs-per-min-trend.png' width=200px>](./img/function-execs-per-min-trend.png)
 
 - **Average Execution Time (ms)** - Average execution time for a function.
 
- [<img src='./img/function-avg-exec-time.png' width=200px>](./img/function-avg-exec-time.png)
+  [<img src='./img/function-avg-exec-time.png' width=200px>](./img/function-avg-exec-time.png)
 
 - **Average Execution Time (ms) Trend** - Average execution time trend for a function.
 
- [<img src='./img/function-avg-exec-time-trend.png' width=200px>](./img/function-avg-exec-time-trend.png)
+  [<img src='./img/function-avg-exec-time-trend.png' width=200px>](./img/function-avg-exec-time-trend.png)
 
-##### Cloud Functions Overview
+**Cloud Functions Overview**
 
 - **Executions / min** - List of executions per minute for all functions.
 
-[<img src='./img/functions-overview-execs-per-min.png' width=200px>](./img/functions-overview-execs-per-min.png)
+  [<img src='./img/functions-overview-execs-per-min.png' width=200px>](./img/functions-overview-execs-per-min.png)
 
 - **Executions / min by Status** - List of function executions per minute grouped by status.
 
-[<img src='./img/functions-overview-execs-per-min-status.png' width=200px>](./img/functions-overview-execs-per-min-status.png)
+  [<img src='./img/functions-overview-execs-per-min-status.png' width=200px>](./img/functions-overview-execs-per-min-status.png)
 
 - **Average Execution Time (ms)** - List of average execution times for all functions.
 
-[<img src='./img/functions-overview-exec-times.png' width=200px>](./img/functions-overview-exec-times.png)
+  [<img src='./img/functions-overview-exec-times.png' width=200px>](./img/functions-overview-exec-times.png)
 
 - **Execution Time (ms)** - Trend of average execution times for all functions.
 
-[<img src='./img/functions-overview-exec-times.png' width=200px>](./img/functions-overview-exec-times.png)
+  [<img src='./img/functions-overview-exec-times.png' width=200px>](./img/functions-overview-exec-times.png)
 
 ### METRICS
 
