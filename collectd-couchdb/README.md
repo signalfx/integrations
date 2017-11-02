@@ -50,7 +50,7 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 
 1. Download [collectd-couchdb](https://github.com/signalfx/collectd-couchdb). Place the `couchdb_plugin.py` file in `/usr/share/collectd/collectd-couchdb`
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-couchdb/10-couchdb.conf) for this plugin to `/etc/collectd/managed_config`
+2. Modify the [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf) for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
