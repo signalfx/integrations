@@ -28,7 +28,7 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 
 - **COUCHDB NODE**: Provides metrics from a single CouchDB node.
 
-  [<img src='./img/couchdb-node-dashboard.png' width=200px>](./img/couchdb-node-dashboard-top.png)
+  [<img src='./img/couchdb-node-dashboard.png' width=200px>](./img/couchdb-node-dashboard.png)
 
 - **COUCHDB NODES**: Provides metrics from CouchDB nodes on a particular host.
 
@@ -61,7 +61,7 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 
 ### CONFIGURATION
 
-Using the example configuration file [10-couchdb.conf](https://github.com/signalfx/integrations/tree/release/collectd-couchdb/10-couchdb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and lets you to connect to the CouchDB members
+Using the example configuration file [10-couchdb.conf](https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and lets you to connect to the CouchDB members
 
 | Configuration option | Definition | Example value |
 | ---------------------|------------|---------------|
@@ -73,7 +73,7 @@ Using the example configuration file [10-couchdb.conf](https://github.com/signal
 | Username | Username required for authentication of CouchDB | "admin" |
 | Password | Password required for authentication of CouchDB | "admin" |
 | IncludeMetric | Metric emitted by `_stats` api to be enabled. | "metric listed in docs" |
-| ExcludeMetric | Metric emitted by `_stats` api to be disabled. | "metric listed in docs"
+| ExcludeMetric | Metric emitted by `_stats` api to be disabled. | "metric listed in docs" |
 | Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to CouchDB API. | 10 |
 | ssl\_keyfile | Path to the keyfile | "path/to/file" |
