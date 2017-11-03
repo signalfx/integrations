@@ -6,5 +6,5 @@
   "logo_large": "integration_googlecloudbigtable.png",
   "logo_small": "integration_googlecloudbigtable@2x.png",
   "data_signature": "service:\"bigtable\"",
-  "in_app_categories": ["GCPServicesMonitored"]
+  "in_app_categories": []
 }
