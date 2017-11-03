@@ -6,5 +6,5 @@
   "logo_large": "integration_googleappengine.png",
   "logo_small": "integration_googleappengine@2x.png",
   "data_signature": "service:\"appengine\"",
-  "in_app_categories": ["GCPServicesMonitored"]
+  "in_app_categories": []
 }
