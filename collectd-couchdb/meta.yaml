@@ -1,5 +1,5 @@
 { "display_name":"CouchDB",
-  "description": "Monitor CouchdDB using the SignalFx collectd agent.",
+  "description": "Monitor CouchDB using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-couchdb",
   "code": "https://github.com/signalfx/collectd-couchdb",
   "featured": false,
