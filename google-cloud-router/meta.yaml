@@ -1,0 +1,10 @@
+{ "display_name":"Google Cloud Router",
+  "description": "SignalFx's integration with Google Cloud Router",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-router",
+  "code": "https://cloud.google.com/router",
+  "featured": false,
+  "logo_large": "integration_googlecloudrouter.png",
+  "logo_small": "integration_googlecloudrouter@2x.png",
+  "data_signature": "service:\"router\"",
+  "in_app_categories": ["GCPServicesMonitored"]
+}
