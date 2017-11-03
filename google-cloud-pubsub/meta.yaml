@@ -6,5 +6,5 @@
   "logo_large": "integration_googlecloudpubsub.png",
   "logo_small": "integration_googlecloudpubsub@2x.png",
   "data_signature": "service:\"pubsub\"",
-  "in_app_categories": ["GCPServicesMonitored"]
+  "in_app_categories": []
 }
