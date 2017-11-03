@@ -1,0 +1,10 @@
+{ "display_name":"CouchDB",
+  "description": "Monitor CouchDB using the SignalFx collectd agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-couchdb",
+  "code": "https://github.com/signalfx/collectd-couchdb",
+  "featured": false,
+  "logo_large": "/images/repos/collectd-couchdb/img/integrations_couchdb.png",
+  "logo_small": "/images/repos/collectd-couchdb/img/integrations_couchdb%402x.png",
+  "data_signature": "plugin:\"couchdb\"",
+  "in_app_categories": ["servicesMonitored"]
+}
