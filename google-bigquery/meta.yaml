@@ -6,5 +6,5 @@
   "logo_large": "integration_googlebigquery.png",
   "logo_small": "integration_googlebigquery@2x.png",
   "data_signature": "service:\"bigquery\"",
-  "in_app_categories": []
+  "in_app_categories": ["GCPServicesMonitored"]
 }
