@@ -4,5 +4,5 @@
   "featured": false,
   "logo_large": "/images/repos/newrelic/img/integrations_newrelic.png",
   "logo_small": "/images/repos/newrelic/img/integrations_newrelic.png",
-  "data_signature": "metric_source:\"NewRelic\"",
+  "data_signature": "metric_source:\"NewRelic\""
 }
