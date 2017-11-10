@@ -127,6 +127,31 @@ Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_redis.png)
 
+#### Monitoring length of array keys
+To monitor the length of array keys, the key and database index must be specified in the config file.
+Specify keys in the config file in the form "llen_key $db_index $key_name".
+Note: To avoid duplication reporting, this should only be reported in one node. Keys can be defined in either the 
+master or slave config. Keys will be reported to SignalFx as "gauge.key_llen", with dimensions being the database index, and the key name.
+
+```
+<Plugin python>
+  ModulePath "/opt/collectd_plugins"
+  Import "redis_info"
+
+  <Module redis_info>
+    Host "127.0.0.1"
+    Port 9100
+    llen_key 0 "mylist"
+    llen_key 0 "mylist2"
+    llen_key 0 "mylist3"
+    Verbose true
+    Instance "instance_9100"
+    Redis_uptime_in_seconds "gauge"
+    Redis_used_memory "bytes"
+    Redis_used_memory_peak "bytes"
+  </Module>
+```
+
 ### METRICS
 
 For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
