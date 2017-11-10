@@ -69,6 +69,7 @@ Using the example configuration files [10-redis\_master.conf](https://github.com
 | Host | Hostname |The Host option is the hostname or IP-address where the Redis instance is running.|
 |Port |Port| The Port option is the TCP port on which the Redis instance accepts connections. Either a service name of a port number may be given. Please note that numerical port numbers must be given as a string, too.|
 | Auth | Password | Optionally specify a password to use for AUTH. |
+| SendListLength | (DB Index) (Key pattern) | Specify a pattern of keys to lists for which to send their length as a metric. See below for more details. |
 
 #### Note: Monitoring multiple Redis instances on one host
 
@@ -127,12 +128,24 @@ Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_redis.png)
 
-#### Monitoring length of array keys
-To monitor the length of array keys, the key and database index must be specified in the config file.
-Specify keys in the config file in the form "llen_key $db_index $key_name".
-Note: To avoid duplication reporting, this should only be reported in one node. Keys can be defined in either the 
-master or slave config. Keys will be reported to SignalFx as "gauge.key_llen", with dimensions being the database index, and the key name.
+#### Monitoring length of Redis lists
+To monitor the length of list keys, the key and database index must be
+specified in the config file. Specify keys in the config file in the form
+`SendListLength $db_index "$key_name"`.  `$key_name` can be a globbed pattern
+(only `*` is supported), in which case all keys matching that glob will be
+processed.  Don't forget to surround the pattern with double quotes or else
+Collectd will strip out the asterisks.  If any keys match the glob that are not
+lists, an error will be sent to the collectd logs.
 
+Lengths will be reported to SignalFx under the metric `gauge.key_llen`, a
+separate time series for each list.
+
+**Warning**: The `KEYS` command is used to match the globs so don't try and
+match something that is very big, as this command is not highly optimized and
+can block other commands from executing.
+
+Note: To avoid duplication reporting, this should only be reported in one node.
+Keys can be defined in either the master or slave config.
 ```
 <Plugin python>
   ModulePath "/opt/collectd_plugins"
@@ -141,9 +154,9 @@ master or slave config. Keys will be reported to SignalFx as "gauge.key_llen", w
   <Module redis_info>
     Host "127.0.0.1"
     Port 9100
-    llen_key 0 "mylist"
-    llen_key 0 "mylist2"
-    llen_key 0 "mylist3"
+    # Matches "mylist1", "mylist-test", etc...  Don't forget double quotes!
+    SendListLength 0 "mylist*"
+    SendListLength 0 "message-queue"
     Verbose true
     Instance "instance_9100"
     Redis_uptime_in_seconds "gauge"
