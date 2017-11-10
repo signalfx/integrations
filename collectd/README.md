@@ -62,8 +62,8 @@ Run the following command to install the SignalFx collectd agent ([click here to
 
 SignalFx supports two Docker images of the SignalFx collectd agent for containerized environments:
 
-- Alpine: [quay.io/signalfuse/collectd-alpine](quay.io/signalfuse/collectd-alpine)
-- Ubuntu: [quay.io/signalfuse/collectd](quay.io/signalfuse/collectd)
+- Alpine: [quay.io/signalfuse/collectd-alpine](http://www.quay.io/signalfuse/collectd-alpine)
+- Ubuntu: [quay.io/signalfuse/collectd](http://www.quay.io/signalfuse/collectd)
 
 Run the following command to start the container, replacing `IMAGE_URL` with the URL of the desired image:
 ```

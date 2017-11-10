@@ -6,5 +6,5 @@
   "logo_large": "integration_googlecloudstorage.png",
   "logo_small": "integration_googlecloudstorage@2x.png",
   "data_signature": "service:\"storage\"",
-  "in_app_categories": []
+  "in_app_categories": ["GCPServicesMonitored"]
 }
