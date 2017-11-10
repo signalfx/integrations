@@ -1,9 +1,9 @@
 ---
 title: Key LLEN
-brief: Length of an array key
+brief: Length of an list key
 metric_type: gauge
 ---
 
-### Length of an array key
+### Length of an list key
 
-> gauge.key_llen : Length of an array key
+> gauge.key_llen : Length of an list key
