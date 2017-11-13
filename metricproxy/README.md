@@ -117,7 +117,7 @@ You can use the proxy to duplicate a data stream to multiple destinations. Add e
   {
     "type": "signalfx-json",
     "DefaultAuthToken": "ABCD",
-    "Name": "signalfxforwarder",
+    "Name": "signalfxforwarder"
   },
   {
     "Filename": "/tmp/filewrite.csv",
