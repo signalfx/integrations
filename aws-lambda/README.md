@@ -8,7 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Lambda via [Amazon CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+If you have enabled the SignalFx Amazon Web Services integration and are syncing Cloudwatch metrics, metrics related to Lambda functions will automatically be available to view, as shown in [Importing Lambda Metadata](https://docs.signalfx.com/en/latest/integrations/aws-info.html#lambda-metadata).
+
+You can use one of our wrappers (discussed below) to monitor your functions. If you use a wrapper, in addition to viewing the standard metrics our wrappers make available, you can send in custom metrics to monitor apps running inside the Lambda.
 
 #### FEATURES
 
@@ -26,13 +28,11 @@ Use SignalFx to monitor Lambda via [Amazon CloudWatch](https://github.com/signal
 
   [<img src='./img/dashboard_lambda_instance_cloudwatch.png' width=200px>](./img/dashboard_lambda_instance_cloudwatch.png)
   
-- **Lambda Instance Cloudwatch**: Instance view for specific Lambda function via SignalFx Wrapper.
+- **Lambda Instance SignalFx Wrapper**: Instance view for specific Lambda function via SignalFx Wrapper.
 
   [<img src='./img/dashboard_lambda_instance_wrapper.png' width=200px>](./img/dashboard_lambda_instance_wrapper.png)
 
-### INSTALLATION
-
-SignalFx provides two methods of monitoring Lambda metrics. SignalFx Wrapper provides real-time invocations, errors and cold starts while CloudWatch provides an accurate durations. 
+### INSTALLATION 
 
 #### SignalFx Wrapper
 
@@ -43,8 +43,8 @@ To use SignalFx Wrapper, include SignalFx Lambda Wrapper in the your Lambda func
 Instructions are provided in each of the Lambda wrapper.
 
 - [Java](https://github.com/signalfx/lambda-java)
-- [Python](https://github.com/signalfx/lambda-nodejs)
-- [NodeJs](https://github.com/signalfx/lambda-python)
+- [NodeJs](https://github.com/signalfx/lambda-nodejs)
+- [Python](https://github.com/signalfx/lambda-python)
 
 #### CloudWatch
 
@@ -94,7 +94,7 @@ The Lambda wrapper adds the following dimensions to all data points sent to Sign
 
 #### CloudWatch
 
-For more information about the metrics emitted by Lambda, visit the service's homepage at https://aws.amazon.com/lambda/.
+For more information about the metrics emitted by Lambda, see the documentation at https://docs.signalfx.com/en/latest/integrations/aws-info.html#lambda-metadata.
 
 ### LICENSE
 
