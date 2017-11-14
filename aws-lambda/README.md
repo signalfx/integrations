@@ -38,7 +38,7 @@ You can use one of our wrappers (discussed below) to monitor your functions. If 
 
 SignalFx Wrapper provides real time monitoring of lambda functions as well as ability to send custom metric from your applications to SignalFx.
 
-To use SignalFx Wrapper, include SignalFx Lambda Wrapper in the your Lambda function.
+To use SignalFx Wrapper, include SignalFx Lambda Wrapper in your Lambda function.
 
 Instructions are provided in each of the Lambda wrapper.
 
