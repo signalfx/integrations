@@ -16,21 +16,21 @@ You can use one of our wrappers (discussed below) to monitor your functions. If 
 
 ##### Built-in dashboards
 
-- **Lambda Overview Cloudwatch**: Overview of all data from Lambda via CloudWatch.
+- **Lambda (AWS) Overview**: Overview of all data from Lambda via CloudWatch.
 
-  [<img src='./img/dashboard_lambda_overview_cloudwatch.png' width=200px>](./img/dashboard_lambda_overview_cloudwatch.png)
+  [<img src='./img/lambda-aws-overview-db.png' width=200px>](./img/lambda-aws-overview-db.png)
 
-- **Lambda Overview SignalFx Wrapper**: Overview of all data from Lambda via SignalFx Wrapper.
+- **Lambda (SignalFx) Overview**: Overview of all data from Lambda via SignalFx Wrapper.
 
-  [<img src='./img/dashboard_lambda_overview_cloudwatch.png' width=200px>](./img/dashboard_lambda_overview_wrapper.png)
+  [<img src='./img/lambda-sfx-overview-db.png' width=200px>](./img/lambda-sfx-overview-db.png)
   
-- **Lambda Instance Cloudwatch**: Instance view for specific Lambda function via CloudWatch.
+- **Lambda (AWS) Function**: Instance view for specific Lambda function via CloudWatch.
 
-  [<img src='./img/dashboard_lambda_instance_cloudwatch.png' width=200px>](./img/dashboard_lambda_instance_cloudwatch.png)
+  [<img src='./img/lambda-aws-function-db.png' width=200px>](./img/lambda-aws-function-db.png)
   
-- **Lambda Instance SignalFx Wrapper**: Instance view for specific Lambda function via SignalFx Wrapper.
+- **Lambda (SignalFx) Function**: Instance view for specific Lambda function via SignalFx Wrapper.
 
-  [<img src='./img/dashboard_lambda_instance_wrapper.png' width=200px>](./img/dashboard_lambda_instance_wrapper.png)
+  [<img src='./img/lambda-sfx-function-db.png' width=200px>](./img/lambda-sfx-function-db.png)
 
 ### INSTALLATION 
 
