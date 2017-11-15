@@ -72,20 +72,20 @@ The SignalFx Lambda wrapper sends the following metrics to SignalFx:
 
 | Metric Name  | Type | Description |
 | ------------- | ------------- | ---|
-| function.invocations  | Counter  | Count number of Lambda invocations|
-| function.cold_starts  | Counter  | Count number of cold starts|
-| function.errors  | Counter  | Count number of errors from underlying Lambda handler|
+| function.invocations  | Counter  | Count of Lambda invocations|
+| function.cold_starts  | Counter  | Count of cold starts|
+| function.errors  | Counter  | Count of errors from underlying Lambda handler|
 | function.duration  | Gauge  | Milliseconds in execution time of underlying Lambda handler|
 
-The Lambda wrapper adds the following dimensions to all data points sent to SignalFx:
+The Lambda wrappers add several dimensions to data points sent to SignalFx. These dimensions can be used for filtering and aggregation.
 
 | Dimension | Description |
 | ------------- | ---|
-| lambda_arn  | ARN of the Lambda function instance |
-| aws_region  | AWS Region  |
-| aws_account_id | AWS Account ID  |
-| aws_function_name  | AWS Function Name |
-| aws_function_version  | AWS Function Version |
+| lambda_arn  | Amazon Resource Name (ARN) of the Lambda function instance |
+| aws_region  | AWS Region where the Lambda function is executed  |
+| aws_account_id | AWS Account ID associated with the Lambda function  |
+| aws_function_name  | Name of the Lambda function |
+| aws_function_version  | Version if the Lambda function |
 | aws_function_qualifier  | AWS Function Version Qualifier (version or version alias if it is not an event source mapping Lambda invocation) |
 | event_source_mappings  | AWS Function Name (if it is an event source mapping Lambda invocation) |
 | aws_execution_env  | AWS execution environment (e.g. AWS_Lambda_nodejs6.10) |
