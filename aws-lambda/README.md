@@ -14,7 +14,7 @@ SignalFx enables you to monitor the health and performance of your Lambda functi
 
 -  You can use one of our language-specific wrappers to monitor your functions. Using a wrapper lets you see invocations, errors and durations for your functions in real time, and also provides insight into whether a given function is being impacted by cold starts.
 
-   The wrapper is also a way for you to send in custom application or business metrics from within a Lambda function, analogous to what you can do with our client libraries for code running in non-Lambda environments.
+-  The wrapper is also a way for you to send in custom application or business metrics from within a Lambda function, analogous to what you can do with our client libraries for code running in non-Lambda environments.
 
 #### FEATURES
 
@@ -86,12 +86,12 @@ The Lambda wrappers add several dimensions to data points sent to SignalFx. Thes
 | Dimension | Description |
 | ------------- | ---|
 | lambda_arn  | Amazon Resource Name (ARN) of the Lambda function instance |
-| aws_region  | AWS Region where the Lambda function is executed  |
+| aws_region  | AWS region where the Lambda function is executed  |
 | aws_account_id | AWS Account ID associated with the Lambda function  |
 | aws_function_name  | Name of the Lambda function |
 | aws_function_version  | Version of the Lambda function |
-| aws_function_qualifier  | AWS Function Version Qualifier (version or version alias if it is not an event source mapping Lambda invocation) |
-| event_source_mappings  | AWS Function Name (if it is an event source mapping Lambda invocation) |
+| aws_function_qualifier  | AWS function version qualifier (version or version alias if it is not an event source mapping Lambda invocation) |
+| event_source_mappings  | AWS function name (if it is an event source mapping Lambda invocation) |
 | aws_execution_env  | AWS execution environment (e.g. AWS_Lambda_nodejs6.10) |
 | function_wrapper_version  | SignalFx function wrapper qualifier (e.g. signalfx-lambda-0.0.9) |
 | metric_source | The literal value of 'lambda_wrapper' |
