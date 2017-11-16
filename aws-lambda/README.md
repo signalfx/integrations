@@ -8,9 +8,13 @@
 
 ### DESCRIPTION
 
-If you have enabled the SignalFx Amazon Web Services integration and are syncing Cloudwatch metrics, metrics related to Lambda functions will automatically be available to view, as shown in [Importing Lambda Metadata](https://docs.signalfx.com/en/latest/integrations/aws-info.html#lambda-metadata).
+SignalFx enables you to monitor the health and performance of your Lambda functions via metrics on total invocations, errors, durations and more. In addition, you can easily send custom application or business metrics from within your Lambda functions.
 
-You can use one of our wrappers (discussed below) to monitor your functions. If you use a wrapper, in addition to viewing the standard metrics our wrappers make available, you can send in custom metrics to monitor apps running inside the Lambda.
+- If you have enabled the SignalFx Amazon Web Services integration and are syncing Cloudwatch metrics, [those metrics](https://docs.signalfx.com/en/latest/integrations/aws-info.html#lambda-metadata) will automatically be available to view.
+
+-  You can use one of our language-specific wrappers to monitor your functions. Using a wrapper lets you see invocations, errors and durations for your functions in real time, and also provides insight into whether a given function is being impacted by cold starts.
+
+   The wrapper is also a way for you to send in custom application or business metrics from within a Lambda function, analogous to what you can do with our client libraries for code running in non-Lambda environments.
 
 #### FEATURES
 
@@ -40,7 +44,7 @@ SignalFx Wrapper provides real time monitoring of lambda functions as well as ab
 
 To use SignalFx Wrapper, include SignalFx Lambda Wrapper in your Lambda function.
 
-Instructions are provided in each of the Lambda wrapper.
+Instructions are provided in each of the Lambda wrapper readme files.
 
 - [Java](https://github.com/signalfx/lambda-java)
 - [NodeJs](https://github.com/signalfx/lambda-nodejs)
@@ -85,7 +89,7 @@ The Lambda wrappers add several dimensions to data points sent to SignalFx. Thes
 | aws_region  | AWS Region where the Lambda function is executed  |
 | aws_account_id | AWS Account ID associated with the Lambda function  |
 | aws_function_name  | Name of the Lambda function |
-| aws_function_version  | Version if the Lambda function |
+| aws_function_version  | Version of the Lambda function |
 | aws_function_qualifier  | AWS Function Version Qualifier (version or version alias if it is not an event source mapping Lambda invocation) |
 | event_source_mappings  | AWS Function Name (if it is an event source mapping Lambda invocation) |
 | aws_execution_env  | AWS execution environment (e.g. AWS_Lambda_nodejs6.10) |
