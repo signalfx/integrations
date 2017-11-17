@@ -42,7 +42,7 @@ This plugin requires:
 
 - collectd 4.9+
 - Python plugin for collectd (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd))
-- Python 2.3+
+- Python 2.3+ (2.7.5+ for DC/OS strict mode)
 - Mesos 0.19.0 or greater
 
 ### INSTALLATION
