@@ -79,10 +79,10 @@ Using the example configuration files [10-mesos-master.conf](././10-mesos-master
 | Port | The port on which the Mesos instance is listening for connections. | %%%MASTER\_PORT%%% |
 | Verbose | Enable verbose logging from this plugin to collectd's log file | false |
 | IncludeSystemHealth | Enable the sending of DC/OS System Service Health Metrics (this option is only applicable for a DC/OS master) | false |
-| dcos_sfx_username | New DC/OS username created for the plugin (this option is only applicable for DC/OS in strict mode) | sfx-collectd |
-| dcos_sfx_password | Password of the above username (this option is only applicable for DC/OS in strict mode) | signalfx |
-| master_url | Internal URL of the master in the Mesos cluster (this option is only applicable for DC/OS Agent in strict mode) | "https://10.0.129.78" |
-| ca_file_path |  Path to CA file required for server verification. If not provided, verification is skipped (this option is only applicable for DC/OS in strict mode and is optional) | "path/to/file" |
+| dcos\_sfx\_username | New DC/OS username created for the plugin (this option is only applicable for DC/OS in strict mode) | sfx-collectd |
+| dcos\_sfx\_password | Password of the above username (this option is only applicable for DC/OS in strict mode) | signalfx |
+| master\_url | Internal URL of the master in the Mesos cluster (this option is only applicable for DC/OS Agent in strict mode) | "https://10.0.129.78" |
+| ca\_file\_path |  Path to CA file required for server verification. If not provided, verification is skipped (this option is only applicable for DC/OS in strict mode and is optional) | "path/to/file" |
 
 ### USAGE
 
