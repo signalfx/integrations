@@ -56,7 +56,7 @@ This plugin requires:
 
 4. Restart collectd.
 
-5. **OPTIONAL**: This step needs to be followed when the Mesos cluster being monitored is running under a DC/OS operating in **strict** mode.
+5. **OPTIONAL**: This step needs to be followed when the Mesos cluster being monitored is running under a DC/OS cluster operating in **strict** mode.
     * Make a new user on DC/OS.
     * Give the new user the following permission strings:
         * `dcos:mesos:agent:endpoint:path:/metrics/snapshot	read`
