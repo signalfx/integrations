@@ -56,6 +56,13 @@ This plugin requires:
 
 4. Restart collectd.
 
+5. **OPTIONAL**: This step needs to be followed when the Mesos cluster being monitored is running under a DC/OS operating in **strict** mode.
+    * Make a new user on DC/OS.
+    * Give the new user the following permission strings:
+        * `dcos:mesos:agent:endpoint:path:/metrics/snapshot	read`
+        * `dcos:mesos:master:endpoint:path:/metrics/snapshot read`
+    * Configure the plugin with the required options. See below.
+
 ### CONFIGURATION
 
 Using the example configuration files [10-mesos-master.conf](././10-mesos-master.conf) or [10-mesos-slave.conf](././10-mesos-slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Mesos instance to be monitored.
@@ -70,6 +77,10 @@ Using the example configuration files [10-mesos-master.conf](././10-mesos-master
 | Port | The port on which the Mesos instance is listening for connections. | %%%MASTER\_PORT%%% |
 | Verbose | Enable verbose logging from this plugin to collectd's log file | false |
 | IncludeSystemHealth | Enable the sending of DC/OS System Service Health Metrics (this option is only applicable for a DC/OS master) | false |
+| dcos_sfx_username | New DC/OS username created for the plugin (this option is only applicable for DC/OS in strict mode) | sfx-collectd |
+| dcos_sfx_password | Password of the above username (this option is only applicable for DC/OS in strict mode) | signalfx |
+| master_url | Internal URL of the master in the Mesos cluster (this option is only applicable for DC/OS Agent in strict mode) | "https://10.0.129.78" |
+| ca_file_path |  Path to CA file required for server verification. If not provided, verification is skipped (this option is only applicable for DC/OS in strict mode and is optional) | "path/to/file" |
 
 ### USAGE
 
