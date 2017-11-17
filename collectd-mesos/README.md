@@ -42,7 +42,7 @@ This plugin requires:
 
 - collectd 4.9+
 - Python plugin for collectd (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd))
-- Python 2.3+
+- Python 2.3+ (2.7.5+ for DC/OS strict mode)
 - Mesos 0.19.0 or greater
 
 ### INSTALLATION
@@ -55,6 +55,15 @@ This plugin requires:
 3. Modify the configuration file to contain values that make sense for your environment, as described [below](#configuration).
 
 4. Restart collectd.
+
+5. **OPTIONAL**: This step needs to be followed when the Mesos cluster being monitored is running under a DC/OS cluster operating in **strict** mode.
+    * Make a new user on DC/OS.
+    * Give the new user the following permission strings:
+        * `dcos:mesos:agent:endpoint:path:/metrics/snapshot	read`
+        * `dcos:mesos:master:endpoint:path:/metrics/snapshot read`
+    * Configure the plugin with the required options. See below.
+
+**Note**: The `/system/health/v1` endpoint on port `1050` for DC/OS is not available if operating in strict mode.
 
 ### CONFIGURATION
 
@@ -70,6 +79,10 @@ Using the example configuration files [10-mesos-master.conf](././10-mesos-master
 | Port | The port on which the Mesos instance is listening for connections. | %%%MASTER\_PORT%%% |
 | Verbose | Enable verbose logging from this plugin to collectd's log file | false |
 | IncludeSystemHealth | Enable the sending of DC/OS System Service Health Metrics (this option is only applicable for a DC/OS master) | false |
+| dcos_sfx_username | New DC/OS username created for the plugin (this option is only applicable for DC/OS in strict mode) | sfx-collectd |
+| dcos_sfx_password | Password of the above username (this option is only applicable for DC/OS in strict mode) | signalfx |
+| master_url | Internal URL of the master in the Mesos cluster (this option is only applicable for DC/OS Agent in strict mode) | "https://10.0.129.78" |
+| ca_file_path |  Path to CA file required for server verification. If not provided, verification is skipped (this option is only applicable for DC/OS in strict mode and is optional) | "path/to/file" |
 
 ### USAGE
 
