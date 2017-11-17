@@ -63,6 +63,8 @@ This plugin requires:
         * `dcos:mesos:master:endpoint:path:/metrics/snapshot read`
     * Configure the plugin with the required options. See below.
 
+**Note**: The `/system/health/v1` endpoint on port `1050` for DC/OS is not available if operating in strict mode.
+
 ### CONFIGURATION
 
 Using the example configuration files [10-mesos-master.conf](././10-mesos-master.conf) or [10-mesos-slave.conf](././10-mesos-slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Mesos instance to be monitored.
