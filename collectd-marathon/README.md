@@ -69,7 +69,7 @@ Using the sample configuration file [20-collectd-marathon.conf](https://github.c
 | Import | Path to the name of the pythom module with out the .py extension | `marathon` |
 | LogTraces | Logs traces from the plugin's execution | `true` |
 | verbose | Turns on verbose log statements | `False` |
-| host | A python list of `["<host>", "<port>", "username", "password"]`.  The `username` and `password` are only required for Basic Authentication with the Marathon API. |  no default |
+| host | A python list of `["<scheme>","<host>", "<port>", "username", "password","<Boolean>"]`. The first option is either `http` or `https`. The `username` and `password` are only required for Basic Authentication with the Marathon API. The last option is a string that takes `True` or `False`. Set to true if operating DC/OS in strict mode |  no default |
 
 ### USAGE
 All metrics reported by the Marathon collectd plugin will contain the following dimensions:
