@@ -66,7 +66,7 @@ Using the sample configuration file [20-collectd-marathon.conf](https://github.c
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | `"/usr/share/collectd/collectd-marathon"` |
-| Import | Path to the name of the pythom module with out the .py extension | `marathon` |
+| Import | Path to the name of the python module with out the .py extension | `marathon` |
 | LogTraces | Logs traces from the plugin's execution | `true` |
 | verbose | Turns on verbose log statements | `False` |
 | host | A python list of `["<scheme>", "<host>", "<port>", "username", "password", "<is_dcos_strict_mode>"]`. `scheme` is either "http" or "https". The `username` and `password` are only required for Basic Authentication with the Marathon API. `is_dcos_strict_mode` is a string that takes "True" or "False". Set `is_dcos_strict_mode` to "True" and `scheme` to "https" if operating DC/OS in strict mode |  no default |
