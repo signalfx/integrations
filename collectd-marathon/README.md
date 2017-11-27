@@ -73,6 +73,26 @@ Using the sample configuration file [20-collectd-marathon.conf](https://github.c
 
 **Note**: Metrics from the `/metrics` endpoint are not available while operating in DC/OS strict mode.
 
+An example configuration would look like the following:
+
+```
+<LoadPlugin "python">
+  Globals true
+</LoadPlugin>
+
+<Plugin "python">
+  ModulePath "/usr/share/collectd/collectd-marathon"
+  Import "marathon"
+  LogTraces true
+  <Module "marathon">
+    # The last config is optional. It is "false" by default. Set it to "true" when
+    # operating DC/OS in strict mode
+    host  ["http", "localhost", "8080", "username", "password", "false"]
+    verbose False
+  </Module>
+</Plugin>
+```
+
 ### USAGE
 All metrics reported by the Marathon collectd plugin will contain the following dimensions:
 
