@@ -31,6 +31,8 @@ data:
 
       - type: collectd/docker
         dockerURL: unix:///var/run/docker.sock
+        excludedImages:
+          - ".*pause-amd64.*"
         dimensions:
           container_image: inspect:Config.Image
           container_id: inspect:Id
@@ -73,7 +75,6 @@ data:
       - type: collectd/mongodb
         discoveryRule: containerImage =~ "mongo" && privatePort == 27017
         # REQUIRED
-        username: admin
         databases:
         - mydatabase
 
