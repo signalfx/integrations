@@ -17,6 +17,8 @@ monitors:
 
   - type: collectd/docker
     dockerURL: unix:///var/run/docker.sock
+    excludedImages:
+      - ".*pause-amd64.*"
     dimensions:
       container_image: inspect:Config.Image
       container_id: inspect:Id
