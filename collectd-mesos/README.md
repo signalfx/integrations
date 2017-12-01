@@ -75,14 +75,49 @@ Using the example configuration files [10-mesos-master.conf](././10-mesos-master
 | Cluster | The name of the cluster to which the Mesos instance belongs. Appears in the dimension `cluster`. | "cluster-0" |
 | Instance | The name of this Mesos master/slave instance. Appears in the dimension `plugin_instance`. | "master-0" / "slave-0" |
 | Path | The location of the mesos-master/mesos-slave binary. | "/usr/sbin" |
+| scheme | Scheme the plugin needs to use to fetch metrics. It is either "http" or "https". | "http" |
 | Host  | The hostname or IP address of the Mesos instance to be monitored. | "%%%MASTER\_IP%%%" |
 | Port | The port on which the Mesos instance is listening for connections. | %%%MASTER\_PORT%%% |
 | Verbose | Enable verbose logging from this plugin to collectd's log file | false |
 | IncludeSystemHealth | Enable the sending of DC/OS System Service Health Metrics (this option is only applicable for a DC/OS master) | false |
+| ca\_file\_path |  Path to CA file required for server verification. If not provided, verification is skipped (this option is only applicable if ssl is enabled) | "path/to/file" |
 | dcos\_sfx\_username | New DC/OS username created for the plugin (this option is only applicable for DC/OS in strict mode) | sfx-collectd |
 | dcos\_sfx\_password | Password of the above username (this option is only applicable for DC/OS in strict mode) | signalfx |
-| master\_url | Internal URL of the master in the Mesos cluster (this option is only applicable for DC/OS Agent in strict mode) | "https://10.0.129.78" |
-| ca\_file\_path |  Path to CA file required for server verification. If not provided, verification is skipped (this option is only applicable for DC/OS in strict mode and is optional) | "path/to/file" |
+| dcos\_url | The DC/OS authentication endpoint (this is an optional config and is only applicable for DC/OS in strict mode) | "https://leader.mesos/acs/api/v1/auth/login" |
+
+**Note**: (Applicable if operating DC/OS in strict mode) The default `dcos_url` makes use of the `leader.mesos` hostname provided by DC/OS. If the hostname does not exist, `dcos_url` can be set by the user. See below example.
+
+Below is an example configuration:
+
+```
+<LoadPlugin "python">
+  Globals true
+</LoadPlugin>
+
+<Plugin "python">
+  ModulePath "/opt/collectd-mesos"
+
+  Import "mesos-master"
+
+  <Module "mesos-master">
+    Cluster "cluster-0"
+    Instance "master-0"
+    Path "/usr/sbin"
+    scheme "https"
+    Host "10.0.142.190"
+    Port 5050
+    Verbose false
+    IncludeSystemHealth false
+    dcos_sfx_username "test-collectd"
+    dcos_sfx_password "1234"
+    # Note that https://sfx-dco-elasticl-qyuyl8k0dc99-1879689557.us-west-2.elb.amazonaws.com is
+    # base URL of the DC/OS UI and /acs/api/v1/auth/login is the authentication endpoint the plugin
+    # uses to obtain token for subsequent requests. By default dcos_url takes -
+    # https://leader.mesos/acs/api/v1/auth/login
+    dcos_url "https://sfx-dco-elasticl-qyuyl8k0dc99-1879689557.us-west-2.elb.amazonaws.com/acs/api/v1/auth/login"
+  </Module>
+</Plugin>
+```
 
 ### USAGE
 
