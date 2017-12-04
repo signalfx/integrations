@@ -69,7 +69,7 @@ Using the sample configuration file [20-collectd-marathon.conf](https://github.c
 | Import | Path to the name of the python module with out the .py extension | `marathon` |
 | LogTraces | Logs traces from the plugin's execution | `true` |
 | verbose | Turns on verbose log statements | `False` |
-| host | A python list of `["<scheme>", "<host>", "<port>", "username", "password", "<is_dcos_strict_mode>"]`. `scheme` is either "http" or "https". The `username` and `password` are only required for Basic Authentication with the Marathon API. `is_dcos_strict_mode` is a string that takes "True" or "False". Set `is_dcos_strict_mode` to "True" and `scheme` to "https" if operating DC/OS in strict mode |  no default |
+| host | A python list of `["<scheme>", "<host>", "<port>", "username", "password", "<dcos_auth_url>"]`. `scheme` is either "http" or "https". The `username` and `password` are only required for Basic Authentication with the Marathon API. `dcos_auth_url` is a string that takes the dcos authentication URL which the plugin uses to get authentication tokens from. Set `scheme` to "https" if operating DC/OS in strict mode and `dcos_auth_url` to "https://leader.mesos/acs/api/v1/auth/login" (which is the default DNS entry provided by DC/OS) |  no default |
 
 **Note**: Metrics from the `/metrics` endpoint are not available while operating in DC/OS strict mode.
 
@@ -85,9 +85,10 @@ An example configuration would look like the following:
   Import "marathon"
   LogTraces true
   <Module "marathon">
-    # The last config is optional. It is "false" by default. Set it to "true" when
-    # operating DC/OS in strict mode
-    host  ["http", "localhost", "8080", "username", "password", "false"]
+    # Note that the last config option can also be set to the base URL of the
+    # DC/OS UI and /acs/api/v1/auth/login is the authentication endpoint the plugin
+    # uses to obtain token for subsequent requests.
+    host  ["https", "localhost", "8443", "username", "password", "https://leader.mesos/acs/api/v1/auth/login"]
     verbose False
   </Module>
 </Plugin>
