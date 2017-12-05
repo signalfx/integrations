@@ -35,7 +35,7 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
             yum install collectd-java
 
-    * Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+    * Ubuntu 12.04, 14.04, 16.04 & Debian 7, 8:
         - This plugin is included with [SignalFx's collectd package](https://support.signalfx.com/hc/en-us/articles/208080123).
 
 2. Download SignalFx's sample JMX configuration file [20-javageneric.conf](https://github.com/signalfx/integrations/blob/master/collectd-genericjmx/20-javageneric.conf)
