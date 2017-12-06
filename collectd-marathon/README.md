@@ -12,8 +12,6 @@ Metadata associated with the Marathon plugin for collectd can be found [here](ht
 
 ### DESCRIPTION
 
-This is the SignalFx Marathon plugin. Follow these instructions to install the Marathon plugin for collectd.
-
 The [collectd-marathon](https://github.com/signalfx/collectd-marathon) plugin collects metrics about Marathon applications and tasks.
 
 #### Features
