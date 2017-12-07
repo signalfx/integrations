@@ -19,7 +19,7 @@ SignalFx POPS can help you get the right data to SignalFx many different scenari
 
 SignalFx POPS is deployed as a container and requires the docker engine to run.
 
-We recommend placing POPS either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's carbon database.
+We recommend placing POPS either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints.
 
 #### Sizing details
 
