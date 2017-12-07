@@ -95,6 +95,7 @@ The SignalFx Point Of Presence Service is configured by environment variables wh
 #### Listeners
 
 SignalFx POPS listens for datapoints and events in the collectd and SignalFx formats.
+
 | protocol | endpoints |
 | -------- | -------- |
 | collectd | `/v1/collectd` |
