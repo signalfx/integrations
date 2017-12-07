@@ -119,8 +119,6 @@ There is a debug server that exposes some diagnostic information about the pops 
 
 POPS emits metrics about itself using the `SF_METRICS_STATSENDPOINT` and `SF_METRICS_AUTH_TOKEN`.
 
-For documentation of the metrics emitted by pops, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
