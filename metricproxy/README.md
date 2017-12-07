@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx metric proxy
 
-Metadata associated with the SignalFx metric proxy can be found [here](https://github.com/signalfx/integrations/tree/release/metricproxy). The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy).
+Information associated with the SignalFx metric proxy can be found [here](https://github.com/signalfx/integrations/tree/release/metricproxy). The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -19,7 +19,7 @@ The SignalFx metric proxy can help you get the right data to the right destinati
 
 The SignalFx metric proxy must be deployed on a system that is capable of running Go. All dependencies for this Go project are included in `/Godeps` in the project repository.
 
-We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's carbon database.
+We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's Carbon Database.
 
 #### Sizing details
 
@@ -46,17 +46,11 @@ The size of the machine that hosts the proxy depends on the amount of data that 
 
 #### Note: Deploying using Docker
 
- The SignalFx metric proxy is also packaged as a Docker image that has been built and deployed
- to [quay.io](https://quay.io/repository/signalfx/metricproxy). This image does not include configuration.
- To use this image, ensure that you have a `sfdbproxy.conf` file cross-mounted to `/var/config/sfproxy/sfdbproxy.conf`
- for the container to use. As an example, if you have the configuration file setup on the host at the location
- `/tmp/proxy/sfdbproxy.conf` then the docker command would be `docker run -ti -v /tmp/proxy:/var/config/sfproxy quay.io/signalfx/metricproxy`
+ The SignalFx metric proxy is also packaged as a Docker image that has been built and deployed to [quay.io](https://quay.io/repository/signalfx/metricproxy). This image does not include configuration. To use this image, ensure that you have a `sfdbproxy.conf` file cross-mounted to `/var/config/sfproxy/sfdbproxy.conf` for the container to use. As an example, if you have the configuration file setup on the host at the location `/tmp/proxy/sfdbproxy.conf` then the docker command would be `docker run -ti -v /tmp/proxy:/var/config/sfproxy quay.io/signalfx/metricproxy`
 
 ### CONFIGURATION
 
-See the [example configuration](https://github.com/signalfx/metricproxy/blob/master/exampleSfdbproxy.conf) file for an example of how
-configuration looks.  Configuration is a JSON file with two important fields:
-`ListenFrom` and `ForwardTo`.
+See the [example configuration](https://github.com/signalfx/metricproxy/blob/master/exampleSfdbproxy.conf) file for an example of how configuration looks.  Configuration is a JSON file with two important fields: `ListenFrom` and `ForwardTo`.
 
 #### ListenFrom
 
