@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/pops/img/integrations_pops.png) SignalFx Point of Presence Service (POPS)
 
-Metadata associated with the SignalFx POPS can be found [here](https://github.com/signalfx/integrations/tree/release/pops). The relevant code for the project can be found [here](https://github.com/signalfx/pops).
+Information associated with the SignalFx POPS can be found [here](https://github.com/signalfx/integrations/tree/release/pops). The relevant code for the project can be found [here](https://github.com/signalfx/pops).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
