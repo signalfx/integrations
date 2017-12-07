@@ -19,7 +19,7 @@ The SignalFx metric proxy can help you get the right data to the right destinati
 
 The SignalFx metric proxy must be deployed on a system that is capable of running Go. All dependencies for this Go project are included in `/Godeps` in the project repository.
 
-We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's carbon database.
+We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's Carbon Database.
 
 #### Sizing details
 
