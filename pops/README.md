@@ -45,12 +45,12 @@ A host comparable to AWS's m3.large is known to handle up to approximately 400 t
 1. Identify a server on which to deploy SignalFx POPS.
 1. Ensure that the docker engine is installed on the server
 1. Run the SignalFx POPS container specifying the `VERSION_TAG` with a valid [image tag](https://quay.io/repository/signalfx/pops?tab=tags), the port to expose on the host and any [configuration](#configuration) options you wish to assign to the container.
-    ```bash
-    $ docker run -tdi \
-      -e "SF_METRICS_AUTH_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
-      -p 0.0.0.0:8100:8100 \
-      quay.io/signalfx/pops:<VERSION_TAG>
-    ```
+
+        $ docker run -tdi \
+          -e "SF_METRICS_AUTH_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
+          -p 0.0.0.0:8100:8100 \
+          quay.io/signalfx/pops:<VERSION_TAG>
+
     It is recommended to use a specific version rather than `latest`.
 1. Begin transmitting data to the host and port on which SignalFx POPS is running. The data will be transformed and forwarded.
 
@@ -62,9 +62,9 @@ If a binary must be executed outside of the pops container, it can be built by c
 1. `cd` into the repository directory.
 1. Issue the following make command to build the pops binary for linux in a container.  It will output the binary `pops` to `output/linux/`.
 1. Execute the binary passing in the [configurations](#configuration) as in-line variables.
-      ```bash
-      $ SF_METRICS_AUTH_TOKEN=YOUR_SIGNALFX_API_TOKEN ./output/linux/pops
-      ```
+
+        $ SF_METRICS_AUTH_TOKEN=YOUR_SIGNALFX_API_TOKEN ./output/linux/pops
+
 
 ### CONFIGURATION
 
