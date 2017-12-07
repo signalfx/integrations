@@ -1,0 +1,199 @@
+- title: pointforwarder.addDataPoints.count
+  type: cumulative
+  description: The total number of connections to POPS.
+
+- title: TotalProcessingTimeNs
+  type: cumulative
+  description: The total time spent processing a client connection to POPS.
+
+- title: TotalDecodeErrors
+  type: cumulative
+  description: The number of times a request couldn't be decoded
+
+- title: total_health_checks
+  type: cumulative
+  description: Number of health checks made.
+
+- title: HttpNotFound.Count
+  type: cumulative
+  description: Number of times an HTTP status code 400 is returned to a client.
+
+- title: Alloc
+  type: gauge
+  description: The bytes of allocated heap objects. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: TotalAlloc
+  type: cumulative
+  description: Cumulative bytes allocated for heap objects. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: Sys
+  type: gauge
+  description: Total bytes of memory obtained from the OS. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: Lookups
+  type: cumulative
+  description: Number of pointer lookups performed by the runtime. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: Mallocs
+  type: cumulative
+  description: Cumulative count of heap objects allocated. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: Frees
+  type: cumulative
+  description: Cumulative count of heap objects freed. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: HeapAlloc
+  type: gauge
+  description: Bytes of allocated heap objects. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: HeapSys
+  type: gauge
+  description: Bytes of heap memory obtained from the OS. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: HeapIdle
+  type: gauge
+  description: Bytes in idle (unused) spans. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: HeapInuse
+  type: gauge
+  description: Bytes in in-use spans. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: HeapReleased
+  type: gauge
+  description: Bytes of physical memory returned to the OS. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: HeapObjects
+  type: gauge
+  description: Number of allocated heap objects. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: StackInuse
+  type: gauge
+  description: Bytes in stack spans. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: StackSys
+  type: gauge
+  description: Bytes of stack memory obtained from the OS. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: MSpanInuse
+  type: gauge
+  description: Bytes of allocated mspan structures. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: MSpanSys
+  type: gauge
+  description: Bytes of memory obtained from the OS for mspan structures. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: MCacheInuse
+  type: gauge
+  description: Bytes of allocated mcache structures. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: MCacheSys
+  type: gauge
+  description: Bytes of memory obtained from the OS for mcache structures. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: BuckHashSys
+  type: gauge
+  description: Bytes of memory in profiling bucket hash tables. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: GCSys
+  type: gauge
+  description: Bytes of memory in garbage collection metadata. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: OtherSys
+  type: gauge
+  description: Bytes of memory in miscellaneous off-heap runtime allocations. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: NextGC
+  type: gauge
+  description: The target heap size of the next GC cycle. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: LastGC
+  type: gauge
+  description: The time the last garbage collection finished, as nanoseconds since 1970 (the UNIX epoch). This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: PauseTotalNs
+  type: cumulative
+  description: Cumulative nanoseconds in GC stop-the-world pauses since the program started. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: NumGC
+  type: gauge
+  description: Number of completed GC cycles. This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#MemStats for more information.
+
+- title: GOMAXPROCS
+  type: gauge
+  description: Maximum number of CPUs that can be executing simultaneously This metric is collected from the golang runtime library. Please see https://golang.org/pkg/runtime/#GOMAXPROCS for more information.
+
+- title: process.uptime.ns
+  type: gauge
+  description: Time since the pops process started.
+
+- title: num_cpu
+  type: gauge
+  description: Number of logical CPUs usable by the current process.
+
+- title: num_cgo_call
+  type: cumulative
+  description: The number of cgo calls made by the current process.
+
+- title: num_goroutine
+  type: gauge
+  description: The number of goroutines that currently exist.
+
+- title: fileinfo_commit
+  type: gauge
+  description:  This metric always has a value of 1 but has the dimension "commit" with the git commit hash of pops.
+
+- title: total_datapoints_buffered
+  type: gauge
+  description: The number of datapoints buffered by POPS.
+
+- title: total_events_buffered
+  type: gauge
+  description: The number of events buffered by POPS.
+
+- title: total_retries
+  type: gauge
+  description: The number of times POPS had to retry sending a batch of data to SignalFx.
+
+- title: total_datapoints_by_token
+  type: cumulative
+  description: The total number of datapoints emitted by token.  The metric has a dimension named "token".
+
+- title: total_events_by_token
+  type: cumulative
+  description: The total number of events emitted by token.  The metric has a dimension named "token".
+
+- title: batch_sizes.count
+  type: cumulative
+  description: The size of batches emitted by POPS.
+
+- title: batch_sizes.sum
+  type: cumulative
+  description: The histogram sum of sizes of batches emitted by POPS.
+
+- title: batch_sizes.sumsquare
+  type: cumulative
+  description: The histogram sumsquare of sizes of batches emitted by POPS.
+
+- title: batch_sizes.max
+  type: cumulative
+  description: The histogram maximum of sizes of batches emitted by POPS.
+
+- title: batch_sizes.min
+  type: cumulative
+  description: The histogram minimum of sizes of batches emitted by POPS.
+
+- title: batch_sizes.p25
+  type: cumulative
+  description: The histogram p25 of sizes of batches emitted by POPS.
+
+- title: batch_sizes.p50
+  type: cumulative
+  description: The histogram p50 of sizes of batches emitted by POPS.
+
+- title: batch_sizes.p90
+  type: cumulative
+  description: The histogram p90 of sizes of batches emitted by POPS.
+
+- title: batch_sizes.p99
+  type: cumulative
+  description: The histogram p99 of sizes of batches emitted by POPS.

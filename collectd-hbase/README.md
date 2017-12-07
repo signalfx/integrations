@@ -25,7 +25,7 @@ Metadata associated with the HBase collectd plugin can be found [here](https://g
             yum install collectd-java
 
 
-    * Ubuntu 12.04, 14.04, 15.04 & Debian 7, 8:
+    * Ubuntu 12.04, 14.04, 16.04 & Debian 7, 8:
       - This plugin is included with [SignalFx's collectd package](https://github.com/signalfx/integrations/tree/master/collectd).
 
 2. Download SignalFx's sample JMX configuration file and sample Cassandra configuration file from the following URLs:
