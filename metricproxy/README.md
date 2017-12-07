@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/metricproxy/img/integrations_metricproxy.png) SignalFx metric proxy
 
-Metadata associated with the SignalFx metric proxy can be found [here](https://github.com/signalfx/integrations/tree/release/metricproxy). The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy).
+Information associated with the SignalFx metric proxy can be found [here](https://github.com/signalfx/integrations/tree/release/metricproxy). The relevant code for the project can be found [here](https://github.com/signalfx/metricproxy).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -19,7 +19,7 @@ The SignalFx metric proxy can help you get the right data to the right destinati
 
 The SignalFx metric proxy must be deployed on a system that is capable of running Go. All dependencies for this Go project are included in `/Godeps` in the project repository.
 
-We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's carbon database.
+We recommend placing the proxy either on the same server as another existing metrics aggregator or on a central server that is already receiving datapoints, such as Graphite's Carbon Database.
 
 #### Sizing details
 
