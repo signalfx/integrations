@@ -1,4 +1,4 @@
-# ![](./img/integration_amazonkinesisstreams.png) AWS Kinesis
+# ![](./img/integration_awskinesisstreams.png) AWS Kinesis
 
 - [Description](#description)
 - [Installation](#installation)
