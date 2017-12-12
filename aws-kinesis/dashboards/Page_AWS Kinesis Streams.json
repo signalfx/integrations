@@ -1,0 +1,2743 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "marshallId" : 1,
+  "sf_service" : "AWS Kinesis",
+  "sf_type" : "Service"
+}, {
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_description" : "",
+  "sf_page" : "AWS Kinesis Streams",
+  "sf_type" : "Page"
+}, {
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "Kinesis Streams Overview",
+  "sf_description" : "An overview of all Amazon Kinesis Streams",
+  "sf_discoveryQuery" : "namespace:\"AWS/Kinesis\" AND _exists_:StreamName",
+  "sf_discoverySelectors" : [ "_exists_:StreamName" ],
+  "sf_filterAlias" : {
+    "variables" : [ ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : null
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1508968654667,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513004846266,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1513004860115,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1508968797956,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1508968535656,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1513008738805,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1508965808507,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1513009076252,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513009882939,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1513009964908,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Successful GetRecords per Stream",
+  "sf_chartIndex" : 1513009882939,
+  "sf_description" : "The number of successful GetRecords operations per stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Successful GetRecords",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.Success",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# records",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Iterator Age (ms) per Stream",
+  "sf_chartIndex" : 1508968797956,
+  "sf_description" : "The age of the last record in all GetRecords calls made against an Kinesis stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Iterator Age Milliseconds",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "query" : "namespace:\"AWS/Kinesis\"",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "query" : "stat:mean",
+        "type" : "dimension",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.IteratorAgeMilliseconds",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "milliseconds",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Get Records Latency (ms) per Stream",
+  "sf_chartIndex" : 1513008738805,
+  "sf_description" : "The time taken per GetRecords operation in milliseconds",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "latency (ms)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "maxDecimalPlaces" : 3,
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Successful PutRecord(s) per Stream",
+  "sf_chartIndex" : 1513009964908,
+  "sf_description" : "The number of successful PutRecord and PutRecords operations per Kinesis stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "PutRecord.Success",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecord.Success"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "PutRecords.Success",
+      "queryItems" : [ {
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property"
+      }, {
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecords.Success",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# records",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 2,
+    "uiHelperValue" : "##CHARTID##_2"
+  }
+}, {
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Put  Record Latency (ms) per Stream",
+  "sf_chartIndex" : 1508968535656,
+  "sf_description" : "The average time taken per PutRecord operation in milliseconds",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "latency (ms)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "query" : "namespace:\"AWS/Kinesis\"",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "query" : "stat:mean",
+        "type" : "dimension",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecord.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      } ],
+      "maxDecimalPlaces" : 2,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 13,
+    "uiHelperValue" : "##CHARTID##_13"
+  }
+}, {
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Incoming Bytes per Stream",
+  "sf_chartIndex" : 1508968654667,
+  "sf_description" : "The average number of bytes successfully put to the Kinesis stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Incoming Bytes",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "query" : "namespace:\"AWS/Kinesis\"",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingBytes"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "forcedResolution" : 300000,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Number of Streams",
+  "sf_chartIndex" : 1513004846266,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Incoming Bytes",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingBytes"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : null,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Write Provisioned Throughput Exceeded",
+  "sf_chartIndex" : 1513009076252,
+  "sf_description" : "The number of records rejected due to throttling for the stream from PutRecord and PutRecords",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "throughtput exceeded",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "WriteProvisionedThroughputExceeded"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Read Provisioned Throughput Exceeded",
+  "sf_chartIndex" : 1508965808507,
+  "sf_description" : "The number of GetRecords calls throttled for the stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "COUNT_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "throughput exceeded",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "query" : "namespace:\"AWS/Kinesis\"",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "ReadProvisionedThroughputExceeded",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
+  }
+}, {
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Incoming Records per Stream",
+  "sf_chartIndex" : 1513004860115,
+  "sf_description" : "The number of records successfully put to the Kinesis stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Incoming Records",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingRecords"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+}, {
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "Kinesis Stream",
+  "sf_description" : "Stream-level metrics for Amazon Kinesis Streams",
+  "sf_discoveryQuery" : "namespace:\"AWS/Kinesis\" AND _exists_:StreamName",
+  "sf_discoverySelectors" : [ "_exists_:StreamName" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "StreamName",
+      "description" : "",
+      "dimension" : "StreamName",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "StreamName=StreamName:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1513019815958,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1513019829572,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513019821881,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1513016566506,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 8,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513016553604,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1513016557984,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 8,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513016852310,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513020564177,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1513020571435,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1513018141366,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513018014147,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 8,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1513019278551,
+        "id" : 0
+      },
+      "row" : 5,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1513019005008,
+        "id" : 0
+      },
+      "row" : 5,
+      "sizeX" : 8,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Successful PutRecord(s) Operations",
+  "sf_chartIndex" : 1513020571435,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Successful PutRecord(s) Ops",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecord*.Success",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 2,
+    "uiHelperValue" : "##CHARTID##_2"
+  }
+}, {
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Average Incoming Bytes",
+  "sf_chartIndex" : 1513016553604,
+  "sf_description" : "The number of bytes successfully put to the Kinesis stream, including bytes from PutRecord and PutRecords",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Incoming Bytes",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingBytes"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "maxDecimalPlaces" : null,
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Average PutRecord Latency (ms)",
+  "sf_chartIndex" : 1513019278551,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "PutRecord*.Latency",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecord*.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 4,
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Incoming Records",
+  "sf_chartIndex" : 1513016852310,
+  "sf_description" : "The number of records successfully put to the Kinesis stream, including records from PutRecord and PutRecords",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Incoming Records",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingRecords"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Read Throughput Exceeded",
+  "sf_chartIndex" : 1513019821881,
+  "sf_description" : "The number of GetRecords calls throttled for the stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Read Throughput Exceeded",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "ReadProvisionedThroughputExceeded"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 2,
+    "uiHelperValue" : "##CHARTID##_2"
+  }
+}, {
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "GetRecord Latency (ms) Distribution",
+  "sf_chartIndex" : 1513018014147,
+  "sf_description" : "The time taken per GetRecords operation in milliseconds",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e5b312",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "min",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "lower",
+        "type" : "property",
+        "value" : "lower"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "mean",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#00b9ff",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "max",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "upper",
+        "type" : "property",
+        "value" : "upper"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "sf_metric",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "latency (ms)",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Incoming Bytes Distribution",
+  "sf_chartIndex" : 1513016566506,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e5b312",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "min",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "lower",
+        "type" : "property",
+        "value" : "lower"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingBytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "mean",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingBytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#00b9ff",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "max",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "upper",
+        "type" : "property",
+        "value" : "upper"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingBytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "stat",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "PutRecord Latency (ms) Distribution",
+  "sf_chartIndex" : 1513019005008,
+  "sf_description" : "The time taken per PutRecord operation in milliseconds",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e5b312",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "min",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "lower",
+        "type" : "property",
+        "value" : "lower"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecord*.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "mean",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecord*.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#00b9ff",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "max",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "upper",
+        "type" : "property",
+        "value" : "upper"
+      } ],
+      "seriesData" : {
+        "metric" : "PutRecord*.Latency",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "sf_metric",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "latency (ms)",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Write Throughput Exceeded",
+  "sf_chartIndex" : 1513019815958,
+  "sf_description" : "The number of records rejected due to throttling for the stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Write Throughput Exceeded",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "WriteProvisionedThroughputExceeded",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# records",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Successful GetRecords Operations",
+  "sf_chartIndex" : 1513020564177,
+  "sf_description" : "The number of successful GetRecords operations",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Successful GetRecords Ops",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.Success"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 2,
+    "uiHelperValue" : "##CHARTID##_2"
+  }
+}, {
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Average GetRecord Latency (ms)",
+  "sf_chartIndex" : 1513018141366,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "GetRecords.Latency",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.Latency"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 4,
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Incoming Records Trend",
+  "sf_chartIndex" : 1513016557984,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "IncomingRecords",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "IncomingRecords"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 27,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "GetRecords Iterator Age (ms)",
+  "sf_chartIndex" : 1513019829572,
+  "sf_description" : "The age of the last record in all GetRecords calls made against an Kinesis stream. A value of zero indicates that the records being read are completely caught up with the stream",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Iterator Age (ms)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "type" : "property",
+        "value" : "mean"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "namespace",
+        "propertyValue" : "AWS/Kinesis",
+        "type" : "property",
+        "value" : "AWS/Kinesis"
+      } ],
+      "seriesData" : {
+        "metric" : "GetRecords.IteratorAgeMilliseconds"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : false,
+        "property" : "StreamName"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "age (ms)",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 2,
+    "uiHelperValue" : "##CHARTID##_2"
+  }
+} ]
