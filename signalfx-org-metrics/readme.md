@@ -32,11 +32,11 @@ For documentation of the organization metrics and dimensions sent by SignalFx, [
 
 ### About ByToken metrics <a name="bytoken"></a>
 
-Some metrics send both a total value and a ByToken value (such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`).The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data sent in via AWS,  Google Cloud Platform (StackDriver), AppDynamics, or New Relic, as data sent from those integrations is not associated with a token. 
+Some metrics send both a total value and a ByToken value (such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`).The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data sent in via AWS, Google Cloud Platform (StackDriver), AppDynamics, or New Relic, as data sent from those integrations is not associated with a token. 
 
 For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`, the value may be less than the value of `sf.org.numAddDatapointCalls`, because the latter includes data from the specified integrations while the former does not.
 
-Conversely, the total number of MTS shown for a ByToken metric can be higher than its non-token counterpart. For example, if you have 10 unique |nbsp| MTS and 2  |nbsp|  tokens, you could have as many as 20 |nbsp|  MTS for a ByToken metric (1 |nbsp|  per token per metric). 
+Conversely, the total number of MTS shown for a ByToken metric can be higher than its non-token counterpart. For example, if you have 10 unique MTS and 2 tokens, you could have as many as 20 MTS for a ByToken metric (1 per token per metric). 
 
 ### About "per metric type" metrics <a name="pertype"></a> 
 
