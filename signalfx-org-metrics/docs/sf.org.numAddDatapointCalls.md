@@ -8,4 +8,5 @@ metric_type: counter
 This metric shows the total number of calls to ingest to send in metrics.
 
 Dimension(s): `orgId`
+
 Resolution: 1 second
