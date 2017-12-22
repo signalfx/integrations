@@ -5,7 +5,7 @@ metric_type: counter
 ---
 ### sf.org.numAddDatapointCalls
 
-This metric shows the total number of calls to ingest to send in metrics.
+Total number of calls to send datapoints to SignalFx.
 
 Dimension(s): `orgId`
 

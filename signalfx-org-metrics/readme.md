@@ -30,7 +30,7 @@ Some metrics send both a total value and a ByToken value (such as `sf.org.numAdd
 
 For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`, the value may be less than the value of `sf.org.numAddDatapointCalls`, because the latter includes data from the specified integrations while the former does not.
 
-Conversely, the total number of MTS shown for a ByToken metric can be higher than its non-token counterpart. For example, if you have 10 unique MTS and 2 tokens, you could have as many as 20 MTS for a ByToken metric (1 per token per metric). 
+Conversely, the total number of MTS shown for a ByToken metric can be higher than its non-token counterpart. For example, if you have 10 unique MTS and 2 tokens, you could have  20 MTS for the ByToken metric (10 MTS per token). 
 
 #### About "per metric type" metrics <a name="pertype"></a> 
 
