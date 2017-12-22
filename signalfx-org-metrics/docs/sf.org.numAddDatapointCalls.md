@@ -9,4 +9,4 @@ Total number of calls to send datapoints to SignalFx.
 
 Dimension(s): `orgId`
 
-Resolution: 1 second
+Data Resolution: 1 second

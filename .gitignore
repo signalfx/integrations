@@ -7,3 +7,7 @@ signalfx-org-metrics/docs/sfx-metrics.bbprojectd/Unix Worksheet.worksheet
 *.bbprojectdata
 
 *.txt
+
+signalfx-org-metrics/docs/template-1-sec.md
+
+signalfx-org-metrics/docs/template-15-min.md

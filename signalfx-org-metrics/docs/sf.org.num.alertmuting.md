@@ -9,4 +9,4 @@ Total number of alert muting rules; includes rules currently in effect and rules
 
 Dimension(s): `orgId`
 
-Resolution: 15 minutes
+Data Resolution: 15 minutes

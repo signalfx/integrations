@@ -9,4 +9,4 @@ Total number of time series currently active in the organization. (Use `sf.org.n
 
 Dimension(s): `orgId`
 
-Resolution: 1 second
+Data Resolution: 1 second

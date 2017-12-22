@@ -9,6 +9,6 @@ One value per token; number of calls to send datapoints to SignalFx.
 
 Dimension(s): `orgId, tokenId`
 
-Resolution: 1 second
+Data Resolution: 1 second
 
 Note that the sum of all the values may be less than the value of `sf.org.numAddDatapointCalls`. For an explanation, see [About ByToken metrics](../readme.md#bytoken).
