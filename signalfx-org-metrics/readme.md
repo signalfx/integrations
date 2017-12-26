@@ -24,7 +24,7 @@ For admins, some of these are already used in charts on the Organization Overvie
 Example of using metric x to troubleshoot problem y.
 
 
-#### About ByToken metrics <a name="bytoken"></a>
+#### About ByToken metrics
 
 Some metrics send both a total value and a ByToken value (such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`).The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data sent in via AWS, Google Cloud Platform (StackDriver), AppDynamics, or New Relic, as data sent from those integrations is not associated with a token. 
 
@@ -32,7 +32,7 @@ For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`
 
 Conversely, the total number of MTS shown for a ByToken metric can be higher than its non-token counterpart. For example, if you have 10 unique MTS and 2 tokens, you could have  20 MTS for the ByToken metric (10 MTS per token). 
 
-#### About "per metric type" metrics <a name="pertype"></a> 
+#### About "per metric type" metrics
 
 Some metrics send a value for each metric type. That is, you can have up to three MTS for these metrics; each MTS is sent with a dimension named  `category` with a value of Counter, Cumulative Counter, or Gauge. Because you can have multiple MTS for these metrics, you would need to use the Sum analytics function to see the total value. 
 
