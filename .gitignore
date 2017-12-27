@@ -8,6 +8,13 @@ signalfx-org-metrics/docs/sfx-metrics.bbprojectd/Unix Worksheet.worksheet
 
 *.txt
 
-signalfx-org-metrics/docs/template-1-sec.md
 
-signalfx-org-metrics/docs/template-15-min.md
+signalfx-org-metrics/docs/template-per-metric-ingest.md
+
+signalfx-org-metrics/docs/template-per-metric-token-ingest.md
+
+signalfx-org-metrics/docs/template-token-ingest.md
+
+signalfx-org-metrics/docs/template-plain-ingest.md
+
+signalfx-org-metrics/docs/template-plain-objects.md

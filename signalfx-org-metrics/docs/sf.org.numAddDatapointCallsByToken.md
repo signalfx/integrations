@@ -13,4 +13,3 @@ Data Resolution: 1 second
 
 Note that the sum of all the values may be less than the value of `sf.org.numAddDatapointCalls`. For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).
 
-test: [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).
