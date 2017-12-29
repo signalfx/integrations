@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.alertmuting
-brief: Number of currently active time series
+brief: Number alert muting rules
 metric_type: gauge
 ---
 ### sf.org.num.alertmuting

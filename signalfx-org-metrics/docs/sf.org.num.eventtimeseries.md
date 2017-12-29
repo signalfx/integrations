@@ -1,11 +1,11 @@
 ---
 title: sf.org.num.eventtimeseries
-brief: Number of event time series
+brief: Number of ETS
 metric_type: gauge
 ---
 ### sf.org.num.eventtimeseries
 
-Number of event time series available to be visualized in charts and detectors.
+Number of event time series (ETS) available to be visualized in charts and detectors.
 
 Dimension(s): `orgId`
 
