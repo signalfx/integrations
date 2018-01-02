@@ -1,6 +1,6 @@
 ---
 title: sf.org.numLimitedMetricTimeSeriesCreateCallsByToken
-brief: Per token number of MTS over maximum allowed
+brief: Per token number of active MTS over maximum allowed
 metric_type: counter
 ---
 ### sf.org.numLimitedMetricTimeSeriesCreateCallsByToken
