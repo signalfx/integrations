@@ -1,6 +1,7 @@
 ---
 title: sf.org.numMetadataWritesByToken
 brief: SignalFx internal metric 
+metric_type: n/a
 ---
 ### sf.org.numMetadataWritesByToken
 

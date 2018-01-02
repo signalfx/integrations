@@ -1,5 +1,5 @@
 ---
-title:  sf.org.numRestCallsByToken
+title: sf.org.numRestCallsByToken
 brief: Per token number of REST calls
 metric_type: counter
 ---

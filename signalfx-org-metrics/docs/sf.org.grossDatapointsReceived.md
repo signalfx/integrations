@@ -1,6 +1,7 @@
 ---
 title: sf.org.grossDatapointsReceived
 brief: SignalFx internal metric 
+metric_type: n/a
 ---
 ### sf.org.grossDatapointsReceived
 

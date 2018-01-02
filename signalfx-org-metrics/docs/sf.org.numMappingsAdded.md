@@ -1,6 +1,7 @@
 ---
 title: sf.org.numMappingsAdded
 brief: SignalFx internal metric 
+metric_type: n/a
 ---
 ### sf.org.numMappingsAdded
 
