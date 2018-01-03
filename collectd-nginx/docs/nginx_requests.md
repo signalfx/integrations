@@ -1,7 +1,7 @@
 ---
 title: Nginx Requests
 brief: Requests handled by Nginx Web Server
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Nginx Requests
 

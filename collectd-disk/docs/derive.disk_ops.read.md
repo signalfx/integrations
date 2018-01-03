@@ -1,7 +1,7 @@
 ---
 title: Disk Read Operations
 brief: The number of disk read operations.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Disk Read Operations
 
