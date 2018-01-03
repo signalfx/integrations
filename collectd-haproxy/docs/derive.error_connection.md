@@ -5,7 +5,7 @@ brief: Corresponds to HAProxy's `econ` metric -  Number of requests that encount
      for all servers of that backend, plus any connection errors not
      associated with a particular server (such as the backend having no
      active servers).
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Error connection
 
