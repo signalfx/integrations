@@ -1,7 +1,7 @@
 ---
 title: Merged Disk Writes
 brief: The number of disk writes merged into single physical disk access operations.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Merged Disk Writes
 
