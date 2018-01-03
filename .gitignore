@@ -22,3 +22,5 @@ signalfx-org-metrics/docs/template-plain-objects.md
 signalfx-org-metrics/sf-metrics copy.rst
 
 signalfx-org-metrics/docs/template-plain-internal.md
+
+signalfx-org-metrics/docs/template-aws.md
