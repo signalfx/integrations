@@ -1,7 +1,7 @@
 ---
 title: Merged Disk Reads
 brief: The number of disk reads merged into single physical disk access operations.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Merged Disk Reads
 
