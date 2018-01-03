@@ -1,7 +1,7 @@
 ---
 title: Keyspace Misses
 brief: Number of failed lookup of keys in the main dictionary
-metric_type: derivative
+metric_type: cumulative counter
 ---
 ### Keyspace Misses
 

@@ -1,7 +1,7 @@
 ---
 title: Nginx Connections Accepted
 brief: Connections accepted by Nginx Web Server
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Nginx Connections Accepted
 

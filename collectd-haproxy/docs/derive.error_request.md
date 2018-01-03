@@ -1,7 +1,7 @@
 ---
 title: Error request
 brief: Corresponds to HAProxy's `ereq` metric -  Request errors.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Error request
 

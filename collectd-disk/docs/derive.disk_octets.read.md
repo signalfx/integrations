@@ -1,7 +1,7 @@
 ---
 title: Disk Octets Read
 brief: The number of bytes (octets) read from a disk.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Disk Octets Read
 
