@@ -12,16 +12,14 @@ SignalFx generates a number of metrics you can use to monitor the status of your
 
 -  Ingest-related metrics, such as the number of active and inactive time series or how many datapoints were sent using a backfill API.
 
--  Org status metrics, such as the number of unique metrics across all metric or event time series or the number of dashboards or charts in the org
+-  Organization status metrics, such as the number of unique metrics across all metric or event time series or the number of dashboards or charts in the organization
 
--  AWS-related metrics, such as TO BE FILLED IN
+-  Metrics related to AWS and GCP, such as `sf.org.num.awsServiceCallCount` (number of calls made to the Amazon API) and `sf.org.num.gcpStackdriverClientCallCount` (number of calls to each Stackdriver client method).
 
 
 ### USAGE
 
-For admins, some of these are already used in charts on the Organization Overview page. Can clone any of them to add or replace values in the chart, then save to a custom dashboard you create for this purpose.
-
-Example of using metric x to troubleshoot problem y.
+SignalFx admins can see some of these values in built-in charts on the Organization Overview page. And, like any other metrics, you can display them on charts you build to monitor your system health.
 
 
 #### About ByToken metrics
