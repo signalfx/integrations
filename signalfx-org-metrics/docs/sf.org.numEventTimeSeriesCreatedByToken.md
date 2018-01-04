@@ -1,6 +1,6 @@
 ---
 title: sf.org.numEventTimeSeriesCreatedByToken
-brief: Per token number of ETS created
+brief: Per token number of event time series created
 metric_type: counter
 ---
 ### sf.org.numEventTimeSeriesCreatedByToken

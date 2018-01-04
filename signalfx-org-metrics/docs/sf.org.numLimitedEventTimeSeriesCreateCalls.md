@@ -1,6 +1,6 @@
 ---
 title: sf.org.numLimitedEventTimeSeriesCreateCalls
-brief: Number of ETS over maximum allowed
+brief: Number of event time series over maximum allowed
 metric_type: counter
 ---
 ### sf.org.numLimitedEventTimeSeriesCreateCalls

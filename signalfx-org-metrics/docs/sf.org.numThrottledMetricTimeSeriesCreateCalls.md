@@ -1,6 +1,6 @@
 ---
 title: sf.org.numThrottledMetricTimeSeriesCreateCalls
-brief: Number of MTS not processed by SignalFx
+brief: Number of metric time series not processed by SignalFx
 metric_type: counter
 ---
 ### sf.org.numThrottledMetricTimeSeriesCreateCalls

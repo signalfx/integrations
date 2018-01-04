@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.metrictimeseries
-brief: Number of MTS
+brief: Number of metric time series
 metric_type: gauge
 ---
 ### sf.org.num.metrictimeseries
