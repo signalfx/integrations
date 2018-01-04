@@ -7,7 +7,7 @@ metric_type: counter
 
 Total number of calls to each Stackdriver client method.
 
-Dimension(s): `orgId, project_id, method` (the API being called, such as `getTimeSeries`)
+Dimension(s): `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
 
 Data Resolution: 1 second
 
