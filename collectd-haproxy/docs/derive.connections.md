@@ -1,7 +1,7 @@
 ---
 title: Connections
 brief: Corresponds to HAProxy's `CumConns` metric. Cumulative number of connections.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Connections
 

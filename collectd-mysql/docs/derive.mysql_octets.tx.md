@@ -1,7 +1,7 @@
 ---
 title: MySQL Bytes Sent
 brief: The number of bytes sent by MySQL server to all clients.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### MySQL Bytes Sent
 

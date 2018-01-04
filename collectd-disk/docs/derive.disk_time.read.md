@@ -1,7 +1,7 @@
 ---
 title: Disk Read Time
 brief: The average amount of time it took to do a read operation.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Disk Read Time
 

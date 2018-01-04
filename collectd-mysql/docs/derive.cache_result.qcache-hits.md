@@ -1,7 +1,7 @@
 ---
 title: MySQL Qcache Query Hits
 brief: The number of hits on MySQL query cache.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### MySQL Qcache Query Hits
 
