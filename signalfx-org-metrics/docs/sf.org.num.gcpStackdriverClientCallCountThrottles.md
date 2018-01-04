@@ -1,7 +1,7 @@
 ---
 title: sf.org.num.gcpStackdriverClientCallCountThrottles
 brief: Number of calls throttled
-metric_type: gauge
+metric_type: counter
 ---
 ### sf.org.num.gcpStackdriverClientCallCountThrottles
 

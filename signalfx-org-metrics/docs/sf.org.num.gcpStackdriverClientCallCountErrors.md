@@ -1,7 +1,7 @@
 ---
 title: sf.org.num.gcpStackdriverClientCallCountErrors
 brief: Number of calls that threw errors
-metric_type: gauge
+metric_type: counter
 ---
 ### sf.org.num.gcpStackdriverClientCallCountErrors
 

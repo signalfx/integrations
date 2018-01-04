@@ -1,7 +1,7 @@
 ---
 title: sf.org.num.gcpStackdriverClientCallCount
 brief: Number of calls
-metric_type: gauge
+metric_type: counter
 ---
 ### sf.org.num.gcpStackdriverClientCallCount
 
