@@ -1,7 +1,7 @@
 ---
 title: Disk Write Time
-brief: The average amount of time it took to do a write operation. 
-metric_type: derive
+brief: The average amount of time it took to do a write operation.
+metric_type: cumulative counter
 ---
 ### Disk Write Time
 
