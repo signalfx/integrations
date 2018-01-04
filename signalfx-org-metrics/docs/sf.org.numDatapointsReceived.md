@@ -1,6 +1,6 @@
 ---
 title: sf.org.numDatapointsReceived
-brief: Number of 
+brief: Number of datapoints SignalFx received
 metric_type: counter
 ---
 ### sf.org.numDatapointsReceived

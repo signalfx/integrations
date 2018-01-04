@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.eventtimeseries
-brief: Number of ETS
+brief: Number of event time series
 metric_type: gauge
 ---
 ### sf.org.num.eventtimeseries
