@@ -9,4 +9,4 @@ Number of visits by all users to any SignalFx pages. For example, if a user goes
 
 Dimension(s): `orgId`
 
-Data Resolution: 1 minute **QUESTION FOR REVIEWER: IS THIS THE CORRECT RESOLUTION?**
+Data Resolution: 15 minutes
