@@ -8,13 +8,13 @@
 
 ### DESCRIPTION
 
-SignalFx generates a number of metrics you can use to monitor the status of your organization, including:
+SignalFx generates a number of metrics you can use to monitor your usage of SignalFx, including:
 
--  Ingest-related metrics, such as the number of active and inactive time series or how many datapoints were sent using a backfill API.
+-  Ingest-related metrics that characterize the volume and nature of data that you are sending to SignalFx, such as the number of datapoints were sent or how many metric time series were created in response to the datapoints and dimensions sent.
 
--  Organization status metrics, such as the number of unique metrics across all metric or event time series or the number of dashboards or charts in the organization
+-  Usage or engagement metrics, such as the number of dashboards or charts in the organization.
 
--  Metrics related to AWS and GCP, such as `sf.org.num.awsServiceCallCount` (number of calls made to the Amazon API) and `sf.org.num.gcpStackdriverClientCallCount` (number of calls to each Stackdriver client method).
+-  Metrics that tell you how SignalFx pulls data on your behalf from cloud services like Amazon Web Services or Google Cloud Platform, such as the number of calls to each GCP Stackdriver client method or how many of the calls to the AWS CloudWatch API are being throttled by AWS.
 
 
 ### USAGE
@@ -24,19 +24,19 @@ SignalFx admins can see some of these values in built-in charts on the Organizat
 
 #### About ByToken metrics
 
-Some metrics send both a total value and a ByToken value (such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`).The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data sent in via AWS, Google Cloud Platform (StackDriver), AppDynamics, or New Relic, as data sent from those integrations is not associated with a token. 
+Some metrics send both a total value and a ByToken value, such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`.
 
-For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`, the value may be less than the value of `sf.org.numAddDatapointCalls`, because the latter includes data from the specified integrations while the former does not.
+The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data sent in via AWS CloudWatch, GCP StackDriver, AppDynamics, or New Relic, as data sent from those integrations is not associated with a token. For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`, the value may be less than the value of `sf.org.numAddDatapointCalls`, because the latter includes data from the specified integrations while the former does not.
 
-Conversely, the total number of MTS shown for a ByToken metric can be higher than its non-token counterpart. For example, if you have 10 unique MTS and 2 tokens, you could have  20 MTS for the ByToken metric (10 MTS per token). 
+Conversely, the sum of ByToken metrics can be higher than their non-token counterpart. For example, if you have a total of 10 metric time series (MTS) in the organization but datapoints associated with each of those MTS are being sent by 2 tokens, you could have a total of 20 MTS across the ByToken metrics (10 MTS per token) but only 10 MTS for the non-token counterpart. 
 
 #### About "per metric type" metrics
 
-Some metrics send a value for each metric type. That is, you can have up to three MTS for these metrics; each MTS is sent with a dimension named  `category` with a value of Counter, Cumulative Counter, or Gauge. Because you can have multiple MTS for these metrics, you would need to use the Sum analytics function to see the total value. 
+Some metrics send a value for each metric type (counter, cumulative counter or gauge), resulting in three MTS for these metrics. Each MTS is sent with a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have multiple MTS for these metrics, you would need to use the Sum analytics function to see the total value. 
 
 For example, you might receive 3 MTS for `sf.org.numMetricTimeSeriesCreated`, one representing the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges. To find the total number of MTS created, you need to sum those values.
 
-Also, you could filter by a category, such as Gauge, to see all metrics of that type.
+Also, you could filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
 
 ### METRICS
 
