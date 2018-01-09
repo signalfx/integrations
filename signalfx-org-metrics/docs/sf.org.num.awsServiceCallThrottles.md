@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.awsServiceCallThrottles 
-brief: Number of calls throttled by Amazon
+brief: Number of Amazon API calls throttled by Amazon
 metric_type: gauge
 ---
 ### sf.org.num.awsServiceCallThrottles

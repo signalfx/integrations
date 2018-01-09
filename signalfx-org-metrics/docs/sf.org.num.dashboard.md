@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.dashboard
-brief: Number of dashboards
+brief: Total number of dashboards
 metric_type: gauge
 ---
 ### sf.org.num.dashboard
