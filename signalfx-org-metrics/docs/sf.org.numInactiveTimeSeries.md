@@ -5,7 +5,7 @@ metric_type: gauge
 ---
 ### sf.org.numInactiveTimeSeries
 
-Total number of previously active metric time series (MTS) that are no longer active. (Use `sf.org.numActiveTimeSeries` to see how many MTS are active.) **QUESTION FOR REVIEWER: I'm assuming this is just MTS, correct?**  
+Total number of previously active metric time series (MTS) that are no longer active. (Use `sf.org.numActiveTimeSeries` to see how many MTS are active.)
 
 Dimension(s): `orgId`
 
