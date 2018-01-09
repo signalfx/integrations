@@ -5,7 +5,7 @@ metric_type: gauge
 ---
 ### sf.org.num.detector
 
-Total number of detectors; includes detectors that are muted. **QUESTION FOR REVIEWER: when built-in detectors are released, will they be counted towards this total?**
+Total number of detectors; includes detectors that are muted.
 
 Dimension(s): `orgId`
 
