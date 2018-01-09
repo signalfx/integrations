@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.chart
-brief: Number of charts
+brief: Total number of charts
 metric_type: gauge
 ---
 ### sf.org.num.chart

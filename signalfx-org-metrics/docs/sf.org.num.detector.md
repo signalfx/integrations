@@ -1,11 +1,11 @@
 ---
 title: sf.org.num.detector
-brief: Number of detectors
+brief: Total number of detectors
 metric_type: gauge
 ---
 ### sf.org.num.detector
 
-Number of detectors; includes detectors that are muted. **QUESTION FOR REVIEWER: when built-in detectors are released, will they be counted towards this total?**
+Total number of detectors; includes detectors that are muted. **QUESTION FOR REVIEWER: when built-in detectors are released, will they be counted towards this total?**
 
 Dimension(s): `orgId`
 

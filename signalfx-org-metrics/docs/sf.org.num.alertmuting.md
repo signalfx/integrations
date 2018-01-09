@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.alertmuting
-brief: Number alert muting rules
+brief: Total number of alert muting rules
 metric_type: gauge
 ---
 ### sf.org.num.alertmuting

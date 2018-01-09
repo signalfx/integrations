@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.awsServiceCallCountExceptions 
-brief: Number of exceptions
+brief: Number of Amazon API calls that threw exceptions
 metric_type: gauge
 ---
 ### sf.org.num.awsServiceCallCountExceptions
