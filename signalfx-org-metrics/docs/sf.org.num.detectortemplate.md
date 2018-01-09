@@ -1,12 +1,8 @@
 ---
 title: sf.org.num.detectortemplate
-brief: Number of detector templates
-metric_type: gauge
+brief: SignalFx internal metric
+metric_type: n/a
 ---
 ### sf.org.num.detectortemplate
 
-**QUESTION FOR REVIEWER: IS THIS ACCURATE AND IS WORDING OK? Number of custom detector templates created before custom templates were deprecated.**
-
-Dimension(s): `orgId`
-
-Data Resolution: 15 minutes
+While you may see this metric in your organization, it is for SignalFx internal use only.
