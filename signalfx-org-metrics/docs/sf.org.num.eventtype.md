@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.eventtype
-brief: Number of event types
+brief: Number of unique event types across all ETS
 metric_type: gauge
 ---
 ### sf.org.num.eventtype

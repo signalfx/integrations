@@ -5,7 +5,7 @@ metric_type: gauge
 ---
 ### sf.org.num.property
 
-Number of tag available for use.
+Number of tags available for use.
 
 Dimension(s): `orgId`
 

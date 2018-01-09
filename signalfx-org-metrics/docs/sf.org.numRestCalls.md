@@ -1,11 +1,11 @@
 ---
 title:  sf.org.numRestCalls
-brief: Number of REST calls
+brief: Number of REST calls made to the SignalFx API
 metric_type: counter
 ---
 ###  sf.org.numRestCalls
 
-Total number of REST calls made to the SignalFx API. 
+Number of REST calls made to the SignalFx API. 
 
 Dimension(s): `orgId`
 

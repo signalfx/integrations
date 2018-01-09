@@ -1,11 +1,11 @@
 ---
 title: sf.org.numBackfillCallsByToken
-brief: Per token number of calls to the backfill API
+brief: Per token number of times a backfill API call was used to send metrics to SignalFx
 metric_type: counter
 ---
 ### sf.org.numBackfillCallsByToken
 
-One value per metric type per token, each representing the number of times a backfill API call was used to send metrics. 
+One value per metric type per token, each representing the number of times a backfill API call was used to send metrics to SignalFx. 
 
 Dimension(s): `category, orgId, tokenId`
 

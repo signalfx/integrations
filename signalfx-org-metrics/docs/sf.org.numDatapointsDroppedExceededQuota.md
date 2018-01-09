@@ -1,6 +1,6 @@
 ---
 title: sf.org.numDatapointsDroppedExceededQuota
-brief: Number of new datapoints not processed by SignalFx
+brief: Number of new datapoints not processed by SignalFx; exceeded subscription limit
 metric_type: counter
 ---
 ### sf.org.numDatapointsDroppedExceededQuota

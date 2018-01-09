@@ -1,6 +1,6 @@
 ---
 title: sf.org.numThrottledMetricTimeSeriesCreateCalls
-brief: Number of metric time series not processed by SignalFx
+brief: Number of metric time series not processed by SignalFx; exceeded per-minute or per-hour MTS creation limit
 metric_type: counter
 ---
 ### sf.org.numThrottledMetricTimeSeriesCreateCalls

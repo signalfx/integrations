@@ -1,6 +1,6 @@
 ---
 title:  sf.org.numRestCallsThrottled
-brief: Number of REST calls not accepted by SignalFx
+brief: Number of REST calls not accepted by SignalFx; exceeded per-minute limit
 metric_type: counter
 ---
 ###  sf.org.numRestCallsThrottled

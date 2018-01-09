@@ -1,11 +1,11 @@
 ---
 title: sf.org.numAddDatapointCalls
-brief: Number of calls to send in metrics
+brief: Number of calls to send datapoints to SignalFx
 metric_type: counter
 ---
 ### sf.org.numAddDatapointCalls
 
-Total number of calls to send datapoints to SignalFx.
+Number of calls to send datapoints to SignalFx.
 
 Dimension(s): `orgId`
 

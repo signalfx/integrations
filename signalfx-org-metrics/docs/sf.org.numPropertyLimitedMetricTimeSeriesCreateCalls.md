@@ -1,6 +1,6 @@
 ---
 title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls
-brief: Number of metric time series not sent due to dimension name maximum
+brief: Number of MTS not sent due to dimension name maximum
 metric_type: counter
 ---
 ### sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls

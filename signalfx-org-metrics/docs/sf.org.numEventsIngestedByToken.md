@@ -1,6 +1,6 @@
 ---
 title: sf.org.numEventsIngestedByToken
-brief: Per token number of custom events received via the API
+brief: Per token number of custom events received via the /event POST API
 metric_type: counter
 ---
 ### sf.org.numEventsIngestedByToken

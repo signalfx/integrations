@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.property
-brief: Number of properties
+brief: Number of properties you have created (not dimensions)
 metric_type: gauge
 ---
 ### sf.org.num.property

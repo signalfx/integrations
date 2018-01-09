@@ -1,6 +1,6 @@
 ---
 title: sf.org.numLimitedMetricTimeSeriesCreateCalls
-brief: Number of active MTS over maximum allowed
+brief: Number of MTS not sent; over maximum allowed
 metric_type: counter
 ---
 ### sf.org.numLimitedMetricTimeSeriesCreateCalls

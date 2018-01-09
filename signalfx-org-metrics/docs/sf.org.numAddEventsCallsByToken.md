@@ -1,11 +1,11 @@
 ---
 title: sf.org.numAddEventsCallsByToken
-brief: Per token number of calls to send in custom events
+brief: Per token number of calls to send custom events to SignalFx
 metric_type: counter
 ---
 ### 
 
-One value per token; number of calls to send custom events to SignalFx
+One value per token; number of calls to send custom events to SignalFx.
 
 Dimension(s): `orgId`
 

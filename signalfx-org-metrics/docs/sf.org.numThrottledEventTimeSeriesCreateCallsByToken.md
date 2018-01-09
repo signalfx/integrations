@@ -1,6 +1,6 @@
 ---
 title: sf.org.numThrottledEventTimeSeriesCreateCallsByToken
-brief: Per token number of events not processed by SignalFx
+brief: Per token number of events not processed by SignalFx; exceeded per-minute event creation limit
 metric_type: counter
 ---
 ### sf.org.numThrottledEventTimeSeriesCreateCallsByToken

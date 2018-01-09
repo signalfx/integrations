@@ -1,6 +1,6 @@
 ---
 title: sf.org.numRestCallsByToken
-brief: Per token number of REST calls
+brief: Per token number of REST calls made to the SignalFx API
 metric_type: counter
 ---
 ###  sf.org.numRestCallsByToken

@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.metric
-brief: Number of metrics
+brief: Number of unique metrics across all MTS
 metric_type: gauge
 ---
 ### sf.org.num.metric

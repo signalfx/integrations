@@ -1,6 +1,6 @@
 ---
 title: sf.org.ui.num.pagevisits
-brief: Number of team members
+brief: Number of visits by all users to any SignalFx pages
 metric_type: gauge
 ---
 ### sf.org.ui.num.pagevisits

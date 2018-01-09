@@ -1,11 +1,11 @@
 ---
 title: sf.org.num.orguser
-brief: Number of members and admins 
+brief: Total number of members and admins 
 metric_type: gauge
 ---
 ### sf.org.num.orguser
 
-Number of members and admins associated with an organization; includes invited users who have not yet logged in.
+Total number of members and admins associated with an organization; includes invited users who have not yet logged in.
 
 Dimension(s): `orgId`
 

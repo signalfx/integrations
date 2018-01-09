@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.metrictimeseries
-brief: Number of metric time series
+brief: Number of metric time series available to be visualized in charts and detectors
 metric_type: gauge
 ---
 ### sf.org.num.metrictimeseries

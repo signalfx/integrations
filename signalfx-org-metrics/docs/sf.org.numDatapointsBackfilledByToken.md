@@ -1,6 +1,6 @@
 ---
 title: sf.org.numDatapointsBackfilledByToken
-brief: Per token number of datapoints backfilled
+brief: Per token number of datapoints that were sent using a backfill API
 metric_type: counter
 ---
 ### sf.org.numDatapointsBackfilledByToken

@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.teammember
-brief: Number of team members
+brief: Number of users that are members of teams
 metric_type: gauge
 ---
 ### sf.org.num.teammember

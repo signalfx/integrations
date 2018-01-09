@@ -1,6 +1,6 @@
 ---
 title: sf.org.num.navigator
-brief: Number of Infrastructure Navigator options
+brief: Number of options available in the sidebar in the Infrastructure Navigator
 metric_type: gauge
 ---
 ### sf.org.num.navigator

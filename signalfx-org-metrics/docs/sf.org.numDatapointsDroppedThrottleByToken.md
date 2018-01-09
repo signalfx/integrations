@@ -1,6 +1,6 @@
 ---
 title: sf.org.numDatapointsDroppedThrottleByToken
-brief: Number of datapoints not processed by SignalFx
+brief: Number of datapoints not processed by SignalFx; exceeded DPM limit
 metric_type: counter
 ---
 ### sf.org.numDatapointsDroppedThrottleByToken

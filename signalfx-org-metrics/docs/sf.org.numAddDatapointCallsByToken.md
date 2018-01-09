@@ -1,6 +1,6 @@
 ---
 title: sf.org.numAddDatapointCallsByToken
-brief: Per token number of calls to send in metrics
+brief: Per token number of calls to send datapoints to SignalFx
 metric_type: counter
 ---
 ### sf.org.numAddDatapointCallsByToken
