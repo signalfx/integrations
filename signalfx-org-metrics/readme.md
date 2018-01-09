@@ -10,7 +10,7 @@
 
 SignalFx generates a number of metrics you can use to monitor your usage of SignalFx, including:
 
--  Ingest-related metrics that characterize the volume and nature of data that you are sending to SignalFx, such as the number of datapoints were sent or how many metric time series were created in response to the datapoints and dimensions sent.
+-  Ingest-related metrics that characterize the volume and nature of data that you are sending to SignalFx, such as the number of datapoints that were sent or how many metric time series were created in response to the datapoints and dimensions sent.
 
 -  Usage or engagement metrics, such as the number of dashboards or charts in the organization.
 
