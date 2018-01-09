@@ -5,7 +5,7 @@ metric_type: counter
 ---
 ### numThrottledEventTimeSeriesCreateCalls
 
-Total number of event time series (ETS) you sent to SignalFx but that SignalFx didn't accept, because your organization significantly exceeded its per-minute event creation limit.
+Total number of event time series (ETS) SignalFx was unable to create, because you significantly exceeded your per-minute event creation limit.
 
 Dimension(s): `orgId`
 

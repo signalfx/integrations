@@ -5,7 +5,7 @@ metric_type: counter
 ---
 ### sf.org.numThrottledMetricTimeSeriesCreateCalls
 
-Total number of metric time series (MTS) you sent to SignalFx but that SignalFx didn't accept, because your organization significantly exceeded its per-minute or per-hour MTS creation limit.
+Number of metric time series (MTS) SignalFx was unable to create because you significantly exceeded your per-minute or per-hour MTS creation limit.
 
 Dimension(s): `orgId`
 

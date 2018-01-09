@@ -1,11 +1,11 @@
 ---
 title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
-brief: Per token number of MTS not sent due to dimension name maximum
+brief: Per token number of MTS SignalFx was not able to create; exceeded dimension name maximum
 metric_type: counter
 ---
 ### sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
-One value per token; number of metric time series (MTS) not sent to SignalFx because you’ve reached your maximum number of unique dimension names.
+One value per token; number of metric time series (MTS) SignalFx was unable to create because you reached your maximum number of unique dimension names.
 
 Dimension(s): `orgId, tokenId`
 
