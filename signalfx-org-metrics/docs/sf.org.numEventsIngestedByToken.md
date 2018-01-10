@@ -7,7 +7,7 @@ metric_type: counter
 
 One value per token; number of custom events received by SignalFx through the /event POST API 
 
-Dimension(s): `orgId, tokenId` **TBD what to do about "category" dimension, discussed in sf.org.numEventsIngested**
+Dimension(s): `orgId, tokenId, category`
 
 Data Resolution: 1 second
 
