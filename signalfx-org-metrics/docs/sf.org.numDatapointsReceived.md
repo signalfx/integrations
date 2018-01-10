@@ -7,10 +7,7 @@ metric_type: counter
 
 One value per metric type, each representing the number of datapoints SignalFx received and processed. 
 
-The sum of the values represents the total number of datapoints you sent to SignalFx minus any datapoints that were not accepted (i.e. `sf.org.numDatapointsDroppedExceededQuota`, `sf.org.numDatapointsDroppedThrottle`).
-
-
-**NOTE FOR REVIEWERS: Confirm rewrite is OK to replace this original text: One value per metric type, each representing the number of datapoints SignalFx received after all throttling and filtering is done.**
+The sum of the values represents the total number of datapoints you sent to SignalFx minus any datapoints that were not accepted due to limits exceeded.
 
 
 Dimension(s): `category, orgId`

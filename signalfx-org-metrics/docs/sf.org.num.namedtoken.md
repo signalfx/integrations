@@ -5,7 +5,7 @@ metric_type: gauge
 ---
 ### sf.org.num.namedtoken
 
-Number of tokens available for use. **QUESTION FOR REVIEWER: ONLY INGEST TOKENS? OR ALSO USER TOKENS?**
+Number of tokens available for use. 
 
 Dimension(s): `orgId`
 
