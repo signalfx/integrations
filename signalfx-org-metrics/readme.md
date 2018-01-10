@@ -28,7 +28,7 @@ SignalFx admins can see some of these values in built-in charts on the Organizat
 
 Some metrics send both a total value and a ByToken value, such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`.
 
-The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data sent in via AWS CloudWatch, GCP StackDriver, AppDynamics, or New Relic, as data sent from those integrations is not associated with a token. For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`, the value may be less than the value of `sf.org.numAddDatapointCalls`, because the latter includes data from the specified integrations while the former does not.
+The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data that SignalFx retrieves on your behalf via AWS CloudWatch, GCP StackDriver, AppDynamics, or New Relic, as data sent from those integrations is not associated with a token. For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`, the value may be less than the value of `sf.org.numAddDatapointCalls`, because the latter includes data from the specified integrations while the former does not.
 
 Conversely, the sum of ByToken metrics can be higher than their non-token counterpart. For example, if you have a total of 10 metric time series (MTS) in the organization but datapoints associated with each of those MTS are being sent by 2 tokens, you could have a total of 20 MTS across the ByToken metrics (10 MTS per token) but only 10 MTS for the non-token counterpart. 
 
