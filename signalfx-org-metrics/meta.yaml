@@ -1,0 +1,3 @@
+{ "display_name":"Organization-level metrics sent by SignalFx",
+  "description": "SignalFx generates a number of metrics you can use to monitor the status of your organization."
+}
