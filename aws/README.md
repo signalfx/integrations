@@ -26,7 +26,8 @@ Connecting to CloudWatch allows you to take advantage of SignalFx’s extensive 
 
 Connect to CloudWatch on the Integrations page in SignalFx.
 
-To connect SignalFx to CloudWatch, you’ll create a new IAM role in AWS for SignalFx to use, provide information from SignalFx to that new role, then provide SignalFx with the role’s ARN. You must be an administrator of your SignalFx account to connect SignalFx to CloudWatch. [Click here for detailed instructions](http://docs.signalfx.com/en/latest/getting-started/send-data.html#cloudwatch).
+To connect SignalFx to CloudWatch, you’ll create a new IAM role in AWS for SignalFx to use, provide information from SignalFx to that new role, then provide SignalFx with the role’s ARN. You must be an administrator of your SignalFx account to connect SignalFx to CloudWatch. <a target="_blank" href=
+http://docs.signalfx.com/en/latest/getting-started/send-data.html#cloudwatch">Click here for detailed instructions</a>
 
 ### USAGE
 
@@ -72,7 +73,7 @@ Much like SignalFx, AWS CloudWatch uses rollups to summarize metrics, and it ref
 
 To use a CloudWatch metric in a plot, you must always specify the metric name along with a filter for `stat` that is appropriate to the metric you have chosen. For example, if you are using the metric `NetworkPacketsIn`, per the AWS CloudWatch documentation for EC2 metrics, the only statistics that are meaningful are Minimum, Maximum and Average, so you should choose the dimension stat with a value of either `lower`, `upper` or `mean`, respectively, depending on which statistic you want to use.
 
-When syncing data from CloudWatch to SignalFx a 60-second sampling period is used. See [CloudWatch documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for more detailed information.
+When syncing data from CloudWatch to SignalFx a 60-second sampling period is used. See <a target="_blank" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">CloudWatch documentation</a> for more detailed information.
 
 ##### AWS namespaces
 

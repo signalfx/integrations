@@ -39,7 +39,7 @@ This plugin collects metrics from the module `mod_status`.
 
 ### INSTALLATION
 
-1. Enable the [mod\_status](http://httpd.apache.org/docs/2.4/mod/mod_status.html) module in your Apache server.
+1. Enable the <a target="_blank" href="http://httpd.apache.org/docs/2.4/mod/mod_status.html">mod_status</a> module in your Apache server.
 
 2. Add the following configuration to your Apache server:
 
@@ -58,7 +58,7 @@ This plugin collects metrics from the module `mod_status`.
 
     * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
-5. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf) for this plugin to `/etc/collectd/managed_config`.
+5. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-apache/10-apache.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 6. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
@@ -66,7 +66,7 @@ This plugin collects metrics from the module `mod_status`.
 
 ### CONFIGURATION
 
-Using the example configuration file [10-apache.conf](https://github.com/signalfx/integrations/tree/master/collectd-apache/10-apache.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-apache/10-apache.conf">10-apache.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

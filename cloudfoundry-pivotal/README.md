@@ -21,9 +21,9 @@ Use this integration to monitor a Pivotal Cloud Foundry deployment. This integra
     Infrastructure Navigator visualizes Cloud Foundry instances as squares,
     colored by metrics including CPU, disk, and network. Additional views are
     provided for focus on the health and performance of specific Cloud Foundry
-    services, as well as Garden Containers. [Click here to read more about the
+    services, as well as Garden Containers. <a target="_blank" href="https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html">Click here to read more about the
     Infrastructure
-    Page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html).
+    Page</a>.
 
   You can quickly see the status of all of the VMs in your Cloud Foundry cluster:
 
@@ -65,18 +65,18 @@ This integration requires administrative access to a Pivotal Cloud Foundry deplo
 
 Follow these steps to enable this integration:
 
-1. Download the product file from [Pivotal Network](https://network.pivotal.io/products/signalfx-monitoring-alerting/).
+1. Download the product file from <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting/">Pivotal Network</a>.
 
-2. Follow the [installation instructions for the tile](http://docs.pivotal.io/partners/signalfx/installing.html).
+2. Follow the <a target="_blank" href="http://docs.pivotal.io/partners/signalfx/installing.html">installation instructions for the tile</a>.
 
 Metrics from Pivotal Cloud Foundry should begin streaming into SignalFx.
 
 To monitor services running within **Garden containers** (e.g. webservers) you will
-need to use [our buildpack decorator](https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator)
+need to use <a target="_blank" href="https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator">our buildpack decorator</a>
 along with the CF meta-buildpack.
 
-To get our agent on to your own **BOSH deployments**, you can use [our BOSH
-release](https://github.com/signalfx/agent-boshrelease).
+To get our agent on to your own **BOSH deployments**, you can use <a target="_blank" href="https://github.com/signalfx/agent-boshrelease">our BOSH
+release</a>.
 
 ### METRICS
 

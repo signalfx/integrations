@@ -16,7 +16,7 @@ Metadata associated with the spark plugin for collectd can be found [here](https
 
 This is the SignalFx Apache Spark plugin. Note we currently only support cluster modes Standalone and Mesos. Follow these instructions to install the Apache Spark plugin for collectd.
 
-The [spark-collectd](https://github.com/signalfx/collectd-spark) plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: [Spark documentation](https://spark.apache.org/docs/latest/monitoring.html)
+The <a target="_blank" href="https://github.com/signalfx/collectd-spark">spark-collectd</a> plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: <a target="_blank" href="https://spark.apache.org/docs/latest/monitoring.html">Spark documentation</a>
 
 #### FEATURES
 
@@ -81,9 +81,9 @@ The [spark-collectd](https://github.com/signalfx/collectd-spark) plugin collects
 
 ### INSTALLATION
 
-1. Download [collectd-spark](https://github.com/signalfx/collectd-spark). Place the `spark_plugin.py` file in `/usr/share/collectd/collectd-spark`
+1. Download <a target="_blank" href="https://github.com/signalfx/collectd-spark">collectd-spark</a>. Place the `spark_plugin.py` file in `/usr/share/collectd/collectd-spark`
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-spark/10-spark.conf) for this plugin to `/etc/collectd/managed_config`
+2. Modify the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-spark/10-spark.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
@@ -94,7 +94,7 @@ The [spark-collectd](https://github.com/signalfx/collectd-spark) plugin collects
 
 ### CONFIGURATION
 
-Using the example configuration file [10-spark.conf](https://github.com/signalfx/integrations/tree/release/collectd-spark/10-spark.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and the metrics you want to be collected and reported.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-spark/10-spark.conf">10-spark.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and the metrics you want to be collected and reported.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
