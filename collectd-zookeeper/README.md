@@ -12,7 +12,7 @@ Metadata associated with SignalFx's integration with Zookeeper can be found [her
 
 ### DESCRIPTION
 
-This is a collectd plugin for getting metrics and information from [ZooKeeper](http://zookeeper.apache.org) servers, based on the ZooKeeper monitoring script [check\_zookeeper.py](https://svn.apache.org/repos/asf/zookeeper/trunk/src/contrib/monitoring/check_zookeeper.py).
+This is a collectd plugin for getting metrics and information from <a target="_blank" href="http://zookeeper.apache.org">ZooKeeper</a> servers, based on the ZooKeeper monitoring script <a target="_blank" href="https://svn.apache.org/repos/asf/zookeeper/trunk/src/contrib/monitoring/check_zookeeper.py">check_zookeeper.py</a>.
 
 #### FEATURES
 
@@ -44,9 +44,9 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Download the [collectd-zookeeper Python module](https://github.com/signalfx/collectd-zookeeper).
+1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-zookeeper">collectd-zookeeper Python module</a>.
 
-2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf">sample configuration file</a> to `/etc/collectd/managed_config`.
 
 3. Modify the configuration file as described in [Configuration](#configuration) below.
 
@@ -54,7 +54,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [20-zookeeper.conf](https://github.com/signalfx/integrations/tree/master/collectd-zookeeper/20-zookeeper.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Zookeeper instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-zookeeper/20-zookeeper.conf">20-zookeeper.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Zookeeper instance to be monitored.
 
 | Setting            | Description     | Default|
 |--------------------|-----------------|-----------|

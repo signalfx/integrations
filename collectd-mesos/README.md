@@ -48,9 +48,9 @@ This plugin requires:
 ### INSTALLATION
 
 1. Download the three Python modules for Mesos from the following URL:
-  [https://github.com/signalfx/collectd-mesos](https://github.com/signalfx/collectd-mesos). Place them in a convenient spot (e.g. in `/usr/share/collectd/mesos-collectd-plugin`)
+  <a target="_blank" href="https://github.com/signalfx/collectd-mesos">https://github.com/signalfx/collectd-mesos</a>. Place them in a convenient spot (e.g. in `/usr/share/collectd/mesos-collectd-plugin`)
 
-2. Download SignalFx's sample configuration files for a [Mesos master](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-master.conf) or a [Mesos slave](https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-slave.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx's sample configuration files for a <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-master.conf">Mesos master</a> or a <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-slave.conf">Mesos slave</a> to `/etc/collectd/managed_config`.
 
 3. Modify the configuration file to contain values that make sense for your environment, as described [below](#configuration).
 
@@ -147,7 +147,7 @@ An unexpectedly low number of connected slaves on a Mesos master can indicate a 
 
 On the Mesos master dashboard, you can view in detail the number of tasks that are finished, failed, lost or errored out. Monitoring connected and active frameworks can help you determine the health of your Mesos scheduler.
 
-For additional information on how to monitor Mesos, check out Apache's guide [here](http://mesos.apache.org/documentation/latest/monitoring/).
+For additional information on how to monitor Mesos, check out Apache's guide <a target="_blank" href="http://mesos.apache.org/documentation/latest/monitoring/">here</a>.
 
 
 ### METRICS

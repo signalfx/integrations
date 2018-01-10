@@ -13,13 +13,13 @@ Metadata associated with the StatsD collectd plugin can be found [here](https://
 
 The StatsD plugin for collectd listens for StatsD events, aggregates them and transmits them according to collectd's configuration. Use this plugin to send data from StatsD to SignalFx.
 
-From [collectd's manpage](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd):
+From <a target="_blank" href="https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd">collectd's manpage</a>:
 
 > The statsd plugin listens to a UDP socket, reads "events" in the statsd protocol and dispatches rates or other aggregates of these numbers periodically.
 
 > The plugin implements the `Counter`, `Timer`, `Gauge` and `Set` types which are dispatched as the collectd types `derive`, `latency`, `gauge` and `objects` respectively.
 
-For more information about StatsD, see [https://github.com/etsy/statsd/](https://github.com/etsy/statsd/).
+For more information about StatsD, see <a target="_blank" href="https://github.com/etsy/statsd/">https://github.com/etsy/statsd/</a>.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -33,7 +33,7 @@ This plugin requires:
 
 NOTE: This plugin is included by default with all versions of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
-1. Download SignalFx's [sample StatsD configuration file](https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf) to `/etc/collectd/managed_config`.
+1. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-statsd/10-statsd.conf">sample StatsD configuration file</a> to `/etc/collectd/managed_config`.
 
 2. Restart collectd.
 
@@ -47,7 +47,7 @@ $ echo "statsd.test:1|g" | nc -w 1 -u 127.0.0.1 8125
 
 ### CONFIGURATION
 
-SignalFx's example configuration file for this plugin can be used as-is, without modification. To read more about available configuration options, see [collectd's manpage for this plugin](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd).
+SignalFx's example configuration file for this plugin can be used as-is, without modification. To read more about available configuration options, see <a target="_blank" href="https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_statsd">collectd's manpage for this plugin</a>.
 
 #### Deployment options
 
@@ -104,7 +104,7 @@ The following example produces a metric called `test.gaugor` of type gauge, with
 
 #### Using StatsD metrics in SignalFx
 
-SignalFx supports using the components of dot-delimited metric names as dimensions for the purposes of filtering and aggregation in a chart. [Click here to read more](http://docs.signalfx.com/en/latest/charts/chart-advanced-config.html#graphite-options-for-plots).
+SignalFx supports using the components of dot-delimited metric names as dimensions for the purposes of filtering and aggregation in a chart. <a target="_blank" href="http://docs.signalfx.com/en/latest/charts/chart-advanced-config.html#graphite-options-for-plots">Click here to read more</a>.
 
 #### Deleting unused metric names from collectd's internal cache
 

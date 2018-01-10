@@ -14,7 +14,7 @@ Metadata associated with the Docker plugin for collectd can be found [here](http
 
 This is the SignalFx Docker plugin. Follow these instructions to install the Docker plugin for collectd.
 
-The [docker-collectd](https://github.com/signalfx/docker-collectd-plugin) plugin collects metrics about the Docker containers running on the system using Docker's stats API. It reports metrics about the CPU utilization of each container, their memory consumption, and their network and disk activity.
+The <a target="_blank" href="https://github.com/signalfx/docker-collectd-plugin">docker-collectd</a> plugin collects metrics about the Docker containers running on the system using Docker's stats API. It reports metrics about the CPU utilization of each container, their memory consumption, and their network and disk activity.
 
 #### FEATURES
 
@@ -50,7 +50,7 @@ The [docker-collectd](https://github.com/signalfx/docker-collectd-plugin) plugin
 
 ### INSTALLATION
 
-1. Download the [docker-collectd-plugin](https://github.com/signalfx/docker-collectd-plugin) Python module.
+1. Download the <a target="_blank" href="https://github.com/signalfx/docker-collectd-plugin">docker-collectd-plugin</a> Python module.
 
 2. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `docker-collectd-plugin` module:
 
@@ -61,7 +61,7 @@ The [docker-collectd](https://github.com/signalfx/docker-collectd-plugin) plugin
             yum install python26-pip
             sudo pip-2.6 install -r /path/to/docker-collectd-plugin/requirements.txt
 
-3. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf) for this plugin to `/etc/collectd/managed_config`.
+3. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-docker/10-docker.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 4. Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
@@ -74,14 +74,14 @@ The [docker-collectd](https://github.com/signalfx/docker-collectd-plugin) plugin
 
 7. The optional dashboard `Docker Neighbors` offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
     * Manually import the dashboard into your organization in SignalFx.
-        * Download the [dashboard group](https://github.com/signalfx/integrations/blob/master/collectd-docker/dashboards/Page_Docker.json) with the optional dashboard
+        * Download the <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-docker/dashboards/Page_Docker.json">dashboard group</a> with the optional dashboard
         * Click to open the Actions menu, hover over Import, then select Dashboard Group
         * Specify the path to the downloaded `Page_Docker.json` file
         * The new dashboard group should appear under Custom Dashboard Groups
 
 ### CONFIGURATION
 
-Using the example configuration file [10-docker.conf](https://github.com/signalfx/integrations/tree/master/collectd-docker/10-docker.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-docker/10-docker.conf">10-docker.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

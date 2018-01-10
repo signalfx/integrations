@@ -12,7 +12,7 @@ Metadata associated with the RabbitMQ collectd plugin can be found [here](https:
 
 ### DESCRIPTION
 
-The RabbitMQ plugin that collects statistics from RabbitMQ. The plugin uses the [RabbitMQ Management HTTP API](https://www.rabbitmq.com/management.html) to poll for statistics on a RabbitMQ server, then reports them to collectd.
+The RabbitMQ plugin that collects statistics from RabbitMQ. The plugin uses the <a target="_blank" href="https://www.rabbitmq.com/management.html">RabbitMQ Management HTTP API</a> to poll for statistics on a RabbitMQ server, then reports them to collectd.
 
 #### FEATURES
 
@@ -40,9 +40,9 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Download the [collectd-rabbitmq Python module]( https://github.com/signalfx/collectd-rabbitmq/)
+1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-rabbitmq/">collectd-rabbitmq Python module</a>
 
-2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/10-rabbitmq.conf">sample configuration file</a> to `/etc/collectd/managed_config`.
 
 3. Modify the configuration file as described in [Configuration](#configuration) below.
 
@@ -50,7 +50,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [10-rabbitmq.conf](https://github.com/signalfx/integrations/tree/master/collectd-rabbitmq/10-rabbitmq.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the RabbitMQ instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-rabbitmq/10-rabbitmq.conf">10-rabbitmq.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the RabbitMQ instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
