@@ -16,6 +16,8 @@ SignalFx generates a number of metrics you can use to monitor your usage of Sign
 
 -  Metrics that tell you how SignalFx pulls data on your behalf from cloud services like Amazon Web Services or Google Cloud Platform, such as the number of calls to each GCP Stackdriver client method or how many of the calls to the AWS CloudWatch API are being throttled by AWS.
 
+Your organization is not charged for these metrics, and they do not count against any limits.
+
 
 ### USAGE
 
