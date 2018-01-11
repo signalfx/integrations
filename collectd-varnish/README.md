@@ -41,7 +41,7 @@ Varnish Cache is a web application accelerator also known as a caching HTTP reve
 
         yum install collectd-varnish
 
-2. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-varnish/10-varnish.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-varnish/10-varnish.conf">sample configuration file</a> to `/etc/collectd/managed_config`.
 
 3. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
@@ -89,7 +89,7 @@ LoadPlugin varnish3
 
 There is no configuration required for the varnish collectd plugin. The default configuration is setup to bring in data on a large variety of metrics.
 
-If using the sample configuration file [10-varnish.conf](https://github.com/signalfx/integrations/tree/master/collectd-varnish/10-varnish.conf), no additional configuration is required. The following optional settings allow you to configure the metrics that will be sent using this plugin:
+If using the sample configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-varnish/10-varnish.conf">10-varnish.conf</a>, no additional configuration is required. The following optional settings allow you to configure the metrics that will be sent using this plugin:
 
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|

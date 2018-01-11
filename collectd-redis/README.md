@@ -12,7 +12,7 @@ Metadata associated with the Redis collectd plugin can be found [here](https://g
 
 ### DESCRIPTION
 
-A [Redis](http://redis.io) plugin for [collectd](http://collectd.org) using the Python plugin for collectd.
+A <a target="_blank" href="http://redis.io">Redis</a> plugin for <a target="_blank" href="http://collectd.org">collectd</a> using the Python plugin for collectd.
 
 You can capture any kind of Redis metrics like:
 
@@ -51,9 +51,9 @@ This plugin requires:
 
 ### INSTALLATION
 
-1. Download the [redis-collectd-plugin Python module](https://github.com/signalfx/redis-collectd-plugin).
+1. Download the <a target="_blank" href="https://github.com/signalfx/redis-collectd-plugin">redis-collectd-plugin Python module</a>.
 
-2. Download SignalFx's sample configuration files for a [Redis master](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf) or [Redis slave](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx's sample configuration files for a <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf">Redis master</a> or <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf">Redis slave</a> to `/etc/collectd/managed_config`.
 
 3. Modify the sample configuration file as described in  [Configuration](#configuration), below.
 
@@ -61,7 +61,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration files [10-redis\_master.conf](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf) or [10-redis\_slave.conf](https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Redis instance to be monitored.
+Using the example configuration files <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf">10-redis\_master.conf</a> or <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf">10-redis\_slave.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Redis instance to be monitored.
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|

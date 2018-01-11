@@ -19,7 +19,7 @@ Use the Memcached plugin for collectd to monitor the following types of informat
 * net input/output bytes
 * number of items cached
 
-Documentation for Memcached can be found here: [https://github.com/memcached/memcached/wiki](https://github.com/memcached/memcached/wiki)
+Documentation for Memcached can be found here: <a target="_blank" href="https://github.com/memcached/memcached/wiki">https://github.com/memcached/memcached/wiki</a>
 
 #### FEATURES
 
@@ -44,7 +44,7 @@ Documentation for Memcached can be found here: [https://github.com/memcached/mem
 
 ### INSTALLATION
 
-1. Download SignalFx's [sample memcached configuration file](https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf) to `/etc/collectd/managed_config`.
+1. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf">sample memcached configuration file</a> to `/etc/collectd/managed_config`.
 
 2. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -52,7 +52,7 @@ Documentation for Memcached can be found here: [https://github.com/memcached/mem
 
 ### CONFIGURATION
 
-Using the example configuration file [10-memcached.conf](https://github.com/signalfx/integrations/tree/master/collectd-memcached/10-memcached.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Memcached instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-memcached/10-memcached.conf">10-memcached.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Memcached instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

@@ -14,7 +14,7 @@ Use SignalFx to monitor Amazon Elastic Compute Cloud (EC2) via [Amazon CloudWatc
 
 ##### Infrastructure Page
 
-- **Infrastructure Navigator**: On the Infrastructure page in SignalFx, the Infrastructure Navigator visualizes EC2 instances as squares, colored by CloudWatch metrics including CPU, disk, and network. Group and filter instances by AWS metadata like availability zone or service tag in order to discover trends and correlations. [Click here to read more about the Infrastructure Page](http://docs.signalfx.com/en/latest/built-in-content/infra-nav.html).
+- **Infrastructure Navigator**: On the Infrastructure page in SignalFx, the Infrastructure Navigator visualizes EC2 instances as squares, colored by CloudWatch metrics including CPU, disk, and network. Group and filter instances by AWS metadata like availability zone or service tag in order to discover trends and correlations. <a target="_blank" href="http://docs.signalfx.com/en/latest/built-in-content/infra-nav.html">Click here to read more about the Infrastructure Page</a>.
 
   [<img src='./img/hosts_aws_instances.png' width=200px>](./img/hosts_aws_instances.png)
 

@@ -12,7 +12,7 @@ Metadata associated with the HAProxy collectd plugin can be found [here](https:/
 
 ### DESCRIPTION
 
-Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collectd plugin to collect metrics about HaProxy.
+Use the <a target="_blank" href="https://github.com/signalfx/collectd-haproxy">collectd-haproxy</a> collectd plugin to collect metrics about HaProxy.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -23,8 +23,8 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
 
 ### INSTALLATION
 
-1. Download the [collectd-haproxy-plugin](https://github.com/signalfx/collectd-haproxy) git repo to `/usr/share/collectd/collectd-haproxy`
-2. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) for this plugin to `/etc/collectd/managed_config`.
+1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-haproxy">collectd-haproxy-plugin</a> git repo to `/usr/share/collectd/collectd-haproxy`
+2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 4. `SELINUX ONLY` Create a SELinux policy package using the supplied type enforcement file.  Enter the commands below to create and install the policy package.
 
@@ -42,7 +42,7 @@ Use the [collectd-haproxy](https://github.com/signalfx/collectd-haproxy) collect
 
 ### CONFIGURATION
 
-Using the example configuration file [10-haproxy.conf](https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf">10-haproxy.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the HAProxy instance to be monitored.
 
 | Configuration Option | Definition | Example Value |
 | ---------------------|------------|---------------|
