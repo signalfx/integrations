@@ -12,7 +12,7 @@ Metadata associated with SignalFx's Couchbase integration can be found [here](ht
 
 ### DESCRIPTION
 
-`collectd-couchbase` is a [collectd](http://www.collectd.org/) plugin that collects statistics from Couchbase.
+`collectd-couchbase` is a <a target="_blank" href="http://www.collectd.org/">collectd</a> plugin that collects statistics from Couchbase.
 
 #### FEATURES
 
@@ -52,9 +52,9 @@ Metadata associated with SignalFx's Couchbase integration can be found [here](ht
 
 ### INSTALLATION
 
-1. Download the [collectd-couchbase Python module](https://github.com/signalfx/collectd-couchbase).
+1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-couchbase">collectd-couchbase Python module</a>.
 
-2. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf) for this plugin to `/etc/collectd/managed_config`.
+2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
@@ -62,7 +62,7 @@ Metadata associated with SignalFx's Couchbase integration can be found [here](ht
 
 ### CONFIGURATION
 
-Using the example configuration file [10-couchbase.conf](https://github.com/signalfx/integrations/tree/master/collectd-couchbase/10-couchbase.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-couchbase/10-couchbase.conf">10-couchbase.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
@@ -72,7 +72,7 @@ Using the example configuration file [10-couchbase.conf](https://github.com/sign
 | Host | Hostname or IP address of the Couchbase server. | "localhost" |
 | Port | Port at which the Couchbase server can be reached. | "8091" |
 | ClusterName | Name of this Couchbase cluster. | "default" |
-| CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See [metric\_info.py](https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py) for more information. | "default" |
+| CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See <a target="_blank" href="https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py">metric_info.py</a> for more information. | "default" |
 | Interval | Number of seconds between calls to Couchbase API. | 10 |
 | Username | If CollectTarget is "BUCKET" and this bucket requires authentication, username to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "USERNAME" |
 | Password | If CollectTarget is "BUCKET" and this bucket requires authentication, password to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "PASSWORD" |
@@ -82,7 +82,7 @@ Using the example configuration file [10-couchbase.conf](https://github.com/sign
 
 Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
 
-For general reference on how to monitor Couchbase, see [Couchbase Monitoring](http://blog.couchbase.com/monitoring-couchbase-cluster) and [Monitor using the REST API](http://developer.couchbase.com/documentation/server/4.0/monitoring/monitoring-rest.html).
+For general reference on how to monitor Couchbase, see <a target="_blank" href="http://blog.couchbase.com/monitoring-couchbase-cluster">Couchbase Monitoring</a> and <a target="_blank" href="http://developer.couchbase.com/documentation/server/4.0/monitoring/monitoring-rest.html">Monitor using the REST API</a>.
 
 **Note on bucket metrics**
 

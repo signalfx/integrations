@@ -45,7 +45,7 @@ This plugin requires:
 
 2. Enable the `stub_status` module in your NGINX server as described [below](#configuration).
 
-3. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) to `/etc/collectd/managed_config`.
+3. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf">sample configuration file</a> to `/etc/collectd/managed_config`.
 
 4. Modify the sample configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -53,7 +53,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration file [10-nginx.conf](https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the NGINX instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-nginx/10-nginx.conf">10-nginx.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the NGINX instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
@@ -61,7 +61,7 @@ Using the example configuration file [10-nginx.conf](https://github.com/signalfx
 
 #### NGINX service configuration
 
-Please see [nginx docs](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) for a guide to configuring the NGINX stats module `ngx_http_stub_status_module`.
+Please see <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_stub_status_module.html">nginx docs</a> for a guide to configuring the NGINX stats module `ngx_http_stub_status_module`.
 
 ### USAGE
 

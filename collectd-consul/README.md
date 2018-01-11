@@ -14,16 +14,16 @@ Metadata associated with the consul plugin for collectd can be found [here](http
 
 This is the SignalFx Consul plugin. Follow these instructions to install the Consul plugin for collectd.
 
-The [consul-collectd](https://github.com/signalfx/collectd-consul) plugin collects metrics from Consul instances hitting these endpoints:  
-- [/agent/self](https://www.consul.io/api/agent.html#read-configuration)  
-- [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)  
-- [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)  
-- [/catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node)  
-- [/status/leader](https://www.consul.io/api/status.html#get-raft-leader)  
-- [/status/peers](https://www.consul.io/api/status.html#list-raft-peers)  
-- [/coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates)  
-- [/coordinate/nodes](https://www.consul.io/api/coordinate.html#read-lan-coordinates)  
-- [/health/state/any](https://www.consul.io/api/health.html#list-checks-in-state)  
+The <a target="_blank" href="https://github.com/signalfx/collectd-consul">consul-collectd</a> plugin collects metrics from Consul instances hitting these endpoints:  
+- <a target="_blank" href="https://www.consul.io/api/agent.html#read-configuration">/agent/self</a>  
+- <a target="_blank" href="https://www.consul.io/api/agent.html#view-metrics">/agent/metrics</a>  
+- <a target="_blank" href="https://www.consul.io/api/catalog.html#list-nodes">/catalog/nodes</a>  
+- <a target="_blank" href="https://www.consul.io/api/catalog.html#list-services-for-node">/catalog/node/:node</a>  
+- <a target="_blank" href="https://www.consul.io/api/status.html#get-raft-leader">/status/leader</a>  
+- <a target="_blank" href="https://www.consul.io/api/status.html#list-raft-peers">/status/peers</a>  
+- <a target="_blank" href="https://www.consul.io/api/coordinate.html#read-wan-coordinates">/coordinate/datacenters</a>  
+- <a target="_blank" href="https://www.consul.io/api/coordinate.html#read-lan-coordinates">/coordinate/nodes</a>  
+- <a target="_blank" href="https://www.consul.io/api/health.html#list-checks-in-state">/health/state/any</a>  
 
 #### FEATURES
 
@@ -67,9 +67,9 @@ The [consul-collectd](https://github.com/signalfx/collectd-consul) plugin collec
 
 ### INSTALLATION
 
-1. Download [collectd-consul](https://github.com/signalfx/collectd-consul). Place the `consul_plugin.py` and `urllib_ssl_handler.py` file in `/usr/share/collectd/collectd-consul`
+1. Download <a target="_blank" href="https://github.com/signalfx/collectd-consul">collectd-consul</a>. Place the `consul_plugin.py` and `urllib_ssl_handler.py` file in `/usr/share/collectd/collectd-consul`
 
-2. Place the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) for this plugin to `/etc/collectd/managed_config`
+2. Place the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
@@ -90,7 +90,7 @@ If running Consul version below 0.9.1, configure the Consul agents that are to b
 
 This plugin will start a UDP server listening at above host and port.
 
-Using the example configuration file [10-consul.conf](https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf">10-consul.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
 
 | Configuration Option | Description | Default Value |
 |------------------------|----------------|------------------|
@@ -313,9 +313,9 @@ The metric `consul.is_leader` is reported by consul servers and have the dimensi
 
 Additional default metrics to track
 
-  - `consul.memberlist.msg.suspect` - This metric counts the number of times an agent suspects another as failed when executing random probes as part of the gossip protocol. These can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
+  - `consul.memberlist.msg.suspect` - This metric counts the number of times an agent suspects another as failed when executing random probes as part of the gossip protocol. These can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the <a target="_blank" href="https://www.consul.io/docs/agent/options.html#ports">required ports</a>.
 
-  - `consul.serf.member.flap` -  This metric tracks when an agent is marked dead and then recovers within a short time period. This can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the [required ports](https://www.consul.io/docs/agent/options.html#ports).
+  - `consul.serf.member.flap` -  This metric tracks when an agent is marked dead and then recovers within a short time period. This can be an indicator of overloaded agents, network problems, or configuration errors where agents can not connect to each other on the <a target="_blank" href="https://www.consul.io/docs/agent/options.html#ports">required ports</a>.
 
   - `consul.dns.stale_queries` - This metric tracks when an agent serves a DNS query based on information from a server that is more than 5 seconds out of date.
 

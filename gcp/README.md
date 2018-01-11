@@ -19,11 +19,11 @@ Connecting to GCP allows you to take advantage of SignalFx’s extensive GCP sup
 
 ### CONFIGURATION
 
-To connect SignalFx to Google Cloud Platform (GCP), you’ll create a new GCP project service account key for SignalFx to use and specify services to monitor in SignalFx. You must be an administrator of your SignalFx account to connect SignalFx to GCP. [Click here for detailed instructions](http://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-google-cloud-platform).
+To connect SignalFx to Google Cloud Platform (GCP), you’ll create a new GCP project service account key for SignalFx to use and specify services to monitor in SignalFx. You must be an administrator of your SignalFx account to connect SignalFx to GCP. <a target="_blank" href="http://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-google-cloud-platform">Click here for detailed instructions</a>.
 
 ### USAGE
 
-See [our detailed GCP integration guide](https://docs.signalfx.com/en/latest/integrations/gcp-info.html) for more information.
+See <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/gcp-info.html">our detailed GCP integration guide</a> for more information.
 
 ### METRICS
 

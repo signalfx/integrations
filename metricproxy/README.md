@@ -28,8 +28,8 @@ The size of the machine that hosts the proxy depends on the amount of data that 
 ### INSTALLATION
 
 1. Identify a server on which to deploy the SignalFx metric proxy.
-2. Edit the file `sfdbconfig.conf` to configure the proxy. Configuration options are defined [below](#configuration), and example configurations are available in the [main project documentation](https://github.com/signalfx/metricproxy).
-3. Use the [install script](https://github.com/signalfx/metricproxy/blob/master/install.sh) to install or upgrade the proxy, as follows.
+2. Edit the file `sfdbconfig.conf` to configure the proxy. Configuration options are defined [below](#configuration), and example configurations are available in the <a target="_blank" href="https://github.com/signalfx/metricproxy">main project documentation</a>.
+3. Use the <a target="_blank" href="https://github.com/signalfx/metricproxy/blob/master/install.sh">install script</a> to install or upgrade the proxy, as follows.
 
         curl -s https://raw.githubusercontent.com/signalfx/metricproxy/master/install.sh | sudo sh
         # Config at    /etc/sfdbconfig.conf
@@ -50,7 +50,7 @@ The size of the machine that hosts the proxy depends on the amount of data that 
 
 ### CONFIGURATION
 
-See the [example configuration](https://github.com/signalfx/metricproxy/blob/master/exampleSfdbproxy.conf) file for an example of how configuration looks.  Configuration is a JSON file with two important fields: `ListenFrom` and `ForwardTo`.
+See the <a target="_blank" href="https://github.com/signalfx/metricproxy/blob/master/exampleSfdbproxy.conf">example configuration</a> file for an example of how configuration looks.  Configuration is a JSON file with two important fields: `ListenFrom` and `ForwardTo`.
 
 #### ListenFrom
 
@@ -64,9 +64,9 @@ See the [example configuration](https://github.com/signalfx/metricproxy/blob/mas
 
 ##### Graphite options
 
-For incoming carbon (Graphite) data only, the proxy supports transforming long dot-delimited metric names into metrics and dimensions for transmission to SignalFx. [Click here to read more on Github](https://github.com/signalfx/metricproxy/blob/master/README.md#graphite-options) about how to use these options.
+For incoming carbon (Graphite) data only, the proxy supports transforming long dot-delimited metric names into metrics and dimensions for transmission to SignalFx. <a target="_blank" href="https://github.com/signalfx/metricproxy/blob/master/README.md#graphite-options">Click here to read more on Github</a> about how to use these options.
 
-For carbon listeners we support either TCP or UDP, with the default being TCP. [Click here to read more on Github](https://github.com/signalfx/metricproxy/blob/master/README.md#carbon-for-read).
+For carbon listeners we support either TCP or UDP, with the default being TCP. <a target="_blank" href="https://github.com/signalfx/metricproxy/blob/master/README.md#carbon-for-read">Click here to read more on Github</a>.
 
 #### ForwardTo
 
@@ -123,7 +123,7 @@ You can use the proxy to duplicate a data stream to multiple destinations. Add e
 
 #### Transforming carbon dot-delimited metric names into metrics with dimensions
 
-SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx metric proxy's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. [Click here to read more on Github about MetricDeconstructor options](https://github.com/signalfx/metricproxy#graphite-dimensions).
+SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx metric proxy's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. <a target="_blank" href="https://github.com/signalfx/metricproxy#graphite-dimensions">Click here to read more on Github about MetricDeconstructor options</a>.
 
 Note that you can apply different MetricDeconstructor rules in each `ForwardTo` destination.
 
