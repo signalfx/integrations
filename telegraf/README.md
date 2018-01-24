@@ -11,19 +11,19 @@ Metadata associated with the SignalFx Telegraf Agent can be found [here](https:/
 
 ### DESCRIPTION
 
-[Telegraf](https://github.com/influxdata/telegraf) is an open source daemon that collects statistics from a system and publishes them to a destination of your choice. You can use Telegraf to monitor infrastructure metrics, and enable Telegraf plugins that monitor a wide range of software.
+<a target="_blank" href="https://github.com/influxdata/telegraf">Telegraf</a> is an open source daemon that collects statistics from a system and publishes them to a destination of your choice. You can use Telegraf to monitor infrastructure metrics, and enable Telegraf plugins that monitor a wide range of software.
 
 #### FEATURES
 
 Sending data using Telegraf allows you to take advantage of the following features:
 
-- The [SignalFx Infrastructure page](https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html) visualizes hosts that are monitored using the SignalFx Telegraf Agent.
+- The <a target="_blank" href="https://docs.signalfx.com/en/latest/built-in-content/infra-nav.html">SignalFx Infrastructure page</a> visualizes hosts that are monitored using the SignalFx Telegraf Agent.
 
   [<img src='./img/telegrafhostspage.png' width=200px>](./img/telegrafhostspage.png)
 
   [<img src='./img/hostspagesinglehost.png' width=200px>](./img/hostspagesinglehost.png)
 
-- SignalFx provides [recommended detectors](http://docs.signalfx.com/en/latest/built-in-content/recommended-detectors.html) for hosts instrumented with the SignalFx Telegraf Agent. These built-in templates allow you to instantly create intelligent detectors based on SignalFx’s powerful analytics.
+- SignalFx provides <a target="_blank" href="http://docs.signalfx.com/en/latest/built-in-content/recommended-detectors.html">recommended detectors</a> for hosts instrumented with the SignalFx Telegraf Agent. These built-in templates allow you to instantly create intelligent detectors based on SignalFx’s powerful analytics.
 
 - The SignalFx metadata plugin for Telegraf is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s Telegraf Agent.
 
@@ -42,7 +42,7 @@ The SignalFx Telegraf Agent is supported on the following operating systems:
 
 #### Install on a host
 
-1.  Download the latest release of the [SignalFx Telegraf Agent](https://github.com/signalfx/telegraf/releases) for your platform.
+1.  Download the latest release of the <a target="_blank" href="https://github.com/signalfx/telegraf/releases">SignalFx Telegraf Agent</a> for your platform.
 2.  Unzip the downloaded zip file.
 
         unzip Linux-x86_64.zip

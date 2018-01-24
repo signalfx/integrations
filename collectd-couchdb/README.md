@@ -14,7 +14,7 @@ Metadata associated with the couchdb plugin for collectd can be found [here](htt
 
 This is the SignalFx CouchDB plugin. Follow these instructions to install the CouchDB plugin for collectd.
 
-The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin collects metrics from CouchDB instances by calling the api endpoint: [stats](http://docs.couchdb.org/en/2.1.0/api/server/common.html#stats)
+The <a target="_blank" href="https://github.com/signalfx/collectd-couchdb">couchdb-collectd</a> plugin collects metrics from CouchDB instances by calling the api endpoint: <a target="_blank" href="http://docs.couchdb.org/en/2.1.0/api/server/common.html#stats">stats</a>
 
 #### FEATURES
 
@@ -48,9 +48,9 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 
 ### INSTALLATION
 
-1. Download [collectd-couchdb](https://github.com/signalfx/collectd-couchdb). Place the `couchdb_plugin.py` file in `/usr/share/collectd/collectd-couchdb`
+1. Download <a target="_blank" href="https://github.com/signalfx/collectd-couchdb">collectd-couchdb</a>. Place the `couchdb_plugin.py` file in `/usr/share/collectd/collectd-couchdb`
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf) for this plugin to `/etc/collectd/managed_config`
+2. Modify the <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
@@ -61,7 +61,7 @@ The [couchdb-collectd](https://github.com/signalfx/collectd-couchdb) plugin coll
 
 ### CONFIGURATION
 
-Using the example configuration file [10-couchdb.conf](https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and lets you to connect to the CouchDB members
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf">10-couchdb.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and lets you to connect to the CouchDB members
 
 | Configuration option | Definition | Example value |
 | ---------------------|------------|---------------|
@@ -126,11 +126,11 @@ Using the example configuration file [10-couchdb.conf](https://github.com/signal
     [<img src='./img/chart-couchdb-node-db-reads-writes.png' width=200px>](./img/chart-couchdb-node-db-reads-writes.png)  
 
   - **Auth Cache Hits vs Misses**: Stack chart of auth cache hits and misses.
-    
+
     [<img src='./img/chart-couchdb-node-auth-hits-misses.png' width=200px>](./img/chart-couchdb-node-auth-hits-misses.png)
 
   - **Shard Cache Hits vs Misses**: Stack chart of shard cache hits and misses.
-    
+
     [<img src='./img/chart-couchdb-node-shard-hits-misses.png' width=200px>](./img/chart-couchdb-node-shard-hits-misses.png)
 
 - **COUCHDB NODES**: Provides metrics from nodes on a particular host.

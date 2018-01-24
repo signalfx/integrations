@@ -34,7 +34,7 @@ To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration]
 
 ### INSTALLATION
 
-1. Download SignalFx's ActiveMQ message age listener from [https://github.com/signalfx/activemq-integration](https://github.com/signalfx/activemq-integration).
+1. Download SignalFx's ActiveMQ message age listener from <a target="_blank" href="https://github.com/signalfx/activemq-integration">https://github.com/signalfx/activemq-integration</a>.
 
 2. Modify `/activemq-integration/amq-message-age/properties` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -62,7 +62,7 @@ Supply values for the following properties in the `/activemq-integration/amq-mes
 
 In some versions of ActiveMQ, messages sometimes get “stuck” in the queue, and message consumers won’t pick them up even if they have available capacity. This bug causes messages to never be delivered. Monitoring tools are typically unable to detect this condition due to a lack of visibility into the messages that never make it out of the queue.
 
-This tool provides visibility into "stuck" messages in ActiveMQ by inspecting each enqueued message, calculating the average and maximum age of messages per queue, and reporting those metrics to SignalFx using our [Java client library](https://github.com/signalfx/integrations/tree/master/lib-java).
+This tool provides visibility into "stuck" messages in ActiveMQ by inspecting each enqueued message, calculating the average and maximum age of messages per queue, and reporting those metrics to SignalFx using our <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/lib-java">Java client library</a>.
 
 Our built-in dashboard for this data makes it immediately visible when messages have been waiting a long time to be delivered.
 

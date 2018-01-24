@@ -21,7 +21,7 @@ This is the SignalFx AppDynamics integration, which brings metrics captured thro
 
 ### INSTALLATION
 
-The [appd-report-standalone](https://github.com/signalfx/appd-integration/tree/master/appd-report-standalone) module is a standalone process that parses configurations and reports
+The <a target="_blank" href="https://github.com/signalfx/appd-integration/tree/master/appd-report-standalone">appd-report-standalone</a> module is a standalone process that parses configurations and reports
 AppDynamics metrics at specified intervals.
 
 Install this module as follows:
@@ -49,7 +49,7 @@ Provide configuration to this process by setting environment variables as follow
 
 ### USAGE
 
-[Metrics.json](https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json) contains configurations for the list of apps, metrics inside each app, and dimensions mapping for each app.
+<a target="_blank" href="https://github.com/signalfx/appd-integration/blob/master/appd-report-standalone/metrics.json">Metrics.json</a> contains configurations for the list of apps, metrics inside each app, and dimensions mapping for each app.
 
 AppDynamics metric paths are described as a pipe-delimited string (|), as follows: `Performance|AppServer1|Resources|CPU`
 

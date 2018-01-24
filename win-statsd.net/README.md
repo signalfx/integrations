@@ -22,7 +22,7 @@ You must have admin privileges in order to install statsd.net. It will run as NE
 
 ### INSTALLATION
 
-1. Download the latest release from https://github.com/signalfx/signalfx-statsd.net-plugin/releases and unzip it.
+1. Download the latest release from <a target="_blank" href="https://github.com/signalfx/signalfx-statsd.net-plugin/releases">https://github.com/signalfx/signalfx-statsd.net-plugin/releases</a> and unzip it.
 
 2. At a PowerShell admin prompt, run the following command to install statsd.net including the SignalFx statsd.net plugin:
 
