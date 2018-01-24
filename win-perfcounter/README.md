@@ -10,7 +10,7 @@
 
 PerfCounterReporter is a Windows service for reporting Windows Performance Counters to SignalFx. Use this to monitor infrastructure of Windows hosts, including CPU, disk, memory and network.
 
-This code is based on/inspired by [PerfTap](https://github.com/Iristyle/PerfTap) as a means of sending performance data to a monitoring system.
+This code is based on/inspired by <a target="_blank" href="https://github.com/Iristyle/PerfTap">PerfTap</a> as a means of sending performance data to a monitoring system.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -23,7 +23,7 @@ You must have admin privileges in order to install PerfCounterReporter. It will 
 
 ### INSTALLATION
 
-1. Download the latest release of the .MSI installer from the [PerfCounterReporter releases page](https://github.com/signalfx/PerfCounterReporter/releases).
+1. Download the latest release of the .MSI installer from the <a target="_blank" href="https://github.com/signalfx/PerfCounterReporter/releases">PerfCounterReporter releases page</a>.
 
 2. Launch the .MSI and follow the prompts to configure the installation.
 

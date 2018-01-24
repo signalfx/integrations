@@ -13,7 +13,7 @@ Metadata associated with the NGINX Plus plugin for collectd can be found [here](
 
 This is the SignalFx NGINX Plus plugin. Follow these instructions to install the NGINX Plus plugin for collectd.
 
-The [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) plugin collects metrics about a single NGINX Plus instance, using the `/status` endpoints exposed with the ngx_http_status_module, documentation [here](http://nginx.org/en/docs/http/ngx_http_status_module.html).
+The <a target="_blank" href="https://github.com/signalfx/collectd-nginx-plus">niginx-plus-collectd</a> plugin collects metrics about a single NGINX Plus instance, using the `/status` endpoints exposed with the ngx_http_status_module, documentation <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_status_module.html">here</a>.
 
 
 #### FEATURES
@@ -38,13 +38,13 @@ The [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) pl
 
 ### INSTALLATION
 
-1. Download the [niginx-plus-collectd](https://github.com/signalfx/collectd-nginx-plus) project.
+1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-nginx-plus">niginx-plus-collectd</a> project.
 
 2. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `niginx-plus-collectd` project:
 
         sudo pip install -r install_requirements.txt
 
-3. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/10-nginx-plus.conf) for this plugin to `/etc/collectd/managed_config`.
+3. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/10-nginx-plus.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 4. Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
@@ -52,7 +52,7 @@ The [`niginx-plus-collectd`](https://github.com/signalfx/collectd-nginx-plus) pl
 
 ### CONFIGURATION
 
-Using the example configuration file [10-nginx-plus.conf](https://github.com/signalfx/integrations/tree/master/collectd-nginx-plus/10-nginx-plus.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-nginx-plus/10-nginx-plus.conf">10-nginx-plus.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | Configuration Option | Definition | Default Value |
 | ---------------------|------------|---------------|
@@ -138,7 +138,7 @@ information, cache, server zone and upstreams metrics.
 * upstreams.bytes.sent
 
 #### Server Zone Metrics
-Server Zone metrics are emitted for each server in each [status zone](http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone).
+Server Zone metrics are emitted for each server in each <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone">status zone</a>.
 To include these metrics, add `ServerZone true` to the plugin configuration, e.g.
 ```apache
   <Module nginx_plus_collectd>
@@ -166,7 +166,7 @@ To include these metrics, add `MemoryZone true` to the plugin configuration, e.g
 * zone.pages.free
 
 #### Upstream Metrics
-Upstream metrics are emitted for each server in each http-context [upstream group](http://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream).
+Upstream metrics are emitted for each server in each http-context <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream">upstream group</a>.
 To include these metrics, add `Upstream true` to the plugin configuration, e.g.
 ```apache
   <Module nginx_plus_collectd>
@@ -187,7 +187,7 @@ To include these metrics, add `Upstream true` to the plugin configuration, e.g.
 * upstreams.zombies
 
 #### Cache Metrics
-Cache metrics are emitted for each cache, e.g. [proxy cache](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_path).
+Cache metrics are emitted for each cache, e.g. <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_path">proxy cache</a>.
 To include these metrics, add `Cache true` to the plugin configuration, e.g.
 ```apache
   <Module nginx_plus_collectd>
@@ -219,7 +219,7 @@ To include these metrics, add `Cache true` to the plugin configuration, e.g.
 * caches.bypass.bytes.written
 
 #### Stream Server Zone Metrics
-Stream Server Zone metrics are emitted for each server in each stream-context [status zone](http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone).
+Stream Server Zone metrics are emitted for each server in each stream-context <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_status_module.html#status_zone">status zone</a>.
 To include these metrics, add `StreamServerZone true` to the plugin configuration, e.g.
 ```apache
   <Module nginx_plus_collectd>
@@ -239,7 +239,7 @@ To include these metrics, add `StreamServerZone true` to the plugin configuratio
 * stream.server.zone.discarded
 
 #### Stream Upstream Metrics
-Stream Upstream metrics are emitted for each server in each stream-context [upstream group](http://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream).
+Stream Upstream metrics are emitted for each server in each stream-context <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream">upstream group</a>.
 To include these metrics, add `StreamUpstream true` to the plugin configuration, e.g.
 ```apache
   <Module nginx_plus_collectd>

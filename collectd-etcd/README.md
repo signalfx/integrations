@@ -14,7 +14,7 @@ Metadata associated with the etcd plugin for collectd can be found [here](https:
 
 This is the SignalFx etcd plugin. Follow these instructions to install the etcd plugin for collectd.
 
-The [etcd-collectd](https://github.com/signalfx/collectd-etcd) plugin collects metrics from etcd instances hitting these endpoints: [statistics](https://coreos.com/etcd/docs/latest/v2/api.html#statistics) (default metrics)  and [metrics](https://coreos.com/etcd/docs/latest/v2/metrics.html) (optional metrics).
+The <a target="_blank" href="https://github.com/signalfx/collectd-etcd">etcd-collectd</a> plugin collects metrics from etcd instances hitting these endpoints: <a target="_blank" href="https://coreos.com/etcd/docs/latest/v2/api.html#statistics">statistics</a> (default metrics) and <a target="_blank" href="https://coreos.com/etcd/docs/latest/v2/metrics.html">metrics</a> (optional metrics).
 
 #### FEATURES
 
@@ -48,9 +48,9 @@ The [etcd-collectd](https://github.com/signalfx/collectd-etcd) plugin collects m
 
 ### INSTALLATION
 
-1. Download [collectd-etcd](https://github.com/signalfx/collectd-etcd). Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`
+1. Download <a target="_blank" href="https://github.com/signalfx/collectd-etcd">collectd-etcd</a>. Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf) for this plugin to `/etc/collectd/managed_config`
+2. Modify the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
@@ -61,7 +61,7 @@ The [etcd-collectd](https://github.com/signalfx/collectd-etcd) plugin collects m
 
 ### CONFIGURATION
 
-Using the example configuration file [10-etcd.conf](https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the etcd members
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf">10-etcd.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the etcd members
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
