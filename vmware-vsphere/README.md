@@ -54,7 +54,6 @@ This is the SignalFx VSphere integration. It collects metrics from vCenter and r
 
 | Software  | Version        |
 |-----------|----------------|
-| python | 3.6 or later |
 | vcenter | 6.5 or later |
 
 
@@ -62,7 +61,7 @@ This is the SignalFx VSphere integration. It collects metrics from vCenter and r
 
 1. Download the SignalFx-Vsphere monitoring application <a target="_blank" href="https://github.com/signalfx/signalfx-vsphere/releases/tag/v1.0.0/"> ovf template</a>.
 
-2. Deploy the ovf template at place where VCenter(to be monitored) is accessible.
+2. Deploy the ovf template to the vCenter using a connected/configured vSphere client.
 
 3. Login to the virtual machine . User : ```signalfx``` Password : ```signalfx```
 
