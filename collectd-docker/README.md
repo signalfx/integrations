@@ -92,6 +92,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | Verbose | Turns on verbose log statements | false |
 | CpuQuotaPercent | Turns on cpu quota metric | false |
 | CpuSharesPercent | Turns on cpu shares metric | false |
+| CollectNetworkStats | Turns on network stat gathering | true |
 
 
 #### How to send metrics about resource allocation
