@@ -2,8 +2,8 @@
   "marshallScope" : 1
 }, {
   "marshallId" : 1,
-  "sf_description" : "Built-in dashboard for VSphere",
-  "sf_page" : "VSphere",
+  "sf_description" : "Built-in dashboards for vSphere",
+  "sf_page" : "vSphere",
   "sf_type" : "Page"
 }, {
   "marshallId" : 2,
@@ -15,7 +15,7 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "vCenter",
-      "description" : "Name of the vCenter",
+      "description" : "vCenter Server Name",
       "dimension" : "vc_name",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
@@ -1680,7 +1680,7 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "vCenter",
-      "description" : "Name of the vCenter",
+      "description" : "vCenter Server Name",
       "dimension" : "vc_name",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
@@ -1695,7 +1695,7 @@
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
-      "required" : false,
+      "required" : true,
       "restricted" : false,
       "value" : ""
     } ]
@@ -3765,7 +3765,7 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "vCenter",
-      "description" : "null",
+      "description" : "vCenter Server Name",
       "dimension" : "vc_name",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
@@ -5839,7 +5839,7 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "vCenter",
-      "description" : "Name of the vCenter",
+      "description" : "vCenter Server Name",
       "dimension" : "vc_name",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
@@ -5854,7 +5854,7 @@
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
-      "required" : false,
+      "required" : true,
       "restricted" : false,
       "value" : ""
     } ]
@@ -8621,7 +8621,7 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "vCenter",
-      "description" : "null",
+      "description" : "vCenter Server Name",
       "dimension" : "vc_name",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
