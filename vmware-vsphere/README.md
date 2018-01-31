@@ -1,6 +1,6 @@
-# ![](./img/integrations_vmwarevsphere.png) VSphere
+# ![](./img/integrations_vsphere.png) vSphere
 
-Metadata associated with SignalFx's VSphere integration can be found [here](https://github.com/signalfx/integrations/tree/release/signalfx-vsphere). The relevant code for the plugin can be found [here](https://github.com/signalfx/signalfx-vsphere).
+Metadata associated with SignalFx's vSphere integration can be found [here](https://github.com/signalfx/integrations/tree/release/signalfx-vsphere). The relevant code for the plugin can be found [here](https://github.com/signalfx/signalfx-vsphere).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,13 +12,13 @@ Metadata associated with SignalFx's VSphere integration can be found [here](http
 
 ### DESCRIPTION
 
-This is the SignalFx VSphere integration. It collects metrics from vCenter and reports metrics to SignalFx
+This is the SignalFx vSphere integration. It collects metrics from vCenter and reports metrics to SignalFx
 
 #### FEATURES
 
 ##### Built-in dashboards
 
-- **VCenter**: Overview of VCenter architecture from all Objects in the VCenter inventory.
+- **vCenter**: Overview of vCenter architecture from all Objects in the vCenter inventory.
 
   [<img src='./img/dashboard_vsphere_vcenter_top.png' width=200px>](./img/dashboard_vsphere_vcenter_top.png)
   
@@ -32,7 +32,7 @@ This is the SignalFx VSphere integration. It collects metrics from vCenter and r
 
   [<img src='./img/dashboard_vsphere_esx_host_bottom.png' width=200px>](./img/dashboard_vsphere_esx_host_bottom.png)
 
-- **ESX-Hosts**: Provides metrics for all the ESX-Hosts in VCenter.
+- **ESX-Hosts**: Provides metrics for all the ESX-Hosts in vCenter.
 
   [<img src='./img/dashboard_vsphere_esx_hosts_top.png' width=200px>](./img/dashboard_vsphere_esx_hosts_top.png)
   
@@ -44,7 +44,7 @@ This is the SignalFx VSphere integration. It collects metrics from vCenter and r
   
   [<img src='./img/dashboard_vsphere_vm_bottom.png' width=200px>](./img/dashboard_vsphere_vm_bottom.png)
 
-- **VMs**: Provides metrics for all the Virtual Machines in VCenter.
+- **VMs**: Provides metrics for all the Virtual Machines in vCenter.
 
   [<img src='./img/dashboard_vsphere_vms.png' width=200px>](./img/dashboard_vsphere_vms.png)
 
@@ -59,7 +59,7 @@ This is the SignalFx VSphere integration. It collects metrics from vCenter and r
 
 ### INSTALLATION
 
-1. Download the SignalFx-Vsphere monitoring application <a target="_blank" href="https://github.com/signalfx/signalfx-vsphere/releases/tag/v1.0.0/"> ovf template</a>.
+1. Download the SignalFx-vSphere monitoring application <a target="_blank" href="https://github.com/signalfx/signalfx-vsphere/releases/tag/v1.0.0/"> ovf template</a>.
 
 2. Deploy the ovf template to the vCenter using a connected/configured vSphere client.
 
@@ -142,21 +142,21 @@ config:
 
 #### Interpreting Built-in dashboards
 
-- **VCenter**:
+- **vCenter**:
 
-  - **Number of Datacenters**: Total number of Datacenters in the VCenter.
+  - **Number of Datacenters**: Total number of Datacenters in the vCenter.
 
     [<img src='./img/chart_vsphere_vcenter_number_datacenters.png' width=200px>](./img/chart_vsphere_vcenter_number_datacenters.png)
 
-  - **Number of Clusters**: Total number of Clusters in the VCenter.
+  - **Number of Clusters**: Total number of Clusters in the vCenter.
 
     [<img src='./img/chart_vsphere_vcenter_number_clusters.png' width=200px>](./img/chart_vsphere_vcenter_number_clusters.png)
 
-  - **Number of Hosts**: Total number of Hosts in the VCenter.
+  - **Number of Hosts**: Total number of Hosts in the vCenter.
 
     [<img src='./img/chart_vsphere_vcenter_number_hosts.png' width=200px>](./img/chart_vsphere_vcenter_number_hosts.png)
 
-  - **Number of VMs**: Total number of Virtual Machines in the VCenter.
+  - **Number of VMs**: Total number of Virtual Machines in the vCenter.
 
     [<img src='./img/chart_vsphere_vcenter_number_vms.png' width=200px>](./img/chart_vsphere_vcenter_number_vms.png)
 
@@ -202,23 +202,23 @@ config:
 
     [<img src='./img/chart_vsphere_esx_hosts_vm_count_top.png' width=200px>](./img/chart_vsphere_esx_hosts_vm_count_top.png)
 
-  - **CPU Usage**: Percentile distribution of CPU Usage of different Hosts in the VCenter.
+  - **CPU Usage**: Percentile distribution of CPU Usage of different Hosts in the vCenter.
 
     [<img src='./img/chart_vsphere_esx_hosts_cpu_percentile.png' width=200px>](./img/chart_vsphere_esx_hosts_cpu_percentile.png)
 
-  - **Memory Usage**: Percentile distribution of Memory Usage of different Hosts in the VCenter.
+  - **Memory Usage**: Percentile distribution of Memory Usage of different Hosts in the vCenter.
 
     [<img src='./img/chart_vsphere_esx_hosts_memory_percentile.png' width=200px>](./img/chart_vsphere_esx_hosts_memory_percentile.png)
 
-  - **Disk Usage**: Percentile distribution of Disk Usage of different Hosts in the VCenter
+  - **Disk Usage**: Percentile distribution of Disk Usage of different Hosts in the vCenter
 
     [<img src='./img/chart_vsphere_esx_hosts_disk_percentile.png' width=200px>](./img/chart_vsphere_esx_hosts_disk_percentile.png)
 
-  - **Network IO**: Percentile distribution of Network Usage of different Hosts in the VCenter.
+  - **Network IO**: Percentile distribution of Network Usage of different Hosts in the vCenter.
 
     [<img src='./img/chart_vsphere_esx_hosts_network_percentile.png' width=200px>](./img/chart_vsphere_esx_hosts_network_percentile.png)
 
-  - **Number of VMs**: Stack chart of VM count of different Hosts present in the VCenter.
+  - **Number of VMs**: Stack chart of VM count of different Hosts present in the vCenter.
 
     [<img src='./img/chart_vsphere_esx_hosts_vm_count_stack.png' width=200px>](./img/chart_vsphere_esx_hosts_vm_count_stack.png)
 
@@ -251,23 +251,23 @@ config:
   
 - **VMs**:
   
-  - **CPU Usage**: Percentile distribution of CPU Usage of different VMs in the VCenter.
+  - **CPU Usage**: Percentile distribution of CPU Usage of different VMs in the vCenter.
 
     [<img src='./img/chart_vsphere_vms_cpu_percentile.png' width=200px>](./img/chart_vsphere_vms_cpu_percentile.png)
 
-  - **Memory Usage**: Percentile distribution of Memory Usage of different VMs in the VCenter.
+  - **Memory Usage**: Percentile distribution of Memory Usage of different VMs in the vCenter.
 
     [<img src='./img/chart_vsphere_vms_memory_percentile.png' width=200px>](./img/chart_vsphere_vms_memory_percentile.png)
 
-  - **Disk Usage**: Percentile distribution of Disk Usage of different VMs in the VCenter
+  - **Disk Usage**: Percentile distribution of Disk Usage of different VMs in the vCenter
 
     [<img src='./img/chart_vsphere_vms_disk_percentile.png' width=200px>](./img/chart_vsphere_vms_disk_percentile.png)
 
-  - **Network IO**: Percentile distribution of Network Usage of different VMs in the VCenter.
+  - **Network IO**: Percentile distribution of Network Usage of different VMs in the vCenter.
 
     [<img src='./img/chart_vsphere_vms_network_percentile.png' width=200px>](./img/chart_vsphere_vms_disk_percentile.png)
 
-  - **Up time**: List of top VMs having highest uptime in the VCenter.
+  - **Up time**: List of top VMs having highest uptime in the vCenter.
 
     [<img src='./img/chart_vsphere_vms_uptime_top.png' width=200px>](./img/chart_vsphere_vms_uptime_top.png)
 
