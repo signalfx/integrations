@@ -1,10 +1,10 @@
-{ "display_name":"VSphere",
-  "description": "Monitor VSphere using the SignalFx-Vsphere application",
+{ "display_name":"vSphere",
+  "description": "Monitor vSphere using the SignalFx-vSphere application",
   "project_url": "https://github.com/signalfx/integrations/tree/master/vmware-vsphere",
   "code": "https://github.com/signalfx/signalfx-vsphere",
   "featured": false,
-  "logo_large": "/images/repos/vsphere/img/integrations_vmwarevsphere.png",
-  "logo_small": "/images/repos/vsphere/img/integrations_vmwarevsphere%402x.png",
+  "logo_large": "/images/repos/vsphere/img/integrations_vsphere.png",
+  "logo_small": "/images/repos/vsphere/img/integrations_sphere%402x.png",
   "data_signature": "metric_source:\"vsphere\"",
   "in_app_categories": ["servicesMonitored"]
 }
