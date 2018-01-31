@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/vmware-vsphere",
   "code": "https://github.com/signalfx/signalfx-vsphere",
   "featured": false,
-  "logo_large": "/images/repos/vsphere/img/integrations_vsphere.png",
-  "logo_small": "/images/repos/vsphere/img/integrations_sphere%402x.png",
+  "logo_large": "/images/repos/vmware-vsphere/img/integrations_vsphere.png",
+  "logo_small": "/images/repos/vmware-vsphere/img/integrations_vsphere@2x.png",
   "data_signature": "metric_source:\"vsphere\"",
   "in_app_categories": ["servicesMonitored"]
 }
