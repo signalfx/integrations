@@ -6,6 +6,7 @@ An Apache Hadoop collectd plugin which users can use to send metrics from Hadoop
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Configuration](#configuration)
 - [License](#license)
 
@@ -77,6 +78,26 @@ Follow these steps to install this plugin:
 4. For JMX based integrations, place the [20-datanode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-datanode.conf), [20-namenode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-namenode.conf), [20-node-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-node-manager.conf), [20-resource-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-resource-manager.conf) on the correct respective node and/or adjust JMX port & host provided in the conf files. Note this integration can be used without JMX, but only metrics in 'metrics.py' will be emitted. This may affect built-in dashboards.
 
 5. Restart collectd.
+
+### USAGE
+SignalFx provides several built-in dashboards for Hadoop YARN, HDFS, and MapReduce. Examples are shown below.
+
+- **Hadoop YARN** Resource Manager and Application metrics
+
+  [<img src='./img/yarn_resource_manager.png' width=200px>](./img/yarn_resource_manager.png)
+  [<img src='./img/yarn_application.png' width=200px>](./img/yarn_application.png)
+
+- **Hadoop HDFS** HDFS Overview, NameNode, and DataNode metrics
+
+  [<img src='./img/hdfs_overview.png' width=200px>](./img/hdfs_overview.png)
+  [<img src='./img/hdfs_namenode.png' width=200px>](./img/hdfs_namenode.png)
+  [<img src='./img/hdfs_datanode.png' width=200px>](./img/hdfs_datanode.png)
+
+- **Haddop MapReduce** MapReduce applications, jobs, and resource usage
+
+  [<img src='./img/mapreduce_apps.png' width=200px>](./img/mapreduce_apps.png)
+  [<img src='./img/mapreduce_jobs.png' width=200px>](./img/mapreduce_jobs.png)
+  [<img src='./img/mapreduce_usage.png' width=200px>](./img/mapreduce_usage.png)
 
 ### CONFIGURATION
 
