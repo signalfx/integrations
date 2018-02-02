@@ -14,10 +14,22 @@ An Apache Hadoop plugin for collectd which users can use to send metrics from Ha
 
 This is the SignalFx Apache Hadoop Integration.  Follow these instructions to install the integration, which is comprised of both a python-based collectd plugin for Hadoop as well as a JMX configuration file.
 
+This integration collects metrics using two independent sources: a Python-based Hadoop plugin for collectd, and a configuration of the collectd Java plugin.
+The Hadoop collectd plugin and JMX plugin are not dependent on each other, however not installing both will cause some of the SignalFx built-in dashboard content to not be populated.
 
-This plugin uses different data collection methods for different sets of metrics. The Hadoop collectd plugin pulls detailed application, queue, node, and MapReduce metrics from the Resource Manager REST API. It uses a JMX configuration file for pulling namenode, datanode, Node Manager & High-Level Resource Manager Metrics via collectd's GenericJMX plugin.
+The Hadoop collectd plugin will collect metrics from the Resource Manager REST API for the following:
+  - [Cluster Metrics](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Metrics_API)
+  - [Cluster Scheduler](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Scheduler_API)
+  - [Cluster Applications](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Applications_API)
+  - [Cluster Nodes](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Nodes_API)
+  - [MapReduce Jobs](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapredAppMasterRest.html#Jobs_API)
 
-If you're not interested in both sets of metrics you can only install the data collection piece for the metrics that you want. NOTE: This may cause certain charts to be blank within SignalFx's built-in dashboard content for Hadoop.
+The collectd GenericJMX will provide detailed metrics for the following:
+  - [DataNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-datanode.conf)
+  - [NameNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-namenode.conf)
+  - [Node Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-node-manager.conf)
+  - [Resource Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-resource-manager.conf)
+
 
 #### Features
 
