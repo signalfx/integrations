@@ -59,15 +59,17 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 
 ### INSTALLATION
 
-1. Download the SignalFx-vSphere monitoring application <a target="_blank" href="https://github.com/signalfx/signalfx-vsphere/releases/tag/v1.0.0/"> ovf template</a>.
+1. Download the latest SignalFx-vSphere monitoring application <a target="_blank" href="https://github.com/signalfx/signalfx-vsphere/releases"> ovf template</a> zip file.
 
-2. Deploy the ovf template to the vCenter using a connected/configured vSphere client.
+2. Unzip the ovf template zip file.
 
-3. Login to the virtual machine . User : ```signalfx``` Password : ```signalfx```
+3. Deploy the ovf template to the vCenter using a connected/configured vSphere client.
 
-4. Modify the sample configuration file located at ```/etc/vsphere/config.yaml``` as described in [Configuration](#configuration), below.
+4. Login to the virtual machine . User : ```signalfx``` Password : ```signalfx```
 
-5. Restart the service by  ```$ service vsphere-monitor restart```
+5. Modify the sample configuration file located at ```/etc/vsphere/config.yaml``` as described in [Configuration](#configuration), below.
+
+6. Restart the service by  ```$ service vsphere-monitor restart```
 
 ### CONFIGURATION
 

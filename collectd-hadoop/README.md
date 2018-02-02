@@ -1,7 +1,7 @@
 # ![](./img/integrations_hadoop.png) Apache Hadoop  
 
 
-An Apache Hadoop collectd plugin which users can use to send metrics from Hadoop clusters to SignalFx
+An Apache Hadoop plugin for collectd which users can use to send metrics from Hadoop clusters to SignalFx
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,12 +12,22 @@ An Apache Hadoop collectd plugin which users can use to send metrics from Hadoop
 
 ### DESCRIPTION
 
-This is the SignalFx Apache Hadoop plugin.  Follow these instructions to install the Apache Hadoop plugin for collectd & JMX.
+This is the SignalFx Apache Hadoop Integration.  Follow these instructions to install the integration, which is comprised of both a python-based collectd plugin for Hadoop as well as a JMX configuration file.
+The Hadoop collectd plugin and JMX plugin are not dependent on each other, however not installing both will cause some of the SignalFx built-in dashboard content to not be populated.
 
+The Hadoop collectd plugin will collect metrics from the Resource Manager REST API for the following:
+- [Cluster Metrics](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Metrics_API)
+- [Cluster Scheduler](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Scheduler_API)
+- [Cluster Applications](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Applications_API)
+- [Cluster Nodes](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Nodes_API)
+- [MapReduce Jobs](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapredAppMasterRest.html#Jobs_API)
 
-This plugin used a python-based collectd integration and JMX configuration:
-- Collectd python for pulling detailed application, queue, node, and MapReduce metrics from resource manager REST API
-- JMX for pulling namenode, datanode, node manager & high level resource manager metrics
+The collectd GenericJMX will provide detailed metrics for the following:
+- [DataNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-datanode.conf)
+- [NameNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-namenode.conf)
+- [Node Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-node-manager.conf)
+- [Resource Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-resource-manager.conf)
+
 
 #### Features
 
@@ -33,7 +43,7 @@ This plugin used a python-based collectd integration and JMX configuration:
   [<img src='./img/hdfs_namenode.png' width=200px>](./img/hdfs_namenode.png)
   [<img src='./img/hdfs_datanode.png' width=200px>](./img/hdfs_datanode.png)
 
-- **Haddop MapReduce** MapReduce applications, jobs, and resource usage
+- **Hadoop MapReduce** MapReduce applications, jobs, and resource usage
 
   [<img src='./img/mapreduce_apps.png' width=200px>](./img/mapreduce_apps.png)
   [<img src='./img/mapreduce_jobs.png' width=200px>](./img/mapreduce_jobs.png)
@@ -44,7 +54,7 @@ This plugin used a python-based collectd integration and JMX configuration:
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->To enable JMX in Hadoop, add the following JVM options to hadoop-env.sh and yarn-env.sh respectively
+>For the JMX-based metrics it is required that JMX be enabled on the Hadoop side. To enable JMX in Hadoop, add the following JVM options to your hadoop-env.sh and yarn-env.sh scripts respectively:
 
 **hadoop-env.sh:**
 
@@ -60,22 +70,26 @@ This plugin requires:
 
 | Software          | Version        |
 |-------------------|----------------|
-| collectd          |     4.9+       |
-| Python plugin for collectd | (included with SignalFx collectd) |
-| Python            |     2.6+       |
-| Apache Hadoop     |     2.0+       |
+| collectd | 4.9+ |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
+| Python |  2.6+  |
+| Apache Hadoop | 2.0+ |
+
 
 ### INSTALLATION
 
 
 Follow these steps to install this plugin:
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
-2. For collectd resource manager piece: Download SignalFx's example Hadoop configuration file to `/etc/collectd/managed_config`:  [sample.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/sample.conf),
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed as a part of your collectd installation.
 
-3. Modify your hadoop configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+2. Download both parts of the Hadoop collectd plugin: [hadoop_plugin.py](https://github.com/signalfx/collectd-hadoop/blob/master/hadoop_plugin.py) and [metrics.py](https://github.com/signalfx/collectd-hadoop/blob/master/metrics.py)
 
-4. For JMX based integrations, place the [20-datanode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-datanode.conf), [20-namenode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-namenode.conf), [20-node-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-node-manager.conf), [20-resource-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-resource-manager.conf) on the correct respective node and/or adjust JMX port & host provided in the conf files. Note this integration can be used without JMX, but only metrics in 'metrics.py' will be emitted. This may affect built-in dashboards.
+3. Download SignalFx's example configuration file for the Hadoop collectd Plugin to `/etc/collectd/managed_config`:  [10-hadoop.conf](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/10-hadoop.conf).
+
+4. Modify your Hadoop collectd Plugin's configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+
+4. For JMX-based metrics, place the [20-datanode.conf](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-datanode.conf), [20-namenode.conf](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-namenode.conf), [20-node-manager.conf](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-node-manager.conf), [20-resource-manager.conf](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-resource-manager.conf) on the correct respective node and/or adjust JMX port & host provided in the conf files.
 
 5. Restart collectd.
 
@@ -93,7 +107,7 @@ SignalFx provides several built-in dashboards for Hadoop YARN, HDFS, and MapRedu
   [<img src='./img/hdfs_namenode.png' width=200px>](./img/hdfs_namenode.png)
   [<img src='./img/hdfs_datanode.png' width=200px>](./img/hdfs_datanode.png)
 
-- **Haddop MapReduce** MapReduce applications, jobs, and resource usage
+- **Hadoop MapReduce** MapReduce applications, jobs, and resource usage
 
   [<img src='./img/mapreduce_apps.png' width=200px>](./img/mapreduce_apps.png)
   [<img src='./img/mapreduce_jobs.png' width=200px>](./img/mapreduce_jobs.png)
@@ -101,7 +115,7 @@ SignalFx provides several built-in dashboards for Hadoop YARN, HDFS, and MapRedu
 
 ### CONFIGURATION
 
->See the following links for more information of specific metric endpoints:
+>See the following links for more information about specific metric endpoints:
 
 >https://hadoop.apache.org/docs/r2.7.4/hadoop-project-dist/hadoop-common/Metrics.html
 
@@ -109,11 +123,11 @@ SignalFx provides several built-in dashboards for Hadoop YARN, HDFS, and MapRedu
 
 >https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapredAppMasterRest.html
 
-Using the example configuration file [sample.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/sample.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file [10-hadoop.conf](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/10-hadoop.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | Configuration Option | Definition | Example Value |
 | ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-hadoop" |
+| ModulePath* | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-hadoop" |
 | ResourceManagerURL*  | Host where Resource Manager REST API is running | "http://127.0.0.1" |
 | ResourceManagerPort*  | Port where Resource Manager REST API is running | 8088 |
 | ExcludeMetrics  | An individual metric name to be excluded | "hadoop.cluster.metrics.allocated_mb" |
@@ -124,6 +138,4 @@ Using the example configuration file [sample.conf](https://github.com/signalfx/f
 
 ### LICENSE
 
-> Include licensing information for this integration metadata, not the integration itself, in this section.
-
-This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details.
+> This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details.

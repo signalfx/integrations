@@ -5,6 +5,6 @@
   "featured": false,
   "logo_large": "/images/repos/collectd-hadoop/img/integrations_hadoop@2x.png",
   "logo_small": "/images/repos/collectd-hadoop/img/integrations_hadoop.png",
-  "data_signature": "plugin:\"hadoop\"",
+  "data_signature": "plugin:\"apache_hadoop\"",
   "in_app_categories": ["servicesMonitored"]
 }
