@@ -34,3 +34,4 @@ Each integration in this repository must include documentation of the metrics th
   as given by a sine function.  We send this in as it is a good way to show a
   gauge.
   ```
+NOTE: Do not create subdirectories under /docs. The metrics need to all be in /docs so they will be pulled into the product.
