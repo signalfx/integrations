@@ -16,17 +16,17 @@ This is the SignalFx Apache Hadoop Integration.  Follow these instructions to in
 The Hadoop collectd plugin and JMX plugin are not dependent on each other, however not installing both will cause some of the SignalFx built-in dashboard content to not be populated.
 
 The Hadoop collectd plugin will collect metrics from the Resource Manager REST API for the following:
-  - [Cluster Metrics](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Metrics_API)
-  - [Cluster Scheduler](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Scheduler_API)
-  - [Cluster Applications](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Applications_API)
-  - [Cluster Nodes](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Nodes_API)
-  - [MapReduce Jobs](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapredAppMasterRest.html#Jobs_API)
+- [Cluster Metrics](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Metrics_API)
+- [Cluster Scheduler](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Scheduler_API)
+- [Cluster Applications](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Applications_API)
+- [Cluster Nodes](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/ResourceManagerRest.html#Cluster_Nodes_API)
+- [MapReduce Jobs](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapredAppMasterRest.html#Jobs_API)
 
 The collectd GenericJMX will provide detailed metrics for the following:
-  - [DataNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-datanode.conf)
-  - [NameNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-namenode.conf)
-  - [Node Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-node-manager.conf)
-  - [Resource Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-resource-manager.conf)
+- [DataNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-datanode.conf)
+- [NameNode](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-namenode.conf)
+- [Node Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-node-manager.conf)
+- [Resource Manager](https://github.com/signalfx/integrations/blob/master/collectd-hadoop/20-resource-manager.conf)
 
 
 #### Features
