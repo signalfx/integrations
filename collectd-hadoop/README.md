@@ -1,7 +1,7 @@
 # ![](./img/integrations_hadoop.png) Apache Hadoop  
 
 
-An Apache Hadoop collectd plugin which users can use to send metrics from Hadoop clusters to SignalFx
+An Apache Hadoop plugin for collectd which users can use to send metrics from Hadoop clusters to SignalFx
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,12 +12,14 @@ An Apache Hadoop collectd plugin which users can use to send metrics from Hadoop
 
 ### DESCRIPTION
 
-This is the SignalFx Apache Hadoop plugin.  Follow these instructions to install the Apache Hadoop plugin for collectd & JMX.
+This is the SignalFx Apache Hadoop Integration.  Follow these instructions to install the integration, which is comprised of both a python-based collectd plugin for Hadoop as well as a JMX configuration file.
 
 
-This plugin used a python-based collectd integration and JMX configuration:
-- Collectd python for pulling detailed application, queue, node, and MapReduce metrics from resource manager REST API
-- JMX for pulling namenode, datanode, node manager & high level resource manager metrics
+This plugin uses different data collection methods for different sets of metrics:
+- The Hadoop collectd plugin pulls detailed application, queue, node, and MapReduce metrics from the Resource Manager REST API
+- It uses a JMX configuration file for pulling namenode, datanode, Node Manager & High-Level Resource Manager Metrics via collectd's GenericJMX plugin.
+
+If you're not interested in both sets of metrics you can only install the data collection piece for the metrics that you want. NOTE: This may cause certain charts to be blank within SignalFx's built-in dashboard content for Hadoop.
 
 #### Features
 
@@ -44,7 +46,7 @@ This plugin used a python-based collectd integration and JMX configuration:
 
 ### REQUIREMENTS AND DEPENDENCIES
 
->To enable JMX in Hadoop, add the following JVM options to hadoop-env.sh and yarn-env.sh respectively
+>For the JMX-based metrics it is required that JMX be enabled on the Hadoop side. To enable JMX in Hadoop, add the following JVM options to your hadoop-env.sh and yarn-env.sh scripts respectively:
 
 **hadoop-env.sh:**
 
@@ -60,22 +62,26 @@ This plugin requires:
 
 | Software          | Version        |
 |-------------------|----------------|
-| collectd          |     4.9+       |
-| Python plugin for collectd | (included with SignalFx collectd) |
-| Python            |     2.6+       |
-| Apache Hadoop     |     2.0+       |
+| collectd | 4.9+ |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
+| Python |  2.6+  |
+| Apache Hadoop | 2.0+ |
+
 
 ### INSTALLATION
 
 
 Follow these steps to install this plugin:
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
-2. For collectd resource manager piece: Download SignalFx's example Hadoop configuration file to `/etc/collectd/managed_config`:  [sample.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/sample.conf),
+1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed as a part of your collectd installation.
 
-3. Modify your hadoop configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+2. Download both parts of the Hadoop collectd plugin: [hadoop_plugin.py](https://github.com/signalfx/collectd-hadoop/blob/master/hadoop_plugin.py) and [metrics.py](https://github.com/signalfx/collectd-hadoop/blob/master/metrics.py)
 
-4. For JMX based integrations, place the [20-datanode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-datanode.conf), [20-namenode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-namenode.conf), [20-node-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-node-manager.conf), [20-resource-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-resource-manager.conf) on the correct respective node and/or adjust JMX port & host provided in the conf files. Note this integration can be used without JMX, but only metrics in 'metrics.py' will be emitted. This may affect built-in dashboards.
+3. Download SignalFx's example configuration file for the Hadoop collectd Plugin to `/etc/collectd/managed_config`:  [sample.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/sample.conf).
+
+4. Modify your Hadoop collectd Plugin's configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
+
+4. For JMX-based metrics, place the [20-datanode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-datanode.conf), [20-namenode.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-namenode.conf), [20-node-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-node-manager.conf), [20-resource-manager.conf](https://github.com/signalfx/field-shared/blob/master/Integrations/collectd-hadoop/20-resource-manager.conf) on the correct respective node and/or adjust JMX port & host provided in the conf files. 
 
 5. Restart collectd.
 
@@ -101,7 +107,7 @@ SignalFx provides several built-in dashboards for Hadoop YARN, HDFS, and MapRedu
 
 ### CONFIGURATION
 
->See the following links for more information of specific metric endpoints:
+>See the following links for more information about specific metric endpoints:
 
 >https://hadoop.apache.org/docs/r2.7.4/hadoop-project-dist/hadoop-common/Metrics.html
 
@@ -124,6 +130,6 @@ Using the example configuration file [sample.conf](https://github.com/signalfx/f
 
 ### LICENSE
 
-> Include licensing information for this integration metadata, not the integration itself, in this section.
+> This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details.
 
-This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details.
+
