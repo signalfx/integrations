@@ -13,8 +13,6 @@ An Apache Hadoop plugin for collectd which users can use to send metrics from Ha
 ### DESCRIPTION
 
 This is the SignalFx Apache Hadoop Integration.  Follow these instructions to install the integration, which is comprised of both a python-based collectd plugin for Hadoop as well as a JMX configuration file.
-
-This integration collects metrics using two independent sources: a Python-based Hadoop plugin for collectd, and a configuration of the collectd Java plugin.
 The Hadoop collectd plugin and JMX plugin are not dependent on each other, however not installing both will cause some of the SignalFx built-in dashboard content to not be populated.
 
 The Hadoop collectd plugin will collect metrics from the Resource Manager REST API for the following:
