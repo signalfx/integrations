@@ -43,7 +43,7 @@ The collectd GenericJMX will provide detailed metrics for the following:
   [<img src='./img/hdfs_namenode.png' width=200px>](./img/hdfs_namenode.png)
   [<img src='./img/hdfs_datanode.png' width=200px>](./img/hdfs_datanode.png)
 
-- **Haddop MapReduce** MapReduce applications, jobs, and resource usage
+- **Hadoop MapReduce** MapReduce applications, jobs, and resource usage
 
   [<img src='./img/mapreduce_apps.png' width=200px>](./img/mapreduce_apps.png)
   [<img src='./img/mapreduce_jobs.png' width=200px>](./img/mapreduce_jobs.png)
@@ -107,7 +107,7 @@ SignalFx provides several built-in dashboards for Hadoop YARN, HDFS, and MapRedu
   [<img src='./img/hdfs_namenode.png' width=200px>](./img/hdfs_namenode.png)
   [<img src='./img/hdfs_datanode.png' width=200px>](./img/hdfs_datanode.png)
 
-- **Haddop MapReduce** MapReduce applications, jobs, and resource usage
+- **Hadoop MapReduce** MapReduce applications, jobs, and resource usage
 
   [<img src='./img/mapreduce_apps.png' width=200px>](./img/mapreduce_apps.png)
   [<img src='./img/mapreduce_jobs.png' width=200px>](./img/mapreduce_jobs.png)
