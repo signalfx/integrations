@@ -1,4 +1,4 @@
-# ![](./img/integration_aws.png) Amazon CloudWatch
+# ![](./img/integration_aws.png) Amazon Web Services
 
 - [Description](#description)
 - [Configuration](#configuration)

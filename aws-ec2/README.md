@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Amazon Elastic Compute Cloud (EC2) via [Amazon CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+Use SignalFx to monitor Amazon Elastic Compute Cloud (EC2) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 #### FEATURES
 
