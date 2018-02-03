@@ -41,12 +41,14 @@ To access this integration, [connect to Amazon Web Services](https://github.com/
 
 For the usage data to be imported, make sure the following lines are in your AWS Policy Document:
 
-<pre>"ec2:DescribeInstances",
+```
+"ec2:DescribeInstances",
 "ec2:DescribeInstanceStatus",
 "ec2:DescribeTags",
 "ec2:DescribeReservedInstances",
 "ec2:DescribeReservedInstancesModifications",
-"organizations:DescribeOrganization",</pre>
+"organizations:DescribeOrganization",
+```
 
 ### USAGE
 
