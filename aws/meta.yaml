@@ -1,5 +1,5 @@
 { "display_name":"Amazon Web Services",
-   "description": "SignalFx's integration with Amazon CloudWatch.",
+   "description": "SignalFx's integration with Amazon Web Services.",
    "project_url": "https://github.com/signalfx/integrations/tree/master/aws",
    "code": "https://aws.amazon.com/cloudwatch/",
    "featured": false,
