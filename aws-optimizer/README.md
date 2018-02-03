@@ -1,67 +1,100 @@
-# ![](./img/integration_optimizer.png) AWS Optimizer
+# Validated Integrations
 
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Metrics](#metrics)
-- [License](#license)
+SignalFx indexes available and validated integrations [here](http://signalfx.github.io). On this page, users can browse available integrations and find the integration that monitors the software they care about. This also provides a single place to view all of the integrations that SignalFx has validated and for which SignalFx has provided built-in content in the SignalFx application. Each integration has a link to the code as well as a Project repository with information on:
 
-### DESCRIPTION
+- How to install, configure and use the integration
+- The metrics that are emitted
+- For the given application or component, what to monitor and how
 
-Use SignalFx to optimize EC2 Usage & Cost via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+In order to be added to the integration index, SignalFx validates each integration for stability, scale, and compatibility. If you would like to contribute here is the process:
 
-SignalFx AWS Optimizer gives you actionable insight into cost-saving opportunities, underutilized investments, usage patterns, and cost attribution. You can view data by InstanceType, AWS Region, AWS availability Zone and categories specific to your setup, such as Service, Team, or any other dimensions that are sourced from EC2 instance tags. SignalFx makes calls to the AWS API to retrieve cost and usage data and derives metrics with which you can visualize EC2 usage and approximated costs. You can also create detectors based on this data, so you can get alerted in real-time on unexpected changes in cost or usage patterns.
+1. Create and publish a integration for SignalFx.
+ 1. We have built an example [collectd-based plugin](https://github.com/signalfx/collectd-example/blob/master/example_plugin.py) to help you get started.
+ 1. For other data collector types you'll just need to make sure that you can direct the output to SignalFX and use one of our [supported formats](https://developers.signalfx.com/docs/signalfx-api-overview)
+1. Ensure that your plugin meets the validation requirements - more on that below.
+1. Clone [this repository](https://github.com/signalfx/Integrations) locally.
+1. Create a directory in this repository named after your plugin.
+1. Add required documentation content to that directory.
+1. Commit and submit a pull request to this repository. Pull request template will prompt for all required information. When you change or enhance your plugin, send updates through a pull request.
 
-Notes on using AWS Optimizer:
-- The imported data does not include AWS Billing data.
-- Data is not imported for EC2 Spot Instances.
-- If you have multiple AWS Accounts, they must all be included in the SignalFx AWS integration and have “Import data for SignalFx AWS Optimizer” selected. If this is not the case, the generated metrics will not reflect accurate values.
+## What is required for a new integration
 
-#### FEATURES
+Here are SignalFx's requirements for a new plugin:
 
-AWS Optimizer generates usage & cost metrics and makes these available for visualization, analytics and alerting.
+- **Validated integration code**
+- **Documentation** that describes the integration and how it operates
+  - Metadata file that points to integration code
+  - Metrics docs
+  - Sample Dashboard
+  - Example configuration file
+  - License file (Apache 2.0 recommended)
+- **Support information**
+  - Contact info for support
 
-##### Built-in dashboards
+## Validation Requirements
 
-- **EC2 Reservations**: Suggestions to optimize EC2 Reservations.
+You're the expert in the software that you wrote the integration for. The goal of this exercise is to convey your expertise in the software being monitored to non-expert users. You do this by providing documentation, usage information and examples. It’s also important to make sure that your integration performs well and collects the right data to get the job done.
 
-  [<img src='./img/dashboard_optimizer_ec2_reservations.png' width=200px>](./img/dashboard_optimizer_ec2_reservations.png)
+### Code Requirements
+Below are requirements for integration code:
 
-- **EC2 Cost and Usage**: Details of EC2 Cost and Usage information.
+1. Include a README file that matches the [prescribed format](https://github.com/signalfx/integrations/blob/master/Example/README.md). This file should contain all the information that a user would need to install, run and derive value from your integration.
+1. Submit your performance test plan and results.
+1. Make sure that your integration collects all the data that is necessary to monitor the software in question.
+  - When deciding which metrics your integration should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available in "detailed" mode. Use other validated integrations as a guide on what to include.
+1. Include dimensions by adding key-value pairs to metric names. Dimensions can include any context that a user needs to drill down or slice-and-dice metrics through their environment (ex. cluster name, node name, region). Dimensions can capture any important concepts of the software being monitored, such as *queue name* for a message queue or *index name* for a search utility. To read more about dimensions, see SignalFx's data model on [developers.signalfx.io](http://developers.signalfx.io).
 
-  [<img src='./img/dashboard_optimizer_ec2_cost_usage.png' width=200px>](./img/dashboard_optimizer_ec2_cost_usage.png)
+### Documentation Requirements
 
-- **EC2 Worksheet**: Charts to help dive deeper into and troubleshoot EC2 Usage.
+Metadata about your integration is stored in the SignalFx integration index to help users find the integration they're looking for. This includes:
 
-  [<img src='./img/dashboard_optimizer_ec2_worksheet.png' width=200px>](./img/dashboard_optimizer_ec2_worksheet.png)
+1. A structured document that includes a link to and description of your integration
+1. Sample configuration for your integration
+1. Documentation of the metrics emitted by your integration
+1. Screenshots of example charts that show how data from your integration should be used
 
-### INSTALLATION
+An example can be found here: [github.com/signalfx/collectd-example](https://github.com/signalfx/collectd-example)
 
-To access this integration, [connect to Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+#### Structured document (YAML File)
 
-For the usage data to be imported, make sure the following lines are in your AWS Policy Document:
+We will programmatically read this document to generate a description on your integration for the catalog. Please provide the following fields:
 
-<pre>"ec2:DescribeInstances",
-"ec2:DescribeInstanceStatus",
-"ec2:DescribeTags",
-"ec2:DescribeReservedInstances",
-"ec2:DescribeReservedInstancesModifications",
-"organizations:DescribeOrganization",</pre>
+| field name | description |
+|------------|-------------|
+| display\_name | name that will display in the integration tile|
+| description | description of integration |
+| project\_url | URL of 'metadata' directory (`https://github.com/signalfx/integrations/tree/master/[integration-foo]`)|
+| code | URL of code repository |
+| featured | flag to put integration in "Top Integrations" section |
+| logo\_large | URL of 300x300 pixel logo image |
+| logo\_small | URL of 150x150 pixel logo image |
 
-### USAGE
 
-SignalFx provides built-in dashboards for this service. Examples are shown below.
+Example:
 
-![](./img/dashboard_optimizer_ec2_reservations.png)
+```
+{ "display_name":"AppDynamics Metrics Integration",
+  "description": "AppDynamics metrics integration",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/appdynamics",
+  "code": "https://github.com/signalfx/appd-integration",
+  "featured": false,
+  "logo_large": "/images/repos/appdynamics/img/integrations_appdynamics%402x.png",
+  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png"
+},
+```
 
-![](./img/dashboard_optimizer_ec2_cost_usage.png)
+#### Sample configuration
 
-![](./img/dashboard_optimizer_ec2_worksheet.png)
+To help users get up and running quickly, provide a sample configuration for your integration that includes sensible default values and highlights required configuration.
 
-### METRICS
+An example of a sample configuration file can be found in in the [Example directory](https://github.com/signalfx/integrations/blob/master/Example/10-example.conf).
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
+#### Metrics and dimensions documentation
 
-### LICENSE
+To help users make sense of their new data, provide documentation of each metric and dimension that the integration emits, including name, type (counter, gauge, or cumulative counter) and description of what it measures.
 
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+An example metrics documentation file can be found in [Example "docs" directory](https://github.com/signalfx/integrations/tree/master/Example/docs).
+
+#### Sample dashboard
+
+Include a dashboard for your users to import into their monitoring solution, so that they can get instant value out of running your integration. SignalFx provides extended trial accounts for plugin developers that you can use to develop your dashboard. [Contact us to learn more](mailto:community@signalfx.com).
