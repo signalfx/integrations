@@ -54,7 +54,7 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 
 | Software  | Version        |
 |-----------|----------------|
-| vcenter | 5.5 or later |
+| vCenter | 5.5 or later |
 
 
 ### INSTALLATION
