@@ -12,7 +12,7 @@
           - mem.swapused.average
         cluster:
           - mem.usage.average
-      EncludeMetrics:
+      ExcludeMetrics:
         datacenter:
           - cpu.usage.average
         vm:
