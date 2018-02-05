@@ -54,7 +54,7 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 
 | Software  | Version        |
 |-----------|----------------|
-| vcenter | 6.5 or later |
+| vcenter | 5.5 or later |
 
 
 ### INSTALLATION
@@ -73,7 +73,7 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 
 ### CONFIGURATION
 
-Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/signalfx-vsphere/config.yaml">config.yaml</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the VCenter to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/vmware-vsphere/config.yaml">config.yaml</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the VCenter to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
@@ -134,7 +134,7 @@ config:
     IngestEndpoint: 'https://ingest.signalfx.com'
     MORSyncInterval: 20
     MetricSyncInterval: 60
-    EncludeMetrics:
+    ExcludeMetrics:
       host:
         - disk.usage.average
 ```
