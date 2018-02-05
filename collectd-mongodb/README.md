@@ -99,6 +99,10 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | User | Valid mongodb user | "" |
 | Password | Associated password for valid user | "password" |
 | Database | Name(s) of database(s) that you would like metrics from. Note: the first database in this list must be "admin", as it is used to perform a `serverStatus()` command. | "admin" "db-prod" "db-dev" |
+| Interval | How frequently to send metrics in seconds | collectd `Interval` setting |
+| SendCollectionMetrics | Whether to send collection level metrics or not | false |
+| SendCollectionTopMetrics | Whether to send collection level top (timing) metrics or not | false |
+| CollectionMetricsIntervalMultiplier | How frequently to send collection level metrics as a multiple of the configured plugin interval (e.g. if the Interval is 15 and the multiplier is 4, collection level metrics will be fetched every minute) | 6 |
 | UseTLS | Set this to `true` if you want to connect to Mongo using TLS/x509/SSL. | false |
 | CACerts | Path to a CA cert that will be used to verify the certificate that Mongo presents (not needed if not using TLS or if Mongo's cert is signed by a globally trusted issuer already installed in the default location on your OS) | "" |
 | TLSClientCert | Path to a client certificate (not needed unless your Mongo instance requires x509 client verification) | "" |
