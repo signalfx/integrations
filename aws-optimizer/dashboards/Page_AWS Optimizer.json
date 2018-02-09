@@ -57,6 +57,15 @@
       "sizeX" : 12,
       "sizeY" : 1
     }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1496246735283,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
       "col" : 8,
       "options" : {
         "chartIndex" : 1517478758864,
@@ -74,15 +83,6 @@
       "row" : 1,
       "sizeX" : 4,
       "sizeY" : 2
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1496246735283,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
     }, {
       "col" : 4,
       "options" : {
@@ -248,15 +248,15 @@
       } ]
     },
     "currentUniqueKey" : 2,
-    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">RI Expiry</font>\n</td></tr></table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#FFFFFF\">\n<font size=\"2\" color=\"gray\">These charts identify reservations that are closest to Expiry and the amortized cost by Reservation.</font>\n</td></tr></table>",
+    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">RI Expiry</font>\n</td></tr></table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#FFFFFF\">\n<font size=\"2\" color=\"gray\">These charts identify Reservations that are closest to expiry, and list the instance counts and amortized costs by Reservation.</font>\n</td></tr></table>",
     "relatedDetectors" : [ ],
-    "revisionNumber" : 15,
-    "uiHelperValue" : "##CHARTID##_15"
+    "revisionNumber" : 17,
+    "uiHelperValue" : "##CHARTID##_17"
   }
 }, {
   "marshallId" : 5,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Days until RI Expires",
+  "sf_chart" : "Days until RIs Expire",
   "sf_chartIndex" : 1517018486635,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -334,8 +334,18 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
-      "colorByValue" : false,
-      "colorByValueScale" : [ ],
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#007c1d",
+        "gt" : 30
+      }, {
+        "color" : "#eac24b",
+        "gt" : 7,
+        "lte" : 30
+      }, {
+        "color" : "#ea1849",
+        "lte" : 7
+      } ],
       "legendColumnConfiguration" : [ {
         "enabled" : false,
         "property" : "aws_account_id"
@@ -398,15 +408,15 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
   }
 }, {
   "marshallId" : 6,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Amount Lost Hourly to Unused RIs",
+  "sf_chart" : "Amount Lost in Unused RIs",
   "sf_chartIndex" : 1496248648487,
-  "sf_description" : "Calculatation based on minimum unused RIs over the last month",
+  "sf_description" : "Calculation based on current unused RIs",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -521,6 +531,7 @@
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "prefix" : "$",
+        "suffix" : "/hour",
         "unit" : "$",
         "unitPosition" : "prefix"
       },
@@ -620,13 +631,13 @@
     },
     "currentUniqueKey" : 24,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 61,
-    "uiHelperValue" : "##CHARTID##_61"
+    "revisionNumber" : 63,
+    "uiHelperValue" : "##CHARTID##_63"
   }
 }, {
   "marshallId" : 7,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Num of Days until next RI Expires",
+  "sf_chart" : "Days Until Next RI Expires",
   "sf_chartIndex" : 1517018809465,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -649,9 +660,9 @@
         },
         "fn" : {
           "options" : {
-            "count" : 1
+            "scaleAmount" : 1.1574074074074074E-8
           },
-          "type" : "BOTTOMN"
+          "type" : "SCALE"
         },
         "showMe" : false
       }, {
@@ -679,15 +690,15 @@
         },
         "fn" : {
           "options" : {
-            "scaleAmount" : 1.1574074074074074E-8
+            "count" : 1
           },
-          "type" : "SCALE"
+          "type" : "BOTTOMN"
         },
         "showMe" : false
       } ],
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "reservation.ms_until_expiration - Bottom 1 - Floor - Scale:1.1574074074074074e-8",
+      "name" : "reservation.ms_until_expiration - Scale:1.1574074074074074e-8 - Floor - Bottom 1",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "reservation.ms_until_expiration",
@@ -722,11 +733,11 @@
       "colorByMetric" : false,
       "colorByValue" : true,
       "colorByValueScale" : [ {
-        "color" : "#acef7f",
+        "color" : "#007c1d",
         "gt" : 30,
         "lte" : 90
       }, {
-        "color" : "#e5e517",
+        "color" : "#eac24b",
         "gt" : 7,
         "lte" : 30
       }, {
@@ -797,15 +808,15 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
   "marshallId" : 8,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Normalized RI Coverage (by Instance Family) %",
+  "sf_chart" : "Normalized RI Coverage by Instance Family",
   "sf_chartIndex" : 1517478758864,
-  "sf_description" : "RI Coverage of Running Instances, Normalized to the \"small\" unit of the Instance Family",
+  "sf_description" : "RI coverage in running instances, normalized to the small unit of the instance family",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -956,8 +967,28 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
-      "colorByValue" : false,
-      "colorByValueScale" : [ ],
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#007c1d",
+        "gt" : 80,
+        "lte" : 100
+      }, {
+        "color" : "#6bd37e",
+        "gt" : 60,
+        "lte" : 80
+      }, {
+        "color" : "#eac24b",
+        "gt" : 40,
+        "lte" : 60
+      }, {
+        "color" : "#f47e00",
+        "gt" : 20,
+        "lte" : 40
+      }, {
+        "color" : "#ea1849",
+        "gte" : 0,
+        "lte" : 20
+      } ],
       "dimensionInLegend" : "sf_metric",
       "disableThrottle" : true,
       "groupBy" : [ "aws_instance_family" ],
@@ -1029,7 +1060,7 @@
       "maxDecimalPlaces" : 3,
       "range" : -604800000,
       "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
+      "secondaryVisualization" : "LINEAR",
       "sortPreference" : "-value",
       "stackedChart" : false,
       "updateInterval" : null,
@@ -1057,8 +1088,8 @@
     },
     "currentUniqueKey" : 13,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 41,
-    "uiHelperValue" : "##CHARTID##_41"
+    "revisionNumber" : 47,
+    "uiHelperValue" : "##CHARTID##_47"
   }
 }, {
   "marshallId" : 9,
@@ -1259,9 +1290,9 @@
 }, {
   "marshallId" : 10,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Unused Regional Reservations Normalized by InstanceFamily (units of \"small\")",
+  "sf_chart" : "Unused Regional Reservations by Family (Normalized to Small Unit of the Instance Family)",
   "sf_chartIndex" : 1507248875862,
-  "sf_description" : "Chart may be blank if there are no unused reservations of scope Region. Reports Unused Reservations based on Instance size flexibility https://aws.amazon.com/blogs/aws/new-instance-size-flexibility-for-ec2-reserved-instances/",
+  "sf_description" : "Chart may be blank if there are no unused reservations of scope Region. Reports unused reservations based on instance size flexibility (https://aws.amazon.com/blogs/aws/new-instance-size-flexibility-for-ec2-reserved-instances/)",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -1426,8 +1457,8 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 37,
-    "uiHelperValue" : "##CHARTID##_37"
+    "revisionNumber" : 40,
+    "uiHelperValue" : "##CHARTID##_40"
   }
 }, {
   "marshallId" : 11,
@@ -1474,9 +1505,9 @@
       } ]
     },
     "currentUniqueKey" : 2,
-    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">RI Coverage</font>\n</td></tr></table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#ffffff\">\n<font size=\"2\" color=\"gray\">These charts list On-demand instances, and estimate potential saving from purchasing reservations for the minimum number running over the last 30 days.</font>\n</td></tr></table>",
-    "revisionNumber" : 23,
-    "uiHelperValue" : "##CHARTID##_23"
+    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">RI Coverage</font>\n</td></tr></table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#ffffff\">\n<font size=\"2\" color=\"gray\">These charts list running On-Demand instances, show estimated savings from purchasing reservations for them, and calculate RI coverage.</font>\n</td></tr></table>",
+    "revisionNumber" : 27,
+    "uiHelperValue" : "##CHARTID##_27"
   }
 }, {
   "marshallId" : 12,
@@ -1599,9 +1630,9 @@
 }, {
   "marshallId" : 13,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Normalized RI Coverage",
+  "sf_chart" : "Normalized RI Coverage (%) Trend",
   "sf_chartIndex" : 1517478569086,
-  "sf_description" : "Mean of RI Coverage of Running Instances, Normalized to the \"small\" unit of the Instance Family",
+  "sf_description" : "Mean of RI coverage in running instances (normalized to the small unit of each instance family)",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -1826,15 +1857,15 @@
     },
     "currentUniqueKey" : 13,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 38,
-    "uiHelperValue" : "__OBJECT_ID___38"
+    "revisionNumber" : 41,
+    "uiHelperValue" : "##CHARTID##_41"
   }
 }, {
   "marshallId" : 14,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Monthly Amortized Cost of Reservations ($)",
+  "sf_chart" : "Amortized Monthly Cost of Reservations",
   "sf_chartIndex" : 1517019193022,
-  "sf_description" : "",
+  "sf_description" : "Amounts reflect amortization of any upfront costs",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -1921,7 +1952,9 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : ""
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -2045,15 +2078,15 @@
     },
     "currentUniqueKey" : 5,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
   "marshallId" : 15,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "On-demand Instances Normalized by InstanceFamily (units of \"small\")",
+  "sf_chart" : "On-Demand Instances (Normalized Count)",
   "sf_chartIndex" : 1510278679115,
-  "sf_description" : "On-demand Instances normalized by Instance family for flexible RI conversion. Reports by InstanceFamily for flexibility - https://aws.amazon.com/blogs/aws/new-instance-size-flexibility-for-ec2-reserved-instances/",
+  "sf_description" : "Normalized to the small unit of each instance family (useful for flexible RI conversion - https://aws.amazon.com/blogs/aws/new-instance-size-flexibility-for-ec2-reserved-instances/)",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -2115,6 +2148,8 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
       "hideDimensionsInList" : false,
       "legendColumnConfiguration" : [ {
         "enabled" : false,
@@ -2156,7 +2191,7 @@
       "maxDecimalPlaces" : 4,
       "range" : -86400000,
       "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
+      "secondaryVisualization" : "SPARKLINE",
       "sortPreference" : "-value",
       "updateInterval" : 3600000,
       "yAxisConfigurations" : [ {
@@ -2172,8 +2207,8 @@
     },
     "currentUniqueKey" : 9,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 47,
-    "uiHelperValue" : "##CHARTID##_47"
+    "revisionNumber" : 54,
+    "uiHelperValue" : "##CHARTID##_54"
   }
 }, {
   "marshallId" : 16,
@@ -2221,15 +2256,15 @@
       } ]
     },
     "currentUniqueKey" : 2,
-    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">RI Utilization</font>\n</td></tr>\n</table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#ffffff\">\n<font size=\"2\" color=\"gray\">These charts identify reservations that have been purchased but are not being used, and estimate wasted cost based on the minimum unused reservations over 30 days.</font>\n</td></tr>\n</table>",
+    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">RI Utilization</font>\n</td></tr>\n</table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#ffffff\">\n<font size=\"2\" color=\"gray\">These charts identify reservations that have been purchased but are not being used, and estimate wasted cost.</font>\n</td></tr>\n</table>",
     "relatedDetectors" : [ ],
-    "revisionNumber" : 12,
-    "uiHelperValue" : "##CHARTID##_12"
+    "revisionNumber" : 13,
+    "uiHelperValue" : "##CHARTID##_13"
   }
 }, {
   "marshallId" : 17,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Unused Regional Reservations by InstanceType",
+  "sf_chart" : "Unused Regional Reservations by Instance Type",
   "sf_chartIndex" : 1468249582986,
   "sf_description" : "Chart may be blank if there are no unused reservations of scope Zone",
   "sf_type" : "Chart",
@@ -2393,15 +2428,15 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 36,
-    "uiHelperValue" : "##CHARTID##_36"
+    "revisionNumber" : 37,
+    "uiHelperValue" : "##CHARTID##_37"
   }
 }, {
   "marshallId" : 18,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Potential Hourly Savings",
+  "sf_chart" : "Potential Savings",
   "sf_chartIndex" : 1496247074261,
-  "sf_description" : "By Purchasing RI (assuming 3 Year No-Upfront Convertibles) for the On-demand Instances",
+  "sf_description" : "From purchasing reservations (assuming 3 Year No-Upfront Convertibles) for running On-Demand instances",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -2613,6 +2648,7 @@
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "prefix" : "$",
+        "suffix" : "/ hour",
         "unit" : "$",
         "unitPosition" : "prefix"
       },
@@ -2716,15 +2752,15 @@
     },
     "currentUniqueKey" : 19,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 58,
-    "uiHelperValue" : "##CHARTID##_58"
+    "revisionNumber" : 62,
+    "uiHelperValue" : "##CHARTID##_62"
   }
 }, {
   "marshallId" : 19,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Normalized RI Coverage",
   "sf_chartIndex" : 1496246735283,
-  "sf_description" : "Mean of RI Coverage of Running Instances, Normalized to the \"small\" unit of the Instance Family",
+  "sf_description" : "Mean of RI coverage  in running instances (normalized to the small unit of each instance family)",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -2845,19 +2881,19 @@
       "colorByMetric" : false,
       "colorByValue" : true,
       "colorByValueScale" : [ {
-        "color" : "#6bd37e",
+        "color" : "#007c1d",
         "gt" : 80,
         "lte" : 100
       }, {
-        "color" : "#acef7f",
+        "color" : "#6bd37e",
         "gt" : 60,
         "lte" : 80
       }, {
-        "color" : "#e5e517",
+        "color" : "#eac24b",
         "gt" : 40,
         "lte" : 60
       }, {
-        "color" : "#eac24b",
+        "color" : "#f47e00",
         "gt" : 20,
         "lte" : 40
       }, {
@@ -2949,15 +2985,15 @@
     },
     "currentUniqueKey" : 13,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 37,
-    "uiHelperValue" : "##CHARTID##_37"
+    "revisionNumber" : 42,
+    "uiHelperValue" : "##CHARTID##_42"
   }
 }, {
   "marshallId" : 20,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "RI Utilization",
+  "sf_chart" : "RI Utilization (%) Trend",
   "sf_chartIndex" : 1510099435398,
-  "sf_description" : "Percentage of RI that are being actively used.",
+  "sf_description" : "Percentage of RIs that are getting used.",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -3047,7 +3083,8 @@
         "aliases" : { },
         "colorOverride" : "#876ff3",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "suffix" : "%"
       },
       "dataManipulations" : [ ],
       "expressionText" : "100* K/(K+L)",
@@ -3129,8 +3166,8 @@
     },
     "currentUniqueKey" : 15,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 29,
-    "uiHelperValue" : "##CHARTID##_29"
+    "revisionNumber" : 32,
+    "uiHelperValue" : "##CHARTID##_32"
   }
 }, {
   "marshallId" : 21,
@@ -3179,21 +3216,12 @@
   "sf_uiModel" : {
     "version" : 1,
     "widgets" : [ {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1517547018613,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 12,
-      "sizeY" : 1
-    }, {
       "col" : 8,
       "options" : {
         "chartIndex" : 1517020422540,
         "id" : 0
       },
-      "row" : 1,
+      "row" : 0,
       "sizeX" : 4,
       "sizeY" : 1
     }, {
@@ -3202,7 +3230,7 @@
         "chartIndex" : 1517020422539,
         "id" : 0
       },
-      "row" : 1,
+      "row" : 0,
       "sizeX" : 4,
       "sizeY" : 1
     }, {
@@ -3211,7 +3239,7 @@
         "chartIndex" : 1517020422537,
         "id" : 0
       },
-      "row" : 1,
+      "row" : 0,
       "sizeX" : 4,
       "sizeY" : 1
     }, {
@@ -3220,7 +3248,7 @@
         "chartIndex" : 1511319366617,
         "id" : 0
       },
-      "row" : 2,
+      "row" : 1,
       "sizeX" : 12,
       "sizeY" : 1
     }, {
@@ -3229,7 +3257,7 @@
         "chartIndex" : 1511318980221,
         "id" : 0
       },
-      "row" : 3,
+      "row" : 2,
       "sizeX" : 12,
       "sizeY" : 1
     }, {
@@ -3238,7 +3266,7 @@
         "chartIndex" : 1510286223415,
         "id" : 0
       },
-      "row" : 4,
+      "row" : 3,
       "sizeX" : 4,
       "sizeY" : 2
     }, {
@@ -3247,7 +3275,7 @@
         "chartIndex" : 1510287381553,
         "id" : 0
       },
-      "row" : 4,
+      "row" : 3,
       "sizeX" : 8,
       "sizeY" : 2
     } ]
@@ -3255,7 +3283,7 @@
 }, {
   "marshallId" : 22,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Instances terminated in last 1 week",
+  "sf_chart" : "Instances Terminated in the Last Seven Days",
   "sf_chartIndex" : 1517020422540,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -3374,6 +3402,7 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
+      "colorByValue" : false,
       "dimensionInLegend" : "sf_originatingMetric",
       "legendColumnConfiguration" : [ {
         "enabled" : true,
@@ -3399,6 +3428,7 @@
       } ],
       "range" : -604800000,
       "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
       "sortPreference" : "-value",
       "updateInterval" : null,
       "yAxisConfigurations" : [ {
@@ -3414,14 +3444,15 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 14
+    "revisionNumber" : 16,
+    "uiHelperValue" : "##CHARTID##_16"
   }
 }, {
   "marshallId" : 23,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Instance Count (by Instance Type and Sub-grouped by AZ)",
+  "sf_chart" : "Instance Count (Grouped by Instance Type and AZ)",
   "sf_chartIndex" : 1510287381553,
-  "sf_description" : "Helps with eye-balling distribution of Instances of a type across different AZ's",
+  "sf_description" : "Helps with eye-balling the distribution of EC2 Instances of a type across different AZ's",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -3558,15 +3589,15 @@
       } ]
     },
     "currentUniqueKey" : 9,
-    "revisionNumber" : 15,
-    "uiHelperValue" : "##CHARTID##_15"
+    "revisionNumber" : 16,
+    "uiHelperValue" : "##CHARTID##_16"
   }
 }, {
   "marshallId" : 24,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "EC2 Cost by UsageType/InstanceType ($)",
+  "sf_chart" : "Costs by Usage Type and EC2 Instance Type ($/minute)",
   "sf_chartIndex" : 1511319366617,
-  "sf_description" : "Filtering by InstanceType provides the breakup of On-demand/Reserved-Used/Reserved-UnUsed",
+  "sf_description" : "Filtering by instance type (available as a dashboard variable at the top) shows the spread of costs among  running On-Demand, running Reserved, and unused Reserved Instances",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -3933,13 +3964,15 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/minute"
       },
       "dataManipulations" : [ ],
       "expressionText" : "A*J",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Unreserved On-demand Instances",
+      "name" : "Cost of Running On-Demand  Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -3953,13 +3986,15 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/minute"
       },
       "dataManipulations" : [ ],
       "expressionText" : "B*K",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Reserved Instances",
+      "name" : "Cost of Running Reserved Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -3973,13 +4008,15 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/minute"
       },
       "dataManipulations" : [ ],
       "expressionText" : "H*L",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Unused Reserved Instances",
+      "name" : "Cost of Unused Reserved Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -3993,13 +4030,15 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/minute"
       },
       "dataManipulations" : [ ],
       "expressionText" : "I*M",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Total Running Instances",
+      "name" : "Cost of All Running Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -4068,13 +4107,13 @@
     },
     "currentUniqueKey" : 19,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 37,
-    "uiHelperValue" : "##CHARTID##_37"
+    "revisionNumber" : 46,
+    "uiHelperValue" : "##CHARTID##_46"
   }
 }, {
   "marshallId" : 25,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "EC2 Hourly Cost by AZ",
+  "sf_chart" : "EC2 Cost by AZ",
   "sf_chartIndex" : 1510286223415,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -4171,7 +4210,9 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/hour"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -4226,8 +4267,18 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
-      "colorByValue" : false,
-      "colorByValueScale" : [ ],
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#0077c2",
+        "gt" : 100
+      }, {
+        "color" : "#00b9ff",
+        "gt" : 1,
+        "lte" : 100
+      }, {
+        "color" : "#6ca2b7",
+        "lte" : 1
+      } ],
       "disableThrottle" : true,
       "groupBy" : [ "aws_availability_zone" ],
       "heatmapAutoGradients" : 10,
@@ -4268,15 +4319,15 @@
     },
     "currentUniqueKey" : 7,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 16,
-    "uiHelperValue" : "##CHARTID##_16"
+    "revisionNumber" : 18,
+    "uiHelperValue" : "##CHARTID##_18"
   }
 }, {
   "marshallId" : 26,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Instance Count by UsageType/InstanceType",
+  "sf_chart" : "Counts by Usage Type and EC2 Instance Type",
   "sf_chartIndex" : 1511318980221,
-  "sf_description" : "Filtering by InstanceType provides the breakup of On-demand/Reserved-Used/Reserved-UnUsed",
+  "sf_description" : "Filtering by instance type (available as a dashboard variable at the top) shows the spread among running On-Demand, running Reserved, and unused Reserved Instances",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -4306,7 +4357,7 @@
       } ],
       "focusNext" : false,
       "invisible" : false,
-      "name" : "# Unreserved (On-demand) Running Instances",
+      "name" : "Count of Running On-Demand Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "on_demand_instance.count",
@@ -4345,7 +4396,7 @@
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Reserved Instances - Used",
+      "name" : "Count of Running Reserved Instances",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -4390,7 +4441,7 @@
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Reserved Instances - Unused",
+      "name" : "Count of Unused Reserved Instances",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -4433,7 +4484,7 @@
       } ],
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Total Running Instances",
+      "name" : "Count of All Running Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "instance.count",
@@ -4502,65 +4553,13 @@
     },
     "currentUniqueKey" : 11,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 33,
-    "uiHelperValue" : "##CHARTID##_33"
+    "revisionNumber" : 38,
+    "uiHelperValue" : "##CHARTID##_38"
   }
 }, {
   "marshallId" : 27,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "",
-  "sf_chartIndex" : 1517547018613,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "text",
-    "chartType" : null,
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 2,
-    "markdownText" : "<table width=\"100%\" height=\"%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#ffffff\">\n<font size=\"4\" color=\"black\">The purpose of this Dashboard is to help dive deeper into EC2 Instance Usage. Using the Dashboard filter to filter by an Instance Type provides the easy way to navigate better.</font>\n</td></tr></table>",
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 25,
-    "uiHelperValue" : "##CHARTID##_25"
-  }
-}, {
-  "marshallId" : 28,
-  "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Instances started in last 1 week",
+  "sf_chart" : "Instances Started in the Last Seven Days",
   "sf_chartIndex" : 1517020422537,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -4679,6 +4678,7 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
+      "colorByValue" : false,
       "dimensionInLegend" : "sf_originatingMetric",
       "legendColumnConfiguration" : [ {
         "enabled" : true,
@@ -4704,6 +4704,7 @@
       } ],
       "range" : -604800000,
       "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
       "sortPreference" : "-value",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -4718,12 +4719,13 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 13
+    "revisionNumber" : 16,
+    "uiHelperValue" : "##CHARTID##_16"
   }
 }, {
-  "marshallId" : 29,
+  "marshallId" : 28,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Instances stopped in last 1 week",
+  "sf_chart" : "Instances Stopped in the Last Seven Days",
   "sf_chartIndex" : 1517020422539,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -4841,6 +4843,7 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
+      "colorByValue" : false,
       "dimensionInLegend" : "sf_originatingMetric",
       "legendColumnConfiguration" : [ {
         "enabled" : true,
@@ -4866,6 +4869,7 @@
       } ],
       "range" : -604800000,
       "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
       "sortPreference" : "-value",
       "updateInterval" : null,
       "yAxisConfigurations" : [ {
@@ -4881,10 +4885,11 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 14
+    "revisionNumber" : 16,
+    "uiHelperValue" : "##CHARTID##_16"
   }
 }, {
-  "marshallId" : 30,
+  "marshallId" : 29,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "2. EC2 Cost & Usage",
   "sf_description" : "Default dashboard.",
@@ -5066,9 +5071,9 @@
     } ]
   }
 }, {
-  "marshallId" : 31,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "RI / OnDemand EC2 Cost per Day ($)",
+  "marshallId" : 30,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "RI and On-Demand Cost per Day (Trend)",
   "sf_chartIndex" : 1517546757500,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -5166,7 +5171,9 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/day"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -5202,7 +5209,7 @@
       "expressionText" : "A*I",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Unreserved (On-demand) Instances",
+      "name" : "Cost of On-Demand Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -5310,7 +5317,9 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/day"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -5346,7 +5355,7 @@
       "expressionText" : "H*K",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Reserved Instances",
+      "name" : "Cost of Reserved Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -5414,13 +5423,13 @@
     },
     "currentUniqueKey" : 25,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 50,
-    "uiHelperValue" : "##CHARTID##_50"
+    "revisionNumber" : 52,
+    "uiHelperValue" : "##CHARTID##_52"
   }
 }, {
-  "marshallId" : 32,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "EC2 Cost per Day (Extrapolated)",
+  "marshallId" : 31,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Total EC2 Cost per Day (Extrapolated)",
   "sf_chartIndex" : 1510290356945,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -5703,6 +5712,7 @@
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "prefix" : "$",
+        "suffix" : "/day",
         "unit" : "$",
         "unitPosition" : "prefix"
       },
@@ -5792,15 +5802,15 @@
     },
     "currentUniqueKey" : 16,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 55,
-    "uiHelperValue" : "##CHARTID##_55"
+    "revisionNumber" : 57,
+    "uiHelperValue" : "##CHARTID##_57"
   }
 }, {
-  "marshallId" : 33,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "Number of Under-utilized Instances",
+  "marshallId" : 32,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Number of Underutilized Instances",
   "sf_chartIndex" : 1517020284587,
-  "sf_description" : "Instances with 30 day mean cpu, memory, and disk utilization < 50%",
+  "sf_description" : "Instances with mean cpu, memory, and disk utilization over 30 days < 50%",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -5813,17 +5823,15 @@
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
+            "amount" : 30,
+            "transformTimeRange" : "30d",
+            "unit" : "d"
           },
-          "type" : "aggregation"
+          "type" : "transformation"
         },
         "fn" : {
           "options" : { },
-          "type" : "SUM"
+          "type" : "MEAN"
         },
         "showMe" : false
       }, {
@@ -5845,10 +5853,26 @@
           "type" : "EXCLUDE"
         },
         "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "cpu.utilization - Sum by host - Exclude x >= 50",
+      "name" : "cpu.utilization - Mean(30d) - Exclude x >= 50 - Sum by host",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "cpu.utilization",
@@ -5868,17 +5892,15 @@
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
+            "amount" : 30,
+            "transformTimeRange" : "30d",
+            "unit" : "d"
           },
-          "type" : "aggregation"
+          "type" : "transformation"
         },
         "fn" : {
           "options" : { },
-          "type" : "SUM"
+          "type" : "MEAN"
         },
         "showMe" : false
       }, {
@@ -5900,10 +5922,26 @@
           "type" : "EXCLUDE"
         },
         "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "memory.utilization - Sum by host - Exclude x >= 50",
+      "name" : "memory.utilization - Mean(30d) - Exclude x >= 50 - Sum by host",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "memory.utilization",
@@ -5939,22 +5977,6 @@
       }, {
         "direction" : {
           "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
             "aggregateGroupBy" : [ ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -5971,10 +5993,40 @@
           "type" : "EXCLUDE"
         },
         "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 30,
+            "transformTimeRange" : "30d",
+            "unit" : "d"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "disk.utilization - Maximum by host - Sum by host - Exclude x >= 50",
+      "name" : "disk.utilization - Maximum by host - Exclude x >= 50 - Sum by host - Mean(30d)",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "disk.utilization",
@@ -6075,12 +6127,14 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
+      "colorByValue" : false,
       "disableThrottle" : true,
       "hideTimestamp" : false,
       "legendColumnConfiguration" : null,
       "maxDelay" : null,
       "range" : -604800000,
       "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
       "sortPreference" : "",
       "updateInterval" : 3600000,
       "yAxisConfigurations" : [ {
@@ -6096,12 +6150,13 @@
     },
     "currentUniqueKey" : 8,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 19
+    "revisionNumber" : 24,
+    "uiHelperValue" : "##CHARTID##_24"
   }
 }, {
-  "marshallId" : 34,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "EC2 Cost per Day (Extrapolated)",
+  "marshallId" : 33,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Total EC2 Cost per Day (Extrapolated)",
   "sf_chartIndex" : 1517536869260,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -6384,6 +6439,7 @@
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "prefix" : "$",
+        "suffix" : "/day",
         "unit" : "$",
         "unitPosition" : "prefix"
       },
@@ -6407,7 +6463,7 @@
       "expressionText" : "F+I",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "F+I - Scale:60",
+      "name" : "Total EC2 Cost",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -6473,13 +6529,13 @@
     },
     "currentUniqueKey" : 16,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 58,
-    "uiHelperValue" : "##CHARTID##_58"
+    "revisionNumber" : 60,
+    "uiHelperValue" : "##CHARTID##_60"
   }
 }, {
-  "marshallId" : 35,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "Total EC2 Instance Count Trend",
+  "marshallId" : 34,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Total EC2 Instance Count",
   "sf_chartIndex" : 1479456721779,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -6573,13 +6629,13 @@
     },
     "currentUniqueKey" : 8,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 35,
-    "uiHelperValue" : "##CHARTID##_35"
+    "revisionNumber" : 37,
+    "uiHelperValue" : "##CHARTID##_37"
   }
 }, {
-  "marshallId" : 36,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "RI / Ondemand Instance Count",
+  "marshallId" : 35,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "RI and On-Demand Instance Count (Trend)",
   "sf_chartIndex" : 1517535342190,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -6608,7 +6664,7 @@
       } ],
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Unreserved (On-demand) Running Instances",
+      "name" : "Count of Running On-Demand Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "on_demand_instance.count",
@@ -6662,7 +6718,7 @@
       "expressionText" : "K-J",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "# Running Instances with RI Applied",
+      "name" : "Count of Running Reserved Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -6730,12 +6786,12 @@
     },
     "currentUniqueKey" : 14,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 32,
-    "uiHelperValue" : "##CHARTID##_32"
+    "revisionNumber" : 36,
+    "uiHelperValue" : "##CHARTID##_36"
   }
 }, {
-  "marshallId" : 37,
-  "marshallMemberOf" : [ 30 ],
+  "marshallId" : 36,
+  "marshallMemberOf" : [ 29 ],
   "sf_chart" : "Under-Utilized Instances",
   "sf_chartIndex" : 1517020284585,
   "sf_description" : "Underutlized instance heat-map, red being most underutilized",
@@ -7071,8 +7127,8 @@
     "revisionNumber" : 18
   }
 }, {
-  "marshallId" : 38,
-  "marshallMemberOf" : [ 30 ],
+  "marshallId" : 37,
+  "marshallMemberOf" : [ 29 ],
   "sf_chart" : "",
   "sf_chartIndex" : 1517020284584,
   "sf_description" : "",
@@ -7103,6 +7159,7 @@
       "colorByMetric" : false,
       "range" : -900000,
       "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
       "sortPreference" : "",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -7116,14 +7173,15 @@
       } ]
     },
     "currentUniqueKey" : 2,
-    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">Resource (CPU, Memory, and Disk) Utilization</font>\n</td></tr></table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#FFFFFF\">\n<font size=\"2\" color=\"gray\">These charts identify instances for which all three of CPU, Memory, and Disk Utilizations have been below 50% on average over 30 days.<br>Below charts will be empty if AWS Account ID is selected in the Dashboard variables.</font>\n</td></tr></table>",
+    "markdownText" : "<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#4682B4\">\n<font size=\"5\" color=\"white\">Resource (CPU, Memory, and Disk) Utilization</font>\n</td></tr></table>\n<table width=\"100%\" height=\"50%\" rules=\"none\"><tr><td valign=\"middle\" align=\"center\" bgcolor=\"#FFFFFF\">\n<font size=\"2\" color=\"gray\">These charts identify instances for which all three of CPU, Memory, and Disk Utilizations have been below 50% on average over 30 days.<br>The charts will be empty if an AWS Account ID is entered in dashboard variables at the top of this page.</font>\n</td></tr></table>",
     "relatedDetectors" : [ ],
-    "revisionNumber" : 13
+    "revisionNumber" : 14,
+    "uiHelperValue" : "##CHARTID##_14"
   }
 }, {
-  "marshallId" : 39,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "EC2 Instance Count by InstanceType",
+  "marshallId" : 38,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Count by Instance Type",
   "sf_chartIndex" : 1479492853549,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -7188,6 +7246,7 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
+      "colorByValue" : false,
       "dimensionInLegend" : "aws_instance_type",
       "hideTimestamp" : false,
       "legendColumnConfiguration" : [ {
@@ -7202,6 +7261,7 @@
       } ],
       "range" : -604800000,
       "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
       "sortPreference" : "-value",
       "stackedChart" : true,
       "updateInterval" : null,
@@ -7219,13 +7279,13 @@
     },
     "currentUniqueKey" : 8,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 30,
-    "uiHelperValue" : "##CHARTID##_30"
+    "revisionNumber" : 32,
+    "uiHelperValue" : "##CHARTID##_32"
   }
 }, {
-  "marshallId" : 40,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "Hourly EC2 Cost by InstanceType ($)",
+  "marshallId" : 39,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Cost by Instance Type",
   "sf_chartIndex" : 1510596508138,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -7358,7 +7418,9 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/hour"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -7413,7 +7475,18 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
-      "colorByValue" : false,
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#0077c2",
+        "gt" : 50
+      }, {
+        "color" : "#00b9ff",
+        "gt" : 1,
+        "lte" : 50
+      }, {
+        "color" : "#6ca2b7",
+        "lte" : 1
+      } ],
       "dimensionInLegend" : "sf_metric",
       "disableThrottle" : true,
       "hideTimestamp" : false,
@@ -7457,7 +7530,7 @@
       "secondaryVisualization" : "SPARKLINE",
       "sortPreference" : "-value",
       "stackedChart" : true,
-      "updateInterval" : null,
+      "updateInterval" : 1000,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -7472,13 +7545,13 @@
     },
     "currentUniqueKey" : 16,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 42,
-    "uiHelperValue" : "##CHARTID##_42"
+    "revisionNumber" : 50,
+    "uiHelperValue" : "##CHARTID##_50"
   }
 }, {
-  "marshallId" : 41,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "Under-Utilized Instances by hostname",
+  "marshallId" : 40,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Underutilized Instances by Hostname",
   "sf_chartIndex" : 1517020284590,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -7753,6 +7826,7 @@
       } ],
       "range" : -604800000,
       "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
       "sortPreference" : "-value",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -7767,12 +7841,13 @@
     },
     "currentUniqueKey" : 8,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 15
+    "revisionNumber" : 16,
+    "uiHelperValue" : "##CHARTID##_16"
   }
 }, {
-  "marshallId" : 42,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "EC2 Cost by InstanceType (%)",
+  "marshallId" : 41,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Cost by Instance Type (%)",
   "sf_chartIndex" : 1510290356959,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -7971,7 +8046,8 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "suffix" : "%"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -8028,13 +8104,17 @@
       "colorByMetric" : false,
       "colorByValue" : true,
       "colorByValueScale" : [ {
-        "color" : "#6bd37e",
-        "gt" : 20,
+        "color" : "#0077c2",
+        "gt" : 25,
         "lte" : 100
       }, {
-        "color" : "#acef7f",
+        "color" : "#00b9ff",
+        "gt" : 10,
+        "lte" : 25
+      }, {
+        "color" : "#6ca2b7",
         "gte" : 0,
-        "lte" : 20
+        "lte" : 10
       } ],
       "dimensionInLegend" : "sf_metric",
       "disableThrottle" : true,
@@ -8094,15 +8174,15 @@
     },
     "currentUniqueKey" : 15,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 41,
-    "uiHelperValue" : "##CHARTID##_41"
+    "revisionNumber" : 46,
+    "uiHelperValue" : "##CHARTID##_46"
   }
 }, {
-  "marshallId" : 43,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "Percentage of Under-utilized Instances",
+  "marshallId" : 42,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "Percentage of Underutilized Instances",
   "sf_chartIndex" : 1517020284588,
-  "sf_description" : "Instances with 30 day mean cpu, memory, and disk utilization < 50%",
+  "sf_description" : "Instances with mean cpu, memory, and disk utilization over 30 days < 50%",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -8340,11 +8420,25 @@
           "type" : "SUM"
         },
         "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 30,
+            "transformTimeRange" : "30d",
+            "unit" : "d"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
       } ],
       "expressionText" : "A+C+F",
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "A+C+F - Count by host - Exclude x < 1 - Sum",
+      "name" : "A+C+F - Count by host - Exclude x < 1 - Sum - Mean(30d)",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -8375,10 +8469,24 @@
           "type" : "COUNT"
         },
         "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 30,
+            "transformTimeRange" : "30d",
+            "unit" : "d"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "cpu.utilization - Count",
+      "name" : "cpu.utilization - Count - Mean(30d)",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "cpu.utilization",
@@ -8475,13 +8583,13 @@
     },
     "currentUniqueKey" : 10,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 21,
-    "uiHelperValue" : "##CHARTID##_21"
+    "revisionNumber" : 27,
+    "uiHelperValue" : "##CHARTID##_27"
   }
 }, {
-  "marshallId" : 44,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "RI / OnDemand EC2 Cost per Day ($)",
+  "marshallId" : 43,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "RI and On-Demand Cost per Day",
   "sf_chartIndex" : 1511829844897,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -8579,7 +8687,9 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/day"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -8723,7 +8833,9 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "prefix" : "$",
+        "suffix" : "/day"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -8827,13 +8939,13 @@
     },
     "currentUniqueKey" : 25,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 48,
-    "uiHelperValue" : "##CHARTID##_48"
+    "revisionNumber" : 49,
+    "uiHelperValue" : "##CHARTID##_49"
   }
 }, {
-  "marshallId" : 45,
-  "marshallMemberOf" : [ 30 ],
-  "sf_chart" : "RI / Ondemand Instance Count",
+  "marshallId" : 44,
+  "marshallMemberOf" : [ 29 ],
+  "sf_chart" : "RI and On-Demand Instance Count",
   "sf_chartIndex" : 1510282012025,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -8984,12 +9096,12 @@
     },
     "currentUniqueKey" : 14,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 30,
-    "uiHelperValue" : "##CHARTID##_30"
+    "revisionNumber" : 31,
+    "uiHelperValue" : "##CHARTID##_31"
   }
 }, {
-  "marshallId" : 46,
-  "marshallMemberOf" : [ 30 ],
+  "marshallId" : 45,
+  "marshallMemberOf" : [ 29 ],
   "sf_chart" : "EC2 Instance Count",
   "sf_chartIndex" : 1468018693067,
   "sf_description" : "",
