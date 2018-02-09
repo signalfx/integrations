@@ -1,15 +1,31 @@
 # ![]() Microsoft Azure
 
 - [Description](#description)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Metrics](#metrics)
+- [License](#license)
 
 ### DESCRIPTION
 
 Use SignalFx to monitor Microsoft Azure services via Azure Monitor.
 
 
+#### FEATURES
+
+Connecting to Microsoft Azure allows you to take advantage of SignalFx’s extensive Azure support.
+
+### CONFIGURATION
+
+To connect SignalFx to Microsoft Azure, you’ll create a new Application in Azure for SignalFx to use. You must be an administrator of your SignalFx account to connect SignalFx to Microsoft Azure.
+
+### USAGE
+
+See <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/gcp-info.html">our detailed Azure integration guide</a> for more information.
+
 ### METRICS
 
-For more information about the metrics emitted by Azure Monitor, see the documentation for individual services.
+For more information about the metrics emitted by Microsoft Azure Monitor, see the documentation for individual services.
 
 ### LICENSE
 
