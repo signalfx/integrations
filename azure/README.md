@@ -1,4 +1,4 @@
-# ![]() Microsoft Azure
+# ![](./img/integrations_azure.png) Microsoft Azure
 
 - [Description](#description)
 - [Configuration](#configuration)
