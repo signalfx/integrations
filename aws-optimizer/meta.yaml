@@ -4,6 +4,6 @@
   "featured": false,
   "logo_large": "integration_optimizer.png",
   "logo_small": "integration_optimizer.png",
-  "data_signature": "cloud_provider_service:\"EC2.Instances\" AND cloud_provider:\"aws\"",
+  "data_signature": "cloud_provider_service:\"EC2.Instances\"",
   "in_app_categories": ["AWSservicesMonitored"]
 }
