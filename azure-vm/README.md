@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurevm.png) Azure Virtual Machine
+# ![](./img/integrations_azurevm.png) Azure Virtual Machines
 
 - [Description](#description)
 - [Installation](#installation)
@@ -25,7 +25,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Batch Accounts, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines
+For more information about the metrics emitted by Azure Virtual Machines, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines
 
 ### LICENSE
 

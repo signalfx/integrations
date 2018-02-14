@@ -1,4 +1,4 @@
-# ![](./img/integrations_azuresqlelasticpools.png) Azure SQL elasticpool
+# ![](./img/integrations_azuresqlelasticpools.png) Azure SQL Elastic Pools
 
 - [Description](#description)
 - [Installation](#installation)
@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Azure SQL elasticpools via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+Use SignalFx to monitor Azure SQL Elastic Pools via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
 #### FEATURES
 
@@ -25,7 +25,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Batch Accounts, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserverselasticpools
+For more information about the metrics emitted by Azure SQL Elastic Pools, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserverselasticpools
 
 ### LICENSE
 

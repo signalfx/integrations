@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurestorage.png) Azure Storage Account
+# ![](./img/integrations_azurestorage.png) Azure Storage
 
 - [Description](#description)
 - [Installation](#installation)
@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Azure Storage Accounts via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+Use SignalFx to monitor Azure Storage via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
 #### FEATURES
 
@@ -25,7 +25,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Batch Accounts, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftstoragestorageaccounts
+For more information about the metrics emitted by Azure Storage, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftstoragestorageaccounts
 
 ### LICENSE
 

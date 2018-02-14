@@ -1,5 +1,5 @@
-{ "display_name":"Azure SQL database",
-  "description": "SignalFx's integration with Azure SQL database",
+{ "display_name":"Azure SQL Database",
+  "description": "SignalFx's integration with Azure SQL Database",
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-sql-databases",
   "code": "https://azure.microsoft.com/en-us/services/sql-database/",
   "featured": false,
