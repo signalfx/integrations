@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurebatch.png) Azure Batch=
+# ![](./img/integrations_azurebatch.png) Azure Batch
 
 - [Description](#description)
 - [Installation](#installation)
