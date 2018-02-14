@@ -1,5 +1,5 @@
-{ "display_name":"Azure SQL elasticpool",
-  "description": "SignalFx's integration with Azure SQL elasticpool",
+{ "display_name":"Azure SQL Elastic Pools",
+  "description": "SignalFx's integration with Azure SQL Elastic Pools",
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-sql-elasticpools",
   "code": "https://azure.microsoft.com/en-us/services/sql-database/",
   "featured": false,

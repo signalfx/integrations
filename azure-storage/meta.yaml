@@ -1,5 +1,5 @@
-{ "display_name":"Azure Storage Account",
-  "description": "SignalFx's integration with Azure Storage Account",
+{ "display_name":"Azure Storage",
+  "description": "SignalFx's integration with Azure Storage",
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-storage",
   "code": "https://azure.microsoft.com/en-us/services/storage/",
   "featured": false,

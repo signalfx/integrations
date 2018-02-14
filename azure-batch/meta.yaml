@@ -1,5 +1,5 @@
-{ "display_name":"Azure Batch Account",
-  "description": "SignalFx's integration with Azure Batch Account",
+{ "display_name":"Azure Batch",
+  "description": "SignalFx's integration with Azure Batch",
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-batch",
   "code": "https://azure.microsoft.com/en-us/services/batch/",
   "featured": false,

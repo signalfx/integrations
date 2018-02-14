@@ -1,4 +1,4 @@
-# ![](./img/integrations_azuresqldatabase.png) Azure SQL database
+# ![](./img/integrations_azuresqldatabase.png) Azure SQL Database
 
 - [Description](#description)
 - [Installation](#installation)
@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Azure SQL databases via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+Use SignalFx to monitor Azure SQL Database via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
 #### FEATURES
 
@@ -25,7 +25,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Batch Accounts, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserversdatabases.
+For more information about the metrics emitted by Azure SQL Database, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserversdatabases.
 
 ### LICENSE
 
