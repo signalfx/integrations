@@ -1,5 +1,5 @@
-{ "display_name":"Azure Virtual Machine",
-  "description": "SignalFx's integration with Azure Virtual Machine",
+{ "display_name":"Azure Virtual Machines",
+  "description": "SignalFx's integration with Azure Virtual Machines",
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-vm",
   "code": "https://azure.microsoft.com/en-us/services/virtual-machines/",
   "featured": false,
