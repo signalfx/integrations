@@ -1,6 +1,6 @@
 # ![](./img/integrations_vsphere.png) vSphere
 
-Metadata associated with SignalFx's vSphere integration can be found [here](https://github.com/signalfx/integrations/tree/release/signalfx-vsphere). The relevant code for the plugin can be found [here](https://github.com/signalfx/signalfx-vsphere).
+Metadata associated with SignalFx's vSphere integration can be found [here](https://github.com/signalfx/integrations/tree/release/vmware-vsphere). The relevant code for the plugin can be found [here](https://github.com/signalfx/signalfx-vsphere/tree/master).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
