@@ -18,7 +18,7 @@ Use SignalFx to monitor Google Compute Engine via [Google Cloud Platform](https:
 
   [<img src='./img/compute_instances.png' width=200px>](./img/compute_instances.png)
 
-- **Compute Instance**: Focus on a single EC2 instance.
+- **Compute Instance**: Focus on a single Compute Engine instance.
 
   [<img src='./img/compute_instance.png' width=200px>](./img/compute_instance.png)
 
