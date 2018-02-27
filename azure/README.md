@@ -22,7 +22,7 @@ To connect SignalFx to Microsoft Azure, you’ll create a new Application in Azu
 
 ### USAGE
 
-See <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html">our detailed Azure integration guide</a> for more information.
+See [our detailed Azure integration guide](https://docs.signalfx.com/en/latest/integrations/azure-info.html) for more information.
 
 ### METRICS
 
