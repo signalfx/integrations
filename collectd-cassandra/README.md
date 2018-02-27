@@ -49,13 +49,13 @@ Use this integration to monitor the following types of information from Cassandr
 
 #### System modifications
 
-Open the JMX port on your Cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the [Cassandra Project site](http://wiki.apache.org/cassandra/JmxInterface). There is also a page covering a few [common issues](http://wiki.apache.org/cassandra/JmxGotchas).
+Open the JMX port on your Cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the <a target="_blank" href="http://wiki.apache.org/cassandra/JmxInterface">Cassandra Project site</a>. There is also a page covering a few <a target="_blank" href="http://wiki.apache.org/cassandra/JmxGotchas">common issues</a>.
 
 #### Install Cassandra integration
 
-1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
+1. RHEL/CentOS and Amazon Linux users: Install the Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
 
-2. Download SignalFx's example Cassandra configuration file to `/etc/collectd/managed_config`:  [20-cassandra.conf](https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf)
+2. Download SignalFx's example Cassandra configuration file to `/etc/collectd/managed_config`:  <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-cassandra/20-cassandra.conf">20-cassandra.conf</a>
 
 3. Modify `20-cassandra.conf` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -63,7 +63,7 @@ Open the JMX port on your Cassandra app. Cassandra will listen for connections o
 
 ### CONFIGURATION
 
-Using the example configuration file [20-cassandra.conf](https://github.com/signalfx/integrations/tree/master/collectd-cassandra/20-cassandra.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Cassandra instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-cassandra/20-cassandra.conf">20-cassandra.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Cassandra instance to be monitored.
 
 | Configuration Option | Description | Default |
 |-------|-------------|------------|

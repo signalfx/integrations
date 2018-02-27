@@ -54,7 +54,7 @@ Follow these steps to install and configure this plugin:
 
     * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
-2. Download SignalFx's [sample configuration file](https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf) for this plugin to `/etc/collectd/managed_config`.
+2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
@@ -62,7 +62,7 @@ Follow these steps to install and configure this plugin:
 
 ### CONFIGURATION
 
-Using the example configuration file [10-mysql.conf](https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MySQL instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf">10-mysql.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MySQL instance to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
@@ -76,7 +76,7 @@ Using the example configuration file [10-mysql.conf](https://github.com/signalfx
 
 #### Note: Monitoring multiple instances
 
-The sample configuration file [10-mysql.conf](https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf) illustrates how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
+The sample configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf">10-mysql.conf</a> illustrates how to configure this plugin to monitor multiple databases, on the same host or on different hosts.
 
 To monitor just one database, include just one `Database` block and delete the others.
 
@@ -85,16 +85,16 @@ This plugin configuration file uses directives called “Database” in two diff
 
 The value of “Database” in the _block declaration_ (`<Database foo>`) indicates the value of the  `plugin_instance` dimension that will be recorded for this database. The value of “Database” within the block (`Database "my_database"`) indicates the `db_name` of the MySQL database to monitor using this configuration.
 
-To illustrate the difference between these two uses of "Database", the example configuration given in [10-mysql.conf](https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf) directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3.
+To illustrate the difference between these two uses of "Database", the example configuration given in <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf">10-mysql.conf</a> directs collectd to collect metrics for three total MySQL databases: the databases named `mysql_one` and `mysql_two` on host 10.128.8.2, and the database named `mysql_one` on host 10.128.8.3.
 
 #### Note: Monitoring a MySQL environment that is configured for replication
-If you have configured MySQL to use replication you may want to collect information relevant to the performance and status of your master and/or slave nodes. This can be achieved by utilizing the `MasterStats`, `SlaveStats`, and `SlaveNotifications` options as described in [10-mysql.conf](https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf)
+If you have configured MySQL to use replication you may want to collect information relevant to the performance and status of your master and/or slave nodes. This can be achieved by utilizing the `MasterStats`, `SlaveStats`, and `SlaveNotifications` options as described in <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mysql/10-mysql.conf">10-mysql.conf</a>
 
 ### USAGE
 
 Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
 
-For general reference on how to monitor MySQL performance using this plugin, see [documentation on collectd.org](https://collectd.org/wiki/index.php/Plugin:MySQL).
+For general reference on how to monitor MySQL performance using this plugin, see <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:MySQL">documentation on collectd.org</a>.
 
 **Monitoring multiple MySQL nodes**
 

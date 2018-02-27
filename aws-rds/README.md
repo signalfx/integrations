@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Amazon Relational Database Service (RDS) via [Amazon CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+Use SignalFx to monitor Amazon Relational Database Service (RDS) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 #### FEATURES
 
@@ -30,11 +30,11 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 #### RDS ENHANCED MONITORING
 
-SignalFx supports an integration with [RDS Enhanced Monitoring](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html) using an AWS Lambda function, described below. This integration also includes built-in dashboards designed specifically for the metrics from Enhanced Monitoring. This Enhanced Monitoring integration complements the CloudWatch-based integration described above.  
+SignalFx supports an integration with <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">RDS Enhanced Monitoring</a> using an AWS Lambda function, described below. This integration also includes built-in dashboards designed specifically for the metrics from Enhanced Monitoring. This Enhanced Monitoring integration complements the CloudWatch-based integration described above.  
 
-To use this integration, you must have RDS Enhanced Monitoring enabled. [Click here for details](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html).
+To use this integration, you must have RDS Enhanced Monitoring enabled. <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Click here for details</a>.
 
-You will also need an [encryption key set up in AWS](http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html). Make sure to add the users who will need to have access to the Lambda function, as well as appropriate admins.
+You will also need an <a target="_blank" href="http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">encryption key set up in AWS</a>. Make sure to add the users who will need to have access to the Lambda function, as well as appropriate admins.
 
 ##### 1. Download code and build the archive
 
@@ -66,7 +66,7 @@ Go to the Configuration tab.
 Under 'Code entry type' select `Upload a .ZIP file`. Set the runtime to `Python 2.7`. Set 'Handler' to be `lambda_script.lambda_handler`. Click 'Upload', and find the `enhanced_rds.zip` file you built earlier. The file should be about 3 MB; if it isn't, the archive may not be built correctly, so you should try going through the process described above again.
 
 1. Supply your SignalFx access token
-    - Under 'Environment Variables', create an environment variable named `access_token` and add your SignalFx access token. [Click here for more information about SignalFx access tokens](https://docs.signalfx.com/en/latest/admin-guide/tokens.html#managing-access-tokens).
+    - Under 'Environment Variables', create an environment variable named `access_token` and add your SignalFx access token. <a target="_blank" href="https://docs.signalfx.com/en/latest/admin-guide/tokens.html#managing-access-tokens">Click here for more information about SignalFx access tokens</a>.
     - Expand the 'Encryption configuration' section and check the box under 'Enable helpers for encryption in transit'. From the 'KMS key to encrypt in transit' and 'KMS key to encrypt at rest' dropdown menus, select the encryption key you created earlier. An 'Encrypt' button will appear next to your environment variables. Click it to activate the encryption.
 
 2. Finish up configuration
@@ -95,7 +95,7 @@ The key for this environment variable is `groups` for the inclusive group or `gr
 E.g.
 `cpuUtilization diskIO memory OSprocesses`
 
-The complete list of available metrics can be found [here](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html).
+The complete list of available metrics can be found <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">here</a>.
 
 Available Metric Groups (all but SQL Server):
 

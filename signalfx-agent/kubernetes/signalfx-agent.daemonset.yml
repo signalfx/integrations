@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
     name: signalfx-agent
     labels:
-        version: 2.2.2
+        version: 2.2.3
         app: signalfx-agent
 spec:
     selector:
@@ -13,15 +13,13 @@ spec:
         metadata:
             labels:
                 app: signalfx-agent
-                version: 2.2.2
+                version: 2.2.3
         spec:
             hostNetwork: true
             restartPolicy: Always
             containers:
             - name: signalfx-agent
-              image: quay.io/signalfx/signalfx-agent:2.2.2
-              securityContext:
-                privileged: true
+              image: quay.io/signalfx/signalfx-agent:2.2.3
               command:
               - /usr/bin/signalfx-agent
               - -config

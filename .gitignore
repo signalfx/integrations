@@ -1,1 +1,28 @@
 .idea
+
+signalfx-org-metrics/docs/sfx-metrics.bbprojectd/Unix Worksheet.worksheet
+
+*.bbprojectsettings
+
+*.bbprojectdata
+
+*.txt
+
+
+signalfx-org-metrics/docs/template-per-metric-ingest.md
+
+signalfx-org-metrics/docs/template-per-metric-token-ingest.md
+
+signalfx-org-metrics/docs/template-token-ingest.md
+
+signalfx-org-metrics/docs/template-plain-ingest.md
+
+signalfx-org-metrics/docs/template-plain-objects.md
+
+signalfx-org-metrics/sf-metrics copy.rst
+
+signalfx-org-metrics/docs/template-plain-internal.md
+
+signalfx-org-metrics/docs/template-aws.md
+
+signalfx-org-metrics/docs/sf.org.num.gcpTemplate.md

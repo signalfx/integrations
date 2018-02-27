@@ -1,0 +1,19 @@
+  config:
+    - host: 192.168.1.60
+      username: administrator@vsphere.local
+      password: Abcd123$
+      Name: VCenter4
+      IngestToken: rJWesf1235RTsffseuv
+      IngestEndpoint: 'https://ingest.signalfx.com'
+      MORSyncInterval: 300
+      MetricSyncInterval: 300
+      IncludeMetrics:
+        host:
+          - mem.swapused.average
+        cluster:
+          - mem.usage.average
+      ExcludeMetrics:
+        datacenter:
+          - cpu.usage.average
+        vm:
+          - mem.usage.average

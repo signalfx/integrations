@@ -12,7 +12,7 @@ Metadata associated with the MongoDB collectd plugin can be found [here](https:/
 
 ### DESCRIPTION
 
-Use the [mongodb](https://github.com/signalfx/collectd-mongodb) collectd plugin to collect metrics from MongoDB nodes.
+Use the <a target="_blank" href="https://github.com/signalfx/collectd-mongodb">mongodb</a> collectd plugin to collect metrics from MongoDB nodes.
 
 This plugin captures the following metrics about MongoDB generally:
 
@@ -29,7 +29,7 @@ The plugin also captures the following DB-specific metrics:
 * db size
 * db counters
 
-Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
+Documentation for MongoDB can be found <a target="_blank" href="http://docs.mongodb.org/manual/">here</a>.
 
 #### FEATURES
 
@@ -53,7 +53,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 |-----------|----------------|
 | collectd  |  4.9 or later  |
 | Python    |  2.4 or later  |
-| MongoDB   |  2.4 or later  |
+| MongoDB   |  2.6 or later  |
 | PyMongo   |  3.0 or later  |
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
@@ -79,9 +79,9 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
         sudo pip install pymongo[tls]
 
-3. Download the [collectd-mongodb Python module](https://github.com/signalfx/collectd-mongodb).  
+3. Download the <a target="_blank" href="https://github.com/signalfx/collectd-mongodb">collectd-mongodb Python module</a>.  
 
-4. Download SignalFx's [sample configuration file ](https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf) for this plugin to `/etc/collectd/managed_config`.
+4. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 5. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
@@ -89,7 +89,7 @@ Documentation for MongoDB can be found here: http://docs.mongodb.org/manual/
 
 ### CONFIGURATION
 
-Using the example configuration file [10-mongodb.conf](https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MongoDB instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mongodb/10-mongodb.conf">10-mongodb.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the MongoDB instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
@@ -99,6 +99,10 @@ Using the example configuration file [10-mongodb.conf](https://github.com/signal
 | User | Valid mongodb user | "" |
 | Password | Associated password for valid user | "password" |
 | Database | Name(s) of database(s) that you would like metrics from. Note: the first database in this list must be "admin", as it is used to perform a `serverStatus()` command. | "admin" "db-prod" "db-dev" |
+| Interval | How frequently to send metrics in seconds | collectd `Interval` setting |
+| SendCollectionMetrics | Whether to send collection level metrics or not | false |
+| SendCollectionTopMetrics | Whether to send collection level top (timing) metrics or not | false |
+| CollectionMetricsIntervalMultiplier | How frequently to send collection level metrics as a multiple of the configured plugin interval (e.g. if the Interval is 15 and the multiplier is 4, collection level metrics will be fetched every minute) | 6 |
 | UseTLS | Set this to `true` if you want to connect to Mongo using TLS/x509/SSL. | false |
 | CACerts | Path to a CA cert that will be used to verify the certificate that Mongo presents (not needed if not using TLS or if Mongo's cert is signed by a globally trusted issuer already installed in the default location on your OS) | "" |
 | TLSClientCert | Path to a client certificate (not needed unless your Mongo instance requires x509 client verification) | "" |
@@ -126,7 +130,7 @@ db.createUser( {
 
 Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
 
-For general reference on how to monitor MongoDB performance, see [Analyzing MongoDB Performance](https://docs.mongodb.org/manual/administration/analyzing-mongodb-performance/).
+For general reference on how to monitor MongoDB performance, see <a target="_blank" href="https://docs.mongodb.org/manual/administration/analyzing-mongodb-performance/">Analyzing MongoDB Performance</a>.
 
 **Monitoring MongoDB clusters**
 
@@ -154,7 +158,7 @@ When analyzing the performance of a MongoDB cluster, it's also important to veri
 
 On an individual instance level, it's important to monitor system statistics like memory usage, page faults, and disk I/O utilization.
 
-MongoDB uses memory-mapped files to store data, so it is important to compare the amount of memory that MongoDB has allocated to the amount of system memory. This plugin reports resident memory usage in [gauge.mem.resident](./docs/gauge.mem.resident.md) and mapped memory usage in [gauge.mem.mapped](./docs/gauge.mem.mapped.md). If either of these quantities exceed the amount of system memory (reported by the [memory](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.memory.html) plugin for collectd), the system may be at or over capacity.
+MongoDB uses memory-mapped files to store data, so it is important to compare the amount of memory that MongoDB has allocated to the amount of system memory. This plugin reports resident memory usage in [gauge.mem.resident](./docs/gauge.mem.resident.md) and mapped memory usage in [gauge.mem.mapped](./docs/gauge.mem.mapped.md). If either of these quantities exceed the amount of system memory (reported by the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.memory.html">memory</a> plugin for collectd), the system may be at or over capacity.
 
 ![Memory statistics from MongoDB](././img/mongodb_memory.png)
 
@@ -166,7 +170,7 @@ This plugin reports page faults in [counter.extra\_info.page\_faults](./docs/cou
 
 *This MongoDB instance has a low rate of page faults. This means that most of the data MongoDB needs to access is in memory, and doesn't need to be fetched from disk.*
 
-You can monitor disk I/O utilization for your MongoDB host using the [disk\_ops.write](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html#derive-disk-ops-write) and [disk\_ops.read](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html#derive-disk-ops-read) metrics emitted by the `disk` plugin for collectd, which is included and enabled by default in most packages of collectd. [Click here to learn more about the collectd-disk](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html) plugin.
+You can monitor disk I/O utilization for your MongoDB host using the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html#derive-disk-ops-write">disk_ops.write</a> and <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html#derive-disk-ops-read">disk_ops.read</a> metrics emitted by the `disk` plugin for collectd, which is included and enabled by default in most packages of collectd. <a target ="_blank" href="https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.disk.html">Click here to learn more about the collectd-disk</a> plugin.
 
 ### METRICS
 

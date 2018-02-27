@@ -1,0 +1,10 @@
+{ "display_name":"Azure Virtual Machine Scale Sets",
+  "description": "SignalFx's integration with Azure Virtual Machine Scale Sets",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-vmscaleset",
+  "code": "https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/",
+  "featured": false,
+  "logo_large": "integrations_azurevmscaleset.png",
+  "logo_small": "integrations_azurevmscaleset@2x.png",
+  "data_signature": "resource_type:\"Microsoft.Compute/virtualMachineScaleSets\"",
+  "in_app_categories": ["AzureServicesMonitored"]
+}

@@ -10,7 +10,7 @@
 
 SignalFx enables you to monitor the health and performance of your Lambda functions via metrics on total invocations, errors, durations and more. In addition, you can easily send custom application or business metrics from within your Lambda functions.
 
-- If you have enabled the SignalFx Amazon Web Services integration and are syncing Cloudwatch metrics, [those metrics](http://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-metrics.html) will automatically be available to view.
+- If you have enabled the SignalFx Amazon Web Services integration and are syncing Cloudwatch metrics, <a target="_blank" href="http://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-metrics.html">those metrics</a> will automatically be available to view.
 
 -  You can use one of our language-specific wrappers to monitor your functions. Using a wrapper lets you see invocations, errors and durations for your functions in real time, and also provides insight into whether a given function is being impacted by cold starts.
 
@@ -27,16 +27,16 @@ SignalFx enables you to monitor the health and performance of your Lambda functi
 - **Lambda (SignalFx) Overview**: Overview of all data from Lambda via SignalFx Wrapper.
 
   [<img src='./img/lambda-sfx-overview-db.png' width=200px>](./img/lambda-sfx-overview-db.png)
-  
+
 - **Lambda (AWS) Function**: Instance view for specific Lambda function via CloudWatch.
 
   [<img src='./img/lambda-aws-function-db.png' width=200px>](./img/lambda-aws-function-db.png)
-  
+
 - **Lambda (SignalFx) Function**: Instance view for specific Lambda function via SignalFx Wrapper.
 
   [<img src='./img/lambda-sfx-function-db.png' width=200px>](./img/lambda-sfx-function-db.png)
 
-### INSTALLATION 
+### INSTALLATION
 
 #### SignalFx Wrapper
 
@@ -46,9 +46,9 @@ To use SignalFx Wrapper, include SignalFx Lambda Wrapper in your Lambda function
 
 Instructions are provided in each of the Lambda wrapper readme files.
 
-- [Java](https://github.com/signalfx/lambda-java)
-- [NodeJs](https://github.com/signalfx/lambda-nodejs)
-- [Python](https://github.com/signalfx/lambda-python)
+- <a target="_blank" href="https://github.com/signalfx/lambda-java">Java</a>
+- <a target="_blank" href="https://github.com/signalfx/lambda-nodejs">NodeJs</a>
+- <a target="_blank" href="https://github.com/signalfx/lambda-python">Python</a>
 
 #### CloudWatch
 
