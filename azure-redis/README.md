@@ -12,6 +12,18 @@ Use SignalFx to monitor Azure Redis Cache via [Microsoft Azure](https://github.c
 
 #### FEATURES
 
+##### Built-in dashboards
+
+- **Azure Redis Cache**: Shows metrics of a Redis cahce.
+
+  [<img src='./img/redis.1.png' width=200px>](./img/redis.1.png)
+
+  [<img src='./img/redis.2.png' width=200px>](./img/redis.2.png)
+
+- **Azure Redis Caches**: Shows metrics of all Redis cahces being monitored.
+
+  [<img src='./img/redis.all.png' width=200px>](./img/redis.1.png)
+
 ### INSTALLATION
 
 To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
@@ -99,10 +111,6 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 - **Number of Connections** - Number of connections stacked per cache.
 
 [<img src='./img/caches.connections.png' width=200px>](./img/caches.connections.png)
-
-- **CPU percent** - Percentage of CPU used by each of the shards in the cache.
-
-[<img src='./img/caches.cpu.percent.png' width=200px>](./img/caches.cpu.percent.png)
 
 - **Used Memory per Cache** - Memory used stacked by cache.
 
