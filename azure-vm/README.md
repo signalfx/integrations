@@ -20,7 +20,7 @@ Use SignalFx to monitor Azure Virtual Machines via [Microsoft Azure](https://git
 
 - **Azure Virtual Machine (Classic)**: Shows metrics of a classic virtual machine.
 
-  [<img src='./img/vmclassic.png' width=200px>](./img/vmclassic.png)
+  [<img src='./img/vm.classic.png' width=200px>](./img/vm.classic.png)
 
 - **Azure Virtual Machines**: Shows metrics of all virtual machines being monitored.
 
