@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurerediscaches.png) Azure Redis Cache
+# ![](./img/integrations_azurelogicapps.png) Azure Logic Apps
 
 - [Description](#description)
 - [Installation](#installation)
@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Azure Redis Cache via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+Use SignalFx to monitor Azure Logic Apps via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
 #### FEATURES
 
@@ -25,7 +25,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Redis Cache, visit [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcacheredis).
+For more information about the metrics emitted by Azure Logic Apps, visit [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftlogicworkflows).
 
 ### LICENSE
 

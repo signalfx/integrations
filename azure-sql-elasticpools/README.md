@@ -25,7 +25,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure SQL Elastic Pools, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserverselasticpools
+For more information about the metrics emitted by Azure SQL Elastic Pools, visit [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserverselasticpools).
 
 ### LICENSE
 

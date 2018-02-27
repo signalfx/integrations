@@ -1,0 +1,10 @@
+{ "display_name":"Azure Logic Apps",
+  "description": "SignalFx's integration with Azure Logic Apps",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-logic-app",
+  "code": "https://azure.microsoft.com/en-us/services/logic-apps/",
+  "featured": false,
+  "logo_large": "integrations_azurelogicapps.png",
+  "logo_small": "integrations_azurelogicapps@2x.png",
+  "data_signature": "resource_type:\"Microsoft.Logic/workflows\"",
+  "in_app_categories": ["AzureServicesMonitored"]
+}

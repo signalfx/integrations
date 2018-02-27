@@ -5,6 +5,6 @@
    "featured": false,
    "logo_large": "integrations_azure.png",
    "logo_small": "integrations_azure.png",
-   "data_signature": "_exists_:resource_id",
+   "data_signature": "_exists_:azure_resource_id",
    "in_app_categories": ["essential", "servicesMonitored", "AzureServicesMonitored"]
  }
