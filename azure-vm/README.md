@@ -12,6 +12,20 @@ Use SignalFx to monitor Azure Virtual Machines via [Microsoft Azure](https://git
 
 #### FEATURES
 
+##### Built-in dashboards
+
+- **Azure Virtual Machine**: Shows metrics of a virtual machine.
+
+  [<img src='./img/vm.png' width=200px>](./img/vm.png)
+
+- **Azure Virtual Machine (Classic)**: Shows metrics of a classic virtual machine.
+
+  [<img src='./img/vmclassic.png' width=200px>](./img/vmclassic.png)
+
+- **Azure Virtual Machines**: Shows metrics of all virtual machines being monitored.
+
+  [<img src='./img/vms.png' width=200px>](./img/vms.png)
+
 ### INSTALLATION
 
 To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).

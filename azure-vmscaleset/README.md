@@ -12,6 +12,16 @@ Use SignalFx to monitor Azure Virtual Machine Scale Sets via [Microsoft Azure](h
 
 #### FEATURES
 
+##### Built-in dashboards
+
+- **Azure VM Scale Set**: Shows metrics of a VM Scale Set.
+
+  [<img src='./img/vmscaleset.png' width=200px>](./img/vmscaleset.png)
+
+- **Azure VM Scale Sets**: Shows metrics of all VM Scale Sets being monitored.
+
+  [<img src='./img/vmscalesets.png' width=200px>](./img/vmscalesets.png)
+
 ### INSTALLATION
 
 To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
