@@ -20,6 +20,66 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 #### Interpreting Built-in dashboards
 
+**Azure Logic App**
+
+- **Billable Executions** - Number of billable actions/triggers by app.
+
+  [<img src='./img/logic.billable.png' width=200px>](./img/logic.billable.png)
+
+- **Runs Completed** - Number of workflow runs that have completed for the app.
+
+  [<img src='./img/logic.billable.png' width=200px>](./img/logic.billable.png)
+
+- **Actions Completed** - Number of actions that completed for the app.
+
+  [<img src='./img/logic.billable.png' width=200px>](./img/logic.billable.png)
+
+- **Runs Succeeded / Failed / Throttled** - Number of workflow runs that succeeded/failed/got throttled for the app.
+
+  [<img src='./img/logic.runs.png' width=200px>](./img/logic.runs.png)
+
+- **Actions Succeeded / Failed / Throttled** - Number of actions that succeeded/failed/got throttled for the app.
+
+  [<img src='./img/logic.actions.png' width=200px>](./img/logic.actions.png)
+
+- **Triggers Succeeded / Failed / Throttled** - Number of triggers that succeeded/failed/got throttled for the app.
+
+  [<img src='./img/logic.triggers.png' width=200px>](./img/logic.triggers.png)
+
+- **Run Latency (s)** - Run latency for the app.
+
+  [<img src='./img/logic.run.latency.png' width=200px>](./img/logic.run.latency.png)
+
+- **Action Latency (s)** - Action latency for the app.
+
+  [<img src='./img/logic.action.latency.png' width=200px>](./img/logic.action.latency.png)
+
+**Azure Logic Apps**
+
+- **Runs Succeeded** - Aggregated number of workflow runs that succeed.
+
+  [<img src='./img/logics.run.succeeded.png' width=200px>](./img/logics.run.succeeded.png)
+
+- **Successful Run Latency (s)** - Average latency of succeeded workflow runs.
+
+  [<img src='./img/logics.success.runlatency.png' width=200px>](./img/logics.success.runlatency.png)
+
+- **Runs Failed** - Aggregated number of workflow runs that failed.
+
+  [<img src='./img/logics.run.failed.png' width=200px>](./img/logics.run.failed.png)
+
+- **Runs Throttled** - Aggregated number of workflow runs that throttled.
+
+  [<img src='./img/logics.run.throttled.png' width=200px>](./img/logics.run.throttled.png)
+
+- **Runs Completed** - Aggregated number of workflow runs that completed.
+
+  [<img src='./img/logics.run.completed.png' width=200px>](./img/logics.run.completed.png)
+
+- **Total Billable Executions** - Aggregated number of workflow executions that are billed.
+
+  [<img src='./img/logics.billable.png' width=200px>](./img/logics.billable.png)
+
 
 
 
