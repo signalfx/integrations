@@ -66,15 +66,15 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 - **Runs Failed** - Aggregated number of workflow runs that failed.
 
-  [<img src='./img/logics.run.failed.png' width=200px>](./img/logics.run.failed.png)
+  [<img src='./img/logics.runs.failed.png' width=200px>](./img/logics.runs.failed.png)
 
 - **Runs Throttled** - Aggregated number of workflow runs that throttled.
 
-  [<img src='./img/logics.run.throttled.png' width=200px>](./img/logics.run.throttled.png)
+  [<img src='./img/logics.runs.throttled.png' width=200px>](./img/logics.runs.throttled.png)
 
 - **Runs Completed** - Aggregated number of workflow runs that completed.
 
-  [<img src='./img/logics.run.completed.png' width=200px>](./img/logics.run.completed.png)
+  [<img src='./img/logics.runs.completed.png' width=200px>](./img/logics.runs.completed.png)
 
 - **Total Billable Executions** - Aggregated number of workflow executions that are billed.
 
