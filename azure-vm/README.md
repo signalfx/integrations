@@ -40,7 +40,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 - **Disk IOPs Trend** - Trend of the disk I/O operations performed by virtual machine.
 
-  [<img src='./img/vm.disk.iop.trend.png' width=200px>](./img/vm.disk.iop.trend.png)
+  [<img src='./img/vm.disk.iops.trend.png' width=200px>](./img/vm.disk.iops.trend.png)
 
 - **Network I/O** - Number of bytes received from/sent to the network by the virtual machine.
 
