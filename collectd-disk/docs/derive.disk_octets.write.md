@@ -1,7 +1,7 @@
 ---
 title: Disk Octets Written
 brief: The number of bytes (octets) written to a disk.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Disk Octets Written
 

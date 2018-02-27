@@ -1,0 +1,9 @@
+{ "display_name":"AWS Optimizer",
+  "description": "SignalFx AWS Optimizer.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-optimizer",
+  "featured": false,
+  "logo_large": "integration_optimizer.png",
+  "logo_small": "integration_optimizer.png",
+  "data_signature": "cloud_provider_service:\"EC2.Instances\"",
+  "in_app_categories": ["AWSservicesMonitored"]
+}

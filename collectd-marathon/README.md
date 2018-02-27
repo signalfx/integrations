@@ -12,7 +12,7 @@ Metadata associated with the Marathon plugin for collectd can be found [here](ht
 
 ### DESCRIPTION
 
-The [collectd-marathon](https://github.com/signalfx/collectd-marathon) plugin collects metrics about Marathon applications and tasks.
+The <a target="_blank" href="https://github.com/signalfx/collectd-marathon">collectd-marathon</a> plugin collects metrics about Marathon applications and tasks.
 
 #### Features
 ##### Built-in dashboards
@@ -46,20 +46,20 @@ The [collectd-marathon](https://github.com/signalfx/collectd-marathon) plugin co
 
 ### INSTALLATION
 
-1.  Download the [collectd-marathon](https://github.com/signalfx/collectd-marathon) Python module onto a host that has access to the Marathon API.
+1.  Download the <a target="_blank" href="https://github.com/signalfx/collectd-marathon">collectd-marathon</a> Python module onto a host that has access to the Marathon API.
 
 2.  Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `collectd-marathon` module:
 
         sudo pip install -r /path/to/collectd-marathon/requirements.txt
 
-3.  Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) for this plugin to `/etc/collectd/managed_config`.
+3.  Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 4.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
 5.  Restart collectd.
 
 ### CONFIGURATION
-Using the sample configuration file [20-collectd-marathon.conf](https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the sample configuration file <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-marathon/20-collectd-marathon.conf">20-collectd-marathon.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

@@ -58,9 +58,9 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
 ### INSTALLATION
 
-1. Download the [collectd-elasticsearch]( https://github.com/signalfx/collectd-elasticsearch) Python module.
+1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-elasticsearch">collectd-elasticsearch</a> Python module.
 
-2. Download SignalFx’s [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf) to `/etc/collectd/managed_config`.
+2. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/20-elasticsearch.conf">sample configuration file</a> to `/etc/collectd/managed_config`.
 
 3. Modify the configuration file to provide values that make sense for your environment, as described [below](#configuration).
 
@@ -68,7 +68,7 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
 ### CONFIGURATION
 
-Using the example configuration file [20-elasticsearch.conf](https://github.com/signalfx/integrations/tree/master/collectd-elasticsearch/20-elasticsearch.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-elasticsearch/20-elasticsearch.conf">20-elasticsearch.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Elasticsearch instance to be monitored.
 
 The plugin is intended to be run on a per-node basis. Define only one "Module" element per `20-elasticsearch.conf` configuration file.
 

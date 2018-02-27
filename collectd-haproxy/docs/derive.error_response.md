@@ -1,7 +1,7 @@
 ---
 title: Error response
 brief: Corresponds to HAProxy's `eresp` metric -  Response errors. srv_abrt will be counted here also. Responses denied because of security concerns.
-metric_type: derive
+metric_type: cumulative counter
 ---
 ### Error response
 

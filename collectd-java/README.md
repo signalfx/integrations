@@ -14,7 +14,7 @@ Metadata associated with the Java plugin for collectd can be found [here](https:
 
 The Java plugin for collectd is required to use SignalFx's integrations with Java applications like [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq), [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)[](sfx_link:collectd-cassandra) and [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka).
 
-Read more about the Java plugin for collectd on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
+Read more about the Java plugin for collectd on the <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Java">collectd wiki</a>.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -33,7 +33,7 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 
     * On Ubuntu and Debian systems, this plugin is included by default with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 
-2. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: [10-jmx.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+2. Download SignalFx's example configuration file for the Java plugin to `/etc/collectd/managed_config`: <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf">10-jmx.conf</a>
 
 3. Download [signalfx\_types\_db](https://github.com/signalfx/integrations/tree/master/collectd-java/signalfx_types_db) and configure its location as described inside of the `10-jmx.conf` configuration file (Default location is  `/usr/share/collectd/java-collectd-plugin/signalfx_types_db`).
 
@@ -41,7 +41,7 @@ Read more about the Java plugin for collectd on the [collectd wiki](https://coll
 
 ### CONFIGURATION
 
-No additional configuration is required, however full configuration details for this plugin are available on the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Java).
+No additional configuration is required, however full configuration details for this plugin are available on the <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Java">collectd wiki</a>.
 
 ### USAGE
 
