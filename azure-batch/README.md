@@ -54,15 +54,15 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 - **Tasks Started** - Number of tasks that started.
 
-  [<img src='./img/batch.tasks.started.png' width=200px>](./img/batch.task.started.png)
+  [<img src='./img/batch.tasks.started.png' width=200px>](./img/batch.tasks.started.png)
 
 - **Tasks Completed** - Number of tasks completed.
 
-  [<img src='./img/batch.tasks.completed.png' width=200px>](./img/batch.task.completed.png)
+  [<img src='./img/batch.tasks.completed.png' width=200px>](./img/batch.tasks.completed.png)
 
 - **Tasks Failed** - Number of tasks failed.
 
-  [<img src='./img/batch.tasks.failed.png' width=200px>](./img/batch.task.failed.png)
+  [<img src='./img/batch.tasks.failed.png' width=200px>](./img/batch.tasks.failed.png)
 
 - **Number of Cores** - Number of in each of the Accounts.
 
