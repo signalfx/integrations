@@ -64,11 +64,11 @@ The above charts are applicable to all Azure VM Scale Sets. The following two ch
 
 - **CPU Credits Remaining** - Number of CPU credits remaining for a burstable scale set.
 
-[<img src='./img/vm.cpu.credits.remaining.png' width=200px>](./img/vm.cpu.credits.remaining.png)
+  [<img src='./img/vm.cpu.credits.remaining.png' width=200px>](./img/vm.cpu.credits.remaining.png)
 
 - **CPU Credits Used** - Number of CPU credits used by a burstable scaleset.
 
-[<img src='./img/vm.cpu.credits.used.png' width=200px>](./img/vm.cpu.credits.remaining.used.png)
+  [<img src='./img/vm.cpu.credits.used.png' width=200px>](./img/vm.cpu.credits.used.png)
 
 **Azure VM Scale Sets**
 
