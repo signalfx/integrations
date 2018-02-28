@@ -68,11 +68,11 @@ The above charts are applicable to all Azure Virtual Machines. The following two
 
 - **CPU Credits Remaining** - Number of CPU credits remaining for a burstable machine.
 
-[<img src='./img/vm.cpu.credits.remaining.png' width=200px>](./img/vm.cpu.credits.remaining.png)
+  [<img src='./img/vm.cpu.credits.remaining.png' width=200px>](./img/vm.cpu.credits.remaining.png)
 
 - **CPU Credits Used** - Number of CPU credits used by a burstable machine.
 
-[<img src='./img/vm.cpu.credits.used.png' width=200px>](./img/vm.cpu.credits.remaining.used.png)
+  [<img src='./img/vm.cpu.credits.used.png' width=200px>](./img/vm.cpu.credits.used.png)
 
 **Azure Compute Virtual Machines**
 
