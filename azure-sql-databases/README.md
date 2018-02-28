@@ -25,7 +25,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure SQL Database, visit https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserversdatabases.
+For more information about the metrics emitted by Azure SQL Database, visit [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserversdatabases).
 
 ### LICENSE
 
