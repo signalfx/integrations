@@ -213,7 +213,7 @@ LoadPlugin python
     [<img src='./img/chart-solr-node-jvm-memory-pools-usage.png' width=200px>](./img/chart-solr-node-jvm-memory-pools-usage.png)
 
   
-- **solr NODES**:
+- **SOLR NODES**:
 
   - **Number of Nodes**: Shows the total number of Solr nodes monitored in the org.
 
