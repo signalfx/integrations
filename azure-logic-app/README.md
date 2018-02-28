@@ -18,9 +18,10 @@ Use SignalFx to monitor Azure Logic Apps via [Microsoft Azure](https://github.co
 
   [<img src='./img/logic.png' width=200px>](./img/logic.png)
 
-- **Azure Logic App**: Shows metrics of a Logic Apps being monitored.
+- **Azure Logic Apps**: Shows metrics of all Logic Apps being monitored.
 
   [<img src='./img/logics.png' width=200px>](./img/logics.png)
+
 
 ### INSTALLATION
 
@@ -38,11 +39,11 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 - **Runs Completed** - Number of workflow runs that have completed for the app.
 
-  [<img src='./img/logic.billable.png' width=200px>](./img/logic.billable.png)
+  [<img src='./img/logic.runs.completed.png' width=200px>](./img/logic.runs.completed.png)
 
 - **Actions Completed** - Number of actions that completed for the app.
 
-  [<img src='./img/logic.billable.png' width=200px>](./img/logic.billable.png)
+  [<img src='./img/logic.actions.completed.png' width=200px>](./img/logic.actions.completed.png)
 
 - **Runs Succeeded / Failed / Throttled** - Number of workflow runs that succeeded/failed/got throttled for the app.
 
