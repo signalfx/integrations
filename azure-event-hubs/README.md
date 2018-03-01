@@ -1,4 +1,4 @@
-# ![](./img/integrations_azureeventhubs.png) Azure Event Hubs
+# ![](./img/integrations_azureeventhubs.png) Microsoft Azure Event Hubs
 
 - [Description](#description)
 - [Installation](#installation)
