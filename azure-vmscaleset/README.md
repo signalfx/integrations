@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurevmscaleset.png) Azure Virtual Machine Scale Sets
+# ![](./img/integrations_azurevmscaleset.png) Microsoft Azure Virtual Machine Scale Sets
 
 - [Description](#description)
 - [Installation](#installation)

@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurelogicapps.png) Azure Logic Apps
+# ![](./img/integrations_azurelogicapps.png) Microsoft Azure Logic Apps
 
 - [Description](#description)
 - [Installation](#installation)

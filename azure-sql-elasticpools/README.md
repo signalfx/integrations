@@ -1,4 +1,4 @@
-# ![](./img/integrations_azuresqlelasticpools.png) Azure SQL Elastic Pools
+# ![](./img/integrations_azuresqlelasticpools.png) Microsoft Azure SQL Elastic Pools
 
 - [Description](#description)
 - [Installation](#installation)

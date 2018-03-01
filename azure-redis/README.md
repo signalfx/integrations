@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurerediscaches.png) Azure Redis Cache
+# ![](./img/integrations_azurerediscaches.png) Microsoft Azure Redis Cache
 
 - [Description](#description)
 - [Installation](#installation)
