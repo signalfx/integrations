@@ -1,4 +1,4 @@
-# ![](./img/integrations_azuresqldatabase.png) Azure SQL Database
+# ![](./img/integrations_azuresqldatabase.png) Microsoft Azure SQL Database
 
 - [Description](#description)
 - [Installation](#installation)

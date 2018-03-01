@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurevm.png) Azure Virtual Machines
+# ![](./img/integrations_azurevm.png) Microsoft Azure Virtual Machines
 
 - [Description](#description)
 - [Installation](#installation)
