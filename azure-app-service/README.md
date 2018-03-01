@@ -1,4 +1,4 @@
-# ![](./img/integrations_azureappservice.png) Azure App Service
+# ![](./img/integrations_azureappservice.png) Microsoft Azure App Service
 
 - [Description](#description)
 - [Installation](#installation)

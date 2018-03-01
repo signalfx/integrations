@@ -1,4 +1,4 @@
-# ![](./img/integrations_azurestorage.png) Azure Storage
+# ![](./img/integrations_azurestorage.png) Microsoft Azure Storage
 
 - [Description](#description)
 - [Installation](#installation)
