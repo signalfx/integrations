@@ -1,0 +1,10 @@
+{ "display_name":"Azure Redis Cache",
+  "description": "SignalFx's integration with Azure Redis Cache",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-redis",
+  "code": "https://azure.microsoft.com/en-us/services/cache/",
+  "featured": false,
+  "logo_large": "integrations_azurerediscaches.png",
+  "logo_small": "integrations_azurerediscaches@2x.png",
+  "data_signature": "resource_type:\"Microsoft.Cache/Redis\"",
+  "in_app_categories": ["AzureServicesMonitored"]
+}
