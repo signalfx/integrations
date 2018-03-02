@@ -1,9 +1,9 @@
 ---
-title: sf.org.num.azureMonitorCallCountErrors
+title: sf.org.num.azureMonitorClientCallCountErrors
 brief: Number of calls to Azure Monitor API method that threw errors
 metric_type: counter
 ---
-### sf.org.num.azureMonitorCallCountErrors
+### sf.org.num.azureMonitorClientCallCountErrors
 
 Number of calls to Azure Monitor API method that threw errors.
 
