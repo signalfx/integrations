@@ -14,7 +14,7 @@ Use SignalFx to monitor Microsoft Azure services via Azure Monitor.
 
 Connecting to Microsoft Azure allows you to take advantage of SignalFx’s extensive Azure support.
 
-- SignalFx can sync metadata about your Azure Virtual Machines to enrich metrics reported by Azure Monitor or the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
+- SignalFx can sync metadata about your Azure Virtual Machines (only applicable to the VM's created/managed by Azure Resource Manager) to enrich metrics reported by Azure Monitor or the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
 - SignalFx provides built-in dashboards for many Azure services that report to Monitor, such as [Azure Virtual Machines](https://github.com/signalfx/integrations/tree/master/azure-vm)[](sfx_link:azure-vm) and [Azure Logic App](https://github.com/signalfx/integrations/tree/master/azure-logic-app)[](sfx_link:azure-logic-app).
 
 ### CONFIGURATION
