@@ -52,7 +52,9 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">colle
 
 4. Install the Metrics Plugin in Jenkins. `Manage Jenkins > Manage Plugins > Available > Search "Metrics Plugin"`
 
-5. Restart collectd
+5. Install the Python requirements with `sudo pip install -r requirements.txt`
+
+6. Restart collectd
 
 
 ### CONFIGURATION
@@ -74,6 +76,9 @@ Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through t
 | ExcludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to exclude(valid when EnhancedMetrics is "true") | "vm.terminated.count" |
 | Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to Jenkins API. | 10 |
+| ssl_keyfile | Path to the keyfile | "path/to/file" |
+| ssl_certificate | Path to the certificate | "path/to/file" |
+| ssl_ca_certs  | Path to the ca file | "path/to/file" |
 
 Example configuration:
 
@@ -89,6 +94,9 @@ LoadPlugin python
         APIToken "f04fff7c860d884f2ef00a2b2d481c2f"
         MetricsKey "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg"
         Interval 60
+        ssl_keyfile "/etc/cert/jenkins.key"
+        ssl_certificate "/etc/cert/jenkins.crt"
+        ssl_ca_certs "/etc/cert/ca.crt"
     </Module>
 </Plugin>
 ```

@@ -1,0 +1,10 @@
+{ "display_name":"Apache Solr",
+  "description": "Monitor apache solr using the SignalFx collectd agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-solr",
+  "code": "https://github.com/signalfx/collectd-solr",
+  "featured": false,
+  "logo_small": "/images/repos/collectd-solr/img/integrations_solr.png",
+  "logo_large": "/images/repos/collectd-solr/img/integrations_solr%402x.png",
+  "data_signature": "plugin:\"solr\"",
+  "in_app_categories": ["servicesMonitored"]
+}

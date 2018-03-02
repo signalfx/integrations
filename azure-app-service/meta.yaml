@@ -1,0 +1,10 @@
+{ "display_name":"Azure App Service",
+  "description": "SignalFx's integration with Azure App Service",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-app-service",
+  "code": "https://azure.microsoft.com/en-us/services/app-service/",
+  "featured": false,
+  "logo_large": "integrations_azureappservice.png",
+  "logo_small": "integrations_azureappservice@2x.png",
+  "data_signature": "resource_type:\"Microsoft.Web/sites\"",
+  "in_app_categories": ["AzureServicesMonitored"]
+}

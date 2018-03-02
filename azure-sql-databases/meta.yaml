@@ -1,0 +1,10 @@
+{ "display_name":"Azure SQL Database",
+  "description": "SignalFx's integration with Azure SQL Database",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-sql-databases",
+  "code": "https://azure.microsoft.com/en-us/services/sql-database/",
+  "featured": false,
+  "logo_large": "integrations_azuresqldatabase.png",
+  "logo_small": "integrations_azuresqldatabase@2x.png",
+  "data_signature": "resource_type:\"Microsoft.Sql/servers/databases\"",
+  "in_app_categories": ["AzureServicesMonitored"]
+}
