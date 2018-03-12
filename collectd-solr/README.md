@@ -76,7 +76,7 @@ Using the example configuration file [20-solr.conf](https://github.com/signalfx/
 | EnhancedMetrics | Boolean to indicate whether stats from `/metrics` are needed | "false" |
 | IncludeMetric | Metric name from the `/admin/metrics` endpoint to include(valid when EnhancedMetrics is "false") | "" |
 | ExcludeMetric | Metric name from the `/admin/metrics` endpoint to exclude(valid when EnhancedMetrics is "true") | "" |
-| Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
+| Dimension | Space-separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to solr API. | 10 |
 | ssl\_keyfile | Path to the keyfile | "path/to/file" |
 | ssl\_certificate | Path to the certificate | "path/to/file" |
