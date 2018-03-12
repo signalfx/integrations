@@ -74,7 +74,7 @@ Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through t
 | EnhancedMetrics | Boolean to indicate whether advanced stats from `/metrics/<MetricsKey>/metrics` are needed | "false" |
 | IncludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to include(valid when EnhancedMetrics is "false") | "vm.daemon.count" |
 | ExcludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to exclude(valid when EnhancedMetrics is "true") | "vm.terminated.count" |
-| Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
+| Dimension | Space-separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to Jenkins API. | 10 |
 | ssl_keyfile | Path to the keyfile | "path/to/file" |
 | ssl_certificate | Path to the certificate | "path/to/file" |
