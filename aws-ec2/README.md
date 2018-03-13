@@ -38,7 +38,7 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 #### Uniquely identifying EC2 instances
 
-EC2 instance IDs are not guaranteed to be unique. To uniquely identify an EC2 instance, SignalFx concatenates instanceId, AWS region, and AWS account ID separated by underscore in the dimension `AWSUniqueId`, as follows:
+EC2 instance IDs are not guaranteed to be unique. To uniquely identify an EC2 instance, SignalFx concatenates instanceId, AWS region, and AWS account ID separated by underscores in the dimension `AWSUniqueId`, as follows:
 ```
     instanceId_region_accountID
 ```
