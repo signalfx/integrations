@@ -1,11 +1,11 @@
 ---
 title: sf.org.num.namedtoken
-brief: Number of tokens available for use
+brief: Number of access tokens
 metric_type: gauge
 ---
 ### sf.org.num.namedtoken
 
-Number of tokens available for use. 
+Number of organization access tokens, including disabled tokens. 
 
 Dimension(s): `orgId`
 
