@@ -11,6 +11,12 @@ Metadata associated with the SignalFx collectd agent can be found [here](https:/
 
 ### DESCRIPTION
 
+**We have a new agent called the SignalFx SmartAgent that wraps collectd and
+provides auto-discovery of services, among other features.  See [the
+integration tile for the new agent](?selectedKeyValue=plugin:signalfx-agent)
+for more information.  We strongly recommend using this new agent instead of
+collectd, which is described below for legacy purposes.**
+
 <a target="_blank" href="http://collectd.org">collectd</a> is an open source daemon that collects statistics from a system and publishes them to a destination of your choice. You can use collectd to monitor infrastructure metrics, and install collectd plugins that monitor a wide range of software. It’s fast, performs well at scale, and enjoys great community support. We released the <a target="_blank" href="https://github.com/signalfx/collectd">SignalFx collectd agent</a> to make a great agent even better.
 
 The <a target="_blank" href="https://github.com/signalfx/collectd">SignalFx collectd agent</a> introduces the following changes from community collectd:
