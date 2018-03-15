@@ -3,6 +3,7 @@
    "project_url": "https://github.com/signalfx/integrations/tree/master/aws",
    "code": "https://aws.amazon.com/cloudwatch/",
    "featured": false,
+   "sort_order": 2,
    "logo_large": "integration_aws.png",
    "logo_small": "integration_aws.png",
    "data_signature": "_exists_:namespace",
