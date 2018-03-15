@@ -3,6 +3,7 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd",
   "code": "https://github.com/signalfx/collectd",
   "featured": true,
+  "sort_order": 1,
   "logo_large": "/images/repos/collectd/img/integration_signalfx.png",
   "logo_small": "/images/repos/collectd/img/integration_signalfx.png",
   "data_signature": "plugin:\"signalfx-metadata\"",
