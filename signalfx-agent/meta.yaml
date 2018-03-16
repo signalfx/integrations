@@ -1,0 +1,11 @@
+{ "display_name":" SignalFx SmartAgent",
+  "description": "SignalFx's newer agent with auto-discovery that supersedes our old collectd agent",
+  "project_url": "https://github.com/signalfx/signalfx-agent",
+  "code": "https://github.com/signalfx/signalfx-agent",
+  "featured": true,
+  "sort_order": 0,
+  "logo_large": "/images/repos/collectd/img/integration_smartagent@2x.png",
+  "logo_small": "/images/repos/collectd/img/integration_smartagent.png",
+  "data_signature": "_exists_:signalfx_agent",
+  "in_app_categories": ["essential", "servicesMonitored"]
+}

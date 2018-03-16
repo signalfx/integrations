@@ -81,6 +81,12 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-spark">spark-c
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/spark
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-spark.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download <a target="_blank" href="https://github.com/signalfx/collectd-spark">collectd-spark</a>. Place the `spark_plugin.py` file in `/usr/share/collectd/collectd-spark`
 
 2. Modify the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-spark/10-spark.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
@@ -101,7 +107,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-spark/" |
 | MetricsURL | URL for master or worker node if Metrics source (and therefore, by default Metrics HTTP Servlet Sink) are enabled | "http://localhost" |
 | MasterPort | Master (webui) port to query for metrics  | 8080 |
-| WorkerPorts | Space separated worker (webui) ports to query for metrics | 8081 8082 |
+| WorkerPorts | Space-separated worker (webui) ports to query for metrics | 8081 8082 |
 | Applications | Boolean indicating whether to collect application level metrics | "False" |
 | Master | URL for master application | "http://localhost:8080" |
 | Cluster | Your Spark cluster mode - only standalone and mesos supported | "Standalone" |
@@ -109,7 +115,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | IncludeMetrics | Metrics from enhanced metrics that can be included individually | "metric\_name\_1,metric\_name\_2" |
 | ExcludeMetrics | Metrics from enhanced metrics that can be excluded individually | "metric\_name\_1,metric\_name2" |
 | Dimension | Key-value pair for a user-defined dimension | "dimension\_key=dimension\_value" |
-| Dimension | Comma separated key-value pairs for user-defined dimensions | "dimension\_key1=dimension\_value1,dimension\_key2=dimension\_value2" |
+| Dimension | Comma-separated key-value pairs for user-defined dimensions | "dimension\_key1=dimension\_value1,dimension\_key2=dimension\_value2" |
 
 Example configuration:
 
