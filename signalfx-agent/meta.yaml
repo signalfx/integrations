@@ -6,6 +6,6 @@
   "sort_order": 0,
   "logo_large": "/images/repos/collectd/img/integration_smartagent@2x.png",
   "logo_small": "/images/repos/collectd/img/integration_smartagent.png",
-  "data_signature": "plugin:\"signalfx-metadata\"",
+  "data_signature": "_exists_:signalfx_agent",
   "in_app_categories": ["essential", "servicesMonitored"]
 }
