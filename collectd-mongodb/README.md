@@ -59,6 +59,12 @@ Documentation for MongoDB can be found <a target="_blank" href="http://docs.mong
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/mongodb
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-mongodb.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Install `pip` and `pymongo`.
 
     * **RHEL/CentOS and Amazon Linux**

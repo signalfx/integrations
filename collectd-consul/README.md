@@ -67,6 +67,12 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-consul">consul
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/consul
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-consul.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download <a target="_blank" href="https://github.com/signalfx/collectd-consul">collectd-consul</a>. Place the `consul_plugin.py` and `urllib_ssl_handler.py` file in `/usr/share/collectd/collectd-consul`
 
 2. Place the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
