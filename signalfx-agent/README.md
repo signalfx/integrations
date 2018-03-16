@@ -60,6 +60,40 @@ agent, including a Java JRE runtime and a Python runtime, so there are no
 additional dependencies required.  This means that the Smart Agent should work on any
 relatively modern Linux distribution (kernel version 2.6+).
 
+#### Deployment
+We support the following deployment/configuration management tools to automate the
+installation process.  See [Bundles](#bundles) for a list of underlying
+packages for the Smart Agent.
+
+##### Installer Script
+For non-containerized environments, there is a convenience script that you can
+run on your host to install the Smart Agent package.  This is useful for testing and
+trials, but for full-scale deployments you will probably want to use a
+configuration management system like Chef or Puppet.  You can [view the source
+for the installer
+script](https://github.com/signalfx/signalfx-agent/tree/master/deployments/installer/install.sh)
+and use it on your hosts by running:
+
+```sh
+curl -sSL https://dl.signalfx.com/signalfx-agent.sh > /tmp/signalfx-agent.sh
+sh /tmp/signalfx-agent.sh <access token>
+```
+
+##### Chef
+We offer a Chef cookbook to install and configure the Smart Agent.  See [the cookbook
+source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/chef) and [on the Chef
+Supermarket](https://supermarket.chef.io/cookbooks/signalfx_agent).
+
+##### Puppet
+We also offer a Puppet manifest to install and configure the Smart Agent.  See [the
+manifest source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/puppet) and [on the Puppet
+Forge](https://forge.puppet.com/signalfx/signalfx_agent/readme).
+
+##### Kubernetes
+See our [Kubernetes Quickstart
+Guide](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html)
+for more information.
+
 #### Bundles
 We offer the Smart Agent in the following forms:
 
@@ -142,38 +176,6 @@ logs only to stdout/err so it is up to you to direct that to a log file or
 other log management system if you wish to persist logs.  See the
 [signalfx-agent command](https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.md) doc for more information on
 supported command flags.
-
-
-#### Deployment Tools
-We support the following deployment/configuration management tools to automate the
-installation process:
-
-##### Installer Script
-For non-containerized environments, there is a convenience script that you can
-run on your host to install the Smart Agent package.  This is useful for testing and
-trials, but for full-scale deployments you will probably want to use a
-configuration management system like Chef or Puppet.  You can [view the source
-for the installer
-script](https://github.com/signalfx/signalfx-agent/tree/master/deployments/installer/install.sh)
-and use it on your hosts by running:
-
-```sh
-curl -sSL https://dl.signalfx.com/signalfx-agent.sh > /tmp/signalfx-agent.sh
-sh /tmp/signalfx-agent.sh <access token>
-```
-
-##### Chef
-We offer a Chef cookbook to install and configure the Smart Agent.  See [the cookbook
-source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/chef) and INSERT URL TO SUPERMARKET.
-
-##### Puppet
-We also offer a Puppet manifest to install and configure the Smart Agent.  See [the
-manifest source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/puppet) and INSERT THE PUPPET FORGE LINK.
-
-##### Kubernetes
-See our [Kubernetes Quickstart
-Guide](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html)
-for more information.
 
 #### Privileges
 
