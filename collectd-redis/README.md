@@ -51,6 +51,12 @@ This plugin requires:
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/redis
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-redis.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download the <a target="_blank" href="https://github.com/signalfx/redis-collectd-plugin">redis-collectd-plugin Python module</a>.
 
 2. Download SignalFx's sample configuration files for a <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_master.conf">Redis master</a> or <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-redis/10-redis_slave.conf">Redis slave</a> to `/etc/collectd/managed_config`.
