@@ -48,6 +48,12 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-etcd">etcd-col
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/etcd
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-etcd.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download <a target="_blank" href="https://github.com/signalfx/collectd-etcd">collectd-etcd</a>. Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`
 
 2. Modify the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
@@ -72,7 +78,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | EnhancedMetrics | Boolean to indicate whether stats from `/metrics` are needed | "false" |
 | IncludeMetric | Metric name from the `/metric` endpoint to include(valid when EnhancedMetrics is "false") | "etcd\_debugging\_mvcc\_slow\_watcher\_total" |
 | ExcludeMetric | Metric name from the `/metric` endpoint to exclude(valid when EnhancedMetrics is "true") | "etcd\_server\_has\_leader" |
-| Dimension | Space separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
+| Dimension | Space-separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to etcd API. | 10 |
 | ssl\_keyfile | Path to the keyfile | "path/to/file" |
 | ssl\_certificate | Path to the certificate | "path/to/file" |

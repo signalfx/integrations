@@ -39,6 +39,12 @@ This plugin collects metrics from the module `mod_status`.
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/apache
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-apache.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Enable the <a target="_blank" href="http://httpd.apache.org/docs/2.4/mod/mod_status.html">mod_status</a> module in your Apache server.
 
 2. Add the following configuration to your Apache server:

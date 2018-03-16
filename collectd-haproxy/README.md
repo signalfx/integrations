@@ -23,6 +23,12 @@ Use the <a target="_blank" href="https://github.com/signalfx/collectd-haproxy">c
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/haproxy
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-haproxy.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-haproxy">collectd-haproxy-plugin</a> git repo to `/usr/share/collectd/collectd-haproxy`
 2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-haproxy/10-haproxy.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 3. Modify the sample configuration file as described in [Configuration](#configuration), below.
