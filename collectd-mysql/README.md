@@ -45,6 +45,12 @@ This plugin connects to a MySQL instance and reports on the values returned by a
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/mysql
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-mysql.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 Follow these steps to install and configure this plugin:
 
 1. Installing the plugin:

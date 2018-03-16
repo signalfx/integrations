@@ -48,6 +48,12 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-etcd">etcd-col
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/etcd
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-etcd.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download <a target="_blank" href="https://github.com/signalfx/collectd-etcd">collectd-etcd</a>. Place the `etcd_plugin.py` file in `/usr/share/collectd/collectd-etcd`
 
 2. Modify the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-etcd/10-etcd.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`

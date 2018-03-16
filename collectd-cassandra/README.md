@@ -47,6 +47,12 @@ Use this integration to monitor the following types of information from Cassandr
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/cassandra
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-cassandra.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 #### System modifications
 
 Open the JMX port on your Cassandra app. Cassandra will listen for connections on port 8080 (port 7199 starting in 0.8.0-beta1). More information can be found at the <a target="_blank" href="http://wiki.apache.org/cassandra/JmxInterface">Cassandra Project site</a>. There is also a page covering a few <a target="_blank" href="http://wiki.apache.org/cassandra/JmxGotchas">common issues</a>.

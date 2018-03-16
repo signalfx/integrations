@@ -50,6 +50,12 @@ The <a target="_blank" href="https://github.com/signalfx/docker-collectd-plugin"
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/docker
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-docker.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download the <a target="_blank" href="https://github.com/signalfx/docker-collectd-plugin">docker-collectd-plugin</a> Python module.
 
 2. Run the following command to install the module’s dependencies using `pip`, replacing the example path with the download location of the `docker-collectd-plugin` module:

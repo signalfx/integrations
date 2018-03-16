@@ -29,6 +29,12 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/genericjmx
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-genericjmx.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Install the Java plugin.
 
     * RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09. Run the following command to install the Java plugin for collectd:

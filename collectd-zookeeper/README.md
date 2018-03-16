@@ -44,6 +44,12 @@ This plugin requires:
 
 ### INSTALLATION
 
+**If you are using the new SmartAgent, see the docs for [the collectd/zookeeper
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-zookeeper.md)
+for more information.  The configuration documentation below may be helpful as
+well, but consult the SmartAgent repo's docs for the exact schema.**
+
+
 1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-zookeeper">collectd-zookeeper Python module</a>.
 
 2. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/20-zookeeper.conf">sample configuration file</a> to `/etc/collectd/managed_config`.
