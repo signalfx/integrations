@@ -6,9 +6,10 @@
 
 See [the Github repo](https://github.com/signalfx/signalfx-agent) for the
 source code along with more extensive documentation.
+## SignalFx Smart Agent
 
 
-The SignalFx SmartAgent is a metric agent written in Go for monitoring
+The SignalFx Smart Agent is a metric agent written in Go for monitoring
 infrastructure and application services in a variety of different environments.
 
 
@@ -97,9 +98,8 @@ manifest source](https://github.com/signalfx/signalfx-agent/tree/master/deployme
 Forge](https://forge.puppet.com/signalfx/signalfx_agent/readme).
 
 ##### Kubernetes
-See our [Kubernetes setup instructions](https://github.com/signalfx/signalfx-agent/tree/master/docs/kubernetes-setup.md) and the
-[Kubernetes Quickstart
-Guide](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html)
+See our [Kubernetes setup instructions](https://github.com/signalfx/signalfx-agent/tree/master/docs/kubernetes-setup.md) and the documentation on 
+[Monitoring Kubernetes](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html)
 for more information.
 
 #### Bundles
