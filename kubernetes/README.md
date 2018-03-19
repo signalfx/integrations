@@ -8,7 +8,7 @@ Metadata associated with the Kubernetes integration can be found [here](https://
 
 ### DESCRIPTION
 
-See the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html">Quick Start Guide</a> to start using our Kubernetes integration.
+See the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/agent/kubernetes-setup.html">Kubernetes setup instructions</a> to start using our Kubernetes integration.
 
 ### METRICS
 
