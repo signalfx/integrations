@@ -21,7 +21,7 @@ The Smart Agent has three main components:
 
 #### Observers
 
-Observers watch the various environments we support to discover running
+Observers watch the various environments that we support to discover running
 services and automatically configure the Smart Agent to send metrics for those
 services.
 
@@ -31,16 +31,15 @@ see [Observer Config](https://github.com/signalfx/signalfx-agent/tree/master/doc
 #### Monitors
 
 Monitors collect metrics from the host system and services.  They are
-configured under the `monitors` list in the Smart Agent config.  For monitors of
-applications, you can configure a discovery rule on the monitor so that a
-separate instance of the monitor is created for each discovered instance of
-applications that match that discovery rule.  See [Auto
+configured under the `monitors` list in the Smart Agent config.  For
+application-specific monitors, you can define discovery rules in your monitor
+configuration. A separate monitor instance is created for each discovered
+instance of applications that match a discovery rule. See [Auto
 Discovery](https://github.com/signalfx/signalfx-agent/tree/master/docs/auto-discovery.md) for more information.
 
-Many of the monitors rely on a third-party "super monitor",
-[collectd](https://collectd.org), under the covers to do a lot of the metric
-collection, although we also have monitors apart from Collectd.  They are
-configured in the same way, however.
+Many of the monitors are built around [collectd](https://collectd.org), an open
+source third-party monitor, and use it to collect metrics. Some other monitors
+do not use collectd. However, either type is configured in the same way.
 
 For a list of supported monitors and their configurations, 
 see [Monitor Config](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitor-config.md).
@@ -98,8 +97,9 @@ manifest source](https://github.com/signalfx/signalfx-agent/tree/master/deployme
 Forge](https://forge.puppet.com/signalfx/signalfx_agent/readme).
 
 ##### Kubernetes
-See our [Kubernetes setup instructions](https://github.com/signalfx/signalfx-agent/tree/master/docs/kubernetes-setup.md) and the documentation on 
-[Monitoring Kubernetes](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html)
+See our [Kubernetes setup instructions](https://github.com/signalfx/signalfx-agent/tree/master/docs/kubernetes-setup.md) and the
+documentation on [Monitoring
+Kubernetes](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html)
 for more information.
 
 #### Bundles
@@ -109,6 +109,44 @@ We offer the Smart Agent in the following forms:
 We provide a Docker image at
 [quay.io/signalfx/signalfx-agent](https://quay.io/signalfx/signalfx-agent). The
 image is tagged using the same agent version scheme.
+
+If you are using Docker outside of Kubernetes, you can run the Smart Agent in a
+Docker container and still gather metrics on the underlying host by running it
+with the following flags:
+
+```sh
+$ docker run \
+    --name signalfx-agent \
+    --pid host \
+    --net host \
+    -v /:/hostfs:ro \
+    -v /var/run/docker.sock:/var/run/docker.sock:ro \
+    -v /etc/signalfx/:/etc/signalfx/:ro \
+    quay.io/signalfx/signalfx-agent:<version>
+```
+
+This assumes you have the Smart Agent config in the conventional directory
+(`/etc/signalfx`) on the root mount namespace.
+
+If you have the Docker API available through the conventional UNIX domain
+socket, you should mount that in to be able to use the
+[docker-container-stats](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/docker-container-stats.md) monitor.
+
+It is necessary to mount in the host root filesystem at `/hostfs` in order to
+get disk usage metrics for the host filesystems using the
+[collectd/df](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-df.md).  You will need to set the
+`hostFSPath: /hostfs` config option on that monitor to make it use this
+non-default path.
+
+The only other special config you will need is the `etcPath: /hostfs/etc`
+option under the
+[collectd/signalfx-metadata](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-signalfx-metadata.md)
+monitor config.  This tells it where to find certain files like
+`/etc/os-release` that are used to generate host metadata such as the Linux
+distro and version.
+
+You may also want to use the [Docker observer](https://github.com/signalfx/signalfx-agent/tree/master/docs/observers/docker.md) to
+automatically discover other containers running in the same Docker engine.
 
 ##### Debian Package
 We provide a Debian package repository that you can make use of with the
