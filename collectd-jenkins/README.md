@@ -76,9 +76,9 @@ Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through t
 | ExcludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to exclude(valid when EnhancedMetrics is "true") | "vm.terminated.count" |
 | Dimension | Space-separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to Jenkins API. | 10 |
-| ssl_keyfile | Path to the keyfile | "path/to/file" |
-| ssl_certificate | Path to the certificate | "path/to/file" |
-| ssl_ca_certs  | Path to the ca file | "path/to/file" |
+| ssl\_keyfile | Path to the keyfile | "path/to/file" |
+| ssl\_certificate | Path to the certificate | "path/to/file" |
+| ssl\_ca\_certs  | Path to the ca file | "path/to/file" |
 
 Example configuration:
 
