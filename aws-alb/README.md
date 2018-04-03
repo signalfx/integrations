@@ -14,11 +14,11 @@ Use SignalFx to monitor Application Load Balancing (ALB) via [Amazon Web Service
 
 ##### Built-in dashboards
 
-- **ApplicationELB Instances**: Overview of all data from ELB.
+- **ApplicationELB Instances**: Overview of all data from ALB.
 
   [<img src='./img/dashboard_alb_instances.png' width=200px>](./img/dashboard_alb_instances.png)
 
-- **ApplicationELB Instance**: Focus on a single ELB load balancer.
+- **ApplicationELB Instance**: Focus on a single ALB load balancer.
 
   [<img src='./img/dashboard_alb_instance.png' width=200px>](./img/dashboard_alb_instance.png)
 
@@ -30,7 +30,7 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 ### USAGE
 
-#### Uniquely identifying ELBs
+#### Uniquely identifying ALBs
 
 SignalFx synthesizes a unique ID for each ALB in the dimension `AWSUniqueId`.
 
