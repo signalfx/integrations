@@ -1,10 +1,10 @@
 ---
 title: sf.org.limit.activeTimeSeries
-brief: Current limit of active MTS
+brief: Maximum number of active MTS
 metric_type: gauge
 ---
 ### sf.org.limit.activeTimeSeries
 
-Upper limit of the active MTS in the organization
+Maximum number of active metric time series (MTS).
 
 Data Resolution: 15 minutes

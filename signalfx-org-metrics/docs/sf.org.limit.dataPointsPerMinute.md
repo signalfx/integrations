@@ -1,10 +1,10 @@
 ---
 title: sf.org.limit.dataPointsPerMinute
-brief: Upper limit of the DPM in the organization
+brief: Maximum number of datapoints per minute (DPM)
 metric_type: gauge
 ---
 ### sf.org.limit.dataPointsPerMinute
 
-Upper limit of how many data points per minute that can be sent to SignalFx in the organization.
+Maximum number of datapoints per minute (DPM) SignalFx will process and store.
 
 Data Resolution: 15 minutes
