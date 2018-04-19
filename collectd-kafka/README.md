@@ -22,9 +22,15 @@ This is the Kafka plugin for collectd. It will send data about Kafka to SignalFx
 
   [<img src='./img/dashboard_kafka.png' width=200px>](./img/dashboard_kafka.png)
 
-- **Kafka Broker**: Focus on a single Kafka broker.
+  [<img src='./img/dashboard_kafka_bottom.png' width=200px>](./img/dashboard_kafka_bottom.png)
+
+- **Broker**: Focus on a single Kafka broker.
 
   [<img src='./img/dashboard_kafka_broker.png' width=200px>](./img/dashboard_kafka_broker.png)
+
+- **Jvm**: Focus on the java virtual machine performance on a single instance.
+
+  [<img src='./img/dashboard_kafka_jvm.png' width=200px>](./img/dashboard_kafka_jvm.png)
 
 ### REQUIREMENTS AND DEPENDENCIES
 
