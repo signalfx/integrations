@@ -1,9 +1,9 @@
 ---
-title: sf.org.limit.activeTimeSeries
+title: sf.org.subscription.activeTimeSeries
 brief: Maximum number of active MTS
 metric_type: gauge
 ---
-### sf.org.limit.activeTimeSeries
+### sf.org.subscription.activeTimeSeries
 
 Maximum number of active metric time series (MTS).
 
