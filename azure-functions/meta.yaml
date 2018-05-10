@@ -1,0 +1,10 @@
+{ "display_name":"Azure Functions",
+  "description": "SignalFx's integration with Azure Functions.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-functions",
+  "code": "https://azure.microsoft.com/en-us/services/functions/",
+  "featured": false,
+  "logo_large": "integration_azurefunctions@2x.png",
+  "logo_small": "integration_azurefunctions.png",
+  "data_signature": "metric_source:\"azure_function_wrapper\"",
+  "in_app_categories": ["AzureServicesMonitored"]
+}
