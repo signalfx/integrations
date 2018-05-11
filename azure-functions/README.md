@@ -59,11 +59,9 @@ By default, SignalFx will import all Azure Monitor metrics that are available in
 
 #### Uniquely identifying Azure Function
 
-SignalFx uses a combination of Function App name and the function name.
+SignalFx uses a combination of the Function App name, function name, and region to uniquely identify a function.
 
-### METRICS
-
-#### SignalFx Wrapper
+#### SignalFx Wrapper Metrics
 
 The SignalFx Azure Function wrapper sends the following metrics to SignalFx:
 
