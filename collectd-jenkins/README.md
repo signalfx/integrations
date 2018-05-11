@@ -1,6 +1,6 @@
 # ![](./img/integrations_jenkins.png) Jenkins
 
-Metadata associated with the jenkins plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/master/collectd-jenkins). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-jenkins)
+This directory consolidates all the metadata associated with the jenkins plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-jenkins)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -191,7 +191,7 @@ LoadPlugin python
 - **Jenkins Master**:
 
   - **Top 5 Failed Jobs**: Shows the top 5 failed jobs over the past day based on the total failure count in an instance(s).
-
+    
     [<img src='./img/chart-jenkins-master-top-5-failed-jobs.png' width=200px>](./img/chart-jenkins-master-top-5-failed-jobs.png)
 
   - **Health Checks**: The status of each health check as reported by DropWizard Metrics. This gives a quick overview of what's wrong with the instance.
@@ -199,15 +199,15 @@ LoadPlugin python
     [<img src='./img/chart-jenkins-master-health-checks.png' width=200px>](./img/chart-jenkins-master-health-checks.png)
 
   - **Slave Status**: Shows the number of slave agents of the instance(s) that are alive.
-
+  
       [<img src='./img/chart-jenkins-master-slave-status.png' width=200px>](./img/chart-jenkins-master-slave-status.png)
 
   - **Busy Executors vs Pending Jobs**: A line chart showing comparison between in-use executors and pending jobs in queue in an instance(s). On comparing this chart with two above, reason for job failures can be narrowed down further quickly.
-
+  
       [<img src='./img/chart-jenkins-master-busy-executors-vs-pending-jobs.png' width=200px>](./img/chart-jenkins-busy-executors-vs-pending-jobs.png)
-
+  
   - **VM Memory Utilization**: Area chart of the memory used by the Jenkins JVM instance(s) on a host.
-
+  
       [<img src='./img/chart-jenkins-master-vm-memory-utilization.png' width=200px>](./img/chart-jenkins-vm-memory-utilization.png)
 
 All DropWizard metrics reported by the jenkins collectd plugin will not contain any dimensions by default. Whereas, the job metrics sent will contain the following dimensions by default:
