@@ -102,7 +102,7 @@ manifest source](https://github.com/signalfx/signalfx-agent/tree/master/deployme
 Forge](https://forge.puppet.com/signalfx/signalfx_agent/readme).
 
 ##### Ansible
-We also offer a Ansible Role to install and configure the Smart Agent.  See [the
+We also offer an Ansible Role to install and configure the Smart Agent.  See [the
 role source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/ansible).
 
 ##### Salt
