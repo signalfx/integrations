@@ -69,7 +69,7 @@ Using the example configuration file [20-openstack.conf](https://github.com/sign
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-openstack/" |
-| AuthURL | Keystone authentication URL/endpoint for the OpenStack cloud | "localhost" |
+| AuthURL | Keystone authentication URL/endpoint for the OpenStack cloud | "http://localhost/identity/v3" |
 | Username | Username to authenticate with keystone identity | "admin" |
 | Password | Password to authenticate with keystone identity | "secret" |
 | ProjectName | Specify the name of Project to be monitored | "demo" |
