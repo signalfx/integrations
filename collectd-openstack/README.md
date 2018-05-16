@@ -1,4 +1,4 @@
-# ![](./img/integrations_openstack.png) Apache openstack
+# ![](./img/integrations_openstack.png) OpenStack
 
 Metadata associated with the openstack plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-openstack). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-openstack).
 
