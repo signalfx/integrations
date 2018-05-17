@@ -87,6 +87,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | IngestEndpoint | The url of ingest endpoint to send to metrics. | https://ingest.signalfx.com |
 | IncludeMetrics | Metrics required for different inventory objects can be included individually. Currently metrics can be added for datacenter, cluster, host and vm. | mem.usage.average |
 | ExcludeMetrics | Metrics emitted from different inventory objects can be excluded individually. | mem.usage.average |
+| Dimensions | Additional dimensions to be added to each datapoint. | dimension_key: "dimension_value" |
 
 Example configuration:
 
@@ -105,6 +106,9 @@ config:
         - mem.swapused.average
       cluster:
         - mem.usage.average
+    Dimensions:
+      dimension_key: "dimension_value"
+      dimension_key1: "dimension_value1"
 
 ```
 
@@ -125,6 +129,9 @@ config:
         - mem.swapused.average
       cluster:
         - mem.usage.average
+    Dimensions:
+      dimension_key: "dimension_value"
+      dimension_key1: "dimension_value1"
 
   - host: 192.168.1.20
     username: administrator@vsphere.local
