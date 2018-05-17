@@ -14,7 +14,7 @@ Metadata associated with the openstack plugin for collectd can be found [here](h
 
 This is the SignalFx openstack plugin. Follow these instructions to install the openstack plugin for collectd.
 
-The [openstack-collectd](https://github.com/signalfx/collectd-openstack) plugin collects metrics from openstack components by hitting various endpoints. This plugin covers below components,
+The [openstack-collectd](https://github.com/signalfx/collectd-openstack) plugin collects metrics from openstack components by hitting various endpoints. This plugin covers the following components:
 
 * Nova (Compute)
 * Cinder (BlockStorge)
@@ -26,7 +26,7 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 #### Built-in dashboards
 
-- **OPENSTACK HYPERVISOR**: Provides a high-level overview of metrics for a single openstack hypervisor.
+- **OPENSTACK HYPERVISOR**: Provides a high-level overview metrics for a single openstack hypervisor.
 
   [<img src='./img/openstack-hypervisor-dashboard.png' width=200px>](./img/openstack-hypervisor-dashboard.png)
 
@@ -218,7 +218,7 @@ A few other details:
 
 
 ### METRICS
-By default, metrics about a hypervisor, tenant and instances are provided. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
+Metrics about a hypervisor, tenant and instances are collected by default. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
 
 
 #### Metric naming
