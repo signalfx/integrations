@@ -47,7 +47,8 @@ To use SignalFx Wrapper, include SignalFx Azure Wrapper in your Azure Function.
 Instructions are provided in each of the Azure Function wrapper readme files.
 
 - <a target="_blank" href="https://github.com/signalfx/azure-function-java">Java</a>
-- <a target="_blank" href="https://github.com/signalfx/azure-function-nodejs">NodeJs</a>
+- <a target="_blank" href="https://github.com/signalfx/azure-function-nodejs">NodeJS</a>
+- <a target="_blank" href="https://github.com/signalfx/azure-function-csharp">C#</a>
 
 #### Azure Monitor
 
