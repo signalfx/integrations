@@ -88,7 +88,7 @@ and use it on your hosts by running:
 
 ```sh
 curl -sSL https://dl.signalfx.com/signalfx-agent.sh > /tmp/signalfx-agent.sh
-sh /tmp/signalfx-agent.sh YOUR_SIGNALFX_API_TOKEN
+sudo sh /tmp/signalfx-agent.sh YOUR_SIGNALFX_API_TOKEN
 ```
 
 ##### Chef
