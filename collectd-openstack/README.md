@@ -26,17 +26,28 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 #### Built-in dashboards
 
-- **OPENSTACK HYPERVISOR**: Provides a high-level overview metrics for a single openstack hypervisor.
 
-  [<img src='./img/openstack-hypervisor-dashboard.png' width=200px>](./img/openstack-hypervisor-dashboard.png)
+- **HYPERVISOR**: Provides a high-level overview metrics for an openstack hypervisor.
 
-- **OPENSTACK TENANT**: Provides metrics from a single openstack project/tenant.
+  [<img src='./img/openstack-hypervisor-dashboard-top.png' width=200px>](./img/openstack-hypervisor-dashboard-top.png)
 
-  [<img src='./img/openstack-tenant-dashboard.png' width=200px>](./img/openstack-tenant-dashboard.png)
+  [<img src='./img/openstack-hypervisor-dashboard-bottom.png' width=200px>](./img/openstack-hypervisor-dashboard-bottom.png)
 
-- **OPENSTACK INSTANCE**: Provides metrics from a single openstack NOVA instance.
+- **TENANT**: Provides metrics from an openstack project/tenant.
 
-  [<img src='./img/openstack-instance-dashboard.png' width=200px>](./img/openstack-instance-dashboard.png)
+  [<img src='./img/openstack-tenant-dashboard-top.png' width=200px>](./img/openstack-tenant-dashboard-top.png)
+
+  [<img src='./img/openstack-tenant-dashboard-bottom.png' width=200px>](./img/openstack-tenant-dashboard-bottom.png)
+
+- **NEUTRON**: Provides metrics from an openstack Neutron component.
+
+  [<img src='./img/openstack-neutron-dashboard.png' width=200px>](./img/openstack-neutron-dashboard.png)
+
+- **INSTANCE**: Provides metrics from an openstack compute instance.
+
+  [<img src='./img/openstack-instance-dashboard-top.png' width=200px>](./img/openstack-instance-dashboard-top.png)
+
+  [<img src='./img/openstack-instance-dashboard-bottom.png' width=200px>](./img/openstack-instance-dashboard-bottom.png)
 
 
 ### REQUIREMENTS AND DEPENDENCIES
@@ -130,85 +141,144 @@ LoadPlugin python
 
 #### Interpreting Built-in dashboards
 
-- **OPENSTACK HYPERVISOR**:
+- **HYPERVISOR**:
 
-  - **Number of VMs**: Shows the number of VMs running in the hypervisor.
+  - **Running VMs**: Shows the number of VMs running in the hypervisor.
 
     [<img src='./img/chart-openstack-hypervisor-vms.png' width=200px>](./img/chart-openstack-hypervisor-vms.png)
 
-  - **Average CPU Load**: Shows the average CPU load on the hypervisor.
+  - **Load Average**: Shows the average CPU load on the hypervisor.
 
     [<img src='./img/chart-openstack-hypervisor-load.png' width=200px>](./img/chart-openstack-hypervisor-load.png)
 
   - **Memory Usage**: Shows the memory usage free vs used in the hypervisor.
 
-    [<img src='./img/chart-openstack-hypervisor-usage-memory.png' width=200px>](./img/chart-openstack-hypervisor-usage-memory.png)
+    [<img src='./img/chart-openstack-hypervisor-memory-usage.png' width=200px>](./img/chart-openstack-hypervisor-memory-usage.png)
 
-  - **Disk Usage**: Shows the overall disk used in the hypervisor.
+  - **Disk Usage**: Shows the disk usage free vs used in the hypervisor.
 
-    [<img src='./img/chart-openstack-hypervisor-used-disk.png' width=200px>](./img/chart-openstack-hypervisor-used-disk.png)
+    [<img src='./img/chart-openstack-hypervisor-disk-usage.png' width=200px>](./img/chart-openstack-hypervisor-disk-usage.png)
 
-  - **Number of CPUs and VCPUs**: Shows the number of CPUs available and VCPUs used in the hypervisor.
+  - **CPUs and VCPUs**: Shows the number of CPUs available and VCPUs used in the hypervisor.
 
-    [<img src='./img/chart-openstack-hypervisor-vcpus.png' width=200px>](./img/chart-openstack-hypervisor-vcpus.png)
+    [<img src='./img/chart-openstack-hypervisor-cpus-vcpus.png' width=200px>](./img/chart-openstack-hypervisor-cpus-vcpus.png)
 
-  - **Memory WoW change**: Shows the WoW (week over week) change in memory in the hypervisor.
+  - **Physical CPUs**: Shows the number of pysical cores on the host running hypervisor.
 
-    [<img src='./img/chart-openstack-hypervisor-wowmemory.png' width=200px>](./img/chart-openstack-hypervisor-wowmemory.png)
+    [<img src='./img/chart-openstack-hypervisor-physical-cpus.png' width=200px>](./img/chart-openstack-hypervisor-physical-cpus.png)
+
+  - **Total Disk**: Shows the total disk available on the host running hypervisor.
+
+    [<img src='./img/chart-openstack-hypervisor-total-disk.png' width=200px>](./img/chart-openstack-hypervisor-total-disk.png)
+
+  - **Total Memory**: Shows the total RAM memory available on the host running hypervisor.
+
+    [<img src='./img/chart-openstack-hypervisor-total-memory.png' width=200px>](./img/chart-openstack-hypervisor-total-memory.png)
 
 
-- **OPENSTACK TENANT**:
+- **TENANT**:
 
-  - **Number of Instances**: Shows the number of used instances in the tenant/project.
+  - **Used Instances**: Shows the number of used instances in the tenant/project.
+
+    [<img src='./img/chart-openstack-tenant-used-instances.png' width=200px>](./img/chart-openstack-tenant-used-instances.png)
+
+  - **Memory Utilization**: Shows the percentage of utilized memory in the tenant/project.
+
+    [<img src='./img/chart-openstack-tenant-memory-util.png' width=200px>](./img/chart-openstack-tenant-memory-util.png)
+
+  - **Disk Utilization**: Shows the percentage of utilized disk in the tenant/project.
+
+    [<img src='./img/chart-openstack-tenant-disk-util.png' width=200px>](./img/chart-openstack-tenant-disk-util.png)
+
+  - **Instances Available vs Used**: Shows the number of available instances and used instances in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-instances.png' width=200px>](./img/chart-openstack-tenant-instances.png)
 
-  - **Free Memory**: Shows the percentage of free memory in the tenant/project.
+  - **Memory Usage**: Shows the used memory over available in the tenant/project.
 
-    [<img src='./img/chart-openstack-tenant-free-memory.png' width=200px>](./img/chart-openstack-tenant-free-memory.png)
+    [<img src='./img/chart-openstack-tenant-memory-usage.png' width=200px>](./img/chart-openstack-tenant-memory-usage.png)
 
-  - **Number of VCPUs used**: Shows the number of used VCPUs over available VCPUs in the tenant/project.
+  - **Disk Usage**: Shows the used disk over available in the tenant/project.
 
-    [<img src='./img/chart-openstack-tenant-cores.png' width=200px>](./img/chart-openstack-tenant-cores.png)
+    [<img src='./img/chart-openstack-tenant-disk-usage.png' width=200px>](./img/chart-openstack-tenant-disk-usage.png)
 
-  - **Number of Floating IPs**: Shows the number of used floating ips over available in the tenant/project.
-
-    [<img src='./img/chart-openstack-tenant-floatingips.png' width=200px>](./img/chart-openstack-tenant-floatingips.png)
-
-  - **Free Disk**: Shows the percentage of free disk in the tenant/project.
-
-    [<img src='./img/chart-openstack-tenant-free-disk.png' width=200px>](./img/chart-openstack-tenant-free-disk.png)
-
-  - **Memory Used vs Available**: Shows the used memory over available in the tenant/project.
-
-    [<img src='./img/chart-openstack-tenant-memory.png' width=200px>](./img/chart-openstack-tenant-memory.png)
-
-  - **Volumes Used vs Available**: Shows the used volumes over available volumes in the tenant/project.
+  - **Volumes Available vs Used**: Shows the used volumes over available volumes in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-volumes.png' width=200px>](./img/chart-openstack-tenant-volumes.png)
 
-  - **Neutron Resources**: Shows the usage of various resources in the Neutron.
+  - **VCPUs Available vs Used**: Shows the used virtaul cpus over available in the tenant/project.
 
-    [<img src='./img/chart-openstack-tenant-neutron.png' width=200px>](./img/chart-openstack-tenant-neutron.png)
+    [<img src='./img/chart-openstack-tenant-vcpus.png' width=200px>](./img/chart-openstack-tenant-vcpus.png)
+
+  - **Top Instances by CPU %**: Shows the top five instances by CPU usage percentage in the tenant/project.
+
+    [<img src='./img/chart-openstack-tenant-top-cpu.png' width=200px>](./img/chart-openstack-tenant-top-cpu.png)
+
+  - **Top Instances by Memoery Used**: Shows the top five instances by memory usage in the tenant/project.
+
+    [<img src='./img/chart-openstack-tenant-top-memory.png' width=200px>](./img/chart-openstack-tenant-top-memory.png)
+
+  - **Top Instances by VCPUs**: Shows the top five instances by virtual CPUs used in the tenant/project.
+
+    [<img src='./img/chart-openstack-tenant-top-vcpus.png' width=200px>](./img/chart-openstack-tenant-top-vcpus.png)
 
 
-- **OPENSTACK INSTANCE**:
+- **NEUTRON**:
 
-  - **CPU Usage**: Shows the percentage of CPU usage of an instance.
+  - **Networks**: Shows the total number of networks created in all prjects.
+
+    [<img src='./img/chart-openstack-neutron-networks.png' width=200px>](./img/chart-openstack-neutron-networks.png)
+
+  - **Routers**: Shows the total number of routers created in all prjects.
+
+    [<img src='./img/chart-openstack-neutron-routers.png' width=200px>](./img/chart-openstack-neutron-routers.png)
+
+  - **Subnets**: Shows the total number of subnets created in all prjects.
+
+    [<img src='./img/chart-openstack-neutron-subnest.png' width=200px>](./img/chart-openstack-neutron-subnets.png)
+
+  - **Flaoting IPs Available vs Used**: Shows the total number of floating IPs used over available in all prjects.
+
+    [<img src='./img/chart-openstack-neutron-floating-ips.png' width=200px>](./img/chart-openstack-neutron-floating-ips.png)
+
+  - **Security Groups Available vs Used**: Shows the total number of security groups used over available in all prjects.
+
+    [<img src='./img/chart-openstack-neutron-security-groups.png' width=200px>](./img/chart-openstack-neutron-security-groups.png)
+
+
+- **INSTANCE**:
+
+  - **VCPUs**: Shows the number of allocated virtual CPUs to the instance.
+
+    [<img src='./img/chart-openstack-instance-vcpus.png' width=200px>](./img/chart-openstack-instance-vcpus.png)
+
+  - **CPU Used %**: Shows the current percentage of CPU usage of an instance.
+
+    [<img src='./img/chart-openstack-instance-cpu-used.png' width=200px>](./img/chart-openstack-instance-cpu-used.png)
+
+  - **CPU %**: Shows the percentage of instance CPU usage over the time.
 
     [<img src='./img/chart-openstack-instance-cpu.png' width=200px>](./img/chart-openstack-instance-cpu.png)
 
-  - **Memory Usage**: Shows the used memory in the instance.
+  - **Memory**: Shows the memory usage of the instance.
 
     [<img src='./img/chart-openstack-instance-memory.png' width=200px>](./img/chart-openstack-instance-memory.png)
 
-  - **Received Network Packets**: Shows the number of network packets received at the instance.
+  - **Total Bytes Sent/Received**: Shows the number of bytes sent and received over the network.
 
-    [<img src='./img/chart-openstack-instance-rx-packets.png' width=200px>](./img/chart-openstack-instance-rx-packets.png)
+    [<img src='./img/chart-openstack-instance-bytes-sent-received.png' width=200px>](./img/chart-openstack-instance-bytes-sent-received.png)
 
-  - **Virtual Disk Reads and Writes**: Shows the virtual disk reads and write requests of the instance.
+  - **Received vs Transmitted Packers/sec**: Shows the number of network packets sent and received per second.
 
-    [<img src='./img/chart-openstack-instance-vda.png' width=200px>](./img/chart-openstack-instance-vda.png)
+    [<img src='./img/chart-openstack-instance-packets-sent-received.png' width=200px>](./img/chart-openstack-instance-packets-sent-received.png)
+
+  - **Virtual Disk Reads and Write Requests**: Shows the number virtual disk read and write request.
+
+    [<img src='./img/chart-openstack-instance-vda-read-write-requests.png' width=200px>](./img/chart-openstack-instance-vda-read-write-requests.png)
+
+  - **Size of VDS Reads and Writes**: Shows the size of virtual disk reads and writes.
+
+    [<img src='./img/chart-openstack-instance-vda-read-write-size.png' width=200px>](./img/chart-openstack-instance-vda-read-write-size.png)
 
   
 A few other details:
