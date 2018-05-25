@@ -235,7 +235,7 @@ LoadPlugin python
 
   - **Subnets**: Shows the total number of subnets created in all prjects.
 
-    [<img src='./img/chart-openstack-neutron-subnest.png' width=200px>](./img/chart-openstack-neutron-subnets.png)
+    [<img src='./img/chart-openstack-neutron-subnets.png' width=200px>](./img/chart-openstack-neutron-subnets.png)
 
   - **Flaoting IPs Available vs Used**: Shows the total number of floating IPs used over available in all prjects.
 
