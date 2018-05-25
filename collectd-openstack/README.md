@@ -27,7 +27,7 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 #### Built-in dashboards
 
 
-- **HYPERVISOR**: Provides a high-level overview metrics for an OpenStack hypervisor.
+- **HYPERVISOR**: Provides a high-level overview of metrics for an OpenStack hypervisor.
 
   [<img src='./img/openstack-hypervisor-dashboard-top.png' width=200px>](./img/openstack-hypervisor-dashboard-top.png)
 
@@ -83,11 +83,11 @@ Using the example configuration file [20-openstack.conf](https://github.com/sign
 | AuthURL | Keystone authentication URL/endpoint for the OpenStack cloud | "http://localhost/identity/v3" |
 | Username | Username to authenticate with keystone identity | "admin" |
 | Password | Password to authenticate with keystone identity | "secret" |
-| ProjectName | Specify the name of Project to be monitored | "demo" |
+| ProjectName | Specify the name of project to be monitored | "demo" |
 | ProjectDomainId | Specify the project domain | "default" |
 | UserDomainId | Specify the user domain | "default" |
 | Dimension | Space-separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
-| Interval | Number of seconds between calls to openstack API. | 10 |
+| Interval | Number of seconds between calls to the OpenStack API. | 10 |
 
 Example configuration:
 
