@@ -1,6 +1,6 @@
 # ![](./img/integrations_openstack.png) OpenStack
 
-Metadata associated with the openstack plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-openstack). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-openstack).
+Metadata associated with the OpenStack plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-openstack). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-openstack).
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,9 +12,9 @@ Metadata associated with the openstack plugin for collectd can be found [here](h
 
 ### DESCRIPTION
 
-This is the SignalFx openstack plugin. Follow these instructions to install the openstack plugin for collectd.
+This is the SignalFx OpenStack plugin. Follow these instructions to install the OpenStack plugin for collectd.
 
-The [openstack-collectd](https://github.com/signalfx/collectd-openstack) plugin collects metrics from openstack components by hitting various endpoints. This plugin covers the following components:
+The [openstack-collectd](https://github.com/signalfx/collectd-openstack) plugin collects metrics from OpenStack components by hitting various endpoints. This plugin covers the following components:
 
 * Nova (Compute)
 * Cinder (BlockStorge)
@@ -27,23 +27,23 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 #### Built-in dashboards
 
 
-- **HYPERVISOR**: Provides a high-level overview metrics for an openstack hypervisor.
+- **HYPERVISOR**: Provides a high-level overview metrics for an OpenStack hypervisor.
 
   [<img src='./img/openstack-hypervisor-dashboard-top.png' width=200px>](./img/openstack-hypervisor-dashboard-top.png)
 
   [<img src='./img/openstack-hypervisor-dashboard-bottom.png' width=200px>](./img/openstack-hypervisor-dashboard-bottom.png)
 
-- **TENANT**: Provides metrics from an openstack project/tenant.
+- **TENANT**: Provides metrics from an OpenStack project/tenant.
 
   [<img src='./img/openstack-tenant-dashboard-top.png' width=200px>](./img/openstack-tenant-dashboard-top.png)
 
   [<img src='./img/openstack-tenant-dashboard-bottom.png' width=200px>](./img/openstack-tenant-dashboard-bottom.png)
 
-- **NEUTRON**: Provides metrics from an openstack Neutron component.
+- **NEUTRON**: Provides metrics from an OpenStack Neutron component.
 
   [<img src='./img/openstack-neutron-dashboard.png' width=200px>](./img/openstack-neutron-dashboard.png)
 
-- **INSTANCE**: Provides metrics from an openstack compute instance.
+- **INSTANCE**: Provides metrics from an OpenStack compute instance.
 
   [<img src='./img/openstack-instance-dashboard-top.png' width=200px>](./img/openstack-instance-dashboard-top.png)
 
@@ -62,22 +62,22 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 ### INSTALLATION
 
-1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files in `/usr/share/collectd/collectd-openstack`
+1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into `/usr/share/collectd/collectd-openstack` directory.
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin and copy to `/etc/collectd/managed_config`
+2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin and copy to `/etc/collectd/managed_config` directory.
 
-3. Modify the sample configuration file as described in [Configuration](#configuration), below
+3. Modify the sample configuration file as described in [Configuration](#configuration) below.
 
-4. Install the Python requirements with sudo ```pip install -r requirements.txt```
+4. Install the Python requirements with sudo ```pip install -r requirements.txt```.
 
-5. Restart collectd
+5. Restart collectd.
 
 
 ### CONFIGURATION
 
-Using the example configuration file [20-openstack.conf](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the openstack instances
+Using the example configuration file [20-openstack.conf](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the openstack instances.
 
-| configuration option | definition | example value |
+| Configuration option | Definition | Example Value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-openstack/" |
 | AuthURL | Keystone authentication URL/endpoint for the OpenStack cloud | "http://localhost/identity/v3" |
@@ -171,7 +171,7 @@ LoadPlugin python
 
     [<img src='./img/chart-openstack-hypervisor-total-disk.png' width=200px>](./img/chart-openstack-hypervisor-total-disk.png)
 
-  - **Total Memory**: Shows the total RAM memory available on the host running hypervisor.
+  - **Total Memory**: Shows the total RAM available on the host running hypervisor.
 
     [<img src='./img/chart-openstack-hypervisor-total-memory.png' width=200px>](./img/chart-openstack-hypervisor-total-memory.png)
 
@@ -186,27 +186,27 @@ LoadPlugin python
 
     [<img src='./img/chart-openstack-tenant-memory-util.png' width=200px>](./img/chart-openstack-tenant-memory-util.png)
 
-  - **Disk Utilization**: Shows the percentage of utilized disk in the tenant/project.
+  - **Disk Utilization**: Shows the percentage of utilized disk space in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-disk-util.png' width=200px>](./img/chart-openstack-tenant-disk-util.png)
 
-  - **Instances Available vs Used**: Shows the number of available instances and used instances in the tenant/project.
+  - **Instances Available vs Used**: Shows the number of available and used instances in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-instances.png' width=200px>](./img/chart-openstack-tenant-instances.png)
 
-  - **Memory Usage**: Shows the used memory over available in the tenant/project.
+  - **Memory Usage**: Shows the overall memory available and used in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-memory-usage.png' width=200px>](./img/chart-openstack-tenant-memory-usage.png)
 
-  - **Disk Usage**: Shows the used disk over available in the tenant/project.
+  - **Disk Usage**: Shows the overall disk space available and used in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-disk-usage.png' width=200px>](./img/chart-openstack-tenant-disk-usage.png)
 
-  - **Volumes Available vs Used**: Shows the used volumes over available volumes in the tenant/project.
+  - **Volumes Available vs Used**: Shows the maximum number of block storage volumes available and used in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-volumes.png' width=200px>](./img/chart-openstack-tenant-volumes.png)
 
-  - **VCPUs Available vs Used**: Shows the used virtaul cpus over available in the tenant/project.
+  - **VCPUs Available vs Used**: Shows the maximum number of virtual cpus available and used in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-vcpus.png' width=200px>](./img/chart-openstack-tenant-vcpus.png)
 
@@ -225,30 +225,30 @@ LoadPlugin python
 
 - **NEUTRON**:
 
-  - **Networks**: Shows the total number of networks created in all prjects.
+  - **Networks**: Shows the total number of networks created in all projects.
 
     [<img src='./img/chart-openstack-neutron-networks.png' width=200px>](./img/chart-openstack-neutron-networks.png)
 
-  - **Routers**: Shows the total number of routers created in all prjects.
+  - **Routers**: Shows the total number of routers created in all projects.
 
     [<img src='./img/chart-openstack-neutron-routers.png' width=200px>](./img/chart-openstack-neutron-routers.png)
 
-  - **Subnets**: Shows the total number of subnets created in all prjects.
+  - **Subnets**: Shows the total number of subnets created in all projects.
 
     [<img src='./img/chart-openstack-neutron-subnets.png' width=200px>](./img/chart-openstack-neutron-subnets.png)
 
-  - **Flaoting IPs Available vs Used**: Shows the total number of floating IPs used over available in all prjects.
+  - **Flaoting IPs Available vs Used**: Shows the maximum number of floating IPs available and used in all projects.
 
     [<img src='./img/chart-openstack-neutron-floating-ips.png' width=200px>](./img/chart-openstack-neutron-floating-ips.png)
 
-  - **Security Groups Available vs Used**: Shows the total number of security groups used over available in all prjects.
+  - **Security Groups Available vs Used**: Shows the maximum number of security groups available and used in all projects.
 
     [<img src='./img/chart-openstack-neutron-security-groups.png' width=200px>](./img/chart-openstack-neutron-security-groups.png)
 
 
 - **INSTANCE**:
 
-  - **VCPUs**: Shows the number of allocated virtual CPUs to the instance.
+  - **VCPUs**: Shows the number of virtual CPUs allocated to the instance.
 
     [<img src='./img/chart-openstack-instance-vcpus.png' width=200px>](./img/chart-openstack-instance-vcpus.png)
 
@@ -272,7 +272,7 @@ LoadPlugin python
 
     [<img src='./img/chart-openstack-instance-packets-sent-received.png' width=200px>](./img/chart-openstack-instance-packets-sent-received.png)
 
-  - **Virtual Disk Reads and Write Requests**: Shows the number virtual disk read and write request.
+  - **Virtual Disk Read and Write Requests**: Shows the number of virtual disk read and write request.
 
     [<img src='./img/chart-openstack-instance-vda-read-write-requests.png' width=200px>](./img/chart-openstack-instance-vda-read-write-requests.png)
 
@@ -288,7 +288,7 @@ A few other details:
 
 
 ### METRICS
-Metrics about a hypervisor, tenant and instances are collected by default. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these will be skipped if provided in the configuration). See [usage](#usage) for details.
+Metrics about a hypervisor, tenant and instances are collected by default. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these type will be skipped if provided in the configuration). See [usage](#usage) for details.
 
 
 #### Metric naming
