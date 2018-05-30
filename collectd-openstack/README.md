@@ -66,7 +66,7 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin and copy to `/etc/collectd/managed_config` directory.
 
-3. Modify the sample configuration file as described in [Configuration](#configuration) below.
+3. Follow below [Configuration](#configuration) while updating the sample configuration file in step2.
 
 4. Install the Python requirements with sudo ```pip install -r requirements.txt```.
 
@@ -206,7 +206,7 @@ LoadPlugin python
 
     [<img src='./img/chart-openstack-tenant-volumes.png' width=200px>](./img/chart-openstack-tenant-volumes.png)
 
-  - **VCPUs Available vs Used**: Shows the maximum number of virtual cpus available and used in the tenant/project.
+  - **VCPUs Available vs Used**: Shows the maximum number of virtual CPUs available and used in the tenant/project.
 
     [<img src='./img/chart-openstack-tenant-vcpus.png' width=200px>](./img/chart-openstack-tenant-vcpus.png)
 
@@ -272,7 +272,7 @@ LoadPlugin python
 
     [<img src='./img/chart-openstack-instance-packets-sent-received.png' width=200px>](./img/chart-openstack-instance-packets-sent-received.png)
 
-  - **Virtual Disk Read and Write Requests**: Shows the number of virtual disk read and write request.
+  - **Virtual Disk Read and Write Requests**: Shows the number of virtual disk read and write requests.
 
     [<img src='./img/chart-openstack-instance-vda-read-write-requests.png' width=200px>](./img/chart-openstack-instance-vda-read-write-requests.png)
 
@@ -288,11 +288,11 @@ A few other details:
 
 
 ### METRICS
-Metrics about a hypervisor, tenant and instances are collected by default. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these type will be skipped if provided in the configuration). See [usage](#usage) for details.
+Metrics about a hypervisor, tenant and instances are collected by default. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). Note, that SignalFx does not support `histogram` and `summary` metric types (hence, metrics of these types will be skipped if provided in the configuration). See [usage](#usage) for details.
 
 
 #### Metric naming
-`<metric type>.openstack.<component>.<name of metric>`. This is the format of default metric names reported by the plugin.
+`<metric type>.openstack.<component>.<name of metric>`. The format of default metric names reported by the plugin is.
 
 
 ### LICENSE
