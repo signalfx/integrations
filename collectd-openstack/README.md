@@ -64,9 +64,9 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into `/usr/share/collectd/collectd-openstack` directory.
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin and copy to `/etc/collectd/managed_config` directory.
+2. Copy the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin to `/etc/collectd/managed_config` directory.
 
-3. Follow below [Configuration](#configuration) while updating the sample configuration file in step2.
+3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
 4. Install the Python requirements with sudo ```pip install -r requirements.txt```.
 
