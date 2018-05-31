@@ -1,4 +1,4 @@
-# ![](./img/integrations_openstack.png) OpenStack
+# ![](./img/integration_openstack.png) OpenStack
 
 Metadata associated with the OpenStack plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-openstack). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-openstack).
 
@@ -280,7 +280,7 @@ LoadPlugin python
 
     [<img src='./img/chart-openstack-instance-vda-read-write-size.png' width=200px>](./img/chart-openstack-instance-vda-read-write-size.png)
 
-  
+
 A few other details:
 
 * `plugin` is always set to `openstack`
