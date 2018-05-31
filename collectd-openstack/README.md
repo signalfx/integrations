@@ -75,7 +75,7 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 ### CONFIGURATION
 
-Using the example configuration file [20-openstack.conf](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the openstack instances.
+Using the example configuration file [20-openstack.conf](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the OpenStack instances.
 
 | Configuration option | Definition | Example Value |
 | ---------------------|------------|---------------|
@@ -292,7 +292,7 @@ Metrics about a hypervisor, tenant and instances are collected by default. For d
 
 
 #### Metric naming
-`<metric type>.openstack.<component>.<name of metric>`. The format of default metric names reported by the plugin is.
+The format of default metric names reported by the plugin is `<metric type>.openstack.<component>.<name of metric>`.
 
 
 ### LICENSE
