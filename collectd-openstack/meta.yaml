@@ -1,0 +1,10 @@
+{ "display_name":"OpenStack",
+  "description": "Monitor openstack platform using the SignalFx collectd agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-openstack",
+  "code": "https://github.com/signalfx/collectd-openstack",
+  "featured": false,
+  "logo_small": "/images/repos/collectd-openstack/img/integrations_openstack.png",
+  "logo_large": "/images/repos/collectd-openstack/img/integrations_openstack%402x.png",
+  "data_signature": "plugin:\"openstack\"",
+  "in_app_categories": ["servicesMonitored"]
+}
