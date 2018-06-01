@@ -54,9 +54,7 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 #### Deployment Host
 
-Identify a host on which the SignalFx agent will run. This integration collects data from OpenStack remotely via APIs, and so those API endpoints must be visible to the host on which the agent runs.  We do not recommend installing the agent directly on a compute instance because,
-   1. compute instance/resource under one project cannot get stats about the resources under other projects
-   2. compute instance may go down due to lack of resources in the project
+Identify a host on which the SignalFx agent will run. This integration collects data from OpenStack remotely via APIs, and so those API endpoints must be visible to the host on which the agent runs.  We do not recommend installing the agent directly on a compute instance because, a compute instance/resource under one project cannot get stats about the resources under other projects. Also, a compute instance may go down due to lack of resources in the project.
 
 #### Version information
 
@@ -68,7 +66,7 @@ Identify a host on which the SignalFx agent will run. This integration collects 
 
 ### INSTALLATION
 
-1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into `/usr/share/collectd/collectd-openstack` directory.
+1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into `/usr/share/collectd/collectd-openstack` directory on the deployment host you have identified (see Requirements and Dependencies).
 
 2. Copy the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin to `/etc/collectd/managed_config` directory.
 
