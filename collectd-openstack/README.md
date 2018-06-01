@@ -52,6 +52,10 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 ### REQUIREMENTS AND DEPENDENCIES
 
+#### Deployment Host
+
+Identify a host on which the SignalFx agent will run. This integration collects data from OpenStack remotely via APIs, and so those API endpoints must be visible to the host on which the agent runs.  We do not recommend installing the agent directly on a compute instance because a compute instance/resource under one project cannot get stats about the resources under other projects. Also, a compute instance may go down due to lack of resources in the project.
+
 #### Version information
 
 | Software  | Version        |
@@ -62,11 +66,11 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 ### INSTALLATION
 
-1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into `/usr/share/collectd/collectd-openstack` directory.
+1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into the `/usr/share/collectd/collectd-openstack` directory on the deployment host you have identified (see Requirements and Dependencies).
 
 2. Copy the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin to `/etc/collectd/managed_config` directory.
 
-3. Modify the sample configuration file as described in [Configuration](#configuration), below.
+3. Modify the sample configuration file as described in [Configuration](#configuration), below. To avoid duplicate reporting, configure each project only once.
 
 4. Install the Python requirements with sudo ```pip install -r requirements.txt```.
 
@@ -75,7 +79,7 @@ Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/
 
 ### CONFIGURATION
 
-Using the example configuration file [20-openstack.conf](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the OpenStack instances.
+Using the example configuration file [20-openstack.conf](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) as a guide, provide configuration values for each project that this integration should monitor.
 
 | Configuration option | Definition | Example Value |
 | ---------------------|------------|---------------|
@@ -88,6 +92,8 @@ Using the example configuration file [20-openstack.conf](https://github.com/sign
 | UserDomainId | Specify the user domain | "default" |
 | Dimension | Space-separated key-value pair for a user-defined dimension | dimension\_name dimension\_value |
 | Interval | Number of seconds between calls to the OpenStack API. | 10 |
+
+Note: The configured user must have access to the project.
 
 Example configuration:
 
