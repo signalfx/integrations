@@ -1,5 +1,5 @@
 { "display_name":"OpenStack",
-  "description": "Monitor openstack platform using the SignalFx collectd agent.",
+  "description": "Monitor OpenStack platform using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-openstack",
   "code": "https://github.com/signalfx/collectd-openstack",
   "featured": false,
