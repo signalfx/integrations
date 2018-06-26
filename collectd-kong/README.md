@@ -42,11 +42,11 @@ In addition to these groups, system-wide connection stats can be provided, inclu
 
 ##### Built-in dashboards
 
-- **Kong Servers Overview**: High-level Kong performance for all reporting server
+- **Kong Servers Overview**: High-level Kong performance for all reporting servers
 
   [<img src='./img/kong_servers_overview.png' width=200px>](./img/kong_servers_overview.png)
 
-- **Kong Server Overview**: High-level Kong performance for individual server
+- **Kong Server Overview**: High-level Kong performance for an individual server
 
   [<img src='./img/kong_server_overview.png' width=200px>](./img/kong_server_overview.png)
 
@@ -76,12 +76,7 @@ This plugin requires:
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/kong
-monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-kong.md)
-for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
-
-Follow these steps to install this plugin:
+When using the SignalFx collectd agent follow these steps to install this plugin:
 
 1. Download and install the <a target="_blank" href="https://github.com/signalfx/kong-plugin-signalfx/">kong-plugin-signalfx</a> Lua module on all Kong servers
 
