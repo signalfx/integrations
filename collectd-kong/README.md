@@ -96,7 +96,7 @@ to `/etc/collectd/managed_config`.
 
 ### CONFIGURATION
 
-Using the example configuration file [10-kong.conf](./10-kong.conf)
+Using the example configuration file [10-kong.conf](https://github.com/signalfx/integrations/blob/master/collectd-kong/10-kong.conf)
 as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | example value |
@@ -104,7 +104,7 @@ as a guide, provide values for the configuration options listed below that make 
 | URL | The URL for the `/signalfx` kong-plugin-signalfx metric endpoint | `"https://my_kong_server:8443/signalfx"` |
 | AuthHeader | The name and value of a header to be passed with GETs to the URL | `"Authorization" "Basic YWRtaW46cGFzc3dvcmQ="` |
 | VerifyCerts | Whether to verify the ssl certificates for HTTPS requests to the URL | `true` |
-| CABundle | Path to a CA_BUNDLE file or directory with certificates of trusted CAs when `VerifyCerts` is true | `"/path/ca_bundle/`" |
+| CABundle | Path to a CA\_BUNDLE file or directory with certificates of trusted CAs when `VerifyCerts` is true | `"/path/ca_bundle/`" |
 | ClientCert | Client side certificate to use for HTTPS requests to the URL | `"/path/client.cert"` |
 | ClientCertKey | Separate client side certificate key if not included with cert file | `"/path/client.key"` |
 | Metric | The short name and report boolean for (un)desired metrics to emit.  See [Metrics](#metrics). | `"request_latency" false` |
