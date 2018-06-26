@@ -4,6 +4,6 @@
  "code": "https://github.com/signalfx/collectd-kong",
  "featured": false,
  "logo_large": "/images/repos/collectd-kong/img/integrations_kong.png",
- "logo_small": "/images/repos/collectd-kong/img/integrations_kong%402x.png",
+ "logo_small": "/images/repos/collectd-kong/img/integrations_kong@2x.png",
  "data_signature": "plugin:\"kong\"",
  "in_app_categories": ["servicesMonitored"]}
