@@ -16,14 +16,14 @@ Kong plugin dependency [here](https://github.com/signalfx/kong-plugin-signalfx).
 
 ### DESCRIPTION
 
-This is the SignalFx Kong collectd plugin to provide users with the ability to gather and report their service traffic
+The SignalFx Kong collectd plugin provides users with the ability to gather and report their service traffic
 metrics with collectd, in tandem with [kong-plugin-signalfx](https://github.com/signalfx/kong-plugin-signalfx).
 
 This plugin emits metrics for configurable request/response lifecycle groups including:
 
 * Counters for response counts
 * Counters for cumulative response and request sizes
-* Counters for cumulative request, upstream, and kong latencies
+* Counters for cumulative request, upstream, and Kong latencies
 
 These request/response lifecycle groups can be optionally partitioned by tunable levels of granularity by:
 
@@ -76,18 +76,23 @@ This plugin requires:
 
 ### INSTALLATION
 
-When using the SignalFx collectd agent follow these steps to install this plugin:
+* Both the SignalFx Smart Agent and collectd agent report metrics made available by the
+[kong-plugin-signalfx](https://github.com/signalfx/kong-plugin-signalfx) metric endpoint.
+Please download and install this Lua module on all Kong servers using its
+[instructions](https://github.com/signalfx/kong-plugin-signalfx/blob/master/README.md).
 
-1. Download and install the <a target="_blank" href="https://github.com/signalfx/kong-plugin-signalfx/">kong-plugin-signalfx</a> Lua module on all Kong servers
+* If you are using the SignalFx Smart Agent, collectd-kong is already included.  Please see
+[the monitor documentation](https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/collectd-kong.md) for configuration instructions.
+* If you are using the SignalFx collectd agent follow the steps below.
 
-2. Download and install the <a target="_blank" href="https://github.com/signalfx/collectd-kong/">collectd-kong</a> Python module.
+1. Download and install the <a target="_blank" href="https://github.com/signalfx/collectd-kong/">collectd-kong</a> Python module.
 
-3. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-kong/10-kong.conf">sample configuration file</a>
+2. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-kong/10-kong.conf">sample configuration file</a>
 to `/etc/collectd/managed_config`.
 
-4. Modify the configuration file as described in [Configuration](#configuration) below.
+3. Modify the configuration file as described in [Configuration](#configuration) below.
 
-5. Restart collectd.
+4. Restart collectd.
 
 ### CONFIGURATION
 
@@ -137,7 +142,7 @@ Sample of built-in dashboard in SignalFx:
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
+For documentation of the metrics emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 
