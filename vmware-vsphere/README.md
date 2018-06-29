@@ -69,7 +69,9 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 
 5. Modify the sample configuration file located at ```/etc/vsphere/config.yaml``` as described in [Configuration](#configuration), below.
 
-6. Restart the service by  ```$ service vsphere-monitor restart```
+6. Perform basic checks for network connectivity of VM by ```$ service vsphere-monitor check```
+
+7. Restart the service by  ```$ service vsphere-monitor restart```
 
 ### CONFIGURATION
 
@@ -83,8 +85,11 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | Name | Name of the vCenter Server. | VCenter-Signalfx |
 | IngestToken | SignalFx Ingest Token required to send metrics to ingest server. | rJWesf1235RTsffseuv |
 | MORSyncInterval | Time interval at which the vCenter inventory should be synced. | 300 |
+| MORSyncTimeout | The time that the application should wait for the vCenter inventory to synchronize the first time. Larger inventories will require a longer timeout. | 600 |
 | MetricSyncInterval | Time interval at which the available metrics should be synced. | 300 |
+| MetricSyncTimeout | he time that the application should wait for metrics to synchronize the first time. This should be increased when the volume of metrics is high. | 600 |
 | IngestEndpoint | The url of ingest endpoint to send to metrics. | https://ingest.signalfx.com |
+| IngestTimeout | The timeout interval for sending metrics to signalfx ingest endpoint. | 20 |
 | IncludeMetrics | Metrics required for different inventory objects can be included individually. Currently metrics can be added for datacenter, cluster, host and vm. | mem.usage.average |
 | ExcludeMetrics | Metrics emitted from different inventory objects can be excluded individually. | mem.usage.average |
 | Dimensions | Additional dimensions to be added to each datapoint. | dimension_key: "dimension_value" |
@@ -99,8 +104,11 @@ config:
     Name: VCenter4
     IngestToken: rJWesf1235RTsffseuv
     IngestEndpoint: 'https://ingest.signalfx.com'
+    IngestTimeout: 20
     MORSyncInterval: 300
+    MORSyncTimeout: 600
     MetricSyncInterval: 300
+    MetricSyncTimeout: 600
     IncludeMetrics:
       host:
         - mem.swapused.average
@@ -122,8 +130,11 @@ config:
     Name: VCenter4
     IngestToken: rJWesf1235RTsffseuv
     IngestEndpoint: 'https://ingest.signalfx.com'
+    IngestTimeout: 10
     MORSyncInterval: 300
+    MORSyncTimeout: 1200
     MetricSyncInterval: 300
+    MetricSyncTimeout: 900
     IncludeMetrics:
       host:
         - mem.swapused.average
