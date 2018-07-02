@@ -1,7 +1,7 @@
 ---
 title: sf.org.numNewDimensions
 brief: Number of new dimensions that were created
-metric_type: gauge
+metric_type: counter
 ---
 ### sf.org.numNewDimensions
 
