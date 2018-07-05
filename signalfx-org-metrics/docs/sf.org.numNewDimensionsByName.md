@@ -1,7 +1,7 @@
 ---
 title: sf.org.numNewDimensionsByName
 brief: Number of new dimensions for each unique dimension name
-metric_type: gauge
+metric_type: counter
 ---
 ### sf.org.numNewDimensionsByName
 

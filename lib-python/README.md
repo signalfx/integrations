@@ -29,7 +29,7 @@ Python 2.7.9 or higher is recommended. If you are not making API calls to intera
 #### API access token
 
 To use this library, you need a SignalFx API access
-token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview).
+token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication).
 
 ### INSTALLATION
 
