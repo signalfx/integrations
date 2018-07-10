@@ -87,7 +87,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | MORSyncInterval | Time interval at which the vCenter inventory should be synced. | 300 |
 | MORSyncTimeout | The time that the application should wait for the vCenter inventory to synchronize the first time. Larger inventories will require a longer timeout. | 600 |
 | MetricSyncInterval | Time interval at which the available metrics should be synced. | 300 |
-| MetricSyncTimeout | he time that the application should wait for metrics to synchronize the first time. This should be increased when the volume of metrics is high. | 600 |
+| MetricSyncTimeout | The time that the application should wait for metrics to synchronize the first time. This should be increased when the volume of metrics is high. | 600 |
 | IngestEndpoint | The url of ingest endpoint to send to metrics. | https://ingest.signalfx.com |
 | IngestTimeout | The timeout interval for sending metrics to signalfx ingest endpoint. | 20 |
 | IncludeMetrics | Metrics required for different inventory objects can be included individually. Currently metrics can be added for datacenter, cluster, host and vm. | mem.usage.average |
