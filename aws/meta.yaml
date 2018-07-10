@@ -6,6 +6,5 @@
    "sort_order": 2,
    "logo_large": "integration_aws.png",
    "logo_small": "integration_aws.png",
-   "data_signature": "_exists_:namespace",
    "in_app_categories": ["AWSservicesMonitored"]
  }
