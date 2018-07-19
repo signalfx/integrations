@@ -6,7 +6,7 @@
 
 See [the Github repo](https://github.com/signalfx/signalfx-agent) for the
 source code along with more extensive documentation.
-## SignalFx Smart Agent
+## SignalFx Smart Agent 
 
 
 The SignalFx Smart Agent is a metric agent written in Go for monitoring
@@ -59,10 +59,10 @@ machine during metric analysis.
 
 #### Writer
 The writer collects metrics emitted by the configured monitors and sends them
-to SignalFx on a regular basis.  By default it batches metrics for 1 second
-before sending.  There are a few things that can be
+to SignalFx on a regular basis.  There are a few things that can be
 [configured](https://github.com/signalfx/signalfx-agent/tree/master/docs/config-schema.md#writer) in the writer, but this is generally
-unnecessary.
+only necessary if you have a very large number of metrics flowing through a
+single agent.
 
 ### INSTALLATION
 
@@ -70,7 +70,9 @@ The Smart Agent is available for Linux in both a containerized and standalone fo
 Whatever form you use, the dependencies are completely bundled along with the
 agent, including a Java JRE runtime and a Python runtime, so there are no
 additional dependencies required.  This means that the Smart Agent should work on any
-relatively modern Linux distribution (kernel version 2.6+).
+relatively modern Linux distribution (kernel version 2.6+).  To get started
+deploying the Smart Agent directly on a host, see the
+[Smart Agent Quickstart](https://github.com/signalfx/signalfx-agent/tree/master/docs/smart-agent-quickstart.md) guide.
 
 #### Deployment
 We support the following deployment/configuration management tools to automate the
@@ -109,6 +111,9 @@ role source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/
 We also offer a Salt Formula to install and configure the Smart Agent.  See [the
 formula source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/salt).
 
+##### Docker Image
+See [Docker Deployment](https://github.com/signalfx/signalfx-agent/tree/master/deployments/docker) for more information.
+
 ##### Kubernetes
 See our [Kubernetes setup instructions](https://github.com/signalfx/signalfx-agent/tree/master/docs/kubernetes-setup.md) and the
 documentation on [Monitoring
@@ -117,49 +122,6 @@ for more information.
 
 #### Bundles
 We offer the Smart Agent in the following forms:
-
-##### Docker Image
-We provide a Docker image at
-[quay.io/signalfx/signalfx-agent](https://quay.io/signalfx/signalfx-agent). The
-image is tagged using the same agent version scheme.
-
-If you are using Docker outside of Kubernetes, you can run the Smart Agent in a
-Docker container and still gather metrics on the underlying host by running it
-with the following flags:
-
-```sh
-$ docker run \
-    --name signalfx-agent \
-    --pid host \
-    --net host \
-    -v /:/hostfs:ro \
-    -v /var/run/docker.sock:/var/run/docker.sock:ro \
-    -v /etc/signalfx/:/etc/signalfx/:ro \
-    quay.io/signalfx/signalfx-agent:<version>
-```
-
-This assumes you have the Smart Agent config in the conventional directory
-(`/etc/signalfx`) on the root mount namespace.
-
-If you have the Docker API available through the conventional UNIX domain
-socket, you should mount that in to be able to use the
-[docker-container-stats](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/docker-container-stats.md) monitor.
-
-It is necessary to mount in the host root filesystem at `/hostfs` in order to
-get disk usage metrics for the host filesystems using the
-[collectd/df](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-df.md).  You will need to set the
-`hostFSPath: /hostfs` config option on that monitor to make it use this
-non-default path.
-
-The only other special config you will need is the `etcPath: /hostfs/etc`
-option under the
-[collectd/signalfx-metadata](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-signalfx-metadata.md)
-monitor config.  This tells it where to find certain files like
-`/etc/os-release` that are used to generate host metadata such as the Linux
-distro and version.
-
-You may also want to use the [Docker observer](https://github.com/signalfx/signalfx-agent/tree/master/docs/observers/docker.md) to
-automatically discover other containers running in the same Docker engine.
 
 ##### Debian Package
 We provide a Debian package repository that you can make use of with the
@@ -233,7 +195,7 @@ capabilities the Smart Agent requires.
 `signalfx-agent/bin/signalfx-agent -config <path to config.yaml>`.  The Smart Agent
 logs only to stdout/err so it is up to you to direct that to a log file or
 other log management system if you wish to persist logs.  See the
-[signalfx-agent command](https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.md) doc for more information on
+[signalfx-agent command](https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.man) doc for more information on
 supported command flags.
 
 #### Privileges
