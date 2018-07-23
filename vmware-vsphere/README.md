@@ -71,7 +71,9 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 
 6. Perform basic checks for network connectivity of VM by ```$ service vsphere-monitor check```
 
-7. Restart the service by  ```$ service vsphere-monitor restart```
+7. If the version of vCenter to be monitored is less than 6.5, please check the aritcle ```https://kb.vmware.com/s/article/21070961``` to increase the volume of metrics sent by vCenter.
+
+8. Restart the service by  ```$ service vsphere-monitor restart```
 
 ### CONFIGURATION
 
@@ -85,9 +87,9 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | Name | Name of the vCenter Server. | VCenter-Signalfx |
 | IngestToken | SignalFx Ingest Token required to send metrics to ingest server. | rJWesf1235RTsffseuv |
 | MORSyncInterval | Time interval at which the vCenter inventory should be synced. | 300 |
-| MORSyncTimeout | The time that the application should wait for the vCenter inventory to synchronize the first time. Larger inventories will require a longer timeout. | 600 |
+| MORSyncTimeout | The time that the application should wait for the vCenter inventory to synchronize the first time. Larger inventories will require a longer timeout. Please increase the timeout when the application fails with MORSyncTimeout error message, according to the size of inventory.| 600 |
 | MetricSyncInterval | Time interval at which the available metrics should be synced. | 300 |
-| MetricSyncTimeout | The time that the application should wait for metrics to synchronize the first time. This should be increased when the volume of metrics is high. | 600 |
+| MetricSyncTimeout | The time that the application should wait for metrics to synchronize the first time. This should be increased when the volume of metrics is high. Please increase the timeout when the application fails with MetricSyncTimeout error message. | 600 |
 | IngestEndpoint | The url of ingest endpoint to send to metrics. | https://ingest.signalfx.com |
 | IngestTimeout | The timeout interval for sending metrics to signalfx ingest endpoint. | 20 |
 | IncludeMetrics | Metrics required for different inventory objects can be included individually. Currently metrics can be added for datacenter, cluster, host and vm. | mem.usage.average |
