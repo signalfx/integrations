@@ -74,7 +74,7 @@ The above charts are applicable to all Azure VM Scale Sets. The following two ch
 
 - **Number of Scale Sets** - Total number of vm scale sets being monitored.
 
-  [<img src='./img/vmscaleset.count.png' width=200px>](./img/vms.count.png)
+  [<img src='./img/vmscaleset.count.png' width=200px>](./img/vmscaleset.count.png)
 
 - **Top Scale Sets by CPU percent** - List of vm scale sets that use most CPU.
 
@@ -82,7 +82,7 @@ The above charts are applicable to all Azure VM Scale Sets. The following two ch
 
 - **Azure Scale Sets by Region** - Count of Azure vm scale sets by region.
 
-  [<img src='./img/vmscaleset.by.region.png' width=200px>](./img/vmvmscalesets.by.region.png)
+  [<img src='./img/vmscaleset.by.region.png' width=200px>](./img/vmscaleset.by.region.png)
 
 - **Network Bytes In** - Percentile trend of bytes received by vm scale sets.
 
