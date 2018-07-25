@@ -66,11 +66,11 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 - **Incoming Requests** - Shows the trend of incoming requests for all event hubs monitored.
 
-  [<img src='./img/hubs.incoming.reqs.png' width=200px>](./img/hub.incoming.reqs.png)
+  [<img src='./img/hubs.incoming.reqs.png' width=200px>](./img/hubs.incoming.reqs.png)
 
 - **Successful Requests** - Shows the trend of successful requests for all event hubs monitored.
 
-  [<img src='./img/hubs.successful.reqs.png' width=200px>](./img/hub.successful.reqs.png)
+  [<img src='./img/hubs.successful.reqs.png' width=200px>](./img/hubs.successful.reqs.png)
 
 - **Top Event Hubs by Server Errors** - List of event hubs with most number of server errors.
 
