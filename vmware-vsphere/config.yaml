@@ -5,8 +5,11 @@
       Name: VCenter4
       IngestToken: rJWesf1235RTsffseuv
       IngestEndpoint: 'https://ingest.signalfx.com'
+      IngestTimeout: 20
       MORSyncInterval: 300
+      MORSyncTimeout: 600
       MetricSyncInterval: 300
+      MetricSyncTimeout: 600
       IncludeMetrics:
         host:
           - mem.swapused.average
@@ -17,3 +20,6 @@
           - cpu.usage.average
         vm:
           - mem.usage.average
+      Dimensions:
+        dimension_key: "dimension_value"
+        dimension_key1: "dimension_value1"
