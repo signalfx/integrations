@@ -28,99 +28,170 @@ To access this integration, [connect to CloudWatch](https://github.com/signalfx/
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
-#### RDS ENHANCED MONITORING
+### RDS ENHANCED MONITORING
 
 SignalFx supports an integration with <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">RDS Enhanced Monitoring</a> using an AWS Lambda function, described below. This integration also includes built-in dashboards designed specifically for the metrics from Enhanced Monitoring. This Enhanced Monitoring integration complements the CloudWatch-based integration described above.  
 
-To use this integration, you must have RDS Enhanced Monitoring enabled. <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Click here for details</a>.
+You can choose to deploy the function either from the Serverless Application Repository (recommended) or from source. Choose a deployment method and follow the steps below to encrypt your SignalFx access token, customize the metrics that will be sent to SignalFx, and create and deploy the new function. 
 
-You will also need an <a target="_blank" href="http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">encryption key set up in AWS</a>. Make sure to add the users who will need to have access to the Lambda function, as well as appropriate admins.
+Before you begin, you must enable the Enhanced Monitoring option for the RDS instances you want to monitor using this integration. [Click here for instructions on enabling Enhanced Monitoring](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html).
 
-##### 1. Download code and build the archive
+##### Note: Encryption of your SignalFx access token
+This Lambda function uses your SignalFx access token to send metrics to SignalFx, as an environment variable to the function. While Lambda encrypts all environment variables at rest and decrypts them upon invocation, AWS recommends that all sensitive information such as access tokens be encrypted using a KMS key before function deployment, and decrypted at runtime within the code. 
 
-In a bash shell, copy and paste the following commands:
+Both procedures below include instructions for using either an encrypted or non-encrypted access token. 
 
-```sh
-$ git clone https://github.com/signalfx/enhanced-rds-monitoring.git
+* [Deploying through the Serverless Application Repository](#deploying-through-the-serverless-application-repository)
+* [Building from source](#building-from-source)
+* [Metrics collected by this integration](#metric-groups-collected-by-this-integration)
+
+#### Deploying through the Serverless Application Repository
+
+##### 1. Set up an encryption key and encrypt your access token (if desired)
+Only follow this step if you chose to manually encrypt your access token.
+Either create a new KMS encryption key or select a preexisting one. **The key
+must be in the same availability zone as the RDS instances you are
+monitoring.** You can create and manage encryption keys from IAM in the AWS
+management console. Documentation on KMS encryption from the CLI can be found
+[here](http://docs.aws.amazon.com/cli/latest/reference/kms/encrypt.html). Make sure you have access to the cipher text output by the encryption as well as the key id of the encryption key you used.
+
+##### 2. Create the Lambda function
+Click `Create Function` from the list of Lambda functions in your AWS console.
+Make sure you are in the intended availability zone. Select the
+`Serverless Application Repository` option in the upper right hand corner.
+Search for `signalfx rds` and choose the appropriate entry based on whether you
+encrypted your access token.
+
+To access the templates directly, find the template for encrypted access
+tokens [here](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics-encrypted). 
+The template for non-encrypted access tokens is [here](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics).
+
+##### 3. Fill out application parameters
+Under `Configure application parameters`, choose a name for your function,
+and fill out the fields accordingly.
+
+**Parameters for template using encrypted access tokens**
+- `EncryptedSignalFxAuthToken`: The Ciphertext blob output from your encryption of your SignalFx organization's access token
+- `KeyId`: The key id of your KMS encryption key; it is the last section of the key's ARN.
+- `SelectedMetricGroups`: The metric groups you wish to send. Enter `All` if you want all available metrics. Otherwise, list the names of desired metric groups, spelled exactly as they are in [Metrics collected by this integration](#metric-groups-collected-by-this-integration), separated by single spaces.
+
+**Parameters for template using non-encrypted access tokens**
+- `SignalFxAuthToken`: Your SignalFx organization's access token
+- `SelectedMetricGroups`: The metric groups you wish to send. Enter `All` if you want all available metrics. Otherwise, list the names of desired metric groups, spelled exactly as they are in [Metrics collected by this integration](#metric-groups-collected-by-this-integration), separated by single spaces.
+
+ 
+##### 4. Deploy function and configure trigger
+Click `Deploy`. Once the function has finished deploying, navigate to the
+function's main page. 
+
+Under the `Configuration` tab, scroll through the list on the left and
+select CloudWatch Logs as the source of the trigger. Below there will be
+specific configurations for the trigger. 
+
+* Select `RDSOSMetrics` as the log group. 
+* Choose an appropriate name for the filter, and leave the filter pattern
+blank. 
+* Make sure the `Enabled` switch is activated. 
+
+Click `Add`, then click `Save` in the upper right corner.
+
+That's it! Your metrics are on the way to SignalFx ingest!
+
+#### Building from source
+
+##### 1. Set up the execution role
+The execution role just needs basic Lambda execution permissions and KMS
+decrypt permissions (if you wish to encrypt your SignalFx access token). If you
+don't want to create one, you can select from a list of templates when you
+create the lambda function.
+
+##### 2. Set up an encryption key and encrypt access token
+Only follow this step if you chose to encrypt your access token. Either create
+a new KMS encryption key or select a preexisting one. **The key must be in the
+same availability zone as the RDS instances you are monitoring.** You can
+create and manage encryption keys from IAM in the AWS management console.
+Documentation on KMS encryption from the CLI can be found
+[here](http://docs.aws.amazon.com/cli/latest/reference/kms/encrypt.html).
+Make sure you have access to the cipher text output by the encryption as well
+as the key id of the encryption key you used.
+
+##### 3. Clone the source repo and build the deployment package
+You can find the repo
+[here](https://github.com/signalfx/enhanced-rds-monitoring).
+Once you have cloned the repo:
+```
 $ cd enhanced-rds-monitoring
 $ ./build.sh
-$ tox # Optional: verify the build.
 ```
+The package will be named `enhanced_rds.zip`. This will be the file to upload
+for the Lambda.
 
-After running this sequence of commands, you will have a copy of `enhanced_rds.zip`. This will be the zip archive you upload to the Lambda function in a later step.
+##### 4. Create and configure the Lambda function
+From the Lambda creation screen, make sure you have selected
+`Build from scratch`. Select a name for your function. For `Runtime` select
+`Python2.7`. For the execution role, either select the role you wish to use or
+select `Create from Template` and add KMS decrypt permissions if need be. You
+will also need to choose a name for the role.
 
-##### 2. Create a new Lambda function
+###### Designer
+The only thing to be done here is set up the trigger from CloudWatch Logs.
+Select CloudWatch Logs from the list on the left. Below, a section labelled
+`Configure triggers` will appear. For the `Log group` field, select
+`RDSOSMetrics`. You must also choose a filter name, but leave the filter
+pattern blank. You can disable the trigger to start if you wish (though you
+will need to manually enable it later to start sending metrics), then click
+Add.
 
-Create a new Lambda function on the Functions page of the AWS Management Console.
+###### Function code
+Once the function is created you can change the configurations. Upload the ZIP
+file containing the deployment package. Change the text in `Handler` to be
+`lambda_script.lambda_handler`.
 
-Under Basic Information, the only required function permission is 'KMS decryption permissions'. You can either use a preexisting role that already has this permission, or create a new role from the templates that AWS provides. To create a new role, select `Create new role from template(s)` from the Role dropdown, create a descriptive name for the role, and under Policy templates, select `KMS decryption permissions`.
+###### Environment variables
 
-![](./img/function-name-and-role.png)
+First create an environment variable called `groups`. This will store the list of metric groups to be reported. To report all available metrics, enter `All`. Otherwise, list the names of desired metric groups, spelled exactly as listed under [Metrics collected by this integration](#metric-groups-collected-by-this-integration), separated by single spaces. 
 
-##### 3. Configure the function
+Next create a variable to store your SignalFx access token. Create a field called `encrypted_access_token` to store an encrypted SignalFx access token, or simply `access_token` to store an unencrypted token. Paste your access token into the value field. 
 
-Go to the Configuration tab.
+If you use `encrypted_access_token`, follow the steps below to encrypt it:
+  * Under `Encryption configuration`, check the box to `Enable helpers for encryption in transit`. A new field will appear labelled `KMS key to encrypt in transit`. 
+  * Select the encryption key you wish to use from the dropdown. A button labelled `Encrypt` will appear next to your environment variables. 
+  * Click the `Encrypt` button next to `encrypted_access_token` once. The value will be replaced by a Ciphertext blob.
 
-![](./img/lambda-configuration.png)
+###### Basic settings
+Under basic settings, set `Timeout` to `0 min 5 sec`.
 
-Under 'Code entry type' select `Upload a .ZIP file`. Set the runtime to `Python 2.7`. Set 'Handler' to be `lambda_script.lambda_handler`. Click 'Upload', and find the `enhanced_rds.zip` file you built earlier. The file should be about 3 MB; if it isn't, the archive may not be built correctly, so you should try going through the process described above again.
+Click `Save`, and once the trigger is enabled, your function will start sending
+your metrics to SignalFx!
 
-1. Supply your SignalFx access token
-    - Under 'Environment Variables', create an environment variable named `access_token` and add your SignalFx access token. <a target="_blank" href="https://docs.signalfx.com/en/latest/admin-guide/tokens.html#managing-access-tokens">Click here for more information about SignalFx access tokens</a>.
-    - Expand the 'Encryption configuration' section and check the box under 'Enable helpers for encryption in transit'. From the 'KMS key to encrypt in transit' and 'KMS key to encrypt at rest' dropdown menus, select the encryption key you created earlier. An 'Encrypt' button will appear next to your environment variables. Click it to activate the encryption.
+#### Metric groups collected by this integration
 
-2. Finish up configuration
-    - For Execution role, select `Choose an existing role` and select a role with the required permissions (see Basic Information, above).
-    - Change the default 3 second timeout to 5 seconds.
+The following metric groups are collected by this integration. To collect all of them, use `All` at configuration time. To select a subset, choose metric groups by name. You can find documentation on the available metrics
+[here](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuid/USER_Monitoring.OS.html).
 
-##### 4. Add a trigger
+**Metric Groups (except for SQLServer)**
+- cpuUtilization
+- diskIO
+- fileSys
+- loadAverageMinute
+- memory
+- network
+- swap
+- tasks
+- OSprocesses*
+- RDSprocesses*
 
-On the Triggers tab, click Add Trigger.
+**SQLServer Metric Groups**
+- cpuUtilization
+- disks
+- memory
+- network
+- system
+- OSprocesses*
+- RDSprocesses*
 
-![](./img/trigger-before.png)
-
-Select CloudWatch Logs from the list. A number of additional options will appear. Select `RDSOSMetrics` under 'Log Group', and select an appropriate 'Filter Name'. Leave 'Filter Pattern' empty.
-
-We recommend that you deselect the 'Enable trigger' option so that you can review your settings before activating your Lambda. You can enable the trigger from the Triggers tab at any time.
-
-![](./img/trigger-after.png)
-
-When you are satisfied with your configuration settings, enable the trigger, and you're good to go! Your metrics will shortly be on their way to SignalFx, and built-in dashboards for RDS Enhanced Monitoring will appear on the Dashboards page in SignalFx.
-
-###### Optional: Specify a subset of available metrics to send to SignalFx
-To specify that SignalFx should collect only a subset of the metrics available from Enhanced Monitoring, create an environment variable to store the desired list. You can either include only the specified groups, or exclude all but the specified groups.
-
-The key for this environment variable is `groups` for the inclusive group or `groups_out` for the exclusive group. The list should simply be the names of the groups, spelled exactly as they are in the documentation (including capitals), separated by a single space. If you create both lists, only the `groups` list will be used.
-
-E.g.
-`cpuUtilization diskIO memory OSprocesses`
-
-The complete list of available metrics can be found <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">here</a>.
-
-Available Metric Groups (all but SQL Server):
-
-- `cpuUtilization`
-- `diskIO`
-- `fileSys`
-- `loadAverageMinute`
-- `memory`
-- `network`
-- `OSprocesses`
-- `RDSprocesses`
-- `swap`
-- `tasks`
-
-Available Metric Groups (SQL Server only):
-
-- `cpuUtilization`
-- `disks`
-- `memory`
-- `network`
-- `OSprocesses`
-- `RDSprocesses`
-- `system`
-
-NOTE: While `OSprocesses` and `RDSprocesses` are not listed groups in the AWS documentation, they are metric groups that we provide.
+\* Process-based metric group added by SignalFx, does not appear in AWS
+documentation.
 
 ### USAGE
 
