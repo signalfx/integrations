@@ -5,4 +5,4 @@ metric_type: gauge
 ---
 ### kafka.zk.request-latency
 
-ZooKeeper client request latency
+ZooKeeper client request latency (available from v1.x.x)
