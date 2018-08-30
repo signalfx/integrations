@@ -121,6 +121,34 @@ You can use the proxy to duplicate a data stream to multiple destinations. Add e
 ]
 ```
 
+#### Sending To Alternate Ingest Targets
+
+You can configure the forwarder to send to alternate ingest endpoints such as another metric proxy or an alternate SignalFx Deployment.
+
+| Key | Description | Default |
+| --- | ----------- | ------- |
+| `URL` | Datapoint ingest url. | `https://ingest.signalfx.com/v2/datapoint` |
+| `EventURL` | Event ingest url. | `https://ingest.signalfx.com/v2/event` |
+| `TraceURL` | Trace ingest url. | `https://ingest.signalfx.com/v1/trace` |
+
+```
+"ForwardTo": [
+  {
+    "type": "signalfx-json",
+    "DefaultAuthToken": "ABCD",
+    "Name": "signalfxforwarder"
+    "URL": "https://ingest.signalfx.com/v2/datapoint",
+    "EventURL": "https://ingest.signalfx.com/v2/event",
+    "TraceURL": "https://ingest.signalfx.com/v1/trace"
+  },
+  {
+    "Filename": "/tmp/filewrite.csv",
+    "Name": "filelocal",
+    "type": "csv"
+  }
+]
+```
+
 #### Transforming carbon dot-delimited metric names into metrics with dimensions
 
 SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx metric proxy's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. <a target="_blank" href="https://github.com/signalfx/metricproxy#graphite-dimensions">Click here to read more on Github about MetricDeconstructor options</a>.
