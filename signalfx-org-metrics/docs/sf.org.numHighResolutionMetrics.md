@@ -1,0 +1,10 @@
+---
+title: sf.org.numHighResolutionMetrics
+brief: Number of high resolution metrics monitored
+metric_type: counter
+---
+### sf.org.num.numHighResolutionMetrics
+
+Number of high resolution metrics monitored by SignalFx.
+
+Data Resolution: 10 minutes
