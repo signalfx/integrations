@@ -7,4 +7,6 @@ metric_type: counter
 
 Number of custom metrics monitored by SignalFx.
 
+Dimension(s): `orgId`
+
 Data Resolution: 10 minutes
