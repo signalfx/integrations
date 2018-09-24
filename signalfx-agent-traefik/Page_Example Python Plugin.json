@@ -1,0 +1,257 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_description" : "",
+  "sf_type" : "Service",
+  "sf_service" : "Example Python Plugin",
+  "marshallId" : 1
+}, {
+  "sf_page" : "Example Python Plugin",
+  "sf_type" : "Page",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ]
+}, {
+  "sf_dashboard" : "Example Python Plugin",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 12,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1456190789273,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1456190662608,
+        "name" : "",
+        "id" : 1
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1456190732148,
+        "name" : "",
+        "id" : 2
+      }
+    } ],
+    "version" : 1
+  },
+  "sf_description" : "A dashboard demonstrating the example Python plugin.",
+  "sf_type" : "Dashboard",
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "A sine wave",
+  "sf_uiModel" : {
+    "revisionNumber" : 2,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "transient" : false,
+      "seriesData" : {
+        "metric" : "gauge.sine"
+      },
+      "configuration" : { },
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "plugin",
+        "propertyValue" : "hello-world",
+        "query" : "plugin:hello-world",
+        "type" : "property",
+        "value" : "hello-world"
+      } ],
+      "dataManipulations" : [ ],
+      "uniqueKey" : 1,
+      "type" : "plot",
+      "name" : "gauge.sine"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "useKMG2" : false,
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:gauge.sine AND _missing_:sf_programId) AND ((plugin:hello\\\\-world))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_cacheProgram" : false,
+  "sf_description" : "Look at it go.",
+  "sf_chartIndex" : 1456190789273,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:gauge.sine AND _missing_:sf_programId) AND ((plugin:hello\\\\-world))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Datapoints sent",
+  "sf_uiModel" : {
+    "revisionNumber" : 2,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "transient" : false,
+      "seriesData" : {
+        "metric" : "counter.datapoints"
+      },
+      "configuration" : { },
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "plugin",
+        "propertyValue" : "hello-world",
+        "query" : "plugin:hello-world",
+        "type" : "property",
+        "value" : "hello-world"
+      } ],
+      "dataManipulations" : [ ],
+      "uniqueKey" : 1,
+      "type" : "plot",
+      "name" : "counter.datapoints"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "useKMG2" : false,
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:counter.datapoints AND _missing_:sf_programId) AND ((plugin:hello\\\\-world))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1456190662608,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:counter.datapoints AND _missing_:sf_programId) AND ((plugin:hello\\\\-world))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Notifications sent",
+  "sf_uiModel" : {
+    "revisionNumber" : 2,
+    "chartType" : "line",
+    "allPlots" : [ {
+      "yAxisIndex" : 0,
+      "invisible" : false,
+      "focusNext" : false,
+      "transient" : false,
+      "seriesData" : {
+        "metric" : "counter.notifications"
+      },
+      "configuration" : { },
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "plugin",
+        "propertyValue" : "hello-world",
+        "query" : "plugin:hello-world",
+        "type" : "property",
+        "value" : "hello-world"
+      } ],
+      "dataManipulations" : [ ],
+      "uniqueKey" : 1,
+      "type" : "plot",
+      "name" : "counter.notifications"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "useKMG2" : false,
+      "sortPreference" : ""
+    },
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:counter.notifications AND _missing_:sf_programId) AND ((plugin:hello\\\\-world))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_cacheProgram" : false,
+  "sf_description" : "This plugin sends a notification at every startup.",
+  "sf_chartIndex" : 1456190732148,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:counter.notifications AND _missing_:sf_programId) AND ((plugin:hello\\\\-world))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ]
+} ]
