@@ -11,7 +11,7 @@ Metadata associated with the SignalFx collectd agent can be found [here](https:/
 
 ### DESCRIPTION
 
-**We have a new agent called the SignalFx SmartAgent that wraps collectd and
+**We have a new agent called the SignalFx Smart Agent that wraps collectd and
 provides auto-discovery of services, among other features.  See [the
 integration tile for the new agent](?selectedKeyValue=plugin:signalfx-agent)
 for more information.  We strongly recommend using this new agent instead of

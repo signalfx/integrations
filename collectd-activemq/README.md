@@ -56,10 +56,10 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/activemq
+**If you are using the new Smart Agent, see the docs for [the collectd/activemq
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-activemq.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.
