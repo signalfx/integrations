@@ -25,10 +25,10 @@ This plugin requires:
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/vmem
+**If you are using the new Smart Agent, see the docs for [the collectd/vmem
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-vmem.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).

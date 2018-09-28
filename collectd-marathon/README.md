@@ -46,10 +46,10 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-marathon">coll
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/marathon
+**If you are using the new Smart Agent, see the docs for [the collectd/marathon
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-marathon.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 1.  Download the <a target="_blank" href="https://github.com/signalfx/collectd-marathon">collectd-marathon</a> Python module onto a host that has access to the Marathon API.
