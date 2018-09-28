@@ -74,12 +74,8 @@ Metric data are reported to SignalFx at fixed time intervals. Typically there ar
 
 ### METRICS
 
->This section refers to the metrics documentation found in the `/docs` subdirectory. See [/docs/README.md](./docs/readme.md) for formatting instructions.
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
+For documentation of the metrics and dimensions emitted by this integration, click [here](./docs). Any metric can be excluded from being sent by adding the metric name to the `metricsToExclude` section of the Smart Agent configuration file. Metric names are found in the [docs](./docs).
 
 ### LICENSE
-
-> Include licensing information for this integration metadata, not the integration itself, in this section.
 
 This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-agent-traefik/blob/master/LICENSE) for more details.
