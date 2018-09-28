@@ -45,10 +45,10 @@ This is the Kafka plugin for collectd. It will send data about Kafka to SignalFx
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/kafka
+**If you are using the new Smart Agent, see the docs for [the collectd/kafka
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-kafka.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 1. RHEL/CentOS and Amazon Linux users: Install the [Java plugin for collectd](https://github.com/signalfx/integrations/tree/master/collectd-java)[](sfx_link:collectd-java) if it is not already installed.

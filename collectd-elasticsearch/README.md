@@ -58,10 +58,10 @@ Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsear
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/elasticsearch
+**If you are using the new Smart Agent, see the docs for [the collectd/elasticsearch
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-elasticsearch.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-elasticsearch">collectd-elasticsearch</a> Python module.
