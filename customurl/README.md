@@ -1,4 +1,4 @@
-# ![](./img/integration_externallink.png) Custom Links
+# ![](./img/integration_externallink.png) Custom URL Links
 
 - [Description](#description)
 - [Installation](#installation)

@@ -1,4 +1,4 @@
-{ "display_name":"Custom Links",
+{ "display_name":"Custom URL Links",
   "description": "Link from SignalFx to any URL",
   "project_url": "https://github.com/signalfx/integrations/tree/master/customurl",
   "code": "",
