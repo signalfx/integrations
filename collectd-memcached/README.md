@@ -44,10 +44,10 @@ Documentation for Memcached can be found here: <a target="_blank" href="https://
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/memcached
+**If you are using the new Smart Agent, see the docs for [the collectd/memcached
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-memcached.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 1. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-memcached/10-memcached.conf">sample memcached configuration file</a> to `/etc/collectd/managed_config`.

@@ -29,10 +29,10 @@ From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:GenericJMX):
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/genericjmx
+**If you are using the new Smart Agent, see the docs for [the collectd/genericjmx
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-genericjmx.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 1. Install the Java plugin.

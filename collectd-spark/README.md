@@ -81,10 +81,10 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-spark">spark-c
 
 ### INSTALLATION
 
-**If you are using the new SmartAgent, see the docs for [the collectd/spark
+**If you are using the new Smart Agent, see the docs for [the collectd/spark
 monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-spark.md)
 for more information.  The configuration documentation below may be helpful as
-well, but consult the SmartAgent repo's docs for the exact schema.**
+well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
 1. Download <a target="_blank" href="https://github.com/signalfx/collectd-spark">collectd-spark</a>. Place the `spark_plugin.py` file in `/usr/share/collectd/collectd-spark`
