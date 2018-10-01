@@ -1,0 +1,10 @@
+{ "display_name":"Splunk",
+  "description": "Deep linking from SignalFx to Splunk",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/splunk",
+  "code": "https://www.splunk.com/",
+  "featured": false,
+  "logo_large": "integration_splunk@2x.png",
+  "logo_small": "integration_splunk.png",
+  "data_signature": "",
+  "in_app_categories": ["linkedServices"]
+}
