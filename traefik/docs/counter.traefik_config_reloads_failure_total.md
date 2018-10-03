@@ -1,8 +1,8 @@
 ---
 title: traefik_config_reloads_failure_total
-brief: Config failure reloads
+brief: Total number of config reloads that failed
 metric_type: counter
 ---
 ### traefik_config_reloads_failure_total
 
-Config failure reloads
+Total number of config reloads that failed
