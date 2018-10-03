@@ -1,7 +1,5 @@
 # ![](https://github.com/signalfx/integrations/blob/master/signal-agent-traefik/img/integration_traefik.png) Traefik
 
-Metadata associated with the Traefik integration with SignalFx Smart Agent can be found [here](https://github.com/signalfx/integrations/tree/release/signalfx-agent-traefik).
-
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
@@ -64,19 +62,17 @@ monitors:
 
 The Smart Agent exports prometheus metrics exposed by Traefik. These metrics can be categorized into Traefik-related, entrypoint-related and backend-related metrics. The Traefik-related metrics are prefixed by`go_`and`process_`. The entrypoint-related metrics are prefixed by`traefik_entrypoint_`and the backend-related metrics prefixed by`traefik_backend_`.
 
-The Traefik-related metrics are for monitoring Traefik itself. For instance, the `go_memstats_sys_bytes` metric can be used to plot Traefik memory usage. The entrypoint-related and backend-related metrics are essentially <a target="_blank" href="https://docs.signalfx.com/en/latest/concepts/metric-types.html">cummulative counter</a> type metrics of the number and duration of requests measured at entrypoints and backends. These metrics are used to compute measurements such as the average request duration. Below is a screen capture of an example SignalFx chart showing the average request duration per HTTP method. The request durations are computed using metrics `traefik_entrypoint_request_duration_seconds_sum` and `traefik_entrypoint_request_duration_seconds_count`.
+The Traefik-related metrics are for monitoring Traefik itself. For instance, the `go_memstats_sys_bytes` metric can be used to plot Traefik memory usage. The entrypoint-related and backend-related key metrics are the number and duration of requests measured at entrypoints and backends. These metrics are used to compute measurements such as the average request duration. 
 
-![Request Duration / HTTP Method](./img/request_duration_HTTP_method_chart.png)
+![Overview](./img/traefik_overview.png)
+![EntryPoints](./img/traefik_entrypoints.png)
+![Backends](./img/traefik_backends.png)
 
-The entrypoint-related and backend-related metrics also include <a target="_blank" href="https://docs.signalfx.com/en/latest/concepts/metric-types.html">gauge</a> type metrics for the number of entrypoints connections, backends connections and backend server up/down flag.
-
-#### Important conditions to watch out for
-
-Metric data are reported to SignalFx at fixed time intervals. Typically there are several metric data points with an interval. Data points in an interval are <a target="_blank" href="https://docs.signalfx.com/en/latest/concepts/rollups.html#rollups">rolled up</a> into a single value. Cumulative counter type metrics are rolled up into rate per second by default. The rate per second is the difference between the latest value in the current interval and the latest value in the previous interval divide by interval length. The default rollup may need to be changed in order to get the desired values.
+The entrypoint-related and backend-related metrics also include metrics for the number of entrypoints connections, backends connections and backend server up/down flag.
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this integration, click [here](./docs). Any metric can be excluded from being sent by adding the metric name to the `metricsToExclude` section of the Smart Agent configuration file. Metric names are found in the [docs](./docs).
+For documentation of the metrics and dimensions emitted by this integration, see [here](./docs). Any metric can be excluded from being sent by adding the metric name to the `metricsToExclude` section of the Smart Agent configuration file. Metric names are found in the [docs](./docs).
 
 ### LICENSE
 
