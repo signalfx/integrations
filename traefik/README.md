@@ -56,6 +56,8 @@ observers:
 monitors:
   - type: prometheus-exporter
     discoveryRule: port == 8080
+  extraDimensions:
+    metric_source: traefik
 ```
 
 ### USAGE
