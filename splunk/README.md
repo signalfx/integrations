@@ -12,7 +12,7 @@ Create deep links to Splunk searches from SignalFx dashboards and alerts.
 
 You can set up links from SignalFx charts and alerts to searches in Splunk. Any dashboard editor can create links on a dashboard, and account admins can create links that appear throughout SignalFx. 
 
-[Click here to get started](https://app.signalfx.com/#/organization/YOUR_SIGNALFX_ORG_ID?selectedKeyValue=sf_section:globalcrosslinks). 
+[Click here to get started](https://app.signalfx.com/#/organization/YOUR_SIGNALFX_ORG_ID?selectedKeyValue=sf_section:globaldatalinks). 
 
 ### LICENSE
 
