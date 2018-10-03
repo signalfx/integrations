@@ -22,21 +22,21 @@ Configure <a target="_blank" href="https://docs.traefik.io/configuration/metrics
 
 Follow these steps to install this plugin:
 
-1. Install the <a target="_blank" href="https://github.com/signalfx/signalfx-agent">SignalFx Smart Agent</a> in your environment.
-2. Modify the smart agent configuration file as described in [Smart Agent Configuration](#smart-agent-configuration), below.
-3. Configure Traefik to expose prometheus metrics endpoint as described in [Traefik Configuration](#traefik-configuration), below.  
+1. Install the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/agent/index.html">SignalFx Smart Agent</a> in your environment.
+2. Modify the Smart Agent configuration file as described in [Smart Agent Configuration](#smart-agent-configuration), below.
+3. Configure Traefik to expose Prometheus metrics endpoint as described in [Traefik Configuration](#traefik-configuration), below.  
 
 ### CONFIGURATION
 #### Traefik Configuration
-Edit the Traefik configuration file, typically`traefik.toml`, to enable Traefik to expose <a target="_blank" href="https://docs.traefik.io/configuration/metrics/">prometheus metrics</a> at endpoint. The endpoint is on path `/metrics` by default. The configuration file is typically passed in as command line argument when running the Traefik binary. For example,
+Edit the Traefik configuration file, typically`traefik.toml`, to enable Traefik to expose <a target="_blank" href="https://docs.traefik.io/configuration/metrics/">prometheus metrics</a> at endpoint. The endpoint is on path `/metrics` by default. When running the Traefik binary, the configuration file is typically passed in as a command line argument.
 
 `./traefik -c traefik.toml`
 
-Whereas the configuration file is mounted to volume `/etc/traefik/traefik.toml` when running the Traefik docker image. For example,
+However, when running the Traefik Docker image, the configuration file is mounted to the volume `/etc/traefik/traefik.toml`. For Example, 
 
 `docker run -d -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/etc/traefik/traefik.toml`
 
-If the configuration file is not available use the <a target="_blank" href="https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml">sample configuration file</a>. The Smart Agent must have network access to Traefik. This means for instance that, in a docker environment, the Smart Agent container needs to share a network with the Traefik container. So the docker run command to start the agent may look as follows:
+If the configuration file is not available use the <a target="_blank" href="https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml">sample configuration file</a>. The Smart Agent must have network access to Traefik. This means for instance that, in a Docker environment, the Smart Agent container needs to share a network with the Traefik container. So the Docker run command to start the agent may look as follows:
 ```
 docker run --rm \
 -e SFX_ACCESS_TOKEN=<signalfx access token> \
@@ -47,7 +47,7 @@ docker run --rm \
 quay.io/signalfx/signalfx-agent:<version>
 ```
 #### Smart Agent Configuration
-Find and edit the Smart Agent configuration file`agent.yaml`to enable the docker observer and configure the prometheus-exporter monitor as described <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/9feb3f77fdf6de46dc476f62568ad4f9b725660c/docs/monitors/prometheus-exporter.md">here</a>. For example, the configuration below will cause the Smart Agent to query the Docker Engine API for all running containers with port 8080 exposed and export prometheus metrics from endpoint `<container ip>:8080/metrics`.
+Find and edit the Smart Agent configuration file `agent.yaml`to enable the Docker observer and configure the prometheus-exporter monitor as described <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/9feb3f77fdf6de46dc476f62568ad4f9b725660c/docs/monitors/prometheus-exporter.md">here</a>. For example, the configuration below will cause the Smart Agent to query the Docker Engine API for all running containers with port 8080 exposed and export Prometheus metrics from endpoint `<container ip>:8080/metrics`.
 ```
 observers:
   - type: docker
@@ -60,7 +60,7 @@ monitors:
 
 ### USAGE
 
-The Smart Agent exports prometheus metrics exposed by Traefik. These metrics can be categorized into Traefik-related, entrypoint-related and backend-related metrics. The Traefik-related metrics are prefixed by`go_`and`process_`. The entrypoint-related metrics are prefixed by`traefik_entrypoint_`and the backend-related metrics prefixed by`traefik_backend_`.
+The Smart Agent exports Prometheus metrics exposed by Traefik. These metrics can be categorized into Traefik-related, entrypoint-related and backend-related metrics. The Traefik-related metrics are prefixed by `go_` and `process_`. The entrypoint-related metrics are prefixed by `traefik_entrypoint_` and the backend-related metrics prefixed by `traefik_backend_`.
 
 The Traefik-related metrics are for monitoring Traefik itself. For instance, the `go_memstats_sys_bytes` metric can be used to plot Traefik memory usage. The entrypoint-related and backend-related key metrics are the number and duration of requests measured at entrypoints and backends. These metrics are used to compute measurements such as the average request duration. 
 
