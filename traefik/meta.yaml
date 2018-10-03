@@ -1,9 +1,9 @@
 { "display_name":"Traefik",
   "description": "Monitoring Traefik reverse proxy / load balancer",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/signalfx-agent-traefik",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/traefik",
   "featured": false,
   "logo_large": "/images/repos/signalfx-agent-traefik/img/integration_traefik.png",
   "logo_small": "/images/repos/signalfx-agent-traefik/img/integration_traefik@2x.png",
-# "data_signature": "plugin:\"traefik\"",
+  "data_signature": "metric_source:\"traefik\"",
   "in_app_categories": ["servicesMonitored"]
 }
