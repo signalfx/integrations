@@ -1,0 +1,79 @@
+# ![](https://github.com/signalfx/integrations/blob/master/signal-agent-traefik/img/integration_traefik.png) Traefik
+
+- [Description](#description)
+- [Requirements and Dependencies](#requirements-and-dependencies)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Metrics](#metrics)
+- [License](#license)
+
+### DESCRIPTION
+
+Configure <a target="_blank" href="https://docs.traefik.io/configuration/metrics">Traefik</a> to expose internal metrics as prometheus metrics at an endpoint. Install the <a target="_blank" href="https://github.com/signalfx/signalfx-agent">SignalFx Smart Agent</a> and configure it to access SignalFx and use the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/9feb3f77fdf6de46dc476f62568ad4f9b725660c/docs/monitors/prometheus-exporter.md">prometheus-exporter</a> monitor.
+
+### REQUIREMENTS AND DEPENDENCIES
+
+| Software          | Version        |
+|-------------------|----------------|
+| signalfx-agent    |     3.4+       |
+
+### INSTALLATION
+
+Follow these steps to install this plugin:
+
+1. Install the <a target="_blank" href="https://github.com/signalfx/signalfx-agent">SignalFx Smart Agent</a> in your environment.
+2. Modify the smart agent configuration file as described in [Smart Agent Configuration](#smart-agent-configuration), below.
+3. Configure Traefik to expose prometheus metrics endpoint as described in [Traefik Configuration](#traefik-configuration), below.  
+
+### CONFIGURATION
+#### Traefik Configuration
+Edit the Traefik configuration file, typically`traefik.toml`, to enable Traefik to expose <a target="_blank" href="https://docs.traefik.io/configuration/metrics/">prometheus metrics</a> at endpoint. The endpoint is on path `/metrics` by default. The configuration file is typically passed in as command line argument when running the Traefik binary. For example,
+
+`./traefik -c traefik.toml`
+
+Whereas the configuration file is mounted to volume `/etc/traefik/traefik.toml` when running the Traefik docker image. For example,
+
+`docker run -d -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/etc/traefik/traefik.toml`
+
+If the configuration file is not available use the <a target="_blank" href="https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml">sample configuration file</a>. The Smart Agent must have network access to Traefik. This means for instance that, in a docker environment, the Smart Agent container needs to share a network with the Traefik container. So the docker run command to start the agent may look as follows:
+```
+docker run --rm \
+-e SFX_ACCESS_TOKEN=<signalfx access token> \
+-e SFX_INGEST_URL=<signalfx ingest url> \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v <agent.yaml path>:/etc/signalfx/agent.yaml \
+--net <traefik container network> \
+quay.io/signalfx/signalfx-agent:<version>
+```
+#### Smart Agent Configuration
+Find and edit the Smart Agent configuration file`agent.yaml`to enable the docker observer and configure the prometheus-exporter monitor as described <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/9feb3f77fdf6de46dc476f62568ad4f9b725660c/docs/monitors/prometheus-exporter.md">here</a>. For example, the configuration below will cause the Smart Agent to query the Docker Engine API for all running containers with port 8080 exposed and export prometheus metrics from endpoint `<container ip>:8080/metrics`.
+```
+observers:
+  - type: docker
+monitors:
+  - type: prometheus-exporter
+    discoveryRule: port == 8080
+  extraDimensions:
+    metric_source: traefik
+```
+
+### USAGE
+
+The Smart Agent exports prometheus metrics exposed by Traefik. These metrics can be categorized into Traefik-related, entrypoint-related and backend-related metrics. The Traefik-related metrics are prefixed by`go_`and`process_`. The entrypoint-related metrics are prefixed by`traefik_entrypoint_`and the backend-related metrics prefixed by`traefik_backend_`.
+
+The Traefik-related metrics are for monitoring Traefik itself. For instance, the `go_memstats_sys_bytes` metric can be used to plot Traefik memory usage. The entrypoint-related and backend-related key metrics are the number and duration of requests measured at entrypoints and backends. These metrics are used to compute measurements such as the average request duration. 
+
+![Overview](./img/traefik_overview.png)
+![EntryPoints](./img/traefik_entrypoints.png)
+![Backends](./img/traefik_backends.png)
+
+The entrypoint-related and backend-related metrics also include metrics for the number of entrypoints connections, backends connections and backend server up/down flag.
+
+### METRICS
+
+For documentation of the metrics and dimensions emitted by this integration, see [here](./docs). Any metric can be excluded from being sent by adding the metric name to the `metricsToExclude` section of the Smart Agent configuration file. Metric names are found in the [docs](./docs).
+
+### LICENSE
+
+This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-agent-traefik/blob/master/LICENSE) for more details.
