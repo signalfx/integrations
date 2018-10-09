@@ -1,8 +1,8 @@
 ---
 title: traefik_entrypoint_request_duration_seconds_bucket
-brief: How long it took to process the request on an entrypoint, partitioned by status code, protocol, and method.
+brief: The sum of request durations within a configured time intervals.
 metric_type: cumulative counter
 ---
 ### traefik_entrypoint_request_duration_seconds_bucket
 
-How long it took to process the request on an entrypoint, partitioned by status code, protocol, and method.
+The sum of request durations that are within a configured time interval. The request durations are measured at an entrypoint in seconds. This value is partitioned by status code, protocol, and method.

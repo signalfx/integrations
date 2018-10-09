@@ -1,8 +1,8 @@
 ---
 title: traefik_backend_request_duration_seconds_bucket
-brief: How long it took to process the request, in seconds, on a backend, partitioned by status code, protocol, and method.
+brief: The sum of request durations within a configured time interval.
 metric_type: cumulative counter
 ---
 ### traefik_backend_request_duration_seconds_bucket
 
-How long it took to process the request, in seconds, on a backend, partitioned by status code, protocol, and method.
+The sum of request durations that are within a configured time interval. The request durations are measured at a backend in seconds. This value is partitioned by status code, protocol, and method.
