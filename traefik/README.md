@@ -28,11 +28,11 @@ Follow these steps to install this plugin:
 
 ### CONFIGURATION
 #### Traefik Configuration
-Edit the Traefik configuration file, typically`traefik.toml`, to enable Traefik to expose <a target="_blank" href="https://docs.traefik.io/configuration/metrics/">prometheus metrics</a> at endpoint. The endpoint is on path `/metrics` by default. When running the Traefik binary, the configuration file is typically passed in as a command line argument.
+Edit the Traefik configuration file, typically `traefik.toml`, to enable Traefik to expose <a target="_blank" href="https://docs.traefik.io/configuration/metrics/">prometheus metrics</a> at endpoint. The endpoint is on path `/metrics` by default. When running the Traefik binary, the configuration file is typically passed in as a command line argument.
 
 `./traefik -c traefik.toml`
 
-However, when running the Traefik Docker image, the configuration file is mounted to the volume `/etc/traefik/traefik.toml`. For Example, 
+However, when running the Traefik Docker image, the configuration file is mounted to the volume `/etc/traefik/traefik.toml`. For example,
 
 `docker run -d -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/etc/traefik/traefik.toml`
 
@@ -47,7 +47,7 @@ docker run --rm \
 quay.io/signalfx/signalfx-agent:<version>
 ```
 #### Smart Agent Configuration
-Find and edit the Smart Agent configuration file `agent.yaml`to enable the Docker observer and configure the prometheus-exporter monitor as described <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/9feb3f77fdf6de46dc476f62568ad4f9b725660c/docs/monitors/prometheus-exporter.md">here</a>. For example, the configuration below will cause the Smart Agent to query the Docker Engine API for all running containers with port 8080 exposed and export Prometheus metrics from endpoint `<container ip>:8080/metrics`.
+Find and edit the Smart Agent configuration file `agent.yaml` to enable the Docker observer and configure the prometheus-exporter monitor as described <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/9feb3f77fdf6de46dc476f62568ad4f9b725660c/docs/monitors/prometheus-exporter.md">here</a>. For example, the configuration below will cause the Smart Agent to query the Docker Engine API for all running containers with port 8080 exposed and export Prometheus metrics from endpoint `<container ip>:8080/metrics`.
 ```
 observers:
   - type: docker
@@ -57,12 +57,13 @@ monitors:
   extraDimensions:
     metric_source: traefik
 ```
+Also, metrics can be excluded by configuring the `metricsToExclude` section of the Smart Agent configuration file.
 
 ### USAGE
 
 The Smart Agent exports Prometheus metrics exposed by Traefik. These metrics can be categorized into Traefik-related, entrypoint-related and backend-related metrics. The Traefik-related metrics are prefixed by `go_` and `process_`. The entrypoint-related metrics are prefixed by `traefik_entrypoint_` and the backend-related metrics prefixed by `traefik_backend_`.
 
-The Traefik-related metrics are for monitoring Traefik itself. For instance, the `go_memstats_sys_bytes` metric can be used to plot Traefik memory usage. The entrypoint-related and backend-related key metrics are the number and duration of requests measured at entrypoints and backends. These metrics are used to compute measurements such as the average request duration. 
+The Traefik-related metrics are for monitoring Traefik itself. For instance, the `go_memstats_sys_bytes` metric can be used to plot Traefik memory usage. The entrypoint-related and backend-related key metrics are the number and duration of requests measured at entrypoints and backends. These metrics are used to compute measurements such as the average request duration.
 
 ![Overview](./img/traefik_overview.png)
 ![EntryPoints](./img/traefik_entrypoints.png)
@@ -72,7 +73,7 @@ The entrypoint-related and backend-related metrics also include metrics for the 
 
 ### METRICS
 
-For documentation of the metrics and dimensions emitted by this integration, see [here](./docs). Any metric can be excluded from being sent by adding the metric name to the `metricsToExclude` section of the Smart Agent configuration file. Metric names are found in the [docs](./docs).
+For documentation of the metrics emitted, [click here](./docs).
 
 ### LICENSE
 
