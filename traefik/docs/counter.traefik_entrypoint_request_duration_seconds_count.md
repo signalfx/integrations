@@ -1,8 +1,8 @@
 ---
 title: traefik_entrypoint_request_duration_seconds_count
-brief: Count of the number of duration requests that were measured.
+brief: The number of request durations that were measured on an entrypoint.
 metric_type: cumulative counter
 ---
 ### traefik_entrypoint_request_duration_seconds_count
 
-Count of the number of duration requests that were measured.
+The number of request durations that were measured on an entrypoint. The values are partitioned by status code, protocol, and method.
