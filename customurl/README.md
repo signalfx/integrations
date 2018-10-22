@@ -12,7 +12,7 @@ Create links from SignalFx dashboards and alerts to any URL-addressable destinat
 
 You can set up links from SignalFx charts and alerts to any URL-addressable destination. Any dashboard editor can create links on a dashboard, and account admins can create links that appear throughout SignalFx. 
 
-[Click here to get started](https://app.signalfx.com/#/organization/YOUR_SIGNALFX_ORG_ID?selectedKeyValue=sf_section:globaldatalinks). 
+[Click here to get started](/#/organization/YOUR_SIGNALFX_ORG_ID?selectedKeyValue=sf_section:globaldatalinks). 
 
 ### LICENSE
 
