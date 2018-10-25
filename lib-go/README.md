@@ -1,12 +1,12 @@
 # ![](https://github.com/signalfx/integrations/blob/master/lib-go/img/integrations_golang.png) Go library for SignalFx
 
-Metadata associated with the Go library for SignalFx can be found [here](https://github.com/signalfx/integrations/tree/release/lib-go). The relevant code for the library can be found [here](https://github.com/signalfx/golib/tree/master/sfxclient).
+Metadata associated with the Go library for SignalFx can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/lib-go">here</a>. The relevant code for the library can be found <a target="_blank" href="https://github.com/signalfx/golib/tree/master/sfxclient">here</a>.
 
 ```
     import "github.com/signalfx/golib/sfxclient"
 ```
 
-Package [signalfx](https://github.com/signalfx/golib/tree/master/sfxclient) creates convenient Go functions and wrappers to send metrics to SignalFx.
+Package <a target="_blank" href="https://github.com/signalfx/golib/tree/master/sfxclient">signalfx</a> creates convenient Go functions and wrappers to send metrics to SignalFx.
 
 The core of the library is HTTPDatapointSink which allows users to send metrics to SignalFx ad-hoc. A Scheduler is built on top of this to facility easy management of metrics for multiple SignalFx reporters at once in more complex libraries.
 

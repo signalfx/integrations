@@ -1,8 +1,8 @@
 # ![](./img/integrations_kong.png) Kong
 
-Metadata associated with the Kong plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/master/collectd-kong).
+Metadata associated with the Kong plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-kong">here</a>.
 
-The relevant code for the integration can be found [here](https://github.com/signalfx/collectd-kong) and for its Kong plugin dependency [here](https://github.com/signalfx/kong-plugin-signalfx).
+The relevant code for the integration can be found <a target="_blank" href="https://github.com/signalfx/collectd-kong">here</a> and for its Kong plugin dependency <a target="_blank" href="https://github.com/signalfx/kong-plugin-signalfx">here</a>.
 
 - [Description](#description)
 - [Features](#features)
@@ -16,7 +16,7 @@ The relevant code for the integration can be found [here](https://github.com/sig
 ### DESCRIPTION
 
 The SignalFx Kong collectd plugin provides users with the ability to gather and report their service traffic
-metrics with collectd, in tandem with [kong-plugin-signalfx](https://github.com/signalfx/kong-plugin-signalfx).
+metrics with collectd, in tandem with <a target="_blank" href="https://github.com/signalfx/kong-plugin-signalfx">kong-plugin-signalfx</a>.
 
 This plugin emits metrics for configurable request/response lifecycle groups including:
 
@@ -71,13 +71,13 @@ This plugin requires:
 | Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 | Python | 2.6+ |
 | Kong | 0.11.2+ |
-| Configured [kong-plugin-signalfx](https://github.com/signalfx/kong-plugin-signalfx) | 0.0.1+ |
+| Configured <a target="_blank" href="https://github.com/signalfx/kong-plugin-signalfx">kong-plugin-signalfx</a> | 0.0.1+ |
 
 ### INSTALLATION
 
-Both the SignalFx Smart Agent and collectd agent report metrics made available by the [kong-plugin-signalfx](https://github.com/signalfx/kong-plugin-signalfx) metric endpoint. Please download and install this Lua module on all Kong servers using its [instructions](https://github.com/signalfx/kong-plugin-signalfx/blob/master/README.md).
+Both the SignalFx Smart Agent and collectd agent report metrics made available by the <a target="_blank" href="https://github.com/signalfx/kong-plugin-signalfx">kong-plugin-signalfx</a> metric endpoint. Please download and install this Lua module on all Kong servers using its <a target="_blank" href="https://github.com/signalfx/kong-plugin-signalfx/blob/master/README.md">instructions</a>.
 
-* If you are using the SignalFx Smart Agent, collectd-kong is already included.  Please see [the monitor documentation](https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/collectd-kong.md) for configuration instructions.
+* If you are using the SignalFx Smart Agent, collectd-kong is already included.  Please see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/collectd-kong.md">the monitor documentation</a> for configuration instructions.
 
 * If you are using the SignalFx collectd agent follow the steps below.
 
@@ -91,7 +91,7 @@ Both the SignalFx Smart Agent and collectd agent report metrics made available b
 
 ### CONFIGURATION
 
-Using the example configuration file [10-kong.conf](https://github.com/signalfx/integrations/blob/master/collectd-kong/10-kong.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-kong/10-kong.conf">10-kong.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | Configuration option | Definition | Example value |
 | ---------------------|------------|---------------|

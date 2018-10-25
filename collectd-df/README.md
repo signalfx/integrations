@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) DF (Disk Free)
 
-Metadata associated with the df collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-df). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/df.c).
+Metadata associated with the df collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-df">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/df.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,7 +12,7 @@ Metadata associated with the df collectd plugin can be found [here](https://gith
 
 ### DESCRIPTION
 
-From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:DF):
+From <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:DF">collectd wiki</a>:
 
 > The DF plugin collects file system usage information, i. e. basically how much space on a mounted partition is used and how much is available. It's named after and very similar to the df(1) UNIX command that's been around forever.
 However, not all "partitions" are of interest. For example /proc and /dev usually don't get filled and their "size" doesn't make a lot of sense. That's why the DF plugin offers to select only specific devices, mount points or filesystem types.
@@ -33,12 +33,12 @@ for more information.  The configuration documentation below may be helpful as
 well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd">SignalFx collectd agent</a>.
 
 
 ### CONFIGURATION
 
-Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/integrations/blob/master/collectd/collectd.conf) file.
+Configuration for this plugin is kept in the main <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd/collectd.conf">collectd.conf</a> file.
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
@@ -55,7 +55,7 @@ Configuration for this plugin is kept in the main [collectd.conf](https://github
 
 The primary use of this plugin is to track the available space on the systems filesystems. This can be used to set alerts and thresholds to avoid a filesystem from being filled to capacity.
 
-The [SignalFx collectd plugin](https://github.com/signalfx/integrations/tree/master/signalfx-metadata) computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the [metrics for the plugin](https://github.com/signalfx/integrations/tree/master/signalfx-metadata/docs/disk.utilization.md).
+The <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/signalfx-metadata">SignalFx collectd plugin</a> computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/signalfx-metadata/docs/disk.utilization.md">metrics for the plugin</a>.
 
 ### METRICS
 
@@ -63,4 +63,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/df.c)
+License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/df.c">in the header of the plugin</a>

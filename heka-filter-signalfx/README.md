@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/heka-filter-signalfx/img/integrations_heka.png) Heka Filter for SignalFx
 
-Metadata associated with the Heka filter integration can be found [here](https://github.com/signalfx/integrations/tree/release/heka-filter-signalfx). The relevant code for the integration can be found [here](https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua).
+Metadata associated with the Heka filter integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/heka-filter-signalfx">here</a>. The relevant code for the integration can be found <a target="_blank" href="https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -10,7 +10,7 @@ Metadata associated with the Heka filter integration can be found [here](https:/
 
 ### DESCRIPTION
 
-This integration provides support for pushing Heka metrics into SignalFx. [Heka](http://hekad.readthedocs.org/en/v0.10.0/) is an open source stream processing software system developed by Mozilla. This filter for was built by Clever, a SignalFx customer. The integration extracts data from Fields in messages. Generates JSON suitable for send to datapoint SignalFx API. Batches multiple messages into one string, which can be passed to an `HttpOutput` using a `PayloadEncoder`. Currently, only supports writing data points, NOT events.
+This integration provides support for pushing Heka metrics into SignalFx. <a target="_blank" href="http://hekad.readthedocs.org/en/v0.10.0/">Heka</a> is an open source stream processing software system developed by Mozilla. This filter for was built by Clever, a SignalFx customer. The integration extracts data from Fields in messages. Generates JSON suitable for send to datapoint SignalFx API. Batches multiple messages into one string, which can be passed to an `HttpOutput` using a `PayloadEncoder`. Currently, only supports writing data points, NOT events.
 
 Heka is a “Swiss Army Knife” type tool for data processing, useful for a wide variety of different tasks, such as:
 
@@ -31,11 +31,11 @@ This filter requires:
 
 ### INSTALLATION
 
-Heka installation instructions are available in the [Heka documentation](http://hekad.readthedocs.org/en/v0.10.0/installing.html)
+Heka installation instructions are available in the <a target="_blank" href="http://hekad.readthedocs.org/en/v0.10.0/installing.html">Heka documentation</a>
 
 ### CONFIGURATION
 
-Full Heka configuration setting are available in the [Heka docs](http://hekad.readthedocs.org/en/v0.10.0/config/index.html)
+Full Heka configuration setting are available in the <a target="_blank" href="http://hekad.readthedocs.org/en/v0.10.0/config/index.html">Heka docs</a>
 
 Configuration for the SignalFx filter:
 
@@ -82,7 +82,7 @@ Configuration for the SignalFx filter:
 
 ### METRICS
 
-Documentation of the metrics and dimensions emitted by this integration, are available in the [Heka docs](https://hekad.readthedocs.org/en/v0.10.0/config/outputs/index.html#common-output-parameters).
+Documentation of the metrics and dimensions emitted by this integration, are available in the <a target="_blank" href="https://hekad.readthedocs.org/en/v0.10.0/config/outputs/index.html#common-output-parameters">Heka docs</a>.
 
 ### LICENSE
 

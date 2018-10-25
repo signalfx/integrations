@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/kubernetes/img/integrations_kubernetes.png) Kubernetes
 
-Metadata associated with the Kubernetes integration can be found [here](https://github.com/signalfx/integrations/tree/release/kubernetes). The relevant documentation for the project can be found [here](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html).
+Metadata associated with the Kubernetes integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/kubernetes">here</a>. The relevant documentation for the project can be found <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html">here</a>.
 
 - [Description](#description)
 - [Metrics](#metrics)

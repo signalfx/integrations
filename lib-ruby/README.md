@@ -28,7 +28,7 @@ This library supports Ruby 2.x.
 #### API access token
 
 To use this library, you need a SignalFx API access
-token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication-overview).
+token. <a target="_blank" href="https://developers.signalfx.com/docs/authentication-overview">Click here for more information on retrieving your API token</a>.
 
 
 ### INSTALLATION
@@ -163,4 +163,4 @@ See `examples/generic_usecase.rb` for a complete code example for Reporting data
 
 ### LICENSE
 
-Apache Software License v2 © [SignalFx](https://signalfx.com)
+Apache Software License v2 © <a target="_blank" href="https://signalfx.com">SignalFx</a>
