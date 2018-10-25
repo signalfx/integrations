@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/telegraf/img/integrations_telegraf.png) SignalFx Telegraf Agent
 
-Metadata associated with the SignalFx Telegraf Agent can be found [here](https://github.com/signalfx/integrations/tree/release/telegraf). The code repository for this project can be found [here](https://github.com/signalfx/telegraf/).
+Metadata associated with the SignalFx Telegraf Agent can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/telegraf">here</a>. The code repository for this project can be found <a target="_blank" href="https://github.com/signalfx/telegraf/">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

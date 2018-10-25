@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Load
 
-Metadata associated with the Load collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-load). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/load.c).
+Metadata associated with the Load collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-load">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/load.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -11,7 +11,7 @@ Metadata associated with the Load collectd plugin can be found [here](https://gi
 
 ### DESCRIPTION
 
-From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Load):
+From <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Load">collectd wiki</a>:
 
 > The Load plugin collects the system load. These numbers give a rough overview over the utilization of a machine, though their meaning is mostly overrated.
 The system load is defined as the number of runnable tasks in the run-queue and is provided by many operating systems as a one, five or fifteen minute average.
@@ -32,7 +32,7 @@ for more information.  The configuration documentation below may be helpful as
 well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd">SignalFx collectd agent</a>.
 
 
 ### CONFIGURATION
@@ -45,4 +45,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/load.c)
+License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/load.c">in the header of the plugin</a>

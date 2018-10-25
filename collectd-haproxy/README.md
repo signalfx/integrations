@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-haproxy/img/integrations_haproxy.png) HAProxy
 
-Metadata associated with the HAProxy collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-haproxy). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-haproxy).
+Metadata associated with the HAProxy collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-haproxy">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-haproxy">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -23,8 +23,7 @@ Use the <a target="_blank" href="https://github.com/signalfx/collectd-haproxy">c
 
 ### INSTALLATION
 
-**If you are using the new Smart Agent, see the docs for [the collectd/haproxy
-monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-haproxy.md)
+**If you are using the new Smart Agent, see the docs for <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-haproxy.md">the collectd/haproxy monitor</a>
 for more information.  The configuration documentation below may be helpful as
 well, but consult the Smart Agent repo's docs for the exact schema.**
 

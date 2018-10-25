@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-marathon/img/integrations_marathon.png) Marathon
 
-Metadata associated with the Marathon plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-marathon).  The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-marathon).
+Metadata associated with the Marathon plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-marathon">here</a>.  The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-marathon">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -4,7 +4,7 @@
 
 ### DESCRIPTION
 
-See [the Github repo](https://github.com/signalfx/signalfx-agent) for the
+See <a target="_blank" href="https://github.com/signalfx/signalfx-agent">the Github repo</a> for the
 source code along with more extensive documentation.
 ## SignalFx Smart Agent 
 
@@ -31,7 +31,7 @@ services and automatically configure the Smart Agent to send metrics for those
 services.
 
 For a list of supported observers and their configurations,
-see [Observer Config](https://github.com/signalfx/signalfx-agent/tree/master/docs/observer-config.md).
+see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/observer-config.md">Observer Config</a>.
 
 #### Monitors
 
@@ -42,12 +42,12 @@ configuration. A separate monitor instance is created for each discovered
 instance of applications that match a discovery rule. See [Auto
 Discovery](https://github.com/signalfx/signalfx-agent/tree/master/docs/auto-discovery.md) for more information.
 
-Many of the monitors are built around [collectd](https://collectd.org), an open
+Many of the monitors are built around <a target="_blank" href="https://collectd.org">collectd</a>, an open
 source third-party monitor, and use it to collect metrics. Some other monitors
 do not use collectd. However, either type is configured in the same way.
 
 For a list of supported monitors and their configurations, 
-see [Monitor Config](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitor-config.md).
+see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/monitor-config.md">Monitor Config</a>.
 
 The Smart Agent is primarily intended to monitor services/applications running on the
 same host as the Smart Agent.  This is in keeping with the collectd model.  The main
@@ -60,7 +60,7 @@ machine during metric analysis.
 #### Writer
 The writer collects metrics emitted by the configured monitors and sends them
 to SignalFx on a regular basis.  There are a few things that can be
-[configured](https://github.com/signalfx/signalfx-agent/tree/master/docs/config-schema.md#writer) in the writer, but this is generally
+<a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/config-schema.md#writer">configured</a> in the writer, but this is generally
 only necessary if you have a very large number of metrics flowing through a
 single agent.
 
@@ -72,7 +72,7 @@ agent, including a Java JRE runtime and a Python runtime, so there are no
 additional dependencies required.  This means that the Smart Agent should work on any
 relatively modern Linux distribution (kernel version 2.6+).  To get started
 deploying the Smart Agent directly on a host, see the
-[Smart Agent Quickstart](https://github.com/signalfx/signalfx-agent/tree/master/docs/smart-agent-quickstart.md) guide.
+<a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/smart-agent-quickstart.md">Smart Agent Quickstart</a> guide.
 
 #### Deployment
 We support the following deployment/configuration management tools to automate the
@@ -112,10 +112,10 @@ We also offer a Salt Formula to install and configure the Smart Agent.  See [the
 formula source](https://github.com/signalfx/signalfx-agent/tree/master/deployments/salt).
 
 ##### Docker Image
-See [Docker Deployment](https://github.com/signalfx/signalfx-agent/tree/master/deployments/docker) for more information.
+See <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/docker">Docker Deployment</a> for more information.
 
 ##### Kubernetes
-See our [Kubernetes setup instructions](https://github.com/signalfx/signalfx-agent/tree/master/docs/kubernetes-setup.md) and the
+See our <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/kubernetes-setup.md">Kubernetes setup instructions</a> and the
 documentation on [Monitoring
 Kubernetes](https://docs.signalfx.com/en/latest/integrations/kubernetes-quickstart.html)
 for more information.
@@ -175,7 +175,7 @@ options that you will especially want to consider:
 
  - `internalMetricsSocketPath` - This is the full path to a UNIX domain socket
 	 that the Smart Agent will listen on for requests from the
-	 [internal-metrics](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/internal-metrics.md) monitor to gather
+	 <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/internal-metrics.md">internal-metrics</a> monitor to gather
 	 internal metrics about the Smart Agent.  It can also be blank to disable this
 	 socket.
 
@@ -195,12 +195,12 @@ capabilities the Smart Agent requires.
 `signalfx-agent/bin/signalfx-agent -config <path to config.yaml>`.  The Smart Agent
 logs only to stdout/err so it is up to you to direct that to a log file or
 other log management system if you wish to persist logs.  See the
-[signalfx-agent command](https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.man) doc for more information on
+<a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.man">signalfx-agent command</a> doc for more information on
 supported command flags.
 
 #### Privileges
 
-When using the [host observer](https://github.com/signalfx/signalfx-agent/tree/master/docs/observers/host.md), the Smart Agent requires
+When using the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/observers/host.md">host observer</a>, the Smart Agent requires
 the [Linux
 capabilities](http://man7.org/linux/man-pages/man7/capabilities.7.html)
 `DAC_READ_SEARCH` and `SYS_PTRACE`, both of which are necessary to allow the
@@ -220,7 +220,7 @@ The Smart Agent is configured primarily from a YAML file (by default,
 `/etc/signalfx/agent.yaml`, but this can be overridden by the `-config` command
 line flag).  
 
-For the full schema of the config, see [Config Schema](https://github.com/signalfx/signalfx-agent/tree/master/docs/config-schema.md).
+For the full schema of the config, see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/config-schema.md">Config Schema</a>.
 
 For information on how to configure the Smart Agent from remote sources, such as
 other files on the filesystem or KV stores such as Etcd, see [Remote
@@ -274,7 +274,7 @@ The Smart Agent status output has the following sections:
 	 generally does not prevent the Smart Agent from starting up, but will prevent
 	 that monitor from ever instantiating.
 
-Also see our [FAQ](https://github.com/signalfx/signalfx-agent/tree/master/docs/faq.md) for more troubleshooting help.
+Also see our <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/faq.md">FAQ</a> for more troubleshooting help.
 
 ### DEVELOPMENT
 

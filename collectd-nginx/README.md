@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-nginx/img/integrations_nginx.png) NGINX
 
-Metadata associated with the NGINX collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-nginx). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/nginx.c).
+Metadata associated with the NGINX collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-nginx">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/nginx.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

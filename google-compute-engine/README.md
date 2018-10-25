@@ -120,7 +120,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 ### METRICS
 
-For more information about the metrics emitted by Google Compute Engine, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-compute
+For more information about the metrics emitted by Google Compute Engine, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-compute">https://cloud.google.com/monitoring/api/metrics#gcp-compute</a>
 
 ### LICENSE
 

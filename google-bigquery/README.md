@@ -53,7 +53,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 ### METRICS
 
-For more information about the metrics emitted by Google BigQuery, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-bigquery
+For more information about the metrics emitted by Google BigQuery, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-bigquery">https://cloud.google.com/monitoring/api/metrics#gcp-bigquery</a>
 
 ### LICENSE
 

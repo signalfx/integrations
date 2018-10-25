@@ -13,7 +13,7 @@
 
 ### DESCRIPTION
 
-This [repository](https://github.com/signalfx/integrations/tree/release/lib-java) contains libraries for instrumenting Java applications and reporting metrics to SignalFx, using Codahale Metrics.
+This <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/lib-java">repository</a> contains libraries for instrumenting Java applications and reporting metrics to SignalFx, using Codahale Metrics.
 
 You can also use the module `signalfx-java` to send metrics directly to SignalFx using protocol buffers, without using Codahale or Yammer metrics.
 
@@ -22,7 +22,7 @@ You can also use the module `signalfx-java` to send metrics directly to SignalFx
 
 #### Codahale, Yammer and Dropwizard Metrics version
 
-We recommend sending metrics with Java using Codahale Metrics version 3.0+. You can also use Yammer Metrics 2.0.x (an earlier version of Codahale Metrics). More information on the Codahale Metrics library can be found on the [Codahale Metrics website](https://dropwizard.github.io/metrics/).
+We recommend sending metrics with Java using Codahale Metrics version 3.0+. You can also use Yammer Metrics 2.0.x (an earlier version of Codahale Metrics). More information on the Codahale Metrics library can be found on the <a target="_blank" href="https://dropwizard.github.io/metrics/">Codahale Metrics website</a>.
 
 #### Supported languages
 
@@ -32,7 +32,7 @@ Java 6+ with `signalfx-metrics`.
 #### API access token
 
 
-To use this library, you need a SignalFx API access token. [Click here for more information on retrieving an API token](https://developers.signalfx.com/docs/authentication).
+To use this library, you need a SignalFx API access token. <a target="_blank" href="https://developers.signalfx.com/docs/authentication">Click here for more information on retrieving an API token</a>.
 
 
 ### INSTALLATION

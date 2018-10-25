@@ -69,7 +69,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 ### METRICS
 
-For more information about the metrics emitted by Google Cloud Functions, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions
+For more information about the metrics emitted by Google Cloud Functions, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions">https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions</a>
 
 ### LICENSE
 

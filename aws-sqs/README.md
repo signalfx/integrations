@@ -38,7 +38,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon Simple Queue Service, visit the service's homepage at https://aws.amazon.com/sqs/.
+For more information about the metrics emitted by Amazon Simple Queue Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/sqs/">https://aws.amazon.com/sqs/</a>.
 
 ### LICENSE
 

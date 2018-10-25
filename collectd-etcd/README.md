@@ -1,6 +1,6 @@
 # ![](./img/integrations_etcd.png) etcd
 
-Metadata associated with the etcd plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-etcd). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-etcd).
+Metadata associated with the etcd plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-etcd">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-etcd">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
