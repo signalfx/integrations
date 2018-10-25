@@ -1,6 +1,6 @@
 # ![](./img/integrations_solr.png) Apache Solr
 
-Metadata associated with the solr plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-solr). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-solr).
+Metadata associated with the solr plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-solr">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-solr">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,7 +14,7 @@ Metadata associated with the solr plugin for collectd can be found [here](https:
 
 This is the SignalFx solr plugin. Follow these instructions to install the solr plugin for collectd.
 
-The [solr-collectd](https://github.com/signalfx/collectd-solr) plugin collects metrics from solr instances hitting these endpoints: [statistics](https://lucene.apache.org/solr/guide/6_6/performance-statistics-reference.html) (default metrics)  and [metrics](https://lucene.apache.org/solr/guide/6_6/metrics-reporting.html) (optional metrics).
+The <a target="_blank" href="https://github.com/signalfx/collectd-solr">solr-collectd</a> plugin collects metrics from solr instances hitting these endpoints: <a target="_blank" href="https://lucene.apache.org/solr/guide/6_6/performance-statistics-reference.html">statistics</a> (default metrics)  and <a target="_blank" href="https://lucene.apache.org/solr/guide/6_6/metrics-reporting.html">metrics</a> (optional metrics).
 
 #### FEATURES
 
@@ -52,9 +52,9 @@ The [solr-collectd](https://github.com/signalfx/collectd-solr) plugin collects m
 
 ### INSTALLATION
 
-1. Download [collectd-solr](https://github.com/signalfx/collectd-solr). Place the `solr_collectd.py` file in `/usr/share/collectd/collectd-solr`
+1. Download <a target="_blank" href="https://github.com/signalfx/collectd-solr">collectd-solr</a>. Place the `solr_collectd.py` file in `/usr/share/collectd/collectd-solr`
 
-2. Modify the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-solr/20-solr.conf) for this plugin to `/etc/collectd/managed_config`
+2. Modify the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-solr/20-solr.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below
 
@@ -65,7 +65,7 @@ The [solr-collectd](https://github.com/signalfx/collectd-solr) plugin collects m
 
 ### CONFIGURATION
 
-Using the example configuration file [20-solr.conf](https://github.com/signalfx/integrations/tree/release/collectd-solr/20-solr.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the solr nodes
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-solr/20-solr.conf">20-solr.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the solr nodes
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|

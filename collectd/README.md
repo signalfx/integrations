@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integration_signalfx.png) SignalFx collectd agent
 
-Metadata associated with the SignalFx collectd agent can be found [here](https://github.com/signalfx/integrations/tree/release/collectd). The code repository for this project can be found [here](https://github.com/signalfx/collectd/).
+Metadata associated with the SignalFx collectd agent can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd">here</a>. The code repository for this project can be found <a target="_blank" href="https://github.com/signalfx/collectd/">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/appdynamics/img/integrations_appdynamics.png) AppDynamics   
 
-Metadata associated with the AppDynamics Integration can be found [here](https://github.com/signalfx/integrations/tree/release/appdynamics). The relevant code for the integration can be found [here](https://github.com/signalfx/appd-integration).
+Metadata associated with the AppDynamics Integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/appdynamics">here</a>. The relevant code for the integration can be found <a target="_blank" href="https://github.com/signalfx/appd-integration">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

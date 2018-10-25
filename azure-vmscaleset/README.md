@@ -121,7 +121,7 @@ The above charts are applicable to all Azure VM Scale Sets. The following two ch
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Virtual Machine Scale Sets, visit [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftbatchbatchaccounts).
+For more information about the metrics emitted by Azure Virtual Machine Scale Sets, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftbatchbatchaccounts">here</a>.
 
 ### LICENSE
 

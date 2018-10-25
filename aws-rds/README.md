@@ -34,7 +34,7 @@ SignalFx supports an integration with <a target="_blank" href="http://docs.aws.a
 
 You can choose to deploy the function either from the Serverless Application Repository (recommended) or from source. Choose a deployment method and follow the steps below to encrypt your SignalFx access token, customize the metrics that will be sent to SignalFx, and create and deploy the new function. 
 
-Before you begin, you must enable the Enhanced Monitoring option for the RDS instances you want to monitor using this integration. [Click here for instructions on enabling Enhanced Monitoring](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html).
+Before you begin, you must enable the Enhanced Monitoring option for the RDS instances you want to monitor using this integration. <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Click here for instructions on enabling Enhanced Monitoring</a>.
 
 ##### Note: Encryption of your SignalFx access token
 This Lambda function uses your SignalFx access token to send metrics to SignalFx, as an environment variable to the function. While Lambda encrypts all environment variables at rest and decrypts them upon invocation, AWS recommends that all sensitive information such as access tokens be encrypted using a KMS key before function deployment, and decrypted at runtime within the code. 
@@ -48,12 +48,12 @@ Both procedures below include instructions for using either an encrypted or non-
 #### Deploying through the Serverless Application Repository
 
 ##### 1. Set up an encryption key and encrypt your access token (if desired)
-Only follow this step if you chose to manually encrypt your access token. Either create a new KMS encryption key or select a preexisting one. **The key must be in the same availability zone as the RDS instances you are monitoring.** You can create and manage encryption keys from IAM in the AWS management console. Documentation on KMS encryption from the CLI can be found [here](http://docs.aws.amazon.com/cli/latest/reference/kms/encrypt.html). Make sure you have access to the cipher text output by the encryption as well as the key id of the encryption key you used.
+Only follow this step if you chose to manually encrypt your access token. Either create a new KMS encryption key or select a preexisting one. **The key must be in the same availability zone as the RDS instances you are monitoring.** You can create and manage encryption keys from IAM in the AWS management console. Documentation on KMS encryption from the CLI can be found <a target="_blank" href="http://docs.aws.amazon.com/cli/latest/reference/kms/encrypt.html">here</a>. Make sure you have access to the cipher text output by the encryption as well as the key id of the encryption key you used.
 
 ##### 2. Create the Lambda function
 Click `Create Function` from the list of Lambda functions in your AWS console. Make sure you are in the intended availability zone. Select the `Serverless Application Repository` option in the upper right hand corner. Search for `signalfx rds` and choose the appropriate entry based on whether you encrypted your access token.
 
-To access the templates directly, find the template for encrypted access tokens [here](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics-encrypted). The template for non-encrypted access tokens is [here](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics).
+To access the templates directly, find the template for encrypted access tokens <a target="_blank" href="https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics-encrypted">here</a>. The template for non-encrypted access tokens is <a target="_blank" href="https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics">here</a>.
 
 ##### 3. Fill out application parameters
 Under `Configure application parameters`, choose a name for your function, and fill out the fields accordingly.
@@ -87,10 +87,10 @@ That's it! Your metrics are on the way to SignalFx ingest!
 The execution role just needs basic Lambda execution permissions and KMS decrypt permissions (if you wish to encrypt your SignalFx access token). If you don't want to create one, you can select from a list of templates when you create the lambda function.
 
 ##### 2. Set up an encryption key and encrypt access token
-Only follow this step if you chose to encrypt your access token. Either create a new KMS encryption key or select a preexisting one. **The key must be in the same availability zone as the RDS instances you are monitoring.** You can create and manage encryption keys from IAM in the AWS management console. Documentation on KMS encryption from the CLI can be found [here](http://docs.aws.amazon.com/cli/latest/reference/kms/encrypt.html). Make sure you have access to the cipher text output by the encryption as well as the key id of the encryption key you used.
+Only follow this step if you chose to encrypt your access token. Either create a new KMS encryption key or select a preexisting one. **The key must be in the same availability zone as the RDS instances you are monitoring.** You can create and manage encryption keys from IAM in the AWS management console. Documentation on KMS encryption from the CLI can be found <a target="_blank" href="http://docs.aws.amazon.com/cli/latest/reference/kms/encrypt.html">here</a>. Make sure you have access to the cipher text output by the encryption as well as the key id of the encryption key you used.
 
 ##### 3. Clone the source repo and build the deployment package
-You can find the repo [here](https://github.com/signalfx/enhanced-rds-monitoring).
+You can find the repo <a target="_blank" href="https://github.com/signalfx/enhanced-rds-monitoring">here</a>.
 Once you have cloned the repo:
 ```
 $ cd enhanced-rds-monitoring
@@ -124,7 +124,7 @@ Click `Save`, and once the trigger is enabled, your function will start sending 
 
 #### Metric groups collected by this integration
 
-The following metric groups are collected by this integration. To collect all of them, use `All` at configuration time. To select a subset, choose metric groups by name. You can find documentation on the available metrics [here](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuid/USER_Monitoring.OS.html).
+The following metric groups are collected by this integration. To collect all of them, use `All` at configuration time. To select a subset, choose metric groups by name. You can find documentation on the available metrics <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuid/USER_Monitoring.OS.html">here</a>.
 
 **Metric Groups (except for SQLServer)**
 - cpuUtilization
@@ -159,7 +159,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon Relational Database Service, visit the service's homepage at https://aws.amazon.com/rds/.
+For more information about the metrics emitted by Amazon Relational Database Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
 
 ### LICENSE
 
