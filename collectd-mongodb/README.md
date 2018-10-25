@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-mongodb/img/integrations_mongodb.png) MongoDB
 
-Metadata associated with the MongoDB collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-mongodb). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-mongodb).
+Metadata associated with the MongoDB collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-mongodb">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-mongodb">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

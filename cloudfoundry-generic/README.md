@@ -1,6 +1,6 @@
 # ![](././img/integrations_cloudfoundry.png) Cloud Foundry
 
-Metadata associated with the **Cloud Foundry Integration** can be found [here](https://github.com/signalfx/integrations/tree/release/cloudfoundry-generic). The relevant code for the integration can be found [here](https://github.com/search?q=topic%3Acloud-foundry+org%3Asignalfx+fork%3Atrue).
+Metadata associated with the **Cloud Foundry Integration** can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/cloudfoundry-generic">here</a>. The relevant code for the integration can be found <a target="_blank" href="https://github.com/search?q=topic%3Acloud-foundry+org%3Asignalfx+fork%3Atrue">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

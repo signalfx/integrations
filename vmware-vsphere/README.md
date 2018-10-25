@@ -1,6 +1,6 @@
 # ![](./img/integrations_vsphere.png) vSphere
 
-Metadata associated with SignalFx's vSphere integration can be found [here](https://github.com/signalfx/integrations/tree/release/vmware-vsphere). The relevant code for the plugin can be found [here](https://github.com/signalfx/signalfx-vsphere/tree/master).
+Metadata associated with SignalFx's vSphere integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/vmware-vsphere">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/signalfx-vsphere/tree/master">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -71,7 +71,7 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 
 6. Perform basic checks for network connectivity of VM by ```$ service vsphere-monitor check```
 
-7. If the version of the vCenter is less than 6.5, please check the aritcle [https://kb.vmware.com/s/article/2107096](https://kb.vmware.com/s/article/2107096) to increase the volume of metrics sent by vCenter.
+7. If the version of the vCenter is less than 6.5, please check the article <a target="_blank" href="https://kb.vmware.com/s/article/2107096">https://kb.vmware.com/s/article/2107096</a> to increase the volume of metrics sent by vCenter.
 
 8. Restart the service by  ```$ service vsphere-monitor restart```
 

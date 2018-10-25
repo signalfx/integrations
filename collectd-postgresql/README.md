@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-postgresql/img/integrations_postgresql.png) PostgreSQL
 
-Metadata associated with the PostgreSQL collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-postgresql). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/postgresql.c).
+Metadata associated with the PostgreSQL collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-postgresql">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/postgresql.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

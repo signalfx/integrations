@@ -66,11 +66,11 @@ For EC2, SignalFx will scan every instance ID from your AWS account and pull out
 | reservation-id	| aws\_reservation\_id	| ID of the instance’s reservation |
 | root-device-type	| aws\_root\_device\_type	| Type of root device that the instance uses |
 
-For more information about the filters, see http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html.
+For more information about the filters, see <a target="_blank" href="http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html">http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html</a>.
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon EC2, visit the service's homepage at https://aws.amazon.com/ec2/.
+For more information about the metrics emitted by Amazon EC2, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ec2/">https://aws.amazon.com/ec2/</a>.
 
 ### LICENSE
 

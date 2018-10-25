@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch
 
-Metadata associated with the Elasticsearch collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-elasticsearch). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch).
+Metadata associated with the Elasticsearch collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-elasticsearch">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-elasticsearch">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -20,7 +20,7 @@ Use this plugin to monitor the following types of information from an Elasticsea
   * per-index statistics
   * cluster statistics
 
-Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+Original Elasticsearch Documentation <a target="_blank" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html">https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html<a/>
 
 #### FEATURES
 

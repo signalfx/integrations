@@ -1,6 +1,6 @@
 # ![](./img/integrations_cassandra.png) Cassandra
 
- Metadata associated with SignalFx's Cassandra integration with collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-cassandra). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c).
+ Metadata associated with SignalFx's Cassandra integration with collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-cassandra">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/java.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

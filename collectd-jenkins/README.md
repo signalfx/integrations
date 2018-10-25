@@ -1,6 +1,6 @@
 # ![](./img/integrations_jenkins.png) Jenkins
 
-This directory consolidates all the metadata associated with the jenkins plugin for collectd. The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-jenkins)
+This directory consolidates all the metadata associated with the jenkins plugin for collectd. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">here</a>
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

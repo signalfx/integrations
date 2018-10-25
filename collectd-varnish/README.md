@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-varnish/img/integrations_varnish.png) Varnish
 
-Metadata associated with the Varnish collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-varnish). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/varnish.c).
+Metadata associated with the Varnish collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-varnish">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/varnish.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -52,7 +52,7 @@ Varnish Cache is a web application accelerator also known as a caching HTTP reve
 Starting with collectd 5.6.1-sfx0, the varnish plugin provided within the SignalFx Package only supports varnish 4.
 Follow these steps to add varnish 3 plugin support:
 
-1. Copy the [varnish3.so](https://dl.signalfx.com/debs/collectd-varnish/varnish3.so) file to the collectd library directory `/usr/lib/collectd/`.
+1. Copy the <a target="_blank" href="https://dl.signalfx.com/debs/collectd-varnish/varnish3.so">varnish3.so</a> file to the collectd library directory `/usr/lib/collectd/`.
 
 2. Update the configuration file `10-varnish.conf` in your `/etc/collectd/managed_config` directory to show `varnish3` instead of `varnish` as the name used by the LoadPlugin.
 

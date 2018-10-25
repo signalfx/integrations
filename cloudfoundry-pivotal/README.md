@@ -1,6 +1,6 @@
 # ![](././img/integrations_pivotalcloudfoundry.png) Pivotal Cloud Foundry
 
-Metadata associated with the **Pivotal Cloud Foundry Integration** can be found [here](https://github.com/signalfx/integrations/tree/release/cloudfoundry-pivotal). The relevant code for the integration can be found [here](https://github.com/signalfx/cloudfoundry-integration).
+Metadata associated with the **Pivotal Cloud Foundry Integration** can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/cloudfoundry-pivotal">here</a>. The relevant code for the integration can be found <a target="_blank" href="https://github.com/signalfx/cloudfoundry-integration">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

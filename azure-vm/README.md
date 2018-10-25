@@ -125,7 +125,7 @@ The above charts are applicable to all Azure Virtual Machines. The following two
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Virtual Machines, visit [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines).
+For more information about the metrics emitted by Azure Virtual Machines, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines">here</a>.
 
 ### LICENSE
 

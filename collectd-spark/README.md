@@ -2,7 +2,7 @@
 
 **Plugin currently supports cluster modes Standalone and Mesos**
 
-Metadata associated with the spark plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-spark). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-spark).
+Metadata associated with the spark plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-spark">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-spark">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
