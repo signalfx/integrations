@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Write-HTTP
 
-Metadata associated with the Write-HTTP collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-write_http). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/write_http.c).
+Metadata associated with the Write-HTTP collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-write_http">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/write_http.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -10,7 +10,7 @@ Metadata associated with the Write-HTTP collectd plugin can be found [here](http
 
 ### DESCRIPTION
 
-The Write HTTP plugin sends the values collected by collectd to a web-server using HTTP POST requests. The data is formatted as PUTVAL commands, see plain text protocol. The [SignalFx collectd agent](https://github.com/signalfx/collectd) version of this plugin has been extended with **Buffer Flushing** to ensure that metrics always arrive in a timely manner, we’ve added a timer so that it transmits data to SignalFx either when the data buffer is full or when a time limit is reached, whichever happens first. This capability is particularly useful if you are only collecting small quantities of time-sensitive metrics.
+The Write HTTP plugin sends the values collected by collectd to a web-server using HTTP POST requests. The data is formatted as PUTVAL commands, see plain text protocol. The <a target="_blank" href="https://github.com/signalfx/collectd">SignalFx collectd agent</a> version of this plugin has been extended with **Buffer Flushing** to ensure that metrics always arrive in a timely manner, we’ve added a timer so that it transmits data to SignalFx either when the data buffer is full or when a time limit is reached, whichever happens first. This capability is particularly useful if you are only collecting small quantities of time-sensitive metrics.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -22,12 +22,12 @@ This plugin requires:
 
 ### INSTALLATION
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd">SignalFx collectd agent</a>.
 
 
 ### CONFIGURATION
 
-From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_write_http):
+From <a target="_blank" href="https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_write_http">collectd wiki</a>:
 
 >This output plugin submits values to an HTTP server using POST requests and encoding metrics with JSON or using the PUTVAL command described in collectd-unixsock(5).
 
@@ -70,4 +70,4 @@ Synopsis:
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/write_http.c)
+License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/write_http.c">in the header of the plugin</a>

@@ -85,7 +85,7 @@ The Azure Function wrappers add several dimensions to data points sent to Signal
 
 #### Azure Monitor
 
-For more information about the metrics emitted by Azure Functions, see the documentation at https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.microsoft.azure.html.
+For more information about the metrics emitted by Azure Functions, see the documentation at <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.microsoft.azure.html">https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.microsoft.azure.html</a>.
 
 ### LICENSE
 

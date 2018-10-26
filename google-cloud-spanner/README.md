@@ -80,7 +80,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 ### METRICS
 
-For more information about the metrics emitted by Google Cloud Spanner, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-spanner
+For more information about the metrics emitted by Google Cloud Spanner, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-spanner">https://cloud.google.com/monitoring/api/metrics#gcp-spanner</a>
 
 ### LICENSE
 

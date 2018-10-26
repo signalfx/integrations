@@ -1,6 +1,6 @@
 # ![](./img/integrations_couchdb.png) CouchDB
 
-Metadata associated with the couchdb plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-couchdb). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-couchdb).
+Metadata associated with the couchdb plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-couchdb">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-couchdb">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

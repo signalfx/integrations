@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-rabbitmq/img/integrations_rabbitmq.png) RabbitMQ
 
-Metadata associated with the RabbitMQ collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-rabbitmq). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-rabbitmq).
+Metadata associated with the RabbitMQ collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-rabbitmq">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-rabbitmq">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

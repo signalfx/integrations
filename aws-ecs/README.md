@@ -10,7 +10,7 @@
 
 Use SignalFx to monitor Amazon EC2 Container Service (ECS) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-For greater insight into your ECS environment, SignalFx's Smart Agent can auto-discover services and provide more in-depth metrics about your containers that are running in ECS.  See the [Smart Agent ECS Deployment Guide](https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs) for instructions on how to deploy the Smart Agent in ECS.
+For greater insight into your ECS environment, SignalFx's Smart Agent can auto-discover services and provide more in-depth metrics about your containers that are running in ECS.  See the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Smart Agent ECS Deployment Guide</a> for instructions on how to deploy the Smart Agent in ECS.
 #### FEATURES
 
 ##### Built-in dashboards
@@ -45,7 +45,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon EC2 Container Service, visit the service's homepage at https://aws.amazon.com/ecs/.
+For more information about the metrics emitted by Amazon EC2 Container Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ecs/">https://aws.amazon.com/ecs/</a>.
 
 ### LICENSE
 

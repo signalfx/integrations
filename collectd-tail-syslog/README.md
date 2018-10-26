@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Tail collectd Plugin
 
-Metadata associated with the Tail collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-tail-syslog). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/tail.c).
+Metadata associated with the Tail collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-tail-syslog">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/tail.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -10,9 +10,9 @@ Metadata associated with the Tail collectd plugin can be found [here](https://gi
 
 ### DESCRIPTION
 
-From the [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Tail):
+From the <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Tail">collectd wiki</a>:
 
-The Tail plugin can be used to “tail” log files, i. e. follow them as tail -F does. Each line is given to one or more “matches” which test if the line is relevant for any statistics using a [POSIX extended regular expression](http://en.wikipedia.org/wiki/Regular_expression). So you could, for example, count the number of failed login attempts via SSH by using the following regular expression with the `/var/log/auth.log` logfile:
+The Tail plugin can be used to “tail” log files, i. e. follow them as tail -F does. Each line is given to one or more “matches” which test if the line is relevant for any statistics using a <a target="_blank" href="http://en.wikipedia.org/wiki/Regular_expression">POSIX extended regular expression</a>. So you could, for example, count the number of failed login attempts via SSH by using the following regular expression with the `/var/log/auth.log` logfile:
 
 ```
 \<sshd[^:]*: Invalid user [^ ]+ from\>
@@ -61,19 +61,19 @@ This plugin requires:
 
 ### INSTALLATION
 
-This plugin is automatically bundled with the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd), but it is not enabled by default.
+This plugin is automatically bundled with the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd">SignalFx collectd agent</a>, but it is not enabled by default.
 
 
 ### CONFIGURATION
 
-Please see the [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_tail) for information on how to configure this plugin.
+Please see the <a target="_blank" href="https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_tail">collectd wiki</a> for information on how to configure this plugin.
 
-Additionally, some sample configurations can be found [here](https://collectd.org/wiki/index.php/Plugin:Tail/Config).
+Additionally, some sample configurations can be found <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Tail/Config">here</a>.
 
 ### CAVEATS
 
-This plugin was created by the collectd community to satisfy “modest” log tailing use cases that typically involve monitoring at most a small handful of logs for matches with up to a couple dozen regular expressions in each log. (See [here](https://collectd.org/wiki/index.php/Plugin:Tail/Config) for several examples). Its creators haven’t specifically noted any caveats related to its usage or performance, possibly due to the difficulty in doing so given the number of variables involved. It is reasonable to expect that at some point this plugin will have difficulty scaling under typical regex configuration once the number of logs it is tasked with monitoring increases into double digits, especially if the logs are very active.
+This plugin was created by the collectd community to satisfy “modest” log tailing use cases that typically involve monitoring at most a small handful of logs for matches with up to a couple dozen regular expressions in each log. (See <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Tail/Config">here</a> for several examples). Its creators haven’t specifically noted any caveats related to its usage or performance, possibly due to the difficulty in doing so given the number of variables involved. It is reasonable to expect that at some point this plugin will have difficulty scaling under typical regex configuration once the number of logs it is tasked with monitoring increases into double digits, especially if the logs are very active.
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/tail.c).
+License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/tail.c">in the header of the plugin</a>.
