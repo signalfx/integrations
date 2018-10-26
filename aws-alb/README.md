@@ -36,7 +36,7 @@ SignalFx synthesizes a unique ID for each ALB in the dimension `AWSUniqueId`.
 
 ### METRICS
 
-For more information about the metrics emitted by Application Load Balancing, visit the service's homepage at https://aws.amazon.com/elasticloadbalancing/.
+For more information about the metrics emitted by Application Load Balancing, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/elasticloadbalancing/">https://aws.amazon.com/elasticloadbalancing/</a>.
 
 ### LICENSE
 

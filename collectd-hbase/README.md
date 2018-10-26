@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-hbase/img/integrations_hbase.png) HBase collectd Plugin
 
-Metadata associated with the HBase collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-hbase). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c).
+Metadata associated with the HBase collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-hbase">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/java.c">here</a>.
 
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation](#installation)
@@ -18,7 +18,7 @@ Metadata associated with the HBase collectd plugin can be found [here](https://g
 
 ### INSTALLATION
 
-1. Install the [Java plugin](https://collectd.org/wiki/index.php/Plugin:GenericJMX).
+1. Install the <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:GenericJMX">Java plugin</a>.
 
     * RHEL/CentOS 6.x & 7.x, and Amazon Linux 2014.09, 2015.03 & 2015.09. Run the following command to install the Java plugin for collectd:
 
@@ -30,11 +30,11 @@ Metadata associated with the HBase collectd plugin can be found [here](https://g
 
 2. Download SignalFx's sample JMX configuration file and sample Cassandra configuration file from the following URLs:
 
-    * [JMX.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf)
+    * <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf">JMX.conf</a>
 
-    * [hbase.conf](https://github.com/signalfx/integrations/blob/master/collectd-hbase/20-hbase.conf)
+    * <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-hbase/20-hbase.conf">hbase.conf</a>
 
-3. Modify [hbase.conf](https://github.com/signalfx/integrations/blob/master/collectd-hbase/20-hbase.conf) to provide values that make sense for your environment, as described in the header.
+3. Modify <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-hbase/20-hbase.conf">hbase.conf</a> to provide values that make sense for your environment, as described in the header.
 
     * Add the following lines to /etc/collectd.conf, replacing the example paths with the locations of the configuration files you downloaded in step 2:
 
@@ -51,7 +51,7 @@ Metrics from HBase will begin streaming into SignalFx.
 
 
 
-You must include [JMX.conf](https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf) this ensures that the Java collectd plugin will properly run prior to loading the Cassandra specific configuration.
+You must include <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-java/10-jmx.conf">JMX.conf</a> this ensures that the Java collectd plugin will properly run prior to loading the Cassandra specific configuration.
 
 | Value | Description |
 |-------|-------------|

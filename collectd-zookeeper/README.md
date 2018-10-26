@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-zookeeper/img/integrations_zookeeper.png) Zookeeper
 
-Metadata associated with SignalFx's integration with Zookeeper can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-zookeeper). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-zookeeper).
+Metadata associated with SignalFx's integration with Zookeeper can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-zookeeper">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-zookeeper">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -38,7 +38,7 @@ This plugin requires:
 | Zookeeper         | 3.4.0+   |
 
 #### Note:
- - Requires ZooKeeper 3.4.0 or greater in order to use the `mntr` [four letter word command](http://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html#sc_zkCommands).
+ - Requires ZooKeeper 3.4.0 or greater in order to use the `mntr` <a target="_blank" href="http://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html#sc_zkCommands">four letter word command</a>.
  - If support for earlier versions is needed, add `srvr` command, available in since 3.3.0, or `stat` (fetches extra uneeded data but available pre-3.3).
 
 

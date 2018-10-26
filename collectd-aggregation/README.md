@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use the [aggregation](https://collectd.org/wiki/index.php/Plugin:Aggregation) plugin to aggregate metrics. This plugin provides aggregates, by default average and summary.
+Use the <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Aggregation">aggregation</a> plugin to aggregate metrics. This plugin provides aggregates, by default average and summary.
 
 ### REQUIREMENTS AND DEPENDENCIES
 
@@ -19,7 +19,7 @@ Use the [aggregation](https://collectd.org/wiki/index.php/Plugin:Aggregation) pl
 
 
 ### CONFIGURATION
-By default the CPU plugin will assign each CPU a number and use that as the plugin\_instance. This gives a very detailed report of CPU usage, but it is not generally useful. Use the [following configuration](https://github.com/signalfx/Integrations/blob/master/collectd-aggregation/10-aggregation-cpu.conf) to aggregate CPU metrics.
+By default the CPU plugin will assign each CPU a number and use that as the plugin\_instance. This gives a very detailed report of CPU usage, but it is not generally useful. Use the <a target="_blank" href="https://github.com/signalfx/Integrations/blob/master/collectd-aggregation/10-aggregation-cpu.conf">following configuration</a> to aggregate CPU metrics.
 
 
 ### METRICS

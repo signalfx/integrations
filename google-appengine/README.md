@@ -130,7 +130,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 ### METRICS
 
-For more information about the metrics emitted by Google App Engine, visit the service's metric page at https://cloud.google.com/monitoring/api/metrics#gcp-appengine
+For more information about the metrics emitted by Google App Engine, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-appengine">https://cloud.google.com/monitoring/api/metrics#gcp-appengine</a>
 
 ### LICENSE
 

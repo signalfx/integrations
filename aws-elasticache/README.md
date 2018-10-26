@@ -44,7 +44,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ### METRICS
 
-For more information about the metrics emitted by Amazon ElastiCache, visit the service's homepage at https://aws.amazon.com/elasticache/.
+For more information about the metrics emitted by Amazon ElastiCache, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/elasticache/">https://aws.amazon.com/elasticache/</a>.
 
 ### LICENSE
 

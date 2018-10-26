@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd/img/integrations_collectd.png) Protocols
 
-Metadata associated with the Protocols collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-protocols). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/protocols.c).
+Metadata associated with the Protocols collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-protocols">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/protocols.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,7 +12,7 @@ Metadata associated with the Protocols collectd plugin can be found [here](https
 
 ### DESCRIPTION
 
-From [collectd wiki](https://collectd.org/wiki/index.php/Plugin:Protocols):
+From <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Protocols">collectd wiki</a>:
 
 The Protocols plugin collects information about the network protocols supported by the system, for example Internet Protocol (IP) and Transmission Control Protocol (TCP). Currently the plugin is only available under Linux and reads its information from the following two files in the /proc file-system:
 
@@ -37,14 +37,14 @@ for more information.  The configuration documentation below may be helpful as
 well, but consult the Smart Agent repo's docs for the exact schema.**
 
 
-Installation and initial configuration options are available as part of the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd).
+Installation and initial configuration options are available as part of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd">SignalFx collectd agent</a>.
 
 
 ### CONFIGURATION
 
-Configuration for this plugin is kept in the main [collectd.conf](https://github.com/signalfx/integrations/blob/master/collectd/collectd.conf) file.
+Configuration for this plugin is kept in the main <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd/collectd.conf">collectd.conf</a> file.
 
-From [collectd wiki](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_protocols):
+From <a target="_blank" href="https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_protocols">collectd wiki</a>:
 
 | Configuration Option | Type | Definition |
 |----------------------|------|------------|
@@ -73,4 +73,4 @@ For documentation of the metrics and dimensions emitted by this plugin, [click h
 
 ### LICENSE
 
-License for this plugin can be found [in the header of the plugin](https://github.com/signalfx/collectd/blob/master/src/protocols.c)
+License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/protocols.c">in the header of the plugin</a>

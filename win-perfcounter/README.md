@@ -119,7 +119,7 @@ The names of all counters to be reported are combined together from all the conf
 
 NLog is used for logging, and the default configuration of this tool ships with just file logging enabled.  The logs are written to `%ALLUSERSPROFILE%\PerfCounterReporter\logs`.  Generally speaking, on modern Windows installations, this will be `C:\ProgramData\PerfCounterReporter\logs`.  
 
-For information on logging see [NLog documentation](http://nlog-project.org/wiki/Configuration_File).
+For information on logging see <a target="_blank" href="http://nlog-project.org/wiki/Configuration_File">NLog documentation</a>.
 
 ### LICENSE
 
