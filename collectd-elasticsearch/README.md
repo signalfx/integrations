@@ -82,7 +82,7 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-elasticsearch" |
 | Verbose | Enable verbose logging. | false |
-| Cluster | A name for this cluster. Appears in the dimension `cluster`. | "elasticsearch" |
+| Cluster | A name for this cluster. Appears in the dimension `plugin_instance`. If specified, this value will override the cluster name returned by the ES endpoint. | "elasticsearch" |
 | Indexes | Identifies the indexes for which the plugin should collect statistics. See note below. | ["_all"] |
 | EnableIndexStats | Enable or disable collection of index statistics. | false |
 | IndexStatsMasterOnly | When `true`, index stats will only be sent if the node is the active master.  When `false`, index stats will be sent if the node is master eligible.  This requires EnableIndexStats to be `true`. | false |
