@@ -12,6 +12,8 @@ Metadata associated with the solr plugin for collectd can be found <a target="_b
 
 ### DESCRIPTION
 
+*NOTE: This plugin can collect metrics from Solr only when a Solr instance is running in SolrCloud mode*
+
 This is the SignalFx solr plugin. Follow these instructions to install the solr plugin for collectd.
 
 The <a target="_blank" href="https://github.com/signalfx/collectd-solr">solr-collectd</a> plugin collects metrics from solr instances hitting these endpoints: <a target="_blank" href="https://lucene.apache.org/solr/guide/6_6/performance-statistics-reference.html">statistics</a> (default metrics)  and <a target="_blank" href="https://lucene.apache.org/solr/guide/6_6/metrics-reporting.html">metrics</a> (optional metrics).
@@ -212,14 +214,14 @@ LoadPlugin python
 
     [<img src='./img/chart-solr-node-jvm-memory-pools-usage.png' width=200px>](./img/chart-solr-node-jvm-memory-pools-usage.png)
 
-  
+
 - **SOLR NODES**:
 
   - **Number of Nodes**: Shows the total number of Solr nodes monitored in the org.
 
     [<img src='./img/chart-solr-nodes-num-nodes.png' width=200px>](./img/chart-solr-nodes-num-nodes.png)
 
-  - **Number of Cores Heatmap **: Shows the total number of cores in heapmap for each node.
+  - **Number of Cores Heatmap**: Shows the total number of cores in heapmap for each node.
 
     [<img src='./img/chart-solr-nodes-cores-per-node.png' width=200px>](./img/chart-solr-nodes-cores-per-node.png)
 
@@ -231,7 +233,7 @@ LoadPlugin python
 
     [<img src='./img/chart-solr-nodes-requests-per-sec.png' width=200px>](./img/chart-solr-nodes-requests-per-sec.png)
 
-  
+
 A few other details:
 
 * `plugin` is always set to `solr`
