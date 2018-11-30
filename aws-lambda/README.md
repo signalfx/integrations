@@ -50,6 +50,7 @@ Instructions are provided in each of the Lambda wrapper readme files.
 - <a target="_blank" href="https://github.com/signalfx/lambda-nodejs">NodeJs</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-python">Python</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-csharp">C#</a>
+- <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a>
 
 #### CloudWatch
 
