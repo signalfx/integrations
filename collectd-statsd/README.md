@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-statsd/img/integrations_statsd.png) StatsD
 
-Metadata associated with the StatsD collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-statsd). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/statsd.c).
+Metadata associated with the StatsD collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-statsd">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/statsd.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

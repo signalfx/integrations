@@ -1,6 +1,6 @@
 # IOStat
 
-Metadata associated with the IOStat plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-iostat).  The relevant code for the plugin can be found [here](https://github.com/signalfx/iostat-collectd-python).
+Metadata associated with the IOStat plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-iostat">here</a>.  The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/iostat-collectd-python">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -30,14 +30,14 @@ At this time there are no built in dashboards.  You may find metrics reported by
 
 ### INSTALLATION
 1.  Ensure that sysstat is installed on the host.
-2.  Download the [iostat-collectd-python](https://github.com/signalfx/iostat-collectd-python) Python module.
+2.  Download the <a target="_blank" href="https://github.com/signalfx/iostat-collectd-python">iostat-collectd-python</a> Python module.
 3.  Place the contents of the repo in /usr/share/collectd/iostat-collectd-python
 4.  Download SignalFx’s [sample configuration file](./10-iostat.conf) for this plugin to `/etc/collectd/managed_config`.
 5.  Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 6.  Restart collectd.
 
 ### CONFIGURATION
-Using the example configuration file [10-iostat.conf](https://github.com/signalfx/integrations/tree/master/collectd-iostat/10-iostat.conf) as a guide, provide values for the configuration options listed below that make sense for your environment.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-iostat/10-iostat.conf">10-iostat.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

@@ -95,7 +95,7 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 ### METRICS
 
-For more information about the metrics emitted by Azure Storage, visit [here](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftstoragestorageaccounts).
+For more information about the metrics emitted by Azure Storage, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftstoragestorageaccounts">here</a>.
 
 ### LICENSE
 

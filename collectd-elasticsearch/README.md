@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-elasticsearch/img/integrations_elasticsearch.png) Elasticsearch
 
-Metadata associated with the Elasticsearch collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-elasticsearch). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-elasticsearch).
+Metadata associated with the Elasticsearch collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-elasticsearch">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-elasticsearch">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -20,7 +20,7 @@ Use this plugin to monitor the following types of information from an Elasticsea
   * per-index statistics
   * cluster statistics
 
-Original Elasticsearch Documentation https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+Original Elasticsearch Documentation <a target="_blank" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html">https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html<a/>
 
 #### FEATURES
 
@@ -82,7 +82,7 @@ The plugin is intended to be run on a per-node basis. Define only one "Module" e
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/usr/share/collectd/collectd-elasticsearch" |
 | Verbose | Enable verbose logging. | false |
-| Cluster | A name for this cluster. Appears in the dimension `cluster`. | "elasticsearch" |
+| Cluster | A name for this cluster. Appears in the dimension `plugin_instance`. If specified, this value will override the cluster name returned by the ES endpoint. | "elasticsearch" |
 | Indexes | Identifies the indexes for which the plugin should collect statistics. See note below. | ["_all"] |
 | EnableIndexStats | Enable or disable collection of index statistics. | false |
 | IndexStatsMasterOnly | When `true`, index stats will only be sent if the node is the active master.  When `false`, index stats will be sent if the node is master eligible.  This requires EnableIndexStats to be `true`. | false |

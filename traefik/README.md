@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/traefik/img/integration_traefik.png) Traefik
+# ![](./img/integration_traefik.png) Traefik
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
