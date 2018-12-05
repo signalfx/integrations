@@ -44,7 +44,7 @@ For ELB, SignalFx will scan every load balancer name from your AWS account and p
 
 ### METRICS
 
-For more information about the metrics emitted by Elastic Load Balancing, visit the service's homepage at https://aws.amazon.com/elasticloadbalancing/.
+For more information about the metrics emitted by Elastic Load Balancing, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/elasticloadbalancing/">https://aws.amazon.com/elasticloadbalancing/</a>.
 
 ### LICENSE
 

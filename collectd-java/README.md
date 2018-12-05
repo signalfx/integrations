@@ -1,6 +1,6 @@
 # ![](./img/integrations_java.png) Java
 
-Metadata associated with the Java plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-java). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c).
+Metadata associated with the Java plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-java">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/java.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

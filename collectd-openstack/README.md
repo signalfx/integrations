@@ -1,6 +1,6 @@
 # ![](./img/integration_openstack.png) OpenStack
 
-Metadata associated with the OpenStack plugin for collectd can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-openstack). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd-openstack).
+Metadata associated with the OpenStack plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-openstack">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-openstack">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -14,13 +14,13 @@ Metadata associated with the OpenStack plugin for collectd can be found [here](h
 
 This is the SignalFx OpenStack plugin. Follow these instructions to install the OpenStack plugin for collectd.
 
-The [openstack-collectd](https://github.com/signalfx/collectd-openstack) plugin collects metrics from OpenStack components by hitting various endpoints. This plugin covers the following components:
+The <a target="_blank" href="https://github.com/signalfx/collectd-openstack">openstack-collectd</a> plugin collects metrics from OpenStack components by hitting various endpoints. This plugin covers the following components:
 
 * Nova (Compute)
 * Cinder (BlockStorge)
 * Neutron (Network)
 
-Reference for OpenStack [Monitoring](https://wiki.openstack.org/wiki/Operations/Monitoring).
+Reference for OpenStack <a target="_blank" href="https://wiki.openstack.org/wiki/Operations/Monitoring">Monitoring</a>.
 
 #### FEATURES
 
@@ -66,9 +66,9 @@ Identify a host on which the SignalFx agent will run. This integration collects 
 
 ### INSTALLATION
 
-1. Download [collectd-openstack](https://github.com/signalfx/collectd-openstack). Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into the `/usr/share/collectd/collectd-openstack` directory on the deployment host you have identified (see Requirements and Dependencies).
+1. Download <a target="_blank" href="https://github.com/signalfx/collectd-openstack">collectd-openstack</a>. Place the `openstack_metrics.py`, `NovaMetrics.py`, `CinderMetrics.py`, and `NeutronMetrics.py` files into the `/usr/share/collectd/collectd-openstack` directory on the deployment host you have identified (see Requirements and Dependencies).
 
-2. Copy the [sample configuration file](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) for this plugin to `/etc/collectd/managed_config` directory.
+2. Copy the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config` directory.
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below. To avoid duplicate reporting, configure each project only once.
 
@@ -79,7 +79,7 @@ Identify a host on which the SignalFx agent will run. This integration collects 
 
 ### CONFIGURATION
 
-Using the example configuration file [20-openstack.conf](https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf) as a guide, provide configuration values for each project that this integration should monitor.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-openstack/20-openstack.conf">20-openstack.conf</a> as a guide, provide configuration values for each project that this integration should monitor.
 
 | Configuration option | Definition | Example Value |
 | ---------------------|------------|---------------|

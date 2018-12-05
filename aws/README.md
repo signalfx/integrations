@@ -47,11 +47,10 @@ The following metadata is available for filtering metrics:
 
 | Custom Property	| Description |
 |-----------------|-------------|
-| `aws_account_alias` | AWS account alias that the instance, volume or load balancer is running under |
 | `aws_account_id` | AWS account ID that the instance, volume or load balancer is running under |
 | `aws_tag_[Name of tag]` | Custom tags applied to the instance, volume or load balancer (e.g., aws\_tag\_Name)|
 
-Account alias and ID can be useful because SignalFx allows you to import metrics from more than one AWS account. To distinguish between metrics from different accounts, the account alias and account ID are added as properties to the relevant metric time series.
+Account ID can be useful because SignalFx allows you to import metrics from more than one AWS account. To distinguish between metrics from different accounts, the account ID is added as a property to the relevant metric time series.
 
 SignalFx also syncs AWS tags and makes them available as properties on metrics associated with the relevant resources with the key `aws_tag_[Name of tag]`.
 

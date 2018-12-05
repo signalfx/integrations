@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-kafka/img/integrations_kafka.png) Kafka
 
-Metadata associated with SignalFx's integration with Kafka can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-kafka). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/java.c).
+Metadata associated with SignalFx's integration with Kafka can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-kafka">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/java.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)

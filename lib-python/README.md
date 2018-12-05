@@ -29,7 +29,7 @@ Python 2.7.9 or higher is recommended. If you are not making API calls to intera
 #### API access token
 
 To use this library, you need a SignalFx API access
-token. [Click here for more information on retrieving your API token](https://developers.signalfx.com/docs/authentication).
+token. <a target="_blank" href="https://developers.signalfx.com/docs/authentication">Click here for more information on retrieving your API token</a>.
 
 ### INSTALLATION
 
@@ -114,7 +114,7 @@ sfx.send(
 sfx.stop()
 ```
 
-See [examples/generic_usecase.py](examples/generic_usecase.py) for a
+See <a target="_blank" href="examples/generic_usecase.py">examples/generic_usecase.py</a> for a
 complete code sample showing how to send data to SignalFx.
 
 #### Sending events
@@ -152,7 +152,7 @@ sfx.update_tag('some_tag_name',
 
 #### AWS integration
 
-Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the [AWS unique ID](https://signalfx-product-docs.readthedocs-hosted.com/en/latest/integrations/aws-info.html#uniquely-identifying-aws-instances) of the current host as an extra dimension. For example:
+Optionally, the client may be configured to append additional dimensions to all metrics and events sent to SignalFx. One use case for this is to append the <a target="_blank" href="https://signalfx-product-docs.readthedocs-hosted.com/en/latest/integrations/aws-info.html#uniquely-identifying-aws-instances">AWS unique ID</a> of the current host as an extra dimension. For example:
 
 ```python
 import signalfx
@@ -174,7 +174,7 @@ sfx.stop()
 
 #### PyFormance reporter
 
-`pyformance` is a [Python library](https://github.com/omergertel/pyformance) that provides [CodaHale](http://metrics.codahale.com/)-style metrics in a very Pythonic way. We offer a reporter that can report the `pyformance` metric registry data directly to SignalFx.
+`pyformance` is a <a target="_blank" href="https://github.com/omergertel/pyformance">Python library</a> that provides <a target="_blank" href="http://metrics.codahale.com/">CodaHale</a>-style metrics in a very Pythonic way. We offer a reporter that can report the `pyformance` metric registry data directly to SignalFx.
 
 ```python
 from pyformance import count_calls, gauge

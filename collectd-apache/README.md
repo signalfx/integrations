@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/collectd-apache/img/integrations_apache.png) Apache
 
-Metadata associated with the Apache collectd plugin can be found [here](https://github.com/signalfx/integrations/tree/release/collectd-apache). The relevant code for the plugin can be found [here](https://github.com/signalfx/collectd/blob/master/src/apache.c).
+Metadata associated with the Apache collectd plugin can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-apache">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/apache.c">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
