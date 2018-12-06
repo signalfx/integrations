@@ -7,6 +7,6 @@ metric_type: gauge
 
 Total number of detectors; includes detectors that are muted.
 
-Dimension(s): `orgId`
+Dimension(s): `orgId, version`
 
 Data Resolution: 15 minutes
