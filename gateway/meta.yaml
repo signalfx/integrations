@@ -3,7 +3,7 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/gateway",
   "code": "https://github.com/signalfx/gateway",
   "featured": false,
-  "logo_large": "/images/repos/gateway/img/integration_gateway%402x.png",
-  "logo_small": "/images/repos/gateway/img/integration_gateway.png",
+  "logo_large": "/images/repos/gateway/img/integration_sfxgateway%402x.png",
+  "logo_small": "/images/repos/gateway/img/integration_sfxgateway.png",
   "in_app_categories": ["essential"]
 }
