@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/gateway/img/integrations_gateway.png) SignalFx Gateway
+# ![](https://github.com/signalfx/integrations/blob/master/gateway/img/integration_gateway.png) SignalFx Gateway
 
 Information associated with the SignalFx Gateway can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/gateway">here</a>. The relevant code for the project can be found <a target="_blank" href="https://github.com/signalfx/gateway">here</a>.
 
