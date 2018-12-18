@@ -319,7 +319,7 @@ to the default of TCP).
 For incoming carbon (Graphite) data only, the gateway supports transforming long dot-delimited metric names into metrics and dimensions for transmission to SignalFx.
 
 
-####### Graphite Options
+###### Graphite Options
 
 This config will listen using CollectD's HTTP protocol and forward
 all those metrics to a single graphite listener.  It will collect
