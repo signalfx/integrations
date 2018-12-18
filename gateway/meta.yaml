@@ -1,0 +1,9 @@
+{ "display_name":"SignalFx Gateway",
+  "description": "Aggregate metrics from different sources and formats and forward them to SignalFx.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/gateway",
+  "code": "https://github.com/signalfx/gateway",
+  "featured": false,
+  "logo_large": "/images/repos/gateway/img/integration_sfxgateway%402x.png",
+  "logo_small": "/images/repos/gateway/img/integration_sfxgateway.png",
+  "in_app_categories": ["essential"]
+}
