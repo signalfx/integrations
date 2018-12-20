@@ -1,0 +1,11 @@
+{ "display_name":" SignalFx SmartGateway",
+  "description": "SignalFx's Smart Gateway",
+  "project_url": "https://docs.signalfx.com/en/latest/apm/apm-overview/index.html",
+  "featured": true,
+  "sort_order": 0,
+  "logo_large": "integration_smartgateway@2x.png",
+  "logo_small": "integration_smartgateway.png",
+  "data_signature": "_exists_:signalfx_gateway",
+  "in_app_categories": ["essential"],
+  "feature": "apm",
+}
