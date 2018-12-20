@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-batch",
   "code": "https://azure.microsoft.com/en-us/services/batch/",
   "featured": false,
-  "logo_large": "integrations_azurebatch.png",
-  "logo_small": "integrations_azurebatch@2x.png",
+  "logo_small": "integrations_azurebatch.png",
+  "logo_large": "integrations_azurebatch%402x.png",
   "data_signature": "resource_type:\"Microsoft.Batch/batchAccounts\"",
   "in_app_categories": ["AzureServicesMonitored"]
 }

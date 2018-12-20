@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-postgresql",
   "code": "https://github.com/signalfx/collectd/blob/master/src/postgresql.c",
   "featured": false,
-  "logo_large": "/images/repos/collectd-postgresql/img/integrations_postgresql.png",
-  "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png",
+  "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql.png",
+  "logo_large": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png",
   "data_signature": "plugin:\"postgresql\"",
   "in_app_categories": ["servicesMonitored"]
 }

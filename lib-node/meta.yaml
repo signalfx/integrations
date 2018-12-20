@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-node",
   "code": "https://github.com/signalfx/signalfx-nodejs",
   "featured": false,
-  "logo_large": "/images/repos/lib-node/img/integrations_nodejs.png",
-  "logo_small": "/images/repos/lib-node/img/integrations_nodejs%402x.png"
+  "logo_small": "/images/repos/lib-node/img/integrations_nodejs.png",
+  "logo_large": "/images/repos/lib-node/img/integrations_nodejs%402x.png"
 }

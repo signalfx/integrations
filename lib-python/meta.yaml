@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-python",
   "code": "https://github.com/signalfx/signalfx-python",
   "featured": false,
-  "logo_large": "/images/repos/lib-python/img/integrations_python.png",
-  "logo_small": "/images/repos/lib-python/img/integrations_python%402x.png"
+  "logo_small": "/images/repos/lib-python/img/integrations_python.png",
+  "logo_large": "/images/repos/lib-python/img/integrations_python%402x.png"
 }

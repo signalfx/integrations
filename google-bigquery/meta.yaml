@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/google-bigquery",
   "code": "https://cloud.google.com/bigquery",
   "featured": false,
-  "logo_large": "integration_googlebigquery.png",
-  "logo_small": "integration_googlebigquery@2x.png",
+  "logo_small": "integration_googlebigquery.png",
+  "logo_large": "integration_googlebigquery%402x.png",
   "data_signature": "service:\"bigquery\"",
   "in_app_categories": ["GCPServicesMonitored"]
 }

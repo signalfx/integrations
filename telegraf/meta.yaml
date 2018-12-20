@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/telegraf",
   "code": "https://github.com/signalfx/telegraf",
   "featured": false,
-  "logo_large": "/images/repos/telegraf/img/integrations_telegraf.png",
-  "logo_small": "/images/repos/telegraf/img/integrations_telegraf%402x.png",
+  "logo_small": "/images/repos/telegraf/img/integrations_telegraf.png",
+  "logo_large": "/images/repos/telegraf/img/integrations_telegraf%402x.png",
   "data_signature": "agent:\"telegraf\"",
   "in_app_categories": ["essential", "servicesMonitored"]
 }

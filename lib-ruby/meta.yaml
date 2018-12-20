@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-ruby",
   "code": "https://github.com/signalfx/signalfx-ruby",
   "featured": false,
-  "logo_large": "/images/repos/lib-ruby/img/integrations_ruby.png",
-  "logo_small": "/images/repos/lib-ruby/img/integrations_tuby%402x.png"
+  "logo_small": "/images/repos/lib-ruby/img/integrations_ruby.png",
+  "logo_large": "/images/repos/lib-ruby/img/integrations_tuby%402x.png"
 }

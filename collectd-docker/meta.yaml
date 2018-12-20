@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-docker",
   "code": "https://github.com/signalfx/docker-collectd-plugin",
   "featured": true,
-  "logo_large": "/images/repos/collectd-docker/img/integrations_docker.png",
-  "logo_small": "/images/repos/collectd-docker/img/integrations_docker%402x.png",
+  "logo_small": "/images/repos/collectd-docker/img/integrations_docker.png",
+  "logo_large": "/images/repos/collectd-docker/img/integrations_docker%402x.png",
   "data_signature": "plugin:\"docker\"",
   "in_app_categories": ["servicesMonitored"]
 }

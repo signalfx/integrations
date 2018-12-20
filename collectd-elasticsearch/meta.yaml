@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-elasticsearch",
   "code": "https://github.com/signalfx/collectd-elasticsearch",
   "featured": true,
-  "logo_large": "/images/repos/collectd-elasticsearch/img/integrations_elasticsearch.png",
-  "logo_small": "/images/repos/collectd-elasticsearch/img/integrations_elasticsearch%402x.png",
+  "logo_small": "/images/repos/collectd-elasticsearch/img/integrations_elasticsearch.png",
+  "logo_large": "/images/repos/collectd-elasticsearch/img/integrations_elasticsearch%402x.png",
   "data_signature": "plugin:\"elasticsearch\"",  
   "in_app_categories": ["servicesMonitored"]
 }

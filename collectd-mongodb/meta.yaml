@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/collectd-mongodb",
   "code": "https://github.com/signalfx/collectd-mongodb",
   "featured": true,
-  "logo_large": "/images/repos/collectd-mongodb/img/integrations_mongodb.png",
-  "logo_small": "/images/repos/collectd-mongodb/img/integrations_mongodb%402x.png",
+  "logo_small": "/images/repos/collectd-mongodb/img/integrations_mongodb.png",
+  "logo_large": "/images/repos/collectd-mongodb/img/integrations_mongodb%402x.png",
   "data_signature": "plugin:\"mongo\"",
   "in_app_categories": ["servicesMonitored"]
 }
