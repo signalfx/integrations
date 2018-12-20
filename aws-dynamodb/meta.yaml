@@ -3,7 +3,7 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/aws-dynamodb",
   "code": "https://aws.amazon.com/dynamodb/",
   "featured": false,
-  "logo_large": "integration_awsdynamodb@2x.png",
+  "logo_large": "integration_awsdynamodb%402x.png",
   "logo_small": "integration_awsdynamodb.png",
   "data_signature": "namespace:\"AWS/DynamoDB\"",
   "in_app_categories": ["AWSservicesMonitored"]

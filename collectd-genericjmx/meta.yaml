@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-genericjmx",
   "code": "https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
   "featured": false,
-  "logo_large": "/images/repos/collectd-java/img/integrations_jmx.png",
-  "logo_small": "/images/repos/collectd-java/img/integrations_jmx%402x.png"
+  "logo_small": "/images/repos/collectd-java/img/integrations_jmx.png",
+  "logo_large": "/images/repos/collectd-java/img/integrations_jmx%402x.png"
 }

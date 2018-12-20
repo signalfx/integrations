@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-varnish",
   "code": "https://github.com/signalfx/collectd/blob/master/src/varnish.c",
   "featured": false,
-  "logo_large": "/images/repos/collectd-varnish/img/integrations_varnish.png",
-  "logo_small": "/images/repos/collectd-varnish/img/integrations_varnish%402x.png",
+  "logo_small": "/images/repos/collectd-varnish/img/integrations_varnish.png",
+  "logo_large": "/images/repos/collectd-varnish/img/integrations_varnish%402x.png",
   "data_signature": "plugin:\"varnish\"",
   "in_app_categories": ["servicesMonitored"]
 }

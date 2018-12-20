@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/heka-filter-signalfx",
   "code": "https://github.com/Clever/heka-clever-plugins/blob/master/lua/filters/signalfxbatch.lua",
   "featured": false,
-  "logo_large": "/images/repos/heka-filter-signalfx/img/integrations_heka.png",
-  "logo_small": "/images/repos/heka-filter-signalfx/img/integrations_heka%402x.png"
+  "logo_small": "/images/repos/heka-filter-signalfx/img/integrations_heka.png",
+  "logo_large": "/images/repos/heka-filter-signalfx/img/integrations_heka%402x.png"
 }

@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-jenkins",
   "code": "https://github.com/signalfx/collectd-jenkins",
   "featured": false,
-  "logo_large": "/images/repos/collectd-jenkins/img/integrations_jenkins.png",
-  "logo_small": "/images/repos/collectd-jenkins/img/integrations_jenkins%402x.png",
+  "logo_small": "/images/repos/collectd-jenkins/img/integrations_jenkins.png",
+  "logo_large": "/images/repos/collectd-jenkins/img/integrations_jenkins%402x.png",
   "data_signature": "plugin:\"jenkins\"",
   "in_app_categories": ["servicesMonitored"]
 }

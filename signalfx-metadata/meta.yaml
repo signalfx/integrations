@@ -3,7 +3,7 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-signalfx",
   "code": "https://github.com/signalfx/signalfx-collectd-plugin",
   "featured": false,
-  "logo_large": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin.png",
-  "logo_small": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin%402x.png",
+  "logo_small": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin.png",
+  "logo_large": "/images/repos/collectd-signalfx/img/integrations_signalfx-collectd-plugin%402x.png",
   "data_signature": "plugin:\"signalfx-metadata\""
 }

@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-bigtable",
   "code": "https://cloud.google.com/bigtable",
   "featured": false,
-  "logo_large": "integration_googlecloudbigtable.png",
-  "logo_small": "integration_googlecloudbigtable@2x.png",
+  "logo_small": "integration_googlecloudbigtable.png",
+  "logo_large": "integration_googlecloudbigtable%402x.png",
   "data_signature": "service:\"bigtable\"",
   "in_app_categories": ["GCPServicesMonitored"]
 }
