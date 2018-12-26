@@ -19,7 +19,7 @@ Please refer to the the sizing details located <a target="_blank" href="https://
 
 ### INSTALLATION
 
-You will want to download the Smart Gateway binary at <a target="_blank" href="https://app.signalfx.com/#/smart-gateway/download">https://app.signalfx.com/#/smart-gateway/download</a>
+You will want to download the Smart Gateway binary at <a target="_blank" href="/#/smart-gateway/download">here</a>.
 
 To deploy the SignalFx Smart Gateway, start by reviewing the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#instance-sizing">sizing information</a> to determine the recommended hardware for running the Smart Gateway.
 
