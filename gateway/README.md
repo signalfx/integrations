@@ -134,7 +134,7 @@ See the <a target="_blank" href="https://github.com/signalfx/gateway/blob/master
 | Configuration property | Definition | Example values |
 |--------|----------|--------|
 | `Name` | A name for this forwarder. | "ourcarbon" |
-| `type` | The type of data that the gateway will emit. Possible values are `csv` for writing to a CSV file, `carbon` for sending to a Graphite server, and `signalfx-json` for sending to SignalFx. | "carbon" |
+| `type` | The type of data that the gateway will emit. Possible values are `csv` for writing to a CSV file, `carbon` for sending to a Graphite server, and `signalfx` for sending to SignalFx. | "carbon" |
 | `BufferSize` | A performance configuration that specifies how many datapoints/events should be buffered in forwarders.  This is very useful when the gateway is configured with a `StatsDelay`. | `1000000` |
 | `MaxDrainSize` | A performance configuration that specifies the maximum amount of datapoints/events to emit in a single outbound request. This is very useful when the gateway is configured with a `StatsDelay`. | `5000` |
 | `DrainingThreads` | A performance configuration that specifies how many go routines should drain a buffer. This is very useful when the gateway is configured with a `StatsDelay`. | `50` |
@@ -176,13 +176,13 @@ You can write datapoints to a CSV file for debugging by configuring a forwarder 
 
  | Configuration property | Definition | Example values |
  |--------|----------|--------|
- | `Filename` | Location on disk of a CSV file to write metric data to. | "/tmp/filewrite.csv" |
+ | `Filename` | Location on disk of a CSV file to write metric data to. | "/var/config/gateway/filewrite.csv" |
  
  You will need to specify the filename.
 
     {
         "Type": "csv",
-        "Filename": "/tmp/filewrite.csv",
+        "Filename": "/var/config/gateway/filewrite.csv",
         "Name": "filelocal"
     }
 
@@ -640,6 +640,16 @@ The following is a full list of overrideable options and their defaults:
       "EndsWith":""
     }
 
+#### Other Configuration Options
+
+
+| Configuration property | Definition | Example values |
+|--------|----------|--------|
+| `StatsDelay` | If and how often we should self report metrics about the gateway out all forwarders | "1s" |
+| `ServerName` | All self-reported metrics emitted from the gatway have a `host` dimension. If this is not set it will be the name of current host system | "gateway-staging-1" |
+| `AdditionalDimensions` | Any additional dimensions you might want to add to all self reported metrics | `{"cluster":"staging-west-1"}` |
+
+
 ### USAGE
 
 SignalFx Gateway can help you get the right data to the right destination in many different scenarios.
@@ -732,14 +742,14 @@ You can use the gateway to duplicate a data stream to multiple destinations. Add
 
     "ForwardTo": [
       {
-        "type": "signalfx-json",
+        "Type": "signalfx",
         "DefaultAuthToken": "ABCD",
         "Name": "signalfxforwarder"
       },
       {
         "Filename": "/tmp/filewrite.csv",
         "Name": "filelocal",
-        "type": "csv"
+        "Type": "csv"
       }
     ]
 
@@ -756,7 +766,7 @@ You can configure the forwarder to send to alternate ingest endpoints such as an
 
     "ForwardTo": [
       {
-        "type": "signalfx-json",
+        "Type": "signalfx",
         "DefaultAuthToken": "ABCD",
         "Name": "signalfxforwarder"
         "URL": "https://ingest.signalfx.com/v2/datapoint",
@@ -766,7 +776,7 @@ You can configure the forwarder to send to alternate ingest endpoints such as an
       {
         "Filename": "/tmp/filewrite.csv",
         "Name": "filelocal",
-        "type": "csv"
+        "Type": "csv"
       }
     ]
 
