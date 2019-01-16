@@ -231,6 +231,20 @@ For this, you will need to specify which port to bind to.  An example config:
         "ListenAddr": "0.0.0.0:18080"
     }
 
+##### Identify and Replace variables in Span Names
+
+The SignalFx listener has the ability to ideitify and replace variables in span names and turn them into tags. It uses go's named capture groups. See more at [https://golang.org/pkg/regexp/syntax/]. 
+The example below for example would replace span name `/api/v1/document/321083210/update` with `/api/v1/document/{documentId}/update` and add the tag `"documentId":"321083210"` to the span. 
+
+Be VERY careful with this feature. Every named expression in each regular expression costs, and depending on how they're written, could be VERY expensive.  
+Every rule will be applied in order to every span that goes through the listener so if you decide to use this feature you may have to size up the instance dramatically.
+
+    {
+        "Type": "signalfx",
+        "ListenAddr": "0.0.0.0:18080",
+        "SpanNameReplacementRules": ["^\/api\/v1\/document\/(?P<documentId>.*)\/update$"]
+    }
+
 ##### collectd listener
 
 You can receive data sent by CollectD by setting up a `collectd` endpoint.
