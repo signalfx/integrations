@@ -7,7 +7,7 @@ metric_type: counter
 
 One value per token; number of custom events you sent to SignalFx but that SignalFx didn't accept, because your organization significantly exceeded its per-minute limit.
 
-Dimension(s): `orgId`
+Dimension(s): `orgId, tokenId`
 
 Data Resolution: 1 second
 
