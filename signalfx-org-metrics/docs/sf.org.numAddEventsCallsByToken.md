@@ -7,7 +7,7 @@ metric_type: counter
 
 One value per token; number of calls to send custom events to SignalFx.
 
-Dimension(s): `orgId`
+Dimension(s): `orgId, tokenId`
 
 Data Resolution: 1 second
 
