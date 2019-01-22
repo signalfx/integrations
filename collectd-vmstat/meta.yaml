@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/vmstat-collectd",
   "code": "https://github.com/signalfx/vmstat-collectd",
   "featured": false,
-  "logo_large": "/images/repos/collectd-docker/img/integrations_vmstat.png",
-  "logo_small": "/images/repos/collectd-docker/img/integrations_vmstat%402x.png"
+  "logo_small": "/images/repos/collectd-docker/img/integrations_vmstat.png",
+  "logo_large": "/images/repos/collectd-docker/img/integrations_vmstat%402x.png"
 }

@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-marathon",
   "code": "https://github.com/signalfx/collectd-marathon",
   "featured": true,
-  "logo_large": "/images/repos/collectd-docker/img/integrations_marathon.png",
-  "logo_small": "/images/repos/collectd-docker/img/integrations_marathon%402x.png",
+  "logo_small": "/images/repos/collectd-docker/img/integrations_marathon.png",
+  "logo_large": "/images/repos/collectd-docker/img/integrations_marathon%402x.png",
   "data_signature": "plugin:\"marathon\"",
   "in_app_categories": ["servicesMonitored"]
 }

@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-riak",
   "code": "https://github.com/signalfx/collectd/blob/master/src/curl_json.c",
   "featured": true,
-  "logo_large": "/images/repos/collectd-riak/img/integrations_riak.png",
-  "logo_small": "/images/repos/collectd-riak/img/integrations_riak%402x.png"
+  "logo_small": "/images/repos/collectd-riak/img/integrations_riak.png",
+  "logo_large": "/images/repos/collectd-riak/img/integrations_riak%402x.png"
 }

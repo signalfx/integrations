@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-sql-elasticpools",
   "code": "https://azure.microsoft.com/en-us/services/sql-database/",
   "featured": false,
-  "logo_large": "integrations_azuresqlelasticpools.png",
-  "logo_small": "integrations_azuresqlelasticpools@2x.png",
+  "logo_small": "integrations_azuresqlelasticpools.png",
+  "logo_large": "integrations_azuresqlelasticpools%402x.png",
   "data_signature": "resource_type:\"Microsoft.Sql/servers/elasticpools\"",
   "in_app_categories": ["AzureServicesMonitored"]
 }

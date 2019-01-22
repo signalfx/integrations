@@ -38,11 +38,11 @@ You're the expert in the software that you wrote the integration for. The goal o
 ### Code Requirements
 Below are requirements for integration code:
 
-1. Include a README file that matches the <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/Example/README.md">prescribed format</a>. This file should contain all the information that a user would need to install, run and derive value from your integration.
+1. Include a README file that matches the <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/Example/readme.md">prescribed format</a>. This file should contain all the information that a user would need to install, run and derive value from your integration.
 1. Submit your performance test plan and results.
 1. Make sure that your integration collects all the data that is necessary to monitor the software in question.
   - When deciding which metrics your integration should report, err on the side of a concise list that reports just the important metrics, rather than a longer one that reports everything available. A good model is to separate metrics into those that will be sent by default, and those that are available in "detailed" mode. Use other validated integrations as a guide on what to include.
-1. Include dimensions by adding key-value pairs to metric names. Dimensions can include any context that a user needs to drill down or slice-and-dice metrics through their environment (ex. cluster name, node name, region). Dimensions can capture any important concepts of the software being monitored, such as *queue name* for a message queue or *index name* for a search utility. To read more about dimensions, see SignalFx's data model on <a target="_blank" href="http://developers.signalfx.io">developers.signalfx.io</a>.
+1. Include dimensions by adding key-value pairs to metric names. Dimensions can include any context that a user needs to drill down or slice-and-dice metrics through their environment (ex. cluster name, node name, region). Dimensions can capture any important concepts of the software being monitored, such as *queue name* for a message queue or *index name* for a search utility. To read more about dimensions, see SignalFx's data model on <a target="_blank" href="http://developers.signalfx.com">developers.signalfx.com</a>.
 
 ### Documentation Requirements
 
@@ -68,6 +68,7 @@ We will programmatically read this document to generate a description on your in
 | featured | flag to put integration in "Top Integrations" section |
 | logo\_large | URL of 300x300 pixel logo image |
 | logo\_small | URL of 150x150 pixel logo image |
+| feature | the feature associated with the integration |
 
 
 Example:
@@ -79,7 +80,8 @@ Example:
   "code": "https://github.com/signalfx/appd-integration",
   "featured": false,
   "logo_large": "/images/repos/appdynamics/img/integrations_appdynamics%402x.png",
-  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png"
+  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png",
+  "feature": "<feature_name>"
 },
 ```
 

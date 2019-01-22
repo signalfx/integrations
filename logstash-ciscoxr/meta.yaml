@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/logstash-ciscoxr",
   "code": "https://github.com/cisco/bigmuddy-network-telemetry-stacks",
   "featured": true,
-  "logo_large": "/images/repos/logstash-ciscoxr/img/integrations_ciscoiosxr.png",
-  "logo_small": "/images/repos/logstash-ciscoxr/img/integrations_ciscoiosxr%402x.png"
+  "logo_small": "/images/repos/logstash-ciscoxr/img/integrations_ciscoiosxr.png",
+  "logo_large": "/images/repos/logstash-ciscoxr/img/integrations_ciscoiosxr%402x.png"
 }

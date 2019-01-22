@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/azure-vm",
   "code": "https://azure.microsoft.com/en-us/services/virtual-machines/",
   "featured": false,
-  "logo_large": "integrations_azurevm.png",
-  "logo_small": "integrations_azurevm@2x.png",
+  "logo_small": "integrations_azurevm.png",
+  "logo_large": "integrations_azurevm%402x.png",
   "data_signature": "resource_type:\"Microsoft.Compute/virtualMachines\"",
   "in_app_categories": ["AzureServicesMonitored"]
 }

@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-go",
   "code": "https://github.com/signalfx/golib/tree/master/sfxclient",
   "featured": false,
-  "logo_large": "/images/repos/lib-go/img/integrations_golang.png",
-  "logo_small": "/images/repos/lib-go/img/integrations_golang%402x.png"
+  "logo_small": "/images/repos/lib-go/img/integrations_golang.png",
+  "logo_large": "/images/repos/lib-go/img/integrations_golang%402x.png"
 }

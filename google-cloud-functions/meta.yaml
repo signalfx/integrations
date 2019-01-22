@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-functions",
   "code": "https://cloud.google.com/functions",
   "featured": false,
-  "logo_large": "integration_googlecloudfunctions.png",
-  "logo_small": "integration_googlecloudfunctions@2x.png",
+  "logo_small": "integration_googlecloudfunctions.png",
+  "logo_large": "integration_googlecloudfunctions%402x.png",
   "data_signature": "service:\"cloudfunctions\"",
   "in_app_categories": ["GCPServicesMonitored"]
 }

@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/lib-java",
   "code": "https://github.com/signalfx/signalfx-java",
   "featured": false,
-  "logo_large": "/images/repos/lib-java/img/integrations_java.png",
-  "logo_small": "/images/repos/lib-java/img/integrations_java%402x.png"
+  "logo_small": "/images/repos/lib-java/img/integrations_java.png",
+  "logo_large": "/images/repos/lib-java/img/integrations_java%402x.png"
 }

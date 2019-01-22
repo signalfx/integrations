@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-zookeeper",
   "code": "https://github.com/signalfx/collectd/blob/master/src/zookeeper.c",
   "featured": false,
-  "logo_large": "/images/repos/collectd-zookeeper/img/integrations_zookeeper.png",
-  "logo_small": "/images/repos/collectd-zookeeper/img/integrations_zookeeper%402x.png",
+  "logo_small": "/images/repos/collectd-zookeeper/img/integrations_zookeeper.png",
+  "logo_large": "/images/repos/collectd-zookeeper/img/integrations_zookeeper%402x.png",
   "data_signature": "plugin:\"zookeeper\"",
   "in_app_categories": ["servicesMonitored"]
 }

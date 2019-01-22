@@ -3,7 +3,7 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/win-statsd.net",
   "code": "https://github.com/signalfx/signalfx-statsd.net-plugin",
   "featured": false,
-  "logo_large": "/images/repos/win-statsd.net/img/integrations_windows.png",
-  "logo_small": "/images/repos/win-statsd.net/img/integrations_windows%402x.png",
+  "logo_small": "/images/repos/win-statsd.net/img/integrations_windows.png",
+  "logo_large": "/images/repos/win-statsd.net/img/integrations_windows%402x.png",
   "in_app_categories": ["servicesMonitored"]
 }
