@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/google-container-engine",
   "code": "https://cloud.google.com/container-engine",
   "featured": false,
-  "logo_large": "integration_googlecontainerengine.png",
-  "logo_small": "integration_googlecontainerengine@2x.png",
+  "logo_small": "integration_googlecontainerengine.png",
+  "logo_large": "integration_googlecontainerengine%402x.png",
   "data_signature": "service:\"container\"",
   "in_app_categories": ["GCPServicesMonitored"]
 }

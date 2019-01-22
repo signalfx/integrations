@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-iostat",
   "code": "https://github.com/signalfx/iostat-collectd-python",
   "featured": false,
-  "logo_large": "/images/repos/collectd-docker/img/integrations_iostat.png",
-  "logo_small": "/images/repos/collectd-docker/img/integrations_iostat%402x.png"
+  "logo_small": "/images/repos/collectd-docker/img/integrations_iostat.png",
+  "logo_large": "/images/repos/collectd-docker/img/integrations_iostat%402x.png"
 }

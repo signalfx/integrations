@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/win-perfcounter",
   "code": "https://github.com/signalfx/PerfCounterReporter",
   "featured": false,
-  "logo_large": "/images/repos/win-perfcounter/img/integrations_windows.png",
-  "logo_small": "/images/repos/win-perfcounter/img/integrations_windows%402x.png",
+  "logo_small": "/images/repos/win-perfcounter/img/integrations_windows.png",
+  "logo_large": "/images/repos/win-perfcounter/img/integrations_windows%402x.png",
   "data_signature": "sf_metric:\"signalfx.usedmemory\"",
   "in_app_categories": ["servicesMonitored"]
 }

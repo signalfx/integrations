@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/google-appengine",
   "code": "https://cloud.google.com/appengine",
   "featured": false,
-  "logo_large": "integration_googleappengine.png",
-  "logo_small": "integration_googleappengine@2x.png",
+  "logo_small": "integration_googleappengine.png",
+  "logo_large": "integration_googleappengine%402x.png",
   "data_signature": "service:\"appengine\"",
   "in_app_categories": ["GCPServicesMonitored"]
 }

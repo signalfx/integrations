@@ -3,6 +3,6 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/win-metrics.net",
   "code": "https://github.com/signalfx/Metrics.NET.SignalFX",
   "featured": false,
-  "logo_large": "/images/repos/win-metrics.net/img/integrations_windows.png",
-  "logo_small": "/images/repos/win-metrics.net/img/integrations_windows%402x.png"
+  "logo_small": "/images/repos/win-metrics.net/img/integrations_windows.png",
+  "logo_large": "/images/repos/win-metrics.net/img/integrations_windows%402x.png"
 }

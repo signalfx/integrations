@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-pubsub",
   "code": "https://cloud.google.com/pubsub",
   "featured": false,
-  "logo_large": "integration_googlecloudpubsub.png",
-  "logo_small": "integration_googlecloudpubsub@2x.png",
+  "logo_small": "integration_googlecloudpubsub.png",
+  "logo_large": "integration_googlecloudpubsub%402x.png",
   "data_signature": "service:\"pubsub\"",
   "in_app_categories": ["GCPServicesMonitored"]
 }

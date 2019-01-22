@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-rabbitmq",
   "code": "https://github.com/signalfx/collectd-rabbitmq",
   "featured": false,
-  "logo_large": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq.png",
-  "logo_small": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq%402x.png",
+  "logo_small": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq.png",
+  "logo_large": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq%402x.png",
   "data_signature": "plugin:\"rabbitmq\"",
   "in_app_categories": ["servicesMonitored"]
 }

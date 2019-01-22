@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/google-compute-engine",
   "code": "https://cloud.google.com/compute",
   "featured": false,
-  "logo_large": "integration_googlecomputeengine.png",
-  "logo_small": "integration_googlecomputeengine@2x.png",
+  "logo_small": "integration_googlecomputeengine.png",
+  "logo_large": "integration_googlecomputeengine%402x.png",
   "data_signature": "service:\"compute\"",
   "in_app_categories": ["GCPServicesMonitored"]
 }

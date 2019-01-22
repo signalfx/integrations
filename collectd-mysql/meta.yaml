@@ -3,8 +3,8 @@
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-mysql",
   "code": "https://github.com/signalfx/collectd/blob/master/src/mysql.c",
   "featured": false,
-  "logo_large": "/images/repos/collectd-mysql/img/integrations_mysql.png",
-  "logo_small": "/images/repos/collectd-mysql/img/integrations_mysql%402x.png",
+  "logo_small": "/images/repos/collectd-mysql/img/integrations_mysql.png",
+  "logo_large": "/images/repos/collectd-mysql/img/integrations_mysql%402x.png",
   "data_signature": "plugin:\"mysql\"",
   "in_app_categories": ["servicesMonitored"]
 }
