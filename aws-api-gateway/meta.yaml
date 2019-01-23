@@ -1,0 +1,10 @@
+{ "display_name":"Amazon API Gateway",
+  "description": "SignalFx's integration with Amazon API Gateway.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-api-gateway",
+  "code": "https://aws.amazon.com/api-gateway/",
+  "featured": false,
+  "logo_large": "integration_awsapigateway@2x.png",
+  "logo_small": "integration_awsapigateway.png",
+  "data_signature": "namespace:\"AWS/ApiGateway\"",
+  "in_app_categories": ["AWSservicesMonitored"]
+}
