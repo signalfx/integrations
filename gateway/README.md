@@ -233,11 +233,11 @@ For this, you will need to specify which port to bind to.  An example config:
 
 ##### Identify and Replace variables in Span Names
 
-The SignalFx listener has the ability to ideitify and replace variables in span names and turn them into tags. It uses go's named capture groups. See more at [https://golang.org/pkg/regexp/syntax/]. 
+The SignalFx listener has the ability to identify and replace variables in span names and turn them into tags. It uses regex-based replacement rules. See the [syntax here](https://golang.org/pkg/regexp/syntax/).
 The example below for example would replace span name `/api/v1/document/321083210/update` with `/api/v1/document/{documentId}/update` and add the tag `"documentId":"321083210"` to the span. 
 
-Be VERY careful with this feature. Every named expression in each regular expression costs, and depending on how they're written, could be VERY expensive.  
-Every rule will be applied in order to every span that goes through the listener so if you decide to use this feature you may have to size up the instance dramatically.
+Every rule will be applied in the order they are defined to every span that goes through the listener. 
+Use caution when leveraging this feature: every expression, and the complexity of those expressions, will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
 
     {
         "Type": "signalfx",
