@@ -236,13 +236,14 @@ For this, you will need to specify which port to bind to.  An example config:
 The SignalFx listener has the ability to identify and replace variables in span names and turn them into tags. It uses regex-based replacement rules. See the [syntax here](https://golang.org/pkg/regexp/syntax/).
 The example below for example would replace span name `/api/v1/document/321083210/update` with `/api/v1/document/{documentId}/update` and add the tag `"documentId":"321083210"` to the span. 
 
-Every rule will be applied in the order they are defined to every span that goes through the listener. 
+Every rule will be applied in the order they are defined to every span that goes through the listener. The config parameter `SpanNameReplacementBreakAfterMatch` controls whether to stop processing span name replacement rules after the first matching rule for a span. The default value for this parameter is `true`.
 Use caution when leveraging this feature: every expression, and the complexity of those expressions, will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
 
     {
         "Type": "signalfx",
         "ListenAddr": "0.0.0.0:18080",
-        "SpanNameReplacementRules": ["^\/api\/v1\/document\/(?P<documentId>.*)\/update$"]
+        "SpanNameReplacementRules": ["^\/api\/v1\/document\/(?P<documentId>.*)\/update$"],
+        "SpanNameReplacementBreakAfterMatch": false
     }
 
 ##### collectd listener
@@ -813,22 +814,25 @@ using an internal datapoint buffer size of 1,000,000 and sending with 50 threads
 simultaneously with each thread sending no more than 5,000 points in a single
 call.
 
-StatsDelay being set to 1s means every 1s we'll emit metrics out all forwarders
-about the running Gateway.  These metrics are emitted with a host dimension
-that will be set to the value of the ServerName set in the config file or to
-the hostname of the machine by default.
+StatsDelay being set to 10s means every 10s we'll emit metrics out all
+forwarders about the running Gateway.  If you don't want these metrics, omit
+this config value. These metrics are emitted with both host and
+cluster dimensions. The host dimension will be set to the value of the
+ServerName set in the config file or to the hostname of the machine by default.
+The cluster dimension will be set to what you set in the config file, or to
+the default value of "gateway".
 
-Also note that we're setting LateThreshold and FutureThreshold to 1s.  This means
+Also note that we're setting LateThreshold and FutureThreshold to 10s.  This means
 we'll count datapoints, events and spans that exceed those thresholds (if set) and
 log them up to one per second. When you've turned on as described immediately above
 you'll see metrics named late.count and future.count emitted counting each type of
 data that was late or in the future respectively.
 
     {
-      "StatsDelay": "1s",
+      "StatsDelay": "10s",
       "ServerName": "gateway-us-east1",
-      "LateThreshold": "1s",
-      "FutureThreshold": "1s",
+      "LateThreshold": "10s",
+      "FutureThreshold": "10s",
       "ListenFrom": [
         {
           "Type": "carbon",
@@ -847,6 +851,13 @@ data that was late or in the future respectively.
         }
       ]
     }
+
+An alternative to using the above `StatsDelay` is to have the gateway provide a
+signalfx datapoint endpoint that contains the same information but can be
+scraped by our Smart Agent.  If you set the config
+`InternalMetricsListenerAddress` to a host port combination and configure
+the smart gateway to scrape that for internal metrics at `/internal-metrics`
+it would accomplish the same thing.
 
 #### Transforming carbon dot-delimited metric names into metrics with dimensions
 
