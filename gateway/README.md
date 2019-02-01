@@ -851,6 +851,13 @@ data that was late or in the future respectively.
       ]
     }
 
+An alternative to using the above `StatsDelay` is to have the gateway provide a
+signalfx datapoint endpoint that contains the same information but can be
+scraped by our Smart Agent.  If you set the config
+`InternalMetricsListenerAddress` to a host port combination and configure
+the smart gateway to scrape that for internal metrics at `/internal-metrics`
+it would accomplish the same thing.
+
 #### Transforming carbon dot-delimited metric names into metrics with dimensions
 
 SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx Gateway's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. <a target="_blank" href="https://github.com/signalfx/gateway#graphite-dimensions">Click here to read more on Github about MetricDeconstructor options</a>.
