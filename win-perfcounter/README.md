@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/win-perfcounter/img/integrations_windows.png) PerfCounterReporter
+# ![](https://github.com/signalfx/integrations/blob/master/win-perfcounter/img/integrations_windows.png) PerfCounterReporter (deprecated)
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -8,7 +8,11 @@
 
 ### DESCRIPTION
 
-PerfCounterReporter is a Windows service for reporting Windows Performance Counters to SignalFx. Use this to monitor infrastructure of Windows hosts, including CPU, disk, memory and network.
+PerfCounterReporter is a deprecated Windows service for reporting Windows
+Performance Counters to SignalFx. It was used to monitor infrastructure of
+Windows hosts, including CPU, disk, memory and network. Please use the
+[SignalFx Smart Agent](https://github.com/signalfx/integrations/tree/release/signalfx-agent)
+and its [Windows Perf Counter](https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/telegraf-win_perf_counters.md) monitor instead.
 
 This code is based on/inspired by <a target="_blank" href="https://github.com/Iristyle/PerfTap">PerfTap</a> as a means of sending performance data to a monitoring system.
 
