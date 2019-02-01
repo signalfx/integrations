@@ -813,22 +813,25 @@ using an internal datapoint buffer size of 1,000,000 and sending with 50 threads
 simultaneously with each thread sending no more than 5,000 points in a single
 call.
 
-StatsDelay being set to 1s means every 1s we'll emit metrics out all forwarders
-about the running Gateway.  These metrics are emitted with a host dimension
-that will be set to the value of the ServerName set in the config file or to
-the hostname of the machine by default.
+StatsDelay being set to 10s means every 10s we'll emit metrics out all
+forwarders about the running Gateway.  If you don't want these metrics, omit
+this config value. These metrics are emitted with both host and
+cluster dimensions. The host dimension will be set to the value of the
+ServerName set in the config file or to the hostname of the machine by default.
+The cluster dimension will be set to what you set in the config file, or to
+the default value of "gateway".
 
-Also note that we're setting LateThreshold and FutureThreshold to 1s.  This means
+Also note that we're setting LateThreshold and FutureThreshold to 10s.  This means
 we'll count datapoints, events and spans that exceed those thresholds (if set) and
 log them up to one per second. When you've turned on as described immediately above
 you'll see metrics named late.count and future.count emitted counting each type of
 data that was late or in the future respectively.
 
     {
-      "StatsDelay": "1s",
+      "StatsDelay": "10s",
       "ServerName": "gateway-us-east1",
-      "LateThreshold": "1s",
-      "FutureThreshold": "1s",
+      "LateThreshold": "10s",
+      "FutureThreshold": "10s",
       "ListenFrom": [
         {
           "Type": "carbon",
