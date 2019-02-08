@@ -224,6 +224,7 @@ capabilities the Smart Agent requires.
 `signalfx-agent/bin/signalfx-agent -config <path to config.yaml>`.  By default,
 the Smart Agent logs only to stdout/err. If you want to persist logs, you must direct
 the output to a log file or other log management system.  See the
+
 <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.man">signalfx-agent command</a> doc for more information on
 supported command flags.
 
