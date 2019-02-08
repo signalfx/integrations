@@ -114,9 +114,7 @@ Once the dependencies have been installed, please run the installer script below
 You can <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/installer/install.ps1">view the source for the installer script</a>
 and use it on your hosts in powershell by running:
 
-```ps
-& {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/signalfx-agent.ps1')); $params = @{access_token = "YOUR_SIGNALFX_API_TOKEN"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-```
+`& {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/signalfx-agent.ps1')); $params = @{access_token = "YOUR_SIGNALFX_API_TOKEN"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}`
 
 ##### Chef
 We offer a Chef cookbook to install and configure the Smart Agent on Linux.  See <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/chef">the cookbook
@@ -226,6 +224,7 @@ capabilities the Smart Agent requires.
 `signalfx-agent/bin/signalfx-agent -config <path to config.yaml>`.  By default,
 the Smart Agent logs only to stdout/err. If you want to persist logs, you must direct
 the output to a log file or other log management system.  See the
+
 <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.man">signalfx-agent command</a> doc for more information on
 supported command flags.
 
