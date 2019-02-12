@@ -1,4 +1,4 @@
-{ "display_name":"Microsoft Internet Information Services",
+{ "display_name":"Microsoft IIS",
   "description": "Monitor Microsoft Internet Information Services",
   "project_url": "https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/windows-iis.md",
   "code": "https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/windowsiis",
