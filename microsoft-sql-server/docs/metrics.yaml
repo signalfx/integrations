@@ -1,0 +1,357 @@
+- title: sqlserver_database_io.read_bytes
+  type: gauge
+  description: Bytes read by the database.
+- title: sqlserver_database_io.read_latency_ms
+  type: gauge
+  description: Latency in milliseconds reading from the database.
+- title: sqlserver_database_io.reads
+  type: gauge
+  description: Number of reads from the database.
+- title: sqlserver_database_io.write_bytes
+  type: gauge
+  description: Bytes written to the database.
+- title: sqlserver_database_io.write_latency_ms
+  type: gauge
+  description: Latency in milliseconds writing to the database.
+- title: sqlserver_database_io.writes
+  type: gauge
+  description: Number of writes to the database.
+- title: sqlserver_memory_clerks.size_kb.bound_trees
+  type: gauge
+  description: Size in KB of bound trees memory clerk.
+- title: sqlserver_memory_clerks.size_kb.buffer_pool
+  type: gauge
+  description: Size in KB of buffer pool memory clerk.
+- title: sqlserver_memory_clerks.size_kb.connection_pool
+  type: gauge
+  description: Size in KB of connection pool memory clerk.
+- title: sqlserver_memory_clerks.size_kb.general
+  type: gauge
+  description: Size in KB of general memory clerk.
+- title: sqlserver_memory_clerks.size_kb.in-memory_oltp
+  type: gauge
+  description: Size in KB of in in-memoory oltp memory clerk.
+- title: sqlserver_memory_clerks.size_kb.log_pool
+  type: gauge
+  description: Size in KB of log pool memory clerk.
+- title: sqlserver_memory_clerks.size_kb.memoryclerk_sqltrace
+  type: gauge
+  description: Size in KB of sql trace memory clerk.
+- title: sqlserver_memory_clerks.size_kb.schema_manager_user_store
+  type: gauge
+  description: Size in KB of user store schema manager memory clerk.
+- title: sqlserver_memory_clerks.size_kb.sos_node
+  type: gauge
+  description: Size in KB of sos node memory clerk.
+- title: sqlserver_memory_clerks.size_kb.sql_optimizer
+  type: gauge
+  description: Size in KB of SQL optimizer memory clerk.
+- title: sqlserver_memory_clerks.size_kb.sql_plans
+  type: gauge
+  description: Size in KB of sql plans memory clerk.
+- title: sqlserver_memory_clerks.size_kb.sql_reservations
+  type: gauge
+  description: Size in KB of sql reservations memory clerk.
+- title: sqlserver_memory_clerks.size_kb.sql_storage_engine
+  type: gauge
+  description: Size in KB of sql storage engine memory clerk.
+- title: sqlserver_memory_clerks.size_kb.system_rowset_store
+  type: gauge
+  description: Size in KB of system rowset store memory clerk.
+- title: sqlserver_performance.active_memory_grant_amount_kb
+  type: gauge
+  description: Amount of active memory in KB granted.
+- title: sqlserver_performance.active_temp_tables
+  type: gauge
+  description: Number of active temporary tables.
+- title: sqlserver_performance.background_writer_pages_persec
+  type: gauge
+  description: Rate per second of pages written in the background.
+- title: sqlserver_performance.backup.restore_throughput_persec
+  type: gauge
+  description: Rate per second of backup/restore throughput.
+- title: sqlserver_performance.batch_requests_persec
+  type: gauge
+  description: Rate per second of batch requests.
+- title: sqlserver_performance.blocked_tasks
+  type: gauge
+  description: Number of blocked tasks.
+- title: sqlserver_performance.buffer_cache_hit_ratio
+  type: gauge
+  description: Buffer cache hit ration.
+- title: sqlserver_performance.bytes_received_from_replica_persec
+  type: gauge
+  description: Rate per second of bytes received from replicas.
+- title: sqlserver_performance.bytes_sent_to_replica_persec
+  type: gauge
+  description: Rate per second of bytes sent to replicas.
+- title: sqlserver_performance.bytes_sent_to_transport_persec
+  type: gauge
+  description: Rate per second of bytes sent to transports.
+- title: sqlserver_performance.checkpoint_pages_persec
+  type: gauge
+  description: Rate per second of checkpoint pages.
+- title: sqlserver_performance.cpu_limit_violation_count
+  type: gauge
+  description: Number of cpu limit violations.
+- title: sqlserver_performance.cpu_usage_percent
+  type: gauge
+  description: CPU usage percentage.
+- title: sqlserver_performance.cpu_usage_time
+  type: gauge
+  description: CPU usage time.
+- title: sqlserver_performance.data_files_size_kb
+  type: gauge
+  description: Size in KB of data files.
+- title: sqlserver_performance.disk_read_bytes_persec
+  type: gauge
+  description: Rate per second of bytes from disk.
+- title: sqlserver_performance.disk_read_io_persec
+  type: gauge
+  description: Rate per second of read operations from disk.
+- title: sqlserver_performance.disk_read_io_throttled_persec
+  type: gauge
+  description: Rate per second of throttled read operations.
+- title: sqlserver_performance.disk_write_bytes_persec
+  type: gauge
+  description: Rate per second of bytes written to disk.
+- title: sqlserver_performance.disk_write_io_persec
+  type: gauge
+  description: Rate per second of write operations to disk.
+- title: sqlserver_performance.disk_write_io_throttled_persec
+  type: gauge
+  description: Rate per second of write operations throttled.
+- title: sqlserver_performance.errors_persec
+  type: gauge
+  description: Rate of errors per second.
+- title: sqlserver_performance.flow_control_persec
+  type: gauge
+  description: Rate per second of flow control.
+- title: sqlserver_performance.flow_control_time_ms_persec
+  type: gauge
+  description: Rate per second of ms of flow control time.
+- title: sqlserver_performance.forwarded_records_persec
+  type: gauge
+  description: Rate per second of record forwarding.
+- title: sqlserver_performance.free_list_stalls_persec
+  type: gauge
+  description: Rate per second of stalled free list.
+- title: sqlserver_performance.free_space_in_tempdb_kb
+  type: gauge
+  description: Free space in KB of tempdb.
+- title: sqlserver_performance.full_scans_persec
+  type: gauge
+  description: Rate per second of full scans.
+- title: sqlserver_performance.index_searches_persec
+  type: gauge
+  description: Rate per second of index searches.
+- title: sqlserver_performance.latch_waits_persec
+  type: gauge
+  description: Rate per second of latch waits.
+- title: sqlserver_performance.lazy_writes_persec
+  type: gauge
+  description: Rate per second of lazy writes.
+- title: sqlserver_performance.lock_timeouts_persec
+  type: gauge
+  description: Rate per second of lock timeouts.
+- title: sqlserver_performance.lock_wait_count
+  type: gauge
+  description: Number of lock waits.
+- title: sqlserver_performance.lock_wait_time
+  type: gauge
+  description: Lock wait time.
+- title: sqlserver_performance.lock_waits_persec
+  type: gauge
+  description: Rate per second of lock waits.
+- title: sqlserver_performance.log_apply_pending_queue
+  type: gauge
+  description: Size of the log apply pending queue.
+- title: sqlserver_performance.log_apply_ready_queue
+  type: gauge
+  description: Size of log apply ready queue.
+- title: sqlserver_performance.log_bytes_flushed_persec
+  type: gauge
+  description: Rate per second of log bytes flushed.
+- title: sqlserver_performance.log_bytes_received_persec
+  type: gauge
+  description: Rate per second of log bytes received.
+- title: sqlserver_performance.log_files_size_kb
+  type: gauge
+  description: Size in KB of log file.
+- title: sqlserver_performance.log_files_used_size_kb
+  type: gauge
+  description: Size in KB of log file used.
+- title: sqlserver_performance.log_flush_wait_time
+  type: gauge
+  description: Time spent flushing the log.
+- title: sqlserver_performance.log_flushes_persec
+  type: gauge
+  description: Rate per second of log flushes.
+- title: sqlserver_performance.log_send_queue
+  type: gauge
+  description: Size of the log send queue.
+- title: sqlserver_performance.logins_persec
+  type: gauge
+  description: Rate of logins per second.
+- title: sqlserver_performance.logouts_persec
+  type: gauge
+  description: Rate of logouts per second.
+- title: sqlserver_performance.memory_broker_clerk_size
+  type: gauge
+  description: Size of memory broker clerk.
+- title: sqlserver_performance.memory_grants_outstanding
+  type: gauge
+  description: Number of outstanding memory grants.
+- title: sqlserver_performance.memory_grants_pending
+  type: gauge
+  description: Number of pending memory grants.
+- title: sqlserver_performance.number_of_deadlocks_persec
+  type: gauge
+  description: Rate of deadlocks per second.
+- title: sqlserver_performance.page_life_expectancy
+  type: gauge
+  description: Page life expectancy.
+- title: sqlserver_performance.page_lookups_persec
+  type: gauge
+  description: Rate of page look ups per second.
+- title: sqlserver_performance.page_reads_persec
+  type: gauge
+  description: Rate of page reads per second.
+- title: sqlserver_performance.page_splits_persec
+  type: gauge
+  description: Rate of page splits per second.
+- title: sqlserver_performance.page_writes_persec
+  type: gauge
+  description: Rate of page writes per second.
+- title: sqlserver_performance.percent_log_used
+  type: gauge
+  description: Percentage of log used.
+- title: sqlserver_performance.processes_blocked
+  type: gauge
+  description: Number of blocked processes.
+- title: sqlserver_performance.queued_request_count
+  type: gauge
+  description: Number of queued requests.
+- title: sqlserver_performance.queued_requests
+  type: gauge
+  description: Average number of queued requests.
+- title: sqlserver_performance.readahead_pages_persec
+  type: gauge
+  description: Rate per second of read ahead pages.
+- title: sqlserver_performance.receives_from_replica_persec
+  type: gauge
+  description: Rate receives from replicas per second.
+- title: sqlserver_performance.recovery_queue
+  type: gauge
+  description: Size of recovery queue.
+- title: sqlserver_performance.redone_bytes_persec
+  type: gauge
+  description: Rate of redone bytes per second.
+- title: sqlserver_performance.reduced_memory_grant_count
+  type: gauge
+  description: Number of reduced memory grants.
+- title: sqlserver_performance.request_count
+  type: gauge
+  description: Number of requests.
+- title: sqlserver_performance.requests_completed_persec
+  type: gauge
+  description: Rate of completed requests per second.
+- title: sqlserver_performance.resent_messages_persec
+  type: gauge
+  description: Rate of resent messages per second.
+- title: sqlserver_performance.sends_to_replica_persec
+  type: gauge
+  description: Rate of sends to replicas per second.
+- title: sqlserver_performance.sends_to_transport_persec
+  type: gauge
+  description: Rate of sends to transports per second.
+- title: sqlserver_performance.sql_compilations_persec
+  type: gauge
+  description: Rate of sql compilations per second.
+- title: sqlserver_performance.sql_re-compilations_persec
+  type: gauge
+  description: Rate of sql recompilations per sec.
+- title: sqlserver_performance.target_server_memory_kb
+  type: gauge
+  description: Size of target server memory in KB.
+- title: sqlserver_performance.temp_tables_creation_rate
+  type: gauge
+  description: Rate of temporary table creations.
+- title: sqlserver_performance.temp_tables_for_destruction
+  type: gauge
+  description: Number of temporary tables marked for destruction.
+- title: sqlserver_performance.total_server_memory_kb
+  type: gauge
+  description: Total server memory in KB.
+- title: sqlserver_performance.transaction_delay
+  type: gauge
+  description: Number of delayed transactions.
+- title: sqlserver_performance.transactions_persec
+  type: gauge
+  description: Rate of transactions per second.
+- title: sqlserver_performance.used_memory_kb
+  type: gauge
+  description: Used memory in KB.
+- title: sqlserver_performance.user_connections
+  type: gauge
+  description: Number of user connections.
+- title: sqlserver_performance.version_store_size_kb
+  type: gauge
+  description: Size of the version store in KB.
+- title: sqlserver_performance.write_transactions_persec
+  type: gauge
+  description: Rate of write transactions per second.
+- title: sqlserver_performance.xtp_memory_used_kb
+  type: gauge
+  description: Size of xtp memory used in KB.
+- title: sqlserver_server_properties.available_storage_mb
+  type: gauge
+  description: Available storage in MB.
+- title: sqlserver_server_properties.cpu_count
+  type: gauge
+  description: Number of cpus.
+- title: sqlserver_server_properties.db_offline
+  type: gauge
+  description: Number of offline databases.
+- title: sqlserver_server_properties.db_online
+  type: gauge
+  description: Number of online databases.
+- title: sqlserver_server_properties.db_recovering
+  type: gauge
+  description: Number of databases recovering.
+- title: sqlserver_server_properties.db_recoveryPending
+  type: gauge
+  description: Number of databases pending recovery.
+- title: sqlserver_server_properties.db_restoring
+  type: gauge
+  description: Number of databases restoring.
+- title: sqlserver_server_properties.db_suspect
+  type: gauge
+  description: Number of suspect databases.
+- title: sqlserver_server_properties.engine_edition
+  type: gauge
+  description: Sql server engine edition version.
+- title: sqlserver_server_properties.server_memory
+  type: gauge
+  description: Amount of memory on the sql server.
+- title: sqlserver_server_properties.total_storage_mb
+  type: gauge
+  description: Amount of storage in MB of the sql server.
+- title: sqlserver_server_properties.uptime
+  type: gauge
+  description: Uptime of the sql server.
+- title: sqlserver_waitstats.max_wait_time_ms
+  type: gauge
+  description: Maximum time in millisecond spent waiting.
+- title: sqlserver_waitstats.resource_wait_ms
+  type: gauge
+  description: Time in milliseconds spent waiting on a resource.
+- title: sqlserver_waitstats.signal_wait_time_ms
+  type: gauge
+  description: Time in milliseconds waiting on a signal.
+- title: sqlserver_waitstats.wait_time_ms
+  type: gauge
+  description: Time in milliseconds waiting.
+- title: sqlserver_waitstats.waiting_tasks_count
+  type: gauge
+  description: Time in milliseconds
