@@ -1,0 +1,10 @@
+{ "display_name":"Microsoft SQL Server",
+  "description": "Monitor Microsoft SQL Server",
+  "project_url": "https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/telegraf-sqlserver.md",
+  "code": "https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/telegraf/monitors/mssqlserver",
+  "featured": false,
+  "logo_small": "/images/repos/microsoft-sql-server/img/integration_microsoftsqlserver.png",
+  "logo_large": "/images/repos/microsoft-sql-server/img/integration_microsoftsqlserver%402x.png",
+  "data_signature": "sf_metric:\"sqlserver_server_properties.db_online\"",
+  "in_app_categories": ["servicesMonitored"]
+}
