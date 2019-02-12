@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/microsoft-iis/img/integrations_microsoftiis.png) Microsoft Internet Information Services (IIS)
+# ![](https://github.com/signalfx/integrations/blob/master/microsoft-iis/img/integration_microsoftiis.png) Microsoft Internet Information Services (IIS)
 
 - [Description](#description)
 - [Installation](#installation)

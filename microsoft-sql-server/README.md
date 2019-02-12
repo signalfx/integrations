@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/microsoft-sql-server/img/integrations_microsoftsqlserver.png) Microsoft SQL Server
+# ![](https://github.com/signalfx/integrations/blob/master/microsoft-sql-server/img/integration_microsoftsqlserver.png) Microsoft SQL Server
 
 - [Description](#description)
 - [Installation](#installation)
