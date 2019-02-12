@@ -4,7 +4,7 @@
   "code": "https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/windowsiis",
   "featured": false,
   "logo_small": "/images/repos/microsoft-iis/img/integration_microsoftiis.png",
-  "logo_large": "/images/repos/microsoft-iis/img/integration_microsoftiis402x.png",
+  "logo_large": "/images/repos/microsoft-iis/img/integration_microsoftiis%402x.png",
   "data_signature": "sf_metric:\"web_service.total_method_requests_sec\"",
   "in_app_categories": ["servicesMonitored"]
 }
