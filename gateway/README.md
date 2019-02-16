@@ -150,6 +150,7 @@ You can write datapoints to SignalFx by configuring a forwarder with the type `s
 |--------|----------|--------|
 | `DefaultAuthToken` | A SignalFx API token that the gateway will use to transmit data to SignalFx. | "ABCD" |
 | `DisableCompression` | Optionally disables gzip compression when forwarding to SignalFx | `true` |
+| `AuthTokenEnvVar` | An environment variable to check for a SignalFx API token | "AUTH_TOKEN_VAR" |
 
 You will need to configure your auth token inside DefaultAuthToken.
 
@@ -158,6 +159,20 @@ You will need to configure your auth token inside DefaultAuthToken.
         "Name": "testgateway",
         "DefaultAuthToken": "___AUTH_TOKEN___"
     }
+
+Or you can use AuthTokenEnvVar to point to an environment variable that contains your auth token
+
+    {
+        "Type": "signalfx",
+        "Name": "testgateway",
+        "AuthTokenEnvVar": "AUTH_TOKEN_VAR"
+    }
+
+where `AUTH_TOKEN_VAR` is set in your environment
+
+    export AUTH_TOKEN_VAR="___AUTH_TOKEN___"
+
+If `AuthTokenEnvVar` is set and available in the environment, it will be preferred to `DefaultAuthToken`. If `DefaultAuthToken` is not set, and the value of `AuthTokenEnvVar` is not available in the environment, the gateway will also check the environment for `SIGNALFX_ACCESS_TOKEN` for a value to use as your auth token
 
 By default gzip compression talking to SignalFx is turned on, if for some
 reason you want to turn it off you can disable it in the SignalFx forward config
