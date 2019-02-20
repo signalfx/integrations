@@ -1,0 +1,183 @@
+- title: gitlab_auth_user_authenticated_total
+  type: counter
+  description: Multiprocess metric
+- title: gitlab_auth_user_unauthenticated_total
+  type: counter
+  description: Multiprocess metric
+- title: gitlab_banzai_cacheless_render_real_duration_seconds_bucket
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_banzai_cacheless_render_real_duration_seconds_count
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_banzai_cacheless_render_real_duration_seconds_sum
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_cache_misses_total
+  type: counter
+  description: Multiprocess metric
+- title: gitlab_cache_operation_duration_seconds_bucket
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_cache_operation_duration_seconds_count
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_cache_operation_duration_seconds_sum
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_rails_queue_duration_seconds_bucket
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_rails_queue_duration_seconds_count
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_rails_queue_duration_seconds_sum
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_sql_duration_seconds_bucket
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_sql_duration_seconds_count
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_sql_duration_seconds_sum
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_transaction_cache_read_hit_count_total
+  type: counter
+  description: Multiprocess metric
+- title: gitlab_transaction_cache_read_miss_count_total
+  type: counter
+  description: Multiprocess metric
+- title: gitlab_transaction_duration_seconds_bucket
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_transaction_duration_seconds_count
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_transaction_duration_seconds_sum
+  type: histogram
+  description: Multiprocess metric
+- title: gitlab_transaction_new_redis_connections_total
+  type: counter
+  description: Multiprocess metric
+- title: gitlab_transaction_rails_queue_duration_total
+  type: gauge
+  description: Multiprocess metric
+- title: gitlab_transaction_view_duration_total
+  type: counter
+  description: Multiprocess metric
+- title: http_request_duration_seconds_bucket
+  type: histogram
+  description: Multiprocess metric
+- title: http_request_duration_seconds_count
+  type: histogram
+  description: Multiprocess metric
+- title: http_request_duration_seconds_sum
+  type: histogram
+  description: Multiprocess metric
+- title: http_requests_total
+  type: counter
+  description: Multiprocess metric
+- title: job_register_attempts_failed_total
+  type: counter
+  description: Multiprocess metric
+- title: job_register_attempts_total
+  type: counter
+  description: Multiprocess metric
+- title: ruby_file_descriptors
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_duration_seconds_total
+  type: counter
+  description: Multiprocess metric
+- title: ruby_gc_stat_count
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_allocatable_pages
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_allocated_pages
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_available_slots
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_eden_pages
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_final_slots
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_free_slots
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_live_slots
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_marked_slots
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_sorted_length
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_heap_tomb_pages
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_major_gc_count
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_malloc_increase_bytes
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_malloc_increase_bytes_limit
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_minor_gc_count
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_old_objects
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_old_objects_limit
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_oldmalloc_increase_bytes
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_oldmalloc_increase_bytes_limit
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_remembered_wb_unprotected_objects
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_remembered_wb_unprotected_objects_limit
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_total_allocated_objects
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_total_allocated_pages
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_total_freed_objects
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_gc_stat_total_freed_pages
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_memory_bytes
+  type: gauge
+  description: Multiprocess metric
+- title: ruby_sampler_duration_seconds_total
+  type: counter
+  description: Multiprocess metric
+- title: unicorn_active_connections
+  type: gauge
+  description: Multiprocess metric
+- title: unicorn_queued_connections
+  type: gauge
+  description: Multiprocess metric
+- title: user_session_logins_total
+  type: counter
+  description: Multiprocess metric
