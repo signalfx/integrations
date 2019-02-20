@@ -1,0 +1,585 @@
+- title: go_gc_duration_seconds
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_sum
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_count
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_goroutines
+  type: gauge
+  description: Number of goroutines that currently exist
+- title: go_info
+  type: gauge
+  description: Information about the Go environment
+- title: go_memstats_alloc_bytes
+  type: gauge
+  description: Number of bytes allocated and still in use
+- title: go_memstats_alloc_bytes_total
+  type: counter
+  description: Total number of bytes allocated, even if freed
+- title: go_memstats_buck_hash_sys_bytes
+  type: gauge
+  description: Number of bytes used by the profiling bucket hash table
+- title: go_memstats_frees_total
+  type: counter
+  description: Total number of frees
+- title: go_memstats_gc_cpu_fraction
+  type: gauge
+  description: The fraction of this program's available CPU time used by the GC since the program started
+- title: go_memstats_gc_sys_bytes
+  type: gauge
+  description: Number of bytes used for garbage collection system metadata
+- title: go_memstats_heap_alloc_bytes
+  type: gauge
+  description: Number of heap bytes allocated and still in use
+- title: go_memstats_heap_idle_bytes
+  type: gauge
+  description: Number of heap bytes waiting to be used
+- title: go_memstats_heap_inuse_bytes
+  type: gauge
+  description: Number of heap bytes that are in use
+- title: go_memstats_heap_objects
+  type: gauge
+  description: Number of allocated objects
+- title: go_memstats_heap_released_bytes
+  type: gauge
+  description: Number of heap bytes released to OS
+- title: go_memstats_heap_sys_bytes
+  type: gauge
+  description: Number of heap bytes obtained from system
+- title: go_memstats_last_gc_time_seconds
+  type: gauge
+  description: Number of seconds since 1970 of last garbage collection
+- title: go_memstats_lookups_total
+  type: counter
+  description: Total number of pointer lookups
+- title: go_memstats_mallocs_total
+  type: counter
+  description: Total number of mallocs
+- title: go_memstats_mcache_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mcache structures
+- title: go_memstats_mcache_sys_bytes
+  type: gauge
+  description: Number of bytes used for mcache structures obtained from system
+- title: go_memstats_mspan_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mspan structures
+- title: go_memstats_mspan_sys_bytes
+  type: gauge
+  description: Number of bytes used for mspan structures obtained from system
+- title: go_memstats_next_gc_bytes
+  type: gauge
+  description: Number of heap bytes when next garbage collection will take place
+- title: go_memstats_other_sys_bytes
+  type: gauge
+  description: Number of bytes used for other system allocations
+- title: go_memstats_stack_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by the stack allocator
+- title: go_memstats_stack_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system for stack allocator
+- title: go_memstats_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system
+- title: go_threads
+  type: gauge
+  description: Number of OS threads created
+- title: net_conntrack_dialer_conn_attempted_total
+  type: counter
+  description: Total number of connections attempted by the given dialer a given name
+- title: net_conntrack_dialer_conn_closed_total
+  type: counter
+  description: Total number of connections closed which originated from the dialer of a given name
+- title: net_conntrack_dialer_conn_established_total
+  type: counter
+  description: Total number of connections successfully established by the given dialer a given name
+- title: net_conntrack_dialer_conn_failed_total
+  type: counter
+  description: Total number of connections failed to dial by the dialer a given name
+- title: net_conntrack_listener_conn_accepted_total
+  type: counter
+  description: Total number of connections opened to the listener of a given name
+- title: net_conntrack_listener_conn_closed_total
+  type: counter
+  description: Total number of connections closed that were made to the listener of a given name
+- title: process_cpu_seconds_total
+  type: counter
+  description: Total user and system CPU time spent in seconds
+- title: process_max_fds
+  type: gauge
+  description: Maximum number of open file descriptors
+- title: process_open_fds
+  type: gauge
+  description: Number of open file descriptors
+- title: process_resident_memory_bytes
+  type: gauge
+  description: Resident memory size in bytes
+- title: process_start_time_seconds
+  type: gauge
+  description: Start time of the process since unix epoch in seconds
+- title: process_virtual_memory_bytes
+  type: gauge
+  description: Virtual memory size in bytes
+- title: process_virtual_memory_max_bytes
+  type: gauge
+  description: Maximum amount of virtual memory available in bytes
+- title: prometheus_api_remote_read_queries
+  type: gauge
+  description: The current number of remote read queries being executed or waiting
+- title: prometheus_build_info
+  type: gauge
+  description: A metric with a constant '1' value labeled by version, revision, branch, and goversion from which prometheus was built
+- title: prometheus_config_last_reload_success_timestamp_seconds
+  type: gauge
+  description: Timestamp of the last successful configuration reload
+- title: prometheus_config_last_reload_successful
+  type: gauge
+  description: Whether the last configuration reload attempt was successful
+- title: prometheus_engine_queries
+  type: gauge
+  description: The current number of queries being executed or waiting
+- title: prometheus_engine_queries_concurrent_max
+  type: gauge
+  description: The max number of concurrent queries
+- title: prometheus_engine_query_duration_seconds
+  type: counter
+  description: Query timings
+- title: prometheus_engine_query_duration_seconds_sum
+  type: counter
+  description: Query timings
+- title: prometheus_engine_query_duration_seconds_count
+  type: counter
+  description: Query timings
+- title: prometheus_http_request_duration_seconds_bucket
+  type: counter
+  description: Histogram of latencies for HTTP requests
+- title: prometheus_http_request_duration_seconds_sum
+  type: counter
+  description: Histogram of latencies for HTTP requests
+- title: prometheus_http_request_duration_seconds_count
+  type: counter
+  description: Histogram of latencies for HTTP requests
+- title: prometheus_http_response_size_bytes_bucket
+  type: counter
+  description: Histogram of response size for HTTP requests
+- title: prometheus_http_response_size_bytes_sum
+  type: counter
+  description: Histogram of response size for HTTP requests
+- title: prometheus_http_response_size_bytes_count
+  type: counter
+  description: Histogram of response size for HTTP requests
+- title: prometheus_notifications_alertmanagers_discovered
+  type: gauge
+  description: The number of alertmanagers discovered and active
+- title: prometheus_notifications_dropped_total
+  type: counter
+  description: Total number of alerts dropped due to errors when sending to Alertmanager
+- title: prometheus_notifications_queue_capacity
+  type: gauge
+  description: The capacity of the alert notifications queue
+- title: prometheus_notifications_queue_length
+  type: gauge
+  description: The number of alert notifications in the queue
+- title: prometheus_rule_evaluation_duration_seconds
+  type: counter
+  description: The duration for a rule to execute
+- title: prometheus_rule_evaluation_duration_seconds_sum
+  type: counter
+  description: The duration for a rule to execute
+- title: prometheus_rule_evaluation_duration_seconds_count
+  type: counter
+  description: The duration for a rule to execute
+- title: prometheus_rule_evaluation_failures_total
+  type: counter
+  description: The total number of rule evaluation failures
+- title: prometheus_rule_group_duration_seconds
+  type: counter
+  description: The duration of rule group evaluations
+- title: prometheus_rule_group_duration_seconds_sum
+  type: counter
+  description: The duration of rule group evaluations
+- title: prometheus_rule_group_duration_seconds_count
+  type: counter
+  description: The duration of rule group evaluations
+- title: prometheus_rule_group_interval_seconds
+  type: gauge
+  description: The interval of a rule group
+- title: prometheus_rule_group_iterations_missed_total
+  type: counter
+  description: The total number of rule group evaluations missed due to slow rule group evaluation
+- title: prometheus_rule_group_iterations_total
+  type: counter
+  description: The total number of scheduled rule group evaluations, whether executed or missed
+- title: prometheus_rule_group_last_duration_seconds
+  type: gauge
+  description: The duration of the last rule group evaluation
+- title: prometheus_sd_azure_refresh_duration_seconds
+  type: counter
+  description: The duration of a Azure-SD refresh in seconds
+- title: prometheus_sd_azure_refresh_duration_seconds_sum
+  type: counter
+  description: The duration of a Azure-SD refresh in seconds
+- title: prometheus_sd_azure_refresh_duration_seconds_count
+  type: counter
+  description: The duration of a Azure-SD refresh in seconds
+- title: prometheus_sd_azure_refresh_failures_total
+  type: counter
+  description: Number of Azure-SD refresh failures
+- title: prometheus_sd_configs_failed_total
+  type: counter
+  description: Total number of service discovery configurations that failed to load
+- title: prometheus_sd_consul_rpc_duration_seconds
+  type: counter
+  description: The duration of a Consul RPC call in seconds
+- title: prometheus_sd_consul_rpc_duration_seconds_sum
+  type: counter
+  description: The duration of a Consul RPC call in seconds
+- title: prometheus_sd_consul_rpc_duration_seconds_count
+  type: counter
+  description: The duration of a Consul RPC call in seconds
+- title: prometheus_sd_consul_rpc_failures_total
+  type: counter
+  description: The number of Consul RPC call failures
+- title: prometheus_sd_discovered_targets
+  type: gauge
+  description: Current number of discovered targets
+- title: prometheus_sd_dns_lookup_failures_total
+  type: counter
+  description: The number of DNS-SD lookup failures
+- title: prometheus_sd_dns_lookups_total
+  type: counter
+  description: The number of DNS-SD lookups
+- title: prometheus_sd_ec2_refresh_duration_seconds
+  type: counter
+  description: The duration of a EC2-SD refresh in seconds
+- title: prometheus_sd_ec2_refresh_duration_seconds_sum
+  type: counter
+  description: The duration of a EC2-SD refresh in seconds
+- title: prometheus_sd_ec2_refresh_duration_seconds_count
+  type: counter
+  description: The duration of a EC2-SD refresh in seconds
+- title: prometheus_sd_ec2_refresh_failures_total
+  type: counter
+  description: The number of EC2-SD scrape failures
+- title: prometheus_sd_file_read_errors_total
+  type: counter
+  description: The number of File-SD read errors
+- title: prometheus_sd_file_scan_duration_seconds
+  type: counter
+  description: The duration of the File-SD scan in seconds
+- title: prometheus_sd_file_scan_duration_seconds_sum
+  type: counter
+  description: The duration of the File-SD scan in seconds
+- title: prometheus_sd_file_scan_duration_seconds_count
+  type: counter
+  description: The duration of the File-SD scan in seconds
+- title: prometheus_sd_gce_refresh_duration
+  type: counter
+  description: The duration of a GCE-SD refresh in seconds
+- title: prometheus_sd_gce_refresh_duration_sum
+  type: counter
+  description: The duration of a GCE-SD refresh in seconds
+- title: prometheus_sd_gce_refresh_duration_count
+  type: counter
+  description: The duration of a GCE-SD refresh in seconds
+- title: prometheus_sd_gce_refresh_failures_total
+  type: counter
+  description: The number of GCE-SD refresh failures
+- title: prometheus_sd_kubernetes_cache_last_resource_version
+  type: gauge
+  description: Last resource version from the Kubernetes API
+- title: prometheus_sd_kubernetes_cache_list_duration_seconds_sum
+  type: counter
+  description: Duration of a Kubernetes API call in seconds
+- title: prometheus_sd_kubernetes_cache_list_duration_seconds_count
+  type: counter
+  description: Duration of a Kubernetes API call in seconds
+- title: prometheus_sd_kubernetes_cache_list_items_sum
+  type: counter
+  description: Count of items in a list from the Kubernetes API
+- title: prometheus_sd_kubernetes_cache_list_items_count
+  type: counter
+  description: Count of items in a list from the Kubernetes API
+- title: prometheus_sd_kubernetes_cache_list_total
+  type: counter
+  description: Total number of list operations
+- title: prometheus_sd_kubernetes_cache_short_watches_total
+  type: counter
+  description: Total number of short watch operations
+- title: prometheus_sd_kubernetes_cache_watch_duration_seconds_sum
+  type: counter
+  description: Duration of watches on the Kubernetes API
+- title: prometheus_sd_kubernetes_cache_watch_duration_seconds_count
+  type: counter
+  description: Duration of watches on the Kubernetes API
+- title: prometheus_sd_kubernetes_cache_watch_events_sum
+  type: counter
+  description: Number of items in watches on the Kubernetes API
+- title: prometheus_sd_kubernetes_cache_watch_events_count
+  type: counter
+  description: Number of items in watches on the Kubernetes API
+- title: prometheus_sd_kubernetes_cache_watches_total
+  type: counter
+  description: Total number of watch operations
+- title: prometheus_sd_kubernetes_events_total
+  type: counter
+  description: The number of Kubernetes events handled
+- title: prometheus_sd_marathon_refresh_duration_seconds
+  type: counter
+  description: The duration of a Marathon-SD refresh in seconds
+- title: prometheus_sd_marathon_refresh_duration_seconds_sum
+  type: counter
+  description: The duration of a Marathon-SD refresh in seconds
+- title: prometheus_sd_marathon_refresh_duration_seconds_count
+  type: counter
+  description: The duration of a Marathon-SD refresh in seconds
+- title: prometheus_sd_marathon_refresh_failures_total
+  type: counter
+  description: The number of Marathon-SD refresh failures
+- title: prometheus_sd_openstack_refresh_duration_seconds
+  type: counter
+  description: The duration of an OpenStack-SD refresh in seconds
+- title: prometheus_sd_openstack_refresh_duration_seconds_sum
+  type: counter
+  description: The duration of an OpenStack-SD refresh in seconds
+- title: prometheus_sd_openstack_refresh_duration_seconds_count
+  type: counter
+  description: The duration of an OpenStack-SD refresh in seconds
+- title: prometheus_sd_openstack_refresh_failures_total
+  type: counter
+  description: The number of OpenStack-SD scrape failures
+- title: prometheus_sd_received_updates_total
+  type: counter
+  description: Total number of update events received from the SD providers
+- title: prometheus_sd_triton_refresh_duration_seconds
+  type: counter
+  description: The duration of a Triton-SD refresh in seconds
+- title: prometheus_sd_triton_refresh_duration_seconds_sum
+  type: counter
+  description: The duration of a Triton-SD refresh in seconds
+- title: prometheus_sd_triton_refresh_duration_seconds_count
+  type: counter
+  description: The duration of a Triton-SD refresh in seconds
+- title: prometheus_sd_triton_refresh_failures_total
+  type: counter
+  description: The number of Triton-SD scrape failures
+- title: prometheus_sd_updates_delayed_total
+  type: counter
+  description: Total number of update events that couldn't be sent immediately
+- title: prometheus_sd_updates_total
+  type: counter
+  description: Total number of update events sent to the SD consumers
+- title: prometheus_target_interval_length_seconds
+  type: counter
+  description: Actual intervals between scrapes
+- title: prometheus_target_interval_length_seconds_sum
+  type: counter
+  description: Actual intervals between scrapes
+- title: prometheus_target_interval_length_seconds_count
+  type: counter
+  description: Actual intervals between scrapes
+- title: prometheus_target_scrape_pool_sync_total
+  type: counter
+  description: Total number of syncs that were executed on a scrape pool
+- title: prometheus_target_scrapes_exceeded_sample_limit_total
+  type: counter
+  description: Total number of scrapes that hit the sample limit and were rejected
+- title: prometheus_target_scrapes_sample_duplicate_timestamp_total
+  type: counter
+  description: Total number of samples rejected due to duplicate timestamps but different values
+- title: prometheus_target_scrapes_sample_out_of_bounds_total
+  type: counter
+  description: Total number of samples rejected due to timestamp falling outside of the time bounds
+- title: prometheus_target_scrapes_sample_out_of_order_total
+  type: counter
+  description: Total number of samples rejected due to not being out of the expected order
+- title: prometheus_target_sync_length_seconds
+  type: counter
+  description: Actual interval to sync the scrape pool
+- title: prometheus_target_sync_length_seconds_count
+  type: counter
+  description: Actual interval to sync the scrape pool
+- title: prometheus_target_sync_length_seconds_sum
+  type: counter
+  description: Actual interval to sync the scrape pool
+- title: prometheus_treecache_watcher_goroutines
+  type: gauge
+  description: The current number of watcher goroutines
+- title: prometheus_treecache_zookeeper_failures_total
+  type: counter
+  description: The total number of ZooKeeper failures
+- title: prometheus_tsdb_blocks_loaded
+  type: gauge
+  description: Number of currently loaded data blocks
+- title: prometheus_tsdb_checkpoint_creations_failed_total
+  type: counter
+  description: Total number of checkpoint creations that failed
+- title: prometheus_tsdb_checkpoint_creations_total
+  type: counter
+  description: Total number of checkpoint creations attempted
+- title: prometheus_tsdb_checkpoint_deletions_failed_total
+  type: counter
+  description: Total number of checkpoint deletions that failed
+- title: prometheus_tsdb_checkpoint_deletions_total
+  type: counter
+  description: Total number of checkpoint deletions attempted
+- title: prometheus_tsdb_compaction_chunk_range_seconds_bucket
+  type: counter
+  description: Final time range of chunks on their first compaction
+- title: prometheus_tsdb_compaction_chunk_range_seconds_sum
+  type: counter
+  description: Final time range of chunks on their first compaction
+- title: prometheus_tsdb_compaction_chunk_range_seconds_count
+  type: counter
+  description: Final time range of chunks on their first compaction
+- title: prometheus_tsdb_compaction_chunk_samples_bucket
+  type: counter
+  description: Final number of samples on their first compaction
+- title: prometheus_tsdb_compaction_chunk_samples_sum
+  type: counter
+  description: Final number of samples on their first compaction
+- title: prometheus_tsdb_compaction_chunk_samples_count
+  type: counter
+  description: Final number of samples on their first compaction
+- title: prometheus_tsdb_compaction_chunk_size_bytes_bucket
+  type: counter
+  description: Final size of chunks on their first compaction
+- title: prometheus_tsdb_compaction_chunk_size_bytes_sum
+  type: counter
+  description: Final size of chunks on their first compaction
+- title: prometheus_tsdb_compaction_chunk_size_bytes_count
+  type: counter
+  description: Final size of chunks on their first compaction
+- title: prometheus_tsdb_compaction_duration_seconds_bucket
+  type: counter
+  description: Duration of compaction runs
+- title: prometheus_tsdb_compaction_duration_seconds_sum
+  type: counter
+  description: Duration of compaction runs
+- title: prometheus_tsdb_compaction_duration_seconds_count
+  type: counter
+  description: Duration of compaction runs
+- title: prometheus_tsdb_compactions_failed_total
+  type: counter
+  description: Total number of compactions that failed for the partition
+- title: prometheus_tsdb_compactions_total
+  type: counter
+  description: Total number of compactions that were executed for the partition
+- title: prometheus_tsdb_compactions_triggered_total
+  type: counter
+  description: Total number of triggered compactions for the partition
+- title: prometheus_tsdb_head_active_appenders
+  type: gauge
+  description: Number of currently active appender transactions
+- title: prometheus_tsdb_head_chunks
+  type: gauge
+  description: Total number of chunks in the head block
+- title: prometheus_tsdb_head_chunks_created_total
+  type: counter
+  description: Total number of chunks created in the head
+- title: prometheus_tsdb_head_chunks_removed_total
+  type: counter
+  description: Total number of chunks removed in the head
+- title: prometheus_tsdb_head_gc_duration_seconds
+  type: counter
+  description: Runtime of garbage collection in the head block
+- title: prometheus_tsdb_head_gc_duration_seconds_sum
+  type: counter
+  description: Runtime of garbage collection in the head block
+- title: prometheus_tsdb_head_gc_duration_seconds_count
+  type: counter
+  description: Runtime of garbage collection in the head block
+- title: prometheus_tsdb_head_max_time
+  type: gauge
+  description: Maximum timestamp of the head block
+- title: prometheus_tsdb_head_min_time
+  type: gauge
+  description: Minimum time bound of the head block
+- title: prometheus_tsdb_head_samples_appended_total
+  type: counter
+  description: Total number of appended samples
+- title: prometheus_tsdb_head_series
+  type: gauge
+  description: Total number of series in the head block
+- title: prometheus_tsdb_head_series_created_total
+  type: counter
+  description: Total number of series created in the head
+- title: prometheus_tsdb_head_series_not_found_total
+  type: counter
+  description: Total number of requests for series that were not found
+- title: prometheus_tsdb_head_series_removed_total
+  type: counter
+  description: Total number of series removed in the head
+- title: prometheus_tsdb_head_truncations_failed_total
+  type: counter
+  description: Total number of head truncations that failed
+- title: prometheus_tsdb_head_truncations_total
+  type: counter
+  description: Total number of head truncations attempted
+- title: prometheus_tsdb_lowest_timestamp
+  type: gauge
+  description: Lowest timestamp value stored in the database
+- title: prometheus_tsdb_reloads_failures_total
+  type: counter
+  description: Number of times the database failed to reload block data from disk
+- title: prometheus_tsdb_reloads_total
+  type: counter
+  description: Number of times the database reloaded block data from disk
+- title: prometheus_tsdb_retention_cutoffs_failures_total
+  type: counter
+  description: Number of times the database failed to cut off block data from disk
+- title: prometheus_tsdb_retention_cutoffs_total
+  type: counter
+  description: Number of times the database cut off block data from disk
+- title: prometheus_tsdb_symbol_table_size_bytes
+  type: gauge
+  description: Size of symbol table on disk (in bytes)
+- title: prometheus_tsdb_tombstone_cleanup_seconds_bucket
+  type: counter
+  description: The time taken to recompact blocks to remove tombstones
+- title: prometheus_tsdb_tombstone_cleanup_seconds_sum
+  type: counter
+  description: The time taken to recompact blocks to remove tombstones
+- title: prometheus_tsdb_tombstone_cleanup_seconds_count
+  type: counter
+  description: The time taken to recompact blocks to remove tombstones
+- title: prometheus_tsdb_wal_completed_pages_total
+  type: counter
+  description: Total number of completed pages
+- title: prometheus_tsdb_wal_fsync_duration_seconds
+  type: counter
+  description: Duration of WAL fsync
+- title: prometheus_tsdb_wal_fsync_duration_seconds_sum
+  type: counter
+  description: Duration of WAL fsync
+- title: prometheus_tsdb_wal_fsync_duration_seconds_count
+  type: counter
+  description: Duration of WAL fsync
+- title: prometheus_tsdb_wal_page_flushes_total
+  type: counter
+  description: Total number of page flushes
+- title: prometheus_tsdb_wal_truncate_duration_seconds
+  type: counter
+  description: Duration of WAL truncation
+- title: prometheus_tsdb_wal_truncate_duration_seconds_sum
+  type: counter
+  description: Duration of WAL truncation
+- title: prometheus_tsdb_wal_truncate_duration_seconds_count
+  type: counter
+  description: Duration of WAL truncation
+- title: prometheus_tsdb_wal_truncations_failed_total
+  type: counter
+  description: Total number of WAL truncations that failed
+- title: prometheus_tsdb_wal_truncations_total
+  type: counter
+  description: Total number of WAL truncations attempted
+- title: promhttp_metric_handler_requests_in_flight
+  type: gauge
+  description: Current number of scrapes being served
+- title: promhttp_metric_handler_requests_total
+  type: counter
+  description: Total number of scrapes by HTTP status code

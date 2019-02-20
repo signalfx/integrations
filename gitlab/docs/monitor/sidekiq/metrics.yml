@@ -1,0 +1,9 @@
+- title: sidekiq_queue_size
+  type: gauge
+  description: sidekiq_queue_size metric
+- title: sidekiq_queue_latency
+  type: gauge
+  description: sidekiq_queue_latency metric
+- title: sidekiq_dead_jobs_total
+  type: gauge
+  description: sidekiq_dead_jobs_total metric

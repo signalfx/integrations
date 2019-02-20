@@ -1,0 +1,591 @@
+- title: go_gc_duration_seconds
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_sum
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_count
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_goroutines
+  type: gauge
+  description: Number of goroutines that currently exist
+- title: go_info
+  type: gauge
+  description: Information about the Go environment
+- title: go_memstats_alloc_bytes
+  type: gauge
+  description: Number of bytes allocated and still in use
+- title: go_memstats_alloc_bytes_total
+  type: counter
+  description: Total number of bytes allocated, even if freed
+- title: go_memstats_buck_hash_sys_bytes
+  type: gauge
+  description: Number of bytes used by the profiling bucket hash table
+- title: go_memstats_frees_total
+  type: counter
+  description: Total number of frees
+- title: go_memstats_gc_cpu_fraction
+  type: gauge
+  description: The fraction of this program's available CPU time used by the GC since the program started
+- title: go_memstats_gc_sys_bytes
+  type: gauge
+  description: Number of bytes used for garbage collection system metadata
+- title: go_memstats_heap_alloc_bytes
+  type: gauge
+  description: Number of heap bytes allocated and still in use
+- title: go_memstats_heap_idle_bytes
+  type: gauge
+  description: Number of heap bytes waiting to be used
+- title: go_memstats_heap_inuse_bytes
+  type: gauge
+  description: Number of heap bytes that are in use
+- title: go_memstats_heap_objects
+  type: gauge
+  description: Number of allocated objects
+- title: go_memstats_heap_released_bytes
+  type: gauge
+  description: Number of heap bytes released to OS
+- title: go_memstats_heap_sys_bytes
+  type: gauge
+  description: Number of heap bytes obtained from system
+- title: go_memstats_last_gc_time_seconds
+  type: gauge
+  description: Number of seconds since 1970 of last garbage collection
+- title: go_memstats_lookups_total
+  type: counter
+  description: Total number of pointer lookups
+- title: go_memstats_mallocs_total
+  type: counter
+  description: Total number of mallocs
+- title: go_memstats_mcache_inuse_bytes
+  type: gauge
+  description:  Number of bytes in use by mcache structures
+- title: go_memstats_mcache_sys_bytes
+  type: gauge
+  description: Number of bytes used for mcache structures obtained from system
+- title: go_memstats_mspan_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mspan structures
+- title: go_memstats_mspan_sys_bytes
+  type: gauge
+  description: Number of bytes used for mspan structures obtained from system
+- title: go_memstats_next_gc_bytes
+  type: gauge
+  description: Number of heap bytes when next garbage collection will take place
+- title: go_memstats_other_sys_bytes
+  type: gauge
+  description: Number of bytes used for other system allocations
+- title: go_memstats_stack_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by the stack allocator
+- title: go_memstats_stack_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system for stack allocator
+- title: go_memstats_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system
+- title: go_threads
+  type: gauge
+  description: Number of OS threads created
+- title: node_arp_entries
+  type: gauge
+  description: ARP entries by device
+- title: node_boot_time_seconds
+  type: gauge
+  description: Node boot time, in unixtime
+- title: node_context_switches_total
+  type: counter
+  description: Total number of context switches
+- title: node_cpu_guest_seconds_total
+  type: counter
+  description: Seconds the cpus spent in guests (VMs) for each mode
+- title: node_cpu_seconds_total
+  type: counter
+  description: Seconds the cpus spent in each mode
+- title: node_disk_io_now
+  type: gauge
+  description: The number of I/Os currently in progress
+- title: node_disk_io_time_seconds_total
+  type: counter
+  description: Total seconds spent doing I/Os
+- title: node_disk_io_time_weighted_seconds_total
+  type: counter
+  description: The weighted number of seconds spent doing I/Os. See https://www.kernel.org/doc/Documentation/iostats.txt
+- title: node_disk_read_bytes_total
+  type: counter
+  description: The total number of bytes read successfully
+- title: node_disk_read_time_seconds_total
+  type: counter
+  description: The total number of milliseconds spent by all reads
+- title: node_disk_reads_completed_total
+  type: counter
+  description: The total number of reads completed successfully
+- title: node_disk_reads_merged_total
+  type: counter
+  description: The total number of reads merged. See https://www.kernel.org/doc/Documentation/iostats.txt
+- title: node_disk_write_time_seconds_total
+  type: counter
+  description: This is the total number of seconds spent by all writes
+- title: node_disk_writes_completed_total
+  type: counter
+  description: The total number of writes completed successfully
+- title: node_disk_writes_merged_total
+  type: counter
+  description: The number of writes merged. See https://www.kernel.org/doc/Documentation/iostats.txt
+- title: node_disk_written_bytes_total
+  type: counter
+  description: The total number of bytes written successfully
+- title: node_entropy_available_bits
+  type: gauge
+  description: Bits of available entropy
+- title: node_exporter_build_info
+  type: gauge
+  description: A metric with a constant '1' value labeled by version, revision, branch, and goversion from which node_exporter was built
+- title: node_filefd_allocated
+  type: gauge
+  description: "File descriptor statistics: allocated"
+- title: node_filefd_maximum
+  type: gauge
+  description: "File descriptor statistics: maximum"
+- title: node_filesystem_avail_bytes
+  type: gauge
+  description: Filesystem space available to non-root users in bytes
+- title: node_filesystem_device_error
+  type: gauge
+  description: Whether an error occurred while getting statistics for the given device
+- title: node_filesystem_files
+  type: gauge
+  description: Filesystem total file nodes
+- title: node_filesystem_files_free
+  type: gauge
+  description: Filesystem total free file nodes
+- title: node_filesystem_free_bytes
+  type: gauge
+  description: Filesystem free space in bytes
+- title: node_filesystem_readonly
+  type: gauge
+  description: Filesystem read-only status
+- title: node_filesystem_size_bytes
+  type: gauge
+  description: Filesystem size in bytes
+- title: node_forks_total
+  type: counter
+  description: Total number of forks
+- title: node_intr_total
+  type: counter
+  description: Total number of interrupts serviced
+- title: node_ipvs_connections_total
+  type: counter
+  description: The total number of connections made
+- title: node_ipvs_incoming_bytes_total
+  type: counter
+  description: The total amount of incoming data
+- title: node_ipvs_incoming_packets_total
+  type: counter
+  description: The total number of incoming packets
+- title: node_ipvs_outgoing_bytes_total
+  type: counter
+  description: The total amount of outgoing data
+- title: node_ipvs_outgoing_packets_total
+  type: counter
+  description: The total number of outgoing packets
+- title: node_load1
+  type: gauge
+  description: 1m load average
+- title: node_load15
+  type: gauge
+  description: 15m load average
+- title: node_load5
+  type: gauge
+  description: 5m load average
+- title: node_memory_Active_anon_bytes
+  type: gauge
+  description: Memory information field Active_anon_bytes
+- title: node_memory_Active_bytes
+  type: gauge
+  description: Memory information field Active_bytes
+- title: node_memory_Active_file_bytes
+  type: gauge
+  description: Memory information field Active_file_bytes
+- title: node_memory_AnonHugePages_bytes
+  type: gauge
+  description: Memory information field AnonHugePages_bytes
+- title: node_memory_AnonPages_bytes
+  type: gauge
+  description: Memory information field AnonPages_bytes
+- title: node_memory_Bounce_bytes
+  type: gauge
+  description: Memory information field Bounce_bytes
+- title: node_memory_Buffers_bytes
+  type: gauge
+  description: Memory information field Buffers_bytes
+- title: node_memory_Cached_bytes
+  type: gauge
+  description: Memory information field Cached_bytes
+- title: node_memory_CommitLimit_bytes
+  type: gauge
+  description: Memory information field CommitLimit_bytes
+- title: node_memory_Committed_AS_bytes
+  type: gauge
+  description: Memory information field Committed_AS_bytes
+- title: node_memory_DirectMap1G_bytes
+  type: gauge
+  description: Memory information field DirectMap1G_bytes
+- title: node_memory_DirectMap2M_bytes
+  type: gauge
+  description: Memory information field DirectMap2M_bytes
+- title: node_memory_DirectMap4k_bytes
+  type: gauge
+  description: Memory information field DirectMap4k_bytes
+- title: node_memory_Dirty_bytes
+  type: gauge
+  description: Memory information field Dirty_bytes
+- title: node_memory_HugePages_Free
+  type: gauge
+  description: Memory information field HugePages_Free
+- title: node_memory_HugePages_Rsvd
+  type: gauge
+  description: Memory information field HugePages_Rsvd
+- title: node_memory_HugePages_Surp
+  type: gauge
+  description: Memory information field HugePages_Surp
+- title: node_memory_HugePages_Total
+  type: gauge
+  description: Memory information field HugePages_Total
+- title: node_memory_Hugepagesize_bytes
+  type: gauge
+  description: Memory information field Hugepagesize_bytes
+- title: node_memory_Inactive_anon_bytes
+  type: gauge
+  description: Memory information field Inactive_anon_bytes
+- title: node_memory_Inactive_bytes
+  type: gauge
+  description: Memory information field Inactive_bytes
+- title: node_memory_Inactive_file_bytes
+  type: gauge
+  description: Memory information field Inactive_file_bytes
+- title: node_memory_KernelStack_bytes
+  type: gauge
+  description: Memory information field KernelStack_bytes
+- title: node_memory_Mapped_bytes
+  type: gauge
+  description: Memory information field Mapped_bytes
+- title: node_memory_MemAvailable_bytes
+  type: gauge
+  description: Memory information field MemAvailable_bytes
+- title: node_memory_MemFree_bytes
+  type: gauge
+  description: Memory information field MemFree_bytes
+- title: node_memory_MemTotal_bytes
+  type: gauge
+  description: Memory information field MemTotal_bytes
+- title: node_memory_Mlocked_bytes
+  type: gauge
+  description: Memory information field Mlocked_bytes
+- title: node_memory_NFS_Unstable_bytes
+  type: gauge
+  description: Memory information field NFS_Unstable_bytes
+- title: node_memory_PageTables_bytes
+  type: gauge
+  description: Memory information field PageTables_bytes
+- title: node_memory_SReclaimable_bytes
+  type: gauge
+  description: Memory information field SReclaimable_bytes
+- title: node_memory_SUnreclaim_bytes
+  type: gauge
+  description: Memory information field SUnreclaim_bytes
+- title: node_memory_ShmemHugePages_bytes
+  type: gauge
+  description: Memory information field ShmemHugePages_bytes
+- title: node_memory_ShmemPmdMapped_bytes
+  type: gauge
+  description: Memory information field ShmemPmdMapped_bytes
+- title: node_memory_Shmem_bytes
+  type: gauge
+  description: Memory information field Shmem_bytes
+- title: node_memory_Slab_bytes
+  type: gauge
+  description: Memory information field Slab_bytes
+- title: node_memory_SwapCached_bytes
+  type: gauge
+  description: Memory information field SwapCached_bytes
+- title: node_memory_SwapFree_bytes
+  type: gauge
+  description: Memory information field SwapFree_bytes
+- title: node_memory_SwapTotal_bytes
+  type: gauge
+  description: Memory information field SwapTotal_bytes
+- title: node_memory_Unevictable_bytes
+  type: gauge
+  description: Memory information field Unevictable_bytes
+- title: node_memory_VmallocChunk_bytes
+  type: gauge
+  description: Memory information field VmallocChunk_bytes
+- title: node_memory_VmallocTotal_bytes
+  type: gauge
+  description: Memory information field VmallocTotal_bytes
+- title: node_memory_VmallocUsed_bytes
+  type: gauge
+  description: Memory information field VmallocUsed_bytes
+- title: node_memory_WritebackTmp_bytes
+  type: gauge
+  description: Memory information field WritebackTmp_bytes
+- title: node_memory_Writeback_bytes
+  type: gauge
+  description: Memory information field Writeback_bytes
+- title: node_netstat_Icmp6_InErrors
+  type: gauge
+  description: Statistic Icmp6InErrors
+- title: node_netstat_Icmp6_InMsgs
+  type: gauge
+  description: Statistic Icmp6InMsgs
+- title: node_netstat_Icmp6_OutMsgs
+  type: gauge
+  description: Statistic Icmp6OutMsgs
+- title: node_netstat_Icmp_InErrors
+  type: gauge
+  description: Statistic IcmpInErrors
+- title: node_netstat_Icmp_InErrors
+  type: gauge
+  description: Statistic IcmpInErrors
+- title: node_netstat_Icmp_InMsgs
+  type: gauge
+  description: Statistic IcmpInMsgs
+- title: node_netstat_Icmp_OutMsgs
+  type: gauge
+  description: Statistic IcmpOutMsgs
+- title: node_netstat_Ip6_InOctets
+  type: gauge
+  description: Statistic Ip6InOctets
+- title: node_netstat_Ip6_OutOctets
+  type: gauge
+  description: Statistic Ip6OutOctets
+- title: node_netstat_IpExt_InOctets
+  type: gauge
+  description: Statistic IpExtInOctets
+- title: node_netstat_IpExt_OutOctets
+  type: gauge
+  description: Statistic IpExtOutOctets
+- title: node_netstat_Ip_Forwarding
+  type: gauge
+  description: Statistic IpForwarding
+- title: node_netstat_TcpExt_ListenDrops
+  type: gauge
+  description: Statistic TcpExtListenDrops
+- title: node_netstat_TcpExt_ListenOverflows
+  type: gauge
+  description: Statistic TcpExtListenOverflows
+- title: node_netstat_TcpExt_SyncookiesFailed
+  type: gauge
+  description: Statistic TcpExtSyncookiesFailed
+- title: node_netstat_TcpExt_SyncookiesRecv
+  type: gauge
+  description: Statistic TcpExtSyncookiesRecv
+- title: node_netstat_TcpExt_SyncookiesSent
+  type: gauge
+  description: Statistic TcpExtSyncookiesSent
+- title: node_netstat_Tcp_ActiveOpens
+  type: gauge
+  description: Statistic TcpActiveOpens
+- title: node_netstat_Tcp_CurrEstab
+  type: gauge
+  description: Statistic TcpCurrEstab
+- title: node_netstat_Tcp_InErrs
+  type: gauge
+  description: Statistic TcpInErrs
+- title: node_netstat_Tcp_PassiveOpens
+  type: gauge
+  description: Statistic TcpPassiveOpens
+- title: node_netstat_Tcp_RetransSegs
+  type: gauge
+  description: Statistic TcpRetransSegs
+- title: node_netstat_Udp6_InDatagrams
+  type: gauge
+  description: Statistic Udp6InDatagrams
+- title: node_netstat_Udp6_InErrors
+  type: gauge
+  description: Statistic Udp6InErrors
+- title: node_netstat_Udp6_NoPorts
+  type: gauge
+  description: Statistic Udp6NoPorts
+- title: node_netstat_Udp6_OutDatagrams
+  type: gauge
+  description: Statistic Udp6OutDatagrams
+- title: node_netstat_UdpLite6_InErrors
+  type: gauge
+  description: Statistic UdpLite6InErrors
+- title: node_netstat_UdpLite_InErrors
+  type: gauge
+  description: Statistic UdpLiteInErrors
+- title: node_netstat_Udp_InDatagrams
+  type: gauge
+  description: Statistic UdpInDatagrams
+- title: node_netstat_Udp_InErrors
+  type: gauge
+  description: Statistic UdpInErrors
+- title: node_netstat_Udp_NoPorts
+  type: gauge
+  description: Statistic UdpNoPorts
+- title: node_netstat_Udp_OutDatagrams
+  type: gauge
+  description: Statistic UdpOutDatagrams
+- title: node_network_receive_bytes_total
+  type: counter
+  description: Network device statistic receive_bytes
+- title: node_network_receive_compressed_total
+  type: counter
+  description: Network device statistic receive_compressed
+- title: node_network_receive_drop_total
+  type: counter
+  description: Network device statistic receive_drop
+- title: node_network_receive_errs_total
+  type: counter
+  description: Network device statistic receive_errs
+- title: node_network_receive_fifo_total
+  type: counter
+  description: Network device statistic receive_fifo
+- title: node_network_receive_frame_total
+  type: counter
+  description: Network device statistic receive_frame
+- title: node_network_receive_multicast_total
+  type: counter
+  description: Network device statistic receive_multicast
+- title: node_network_receive_packets_total
+  type: counter
+  description: Network device statistic receive_packets
+- title: node_network_transmit_bytes_total
+  type: counter
+  description: Network device statistic transmit_bytes
+- title: node_network_transmit_carrier_total
+  type: counter
+  description: Network device statistic transmit_carrier
+- title: node_network_transmit_colls_total
+  type: counter
+  description: Network device statistic transmit_colls
+- title: node_network_transmit_compressed_total
+  type: counter
+  description: Network device statistic transmit_compressed
+- title: node_network_transmit_drop_total
+  type: counter
+  description: Network device statistic transmit_drop
+- title: node_network_transmit_errs_total
+  type: counter
+  description: Network device statistic transmit_errs
+- title: node_network_transmit_fifo_total
+  type: counter
+  description: Network device statistic transmit_fifo
+- title: node_network_transmit_packets_total
+  type: counter
+  description: Network device statistic transmit_packets
+- title: node_nf_conntrack_entries
+  type: gauge
+  description: Number of currently allocated flow entries for connection tracking
+- title: node_nf_conntrack_entries_limit
+  type: gauge
+  description: Maximum size of connection tracking table
+- title: node_procs_blocked
+  type: gauge
+  description: Number of processes blocked waiting for I/O to complete
+- title: node_procs_running
+  type: gauge
+  description: Number of processes in runnable state
+- title: node_scrape_collector_duration_seconds
+  type: gauge
+  description: Duration of a collector scrape
+- title: node_scrape_collector_success
+  type: gauge
+  description: Whether a collector succeeded
+- title: node_sockstat_FRAG_inuse
+  type: gauge
+  description: Number of FRAG sockets in state inuse
+- title: node_sockstat_FRAG_memory
+  type: gauge
+  description: Number of FRAG sockets in state memory
+- title: node_sockstat_RAW_inuse
+  type: gauge
+  description: Number of RAW sockets in state inuse
+- title: node_sockstat_TCP_alloc
+  type: gauge
+  description: Number of TCP sockets in state alloc
+- title: node_sockstat_TCP_inuse
+  type: gauge
+  description: Number of TCP sockets in state inuse
+- title: node_sockstat_TCP_mem
+  type: gauge
+  description: Number of TCP sockets in state mem
+- title: node_sockstat_TCP_mem_bytes
+  type: gauge
+  description: Number of TCP sockets in state mem_bytes
+- title: node_sockstat_TCP_orphan
+  type: gauge
+  description: Number of TCP sockets in state orphan
+- title: node_sockstat_TCP_tw
+  type: gauge
+  description: Number of TCP sockets in state tw
+- title: node_sockstat_UDPLITE_inuse
+  type: gauge
+  description: Number of UDPLITE sockets in state inuse
+- title: node_sockstat_UDP_inuse
+  type: gauge
+  description: Number of UDP sockets in state inuse
+- title: node_sockstat_UDP_mem
+  type: gauge
+  description: Number of UDP sockets in state mem
+- title: node_sockstat_UDP_mem_bytes
+  type: gauge
+  description: Number of UDP sockets in state mem_bytes
+- title: node_sockstat_sockets_used
+  type: gauge
+  description: Number of sockets sockets in state used
+- title: node_textfile_scrape_error
+  type: gauge
+  description: 1 if there was an error opening or reading a file, 0 otherwise
+- title: node_time_seconds
+  type: gauge
+  description: System time in seconds since epoch (1970)
+- title: node_uname_info
+  type: gauge
+  description: Labeled system information as provided by the uname system call
+- title: node_vmstat_pgfault
+  type: gauge
+  description: /proc/vmstat information field pgfault
+- title: node_vmstat_pgmajfault
+  type: gauge
+  description: /proc/vmstat information field pgmajfault
+- title: node_vmstat_pgpgin
+  type: gauge
+  description: /proc/vmstat information field pgpgin
+- title: node_vmstat_pgpgout
+  type: gauge
+  description: /proc/vmstat information field pgpgout
+- title: node_vmstat_pswpin
+  type: gauge
+  description: /proc/vmstat information field pswpin
+- title: node_vmstat_pswpout
+  type: gauge
+  description: /proc/vmstat information field pswpout
+- title: process_cpu_seconds_total
+  type: counter
+  description: Total user and system CPU time spent in seconds
+- title: process_max_fds
+  type: gauge
+  description: Maximum number of open file descriptors
+- title: process_open_fds
+  type: gauge
+  description: Maximum number of open file descriptors
+- title: process_resident_memory_bytes
+  type: gauge
+  description: Resident memory size in bytes
+- title: process_start_time_seconds
+  type: gauge
+  description: Start time of the process since unix epoch in seconds
+- title: process_virtual_memory_bytes
+  type: gauge
+  description: Virtual memory size in bytes
+- title: promhttp_metric_handler_requests_in_flight
+  type: gauge
+  description: Current number of scrapes being served
+- title: promhttp_metric_handler_requests_total
+  type: counter
+  description: Total number of scrapes by HTTP status code
