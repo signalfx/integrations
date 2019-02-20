@@ -1,0 +1,288 @@
+- title: go_gc_duration_seconds
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_sum
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_count
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_goroutines
+  type: gauge
+  description: Number of goroutines that currently exist
+- title: go_info
+  type: gauge
+  description: Information about the Go environment
+- title: go_memstats_alloc_bytes
+  type: gauge
+  description: Number of bytes allocated and still in use
+- title: go_memstats_alloc_bytes_total
+  type: counter
+  description: Total number of bytes allocated, even if freed
+- title: go_memstats_buck_hash_sys_bytes
+  type: gauge
+  description: Number of bytes used by the profiling bucket hash table
+- title: go_memstats_frees_total
+  type: counter
+  description: Total number of frees
+- title: go_memstats_gc_cpu_fraction
+  type: gauge
+  description: The fraction of this program's available CPU time used by the GC since the program started
+- title: go_memstats_gc_sys_bytes
+  type: gauge
+  description: Number of bytes used for garbage collection system metadata
+- title: go_memstats_heap_alloc_bytes
+  type: gauge
+  description: Number of heap bytes allocated and still in use
+- title: go_memstats_heap_idle_bytes
+  type: gauge
+  description: Number of heap bytes waiting to be used
+- title: go_memstats_heap_inuse_bytes
+  type: gauge
+  description: Number of heap bytes that are in use
+- title: go_memstats_heap_objects
+  type: gauge
+  description: Number of allocated objects
+- title: go_memstats_heap_released_bytes
+  type: gauge
+  description: Number of heap bytes released to OS
+- title: go_memstats_heap_sys_bytes
+  type: gauge
+  description: Number of heap bytes obtained from system
+- title: go_memstats_last_gc_time_seconds
+  type: gauge
+  description: Number of seconds since 1970 of last garbage collection
+- title: go_memstats_lookups_total
+  type: counter
+  description: Total number of pointer lookups
+- title: go_memstats_mallocs_total
+  type: counter
+  description: Total number of mallocs
+- title: go_memstats_mcache_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mcache structures
+- title: go_memstats_mcache_sys_bytes
+  type: gauge
+  description: Number of bytes used for mcache structures obtained from system
+- title: go_memstats_mspan_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mspan structures
+- title: go_memstats_mspan_sys_bytes
+  type: gauge
+  description: Number of bytes used for mspan structures obtained from system
+- title: go_memstats_next_gc_bytes
+  type: gauge
+  description: Number of heap bytes when next garbage collection will take place
+- title: go_memstats_other_sys_bytes
+  type: gauge
+  description: Number of bytes used for other system allocations
+- title: go_memstats_stack_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by the stack allocator
+- title: go_memstats_stack_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system for stack allocator
+- title: go_memstats_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system
+- title: go_threads
+  type: gauge
+  description: Number of OS threads created
+- title: process_cpu_seconds_total
+  type: counter
+  description: Total user and system CPU time spent in seconds
+- title: process_max_fds
+  type: gauge
+  description: Maximum number of open file descriptors
+- title: process_open_fds
+  type: gauge
+  description: Number of open file descriptors
+- title: process_resident_memory_bytes
+  type: gauge
+  description: Resident memory size in bytes
+- title: process_start_time_seconds
+  type: gauge
+  description: Start time of the process since unix epoch in seconds
+- title: process_virtual_memory_bytes
+  type: gauge
+  description: Virtual memory size in bytes
+- title: redis_aof_current_rewrite_duration_sec
+  type: gauge
+  description: aof_current_rewrite_duration_sec metric
+- title: redis_aof_enabled
+  type: gauge
+  description: aof_enabled metric
+- title: redis_aof_last_rewrite_duration_sec
+  type: gauge
+  description: aof_last_rewrite_duration_sec metric
+- title: redis_aof_rewrite_in_progress
+  type: gauge
+  description: aof_rewrite_in_progress metric
+- title: redis_aof_rewrite_scheduled
+  type: gauge
+  description: aof_rewrite_scheduled metric
+- title: redis_blocked_clients
+  type: gauge
+  description: blocked_clients metric
+- title: redis_client_biggest_input_buf
+  type: gauge
+  description: client_biggest_input_buf metric
+- title: redis_client_longest_output_list
+  type: gauge
+  description: client_longest_output_list metric
+- title: redis_cluster_enabled
+  type: gauge
+  description: cluster_enabled metric
+- title: redis_command_call_duration_seconds_count
+  type: gauge
+  description: command_call_duration_seconds_count metric
+- title: redis_command_call_duration_seconds_sum
+  type: gauge
+  description: Total amount of time in seconds spent per command
+- title: redis_commands_processed_total
+  type: gauge
+  description: commands_processed_total metric
+- title: redis_config_maxclients
+  type: gauge
+  description: config_maxclients metric
+- title: redis_config_maxmemory
+  type: gauge
+  description: config_maxmemory metric
+- title: redis_connected_clients
+  type: gauge
+  description: connected_clients metric
+- title: redis_connected_slaves
+  type: gauge
+  description: connected_slaves metric
+- title: redis_connections_received_total
+  type: gauge
+  description: connections_received_total metric
+- title: redis_db_avg_ttl_seconds
+  type: gauge
+  description: Avg TTL in seconds
+- title: redis_db_keys
+  type: gauge
+  description: Total number of keys by DB
+- title: redis_db_keys_expiring
+  type: gauge
+  description: Total number of expiring keys by DB
+- title: redis_evicted_keys_total
+  type: gauge
+  description: evicted_keys_total metric
+- title: redis_expired_keys_total
+  type: gauge
+  description: expired_keys_total metric
+- title: redis_exporter_build_info
+  type: gauge
+  description: redis exporter build_info
+- title: redis_exporter_last_scrape_duration_seconds
+  type: gauge
+  description: The last scrape duration
+- title: redis_exporter_last_scrape_error
+  type: gauge
+  description: The last scrape error status
+- title: redis_exporter_scrapes_total
+  type: gauge
+  description: Current total redis scrapes
+- title: redis_instance_info
+  type: gauge
+  description: Information about the Redis instance
+- title: redis_instance_info
+  type: gauge
+  description: Information about the Redis instance
+- title: redis_instantaneous_input_kbps
+  type: gauge
+  description: instantaneous_input_kbps metric
+- title: redis_instantaneous_ops_per_sec
+  type: gauge
+  description: instantaneous_ops_per_sec metric
+- title: redis_instantaneous_output_kbps
+  type: gauge
+  description: instantaneous_output_kbps metric
+- title: redis_keyspace_hits_total
+  type: gauge
+  description: keyspace_hits_total metric
+- title: redis_keyspace_misses_total
+  type: gauge
+  description: keyspace_misses_total metric
+- title: redis_latest_fork_usec
+  type: gauge
+  description: latest_fork_usec metric
+- title: redis_loading_dump_file
+  type: gauge
+  description: loading_dump_file metric
+- title: redis_master_repl_offset
+  type: gauge
+  description: master_repl_offset metric
+- title: redis_memory_fragmentation_ratio
+  type: gauge
+  description: memory_fragmentation_ratio metric
+- title: redis_memory_max_bytes
+  type: gauge
+  description: memory_max_bytes metric
+- title: redis_memory_used_bytes
+  type: gauge
+  description: memory_used_bytes metric
+- title: redis_memory_used_lua_bytes
+  type: gauge
+  description: memory_used_lua_bytes metric
+- title: redis_memory_used_peak_bytes
+  type: gauge
+  description: memory_used_peak_bytes metric
+- title: redis_memory_used_rss_bytes
+  type: gauge
+  description: memory_used_rss_bytes metric
+- title: redis_net_input_bytes_total
+  type: gauge
+  description: net_input_bytes_total metric
+- title: redis_net_output_bytes_total
+  type: gauge
+  description: net_output_bytes_total metric
+- title: redis_process_id
+  type: gauge
+  description: process_id metric
+- title: redis_pubsub_channels
+  type: gauge
+  description: pubsub_channels metric
+- title: redis_pubsub_patterns
+  type: gauge
+  description: pubsub_patterns metric
+- title: redis_rdb_changes_since_last_save
+  type: gauge
+  description: rdb_changes_since_last_save metric
+- title: redis_rdb_current_bgsave_duration_sec
+  type: gauge
+  description: rdb_current_bgsave_duration_sec metric
+- title: redis_rdb_last_bgsave_duration_sec
+  type: gauge
+  description: rdb_last_bgsave_duration_sec metric
+- title: redis_rejected_connections_total
+  type: gauge
+  description: rejected_connections_total metric
+- title: redis_replication_backlog_bytes
+  type: gauge
+  description: replication_backlog_bytes metric
+- title: redis_slowlog_length
+  type: gauge
+  description: Total slowlog
+- title: redis_start_time_seconds
+  type: gauge
+  description: Start time of the Redis instance since unix epoch in seconds
+- title: redis_up
+  type: gauge
+  description: up metric
+- title: redis_uptime_in_seconds
+  type: gauge
+  description: uptime_in_seconds metric
+- title: redis_used_cpu_sys
+  type: gauge
+  description: used_cpu_sys metric
+- title: redis_used_cpu_sys_children
+  type: gauge
+  description: used_cpu_sys_children metric
+- title: redis_used_cpu_user
+  type: gauge
+  description: used_cpu_user metric
+- title: redis_used_cpu_user_children
+  type: gauge
+  description: used_cpu_user_children metric

@@ -1,0 +1,9 @@
+{ "display_name":"GitLab",
+  "description": "SignalFx Smart Agent monitor for ingesting Real-Time/Live Conviva metrics",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/gitlab",
+  "featured": false,
+  "logo_large": "/images/repos/gitlab/img/integration_gitlab@2x.png",
+  "logo_small": "/images/repos/gitlab/img/integration_gitlab.png",
+  "data_signature": "metric_source:\"gitlab\"",
+  "in_app_categories": ["servicesMonitored"]
+}

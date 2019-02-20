@@ -1,0 +1,30 @@
+- title: ci_stale_builds
+  type: gauge
+  description: ci_stale_builds metric
+- title: pg_stat_table_seq_tup_read
+  type: gauge
+  description: pg_stat_table_seq_tup_read metric
+- title: pg_stat_table_idx_tup_fetch
+  type: gauge
+  description: pg_stat_table_idx_tup_fetch metric
+- title: pg_stat_table_n_tup_ins
+  type: gauge
+  description: pg_stat_table_n_tup_ins metric
+- title: pg_stat_table_n_tup_upd
+  type: gauge
+  description: pg_stat_table_n_tup_upd metric
+- title: pg_stat_table_n_tup_del
+  type: gauge
+  description: pg_stat_table_n_tup_del metric
+- title: pg_stat_table_n_tup_hot_upd
+  type: gauge
+  description: pg_stat_table_n_tup_hot_upd metric
+- title: pg_stat_table_n_dead_tup
+  type: gauge
+  description: pg_stat_table_n_dead_tup metric
+- title: pg_stat_table_seq_scan
+  type: gauge
+  description: pg_stat_table_seq_scan metric
+- title: gitlab_database_rows
+  type: gauge
+  description: pg_stat_table_seq_scan metric

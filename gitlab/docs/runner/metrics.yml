@@ -1,0 +1,141 @@
+- title: gitlab_runner_api_request_statuses_total
+  type: counter
+  description: The total number of API requests, partitioned by runner, endpoint and status
+- title: gitlab_runner_autoscaling_machine_creation_duration_seconds_bucket
+  type: counter
+  description: Histogram of machine creation time
+- title: gitlab_runner_autoscaling_machine_creation_duration_seconds_sum
+  type: counter
+  description: Histogram of machine creation time
+- title: gitlab_runner_autoscaling_machine_creation_duration_seconds_count
+  type: counter
+  description: Histogram of machine creation time
+- title: gitlab_runner_autoscaling_machine_states
+  type: gauge
+  description: The current number of machines per state in this provider
+- title: gitlab_runner_concurrent
+  type: gauge
+  description: The current value of concurrent setting
+- title: gitlab_runner_errors_total
+  type: counter
+  description: The number of catched errors
+- title: gitlab_runner_limit
+  type: gauge
+  description: The current value of concurrent setting
+- title: gitlab_runner_request_concurrency
+  type: gauge
+  description: The current number of concurrent requests for a new job
+- title: gitlab_runner_request_concurrency_exceeded_total
+  type: counter
+  description: Counter tracking exceeding of request concurrency
+- title: gitlab_runner_version_info
+  type: gauge
+  description: A metric with a constant '1' value labeled by different build stats fields
+- title: go_gc_duration_seconds
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_sum
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_count
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_goroutines
+  type: gauge
+  description: Number of goroutines that currently exist
+- title: go_info
+  type: gauge
+  description: Information about the Go environment
+- title: go_memstats_alloc_bytes
+  type: gauge
+  description: Number of bytes allocated and still in use
+- title: go_memstats_alloc_bytes_total
+  type: counter
+  description: Total number of bytes allocated, even if freed
+- title: go_memstats_buck_hash_sys_bytes
+  type: gauge
+  description: Number of bytes used by the profiling bucket hash table
+- title: go_memstats_frees_total
+  type: counter
+  description: Total number of frees
+- title: go_memstats_gc_cpu_fraction
+  type: gauge
+  description: The fraction of this program's available CPU time used by the GC since the program started
+- title: go_memstats_gc_sys_bytes
+  type: gauge
+  description: Number of bytes used for garbage collection system metadata
+- title: go_memstats_heap_alloc_bytes
+  type: gauge
+  description: Number of heap bytes allocated and still in use
+- title: go_memstats_heap_idle_bytes
+  type: gauge
+  description: Number of heap bytes waiting to be used
+- title: go_memstats_heap_inuse_bytes
+  type: gauge
+  description: Number of heap bytes that are in use
+- title: go_memstats_heap_objects
+  type: gauge
+  description: Number of allocated objects
+- title: go_memstats_heap_released_bytes
+  type: gauge
+  description: Number of heap bytes released to OS
+- title: go_memstats_heap_sys_bytes
+  type: gauge
+  description: Number of heap bytes obtained from system
+- title: go_memstats_last_gc_time_seconds
+  type: gauge
+  description: Number of seconds since 1970 of last garbage collection
+- title: go_memstats_lookups_total
+  type: counter
+  description: Total number of pointer lookups
+- title: go_memstats_mallocs_total
+  type: counter
+  description: Total number of mallocs
+- title: go_memstats_mcache_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mcache structures
+- title: go_memstats_mcache_sys_bytes
+  type: gauge
+  description: Number of bytes used for mcache structures obtained from system
+- title: go_memstats_mspan_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mspan structures
+- title: go_memstats_mspan_sys_bytes
+  type: gauge
+  description: Number of bytes used for mspan structures obtained from system
+- title: go_memstats_next_gc_bytes
+  type: gauge
+  description: Number of heap bytes when next garbage collection will take place
+- title: go_memstats_other_sys_bytes
+  type: gauge
+  description: Number of bytes used for other system allocations
+- title: go_memstats_stack_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by the stack allocator
+- title: go_memstats_stack_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system for stack allocator
+- title: go_memstats_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system
+- title: go_threads
+  type: gauge
+  description: Number of OS threads created
+- title: process_cpu_seconds_total
+  type: counter
+  description: Total user and system CPU time spent in seconds
+- title: process_max_fds
+  type: gauge
+  description: Maximum number of open file descriptors
+- title: process_open_fds
+  type: gauge
+  description: Number of open file descriptors
+- title: process_resident_memory_bytes
+  type: gauge
+  description: Resident memory size in bytes
+- title: process_start_time_seconds
+  type: gauge
+  description: Start time of the process since unix epoch in seconds
+- title: process_virtual_memory_bytes
+  type: gauge
+  description: Virtual memory size in bytes
