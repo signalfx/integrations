@@ -116,8 +116,16 @@ The size of the machine that hosts the gateway depends on the amount of data tha
 
         /etc/init.d/gateway start
 
+5. Configure your endpoints:
 
-5. Begin transmitting data to the host and port on which the gateway is running. The data will be transformed and forwarded as specified in the [configuration](#configuration).
+By default, the SignalFx Gateway sends metrics to the `us0` realm.
+If you are not in this realm, you will need to explicitly set the
+endpoint urls to use your realm. To determine if you are in a different realm and need to
+explicitly set the endpoints, check your profile page in the SignalFx
+web application. See the configuration section on [sending to alternate ingest targets](#sending-to-alternate-ingest-targets) below.
+
+
+6. Begin transmitting data to the host and port on which the gateway is running. The data will be transformed and forwarded as specified in the [configuration](#configuration).
 
 #### Docker Container Deployment
 
@@ -786,12 +794,15 @@ You can use the gateway to duplicate a data stream to multiple destinations. Add
 #### Sending To Alternate Ingest Targets
 
 You can configure the forwarder to send to alternate ingest endpoints such as another Gateway or an alternate SignalFx Deployment.
+The SignalFx Gateway sends to the `us0` realm by default. If you are not in this realm, you will need to explicitly set the
+endpoint urls above as shown below. To determine if you are in a different realm and need to
+explicitly set the endpoints, check your profile page in the SignalFx web application. 
 
 | Key | Description | Default |
 | --- | ----------- | ------- |
-| `URL` | Datapoint ingest url. | `https://ingest.signalfx.com/v2/datapoint` |
-| `EventURL` | Event ingest url. | `https://ingest.signalfx.com/v2/event` |
-| `TraceURL` | Trace ingest url. | `https://ingest.signalfx.com/v1/trace` |
+| `URL` | Datapoint ingest url. | `https://ingest.{REALM}.signalfx.com/v2/datapoint` |
+| `EventURL` | Event ingest url. | `https://ingest.{REALM}.signalfx.com/v2/event` |
+| `TraceURL` | Trace ingest url. | `https://ingest.{REALM}.signalfx.com/v1/trace` |
 
 
     "ForwardTo": [
@@ -799,9 +810,9 @@ You can configure the forwarder to send to alternate ingest endpoints such as an
         "Type": "signalfx",
         "DefaultAuthToken": "ABCD",
         "Name": "signalfxforwarder"
-        "URL": "https://ingest.signalfx.com/v2/datapoint",
-        "EventURL": "https://ingest.signalfx.com/v2/event",
-        "TraceURL": "https://ingest.signalfx.com/v1/trace"
+        "URL": "https://ingest.{REALM}.signalfx.com/v2/datapoint",
+        "EventURL": "https://ingest.{REALM}.signalfx.com/v2/event",
+        "TraceURL": "https://ingest.{REALM}.signalfx.com/v1/trace"
       },
       {
         "Filename": "/tmp/filewrite.csv",
