@@ -1,4 +1,4 @@
-# ![](./img/integration_azurekubernetesservice.png) Microsoft Azure Virtual Machine Scale Sets
+# ![](./img/integration_azurekubernetesservice.png) Microsoft Azure Kubernetes Service
 
 - [Description](#description)
 - [Installation](#installation)
