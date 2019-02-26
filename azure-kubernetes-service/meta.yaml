@@ -1,0 +1,10 @@
+{ "display_name":"Azure Kubernetes Service",
+  "description": "SignalFx's integration with Azure Kubernetes Service",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-kubernetes-service",
+  "code": "https://azure.microsoft.com/en-us/services/kubernetes-service/",
+  "featured": false,
+  "logo_small": "integration_azurekubernetesservice.png",
+  "logo_large": "integration_azurekubernetesservice%402x.png",
+  "data_signature": "resource_type:\"Microsoft.ContainerService/managedClusters\"",
+  "in_app_categories": ["AzureServicesMonitored"]
+}
