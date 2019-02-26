@@ -75,6 +75,8 @@ listen_address = "0.0.0.0:9252"
 ...
 ```
 
+For the `gitlab-unicorn` target, the IP address of the SignalFx Smart Agent container or host depending on the environment, needs to be whitelisted as described <a target="_blank" href="https://docs.gitlab.com/ee/administration/monitoring/ip_whitelist.html">here</a> in order for the agent to access the endpoint.
+
 #### Smart Agent Configuration
 
 Find and edit the SignalFx Smart Agent configuration file `agent.yaml` to configure <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/prometheus-exporter.md">prometheus-exporter</a> monitors for the Prometheus endpoint targets. For example, you can define a prometheus-exporter monitor per endpoint target as shown below. Though verbose, it is the only way to configure metricPath, extraDimension, metricsToExclude etc per endpoint target. 
