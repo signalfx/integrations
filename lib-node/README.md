@@ -22,7 +22,7 @@
 
 #### API access token
 
-To use this library, you need a SignalFx API access token. <a target="_blank" href="https://developers.signalfx.com/docs/authentication">Click here for more information on retrieving your API token</a>.
+To use this library, you need a SignalFx API access token. <a target="_blank" href="https://developers.signalfx.com/administration/access_tokens_overview.html">Click here for more information on retrieving your API token</a>.
 
 
 ### INSTALLATION
