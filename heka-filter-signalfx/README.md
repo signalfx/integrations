@@ -35,6 +35,15 @@ Heka installation instructions are available in the <a target="_blank" href="htt
 
 ### CONFIGURATION
 
+#### Configuring your ingest endpoint
+
+Before we can send metrics to SignalFx, we need to make sure you are sending them to
+the correct SignalFx realm. To determine what realm you are in, check your
+profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to configure the Heka address to point to
+the correct ingest URL. See the example configuration below.
+
+
 Full Heka configuration setting are available in the <a target="_blank" href="http://hekad.readthedocs.org/en/v0.10.0/config/index.html">Heka docs</a>
 
 Configuration for the SignalFx filter:
@@ -74,10 +83,10 @@ Configuration for the SignalFx filter:
     message_matcher = "Fields[payload_name] == 'signalfxbatch'"
     type = "HttpOutput"
     encoder = "PayloadEncoder"
-    address = "https://ingest.signalfx.com/v2/datapoint"
+    address = "https://ingest.{realm}.signalfx.com/v2/datapoint"
       [signalfx.headers]
       content-type = ["application/json"]
-      X-SF-Token = "<YOUR-SIGNALFX-API-TOKEN>"
+      X-SF-Token = "<YOUR-SIGNALFX-ORG-ACCESS-TOKEN>"
 ```
 
 ### METRICS

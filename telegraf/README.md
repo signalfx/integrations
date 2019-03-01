@@ -73,15 +73,31 @@ By default, the following plugin sections are listed in the configuration file b
 
 If you are not using InfluxDB, comment out the InfluxDB plugin configuration section `[[outputs.influxdb]]`.
 
+
+### Configuring your endpoint
+
+Before we can send metrics to SignalFx, we need to make sure you are sending them to
+the correct SignalFx realm. To determine what realm you are in, check your
+profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to configure telegraf
+to send to the correct realm using the `DatapointIngestURL` and `EventIngestURL` configuration options, as shown below.
+
+```
+DatapointIngestURL: https://ingest.{realm}.signalfx.com/v2/datapoint
+EventIngestURL: https://ingest.{realm}.signalfx.com/v2/event
+```
+
+
+
 #### Set configuration values
 
 In `telegraf.conf`, provide values for the configuration options listed below that make sense for your environment.
 
 | plugin block | configuration option | definition | example |
 | ------ | ------------------ | ------- | -------- |
-| [[outputs.signalfx]] | APIToken | Your SignalFx API token. | 'YOUR_SIGNALFX_API_TOKEN' |
-| [[outputs.signalfx]] | DatapointIngestURL | The datapoint ingest endpoint you wish to send to. | `https://ingest.signalfx.com/v2/datapoint` |
-| [[outputs.signalfx]] | EventIngestURL | The event ingest endpoint you wish to send to. | `https://ingest.signalfx.com/v2/event` |
+| [[outputs.signalfx]] | APIToken | Your SignalFx organization access token. | 'ORG_TOKEN' |
+| [[outputs.signalfx]] | DatapointIngestURL | The datapoint ingest endpoint you wish to send to. | `https://ingest.{realm}.signalfx.com/v2/datapoint` |
+| [[outputs.signalfx]] | EventIngestURL | The event ingest endpoint you wish to send to. | `https://ingest.{realm}.signalfx.com/v2/event` |
 | [[outputs.signalfx]] | Exclude | An array of metric names represented as strings that should not be sent to SignalFx | `["metric.name", "metric2.name"]` |
 | [[outputs.signalfx]] | Include | An array of metric names represented as strings that should be sent to SignalFx.  By default all Non-SignalFx generated events (string type metrics) are disabled.  This array should be used to enable individual events. | `["metric.name", "metric2.name"]` |
 | [agent] | logfile | Name of the desired logfile. Leave empty to log to `stderr`.  | 'logfile.log' |
