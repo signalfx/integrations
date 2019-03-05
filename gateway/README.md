@@ -261,6 +261,22 @@ Use caution when leveraging this feature: every expression, and the complexity o
         "SpanNameReplacementBreakAfterMatch": false
     }
 
+##### Add tags to Spans
+
+The SignalFx listener has the ability to add tags to every span that passes through it. 
+`AdditionalSpanTags` defines a set of tag name/value pairs that will be included on every span.
+
+Warning: The tags defined by `AdditionalSpanTags` will overwrite any existing values that are using the same tag name
+
+    {
+        "Type": "signalfx",
+        "ListenAddr": "0.0.0.0:18080",
+        "AdditionalSpanTags": {
+            "foo": "bar",
+            "key": "value"
+        }
+    }
+
 ##### collectd listener
 
 You can receive data sent by CollectD by setting up a `collectd` endpoint.
