@@ -120,7 +120,7 @@ The size of the machine that hosts the gateway depends on the amount of data tha
 
 By default, the SignalFx Gateway sends metrics to the `us0` realm.
 If you are not in this realm, you will need to explicitly set the
-endpoint urls to use your realm. To determine if you are in a different realm and need to
+endpoint urls to use your realm. To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to
 explicitly set the endpoints, check your profile page in the SignalFx
 web application. See the configuration section on [sending to alternate ingest targets](#sending-to-alternate-ingest-targets) below.
 
@@ -156,7 +156,7 @@ You can write datapoints to SignalFx by configuring a forwarder with the type `s
 
 | Configuration property | Definition | Example values |
 |--------|----------|--------|
-| `DefaultAuthToken` | A SignalFx API token that the gateway will use to transmit data to SignalFx. | "ABCD" |
+| `DefaultAuthToken` | A SignalFx API token that the gateway will use to transmit data to SignalFx. | "YOUR_SIGNALFX_API_TOKEN" |
 | `DisableCompression` | Optionally disables gzip compression when forwarding to SignalFx | `true` |
 | `AuthTokenEnvVar` | An environment variable to check for a SignalFx API token | "AUTH_TOKEN_VAR" |
 
@@ -378,7 +378,7 @@ graphite dot delimited name.
       "ForwardTo": [
         {
           "Type": "carbon",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Host": "graphite.database.dc1.com",
           "DimensionsOrder": ["source", "forwarder"],
           "Name": "graphite-west"
@@ -413,7 +413,7 @@ seconds.
       "ForwardTo": [
         {
           "Type": "signalfx",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Name": "signalfxforwarder"
         }
       ]
@@ -544,7 +544,7 @@ Config
       "ForwardTo": [
         {
           "Type": "signalfx",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Name": "signalfxforwarder"
         }
       ]
@@ -640,7 +640,7 @@ Config
       "ForwardTo": [
         {
           "Type": "signalfx",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Name": "signalfxforwarder"
         }
       ]
@@ -745,7 +745,7 @@ Example:
       "ForwardTo": [
         {
           "Type": "signalfx",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Name": "signalfxforwarder"
         }
       ]
@@ -768,7 +768,7 @@ points to SignalFx.
       "ForwardTo": [
         {
           "Type": "signalfx",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Name": "signalfxforwarder"
         }
       ]
@@ -781,7 +781,7 @@ You can use the gateway to duplicate a data stream to multiple destinations. Add
     "ForwardTo": [
       {
         "Type": "signalfx",
-        "DefaultAuthToken": "ABCD",
+        "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
         "Name": "signalfxforwarder"
       },
       {
@@ -795,24 +795,24 @@ You can use the gateway to duplicate a data stream to multiple destinations. Add
 
 You can configure the forwarder to send to alternate ingest endpoints such as another Gateway or an alternate SignalFx Deployment.
 The SignalFx Gateway sends to the `us0` realm by default. If you are not in this realm, you will need to explicitly set the
-endpoint urls above as shown below. To determine if you are in a different realm and need to
+endpoint urls above as shown below. To determine if you are in a different realm (YOUR_SIGNALFX_RELAM) and need to
 explicitly set the endpoints, check your profile page in the SignalFx web application. 
 
 | Key | Description | Default |
 | --- | ----------- | ------- |
-| `URL` | Datapoint ingest url. | `https://ingest.{REALM}.signalfx.com/v2/datapoint` |
-| `EventURL` | Event ingest url. | `https://ingest.{REALM}.signalfx.com/v2/event` |
-| `TraceURL` | Trace ingest url. | `https://ingest.{REALM}.signalfx.com/v1/trace` |
+| `URL` | Datapoint ingest url. | `https://ingest.us0.signalfx.com/v2/datapoint` |
+| `EventURL` | Event ingest url. | `https://ingest.us0.signalfx.com/v2/event` |
+| `TraceURL` | Trace ingest url. | `https://ingest.us0.signalfx.com/v1/trace` |
 
 
     "ForwardTo": [
       {
         "Type": "signalfx",
-        "DefaultAuthToken": "ABCD",
+        "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
         "Name": "signalfxforwarder"
-        "URL": "https://ingest.{REALM}.signalfx.com/v2/datapoint",
-        "EventURL": "https://ingest.{REALM}.signalfx.com/v2/event",
-        "TraceURL": "https://ingest.{REALM}.signalfx.com/v1/trace"
+        "URL": "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint",
+        "EventURL": "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/event",
+        "TraceURL": "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v1/trace"
       },
       {
         "Filename": "/tmp/filewrite.csv",
@@ -869,7 +869,7 @@ data that was late or in the future respectively.
       "ForwardTo": [
         {
           "Type": "signalfx",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Name": "signalfxforwarder",
           "BufferSize": 1000000,
           "DrainingThreads": 50,
@@ -899,7 +899,7 @@ Because the SignalFx Gateway multiplexes incoming traffic from incoming instance
 
 #### Simplify configuration of collectd
 
-The SignalFx Gateway provides one single point of configuration management. Configuring the gateway with your SignalFx API token allows you to manage the token once, on the gateway, rather than on each individual agent.
+The SignalFx Gateway provides one single point of configuration management. Configuring the gateway with your SignalFx API token (YOUR_SIGNALFX_API_TOKEN) allows you to manage the token once, on the gateway, rather than on each individual agent.
 
 In addition, because the SignalFx Gateway can apply dimensions to all outgoing data points, you can use it to annotate metrics from many instances of collectd at once, with information of which individual collectd hosts may not be aware. This can make it easier to add new context to your metrics.
 
@@ -935,7 +935,7 @@ would be denied and those that were not would be allowed.
         },
         {
           "Type": "signalfx",
-          "DefaultAuthToken": "ABCD",
+          "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
           "Name": "signalfxforwarder",
           "Filters": {
             "Deny": [
@@ -982,7 +982,7 @@ You can learn more about pprof on [the pprof help page](http://golang.org/pkg/ne
           "ForwardTo": [
             {
               "Type": "signalfx",
-              "DefaultAuthToken": "ABCD",
+              "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
               "Name": "signalfxforwarder"
             }
         }
@@ -1004,7 +1004,7 @@ logged out.
           "ForwardTo": [
             {
               "Type": "signalfx",
-              "DefaultAuthToken": "ABCD",
+              "DefaultAuthToken": "YOUR_SIGNALFX_API_TOKEN",
               "Name": "signalfxforwarder"
             }
         }

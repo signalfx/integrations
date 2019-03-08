@@ -51,12 +51,12 @@ collectd will begin emitting metrics to SignalFx.
 #### Configuring the plugin
 
 Before we can send metrics to SignalFx, we need to make sure you are sending them to
-the correct SignalFx realm. To determine what realm you are in, check your
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
 profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
 If you are not in the `us0` realm, you will need to set the `URL` configuration option below
 to use the correct realm, as shown below.
 
-You will also need to set the `Token` configuration option to your SignalFx organization access token.
+You will also need to set the `Token` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
 For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
 
 
@@ -66,7 +66,7 @@ For more information on authentication, see the API's [Authentication documentat
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/signalfx-collectd-plugin" |
-| URL | URL for where metrics are sent from collectd. If you are looking to limit the number of connections from your infrastructure to the SignalFx service you can optioally configure the use of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/metricproxy">SignalFx metricproxy</a> | "https://ingest.{realm}.signalfx.com/v1/collectd" |
+| URL | URL for where metrics are sent from collectd. If you are looking to limit the number of connections from your infrastructure to the SignalFx service you can optioally configure the use of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/metricproxy">SignalFx metricproxy</a> | "https://ingest.us0.signalfx.com/v1/collectd" |
 | Token | Your SignalFx Organization Acess Token | none |
 | LogTraces | Enable log traces | true |
 | Notifications | Enable notification on this plugin | true |
