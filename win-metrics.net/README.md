@@ -168,7 +168,7 @@ You must specify the following attributes:
 
 |Attribute | definition |
 |----------|------------|
-|apiToken | Your SignalFx token |
+|apiToken | Your SignalFx token (YOUR_SIGNALFX_API_TOKEN) |
 
 The following attributes are optional
 
@@ -183,7 +183,7 @@ The following attributes are optional
 E.g
 
 ```xml
-  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"/>
+  <signalFxReporter apiToken="YOUR_SIGNALFX_API_TOKEN" sourceType="netbios" sampleInterval="00:00:05"/>
 ```
 
 ### Source Value for a Metric
@@ -200,7 +200,7 @@ It is often useful, but not required, to identify the "source" of a metric. An e
 To add default dimensions add a nested <defaultDimensions> in your <signalFxReporter> stanza:
 
 ```xml
-  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"/>
+  <signalFxReporter apiToken="YOUR_SIGNALFX_API_TOKEN" sourceType="netbios" sampleInterval="00:00:05"/>
     <defaultDimensions>
       <defaultDimension name="environment" value="prod"/>
       <defaultDimension name="serverType" value="API"/>

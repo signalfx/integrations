@@ -61,7 +61,7 @@ You must have administrator (sudo) privileges to install this agent.
 
 #### Configuring the ingest endpoint
 Before we can send metrics to SignalFx, we need to make sure you are sending them to
-the correct SignalFx realm. To determine what realm you are in, check your
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
 profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
 If you are not in the `us0` realm, you will need to configure ingest url, as shown below.
 
@@ -69,7 +69,7 @@ If you are not in the `us0` realm, you will need to configure ingest url, as sho
 
 Run the following command to install the SignalFx collectd agent (<a target="_blank" href="https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md">click here to read about available configuration options</a>):
 ```
-sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN -u https://ingest.{realm}.signalfx.com
+sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN -u https://ingest.YOUR_SIGNALFX_REALM.signalfx.com
 ```
 #### Install in a privileged container
 
@@ -82,8 +82,8 @@ Run the following command to start the container, replacing `IMAGE_URL` with the
 ```
 docker run --privileged \
 --net="host" \
--e "SF_API_TOKEN=ORG_TOKEN" \
--e "SF_INGEST_HOST=https://ingest.{realm}.signalfx.com" \
+-e "SF_API_TOKEN=YOUR_SIGNALFX_API_TOKEN" \
+-e "SF_INGEST_HOST=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com" \
 -v /:/hostfs:ro \
 -v /var/run/docker.sock:/var/run/docker.sock \
 IMAGE_URL
@@ -120,14 +120,14 @@ Installing the SignalFx collectd agent allows you to install many of the integra
 
 You can add a dimension to every datapoint that collectd sends to SignalFx by adding HTTP query parameters to the SignalFx ingest URL, part of the configuration for the `write_http` plugin. This allows you to add information about the host or environment to every metric. For instance, you could identify all metrics coming from production boxes with a dimension like `environment=prod`.
 
-The SignalFx URL to which collectd will transmit data is specified in `10-write_http-plugin.conf` and by default has a value like https://ingest.{realm}.signalfx.com/v1/collectd.
+The SignalFx URL to which collectd will transmit data is specified in `10-write_http-plugin.conf` and by default has a value like https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v1/collectd.
 
 Append dimensions to the  URL as `sfxdim_[DIMENSION NAME]=[DIMENSION VALUE]`. Multiple dimensions may be specified.
 
 For example, the following URL sends data points to SignalFx with the added dimensions `serverType=API` and `tier=middleware`.
 
 ```
-    URL "https://ingest.{realm}.signalfx.com/v1/collectd?sfxdim_serverType=API&sfxdim_tier=middleware"
+    URL "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v1/collectd?sfxdim_serverType=API&sfxdim_tier=middleware"
 ```
 
 #### Transmitting outside a network

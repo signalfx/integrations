@@ -80,14 +80,14 @@ This is the SignalFx vSphere integration. It collects metrics from vCenter and r
 #### Configuring the ingest endpoint
 
 Before we can send metrics to SignalFx, we need to make sure you are sending them to
-the correct SignalFx realm. To determine what realm you are in, check your
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
 profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
 If you are not in the `us0` realm, you will need to configure the `IngestEndpoint` configuration
 option shown below to include your realm in the URL.
 
 #### Authentication
 
-To use this library, you will need a valid SiganlFx organization access token.
+To use this library, you will need a valid SiganlFx organization access token (YOUR_SIGNALFX_API_TOKEN).
 For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
 
 #### Configuration Options
@@ -100,12 +100,12 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | username | Username required to login to vCenter Server. | administrator@vsphere.local |
 | password | Password required to login to vCenter Server. | Abcd123$ |
 | Name | Name of the vCenter Server. | VCenter-Signalfx |
-| IngestToken | SignalFx Organization Access Token required to send metrics to SignalFx | 'ORG_TOKEN' |
+| IngestToken | SignalFx Organization Access Token required to send metrics to SignalFx | YOUR_SIGNALFX_API_TOKEN |
 | MORSyncInterval | Time interval at which the vCenter inventory should be synced. | 300 |
 | MORSyncTimeout | The time that the application should wait for the vCenter inventory to synchronize the first time. Larger inventories will require a longer timeout. This timeout should be increased according to the inventory size when the application fails with MORSyncTimeout error message.| 600 |
 | MetricSyncInterval | Time interval at which the available metrics should be synced. | 300 |
 | MetricSyncTimeout | The time that the application should wait for metrics to synchronize the first time. This should be increased when the volume of metrics is high.  This timeout should be increased when the application fails with MetricSyncTimeout error message. | 600 |
-| IngestEndpoint | The url of ingest endpoint to send to metrics. | https://ingest.{realm}.signalfx.com |
+| IngestEndpoint | The url of ingest endpoint to send to metrics. | https://ingest.YOUR_SIGNALFX_REALM.signalfx.com |
 | IngestTimeout | The timeout interval for sending metrics to signalfx ingest endpoint. | 20 |
 | IncludeMetrics | Metrics required for different inventory objects can be included individually. Currently metrics can be added for datacenter, cluster, host and vm. | mem.usage.average |
 | ExcludeMetrics | Metrics emitted from different inventory objects can be excluded individually. | mem.usage.average |
@@ -119,8 +119,8 @@ config:
     username: administrator@vsphere.local
     password: Abcd123$
     Name: VCenter4
-    IngestToken: ORG_TOKEN
-    IngestEndpoint: 'https://ingest.{realm}.signalfx.com'
+    IngestToken: YOUR_SIGNALFX_API_TOKEN
+    IngestEndpoint: 'https://ingest.YOUR_SIGNALFX_REALM.signalfx.com'
     IngestTimeout: 20
     MORSyncInterval: 300
     MORSyncTimeout: 600
@@ -145,8 +145,8 @@ config:
     username: administrator@vsphere.local
     password: Abcd123$
     Name: VCenter4
-    IngestToken: ORG_TOKEN
-    IngestEndpoint: 'https://ingest.{realm}signalfx.com'
+    IngestToken: YOUR_SIGNALFX_API_TOKEN
+    IngestEndpoint: 'https://ingest.YOUR_SIGNALFX_REALM.signalfx.com'
     IngestTimeout: 10
     MORSyncInterval: 300
     MORSyncTimeout: 1200
@@ -165,8 +165,8 @@ config:
     username: administrator@vsphere.local
     password: Abcd123$
     Name: 192.168.1.20
-    IngestToken: ORG_TOKEN
-    IngestEndpoint: 'https://ingest.{realm}.signalfx.com'
+    IngestToken: YOUR_SIGNALFX_API_TOKEN
+    IngestEndpoint: 'https://ingest.YOUR_SIGNALFX_REALM.signalfx.com'
     MORSyncInterval: 20
     MetricSyncInterval: 60
     ExcludeMetrics:
