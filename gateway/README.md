@@ -15,6 +15,9 @@ Information associated with the SignalFx Gateway can be found <a target="_blank"
         - [Carbon](#carbon-forwarder)
     - [Listeners](#listenfrom)
         - [SignalFx](#signalfx-listener)
+            - [Add Tags to Spans](#add-tags-to-spans)
+            - [Identify and Replace variables in Span Names](#identify-and-replace-variables-in-span-names)
+            - [Using AdditionalSpanTags and SpanNameReplacementRules Together](#using-additionalspantags-and-spannamereplacementrules-together)
         - [collectd](#collectd-listener)
         - [Prometheus](#prometheus-listener)
         - [Wavefront](#wavefront-listener)
@@ -254,6 +257,22 @@ For this, you will need to specify which port to bind to.  An example config:
         "ListenAddr": "0.0.0.0:18080"
     }
 
+##### Add Tags to Spans
+
+The SignalFx listener has the ability to add tags to every span that passes through it. 
+`AdditionalSpanTags` defines a set of tag name/value pairs that will be included on every span.
+
+Warning: The tags defined by `AdditionalSpanTags` will overwrite any existing values that the incoming spans have set for the configured tag names
+
+    {
+        "Type": "signalfx",
+        "ListenAddr": "0.0.0.0:18080",
+        "AdditionalSpanTags": {
+            "foo": "bar",
+            "key": "value"
+        }
+    }
+
 ##### Identify and Replace variables in Span Names
 
 The SignalFx listener has the ability to identify and replace variables in span names and turn them into tags. It uses regex-based replacement rules. See the [syntax here](https://golang.org/pkg/regexp/syntax/).
@@ -268,6 +287,21 @@ Use caution when leveraging this feature: every expression, and the complexity o
         "SpanNameReplacementRules": ["^\/api\/v1\/document\/(?P<documentId>.*)\/update$"],
         "SpanNameReplacementBreakAfterMatch": false
     }
+
+##### Using AdditionalSpanTags and SpanNameReplacementRules Together
+
+If a tag name is configured under both `AdditionalSpanTags` and `SpanNameReplacementRules`, the replacement rule will take precedence, and the additional span tag will only be used if the replacement rule is not matched, effectively creating a default value.
+For example, with the config below, `documentId` will be replaced with the proper value if it matches the given regex, or set to "None" for all other spans
+
+    {
+        "Type": "signalfx",
+        "ListenAddr": "0.0.0.0:18080",
+        "SpanNameReplacementRules": ["^\/api\/v1\/document\/(?P<documentId>.*)\/update$"],
+        "SpanNameReplacementBreakAfterMatch": false,
+        "AdditionalSpanTags": {
+            "documentId": "None"
+        }
+    } 
 
 ##### collectd listener
 

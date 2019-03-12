@@ -14,7 +14,6 @@ You can also use the module `signalfx-java` to send metrics directly to SignalFx
 For more information regarding installation, usage, and examples see https://github.com/signalfx/signalfx-java
 
 
-
 ### LICENSE
 
 This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-java/blob/master/LICENSE) for more details.

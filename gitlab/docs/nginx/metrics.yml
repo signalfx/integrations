@@ -1,0 +1,57 @@
+- title: nginx_vts_info
+  type: gauge
+  description: Nginx info
+- title: nginx_vts_start_time_seconds
+  type: gauge
+  description: Nginx start time
+- title: nginx_vts_main_connections
+  type: gauge
+  description: connections
+- title: nginx_vts_main_shm_usage_bytes
+  type: gauge
+  description: Shared memory [ngx_http_vhost_traffic_status] info
+- title: nginx_vts_server_bytes_total
+  type: counter
+  description: The request/response bytes
+- title: nginx_vts_server_requests_total
+  type: counter
+  description: The requests counter
+- title: nginx_vts_server_request_seconds_total
+  type: counter
+  description: The request processing time in seconds
+- title: nginx_vts_server_cache_total
+  type: counter
+  description: The requests cache counter
+- title: nginx_vts_server_request_seconds
+  type: gauge
+  description: The average of request processing times in seconds
+- title: nginx_vts_server_request_duration_seconds
+  type: counter
+  description: The histogram of request processing time
+- title: nginx_vts_server_request_duration_seconds
+  type: counter
+  description: The histogram of request processing time
+- title: nginx_vts_upstream_bytes_total
+  type: counter
+  description: The request/response bytes
+- title: nginx_vts_upstream_requests_total
+  type: counter
+  description: The upstream requests counter
+- title: nginx_vts_upstream_request_seconds_total
+  type: counter
+  description: The request Processing time including upstream in seconds
+- title: nginx_vts_upstream_request_seconds
+  type: gauge
+  description: The average of request processing times including upstream in seconds
+- title: nginx_vts_upstream_response_seconds_total
+  type: counter
+  description: The only upstream response processing time in seconds
+- title: nginx_vts_upstream_response_seconds
+  type: gauge
+  description: The average of only upstream response processing times in seconds
+- title: nginx_vts_upstream_request_duration_seconds
+  type: counter
+  description: The histogram of request processing time including upstream
+- title: nginx_vts_upstream_response_duration_seconds
+  type: counter
+  description: The histogram of only upstream response processing time

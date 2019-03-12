@@ -7,7 +7,6 @@
 
 For more information regarding installation, usage, and examples, see https://github.com/signalfx/signalfx-ruby.
 
-
 ### LICENSE
 
 Apache Software License v2 © <a target="_blank" href="https://signalfx.com">SignalFx</a>

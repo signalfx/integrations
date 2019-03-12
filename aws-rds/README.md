@@ -124,7 +124,7 @@ Click `Save`, and once the trigger is enabled, your function will start sending 
 
 #### Metric groups collected by this integration
 
-The following metric groups are collected by this integration. To collect all of them, use `All` at configuration time. To select a subset, choose metric groups by name. You can find documentation on the available metrics <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuid/USER_Monitoring.OS.html">here</a>.
+The following metric groups are collected by this integration. To collect all of them, use `All` at configuration time. To select a subset, choose metric groups by name. You can find documentation on the available metrics <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">here</a>.
 
 **Metric Groups (except for SQLServer)**
 - cpuUtilization

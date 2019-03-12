@@ -1,0 +1,156 @@
+- title: gitaly_authentications
+  type: counter
+  description: Counts of of Gitaly request authentication attempts
+- title: gitaly_connections_total
+  type: counter
+  description: Total number of connections accepted by this Gitaly process
+- title: gitaly_service_client_requests
+  type: counter
+  description: Counter of client requests received by client, call_site, auth version, and response code
+- title: gitaly_smarthttp_deepen_count
+  type: counter
+  description: Number of git-upload-pack requests processed that contained a 'deepen' message
+- title: gitaly_spawn_timeout_count
+  type: counter
+  description: Number of process spawn timeouts
+- title: gitaly_supervisor_health_checks
+  type: counter
+  description: Count of Gitaly supervisor health checks
+- title: gitaly_supervisor_rss_bytes
+  type: gauge
+  description: Resident set size of supervised processes, in bytes
+- title: gitaly_supervisor_starts_total
+  type: counter
+  description: Number of starts of supervised processes
+- title: gitlab_build_info
+  type: gauge
+  description: Current build info for this GitLab Service
+- title: go_gc_duration_seconds
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_sum
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_count
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_goroutines
+  type: gauge
+  description: Number of goroutines that currently exist
+- title: go_info
+  type: gauge
+  description: Information about the Go environment
+- title: go_memstats_alloc_bytes
+  type: gauge
+  description: Number of bytes allocated and still in use
+- title: go_memstats_alloc_bytes_total
+  type: counter
+  description: Total number of bytes allocated, even if freed
+- title: go_memstats_buck_hash_sys_bytes
+  type: gauge
+  description: Number of bytes used by the profiling bucket hash table
+- title: go_memstats_frees_total
+  type: counter
+  description: Total number of frees
+- title: go_memstats_gc_cpu_fraction
+  type: gauge
+  description: The fraction of this program's available CPU time used by the GC since the program started
+- title: go_memstats_gc_sys_bytes
+  type: gauge
+  description: Number of bytes used for garbage collection system metadata
+- title: go_memstats_heap_alloc_bytes
+  type: gauge
+  description: Number of heap bytes allocated and still in use
+- title: go_memstats_heap_idle_bytes
+  type: gauge
+  description: Number of heap bytes waiting to be used
+- title: go_memstats_heap_inuse_bytes
+  type: gauge
+  description: Number of heap bytes that are in use
+- title: go_memstats_heap_objects
+  type: gauge
+  description: Number of allocated objects
+- title: go_memstats_heap_released_bytes
+  type: gauge
+  description: Number of heap bytes released to OS
+- title: go_memstats_heap_sys_bytes
+  type: gauge
+  description: Number of heap bytes obtained from system
+- title: go_memstats_last_gc_time_seconds
+  type: gauge
+  description: Number of seconds since 1970 of last garbage collection
+- title: go_memstats_lookups_total
+  type: counter
+  description: Total number of pointer lookups
+- title: go_memstats_mallocs_total
+  type: counter
+  description: Total number of mallocs
+- title: go_memstats_mcache_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mcache structures
+- title: go_memstats_mcache_sys_bytes
+  type: gauge
+  description: Number of bytes used for mcache structures obtained from system
+- title: go_memstats_mspan_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mspan structures
+- title: go_memstats_mspan_sys_bytes
+  type: gauge
+  description: Number of bytes used for mspan structures obtained from system
+- title: go_memstats_next_gc_bytes
+  type: gauge
+  description: Number of heap bytes when next garbage collection will take place
+- title: go_memstats_other_sys_bytes
+  type: gauge
+  description: Number of bytes used for other system allocations
+- title: go_memstats_stack_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by the stack allocator
+- title: go_memstats_stack_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system for stack allocator
+- title: go_memstats_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system
+- title: go_threads
+  type: gauge
+  description: Number of OS threads created
+- title: grpc_server_handled_total
+  type: counter
+  description: Total number of RPCs completed on the server, regardless of success or failure
+- title: grpc_server_msg_received_total
+  type: counter
+  description: Total number of RPC stream messages received on the server
+- title: grpc_server_msg_sent_total
+  type: counter
+  description: Total number of gRPC stream messages sent by the server
+- title: grpc_server_started_total
+  type: counter
+  description: Total number of RPCs started on the server
+- title: process_cpu_seconds_total
+  type: counter
+  description: Total user and system CPU time spent in seconds
+- title: process_max_fds
+  type: gauge
+  description: Maximum number of open file descriptors
+- title: process_open_fds
+  type: gauge
+  description: Number of open file descriptors
+- title: process_resident_memory_bytes
+  type: gauge
+  description: Resident memory size in bytes
+- title: process_start_time_seconds
+  type: gauge
+  description: Start time of the process since unix epoch in seconds
+- title: process_virtual_memory_bytes
+  type: gauge
+  description: Virtual memory size in bytes
+- title: process_virtual_memory_max_bytes
+  type: gauge
+  description: Maximum amount of virtual memory available in bytes
+- title: promhttp_metric_handler_requests_in_flight
+  type: gauge
+  description: Current number of scrapes being served
+- title: promhttp_metric_handler_requests_total
+  type: counter
+  description: Total number of scrapes by HTTP status code

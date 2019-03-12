@@ -11,8 +11,6 @@
 
 For more information regarding installation, usage, and examples, see https://github.com/signalfx/signalfx-nodejs.
 
-
-
 ### LICENSE
 
 This library is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/signalfx-nodejs/blob/master/LICENSE) for more details.

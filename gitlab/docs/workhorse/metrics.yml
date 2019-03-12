@@ -1,0 +1,195 @@
+- title: gitlab_workhorse_builds_register_handler_open
+  type: gauge
+  description: Describes how many requests is currently open in given state
+- title: gitlab_workhorse_builds_register_handler_requests
+  type: counter
+  description: Describes how many requests in different states hit a register handler
+- title: gitlab_workhorse_git_http_sessions_active
+  type: gauge
+  description: Number of Git HTTP request-response cycles currently being handled by gitlab-workhorse
+- title: gitlab_workhorse_http_in_flight_requests
+  type: gauge
+  description: A gauge of requests currently being served by workhorse
+- title: gitlab_workhorse_http_request_duration_seconds_bucket
+  type: counter
+  description: A histogram of latencies for requests to workhorse
+- title: gitlab_workhorse_http_request_duration_seconds_sum
+  type: counter
+  description: A histogram of latencies for requests to workhorse
+- title: gitlab_workhorse_http_request_duration_seconds_count
+  type: counter
+  description: A histogram of latencies for requests to workhorse
+- title: gitlab_workhorse_http_request_size_bytes_bucket
+  type: counter
+  description: A histogram of sizes of requests to workhorse
+- title: gitlab_workhorse_http_request_size_bytes_sum
+  type: counter
+  description: A histogram of sizes of requests to workhorse
+- title: gitlab_workhorse_http_request_size_bytes_count
+  type: counter
+  description: A histogram of sizes of requests to workhorse
+- title: gitlab_workhorse_http_requests_total
+  type: counter
+  description: A counter for requests to workhorse
+- title: gitlab_workhorse_http_time_to_write_header_seconds_bucket
+  type: counter
+  description: A histogram of request durations until the response headers are written
+- title: gitlab_workhorse_http_time_to_write_header_seconds_sum
+  type: counter
+  description: A histogram of request durations until the response headers are written
+- title: gitlab_workhorse_http_time_to_write_header_seconds_count
+  type: counter
+  description: A histogram of request durations until the response headers are written
+- title: gitlab_workhorse_internal_api_failure_response_bytes
+  type: counter
+  description: How many bytes have been returned by upstream GitLab in API failure/rejection response bodies
+- title: gitlab_workhorse_keywatcher_keywatchers
+  type: gauge
+  description: The number of keys that is being watched by gitlab-workhorse
+- title: gitlab_workhorse_keywather_total_messages
+  type: counter
+  description: How many messages gitlab-workhorse has received in total on pubsub
+- title: gitlab_workhorse_object_storage_upload_bytes
+  type: counter
+  description: How many bytes were sent to object storage
+- title: gitlab_workhorse_object_storage_upload_open
+  type: gauge
+  description: Describes many object storage requests are open now
+- title: gitlab_workhorse_object_storage_upload_requests
+  type: counter
+  description: How many object storage requests have been processed
+- title: gitlab_workhorse_redis_errors
+  type: counter
+  description: Counts different types of Redis errors encountered by workhorse, by type and destination (redis, sentinel)
+- title: gitlab_workhorse_redis_total_connections
+  type: counter
+  description: How many connections gitlab-workhorse has opened in total. Can be used to track Redis connection rate for this process
+- title: gitlab_workhorse_send_url_bytes
+  type: counter
+  description: How many bytes were passed with send URL
+- title: gitlab_workhorse_send_url_open_requests
+  type: gauge
+  description: Describes how many send URL requests are open now
+- title: gitlab_workhorse_send_url_requests
+  type: counter
+  description: How many send URL requests have been processed
+- title: gitlab_workhorse_static_error_responses
+  type: counter
+  description: How many HTTP responses have been changed to a static error page, by HTTP status code.
+- title: go_gc_duration_seconds
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_sum
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_gc_duration_seconds_count
+  type: counter
+  description: A summary of the GC invocation durations
+- title: go_goroutines
+  type: gauge
+  description: Number of goroutines that currently exist
+- title: go_info
+  type: gauge
+  description: Information about the Go environment
+- title: go_memstats_alloc_bytes
+  type: gauge
+  description: Number of bytes allocated and still in use
+- title: go_memstats_alloc_bytes_total
+  type: counter
+  description: Total number of bytes allocated, even if freed
+- title: go_memstats_buck_hash_sys_bytes
+  type: gauge
+  description: Number of bytes used by the profiling bucket hash table
+- title: go_memstats_frees_total
+  type: counter
+  description: Total number of frees
+- title: go_memstats_gc_cpu_fraction
+  type: gauge
+  description: The fraction of this program's available CPU time used by the GC since the program started
+- title: go_memstats_gc_sys_bytes
+  type: gauge
+  description: Number of bytes used for garbage collection system metadata
+- title: go_memstats_heap_alloc_bytes
+  type: gauge
+  description: Number of heap bytes allocated and still in use
+- title: go_memstats_heap_idle_bytes
+  type: gauge
+  description: Number of heap bytes waiting to be used
+- title: go_memstats_heap_inuse_bytes
+  type: gauge
+  description: Number of heap bytes that are in use
+- title: go_memstats_heap_objects
+  type: gauge
+  description: Number of allocated objects
+- title: go_memstats_heap_released_bytes
+  type: gauge
+  description: Number of heap bytes released to OS
+- title: go_memstats_heap_sys_bytes
+  type: gauge
+  description: Number of heap bytes obtained from system
+- title: go_memstats_last_gc_time_seconds
+  type: gauge
+  description: Number of seconds since 1970 of last garbage collection
+- title: go_memstats_lookups_total
+  type: counter
+  description: Total number of pointer lookups
+- title: go_memstats_mallocs_total
+  type: counter
+  description: Total number of mallocs
+- title: go_memstats_mcache_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mcache structures
+- title: go_memstats_mcache_sys_bytes
+  type: gauge
+  description: Number of bytes used for mcache structures obtained from system
+- title: go_memstats_mspan_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by mspan structures
+- title: go_memstats_mspan_sys_bytes
+  type: gauge
+  description: Number of bytes used for mspan structures obtained from system
+- title: go_memstats_next_gc_bytes
+  type: gauge
+  description: Number of heap bytes when next garbage collection will take place
+- title: go_memstats_other_sys_bytes
+  type: gauge
+  description: Number of bytes used for other system allocations
+- title: go_memstats_stack_inuse_bytes
+  type: gauge
+  description: Number of bytes in use by the stack allocator
+- title: go_memstats_stack_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system for stack allocator
+- title: go_memstats_sys_bytes
+  type: gauge
+  description: Number of bytes obtained from system
+- title: go_threads
+  type: gauge
+  description: Number of OS threads created
+- title: process_cpu_seconds_total
+  type: counter
+  description: Total user and system CPU time spent in seconds
+- title: process_max_fds
+  type: gauge
+  description: Maximum number of open file descriptors
+- title: process_open_fds
+  type: gauge
+  description: Number of open file descriptors
+- title: process_resident_memory_bytes
+  type: gauge
+  description: Resident memory size in bytes
+- title: process_start_time_seconds
+  type: gauge
+  description: Start time of the process since unix epoch in seconds
+- title: process_virtual_memory_bytes
+  type: gauge
+  description: Virtual memory size in bytes
+- title: process_virtual_memory_max_bytes
+  type: gauge
+  description: Maximum amount of virtual memory available in bytes
+- title: promhttp_metric_handler_requests_in_flight
+  type: gauge
+  description: Current number of scrapes being served
+- title: promhttp_metric_handler_requests_total
+  type: gauge
+  description: Total number of scrapes by HTTP status code
