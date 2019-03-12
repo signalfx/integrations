@@ -1,0 +1,9 @@
+- title: process_memory_bytes
+  type: gauge
+  description: process_memory_bytes metric
+- title: process_age_seconds
+  type: gauge
+  description: process_age_seconds metric
+- title: process_count
+  type: gauge
+  description: process_count metric

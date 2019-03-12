@@ -12,9 +12,16 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary that can be downloaded <a target="_blank" href="/#/smart-gateway/download">here</a>. It is designed to run in your environment, close to your applications, and receive all metrics and trace spans from your applications before they are forwarded to SignalFx.
+The SignalFx Smart Gateway is available as a single, statically-linked binary that can be downloaded <a target="_blank" href="/#/smart-gateway/download">here</a> from SignalFx. Alternatively, you can download the SignalFx Smart Gateway from the command line using `curl`:
 
-Once you have downloaded the Smart Gateway, follow the installation, configuration and deployment instructions in the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#install-and-configure-the-smart-gateway">Smart Gateway Deployment Guide</a>.
+```
+$ curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" \
+    https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download | gunzip > smart-gateway
+```
+
+The Smart Gateway is designed to run in your environment, close to your applications, and receive all metrics and trace spans from your applications before they are forwarded to SignalFx.
+
+Once you have downloaded the Smart Gateway, follow the installation, configuration and deployment instructions from the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#install-and-configure-the-smart-gateway">Smart Gateway Deployment Guide</a>.
 
 ### USAGE
 
