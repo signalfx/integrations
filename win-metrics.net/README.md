@@ -50,12 +50,12 @@ This will allow you to see all of of your `api.use` metrics together or split it
 ## CONFIGURATION
 
 To configure Metrics.Net to report you need to set up two things
- - Your SignalFX API token
+ - Your SignalFx API token
  - The default source
 
-### Your SignalFX API Token
+### Your SignalFx API Token
 
-Your API SignalFX API token is available if you click on your avatar in the SignalFx UI.
+Your API SignalFx API token is available if you click on your avatar in the SignalFx UI.
 
 ### Default source name
 
