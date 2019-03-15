@@ -1,6 +1,6 @@
 # ![](./img/integrations_apachespark.png) Apache Spark  
 
-**Plugin currently supports cluster modes Standalone, Mesos and Yarn**
+**Plugin currently supports cluster modes Standalone, Mesos and Hadoop Yarn**
 
 Metadata associated with the spark plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-spark">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-spark">here</a>.
 
@@ -15,7 +15,7 @@ Metadata associated with the spark plugin for collectd can be found <a target="_
 ### DESCRIPTION
 
 This is the SignalFx Apache Spark plugin. Note we currently only support cluster modes 
-Standalone, Mesos, and Yarn. Follow these instructions to install the Apache Spark plugin for collectd.
+Standalone, Mesos, and Hadoop Yarn. Follow these instructions to install the Apache Spark plugin for collectd.
 
 The <a target="_blank" href="https://github.com/signalfx/collectd-spark">spark-collectd</a> plugin collects metrics from Spark cluster and instances hitting endpoints specified in Spark's Monitoring and Instrumentation documentation under `REST API` and `Metrics`: <a target="_blank" href="https://spark.apache.org/docs/latest/monitoring.html">Spark documentation</a>
 
@@ -111,7 +111,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | WorkerPorts | Space-separated worker (webui) ports to query for metrics | 8081 8082 |
 | Applications | Boolean indicating whether to collect application level metrics | "False" |
 | Master | URL for master application | "http://localhost:8080" |
-| Cluster | Your Spark cluster mode - only Standalone, Mesos, and Yarn are supported | "Standalone" |
+| Cluster | Your Spark cluster mode - only `Standalone`, `Mesos`, and `Yarn` are supported | "Standalone" |
 | EnhancedMetrics | Flag to specify whether to include additional metrics | "False" |
 | IncludeMetrics | Metrics from enhanced metrics that can be included individually | "metric\_name\_1,metric\_name\_2" |
 | ExcludeMetrics | Metrics from enhanced metrics that can be excluded individually | "metric\_name\_1,metric\_name2" |
@@ -170,12 +170,12 @@ LoadPlugin python
 </Plugin>
 ```
 
-**When running Spark on Apache Hadoop / Yarn, this integration is only capable of
+**When running Spark on Hadoop Yarn, this integration is only capable of
 reporting application metrics from the master node. Please use the
 <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-hadoop">
 SignalFx collectd Hadoop plugin</a> to report on the health of the cluster.**
 
-An example configuration for monitoring applications on Yarn
+An example configuration for monitoring applications on Hadoop Yarn
 
 ```apache
 LoadPlugin python
