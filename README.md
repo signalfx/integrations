@@ -10,7 +10,7 @@ In order to be added to the integration index, SignalFx validates each integrati
 
 1. Create and publish a integration for SignalFx.
  1. We have built an example <a target="_blank" href="https://github.com/signalfx/collectd-example/blob/master/example_plugin.py">collectd-based plugin</a> to help you get started.
- 1. For other data collector types you'll just need to make sure that you can direct the output to SignalFX and use one of our <a target="_blank" href="https://developers.signalfx.com/">supported formats</a>
+ 1. For other data collector types you'll just need to make sure that you can direct the output to SignalFx and use one of our <a target="_blank" href="https://developers.signalfx.com/">supported formats</a>
 1. Ensure that your plugin meets the validation requirements - more on that below.
 1. Clone <a target="_blank" href="https://github.com/signalfx/Integrations">this repository</a> locally.
 1. Create a directory in this repository named after your plugin.

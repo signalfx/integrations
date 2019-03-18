@@ -35,13 +35,22 @@ Heka installation instructions are available in the <a target="_blank" href="htt
 
 ### CONFIGURATION
 
+#### Configuring your ingest endpoint
+
+Before we can send metrics to SignalFx, we need to make sure you are sending them to
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
+profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to configure the Heka address to point to
+the correct ingest URL. See the example configuration below.
+
+
 Full Heka configuration setting are available in the <a target="_blank" href="http://hekad.readthedocs.org/en/v0.10.0/config/index.html">Heka docs</a>
 
 Configuration for the SignalFx filter:
 
 | Setting            | type  |   default   | description          |
 |--------------------|-------|-------------|----------------------|
-|metric\_name | string | (required) no default set | String to use as the `metric` name in SignalFX. Supports interpolation of field values from the processed message, using `%{fieldname}`. Any `fieldname` values of "Type", "Payload", "Hostname", "Pid", "Logger", "Severity", or "EnvVersion" will be extracted from the the base message schema, any other values will be assumed to refer to a dynamic message field. Only the first value of the first instance of a dynamic message field can be used for series name interpolation. If the dynamic field doesn't exist, the uninterpolated value will be left in the series name. Note that it is not possible to interpolate either the "Timestamp" or the "Uuid" message fields into the series name, those values will be interpreted as referring to dynamic message fields.|
+|metric\_name | string | (required) no default set | String to use as the `metric` name in SignalFx. Supports interpolation of field values from the processed message, using `%{fieldname}`. Any `fieldname` values of "Type", "Payload", "Hostname", "Pid", "Logger", "Severity", or "EnvVersion" will be extracted from the the base message schema, any other values will be assumed to refer to a dynamic message field. Only the first value of the first instance of a dynamic message field can be used for series name interpolation. If the dynamic field doesn't exist, the uninterpolated value will be left in the series name. Note that it is not possible to interpolate either the "Timestamp" or the "Uuid" message fields into the series name, those values will be interpreted as referring to dynamic message fields.|
 | value_field | string | (optional) defaults to `"value"` | The `fieldname` to use as the value for the metric in signalfx. If the `value` field is not present this encoder will set one as the value for counters: `1`. A value of `0` will be used for `gauges`. |
 | msg\_type | string | (optional) defaults to `"signalfxbatch"` | `Type` of the message outputted from this filter. |
 | max\_count | int  | (optional) defaults to `"20"` | Max number of messages before a batch is flushed from the filter.|
@@ -74,10 +83,10 @@ Configuration for the SignalFx filter:
     message_matcher = "Fields[payload_name] == 'signalfxbatch'"
     type = "HttpOutput"
     encoder = "PayloadEncoder"
-    address = "https://ingest.signalfx.com/v2/datapoint"
+    address = "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint"
       [signalfx.headers]
       content-type = ["application/json"]
-      X-SF-Token = "<YOUR-SIGNALFX-API-TOKEN>"
+      X-SF-Token = "YOUR_SIGNALFX_API_TOKEN"
 ```
 
 ### METRICS
