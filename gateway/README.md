@@ -829,7 +829,7 @@ You can use the gateway to duplicate a data stream to multiple destinations. Add
 
 You can configure the forwarder to send to alternate ingest endpoints such as another Gateway or an alternate SignalFx Deployment.
 The SignalFx Gateway sends to the `us0` realm by default. If you are not in this realm, you will need to explicitly set the
-endpoint urls above as shown below. To determine if you are in a different realm (YOUR_SIGNALFX_RELAM) and need to
+endpoint urls above as shown below. To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to
 explicitly set the endpoints, check your profile page in the SignalFx web application. 
 
 | Key | Description | Default |
