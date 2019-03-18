@@ -122,11 +122,9 @@ The size of the machine that hosts the gateway depends on the amount of data tha
 5. Configure your endpoints:
 
 By default, the SignalFx Gateway sends metrics to the `us0` realm.
-If you are not in this realm, you will need to explicitly set the
-endpoint urls to use your realm. To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to
-explicitly set the endpoints, check your profile page in the SignalFx
-web application. See the configuration section on [sending to alternate ingest targets](#sending-to-alternate-ingest-targets) below.
-
+If you are not in this realm, you will need to explicitly set the endpoint urls to use your realm.
+To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to explicitly set the endpoints, check your profile page in the SignalFx web application.
+See the configuration section on [sending to alternate ingest targets](#sending-to-alternate-ingest-targets) below.
 
 6. Begin transmitting data to the host and port on which the gateway is running. The data will be transformed and forwarded as specified in the [configuration](#configuration).
 
