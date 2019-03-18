@@ -48,11 +48,9 @@ To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration]
 
 #### Configuring your endpoint
 
-Before we can send metrics to SignalFx, we need to make sure you are sending them to
-the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
-profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
-If you are not in the `us0` realm, you will need to set the `sfx_host` configuration option,
-as shown below.
+Before we can send metrics to SignalFx, we need to make sure you are sending them to the correct SignalFx realm.
+To determine what realm you are in (YOUR_SIGNALFX_REALM), check your profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to set the `sfx_host` configuration option, as shown below.
 
 You will also need to set the `token` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
 For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
