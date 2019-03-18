@@ -38,10 +38,19 @@ However, when running the Traefik Docker image, the configuration file is mounte
 `docker run -d -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/etc/traefik/traefik.toml`
 
 If the configuration file is not available use the <a target="_blank" href="https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml">sample configuration file</a>. The Smart Agent must have network access to Traefik. This means for instance that, in a Docker environment, the Smart Agent container needs to share a network with the Traefik container. So the Docker run command to start the agent may look as follows:
+
+Before we can send metrics to SignalFx, we need to make sure you are sending them to
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
+profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to set the `URL` configuration option below
+to use the correct realm, as shown below.
+
+You will also need to set the `SFX_ACCESS_TOKEN` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
+For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
 ```
 docker run --rm \
--e SFX_ACCESS_TOKEN=<signalfx access token> \
--e SFX_INGEST_URL=<signalfx ingest url> \
+-e SFX_ACCESS_TOKEN=YOUR_SIGNALFX_API_TOKEN \
+-e SFX_INGEST_URL=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v <agent.yaml path>:/etc/signalfx/agent.yaml \
 --net <traefik container network> \

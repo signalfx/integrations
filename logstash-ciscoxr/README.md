@@ -67,7 +67,7 @@ Configuration directions are provided by <a target="_blank" href="https://github
 >In order to use `stack_signalfx`, registration is required at https://signalfx.com/. Once registered, an organisation API Token can be retrieved from the profile page. This token should be setup in the `stack_signalfx/src/environment` as shown here (note the token is not made up in the example):
 
 ```
-export SIGNALFXTOKEN="DuMMyExaMPLeT0KEn"
+export SIGNALFXTOKEN="YOUR_SIGNALFX_API_TOKEN"
 ```
 
 >Streams should be pointed at the `logstash` setup as for the other stacks. Go to `https://app.signalfx.com/` to visualise the data. The Usage Metric dashboard should show some number of datapoints received per second. Below is an example of dashboard setup to show IP SLA and interface counter data.

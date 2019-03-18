@@ -110,7 +110,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 | EnhancedMetrics | Possible values - *true* or *false*<br>Set to *true* to enable collecting all metrics from Consul's runtime telemetry send via UDP or from the `/agent/metrics` endpoint. | `false` |
 | ExcludeMetric | Blocks metrics by prefix matching, if *EnhancedMetrics* is true. This can be used to exclude metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None |
 | IncludeMetric | Allows metrics by prefix matching, if *EnhancedMetrics* is false. This can be used to include metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None |
-| SfxToken |  SignalFx org access token. If added to the config, an event is sent to SignalFx on leader transition and can be viewed on the Consul dashboard. | None |
+| SfxToken |  SignalFx org access token (YOUR_SIGNALFX_API_TOKEN). If added to the config, an event is sent to SignalFx on leader transition and can be viewed on the Consul dashboard. | None |
 | Dimension | Add single custom global dimension to your metrics, formatted as "key=value" | None |
 | Dimensions | Add multiple global dimensions, formatted as "key1=value1,key2=value2,..." | None |
 | CaCertificate | If Consul server has https enabled for the API, provide the path to the CA Certificate. | None |
@@ -132,7 +132,7 @@ LoadPlugin python
     ApiPort 8500
     ApiProtocol "http"
     AclToken "token"
-    SfxToken "SignalFX_token"
+    SfxToken "YOUR_SIGNALFX_API_TOKEN"
     TelemetryServer true
     TelemetryHost "17.2.3.4"
     TelemetryPort 8125
@@ -163,7 +163,7 @@ LoadPlugin python
     ApiPort 8500
     ApiProtocol "http"
     AclToken "token"
-    SfxToken "SignalFX_token"
+    SfxToken "YOUR_SIGNALFX_API_TOKEN"
     TelemetryServer true
     TelemetryHost "17.2.3.4"
     TelemetryPort 8125

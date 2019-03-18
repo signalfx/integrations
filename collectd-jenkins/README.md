@@ -70,7 +70,7 @@ Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through t
 | Port | Port at which the instance can be reached | "2379" |
 | MetricsKey | Access key required to fetch Codahale metrics | "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg" |
 | Username | User with security access if configured | "admin" |
-| APIToken | API Token of the user | "f04fff7c860d884f2ef00a2b2d481c2f" |
+| APIToken | API Token of the user | "YOUR_SIGNALFX_API_TOKEN" |
 | EnhancedMetrics | Boolean to indicate whether advanced stats from `/metrics/<MetricsKey>/metrics` are needed | "false" |
 | IncludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to include(valid when EnhancedMetrics is "false") | "vm.daemon.count" |
 | ExcludeMetric | Metric name from the `/metrics/<MetricsKey>/metrics` endpoint to exclude(valid when EnhancedMetrics is "true") | "vm.terminated.count" |
@@ -91,7 +91,7 @@ LoadPlugin python
         Host "127.0.0.1"
         Port "8080"
         Username "admin"
-        APIToken "f04fff7c860d884f2ef00a2b2d481c2f"
+        APIToken "YOUR_SIGNALFX_API_TOKEN"
         MetricsKey "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg"
         Interval 60
         ssl_keyfile "/etc/cert/jenkins.key"
@@ -112,7 +112,7 @@ LoadPlugin python
         Host "127.0.0.1"
         Port "8080"
         Username "admin"
-        APIToken "f04fff7c860d884f2ef00a2b2d481c2f"
+        APIToken "YOUR_SIGNALFX_API_TOKEN"
         MetricsKey "6ZHwGBkGR91dxbFenpfz_g2h0-ocmK-CvdHLdmg"
         Interval 10
     </Module>
@@ -120,7 +120,7 @@ LoadPlugin python
         Host "127.0.0.1"
         Port "8010"
         Username "admin"
-        APIToken "f04bbb7c860d8b4f1ef00a2b2d481c2f"
+        APIToken "YOUR_SIGNALFX_API_TOKEN"
         MetricsKey "6Z76HwGBHOj4uBOlsxbFenpfz_g2UAh0-ocmK-CvdHLSRdmg"
         EnhancedMetrics False
         IncludeMetric "vm.daemon.count"

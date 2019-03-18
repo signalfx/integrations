@@ -99,7 +99,8 @@ and use it on your hosts by running:
 
 ```sh
 curl -sSL https://dl.signalfx.com/signalfx-agent.sh > /tmp/signalfx-agent.sh
-sudo sh /tmp/signalfx-agent.sh YOUR_SIGNALFX_API_TOKEN
+sudo sh /tmp/signalfx-agent.sh --ingest-url https://ingest.YOUR_SIGNALFX_REALM.signalfx.com \
+--api-url https://api.YOUR_SIGNALFX_REALM.signalfx.com YOUR_SIGNALFX_API_TOKEN
 ```
 
 ###### Windows

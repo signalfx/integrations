@@ -68,13 +68,24 @@ If a binary must be executed outside of the pops container, it can be built by c
 
 ### CONFIGURATION
 
+
+#### Configuring the ingest endpoint
+
+Before we can forward metrics to SignalFx, we need to make sure you are sending them to
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
+profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to set the `DATA_SINK_DP_ENDPOINT`, `DATA_SINK_EVENT_ENDPIONT`,
+and `SF_METRICS_STATSENDPOINT` configuration options to use the correct realm, as shown below.
+
+#### Configuration options
+
 The SignalFx Point Of Presence Service is configured by environment variables which are set on the container at run time. When POPS starts up it looks for the following environment variables to configure itself.
 
 | Option | Description | Default Value | Example |
 | ------ | ----------- | ------------- | ------- |
 | `CHANNEL_SIZE` | The size of each channel in POPS. A channel is a buffer of request  datapoint payloads. | `1000000` | `CHANNEL_SIZE=1000000` |
-| `DATA_SINK_DP_ENDPOINT` | The  datapoint endpoint POPS will forward  datapoints to. | `https://ingest.signalfx.com/v2/datapoint` | `DATA_SINK_DP_ENDPOINT=https://ingest.signalfx.com/v2/datapoint` |
-| `DATA_SINK_EVENT_ENDPOINT` | The event endpoint POPS will forward events to. | `https://ingest.signalfx.com/v2/event`  | `DATA_SINK_EVENT_ENDPOINT=https://ingest.signalfx.com/v2/event` |
+| `DATA_SINK_DP_ENDPOINT` | The  datapoint endpoint POPS will forward  datapoints to. | `https://ingest.us0.signalfx.com/v2/datapoint` | `DATA_SINK_DP_ENDPOINT=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint` |
+| `DATA_SINK_EVENT_ENDPOINT` | The event endpoint POPS will forward events to. | `https://ingest.us0.signalfx.com/v2/event`  | `DATA_SINK_EVENT_ENDPOINT=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/event` |
 | `DATA_SINK_SHUTDOWN_TIMEOUT` | The shutdown time out used when shutting down worker threads of a POPS instance. If connections have already been drained, then graceful shutdown period should already have drained connections. Graceful shutdown is a period where POPS waits for connections to stop.  This feature is useful for when POPS is behind something like a load balancer which can stop sending traffic before terminating the POPS instance. | `3s` | `DATA_SINK_SHUTDOWN_TIMEOUT=3s` |
 | `LOG_DIR` | The directory inside the container that POPS should log to. The pops log is named pops.log.json. If no directory is specified, POPS will log to stdout. |  | `LOG_DIR=/var/log/pops` |
 | `MAX_DRAIN_SIZE` | POPS batches  datapoints together for a given token as much as possible. `MAX_DRAIN_SIZE` is the maximum number of  datapoints a single batch of metrics can be. | `5000` | `MAX_DRAIN_SIZE=5000` |
@@ -89,7 +100,7 @@ The SignalFx Point Of Presence Service is configured by environment variables wh
 | `POPS_PORT` | The port for POPS to operate on inside of the container. | `8100` | `POPS_PORT=8100` |
 | `SF_METRICS_AUTH_TOKEN` | The authentication token used for emitting internal metrics from POPS. |  | `SF_METRICS_AUTH_TOKEN=YOUR_SIGNALFX_API_TOKEN` |
 | `SF_METRICS_REPORT_INTERVAL` | The interval for emitting internal metrics about POPS. | `5s` | `SF_METRICS_REPORT_INTERVAL=5s` |
-| `SF_METRICS_STATSENDPOINT` | The ingest url for emitting internal metrics about POPS .| `https://ingest.signalfx.com/v2/datapoint` | `SF_METRICS_STATSENDPOINT=https://ingest.signalfx.com/v2/datapoint` |
+| `SF_METRICS_STATSENDPOINT` | The ingest url for emitting internal metrics about POPS .| `https://ingest.us0.signalfx.com/v2/datapoint` | `SF_METRICS_STATSENDPOINT=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint` |
 | `SF_SOURCE_NAME` | A dimension appended to pops internal metrics. |  | `SF_SOURCE_NAME=pops_forwarder` |
 
 #### Listeners

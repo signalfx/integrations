@@ -48,19 +48,26 @@ collectd will begin emitting metrics to SignalFx.
 
 ### CONFIGURATION
 
-You will need to add your API Token to allow the metric data to be sent to the SignalFx service.
+#### Configuring the plugin
 
-Directions for finding your token:
-1. Open your SignalFx profile page at https://app.signalfx.com/#/myprofile.
-2. Locate the words "API Token" on the page.
-3. Click the link next to "API Token" that says "show". Your API token appears.
-4. Copy the value of the token to the "Token" field in this config.
+Before we can send metrics to SignalFx, we need to make sure you are sending them to
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
+profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to set the `URL` configuration option below
+to use the correct realm, as shown below.
+
+You will also need to set the `Token` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
+For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
+
+
+#### Configuration options
+
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/signalfx-collectd-plugin" |
-| URL | URL for where metrics are sent from collectd. If you are looking to limit the number of connections from your infrastructure to the SignalFx service you can optioally configure the use of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/metricproxy">SignalFx metricproxy</a> | "https://ingest.signalfx.com/v1/collectd" |
-| Token | API token for your SignalFx org | none |
+| URL | URL for where metrics are sent from collectd. If you are looking to limit the number of connections from your infrastructure to the SignalFx service you can optioally configure the use of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/metricproxy">SignalFx metricproxy</a> | "https://ingest.us0.signalfx.com/v1/collectd" |
+| Token | Your SignalFx Organization Acess Token | none |
 | LogTraces | Enable log traces | true |
 | Notifications | Enable notification on this plugin | true |
 | NotifyLevel | Set the notification level | "OKAY" |
