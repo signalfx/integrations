@@ -46,13 +46,26 @@ To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration]
 
 ### CONFIGURATION
 
+#### Configuring your endpoint
+
+Before we can send metrics to SignalFx, we need to make sure you are sending them to
+the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
+profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to set the `sfx_host` configuration option,
+as shown below.
+
+You will also need to set the `token` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
+For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
+
+#### Configuration options
+
 Supply values for the following properties in the `/activemq-integration/amq-message-age/properties` file.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | path | Filesystem path to ActiveMQ executable | <Path-To-ActiveMQ-Executable>/activemq |
-| token | SignalFx API token | <SignalFX-API-TOKEN> |
-| sfx\_host | Host to which to transmit data | `https://ingest.signalfx.com` |
+| token | SignalFx Organization Access Token | none |
+| sfx\_host | Host to which to transmit data | `https://ingest.us0.signalfx.com` |
 | interval | Interval at which to measure message age, in milliseconds. | 3000 |
 | host | URL at which to connect to ActiveMQ broker. | `tcp://localhost:61616` |
 | host\_name | Name of this ActiveMQ host. This value appears in the dimension `host` in SignalFx. | ActiveMQ_Host1 |

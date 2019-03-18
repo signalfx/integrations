@@ -64,7 +64,7 @@ Under `Configure application parameters`, choose a name for your function, and f
 - `SelectedMetricGroups`: The metric groups you wish to send. Enter `All` if you want all available metrics. Otherwise, list the names of desired metric groups, spelled exactly as they are in [Metrics collected by this integration](#metric-groups-collected-by-this-integration), separated by single spaces.
 
 **Parameters for template using non-encrypted access tokens**
-- `SignalFxAuthToken`: Your SignalFx organization's access token
+- `SignalFxAuthToken`: Your SignalFx organization's access token (YOUR_SIGNALFX_API_TOKEN)
 - `SelectedMetricGroups`: The metric groups you wish to send. Enter `All` if you want all available metrics. Otherwise, list the names of desired metric groups, spelled exactly as they are in [Metrics collected by this integration](#metric-groups-collected-by-this-integration), separated by single spaces.
 
  
