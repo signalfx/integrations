@@ -50,12 +50,12 @@ This will allow you to see all of of your `api.use` metrics together or split it
 ## CONFIGURATION
 
 To configure Metrics.Net to report you need to set up two things
- - Your SignalFX API token
+ - Your SignalFx API token
  - The default source
 
-### Your SignalFX API Token
+### Your SignalFx API Token
 
-Your API SignalFX API token is available if you click on your avatar in the SignalFx UI.
+Your API SignalFx API token is available if you click on your avatar in the SignalFx UI.
 
 ### Default source name
 
@@ -168,7 +168,7 @@ You must specify the following attributes:
 
 |Attribute | definition |
 |----------|------------|
-|apiToken | Your SignalFx token |
+|apiToken | Your SignalFx token (YOUR_SIGNALFX_API_TOKEN) |
 
 The following attributes are optional
 
@@ -183,7 +183,7 @@ The following attributes are optional
 E.g
 
 ```xml
-  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"/>
+  <signalFxReporter apiToken="YOUR_SIGNALFX_API_TOKEN" sourceType="netbios" sampleInterval="00:00:05"/>
 ```
 
 ### Source Value for a Metric
@@ -200,7 +200,7 @@ It is often useful, but not required, to identify the "source" of a metric. An e
 To add default dimensions add a nested <defaultDimensions> in your <signalFxReporter> stanza:
 
 ```xml
-  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05"/>
+  <signalFxReporter apiToken="YOUR_SIGNALFX_API_TOKEN" sourceType="netbios" sampleInterval="00:00:05"/>
     <defaultDimensions>
       <defaultDimension name="environment" value="prod"/>
       <defaultDimension name="serverType" value="API"/>

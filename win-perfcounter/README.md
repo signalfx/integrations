@@ -43,7 +43,7 @@ The `signalFxReporter` block includes the following options:
 
 | Setting            | Description     | Default  |
 |--------------------|----------------------------|----------|
-| APIToken | Your SignalFx API token. | No default. |
+| APIToken | Your SignalFx API token. (YOUR_SIGNALFX_API_TOKEN) | No default. |
 | SourceType | Configuration for what the "source" of metrics will be. Value must be one of `netbios` (use the netbios name of the server), `dns` (use the DNS name of the server), `fqdn` (use the FQDN name of the server), or `custom` (use a custom value specified in a parameter `SourceValue`). | No default. |
 | DefaultDimensions | A hashtable of default dimensions to pass to SignalFx (see [Adding Default Dimensions](#adding-default-dimensions) below). | Empty dictionary |
 | AwsIntegration | If set to "true" then AWS metadata will accompany metrics. | false |
@@ -52,14 +52,14 @@ The `signalFxReporter` block includes the following options:
 **Example:**
 
 ```xml
-<signalFxReporter apiToken="<yourtoken>" sampleInterval="00:00:05" sourceType="netbios"/>
+<signalFxReporter apiToken="YOUR_SIGNALFX_API_TOKEN" sampleInterval="00:00:05" sourceType="netbios"/>
 ```
 
 #### Adding default dimensions
 To add dimensions that will be included in every metric emitted by PerfCounterReporter, add a nested `<defaultDimensions>` block in your `<signalFxReporter>` stanza. In the following example, dimensions "environment:prod" and "serverType:API" will be included in all metrics:
 
 ```xml
-  <signalFxReporter apiToken="AAABQWDCC" sourceType="netbios" sampleInterval="00:00:05">
+  <signalFxReporter apiToken="YOUR_SIGNALFX_API_TOKEN" sourceType="netbios" sampleInterval="00:00:05">
     <defaultDimensions>
       <defaultDimension name="environment" value="prod"/>
       <defaultDimension name="serverType" value="API"/>
