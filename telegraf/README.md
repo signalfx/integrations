@@ -76,11 +76,9 @@ If you are not using InfluxDB, comment out the InfluxDB plugin configuration sec
 
 ### Configuring your endpoint
 
-Before we can send metrics to SignalFx, we need to make sure you are sending them to
-the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
-profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
-If you are not in the `us0` realm, you will need to configure telegraf
-to send to the correct realm using the `DatapointIngestURL` and `EventIngestURL` configuration options, as shown below.
+Before we can send metrics to SignalFx, we need to make sure you are sending them to the correct SignalFx realm.
+To determine what realm you are in (YOUR_SIGNALFX_REALM), check your profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to configure telegraf to send to the correct realm using the `DatapointIngestURL` and `EventIngestURL` configuration options, as shown below.
 
 ```
 DatapointIngestURL: https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint
