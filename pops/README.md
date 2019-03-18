@@ -71,11 +71,9 @@ If a binary must be executed outside of the pops container, it can be built by c
 
 #### Configuring the ingest endpoint
 
-Before we can forward metrics to SignalFx, we need to make sure you are sending them to
-the correct SignalFx realm. To determine what realm you are in (YOUR_SIGNALFX_REALM), check your
-profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
-If you are not in the `us0` realm, you will need to set the `DATA_SINK_DP_ENDPOINT`, `DATA_SINK_EVENT_ENDPIONT`,
-and `SF_METRICS_STATSENDPOINT` configuration options to use the correct realm, as shown below.
+Before we can forward metrics to SignalFx, we need to make sure you are sending them to the correct SignalFx realm.
+To determine what realm you are in (YOUR_SIGNALFX_REALM), check your profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
+If you are not in the `us0` realm, you will need to set the `DATA_SINK_DP_ENDPOINT`, `DATA_SINK_EVENT_ENDPIONT`, and `SF_METRICS_STATSENDPOINT` configuration options to use the correct realm, as shown below.
 
 #### Configuration options
 
