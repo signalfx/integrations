@@ -69,7 +69,7 @@ If you are not in the `us0` realm, you will need to configure ingest url, as sho
 
 Run the following command to install the SignalFx collectd agent (<a target="_blank" href="https://github.com/signalfx/signalfx-collectd-installer/blob/master/README.md">click here to read about available configuration options</a>):
 ```
-sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN -u https://ingest.YOUR_SIGNALFX_REALM.signalfx.com
+sudo curl -sSL https://dl.signalfx.com/collectd-install | bash -s YOUR_SIGNALFX_API_TOKEN -U https://ingest.YOUR_SIGNALFX_REALM.signalfx.com
 ```
 #### Install in a privileged container
 
