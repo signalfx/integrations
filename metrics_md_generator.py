@@ -25,7 +25,7 @@ def write_md_file(metric, output_file_dir):
     f = open(file_path, 'w')
     f.write('---\n')
     f.write('title: ' + metric['title'] + '\n')
-    f.write('brief: ' + metric['description'] + '\n')
+    f.write('brief: ' + metric.get('brief', '').strip() or metric['description'] + '\n')
     f.write('metric_type: ' + metric['type'] + '\n')
     f.write('---\n')
     f.write('### ' + metric['title'] + '\n\n')
