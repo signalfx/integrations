@@ -1,0 +1,9 @@
+{ "display_name":"Expvar",
+  "description": "Monitor Expvar using the SignalFx Smart Agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/expvar",
+  "featured": false,
+  "logo_large": "/images/repos/expvar/img/integration_expvar@2x.png",
+  "logo_small": "/images/repos/expvar/img/integration_expvar.png",
+  "data_signature": "metric_source:\"expvar\"",
+  "in_app_categories": ["servicesMonitored"]
+}
