@@ -8,6 +8,7 @@ signalfx-org-metrics/docs/sfx-metrics.bbprojectd/Unix Worksheet.worksheet
 
 *.txt
 
+.DS_Store
 
 signalfx-org-metrics/docs/template-per-metric-ingest.md
 
