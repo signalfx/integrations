@@ -1,0 +1,112 @@
+- title: memstats.alloc
+  type: gauge
+  brief: Bytes of allocated heap objects
+  description: Bytes of allocated heap objects. Same as memstats.heap_alloc
+- title: memstats.heap_alloc
+  type: gauge
+  description: Bytes of allocated heap objects
+- title: memstats.heap_sys
+  type: gauge
+  description: Bytes of heap memory obtained from the OS
+- title: memstats.heap_idle
+  type: gauge
+  description: Bytes in idle (unused) spans
+- title: memstats.heap_inuse
+  type: gauge
+  description: Bytes in in-use spans
+- title: memstats.heap_released
+  type: gauge
+  description: Bytes of physical memory returned to the OS
+- title: memstats.heap_objects
+  type: gauge
+  description: Number of allocated heap objects
+- title: memstats.stack_inuse
+  type: gauge
+  description: Bytes in stack spans
+- title: memstats.stack_sys
+  type: gauge
+  description: Bytes of stack memory obtained from the OS
+- title: memstats.m_span_inuse
+  type: gauge
+  description: Bytes of allocated mspan structures
+- title: memstats.m_span_sys
+  type: gauge
+  description: Bytes of memory obtained from the OS for mspan
+- title: memstats.m_cache_inuse
+  type: gauge
+  description: Bytes of allocated mcache structures
+- title: memstats.m_cache_sys
+  type: gauge
+  description: Bytes of memory obtained from the OS for mcache structures
+- title: memstats.buck_hash_sys
+  type: gauge
+  description: Bytes of memory in profiling bucket hash tables
+- title: memstats.gc_sys
+  type: gauge
+  description: Bytes of memory in garbage collection metadata
+- title: memstats.other_sys
+  type: gauge
+  description: Bytes of memory in miscellaneous off-heap runtime allocations
+- title: memstats.sys
+  type: gauge
+  description: total bytes of memory obtained from the OS
+- title: memstats.next_gc
+  type: gauge
+  description: Target heap size of the next GC cycle
+- title: memstats.last_gc
+  type: gauge
+  brief: The time the last garbage collection finished
+  description: The time the last garbage collection finished, as nanoseconds since 1970 (the UNIX epoch)
+- title: memstats.gccpu_fraction
+  type: gauge
+  brief: The fraction CPU time used by the GC
+  description: The fraction of this program's available CPU time used by the GC since the program started
+- title: memstats.enable_gc
+  type: gauge
+  brief: Id GC enabled boolean
+  description: Boolean that indicates that GC is enabled. It is always true, even if GOGC=off
+- title: memstats.debug_gc
+  type: gauge
+  description: memstats.debug_gc is currently unused
+- title: memstats.most_recent_gc_pause_ns
+  type: gauge
+  description: Most recent GC stop-the-world pause time in nanoseconds
+- title: memstats.most_recent_gc_pause_end
+  type: gauge
+  brief: Most recent GC pause end time
+  description: Most recent GC pause end time, as nanoseconds since 1970 (the UNIX epoch)
+- title: memstats.total_alloc
+  type: counter
+  description: Cumulative bytes allocated for heap objects
+- title: memstats.lookups
+  type: counter
+  description: Number of pointer lookups performed by the runtime
+- title: memstats.mallocs
+  type: counter
+  description: Cumulative count of heap objects allocated
+- title: memstats.frees
+  type: counter
+  description: Cumulative count of heap objects freed
+- title: memstats.pause_total_ns
+  type: counter
+  brief: Cumulative nanoseconds of GC pauses
+  description: Cumulative nanoseconds in GC stop-the-world pauses since the program started
+- title: memstats.num_gc
+  type: counter
+  description: Number of completed GC cycles
+- title: memstats.num_forced_gc
+  type: counter
+  brief: Number of forced GC cycles
+  description: Number of GC cycles that were forced by the application calling the GC function
+- title: memstats.by_size.size
+  type: counter
+  brief: The maximum byte size of a class as identified by dimension class
+  description: The maximum byte size of a class as identified by dimension class. It is the class interval upper limit. The values of dimension class are numbers between 0 and 60 inclusive. Consecutive classes are of consecutive dimension class values. The lower limit of a class is the upper limit of the consecutive class below. Metrics memstats.by_size.size, memstats.by_size.mallocs and memstats.by_size.frees of the same class are related
+- title: memstats.by_size.mallocs
+  type: counter
+  brief: Cumulative count of heap objects allocated in a class
+  description: Cumulative count of heap objects allocated in a class. The class is identified by dimension class and it is as described for metric memstats.by_size.size
+- title: memstats.by_size.frees
+  type: counter
+  brief: Cumulative count of heap objects freed in a class
+  description: Cumulative count of heap objects freed in a class. The class is identified by dimension class and it is as described for metric memstats.by_size.size
