@@ -18,6 +18,7 @@ Information associated with the SignalFx Gateway can be found <a target="_blank"
             - [Add Tags to Spans](#add-tags-to-spans)
             - [Identify and Replace variables in Span Names](#identify-and-replace-variables-in-span-names)
             - [Using AdditionalSpanTags and SpanNameReplacementRules Together](#using-additionalspantags-and-spannamereplacementrules-together)
+            - [Removing Span Tag Data](#removing-span-tag-data)
         - [collectd](#collectd-listener)
         - [Prometheus](#prometheus-listener)
         - [Wavefront](#wavefront-listener)
@@ -300,6 +301,35 @@ For example, with the config below, `documentId` will be replaced with the prope
             "documentId": "None"
         }
     } 
+
+##### Removing Span Tag Data
+
+If a tag contains sensitive data that needs to be removed, `RemoveSpanTags` can be used to define tags that should be removed from specific services/operations. 
+Services and Operations can be specified using a `*` for a wildcard match. If the Service or Operation field is left blank, `*` will be used as a default value. Tags must be specified using the exact name of the tag.
+For example, in the config below, the gateway will remove the "password" tag from any span that has a service that starts with "auth" and has an operation name "login". 
+It will also remove the "zipcode", "number", and "CVV" tags from any span that contains "credit-card" in the operation name, from ANY service.
+
+Use caution when leveraging this feature: every expression will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+
+    {
+        "Type": "signalfx",
+        "ListenAddr": "0.0.0.0:18080",
+        "RemoveSpanTags": [
+            {
+                "Service": "auth*",
+                "Operation": "login",
+                "Tags": [
+                    "password"
+                ]
+            },
+            {
+                "Operation": "*credit-card*",
+                "Tags": [
+                    "zipcode", "number", "CVV"
+                ]
+            }
+        ]
+    }
 
 ##### collectd listener
 
