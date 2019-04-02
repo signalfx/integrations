@@ -19,6 +19,7 @@ Information associated with the SignalFx Gateway can be found <a target="_blank"
             - [Identify and Replace variables in Span Names](#identify-and-replace-variables-in-span-names)
             - [Using AdditionalSpanTags and SpanNameReplacementRules Together](#using-additionalspantags-and-spannamereplacementrules-together)
             - [Removing Span Tag Metadata](#removing-span-tag-metadata)
+            - [Obfuscating Span Tag Metadata](#obfuscating-span-tag-metadata)
         - [collectd](#collectd-listener)
         - [Prometheus](#prometheus-listener)
         - [Wavefront](#wavefront-listener)
@@ -327,6 +328,23 @@ Use caution when leveraging this feature: every expression will impact the throu
 }
 ```
 
+##### Obfuscating Span Tag Metadata
+`ObfuscateSpanTags` can be used to replace the value of certain tags in the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want redacted in your trace spans.  Similar to `RemoveSpanTags`, the tags to obfuscate can be specified by service name and operation name; both support using `*` for wildcard matching.
+For example, in the configuration below, the Gateway will replace the value of the `password` tag with `<obfuscated>` in any span that has a service that starts with `auth`.
+
+Use caution when leveraging this feature: every expression will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+```json
+{
+    "Type": "signalfx",
+    "ListenAddr": "0.0.0.0:18080",
+    "ObfuscateSpanTags": [
+        {
+            "Service": "auth*",
+            "Tags": ["password"]
+        }
+    ]
+}
+```
 ##### collectd listener
 
 You can receive data sent by CollectD by setting up a `collectd` endpoint.
