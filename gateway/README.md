@@ -329,10 +329,12 @@ Use caution when leveraging this feature: every expression will impact the throu
 ```
 
 ##### Obfuscating Span Tag Metadata
-`ObfuscateSpanTags` can be used to replace the value of certain tags in the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want redacted in your trace spans.  Similar to `RemoveSpanTags`, the tags to obfuscate can be specified by service name and operation name; both support using `*` for wildcard matching.
+
+`ObfuscateSpanTags` can be used to replace the value of certain tags in the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want redacted in your trace spans.  Similar to `RemoveSpanTags`, the tags to obfuscate can be specified by service name and operation name; both support using `*` for wildcard matching. All matching tags will have their value replaced with the string `<obfuscated>`.
 For example, in the configuration below, the Gateway will replace the value of the `password` tag with `<obfuscated>` in any span that has a service that starts with `auth`.
 
 Use caution when leveraging this feature: every expression will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+
 ```json
 {
     "Type": "signalfx",
