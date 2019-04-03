@@ -18,8 +18,8 @@ Information associated with the SignalFx Gateway can be found <a target="_blank"
             - [Add Tags to Spans](#add-tags-to-spans)
             - [Identify and Replace variables in Span Names](#identify-and-replace-variables-in-span-names)
             - [Using AdditionalSpanTags and SpanNameReplacementRules Together](#using-additionalspantags-and-spannamereplacementrules-together)
-            - [Removing Span Tag Metadata](#removing-span-tag-metadata)
             - [Obfuscating Span Tag Metadata](#obfuscating-span-tag-metadata)
+            - [Removing Span Tag Metadata](#removing-span-tag-metadata)
             - [Span Processing Order of Operations](#span-processing-order-of-operations)
         - [collectd](#collectd-listener)
         - [Prometheus](#prometheus-listener)
@@ -351,7 +351,7 @@ Use caution when leveraging this feature: every expression will impact the throu
 
 ##### Span Processing Order of Operations
 
-When evaluating a span, the Gateway will add `AdditionalSpanTags`, then apply `SpanNameReplacementRules`, then `ObfuscateSpanTags`, and finally `RemoveSpanTags`. This allows the result of `SpanNameReplacementRules` to be configured as an `Operation` for `ObfuscateSpanTags` or `RemoveSpanTags`. This also ensures that any tags that are matched by `ObfuscateSpanTags` or `RemoveSpanTags` cannot be added by a later step of the processing chain.
+When evaluating a span, the Gateway will add [`AdditionalSpanTags`](#add-tags-to-spans), then apply [`SpanNameReplacementRules`](#identify-and-replace-variables-in-span-names), then [`ObfuscateSpanTags`](#obfuscating-span-tag-metadata), and finally [`RemoveSpanTags`](#removing-span-tag-metadata). This allows the result of `SpanNameReplacementRules` to be configured as an `Operation` for `ObfuscateSpanTags` or `RemoveSpanTags`. This also ensures that any tags that are matched by `ObfuscateSpanTags` or `RemoveSpanTags` cannot be added by a later step of the processing chain.
 
 ##### collectd listener
 
