@@ -20,6 +20,7 @@ Information associated with the SignalFx Gateway can be found <a target="_blank"
             - [Using AdditionalSpanTags and SpanNameReplacementRules Together](#using-additionalspantags-and-spannamereplacementrules-together)
             - [Removing Span Tag Metadata](#removing-span-tag-metadata)
             - [Obfuscating Span Tag Metadata](#obfuscating-span-tag-metadata)
+            - [Span Processing Order of Operations](#span-processing-order-of-operations)
         - [collectd](#collectd-listener)
         - [Prometheus](#prometheus-listener)
         - [Wavefront](#wavefront-listener)
@@ -276,7 +277,7 @@ Warning: The tags defined by `AdditionalSpanTags` will overwrite any existing va
 ##### Identify and Replace variables in Span Names
 
 The SignalFx listener has the ability to identify and replace variables in span names and turn them into tags. It uses regex-based replacement rules. See the [syntax here](https://golang.org/pkg/regexp/syntax/).
-The example below for example would replace span name `/api/v1/document/321083210/update` with `/api/v1/document/{documentId}/update` and add the tag `"documentId":"321083210"` to the span. 
+For example, with the configuration below, the Gateway would replace span name `/api/v1/document/321083210/update` with `/api/v1/document/{documentId}/update` and add the tag `"documentId":"321083210"` to the span. 
 
 Every rule will be applied in the order they are defined to every span that goes through the listener. The config parameter `SpanNameReplacementBreakAfterMatch` controls whether to stop processing span name replacement rules after the first matching rule for a span. The default value for this parameter is `true`.
 Use caution when leveraging this feature: every expression, and the complexity of those expressions, will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
@@ -291,7 +292,7 @@ Use caution when leveraging this feature: every expression, and the complexity o
 ##### Using AdditionalSpanTags and SpanNameReplacementRules Together
 
 If a tag name is configured under both `AdditionalSpanTags` and `SpanNameReplacementRules`, the replacement rule will take precedence, and the additional span tag will only be used if the replacement rule is not matched, effectively creating a default value.
-For example, with the config below, `documentId` will be replaced with the proper value if it matches the given regex, or set to "None" for all other spans
+For example, with the configuration below, `documentId` will be replaced with the proper value if it matches the given regex, or set to "None" for all other spans
 
     {
         "Type": "signalfx",
@@ -303,10 +304,10 @@ For example, with the config below, `documentId` will be replaced with the prope
         }
     } 
 
-##### Removing Span Tag Metadata
+##### Obfuscating Span Tag Metadata
 
-`RemoveSpanTags` can be used to remove certain tags from the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want to remove from your trace spans. The tags to remove can be specified by service name and operation name; both support using `*` for wildcard matching.
-For example, in the configuration below, the Gateway will remove the `password` tag from any span that has a service that starts with `auth` and has an operation name `login`. It will also remove the `zipcode`, `number`, and `CVV` tags from any span that contains `credit-card` in the operation name, from ANY service.
+`ObfuscateSpanTags` can be used to replace the value of certain tags in the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want redacted in your trace spans.  The tags to obfuscate can be specified by service name and operation name; both support using `*` for wildcard matching, and have a default value of `*` if left empty. All matching tags will have their value replaced with the string `<obfuscated>`.
+For example, with the configuration below, the Gateway will replace the value of the `password` tag with `<obfuscated>` for any span that has a service that starts with `auth` and has an operation name `login`. It will also replace the value of the `zipcode`, `number`, and `CVV` tags with `<obfuscated>` in any span that contains `credit-card` in the operation name, from ANY service.
 
 Use caution when leveraging this feature: every expression will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
 
@@ -328,10 +329,10 @@ Use caution when leveraging this feature: every expression will impact the throu
 }
 ```
 
-##### Obfuscating Span Tag Metadata
+##### Removing Span Tag Metadata
 
-`ObfuscateSpanTags` can be used to replace the value of certain tags in the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want redacted in your trace spans.  Similar to `RemoveSpanTags`, the tags to obfuscate can be specified by service name and operation name; both support using `*` for wildcard matching. All matching tags will have their value replaced with the string `<obfuscated>`.
-For example, in the configuration below, the Gateway will replace the value of the `password` tag with `<obfuscated>` in any span that has a service that starts with `auth`.
+`RemoveSpanTags` can be used to remove certain tags from the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want to remove from your trace spans. Like `ObfuscateSpanTags`, the tags to remove can be specified by service name and operation name; both support using `*` for wildcard matching, and have a default value of `*` if left empty.
+For example, with the configuration below, the Gateway will remove the `password` tag in any span that has a service that starts with `auth`.
 
 Use caution when leveraging this feature: every expression will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
 
@@ -347,6 +348,11 @@ Use caution when leveraging this feature: every expression will impact the throu
     ]
 }
 ```
+
+##### Span Processing Order of Operations
+
+When evaluating a span, the Gateway will add `AdditionalSpanTags`, then apply `SpanNameReplacementRules`, then `ObfuscateSpanTags`, and finally `RemoveSpanTags`. This allows the result of `SpanNameReplacementRules` to be configured as an `Operation` for `ObfuscateSpanTags` or `RemoveSpanTags`. This also ensures that any tags that are matched by `ObfuscateSpanTags` or `RemoveSpanTags` cannot be added by a later step of the processing chain.
+
 ##### collectd listener
 
 You can receive data sent by CollectD by setting up a `collectd` endpoint.
