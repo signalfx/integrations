@@ -115,7 +115,8 @@ Once the dependencies have been installed, please run the installer script below
 You can <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/installer/install.ps1">view the source for the installer script</a>
 and use it on your hosts in powershell by running:
 
-`& {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/signalfx-agent.ps1')); $params = @{access_token = "YOUR_SIGNALFX_API_TOKEN"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}`
+
+`& {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/signalfx-agent.ps1')); $params = @{access_token = "YOUR_SIGNALFX_API_TOKEN"; ingest_url = "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com"; api_url = "https://api.YOUR_SIGNALFX_REALM.signalfx.com"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}`
 
 ##### Chef
 We offer a Chef cookbook to install and configure the Smart Agent on Linux.  See <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/chef">the cookbook
