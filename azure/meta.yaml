@@ -5,5 +5,6 @@
    "featured": false,
    "logo_large": "integrations_azure.png",
    "logo_small": "integrations_azure.png",
-   "in_app_categories": ["essential", "servicesMonitored", "AzureServicesMonitored"]
- }
+   "in_app_categories": ["essential", "servicesMonitored", "AzureServicesMonitored"],
+   "browse_categories": ["Cloud infrastructure and services"]
+}

@@ -6,5 +6,6 @@
   "logo_small": "/images/repos/collectd-openstack/img/integration_openstack.png",
   "logo_large": "/images/repos/collectd-openstack/img/integration_openstack%402x.png",
   "data_signature": "plugin:\"openstack\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Compute"]
 }

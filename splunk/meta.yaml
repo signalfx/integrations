@@ -6,5 +6,6 @@
   "logo_large": "integration_splunk@2x.png",
   "logo_small": "integration_splunk.png",
   "data_signature": "",
-  "in_app_categories": ["linkedServices"]
+  "in_app_categories": ["linkedServices"],
+  "browse_categories": ["Management Tools"]
 }
