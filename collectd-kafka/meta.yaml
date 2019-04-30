@@ -6,5 +6,6 @@
   "logo_small": "/images/repos/collectd-kafka/img/integrations_kafka.png",
   "logo_large": "/images/repos/collectd-kafka/img/integrations_kafka%402x.png",
   "data_signature": "hostHasService:kafka",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Application Integration"]
 }

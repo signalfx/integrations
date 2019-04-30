@@ -6,5 +6,6 @@
   "logo_small": "integrations_azuresqldatabase.png",
   "logo_large": "integrations_azuresqldatabase%402x.png",
   "data_signature": "resource_type:\"Microsoft.Sql/servers/databases\"",
-  "in_app_categories": ["AzureServicesMonitored"]
+  "in_app_categories": ["AzureServicesMonitored"],
+  "browse_categories": ["Database"]
 }

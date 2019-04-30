@@ -6,5 +6,6 @@
   "logo_large": "integration_awsec2.png",
   "logo_small": "integration_awsec2.png",
   "data_signature": "namespace:\"AWS/EC2\"",
-  "in_app_categories": ["AWSservicesMonitored"]
+  "in_app_categories": ["AWSservicesMonitored"],
+  "browse_categories": ["Compute"]
 }

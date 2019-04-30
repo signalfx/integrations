@@ -6,5 +6,6 @@
   "logo_large": "/images/repos/collectd-activemq/img/integrations_activemq%402x.png",
   "logo_small": "/images/repos/collectd-activemq/img/integrations_activemq.png",
   "data_signature": "hostHasService:activemq",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Application Integration"]
 }

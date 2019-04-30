@@ -6,5 +6,6 @@
   "logo_small": "/images/repos/collectd-elasticsearch/img/integrations_elasticsearch.png",
   "logo_large": "/images/repos/collectd-elasticsearch/img/integrations_elasticsearch%402x.png",
   "data_signature": "plugin:\"elasticsearch\"",  
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Analytics"]
 }
