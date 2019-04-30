@@ -6,5 +6,6 @@
   "logo_small": "/images/repos/collectd-spark/img/integrations_apachespark.png",
   "logo_large": "/images/repos/collectd-spark/img/integrations_apachespark%402x.png",
   "data_signature": "plugin:\"apache_spark\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Analytics"]
 }

@@ -315,7 +315,7 @@ Use caution when leveraging this feature: every expression will impact the throu
 {
     "Type": "signalfx",
     "ListenAddr": "0.0.0.0:18080",
-    "RemoveSpanTags": [
+    "ObfuscateSpanTags": [
         {
             "Service": "auth*",
             "Operation": "login",
@@ -340,7 +340,7 @@ Use caution when leveraging this feature: every expression will impact the throu
 {
     "Type": "signalfx",
     "ListenAddr": "0.0.0.0:18080",
-    "ObfuscateSpanTags": [
+    "RemoveSpanTags": [
         {
             "Service": "auth*",
             "Tags": ["password"]

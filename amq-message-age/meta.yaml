@@ -6,5 +6,6 @@
   "logo_large": "integrations_activemq%402x.png",
   "logo_small": "integrations_activemq.png",
   "data_signature": "plugin:\"amq.message.age\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Compute"]
 }

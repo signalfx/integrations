@@ -2,5 +2,5 @@
   "description": "Aggregate metrics with different tokens from collectd, json, or protobuf and forward them to SignalFx.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/pops",
   "code": "https://github.com/signalfx/pops",
-  "featured": false,
+  "featured": false
 }

@@ -6,5 +6,6 @@
   "logo_small": "/images/repos/collectd-couchdb/img/integrations_couchdb.png",
   "logo_large": "/images/repos/collectd-couchdb/img/integrations_couchdb%402x.png",
   "data_signature": "plugin:\"couchdb\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Database"]
 }

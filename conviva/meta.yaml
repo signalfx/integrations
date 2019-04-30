@@ -6,5 +6,6 @@
   "logo_large": "/images/repos/conviva/img/integration_conviva@2x.png",
   "logo_small": "/images/repos/conviva/img/integration_conviva.png",
   "data_signature": "metric_source:\"conviva\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Media Services & Solutions"]
 }

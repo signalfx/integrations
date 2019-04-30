@@ -6,5 +6,6 @@
    "sort_order": 2,
    "logo_large": "integration_aws.png",
    "logo_small": "integration_aws.png",
-   "in_app_categories": ["AWSservicesMonitored"]
- }
+   "in_app_categories": ["AWSservicesMonitored"],
+   "browse_categories": ["Cloud infrastructure and services", "Management Tools"]
+}

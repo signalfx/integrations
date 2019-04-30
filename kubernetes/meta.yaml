@@ -6,5 +6,6 @@
   "logo_large": "/images/repos/kubernetes/img/integrations_kubernetes%402x.png",
   "logo_small": "/images/repos/kubernetes/img/integrations_kubernetes.png",
   "data_signature": "metric_source:\"kubernetes\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Compute", "Containers"]
 }

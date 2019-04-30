@@ -6,5 +6,6 @@
   "logo_large": "/images/repos/collectd-mesos/img/integrations_mesos%402x.png",
   "logo_small": "/images/repos/collectd-mesos/img/integrations_mesos.png",
   "data_signature": "plugin:\"mesos\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Compute", "Containers"]
 }
