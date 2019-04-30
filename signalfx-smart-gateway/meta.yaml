@@ -7,5 +7,5 @@
   "logo_small": "integration_smartgateway.png",
   "data_signature": "sf_metric:\"gateway.processedTraces\"",
   "in_app_categories": ["essential"],
-  "feature": "apm",
+  "feature": "apm"
 }

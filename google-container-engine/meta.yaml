@@ -6,5 +6,6 @@
   "logo_small": "integration_googlecontainerengine.png",
   "logo_large": "integration_googlecontainerengine%402x.png",
   "data_signature": "service:\"container\"",
-  "in_app_categories": ["GCPServicesMonitored"]
+  "in_app_categories": ["GCPServicesMonitored"],
+  "browse_categories": ["Container"]
 }

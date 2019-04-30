@@ -6,5 +6,6 @@
   "logo_small": "integration_googleclouddatastore.png",
   "logo_large": "integration_googleclouddatastore%402x.png",
   "data_signature": "service:\"datastore\"",
-  "in_app_categories": ["GCPServicesMonitored"]
+  "in_app_categories": ["GCPServicesMonitored"],
+  "browse_categories": ["Database"]
 }

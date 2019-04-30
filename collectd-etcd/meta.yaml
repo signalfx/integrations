@@ -6,5 +6,6 @@
   "logo_small": "/images/repos/collectd-etcd/img/integrations_etcd.png",
   "logo_large": "/images/repos/collectd-etcd/img/integrations_etcd%402x.png",
   "data_signature": "plugin:\"etcd\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Database"]
 }

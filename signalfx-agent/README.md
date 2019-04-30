@@ -8,7 +8,6 @@ See <a target="_blank" href="https://github.com/signalfx/signalfx-agent">the Git
 source code along with more extensive documentation.
 ## SignalFx Smart Agent 
 
-
 The SignalFx Smart Agent is a metric agent written in Go for monitoring
 infrastructure and application services in a variety of different environments.
 It is meant as a successor to our previous <a target="_blank" href="https://github.com/signalfx/collectd">collectd
@@ -17,8 +16,6 @@ so any existing Python or C-based collectd plugins will still work without
 modification.  On Windows collectd is not included, but the Smart Agent is capable of
 running python based collectd plugins without collectd.  C-based collectd plugins
 are not available on Windows.
-
-
 
 The Smart Agent has three main components:
 
@@ -118,8 +115,11 @@ and use it on your hosts in powershell by running:
 
 `& {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/signalfx-agent.ps1')); $params = @{access_token = "YOUR_SIGNALFX_API_TOKEN"; ingest_url = "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com"; api_url = "https://api.YOUR_SIGNALFX_REALM.signalfx.com"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}`
 
+The Smart Agent should be installed to `\Program Files\SignalFx\SignalFxAgent`, and the default configuration file
+should be installed at `\ProgramData\SignalFxAgent`.
+
 ##### Chef
-We offer a Chef cookbook to install and configure the Smart Agent on Linux.  See <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/chef">the cookbook
+We offer a Chef cookbook to install and configure the Smart Agent.  See <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/chef">the cookbook
 source</a> and <a target="_blank" href="https://supermarket.chef.io/cookbooks/signalfx_agent">on the Chef
 Supermarket</a>.
 
@@ -226,7 +226,6 @@ capabilities the Smart Agent requires.
 `signalfx-agent/bin/signalfx-agent -config <path to config.yaml>`.  By default,
 the Smart Agent logs only to stdout/err. If you want to persist logs, you must direct
 the output to a log file or other log management system.  See the
-
 <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/signalfx-agent.1.man">signalfx-agent command</a> doc for more information on
 supported command flags.
 
@@ -290,8 +289,8 @@ show how to do install and start the Smart Agent as a Windows service.
 
 ##### Linux
 When using the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/observers/host.md">host observer</a>, the Smart Agent requires
-the [Linux
-capabilities](http://man7.org/linux/man-pages/man7/capabilities.7.html)
+the <a target="_blank" href="http://man7.org/linux/man-pages/man7/capabilities.7.html">Linux
+capabilities</a>
 `DAC_READ_SEARCH` and `SYS_PTRACE`, both of which are necessary to allow the
 agent to determine which processes are listening on network ports on the host.
 Otherwise, there is nothing built into the Smart Agent that requires privileges.
@@ -310,7 +309,7 @@ On Windows the Smart Agent must be installed and run under an administrator acco
 
 The Smart Agent is configured primarily from a YAML file. By default, the Smart Agent config
 is installed at and looked for at `/etc/signalfx/agent.yaml` on Linux and
-`C:\SignalFx\SignalFxAgent\etc\signalfx\agent.yaml` on Windows. This can be
+`\ProgramData\SignalFxAgent\agent.yaml` on Windows. This can be
 overridden by the `-config` command line flag.  
 
 For the full schema of the config, see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/config-schema.md">Config Schema</a>.
