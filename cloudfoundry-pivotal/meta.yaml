@@ -6,5 +6,6 @@
   "data_signature": "metric_source:\"cloudfoundry\"",
   "logo_large": "/images/repos/cloudfoundry/img/integrations_pivotalcloudfoundry%402x.png",
   "logo_small": "/images/repos/cloudfoundry/img/integrations_pivotalcloudfoundry.png",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Cloud infrastructure and services"]
 }

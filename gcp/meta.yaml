@@ -5,5 +5,6 @@
    "featured": false,
    "logo_large": "integration_gcp.png",
    "logo_small": "integration_gcp.png",
-   "in_app_categories": ["essential", "servicesMonitored", "GCPServicesMonitored"]
- }
+   "in_app_categories": ["essential", "servicesMonitored", "GCPServicesMonitored"],
+   "browse_categories": ["Cloud infrastructure and services"]
+}

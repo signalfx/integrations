@@ -6,5 +6,6 @@
   "logo_small": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq.png",
   "logo_large": "/images/repos/collectd-rabbitmq/img/integrations_rabbitmq%402x.png",
   "data_signature": "plugin:\"rabbitmq\"",
-  "in_app_categories": ["servicesMonitored"]
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Application Integration"]
 }

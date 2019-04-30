@@ -6,5 +6,6 @@
   "logo_large": "integration_awslambda%402x.png",
   "logo_small": "integration_awslambda.png",
   "data_signature": "namespace:\"AWS/Lambda\"",
-  "in_app_categories": ["AWSservicesMonitored"]
+  "in_app_categories": ["AWSservicesMonitored"],
+  "browse_categories": ["Compute"]
 }
