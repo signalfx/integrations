@@ -46,7 +46,13 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">colle
 To install this plugin for use with Smart Agent, add these lines into the /etc/signalfx/agent.yaml file:
 
 ```
-type: collectd/jenkinshost: localhostport: 8080metricsKey: YOUR_METRICS_KEYapiToken: YOUR_API_TOKENusername: YOUR_JENKINS_USERNAME```
+type: collectd/jenkins
+host: local
+hostport: 8080
+metricsKey: YOUR_METRICS_KEY
+apiToken: YOUR_API_TOKEN
+username: YOUR_JENKINS_USERNAME
+```
 
 
 1. Download <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">collectd-jenkins</a>. Place the `jenkins.py` file in `/usr/share/collectd/collectd-jenkins`
@@ -66,7 +72,8 @@ type: collectd/jenkinshost: localhostport: 8080metricsKey: YOUR_METRICS_KEYapiTo
 
 Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-jenkins/10-jenkins.conf">10-jenkins.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the jenkins instances.
 
-Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins and also values of type string and list(hence, metrics of these will be skipped if provided in the configuration)
+Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through the configuration file. Note that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins. Neither does it support values of type string and list (so metrics of these will be skipped if provided in the configuration).
+
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
