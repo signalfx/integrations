@@ -47,15 +47,10 @@ To install this plugin for use with Smart Agent, add these lines into the /etc/s
 
 ```
 type: collectd/jenkins
-
 host: local
-
 hostport: 8080
-
 metricsKey: YOUR_METRICS_KEY
-
 apiToken: YOUR_API_TOKEN
-
 username: YOUR_JENKINS_USERNAME
 ```
 
