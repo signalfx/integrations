@@ -1,6 +1,6 @@
 # ![](./img/integrations_jenkins.png) Jenkins
 
-This directory consolidates all the metadata associated with the jenkins plugin for collectd. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">here</a>
+This directory consolidates all the metadata associated with the SignalFx Smart Agent Jenkins plugin. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">here</a>
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,9 +12,8 @@ This directory consolidates all the metadata associated with the jenkins plugin 
 
 ### DESCRIPTION
 
-This is the SignalFx Jenkins plugin. Follow these instructions to install the Jenkins plugin for collectd.
-
 The <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">collectd-jenkins</a> plugin collects metrics from jenkins instances hitting these endpoints: <a target="_blank" href="https://wiki.jenkins.io/display/jenkins/remote+access+api">../api/json</a> (job metrics)  and <a target="_blank" href="https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin">metrics/&lt;MetricsKey&gt;/..</a> (default and optional Codahale/Dropwizard JVM metrics).
+
 
 #### FEATURES
 
@@ -44,22 +43,28 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">colle
 
 ### INSTALLATION
 
+To install this plugin for use with Smart Agent, add these lines into the /etc/signalfx/agent.yaml file:
+
+```
+type: collectd/jenkinshost: localhostport: 8080metricsKey: YOUR_METRICS_KEYapiToken: YOUR_API_TOKENusername: YOUR_JENKINS_USERNAME```
+
+
 1. Download <a target="_blank" href="https://github.com/signalfx/collectd-jenkins">collectd-jenkins</a>. Place the `jenkins.py` file in `/usr/share/collectd/collectd-jenkins`
 
 2. Copy the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-jenkins/10-jenkins.conf">sample configuration file</a> for this plugin in `/etc/collectd/managed_config`
 
-3. Modify the sample configuration file as described in [Configuration](#configuration), below
+3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
 4. Install the Metrics Plugin in Jenkins. `Manage Jenkins > Manage Plugins > Available > Search "Metrics Plugin"`
 
 5. Install the Python requirements with `sudo pip install -r requirements.txt`
 
-6. Restart collectd
+6. Restart collectd.
 
 
 ### CONFIGURATION
 
-Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-jenkins/10-jenkins.conf">10-jenkins.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the jenkins instances
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-jenkins/10-jenkins.conf">10-jenkins.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the jenkins instances.
 
 Metrics from `/metrics/<MetricsKey>/metrics` endpoint can be activated through the configuration file. Note, that SignalFx does not support `histograms`, `meter` and `timer` metric types as they are too verbose in Jenkins and also values of type string and list(hence, metrics of these will be skipped if provided in the configuration)
 
