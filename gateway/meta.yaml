@@ -1,5 +1,7 @@
 { "display_name":"SignalFx Gateway",
-  "description": "Aggregate metrics from different sources and formats and forward them to SignalFx.",
+  "description": "Aggregate metrics from different sources and formats and forward them to SignalFx. 
+  
+  If you are an APM customer, install the Smart Gateway instead.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/gateway",
   "code": "https://github.com/signalfx/gateway",
   "featured": false,
