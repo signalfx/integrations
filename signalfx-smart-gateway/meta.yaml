@@ -1,7 +1,5 @@
 { "display_name": "SignalFx Smart Gateway",
-  "description": "SignalFx's Smart Gateway for Microservices APM and NoSample™️
-  
-  Test",
+  "description": "SignalFx's Smart Gateway for Microservices APM and NoSample™️",
   "project_url": "https://docs.signalfx.com/en/latest/apm/apm-overview/index.html",
   "featured": true,
   "sort_order": 0,
