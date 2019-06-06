@@ -1,6 +1,6 @@
 # ![](././img/integrations_pivotalcloudfoundry.png) Pivotal Cloud Foundry
 
-Metadata associated with the **Pivotal Cloud Foundry Integration** can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/cloudfoundry-pivotal">here</a>. The relevant code for the integration can be found <a target="_blank" href="https://github.com/signalfx/cloudfoundry-integration">here</a>.
+Our PCF Tile can be downloaded <a target="_blank" href="https://github.com/signalfx/signalfx-cloudfoundry-bridge-boshrelease/releases">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -65,9 +65,10 @@ This integration requires administrative access to a Pivotal Cloud Foundry deplo
 
 Follow these steps to enable this integration:
 
-1. Download the product file from <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting/">Pivotal Network</a>.
-
-2. Follow the <a target="_blank" href="http://docs.pivotal.io/partners/signalfx/installing.html">installation instructions for the tile</a>.
+1. Install the <a target="_blank" href="https://github.com/signalfx/signalfx-cloudfoundry-bridge-boshrelease/releases">latest BOSH release for our Bridge application</a>,
+   which pulls metrics from the Loggregator Firehose and sends them to SignalFx.
+   This can be installed in any deployment in your CF environment, as long as
+   it has access to the BOSH Director and the Traffic Controller server.
 
 Metrics from Pivotal Cloud Foundry should begin streaming into SignalFx.
 
