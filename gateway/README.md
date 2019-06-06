@@ -311,7 +311,7 @@ For example, with the configuration below, `documentId` will be replaced with th
 `ObfuscateSpanTags` can be used to replace the value of certain tags in the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want redacted in your trace spans.  The tags to obfuscate can be specified by service name and operation name; both support using `*` for wildcard matching, and have a default value of `*` if left empty. All matching tags will have their value replaced with the string `<obfuscated>`.
 For example, with the configuration below, the Gateway will replace the value of the `password` tag with `<obfuscated>` for any span that has a service that starts with `auth` and has an operation name `login`. It will also replace the value of the `zipcode`, `number`, and `CVV` tags with `<obfuscated>` in any span that contains `credit-card` in the operation name, from ANY service.
 
-Use caution when leveraging this feature: every expression will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+The Gateway can handle approximately two dozen rules without a significant impact to throughput. If you plan to use a large number of rules, make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
 
 ```json
 {
@@ -336,7 +336,7 @@ Use caution when leveraging this feature: every expression will impact the throu
 `RemoveSpanTags` can be used to remove certain tags from the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want to remove from your trace spans. Like `ObfuscateSpanTags`, the tags to remove can be specified by service name and operation name; both support using `*` for wildcard matching, and have a default value of `*` if left empty.
 For example, with the configuration below, the Gateway will remove the `password` tag in any span that has a service that starts with `auth`.
 
-Use caution when leveraging this feature: every expression will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+The Gateway can handle approximately two dozen rules without a significant impact to throughput. If you plan to use a large number of rules, make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
 
 ```json
 {
