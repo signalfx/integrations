@@ -23,7 +23,7 @@ The Smart Gateway is designed to run in your environment, close to your applicat
 
 Once you have downloaded the Smart Gateway, follow the installation, configuration and deployment instructions from the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#install-and-configure-the-smart-gateway">Smart Gateway Deployment Guide</a>.
 
-### Verifying the Smart Gateway Download
+#### Verifying the Smart Gateway Download
 
 To verify the integrity of your Smart Gateway binary, use `sha256sum` to compute the checksum of the file, and compare to the checksum listed below for your respective version
 
