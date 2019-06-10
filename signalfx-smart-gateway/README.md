@@ -43,71 +43,71 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-##### Latest Version: v1.1.1
-_June 4, 2019_
-[Download Smart Gateway v1.1.1](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1)
+##### Latest Version: v1.1.1 (June 4, 2019)
 
-_sha256: c85c33dc988f7fe996718b74e616854e5585c36ce5f9af644fb05c77d6c01103_
+[Download Smart Gateway v1.1.1](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1)  
+_SHA256: `c85c33dc988f7fe996718b74e616854e5585c36ce5f9af644fb05c77d6c01103`_
+
 * Fix for attaching cluster variable to retained traces
 
-##### v1.1.0
-_May 29, 2019_
-[Download Smart Gateway v1.1.0](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.0)
+##### v1.1.0 (May 29, 2019)
 
-_sha256: 82774e826ef5fc511bd29a85e3aa79bf60db5719d05fc32eb7b05ae5e1b0dcdc_
+[Download Smart Gateway v1.1.0](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.0)  
+_SHA256: `82774e826ef5fc511bd29a85e3aa79bf60db5719d05fc32eb7b05ae5e1b0dcdc`_
+
 * Report Gateway and NoSample Module version properties as version number, instead of commit hash
 * Fix accuracy of `traces.count` and `spans.count` metrics
 
-##### v1.0.5
-_April 29, 2019_
-[Download Smart Gateway v1.0.5](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.5)
+##### v1.0.5 (April 29, 2019)
 
-_sha256: 56e8a00ca268ef8534a715aadbf6853d54c1b2a4fbf4d58d69bc7cb866d7a94f_
+[Download Smart Gateway v1.0.5](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.5)  
+_SHA256: `56e8a00ca268ef8534a715aadbf6853d54c1b2a4fbf4d58d69bc7cb866d7a94f`_
+
 * Ensure http client drains and closes responses
 * Improve joining existing Smart Gateway clusters
 
-##### v1.0.4
-_April 23, 2019_
-[Download Smart Gateway v1.0.4](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.4)
+##### v1.0.4 (April 23, 2019)
 
-_sha256: faa2dc350a1c223c652069c09038f647ea584fab4d2b7953fd4322519779fe64_
+[Download Smart Gateway v1.0.4](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.4)  
+_SHA256: `faa2dc350a1c223c652069c09038f647ea584fab4d2b7953fd4322519779fe64`_
+
 * Proactively clean up expired file descriptors
 
-##### v1.0.3
-_April 11, 2019_
-[Download Smart Gateway v1.0.3](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.3)
+##### v1.0.3 (April 11, 2019)
 
-_sha256: 0f59091d2f802f1866f59e27d1d1c05bf670159d21e26a897791d4af6419ac65_
+[Download Smart Gateway v1.0.3](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.3)  
+_SHA256: `0f59091d2f802f1866f59e27d1d1c05bf670159d21e26a897791d4af6419ac65`_
+
 * Add `ForceTraceInitiatingSpan` config to force an initiating span if none is present on the trace
 
-##### v1.0.2
-_March 26, 2019_
-[Download Smart Gateway v1.0.2](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.2)
+##### v1.0.2 (March 26, 2019)
 
-_sha256: 71ac690d578d09057d6893e04fc52d70b86a4f4e4e88f883c0f91e03acb352a4_
+[Download Smart Gateway v1.0.2](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.2)  
+_SHA256: `71ac690d578d09057d6893e04fc52d70b86a4f4e4e88f883c0f91e03acb352a4`_
+
 * Expose and pass through etcd configurations
     * EtcdElectionTimeout
     * EtcdSnapCount
     * EtcdMaxSnapFiles
     * EtcdMaxWalFiles
 * Enable client-only mode for clustered Smart Gateways
-* Add `ObfuscateSpanTags` and `RemoveSpanTags` config 
+* Add `ObfuscateSpanTags` and `RemoveSpanTags` config
 
-##### v1.0.1
-_March 6, 2019_
-[Download Smart Gateway v1.0.1](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.1)
+##### v1.0.1 (March 6, 2019)
 
-_sha256: 53819394425c1a0db60fdc3fc9ba8bab2d85d1c027e1218ee2b938357b50e818_
+[Download Smart Gateway v1.0.1](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.1)  
+_SHA256: ``53819394425c1a0db60fdc3fc9ba8bab2d85d1c027e1218ee2b938357b50e818``_
+
 * Utilize new on-disk format to reduce memory usage
 * Enforce consistent cluster name within etcd cluster
 * Add `AuthTokenEnvVar` config
 * Add `SpanNameReplacementBreakAfterMatch` config
 
-##### v1.0.0
-_February 4, 2019_
-[Download Smart Gateway v1.0.0](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.0)
+##### v1.0.0 (February 4, 2019)
 
-_sha256: 2fadd3abeb99e1b781a7805ea524bcc9773a5efc122260abdd684f6799afdda9_
+[Download Smart Gateway v1.0.0](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.0)  
+_SHA256: `2fadd3abeb99e1b781a7805ea524bcc9773a5efc122260abdd684f6799afdda9`_
+
 * Update Smart Gateway to use Golang 1.11.5
 * Add `SpanNameReplacementRules` config
 
