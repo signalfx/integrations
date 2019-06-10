@@ -62,10 +62,19 @@ Under `Configure application parameters`, choose a name for your function, and f
 - `EncryptedSignalFxAuthToken`: The Ciphertext blob output from your encryption of your SignalFx organization's access token
 - `KeyId`: The key id of your KMS encryption key; it is the last section of the key's ARN.
 - `SelectedMetricGroups`: The metric groups you wish to send. Enter `All` if you want all available metrics. Otherwise, list the names of desired metric groups, spelled exactly as they are in [Metrics collected by this integration](#metric-groups-collected-by-this-integration), separated by single spaces.
+- `Realm`: Your SignalFx Realm: YOUR_SIGNALFX_REALM. To determine what realm you are in, check your profile page in the SignalFx web application. Default: `us0`.
 
 **Parameters for template using non-encrypted access tokens**
 - `SignalFxAuthToken`: Your SignalFx organization's access token (YOUR_SIGNALFX_API_TOKEN)
 - `SelectedMetricGroups`: The metric groups you wish to send. Enter `All` if you want all available metrics. Otherwise, list the names of desired metric groups, spelled exactly as they are in [Metrics collected by this integration](#metric-groups-collected-by-this-integration), separated by single spaces.
+- `Realm`: Your SignalFx Realm: YOUR_SIGNALFX_REALM. To determine what realm you are in, check your profile page in the SignalFx web application. Default: `us0`.
+
+#### A note on SignalFx realms:
+A realm is a self-contained deployment of SignalFx in which your organization is hosted.
+Different realms have different API endpoints.
+For example, the endpoint for sending data in the us1 realm is ingest.us1.signalfx.com,
+and ingest.eu0.signalfx.com for the eu0 realm. If you try to send data to the incorrect realm,
+your access token will be denied.
 
  
 ##### 4. Deploy function and configure trigger
