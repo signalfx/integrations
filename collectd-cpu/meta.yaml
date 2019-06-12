@@ -1,5 +1,5 @@
 { "display_name":"CPU",
-  "description": "SignalFx uses the collectd cpu plugin for collectd to get CPU metrics per host.",
+  "description": "SignalFx uses the Collectd cpu plugin to get CPU metrics per host.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-cpu",
   "code": "https://github.com/signalfx/collectd/blob/master/src/cpu.c",
   "featured": false,
