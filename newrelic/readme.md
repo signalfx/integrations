@@ -36,16 +36,6 @@ Your New Relic account is now connected and ready to use. Data from New Relic wi
 
 This section includes information that can help you build SignalFx charts from New Relic data.
 
-#### Example New Relic dashboards
-
-SignalFx provides example dashboards that you can use as a baseline for creating your own New Relic charts in SignalFx. You can import them to SignalFx by <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/newrelic/dashboards/Page_SignalFx%20collectd%20%2B%20New%20Relic.json">clicking here to download the JSON file</a>. In SignalFx, open the menu in the top right-hand corner of the app next to your profile image, and selecting **Import dashboard group**. This will create a new dashboard group called "SignalFx + New Relic" that contains two example dashboards:
-
-* **"New Relic Applications Overview"** - This shows how to display metrics for multiple New Relic applications at once, like response time and requests per minute.
-  ![](././img/dashboard_newrelic.png)
-
-* **"New Relic APM + collectd infrastructure metrics"** - This shows how to display data from New Relic applications data alongside infrastructure metrics from collectd.
-  ![](././img/dashboard_newrelic_infra.png)
-
 #### Recognizing New Relic metrics in SignalFx
 
 Metrics from New Relic are composed of strings delimited by the slash character `/`. Examples of New Relic metrics in SignalFx include the following:
