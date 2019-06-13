@@ -58,6 +58,11 @@ You must have administrator (sudo) privileges to install this agent.
 
 ### INSTALLATION
 
+**We have a new agent called the SignalFx Smart Agent that wraps collectd and
+provides auto-discovery of services, among other features.  See [the
+integration tile for the new agent](?selectedKeyValue=plugin:signalfx-agent)
+for more information.  We strongly recommend using this new agent instead of
+collectd, which is described below for legacy purposes.**
 
 #### Configuring the ingest endpoint
 Before we can send metrics to SignalFx, we need to make sure you are sending them to
