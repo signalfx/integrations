@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.open
-brief: This metric shows how many worker slots are open.  The slots do not have a worker thread yet, but they can be spun up based on incoming requests.
+brief: This metric shows how many worker slots are open.
 metric_type: gauge
 custom: false
 ---
