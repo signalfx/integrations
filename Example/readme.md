@@ -79,10 +79,6 @@ Using the example configuration file [10-example.conf](https://github.com/signal
 
 This plugin is an example that emits values on its own, and does not connect to software. It emits a repeating sine wave in the metric `gauge.sine`, and counts of datapoints and notifications emitted in the metrics `counter.datapoints` and `counter.notifications` respectively.
 
-Below is a screen capture of an example SignalFx dashboard, illustrating the metrics emitted by this plugin. The dashboard is included in this repository, and can be imported into SignalFx or other monitoring product. [Click here to download](././Page_Example Python Plugin.json).
-
-![Example dashboard showing metrics from this plugin](././img/example_plugin_dashboard.png)
-
 #### Important conditions to watch out for
 
 *`gauge.sine` looks like a straight line instead of a curve.*
