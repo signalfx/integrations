@@ -1,12 +1,12 @@
 .idea
 
+__pycache__
+
 signalfx-org-metrics/docs/sfx-metrics.bbprojectd/Unix Worksheet.worksheet
 
 *.bbprojectsettings
 
 *.bbprojectdata
-
-*.txt
 
 .DS_Store
 
