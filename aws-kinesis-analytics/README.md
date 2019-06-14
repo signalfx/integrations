@@ -1,4 +1,4 @@
-# ![](./img/integration_awskinesisstreams.png) AWS Kinesis
+# ![](./img/integration_awskinesisanalytics.png) AWS Kinesis Analytics
 
 - [Description](#description)
 - [Installation](#installation)
@@ -8,19 +8,19 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor AWS Kinesis via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+Use SignalFx to monitor AWS Kinesis Analytics via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 #### FEATURES
 
 ##### Built-in dashboards
 
-- **Kinesis Streams Overview**: Overview of all streams and data from Kinesis.
+- **Kinesis Analytics Overview**: Overview of all applications and data from Kinesis Analytics.
 
   [<img src='./img/dashboard_kinesis_overview.png' width=200px>](./img/dashboard_kinesis_overview.png)
 
-- **Kinesis Stream**: Focus on a single Kinesis Stream.
+- **Kinesis Analytics**: Focus on a single Kinesis Analytics application.
 
-  [<img src='./img/dashboard_kinesis_stream.png' width=200px>](./img/dashboard_kinesis_stream.png)
+  [<img src='./img/dashboard_kinesis_analytics.png' width=200px>](./img/dashboard_kinesis_analytics.png)
 
 ### INSTALLATION
 
@@ -34,11 +34,11 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_kinesis_overview.png)
 
-![](./img/dashboard_kinesis_stream.png)
+![](./img/dashboard_kinesis_analytics.png)
 
 ### METRICS
 
-For more information about the metrics emitted by AWS Kinesis, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/kinesis/">https://aws.amazon.com/kinesis/</a>.
+For more information about the metrics emitted by AWS Kinesis Analytics, visit the service's monitoring page at <a target="_blank" href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/monitoring-metrics.html">https://docs.aws.amazon.com/kinesisanalytics/latest/dev/monitoring-metrics.html</a>.
 
 ### LICENSE
 

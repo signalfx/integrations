@@ -1,0 +1,11 @@
+{ "display_name":"AWS Kinesis Analytics",
+  "description": "SignalFx's integration with AWS Kinesis Analytics.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-kinesis-analytics",
+  "code": "https://aws.amazon.com/kinesis/data-analytics/",
+  "featured": false,
+  "logo_large": "integration_awskinesisanalytics%402x.png",
+  "logo_small": "integration_awskinesisanalytics.png",
+  "data_signature": "namespace:\"AWS/KinesisAnalytics\"",
+  "in_app_categories": ["AWSservicesMonitored"],
+  "browse_categories": ["Media Services & Solutions", "Analytics"]
+}
