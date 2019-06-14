@@ -78,13 +78,6 @@ well, but consult the Smart Agent repo's docs for the exact schema.**
     * Set the CpuQuotaPercent and CpuSharesPercent configuration options to true
     * Configure the filter to emit the optional metrics. Please see the configuration details [here](#configuration)
 
-7. The optional dashboard `Docker Neighbors` offers visualizations based on the CPU quota and CPU shares metrics. To view the dashboard:
-    * Manually import the dashboard into your organization in SignalFx.
-        * Download the <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-docker/dashboards/Page_Docker.json">dashboard group</a> with the optional dashboard
-        * Click to open the Actions menu, hover over Import, then select Dashboard Group
-        * Specify the path to the downloaded `Page_Docker.json` file
-        * The new dashboard group should appear under Custom Dashboard Groups
-
 ### CONFIGURATION
 
 Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-docker/10-docker.conf">10-docker.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment.

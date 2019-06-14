@@ -1,0 +1,11 @@
+{ "display_name":"AWS Kinesis Streams",
+  "description": "SignalFx's integration with AWS Kinesis Streams.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-kinesis-streams",
+  "code": "https://aws.amazon.com/kinesis/",
+  "featured": false,
+  "logo_large": "integration_awskinesisstreams%402x.png",
+  "logo_small": "integration_awskinesisstreams.png",
+  "data_signature": "namespace:\"AWS/Kinesis\"",
+  "in_app_categories": ["AWSservicesMonitored"],
+  "browse_categories": ["Media Services & Solutions", "Analytics"]
+}
