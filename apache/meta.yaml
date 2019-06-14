@@ -1,0 +1,11 @@
+{ "display_name":"Apache",
+  "description": "Monitor the Apache Webserver using the SignalFx Smart Agent.",
+  "project_url": "https://github.com/signalfx/integrations/tree/master/apache",
+  "code": "https://github.com/signalfx/collectd/blob/master/src/apache.c",
+  "featured": false,
+  "logo_large": "/images/repos/apache/img/integrations_apache%402x.png",
+  "logo_small": "/images/repos/apache/img/integrations_apache.png",
+  "data_signature": "plugin:\"apache\"",
+  "in_app_categories": ["servicesMonitored"],
+  "browse_categories": ["Web"]
+}
