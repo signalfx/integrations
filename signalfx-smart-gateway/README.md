@@ -12,11 +12,11 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v1.1.2">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v1.1.1">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
 $ curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" \
-    https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.2 | gunzip > smart-gateway
+    https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1 | gunzip > smart-gateway
 ```
 
 The Smart Gateway is designed to run in your environment, close to your applications, and receive all metrics and trace spans from your applications before they are forwarded to SignalFx.
@@ -35,7 +35,7 @@ It is also possible to download the checksum using `curl`, to automate the verif
 
 ```
 $ curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" \
-    https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v1.1.2 > smart-gateway.sha256
+    https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v1.1.1 > smart-gateway.sha256
 $ sha256sum -c smart-gateway.sha256
 ```
 
@@ -43,16 +43,7 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-
-##### Latest Version: v1.1.2 (June 18, 2019)
-
-[Download Smart Gateway v1.1.2](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.2)  
-_SHA256: `9e078a1505170c035ee7d452096918d90b0449bb2f85a5b6f55c0999204a0926`_
-
-* Update base SignalFx Gateway version to v1.2.0.1
-* Add version flag support for SignalFx Gateway
-
-##### v1.1.1 (June 4, 2019)
+##### Latest Version: v1.1.1 (June 4, 2019)
 
 [Download Smart Gateway v1.1.1](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1)  
 _SHA256: `c85c33dc988f7fe996718b74e616854e5585c36ce5f9af644fb05c77d6c01103`_
