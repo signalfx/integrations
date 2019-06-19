@@ -1,6 +1,6 @@
 # ![](./img/integrations_consul.png) Consul
 
-Metadata associated with the consul plugin for collectd can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-consul">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-consul">here</a>.
+Metadata associated with this integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/consul">here</a>. The relevant code for the integration can be found <a target="_blank" href="https://github.com/signalfx/collectd-consul">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,18 +12,10 @@ Metadata associated with the consul plugin for collectd can be found <a target="
 
 ### DESCRIPTION
 
-This is the SignalFx Consul plugin. Follow these instructions to install the Consul plugin for collectd.
-
-The <a target="_blank" href="https://github.com/signalfx/collectd-consul">consul-collectd</a> plugin collects metrics from Consul instances hitting these endpoints:  
-- <a target="_blank" href="https://www.consul.io/api/agent.html#read-configuration">/agent/self</a>  
-- <a target="_blank" href="https://www.consul.io/api/agent.html#view-metrics">/agent/metrics</a>  
-- <a target="_blank" href="https://www.consul.io/api/catalog.html#list-nodes">/catalog/nodes</a>  
-- <a target="_blank" href="https://www.consul.io/api/catalog.html#list-services-for-node">/catalog/node/:node</a>  
-- <a target="_blank" href="https://www.consul.io/api/status.html#get-raft-leader">/status/leader</a>  
-- <a target="_blank" href="https://www.consul.io/api/status.html#list-raft-peers">/status/peers</a>  
-- <a target="_blank" href="https://www.consul.io/api/coordinate.html#read-wan-coordinates">/coordinate/datacenters</a>  
-- <a target="_blank" href="https://www.consul.io/api/coordinate.html#read-lan-coordinates">/coordinate/nodes</a>  
-- <a target="_blank" href="https://www.consul.io/api/health.html#list-checks-in-state">/health/state/any</a>  
+The SignalFx Consul integration consists primarily of [a
+monitor](https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-consul.html)
+within the [SignalFx Smart
+Agent](https://docs.signalfx.com/en/latest/integrations/agent/index.html).
 
 #### FEATURES
 
@@ -60,129 +52,18 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-consul">consul
 
 | Software  | Version        |
 |-----------|----------------|
-| collectd  |  4.9 or later  |
-| python | 2.6 or later |
+| SignalFx Smart Agent  |  2.0+  |
 | Consul | 0.7.0 or later |
-| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
-
-### INSTALLATION
-
-**If you are using the new Smart Agent, see the docs for [the collectd/consul
-monitor](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-consul.md)
-for more information.  The configuration documentation below may be helpful as
-well, but consult the Smart Agent repo's docs for the exact schema.**
-
-
-1. Download <a target="_blank" href="https://github.com/signalfx/collectd-consul">collectd-consul</a>. Place the `consul_plugin.py` and `urllib_ssl_handler.py` file in `/usr/share/collectd/collectd-consul`
-
-2. Place the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`
-
-3. Modify the sample configuration file as described in [Configuration](#configuration), below
-
-4. Install the Python requirements with sudo ```pip install -r requirements.txt```
-
-5. Restart collectd
 
 
 ### CONFIGURATION
 
-If running Consul version below 0.9.1, configure the Consul agents that are to be monitored to send telemetry by adding the below configuration to Consul agents configuration file.
-
-```
-{"telemetry":
-  {"statsd_address": "host:port"}
-}
-```
-
-This plugin will start a UDP server listening at above host and port.
-
-Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-consul/10-consul.conf">10-consul.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the consul members
-
-| Configuration Option | Description | Default Value |
-|------------------------|----------------|------------------|
-| ApiHost | IP address or DNS to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `localhost` |
-| ApiPort | Port to which the Consul HTTP/HTTPS server binds to on the instance to be monitored | `8500` |
-| ApiProtocol | Possible values - *http* or *https* | `http` |
-| AclToken | Consul ACL token. | None |
-| TelemetryServer | Possible values - *true* or *false*<br>Set to *true* to enable collecting Consul's internal metrics via UDP from Consul's telemetry.<br>If set to *false* and Consul version is 0.9.1 and above, the metrics will be collected from API.<br>If set to *false* and Consul version is less than 0.9.1, Consul's internal metrics will not be available. | `false` |
-| TelemetryHost | IP address or DNS to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. | `localhost` |
-| TelemetryPort | Port to which consul is configured to send telemetry UDP packets. Relevant if TelemetryServer set to true. |  `8125` |
-| EnhancedMetrics | Possible values - *true* or *false*<br>Set to *true* to enable collecting all metrics from Consul's runtime telemetry send via UDP or from the `/agent/metrics` endpoint. | `false` |
-| ExcludeMetric | Blocks metrics by prefix matching, if *EnhancedMetrics* is true. This can be used to exclude metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None |
-| IncludeMetric | Allows metrics by prefix matching, if *EnhancedMetrics* is false. This can be used to include metrics sent from `/agent/metrics` endpoint or from Consul's runtime telemetry send via UDP. | None |
-| SfxToken |  SignalFx org access token (YOUR_SIGNALFX_API_TOKEN). If added to the config, an event is sent to SignalFx on leader transition and can be viewed on the Consul dashboard. | None |
-| Dimension | Add single custom global dimension to your metrics, formatted as "key=value" | None |
-| Dimensions | Add multiple global dimensions, formatted as "key1=value1,key2=value2,..." | None |
-| CaCertificate | If Consul server has https enabled for the API, provide the path to the CA Certificate. | None |
-| ClientCertificate | If client-side authentication is enabled, provide the path to the certificate file. | None |
-| ClientKey | If client-side authentication is enabled, provide the path to the key file. | None |
-| Debug | Possible values - *true* or *false*<br> | `false` |
-
-Example configuration:
-
-```apache
-LoadPlugin python
-
-<Plugin python>
-  ModulePath "/usr/share/collectd/collectd-consul"
-
-  Import consul_plugin
-  <Module consul_plugin>
-    ApiHost "server-1"
-    ApiPort 8500
-    ApiProtocol "http"
-    AclToken "token"
-    SfxToken "YOUR_SIGNALFX_API_TOKEN"
-    TelemetryServer true
-    TelemetryHost "17.2.3.4"
-    TelemetryPort 8125
-    EnhancedMetrics true
-    ExcludeMetric "consul.consul.http"
-    ExcludeMetric "consul.memberlist"
-    Dimension "foo=bar"
-    Dimensions "foo=bar,bar=baz"
-    CaCertificate "path/to/ca_cert"
-    ClientKey "path/to/client_key"
-    ClientCertificate "path/to/client/certificate"
-    Debug true
-  </Module>
-</Plugin>
-```
-
-The plugin can be configured to collect metrics from multiple instances in the following manner.
-
-```apache
-LoadPlugin python
-
-<Plugin python>
-  ModulePath "/usr/share/collectd/collectd-consul"
-
-  Import consul_plugin
-  <Module consul_plugin>
-    ApiHost "server-1"
-    ApiPort 8500
-    ApiProtocol "http"
-    AclToken "token"
-    SfxToken "YOUR_SIGNALFX_API_TOKEN"
-    TelemetryServer true
-    TelemetryHost "17.2.3.4"
-    TelemetryPort 8125
-    EnhancedMetrics true
-    ExcludeMetric "consul.consul.http"
-    ExcludeMetric "consul.memberlist"
-    Dimension "foo=bar"
-    Debug true
-  </Module>
-  <Module consul_plugin>
-    ApiHost "server-2"
-    ApiPort 8500
-    ApiProtocol "http"
-    IncludeMetric "consul.fsm"
-    Dimensions "foo=bar,bar=baz"
-    TelemetryServer false
-  </Module>
-</Plugin>
-```
+This integration is part of the <a
+href="https://docs.signalfx.com/en/latest/integrations/agent/index.html"
+target="_blank">SignalFx Smart Agent</a> -- see the docs for <a
+href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-consul.html"
+target="_blank">the collectd/consul monitor</a> for details on how to
+configure the Smart Agent to work with this integration.
 
 ### USAGE
 
