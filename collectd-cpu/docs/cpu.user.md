@@ -1,7 +1,7 @@
 
 ---
 title: cpu.user
-brief: CPU time spent running in userspace.
+brief: CPU time spent running in userspace
 metric_type: cumulative
 custom: true
 ---

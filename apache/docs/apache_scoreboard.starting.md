@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.starting
-brief: This metric shows how many workers are being started up.
+brief: This metric shows how many workers are being started up
 metric_type: gauge
 custom: true
 ---

@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.dnslookup
-brief: This metric counts the number of worker threads that are performing a DNS lookup.
+brief: This metric counts the number of worker threads that are performing a DNS lookup
 metric_type: gauge
 custom: true
 ---

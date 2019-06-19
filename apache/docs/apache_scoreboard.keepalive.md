@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.keepalive
-brief: The number of worker threads that are maintaining keep-alive connections: keeping the connection "alive" after serving a response, in the expectation that another HTTP request will come on the same connection.
+brief: The number of worker threads that are maintaining keep-alive connections: keeping the connection "alive" after serving a response, in the expectation that another HTTP request will come on the same connection
 metric_type: gauge
 custom: true
 ---

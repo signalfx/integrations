@@ -1,7 +1,7 @@
 
 ---
 title: cpu.softirq
-brief: CPU time spent while servicing software interrupts.
+brief: CPU time spent while servicing software interrupts
 metric_type: cumulative
 custom: true
 ---

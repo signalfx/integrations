@@ -1,7 +1,7 @@
 
 ---
 title: cpu.steal
-brief: CPU time spent waiting for a hypervisor to service requests from other virtual machines.
+brief: CPU time spent waiting for a hypervisor to service requests from other virtual machines
 metric_type: cumulative
 custom: true
 ---
