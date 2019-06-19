@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.logging
-brief: This metric shows how many worker threads are busy writing to the log file.
+brief: This metric shows how many worker threads are busy writing to the log file
 metric_type: gauge
 custom: true
 ---

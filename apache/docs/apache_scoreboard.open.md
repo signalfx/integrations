@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.open
-brief: This metric shows how many worker slots are open.
+brief: This metric shows how many worker slots are open
 metric_type: gauge
 custom: false
 ---

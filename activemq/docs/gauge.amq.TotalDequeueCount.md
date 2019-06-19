@@ -1,7 +1,7 @@
 
 ---
 title: gauge.amq.TotalDequeueCount
-brief: Total number of messages that have been acknowledged from the broker.
+brief: Total number of messages that have been acknowledged from the broker
 metric_type: gauge
 custom: true
 ---

@@ -1,7 +1,7 @@
 
 ---
 title: apache_connections
-brief: The number of connections that are being served by Apache.
+brief: The number of connections that are being served by Apache
 metric_type: gauge
 custom: false
 ---

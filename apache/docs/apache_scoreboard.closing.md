@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.closing
-brief: This metric shows how many worker threads are in the process of closing TCP connections after serving a response.
+brief: This metric shows how many worker threads are in the process of closing TCP connections after serving a response
 metric_type: gauge
 custom: true
 ---
