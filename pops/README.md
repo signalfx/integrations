@@ -131,4 +131,4 @@ POPS emits metrics about itself using the `SF_METRICS_STATSENDPOINT` and `SF_MET
 
 ### LICENSE
 
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](../LICENSE) for more details.
