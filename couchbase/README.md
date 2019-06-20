@@ -1,6 +1,6 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-couchbase/img/integrations_couchbase.png) Couchbase
+# ![](https://github.com/signalfx/integrations/blob/master/couchbase/img/integrations_couchbase.png) Couchbase
 
-Metadata associated with SignalFx's Couchbase integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-couchbase">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd-couchbase">here</a>.
+Metadata associated with SignalFx's Couchbase integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/couchbase">here</a>..
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -12,7 +12,7 @@ Metadata associated with SignalFx's Couchbase integration can be found <a target
 
 ### DESCRIPTION
 
-`collectd-couchbase` is a <a target="_blank" href="http://www.collectd.org/">collectd</a> plugin that collects statistics from Couchbase.
+The SignalFx Smart Agent can pull metrics from Couchbase using the collectd-couchbase plugin.
 
 #### FEATURES
 
@@ -44,39 +44,18 @@ Metadata associated with SignalFx's Couchbase integration can be found <a target
 
 | Software  | Version        |
 |-----------|----------------|
-| collectd  |  4.9 or later  |
-| python | 2.7 or later |
+| SignalFx Smart Agent  |  2.0+  |
 | couchbase | 3.0 or later |
-| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
-
-### INSTALLATION
-
-1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-couchbase">collectd-couchbase Python module</a>.
-
-2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
-
-3. Modify the sample configuration file as described in [Configuration](#configuration), below.
-
-4. Restart collectd.
 
 ### CONFIGURATION
 
-Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-couchbase/10-couchbase.conf">10-couchbase.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
-
-| configuration option | definition | example value |
-| ---------------------|------------|---------------|
-| ModulePath | Path on disk where collectd can find this module. | "/opt/collectd-couchbase" |
-| CollectTarget | Define what this Module block will monitor: "NODE", for a Couchbase node, or "BUCKET" for a Couchbase bucket. | "BUCKET" |
-| CollectBucket | If CollectTarget is "BUCKET", the name of the bucket that this Module block will monitor. | "custom_bucket" |
-| Host | Hostname or IP address of the Couchbase server. | "localhost" |
-| Port | Port at which the Couchbase server can be reached. | "8091" |
-| ClusterName | Name of this Couchbase cluster. | "default" |
-| CollectMode | Change to "detailed" to collect all available metrics from Couchbase stats API. Defaults to "default", collecting a curated set that works well with SignalFx. See <a target="_blank" href="https://github.com/signalfx/collectd-couchbase/blob/master/metric_info.py">metric_info.py</a> for more information. | "default" |
-| Interval | Number of seconds between calls to Couchbase API. | 10 |
-| Username | If CollectTarget is "BUCKET" and this bucket requires authentication, username to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "USERNAME" |
-| Password | If CollectTarget is "BUCKET" and this bucket requires authentication, password to authenticate to this bucket. If this bucket does not require authentication, do not include this option in the Module block. | "PASSWORD" |
-| FieldLength | The number of characters used to encode dimension data. **CAUTION**: Modify this value only if you specifically compiled collectd with a non-default value for `DATA_MAX_NAME_LEN` in `plugin.h`. |  "1024" |
+This integration is part of the <a
+href="https://docs.signalfx.com/en/latest/integrations/agent/index.html"
+target="_blank">SignalFx Smart Agent</a> -- see the docs for <a
+href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-couchbase.html"
+target="_blank">the collectd/couchbase monitor</a> for details on how to
+configure the Smart Agent to work with this integration.
 
 ### USAGE
 
