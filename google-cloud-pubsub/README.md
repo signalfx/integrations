@@ -81,7 +81,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 - **Undelivered Messages** - Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.
 
-  [<img src='./img/subscription-undelivered-messages-size.png' width=200px>](./img/subscription-undelivered-messages.png)
+  [<img src='./img/subscription-undelivered-messages.png' width=200px>](./img/subscription-undelivered-messages.png)
 
 - **Outstanding Messages** - Number of messages delivered to a subscription's push endpoint, but not yet acknowledged.
 

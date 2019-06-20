@@ -1104,4 +1104,4 @@ logged out.
 
 ### LICENSE
 
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](../LICENSE) for more details.

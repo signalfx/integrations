@@ -7,7 +7,7 @@ metric_type: cumulative_counter
 
 > Count of transmit errors on the interface.
 
-Errors happen due to various reasons. Some reasons are [explained here](http://platforms.infostruction.com/interface-errors-on-linux-centosredhat/)
+Errors happen due to various reasons. Some reasons are [explained here](https://unix.stackexchange.com/q/184604)
 
 **Rate/sec rollup** provides the current rate of transmit errors on the interface in errors/sec.
 
