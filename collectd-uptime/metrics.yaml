@@ -1,0 +1,8 @@
+uptime:
+  brief: Seconds since system boot
+  description: '> How many seconds since system boot
+
+    This metric is useful to monitor system restarts.'
+  metric_type: gauge
+  title: Uptime
+

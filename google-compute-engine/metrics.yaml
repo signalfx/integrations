@@ -1,0 +1,116 @@
+firewall_dropped_bytes_count:
+  brief: Delta count of incoming bytes dropped by the firewall.
+  description: Delta count of incoming bytes dropped by the firewall.
+  metric_type: counter
+  title: firewall/dropped_bytes_count
+
+firewall_dropped_packets_count:
+  brief: Delta count of incoming packets dropped by the firewall.
+  description: Delta count of incoming packets dropped by the firewall.
+  metric_type: counter
+  title: firewall/dropped_packets_count
+
+instance_cpu_reserved_cores:
+  brief: Number of cores reserved on the host of the instance.
+  description: Number of cores reserved on the host of the instance.
+  metric_type: gauge
+  title: instance/cpu/reserved_cores
+
+instance_cpu_usage_time:
+  brief: Delta CPU usage for all cores, in seconds. To compute the per-core CPU utilization
+    fraction, divide this value by (end-start)*N, where end and start define this
+    value's time interval and N is `compute.googleapis.com/instance/cpu/reserved_cores`
+    at the end of the interval.
+  description: Delta CPU usage for all cores, in seconds. To compute the per-core
+    CPU utilization fraction, divide this value by (end-start)*N, where end and start
+    define this value's time interval and N is `compute.googleapis.com/instance/cpu/reserved_cores`
+    at the end of the interval.
+  metric_type: counter
+  title: instance/cpu/usage_time
+
+instance_cpu_utilization:
+  brief: The fraction of the allocated CPU that is currently in use on the instance.
+    This value can be greater than 1.0 on some machine types that allow bursting.
+  description: The fraction of the allocated CPU that is currently in use on the instance.
+    This value can be greater than 1.0 on some machine types that allow bursting.
+  metric_type: gauge
+  title: instance/cpu/utilization
+
+instance_disk_read_bytes_count:
+  brief: Delta count of bytes read from disk.
+  description: Delta count of bytes read from disk.
+  metric_type: counter
+  title: instance/disk/read_bytes_count
+
+instance_disk_read_ops_count:
+  brief: Delta count of disk read IO operations.
+  description: Delta count of disk read IO operations.
+  metric_type: counter
+  title: instance/disk/read_ops_count
+
+instance_disk_throttled_read_bytes_count:
+  brief: Delta count of bytes in throttled read operations.
+  description: Delta count of bytes in throttled read operations.
+  metric_type: counter
+  title: instance/disk/throttled_read_bytes_count
+
+instance_disk_throttled_read_ops_count:
+  brief: Delta count of throttled read operations.
+  description: Delta count of throttled read operations.
+  metric_type: counter
+  title: instance/disk/throttled_read_ops_count
+
+instance_disk_throttled_write_bytes_count:
+  brief: Delta count of bytes in throttled write operations.
+  description: Delta count of bytes in throttled write operations.
+  metric_type: counter
+  title: instance/disk/throttled_write_bytes_count
+
+instance_disk_throttled_write_ops_count:
+  brief: Delta count of throttled write operations.
+  description: Delta count of throttled write operations.
+  metric_type: counter
+  title: instance/disk/throttled_write_ops_count
+
+instance_disk_write_bytes_count:
+  brief: Delta count of bytes written to disk.
+  description: Delta count of bytes written to disk.
+  metric_type: counter
+  title: instance/disk/write_bytes_count
+
+instance_disk_write_ops_count:
+  brief: Delta count of disk write IO operations.
+  description: Delta count of disk write IO operations.
+  metric_type: counter
+  title: instance/disk/write_ops_count
+
+instance_network_received_bytes_count:
+  brief: Delta count of bytes received from the network.
+  description: Delta count of bytes received from the network.
+  metric_type: counter
+  title: instance/network/received_bytes_count
+
+instance_network_received_packets_count:
+  brief: Delta count of packets received from the network.
+  description: Delta count of packets received from the network.
+  metric_type: counter
+  title: instance/network/received_packets_count
+
+instance_network_sent_bytes_count:
+  brief: Delta count of bytes sent over the network.
+  description: Delta count of bytes sent over the network.
+  metric_type: counter
+  title: instance/network/sent_bytes_count
+
+instance_network_sent_packets_count:
+  brief: Delta count of packets sent over the network.
+  description: Delta count of packets sent over the network.
+  metric_type: counter
+  title: instance/network/sent_packets_count
+
+instance_uptime:
+  brief: How long the VM has been running, in seconds.
+  description: How long the VM has been running, in seconds.
+  metric_type: counter
+  title: instance/uptime
+

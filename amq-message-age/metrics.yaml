@@ -1,0 +1,16 @@
+message.age.average:
+  brief: Average age of ActiveMQ messages per host, broker and queue or topic, in
+    milliseconds.
+  description: Average age of ActiveMQ messages per host, broker and queue or topic,
+    in milliseconds.
+  metric_type: counter
+  title: Average message age (ms)
+
+message.age.maximum:
+  brief: Maximum age of ActiveMQ messages per host, broker and queue or topic, in
+    milliseconds.
+  description: Maximum age of ActiveMQ messages per host, broker and queue or topic,
+    in milliseconds.
+  metric_type: counter
+  title: Maximum message age (ms)
+

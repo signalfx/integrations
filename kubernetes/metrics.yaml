@@ -1,0 +1,326 @@
+container_cpu_system_seconds_total:
+  brief: Cumulative system cpu time consumed in nanoseconds.
+  description: Cumulative system cpu time consumed in nanoseconds.
+  metric_type: counter
+  title: container_cpu_system_seconds_total
+
+container_cpu_usage_seconds_total:
+  brief: Cumulative cpu time consumed per cpu in nanoseconds.
+  description: Cumulative cpu time consumed per cpu in nanoseconds.
+  metric_type: counter
+  title: container_cpu_usage_seconds_total
+
+container_cpu_user_seconds_total:
+  brief: Cumulative user cpu time consumed in nanoseconds.
+  description: Cumulative user cpu time consumed in nanoseconds.
+  metric_type: counter
+  title: container_cpu_user_seconds_total
+
+container_cpu_utilization:
+  brief: Cumulative cpu utilization in percentages.
+  description: 'Cumulative cpu utilization in percentages. This metric is container_cpu_usage_seconds_total/10000000.
+    Metric has counter type because user would be interested in rate of change (Rollup:
+    Rate/sec)'
+  metric_type: counter
+  title: container_cpu_utilization
+
+container_fs_io_current:
+  brief: Number of I/Os currently in progress
+  description: Number of I/Os currently in progress.
+  metric_type: gauge
+  title: container_fs_io_current
+
+container_fs_io_time_seconds_total:
+  brief: Cumulative count of seconds spent doing I/Os
+  description: Cumulative count of seconds spent doing I/Os.
+  metric_type: counter
+  title: container_fs_io_time_seconds_total
+
+container_fs_io_time_weighted_seconds_total:
+  brief: Cumulative weighted I/O time in seconds
+  description: Cumulative weighted I/O time in seconds.
+  metric_type: counter
+  title: container_fs_io_time_weighted_seconds_total
+
+container_fs_limit_bytes:
+  brief: Number of bytes that the container may occupy on this filesystem.
+  description: Number of bytes that the container may occupy on this filesystem.
+  metric_type: gauge
+  title: container_fs_limit_bytes
+
+container_fs_read_seconds_total:
+  brief: Cumulative count of seconds spent reading
+  description: Cumulative count of seconds spent reading.
+  metric_type: counter
+  title: container_fs_read_seconds_total
+
+container_fs_reads_merged_total:
+  brief: Cumulative count of reads merged
+  description: Cumulative count of reads merged.
+  metric_type: counter
+  title: container_fs_reads_merged_total
+
+container_fs_reads_total:
+  brief: Cumulative count of reads completed
+  description: Cumulative count of reads completed.
+  metric_type: counter
+  title: container_fs_reads_total
+
+container_fs_sector_reads_total:
+  brief: Cumulative count of sector reads completed
+  description: Cumulative count of sector reads completed.
+  metric_type: counter
+  title: container_fs_sector_reads_total
+
+container_fs_sector_writes_total:
+  brief: Cumulative count of sector writes completed
+  description: Cumulative count of sector writes completed.
+  metric_type: counter
+  title: container_fs_sector_writes_total
+
+container_fs_usage_bytes:
+  brief: Number of bytes that are consumed by the container on this filesystem.
+  description: Number of bytes that are consumed by the container on this filesystem.
+  metric_type: gauge
+  title: container_fs_usage_bytes
+
+container_fs_write_seconds_total:
+  brief: Cumulative count of seconds spent writing
+  description: Cumulative count of seconds spent writing.
+  metric_type: counter
+  title: container_fs_write_seconds_total
+
+container_fs_writes_merged_total:
+  brief: Cumulative count of writes merged
+  description: Cumulative count of writes merged.
+  metric_type: counter
+  title: container_fs_writes_merged_total
+
+container_fs_writes_total:
+  brief: Cumulative count of writes completed
+  description: Cumulative count of writes completed.
+  metric_type: counter
+  title: container_fs_writes_total
+
+container_last_seen:
+  brief: Last time a container was seen by the exporter
+  description: Last time a container was seen by the exporter.
+  metric_type: gauge
+  title: container_last_seen
+
+container_memory_failcnt:
+  brief: Number of memory usage hits limits
+  description: Number of memory usage hits limits.
+  metric_type: counter
+  title: container_memory_failcnt
+
+container_memory_failures_total:
+  brief: Cumulative count of memory allocation failures.
+  description: Cumulative count of memory allocation failures.
+  metric_type: counter
+  title: container_memory_failures_total
+
+container_memory_usage_bytes:
+  brief: Current memory usage in bytes.
+  description: Current memory usage in bytes.
+  metric_type: gauge
+  title: container_memory_usage_bytes
+
+container_memory_working_set_bytes:
+  brief: Current working set in bytes.
+  description: Current working set in bytes.
+  metric_type: gauge
+  title: container_memory_working_set_bytes
+
+container_network_receive_bytes_total:
+  brief: Cumulative count of bytes received
+  description: Cumulative count of bytes received.
+  metric_type: counter
+  title: container_network_receive_bytes_total
+
+container_network_receive_errors_total:
+  brief: Cumulative count of errors encountered while receiving
+  description: Cumulative count of errors encountered while receiving.
+  metric_type: counter
+  title: container_network_receive_errors_total
+
+container_network_receive_packets_dropped_total:
+  brief: Cumulative count of packets dropped while receiving
+  description: Cumulative count of packets dropped while receiving.
+  metric_type: counter
+  title: container_network_receive_packets_dropped_total
+
+container_network_receive_packets_total:
+  brief: Cumulative count of packets received
+  description: Cumulative count of packets received.
+  metric_type: counter
+  title: container_network_receive_packets_total
+
+container_network_transmit_bytes_total:
+  brief: Cumulative count of bytes transmitted
+  description: Cumulative count of bytes transmitted.
+  metric_type: counter
+  title: container_network_transmit_bytes_total
+
+container_network_transmit_errors_total:
+  brief: Cumulative count of errors encountered while transmitting
+  description: Cumulative count of errors encountered while transmitting.
+  metric_type: counter
+  title: container_network_transmit_errors_total
+
+container_network_transmit_packets_dropped_total:
+  brief: Cumulative count of packets dropped while transmitting
+  description: Cumulative count of packets dropped while transmitting.
+  metric_type: counter
+  title: container_network_transmit_packets_dropped_total
+
+container_network_transmit_packets_total:
+  brief: Cumulative count of packets transmitted
+  description: Cumulative count of packets transmitted.
+  metric_type: counter
+  title: container_network_transmit_packets_total
+
+container_spec_cpu_shares:
+  brief: CPU share of the container.
+  description: CPU share of the container.
+  metric_type: gauge
+  title: container_spec_cpu_shares
+
+container_spec_memory_limit_bytes:
+  brief: Memory limit for the container.
+  description: Memory limit for the container.
+  metric_type: gauge
+  title: container_spec_memory_limit_bytes
+
+container_spec_memory_swap_limit_bytes:
+  brief: Memory swap limit for the container.
+  description: Memory swap limit for the container.
+  metric_type: gauge
+  title: container_spec_memory_swap_limit_bytes
+
+container_start_time_seconds:
+  brief: Start time of the container since unix epoch in seconds.
+  description: Start time of the container since unix epoch in seconds.
+  metric_type: gauge
+  title: container_start_time_seconds
+
+container_tasks_state:
+  brief: Number of tasks in given state
+  description: Number of tasks in given state.
+  metric_type: gauge
+  title: container_tasks_state
+
+kubernetes.daemon_set.current_scheduled:
+  brief: The number of nodes that are running at least 1 daemon pod and are supposed
+    to run the daemon pod
+  description: The number of nodes that are running at least 1 daemon pod and are
+    supposed to run the daemon pod
+  metric_type: gauge
+  title: kubernetes.daemon_set.current_scheduled
+
+kubernetes.daemon_set.desired_scheduled:
+  brief: The total number of nodes that should be running the daemon pod (including
+    nodes currently running the daemon pod)
+  description: The total number of nodes that should be running the daemon pod (including
+    nodes currently running the daemon pod)
+  metric_type: gauge
+  title: kubernetes.daemon_set.desired_scheduled
+
+kubernetes.daemon_set.misscheduled:
+  brief: The number of nodes that are running the daemon pod, but are not supposed
+    to run the daemon pod
+  description: The number of nodes that are running the daemon pod, but are not supposed
+    to run the daemon pod
+  metric_type: gauge
+  title: kubernetes.daemon_set.misscheduled
+
+kubernetes.daemon_set.ready:
+  brief: The number of nodes that should be running the daemon pod and have one or
+    more of the daemon pod running and ready
+  description: The number of nodes that should be running the daemon pod and have
+    one or more of the daemon pod running and ready
+  metric_type: gauge
+  title: kubernetes.daemon_set.ready
+
+kubernetes.deployment.available:
+  brief: Total number of available pods (ready for at least minReadySeconds) targeted
+    by this deployment.
+  description: Total number of available pods (ready for at least minReadySeconds)
+    targeted by this deployment.
+  metric_type: gauge
+  title: kubernetes.deployment.available
+
+kubernetes.deployment.desired:
+  brief: Number of desired pods
+  description: Number of desired pods
+  metric_type: gauge
+  title: kubernetes.deployment.desired
+
+kubernetes.replica_set.available:
+  brief: Total number of available pods (ready for at least minReadySeconds) targeted
+    by this replica set.
+  description: Total number of available pods (ready for at least minReadySeconds)
+    targeted by this replica set.
+  metric_type: gauge
+  title: kubernetes.replica_set.available
+
+kubernetes.replica_set.desired:
+  brief: Number of desired pods
+  description: Number of desired pods
+  metric_type: gauge
+  title: kubernetes.replica_set.desired
+
+kubernetes.replication_controller.available:
+  brief: Total number of available pods (ready for at least minReadySeconds) targeted
+    by this replication controller.
+  description: Total number of available pods (ready for at least minReadySeconds)
+    targeted by this replication controller.
+  metric_type: gauge
+  title: kubernetes.replication_controller.available
+
+kubernetes.replication_controller.desired:
+  brief: Number of desired pods
+  description: Number of desired pods
+  metric_type: gauge
+  title: kubernetes.replication_controller.desired
+
+kubernetes_container_restart_count:
+  brief: How many times the container has restarted (capped at 5 due to K8s GC)
+  description: How many times the container has restarted (capped at 5 due to K8s
+    GC)
+  metric_type: gauge
+  title: kubernetes.container_restart_count
+
+kubernetes_node_ready:
+  brief: Whether this node is ready (1), not ready (0) or in an unknown state (-1)
+  description: Whether this node is ready (1), not ready (0) or in an unknown state
+    (-1)
+  metric_type: gauge
+  title: kubernetes.node_ready
+
+kubernetes_pod_phase:
+  brief: Current phase of the pod (1 - Pending, 2 - Running, 3 - Succeeded, 4 - Failed,
+    5 - Unknown)
+  description: Current phase of the pod (1 - Pending, 2 - Running, 3 - Succeeded,
+    4 - Failed, 5 - Unknown)
+  metric_type: gauge
+  title: kubernetes.pod_phase
+
+machine_cpu_cores:
+  brief: Number of CPU cores on the node.
+  description: Number of CPU cores on the node.
+  metric_type: gauge
+  title: machine_cpu_cores
+
+machine_cpu_frequency_khz:
+  brief: Node's CPU frequency.
+  description: Node's CPU frequency.
+  metric_type: gauge
+  title: machine_cpu_frequency_khz
+
+machine_memory_bytes:
+  brief: Amount of memory installed on the node.
+  description: Amount of memory installed on the node.
+  metric_type: gauge
+  title: machine_memory_bytes
+

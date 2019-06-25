@@ -1,0 +1,489 @@
+instance.cost:
+  brief: The average cost of a running EC2 instance (of a given instance type, region,
+    platform, and tenancy). The calculation factors in Reserved Instance coverage
+    and utilization, but does not factor in any negotiated discount.
+  description: '> The average cost of a running EC2 instance (of a given instance
+    type, region, platform, and tenancy). The calculation factors in Reserved Instance
+    coverage and utilization, but does not factor in any negotiated discount.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service'
+  metric_type: gauge
+  title: Instance Cost
+
+instance.count:
+  brief: This metric reports a value of 1 for every running EC2 instance. All AWS
+    tags associated with a specific instance are available as properties on the metric
+    time series, and can be used in analytics for filtering and grouping by custom
+    tags.
+  description: '> This metric reports a value of 1 for every running EC2 instance.
+    All AWS tags associated with a specific instance are available as properties on
+    the metric time series, and can be used in analytics for filtering and grouping
+    by custom tags.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service'
+  metric_type: gauge
+  title: Instance Count
+
+instance.normalized_count:
+  brief: This metric reports a value equivalent to the AWS normalization factor (e.g.
+    2.0 for a "medium" sized instance) for every running EC2 instance. All AWS tags
+    associated with a specific instance are available as properties on the metric
+    time series, and can be used in analytics for filtering and grouping by custom
+    tags.
+  description: '> This metric reports a value equivalent to the AWS normalization
+    factor (e.g. 2.0 for a "medium" sized instance) for every running EC2 instance.
+    All AWS tags associated with a specific instance are available as properties on
+    the metric time series, and can be used in analytics for filtering and grouping
+    by custom tags.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service'
+  metric_type: gauge
+  title: Normalized Instance Count
+
+instance.state_change:
+  brief: Count of state changes of EC2 instances (e.g. instances started, stopped,
+    or terminated) in the last minute.
+  description: '> Count of state changes of EC2 instances (e.g. instances started,
+    stopped, or terminated) in the last minute.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    state'
+  metric_type: counter
+  title: Instance State Change
+
+on_demand_instance.count:
+  brief: Number of running EC2 Instances (of a given instance type, region, platform,
+    and tenancy) for which there are no Reserved Instances available to apply.
+  description: '> Number of running EC2 Instances (of a given instance type, region,
+    platform, and tenancy) for which there are no Reserved Instances available to
+    apply.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service'
+  metric_type: gauge
+  title: On-Demand Instance Count
+
+on_demand_instance.normalized_count:
+  brief: Number of running EC2 Instances (normalized to the small instance type of
+    the instance_type dimension) for which there are no Reserved Instances available
+    to apply.
+  description: '> Number of running EC2 Instances (normalized to the small instance
+    type of the instance_type dimension) for which there are no Reserved Instances
+    available to apply.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service'
+  metric_type: gauge
+  title: Normalized On-Demand Instance Count
+
+on_demand_instance.published_cost:
+  brief: Cost of an EC2 On-Demand Instance (of a given instance type, region, platform,
+    and tenancy) as publicly made available by AWS.
+  description: '> Cost of an EC2 On-Demand Instance (of a given instance type, region,
+    platform, and tenancy) as publicly made available by AWS.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    cost_resolution_secs'
+  metric_type: gauge
+  title: Published On-Demand Cost
+
+reservation.amortized_cost:
+  brief: Amortized average cost of an EC2 Reservation, taking into account the upfront
+    cost and recurring costs over the entire term of the reservation.
+  description: '> Amortized average cost of an EC2 Reservation, taking into account
+    the upfront cost and recurring costs over the entire term of the reservation.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    cost_resolution_secs
+
+    reserved_instance_id'
+  metric_type: gauge
+  title: Amortized Reservation Cost
+
+reservation.count:
+  brief: Count of EC2 instances in a Reservation
+  description: '> Count of EC2 instances in a Reservation
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    reserved_instance_id'
+  metric_type: gauge
+  title: Reservation Count
+
+reservation.ms_until_expiration:
+  brief: Time (in milliseconds) until an EC2 Reservation expires.
+  description: '> Time (in milliseconds) until an EC2 Reservation expires.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    reserved_instance_id'
+  metric_type: gauge
+  title: Time to Reservation Expiry
+
+ri.cost:
+  brief: Amortized average cost of a purchased EC2 Reserved Instance (of a given instance
+    type, region, platform, and tenancy).
+  description: '> Amortized average cost of a purchased EC2 Reserved Instance (of
+    a given instance type, region, platform, and tenancy).
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    cost_resolution_secs'
+  metric_type: gauge
+  title: RI Cost
+
+ri.count:
+  brief: Number of EC2 Reserved Instances available (of a given instance type, region,
+    platform, and tenancy).
+  description: '> Number of EC2 Reserved Instances available (of a given instance
+    type, region, platform, and tenancy).
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    utilization'
+  metric_type: gauge
+  title: RI Count
+
+ri.normailized_count:
+  brief: Number of EC2 Reserved Instances used (of a given instance type, region,
+    platform, and tenancy), normalized to the small instance type of the RI's instance
+    family.
+  description: '> Number of EC2 Reserved Instances used (of a given instance type,
+    region, platform, and tenancy), normalized to the small instance type of the RI''s
+    instance family.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    utilization'
+  metric_type: gauge
+  title: Normalized RI Count
+
+ri.normalized_cost:
+  brief: Amortized average cost of a purchased EC2 Reserved Instance, normalized to
+    the small instance type of the RI's instance family.
+  description: '> Amortized average cost of a purchased EC2 Reserved Instance, normalized
+    to the small instance type of the RI''s instance family.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    cost_resolution_secs'
+  metric_type: gauge
+  title: Normalized RI Cost
+
+ri.published_cost:
+  brief: Cost of an EC2 3-Year No-Upfront Convertible Reserved Instance (of a given
+    instance type, region, platform, and tenancy) as publicly made available by AWS.
+    This metric can be used to estimate potential savings from the On-Demand to RI
+    Conversion.
+  description: '> Cost of an EC2 3-Year No-Upfront Convertible Reserved Instance (of
+    a given instance type, region, platform, and tenancy) as publicly made available
+    by AWS. This metric can be used to estimate potential savings from the On-Demand
+    to RI Conversion.
+
+    Associated Dimensions :
+
+    aws_account_id
+
+    aws_availability_zone
+
+    aws_instance_family
+
+    aws_instance_type
+
+    aws_master_account_id
+
+    aws_platform
+
+    aws_region
+
+    aws_tenancy
+
+    cloud_provider
+
+    cloud_provider_service
+
+    cost_resolution_secs'
+  metric_type: gauge
+  title: Published RI Cost
+

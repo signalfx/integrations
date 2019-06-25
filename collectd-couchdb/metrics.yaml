@@ -1,0 +1,873 @@
+counter.couchdb.couch_log.level.alert:
+  brief: Number of logged alert messages
+  description: Number of logged alert messages
+  metric_type: counter
+  title: Log Level Alert
+
+counter.couchdb.couch_log.level.critical:
+  brief: Number of logged critical messages
+  description: Number of logged critical messages
+  metric_type: counter
+  title: Log Level Critical
+
+counter.couchdb.couch_log.level.debug:
+  brief: Number of logged debug messages
+  description: Number of logged debug messages
+  metric_type: counter
+  title: Log Level Debug
+
+counter.couchdb.couch_log.level.emergency:
+  brief: Number of logged emergency messages
+  description: Number of logged emergency messages
+  metric_type: counter
+  title: Log Level Emergency
+
+counter.couchdb.couch_log.level.error:
+  brief: Number of logged error messages
+  description: Number of logged error messages
+  metric_type: counter
+  title: Log Level Error
+
+counter.couchdb.couch_log.level.info:
+  brief: Number of logged info messages
+  description: Number of logged info messages
+  metric_type: counter
+  title: Log Level Info
+
+counter.couchdb.couch_log.level.notice:
+  brief: Number of logged notice messages
+  description: Number of logged notice messages
+  metric_type: counter
+  title: Log Level Notice
+
+counter.couchdb.couch_log.level.warning:
+  brief: Number of logged warning messages
+  description: Number of logged warning messages
+  metric_type: counter
+  title: Log Level Warning
+
+counter.couchdb.couch_replicator.changes_manager_deaths:
+  brief: Number of failed replicator changes managers
+  description: Number of failed replicator changes managers
+  metric_type: counter
+  title: Replicator Changes Manager Deaths
+
+counter.couchdb.couch_replicator.changes_queue_deaths:
+  brief: Number of failed replicator changes work queues
+  description: Number of failed replicator changes work queues
+  metric_type: counter
+  title: Replicator Changes Queue Deaths
+
+counter.couchdb.couch_replicator.changes_read_failures:
+  brief: Number of failed replicator changes read failures
+  description: Number of failed replicator changes read failures
+  metric_type: counter
+  title: Replicator Changes Read Failures
+
+counter.couchdb.couch_replicator.changes_reader_deaths:
+  brief: Number of failed replicator changes readers
+  description: Number of failed replicator changes readers
+  metric_type: counter
+  title: Replicator Changes Reader Deaths
+
+counter.couchdb.couch_replicator.checkpoints.failure:
+  brief: Number of failed checkpoint saves
+  description: Number of failed checkpoint saves
+  metric_type: counter
+  title: Replicator Checkpoints Failure
+
+counter.couchdb.couch_replicator.checkpoints.success:
+  brief: Number of checkpoints successfully saves
+  description: Number of checkpoints successfully saves
+  metric_type: counter
+  title: Replicator Checkpoints Success
+
+counter.couchdb.couch_replicator.failed_starts:
+  brief: Number of replications that have failed to start
+  description: Number of replications that have failed to start
+  metric_type: counter
+  title: Replicator Failed Starts
+
+counter.couchdb.couch_replicator.requests:
+  brief: Number of http requests made by the replicator
+  description: Number of http requests made by the replicator
+  metric_type: counter
+  title: Replicator Requests
+
+counter.couchdb.couch_replicator.responses.failure:
+  brief: Number of failed http responses received by the replicator
+  description: Number of failed http responses received by the replicator
+  metric_type: counter
+  title: Replicator Responses Failure
+
+counter.couchdb.couch_replicator.responses.success:
+  brief: Number of successful http responses received by the replicator
+  description: Number of successful http responses received by the replicator
+  metric_type: counter
+  title: Replicator Responses Success
+
+counter.couchdb.couch_replicator.stream_responses.failure:
+  brief: Number of failed streaming http responses received by the replicator
+  description: Number of failed streaming http responses received by the replicator
+  metric_type: counter
+  title: Replicator Stream Responses Failure
+
+counter.couchdb.couch_replicator.stream_responses.success:
+  brief: Number of successful streaming http responses received by the replicator
+  description: Number of successful streaming http responses received by the replicator
+  metric_type: counter
+  title: Replicator Stream Responses Success
+
+counter.couchdb.couch_replicator.worker_deaths:
+  brief: Number of failed replicator workers
+  description: Number of failed replicator workers
+  metric_type: counter
+  title: Replicator Worker Deaths
+
+counter.couchdb.couch_replicator.workers_started:
+  brief: Number of replicator workers started
+  description: Number of replicator workers started
+  metric_type: counter
+  title: Replicator Workers Started
+
+counter.couchdb.couchdb.auth_cache_hits:
+  brief: Number of authentication cache hits
+  description: Number of authentication cache hits
+  metric_type: counter
+  title: Auth Cache Hits
+
+counter.couchdb.couchdb.auth_cache_misses:
+  brief: Number of authentication cache misses
+  description: Number of authentication cache misses
+  metric_type: counter
+  title: Auth Cache Misses
+
+counter.couchdb.couchdb.couch_server.lru_skip:
+  brief: Number of couch_server lru operations skipped
+  description: Number of couch_server lru operations skipped
+  metric_type: counter
+  title: Server Lru Skip
+
+counter.couchdb.couchdb.database_reads:
+  brief: Number of times a document was read from a database
+  description: Number of times a document was read from a database
+  metric_type: counter
+  title: Database Reads
+
+counter.couchdb.couchdb.database_writes:
+  brief: Number of times a database was changed
+  description: Number of times a database was changed
+  metric_type: counter
+  title: Database Writes
+
+counter.couchdb.couchdb.document_inserts:
+  brief: Number of documents inserted
+  description: Number of documents inserted
+  metric_type: counter
+  title: Document Inserts
+
+counter.couchdb.couchdb.document_writes:
+  brief: Number of document write operations
+  description: Number of document write operations
+  metric_type: counter
+  title: Document Writes
+
+counter.couchdb.couchdb.httpd.aborted_requests:
+  brief: Number of aborted requests
+  description: Number of aborted requests
+  metric_type: counter
+  title: Httpd Aborted Requests
+
+counter.couchdb.couchdb.httpd.bulk_requests:
+  brief: Number of bulk requests
+  description: Number of bulk requests
+  metric_type: counter
+  title: Httpd Bulk Requests
+
+counter.couchdb.couchdb.httpd.clients_requesting_changes:
+  brief: Number of clients for continuous _changes
+  description: Number of clients for continuous _changes
+  metric_type: counter
+  title: Httpd Clients Requesting Changes
+
+counter.couchdb.couchdb.httpd.requests:
+  brief: Number of http requests
+  description: Number of http requests
+  metric_type: counter
+  title: Httpd Requests
+
+counter.couchdb.couchdb.httpd.temporary_view_reads:
+  brief: Number of temporary view reads
+  description: Number of temporary view reads
+  metric_type: counter
+  title: Httpd Temporary View Reads
+
+counter.couchdb.couchdb.httpd.view_reads:
+  brief: Number of view reads
+  description: Number of view reads
+  metric_type: counter
+  title: Httpd View Reads
+
+counter.couchdb.couchdb.httpd_request_methods.COPY:
+  brief: Number of http copy requests
+  description: Number of http copy requests
+  metric_type: counter
+  title: Httpd Request Methods Copy
+
+counter.couchdb.couchdb.httpd_request_methods.DELETE:
+  brief: Number of http delete requests
+  description: Number of http delete requests
+  metric_type: counter
+  title: Httpd Request Methods Delete
+
+counter.couchdb.couchdb.httpd_request_methods.GET:
+  brief: Number of http get requests
+  description: Number of http get requests
+  metric_type: counter
+  title: Httpd Request Methods Get
+
+counter.couchdb.couchdb.httpd_request_methods.HEAD:
+  brief: Number of http head requests
+  description: Number of http head requests
+  metric_type: counter
+  title: Httpd Request Methods Head
+
+counter.couchdb.couchdb.httpd_request_methods.OPTIONS:
+  brief: Number of http options requests
+  description: Number of http options requests
+  metric_type: counter
+  title: Httpd Request Methods Options
+
+counter.couchdb.couchdb.httpd_request_methods.POST:
+  brief: Number of http post requests
+  description: Number of http post requests
+  metric_type: counter
+  title: Httpd Request Methods Post
+
+counter.couchdb.couchdb.httpd_request_methods.PUT:
+  brief: Number of http put requests
+  description: Number of http put requests
+  metric_type: counter
+  title: Httpd Request Methods Put
+
+counter.couchdb.couchdb.httpd_status_codes.200:
+  brief: Number of http 200 ok responses
+  description: Number of http 200 ok responses
+  metric_type: counter
+  title: Httpd Status Codes 200
+
+counter.couchdb.couchdb.httpd_status_codes.201:
+  brief: Number of http 201 created responses
+  description: Number of http 201 created responses
+  metric_type: counter
+  title: Httpd Status Codes 201
+
+counter.couchdb.couchdb.httpd_status_codes.202:
+  brief: Number of http 202 accepted responses
+  description: Number of http 202 accepted responses
+  metric_type: counter
+  title: Httpd Status Codes 202
+
+counter.couchdb.couchdb.httpd_status_codes.204:
+  brief: Number of http 204 no content responses
+  description: Number of http 204 no content responses
+  metric_type: counter
+  title: Httpd Status Codes 204
+
+counter.couchdb.couchdb.httpd_status_codes.206:
+  brief: Number of http 206 partial content
+  description: Number of http 206 partial content
+  metric_type: counter
+  title: Httpd Status Codes 206
+
+counter.couchdb.couchdb.httpd_status_codes.301:
+  brief: Number of http 301 moved permanently responses
+  description: Number of http 301 moved permanently responses
+  metric_type: counter
+  title: Httpd Status Codes 301
+
+counter.couchdb.couchdb.httpd_status_codes.302:
+  brief: Number of http 302 found responses
+  description: Number of http 302 found responses
+  metric_type: counter
+  title: Httpd Status Codes 302
+
+counter.couchdb.couchdb.httpd_status_codes.304:
+  brief: Number of http 304 not modified responses
+  description: Number of http 304 not modified responses
+  metric_type: counter
+  title: Httpd Status Codes 304
+
+counter.couchdb.couchdb.httpd_status_codes.400:
+  brief: Number of http 400 bad request responses
+  description: Number of http 400 bad request responses
+  metric_type: counter
+  title: Httpd Status Codes 400
+
+counter.couchdb.couchdb.httpd_status_codes.401:
+  brief: Number of http 401 unauthorized responses
+  description: Number of http 401 unauthorized responses
+  metric_type: counter
+  title: Httpd Status Codes 401
+
+counter.couchdb.couchdb.httpd_status_codes.403:
+  brief: Number of http 403 forbidden responses
+  description: Number of http 403 forbidden responses
+  metric_type: counter
+  title: Httpd Status Codes 403
+
+counter.couchdb.couchdb.httpd_status_codes.404:
+  brief: Number of http 404 not found responses
+  description: Number of http 404 not found responses
+  metric_type: counter
+  title: Httpd Status Codes 404
+
+counter.couchdb.couchdb.httpd_status_codes.405:
+  brief: Number of http 405 method not allowed responses
+  description: Number of http 405 method not allowed responses
+  metric_type: counter
+  title: Httpd Status Codes 405
+
+counter.couchdb.couchdb.httpd_status_codes.406:
+  brief: Number of http 406 not acceptable responses
+  description: Number of http 406 not acceptable responses
+  metric_type: counter
+  title: Httpd Status Codes 406
+
+counter.couchdb.couchdb.httpd_status_codes.409:
+  brief: Number of http 409 conflict responses
+  description: Number of http 409 conflict responses
+  metric_type: counter
+  title: Httpd Status Codes 409
+
+counter.couchdb.couchdb.httpd_status_codes.412:
+  brief: Number of http 412 precondition failed responses
+  description: Number of http 412 precondition failed responses
+  metric_type: counter
+  title: Httpd Status Codes 412
+
+counter.couchdb.couchdb.httpd_status_codes.413:
+  brief: Number of http 413 request entity too long responses
+  description: Number of http 413 request entity too long responses
+  metric_type: counter
+  title: Httpd Status Codes 413
+
+counter.couchdb.couchdb.httpd_status_codes.414:
+  brief: Number of http 414 request uri too long responses
+  description: Number of http 414 request uri too long responses
+  metric_type: counter
+  title: Httpd Status Codes 414
+
+counter.couchdb.couchdb.httpd_status_codes.415:
+  brief: Number of http 415 unsupported media type responses
+  description: Number of http 415 unsupported media type responses
+  metric_type: counter
+  title: Httpd Status Codes 415
+
+counter.couchdb.couchdb.httpd_status_codes.416:
+  brief: Number of http 416 requested range not satisfiable responses
+  description: Number of http 416 requested range not satisfiable responses
+  metric_type: counter
+  title: Httpd Status Codes 416
+
+counter.couchdb.couchdb.httpd_status_codes.417:
+  brief: Number of http 417 expectation failed responses
+  description: Number of http 417 expectation failed responses
+  metric_type: counter
+  title: Httpd Status Codes 417
+
+counter.couchdb.couchdb.httpd_status_codes.500:
+  brief: Number of http 500 internal server error responses
+  description: Number of http 500 internal server error responses
+  metric_type: counter
+  title: Httpd Status Codes 500
+
+counter.couchdb.couchdb.httpd_status_codes.501:
+  brief: Number of http 501 not implemented responses
+  description: Number of http 501 not implemented responses
+  metric_type: counter
+  title: Httpd Status Codes 501
+
+counter.couchdb.couchdb.local_document_writes:
+  brief: Number of _local document write operations
+  description: Number of _local document write operations
+  metric_type: counter
+  title: Local Document Writes
+
+counter.couchdb.couchdb.mrview.emits:
+  brief: Number of invocations of 'emit' in map functions in the view server
+  description: Number of invocations of 'emit' in map functions in the view server
+  metric_type: counter
+  title: Mrview Emits
+
+counter.couchdb.couchdb.mrview.map_doc:
+  brief: Number of documents mapped in the view server
+  description: Number of documents mapped in the view server
+  metric_type: counter
+  title: Mrview Map Doc
+
+counter.couchdb.couchdb.open_databases:
+  brief: Number of open databases
+  description: Number of open databases
+  metric_type: counter
+  title: Open Databases
+
+counter.couchdb.couchdb.open_os_files:
+  brief: Number of file descriptors couchdb has open
+  description: Number of file descriptors couchdb has open
+  metric_type: counter
+  title: Open Os Files
+
+counter.couchdb.couchdb.query_server.vdu_rejects:
+  brief: Number of rejections by validate_doc_update function
+  description: Number of rejections by validate_doc_update function
+  metric_type: counter
+  title: Query Server Vdu Rejects
+
+counter.couchdb.ddoc_cache.hit:
+  brief: Number of design doc cache hits
+  description: Number of design doc cache hits
+  metric_type: counter
+  title: Ddoc Cache Hit
+
+counter.couchdb.ddoc_cache.miss:
+  brief: Number of design doc cache misses
+  description: Number of design doc cache misses
+  metric_type: counter
+  title: Ddoc Cache Miss
+
+counter.couchdb.ddoc_cache.recovery:
+  brief: Number of design doc cache recoveries
+  description: Number of design doc cache recoveries
+  metric_type: counter
+  title: Ddoc Cache Recovery
+
+counter.couchdb.fabric.doc_update.errors:
+  brief: Number of document update errors
+  description: Number of document update errors
+  metric_type: counter
+  title: Fabric Doc Update Errors
+
+counter.couchdb.fabric.doc_update.mismatched_errors:
+  brief: Number of document update errors with multiple error types
+  description: Number of document update errors with multiple error types
+  metric_type: counter
+  title: Fabric Doc Update Mismatched Errors
+
+counter.couchdb.fabric.doc_update.write_quorum_errors:
+  brief: Number of write quorum errors
+  description: Number of write quorum errors
+  metric_type: counter
+  title: Fabric Doc Update Write Quorum Errors
+
+counter.couchdb.fabric.read_repairs.failure:
+  brief: Number of failed read repair operations
+  description: Number of failed read repair operations
+  metric_type: counter
+  title: Fabric Read Repairs Failure
+
+counter.couchdb.fabric.read_repairs.success:
+  brief: Number of successful read repair operations
+  description: Number of successful read repair operations
+  metric_type: counter
+  title: Fabric Read Repairs Success
+
+counter.couchdb.fabric.worker.timeouts:
+  brief: Number of worker timeouts
+  description: Number of worker timeouts
+  metric_type: counter
+  title: Fabric Worker Timeouts
+
+counter.couchdb.global_changes.db_writes:
+  brief: Number of db writes performed by global changes
+  description: Number of db writes performed by global changes
+  metric_type: counter
+  title: Global Changes Db Writes
+
+counter.couchdb.global_changes.event_doc_conflict:
+  brief: Number of conflicted event docs encountered by global changes
+  description: Number of conflicted event docs encountered by global changes
+  metric_type: counter
+  title: Global Changes Event Doc Conflict
+
+counter.couchdb.global_changes.rpcs:
+  brief: Number of rpc operations performed by global_changes
+  description: Number of rpc operations performed by global_changes
+  metric_type: counter
+  title: Global Changes Rpcs
+
+counter.couchdb.mem3.shard_cache.eviction:
+  brief: Number of shard cache evictions
+  description: Number of shard cache evictions
+  metric_type: counter
+  title: Mem3 Shard Cache Eviction
+
+counter.couchdb.mem3.shard_cache.hit:
+  brief: Number of shard cache hits
+  description: Number of shard cache hits
+  metric_type: counter
+  title: Mem3 Shard Cache Hit
+
+counter.couchdb.mem3.shard_cache.miss:
+  brief: Number of shard cache misses
+  description: Number of shard cache misses
+  metric_type: counter
+  title: Mem3 Shard Cache Miss
+
+counter.couchdb.pread.exceed_eof:
+  brief: Number of the attempts to read beyond end of db file
+  description: Number of the attempts to read beyond end of db file
+  metric_type: counter
+  title: Pread Exceed Eof
+
+counter.couchdb.pread.exceed_limit:
+  brief: Number of the attempts to read beyond set limit
+  description: Number of the attempts to read beyond set limit
+  metric_type: counter
+  title: Pread Exceed Limit
+
+counter.couchdb.rexi.buffered:
+  brief: Number of rexi messages buffered
+  description: Number of rexi messages buffered
+  metric_type: counter
+  title: Rexi Buffered
+
+counter.couchdb.rexi.down:
+  brief: Number of rexi_down messages handled
+  description: Number of rexi_down messages handled
+  metric_type: counter
+  title: Rexi Down
+
+counter.couchdb.rexi.dropped:
+  brief: Number of rexi messages dropped from buffers
+  description: Number of rexi messages dropped from buffers
+  metric_type: counter
+  title: Rexi Dropped
+
+counter.couchdb.rexi.streams.timeout.init_stream:
+  brief: Number of rexi stream initialization timeouts
+  description: Number of rexi stream initialization timeouts
+  metric_type: counter
+  title: Rexi Streams Timeout Init Stream
+
+counter.couchdb.rexi.streams.timeout.stream:
+  brief: Number of rexi stream timeouts
+  description: Number of rexi stream timeouts
+  metric_type: counter
+  title: Rexi Streams Timeout Stream
+
+counter.couchdb.rexi.streams.timeout.wait_for_ack:
+  brief: Number of rexi stream timeouts while waiting for acks
+  description: Number of rexi stream timeouts while waiting for acks
+  metric_type: counter
+  title: Rexi Streams Timeout Wait For Ack
+
+gauge.couchdb.couchdb.collect_results_time.arithmetic_mean:
+  brief: Arithmetic mean of microsecond latency for calls to couch_db:collect_results/3
+  description: Arithmetic mean of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Arithmetic Mean
+
+gauge.couchdb.couchdb.collect_results_time.max:
+  brief: Maximum of microsecond latency for calls to couch_db:collect_results/3
+  description: Maximum of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Max
+
+gauge.couchdb.couchdb.collect_results_time.min:
+  brief: Minimum of microsecond latency for calls to couch_db:collect_results/3
+  description: Minimum of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Min
+
+gauge.couchdb.couchdb.collect_results_time.percentile.50:
+  brief: Percentile 50 of microsecond latency for calls to couch_db:collect_results/3
+  description: Percentile 50 of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Percentile 50
+
+gauge.couchdb.couchdb.collect_results_time.percentile.75:
+  brief: Percentile 75 of microsecond latency for calls to couch_db:collect_results/3
+  description: Percentile 75 of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Percentile 75
+
+gauge.couchdb.couchdb.collect_results_time.percentile.90:
+  brief: Percentile 90 of microsecond latency for calls to couch_db:collect_results/3
+  description: Percentile 90 of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Percentile 90
+
+gauge.couchdb.couchdb.collect_results_time.percentile.99:
+  brief: Percentile 99 of microsecond latency for calls to couch_db:collect_results/3
+  description: Percentile 99 of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Percentile 99
+
+gauge.couchdb.couchdb.collect_results_time.standard_deviation:
+  brief: Standard deviation of microsecond latency for calls to couch_db:collect_results/3
+  description: Standard deviation of microsecond latency for calls to couch_db:collect_results/3
+  metric_type: gauge
+  title: Collect Results Time Standard Deviation
+
+gauge.couchdb.couchdb.db_open_time.arithmetic_mean:
+  brief: Arithmetic mean of milliseconds required to open a database
+  description: Arithmetic mean of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Arithmetic Mean
+
+gauge.couchdb.couchdb.db_open_time.max:
+  brief: Maximum of milliseconds required to open a database
+  description: Maximum of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Max
+
+gauge.couchdb.couchdb.db_open_time.min:
+  brief: Minimum of milliseconds required to open a database
+  description: Minimum of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Min
+
+gauge.couchdb.couchdb.db_open_time.percentile.50:
+  brief: Percentile 50 of milliseconds required to open a database
+  description: Percentile 50 of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Percentile 50
+
+gauge.couchdb.couchdb.db_open_time.percentile.75:
+  brief: Percentile 75 of milliseconds required to open a database
+  description: Percentile 75 of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Percentile 75
+
+gauge.couchdb.couchdb.db_open_time.percentile.90:
+  brief: Percentile 90 of milliseconds required to open a database
+  description: Percentile 90 of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Percentile 90
+
+gauge.couchdb.couchdb.db_open_time.percentile.99:
+  brief: Percentile 99 of milliseconds required to open a database
+  description: Percentile 99 of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Percentile 99
+
+gauge.couchdb.couchdb.db_open_time.standard_deviation:
+  brief: Standard deviation of milliseconds required to open a database
+  description: Standard deviation of milliseconds required to open a database
+  metric_type: gauge
+  title: Db Open Time Standard Deviation
+
+gauge.couchdb.couchdb.dbinfo.arithmetic_mean:
+  brief: Arithmetic mean of distribution of latencies for calls to retrieve DB info
+  description: Arithmetic mean of distribution of latencies for calls to retrieve
+    DB info
+  metric_type: gauge
+  title: Dbinfo Arithmetic Mean
+
+gauge.couchdb.couchdb.dbinfo.max:
+  brief: Maximum of distribution of latencies for calls to retrieve DB info
+  description: Maximum of distribution of latencies for calls to retrieve DB info
+  metric_type: gauge
+  title: Dbinfo Max
+
+gauge.couchdb.couchdb.dbinfo.min:
+  brief: Minimum of distribution of latencies for calls to retrieve DB info
+  description: Minimum of distribution of latencies for calls to retrieve DB info
+  metric_type: gauge
+  title: Dbinfo Min
+
+gauge.couchdb.couchdb.dbinfo.percentile.50:
+  brief: Percentile 50 of distribution of latencies for calls to retrieve DB info
+  description: Percentile 50 of distribution of latencies for calls to retrieve DB
+    info
+  metric_type: gauge
+  title: Dbinfo Percentile 50
+
+gauge.couchdb.couchdb.dbinfo.percentile.75:
+  brief: Percentile 75 of distribution of latencies for calls to retrieve DB info
+  description: Percentile 75 of distribution of latencies for calls to retrieve DB
+    info
+  metric_type: gauge
+  title: Dbinfo Percentile 75
+
+gauge.couchdb.couchdb.dbinfo.percentile.90:
+  brief: Percentile 90 of distribution of latencies for calls to retrieve DB info
+  description: Percentile 90 of distribution of latencies for calls to retrieve DB
+    info
+  metric_type: gauge
+  title: Dbinfo Percentile 90
+
+gauge.couchdb.couchdb.dbinfo.percentile.99:
+  brief: Percentile 99 of distribution of latencies for calls to retrieve DB info
+  description: Percentile 99 of distribution of latencies for calls to retrieve DB
+    info
+  metric_type: gauge
+  title: Dbinfo Percentile 99
+
+gauge.couchdb.couchdb.dbinfo.standard_deviation:
+  brief: Standard deviation of distribution of latencies for calls to retrieve DB
+    info
+  description: Standard deviation of distribution of latencies for calls to retrieve
+    DB info
+  metric_type: gauge
+  title: Dbinfo Standard Deviation
+
+gauge.couchdb.couchdb.httpd.bulk_docs.arithmetic_mean:
+  brief: Arithmetic mean of distribution of the number of docs in _bulk_docs requests
+  description: Arithmetic mean of distribution of the number of docs in _bulk_docs
+    requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Arithmetic Mean
+
+gauge.couchdb.couchdb.httpd.bulk_docs.max:
+  brief: Maximum of distribution of the number of docs in _bulk_docs requests
+  description: Maximum of distribution of the number of docs in _bulk_docs requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Max
+
+gauge.couchdb.couchdb.httpd.bulk_docs.min:
+  brief: Minimum of distribution of the number of docs in _bulk_docs requests
+  description: Minimum of distribution of the number of docs in _bulk_docs requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Min
+
+gauge.couchdb.couchdb.httpd.bulk_docs.percentile.50:
+  brief: Percentile 50 of distribution of the number of docs in _bulk_docs requests
+  description: Percentile 50 of distribution of the number of docs in _bulk_docs requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Percentile 50
+
+gauge.couchdb.couchdb.httpd.bulk_docs.percentile.75:
+  brief: Percentile 75 of distribution of the number of docs in _bulk_docs requests
+  description: Percentile 75 of distribution of the number of docs in _bulk_docs requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Percentile 75
+
+gauge.couchdb.couchdb.httpd.bulk_docs.percentile.90:
+  brief: Percentile 90 of distribution of the number of docs in _bulk_docs requests
+  description: Percentile 90 of distribution of the number of docs in _bulk_docs requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Percentile 90
+
+gauge.couchdb.couchdb.httpd.bulk_docs.percentile.99:
+  brief: Percentile 99 of distribution of the number of docs in _bulk_docs requests
+  description: Percentile 99 of distribution of the number of docs in _bulk_docs requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Percentile 99
+
+gauge.couchdb.couchdb.httpd.bulk_docs.standard_deviation:
+  brief: Standard deviation of distribution of the number of docs in _bulk_docs requests
+  description: Standard deviation of distribution of the number of docs in _bulk_docs
+    requests
+  metric_type: gauge
+  title: Httpd Bulk Docs Standard Deviation
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.arithmetic_mean:
+  brief: Arithmetic mean of duration of validate_doc_update function calls
+  description: Arithmetic mean of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Arithmetic Mean
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.max:
+  brief: Maximum of duration of validate_doc_update function calls
+  description: Maximum of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Max
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.min:
+  brief: Minimum of duration of validate_doc_update function calls
+  description: Minimum of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Min
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.percentile.50:
+  brief: Percentile 50 of duration of validate_doc_update function calls
+  description: Percentile 50 of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Percentile 50
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.percentile.75:
+  brief: Percentile 75 of duration of validate_doc_update function calls
+  description: Percentile 75 of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Percentile 75
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.percentile.90:
+  brief: Percentile 90 of duration of validate_doc_update function calls
+  description: Percentile 90 of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Percentile 90
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.percentile.99:
+  brief: Percentile 99 of duration of validate_doc_update function calls
+  description: Percentile 99 of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Percentile 99
+
+gauge.couchdb.couchdb.query_server.vdu_process_time.standard_deviation:
+  brief: Standard deviation of duration of validate_doc_update function calls
+  description: Standard deviation of duration of validate_doc_update function calls
+  metric_type: gauge
+  title: Query Server Vdu Process Time Standard Deviation
+
+gauge.couchdb.couchdb.request_time.arithmetic_mean:
+  brief: Arithmetic mean of length of a request inside CouchDB without MochiWeb
+  description: Arithmetic mean of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Arithmetic Mean
+
+gauge.couchdb.couchdb.request_time.max:
+  brief: Maximum of length of a request inside CouchDB without MochiWeb
+  description: Maximum of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Max
+
+gauge.couchdb.couchdb.request_time.min:
+  brief: Minimum of length of a request inside CouchDB without MochiWeb
+  description: Minimum of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Min
+
+gauge.couchdb.couchdb.request_time.percentile.50:
+  brief: Percentile 50 of length of a request inside CouchDB without MochiWeb
+  description: Percentile 50 of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Percentile 50
+
+gauge.couchdb.couchdb.request_time.percentile.75:
+  brief: Percentile 75 of length of a request inside CouchDB without MochiWeb
+  description: Percentile 75 of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Percentile 75
+
+gauge.couchdb.couchdb.request_time.percentile.90:
+  brief: Percentile 90 of length of a request inside CouchDB without MochiWeb
+  description: Percentile 90 of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Percentile 90
+
+gauge.couchdb.couchdb.request_time.percentile.99:
+  brief: Percentile 99 of length of a request inside CouchDB without MochiWeb
+  description: Percentile 99 of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Percentile 99
+
+gauge.couchdb.couchdb.request_time.standard_deviation:
+  brief: Standard deviation of length of a request inside CouchDB without MochiWeb
+  description: Standard deviation of length of a request inside CouchDB without MochiWeb
+  metric_type: gauge
+  title: Request Time Standard Deviation
+
+gauge.couchdb.global_changes.listener_pending_updates:
+  brief: Number of global changes updates pending writes in global_changes_listener
+  description: Number of global changes updates pending writes in global_changes_listener
+  metric_type: gauge
+  title: Global Changes Listener Pending Updates
+
+gauge.couchdb.global_changes.server_pending_updates:
+  brief: Number of global changes updates pending writes in global_changes_server
+  description: Number of global changes updates pending writes in global_changes_server
+  metric_type: gauge
+  title: Global Changes Server Pending Updates
+
