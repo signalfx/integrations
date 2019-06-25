@@ -1,11 +1,12 @@
-{ "display_name":"Azure Virtual Machines",
-  "description": "SignalFx's integration with Azure Virtual Machines",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-vm",
-  "code": "https://azure.microsoft.com/en-us/services/virtual-machines/",
-  "featured": false,
-  "logo_small": "integrations_azurevm.png",
-  "logo_large": "integrations_azurevm%402x.png",
-  "data_signature": "resource_type:\"Microsoft.Compute/virtualMachines\"",
-  "in_app_categories": ["AzureServicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://azure.microsoft.com/en-us/services/virtual-machines/
+data_signature: resource_type:"Microsoft.Compute/virtualMachines"
+description: SignalFx's integration with Azure Virtual Machines
+display_name: Azure Virtual Machines
+featured: false
+in_app_categories:
+- AzureServicesMonitored
+logo_large: integrations_azurevm%402x.png
+logo_small: integrations_azurevm.png
+project_url: https://github.com/signalfx/integrations/tree/master/azure-vm

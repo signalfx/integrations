@@ -1,11 +1,12 @@
-{ "display_name":"Amazon Redshift",
-  "description": "SignalFx's integration with Amazon Redshift.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-redshift",
-  "code": "https://aws.amazon.com/redshift/",
-  "featured": false,
-  "logo_large": "integration_awsredshift%402x.png",
-  "logo_small": "integration_awsredshift.png",
-  "data_signature": "namespace:\"AWS/Redshift\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://aws.amazon.com/redshift/
+data_signature: namespace:"AWS/Redshift"
+description: SignalFx's integration with Amazon Redshift.
+display_name: Amazon Redshift
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsredshift%402x.png
+logo_small: integration_awsredshift.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-redshift

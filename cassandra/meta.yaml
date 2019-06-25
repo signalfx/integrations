@@ -1,11 +1,12 @@
-{ "display_name":"Cassandra",
-  "description": "Monitor Cassandra using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-cassandra",
-  "code": "https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java",
-  "featured": true,
-  "logo_large": "/images/repos/collectd-cassandra/img/integrations_cassandra%402x.png",
-  "logo_small": "/images/repos/collectd-cassandra/img/integrations_cassandra.png",
-  "data_signature": "hostHasService:cassandra",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd/blob/master/bindings/java/org/collectd/java/GenericJMX.java
+data_signature: hostHasService:cassandra
+description: Monitor Cassandra using the SignalFx collectd agent.
+display_name: Cassandra
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-cassandra/img/integrations_cassandra%402x.png
+logo_small: /images/repos/collectd-cassandra/img/integrations_cassandra.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-cassandra

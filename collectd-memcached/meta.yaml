@@ -1,11 +1,12 @@
-{ "display_name":"Memcached",
-  "description": "Monitor Memcached using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-memcached",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/memcached.c",
-  "featured": false,
-  "logo_small": "/images/repos/collectd-memcached/img/integrations_memcached.png",
-  "logo_large": "/images/repos/collectd-memcached/img/integrations_memcached%402x.png",
-  "data_signature": "plugin:\"memcached\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd/blob/master/src/memcached.c
+data_signature: plugin:"memcached"
+description: Monitor Memcached using the SignalFx collectd agent.
+display_name: Memcached
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-memcached/img/integrations_memcached%402x.png
+logo_small: /images/repos/collectd-memcached/img/integrations_memcached.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-memcached

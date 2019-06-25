@@ -1,8 +1,7 @@
-{ "display_name":"Memory",
-  "description": "The Memory plugin for collectd monitors physical memory utilization.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-memory",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/memory.c",
-  "featured": false,
-  "logo_large": "/images/repos/collectd-memory/img/integrations_collectd%402x.png",
-  "logo_small": "/images/repos/collectd-memory/img/integrations_collectd.png"
-}
+code: https://github.com/signalfx/collectd/blob/master/src/memory.c
+description: The Memory plugin for collectd monitors physical memory utilization.
+display_name: Memory
+featured: false
+logo_large: /images/repos/collectd-memory/img/integrations_collectd%402x.png
+logo_small: /images/repos/collectd-memory/img/integrations_collectd.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-memory

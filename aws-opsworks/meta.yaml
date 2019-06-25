@@ -1,10 +1,10 @@
-{ "display_name":"AWS OpsWorks",
-  "description": "SignalFx's integration with AWS OpsWorks.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-opsworks",
-  "code": "https://aws.amazon.com/opsworks/",
-  "featured": false,
-  "logo_large": "integration_awsopsworks.png",
-  "logo_small": "integration_awsopsworks.png",
-  "data_signature": "namespace:\"AWS/OpsWorks\"",
-  "in_app_categories": ["AWSservicesMonitored"]
-}
+code: https://aws.amazon.com/opsworks/
+data_signature: namespace:"AWS/OpsWorks"
+description: SignalFx's integration with AWS OpsWorks.
+display_name: AWS OpsWorks
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsopsworks.png
+logo_small: integration_awsopsworks.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-opsworks

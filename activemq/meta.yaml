@@ -1,11 +1,12 @@
-{ "display_name":"ActiveMQ",
-  "description": "Monitor ActiveMQ using the SignalFx Smart Agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/activemq",
-  "code": "https://github.com/signalfx/activemq-integration",
-  "featured": true,
-  "logo_large": "/images/repos/activemq/img/integrations_activemq%402x.png",
-  "logo_small": "/images/repos/activemq/img/integrations_activemq.png",
-  "data_signature": "hostHasService:activemq",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Application Integration"]
-}
+browse_categories:
+- Application Integration
+code: https://github.com/signalfx/activemq-integration
+data_signature: hostHasService:activemq
+description: Monitor ActiveMQ using the SignalFx Smart Agent.
+display_name: ActiveMQ
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/activemq/img/integrations_activemq%402x.png
+logo_small: /images/repos/activemq/img/integrations_activemq.png
+project_url: https://github.com/signalfx/integrations/tree/master/activemq

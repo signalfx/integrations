@@ -1,11 +1,11 @@
-{ "display_name":"SignalFx collectd agent",
-  "description": "SignalFx's build of collectd, the open-source metrics collection agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd",
-  "code": "https://github.com/signalfx/collectd",
-  "featured": true,
-  "sort_order": 1,
-  "logo_large": "/images/repos/collectd/img/integration_signalfx.png",
-  "logo_small": "/images/repos/collectd/img/integration_signalfx.png",
-  "data_signature": "plugin:\"signalfx-metadata\"",
-  "in_app_categories": ["servicesMonitored"]
-}
+code: https://github.com/signalfx/collectd
+data_signature: plugin:"signalfx-metadata"
+description: SignalFx's build of collectd, the open-source metrics collection agent.
+display_name: SignalFx collectd agent
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd/img/integration_signalfx.png
+logo_small: /images/repos/collectd/img/integration_signalfx.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd
+sort_order: 1

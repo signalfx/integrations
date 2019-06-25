@@ -1,11 +1,13 @@
-{ "display_name":"Docker",
-  "description": "Monitor Docker using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-docker",
-  "code": "https://github.com/signalfx/docker-collectd-plugin",
-  "featured": true,
-  "logo_small": "/images/repos/collectd-docker/img/integrations_docker.png",
-  "logo_large": "/images/repos/collectd-docker/img/integrations_docker%402x.png",
-  "data_signature": "plugin:\"docker\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Compute", "Containers"]
-}
+browse_categories:
+- Compute
+- Containers
+code: https://github.com/signalfx/docker-collectd-plugin
+data_signature: plugin:"docker"
+description: Monitor Docker using the SignalFx collectd agent.
+display_name: Docker
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-docker/img/integrations_docker%402x.png
+logo_small: /images/repos/collectd-docker/img/integrations_docker.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-docker

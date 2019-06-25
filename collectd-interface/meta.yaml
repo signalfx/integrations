@@ -1,8 +1,7 @@
-{ "display_name":"Interface",
-  "description": "Monitor network interfaces using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-interface",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/interface.c",
-  "featured": false,
-  "logo_large": "/images/repos/collectd/img/integrations_collectd%402x.png",
-  "logo_small": "/images/repos/collectd/img/integrations_collectd.png"
-}
+code: https://github.com/signalfx/collectd/blob/master/src/interface.c
+description: Monitor network interfaces using the SignalFx collectd agent.
+display_name: Interface
+featured: false
+logo_large: /images/repos/collectd/img/integrations_collectd%402x.png
+logo_small: /images/repos/collectd/img/integrations_collectd.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-interface

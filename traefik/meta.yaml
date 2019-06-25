@@ -1,10 +1,11 @@
-{ "display_name":"Traefik",
-  "description": "Monitoring Traefik reverse proxy / load balancer",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/traefik",
-  "featured": false,
-  "logo_small": "/images/repos/signalfx-agent-traefik/img/integration_traefik.png",
-  "logo_large": "/images/repos/signalfx-agent-traefik/img/integration_traefik%402x.png",
-  "data_signature": "metric_source:\"traefik\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Networking & Content Delivery"]
-}
+browse_categories:
+- Networking & Content Delivery
+data_signature: metric_source:"traefik"
+description: Monitoring Traefik reverse proxy / load balancer
+display_name: Traefik
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/signalfx-agent-traefik/img/integration_traefik%402x.png
+logo_small: /images/repos/signalfx-agent-traefik/img/integration_traefik.png
+project_url: https://github.com/signalfx/integrations/tree/master/traefik

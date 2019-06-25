@@ -1,10 +1,13 @@
-{ "display_name":"Google Cloud Platform",
-   "description": "SignalFx's integration with Google Cloud Platform's StackDriver.",
-   "project_url": "https://github.com/signalfx/integrations/tree/master/gcp",
-   "code": "https://cloud.google.com/stackdriver/",
-   "featured": false,
-   "logo_large": "integration_gcp.png",
-   "logo_small": "integration_gcp.png",
-   "in_app_categories": ["essential", "servicesMonitored", "GCPServicesMonitored"],
-   "browse_categories": ["Cloud infrastructure and services"]
-}
+browse_categories:
+- Cloud infrastructure and services
+code: https://cloud.google.com/stackdriver/
+description: SignalFx's integration with Google Cloud Platform's StackDriver.
+display_name: Google Cloud Platform
+featured: false
+in_app_categories:
+- essential
+- servicesMonitored
+- GCPServicesMonitored
+logo_large: integration_gcp.png
+logo_small: integration_gcp.png
+project_url: https://github.com/signalfx/integrations/tree/master/gcp

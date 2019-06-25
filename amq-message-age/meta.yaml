@@ -1,11 +1,13 @@
-{ "display_name":"ActiveMQ message age",
-  "description": "Measure the age of messages in ActiveMQ queues, and publishes the results to SignalFx.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/amq-message-age",
-  "code": "https://github.com/signalfx/activemq-integration",
-  "featured": true,
-  "logo_large": "integrations_activemq%402x.png",
-  "logo_small": "integrations_activemq.png",
-  "data_signature": "plugin:\"amq.message.age\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://github.com/signalfx/activemq-integration
+data_signature: plugin:"amq.message.age"
+description: Measure the age of messages in ActiveMQ queues, and publishes the results
+  to SignalFx.
+display_name: ActiveMQ message age
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: integrations_activemq%402x.png
+logo_small: integrations_activemq.png
+project_url: https://github.com/signalfx/integrations/tree/master/amq-message-age

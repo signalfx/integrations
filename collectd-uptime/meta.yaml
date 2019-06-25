@@ -1,8 +1,8 @@
-{ "display_name":"Uptime collectd plugin",
-  "description": "The Uptime plugin provides the time that a systme has been running to collectd",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-uptime",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/uptime.c",
-  "featured": false,
-  "logo_large": "/images/repos/collectd-uptime/img/integrations_collectd%402x.png",
-  "logo_small": "/images/repos/collectd-uptime/img/integrations_collectd.png"
-}
+code: https://github.com/signalfx/collectd/blob/master/src/uptime.c
+description: The Uptime plugin provides the time that a systme has been running to
+  collectd
+display_name: Uptime collectd plugin
+featured: false
+logo_large: /images/repos/collectd-uptime/img/integrations_collectd%402x.png
+logo_small: /images/repos/collectd-uptime/img/integrations_collectd.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-uptime

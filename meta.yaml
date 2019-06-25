@@ -1,1 +1,2 @@
-{ "integrations": ["collectd/example"] }
+integrations:
+- collectd/example

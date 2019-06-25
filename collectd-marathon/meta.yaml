@@ -1,11 +1,13 @@
-{ "display_name":"Marathon",
-  "description": "Monitor Mesosphere Marathon environments",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-marathon",
-  "code": "https://github.com/signalfx/collectd-marathon",
-  "featured": true,
-  "logo_small": "/images/repos/collectd-docker/img/integrations_marathon.png",
-  "logo_large": "/images/repos/collectd-docker/img/integrations_marathon%402x.png",
-  "data_signature": "plugin:\"marathon\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Compute", "Containers"]
-}
+browse_categories:
+- Compute
+- Containers
+code: https://github.com/signalfx/collectd-marathon
+data_signature: plugin:"marathon"
+description: Monitor Mesosphere Marathon environments
+display_name: Marathon
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-docker/img/integrations_marathon%402x.png
+logo_small: /images/repos/collectd-docker/img/integrations_marathon.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-marathon

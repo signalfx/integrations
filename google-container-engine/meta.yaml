@@ -1,11 +1,12 @@
-{ "display_name":"Google Container Engine",
-  "description": "SignalFx's integration with Google Container Engine",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-container-engine",
-  "code": "https://cloud.google.com/container-engine",
-  "featured": false,
-  "logo_small": "integration_googlecontainerengine.png",
-  "logo_large": "integration_googlecontainerengine%402x.png",
-  "data_signature": "service:\"container\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Container"]
-}
+browse_categories:
+- Container
+code: https://cloud.google.com/container-engine
+data_signature: service:"container"
+description: SignalFx's integration with Google Container Engine
+display_name: Google Container Engine
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlecontainerengine%402x.png
+logo_small: integration_googlecontainerengine.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-container-engine

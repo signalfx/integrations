@@ -1,11 +1,12 @@
-{ "display_name":"Google Cloud Storage",
-  "description": "SignalFx's integration with Google Cloud Storage",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-storage",
-  "code": "https://cloud.google.com/storage",
-  "featured": false,
-  "logo_small": "integration_googlecloudstorage.png",
-  "logo_large": "integration_googlecloudstorage%402x.png",
-  "data_signature": "service:\"storage\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Storage"]
-}
+browse_categories:
+- Storage
+code: https://cloud.google.com/storage
+data_signature: service:"storage"
+description: SignalFx's integration with Google Cloud Storage
+display_name: Google Cloud Storage
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlecloudstorage%402x.png
+logo_small: integration_googlecloudstorage.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-cloud-storage

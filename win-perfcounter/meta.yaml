@@ -1,9 +1,8 @@
-{ "display_name":"PerfCounter Reporter (deprecated)",
-  "description": "Monitor Windows infrastructure metrics.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/win-perfcounter",
-  "code": "https://github.com/signalfx/PerfCounterReporter",
-  "featured": false,
-  "logo_small": "/images/repos/win-perfcounter/img/integrations_windows.png",
-  "logo_large": "/images/repos/win-perfcounter/img/integrations_windows%402x.png",
-  "data_signature": "sf_metric:\"signalfx.usedmemory\""
-}
+code: https://github.com/signalfx/PerfCounterReporter
+data_signature: sf_metric:"signalfx.usedmemory"
+description: Monitor Windows infrastructure metrics.
+display_name: PerfCounter Reporter (deprecated)
+featured: false
+logo_large: /images/repos/win-perfcounter/img/integrations_windows%402x.png
+logo_small: /images/repos/win-perfcounter/img/integrations_windows.png
+project_url: https://github.com/signalfx/integrations/tree/master/win-perfcounter

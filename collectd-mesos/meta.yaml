@@ -1,11 +1,13 @@
-{ "display_name":"Mesos",
-  "description": "Monitor Apache Mesos using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-mesos",
-  "code": "https://github.com/signalfx/collectd-mesos",
-  "featured": true,
-  "logo_large": "/images/repos/collectd-mesos/img/integrations_mesos%402x.png",
-  "logo_small": "/images/repos/collectd-mesos/img/integrations_mesos.png",
-  "data_signature": "plugin:\"mesos\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Compute", "Containers"]
-}
+browse_categories:
+- Compute
+- Containers
+code: https://github.com/signalfx/collectd-mesos
+data_signature: plugin:"mesos"
+description: Monitor Apache Mesos using the SignalFx collectd agent.
+display_name: Mesos
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-mesos/img/integrations_mesos%402x.png
+logo_small: /images/repos/collectd-mesos/img/integrations_mesos.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-mesos

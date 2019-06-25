@@ -1,10 +1,12 @@
-{ "display_name":"AppDynamics",
-  "description": "The SignalFx AppDynamics integration brings metrics captured through AppDynamics into SignalFx.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/appdynamics",
-  "code": "https://github.com/signalfx/appd-integration",
-  "featured": false,
-  "logo_large": "/images/repos/appdynamics/img/integrations_appdynamics%402x.png",
-  "logo_small": "/images/repos/appdynamics/img/integrations_appdynamics.png",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Management Tools"]
-}
+browse_categories:
+- Management Tools
+code: https://github.com/signalfx/appd-integration
+description: The SignalFx AppDynamics integration brings metrics captured through
+  AppDynamics into SignalFx.
+display_name: AppDynamics
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/appdynamics/img/integrations_appdynamics%402x.png
+logo_small: /images/repos/appdynamics/img/integrations_appdynamics.png
+project_url: https://github.com/signalfx/integrations/tree/master/appdynamics
