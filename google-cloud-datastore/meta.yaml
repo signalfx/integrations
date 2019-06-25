@@ -1,11 +1,12 @@
-{ "display_name":"Google Cloud Datastore",
-  "description": "SignalFx's integration with Google Cloud Datastore",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-datastore",
-  "code": "https://cloud.google.com/datastore",
-  "featured": false,
-  "logo_small": "integration_googleclouddatastore.png",
-  "logo_large": "integration_googleclouddatastore%402x.png",
-  "data_signature": "service:\"datastore\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://cloud.google.com/datastore
+data_signature: service:"datastore"
+description: SignalFx's integration with Google Cloud Datastore
+display_name: Google Cloud Datastore
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googleclouddatastore%402x.png
+logo_small: integration_googleclouddatastore.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-cloud-datastore

@@ -1,9 +1,9 @@
-{ "display_name":"New Relic",
-  "description": "SignalFx's integration with New Relic.",
-  "code": "https://github.com/signalfx",
-  "featured": false,
-  "logo_large": "/images/repos/newrelic/img/integrations_newrelic.png",
-  "logo_small": "/images/repos/newrelic/img/integrations_newrelic.png",
-  "data_signature": "metric_source:\"NewRelic\"",
-  "browse_categories": ["Management Tools"]
-}
+browse_categories:
+- Management Tools
+code: https://github.com/signalfx
+data_signature: metric_source:"NewRelic"
+description: SignalFx's integration with New Relic.
+display_name: New Relic
+featured: false
+logo_large: /images/repos/newrelic/img/integrations_newrelic.png
+logo_small: /images/repos/newrelic/img/integrations_newrelic.png

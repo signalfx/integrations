@@ -1,8 +1,7 @@
-{ "display_name":"Metrics.NET",
-  "description": "SignalFx Integration with Windows Metrics.NET",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/win-metrics.net",
-  "code": "https://github.com/signalfx/Metrics.NET.SignalFX",
-  "featured": false,
-  "logo_small": "/images/repos/win-metrics.net/img/integrations_windows.png",
-  "logo_large": "/images/repos/win-metrics.net/img/integrations_windows%402x.png"
-}
+code: https://github.com/signalfx/Metrics.NET.SignalFX
+description: SignalFx Integration with Windows Metrics.NET
+display_name: Metrics.NET
+featured: false
+logo_large: /images/repos/win-metrics.net/img/integrations_windows%402x.png
+logo_small: /images/repos/win-metrics.net/img/integrations_windows.png
+project_url: https://github.com/signalfx/integrations/tree/master/win-metrics.net

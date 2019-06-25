@@ -1,11 +1,12 @@
-{ "display_name":"Couchbase",
-  "description": "Monitor Couchbase using the SignalFx Smart Agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/couchbase",
-  "code": "https://github.com/signalfx/collectd-couchbase",
-  "featured": false,
-  "logo_small": "/images/repos/couchbase/img/integrations_couchbase.png",
-  "logo_large": "/images/repos/couchbase/img/integrations_couchbase%402x.png",
-  "data_signature": "plugin:\"couchbase\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd-couchbase
+data_signature: plugin:"couchbase"
+description: Monitor Couchbase using the SignalFx Smart Agent.
+display_name: Couchbase
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-couchbase/img/integrations_couchbase%402x.png
+logo_small: /images/repos/collectd-couchbase/img/integrations_couchbase.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-couchbase

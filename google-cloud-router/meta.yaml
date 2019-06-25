@@ -1,11 +1,12 @@
-{ "display_name":"Google Cloud Router",
-  "description": "SignalFx's integration with Google Cloud Router",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-router",
-  "code": "https://cloud.google.com/router",
-  "featured": false,
-  "logo_small": "integration_googlecloudrouter.png",
-  "logo_large": "integration_googlecloudrouter%402x.png",
-  "data_signature": "service:\"router\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Networking & Content Delivery"]
-}
+browse_categories:
+- Networking & Content Delivery
+code: https://cloud.google.com/router
+data_signature: service:"router"
+description: SignalFx's integration with Google Cloud Router
+display_name: Google Cloud Router
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlecloudrouter%402x.png
+logo_small: integration_googlecloudrouter.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-cloud-router

@@ -1,11 +1,13 @@
-{ "display_name":"Amazon Web Services",
-   "description": "SignalFx's integration with Amazon Web Services.",
-   "project_url": "https://github.com/signalfx/integrations/tree/master/aws",
-   "code": "https://aws.amazon.com/cloudwatch/",
-   "featured": false,
-   "sort_order": 2,
-   "logo_large": "integration_aws.png",
-   "logo_small": "integration_aws.png",
-   "in_app_categories": ["AWSservicesMonitored"],
-   "browse_categories": ["Cloud infrastructure and services", "Management Tools"]
-}
+browse_categories:
+- Cloud infrastructure and services
+- Management Tools
+code: https://aws.amazon.com/cloudwatch/
+description: SignalFx's integration with Amazon Web Services.
+display_name: Amazon Web Services
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_aws.png
+logo_small: integration_aws.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws
+sort_order: 2

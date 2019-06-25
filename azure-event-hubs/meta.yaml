@@ -1,11 +1,12 @@
-{ "display_name":"Azure Event Hubs",
-  "description": "SignalFx's integration with Azure Event Hubs",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-event-hubbs",
-  "code": "https://azure.microsoft.com/en-us/services/event-hubs/",
-  "featured": false,
-  "logo_small": "integrations_azureeventhubs.png",
-  "logo_large": "integrations_azureeventhubs%402x.png",
-  "data_signature": "resource_type:\"Microsoft.EventHub/namespaces\"",
-  "in_app_categories": ["AzureServicesMonitored"],
-  "browse_categories": ["Analytics"]
-}
+browse_categories:
+- Analytics
+code: https://azure.microsoft.com/en-us/services/event-hubs/
+data_signature: resource_type:"Microsoft.EventHub/namespaces"
+description: SignalFx's integration with Azure Event Hubs
+display_name: Azure Event Hubs
+featured: false
+in_app_categories:
+- AzureServicesMonitored
+logo_large: integrations_azureeventhubs%402x.png
+logo_small: integrations_azureeventhubs.png
+project_url: https://github.com/signalfx/integrations/tree/master/azure-event-hubbs

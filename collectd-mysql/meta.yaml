@@ -1,11 +1,12 @@
-{ "display_name":"MySQL",
-  "description": "Monitor MySQL using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-mysql",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/mysql.c",
-  "featured": false,
-  "logo_small": "/images/repos/collectd-mysql/img/integrations_mysql.png",
-  "logo_large": "/images/repos/collectd-mysql/img/integrations_mysql%402x.png",
-  "data_signature": "plugin:\"mysql\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd/blob/master/src/mysql.c
+data_signature: plugin:"mysql"
+description: Monitor MySQL using the SignalFx collectd agent.
+display_name: MySQL
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-mysql/img/integrations_mysql%402x.png
+logo_small: /images/repos/collectd-mysql/img/integrations_mysql.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-mysql

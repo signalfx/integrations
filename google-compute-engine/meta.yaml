@@ -1,11 +1,12 @@
-{ "display_name":"Google Compute Engine",
-  "description": "SignalFx's integration with Google Compute Engine",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-compute-engine",
-  "code": "https://cloud.google.com/compute",
-  "featured": false,
-  "logo_small": "integration_googlecomputeengine.png",
-  "logo_large": "integration_googlecomputeengine%402x.png",
-  "data_signature": "service:\"compute\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://cloud.google.com/compute
+data_signature: service:"compute"
+description: SignalFx's integration with Google Compute Engine
+display_name: Google Compute Engine
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlecomputeengine%402x.png
+logo_small: integration_googlecomputeengine.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-compute-engine

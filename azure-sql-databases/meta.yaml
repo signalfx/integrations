@@ -1,11 +1,12 @@
-{ "display_name":"Azure SQL Database",
-  "description": "SignalFx's integration with Azure SQL Database",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-sql-databases",
-  "code": "https://azure.microsoft.com/en-us/services/sql-database/",
-  "featured": false,
-  "logo_small": "integrations_azuresqldatabase.png",
-  "logo_large": "integrations_azuresqldatabase%402x.png",
-  "data_signature": "resource_type:\"Microsoft.Sql/servers/databases\"",
-  "in_app_categories": ["AzureServicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://azure.microsoft.com/en-us/services/sql-database/
+data_signature: resource_type:"Microsoft.Sql/servers/databases"
+description: SignalFx's integration with Azure SQL Database
+display_name: Azure SQL Database
+featured: false
+in_app_categories:
+- AzureServicesMonitored
+logo_large: integrations_azuresqldatabase%402x.png
+logo_small: integrations_azuresqldatabase.png
+project_url: https://github.com/signalfx/integrations/tree/master/azure-sql-databases

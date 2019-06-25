@@ -1,10 +1,13 @@
-{ "display_name":"Microsoft Azure",
-   "description": "SignalFx's integration with Microsoft Azure's Monitor API.",
-   "project_url": "https://github.com/signalfx/integrations/tree/master/microsoft-azure",
-   "code": "https://azure.microsoft.com/en-us/?v=18.05",
-   "featured": false,
-   "logo_large": "integrations_azure.png",
-   "logo_small": "integrations_azure.png",
-   "in_app_categories": ["essential", "servicesMonitored", "AzureServicesMonitored"],
-   "browse_categories": ["Cloud infrastructure and services"]
-}
+browse_categories:
+- Cloud infrastructure and services
+code: https://azure.microsoft.com/en-us/?v=18.05
+description: SignalFx's integration with Microsoft Azure's Monitor API.
+display_name: Microsoft Azure
+featured: false
+in_app_categories:
+- essential
+- servicesMonitored
+- AzureServicesMonitored
+logo_large: integrations_azure.png
+logo_small: integrations_azure.png
+project_url: https://github.com/signalfx/integrations/tree/master/microsoft-azure
