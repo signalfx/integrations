@@ -1,0 +1,289 @@
+counter.amq.TotalConnectionsCount:
+  brief: Total connections count per broker
+  custom: false
+  description: Total connections count per broker
+  metric_type: counter
+  title: counter.amq.TotalConnectionsCount
+
+gauge.amq.TotalConsumerCount:
+  brief: Total number of consumers subscribed to destinations on the broker
+  custom: false
+  description: Total number of consumers subscribed to destinations on the broker
+  metric_type: gauge
+  title: gauge.amq.TotalConsumerCount
+
+gauge.amq.TotalDequeueCount:
+  brief: Total number of messages that have been acknowledged from the broker
+  custom: true
+  description: Total number of messages that have been acknowledged from the broker.
+  metric_type: gauge
+  title: gauge.amq.TotalDequeueCount
+
+gauge.amq.TotalEnqueueCount:
+  brief: Total number of messages that have been sent to the broker
+  custom: false
+  description: Total number of messages that have been sent to the broker.
+  metric_type: gauge
+  title: gauge.amq.TotalEnqueueCount
+
+gauge.amq.TotalMessageCount:
+  brief: Total number of unacknowledged messages on the broker
+  custom: false
+  description: Total number of unacknowledged messages on the broker
+  metric_type: gauge
+  title: gauge.amq.TotalMessageCount
+
+gauge.amq.TotalProducerCount:
+  brief: Total number of message producers active on destinations on the broker
+  custom: false
+  description: Total number of message producers active on destinations on the broker
+  metric_type: gauge
+  title: gauge.amq.TotalProducerCount
+
+gauge.amq.queue.AverageBlockedTime:
+  brief: Average time (ms) that messages have spent blocked by Flow Control
+  custom: true
+  description: Average time (ms) that messages have spent blocked by Flow Control.
+  metric_type: gauge
+  title: gauge.amq.queue.AverageBlockedTime
+
+gauge.amq.queue.AverageEnqueueTime:
+  brief: Average time (ms) that messages have been held at this destination
+  custom: false
+  description: Average time (ms) that messages have been held at this destination
+  metric_type: gauge
+  title: gauge.amq.queue.AverageEnqueueTime
+
+gauge.amq.queue.AverageMessageSize:
+  brief: Average size of messages in this queue, in bytes
+  custom: true
+  description: Average size of messages in this queue, in bytes.
+  metric_type: gauge
+  title: gauge.amq.queue.AverageMessageSize
+
+gauge.amq.queue.BlockedSends:
+  brief: Number of messages blocked by Flow Control
+  custom: true
+  description: Number of messages blocked by Flow Control.
+  metric_type: gauge
+  title: gauge.amq.queue.BlockedSends
+
+gauge.amq.queue.ConsumerCount:
+  brief: Number of consumers subscribed to this queue
+  custom: false
+  description: Number of consumers subscribed to this queue.
+  metric_type: gauge
+  title: gauge.amq.queue.ConsumerCount
+
+gauge.amq.queue.DequeueCount:
+  brief: Number of messages that have been acknowledged and removed from the queue
+  custom: false
+  description: Number of messages that have been acknowledged and removed from the
+    queue.
+  metric_type: gauge
+  title: gauge.amq.queue.DequeueCount
+
+gauge.amq.queue.EnqueueCount:
+  brief: Number of messages that have been sent to the queue
+  custom: false
+  description: Number of messages that have been sent to the queue.
+  metric_type: gauge
+  title: gauge.amq.queue.EnqueueCount
+
+gauge.amq.queue.ExpiredCount:
+  brief: Number of messages that have expired from the queue
+  custom: false
+  description: Number of messages that have expired from the queue.
+  metric_type: gauge
+  title: gauge.amq.queue.ExpiredCount
+
+gauge.amq.queue.ForwardCount:
+  brief: Number of messages that have been forwarded from this queue to a networked
+    broker
+  custom: true
+  description: Number of messages that have been forwarded from this queue to a networked
+    broker.
+  metric_type: gauge
+  title: gauge.amq.queue.ForwardCount
+
+gauge.amq.queue.InFlightCount:
+  brief: The number of messages that have been dispatched to consumers, but not acknowledged
+  custom: false
+  description: The number of messages that have been dispatched to consumers, but
+    not acknowledged.
+  metric_type: gauge
+  title: gauge.amq.queue.InFlightCount
+
+gauge.amq.queue.ProducerCount:
+  brief: Number of producers publishing to this queue
+  custom: false
+  description: Number of producers publishing to this queue
+  metric_type: gauge
+  title: gauge.amq.queue.ProducerCount
+
+gauge.amq.queue.QueueSize:
+  brief: The number of messages in the queue that have yet to be consumed
+  custom: false
+  description: The number of messages in the queue that have yet to be consumed.
+  metric_type: gauge
+  title: gauge.amq.queue.QueueSize
+
+gauge.amq.queue.TotalBlockedTime:
+  brief: The total time (ms) that messages have spent blocked by Flow Control
+  custom: true
+  description: The total time (ms) that messages have spent blocked by Flow Control.
+  metric_type: gauge
+  title: gauge.amq.queue.TotalBlockedTime
+
+gauge.amq.topic.AverageBlockedTime:
+  brief: Average time (ms) that messages have been blocked by Flow Control
+  custom: true
+  description: Average time (ms) that messages have been blocked by Flow Control.
+  metric_type: gauge
+  title: gauge.amq.topic.AverageBlockedTime
+
+gauge.amq.topic.AverageEnqueueTime:
+  brief: Average time (ms) that messages have been held at this destination
+  custom: false
+  description: Average time (ms) that messages have been held at this destination.
+  metric_type: gauge
+  title: gauge.amq.topic.AverageEnqueueTime
+
+gauge.amq.topic.AverageMessageSize:
+  brief: Average size of messages on this topic, in bytes
+  custom: true
+  description: Average size of messages on this topic, in bytes.
+  metric_type: gauge
+  title: gauge.amq.topic.AverageMessageSize
+
+gauge.amq.topic.BlockedSends:
+  brief: Number of messages blocked by Flow Control
+  custom: true
+  description: Number of messages blocked by Flow Control
+  metric_type: gauge
+  title: gauge.amq.topic.BlockedSends
+
+gauge.amq.topic.ConsumerCount:
+  brief: The number of consumers subscribed to this topic
+  custom: false
+  description: The number of consumers subscribed to this topic
+  metric_type: gauge
+  title: gauge.amq.topic.ConsumerCount
+
+gauge.amq.topic.DequeueCount:
+  brief: Number of messages that have been acknowledged and removed from the topic
+  custom: true
+  description: Number of messages that have been acknowledged and removed from the
+    topic.
+  metric_type: gauge
+  title: gauge.amq.topic.DequeueCount
+
+gauge.amq.topic.EnqueueCount:
+  brief: The number of messages that have been sent to the topic
+  custom: false
+  description: The number of messages that have been sent to the topic.
+  metric_type: gauge
+  title: gauge.amq.topic.EnqueueCount
+
+gauge.amq.topic.ExpiredCount:
+  brief: The number of messages that have expired from this topic
+  custom: false
+  description: The number of messages that have expired from this topic.
+  metric_type: gauge
+  title: gauge.amq.topic.ExpiredCount
+
+gauge.amq.topic.ForwardCount:
+  brief: The number of messages that have been forwarded from this topic to a networked
+    broker
+  custom: true
+  description: The number of messages that have been forwarded from this topic to
+    a networked broker.
+  metric_type: gauge
+  title: gauge.amq.topic.ForwardCount
+
+gauge.amq.topic.InFlightCount:
+  brief: The number of messages that have been dispatched to consumers, but have not
+    yet been acknowledged
+  custom: false
+  description: The number of messages that have been dispatched to consumers, but
+    have not yet been acknowledged.
+  metric_type: gauge
+  title: gauge.amq.topic.InFlightCount
+
+gauge.amq.topic.ProducerCount:
+  brief: Number of producers publishing to this topic
+  custom: false
+  description: Number of producers publishing to this topic.
+  metric_type: gauge
+  title: gauge.amq.topic.ProducerCount
+
+gauge.amq.topic.QueueSize:
+  brief: Number of messages in the topic that have yet to be consumed
+  custom: false
+  description: Number of messages in the topic that have yet to be consumed.
+  metric_type: gauge
+  title: gauge.amq.topic.QueueSize
+
+gauge.amq.topic.TotalBlockedTime:
+  brief: The total time (ms) that messages have spent blocked by Flow Control
+  custom: true
+  description: The total time (ms) that messages have spent blocked by Flow Control
+  metric_type: gauge
+  title: gauge.amq.topic.TotalBlockedTime
+
+gauge.jvm.threads.count:
+  brief: Number of JVM threads
+  custom: false
+  description: Number of JVM threads
+  metric_type: gauge
+  title: gauge.jvm.threads.count
+
+gauge.loaded_classes:
+  brief: Number of classes loaded in the JVM
+  custom: false
+  description: Number of classes loaded in the JVM
+  metric_type: gauge
+  title: gauge.loaded_classes
+
+invocations:
+  brief: Total number of garbage collection events
+  custom: false
+  description: Total number of garbage collection events
+  metric_type: cumulative
+  title: invocations
+
+jmx_memory.committed:
+  brief: Amount of memory guaranteed to be available in bytes
+  custom: false
+  description: Amount of memory guaranteed to be available in bytes
+  metric_type: gauge
+  title: jmx_memory.committed
+
+jmx_memory.init:
+  brief: Amount of initial memory at startup in bytes
+  custom: false
+  description: Amount of initial memory at startup in bytes
+  metric_type: gauge
+  title: jmx_memory.init
+
+jmx_memory.max:
+  brief: Maximum amount of memory that can be used in bytes
+  custom: false
+  description: Maximum amount of memory that can be used in bytes
+  metric_type: gauge
+  title: jmx_memory.max
+
+jmx_memory.used:
+  brief: Current memory usage in bytes
+  custom: false
+  description: Current memory usage in bytes
+  metric_type: gauge
+  title: jmx_memory.used
+
+total_time_in_ms.collection_time:
+  brief: Amount of time spent garbage collecting in milliseconds
+  custom: false
+  description: Amount of time spent garbage collecting in milliseconds
+  metric_type: cumulative
+  title: total_time_in_ms.collection_time
+

@@ -1,0 +1,74 @@
+cluster_cpu_load:
+  brief: CPU load of a cluster.
+  description: CPU load of a cluster.
+  metric_type: gauge
+  title: cluster/cpu_load
+
+cluster_cpu_load_hottest_node:
+  brief: CPU load of the busiest node in a cluster.
+  description: CPU load of the busiest node in a cluster.
+  metric_type: gauge
+  title: cluster/cpu_load_hottest_node
+
+cluster_disk_load:
+  brief: Utilization of HDD disks in a cluster.
+  description: Utilization of HDD disks in a cluster.
+  metric_type: gauge
+  title: cluster/disk_load
+
+cluster_node_count:
+  brief: Number of nodes in a cluster.
+  description: Number of nodes in a cluster.
+  metric_type: gauge
+  title: cluster/node_count
+
+disk_bytes_used:
+  brief: Amount of compressed data stored in a cluster.
+  description: Amount of compressed data stored in a cluster.
+  metric_type: gauge
+  title: disk/bytes_used
+
+server_error_count:
+  brief: Number of server requests for a table that failed with an error.
+  description: Number of server requests for a table that failed with an error.
+  metric_type: counter
+  title: server/error_count
+
+server_latencies:
+  brief: Distribution of server request latencies for a table.
+  description: Distribution of server request latencies for a table.
+  metric_type: counter
+  title: server/latencies
+
+server_modified_rows_count:
+  brief: Number of rows modified by server requests for a table.
+  description: Number of rows modified by server requests for a table.
+  metric_type: counter
+  title: server/modified_rows_count
+
+server_received_bytes_count:
+  brief: Number of uncompressed bytes of request data received by servers for a table.
+  description: Number of uncompressed bytes of request data received by servers for
+    a table.
+  metric_type: counter
+  title: server/received_bytes_count
+
+server_request_count:
+  brief: Number of server requests for a table.
+  description: Number of server requests for a table.
+  metric_type: counter
+  title: server/request_count
+
+server_returned_rows_count:
+  brief: Number of rows returned by server requests for a table.
+  description: Number of rows returned by server requests for a table.
+  metric_type: counter
+  title: server/returned_rows_count
+
+server_sent_bytes_count:
+  brief: Number of uncompressed bytes of response data sent by servers for a table.
+  description: Number of uncompressed bytes of response data sent by servers for a
+    table.
+  metric_type: counter
+  title: server/sent_bytes_count
+

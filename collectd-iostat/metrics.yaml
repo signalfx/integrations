@@ -1,0 +1,99 @@
+gauge.%util:
+  brief: Percentage of CPU time used for I/O requests to a device.
+  description: Percentage of CPU time used for I/O requests to a device.
+  metric_type: gauge
+  title: Percent utilization
+
+gauge.avgqu-sz:
+  brief: Average length of the request queue for a given device.
+  description: Reports the average length of the request queue for a given device.
+  metric_type: gauge
+  title: Average Request Queue
+
+gauge.avgrq-sz:
+  brief: Average size of requests for a given device in sectors.
+  description: Reports the average size of the requests sent to a given device in
+    sectors.
+  metric_type: gauge
+  title: Average Request Size
+
+gauge.await:
+  brief: Average time that I/O requests wait to be serviced on a device.
+  description: Reports the average time for I/O requests to be serviced on a device.
+  metric_type: gauge
+  title: Average Wait Time
+
+gauge.kB_read:
+  brief: Total kilobytes read.
+  description: Reports the total kilobytes read from a device.
+  metric_type: gauge
+  title: Kilobytes (Read)
+
+gauge.kB_read_s:
+  brief: Kilobytes read per second on a device.
+  description: Reports the kilobytes read per second on a device.
+  metric_type: gauge
+  title: Kilobytes per second (Read)
+
+gauge.kB_wrtn:
+  brief: Total kilobytes written.
+  description: Reports the total kilobytes written on a device.
+  metric_type: gauge
+  title: Kilobytes (Write)
+
+gauge.kB_wrtn_s:
+  brief: Kilobytes written per second.
+  description: Reports the kilobytes written per second on a device.
+  metric_type: gauge
+  title: Kilobytes per second (Write)
+
+gauge.r_await:
+  brief: Average time that I/O read requests wait to be serviced on a device.
+  description: Reports the average time for I/O read requests to be serviced on a
+    device.
+  metric_type: gauge
+  title: Average Wait Time (Read)
+
+gauge.r_s:
+  brief: Read requests per second.
+  description: Reports the number of requests to read a device per second.
+  metric_type: gauge
+  title: Requests per second (Read)
+
+gauge.rrqm_s:
+  brief: Number of merged requests per second to read a device
+  description: Reports the number of merged requests per second to read a device.
+  metric_type: gauge
+  title: Requests Merged Per Second (Read)
+
+gauge.svctm:
+  brief: Average time for I/O requests to be serviced on a device.
+  description: Reports the average time for I/O requests to be serviced on a device.
+  metric_type: gauge
+  title: Average Service Time
+
+gauge.tps:
+  brief: Transfers per second.
+  description: Reports the number of transfers per second on a device.
+  metric_type: gauge
+  title: Transfers per second
+
+gauge.w_await:
+  brief: Average time that I/O write requests wait to be serviced on a device.
+  description: Reports the average time for I/O write requests to be serviced on a
+    device.
+  metric_type: gauge
+  title: Average Wait Time (Write)
+
+gauge.w_s:
+  brief: Write requests per second.
+  description: Reports the number of requests to written a device per second.
+  metric_type: gauge
+  title: Requests per second (Write)
+
+gauge.wrqm_s:
+  brief: Number of merged requests per second to write to a device
+  description: Reports the number of merged requests per second to write to a device.
+  metric_type: gauge
+  title: Requests Merged Per Second (Write)
+

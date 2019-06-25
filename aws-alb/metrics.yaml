@@ -1,0 +1,287 @@
+ActiveConnectionCount:
+  brief: The total number of concurrent TCP connections active from clients to the
+    load balancer and from the load balancer to targets.
+  description: The total number of concurrent TCP connections active from clients
+    to the load balancer and from the load balancer to targets.
+  metric_type: null
+  title: ActiveConnectionCount
+
+ClientTLSNegotiationErrorCount:
+  brief: The number of TLS connections initiated by the client that did not establish
+    a session with the load balancer.
+  description: The number of TLS connections initiated by the client that did not
+    establish a session with the load balancer.
+  metric_type: null
+  title: ClientTLSNegotiationErrorCount
+
+ConsumedLCUs:
+  brief: The number of load balancer capacity units (LCU) used by your load balancer.
+  description: The number of load balancer capacity units (LCU) used by your load
+    balancer.
+  metric_type: null
+  title: ConsumedLCUs
+
+ELBAuthError:
+  brief: The number of user authentications that could not be completed because an
+    authenticate action was misconfigured, the load balancer couldn't establish a
+    connection with the IdP, or the load balancer couldn't complete the authentication
+    flow due to an internal error.
+  description: The number of user authentications that could not be completed because
+    an authenticate action was misconfigured, the load balancer couldn't establish
+    a connection with the IdP, or the load balancer couldn't complete the authentication
+    flow due to an internal error.
+  metric_type: null
+  title: ELBAuthError
+
+ELBAuthFailure:
+  brief: The number of user authentications that could not be completed because the
+    IdP denied access to the user or an authorization code was used more than once.
+  description: The number of user authentications that could not be completed because
+    the IdP denied access to the user or an authorization code was used more than
+    once.
+  metric_type: null
+  title: ELBAuthFailure
+
+ELBAuthLatency:
+  brief: The time elapsed, in milliseconds, to query the IdP for the ID token and
+    user info.
+  description: The time elapsed, in milliseconds, to query the IdP for the ID token
+    and user info.
+  metric_type: null
+  title: ELBAuthLatency
+
+ELBAuthRefreshTokenSuccess:
+  brief: The number of times the load balancer successfully refreshed user claims
+    using a refresh token provided by the IdP.
+  description: The number of times the load balancer successfully refreshed user claims
+    using a refresh token provided by the IdP.
+  metric_type: null
+  title: ELBAuthRefreshTokenSuccess
+
+ELBAuthSuccess:
+  brief: The number of authenticate actions that were successful.
+  description: The number of authenticate actions that were successful.
+  metric_type: null
+  title: ELBAuthSuccess
+
+ELBAuthUserClaimsSizeExceeded:
+  brief: The number of times that a configured IdP returned user claims that exceeded
+    11K bytes in size.
+  description: The number of times that a configured IdP returned user claims that
+    exceeded 11K bytes in size.
+  metric_type: null
+  title: ELBAuthUserClaimsSizeExceeded
+
+HTTPCode_ELB_3XX_Count:
+  brief: The number of HTTP 3XX redirection codes that originate from the load balancer.
+  description: The number of HTTP 3XX redirection codes that originate from the load
+    balancer.
+  metric_type: null
+  title: HTTPCode_ELB_3XX_Count
+
+HTTPCode_ELB_4XX_Count:
+  brief: The number of HTTP 4XX client error codes that originate from the load balancer.
+  description: The number of HTTP 4XX client error codes that originate from the load
+    balancer.
+  metric_type: null
+  title: HTTPCode_ELB_4XX_Count
+
+HTTPCode_ELB_500_Count:
+  brief: The number of HTTP 500 error codes that originate from the load balancer.
+  description: The number of HTTP 500 error codes that originate from the load balancer.
+  metric_type: null
+  title: HTTPCode_ELB_500_Count
+
+HTTPCode_ELB_502_Count:
+  brief: The number of HTTP 502 error codes that originate from the load balancer.
+  description: The number of HTTP 502 error codes that originate from the load balancer.
+  metric_type: null
+  title: HTTPCode_ELB_502_Count
+
+HTTPCode_ELB_503_Count:
+  brief: The number of HTTP 503 error codes that originate from the load balancer.
+  description: The number of HTTP 503 error codes that originate from the load balancer.
+  metric_type: null
+  title: HTTPCode_ELB_503_Count
+
+HTTPCode_ELB_504_Count:
+  brief: The number of HTTP 504 error codes that originate from the load balancer.
+  description: The number of HTTP 504 error codes that originate from the load balancer.
+  metric_type: null
+  title: HTTPCode_ELB_504_Count
+
+HTTPCode_ELB_5XX_Count:
+  brief: The number of HTTP 5XX server error codes that originate from the load balancer.
+  description: The number of HTTP 5XX server error codes that originate from the load
+    balancer.
+  metric_type: null
+  title: HTTPCode_ELB_5XX_Count
+
+HTTPCode_Target_2XX_Count:
+  brief: The number of HTTP response codes generated by the targets.
+  description: The number of HTTP response codes generated by the targets.
+  metric_type: null
+  title: HTTPCode_Target_2XX_Count
+
+HTTPCode_Target_3XX_Count:
+  brief: The number of HTTP response codes generated by the targets.
+  description: The number of HTTP response codes generated by the targets.
+  metric_type: null
+  title: HTTPCode_Target_3XX_Count
+
+HTTPCode_Target_4XX_Count:
+  brief: The number of HTTP response codes generated by the targets.
+  description: The number of HTTP response codes generated by the targets.
+  metric_type: null
+  title: HTTPCode_Target_4XX_Count
+
+HTTPCode_Target_5XX_Count:
+  brief: The number of HTTP response codes generated by the targets.
+  description: The number of HTTP response codes generated by the targets.
+  metric_type: null
+  title: HTTPCode_Target_5XX_Count
+
+HTTP_Fixed_Response_Count:
+  brief: The number of fixed-response actions that were successful.
+  description: The number of fixed-response actions that were successful.
+  metric_type: null
+  title: HTTP_Fixed_Response_Count
+
+HTTP_Redirect_Count:
+  brief: The number of redirect actions that were successful.
+  description: The number of redirect actions that were successful.
+  metric_type: null
+  title: HTTP_Redirect_Count
+
+HTTP_Redirect_Url_Limit_Exceeded_Count:
+  brief: The number of redirect actions that couldn't be completed because the URL
+    in the response location header is larger than 8K.
+  description: The number of redirect actions that couldn't be completed because the
+    URL in the response location header is larger than 8K.
+  metric_type: null
+  title: HTTP_Redirect_Url_Limit_Exceeded_Count
+
+HealthyHostCount:
+  brief: The number of targets that are considered healthy.
+  description: The number of targets that are considered healthy.
+  metric_type: null
+  title: HealthyHostCount
+
+IPv6ProcessedBytes:
+  brief: The total number of bytes processed by the load balancer over IPv6.
+  description: The total number of bytes processed by the load balancer over IPv6.
+  metric_type: null
+  title: IPv6ProcessedBytes
+
+IPv6RequestCount:
+  brief: The number of IPv6 requests received by the load balancer.
+  description: The number of IPv6 requests received by the load balancer.
+  metric_type: null
+  title: IPv6RequestCount
+
+LambdaInternalError:
+  brief: The number of requests to a Lambda function that failed because of an issue
+    internal to the load balancer or AWS Lambda.
+  description: The number of requests to a Lambda function that failed because of
+    an issue internal to the load balancer or AWS Lambda.
+  metric_type: null
+  title: LambdaInternalError
+
+LambdaTargetProcessedBytes:
+  brief: The total number of bytes processed by the load balancer for requests to
+    and responses from a Lambda function.
+  description: The total number of bytes processed by the load balancer for requests
+    to and responses from a Lambda function.
+  metric_type: null
+  title: LambdaTargetProcessedBytes
+
+LambdaUserError:
+  brief: The number of requests to a Lambda function that failed because of an issue
+    with the Lambda function.
+  description: The number of requests to a Lambda function that failed because of
+    an issue with the Lambda function.
+  metric_type: null
+  title: LambdaUserError
+
+NewConnectionCount:
+  brief: The total number of new TCP connections established from clients to the load
+    balancer and from the load balancer to targets.
+  description: The total number of new TCP connections established from clients to
+    the load balancer and from the load balancer to targets.
+  metric_type: null
+  title: NewConnectionCount
+
+NonStickyRequestCount:
+  brief: The number of requests where the load balancer chose a new target because
+    it couldn't use an existing sticky session.
+  description: The number of requests where the load balancer chose a new target because
+    it couldn't use an existing sticky session.
+  metric_type: null
+  title: NonStickyRequestCount
+
+ProcessedBytes:
+  brief: The total number of bytes processed by the load balancer over IPv4 and IPv6.
+  description: The total number of bytes processed by the load balancer over IPv4
+    and IPv6.
+  metric_type: null
+  title: ProcessedBytes
+
+RejectedConnectionCount:
+  brief: The number of connections that were rejected because the load balancer had
+    reached its maximum number of connections.
+  description: The number of connections that were rejected because the load balancer
+    had reached its maximum number of connections.
+  metric_type: null
+  title: RejectedConnectionCount
+
+RequestCount:
+  brief: The number of requests processed over IPv4 and IPv6.
+  description: The number of requests processed over IPv4 and IPv6.
+  metric_type: null
+  title: RequestCount
+
+RequestCountPerTarget:
+  brief: The average number of requests received by each target in a target group.
+  description: The average number of requests received by each target in a target
+    group.
+  metric_type: null
+  title: RequestCountPerTarget
+
+RuleEvaluations:
+  brief: The number of rules processed by the load balancer given a request rate averaged
+    over an hour.
+  description: The number of rules processed by the load balancer given a request
+    rate averaged over an hour.
+  metric_type: null
+  title: RuleEvaluations
+
+TargetConnectionErrorCount:
+  brief: The number of connections that were not successfully established between
+    the load balancer and target.
+  description: The number of connections that were not successfully established between
+    the load balancer and target.
+  metric_type: null
+  title: TargetConnectionErrorCount
+
+TargetResponseTime:
+  brief: The time elapsed, in seconds, after the request leaves the load balancer
+    until a response from the target is received.
+  description: The time elapsed, in seconds, after the request leaves the load balancer
+    until a response from the target is received.
+  metric_type: null
+  title: TargetResponseTime
+
+TargetTLSNegotiationErrorCount:
+  brief: The number of TLS connections initiated by the load balancer that did not
+    establish a session with the target.
+  description: The number of TLS connections initiated by the load balancer that did
+    not establish a session with the target.
+  metric_type: null
+  title: TargetTLSNegotiationErrorCount
+
+UnHealthyHostCount:
+  brief: The number of targets that are considered unhealthy.
+  description: The number of targets that are considered unhealthy.
+  metric_type: null
+  title: UnHealthyHostCount
+

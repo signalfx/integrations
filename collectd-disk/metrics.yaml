@@ -1,0 +1,56 @@
+derive.disk_merged.read:
+  brief: The number of disk reads merged into single physical disk access operations.
+  description: The number of disk reads that have been merged into single physical
+    disk access operations.  In other words, this metric measures the number of instances
+    in which one physical disk access served multiple disk reads.
+  metric_type: cumulative
+  title: Merged Disk Reads
+
+derive.disk_merged.write:
+  brief: The number of disk writes merged into single physical disk access operations.
+  description: The number of disk writes that were merged into single physical disk
+    access operations.  In other words, this metric measures the number of instances
+    in which one physical disk access served multiple write operations.
+  metric_type: cumulative
+  title: Merged Disk Writes
+
+derive.disk_octets.read:
+  brief: The number of bytes (octets) read from a disk.
+  description: The number of bytes read from a disk.
+  metric_type: cumulative
+  title: Disk Octets Read
+
+derive.disk_octets.write:
+  brief: The number of bytes (octets) written to a disk.
+  description: The number of bytes written to a disk.
+  metric_type: cumulative
+  title: Disk Octets Written
+
+derive.disk_ops.read:
+  brief: The number of disk read operations.
+  description: The number of disk read operations.
+  metric_type: cumulative
+  title: Disk Read Operations
+
+derive.disk_ops.write:
+  brief: The number of disk write operations.
+  description: The number of disk write operations.
+  metric_type: cumulative
+  title: Disk Write Operations
+
+derive.disk_time.read:
+  brief: The average amount of time it took to do a read operation.
+  description: The average amount of time it took to do a read operation.  For Darwin
+    / Mac OS X, the unit is microseconds.  For Linux and AIX, the unit is milliseconds.  For
+    Solaris, the unit is nanoseconds.  This metric is not reported on FreeBSD.
+  metric_type: cumulative
+  title: Disk Read Time
+
+derive.disk_time.write:
+  brief: The average amount of time it took to do a write operation.
+  description: The average amount of time it took to do a write operation.  For Darwin
+    / Mac OS X, the unit is microseconds.  For Linux and AIX, the unit is milliseconds.  For
+    Solaris, the unit is nanoseconds.  This metric is not reported on FreeBSD.
+  metric_type: cumulative
+  title: Disk Write Time
+

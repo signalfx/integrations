@@ -1,0 +1,24 @@
+api_request_count:
+  brief: Count of Datastore API calls.
+  description: Count of Datastore API calls.
+  metric_type: counter
+  title: api/request_count
+
+entity_read_sizes:
+  brief: Distribution of sizes of read entities, grouped by type.
+  description: Distribution of sizes of read entities, grouped by type.
+  metric_type: counter
+  title: entity/read_sizes
+
+entity_write_sizes:
+  brief: Distribution of sizes of written entities, grouped by op.
+  description: Distribution of sizes of written entities, grouped by op.
+  metric_type: counter
+  title: entity/write_sizes
+
+index_write_count:
+  brief: Count of Datastore index writes.
+  description: Count of Datastore index writes.
+  metric_type: counter
+  title: index/write_count
+

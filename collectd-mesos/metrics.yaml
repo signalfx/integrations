@@ -1,0 +1,717 @@
+bytes.system_mem_free_bytes:
+  brief: Free memory in bytes
+  description: Free memory in bytes, on this system.
+  metric_type: gauge
+  title: System Mem Free Bytes
+
+bytes.system_mem_total_bytes:
+  brief: Total memory available in bytes
+  description: Total memory available in bytes, on this system.
+  metric_type: gauge
+  title: System Mem Total Bytes
+
+counter.datapoints:
+  brief: Count of datapoints produced by this collectd.
+  description: '> Count of Datapoints
+
+    As any plugin (including this one) emits a datapoint we will count it and on
+
+    every reporting interval report the count we''ve seen.'
+  metric_type: cumulative
+  title: datapoints
+
+counter.master_dropped_messages:
+  brief: Number of dropped messages
+  description: Number of dropped messages, on this master.
+  metric_type: counter
+  title: Master Dropped Messages
+
+counter.master_invalid_framework_to_executor_messages:
+  brief: Number of invalid framework to executor messages
+  description: Number of invalid framework to executor messages, on this master.
+  metric_type: counter
+  title: Master Invalid Framework To Executor Messages
+
+counter.master_invalid_status_update_acknowledgements:
+  brief: Number of invalid status update acknowledgements
+  description: Number of invalid status update acknowledgements, on this master.
+  metric_type: counter
+  title: Master Invalid Status Update Acknowledgements
+
+counter.master_invalid_status_updates:
+  brief: Number of invalid status updates
+  description: Number of invalid status updates, on this master.
+  metric_type: counter
+  title: Master Invalid Status Updates
+
+counter.master_messages_authenticate:
+  brief: Number of authentication messages
+  description: Number of authentication messages, on this master.
+  metric_type: counter
+  title: Master Messages Authenticate
+
+counter.master_messages_deactivate_framework:
+  brief: Number of framework deactivation messages
+  description: Number of framework deactivation messages, on this master.
+  metric_type: counter
+  title: Master Messages Deactivate Framework
+
+counter.master_messages_decline_offers:
+  brief: Number of offers declined
+  description: Number of offers declined, on this master.
+  metric_type: counter
+  title: Master Messages Decline Offers
+
+counter.master_messages_exited_executor:
+  brief: Number of terminated executor messages
+  description: Number of terminated executor messages, on this master.
+  metric_type: counter
+  title: Master Messages Exited Executor
+
+counter.master_messages_framework_to_executor:
+  brief: Number of messages from a framework to an executor
+  description: Number of messages from a framework to an executor, on this master.
+  metric_type: counter
+  title: Master Messages Framework To Executor
+
+counter.master_messages_kill_task:
+  brief: Number of kill task messages
+  description: Number of kill task messages, on this master.
+  metric_type: counter
+  title: Master Messages Kill Task
+
+counter.master_messages_launch_tasks:
+  brief: Number of launch task messages
+  description: Number of launch task messages, on this master.
+  metric_type: counter
+  title: Master Messages Launch Tasks
+
+counter.master_messages_reconcile_tasks:
+  brief: Number of reconcile task messages
+  description: Number of reconcile task messages, on this master.
+  metric_type: counter
+  title: Master Messages Reconcile Tasks
+
+counter.master_messages_register_framework:
+  brief: Number of framework registration messages
+  description: Number of framework registration messages, on this master.
+  metric_type: counter
+  title: Master Messages Register Framework
+
+counter.master_messages_register_slave:
+  brief: Number of slave registration messages
+  description: Number of slave registration messages, on this master.
+  metric_type: counter
+  title: Master Messages Register Slave
+
+counter.master_messages_reregister_framework:
+  brief: Number of framework re-registration messages
+  description: Number of framework re-registration messages, on this master.
+  metric_type: counter
+  title: Master Messages Reregister Framework
+
+counter.master_messages_reregister_slave:
+  brief: Number of slave re-registration messages
+  description: Number of slave re-registration messages, on this master.
+  metric_type: counter
+  title: Master Messages Reregister Slave
+
+counter.master_messages_resource_request:
+  brief: Number of resource request messages
+  description: Number of resource request messages, on this master.
+  metric_type: counter
+  title: Master Messages Resource Request
+
+counter.master_messages_revive_offers:
+  brief: Number of offer revival messages
+  description: Number of offer revival messages, on this master.
+  metric_type: counter
+  title: Master Messages Revive Offers
+
+counter.master_messages_status_update:
+  brief: Number of status update messages
+  description: Number of status update messages, on this master.
+  metric_type: counter
+  title: Master Messages Status Update
+
+counter.master_messages_status_update_acknowledgement:
+  brief: Number of status update acknowledgement messages
+  description: Number of status update acknowledgement messages, on this master.
+  metric_type: counter
+  title: Master Messages Status Update Acknowledgement
+
+counter.master_messages_unregister_framework:
+  brief: Number of framework unregistration messages
+  description: Number of framework unregistration messages, on this master.
+  metric_type: counter
+  title: Master Messages Unregister Framework
+
+counter.master_messages_unregister_slave:
+  brief: Number of slave unregistration messages
+  description: Number of slave unregistration messages, on this master.
+  metric_type: counter
+  title: Master Messages Unregister Slave
+
+counter.master_recovery_slave_removals:
+  brief: Number of slaves not re-registered during master failover
+  description: Number of slaves not re-registered during master failover, on this
+    master.
+  metric_type: counter
+  title: Master Recovery Slave Removals
+
+counter.master_slave_registrations:
+  brief: Number of slaves that were able to cleanly re-join the cluster and connect
+    back to the master after the master is disconnected
+  description: Number of slaves that were able to cleanly re-join the cluster and
+    connect back to the master after the master is disconnected, on this master.
+  metric_type: counter
+  title: Master Slave Registrations
+
+counter.master_slave_removals:
+  brief: Number of slave removed for various reasons, including maintenance
+  description: Number of slave removed for various reasons, including maintenance,
+    on this master.
+  metric_type: counter
+  title: Master Slave Removals
+
+counter.master_slave_reregistrations:
+  brief: Number of slave re-registrations
+  description: Number of slave re-registrations, on this master.
+  metric_type: counter
+  title: Master Slave Reregistrations
+
+counter.master_slave_shutdowns_canceled:
+  brief: Number of cancelled slave shutdowns
+  description: Number of cancelled slave shutdowns, on this master. This happens when
+    the slave removal rate limit allows for a slave to reconnect and send a PONG to
+    the master before being removed.
+  metric_type: counter
+  title: Master Slave Shutdowns Canceled
+
+counter.master_slave_shutdowns_scheduled:
+  brief: Number of slaves which have failed their health check and are scheduled to
+    be removed
+  description: Number of slaves which have failed their health check and are scheduled
+    to be removed, on this master. They will not be immediately removed due to the
+    Slave Removal Rate-Limit, but master/slave_shutdowns_completed will start increasing
+    as they do get removed.
+  metric_type: counter
+  title: Master Slave Shutdowns Scheduled
+
+counter.master_tasks_error:
+  brief: Number of tasks that were invalid
+  description: Number of tasks that were invalid, on this master. A task is invalid
+    when the task launch attempt failed because of an error in the task specification.
+  metric_type: counter
+  title: Master Tasks Error
+
+counter.master_tasks_failed:
+  brief: Number of failed tasks
+  description: Number of failed tasks, on this master. A task has failed when the
+    task aborted with an error.
+  metric_type: counter
+  title: Master Tasks Failed
+
+counter.master_tasks_finished:
+  brief: Number of finished tasks
+  description: Number of finished tasks, on this master. A task has finished when
+    the task completes successfully.
+  metric_type: counter
+  title: Master Tasks Finished
+
+counter.master_tasks_killed:
+  brief: Number of killed tasks
+  description: Number of killed tasks, on this master. A task has been killed when
+    the task was killed by the executor.
+  metric_type: counter
+  title: Master Tasks Killed
+
+counter.master_tasks_lost:
+  brief: Number of lost tasks
+  description: Number of lost tasks, on this master. A task is lost when the task
+    was running on an agent that has lost contact with the current master (typically
+    due to a network partition or the agent host crashing).
+  metric_type: counter
+  title: Master Tasks Lost
+
+counter.master_valid_framework_to_executor_messages:
+  brief: Number of valid framework to executor messages
+  description: Number of valid framework to executor messages, on this master.
+  metric_type: counter
+  title: Master Valid Framework To Executor Messages
+
+counter.master_valid_status_update_acknowledgements:
+  brief: Number of valid status update acknowledgement messages
+  description: Number of valid status update acknowledgement messages, on this master.
+  metric_type: counter
+  title: Master Valid Status Update Acknowledgements
+
+counter.master_valid_status_updates:
+  brief: Number of valid status update messages
+  description: Number of valid status update messages, on this master.
+  metric_type: counter
+  title: Master Valid Status Updates
+
+counter.notifications:
+  brief: Count of notifications produced by this collectd.
+  description: '> Count of Notifications
+
+    As any plugin (including this one) emits a notification we will count it and on
+
+    every reporting interval report the count we''ve seen.'
+  metric_type: cumulative
+  title: notifications
+
+counter.slave_executors_terminated:
+  brief: Number of terminated executors
+  description: Number of terminated executors, on this slave.
+  metric_type: counter
+  title: Slave Executors Terminated
+
+counter.slave_invalid_framework_messages:
+  brief: Number of invalid framework messages
+  description: Number of invalid framework messages, on this slave.
+  metric_type: counter
+  title: Slave Invalid Framework Messages
+
+counter.slave_invalid_status_updates:
+  brief: Number of invalid status updates
+  description: Number of invalid status updates, on this slave.
+  metric_type: counter
+  title: Slave Invalid Status Updates
+
+counter.slave_recovery_errors:
+  brief: Number of errors encountered during slave recovery
+  description: Number of errors encountered during slave recovery, on this slave.
+  metric_type: gauge
+  title: Slave Recovery Errors
+
+counter.slave_tasks_failed:
+  brief: Number of failed tasks
+  description: Number of failed tasks, on this slave. A task has failed when the task
+    aborted with an error.
+  metric_type: counter
+  title: Slave Tasks Failed
+
+counter.slave_tasks_finished:
+  brief: Number of finished tasks
+  description: Number of finished tasks, on this slave. A task has finished when the
+    task completes successfully.
+  metric_type: counter
+  title: Slave Tasks Finished
+
+counter.slave_tasks_killed:
+  brief: Number of killed tasks
+  description: Number of killed tasks, on this slave. A task has been killed when
+    the task was killed by the executor.
+  metric_type: counter
+  title: Slave Tasks Killed
+
+counter.slave_tasks_lost:
+  brief: Number of lost tasks
+  description: Number of lost tasks, on this slave. A task is lost when the task was
+    running on an agent that has lost contact with the current master (typically due
+    to a network partition or the agent host crashing).
+  metric_type: counter
+  title: Slave Tasks Lost
+
+counter.slave_valid_framework_messages:
+  brief: Number of valid framework messages
+  description: Number of valid framework messages, on this slave.
+  metric_type: counter
+  title: Slave Valid Framework Messages
+
+counter.slave_valid_status_updates:
+  brief: Number of valid status updates
+  description: Number of valid status updates, on this slave.
+  metric_type: counter
+  title: Slave Valid Status Updates
+
+gauge.master_cpus_total:
+  brief: Number of CPUs available
+  description: Number of CPUs available, in this cluster.
+  metric_type: gauge
+  title: Master CPUs Total
+
+gauge.master_cpus_used:
+  brief: Number of allocated (used) CPUs
+  description: Number of allocated (used) CPUs, in this cluster.
+  metric_type: gauge
+  title: Master CPUs Used
+
+gauge.master_disk_total:
+  brief: Disk space available in MB
+  description: Disk space available in MB, in this cluster.
+  metric_type: gauge
+  title: Master Disk Total
+
+gauge.master_disk_used:
+  brief: Allocated (used) disk space in MB
+  description: Allocated (used) disk space in MB, in this cluster.
+  metric_type: gauge
+  title: Master Disk Used
+
+gauge.master_elected:
+  brief: Whether this is the elected master
+  description: Whether this is the elected master (1 if it is, 0 if not).
+  metric_type: gauge
+  title: Master Elected
+
+gauge.master_event_queue_dispatches:
+  brief: Number of dispatches in the event queue
+  description: Number of dispatches in the event queue, on this master.
+  metric_type: gauge
+  title: Master Event Queue Dispatches
+
+gauge.master_event_queue_http_requests:
+  brief: Number of HTTP requests in the event queue
+  description: Number of HTTP requests in the event queue, on this master.
+  metric_type: gauge
+  title: Master Event Queue HTTP Requests
+
+gauge.master_event_queue_messages:
+  brief: Number of messages in the event queue
+  description: Number of messages in the event queue, on this master.
+  metric_type: gauge
+  title: Master Event Queue Messages
+
+gauge.master_frameworks_active:
+  brief: Number of active frameworks
+  description: Number of active frameworks with tasks, on this master.
+  metric_type: gauge
+  title: Master Frameworks Active
+
+gauge.master_frameworks_connected:
+  brief: Number of connected frameworks
+  description: Number of connected frameworks, on this master.
+  metric_type: gauge
+  title: Master Frameworks Connected
+
+gauge.master_frameworks_disconnected:
+  brief: Number of disconnected frameworks
+  description: Number of disconnected frameworks, on this master.
+  metric_type: gauge
+  title: Master Frameworks Disconnected
+
+gauge.master_frameworks_inactive:
+  brief: Number of inactive frameworks
+  description: Number of inactive frameworks, on this master.
+  metric_type: gauge
+  title: Master Frameworks Inactive
+
+gauge.master_mem_total:
+  brief: Memory available in MB
+  description: Memory available in MB, in this cluster.
+  metric_type: gauge
+  title: Master Mem Total
+
+gauge.master_mem_used:
+  brief: Allocated (used) memory in MB
+  description: Allocated (used) memory in MB, in this cluster.
+  metric_type: gauge
+  title: Master Mem Used
+
+gauge.master_outstanding_offers:
+  brief: Number of outstanding resource offers
+  description: Number of outstanding resource offers, on this master.
+  metric_type: gauge
+  title: Master Outstanding Offers
+
+gauge.master_slaves_active:
+  brief: Number of active slaves
+  description: Number of active slaves with tasks, on this master.
+  metric_type: gauge
+  title: Master Slaves Active
+
+gauge.master_slaves_connected:
+  brief: Number of connected slaves
+  description: Number of connected slaves, on this master.
+  metric_type: gauge
+  title: Master Slaves Connected
+
+gauge.master_slaves_disconnected:
+  brief: Number of disconnected slaves
+  description: Number of disconnected slaves, on this master.
+  metric_type: gauge
+  title: Master Slaves Disconnected
+
+gauge.master_slaves_inactive:
+  brief: Number of inactive slaves
+  description: Number of inactive slaves, on this master.
+  metric_type: gauge
+  title: Master Slaves Inactive
+
+gauge.master_tasks_running:
+  brief: Number of running tasks
+  description: Number of running tasks, on this master. A task is running after it
+    starts running successfully.
+  metric_type: gauge
+  title: Master Tasks Running
+
+gauge.master_tasks_staging:
+  brief: Number of staging tasks
+  description: "Number of staging tasks, on this master. A task is staging when the\
+    \ master has received the framework\u2019s request to launch the task but the\
+    \ task has not yet started to run."
+  metric_type: gauge
+  title: Master Tasks Staging
+
+gauge.master_tasks_starting:
+  brief: Number of starting tasks
+  description: Number of starting tasks, on this master. A task is starting when a
+    custom executor has learned about the task (and maybe started fetching its dependencies)
+    but has not yet started to run it.
+  metric_type: gauge
+  title: Master Tasks Starting
+
+gauge.master_uptime_secs:
+  brief: Uptime in seconds
+  description: Uptime in seconds, on this master.
+  metric_type: gauge
+  title: Master Uptime Secs
+
+gauge.registrar_queued_operations:
+  brief: Number of queued operations in registry
+  description: Number of queued operations in registry.
+  metric_type: gauge
+  title: Registry Queued Operations
+
+gauge.registrar_registry_size_bytes:
+  brief: Registry size in bytes
+  description: Registry size in bytes.
+  metric_type: gauge
+  title: Registry Size Bytes
+
+gauge.registrar_state_fetch_ms:
+  brief: Registry read latency in ms
+  description: Registry read latency in ms.
+  metric_type: gauge
+  title: Registrar State Fetch Ms
+
+gauge.registrar_state_store_ms:
+  brief: Registry write latency in ms
+  description: Registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms
+
+gauge.registrar_state_store_ms_count:
+  brief: Registry write count
+  description: Registry write count.
+  metric_type: gauge
+  title: Registrar State Store Ms Count
+
+gauge.registrar_state_store_ms_max:
+  brief: Maximum registry write latency in ms
+  description: Maximum registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms Max
+
+gauge.registrar_state_store_ms_min:
+  brief: Minimum registry write latency in ms
+  description: Minimum registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms Min
+
+gauge.registrar_state_store_ms_p50:
+  brief: Median registry write latency in ms
+  description: Median registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms P50
+
+gauge.registrar_state_store_ms_p90:
+  brief: 90th percentile registry write latency in ms
+  description: 90th percentile registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms P90
+
+gauge.registrar_state_store_ms_p95:
+  brief: 95th percentile registry write latency in ms
+  description: 95th percentile registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms P95
+
+gauge.registrar_state_store_ms_p99:
+  brief: 99th percentile registry write latency in ms
+  description: 99th percentile registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms P99
+
+gauge.registrar_state_store_ms_p999:
+  brief: 99.9th percentile registry write latency in ms
+  description: 99.9th percentile registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms P999
+
+gauge.registrar_state_store_ms_p9999:
+  brief: 99.99th percentile registry write latency in ms
+  description: 99.99th percentile registry write latency in ms.
+  metric_type: gauge
+  title: Registrar State Store Ms P9999
+
+gauge.sine:
+  brief: A sine wave
+  description: '> A sine wave
+
+    A sine wave is a curve representing periodic oscillations of constant amplitude
+
+    as given by a sine function.  We send this in as it is a good way to show a
+
+    gauge.'
+  metric_type: gauge
+  title: Sine
+
+gauge.slave_cpus_total:
+  brief: Number of CPUs available
+  description: Number of CPUs available, on this slave.
+  metric_type: gauge
+  title: Slave CPUs Total
+
+gauge.slave_cpus_used:
+  brief: Number of allocated (used) CPUs
+  description: Number of allocated (used) CPUs, on this slave.
+  metric_type: gauge
+  title: Slave CPUs Used
+
+gauge.slave_disk_total:
+  brief: Disk space available in MB
+  description: Disk space available in MB, on this slave.
+  metric_type: gauge
+  title: Slave Disk Total
+
+gauge.slave_disk_used:
+  brief: Allocated (used) disk space in MB
+  description: Allocated (used) disk space in MB, on this slave.
+  metric_type: gauge
+  title: Slave Disk Used
+
+gauge.slave_executors_registering:
+  brief: Number of executors registering
+  description: Number of executors registering, on this slave.
+  metric_type: gauge
+  title: Slave Executors Registering
+
+gauge.slave_executors_running:
+  brief: Number of executors running
+  description: Number of executors running, on this slave.
+  metric_type: gauge
+  title: Slave Executors Running
+
+gauge.slave_executors_terminating:
+  brief: Number of terminating executors
+  description: Number of terminating executors, on this slave.
+  metric_type: gauge
+  title: Slave Executors Terminating
+
+gauge.slave_frameworks_active:
+  brief: Number of active frameworks
+  description: Number of active frameworks, on this slave.
+  metric_type: gauge
+  title: Slave Frameworks Active
+
+gauge.slave_mem_total:
+  brief: Memory available in MB
+  description: Memory available in MB, on this slave.
+  metric_type: gauge
+  title: Slave Mem Total
+
+gauge.slave_mem_used:
+  brief: Allocated (used) memory in MB
+  description: Allocated (used) memory in MB, on this slave.
+  metric_type: gauge
+  title: Slave Mem Used
+
+gauge.slave_registered:
+  brief: Whether this slave is registered with a master
+  description: Whether this slave is registered with a master (1 if it is, 0 if not).
+  metric_type: gauge
+  title: Slave Registered
+
+gauge.slave_tasks_running:
+  brief: Number of running tasks
+  description: Number of running tasks, on this slave. A task is running after it
+    starts running successfully.
+  metric_type: gauge
+  title: Slave Tasks Running
+
+gauge.slave_tasks_staging:
+  brief: Number of staging tasks
+  description: "Number of staging tasks, on this slave. A task is staging when the\
+    \ master has received the framework\u2019s request to launch the task but the\
+    \ task has not yet started to run."
+  metric_type: gauge
+  title: Slave Tasks Staging
+
+gauge.slave_tasks_starting:
+  brief: Number of starting tasks
+  description: Number of starting tasks, on this slave. A task is starting when a
+    custom executor has learned about the task (and maybe started fetching its dependencies)
+    but has not yet started to run it.
+  metric_type: gauge
+  title: Slave Tasks Starting
+
+gauge.slave_uptime_secs:
+  brief: Uptime in seconds
+  description: Uptime in seconds, on this slave.
+  metric_type: gauge
+  title: Slave Uptime Secs
+
+gauge.system_cpus_total:
+  brief: Number of CPUs available
+  description: Number of CPUs available, on this system.
+  metric_type: gauge
+  title: System CPUs Total
+
+gauge.system_load_15min:
+  brief: Load average for the past 15 minutes
+  description: Load average for the past 15 minutes, on this system.
+  metric_type: gauge
+  title: System Load 15Min
+
+gauge.system_load_1min:
+  brief: Load average for the past minute
+  description: Load average for the past minute, on this system.
+  metric_type: gauge
+  title: System Load 1Min
+
+gauge.system_load_5min:
+  brief: Load average for the past 5 minutes
+  description: Load average for the past 5 minutes, on this system.
+  metric_type: gauge
+  title: System Load 5Min
+
+percent.master_cpus_percent:
+  brief: Percentage of allocated (used) CPUs
+  description: Percentage of allocated (used) CPUs, in this cluster.
+  metric_type: gauge
+  title: Master CPUs Percent
+
+percent.master_disk_percent:
+  brief: Percentage of allocated (used) disk space
+  description: Percentage of allocated (used) disk space, in this cluster.
+  metric_type: gauge
+  title: Master Disk Percent
+
+percent.master_mem_percent:
+  brief: Percentage of allocated (used) memory
+  description: Percentage of allocated (used) memory, in this cluster.
+  metric_type: gauge
+  title: Master Mem Percent
+
+percent.slave_cpus_percent:
+  brief: Percentage of allocated (used) CPUs
+  description: Percentage of allocated (used) CPUs, on this slave.
+  metric_type: gauge
+  title: Slave CPUs Percent
+
+percent.slave_disk_percent:
+  brief: Percentage of allocated (used) disk space
+  description: Percentage of allocated (used) disk space, on this slave.
+  metric_type: gauge
+  title: Slave Disk Percent
+
+percent.slave_mem_percent:
+  brief: Percentage of allocated (used) memory
+  description: Percentage of allocated (used) memory, on this slave.
+  metric_type: gauge
+  title: Slave Mem Percent
+

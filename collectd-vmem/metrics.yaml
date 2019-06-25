@@ -1,0 +1,53 @@
+vmpage_faults.majflt:
+  brief: Number of major page faults on the system
+  description: The number of major page faults on the system. A major page fault requires
+    loading a memory page from disk.
+  metric_type: cumulative
+  title: Major Page Faults
+
+vmpage_faults.minflt:
+  brief: Number of minor page faults on the system
+  description: The number of minor page faults on the system. Minor page faults do
+    not require loading a memory page from disk.
+  metric_type: cumulative
+  title: Minor Page Faults
+
+vmpage_io.memory.in:
+  brief: Page Ins for Memory
+  description: The number of pages loaded into memory from the backing store.
+  metric_type: cumulative
+  title: Page Ins
+
+vmpage_io.memory.out:
+  brief: Page Outs for Memory
+  description: The number of pages written into the backing store from memory.
+  metric_type: cumulative
+  title: Page Outs
+
+vmpage_io.swap.in:
+  brief: Page Ins for Swap
+  description: '> Number of pages read from backing store when entire process memory
+    was swapped into memory'
+  metric_type: cumulative
+  title: Page Ins
+
+vmpage_io.swap.out:
+  brief: Page Outs for Swap
+  description: '> Number of pages written to backing store when entire process memory
+    was swapped from memory'
+  metric_type: cumulative
+  title: Page Outs
+
+vmpage_number.free_pages:
+  brief: Number of free memory pages
+  description: Number of free memory pages.
+  metric_type: cumulative
+  title: Free pages
+
+vmpage_number.mapped:
+  brief: Number of mapped pages
+  description: The total number of 'used' pages, both in-memory and swapped out to
+    disk storage.
+  metric_type: cumulative
+  title: Mapped pages
+

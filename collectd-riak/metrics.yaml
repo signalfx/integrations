@@ -1,0 +1,28 @@
+gauge.node_get_fsm_time_mean:
+  brief: Time between reception of client read request and subsequent response to
+    client in microseconds
+  description: Time between reception of client read request and subsequent response
+    to client in microseconds
+  metric_type: gauge
+  title: Node Get FSM Time Mean
+
+gauge.node_gets:
+  brief: Reads coordinated by this node in the last minute
+  description: Reads coordinated by this node in the last minute
+  metric_type: gauge
+  title: Node Gets
+
+gauge.node_put_fsm_time_mean:
+  brief: Time between reception of client write request and subsequent response to
+    client in microseconds
+  description: Time between reception of client write request and subsequent response
+    to client in microseconds
+  metric_type: gauge
+  title: Node Put FSM Time Mean
+
+gauge.node_puts:
+  brief: Writes coordinated by this node in the last minute
+  description: Writes coordinated by this node in the last minute
+  metric_type: gauge
+  title: Node Puts
+

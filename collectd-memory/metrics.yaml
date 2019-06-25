@@ -1,0 +1,41 @@
+memory.buffered:
+  brief: Bytes of memory used for buffering I/O
+  description: Amount of memory used for I/O buffers, in bytes.
+  metric_type: gauge
+  title: Buffered memory
+
+memory.cached:
+  brief: Bytes of memory used for disk caching
+  description: Amount of memory used for disk caching, in bytes.
+  metric_type: gauge
+  title: Cached memory
+
+memory.free:
+  brief: Bytes of memory available for use
+  description: Amount of memory that can be immediately used, in bytes. Includes unused
+    memory and reclaimable memory.
+  metric_type: gauge
+  title: Free memory
+
+memory.slab_recl:
+  brief: Bytes of memory, used for SLAB-allocation of kernel objects, that can be
+    reclaimed.
+  description: Bytes of memory that are currently in use by the kernel for SLAB-allocation
+    and can be reclaimed.
+  metric_type: gauge
+  title: SLAB reclaimable memory
+
+memory.slab_unrecl:
+  brief: Bytes of memory, used for SLAB-allocation of kernel objects, that can't be
+    reclaimed
+  description: Bytes of memory that are currently used by the kernel for SLAB-allocation
+    and can't be reclaimed.
+  metric_type: gauge
+  title: SLAB unreclaimable memory
+
+memory.used:
+  brief: Bytes of memory in use by the system.
+  description: The amount of memory consumed by processes and the system, in bytes.
+  metric_type: gauge
+  title: Used memory
+

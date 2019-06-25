@@ -1,0 +1,163 @@
+BinLogDiskUsage:
+  brief: The amount of disk space occupied by binary logs on the master.
+  description: The amount of disk space occupied by binary logs on the master.
+  metric_type: null
+  title: BinLogDiskUsage
+
+BurstBalance:
+  brief: The percent of General Purpose SSD (gp2) burst-bucket I/O credits available.
+  description: The percent of General Purpose SSD (gp2) burst-bucket I/O credits available.
+  metric_type: null
+  title: BurstBalance
+
+CPUCreditBalance:
+  brief: (T2 instances) The number of earned CPU credits that an instance has accrued
+    since it was launched or started.
+  description: (T2 instances) The number of earned CPU credits that an instance has
+    accrued since it was launched or started.
+  metric_type: null
+  title: CPUCreditBalance
+
+CPUCreditUsage:
+  brief: (T2 instances) The number of CPU credits spent by the instance for CPU utilization.
+  description: (T2 instances) The number of CPU credits spent by the instance for
+    CPU utilization.
+  metric_type: null
+  title: CPUCreditUsage
+
+CPUUtilization:
+  brief: The percentage of CPU utilization.
+  description: The percentage of CPU utilization.
+  metric_type: null
+  title: CPUUtilization
+
+DatabaseConnections:
+  brief: The number of database connections in use.
+  description: The number of database connections in use.
+  metric_type: null
+  title: DatabaseConnections
+
+DiskQueueDepth:
+  brief: The number of outstanding IOs (read/write requests) waiting to access the
+    disk.
+  description: The number of outstanding IOs (read/write requests) waiting to access
+    the disk.
+  metric_type: null
+  title: DiskQueueDepth
+
+FailedSQLServerAgentJobsCount:
+  brief: The number of failed SQL Server Agent jobs during the last minute.
+  description: The number of failed SQL Server Agent jobs during the last minute.
+  metric_type: null
+  title: FailedSQLServerAgentJobsCount
+
+FreeStorageSpace:
+  brief: The amount of available storage space.
+  description: The amount of available storage space.
+  metric_type: null
+  title: FreeStorageSpace
+
+FreeableMemory:
+  brief: The amount of available random access memory.
+  description: The amount of available random access memory.
+  metric_type: null
+  title: FreeableMemory
+
+MaximumUsedTransactionIDs:
+  brief: The maximum transaction ID that has been used.
+  description: The maximum transaction ID that has been used.
+  metric_type: null
+  title: MaximumUsedTransactionIDs
+
+NetworkReceiveThroughput:
+  brief: The incoming (Receive) network traffic on the DB instance, including both
+    customer database traffic and Amazon RDS traffic used for monitoring and replication.
+  description: The incoming (Receive) network traffic on the DB instance, including
+    both customer database traffic and Amazon RDS traffic used for monitoring and
+    replication.
+  metric_type: null
+  title: NetworkReceiveThroughput
+
+NetworkTransmitThroughput:
+  brief: The outgoing (Transmit) network traffic on the DB instance, including both
+    customer database traffic and Amazon RDS traffic used for monitoring and replication.
+  description: The outgoing (Transmit) network traffic on the DB instance, including
+    both customer database traffic and Amazon RDS traffic used for monitoring and
+    replication.
+  metric_type: null
+  title: NetworkTransmitThroughput
+
+OldestReplicationSlotLag:
+  brief: The lagging size of the replica lagging the most in terms of WAL data received.
+  description: The lagging size of the replica lagging the most in terms of WAL data
+    received.
+  metric_type: null
+  title: OldestReplicationSlotLag
+
+ReadIOPS:
+  brief: The average number of disk read I/O operations per second.
+  description: The average number of disk read I/O operations per second.
+  metric_type: null
+  title: ReadIOPS
+
+ReadLatency:
+  brief: The average amount of time taken per disk I/O operation.
+  description: The average amount of time taken per disk I/O operation.
+  metric_type: null
+  title: ReadLatency
+
+ReadThroughput:
+  brief: The average number of bytes read from disk per second.
+  description: The average number of bytes read from disk per second.
+  metric_type: null
+  title: ReadThroughput
+
+ReplicaLag:
+  brief: The amount of time a Read Replica DB instance lags behind the source DB instance.
+  description: The amount of time a Read Replica DB instance lags behind the source
+    DB instance.
+  metric_type: null
+  title: ReplicaLag
+
+ReplicationSlotDiskUsage:
+  brief: The disk space used by replication slot files.
+  description: The disk space used by replication slot files.
+  metric_type: null
+  title: ReplicationSlotDiskUsage
+
+SwapUsage:
+  brief: The amount of swap space used on the DB instance.
+  description: The amount of swap space used on the DB instance.
+  metric_type: null
+  title: SwapUsage
+
+TransactionLogsDiskUsage:
+  brief: The disk space used by transaction logs.
+  description: The disk space used by transaction logs.
+  metric_type: null
+  title: TransactionLogsDiskUsage
+
+TransactionLogsGeneration:
+  brief: The size of transaction logs generated per second.
+  description: The size of transaction logs generated per second.
+  metric_type: null
+  title: TransactionLogsGeneration
+
+WriteIOPS:
+  brief: The average number of disk write I/O operations per second.
+  description: The average number of disk write I/O operations per second.
+  metric_type: null
+  title: WriteIOPS
+
+WriteLatency:
+  brief: The average amount of time taken per disk I/O operation.
+  description: The average amount of time taken per disk I/O operation.
+  metric_type: null
+  title: WriteLatency
+
+WriteThroughput:
+  brief: The average number of bytes written to disk per second.
+  description: The average number of bytes written to disk per second.
+  metric_type: null
+  title: WriteThroughput
+
