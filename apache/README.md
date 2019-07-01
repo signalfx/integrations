@@ -37,7 +37,7 @@ This plugin collects metrics from the Apache `mod_status` module.
 | Smart Agent  |  *  |
 
 
-### INSTALLATION
+### CONFIGURATION
 
 This integration is part of the <a
 href="https://docs.signalfx.com/en/latest/integrations/agent/index.html"
