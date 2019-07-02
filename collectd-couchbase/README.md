@@ -54,7 +54,7 @@ Metadata associated with SignalFx's Couchbase integration can be found <a target
 
 1. Download the <a target="_blank" href="https://github.com/signalfx/collectd-couchbase">collectd-couchbase Python module</a>.
 
-2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-couchbase/10-couchbase.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
+2. Download SignalFx's <a target="_blank" href="https://github.com/signalfx/integrations/blob/release/collectd-couchbase/10-couchbase.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
 
 3. Modify the sample configuration file as described in [Configuration](#configuration), below.
 
@@ -62,7 +62,7 @@ Metadata associated with SignalFx's Couchbase integration can be found <a target
 
 ### CONFIGURATION
 
-Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-couchbase/10-couchbase.conf">10-couchbase.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/collectd-couchbase/10-couchbase.conf">10-couchbase.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Couchbase nodes and buckets to be monitored.
 
 | configuration option | definition | example value |
 | ---------------------|------------|---------------|
