@@ -1,5 +1,5 @@
 code: https://github.com/signalfx/collectd
-data_signature: plugin:"signalfx-metadata"
+data_signature: _exists_:"depricated_check"
 description: SignalFx's build of collectd, the open-source metrics collection agent.
 display_name: SignalFx collectd agent
 featured: true
