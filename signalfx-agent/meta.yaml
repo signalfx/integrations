@@ -1,5 +1,5 @@
 code: https://github.com/signalfx/signalfx-agent
-data_signature: _exists_:signalfx_agent
+data_signature: plugin:"host-metadata"
 description: SignalFx's newer agent with auto-discovery that supersedes our old collectd
   agent
 display_name: ' SignalFx SmartAgent'
