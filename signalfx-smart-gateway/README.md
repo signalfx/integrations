@@ -45,14 +45,14 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 ##### Latest Version: v1.1.1 (June 4, 2019)
 
-[Download Smart Gateway v1.1.1](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1)  
+<a target="_blank" href="/#/smart-gateway/download/v1.1.1">Download Smart Gateway v1.1.1</a><br>
 _SHA256: `c85c33dc988f7fe996718b74e616854e5585c36ce5f9af644fb05c77d6c01103`_
 
 * Fix for attaching cluster variable to retained traces
 
 ##### v1.1.0 (May 29, 2019)
 
-[Download Smart Gateway v1.1.0](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.0)  
+<a target="_blank" href="/#/smart-gateway/download/v1.1.0">Download Smart Gateway v1.1.0</a><br>
 _SHA256: `82774e826ef5fc511bd29a85e3aa79bf60db5719d05fc32eb7b05ae5e1b0dcdc`_
 
 * Update base SignalFx Gateway version to v1.0.31
@@ -61,7 +61,7 @@ _SHA256: `82774e826ef5fc511bd29a85e3aa79bf60db5719d05fc32eb7b05ae5e1b0dcdc`_
 
 ##### v1.0.5 (April 29, 2019)
 
-[Download Smart Gateway v1.0.5](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.5)  
+<a target="_blank" href="/#/smart-gateway/download/v1.0.5">Download Smart Gateway v1.0.5</a><br>
 _SHA256: `56e8a00ca268ef8534a715aadbf6853d54c1b2a4fbf4d58d69bc7cb866d7a94f`_
 
 * Update base SignalFx Gateway version to v1.0.29
@@ -70,7 +70,7 @@ _SHA256: `56e8a00ca268ef8534a715aadbf6853d54c1b2a4fbf4d58d69bc7cb866d7a94f`_
 
 ##### v1.0.4 (April 23, 2019)
 
-[Download Smart Gateway v1.0.4](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.4)  
+<a target="_blank" href="/#/smart-gateway/download/v1.0.4">Download Smart Gateway v1.0.4</a><br>
 _SHA256: `faa2dc350a1c223c652069c09038f647ea584fab4d2b7953fd4322519779fe64`_
 
 * Update base SignalFx Gateway version to v1.0.28
@@ -78,14 +78,14 @@ _SHA256: `faa2dc350a1c223c652069c09038f647ea584fab4d2b7953fd4322519779fe64`_
 
 ##### v1.0.3 (April 11, 2019)
 
-[Download Smart Gateway v1.0.3](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.3)  
+<a target="_blank" href="/#/smart-gateway/download/v1.0.3">Download Smart Gateway v1.0.3</a><br>
 _SHA256: `0f59091d2f802f1866f59e27d1d1c05bf670159d21e26a897791d4af6419ac65`_
 
 * Add `ForceTraceInitiatingSpan` config to force an initiating span if none is present on the trace
 
 ##### v1.0.2 (March 26, 2019)
 
-[Download Smart Gateway v1.0.2](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.2)  
+<a target="_blank" href="/#/smart-gateway/download/v1.0.2">Download Smart Gateway v1.0.2</a><br>
 _SHA256: `71ac690d578d09057d6893e04fc52d70b86a4f4e4e88f883c0f91e03acb352a4`_
 
 * Update base SignalFx Gateway version to v1.0.27
@@ -99,7 +99,7 @@ _SHA256: `71ac690d578d09057d6893e04fc52d70b86a4f4e4e88f883c0f91e03acb352a4`_
 
 ##### v1.0.1 (March 6, 2019)
 
-[Download Smart Gateway v1.0.1](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.1)  
+<a target="_blank" href="/#/smart-gateway/download/v1.0.1">Download Smart Gateway v1.0.1</a><br>
 _SHA256: ``53819394425c1a0db60fdc3fc9ba8bab2d85d1c027e1218ee2b938357b50e818``_
 
 * Update base SignalFx Gateway version to v1.0.18
@@ -110,7 +110,7 @@ _SHA256: ``53819394425c1a0db60fdc3fc9ba8bab2d85d1c027e1218ee2b938357b50e818``_
 
 ##### v1.0.0 (February 4, 2019)
 
-[Download Smart Gateway v1.0.0](https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.0.0)  
+<a target="_blank" href="/#/smart-gateway/download/v1.0.0">Download Smart Gateway v1.0.0</a><br>
 _SHA256: `2fadd3abeb99e1b781a7805ea524bcc9773a5efc122260abdd684f6799afdda9`_
 
 * Update base SignalFx Gateway version to v1.0.9
