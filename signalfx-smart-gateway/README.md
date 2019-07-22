@@ -15,8 +15,13 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v1.1.1">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-$ curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" \
-    https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1 | gunzip > smart-gateway
+```
+
+Make sure to mark the `smart-gateway` binary as executable:
+
+```
+chmod +x smart-gateway
 ```
 
 The Smart Gateway is designed to run in your environment, close to your applications, and receive all metrics and trace spans from your applications before they are forwarded to SignalFx.
@@ -28,15 +33,14 @@ Once you have downloaded the Smart Gateway, follow the installation, configurati
 To verify the integrity of your Smart Gateway binary, use `sha256sum` to compute the checksum of the file, and compare to the checksum listed below for your respective version
 
 ```
-$ sha256sum smart-gateway
+sha256sum smart-gateway
 ```
 
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-$ curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" \
-    https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v1.1.1 > smart-gateway.sha256
-$ sha256sum -c smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v1.1.1 > smart-gateway.sha256
+sha256sum -c smart-gateway.sha256
 ```
 
 The downloaded checksum assumes that the Smart Gateway binary is in the current directory, in a file named `smart-gateway`
