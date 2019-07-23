@@ -1,0 +1,174 @@
+subscription_backlog_bytes:
+  brief: Total byte size of the unacknowledged messages (a.k.a. backlog messages)
+    in a subscription.
+  description: Total byte size of the unacknowledged messages (a.k.a. backlog messages)
+    in a subscription.
+  metric_type: gauge
+  title: subscription/backlog_bytes
+
+subscription_byte_cost:
+  brief: Cumulative cost of operations per subscription, measured in bytes. This is
+    used to measure utilization for quotas.
+  description: Cumulative cost of operations per subscription, measured in bytes.
+    This is used to measure utilization for quotas.
+  metric_type: counter
+  title: subscription/byte_cost
+
+subscription_config_updates_count:
+  brief: Cumulative count of configuration changes per subscription, grouped by operation
+    type and result.
+  description: Cumulative count of configuration changes per subscription, grouped
+    by operation type and result.
+  metric_type: counter
+  title: subscription/config_updates_count
+
+subscription_mod_ack_deadline_message_operation_count:
+  brief: Cumulative count of ModifyAckDeadline message operations, grouped by result.
+  description: Cumulative count of ModifyAckDeadline message operations, grouped by
+    result.
+  metric_type: counter
+  title: subscription/mod_ack_deadline_message_operation_count
+
+subscription_mod_ack_deadline_request_count:
+  brief: Cumulative count of ModifyAckDeadline requests, grouped by result.
+  description: Cumulative count of ModifyAckDeadline requests, grouped by result.
+  metric_type: counter
+  title: subscription/mod_ack_deadline_request_count
+
+subscription_num_outstanding_messages:
+  brief: Number of messages delivered to a subscription's push endpoint, but not yet
+    acknowledged.
+  description: Number of messages delivered to a subscription's push endpoint, but
+    not yet acknowledged.
+  metric_type: gauge
+  title: subscription/num_outstanding_messages
+
+subscription_num_undelivered_messages:
+  brief: Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.
+  description: Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.
+  metric_type: gauge
+  title: subscription/num_undelivered_messages
+
+subscription_oldest_unacked_message_age:
+  brief: Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog message)
+    in a subscription.
+  description: Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog
+    message) in a subscription.
+  metric_type: gauge
+  title: subscription/oldest_unacked_message_age
+
+subscription_pull_ack_message_operation_count:
+  brief: Cumulative count of acknowledge message operations, grouped by result.
+  description: Cumulative count of acknowledge message operations, grouped by result.
+  metric_type: counter
+  title: subscription/pull_ack_message_operation_count
+
+subscription_pull_ack_request_count:
+  brief: Cumulative count of acknowledge requests, grouped by result.
+  description: Cumulative count of acknowledge requests, grouped by result.
+  metric_type: counter
+  title: subscription/pull_ack_request_count
+
+subscription_pull_message_operation_count:
+  brief: Cumulative count of pull message operations, grouped by result.
+  description: Cumulative count of pull message operations, grouped by result.
+  metric_type: counter
+  title: subscription/pull_message_operation_count
+
+subscription_pull_request_count:
+  brief: Cumulative count of pull requests, grouped by result.
+  description: Cumulative count of pull requests, grouped by result.
+  metric_type: counter
+  title: subscription/pull_request_count
+
+subscription_push_request_count:
+  brief: Cumulative count of push attempts, grouped by result.
+  description: Cumulative count of push attempts, grouped by result.
+  metric_type: counter
+  title: subscription/push_request_count
+
+subscription_push_request_latencies:
+  brief: Distribution of push request latencies (in microseconds), grouped by result.
+  description: Distribution of push request latencies (in microseconds), grouped by
+    result.
+  metric_type: counter
+  title: subscription/push_request_latencies
+
+subscription_streaming_pull_ack_message_operation_count:
+  brief: Cumulative count of StreamingPull acknowledge message operations, grouped
+    by result.
+  description: Cumulative count of StreamingPull acknowledge message operations, grouped
+    by result.
+  metric_type: counter
+  title: subscription/streaming_pull_ack_message_operation_count
+
+subscription_streaming_pull_ack_request_count:
+  brief: Cumulative count of streaming pull requests with non-empty acknowledge ids,
+    grouped by result.
+  description: Cumulative count of streaming pull requests with non-empty acknowledge
+    ids, grouped by result.
+  metric_type: counter
+  title: subscription/streaming_pull_ack_request_count
+
+subscription_streaming_pull_message_operation_count:
+  brief: Cumulative count of streaming pull message operations, grouped by result.
+  description: Cumulative count of streaming pull message operations, grouped by result.
+  metric_type: counter
+  title: subscription/streaming_pull_message_operation_count
+
+subscription_streaming_pull_mod_ack_deadline_message_operation_count:
+  brief: Cumulative count of StreamingPull ModifyAckDeadline operations, grouped by
+    result.
+  description: Cumulative count of StreamingPull ModifyAckDeadline operations, grouped
+    by result.
+  metric_type: counter
+  title: subscription/streaming_pull_mod_ack_deadline_message_operation_count
+
+subscription_streaming_pull_mod_ack_deadline_request_count:
+  brief: Cumulative count of streaming pull requests with non-empty ModifyAckDeadline
+    fields, grouped by result.
+  description: Cumulative count of streaming pull requests with non-empty ModifyAckDeadline
+    fields, grouped by result.
+  metric_type: counter
+  title: subscription/streaming_pull_mod_ack_deadline_request_count
+
+subscription_streaming_pull_response_count:
+  brief: Cumulative count of streaming pull responses, grouped by result.
+  description: Cumulative count of streaming pull responses, grouped by result.
+  metric_type: counter
+  title: subscription/streaming_pull_response_count
+
+topic_byte_cost:
+  brief: Cost of operations per topic, measured in bytes. This is used to measure
+    utilization for quotas.
+  description: Cost of operations per topic, measured in bytes. This is used to measure
+    utilization for quotas.
+  metric_type: counter
+  title: topic/byte_cost
+
+topic_config_updates_count:
+  brief: Cumulative count of configuration changes per topic, grouped by operation
+    type and result.
+  description: Cumulative count of configuration changes per topic, grouped by operation
+    type and result.
+  metric_type: counter
+  title: topic/config_updates_count
+
+topic_message_sizes:
+  brief: Distribution of publish message sizes (in bytes).
+  description: Distribution of publish message sizes (in bytes).
+  metric_type: counter
+  title: topic/message_sizes
+
+topic_send_message_operation_count:
+  brief: Cumulative count of publish message operations, grouped by result.
+  description: Cumulative count of publish message operations, grouped by result.
+  metric_type: counter
+  title: topic/send_message_operation_count
+
+topic_send_request_count:
+  brief: Cumulative count of publish requests, grouped by result.
+  description: Cumulative count of publish requests, grouped by result.
+  metric_type: counter
+  title: topic/send_request_count
+

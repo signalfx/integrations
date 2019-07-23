@@ -1,7 +1,6 @@
-{ "display_name":"Example Python Plugin",
-  "description": "A hello world of collectd python plugins.",
-  "code": "https://github.com/signalfx/collectd-example",
-  "featured": true,
-  "logo_small": "https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif",
-  "logo_large": "https://myavantiservices.files.wordpress.com/2015/02/helloworld%402x.gif"
-}
+code: https://github.com/signalfx/collectd-example
+description: A hello world of collectd python plugins.
+display_name: Example Python Plugin
+featured: true
+logo_large: https://myavantiservices.files.wordpress.com/2015/02/helloworld%402x.gif
+logo_small: https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif

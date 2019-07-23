@@ -1,0 +1,62 @@
+ChildHealthCheckHealthyCount:
+  brief: For a calculated health check, the number of health checks that are healthy
+    among the health checks that Route 53 is monitoring.
+  description: For a calculated health check, the number of health checks that are
+    healthy among the health checks that Route 53 is monitoring.
+  metric_type: null
+  title: ChildHealthCheckHealthyCount
+
+ConnectionTime:
+  brief: The average time, in milliseconds, that it took Route 53 health checkers
+    to establish a TCP connection with the endpoint.
+  description: The average time, in milliseconds, that it took Route 53 health checkers
+    to establish a TCP connection with the endpoint.
+  metric_type: null
+  title: ConnectionTime
+
+HealthCheckPercentageHealthy:
+  brief: The percentage of Route 53 health checkers that consider the selected endpoint
+    to be healthy.
+  description: The percentage of Route 53 health checkers that consider the selected
+    endpoint to be healthy.
+  metric_type: null
+  title: HealthCheckPercentageHealthy
+
+HealthCheckStatus:
+  brief: The status of the health check endpoint that CloudWatch is checking.
+  description: The status of the health check endpoint that CloudWatch is checking.
+  metric_type: null
+  title: HealthCheckStatus
+
+InboundQueryVolume:
+  brief: For inbound endpoints, the number of DNS queries forwarded from your network
+    to your VPCs through the endpoint specified by EndpointId.
+  description: For inbound endpoints, the number of DNS queries forwarded from your
+    network to your VPCs through the endpoint specified by EndpointId.
+  metric_type: null
+  title: InboundQueryVolume
+
+OutboundQueryVolume:
+  brief: For outbound endpoints, the number of DNS queries forwarded from your VPCs
+    to your network through the endpoint specified by EndpointId.
+  description: For outbound endpoints, the number of DNS queries forwarded from your
+    VPCs to your network through the endpoint specified by EndpointId.
+  metric_type: null
+  title: OutboundQueryVolume
+
+SSLHandshakeTime:
+  brief: The average time, in milliseconds, that it took Route 53 health checkers
+    to complete the SSL handshake.
+  description: The average time, in milliseconds, that it took Route 53 health checkers
+    to complete the SSL handshake.
+  metric_type: null
+  title: SSLHandshakeTime
+
+TimeToFirstByte:
+  brief: The average time, in milliseconds, that it took Route 53 health checkers
+    to receive the first byte of the response to an HTTP or HTTPS request.
+  description: The average time, in milliseconds, that it took Route 53 health checkers
+    to receive the first byte of the response to an HTTP or HTTPS request.
+  metric_type: null
+  title: TimeToFirstByte
+

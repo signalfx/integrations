@@ -1,0 +1,242 @@
+gauge.conviva.attempts:
+  brief: Real-Time/Live time series of the number of attempts
+  description: Real-Time/Live time series of the number of attempts
+  metric_type: gauge
+  title: conviva.attempts
+
+gauge.conviva.audience_metriclens.concurrent_plays:
+  brief: Real-Time/Live audience metriclens of concurrent plays
+  description: Real-Time/Live audience metriclens of concurrent plays
+  metric_type: gauge
+  title: conviva.audience_metriclens.concurrent_plays
+
+gauge.conviva.audience_metriclens.ended_plays:
+  brief: Real-Time/Live audience metriclens of ended plays
+  description: Real-Time/Live audience metriclens of ended plays
+  metric_type: gauge
+  title: conviva.audience_metriclens.ended_plays
+
+gauge.conviva.audience_metriclens.plays:
+  brief: Real-Time/Live audience metriclens of plays
+  description: Real-Time/Live audience metriclens of plays
+  metric_type: gauge
+  title: conviva.audience_metriclens.plays
+
+gauge.conviva.avg_bitrate:
+  brief: Real-Time/Live time series of the average bitrate
+  description: Real-Time/Live time series of the average bitrate
+  metric_type: gauge
+  title: conviva.avg_bitrate
+
+gauge.conviva.concurrent_plays:
+  brief: Real-Time/Live time series of concurrent plays
+  description: Real-Time/Live time series of concurrent plays
+  metric_type: gauge
+  title: conviva.concurrent_plays
+
+gauge.conviva.connection_induced_rebuffering_ratio:
+  brief: Real-Time/Live simple series of connection induced rebuffering ratio
+  description: Real-Time/Live simple series of connection induced rebuffering ratio
+  metric_type: gauge
+  title: conviva.connection_induced_rebuffering_ratio
+
+gauge.conviva.connection_induced_rebuffering_ratio_timeseries:
+  brief: Real-Time/Live time series of connection induced rebuffering ratio
+  description: Real-Time/Live time series of connection induced rebuffering ratio
+  metric_type: gauge
+  title: conviva.connection_induced_rebuffering_ratio_timeseries
+
+gauge.conviva.duration_connection_induced_rebuffering_ratio_distribution:
+  brief: Real-Time/Live label series of duration vs. connection induced rebuffering
+    ratio distribution
+  description: Real-Time/Live label series of duration vs. connection induced rebuffering
+    ratio distribution
+  metric_type: gauge
+  title: conviva.duration_connection_induced_rebuffering_ratio_distribution
+
+gauge.conviva.ended_plays:
+  brief: Real-Time/Live simple series of ended plays
+  description: Real-Time/Live simple series of ended plays
+  metric_type: gauge
+  title: conviva.ended_plays
+
+gauge.conviva.ended_plays_timeseries:
+  brief: Real-Time/Live time series of ended plays
+  description: Real-Time/Live time series of ended plays
+  metric_type: gauge
+  title: conviva.ended_plays_timeseries
+
+gauge.conviva.exits_before_video_start:
+  brief: Real-Time/Live time series of exits before video start
+  description: Real-Time/Live time series of exits before video start
+  metric_type: gauge
+  title: conviva.exits_before_video_start
+
+gauge.conviva.play_bitrate_distribution:
+  brief: Real-Time/Live label series of play bitrate distribution
+  description: Real-Time/Live label series of play bitrate distribution
+  metric_type: gauge
+  title: conviva.play_bitrate_distribution
+
+gauge.conviva.play_buffering_ratio_distribution:
+  brief: Real-Time/Live label series of play buffering ratio distribution
+  description: Real-Time/Live label series of play buffering ratio distribution
+  metric_type: gauge
+  title: conviva.play_buffering_ratio_distribution
+
+gauge.conviva.play_connection_induced_rebuffering_ratio_distribution:
+  brief: Real-Time/Live label series of play connection induced rebuffering ratio
+    distribution
+  description: Real-Time/Live label series of play connection induced rebuffering
+    ratio distribution
+  metric_type: gauge
+  title: conviva.play_connection_induced_rebuffering_ratio_distribution
+
+gauge.conviva.plays:
+  brief: Real-Time/Live time series of plays
+  description: Real-Time/Live time series of plays
+  metric_type: gauge
+  title: conviva.plays
+
+gauge.conviva.quality_metriclens.average_bitrate_kbps:
+  brief: Real-Time/Live quality metriclens metric of average bitrate in kbps
+  description: Real-Time/Live quality metriclens metric of average bitrate in kbps
+  metric_type: gauge
+  title: conviva.quality_metriclens.average_bitrate_kbps
+
+gauge.conviva.quality_metriclens.connection_induced_rebuffering_ratio_percent:
+  brief: Real-Time/Live quality metriclens metric of connection induced rebuffering
+    ratio percent
+  description: Real-Time/Live quality metriclens metric of connection induced rebuffering
+    ratio percent
+  metric_type: gauge
+  title: conviva.quality_metriclens.connection_induced_rebuffering_ratio_percent
+
+gauge.conviva.quality_metriclens.ended_plays:
+  brief: Real-Time/Live quality metriclens metric of ended plays
+  description: Real-Time/Live quality metriclens metric of ended plays
+  metric_type: gauge
+  title: conviva.quality_metriclens.ended_plays
+
+gauge.conviva.quality_metriclens.exits_before_video_start_percent:
+  brief: Real-Time/Live quality metriclens metric of exits before video start percent
+  description: Real-Time/Live quality metriclens metric of exits before video start
+    percent
+  metric_type: gauge
+  title: conviva.quality_metriclens.exits_before_video_start_percent
+
+gauge.conviva.quality_metriclens.plays_percent:
+  brief: Real-Time/Live quality metriclens metric of plays percent
+  description: Real-Time/Live quality metriclens metric of plays percent
+  metric_type: gauge
+  title: conviva.quality_metriclens.plays_percent
+
+gauge.conviva.quality_metriclens.rebuffering_ratio_percent:
+  brief: Real-Time/Live quality metriclens metric of rebuffering ratio percent
+  description: Real-Time/Live quality metriclens metric of rebuffering ratio percent
+  metric_type: gauge
+  title: conviva.quality_metriclens.rebuffering_ratio_percent
+
+gauge.conviva.quality_metriclens.total_attempts:
+  brief: Real-Time/Live quality metriclens metric of total attempts
+  description: Real-Time/Live quality metriclens metric of total attempts
+  metric_type: gauge
+  title: conviva.quality_metriclens.total_attempts
+
+gauge.conviva.quality_metriclens.video_playback_failures_percent:
+  brief: Real-Time/Live quality metriclens metric of video playback failures percent
+  description: Real-Time/Live quality metriclens metric of video playback failures
+    percent
+  metric_type: gauge
+  title: conviva.quality_metriclens.video_playback_failures_percent
+
+gauge.conviva.quality_metriclens.video_restart_time:
+  brief: Real-Time/Live quality metriclens metric of video restart time
+  description: Real-Time/Live quality metriclens metric of video restart time
+  metric_type: gauge
+  title: conviva.quality_metriclens.video_restart_time
+
+gauge.conviva.quality_metriclens.video_start_failures_percent:
+  brief: Real-Time/Live quality metriclens metric of video start failures percent
+  description: Real-Time/Live quality metriclens metric of video start failures percent
+  metric_type: gauge
+  title: conviva.quality_metriclens.video_start_failures_percent
+
+gauge.conviva.quality_metriclens.video_startup_time_sec:
+  brief: Real-Time/Live quality metriclens metric of video startup time in sec
+  description: Real-Time/Live quality metriclens metric of video startup time in sec
+  metric_type: gauge
+  title: conviva.quality_metriclens.video_startup_time_sec
+
+gauge.conviva.quality_summary:
+  brief: Real-Time/Live label series of quality summary
+  description: Real-Time/Live label series of quality summary
+  metric_type: gauge
+  title: conviva.quality_summary
+
+gauge.conviva.rebuffered_plays:
+  brief: Real-Time/Live time series of rebuffered plays
+  description: Real-Time/Live time series of rebuffered plays
+  metric_type: gauge
+  title: conviva.rebuffered_plays
+
+gauge.conviva.rebuffering_ratio:
+  brief: Real-Time/Live time series of rebuffering ratio
+  description: Real-Time/Live time series of rebuffering ratio
+  metric_type: gauge
+  title: conviva.rebuffering_ratio
+
+gauge.conviva.top_assets_summary:
+  brief: Real-Time/Live label series of top assets summary
+  description: Real-Time/Live label series of top assets summary
+  metric_type: gauge
+  title: conviva.top_assets_summary
+
+gauge.conviva.video_playback_failures_distribution:
+  brief: Real-Time/Live label series of video playback failures distribution
+  description: Real-Time/Live label series of video playback failures distribution
+  metric_type: gauge
+  title: conviva.video_playback_failures_distribution
+
+gauge.conviva.video_playback_failures_timeseries:
+  brief: Real-Time/Live time series of video playback failures
+  description: Real-Time/Live time series of video playback failures
+  metric_type: gauge
+  title: conviva.video_playback_failures_timeseries
+
+gauge.conviva.video_restart_time:
+  brief: Real-Time/Live simple series of video restart time
+  description: Real-Time/Live simple series of video restart time
+  metric_type: gauge
+  title: conviva.video_restart_time
+
+gauge.conviva.video_restart_time_distribution:
+  brief: Real-Time/Live label series of video restart time distribution
+  description: Real-Time/Live label series of video restart time distribution
+  metric_type: gauge
+  title: conviva.video_restart_time_distribution
+
+gauge.conviva.video_restart_time_timeseries:
+  brief: Real-Time/Live time series of video restart time
+  description: Real-Time/Live time series of video restart time
+  metric_type: gauge
+  title: conviva.video_restart_time_timeseries
+
+gauge.conviva.video_start_failures:
+  brief: Real-Time/Live time series of video start failures
+  description: Real-Time/Live time series of video start failures
+  metric_type: gauge
+  title: conviva.video_start_failures
+
+gauge.conviva.video_start_failures_errornames:
+  brief: Real-Time/Live simple table of video start failures by error names
+  description: Real-Time/Live simple table of video start failures by error names
+  metric_type: gauge
+  title: conviva.video_start_failures_errornames
+
+gauge.conviva.video_startup_time:
+  brief: Real-Time/Live label series of video startup time
+  description: Real-Time/Live label series of video startup time
+  metric_type: gauge
+  title: conviva.video_startup_time
+

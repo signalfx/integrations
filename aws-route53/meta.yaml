@@ -1,11 +1,12 @@
-{ "display_name":"Amazon Route 53",
-  "description": "SignalFx's integration with Amazon Route 53.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-route53",
-  "code": "https://aws.amazon.com/route53/",
-  "featured": false,
-  "logo_large": "integration_awsroute53.png",
-  "logo_small": "integration_awsroute53.png",
-  "data_signature": "namespace:\"AWS/Route53\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Networking & Content Delivery"]
-}
+browse_categories:
+- Networking & Content Delivery
+code: https://aws.amazon.com/route53/
+data_signature: namespace:"AWS/Route53"
+description: SignalFx's integration with Amazon Route 53.
+display_name: Amazon Route 53
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsroute53.png
+logo_small: integration_awsroute53.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-route53

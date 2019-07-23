@@ -1,11 +1,12 @@
-{ "display_name":"CouchDB",
-  "description": "Monitor CouchDB using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-couchdb",
-  "code": "https://github.com/signalfx/collectd-couchdb",
-  "featured": false,
-  "logo_small": "/images/repos/collectd-couchdb/img/integrations_couchdb.png",
-  "logo_large": "/images/repos/collectd-couchdb/img/integrations_couchdb%402x.png",
-  "data_signature": "plugin:\"couchdb\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd-couchdb
+data_signature: plugin:"couchdb"
+description: Monitor CouchDB using the SignalFx collectd agent.
+display_name: CouchDB
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-couchdb/img/integrations_couchdb%402x.png
+logo_small: /images/repos/collectd-couchdb/img/integrations_couchdb.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-couchdb

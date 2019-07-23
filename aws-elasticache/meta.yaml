@@ -1,11 +1,12 @@
-{ "display_name":"Amazon ElastiCache",
-  "description": "SignalFx's integration with Amazon ElastiCache.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-elasticache",
-  "code": "https://aws.amazon.com/elasticache/",
-  "featured": false,
-  "logo_large": "integration_awselasticache.png",
-  "logo_small": "integration_awselasticache.png",
-  "data_signature": "namespace:\"AWS/ElastiCache\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://aws.amazon.com/elasticache/
+data_signature: namespace:"AWS/ElastiCache"
+description: SignalFx's integration with Amazon ElastiCache.
+display_name: Amazon ElastiCache
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awselasticache.png
+logo_small: integration_awselasticache.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-elasticache

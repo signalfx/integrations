@@ -1,0 +1,12 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd-couchbase
+data_signature: plugin:"couchbase"
+description: Monitor Couchbase using the SignalFx Smart Agent.
+display_name: Couchbase
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-couchbase/img/integrations_couchbase%402x.png
+logo_small: /images/repos/collectd-couchbase/img/integrations_couchbase.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-couchbase

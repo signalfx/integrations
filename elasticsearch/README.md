@@ -55,7 +55,7 @@ Original Elasticsearch Documentation <a target="_blank" href="https://www.elasti
 | Elasticsearch     | 1.0.0 or later |
 | Smart Agent       | 4.4.0 or later to use the new `elasticsearch` monitor that replaced the deprecated `collectd/elasticsearch` monitor |
 
-### INSTALLATION
+### CONFIGURATION
 
 This integration is part of the <a
 href="https://docs.signalfx.com/en/latest/integrations/agent/index.html"

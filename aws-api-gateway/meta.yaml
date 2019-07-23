@@ -1,11 +1,13 @@
-{ "display_name":"Amazon API Gateway",
-  "description": "SignalFx's integration with Amazon API Gateway.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-api-gateway",
-  "code": "https://aws.amazon.com/api-gateway/",
-  "featured": false,
-  "logo_large": "integration_awsapigateway@2x.png",
-  "logo_small": "integration_awsapigateway.png",
-  "data_signature": "namespace:\"AWS/ApiGateway\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Networking & Content Delivery", "Mobile Services"]
-}
+browse_categories:
+- Networking & Content Delivery
+- Mobile Services
+code: https://aws.amazon.com/api-gateway/
+data_signature: namespace:"AWS/ApiGateway"
+description: SignalFx's integration with Amazon API Gateway.
+display_name: Amazon API Gateway
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsapigateway@2x.png
+logo_small: integration_awsapigateway.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-api-gateway

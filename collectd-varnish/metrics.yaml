@@ -1,0 +1,110 @@
+counter.varnish.cache-hit:
+  brief: Count of cache hits.
+  description: '> Count of cache hits
+
+    A cache hit indicates that an object has been delivered to a
+
+    client without fetching it from a backend server.'
+  metric_type: cumulative
+  title: Cache hits
+
+counter.varnish.cache-hitpass:
+  brief: Count of cache hits for pass
+  description: '> Count of hits for pass
+
+    A cache hit for pass indicates that Varnish is going to
+
+    pass the request to the backend and this decision has been
+
+    cached in it self. This counts how many times the cached
+
+    decision is being used.'
+  metric_type: cumulative
+  title: Cache hits for pass
+
+counter.varnish.cache-miss:
+  brief: Count of misses
+  description: '> Count of misses
+
+    A cache miss indicates the object was fetched from the
+
+    backend before delivering it to the backend.'
+  metric_type: cumulative
+  title: Cache misses
+
+counter.varnish.connections-received:
+  brief: The count of parseable client requests seen.
+  description: '> The count of parseable client requests seen
+
+    The count of parseable client requests seen by the server.'
+  metric_type: cumulative
+  title: Good client requests received
+
+counter.varnish.connections-recycled:
+  brief: Count of backend connection recycles
+  description: '> Count of backend connection recycles
+
+    This counter is increased whenever we have a keep-alive
+
+    connection that is put back into the pool of connections.
+
+    It has not yet been used, but it might be, unless the backend
+
+    closes it.'
+  metric_type: cumulative
+  title: Backend connection recycles
+
+counter.varnish.connections-reuses:
+  brief: Count of backend connection reuses
+  description: '> Count of backend connection reuses
+
+    This counter is increased whenever we reuse a recycled connection.'
+  metric_type: cumulative
+  title: Backend connection reuses
+
+counter.varnish.session-accepted:
+  brief: Count of sessions successfully accepted
+  description: '> Count of sessions successfully accepted'
+  metric_type: cumulative
+  title: Sessions accepted
+
+counter.varnish.totals-req_body:
+  brief: Total request body bytes received
+  description: '> Total request body bytes received
+
+    Total bytes from request bodies.'
+  metric_type: cumulative
+  title: Request body bytes
+
+counter.varnish.totals-req_header:
+  brief: Total request header bytes received
+  description: '> Total request header bytes received
+
+    Total bytes from request headers.'
+  metric_type: cumulative
+  title: Request header bytes
+
+counter.varnish.totals-resp_body:
+  brief: Total response body bytes transmitted
+  description: '> Total response body bytes transmitted
+
+    Total bytes from response bodies.'
+  metric_type: cumulative
+  title: Response body bytes
+
+counter.varnish.totals-resp_header:
+  brief: Total response header bytes received
+  description: '> Total response header bytes received
+
+    Total bytes from response headers.'
+  metric_type: cumulative
+  title: Response header bytes
+
+gauge.varnish.uptime:
+  brief: Child varnish process uptime
+  description: '> Child varnish process uptime
+
+    How long the child varnish process has been running.'
+  metric_type: gauge
+  title: Uptime
+

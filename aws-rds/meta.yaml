@@ -1,11 +1,12 @@
-{ "display_name":"Amazon RDS",
-  "description": "SignalFx's integration with Amazon Relational Database Service (RDS).",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-rds",
-  "code": "https://aws.amazon.com/rds/",
-  "featured": false,
-  "logo_large": "integration_awsrds.png",
-  "logo_small": "integration_awsrds.png",
-  "data_signature": "namespace:\"AWS/RDS\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://aws.amazon.com/rds/
+data_signature: namespace:"AWS/RDS"
+description: SignalFx's integration with Amazon Relational Database Service (RDS).
+display_name: Amazon RDS
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsrds.png
+logo_small: integration_awsrds.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-rds

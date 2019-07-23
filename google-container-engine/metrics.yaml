@@ -1,0 +1,66 @@
+container_cpu_reserved_cores:
+  brief: Number of cores of CPU reserved for the container. If no core limit is set,
+    this will be zero.
+  description: Number of cores of CPU reserved for the container. If no core limit
+    is set, this will be zero.
+  metric_type: gauge
+  title: container/cpu/reserved_cores
+
+container_cpu_usage_time:
+  brief: Cumulative CPU usage on all cores in seconds. This number divided by the
+    elapsed time represents usage as a number of cores, regardless of any core limit
+    that might be set.
+  description: Cumulative CPU usage on all cores in seconds. This number divided by
+    the elapsed time represents usage as a number of cores, regardless of any core
+    limit that might be set.
+  metric_type: cumulative
+  title: container/cpu/usage_time
+
+container_cpu_utilization:
+  brief: The percentage of the allocated CPU that is currently in use on the container.
+    If no core limit is set, then this metric is not set.
+  description: The percentage of the allocated CPU that is currently in use on the
+    container. If no core limit is set, then this metric is not set.
+  metric_type: gauge
+  title: container/cpu/utilization
+
+container_disk_bytes_total:
+  brief: "Total number of bytes of capacity on the disk identified by label \u2018\
+    device_name\u2019."
+  description: "Total number of bytes of capacity on the disk identified by label\
+    \ \u2018device_name\u2019."
+  metric_type: gauge
+  title: container/disk/bytes_total
+
+container_disk_bytes_used:
+  brief: "Total number of bytes used on the disk identified by label \u2018device_name\u2019\
+    ."
+  description: "Total number of bytes used on the disk identified by label \u2018\
+    device_name\u2019."
+  metric_type: gauge
+  title: container/disk/bytes_used
+
+container_memory_bytes_total:
+  brief: Memory limit of the container in bytes.
+  description: Memory limit of the container in bytes.
+  metric_type: gauge
+  title: container/memory/bytes_total
+
+container_memory_bytes_used:
+  brief: 'Memory usage in bytes, broken down by type: evictable and non-evictable.'
+  description: 'Memory usage in bytes, broken down by type: evictable and non-evictable.'
+  metric_type: gauge
+  title: container/memory/bytes_used
+
+container_memory_page_fault_count:
+  brief: 'Number of page faults, broken down by type: major and minor.'
+  description: 'Number of page faults, broken down by type: major and minor.'
+  metric_type: counter
+  title: container/memory/page_fault_count
+
+container_uptime:
+  brief: Number of seconds since the container started.
+  description: Number of seconds since the container started.
+  metric_type: cumulative
+  title: container/uptime
+

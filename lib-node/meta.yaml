@@ -1,8 +1,7 @@
-{ "display_name":"SignalFx node.js Library",
-  "description": "Programmatic interface in JavaScript for SignalFx APIs.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/lib-node",
-  "code": "https://github.com/signalfx/signalfx-nodejs",
-  "featured": false,
-  "logo_small": "/images/repos/lib-node/img/integrations_nodejs.png",
-  "logo_large": "/images/repos/lib-node/img/integrations_nodejs%402x.png"
-}
+code: https://github.com/signalfx/signalfx-nodejs
+description: Programmatic interface in JavaScript for SignalFx APIs.
+display_name: SignalFx node.js Library
+featured: false
+logo_large: /images/repos/lib-node/img/integrations_nodejs%402x.png
+logo_small: /images/repos/lib-node/img/integrations_nodejs.png
+project_url: https://github.com/signalfx/integrations/tree/master/lib-node

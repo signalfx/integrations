@@ -1,0 +1,204 @@
+GetRecords.Bytes:
+  brief: The number of bytes retrieved from the Kinesis stream, measured over the
+    specified time period.
+  description: The number of bytes retrieved from the Kinesis stream, measured over
+    the specified time period.
+  metric_type: null
+  title: GetRecords.Bytes
+
+GetRecords.IteratorAge:
+  brief: This metric is deprecated.
+  description: This metric is deprecated.
+  metric_type: null
+  title: GetRecords.IteratorAge
+
+GetRecords.IteratorAgeMilliseconds:
+  brief: Tracks the read position across all shards and consumers in the stream.
+  description: Tracks the read position across all shards and consumers in the stream.
+  metric_type: null
+  title: GetRecords.IteratorAgeMilliseconds
+
+GetRecords.Latency:
+  brief: The time taken per GetRecords operation, measured over the specified time
+    period.
+  description: The time taken per GetRecords operation, measured over the specified
+    time period.
+  metric_type: null
+  title: GetRecords.Latency
+
+GetRecords.Records:
+  brief: The number of records retrieved from the shard, measured over the specified
+    time period.
+  description: The number of records retrieved from the shard, measured over the specified
+    time period.
+  metric_type: null
+  title: GetRecords.Records
+
+GetRecords.Success:
+  brief: We recommend using CloudWatch alarms on the Average statistic to indicate
+    when records are failing from the stream.
+  description: We recommend using CloudWatch alarms on the Average statistic to indicate
+    when records are failing from the stream.
+  metric_type: null
+  title: GetRecords.Success
+
+IncomingBytes:
+  brief: The number of bytes successfully put to the shard over the specified time
+    period.
+  description: The number of bytes successfully put to the shard over the specified
+    time period.
+  metric_type: null
+  title: IncomingBytes
+
+IncomingRecords:
+  brief: The number of records successfully put to the shard over the specified time
+    period.
+  description: The number of records successfully put to the shard over the specified
+    time period.
+  metric_type: null
+  title: IncomingRecords
+
+IteratorAgeMilliseconds:
+  brief: The age of the last record in all GetRecords calls made against a shard,
+    measured over the specified time period.
+  description: The age of the last record in all GetRecords calls made against a shard,
+    measured over the specified time period.
+  metric_type: null
+  title: IteratorAgeMilliseconds
+
+OutgoingBytes:
+  brief: The number of bytes retrieved from the shard, measured over the specified
+    time period.
+  description: The number of bytes retrieved from the shard, measured over the specified
+    time period.
+  metric_type: null
+  title: OutgoingBytes
+
+OutgoingRecords:
+  brief: The number of records retrieved from the shard, measured over the specified
+    time period.
+  description: The number of records retrieved from the shard, measured over the specified
+    time period.
+  metric_type: null
+  title: OutgoingRecords
+
+PutRecord.Bytes:
+  brief: The number of bytes put to the Kinesis stream using the PutRecord operation
+    over the specified time period.
+  description: The number of bytes put to the Kinesis stream using the PutRecord operation
+    over the specified time period.
+  metric_type: null
+  title: PutRecord.Bytes
+
+PutRecord.Latency:
+  brief: The time taken per PutRecord operation, measured over the specified time
+    period.
+  description: The time taken per PutRecord operation, measured over the specified
+    time period.
+  metric_type: null
+  title: PutRecord.Latency
+
+PutRecord.Success:
+  brief: We recommend using CloudWatch alarms on the Average statistic to indicate
+    when records are failing to the stream.
+  description: We recommend using CloudWatch alarms on the Average statistic to indicate
+    when records are failing to the stream.
+  metric_type: null
+  title: PutRecord.Success
+
+PutRecords.Bytes:
+  brief: The number of bytes put to the Kinesis stream using the PutRecords operation
+    over the specified time period.
+  description: The number of bytes put to the Kinesis stream using the PutRecords
+    operation over the specified time period.
+  metric_type: null
+  title: PutRecords.Bytes
+
+PutRecords.Latency:
+  brief: The time taken per PutRecords operation, measured over the specified time
+    period.
+  description: The time taken per PutRecords operation, measured over the specified
+    time period.
+  metric_type: null
+  title: PutRecords.Latency
+
+PutRecords.Records:
+  brief: The number of successful records in a PutRecords operation per Kinesis stream,
+    measured over the specified time period.
+  description: The number of successful records in a PutRecords operation per Kinesis
+    stream, measured over the specified time period.
+  metric_type: null
+  title: PutRecords.Records
+
+PutRecords.Success:
+  brief: We recommend using CloudWatch alarms on the Average statistic to indicate
+    when records are failing to the stream.
+  description: We recommend using CloudWatch alarms on the Average statistic to indicate
+    when records are failing to the stream.
+  metric_type: null
+  title: PutRecords.Success
+
+ReadProvisionedThroughputExceeded:
+  brief: When your consumer-side record processing is falling behind, it is sometimes
+    difficult to know where the bottleneck is.
+  description: When your consumer-side record processing is falling behind, it is
+    sometimes difficult to know where the bottleneck is.
+  metric_type: null
+  title: ReadProvisionedThroughputExceeded
+
+SubscribeToShard.RateExceeded:
+  brief: This metric is emitted when a new subscription attempt fails because there
+    already is an active subscription by the same consumer or if you exceed the number
+    of calls per second allowed for this operation.
+  description: This metric is emitted when a new subscription attempt fails because
+    there already is an active subscription by the same consumer or if you exceed
+    the number of calls per second allowed for this operation.
+  metric_type: null
+  title: SubscribeToShard.RateExceeded
+
+SubscribeToShard.Success:
+  brief: This metric records whether the SubscribeToShard subscription was successfully
+    established.
+  description: This metric records whether the SubscribeToShard subscription was successfully
+    established.
+  metric_type: null
+  title: SubscribeToShard.Success
+
+SubscribeToShardEvent.Bytes:
+  brief: The number of bytes received from the shard, measured over the specified
+    time period.
+  description: The number of bytes received from the shard, measured over the specified
+    time period.
+  metric_type: null
+  title: SubscribeToShardEvent.Bytes
+
+SubscribeToShardEvent.MillisBehindLatest:
+  brief: The difference between the current time and when the last record of the SubscribeToShard
+    event was written to the stream.
+  description: The difference between the current time and when the last record of
+    the SubscribeToShard event was written to the stream.
+  metric_type: null
+  title: SubscribeToShardEvent.MillisBehindLatest
+
+SubscribeToShardEvent.Records:
+  brief: The number of records received from the shard, measured over the specified
+    time period.
+  description: The number of records received from the shard, measured over the specified
+    time period.
+  metric_type: null
+  title: SubscribeToShardEvent.Records
+
+SubscribeToShardEvent.Success:
+  brief: This metric is emitted every time an event is published successfully.
+  description: This metric is emitted every time an event is published successfully.
+  metric_type: null
+  title: SubscribeToShardEvent.Success
+
+WriteProvisionedThroughputExceeded:
+  brief: This is for the same purpose as the ReadProvisionedThroughputExceeded metric,
+    but for the producer (put) side of the stream.
+  description: This is for the same purpose as the ReadProvisionedThroughputExceeded
+    metric, but for the producer (put) side of the stream.
+  metric_type: null
+  title: WriteProvisionedThroughputExceeded
+

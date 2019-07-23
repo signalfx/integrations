@@ -1,7 +1,7 @@
 
 ---
 title: apache_idle_workers
-brief: The number of Apache workers that are idling.
+brief: The number of Apache workers that are idling
 metric_type: gauge
 custom: false
 ---

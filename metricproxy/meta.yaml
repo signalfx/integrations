@@ -1,8 +1,8 @@
-{ "display_name":"SignalFx metric proxy",
-  "description": "Aggregate metrics from collectd or Graphite (carbon) and forward them to SignalFx.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/metricproxy",
-  "code": "https://github.com/signalfx/metricproxy",
-  "featured": false,
-  "logo_small": "/images/repos/metricproxy/img/integrations_metricproxy.png",
-  "logo_large": "/images/repos/metricproxy/img/integrations_metricproxy%402x.png"
-}
+code: https://github.com/signalfx/metricproxy
+description: Aggregate metrics from collectd or Graphite (carbon) and forward them
+  to SignalFx.
+display_name: SignalFx metric proxy
+featured: false
+logo_large: /images/repos/metricproxy/img/integrations_metricproxy%402x.png
+logo_small: /images/repos/metricproxy/img/integrations_metricproxy.png
+project_url: https://github.com/signalfx/integrations/tree/master/metricproxy

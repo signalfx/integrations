@@ -1,0 +1,68 @@
+if_errors.rx:
+  brief: Count of receive errors on the interface
+  description: "> Count of receive errors on the interface.\nErrors happen due to\
+    \ various reasons. Some reasons are [explained here](https://unix.stackexchange.com/q/184604)\n\
+    **Rate/sec rollup** provides the current rate of receive errors on the interface\
+    \ in errors/sec.\n**Max rollup** provides total number of receive errors since\
+    \ the beginning. Note that since this is a\ncumulative counter, its value will\
+    \ periodically restart from zero when the \nmaximum possible value of the counter\
+    \ is exceeded."
+  metric_type: cumulative
+  title: Receive errors
+
+if_errors.tx:
+  brief: Count of transmit errors on the interface
+  description: "> Count of transmit errors on the interface.\nErrors happen due to\
+    \ various reasons. Some reasons are [explained here](https://unix.stackexchange.com/q/184604)\n\
+    **Rate/sec rollup** provides the current rate of transmit errors on the interface\
+    \ in errors/sec.\n**Max rollup** provides total number of transmit errors since\
+    \ the beginning. Note that since this is a\ncumulative counter, its value will\
+    \ periodically restart from zero when the \nmaximum possible value of the counter\
+    \ is exceeded."
+  metric_type: cumulative
+  title: Transmit errors
+
+if_octets.rx:
+  brief: Count of bytes (octets) received on the interface
+  description: "> Count of bytes received by the interface. \nYou can view this metric\
+    \ as a Rate/sec or a cumulative count (Max).\n**Rate/sec**: Provides the current\
+    \ traffic level on the interface in bytes/sec.\n**Max**: Provides the cumulative\
+    \ count of bytes received. Note that since this metric is a\ncumulative counter,\
+    \ its value will periodically restart from zero when the \nmaximum possible value\
+    \ of the counter is exceeded."
+  metric_type: cumulative
+  title: Bytes (octets) received
+
+if_octets.tx:
+  brief: Count of bytes (octets) transmitted by the interface
+  description: "> Count of bytes transmitted by the interface. \nYou can view this\
+    \ metric as a Rate/sec or a cumulative count (Max).\n**Rate/sec**: Provides the\
+    \ current traffic level on the interface in bytes/sec.\n**Max**: Provides the\
+    \ cumulative count of bytes transmitted. Note that since this metric is a\ncumulative\
+    \ counter, its value will periodically restart from zero when the \nmaximum possible\
+    \ value of the counter is exceeded."
+  metric_type: cumulative
+  title: Bytes (octets) transmitted
+
+if_packets.rx:
+  brief: Count of packets received on the interface
+  description: "> Count of packets received by the interface. \nYou can view this\
+    \ metric as a Rate/sec or a cumulative count (Max).\n**Rate/sec**: Provides the\
+    \ current traffic level on the interface in bytes/sec.\n**Max**: Provides the\
+    \ cumulative count of packets received. Note that since this metric is a\ncumulative\
+    \ counter, its value will periodically restart from zero when the \nmaximum possible\
+    \ value of the counter is exceeded."
+  metric_type: cumulative
+  title: Packets received
+
+if_packets.tx:
+  brief: Count of packets transmitted by the interface
+  description: "> Count of packets transmitted by the interface. \nYou can view this\
+    \ metric as a Rate/sec or a cumulative count (Max).\n**Rate/sec**: Provides the\
+    \ current traffic level on the interface in packets/sec.\n**Max**: Provides the\
+    \ cumulative count of packets transmitted. Note that since this metric is a\n\
+    cumulative counter, its value will periodically restart from zero when the \n\
+    maximum possible value of the counter is exceeded."
+  metric_type: cumulative
+  title: Packets transmitted
+

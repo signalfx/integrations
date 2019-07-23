@@ -1,11 +1,12 @@
-{ "display_name":"Google Cloud Bigtable",
-  "description": "SignalFx's integration with Google Cloud Bigtable",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-bigtable",
-  "code": "https://cloud.google.com/bigtable",
-  "featured": false,
-  "logo_small": "integration_googlecloudbigtable.png",
-  "logo_large": "integration_googlecloudbigtable%402x.png",
-  "data_signature": "service:\"bigtable\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://cloud.google.com/bigtable
+data_signature: service:"bigtable"
+description: SignalFx's integration with Google Cloud Bigtable
+display_name: Google Cloud Bigtable
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlecloudbigtable%402x.png
+logo_small: integration_googlecloudbigtable.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-cloud-bigtable

@@ -1,11 +1,12 @@
-{ "display_name":"Google App Engine",
-  "description": "SignalFx's integration with Google App Engine",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-appengine",
-  "code": "https://cloud.google.com/appengine",
-  "featured": false,
-  "logo_small": "integration_googleappengine.png",
-  "logo_large": "integration_googleappengine%402x.png",
-  "data_signature": "service:\"appengine\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://cloud.google.com/appengine
+data_signature: service:"appengine"
+description: SignalFx's integration with Google App Engine
+display_name: Google App Engine
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googleappengine%402x.png
+logo_small: integration_googleappengine.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-appengine

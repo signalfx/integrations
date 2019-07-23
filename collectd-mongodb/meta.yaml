@@ -1,11 +1,12 @@
-{ "display_name":"MongoDB",
-  "description": "Monitor MongoDB using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/collectd-mongodb",
-  "code": "https://github.com/signalfx/collectd-mongodb",
-  "featured": true,
-  "logo_small": "/images/repos/collectd-mongodb/img/integrations_mongodb.png",
-  "logo_large": "/images/repos/collectd-mongodb/img/integrations_mongodb%402x.png",
-  "data_signature": "plugin:\"mongo\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd-mongodb
+data_signature: plugin:"mongo"
+description: Monitor MongoDB using the SignalFx collectd agent.
+display_name: MongoDB
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-mongodb/img/integrations_mongodb%402x.png
+logo_small: /images/repos/collectd-mongodb/img/integrations_mongodb.png
+project_url: https://github.com/signalfx/collectd-mongodb

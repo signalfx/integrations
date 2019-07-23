@@ -1,11 +1,12 @@
-{ "display_name":"HAProxy",
-  "description": "Monitor HAProxy using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-haproxy",
-  "code": "https://github.com/signalfx/collectd-haproxy",
-  "featured": false,
-  "logo_small": "/images/repos/collectd-haproxy/img/integrations_haproxy.png",
-  "logo_large": "/images/repos/collectd-haproxy/img/integrations_haproxy%402x.png",
-  "data_signature": "plugin:\"haproxy\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Networking & Content Delivery"]
-}
+browse_categories:
+- Networking & Content Delivery
+code: https://github.com/signalfx/collectd-haproxy
+data_signature: plugin:"haproxy"
+description: Monitor HAProxy using the SignalFx collectd agent.
+display_name: HAProxy
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-haproxy/img/integrations_haproxy%402x.png
+logo_small: /images/repos/collectd-haproxy/img/integrations_haproxy.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-haproxy

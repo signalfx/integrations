@@ -1,0 +1,852 @@
+counter.caches.bypass.bytes:
+  brief: Total bytes read from an origin server due to a `proxy_cache_bypass` directive
+  description: 'The total number of bytes read from an origin server rather than the
+    cache due to a matching `proxy_cache_bypass` directive.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Bypass Bytes
+
+counter.caches.bypass.bytes.written:
+  brief: Total bytes written to the cache from responses that matched a `proxy_cache_bypass`
+    directive
+  description: 'The total number of bytes written to the cache that matched a `proxy_cache_bypass`
+    directive.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Bypass Bytes Written
+
+counter.caches.bypass.responses:
+  brief: Total responses from an origin server due to a `proxy_cache_bypass` directive
+  description: 'The total number of responses from an origin server rather than the
+    cache due to a matching `proxy_cache_bypass` directive.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Bypass Responses
+
+counter.caches.bypass.responses.written:
+  brief: Total responses written to the cache from responses that matched a `proxy_cache_bypass`
+    directive
+  description: 'The total number of responses written to the cache that matched a
+    `proxy_cache_bypass` directive.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Bypass Responses Written
+
+counter.caches.expire.bytes:
+  brief: Total bytes read from an origin server due to expired cache entries
+  description: 'The total number of bytes read from an origin server due to expired
+    cache entries.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Expiration Response Bytes
+
+counter.caches.expire.bytes.written:
+  brief: Total bytes written to the cache due to expired entries
+  description: 'The total number of bytes written to the cache due to expired entries.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Expiration Bytes Written
+
+counter.caches.expire.responses:
+  brief: Total responses from an origin server due to expired cache entries
+  description: 'The total number of responses from an origin server due to expired
+    cache entries.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Expiration Responses
+
+counter.caches.expire.responses.written:
+  brief: Total responses written to the cache due to expired entries
+  description: 'The total number of responses written to the cache due to expired
+    entries.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Expiration Responses Written
+
+counter.caches.hit.bytes:
+  brief: Total bytes read on cache hits
+  description: 'The total number of bytes read from the cache with valid, fresh data.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Hit Bytes
+
+counter.caches.hit.responses:
+  brief: Total responses read on cache hits
+  description: 'The total number of responses read from the cache with valid, fresh
+    data.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Hit Responses
+
+counter.caches.miss.bytes:
+  brief: Total bytes not found in the cache and fetched from the origin server
+  description: 'The total number of bytes from responses not found in the cache and
+    fetched from the origin server.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Miss Bytes
+
+counter.caches.miss.bytes.written:
+  brief: Total bytes written to the cache due to cache misses
+  description: 'The total number of bytes written to the cache after fetching from
+    the origin server due to a missing entry.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Miss Bytes Written
+
+counter.caches.miss.responses:
+  brief: Total responses taken from an origin server instead of the cache
+  description: 'The total number of responses taken from the origin server and not
+    the cache due to a missing entry.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Miss Responses
+
+counter.caches.miss.responses.written:
+  brief: Total responses written to the cache after a miss
+  description: 'The total number of responses written to the cache after fetch from
+    the origin server due to a missing entry.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Miss Responses Written
+
+counter.caches.revalidated.bytes:
+  brief: Total revalidated bytes read from the cache
+  description: 'The total number of bytes from revalidated responses read from the
+    cache.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Revalidated Bytes
+
+counter.caches.revalidated.responses:
+  brief: Total revalidated responses read from the cache
+  description: 'The total number of revalidated responses read from the cache.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Revalidated Responses
+
+counter.caches.stale.bytes:
+  brief: Total stale bytes read from the cache
+  description: 'The total number of bytes from stale responses read from the cache
+    due to the origin server not responding correctly.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Stale Bytes
+
+counter.caches.stale.responses:
+  brief: Total stale responses read from the cache
+  description: 'The total number of stale responses read from the cache due to the
+    origin server not responding correctly.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Stale Responses
+
+counter.caches.updating.bytes:
+  brief: Total stale responses read from the cache while content was being updated
+  description: 'The total number of bytes from stale responses read from the cache
+    while the entry was being updated.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Updating Bytes
+
+counter.caches.updating.responses:
+  brief: Total stale responses read from the cache while content was being updated
+  description: 'The total number of stale responses read from the cache while the
+    entry was being updated.
+
+    This metric is reported with the dimension `cache.name` to indicate the name of
+    the cache.'
+  metric_type: cumulative
+  title: Cache Updating Responses
+
+counter.connections.accepted:
+  brief: Total accepted connections
+  description: The total number of accepted client connections. This metric is reported
+    with the dimension `nginx.version`.
+  metric_type: cumulative
+  title: Accepted Connections
+
+counter.connections.dropped:
+  brief: Total dropped connections
+  description: The total number of dropped client connections. This metric is reported
+    with the dimension `nginx.version`.
+  metric_type: cumulative
+  title: Dropped Connections
+
+counter.processes.respawned:
+  brief: Total number of abnormally terminated and respawned child processes.
+  description: 'The total number of abnormally terminated and respawned child processes.
+
+    This metric is reported with the dimension `nginx.version`.'
+  metric_type: cumulative
+  title: Respawned Processes
+
+counter.requests.total:
+  brief: Total number of requests
+  description: The total number of client requests. This metric is reported with the
+    dimension `nginx.version`.
+  metric_type: cumulative
+  title: Total Requests
+
+counter.server.zone.bytes.received:
+  brief: Number of bytes received by a server zone
+  description: 'The total number of bytes received from clients across a single http
+    server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone Bytes Received
+
+counter.server.zone.bytes.sent:
+  brief: Number of bytes sent by a server zone
+  description: 'The total number of bytes sent to clients across a single http server
+    status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone Bytes Sent
+
+counter.server.zone.discarded:
+  brief: Total requests completed without sending a response
+  description: 'The total number of requests completed without sending a response
+    across a single http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone Discarded Requests
+
+counter.server.zone.processing:
+  brief: Requests currently being processed
+  description: 'The number of client requests that are currently being processed across
+    a single http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone Processing Requests
+
+counter.server.zone.requests:
+  brief: Total requests received from clients
+  description: 'The total number of requests received from clients across a single
+    http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone Requests
+
+counter.server.zone.responses.1xx:
+  brief: Total 1xx status code responses
+  description: 'The total number of client responses with a 1xx status code across
+    a single http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone 1xx Responses
+
+counter.server.zone.responses.2xx:
+  brief: Total 2xx status code responses
+  description: 'The total number of client responses with a 2xx status code across
+    a single http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone 2xx Responses
+
+counter.server.zone.responses.3xx:
+  brief: Total 3xx status code responses
+  description: 'The total number of client responses with a 3xx status code across
+    a single http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone 3xx Responses
+
+counter.server.zone.responses.4xx:
+  brief: Total 4xx status code responses
+  description: 'The total number of client responses with a 4xx status code across
+    a single http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone 4xx Responses
+
+counter.server.zone.responses.5xx:
+  brief: Total 5xx status code responses
+  description: 'The total number of client responses with a 5xx status code across
+    a single http server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone 5xx Responses
+
+counter.server.zone.responses.total:
+  brief: Total responses sent to clients
+  description: 'The total number of responses sent to clients across a single http
+    server status zone.
+
+    This metric is reported with dimension `server.zone.name` to indicate the name
+    of the server status zone.'
+  metric_type: cumulative
+  title: Server Zone Total Responses
+
+counter.ssl.handshakes.failed:
+  brief: Total failed SSL handshakes
+  description: The total number of failed SSL handshakes.
+  metric_type: cumulative
+  title: SSL Handshakes Failed
+
+counter.ssl.handshakes.successful:
+  brief: Total successful SSL handshakes
+  description: The total number of successful SSH handshakes.
+  metric_type: cumulative
+  title: SSL Successful Handshakes
+
+counter.ssl.sessions.reuses:
+  brief: Total SSL session reuses
+  description: The total number of session reuses during SSL handshake.
+  metric_type: cumulative
+  title: SSL Session Reuses
+
+counter.stream.server.zone.connections:
+  brief: Total accepted connections
+  description: 'The total number of connections accepted from clients across a single
+    stream server status zone.
+
+    This metric is reported with dimension `stream.server.zone.name` to indicate the
+    name of the stream server status zone.'
+  metric_type: cumulative
+  title: Stream Server Zone Accepted Connections
+
+counter.stream.server.zone.discarded:
+  brief: Total connections completed without a session
+  description: "The total number of connections completed without creating a session\
+    \ across a single stream server status zone.\n This metric is reported with dimension\
+    \ `stream.server.zone.name` to indicate the name of the stream server status zone."
+  metric_type: cumulative
+  title: Stream Server Zone Discarded Connections
+
+counter.stream.server.zone.processing:
+  brief: Connections that are currently being processed
+  description: "The number of client connections that are currently being processed\
+    \ across a single stream server status zone.\n This metric is reported with dimension\
+    \ `stream.server.zone.name` to indicate the name of the stream server status zone."
+  metric_type: cumulative
+  title: Stream Server Zone Processing Connections
+
+counter.stream.server.zone.received:
+  brief: Total bytes received from clients
+  description: "The total number of bytes received from clients across a single stream\
+    \ server status zone.\n This metric is reported with dimension `stream.server.zone.name`\
+    \ to indicate the name of the stream server status zone."
+  metric_type: cumulative
+  title: Stream Server Zone Bytes Received
+
+counter.stream.server.zone.sent:
+  brief: Total bytes sent to clients
+  description: 'The total number of bytes received from clients across a single stream
+    server status zone.
+
+    This metric is reported with dimension `stream.server.zone.name` to indicate the
+    name of the stream server status zone.'
+  metric_type: cumulative
+  title: Stream Server Zone Bytes Sent
+
+counter.stream.server.zone.sessions.2xx:
+  brief: Completed sessions with a 2xx status code
+  description: 'The total number of sessions completed with a 2xx status code across
+    a single stream server status zone.
+
+    This metric is reported with dimension `stream.server.zone.name` to indicate the
+    name of the stream server status zone.'
+  metric_type: cumulative
+  title: Stream Server Zone 2xx Sessions
+
+counter.stream.server.zone.sessions.4xx:
+  brief: Completed sessions with a 4xx status code
+  description: 'The total number of sessions completed with a 4xx status code across
+    a single stream server status zone.
+
+    This metric is reported with dimension `stream.server.zone.name` to indicate the
+    name of the stream server status zone.'
+  metric_type: cumulative
+  title: Stream Server Zone 4xx Sessions
+
+counter.stream.server.zone.sessions.5xx:
+  brief: Completed sessions with a 5xx status code
+  description: 'The total number of sessions completed with a 5xx status code across
+    a single stream server status zone.
+
+    This metric is reported with dimension `stream.server.zone.name` to indicate the
+    name of the stream server status zone.'
+  metric_type: cumulative
+  title: Stream Server Zone 5xx Sessions
+
+counter.stream.upstreams.active:
+  brief: The current number of connections for a stream upstream server
+  description: 'The current number of connections for a single stream upstream server.
+    This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Active Connections
+
+counter.stream.upstreams.bytes.received:
+  brief: Total number of bytes received from a stream upstream server
+  description: 'The total number of bytes received from a single stream upstream server.
+    This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Bytes Received
+
+counter.stream.upstreams.bytes.sent:
+  brief: Total number of bytes sent to a stream upstream server
+  description: 'The total number of bytes sent to a single stream upstream server.
+    This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Bytes Sent
+
+counter.stream.upstreams.connections.max:
+  brief: Maximum number of simultaneous connections to a stream upstream server
+  description: 'The maximum number of simultaneous connections to a single stream
+    upstream server. This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Max Connections
+
+counter.stream.upstreams.connections:
+  brief: Total number of connections forwarded to a stream upstream server
+  description: 'The total number of client connections forwarded to a single stream
+    upstream server. This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Connections
+
+counter.stream.upstreams.downtime:
+  brief: Total time the stream upstream server was in the `unavail`, `checking`, and
+    `unhealthy` states
+  description: 'The total time the stream upstream server was in the `unavail`, `checking`,
+    and `unhealthy` states.
+
+    This metric is reported with dimensions `upstream.name` and `upstream.peer.name`
+
+    to indicate the upstream group name and the individual server name.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Downtime
+
+counter.stream.upstreams.fails:
+  brief: Total number of unsuccessful attempts to communicate with stream upstream
+    server
+  description: 'The total number of unsuccessful attempts to communicate with a stream
+    upstream server. This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Fails
+
+counter.stream.upstreams.health.checks.checks:
+  brief: Total health check requests made to a stream upstream server server
+  description: 'The total number of health check requests made to a stream upstream
+    server server. This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Health Check Checks
+
+counter.stream.upstreams.health.checks.fails:
+  brief: Total failed health check requests made to a stream upstream server server
+  description: 'The total number of failed health check requests made to a stream
+    upstream server server. This metric is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Health Check Fails
+
+counter.stream.upstreams.health.checks.unhealthy:
+  brief: Total number of times a stream upstream server became unhealthy
+  description: 'The total number of times a stream upstream server entered the `unhealthy`
+    state due to failed health checks.
+
+    This metric is reported with dimensions `stream.upstream.name` and `stream.upstream.peer.name`
+    to indicate the name
+
+    of the upstream group and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Health Check Unhealthy
+
+counter.stream.upstreams.unavailable:
+  brief: Number of times a stream upstream server server became unavailable for client
+    connections
+  description: 'The total number of times the server became unavailable for client
+    connections due to the number of unsuccessful
+
+    attempts reaching the `max_fails` threshold. This metric is reported with dimensions
+
+    `stream.upstream.name` and `stream.upstream.peer.name` to indicate the name of
+    the upstream group and name of the
+
+    individual server, respectively.'
+  metric_type: cumulative
+  title: Stream Upstream Peer Unavailable
+
+counter.upstreams.active:
+  brief: Current number of active connections for an upstream server
+  description: 'The current number of active connections for a single upstream server.
+    This metric is reported with dimensions
+
+    `upstream.name` and `upstream.peer.name` to indicate the upstream group name and
+    the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Active Connections
+
+counter.upstreams.bytes.received:
+  brief: Total number of bytes received from an upstream server
+  description: 'The total number of bytes received from a single upstream server.
+    This metric is reported
+
+    with dimensions `upstream.name` and `upstream.peer.name` to indicate the name
+    of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Upstream Peer Bytes Received
+
+counter.upstreams.bytes.sent:
+  brief: Total number of bytes sent to an upstream server
+  description: 'The total number of bytes sent to a single upstream server. This metric
+    is reported
+
+    with dimensions `stream.upstream.name` and `stream.upstream.peer.name` to indicate
+    the name of the upstream group
+
+    and name of the individual server, respectively.'
+  metric_type: cumulative
+  title: Upstream Peer Bytes Sent
+
+counter.upstreams.downtime:
+  brief: Total time the server was in the `unavail`, `checking`, and `unhealthy` states
+  description: 'The total time the server was in the `unavail`, `checking`, and `unhealthy`
+    states. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Downtime
+
+counter.upstreams.fails:
+  brief: Total failed attempts to communicate with an upstream server
+  description: 'The total number of unsuccessful attempts to communicate with a single
+    upstream server. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Failed Connections
+
+counter.upstreams.health.checks.checks:
+  brief: Total failed health check requests made to an upstream server
+  description: 'The total number of health check requests made to an upstream server.
+    This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Health Check Checks
+
+counter.upstreams.health.checks.fails:
+  brief: Total failed health check requests made to an upstream server
+  description: 'The total number of failed health check requests made to an upstream
+    server. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Health Check Fails
+
+counter.upstreams.health.checks.unhealthy:
+  brief: Total number of times an upstream server became unhealthy
+  description: 'The total number of times an upstream server entered the `unhealthy`
+    state due to failed health checks.
+
+    This metric is reported with dimensions `upstream.name` and `upstream.peer.name`
+    to indicate the upstream group name
+
+    and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Health Check Unhealthy
+
+counter.upstreams.requests:
+  brief: Total number of client requests forwarded to an upstream server
+  description: 'The total number of client requests forwarded to an upstream server.
+    This metric is reported with dimensions
+
+    `upstream.name` and `upstream.peer.name` to indicate the upstream group name and
+    the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Requests
+
+counter.upstreams.responses.1xx:
+  brief: Total 1xx status code responses from an upstream server
+  description: 'The total number of responses obtained from an upstream server with
+    a 1xx status code. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer 1xx Responses
+
+counter.upstreams.responses.2xx:
+  brief: Total 2xx status code responses from an upstream server
+  description: 'The total number of responses obtained from an upstream server with
+    a 2xx status code. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer 2xx Responses
+
+counter.upstreams.responses.3xx:
+  brief: Total 3xx status code responses from an upstream server
+  description: 'The total number of responses obtained from an upstream server with
+    a 3xx status code. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer 3xx Responses
+
+counter.upstreams.responses.4xx:
+  brief: Total 4xx status code responses from an upstream server
+  description: 'The total number of responses obtained from an upstream server with
+    a 4xx status code. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer 4xx Responses
+
+counter.upstreams.responses.5xx:
+  brief: Total 5xx status code responses from an upstream server
+  description: 'The total number of responses obtained from an upstream server with
+    a 5xx status code. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer 5xx Responses
+
+counter.upstreams.responses.total:
+  brief: Total responses obtained from an upstream server
+  description: 'The total number of responses obtained from an upstream server. This
+    metric is reported with dimensions
+
+    `upstream.name` and `upstream.peer.name` to indicate the upstream group name and
+    the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Total Responses
+
+counter.upstreams.unavailable:
+  brief: Number of times an upstream peer server became unavailable for client connections
+  description: 'The total number of times the server became unavailable for client
+    connections due to the number of unsuccessful
+
+    attempts reaching the `max_fails` threshold. This metric is reported with dimensions
+
+    `upstream.name` and `upstream.peer.name` to indicate the upstream group name and
+    the individual server name.'
+  metric_type: cumulative
+  title: Upstream Peer Unavailable
+
+counter.zone.pages.free:
+  brief: Current number of free memory pages
+  description: 'The current number of free memory pages for a single shared memory
+    zone. This metric is reported with the dimension
+
+    `memory.zone.name` to indicate the name of the shared memory zone.'
+  metric_type: cumulative
+  title: Memory Zone Pages Free
+
+counter.zone.pages.used:
+  brief: Current number of used memory pages
+  description: 'The current number of used memory pages for a single shared memory
+    zone. This metric is reported with the dimension
+
+    `memory.zone.name` to indicate the name of the shared memory zone.'
+  metric_type: cumulative
+  title: Memory Zone Pages Used
+
+gauge.caches.size.max:
+  brief: Maximum size of the cache
+  description: 'The limit on the maximum size of the cache in bytes. This metric is
+    reported with the dimension `cache.name` to
+
+    indicate the name of the cache.'
+  metric_type: gauge
+  title: Max Cache Size
+
+gauge.caches.size:
+  brief: Current size of the cache
+  description: 'The current size of the cache in bytes. This metric is reported with
+    the dimension `cache.name` to
+
+    indicate the name of the cache.'
+  metric_type: gauge
+  title: Cache Size
+
+gauge.connections.active:
+  brief: Current number of active connections
+  description: The current number of active client connections. This metric is reported
+    with the dimension `nginx.version`.
+  metric_type: gauge
+  title: Active Connections
+
+gauge.connections.idle:
+  brief: Total idle connections
+  description: The total number of idle client connections. This metric is reported
+    with the dimension `nginx.version`.
+  metric_type: gauge
+  title: Idle Connections
+
+gauge.requests.current:
+  brief: Current number of client requests
+  description: The current number of client requests. This metric is reported with
+    the dimension `nginx.version`.
+  metric_type: gauge
+  title: Current Requests
+
+gauge.stream.upstreams.response.time:
+  brief: Average time to get the full response from the server
+  description: 'The average time to get the full response from the stream upstream
+    server. This metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: gauge
+  title: Stream Upstream Peer Response Time
+
+gauge.stream.upstreams.zombies:
+  brief: Current number of servers removed from the stream upstream group but still
+    processing active client requests
+  description: 'The current number of servers removed from the stream upstream group
+    but still processing active client requests.
+
+    This metric is reported with the `upstream.name` dimension to indicate the upstream
+    group name.'
+  metric_type: gauge
+  title: Stream Upstream Zombie Servers
+
+gauge.upstreams.header.time:
+  brief: Average time to get the response header from the server
+  description: 'The average time to get the response header from the server. This
+    metric is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: gauge
+  title: Upstream Peer Header Time
+
+gauge.upstreams.keepalive:
+  brief: The current number of idle keepalive connections
+  description: 'The current number of idle keepalive connections for the entire upstream
+    group. This metric is reported with
+
+    the `upstream.name` dimension to indicate the upstream group name.'
+  metric_type: gauge
+  title: Upstream Keepalive Connections
+
+gauge.upstreams.response.time:
+  brief: Average time to get the full response from the server
+  description: 'The average time to get the full response from the server. This metric
+    is reported with
+
+    dimensions `upstream.name` and `upstream.peer.name` to indicate the upstream group
+    name and the individual server name.'
+  metric_type: gauge
+  title: Upstream Peer Response Time
+
+gauge.upstreams.zombies:
+  brief: Current number of servers removed from the group but still processing active
+    client requests
+  description: 'The current number of servers removed from the group but still processing
+    active client requests.
+
+    This metric is reported with the `upstream.name` dimension to indicate the upstream
+    group name.'
+  metric_type: gauge
+  title: Upstream Zombie Servers
+

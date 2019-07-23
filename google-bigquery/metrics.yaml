@@ -1,0 +1,66 @@
+query_count:
+  brief: In flight queries.
+  description: In flight queries.
+  metric_type: gauge
+  title: query/count
+
+query_execution_times:
+  brief: Distribution of queries execution times.
+  description: Distribution of queries execution times.
+  metric_type: gauge
+  title: query/execution_times
+
+query_scanned_bytes:
+  brief: Scanned bytes per minute.
+  description: Scanned bytes per minute.
+  metric_type: counter
+  title: query/scanned_bytes
+
+query_scanned_bytes_billed:
+  brief: Scanned bytes billed per minute.
+  description: Scanned bytes billed per minute.
+  metric_type: counter
+  title: query/scanned_bytes_billed
+
+slots_allocated_for_project:
+  brief: Number of BigQuery slots currently allocated for the project.
+  description: Number of BigQuery slots currently allocated for the project.
+  metric_type: gauge
+  title: slots/allocated_for_project
+
+slots_total_available:
+  brief: Total number of BigQuery slots available for the project.
+  description: Total number of BigQuery slots available for the project.
+  metric_type: gauge
+  title: slots/total_available
+
+storage_stored_bytes:
+  brief: Number of bytes stored.
+  description: Number of bytes stored.
+  metric_type: gauge
+  title: storage/stored_bytes
+
+storage_table_count:
+  brief: Number of tables.
+  description: Number of tables.
+  metric_type: gauge
+  title: storage/table_count
+
+storage_uploaded_bytes:
+  brief: Uploaded bytes per minute.
+  description: Uploaded bytes per minute.
+  metric_type: counter
+  title: storage/uploaded_bytes
+
+storage_uploaded_bytes_billed:
+  brief: Uploaded bytes billed per minute.
+  description: Uploaded bytes billed per minute.
+  metric_type: counter
+  title: storage/uploaded_bytes_billed
+
+storage_uploaded_row_count:
+  brief: Uploaded rows per minute.
+  description: Uploaded rows per minute.
+  metric_type: counter
+  title: storage/uploaded_row_count
+

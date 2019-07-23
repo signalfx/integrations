@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.reading
-brief: This metric shows how many workers are in the process of receiving requests (headers or body).
+brief: This metric shows how many workers are in the process of receiving requests (headers or body)
 metric_type: gauge
 custom: true
 ---

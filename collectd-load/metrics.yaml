@@ -1,0 +1,27 @@
+load.longterm:
+  brief: Average CPU load per core over the last 15 minutes
+  description: '> Average number of schedulable processes per CPU core over the last
+    fifteen minutes
+
+    A value above 1.0 indicates the system was overloaded during the last 15 minutes.'
+  metric_type: gauge
+  title: Long term CPU load
+
+load.midterm:
+  brief: Average CPU load per core over the last five minutes
+  description: '> Average number of schedulable processes per CPU core over the last
+    five minutes
+
+    A value above 1.0 indicates the system was overloaded during the last 5 minutes.'
+  metric_type: gauge
+  title: Medium term CPU load
+
+load.shortterm:
+  brief: Average CPU load per core over the last one minute
+  description: '> Average number of schedulable processes per CPU core over the last
+    one minute
+
+    A value above 1.0 indicates the system was overloaded during the last minute.'
+  metric_type: gauge
+  title: Short term CPU load
+

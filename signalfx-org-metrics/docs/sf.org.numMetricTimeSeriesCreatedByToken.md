@@ -1,5 +1,5 @@
 ---
-title:sf.org.numMetricTimeSeriesCreatedByToken
+title: sf.org.numMetricTimeSeriesCreatedByToken
 brief: Per token number of MTS created
 metric_type: counter
 ---

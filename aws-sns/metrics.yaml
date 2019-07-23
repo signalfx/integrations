@@ -1,0 +1,64 @@
+NumberOfMessagesPublished:
+  brief: The number of messages published to your Amazon SNS topics.
+  description: The number of messages published to your Amazon SNS topics.
+  metric_type: null
+  title: NumberOfMessagesPublished
+
+NumberOfNotificationsDelivered:
+  brief: The number of messages successfully delivered from your Amazon SNS topics
+    to subscribing endpoints.
+  description: The number of messages successfully delivered from your Amazon SNS
+    topics to subscribing endpoints.
+  metric_type: null
+  title: NumberOfNotificationsDelivered
+
+NumberOfNotificationsFailed:
+  brief: The number of messages that Amazon SNS failed to deliver.
+  description: The number of messages that Amazon SNS failed to deliver.
+  metric_type: null
+  title: NumberOfNotificationsFailed
+
+NumberOfNotificationsFilteredOut-InvalidAttributes:
+  brief: "The number of messages that were rejected by subscription filter policies\
+    \ because the messages' attributes are invalid \u2013 for example, because the\
+    \ attribute JSON is incorrectly formatted."
+  description: "The number of messages that were rejected by subscription filter policies\
+    \ because the messages' attributes are invalid \u2013 for example, because the\
+    \ attribute JSON is incorrectly formatted."
+  metric_type: null
+  title: NumberOfNotificationsFilteredOut-InvalidAttributes
+
+NumberOfNotificationsFilteredOut-NoMessageAttributes:
+  brief: The number of messages that were rejected by subscription filter policies
+    because the messages have no attributes.
+  description: The number of messages that were rejected by subscription filter policies
+    because the messages have no attributes.
+  metric_type: null
+  title: NumberOfNotificationsFilteredOut-NoMessageAttributes
+
+NumberOfNotificationsFilteredOut:
+  brief: The number of messages that were rejected by subscription filter policies.
+  description: The number of messages that were rejected by subscription filter policies.
+  metric_type: null
+  title: NumberOfNotificationsFilteredOut
+
+PublishSize:
+  brief: The size of messages published.
+  description: The size of messages published.
+  metric_type: null
+  title: PublishSize
+
+SMSMonthToDateSpentUSD:
+  brief: The charges you have accrued since the start of the current calendar month
+    for sending SMS messages.
+  description: The charges you have accrued since the start of the current calendar
+    month for sending SMS messages.
+  metric_type: null
+  title: SMSMonthToDateSpentUSD
+
+SMSSuccessRate:
+  brief: The rate of successful SMS message deliveries.
+  description: The rate of successful SMS message deliveries.
+  metric_type: null
+  title: SMSSuccessRate
+

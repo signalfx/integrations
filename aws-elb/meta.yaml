@@ -1,11 +1,12 @@
-{ "display_name":"Amazon ELB",
-  "description": "SignalFx's integration with Elastic Load Balancing (ELB).",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-elb",
-  "code": "https://aws.amazon.com/elasticloadbalancing/",
-  "featured": false,
-  "logo_large": "integration_awselb.png",
-  "logo_small": "integration_awselb.png",
-  "data_signature": "namespace:\"AWS/ELB\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Networking & Content Delivery"]
-}
+browse_categories:
+- Networking & Content Delivery
+code: https://aws.amazon.com/elasticloadbalancing/
+data_signature: namespace:"AWS/ELB"
+description: SignalFx's integration with Elastic Load Balancing (ELB).
+display_name: Amazon ELB
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awselb.png
+logo_small: integration_awselb.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-elb

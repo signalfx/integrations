@@ -1,7 +1,7 @@
 
 ---
 title: cpu.interrupt
-brief: CPU time spent while servicing hardware interrupts.
+brief: CPU time spent while servicing hardware interrupts
 metric_type: cumulative
 custom: true
 ---

@@ -1,0 +1,95 @@
+cpu.utilization:
+  brief: Percent of CPU used on this host.
+  description: "This metric shows the amount of CPU in use on this machine, as a percent\
+    \ of total CPU available. \nThe SignalFx metadata plugin computes this metric\
+    \ based on the CPU metrics output by the `aggregation` plugin for collectd or\
+    \ the `cpu` plugin for Telegraf. First, compute the ratio of `cpu.idle` to the\
+    \ sum of all CPU metrics. Next, subtract that number from 1 to yield the ratio\
+    \ of CPU that is not idle, and multiply by 100 to display as percent, as follows:\
+    \ \n```\n[1 - cpu.idle / sum(cpu.*)] * 100\n```"
+  metric_type: gauge
+  title: CPU utilization
+
+cpu.utilization_per_core:
+  brief: Percent of CPU used on each core.
+  description: "This metric shows the amount of CPU in use on each core, as a percent\
+    \ of total CPU available per core. \nThe SignalFx metadata plugin computes this\
+    \ metric based on the CPU metrics output by the `cpu` plugin for collectd and\
+    \ Telegraf. First, compute the ratio of `cpu.idle` to the sum of all CPU metrics.\
+    \ Next, subtract that number from 1 to yield the ratio of CPU that is not idle,\
+    \ and multiply by 100 to display as percent, as follows: \n```\n[1 - cpu.idle\
+    \ / sum(cpu.*)] * 100\n```"
+  metric_type: gauge
+  title: CPU utilization per core
+
+disk.summary_utilization:
+  brief: Percent of disk space utilized on all volumes on this host.
+  description: "This metric shows the percent of disk space utilized on this host,\
+    \ aggregated across all volumes. \nThe SignalFx metadata plugin computes this\
+    \ metric based on the disk space metrics output by the `df` plugin for collectd\
+    \ and the `disk` plugin for Telegraf as follows, initially summing all metrics\
+    \ by host: \ncollectd\n```\n100 * [df_complex.used / (df_complex.free + df_complex.used)]\
+    \ \n```\nTelegraf\n```\n100 * disk.used / disk.total\n```"
+  metric_type: gauge
+  title: Disk utilization summary
+
+disk.utilization:
+  brief: Percent of disk used on this volume.
+  description: "This metric shows the amount of disk space in use on this volume,\
+    \ as a percentage of total disk space available on the volume. \nThe SignalFx\
+    \ metadata plugin computes this metric based on the disk space metrics output\
+    \ by the `df` plugin for collectd, as follows:\ncollectd\n```\n100 * [df_complex.used\
+    \ / (df_complex.free + df_complex.used)] \n```\nOn Telegraf, the SignalFx metadata\
+    \ plugin reports `disk.utilization` with the value of the `disk` plugin's `used_percent`\
+    \ metric."
+  metric_type: gauge
+  title: Disk utilization
+
+disk_ops.total:
+  brief: Total number of disk read and write operations on this host.
+  description: 'This metric shows the total number of disk read and write operations
+    on this host, summed across all volumes. The SignalFx metadata plugin computes
+    this metric based on the disk operations metrics output by the `disk` plugin for
+    collectd and the `diskio` plugin for Telegraf as follows, initially summing all
+    metrics by host:
+
+    collectd
+
+    ```
+
+    disk_ops.read + disk_ops.write
+
+    ```
+
+    Telegraf
+
+    ```
+
+    diskio.reads + diskio.writes
+
+    ```'
+  metric_type: cumulative
+  title: Disk ops total
+
+memory.utilization:
+  brief: Percent of memory in use on this host.
+  description: "This metric shows the amount of memory in use on this machine, as\
+    \ a percent of total memory available. \nThe SignalFx metadata plugin computes\
+    \ this metric based on the metrics output by the `memory` plugin for collectd\
+    \ and the `mem` plugin for Telegraf. The calculation used is as follows:\ncollectd\n\
+    ```\n1.0 * memory.used / sum (memory.*) * 100\n```\nTelegraf\n```\n1.0 * mem.used\
+    \ / sum (mem.*) * 100\n```"
+  metric_type: gauge
+  title: Memory utilization
+
+network.total:
+  brief: Total amount of inbound and outbound network traffic on this host, in bytes.
+  description: "This metric shows the total amount of inbound and outbound network\
+    \ traffic on this host, in bytes. \nThe SignalFx metadata plugin computes this\
+    \ metric based on the network traffic metrics output by the `interface` plugin\
+    \ for collectd and the `net` plugin for Telegraf as follows, initially summing\
+    \ all metrics by host:\ncollectd\n```\nif_octets.rx + if_octets.tx\n```\nTelegraf\n\
+    ```\nnet.bytes_recv + net.bytes_sent\n```"
+  metric_type: cumulative
+  title: Network total
+

@@ -1,8 +1,7 @@
-{ "display_name":"Tail collectd plugin",
-  "description": "The Tail plugin pulls syslog entries into collectd",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-tail-syslog",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/tail.c",
-  "featured": false,
-  "logo_large": "/images/repos/collectd-tail-syslog/img/integrations_collectd%402x.png",
-  "logo_small": "/images/repos/collectd-tail-syslog/img/integrations_collectd.png"
-}
+code: https://github.com/signalfx/collectd/blob/master/src/tail.c
+description: The Tail plugin pulls syslog entries into collectd
+display_name: Tail collectd plugin
+featured: false
+logo_large: /images/repos/collectd-tail-syslog/img/integrations_collectd%402x.png
+logo_small: /images/repos/collectd-tail-syslog/img/integrations_collectd.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-tail-syslog

@@ -1,0 +1,1051 @@
+sf.org.grossDatapointsReceived:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: cumulative
+  title: sf.org.grossDatapointsReceived
+
+sf.org.grossDatapointsReceivedByToken:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: cumulative
+  title: sf.org.grossDatapointsReceivedByToken
+
+sf.org.num.alertmuting:
+  brief: Total number of alert muting rules
+  description: 'Total number of alert muting rules; includes rules currently in effect
+    and rules not currently in effect (e.g. scheduled muting rules).
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.alertmuting
+
+sf.org.num.awsServiceCallCount:
+  brief: Number of calls made to the Amazon API
+  description: 'Total number of calls made to the Amazon API.
+
+    Dimension(s): `orgId`, `namespace` (AWS service, such as `AWS/Cloudwatch`), `method`
+    (the API being called, such as `getMetricStatistics`)
+
+    Data Resolution: 5 seconds'
+  metric_type: gauge
+  title: sf.org.num.awsServiceCallCount
+
+sf.org.num.awsServiceCallCountExceptions:
+  brief: Number of Amazon API calls that threw exceptions
+  description: 'Number of calls made to the Amazon API that threw exceptions.
+
+    Dimension(s): `orgId`, `namespace` (AWS service, such as AWS/Cloudwatch), `method`
+    (the API being called, such as `getMetricStatistics`), `location` (where the exception
+    occurred, either `client` or `server`)
+
+    Data Resolution: 5 seconds'
+  metric_type: gauge
+  title: sf.org.num.awsServiceCallCountExceptions
+
+sf.org.num.awsServiceCallThrottles:
+  brief: Number of Amazon API calls throttled by Amazon
+  description: 'Number of calls made to the Amazon API that are being throttled by
+    AWS because you have exceeded your AWS API Call limits.
+
+    Dimension(s): `orgId`, `namespace` (AWS service, such as AWS/Cloudwatch), `method`
+    (the API being called, such as `getMetricStatistics`)
+
+    Data Resolution: 5 seconds'
+  metric_type: gauge
+  title: sf.org.num.awsServiceCallThrottles
+
+sf.org.num.azureMonitorClientCallCount:
+  brief: Number of calls made to the Azure Monitor API
+  description: 'Total number of calls made to the Amazon API.
+
+    Dimension(s): `orgId`, `subscriptio_id`, `type` (`metric_data_sync` for metric
+    syncing and `metric_metadata_sync` for property syncing), `method` (the function
+    being performed, `getTimeseries` for listing metrics and `getMetricDefinition`
+    for listing out metric definitions)
+
+    Data Resolution: 5 seconds'
+  metric_type: gauge
+  title: sf.org.num.azureMonitorClientCallCount
+
+sf.org.num.azureMonitorClientCallCountErrors:
+  brief: Number of calls to Azure Monitor API method that threw errors
+  description: 'Number of calls to Azure Monitor API method that threw errors.
+
+    Dimension(s): `orgId`, `subscriptio_id`, `type` (`metric_data_sync` for metric
+    syncing and `metric_metadata_sync` for property syncing), `method` (the function
+    being performed, `getTimeseries` for listing metrics and `getMetricDefinition`
+    for listing out metric definitions)
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.num.azureMonitorClientCallCountErrors
+
+sf.org.num.azureMonitorClientCallCountThrottles:
+  brief: Number of calls to Azure Monitor method that were throttled
+  description: 'Number of calls to Azure Monitor method that were throttled.
+
+    Dimension(s): `orgId`, `subscriptio_id`, `type` (`metric_data_sync` for metric
+    syncing and `metric_metadata_sync` for property syncing), `method` (the function
+    being performed, `getTimeseries` for listing metrics and `getMetricDefinition`
+    for listing out metric definitions)
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.num.azureMonitorClientCallCountThrottles
+
+sf.org.num.chart:
+  brief: Total number of charts
+  description: 'Total number of charts; includes any charts created using the SignalFx
+    API but not associated with a dashboard.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.chart
+
+sf.org.num.credentials:
+  brief: Total number of integrations configured with credentials
+  description: 'Total number of integrations that have been configured with credentials
+    in SignalFx, for the purpose of retrieving metrics (example: AWS Cloudwatch) or
+    sending alerts (example: PagerDuty).
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.credentials
+
+sf.org.num.dashboard:
+  brief: Total number of dashboards
+  description: 'Total number of dashboards; includes all user, custom, and built-in
+    dashboards
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.dashboard
+
+sf.org.num.detector:
+  brief: Total number of detectors
+  description: 'Total number of detectors; includes detectors that are muted.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.detector
+
+sf.org.num.detectortemplate:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: cumulative
+  title: sf.org.num.detectortemplate
+
+sf.org.num.dimension:
+  brief: Number of unique dimensions across all time series
+  description: 'Number of unique dimensions across all time series.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.dimension
+
+sf.org.num.eventtimeseries:
+  brief: Number of event time series (ETS) available to be visualized in charts and
+    detectors
+  description: 'Number of event time series (ETS) available to be visualized in charts
+    and detectors.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.eventtimeseries
+
+sf.org.num.eventtype:
+  brief: Number of unique event types across all ETS
+  description: 'Number of unique event types across all ETS.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.eventtype
+
+sf.org.num.gcpStackdriverClientCallCount:
+  brief: Number of calls to each Stackdriver client method
+  description: 'Number of calls to each Stackdriver client method.
+
+    Dimension(s): `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.num.gcpStackdriverClientCallCount
+
+sf.org.num.gcpStackdriverClientCallCountErrors:
+  brief: Number of calls to each Stackdriver client method that threw errors
+  description: 'Number of calls to each Stackdriver client method that threw errors.
+
+    Dimension(s): `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.num.gcpStackdriverClientCallCountErrors
+
+sf.org.num.gcpStackdriverClientCallCountThrottles:
+  brief: Number of calls to each Stackdriver client method that were throttled
+  description: 'Number of calls to each Stackdriver client method that were throttled.
+
+    Dimension(s): `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.num.gcpStackdriverClientCallCountThrottles
+
+sf.org.num.metric:
+  brief: Number of unique metrics across all MTS
+  description: 'Number of unique metrics across all MTS.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.metric
+
+sf.org.num.metrictimeseries:
+  brief: Number of metric time series available to be visualized in charts and detectors
+  description: 'Number of metric time series (MTS) available to be visualized in charts
+    and detectors.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.metrictimeseries
+
+sf.org.num.migrationmarker:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: gauge
+  title: sf.org.num.migrationmarker
+
+sf.org.num.namedtoken:
+  brief: Number of access tokens
+  description: "Number of organization access tokens, including disabled tokens. \n\
+    Dimension(s): `orgId`\nData Resolution: 15 minutes"
+  metric_type: gauge
+  title: sf.org.num.namedtoken
+
+sf.org.num.navigator:
+  brief: Number of options available in the sidebar in the Infrastructure Navigator
+  description: 'Number of options available in the sidebar in the Infrastructure Navigator.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.navigator
+
+sf.org.num.notifications:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: cumulative
+  title: sf.org.num.notifications
+
+sf.org.num.orgpreference:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.num.orgpreference
+
+sf.org.num.orguser:
+  brief: Total number of members and admins
+  description: 'Total number of members and admins associated with an organization;
+    includes invited users who have not yet logged in.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.orguser
+
+sf.org.num.page:
+  brief: Total number of dashboard groups
+  description: 'Total number of dashboard groups; includes user, custom, and built-in
+    dashboard groups.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.page
+
+sf.org.num.property:
+  brief: Number of properties you have created (not dimensions)
+  description: 'Number of properties; includes only properties you have created, not
+    dimensions. For the latter, use ``sf.org.num.dimension``.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.property
+
+sf.org.num.service:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.num.service
+
+sf.org.num.shareablesnapshot:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.num.shareablesnapshot
+
+sf.org.num.source:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.num.source
+
+sf.org.num.tag:
+  brief: Number of tags
+  description: 'Number of tags available for use.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.tag
+
+sf.org.num.team:
+  brief: Number of teams
+  description: 'Number of teams in the organization.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.team
+
+sf.org.num.teammember:
+  brief: Number of users that are members of teams
+  description: 'Number of users that are members of teams; can be greater than the
+    total number of users. For example, if team A has 30 members and team B has 20
+    members, the value is 50 even if there are only 30 members in the org.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.num.teammember
+
+sf.org.numActiveTimeSeries:
+  brief: Number of currently active MTS
+  description: 'Total number of metric time series (MTS) currently active in the organization.
+    (Use `sf.org.numInactiveTimeSeries` to see how many MTS are not active.)
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: gauge
+  title: sf.org.numActiveTimeSeries
+
+sf.org.numAddDatapointCalls:
+  brief: Number of calls to send datapoints to SignalFx
+  description: 'Number of calls to send datapoints to SignalFx.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numAddDatapointCalls
+
+sf.org.numAddDatapointCallsByToken:
+  brief: Per token number of calls to send datapoints to SignalFx
+  description: "One value per token; number of calls to send datapoints to SignalFx.\
+    \ \nDimension(s): `orgId, tokenId`\nData Resolution: 1 second\nNote that the sum\
+    \ of all the values may be less than the value of `sf.org.numAddDatapointCalls`.\
+    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+  metric_type: counter
+  title: sf.org.numAddDatapointCallsByToken
+
+sf.org.numAddEventsCalls:
+  brief: Number of calls to send custom events to SignalFx
+  description: 'Number of calls to send custom events to SignalFx.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numAddEventsCalls
+
+sf.org.numAddEventsCallsByToken:
+  brief: Per token number of calls to send custom events to SignalFx
+  description: 'One value per token; number of calls to send custom events to SignalFx.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numAddEventsCalls`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numAddEventsCallsByToken
+
+sf.org.numBackfillCalls:
+  brief: Number of of times a backfill API call was used to send metrics to SignalFx
+  description: "One value per metric type, each representing the number of times a\
+    \ backfill API call was used to send metrics to SignalFx. \nDimension(s): `category,\
+    \ orgId`\nData Resolution: 1 second\nYou can have up to three MTS for this metric;\
+    \ each MTS is sent with a dimension named  ``category`` with a value of Counter,\
+    \ Cumulative Counter, or Gauge. For more information, see [About \"per metric\
+    \ type\" metrics](../readme.md#about-per-metric-type-metrics)."
+  metric_type: counter
+  title: sf.org.numBackfillCalls
+
+sf.org.numBackfillCallsByToken:
+  brief: Per token number of times a backfill API call was used to send metrics to
+    SignalFx
+  description: "One value per metric type per token, each representing the number\
+    \ of times a backfill API call was used to send metrics to SignalFx. \nDimension(s):\
+    \ `category, orgId, tokenId`\nData Resolution: 1 second\nYou can have up to three\
+    \ MTS associated with each token; each MTS is sent with a dimension named  ``category``\
+    \ with a value of Counter, Cumulative Counter, or Gauge. For more information,\
+    \ see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics).\n\
+    Note that the sum of all the values may be less than the value of `sf.org.numBackfillCalls`.\
+    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+  metric_type: counter
+  title: sf.org.numBackfillCallsByToken
+
+sf.org.numCustomMetrics:
+  brief: Number of custom metrics monitored
+  description: 'Number of custom metrics monitored by SignalFx.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 10 minutes'
+  metric_type: counter
+  title: sf.org.numCustomMetrics
+
+sf.org.numCustomMetricsByToken:
+  brief: Per token number of custom metrics monitored
+  description: 'One value per token; number of custom metrics monitored by SignalFx.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 10 minutes
+
+    Note that the sum of all the values may be less than the value of `sf.org.numCustomMetrics`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numCustomMetricsByToken
+
+sf.org.numDatapointsBackfilled:
+  brief: Number of datapoints that were sent using a backfill API
+  description: 'One value per metric type, each representing the number of datapoints
+    that were sent using a backfill API.
+
+    Dimension(s): `category, orgId`
+
+    Data Resolution: 1 second
+
+    You can have up to three MTS for this metric; each MTS is sent with a dimension
+    named  ``category`` with a value of Counter, Cumulative Counter, or Gauge. For
+    more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).'
+  metric_type: counter
+  title: sf.org.numDatapointsBackfilled
+
+sf.org.numDatapointsBackfilledByToken:
+  brief: Per token number of datapoints that were sent using a backfill API
+  description: 'One value per metric type per token, each representing the number
+    of datapoints that were sent using a backfill API.
+
+    Dimension(s): `category, orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    You can have up to three MTS associated with each token; each MTS is sent with
+    a dimension named  ``category`` with a value of Counter, Cumulative Counter, or
+    Gauge. For more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).
+
+    Note that the sum of all the values may be less than the value of `sf.org.numDatapointsBackfilled`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numDatapointsBackfilledByToken
+
+sf.org.numDatapointsDroppedExceededQuota:
+  brief: Number of new datapoints not processed by SignalFx; exceeded subscription
+    limit
+  description: 'Total number of new datapoints you sent to SignalFx but that SignalFx
+    didn''t accept, because your organization exceeded its subscription limit.
+
+    For more information on how SignalFx processes incoming data when subscription
+    limits are exceeded, see [this FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numDatapointsDroppedExceededQuota
+
+sf.org.numDatapointsDroppedExceededQuotaByToken:
+  brief: Number of new datapoints not processed by SignalFx; exceeded subscription
+    limit
+  description: 'One value per token; number of new datapoints you sent to SignalFx
+    but that SignalFx didn''t accept, because your organization exceeded its subscription
+    limit.
+
+    For more information on how SignalFx processes incoming data when subscription
+    limits are exceeded, see [this FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numDatapointsDroppedExceededQuota`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numDatapointsDroppedExceededQuotaByToken
+
+sf.org.numDatapointsDroppedInTimeout:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numDatapointsDroppedInTimeout
+
+sf.org.numDatapointsDroppedInTimeoutByToken:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numDatapointsDroppedInTimeoutByToken
+
+sf.org.numDatapointsDroppedThrottle:
+  brief: Number of datapoints not processed by SignalFx; exceeded DPM limit
+  description: 'Total number of datapoints you sent to SignalFx but that SignalFx
+    didn''t accept, because your organization significantly exceeded its DPM limit.
+
+    Note that unlike `sf.org.numDatapointsDroppedExceededQuota`, this metric represents
+    datapoints for both existing and new MTS. In other words, if your organization
+    is being throttled, SignalFx is not accepting any data at all. Contact [support](https://support.signalfx.com/hc/en-us/requests/new)
+    to determine how to rectify this issue.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numDatapointsDroppedThrottle
+
+sf.org.numDatapointsDroppedThrottleByToken:
+  brief: Per token number of datapoints not processed by SignalFx; exceeded DPM limit
+  description: 'One value per token; number of datapoints you sent to SignalFx but
+    that SignalFx didn''t accept, because your organization significantly exceeded
+    its DPM limit.
+
+    Note that unlike `sf.org.numDatapointsDroppedExceededQuotaByToken`, this metric
+    represents datapoints for both existing and new MTS. In other words, if your organization
+    is being throttled, SignalFx is not accepting any data at all. Contact [support](https://support.signalfx.com/hc/en-us/requests/new)
+    to determine how to rectify this issue.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numDatapointsDroppedThrottle`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numDatapointsDroppedThrottleByToken
+
+sf.org.numDatapointsReceived:
+  brief: Number of datapoints SignalFx received
+  description: "One value per metric type, each representing the number of datapoints\
+    \ SignalFx received and processed. \nThe sum of the values represents the total\
+    \ number of datapoints you sent to SignalFx minus any datapoints that were not\
+    \ accepted due to limits exceeded.\nDimension(s): `category, orgId`\nData Resolution:\
+    \ 1 second\nYou can have up to three MTS for this metric; each MTS is sent with\
+    \ a dimension named  ``category`` with a value of Counter, Cumulative Counter,\
+    \ or Gauge. For more information, see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics)."
+  metric_type: counter
+  title: sf.org.numDatapointsReceived
+
+sf.org.numDatapointsReceivedByToken:
+  brief: Per token number of datapoints SignalFx received
+  description: "One value per metric type per token, each representing the number\
+    \ of datapoints SignalFx received and processed. \nThe sum of the values for a\
+    \ token represents the total number of datapoints you sent to SignalFx minus any\
+    \ datapoints that were not accepted due to limits exceeded.\nDimension(s): `category,\
+    \ orgId, tokenId`\nData Resolution: 1 second\nYou can have up to three MTS per\
+    \ token for this metric; each MTS is sent with a dimension named  ``category``\
+    \ with a value of Counter, Cumulative Counter, or Gauge. For more information,\
+    \ see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics).\n\
+    Note that the sum of all the values may be less than the value of `sf.org.numDatapointsReceived`.\
+    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+  metric_type: counter
+  title: sf.org.numDatapointsReceivedByToken
+
+sf.org.numEventTimeSeriesCreated:
+  brief: Number of event time series created
+  description: 'Total number of event time series (ETS) created. For MTS values, see
+    `sf.org.numMetricTimeSeriesCreated`.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numEventTimeSeriesCreated
+
+sf.org.numEventTimeSeriesCreatedByToken:
+  brief: Per token number of event time series created
+  description: 'One value per token; number of event time series (ETS) created. For
+    MTS values, see `sf.org.numMetricTimeSeriesCreatedByToken`.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numEventTimeSeriesCreated`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numEventTimeSeriesCreatedByToken
+
+sf.org.numEventsDroppedThrottle:
+  brief: Number of events over per-minute limit
+  description: 'Number of custom events you sent to SignalFx but that SignalFx didn''t
+    accept, because your organization exceeded its per-minute limit.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numEventsDroppedThrottle
+
+sf.org.numEventsDroppedThrottleByToken:
+  brief: Per token number of events over per-minute limit
+  description: 'One value per token; number of custom events you sent to SignalFx
+    but that SignalFx didn''t accept, because your organization significantly exceeded
+    its per-minute limit.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numEventsDroppedThrottle`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numEventsDroppedThrottleByToken
+
+sf.org.numEventsIngested:
+  brief: Number of custom events received via the /event POST API
+  description: 'Number of custom events received by SignalFx through the /event POST
+    API.
+
+    Dimension(s): `orgId, category`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numEventsIngested
+
+sf.org.numEventsIngestedByToken:
+  brief: Per token number of custom events received via the /event POST API
+  description: "One value per token; number of custom events received by SignalFx\
+    \ through the /event POST API \nDimension(s): `orgId, tokenId, category`\nData\
+    \ Resolution: 1 second\nNote that the sum of all the values may be less than the\
+    \ value of `sf.org.numEventsIngested`. For an explanation, see [About ByToken\
+    \ metrics](../readme.md#about-bytoken-metrics)."
+  metric_type: counter
+  title: sf.org.numEventsIngestedByToken
+
+sf.org.numEventsReceived:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numEventsReceived
+
+sf.org.numEventsReceivedByToken:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numEventsReceivedByToken
+
+sf.org.numHighResolutionMetrics:
+  brief: Number of high resolution metrics monitored
+  description: 'Number of high resolution metrics monitored by SignalFx.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 10 minutes'
+  metric_type: counter
+  title: sf.org.numHighResolutionMetrics
+
+sf.org.numHighResolutionMetricsByToken:
+  brief: Per token number of high resolution metrics monitored
+  description: 'One value per token; number of high resolution metrics monitored by
+    SignalFx.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 10 minutes
+
+    Note that the sum of all the values may be less than the value of `sf.org.numHighResolutionMetrics`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numHighResolutionMetricsByToken
+
+sf.org.numInactiveTimeSeries:
+  brief: Number of inactive MTS
+  description: 'Total number of previously active metric time series (MTS) that are
+    no longer active. (Use `sf.org.numActiveTimeSeries` to see how many MTS are active.)
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: gauge
+  title: sf.org.numInactiveTimeSeries
+
+sf.org.numLimitedEventTimeSeriesCreateCalls:
+  brief: Number of event time series over maximum ETS allowed
+  description: 'Number of event time series (ETS) SignalFx was unable to create, because
+    you have exceeded the maximum number of ETS allowed.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numLimitedEventTimeSeriesCreateCalls
+
+sf.org.numLimitedEventTimeSeriesCreateCallsByToken:
+  brief: Per token number of event time series over maximum ETS allowed
+  description: "One value per token, each representing the number of event time series\
+    \ (ETS) SignalFx was unable to create, because you have exceeded the maximum number\
+    \ of ETS allowed. \nDimension(s): `category, orgId, tokenId`\nData Resolution:\
+    \ 1 second\nNote that the sum of all the values may be less than the value of\
+    \ `sf.org.numLimitedEventTimeSeriesCreateCalls`. For an explanation, see [About\
+    \ ByToken metrics](../readme.md#about-bytoken-metrics)."
+  metric_type: counter
+  title: sf.org.numLimitedEventTimeSeriesCreateCallsByToken
+
+sf.org.numLimitedMetricTimeSeriesCreateCalls:
+  brief: Number of MTS not sent; over maximum allowed
+  description: 'One value per metric type, each representing the number of metric
+    time series (MTS) not sent to SignalFx because you''ve reached your maximum active
+    MTS allowed.
+
+    Dimension(s): `category, orgId`
+
+    Data Resolution: 1 second
+
+    You can have up to three MTS for this metric; each MTS is sent with a dimension
+    named  ``category`` with a value of Counter, Cumulative Counter, or Gauge. For
+    more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).'
+  metric_type: counter
+  title: sf.org.numLimitedMetricTimeSeriesCreateCalls
+
+sf.org.numLimitedMetricTimeSeriesCreateCallsByToken:
+  brief: Per token of MTS not sent; over maximum allowed
+  description: 'One value per metric type per token, each representing the number
+    of metric time series (MTS) not sent to SignalFx because you''ve reached your
+    maximum active MTS allowed.
+
+    Dimension(s): `category, orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    You can have up to three MTS associated with each token; each MTS is sent with
+    a dimension named  ``category`` with a value of Counter, Cumulative Counter, or
+    Gauge. For more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).
+
+    Note that the sum of all the values may be less than the value of `sf.org.numLimitedMetricTimeSeriesCreateCalls`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numLimitedMetricTimeSeriesCreateCallsByToken
+
+sf.org.numMappingsAdded:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numMappingsAdded
+
+sf.org.numMappingsAddedByToken:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numMappingsAddedByToken
+
+sf.org.numMetadataWrites:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numMetadataWrites
+
+sf.org.numMetadataWritesByToken:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numMetadataWritesByToken
+
+sf.org.numMetadataWritesThrottled:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numMetadataWritesThrottled
+
+sf.org.numMetadataWrttesThrottledByToken:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.numMetadataWrttesThrottledByToken
+
+sf.org.numMetricTimeSeriesCreated:
+  brief: Number of MTS created
+  description: "Dimension(s): `category, orgId`\nData Resolution: 5 seconds \nOne\
+    \ value per metric type, each representing the number of metric time series (MTS)\
+    \ created of that type. \nYou can have up to three MTS for this metric; each MTS\
+    \ is sent with a dimension named  ``category`` with a value of Counter, Cumulative\
+    \ Counter, or Gauge. For more information, see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics)."
+  metric_type: counter
+  title: sf.org.numMetricTimeSeriesCreated
+
+sf.org.numMetricTimeSeriesCreatedByToken:
+  brief: Per token number of MTS created
+  description: "Dimension(s): `category, orgId, tokenId`\nData Resolution: 5 seconds\n\
+    One value per metric type per token, each representing the number of metric time\
+    \ series (MTS) created of that type. \nYou can have up to three MTS associated\
+    \ with each token; each MTS is sent with a dimension named  ``category`` with\
+    \ a value of Counter, Cumulative Counter, or Gauge. For more information, see\
+    \ [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics).\n\
+    Note that the sum of all the values may be less than the value of `sf.org.numMetricTimeSeriesCreated`.\
+    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+  metric_type: counter
+  title: sf.org.numMetricTimeSeriesCreatedByToken
+
+sf.org.numNewDimensions:
+  brief: Number of new dimensions that were created
+  description: 'The number of new dimensions (key:value pairs) created.
+
+    Data Resolution: 5 minutes'
+  metric_type: counter
+  title: sf.org.numNewDimensions
+
+sf.org.numNewDimensionsByName:
+  brief: Number of new dimensions for each unique dimension name
+  description: 'The number of new dimensions created for each unique dimension name
+    (key from key:value pair). Only the top 100 dimension names (by number of dimensions
+    created) are included, in addition to dimension name sf_metric, which is always
+    included.
+
+    Data Resolution: 5 minutes'
+  metric_type: counter
+  title: sf.org.numNewDimensionsByName
+
+sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls:
+  brief: Number of MTS SignalFx was not able to create; exceeded dimension name
+  description: 'Number of metric time series (MTS) SignalFx was unable to create because
+    you reached your maximum number of unique dimension names.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls
+
+sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
+  brief: Per token number of MTS SignalFx was not able to create; exceeded dimension
+    name maximum
+  description: 'One value per token; number of metric time series (MTS) SignalFx was
+    unable to create because you reached your maximum number of unique dimension names.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
+
+sf.org.numResourcesMonitored:
+  brief: Number of host-based resources monitored
+  description: 'Number of hosts or containers that are being monitored.
+
+    The `resourceType` dimension indicates whether the value represents hosts or containers.
+
+    Dimension(s): `orgId`, `resourceType`
+
+    Data Resolution: 10 minutes'
+  metric_type: counter
+  title: sf.org.numResourcesMonitored
+
+sf.org.numResourcesMonitoredByToken:
+  brief: Per token number of host-based resources monitored
+  description: 'One value per token; number of hosts or containers that are being
+    monitored. This metric will not be created until a host or container actually
+    starts sending a host or container metric.
+
+    The `resourceType` dimension indicates whether the value represents hosts or containers.
+
+    Dimension(s): `orgId, resourceType, tokenId`
+
+    Data Resolution: 10 minutes
+
+    Note that the sum of all the values may be less than the value of `sf.org.numResourcesMonitored`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numResourcesMonitoredByToken
+
+sf.org.numRestCalls:
+  brief: Number of REST calls made to the SignalFx API
+  description: "Number of REST calls made to the SignalFx API. \nDimension(s): `orgId`\n\
+    Data Resolution: 1 second"
+  metric_type: counter
+  title: sf.org.numRestCalls
+
+sf.org.numRestCallsByToken:
+  brief: Per token number of REST calls made to the SignalFx API
+  description: "One value per token; number of REST calls made to the SignalFx API.\
+    \ \nDimension(s): `orgId, tokenId`\nData Resolution: 1 second\nNote that the sum\
+    \ of all the values may be less than the value of `sf.org.numRestCalls`. For an\
+    \ explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+  metric_type: counter
+  title: sf.org.numRestCallsByToken
+
+sf.org.numRestCallsThrottled:
+  brief: Number of REST calls not accepted by SignalFx; exceeded per-minute limit
+  description: 'Number of REST calls you made to the SignalFx API that were not accepted
+    by SignalFx, because your organization significantly exceeded its per-minute limit.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numRestCallsThrottled
+
+sf.org.numRestCallsThrottledByToken:
+  brief: Per token number of REST calls not accepted by SignalFx; exceeded per-minute
+    limit
+  description: 'One value per token; number of REST calls you made to the SignalFx
+    API that were not accepted by SignalFx, because your organization significantly
+    exceeded its per-minute limit.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numRestCallsThrottled`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numRestCallsThrottledByToken
+
+sf.org.numThrottledEventTimeSeriesCreateCalls:
+  brief: Number of events not processed by SignalFx; exceeded per-minute event creation
+    limit
+  description: 'Total number of event time series (ETS) SignalFx was unable to create,
+    because you significantly exceeded your per-minute event creation limit.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numThrottledEventTimeSeriesCreateCalls
+
+sf.org.numThrottledEventTimeSeriesCreateCallsByToken:
+  brief: Per token number of events not processed by SignalFx; exceeded per-minute
+    event creation limit
+  description: 'One value per token; number of event time series (ETS) SignalFx was
+    unable to create because you significantly exceeded your per-minute event creation
+    limit.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numThrottledEventTimeSeriesCreateCalls`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numThrottledEventTimeSeriesCreateCallsByToken
+
+sf.org.numThrottledMetricTimeSeriesCreateCalls:
+  brief: Number of metric time series not processed by SignalFx; exceeded per-minute
+    or per-hour MTS creation limit
+  description: 'Number of metric time series (MTS) SignalFx was unable to create because
+    you significantly exceeded your per-minute or per-hour MTS creation limit.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 1 second'
+  metric_type: counter
+  title: sf.org.numThrottledMetricTimeSeriesCreateCalls
+
+sf.org.numThrottledMetricTimeSeriesCreateCallsByToken:
+  brief: Per token number of MTS not processed by SignalFx; exceeded per-minute or
+    per-hour MTS creation limit
+  description: 'Per token number of metric time series (MTS) SignalFx was unable to
+    create because your organization significantly exceeded its per-minute or per-hour
+    MTS creation limit.
+
+    Dimension(s): `orgId, tokenId`
+
+    Data Resolution: 1 second
+
+    Note that the sum of all the values may be less than the value of `sf.org.numThrottledMetricTimeSeriesCreateCalls`.
+    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+  metric_type: counter
+  title: sf.org.numThrottledMetricTimeSeriesCreateCallsByToken
+
+sf.org.numUniqueNamesInNewDimensions:
+  brief: Number of unique dimension names that were created
+  description: 'The number of unique dimension names (keys) in all new dimensions
+    (key:value pairs) created.
+
+    Data Resolution: 5 minutes'
+  metric_type: counter
+  title: sf.org.numUniqueNamesInNewDimensions
+
+sf.org.subscription.activeTimeSeries:
+  brief: Maximum number of active MTS
+  description: 'Maximum number of active metric time series (MTS).
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.subscription.activeTimeSeries
+
+sf.org.subscription.datapointsPerMinute:
+  brief: Maximum number of datapoints per minute (DPM)
+  description: 'Maximum number of datapoints per minute (DPM) SignalFx will process
+    and store.
+
+    Data Resolution: 15 minutes'
+  metric_type: gauge
+  title: sf.org.suscription.datapointsPerMinute
+
+sf.org.ui.num.pagevisits:
+  brief: SignalFx internal metric
+  description: While you may see this metric in your organization, it is for SignalFx
+    internal use only.
+  metric_type: null
+  title: sf.org.ui.num.pagevisits
+

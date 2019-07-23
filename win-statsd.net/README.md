@@ -81,4 +81,4 @@ For example, the following metric name produces a metric `api.count` with two di
 
 ### LICENSE
 
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](../LICENSE) for more details.

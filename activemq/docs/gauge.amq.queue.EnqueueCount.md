@@ -1,7 +1,7 @@
 
 ---
 title: gauge.amq.queue.EnqueueCount
-brief: Number of messages that have been sent to the queue.
+brief: Number of messages that have been sent to the queue
 metric_type: gauge
 custom: false
 ---

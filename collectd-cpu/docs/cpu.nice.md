@@ -1,7 +1,7 @@
 
 ---
 title: cpu.nice
-brief: CPU time spent in userspace running 'nice'-ed processes.
+brief: CPU time spent in userspace running 'nice'-ed processes
 metric_type: cumulative
 custom: true
 ---

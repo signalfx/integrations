@@ -1,0 +1,2626 @@
+DopplerServer.LinuxFileDescriptor:
+  brief: "Number of file handles for the Doppler\u2019s process."
+  description: "Number of file handles for the Doppler\u2019s process."
+  metric_type: gauge
+  title: Doppler Server Linux File Descriptor
+
+DopplerServer.TruncatingBuffer.DroppedMessages:
+  brief: "Number of messages intentionally dropped by Doppler from the sink for the\
+    \ specific sink. This counter event will correspond with log messages \u201CLog\
+    \ message output is too high.\u201D Emitted every 5 seconds."
+  description: "Number of messages intentionally dropped by Doppler from the sink\
+    \ for the specific sink. This counter event will correspond with log messages\
+    \ \u201CLog message output is too high.\u201D Emitted every 5 seconds."
+  metric_type: gauge
+  title: Doppler Server Truncating Buffer Dropped Messages
+
+DopplerServer.TruncatingBuffer.totalDroppedMessages:
+  brief: Lifetime total number of messages intentionally dropped by Doppler from all
+    of its sinks due to back pressure. Emitted every 5 seconds.
+  description: Lifetime total number of messages intentionally dropped by Doppler
+    from all of its sinks due to back pressure. Emitted every 5 seconds.
+  metric_type: gauge
+  title: Doppler Server Truncating Buffer Total Dropped Messages
+
+DopplerServer.Uptime:
+  brief: "Uptime for the Doppler\u2019s process."
+  description: "Uptime for the Doppler\u2019s process."
+  metric_type: gauge
+  title: Doppler Server Uptime
+
+DopplerServer.dropsondeListener.currentBufferCount:
+  brief: DEPRECATED
+  description: DEPRECATED
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Listener Current Buffer Count
+
+DopplerServer.dropsondeListener.receivedByteCount:
+  brief: DEPRECATED in favor of DopplerServer.udpListener.receivedByteCount.
+  description: DEPRECATED in favor of DopplerServer.udpListener.receivedByteCount.
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Listener Received Byte Count
+
+DopplerServer.dropsondeListener.receivedMessageCount:
+  brief: DEPRECATED in favor of DopplerServer.udpListener.receivedMessageCount.
+  description: DEPRECATED in favor of DopplerServer.udpListener.receivedMessageCount.
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Listener Received Message Count
+
+DopplerServer.dropsondeUnmarshaller.containerMetricReceived:
+  brief: Lifetime number of ContainerMetric messages unmarshalled.
+  description: Lifetime number of ContainerMetric messages unmarshalled.
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Unmarshaller Container Metric Received
+
+DopplerServer.dropsondeUnmarshaller.counterEventReceived:
+  brief: Lifetime number of CounterEvent messages unmarshalled.
+  description: Lifetime number of CounterEvent messages unmarshalled.
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Unmarshaller Counter Event Received
+
+DopplerServer.dropsondeUnmarshaller.errorReceived:
+  brief: Lifetime number of Error messages unmarshalled.
+  description: Lifetime number of Error messages unmarshalled.
+  metric_type: gauge
+  title: Doppler Server Dropsonde Unmarshaller Error Received
+
+DopplerServer.dropsondeUnmarshaller.heartbeatReceived:
+  brief: DEPRECATED
+  description: DEPRECATED
+  metric_type: gauge
+  title: Doppler Server Dropsonde Unmarshaller Heartbeat Received
+
+DopplerServer.dropsondeUnmarshaller.httpStartStopReceived:
+  brief: Lifetime number of HttpStartStop messages unmarshalled.
+  description: Lifetime number of HttpStartStop messages unmarshalled.
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Unmarshaller HTTP Start Stop Received
+
+DopplerServer.dropsondeUnmarshaller.logMessageTotal:
+  brief: Lifetime number of LogMessage messages unmarshalled.
+  description: Lifetime number of LogMessage messages unmarshalled.
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Unmarshaller Log Message Total
+
+DopplerServer.dropsondeUnmarshaller.unmarshalErrors:
+  brief: Lifetime number of errors when unmarshalling messages.
+  description: Lifetime number of errors when unmarshalling messages.
+  metric_type: gauge
+  title: Doppler Server Dropsonde Unmarshaller Unmarshal Errors
+
+DopplerServer.dropsondeUnmarshaller.valueMetricReceived:
+  brief: Lifetime number of ValueMetric messages unmarshalled.
+  description: Lifetime number of ValueMetric messages unmarshalled.
+  metric_type: cumulative
+  title: Doppler Server Dropsonde Unmarshaller Value Metric Received
+
+DopplerServer.httpServer.receivedMessages:
+  brief: "Number of messages received by Doppler\u2019s internal MessageRouter. Emitted\
+    \ every 5 seconds."
+  description: "Number of messages received by Doppler\u2019s internal MessageRouter.\
+    \ Emitted every 5 seconds."
+  metric_type: cumulative
+  title: Doppler Server HTTP Server Received Messages
+
+DopplerServer.listeners.totalReceivedMessageCount:
+  brief: "Total number of messages received across all of Doppler\u2019s listeners\
+    \ (UDP, TCP, TLS)."
+  description: "Total number of messages received across all of Doppler\u2019s listeners\
+    \ (UDP, TCP, TLS)."
+  metric_type: cumulative
+  title: Doppler Server Listeners Total Received Message Count
+
+DopplerServer.memoryStats.lastGCPauseTimeNS:
+  brief: Duration of the last Garbage Collector pause in nanoseconds.
+  description: Duration of the last Garbage Collector pause in nanoseconds.
+  metric_type: gauge
+  title: Doppler Server Memory Stats Last GC Pause Time NS
+
+DopplerServer.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Doppler Server Memory Stats Num Bytes Allocated
+
+DopplerServer.memoryStats.numBytesAllocatedHeap:
+  brief: Number of bytes allocated on the heap
+  description: Number of bytes allocated on the heap.
+  metric_type: gauge
+  title: Heap bytes allocated
+
+DopplerServer.memoryStats.numBytesAllocatedStack:
+  brief: Number of bytes allocated on the stack
+  description: Number of bytes allocated on the stack.
+  metric_type: gauge
+  title: Stack bytes allocated
+
+DopplerServer.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Doppler Server Memory Stats Num Frees
+
+DopplerServer.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Doppler Server Memory Stats Num Mallocs
+
+DopplerServer.messageRouter.numberOfContainerMetricSinks:
+  brief: Instantaneous number of container metric sinks known to the SinkManager.
+    Emitted every 5 seconds.
+  description: Instantaneous number of container metric sinks known to the SinkManager.
+    Emitted every 5 seconds.
+  metric_type: gauge
+  title: Doppler Server Message Router Number of Container Metric Sinks
+
+DopplerServer.messageRouter.numberOfDumpSinks:
+  brief: Instantaneous number of dump sinks known to the SinkManager. Emitted every
+    5 seconds.
+  description: Instantaneous number of dump sinks known to the SinkManager. Emitted
+    every 5 seconds.
+  metric_type: gauge
+  title: Doppler Server Message Router Number of Dump Sinks
+
+DopplerServer.messageRouter.numberOfFirehoseSinks:
+  brief: Instantaneous number of firehose sinks known to the SinkManager. Emitted
+    every 5 seconds.
+  description: Instantaneous number of firehose sinks known to the SinkManager. Emitted
+    every 5 seconds.
+  metric_type: gauge
+  title: Doppler Server Message Router Number of Firehose Sinks
+
+DopplerServer.messageRouter.numberOfSyslogSinks:
+  brief: Instantaneous number of syslog sinks known to the SinkManager.
+  description: Instantaneous number of syslog sinks known to the SinkManager.
+  metric_type: gauge
+  title: Doppler Server Message Router Number of Syslog Sinks
+
+DopplerServer.messageRouter.numberOfWebsocketSinks:
+  brief: Instantaneous number of WebSocket sinks known to the SinkManager. Emitted
+    every 5 seconds.
+  description: Instantaneous number of WebSocket sinks known to the SinkManager. Emitted
+    every 5 seconds.
+  metric_type: gauge
+  title: Doppler Server Message Router Number of Websocket Sinks
+
+DopplerServer.messageRouter.totalDroppedMessages:
+  brief: "Lifetime number of messages dropped inside Doppler for various reasons (downstream\
+    \ consumer can\u2019t keep up internal object wasn\u2019t ready for message, etc.)."
+  description: "Lifetime number of messages dropped inside Doppler for various reasons\
+    \ (downstream consumer can\u2019t keep up internal object wasn\u2019t ready for\
+    \ message, etc.)."
+  metric_type: gauge
+  title: Doppler Server Message Router Total Dropped Messages
+
+DopplerServer.numCpus:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Doppler Server Num Cpus
+
+DopplerServer.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the Doppler process.
+  description: Instantaneous number of active goroutines in the Doppler process.
+  metric_type: gauge
+  title: Doppler Server Num Go Routines
+
+DopplerServer.sentMessagesFirehose.SUBSCRIPTION_ID:
+  brief: Number of sent messages through the firehose per subscription id. Emitted
+    every 5 seconds.
+  description: Number of sent messages through the firehose per subscription id. Emitted
+    every 5 seconds.
+  metric_type: gauge
+  title: Doppler Server Sent Messages Firehose <SUBSCRIPTION ID>
+
+DopplerServer.sentMessagesFirehose:
+  brief: Number of messages sent on the Firehose
+  description: Number of messages sent on the Firehose.
+  metric_type: cumulative
+  title: Firehose messages sent
+
+DopplerServer.signatureVerifier.invalidSignatureErrors:
+  brief: Lifetime number of messages received with an invalid signature.
+  description: Lifetime number of messages received with an invalid signature.
+  metric_type: gauge
+  title: Doppler Server Signature Verifier Invalid Signature Errors
+
+DopplerServer.signatureVerifier.missingSignatureErrors:
+  brief: Lifetime number of messages received that are too small to contain a signature.
+  description: Lifetime number of messages received that are too small to contain
+    a signature.
+  metric_type: gauge
+  title: Doppler Server Signature Verifier Missing Signature Errors
+
+DopplerServer.signatureVerifier.validSignatures:
+  brief: Lifetime number of messages received with valid signatures.
+  description: Lifetime number of messages received with valid signatures.
+  metric_type: cumulative
+  title: Doppler Server Signature Verifier Valid Signatures
+
+DopplerServer.tcpListener.receivedByteCount:
+  brief: "Lifetime number of bytes received by Doppler\u2019s TCP Listener. Emitted\
+    \ every 5 seconds."
+  description: "Lifetime number of bytes received by Doppler\u2019s TCP Listener.\
+    \ Emitted every 5 seconds."
+  metric_type: cumulative
+  title: Doppler Server TCP Listener Received Byte Count
+
+DopplerServer.tcpListener.receivedErrorCount:
+  brief: "Lifetime number of errors encountered by Doppler\u2019s TCP Listener while\
+    \ handshaking, decoding or reading from the connection."
+  description: "Lifetime number of errors encountered by Doppler\u2019s TCP Listener\
+    \ while handshaking, decoding or reading from the connection."
+  metric_type: cumulative
+  title: Doppler Server TCP Listener Received Error Count
+
+DopplerServer.tcpListener.receivedMessageCount:
+  brief: "Lifetime number of messages received by Doppler\u2019s TCP Listener. Emitted\
+    \ every 5 seconds."
+  description: "Lifetime number of messages received by Doppler\u2019s TCP Listener.\
+    \ Emitted every 5 seconds."
+  metric_type: cumulative
+  title: Doppler Server TCP Listener Received Message Count
+
+DopplerServer.tlsListener.receivedByteCount:
+  brief: "Lifetime number of bytes received by Doppler\u2019s TLS Listener. Emitted\
+    \ every 5 seconds."
+  description: "Lifetime number of bytes received by Doppler\u2019s TLS Listener.\
+    \ Emitted every 5 seconds."
+  metric_type: cumulative
+  title: Doppler Server Tls Listener Received Byte Count
+
+DopplerServer.tlsListener.receivedErrorCount:
+  brief: "Lifetime number of errors encountered by Doppler\u2019s TLS Listener while\
+    \ handshaking, decoding or reading from the connection."
+  description: "Lifetime number of errors encountered by Doppler\u2019s TLS Listener\
+    \ while handshaking, decoding or reading from the connection."
+  metric_type: cumulative
+  title: Doppler Server Tls Listener Received Error Count
+
+DopplerServer.tlsListener.receivedMessageCount:
+  brief: "Lifetime number of messages received by Doppler\u2019s TLS Listener. Emitted\
+    \ every 5 seconds."
+  description: "Lifetime number of messages received by Doppler\u2019s TLS Listener.\
+    \ Emitted every 5 seconds."
+  metric_type: cumulative
+  title: Doppler Server Tls Listener Received Message Count
+
+DopplerServer.udpListener.receivedByteCount:
+  brief: "Lifetime number of bytes received by Doppler\u2019s UDP Listener."
+  description: "Lifetime number of bytes received by Doppler\u2019s UDP Listener."
+  metric_type: cumulative
+  title: Doppler Server UDP Listener Received Byte Count
+
+DopplerServer.udpListener.receivedErrorCount:
+  brief: "Lifetime number of errors encountered by Doppler\u2019s UDP Listener while\
+    \ reading from the connection."
+  description: "Lifetime number of errors encountered by Doppler\u2019s UDP Listener\
+    \ while reading from the connection."
+  metric_type: cumulative
+  title: Doppler Server UDP Listener Received Error Count
+
+DopplerServer.udpListener.receivedMessageCount:
+  brief: "Lifetime number of messages received by Doppler\u2019s UDP Listener."
+  description: "Lifetime number of messages received by Doppler\u2019s UDP Listener."
+  metric_type: cumulative
+  title: Doppler Server UDP Listener Received Message Count
+
+LoggregatorTrafficController.LinuxFileDescriptor:
+  brief: "Number of file handles for the TrafficController\u2019s process."
+  description: "Number of file handles for the TrafficController\u2019s process."
+  metric_type: gauge
+  title: Loggregator Traffic Controller Linux File Descriptor
+
+LoggregatorTrafficController.Uptime:
+  brief: "Uptime for the Traffic Controller\u2019s process. Emitted every 30 seconds."
+  description: "Uptime for the Traffic Controller\u2019s process. Emitted every 30\
+    \ seconds."
+  metric_type: gauge
+  title: Loggregator Traffic Controller Uptime
+
+LoggregatorTrafficController.dopplerProxy.containermetricsLatency:
+  brief: Duration for serving container metrics via the containermetrics endpoint
+    (milliseconds). Emitted every 30 seconds.
+  description: Duration for serving container metrics via the containermetrics endpoint
+    (milliseconds). Emitted every 30 seconds.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Doppler Proxy Containermetrics Latency
+
+LoggregatorTrafficController.dopplerProxy.recentlogsLatency:
+  brief: Duration for serving recent logs via the recentLogs endpoint (milliseconds).
+    Emitted every 30 seconds.
+  description: Duration for serving recent logs via the recentLogs endpoint (milliseconds).
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Doppler Proxy Recentlogs Latency
+
+LoggregatorTrafficController.memoryStats.lastGCPauseTimeNS:
+  brief: Duration of the last Garbage Collector pause in nanoseconds.
+  description: Duration of the last Garbage Collector pause in nanoseconds.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Memory Stats Last GC Pause Time NS
+
+LoggregatorTrafficController.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Memory Stats Num Bytes Allocated
+
+LoggregatorTrafficController.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Memory Stats Num Bytes Allocated Heap
+
+LoggregatorTrafficController.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Memory Stats Num Bytes Allocated Stack
+
+LoggregatorTrafficController.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Memory Stats Num Frees
+
+LoggregatorTrafficController.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Memory Stats Num Mallocs
+
+LoggregatorTrafficController.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Num CPUS
+
+LoggregatorTrafficController.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the Doppler process.
+  description: Instantaneous number of active goroutines in the Doppler process.
+  metric_type: gauge
+  title: Loggregator Traffic Controller Num Go Routines
+
+MetronAgent.DopplerForwarder.sentMessages:
+  brief: Lifetime number of messages sent to Doppler regardless of protocol. Emitted
+    every 30 seconds.
+  description: Lifetime number of messages sent to Doppler regardless of protocol.
+    Emitted every 30 seconds.
+  metric_type: cumulative
+  title: Metron Agent Doppler Forwarder Sent Messages
+
+MetronAgent.MessageAggregator.counterEventReceived:
+  brief: Lifetime number of CounterEvents aggregated in Metron.
+  description: Lifetime number of CounterEvents aggregated in Metron.
+  metric_type: cumulative
+  title: Metron Agent Message Aggregator Counter Event Received
+
+MetronAgent.MessageBuffer.droppedMessageCount:
+  brief: "Lifetime number of intentionally dropped messages from Metron\u2019s batch\
+    \ writer buffer. Batch writing is performed over TCP/TLS only."
+  description: "Lifetime number of intentionally dropped messages from Metron\u2019\
+    s batch writer buffer. Batch writing is performed over TCP/TLS only."
+  metric_type: cumulative
+  title: Metron Agent Message Buffer Dropped Message Count
+
+MetronAgent.dropsondeAgentListener.currentBufferCount:
+  brief: Instantaneous number of Dropsonde messages read by UDP socket  but not yet
+    unmarshalled.
+  description: Instantaneous number of Dropsonde messages read by UDP socket  but
+    not yet unmarshalled.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Agent Listener Current Buffer Count
+
+MetronAgent.dropsondeAgentListener.receivedByteCount:
+  brief: Lifetime number of bytes of Dropsonde messages read by UDP socket.
+  description: Lifetime number of bytes of Dropsonde messages read by UDP socket.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Agent Listener Received Byte Count
+
+MetronAgent.dropsondeAgentListener.receivedMessageCount:
+  brief: Lifetime number of Dropsonde messages read by UDP socket.
+  description: Lifetime number of Dropsonde messages read by UDP socket.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Agent Listener Received Message Count
+
+MetronAgent.dropsondeMarshaller.containerMetricMarshalled:
+  brief: Lifetime number of ContainerMetric messages marshalled.
+  description: Lifetime number of ContainerMetric messages marshalled.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Marshaller Container Metric Marshalled
+
+MetronAgent.dropsondeMarshaller.counterEventMarshalled:
+  brief: Lifetime number of CounterEvent messages marshalled.
+  description: Lifetime number of CounterEvent messages marshalled.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Marshaller Counter Event Marshalled
+
+MetronAgent.dropsondeMarshaller.errorMarshalled:
+  brief: Lifetime number of Error messages marshalled.
+  description: Lifetime number of Error messages marshalled.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Marshaller Error Marshalled
+
+MetronAgent.dropsondeMarshaller.heartbeatMarshalled:
+  brief: Lifetime number of Heartbeat messages marshalled.
+  description: Lifetime number of Heartbeat messages marshalled.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Marshaller Heartbeat Marshalled
+
+MetronAgent.dropsondeMarshaller.httpStartStopMarshalled:
+  brief: Lifetime number of HttpStartStop messages marshalled.
+  description: Lifetime number of HttpStartStop messages marshalled.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Marshaller HTTP Start Stop Marshalled
+
+MetronAgent.dropsondeMarshaller.logMessageMarshalled:
+  brief: Lifetime number of LogMessage messages marshalled.
+  description: Lifetime number of LogMessage messages marshalled.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Marshaller Log Message Marshalled
+
+MetronAgent.dropsondeMarshaller.marshalErrors:
+  brief: Lifetime number of errors when marshalling messages.
+  description: Lifetime number of errors when marshalling messages.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Marshaller Marshal Errors
+
+MetronAgent.dropsondeMarshaller.valueMetricMarshalled:
+  brief: Lifetime number of ValueMetric messages marshalled.
+  description: Lifetime number of ValueMetric messages marshalled.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Marshaller Value Metric Marshalled
+
+MetronAgent.dropsondeUnmarshaller.containerMetricReceived:
+  brief: Lifetime number of ContainerMetric messages unmarshalled.
+  description: Lifetime number of ContainerMetric messages unmarshalled.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Unmarshaller Container Metric Received
+
+MetronAgent.dropsondeUnmarshaller.counterEventReceived:
+  brief: Lifetime number of CounterEvent messages unmarshalled.
+  description: Lifetime number of CounterEvent messages unmarshalled.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Unmarshaller Counter Event Received
+
+MetronAgent.dropsondeUnmarshaller.errorReceived:
+  brief: Lifetime number of Error messages unmarshalled.
+  description: Lifetime number of Error messages unmarshalled.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Unmarshaller Error Received
+
+MetronAgent.dropsondeUnmarshaller.heartbeatReceived:
+  brief: DEPRECATED
+  description: DEPRECATED
+  metric_type: gauge
+  title: Metron Agent Dropsonde Unmarshaller Heartbeat Received
+
+MetronAgent.dropsondeUnmarshaller.httpStartStopReceived:
+  brief: Lifetime number of HttpStartStop messages unmarshalled.
+  description: Lifetime number of HttpStartStop messages unmarshalled.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Unmarshaller HTTP Start Stop Received
+
+MetronAgent.dropsondeUnmarshaller.logMessageTotal:
+  brief: Lifetime number of LogMessage messages unmarshalled.
+  description: Lifetime number of LogMessage messages unmarshalled.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Unmarshaller Log Message Total
+
+MetronAgent.dropsondeUnmarshaller.unmarshalErrors:
+  brief: Lifetime number of errors when unmarshalling messages.
+  description: Lifetime number of errors when unmarshalling messages.
+  metric_type: gauge
+  title: Metron Agent Dropsonde Unmarshaller Unmarshal Errors
+
+MetronAgent.dropsondeUnmarshaller.valueMetricReceived:
+  brief: Lifetime number of ValueMetric messages unmarshalled.
+  description: Lifetime number of ValueMetric messages unmarshalled.
+  metric_type: cumulative
+  title: Metron Agent Dropsonde Unmarshaller Value Metric Received
+
+MetronAgent.legacyAgentListener.currentBufferCount:
+  brief: Instantaneous number of Legacy messages read by UDP socket but not yet unmarshalled.
+  description: Instantaneous number of Legacy messages read by UDP socket but not
+    yet unmarshalled.
+  metric_type: cumulative
+  title: Metron Agent Legacy Agent Listener Current Buffer Count
+
+MetronAgent.legacyAgentListener.receivedByteCount:
+  brief: Lifetime number of bytes of Legacy messages read by UDP socket.
+  description: Lifetime number of bytes of Legacy messages read by UDP socket.
+  metric_type: cumulative
+  title: Metron Agent Legacy Agent Listener Received Byte Count
+
+MetronAgent.legacyAgentListener.receivedMessageCount:
+  brief: Lifetime number of Legacy messages read by UDP socket.
+  description: Lifetime number of Legacy messages read by UDP socket.
+  metric_type: cumulative
+  title: Metron Agent Legacy Agent Listener Received Message Count
+
+MetronAgent.memoryStats.lastGCPauseTimeNS:
+  brief: Duration of the last Garbage Collector pause in nanoseconds.
+  description: Duration of the last Garbage Collector pause in nanoseconds.
+  metric_type: gauge
+  title: Metron Agent Memory Stats Last GC Pause Time NS
+
+MetronAgent.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Metron Agent Memory Stats Num Bytes Allocated
+
+MetronAgent.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Metron Agent Memory Stats Num Bytes Allocated Heap
+
+MetronAgent.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Metron Agent Memory Stats Num Bytes Allocated Stack
+
+MetronAgent.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Metron Agent Memory Stats Num Frees
+
+MetronAgent.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Metron Agent Memory Stats Num Mallocs
+
+MetronAgent.numCpus:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Metron Agent Num Cpus
+
+MetronAgent.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the Doppler process.
+  description: Instantaneous number of active goroutines in the Doppler process.
+  metric_type: gauge
+  title: Metron Agent Num Go Routines
+
+MetronAgent.tcp.sendErrorCount:
+  brief: Lifetime number of errors if writing to Doppler over TCP fails.
+  description: Lifetime number of errors if writing to Doppler over TCP fails.
+  metric_type: cumulative
+  title: Metron Agent TCP Send Error Count
+
+MetronAgent.tcp.sentByteCount:
+  brief: Lifetime number of sent bytes to Doppler over TCP.
+  description: Lifetime number of sent bytes to Doppler over TCP.
+  metric_type: cumulative
+  title: Metron Agent TCP Sent Byte Count
+
+MetronAgent.tcp.sentMessageCount:
+  brief: Lifetime number of sent messages to Doppler over TCP.
+  description: Lifetime number of sent messages to Doppler over TCP.
+  metric_type: cumulative
+  title: Metron Agent TCP Sent Message Count
+
+MetronAgent.tls.sendErrorCount:
+  brief: Lifetime number of errors if writing to Doppler over TLS fails.
+  description: Lifetime number of errors if writing to Doppler over TLS fails.
+  metric_type: cumulative
+  title: Metron Agent Tls Send Error Count
+
+MetronAgent.tls.sentByteCount:
+  brief: Lifetime number of sent bytes to Doppler over TLS. Emitted every 30 seconds.
+  description: Lifetime number of sent bytes to Doppler over TLS. Emitted every 30
+    seconds.
+  metric_type: cumulative
+  title: Metron Agent Tls Sent Byte Count
+
+MetronAgent.tls.sentMessageCount:
+  brief: Lifetime number of sent messages to Doppler over TLS. Emitted every 30 seconds.
+  description: Lifetime number of sent messages to Doppler over TLS. Emitted every
+    30 seconds.
+  metric_type: cumulative
+  title: Metron Agent Tls Sent Message Count
+
+MetronAgent.udp.sendErrorCount:
+  brief: Lifetime number of errors if writing to Doppler over UDP fails.
+  description: Lifetime number of errors if writing to Doppler over UDP fails.
+  metric_type: cumulative
+  title: Metron Agent UDP Send Error Count
+
+MetronAgent.udp.sentByteCount:
+  brief: Lifetime number of sent bytes to Doppler over UDP.
+  description: Lifetime number of sent bytes to Doppler over UDP.
+  metric_type: cumulative
+  title: Metron Agent UDP Sent Byte Count
+
+MetronAgent.udp.sentMessageCount:
+  brief: Lifetime number of sent messages to Doppler over UDP.
+  description: Lifetime number of sent messages to Doppler over UDP.
+  metric_type: cumulative
+  title: Metron Agent UDP Sent Message Count
+
+auctioneer.AuctioneerFetchStatesDuration:
+  brief: Time in nanoseconds that the auctioneer took to fetch state from all the
+    cells when running its auction. Emitted every 30 seconds during each auction.
+  description: Time in nanoseconds that the auctioneer took to fetch state from all
+    the cells when running its auction. Emitted every 30 seconds during each auction.
+  metric_type: gauge
+  title: Auctioneer Auctioneer Fetch States Duration
+
+auctioneer.AuctioneerLRPAuctionsFailed:
+  brief: Cumulative number of LRP instances that the auctioneer failed to place on
+    Diego cells. Emitted every 30 seconds during each auction.
+  description: Cumulative number of LRP instances that the auctioneer failed to place
+    on Diego cells. Emitted every 30 seconds during each auction.
+  metric_type: cumulative
+  title: Auctioneer Auctioneer LRP Auctions Failed
+
+auctioneer.AuctioneerLRPAuctionsStarted:
+  brief: Cumulative number of LRP instances that the auctioneer successfully placed
+    on Diego cells. Emitted every 30 seconds during each auction.
+  description: Cumulative number of LRP instances that the auctioneer successfully
+    placed on Diego cells. Emitted every 30 seconds during each auction.
+  metric_type: cumulative
+  title: Auctioneer Auctioneer LRP Auctions Started
+
+auctioneer.AuctioneerTaskAuctionsFailed:
+  brief: Cumulative number of Tasks that the auctioneer failed to place on Diego cells.
+    Emitted every 30 seconds during each auction.
+  description: Cumulative number of Tasks that the auctioneer failed to place on Diego
+    cells. Emitted every 30 seconds during each auction.
+  metric_type: cumulative
+  title: Auctioneer Auctioneer Task Auctions Failed
+
+auctioneer.AuctioneerTaskAuctionsStarted:
+  brief: Cumulative number of Tasks that the auctioneer successfully placed on Diego
+    cells. Emitted every 30 seconds during each auction.
+  description: Cumulative number of Tasks that the auctioneer successfully placed
+    on Diego cells. Emitted every 30 seconds during each auction.
+  metric_type: cumulative
+  title: Auctioneer Auctioneer Task Auctions Started
+
+auctioneer.LockHeld.v1-locks-auctioneer_lock:
+  brief: 'Whether an auctioneer holds the auctioneer lock: 1 means the lock is held,
+    and 0 means the lock was lost. Emitted every 30 seconds by the active auctioneer.'
+  description: 'Whether an auctioneer holds the auctioneer lock: 1 means the lock
+    is held, and 0 means the lock was lost. Emitted every 30 seconds by the active
+    auctioneer.'
+  metric_type: gauge
+  title: Auctioneer Lock Held V1-Locks-Auctioneer Lock
+
+auctioneer.LockHeldDuration.v1-locks-auctioneer_lock:
+  brief: Time in nanoseconds that the active auctioneer has held the auctioneer lock.
+    Emitted every 30 seconds by the active auctioneer.
+  description: Time in nanoseconds that the active auctioneer has held the auctioneer
+    lock. Emitted every 30 seconds by the active auctioneer.
+  metric_type: gauge
+  title: Auctioneer Lock Held Duration V1-Locks-Auctioneer Lock
+
+auctioneer.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: Auctioneer Memory Stats Last GC Pause Time NS
+
+auctioneer.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Auctioneer Memory Stats Num Bytes Allocated
+
+auctioneer.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Auctioneer Memory Stats Num Bytes Allocated Heap
+
+auctioneer.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Auctioneer Memory Stats Num Bytes Allocated Stack
+
+auctioneer.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Auctioneer Memory Stats Num Frees
+
+auctioneer.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Auctioneer Memory Stats Num Mallocs
+
+auctioneer.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Auctioneer Num CPUS
+
+auctioneer.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: Auctioneer Num Go Routines
+
+bbs.BBSMasterElected:
+  brief: Emitted once when the BBS is elected as master.
+  description: Emitted once when the BBS is elected as master.
+  metric_type: gauge
+  title: BBS BBS Master Elected
+
+bbs.ConvergenceLRPDuration:
+  brief: Time in nanoseconds that the BBS took to run its LRP convergence pass. Emitted
+    every 30 seconds when LRP convergence runs.
+  description: Time in nanoseconds that the BBS took to run its LRP convergence pass.
+    Emitted every 30 seconds when LRP convergence runs.
+  metric_type: gauge
+  title: BBS Convergence LRP Duration
+
+bbs.ConvergenceLRPPreProcessingActualLRPsDeleted:
+  brief: Cumulative number of times the BBS has detected and deleted a malformed ActualLRP
+    in its LRP convergence pass. Emitted every 30 seconds.
+  description: Cumulative number of times the BBS has detected and deleted a malformed
+    ActualLRP in its LRP convergence pass. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Convergence LRP Pre Processing Actual LR Ps Deleted
+
+bbs.ConvergenceLRPPreProcessingMalformedRunInfos:
+  brief: Cumulative number of times the BBS has detected a malformed DesiredLRP RunInfo
+    in its LRP convergence pass. Emitted every 30 seconds.
+  description: Cumulative number of times the BBS has detected a malformed DesiredLRP
+    RunInfo in its LRP convergence pass. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Convergence LRP Pre Processing Malformed Run Infos
+
+bbs.ConvergenceLRPPreProcessingMalformedSchedulingInfos:
+  brief: Cumulative number of times the BBS has detected a malformed DesiredLRP SchedulingInfo
+    in its LRP convergence pass. Emitted every 30 seconds.
+  description: Cumulative number of times the BBS has detected a malformed DesiredLRP
+    SchedulingInfo in its LRP convergence pass. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Convergence LRP Pre Processing Malformed Scheduling Infos
+
+bbs.ConvergenceLRPRuns:
+  brief: Cumulative number of times BBS has run its LRP convergence pass. Emitted
+    every 30 seconds.
+  description: Cumulative number of times BBS has run its LRP convergence pass. Emitted
+    every 30 seconds.
+  metric_type: cumulative
+  title: BBS Convergence LRP Runs
+
+bbs.ConvergenceTaskDuration:
+  brief: Time in nanoseconds that the BBS took to run its Task convergence pass. Emitted
+    every 30 seconds when Task convergence runs.
+  description: Time in nanoseconds that the BBS took to run its Task convergence pass.
+    Emitted every 30 seconds when Task convergence runs.
+  metric_type: gauge
+  title: BBS Convergence Task Duration
+
+bbs.ConvergenceTaskRuns:
+  brief: Cumulative number of times the BBS has run its Task convergence pass. Emitted
+    every 30 seconds.
+  description: Cumulative number of times the BBS has run its Task convergence pass.
+    Emitted every 30 seconds.
+  metric_type: cumulative
+  title: BBS Convergence Task Runs
+
+bbs.ConvergenceTasksKicked:
+  brief: Cumulative number of times the BBS has updated a Task during its Task convergence
+    pass. Emitted every 30 seconds.
+  description: Cumulative number of times the BBS has updated a Task during its Task
+    convergence pass. Emitted every 30 seconds.
+  metric_type: cumulative
+  title: BBS Convergence Tasks Kicked
+
+bbs.ConvergenceTasksPruned:
+  brief: Cumulative number of times the BBS has deleted a malformed Task during its
+    Task convergence pass. Emitted every 30 seconds.
+  description: Cumulative number of times the BBS has deleted a malformed Task during
+    its Task convergence pass. Emitted every 30 seconds.
+  metric_type: cumulative
+  title: BBS Convergence Tasks Pruned
+
+bbs.CrashedActualLRPs:
+  brief: Total number of LRP instances that have crashed. Emitted every 30 seconds.
+  description: Total number of LRP instances that have crashed. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Crashed Actual LR Ps
+
+bbs.CrashingDesiredLRPs:
+  brief: Total number of DesiredLRPs that have at least one crashed instance. Emitted
+    every 30 seconds.
+  description: Total number of DesiredLRPs that have at least one crashed instance.
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Crashing Desired LR Ps
+
+bbs.Domain.cf-apps:
+  brief: "Whether the \u2018cf-apps\u2019 domain is up-to-date, so that CF apps from\
+    \ CC have been synchronized with DesiredLRPs for Diego to run. 1 means the domain\
+    \ is up-to-date, no data means it is not. Emitted every 30 seconds."
+  description: "Whether the \u2018cf-apps\u2019 domain is up-to-date, so that CF apps\
+    \ from CC have been synchronized with DesiredLRPs for Diego to run. 1 means the\
+    \ domain is up-to-date, no data means it is not. Emitted every 30 seconds."
+  metric_type: gauge
+  title: BBS Domain Cf-Apps
+
+bbs.Domain.cf-tasks:
+  brief: "Whether the \u2018cf-tasks\u2019 domain is up-to-date, so that CF tasks\
+    \ from CC have been synchronized with tasks for Diego to run. 1 means the domain\
+    \ is up-to-date, no data means it is not. Emitted every 30 seconds."
+  description: "Whether the \u2018cf-tasks\u2019 domain is up-to-date, so that CF\
+    \ tasks from CC have been synchronized with tasks for Diego to run. 1 means the\
+    \ domain is up-to-date, no data means it is not. Emitted every 30 seconds."
+  metric_type: gauge
+  title: BBS Domain Cf-Tasks
+
+bbs.ETCDLeader:
+  brief: Index of the leader node in the etcd cluster. Emitted every 30 seconds.
+  description: Index of the leader node in the etcd cluster. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS ETCD Leader
+
+bbs.ETCDRaftTerm:
+  brief: Raft term of the etcd cluster. Emitted every 30 seconds.
+  description: Raft term of the etcd cluster. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS ETCD Raft Term
+
+bbs.ETCDReceivedBandwidthRate:
+  brief: Number of bytes per second received by the follower etcd node. Emitted every
+    30 seconds.
+  description: Number of bytes per second received by the follower etcd node. Emitted
+    every 30 seconds.
+  metric_type: gauge
+  title: BBS ETCD Received Bandwidth Rate
+
+bbs.ETCDReceivedRequestRate:
+  brief: Number of requests per second received by the follower etcd node. Emitted
+    every 30 seconds.
+  description: Number of requests per second received by the follower etcd node. Emitted
+    every 30 seconds.
+  metric_type: gauge
+  title: BBS ETCD Received Request Rate
+
+bbs.ETCDSentBandwidthRate:
+  brief: Number of bytes per second sent by the leader etcd node. Emitted every 30
+    seconds.
+  description: Number of bytes per second sent by the leader etcd node. Emitted every
+    30 seconds.
+  metric_type: gauge
+  title: BBS ETCD Sent Bandwidth Rate
+
+bbs.ETCDSentRequestRate:
+  brief: Number of requests per second sent by the leader etcd node. Emitted every
+    30 seconds.
+  description: Number of requests per second sent by the leader etcd node. Emitted
+    every 30 seconds.
+  metric_type: gauge
+  title: BBS ETCD Sent Request Rate
+
+bbs.ETCDWatchers:
+  brief: Number of watches set against the etcd cluster. Emitted every 30 seconds.
+  description: Number of watches set against the etcd cluster. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS ETCD Watchers
+
+bbs.LRPsClaimed:
+  brief: Total number of LRP instances that have been claimed by some cell. Emitted
+    every 30 seconds.
+  description: Total number of LRP instances that have been claimed by some cell.
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS LR Ps Claimed
+
+bbs.LRPsDesired:
+  brief: Total number of LRP instances desired across all LRPs. Emitted periodically.
+  description: Total number of LRP instances desired across all LRPs. Emitted periodically.
+  metric_type: gauge
+  title: BBS LR Ps Desired
+
+bbs.LRPsExtra:
+  brief: Total number of LRP instances that are no longer desired but still have a
+    BBS record. Emitted every 30 seconds.
+  description: Total number of LRP instances that are no longer desired but still
+    have a BBS record. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS LR Ps Extra
+
+bbs.LRPsMissing:
+  brief: Total number of LRP instances that are desired but have no record in the
+    BBS. Emitted every 30 seconds.
+  description: Total number of LRP instances that are desired but have no record in
+    the BBS. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS LR Ps Missing
+
+bbs.LRPsRunning:
+  brief: Total number of LRP instances that are running on cells. Emitted every 30
+    seconds.
+  description: Total number of LRP instances that are running on cells. Emitted every
+    30 seconds.
+  metric_type: gauge
+  title: BBS LR Ps Running
+
+bbs.LRPsUnclaimed:
+  brief: Total number of LRP instances that have not yet been claimed by a cell. Emitted
+    every 30 seconds.
+  description: Total number of LRP instances that have not yet been claimed by a cell.
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS LR Ps Unclaimed
+
+bbs.LockHeld.v1-locks-bbs_lock:
+  brief: 'Whether a BBS holds the BBS lock: 1 means the lock is held, and 0 means
+    the lock was lost. Emitted every 30 seconds by the active BBS server.'
+  description: 'Whether a BBS holds the BBS lock: 1 means the lock is held, and 0
+    means the lock was lost. Emitted every 30 seconds by the active BBS server.'
+  metric_type: gauge
+  title: BBS Lock Held V1-Locks-BBS Lock
+
+bbs.LockHeldDuration.v1-locks-bbs_lock:
+  brief: Time in nanoseconds that the active BBS has held the BBS lock. Emitted every
+    30 seconds by the active BBS server.
+  description: Time in nanoseconds that the active BBS has held the BBS lock. Emitted
+    every 30 seconds by the active BBS server.
+  metric_type: gauge
+  title: BBS Lock Held Duration V1-Locks-BBS Lock
+
+bbs.MetricsReportingDuration:
+  brief: Time in nanoseconds that the BBS took to emit metrics about etcd. Emitted
+    every 30 seconds.
+  description: Time in nanoseconds that the BBS took to emit metrics about etcd. Emitted
+    every 30 seconds.
+  metric_type: gauge
+  title: BBS Metrics Reporting Duration
+
+bbs.MigrationDuration:
+  brief: Time in nanoseconds that the BBS took to run migrations against its persistence
+    store. Emitted each time a BBS becomes the active master.
+  description: Time in nanoseconds that the BBS took to run migrations against its
+    persistence store. Emitted each time a BBS becomes the active master.
+  metric_type: gauge
+  title: BBS Migration Duration
+
+bbs.RequestCount:
+  brief: Cumulative number of requests the BBS has handled through its API. Emitted
+    for each BBS request.
+  description: Cumulative number of requests the BBS has handled through its API.
+    Emitted for each BBS request.
+  metric_type: cumulative
+  title: BBS Request Count
+
+bbs.RequestLatency:
+  brief: Time in nanoseconds that the BBS took to handle requests to its API endpoints.
+    Emitted when the BBS API handles requests.
+  description: Time in nanoseconds that the BBS took to handle requests to its API
+    endpoints. Emitted when the BBS API handles requests.
+  metric_type: gauge
+  title: BBS Request Latency
+
+bbs.TasksCompleted:
+  brief: Total number of Tasks that have completed. Emitted every 30 seconds.
+  description: Total number of Tasks that have completed. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Tasks Completed
+
+bbs.TasksPending:
+  brief: Total number of Tasks that have not yet been placed on a cell. Emitted every
+    30 seconds.
+  description: Total number of Tasks that have not yet been placed on a cell. Emitted
+    every 30 seconds.
+  metric_type: gauge
+  title: BBS Tasks Pending
+
+bbs.TasksResolving:
+  brief: Total number of Tasks locked for deletion. Emitted every 30 seconds.
+  description: Total number of Tasks locked for deletion. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Tasks Resolving
+
+bbs.TasksRunning:
+  brief: Total number of Tasks running on cells. Emitted every 30 seconds.
+  description: Total number of Tasks running on cells. Emitted every 30 seconds.
+  metric_type: gauge
+  title: BBS Tasks Running
+
+bbs.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: BBS Memory Stats Last GC Pause Time NS
+
+bbs.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: BBS Memory Stats Num Bytes Allocated
+
+bbs.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: BBS Memory Stats Num Bytes Allocated Heap
+
+bbs.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: BBS Memory Stats Num Bytes Allocated Stack
+
+bbs.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: BBS Memory Stats Num Frees
+
+bbs.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: BBS Memory Stats Num Mallocs
+
+bbs.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: BBS Num CPUS
+
+bbs.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: BBS Num Go Routines
+
+cc.failed_job_count.VM_NAME-VM_INDEX:
+  brief: Number of failed jobs in the <VM_NAME>-<VM_INDEX> queue. This is the number
+    of delayed jobs where the failed at column is populated with the time of the most
+    recently failed attempt at the job. The failed job count is not specific to the
+    jobs run by the Cloud Controller worker. By default, Cloud Controller deletes
+    failed jobs after 31 days. Emitted every 30 seconds per VM.
+  description: Number of failed jobs in the <VM_NAME>-<VM_INDEX> queue. This is the
+    number of delayed jobs where the failed at column is populated with the time of
+    the most recently failed attempt at the job. The failed job count is not specific
+    to the jobs run by the Cloud Controller worker. By default, Cloud Controller deletes
+    failed jobs after 31 days. Emitted every 30 seconds per VM.
+  metric_type: cumulative
+  title: CC Failed Job Count <VM NAME>-<VM INDEX>
+
+cc.failed_job_count.cc-generic:
+  brief: Number of failed jobs in the cc-generic queue. By default, Cloud Controller
+    deletes failed jobs after 31 days. Emitted every 30 seconds per VM.
+  description: Number of failed jobs in the cc-generic queue. By default, Cloud Controller
+    deletes failed jobs after 31 days. Emitted every 30 seconds per VM.
+  metric_type: cumulative
+  title: CC Failed Job Count CC-Generic
+
+cc.failed_job_count.total:
+  brief: Number of failed jobs in all queues. By default, Cloud Controller deletes
+    failed jobs after 31 days. Emitted every 30 seconds per VM.
+  description: Number of failed jobs in all queues. By default, Cloud Controller deletes
+    failed jobs after 31 days. Emitted every 30 seconds per VM.
+  metric_type: gauge
+  title: CC Failed Job Count Total
+
+cc.http_status.1XX:
+  brief: Number of HTTP response status codes of type 1xx (informational). This resets
+    when the Cloud Controller process is restarted and is incremented at the end of
+    each request cycle.
+  description: Number of HTTP response status codes of type 1xx (informational). This
+    resets when the Cloud Controller process is restarted and is incremented at the
+    end of each request cycle.
+  metric_type: cumulative
+  title: CC HTTP Status 1XX
+
+cc.http_status.2XX:
+  brief: Number of HTTP response status codes of type 2xx (success). This resets when
+    the Cloud Controller process is restarted and is incremented at the end of each
+    request cycle. Emitted for each Cloud Controller request.
+  description: Number of HTTP response status codes of type 2xx (success). This resets
+    when the Cloud Controller process is restarted and is incremented at the end of
+    each request cycle. Emitted for each Cloud Controller request.
+  metric_type: cumulative
+  title: CC HTTP Status 2XX
+
+cc.http_status.3XX:
+  brief: Number of HTTP response status codes of type 3xx (redirection). This resets
+    when the Cloud Controller process is restarted and is incremented at the end of
+    each request cycle. Emitted for each Cloud Controller request.
+  description: Number of HTTP response status codes of type 3xx (redirection). This
+    resets when the Cloud Controller process is restarted and is incremented at the
+    end of each request cycle. Emitted for each Cloud Controller request.
+  metric_type: cumulative
+  title: CC HTTP Status 3XX
+
+cc.http_status.4XX:
+  brief: Number of HTTP response status codes of type 4xx (client error). This resets
+    when the Cloud Controller process is restarted and is incremented at the end of
+    each request cycle. Emitted for each Cloud Controller request.
+  description: Number of HTTP response status codes of type 4xx (client error). This
+    resets when the Cloud Controller process is restarted and is incremented at the
+    end of each request cycle. Emitted for each Cloud Controller request.
+  metric_type: cumulative
+  title: CC HTTP Status 4XX
+
+cc.http_status.5XX:
+  brief: Number of HTTP response status codes of type 5xx (server error). This resets
+    when the Cloud Controller process is restarted and is incremented at the end of
+    each request cycle.
+  description: Number of HTTP response status codes of type 5xx (server error). This
+    resets when the Cloud Controller process is restarted and is incremented at the
+    end of each request cycle.
+  metric_type: cumulative
+  title: CC HTTP Status 5XX
+
+cc.job_queue_length.cc-VM_NAME-VM_INDEX:
+  brief: Number of background jobs in the <VM_NAME>-<VM_INDEX> queue that have yet
+    to run for the first time. Emitted every 30 seconds per VM.
+  description: Number of background jobs in the <VM_NAME>-<VM_INDEX> queue that have
+    yet to run for the first time. Emitted every 30 seconds per VM.
+  metric_type: gauge
+  title: CC Job Queue Length CC-<VM NAME>-<VM INDEX>
+
+cc.job_queue_length.cc-generic:
+  brief: Number of background jobs in the cc-generic queue that have yet to run for
+    the first time. Emitted every 30 seconds per VM.
+  description: Number of background jobs in the cc-generic queue that have yet to
+    run for the first time. Emitted every 30 seconds per VM.
+  metric_type: gauge
+  title: CC Job Queue Length CC-Generic
+
+cc.job_queue_length.total:
+  brief: Total number of background jobs in the queues that have yet to run for the
+    first time. Emitted every 30 seconds per VM.
+  description: Total number of background jobs in the queues that have yet to run
+    for the first time. Emitted every 30 seconds per VM.
+  metric_type: gauge
+  title: CC Job Queue Length Total
+
+cc.log_count.all:
+  brief: Total number of log messages, sum of messages of all severity levels. The
+    count resets when the Cloud Controller process is restarted. Emitted every 30
+    seconds per VM.
+  description: Total number of log messages, sum of messages of all severity levels.
+    The count resets when the Cloud Controller process is restarted. Emitted every
+    30 seconds per VM.
+  metric_type: gauge
+  title: CC Log Count All
+
+cc.log_count.debug:
+  brief: "Number of log messages of severity \u201Cdebug.\u201D The count resets when\
+    \ the Cloud Controller process is restarted. Emitted every 30 seconds per VM."
+  description: "Number of log messages of severity \u201Cdebug.\u201D The count resets\
+    \ when the Cloud Controller process is restarted. Emitted every 30 seconds per\
+    \ VM."
+  metric_type: gauge
+  title: CC Log Count Debug
+
+cc.log_count.debug1:
+  brief: Not used.
+  description: Not used.
+  metric_type: gauge
+  title: CC Log Count Debug1
+
+cc.log_count.debug2:
+  brief: "Number of log messages of severity \u201Cdebug2.\u201D The count resets\
+    \ when the Cloud Controller process is restarted. Emitted every 30 seconds per\
+    \ VM."
+  description: "Number of log messages of severity \u201Cdebug2.\u201D The count resets\
+    \ when the Cloud Controller process is restarted. Emitted every 30 seconds per\
+    \ VM."
+  metric_type: gauge
+  title: CC Log Count Debug2
+
+cc.log_count.error:
+  brief: Number of error log messages
+  description: Number of error log messages.
+  metric_type: cumulative
+  title: Error logs
+
+cc.log_count.fatal:
+  brief: Number of fatal log messages
+  description: Number of fatal log messages.
+  metric_type: cumulative
+  title: Fatal logs
+
+cc.log_count.info:
+  brief: "Number of log messages of severity \u201Cinfo.\u201D Examples of info messages\
+    \ are droplet created, copying package, uploading package, access denied due to\
+    \ insufficient scope, job logging, blobstore actions, staging requests, and app\
+    \ running requests. The count resets when the Cloud Controller process is restarted.\
+    \ Emitted every 30 seconds per VM."
+  description: "Number of log messages of severity \u201Cinfo.\u201D Examples of info\
+    \ messages are droplet created, copying package, uploading package, access denied\
+    \ due to insufficient scope, job logging, blobstore actions, staging requests,\
+    \ and app running requests. The count resets when the Cloud Controller process\
+    \ is restarted. Emitted every 30 seconds per VM."
+  metric_type: gauge
+  title: CC Log Count Info
+
+cc.log_count.off:
+  brief: "Number of log messages of severity \u201Coff.\u201D The count resets when\
+    \ the Cloud Controller process is restarted. Emitted every 30 seconds per VM."
+  description: "Number of log messages of severity \u201Coff.\u201D The count resets\
+    \ when the Cloud Controller process is restarted. Emitted every 30 seconds per\
+    \ VM."
+  metric_type: gauge
+  title: CC Log Count Off
+
+cc.log_count.warn:
+  brief: Number of warn log messages
+  description: Number of warn log messages.
+  metric_type: cumulative
+  title: Warn logs
+
+cc.requests.completed:
+  brief: Number of Cloud Controller API requests completed
+  description: Number of Cloud Controller API requests completed.
+  metric_type: cumulative
+  title: Requests completed
+
+cc.requests.outstanding:
+  brief: Number of Cloud Controller requests made but not completed
+  description: Number of Cloud Controller requests made but not completed.
+  metric_type: cumulative
+  title: Requests outstanding
+
+cc.tasks_running.count:
+  brief: Number of tasks currently running
+  description: Number of tasks currently running.
+  metric_type: gauge
+  title: Tasks running
+
+cc.tasks_running.memory_in_mb:
+  brief: Memory being consumed by all currently running tasks. Emitted every 30 seconds
+    per VM. This metric is only seen in version 3 of the Cloud Foundry API.
+  description: Memory being consumed by all currently running tasks. Emitted every
+    30 seconds per VM. This metric is only seen in version 3 of the Cloud Foundry
+    API.
+  metric_type: gauge
+  title: CC Tasks Running Memory in Mb
+
+cc.thread_info.event_machine.connection_count:
+  brief: Number of open connections to event machine. Emitted every 30 seconds per
+    VM.
+  description: Number of open connections to event machine. Emitted every 30 seconds
+    per VM.
+  metric_type: gauge
+  title: CC Thread Info Event Machine Connection Count
+
+cc.thread_info.event_machine.resultqueue.num_waiting:
+  brief: Number of scheduled tasks in the result. Emitted every 30 seconds per VM.
+  description: Number of scheduled tasks in the result. Emitted every 30 seconds per
+    VM.
+  metric_type: gauge
+  title: CC Thread Info Event Machine Resultqueue Num Waiting
+
+cc.thread_info.event_machine.resultqueue.size:
+  brief: Number of unscheduled tasks in the result. Emitted every 30 seconds per VM.
+  description: Number of unscheduled tasks in the result. Emitted every 30 seconds
+    per VM.
+  metric_type: gauge
+  title: CC Thread Info Event Machine Resultqueue Size
+
+cc.thread_info.event_machine.threadqueue.num_waiting:
+  brief: Number of scheduled tasks in the threadqueue. Emitted every 30 seconds per
+    VM.
+  description: Number of scheduled tasks in the threadqueue. Emitted every 30 seconds
+    per VM.
+  metric_type: gauge
+  title: CC Thread Info Event Machine Threadqueue Num Waiting
+
+cc.thread_info.event_machine.threadqueue.size:
+  brief: Number of unscheduled tasks in the threadqueue. Emitted every 30 seconds
+    per VM.
+  description: Number of unscheduled tasks in the threadqueue. Emitted every 30 seconds
+    per VM.
+  metric_type: gauge
+  title: CC Thread Info Event Machine Threadqueue Size
+
+cc.thread_info.thread_count:
+  brief: Total number of threads that are either runnable or stopped. Emitted every
+    30 seconds per VM.
+  description: Total number of threads that are either runnable or stopped. Emitted
+    every 30 seconds per VM.
+  metric_type: gauge
+  title: CC Thread Info Thread Count
+
+cc.total_users:
+  brief: Total number of users ever created, including inactive users. Emitted every
+    10 minutes per VM.
+  description: Total number of users ever created, including inactive users. Emitted
+    every 10 minutes per VM.
+  metric_type: gauge
+  title: CC Total Users
+
+cc.vcap_sinatra.recent_errors:
+  brief: 50 most recent errors. DEPRECATED
+  description: 50 most recent errors. DEPRECATED
+  metric_type: gauge
+  title: CC Vcap Sinatra Recent Errors
+
+cc.vitals.cpu:
+  brief: Percentage of CPU used by the Cloud Controller process. Emitted every 30
+    seconds per VM.
+  description: Percentage of CPU used by the Cloud Controller process. Emitted every
+    30 seconds per VM.
+  metric_type: gauge
+  title: CC Vitals Cpu
+
+cc.vitals.cpu_load_avg:
+  brief: System CPU load averaged over the last 1 minute according to the OS. Emitted
+    every 30 seconds per VM.
+  description: System CPU load averaged over the last 1 minute according to the OS.
+    Emitted every 30 seconds per VM.
+  metric_type: gauge
+  title: CC Vitals Cpu Load Avg
+
+cc.vitals.mem_bytes:
+  brief: The RSS bytes (resident set size) or real memory of the Cloud Controller
+    process. Emitted every 30 seconds per VM.
+  description: The RSS bytes (resident set size) or real memory of the Cloud Controller
+    process. Emitted every 30 seconds per VM.
+  metric_type: gauge
+  title: CC Vitals Mem Bytes
+
+cc.vitals.mem_free_bytes:
+  brief: Total memory available according to the OS. Emitted every 30 seconds per
+    VM.
+  description: Total memory available according to the OS. Emitted every 30 seconds
+    per VM.
+  metric_type: gauge
+  title: CC Vitals Mem Free Bytes
+
+cc.vitals.mem_used_bytes:
+  brief: Total memory used (active + wired) according to the OS. Emitted every 30
+    seconds per VM.
+  description: Total memory used (active + wired) according to the OS. Emitted every
+    30 seconds per VM.
+  metric_type: gauge
+  title: CC Vitals Mem Used Bytes
+
+cc.vitals.num_cores:
+  brief: The number of CPUs of a host machine. Emitted every 30 seconds per VM.
+  description: The number of CPUs of a host machine. Emitted every 30 seconds per
+    VM.
+  metric_type: gauge
+  title: CC Vitals Num Cores
+
+cc.vitals.uptime:
+  brief: The uptime of the Cloud Controller process in seconds. Emitted every 30 seconds
+    per VM.
+  description: The uptime of the Cloud Controller process in seconds. Emitted every
+    30 seconds per VM.
+  metric_type: gauge
+  title: CC Vitals Uptime
+
+cc_uploader.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: CC Uploader Memory Stats Last GC Pause Time NS
+
+cc_uploader.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: CC Uploader Memory Stats Num Bytes Allocated
+
+cc_uploader.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: CC Uploader Memory Stats Num Bytes Allocated Heap
+
+cc_uploader.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: CC Uploader Memory Stats Num Bytes Allocated Stack
+
+cc_uploader.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: CC Uploader Memory Stats Num Frees
+
+cc_uploader.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: CC Uploader Memory Stats Num Mallocs
+
+cc_uploader.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: CC Uploader Num CPUS
+
+cc_uploader.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: CC Uploader Num Go Routines
+
+container.cpu_percentage:
+  brief: Percentage of CPU used by this container
+  description: Percentage of CPU used by this container
+  metric_type: gauge
+  title: Container CPU Usage
+
+container.disk_bytes:
+  brief: Number of bytes of disk used by this container
+  description: Number of bytes of disk used by this container
+  metric_type: gauge
+  title: Container Disk Usage
+
+container.disk_bytes_quota:
+  brief: Number of bytes of disk allowed for this container
+  description: Number of bytes of disk allowed for this container
+  metric_type: gauge
+  title: Container Disk Quota
+
+container.memory_bytes:
+  brief: Number of bytes of RAM used by this container
+  description: Number of bytes of RAM used by this container
+  metric_type: gauge
+  title: Container Memory Usage
+
+container.memory_bytes_quota:
+  brief: Number of bytes of RAM allocated to this container
+  description: Number of bytes of RAM allocated to this container
+  metric_type: gauge
+  title: Container Memory Quota
+
+etcd.CompareAndDeleteFail:
+  brief: CompareAndDeleteFail operation count. Emitted every 30 seconds.
+  description: CompareAndDeleteFail operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Compare and Delete Fail
+
+etcd.CompareAndDeleteSuccess:
+  brief: CompareAndDeleteSuccess operation countEmitted every 30 seconds.
+  description: CompareAndDeleteSuccess operation countEmitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Compare and Delete Success
+
+etcd.CompareAndSwapFail:
+  brief: CompareAndSwapFail operation count. Emitted every 30 seconds.
+  description: CompareAndSwapFail operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Compare and Swap Fail
+
+etcd.CompareAndSwapSuccess:
+  brief: CompareAndSwapSuccess operation count. Emitted every 30 seconds.
+  description: CompareAndSwapSuccess operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Compare and Swap Success
+
+etcd.CreateFail:
+  brief: CreateFail operation count. Emitted every 30 seconds.
+  description: CreateFail operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Create Fail
+
+etcd.CreateSuccess:
+  brief: CreateSuccess operation count. Emitted every 30 seconds.
+  description: CreateSuccess operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Create Success
+
+etcd.DeleteFail:
+  brief: DeleteFail operation count. Emitted every 30 seconds.
+  description: DeleteFail operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Delete Fail
+
+etcd.DeleteSuccess:
+  brief: DeleteSuccess operation count. Emitted every 30 seconds.
+  description: DeleteSuccess operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Delete Success
+
+etcd.EtcdIndex:
+  brief: X-Etcd-Index value from the /stats/store endpoint. Emitted every 30 seconds.
+  description: X-Etcd-Index value from the /stats/store endpoint. Emitted every 30
+    seconds.
+  metric_type: gauge
+  title: Etcd Etcd Index
+
+etcd.ExpireCount:
+  brief: ExpireCount operation count. Emitted every 30 seconds.
+  description: ExpireCount operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Expire Count
+
+etcd.Followers:
+  brief: Number of etcd followers. Emitted every 30 seconds.
+  description: Number of etcd followers. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Followers
+
+etcd.GetsFail:
+  brief: GetsFail operation count. Emitted every 30 seconds.
+  description: GetsFail operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Gets Fail
+
+etcd.GetsSuccess:
+  brief: GetsSuccess operation count. Emitted every 30 seconds.
+  description: GetsSuccess operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Gets Success
+
+etcd.IsLeader:
+  brief: 1 if the current server is the leader, 0 if it is a follower. Emitted every
+    30 seconds.
+  description: 1 if the current server is the leader, 0 if it is a follower. Emitted
+    every 30 seconds.
+  metric_type: gauge
+  title: Etcd Is Leader
+
+etcd.Latency:
+  brief: Current latency in milliseconds from leader to a specific follower. Emitted
+    every 30 seconds.
+  description: Current latency in milliseconds from leader to a specific follower.
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Latency
+
+etcd.RaftIndex:
+  brief: X-Raft-Index value from the /stats/store endpoint. Emitted every 30 seconds.
+  description: X-Raft-Index value from the /stats/store endpoint. Emitted every 30
+    seconds.
+  metric_type: gauge
+  title: Etcd Raft Index
+
+etcd.RaftTerm:
+  brief: X-Raft-Term value from the /stats/store endpoint. Emitted every 30 seconds.
+  description: X-Raft-Term value from the /stats/store endpoint. Emitted every 30
+    seconds.
+  metric_type: gauge
+  title: Etcd Raft Term
+
+etcd.ReceivedAppendRequests:
+  brief: Number of append requests this node has processed. Emitted every 30 seconds.
+  description: Number of append requests this node has processed. Emitted every 30
+    seconds.
+  metric_type: gauge
+  title: Etcd Received Append Requests
+
+etcd.ReceivingBandwidthRate:
+  brief: Number of bytes per second this node is receiving (follower only). Emitted
+    every 30 seconds.
+  description: Number of bytes per second this node is receiving (follower only).
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Receiving Bandwidth Rate
+
+etcd.ReceivingRequestRate:
+  brief: Number of requests per second this node is receiving (follower only). Emitted
+    every 30 seconds.
+  description: Number of requests per second this node is receiving (follower only).
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Receiving Request Rate
+
+etcd.SendingBandwidthRate:
+  brief: Number of bytes per second this node is sending (leader only). This value
+    is undefined on single member clusters. Emitted every 30 seconds.
+  description: Number of bytes per second this node is sending (leader only). This
+    value is undefined on single member clusters. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Sending Bandwidth Rate
+
+etcd.SendingRequestRate:
+  brief: Number of requests per second this node is sending (leader only). This value
+    is undefined on single member clusters. Emitted every 30 seconds.
+  description: Number of requests per second this node is sending (leader only). This
+    value is undefined on single member clusters. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Sending Request Rate
+
+etcd.SentAppendRequests:
+  brief: Number of requests that this node has sent. Emitted every 30 seconds.
+  description: Number of requests that this node has sent. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Sent Append Requests
+
+etcd.SetsFail:
+  brief: SetsFail operation count. Emitted every 30 seconds.
+  description: SetsFail operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Sets Fail
+
+etcd.SetsSuccess:
+  brief: SetsSuccess operation count. Emitted every 30 seconds.
+  description: SetsSuccess operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Sets Success
+
+etcd.UpdateFail:
+  brief: UpdateFail operation count. Emitted every 30 seconds.
+  description: UpdateFail operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Update Fail
+
+etcd.UpdateSuccess:
+  brief: UpdateSuccess operation count. Emitted every 30 seconds.
+  description: UpdateSuccess operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Update Success
+
+etcd.Watchers:
+  brief: Watchers operation count. Emitted every 30 seconds.
+  description: Watchers operation count. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Etcd Watchers
+
+file_server.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: File Server Memory Stats Last GC Pause Time NS
+
+file_server.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: File Server Memory Stats Num Bytes Allocated
+
+file_server.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: File Server Memory Stats Num Bytes Allocated Heap
+
+file_server.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: File Server Memory Stats Num Bytes Allocated Stack
+
+file_server.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: File Server Memory Stats Num Frees
+
+file_server.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: File Server Memory Stats Num Mallocs
+
+file_server.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: File Server Num CPUS
+
+file_server.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: File Server Num Go Routines
+
+garden_linux.BackingStores:
+  brief: Number of container backing store files. Emitted every 30 seconds.
+  description: Number of container backing store files. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Garden Linux Backing Stores
+
+garden_linux.DepotDirs:
+  brief: Number of directories in the Garden depot. Emitted every 30 seconds.
+  description: Number of directories in the Garden depot. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Garden Linux Depot Dirs
+
+garden_linux.LoopDevices:
+  brief: Number of attached loop devices. Emitted every 30 seconds.
+  description: Number of attached loop devices. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Garden Linux Loop Devices
+
+garden_linux.MetricsReporting:
+  brief: How long it took to emit the BackingStores, DepotDirs, and LoopDevices metrics.
+    Emitted every 30 seconds.
+  description: How long it took to emit the BackingStores, DepotDirs, and LoopDevices
+    metrics. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Garden Linux Metrics Reporting
+
+garden_linux.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: Garden Linux Memory Stats Last GC Pause Time NS
+
+garden_linux.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Garden Linux Memory Stats Num Bytes Allocated
+
+garden_linux.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Garden Linux Memory Stats Num Bytes Allocated Heap
+
+garden_linux.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Garden Linux Memory Stats Num Bytes Allocated Stack
+
+garden_linux.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Garden Linux Memory Stats Num Frees
+
+garden_linux.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Garden Linux Memory Stats Num Mallocs
+
+garden_linux.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Garden Linux Num CPUS
+
+garden_linux.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: Garden Linux Num Go Routines
+
+gorouter.bad_gateways:
+  brief: Number of bad gateway events
+  description: Number of bad gateway events.
+  metric_type: cumulative
+  title: Bad gateways
+
+gorouter.responses:
+  brief: Number of router responses
+  description: Number of router responses.
+  metric_type: cumulative
+  title: Responses
+
+gorouter.total_requests:
+  brief: Number of router requests received
+  description: Number of router requests received.
+  metric_type: cumulative
+  title: Requests
+
+gorouter.total_routes:
+  brief: Number of registered routes
+  description: Number of registered routes.
+  metric_type: gauge
+  title: Routes
+
+nsync_bulker.DesiredLRPSyncDuration:
+  brief: Time in nanoseconds that the nsync-bulker took to synchronize CF apps and
+    Diego DesiredLRPs. Emitted every 30 seconds.
+  description: Time in nanoseconds that the nsync-bulker took to synchronize CF apps
+    and Diego DesiredLRPs. Emitted every 30 seconds.
+  metric_type: gauge
+  title: Nsync Bulker Desired LRP Sync Duration
+
+nsync_bulker.LRPsDesired:
+  brief: Cumulative number of LRPs desired through the nsync API. Emitted on each
+    request desiring a new LRP, every 30 seconds.
+  description: Cumulative number of LRPs desired through the nsync API. Emitted on
+    each request desiring a new LRP, every 30 seconds.
+  metric_type: gauge
+  title: Nsync Bulker LR Ps Desired
+
+nsync_bulker.LockHeld.v1-locks-nsync_bulker_lock:
+  brief: 'Whether an nsync-bulker holds the nsync-bulker lock: 1 means the lock is
+    held, and 0 means the lock was lost. Emitted every 30 seconds by the active nsync-bulker.'
+  description: 'Whether an nsync-bulker holds the nsync-bulker lock: 1 means the lock
+    is held, and 0 means the lock was lost. Emitted every 30 seconds by the active
+    nsync-bulker.'
+  metric_type: gauge
+  title: Nsync Bulker Lock Held V1-Locks-Nsync Bulker Lock
+
+nsync_bulker.LockHeldDuration.v1-locks-nsync_bulker_lock:
+  brief: Time in nanoseconds that the active nsync-bulker has held the convergence
+    lock. Emitted every 30 seconds by the active nsync-bulker.
+  description: Time in nanoseconds that the active nsync-bulker has held the convergence
+    lock. Emitted every 30 seconds by the active nsync-bulker.
+  metric_type: gauge
+  title: Nsync Bulker Lock Held Duration V1-Locks-Nsync Bulker Lock
+
+nsync_bulker.NsyncInvalidDesiredLRPsFound:
+  brief: Number of invalid DesiredLRPs found during nsync-bulker periodic synchronization.
+    Emitted every 30 seconds.
+  description: Number of invalid DesiredLRPs found during nsync-bulker periodic synchronization.
+    Emitted every 30 seconds.
+  metric_type: gauge
+  title: Nsync Bulker Nsync Invalid Desired LR Ps Found
+
+nsync_bulker.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: Nsync Bulker Memory Stats Last GC Pause Time NS
+
+nsync_bulker.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Nsync Bulker Memory Stats Num Bytes Allocated
+
+nsync_bulker.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Nsync Bulker Memory Stats Num Bytes Allocated Heap
+
+nsync_bulker.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Nsync Bulker Memory Stats Num Bytes Allocated Stack
+
+nsync_bulker.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Nsync Bulker Memory Stats Num Frees
+
+nsync_bulker.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Nsync Bulker Memory Stats Num Mallocs
+
+nsync_bulker.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Nsync Bulker Num CPUS
+
+nsync_bulker.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: Nsync Bulker Num Go Routines
+
+nsync_listener.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: Nsync Listener Memory Stats Last GC Pause Time NS
+
+nsync_listener.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Nsync Listener Memory Stats Num Bytes Allocated
+
+nsync_listener.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Nsync Listener Memory Stats Num Bytes Allocated Heap
+
+nsync_listener.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Nsync Listener Memory Stats Num Bytes Allocated Stack
+
+nsync_listener.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Nsync Listener Memory Stats Num Frees
+
+nsync_listener.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Nsync Listener Memory Stats Num Mallocs
+
+nsync_listener.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Nsync Listener Num CPUS
+
+nsync_listener.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: Nsync Listener Num Go Routines
+
+rep.CM:
+  brief: Emitted every 30 seconds.
+  description: Emitted every 30 seconds.
+  metric_type: gauge
+  title: Rep CM
+
+rep.CapacityRemainingContainers:
+  brief: Remaining number of containers this cell can host. Emitted every 60 seconds.
+  description: Remaining number of containers this cell can host. Emitted every 60
+    seconds.
+  metric_type: gauge
+  title: Rep Capacity Remaining Containers
+
+rep.CapacityRemainingDisk:
+  brief: Amount of disk available to allocate in the cell, in megabytes
+  description: Amount of disk available to allocate in the cell, in megabytes.
+  metric_type: gauge
+  title: Remaining disk capacity
+
+rep.CapacityRemainingMemory:
+  brief: Amount of memory available to allocate in the cell, in megabytes
+  description: Amount of memory available to allocate in the cell, in megabytes.
+  metric_type: gauge
+  title: Remaining memory capacity
+
+rep.CapacityTotalContainers:
+  brief: Total number of containers this cell can host. Emitted every 60 seconds.
+  description: Total number of containers this cell can host. Emitted every 60 seconds.
+  metric_type: gauge
+  title: Rep Capacity Total Containers
+
+rep.CapacityTotalDisk:
+  brief: Total amount of disk in a cell, in megabytes
+  description: Total amount of disk in a cell, in megabytes.
+  metric_type: gauge
+  title: Total disk capacity
+
+rep.CapacityTotalMemory:
+  brief: Total amount of memory in a cell, in megabytes
+  description: Total amount of memory in a cell, in megabytes.
+  metric_type: gauge
+  title: Total memory capacity
+
+rep.ContainerCount:
+  brief: Number of Diego containers currently running
+  description: Number of Diego containers currently running.
+  metric_type: gauge
+  title: Diego containers
+
+rep.GardenContainerCreationDuration:
+  brief: Time in nanoseconds that the rep Garden backend took to create a container.
+    Emitted after every successful container creation.
+  description: Time in nanoseconds that the rep Garden backend took to create a container.
+    Emitted after every successful container creation.
+  metric_type: gauge
+  title: Rep Garden Container Creation Duration
+
+rep.LogMessage:
+  brief: Emitted every 30 seconds.
+  description: Emitted every 30 seconds.
+  metric_type: gauge
+  title: Rep Log Message
+
+rep.RepBulkSyncDuration:
+  brief: Time in nanoseconds that the cell rep took to synchronize the ActualLRPs
+    it has claimed with its actual garden containers. Emitted every 30 seconds by
+    each rep.
+  description: Time in nanoseconds that the cell rep took to synchronize the ActualLRPs
+    it has claimed with its actual garden containers. Emitted every 30 seconds by
+    each rep.
+  metric_type: gauge
+  title: Rep Rep Bulk Sync Duration
+
+rep.UnhealthyCell:
+  brief: Number of unhealthy Diego cells
+  description: Number of unhealthy Diego cells.
+  metric_type: gauge
+  title: Unhealthy cells
+
+rep.logSenderTotalMessagesRead:
+  brief: Count of application log messages sent by Diego Executor. Emitted every 30
+    seconds.
+  description: Count of application log messages sent by Diego Executor. Emitted every
+    30 seconds.
+  metric_type: cumulative
+  title: Rep Log Sender Total Messages Read
+
+rep.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: Rep Memory Stats Last GC Pause Time NS
+
+rep.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Rep Memory Stats Num Bytes Allocated
+
+rep.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Rep Memory Stats Num Bytes Allocated Heap
+
+rep.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Rep Memory Stats Num Bytes Allocated Stack
+
+rep.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Rep Memory Stats Num Frees
+
+rep.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Rep Memory Stats Num Mallocs
+
+rep.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Rep Num CPUS
+
+rep.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: Rep Num Go Routines
+
+route_emitter.LockHeld.v1-locks-route_emitter_lock:
+  brief: 'Whether a route-emitter holds the route-emitter lock: 1 means the lock is
+    held, and 0 means the lock was lost. Emitted every 30 seconds by the active route-emitter.'
+  description: 'Whether a route-emitter holds the route-emitter lock: 1 means the
+    lock is held, and 0 means the lock was lost. Emitted every 30 seconds by the active
+    route-emitter.'
+  metric_type: gauge
+  title: Route Emitter Lock Held V1-Locks-Route Emitter Lock
+
+route_emitter.LockHeldDuration.v1-locks-route_emitter_lock:
+  brief: Time in nanoseconds that the active route-emitter has held the route-emitter
+    lock. Emitted every 30 seconds by the active route-emitter.
+  description: Time in nanoseconds that the active route-emitter has held the route-emitter
+    lock. Emitted every 30 seconds by the active route-emitter.
+  metric_type: gauge
+  title: Route Emitter Lock Held Duration V1-Locks-Route Emitter Lock
+
+route_emitter.MessagesEmitted:
+  brief: The cumulative number of registration messages that this process has sent.
+    Emitted every 30 seconds.
+  description: The cumulative number of registration messages that this process has
+    sent. Emitted every 30 seconds.
+  metric_type: cumulative
+  title: Route Emitter Messages Emitted
+
+route_emitter.RouteEmitterSyncDuration:
+  brief: Time in nanoseconds that the active route-emitter took to perform its synchronization
+    pass. Emitted every 60 seconds.
+  description: Time in nanoseconds that the active route-emitter took to perform its
+    synchronization pass. Emitted every 60 seconds.
+  metric_type: gauge
+  title: Route Emitter Route Emitter Sync Duration
+
+route_emitter.RoutesRegistered:
+  brief: Cumulative number of route registrations emitted from the route-emitter as
+    it reacts to changes to LRPs. Emitted every 30 seconds.
+  description: Cumulative number of route registrations emitted from the route-emitter
+    as it reacts to changes to LRPs. Emitted every 30 seconds.
+  metric_type: cumulative
+  title: Route Emitter Routes Registered
+
+route_emitter.RoutesSynced:
+  brief: Cumulative number of route registrations emitted from the route-emitter during
+    its periodic route-table synchronization. Emitted every 30 seconds.
+  description: Cumulative number of route registrations emitted from the route-emitter
+    during its periodic route-table synchronization. Emitted every 30 seconds.
+  metric_type: cumulative
+  title: Route Emitter Routes Synced
+
+route_emitter.RoutesTotal:
+  brief: "Number of routes in the route-emitter\u2019s routing table. Emitted every\
+    \ 30 seconds."
+  description: "Number of routes in the route-emitter\u2019s routing table. Emitted\
+    \ every 30 seconds."
+  metric_type: gauge
+  title: Route Emitter Routes Total
+
+route_emitter.RoutesUnregistered:
+  brief: Cumulative number of route unregistrations emitted from the route-emitter
+    as it reacts to changes to LRPs. Emitted every 30 seconds.
+  description: Cumulative number of route unregistrations emitted from the route-emitter
+    as it reacts to changes to LRPs. Emitted every 30 seconds.
+  metric_type: cumulative
+  title: Route Emitter Routes Unregistered
+
+route_emitter.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: Route Emitter Memory Stats Last GC Pause Time NS
+
+route_emitter.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Route Emitter Memory Stats Num Bytes Allocated
+
+route_emitter.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Route Emitter Memory Stats Num Bytes Allocated Heap
+
+route_emitter.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Route Emitter Memory Stats Num Bytes Allocated Stack
+
+route_emitter.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Route Emitter Memory Stats Num Frees
+
+route_emitter.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Route Emitter Memory Stats Num Mallocs
+
+route_emitter.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Route Emitter Num CPUS
+
+route_emitter.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: Route Emitter Num Go Routines
+
+ssh_proxy.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: SSH Proxy Memory Stats Last GC Pause Time NS
+
+ssh_proxy.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: SSH Proxy Memory Stats Num Bytes Allocated
+
+ssh_proxy.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: SSH Proxy Memory Stats Num Bytes Allocated Heap
+
+ssh_proxy.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: SSH Proxy Memory Stats Num Bytes Allocated Stack
+
+ssh_proxy.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: SSH Proxy Memory Stats Num Frees
+
+ssh_proxy.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: SSH Proxy Memory Stats Num Mallocs
+
+ssh_proxy.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: SSH Proxy Num CPUS
+
+ssh_proxy.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process .
+  description: Instantaneous number of active goroutines in the process .
+  metric_type: gauge
+  title: SSH Proxy Num Go Routines
+
+stager.StagingRequestFailedDuration:
+  brief: Time in nanoseconds that the failed staging task took to run. Emitted each
+    time a staging task fails.
+  description: Time in nanoseconds that the failed staging task took to run. Emitted
+    each time a staging task fails.
+  metric_type: gauge
+  title: Stager Staging Request Failed Duration
+
+stager.StagingRequestSucceededDuration:
+  brief: Time in nanoseconds that the successful staging task took to run. Emitted
+    each time a staging task completes successfully.
+  description: Time in nanoseconds that the successful staging task took to run. Emitted
+    each time a staging task completes successfully.
+  metric_type: gauge
+  title: Stager Staging Request Succeeded Duration
+
+stager.StagingRequestsFailed:
+  brief: Cumulative number of failed staging tasks handled by each stager. Emitted
+    every time a staging task fails.
+  description: Cumulative number of failed staging tasks handled by each stager. Emitted
+    every time a staging task fails.
+  metric_type: gauge
+  title: Stager Staging Requests Failed
+
+stager.StagingRequestsSucceeded:
+  brief: Cumulative number of successful staging tasks handled by each stager. Emitted
+    every time a staging task completes successfully.
+  description: Cumulative number of successful staging tasks handled by each stager.
+    Emitted every time a staging task completes successfully.
+  metric_type: gauge
+  title: Stager Staging Requests Succeeded
+
+stager.StagingStartRequestsReceived:
+  brief: Cumulative number of requests to start a staging task. Emitted by a stager
+    each time it handles a request.
+  description: Cumulative number of requests to start a staging task. Emitted by a
+    stager each time it handles a request.
+  metric_type: gauge
+  title: Stager Staging Start Requests Received
+
+stager.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: Stager Memory Stats Last GC Pause Time NS
+
+stager.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Stager Memory Stats Num Bytes Allocated
+
+stager.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Stager Memory Stats Num Bytes Allocated Heap
+
+stager.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Stager Memory Stats Num Bytes Allocated Stack
+
+stager.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Stager Memory Stats Num Frees
+
+stager.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Stager Memory Stats Num Mallocs
+
+stager.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Stager Num CPUS
+
+stager.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: Stager Num Go Routines
+
+syslog_drain_binder.memoryStats.lastGCPauseTimeNS:
+  brief: Duration of the last Garbage Collector pause in nanoseconds.
+  description: Duration of the last Garbage Collector pause in nanoseconds.
+  metric_type: gauge
+  title: Syslog Drain Binder Memory Stats Last GC Pause Time NS
+
+syslog_drain_binder.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: Syslog Drain Binder Memory Stats Num Bytes Allocated
+
+syslog_drain_binder.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: Syslog Drain Binder Memory Stats Num Bytes Allocated Heap
+
+syslog_drain_binder.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: Syslog Drain Binder Memory Stats Num Bytes Allocated Stack
+
+syslog_drain_binder.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: Syslog Drain Binder Memory Stats Num Frees
+
+syslog_drain_binder.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: Syslog Drain Binder Memory Stats Num Mallocs
+
+syslog_drain_binder.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: Syslog Drain Binder Num CPUS
+
+syslog_drain_binder.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the Doppler process.
+  description: Instantaneous number of active goroutines in the Doppler process.
+  metric_type: gauge
+  title: Syslog Drain Binder Num Go Routines
+
+syslog_drain_binder.pollCount:
+  brief: Number of times the syslog drain binder has polled the cloud controller for
+    syslog drain bindings. Emitted every 30 seconds.
+  description: Number of times the syslog drain binder has polled the cloud controller
+    for syslog drain bindings. Emitted every 30 seconds.
+  metric_type: cumulative
+  title: Syslog Drain Binder Poll Count
+
+syslog_drain_binder.totalDrains:
+  brief: Number of syslog drains returned by cloud controller. Emitted every 30 seconds.
+  description: Number of syslog drains returned by cloud controller. Emitted every
+    30 seconds.
+  metric_type: gauge
+  title: Syslog Drain Binder Total Drains
+
+system.cpu.sys:
+  brief: CPU load consumed by the kernel
+  description: CPU load consumed by the kernel.
+  metric_type: gauge
+  title: System CPU load
+
+system.cpu.user:
+  brief: CPU load consumed by userspace
+  description: CPU load consumed by userspace.
+  metric_type: gauge
+  title: User CPU load
+
+system.cpu.wait:
+  brief: Time CPU spent waiting for IO
+  description: Time CPU spent waiting for IO.
+  metric_type: gauge
+  title: CPU wait
+
+system.disk.ephemeral.percent:
+  brief: Percentage of the ephemeral disk used
+  description: Percentage of the ephemeral disk used.
+  metric_type: gauge
+  title: Ephemeral disk used
+
+system.disk.system.percent:
+  brief: Percentage of the system disk used
+  description: Percentage of the system disk used.
+  metric_type: gauge
+  title: System disk used
+
+system.healthy:
+  brief: Overall status of system health
+  description: Overall status of system health.
+  metric_type: gauge
+  title: System health
+
+system.mem.percent:
+  brief: Percentage of RAM used
+  description: Percentage of RAM used.
+  metric_type: gauge
+  title: Memory used
+
+system.swap.percent:
+  brief: Percentage of swap space used
+  description: Percentage of swap space used.
+  metric_type: gauge
+  title: Swap used
+
+tps_listener.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: TPS Listener Memory Stats Last GC Pause Time NS
+
+tps_listener.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: TPS Listener Memory Stats Num Bytes Allocated
+
+tps_listener.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: TPS Listener Memory Stats Num Bytes Allocated Heap
+
+tps_listener.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: TPS Listener Memory Stats Num Bytes Allocated Stack
+
+tps_listener.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: TPS Listener Memory Stats Num Frees
+
+tps_listener.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: TPS Listener Memory Stats Num Mallocs
+
+tps_listener.numCPUS:
+  brief: Number of CPUs on the machine.
+  description: Number of CPUs on the machine.
+  metric_type: gauge
+  title: TPS Listener Num CPUS
+
+tps_listener.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: TPS Listener Num Go Routines
+
+tps_watcher.LockHeld.v1-locks-tps_watcher_lock:
+  brief: 'Whether a tps-watcher holds the tps-watcher lock: 1 means the lock is held,
+    and 0 means the lock was lost. Emitted every 30 seconds by the active tps-watcher.'
+  description: 'Whether a tps-watcher holds the tps-watcher lock: 1 means the lock
+    is held, and 0 means the lock was lost. Emitted every 30 seconds by the active
+    tps-watcher.'
+  metric_type: gauge
+  title: TPS Watcher Lock Held V1-Locks-Tps Watcher Lock
+
+tps_watcher.LockHeldDuration.v1-locks-tps_watcher_lock:
+  brief: Time in nanoseconds that the active tps-watcher has held the convergence
+    lock. Emitted every 30 seconds by the active tps-watcher.
+  description: Time in nanoseconds that the active tps-watcher has held the convergence
+    lock. Emitted every 30 seconds by the active tps-watcher.
+  metric_type: gauge
+  title: TPS Watcher Lock Held Duration V1-Locks-Tps Watcher Lock
+
+tps_watcher.memoryStats.lastGCPauseTimeNS:
+  brief: Duration in nanoseconds of the last garbage collector pause.
+  description: Duration in nanoseconds of the last garbage collector pause.
+  metric_type: gauge
+  title: TPS Watcher Memory Stats Last GC Pause Time NS
+
+tps_watcher.memoryStats.numBytesAllocated:
+  brief: Instantaneous count of bytes allocated and still in use.
+  description: Instantaneous count of bytes allocated and still in use.
+  metric_type: gauge
+  title: TPS Watcher Memory Stats Num Bytes Allocated
+
+tps_watcher.memoryStats.numBytesAllocatedHeap:
+  brief: Instantaneous count of bytes allocated on the main heap and still in use.
+  description: Instantaneous count of bytes allocated on the main heap and still in
+    use.
+  metric_type: gauge
+  title: TPS Watcher Memory Stats Num Bytes Allocated Heap
+
+tps_watcher.memoryStats.numBytesAllocatedStack:
+  brief: Instantaneous count of bytes used by the stack allocator.
+  description: Instantaneous count of bytes used by the stack allocator.
+  metric_type: gauge
+  title: TPS Watcher Memory Stats Num Bytes Allocated Stack
+
+tps_watcher.memoryStats.numFrees:
+  brief: Lifetime number of memory deallocations.
+  description: Lifetime number of memory deallocations.
+  metric_type: gauge
+  title: TPS Watcher Memory Stats Num Frees
+
+tps_watcher.memoryStats.numMallocs:
+  brief: Lifetime number of memory allocations.
+  description: Lifetime number of memory allocations.
+  metric_type: gauge
+  title: TPS Watcher Memory Stats Num Mallocs
+
+tps_watcher.numCPUS:
+  brief: Number of CPUs on the machine. Emitted every 30 seconds.
+  description: Number of CPUs on the machine. Emitted every 30 seconds.
+  metric_type: gauge
+  title: TPS Watcher Num CPUS
+
+tps_watcher.numGoRoutines:
+  brief: Instantaneous number of active goroutines in the process.
+  description: Instantaneous number of active goroutines in the process.
+  metric_type: gauge
+  title: TPS Watcher Num Go Routines
+
+uaa.audit_service.client_authentication_count:
+  brief: Number of client authentication attempts
+  description: Number of client authentication attempts.
+  metric_type: cumulative
+  title: Clients authenticated
+
+uaa.audit_service.client_authentication_failure_count:
+  brief: Number of failed client authentication attempts
+  description: Number of failed client authentication attempts.
+  metric_type: cumulative
+  title: Client authentication failures
+
+uaa.audit_service.principal_authentication_failure_count:
+  brief: Number of failed principal authentication attempts
+  description: Number of failed principal authentication attempts.
+  metric_type: cumulative
+  title: Principal authentication failures
+
+uaa.audit_service.principal_not_found_count:
+  brief: Number of times a non-user was not found
+  description: Number of times a non-user was not found.
+  metric_type: cumulative
+  title: Principal not found
+
+uaa.audit_service.user_authentication_count:
+  brief: Number of times a user has successfully authenticated
+  description: Number of times a user has successfully authenticated.
+  metric_type: cumulative
+  title: User authenticated
+
+uaa.audit_service.user_authentication_failure_count:
+  brief: Number of failed user authentication attempts
+  description: Number of failed user authentication attempts.
+  metric_type: cumulative
+  title: User authentication failure
+
+uaa.audit_service.user_not_found_count:
+  brief: Number of times a user was not found
+  description: Number of times a user was not found.
+  metric_type: cumulative
+  title: User not found
+
+uaa.audit_service.user_password_changes:
+  brief: Number of times a user password has changed
+  description: Number of times a user password has changed.
+  metric_type: cumulative
+  title: User password changes
+
+uaa.audit_service.user_password_failures:
+  brief: Number of times a user password change has failed
+  description: Number of times a user password change has failed.
+  metric_type: cumulative
+  title: User password change failures
+

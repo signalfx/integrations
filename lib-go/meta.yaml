@@ -1,8 +1,7 @@
-{ "display_name":"SignalFx Go Library",
-  "description": "Programmatic interface in Go for SignalFx's metadata and ingest APIs",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/lib-go",
-  "code": "https://github.com/signalfx/golib/tree/master/sfxclient",
-  "featured": false,
-  "logo_small": "/images/repos/lib-go/img/integrations_golang.png",
-  "logo_large": "/images/repos/lib-go/img/integrations_golang%402x.png"
-}
+code: https://github.com/signalfx/golib/tree/master/sfxclient
+description: Programmatic interface in Go for SignalFx's metadata and ingest APIs
+display_name: SignalFx Go Library
+featured: false
+logo_large: /images/repos/lib-go/img/integrations_golang%402x.png
+logo_small: /images/repos/lib-go/img/integrations_golang.png
+project_url: https://github.com/signalfx/integrations/tree/master/lib-go

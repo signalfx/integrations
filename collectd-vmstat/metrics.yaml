@@ -1,0 +1,117 @@
+gauge.active:
+  brief: Total active memory.
+  description: Total active memory.
+  metric_type: gauge
+  title: Active Memory
+
+gauge.b:
+  brief: Total processes waiting in uninterruptible sleep.
+  description: Total processes waiting in uninterruptible sleep.
+  metric_type: gauge
+  title: Processes In Uninterruptible Sleep
+
+gauge.bi:
+  brief: Total blocks received from block devices per-second.
+  description: Total blocks received from block devices per-second.
+  metric_type: gauge
+  title: Blocks Received
+
+gauge.bo:
+  brief: Total blocks sent to disk per-second.
+  description: Total blocks sent to disk per-second.
+  metric_type: gauge
+  title: Blocks Sent
+
+gauge.buff:
+  brief: Total memory used for buffer.
+  description: Total memory used for buffer.
+  metric_type: gauge
+  title: Buffer Memory
+
+gauge.cache:
+  brief: Total memory used for cache.
+  description: Total memory used for cache.
+  metric_type: gauge
+  title: Cache Memory
+
+gauge.cs:
+  brief: Total context switches per-second.
+  description: Total context switches per-second.
+  metric_type: gauge
+  title: Context Switches
+
+gauge.free:
+  brief: Total idle memory.
+  description: Total idle memory.
+  metric_type: gauge
+  title: Free Memory
+
+gauge.id:
+  brief: Percentage of idle CPU time.
+  description: Percentage of idle CPU time.  Included in IO-wait time prior to Linux
+    2.5.41.
+  metric_type: gauge
+  title: Idle CPU Time
+
+gauge.in:
+  brief: Total interrupts per-second.
+  description: Total interrupts per-second.
+  metric_type: gauge
+  title: Interrupts
+
+gauge.inact:
+  brief: Total inactive memory.
+  description: Total inactive memory.
+  metric_type: gauge
+  title: Inactive Memory
+
+gauge.r:
+  brief: Total processes waiting for run time.
+  description: Total processes waiting for run time.
+  metric_type: gauge
+  title: Processes Waiting For Run Time
+
+gauge.si:
+  brief: Total memory swapped from disk to memory per-second.
+  description: Total memory swapped from disk to memory per-second.
+  metric_type: gauge
+  title: Memory Swapped In From Disk
+
+gauge.so:
+  brief: Total memory swapped out to disk per-second.
+  description: Total memory swapped out to disk per-second.
+  metric_type: gauge
+  title: Memory Swapped Out To Disk
+
+gauge.st:
+  brief: Percentage of CPU time stolen from a virtual machine.
+  description: Percentage of CPU time stolen from a virtual machine.  Unknown prior
+    to Linux 2.6.11.
+  metric_type: gauge
+  title: Stolen CPU Time
+
+gauge.swpd:
+  brief: Total virtual memory in use.
+  description: Total virtual memory in use.
+  metric_type: gauge
+  title: Virtual Memory
+
+gauge.sy:
+  brief: Percentage of CPU time spent running kernel code.
+  description: Percentage of CPU time spent running kernel code.
+  metric_type: gauge
+  title: System CPU Time
+
+gauge.us:
+  brief: Percentage of CPU time running non-kernel code.
+  description: Percentage of CPU time running non-kernel code.
+  metric_type: gauge
+  title: User CPU Time
+
+gauge.wa:
+  brief: Percentage of CPU time spent waiting for IO.
+  description: Percentage of CPU time spent waiting for IO.  Included in idle prior
+    to Linux 2.5.41.
+  metric_type: gauge
+  title: IO Wait CPU Time
+

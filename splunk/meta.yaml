@@ -1,11 +1,12 @@
-{ "display_name":"Splunk",
-  "description": "Deep linking from SignalFx to Splunk",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/splunk",
-  "code": "https://www.splunk.com/",
-  "featured": false,
-  "logo_large": "integration_splunk@2x.png",
-  "logo_small": "integration_splunk.png",
-  "data_signature": "",
-  "in_app_categories": ["linkedServices"],
-  "browse_categories": ["Management Tools"]
-}
+browse_categories:
+- Management Tools
+code: https://www.splunk.com/
+data_signature: ''
+description: Deep linking from SignalFx to Splunk
+display_name: Splunk
+featured: false
+in_app_categories:
+- linkedServices
+logo_large: integration_splunk@2x.png
+logo_small: integration_splunk.png
+project_url: https://github.com/signalfx/integrations/tree/master/splunk

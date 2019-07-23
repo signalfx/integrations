@@ -1,0 +1,158 @@
+CPUCreditBalance:
+  brief: The number of earned CPU credits that an instance has accrued since it was
+    launched or started.
+  description: The number of earned CPU credits that an instance has accrued since
+    it was launched or started.
+  metric_type: null
+  title: CPUCreditBalance
+
+CPUCreditUsage:
+  brief: The number of CPU credits spent by the instance for CPU utilization.
+  description: The number of CPU credits spent by the instance for CPU utilization.
+  metric_type: null
+  title: CPUCreditUsage
+
+CPUSurplusCreditBalance:
+  brief: The number of surplus credits that have been spent by an unlimited instance
+    when its CPUCreditBalance value is zero.
+  description: The number of surplus credits that have been spent by an unlimited
+    instance when its CPUCreditBalance value is zero.
+  metric_type: null
+  title: CPUSurplusCreditBalance
+
+CPUSurplusCreditsCharged:
+  brief: The number of spent surplus credits that are not paid down by earned CPU
+    credits, and which thus incur an additional charge.
+  description: The number of spent surplus credits that are not paid down by earned
+    CPU credits, and which thus incur an additional charge.
+  metric_type: null
+  title: CPUSurplusCreditsCharged
+
+CPUUtilization:
+  brief: The percentage of allocated EC2 compute units that are currently in use on
+    the instance.
+  description: The percentage of allocated EC2 compute units that are currently in
+    use on the instance.
+  metric_type: null
+  title: CPUUtilization
+
+DiskReadBytes:
+  brief: Bytes read from all instance store volumes available to the instance.
+  description: Bytes read from all instance store volumes available to the instance.
+  metric_type: null
+  title: DiskReadBytes
+
+DiskReadOps:
+  brief: Completed read operations from all instance store volumes available to the
+    instance in a specified period of time.
+  description: Completed read operations from all instance store volumes available
+    to the instance in a specified period of time.
+  metric_type: null
+  title: DiskReadOps
+
+DiskWriteBytes:
+  brief: Bytes written to all instance store volumes available to the instance.
+  description: Bytes written to all instance store volumes available to the instance.
+  metric_type: null
+  title: DiskWriteBytes
+
+DiskWriteOps:
+  brief: Completed write operations to all instance store volumes available to the
+    instance in a specified period of time.
+  description: Completed write operations to all instance store volumes available
+    to the instance in a specified period of time.
+  metric_type: null
+  title: DiskWriteOps
+
+EBSByteBalance%:
+  brief: Available only for the smaller instance sizes.
+  description: Available only for the smaller instance sizes.
+  metric_type: null
+  title: EBSByteBalance%
+
+EBSIOBalance%:
+  brief: Available only for the smaller instance sizes.
+  description: Available only for the smaller instance sizes.
+  metric_type: null
+  title: EBSIOBalance%
+
+EBSReadBytes:
+  brief: Bytes read from all EBS volumes attached to the instance in a specified period
+    of time.
+  description: Bytes read from all EBS volumes attached to the instance in a specified
+    period of time.
+  metric_type: null
+  title: EBSReadBytes
+
+EBSReadOps:
+  brief: Completed read operations from all Amazon EBS volumes attached to the instance
+    in a specified period of time.
+  description: Completed read operations from all Amazon EBS volumes attached to the
+    instance in a specified period of time.
+  metric_type: null
+  title: EBSReadOps
+
+EBSWriteBytes:
+  brief: Bytes written to all EBS volumes attached to the instance in a specified
+    period of time.
+  description: Bytes written to all EBS volumes attached to the instance in a specified
+    period of time.
+  metric_type: null
+  title: EBSWriteBytes
+
+EBSWriteOps:
+  brief: Completed write operations to all EBS volumes attached to the instance in
+    a specified period of time.
+  description: Completed write operations to all EBS volumes attached to the instance
+    in a specified period of time.
+  metric_type: null
+  title: EBSWriteOps
+
+NetworkIn:
+  brief: The number of bytes received on all network interfaces by the instance.
+  description: The number of bytes received on all network interfaces by the instance.
+  metric_type: null
+  title: NetworkIn
+
+NetworkOut:
+  brief: The number of bytes sent out on all network interfaces by the instance.
+  description: The number of bytes sent out on all network interfaces by the instance.
+  metric_type: null
+  title: NetworkOut
+
+NetworkPacketsIn:
+  brief: The number of packets received on all network interfaces by the instance.
+  description: The number of packets received on all network interfaces by the instance.
+  metric_type: null
+  title: NetworkPacketsIn
+
+NetworkPacketsOut:
+  brief: The number of packets sent out on all network interfaces by the instance.
+  description: The number of packets sent out on all network interfaces by the instance.
+  metric_type: null
+  title: NetworkPacketsOut
+
+StatusCheckFailed:
+  brief: Reports whether the instance has passed both the instance status check and
+    the system status check in the last minute.
+  description: Reports whether the instance has passed both the instance status check
+    and the system status check in the last minute.
+  metric_type: null
+  title: StatusCheckFailed
+
+StatusCheckFailed_Instance:
+  brief: Reports whether the instance has passed the instance status check in the
+    last minute.
+  description: Reports whether the instance has passed the instance status check in
+    the last minute.
+  metric_type: null
+  title: StatusCheckFailed_Instance
+
+StatusCheckFailed_System:
+  brief: Reports whether the instance has passed the system status check in the last
+    minute.
+  description: Reports whether the instance has passed the system status check in
+    the last minute.
+  metric_type: null
+  title: StatusCheckFailed_System
+

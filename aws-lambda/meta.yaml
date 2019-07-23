@@ -1,11 +1,12 @@
-{ "display_name":"Amazon Lambda",
-  "description": "SignalFx's integration with Lambda.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-lambda",
-  "code": "https://aws.amazon.com/lambda/",
-  "featured": false,
-  "logo_large": "integration_awslambda%402x.png",
-  "logo_small": "integration_awslambda.png",
-  "data_signature": "namespace:\"AWS/Lambda\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://aws.amazon.com/lambda/
+data_signature: namespace:"AWS/Lambda"
+description: SignalFx's integration with Lambda.
+display_name: Amazon Lambda
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awslambda%402x.png
+logo_small: integration_awslambda.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-lambda

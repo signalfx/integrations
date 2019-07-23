@@ -1,11 +1,12 @@
-{ "display_name":"Conviva",
-  "description": "SignalFx Smart Agent monitor for ingesting Real-Time/Live Conviva metrics",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/conviva",
-  "code": "https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/conviva",
-  "featured": false,
-  "logo_large": "/images/repos/conviva/img/integration_conviva@2x.png",
-  "logo_small": "/images/repos/conviva/img/integration_conviva.png",
-  "data_signature": "metric_source:\"conviva\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Media Services & Solutions"]
-}
+browse_categories:
+- Media Services & Solutions
+code: https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/conviva
+data_signature: metric_source:"conviva"
+description: SignalFx Smart Agent monitor for ingesting Real-Time/Live Conviva metrics
+display_name: Conviva
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/conviva/img/integration_conviva@2x.png
+logo_small: /images/repos/conviva/img/integration_conviva.png
+project_url: https://github.com/signalfx/integrations/tree/master/conviva

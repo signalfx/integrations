@@ -1,11 +1,12 @@
-{ "display_name":"AWS Auto Scaling",
-  "description": "SignalFx's integration with AWS Auto Scaling.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-autoscaling",
-  "code": "https://aws.amazon.com/autoscaling/",
-  "featured": false,
-  "logo_large": "integration_awsautoscaling.png",
-  "logo_small": "integration_awsautoscaling.png",
-  "data_signature": "namespace:\"AWS/AutoScaling\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://aws.amazon.com/autoscaling/
+data_signature: namespace:"AWS/AutoScaling"
+description: SignalFx's integration with AWS Auto Scaling.
+display_name: AWS Auto Scaling
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsautoscaling.png
+logo_small: integration_awsautoscaling.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-autoscaling

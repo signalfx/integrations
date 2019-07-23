@@ -1,0 +1,341 @@
+cpu.usage_guest:
+  brief: percentage of processor time spent running virtual CPUs for guest operating
+    systems
+  description: This metric measures the percentage of processor time spent running
+    virtual CPUs for guest operating systems
+  metric_type: gauge
+  title: cpu.usage_guest
+
+cpu.usage_guest_nice:
+  brief: percentage of processor time spent running virtual CPUs in user mode with
+    low priority.
+  description: This metric measures the percentage of processor time spent running
+    virtual CPUs in user mode with low priority.
+  metric_type: gauge
+  title: cpu.usage_guest_nice
+
+cpu.usage_idle:
+  brief: percentage of processor time used by idle processes
+  description: This metric measures the percentage of processor time used by idle
+    processes.
+  metric_type: gauge
+  title: cpu.usage_idle
+
+cpu.usage_iowait:
+  brief: percentage of processor time waiting for I/O to complete
+  description: This metric measures the percentage of processor time waiting for I/O
+    to complete.
+  metric_type: gauge
+  title: cpu.usage_iowait
+
+cpu.usage_irq:
+  brief: percentage of processor time spent servicing interrupts
+  description: This metric measures the percentage of processor time spent servicing
+    interrupts.
+  metric_type: gauge
+  title: cpu.usage_irq
+
+cpu.usage_nice:
+  brief: percentage of processor time used by low priority processes
+  description: This metric measures the percentage of processor time used by low priority
+    processes.
+  metric_type: gauge
+  title: cpu.usage_nice
+
+cpu.usage_softirq:
+  brief: percentage of processor time spent servicing softirqs
+  description: This metric measures the percentage of processor time spent servicing
+    softirqs.
+  metric_type: gauge
+  title: cpu.usage_softirq
+
+cpu.usage_steal:
+  brief: percentage of processor stolen processor time
+  description: This metric measures the percentage of stolen processor time.
+  metric_type: gauge
+  title: cpu.usage_steal
+
+cpu.usage_system:
+  brief: percentage of processor time used by system processes
+  description: This metric measures the percentage of processor time used by system
+    processes.
+  metric_type: gauge
+  title: cpu.usage_system
+
+cpu.usage_user:
+  brief: percentage of processor time used by user processes
+  description: This metric measures the percentage of processor time used by user
+    processes.
+  metric_type: gauge
+  title: cpu.usage_user
+
+disk.free:
+  brief: amount of free disk space in bytes
+  description: This metric measures the amount of free disk space in bytes.
+  metric_type: gauge
+  title: disk.free
+
+disk.inodes_free:
+  brief: number of free inodes
+  description: This metric measures the number of free inodes.
+  metric_type: gauge
+  title: disk.inodes_free
+
+disk.inodes_total:
+  brief: number of total inodes
+  description: This metric measures the total number of inodes.
+  metric_type: gauge
+  title: disk.inodes_total
+
+disk.inodes_used:
+  brief: number of free inodes
+  description: This metric measures the number of used inodes in number of files.
+  metric_type: gauge
+  title: disk.inodes_used
+
+disk.total:
+  brief: total amount of disk space in bytes
+  description: This metric measures the total amount of disk space in bytes.
+  metric_type: gauge
+  title: disk.total
+
+disk.used:
+  brief: amount of used disk space in bytes
+  description: This metric measures the amount of used disk space in bytes.
+  metric_type: gauge
+  title: disk.used
+
+disk.used_percent:
+  brief: percentage of disk space used
+  description: This metric measures the percentage of disk space used.
+  metric_type: gauge
+  title: disk.used_percent
+
+mem.active:
+  brief: amount of active memory in bytes
+  description: This metric measures the amount of active memory in bytes.
+  metric_type: gauge
+  title: mem.active
+
+mem.available:
+  brief: amount of available memory in bytes
+  description: This metric measures the amount of available memory in bytes.
+  metric_type: gauge
+  title: mem.available
+
+mem.available_percent:
+  brief: percentage of memory available
+  description: This metric measures the percentage of memory available.
+  metric_type: gauge
+  title: mem.available_percent
+
+mem.buffered:
+  brief: amount of buffered memory in bytes
+  description: This metric measures the amount of buffered memory in bytes.
+  metric_type: gauge
+  title: mem.buffered
+
+mem.cached:
+  brief: amount of cached memory in bytes
+  description: This metric measures the amount of cached memory in bytes.
+  metric_type: gauge
+  title: mem.cached
+
+mem.free:
+  brief: amount of free memory in bytes
+  description: This metric measures the amount of free memory in bytes.
+  metric_type: gauge
+  title: mem.free
+
+mem.inactive:
+  brief: amount of inactive memory in bytes
+  description: This metric measures the amount of inactive memory in bytes.
+  metric_type: gauge
+  title: mem.inactive
+
+mem.total:
+  brief: total amount of memory in bytes
+  description: This metric measures the total amount of memory in bytes.
+  metric_type: gauge
+  title: mem.total
+
+mem.used:
+  brief: total amount of memory used in bytes
+  description: This metric measures the total amount of memory used in bytes.
+  metric_type: gauge
+  title: mem.used
+
+mem.used_percent:
+  brief: percentage of memory used
+  description: This metric measures the percentage of memory used.
+  metric_type: gauge
+  title: mem.used_percent
+
+net.bytes_recv:
+  brief: number of bytes received
+  description: This metric counts the number of bytes received.
+  metric_type: counter
+  title: net.bytes_recv
+
+net.bytes_sent:
+  brief: number of bytes sent
+  description: This metric counts the number of bytes sent.
+  metric_type: counter
+  title: net.bytes_sent
+
+net.drop_in:
+  brief: number of dropped incoming packets
+  description: This metric counts the number of dropped incoming packets.
+  metric_type: counter
+  title: net.drop_in
+
+net.drop_out:
+  brief: number of dropped outgoing packets
+  description: This metric counts the number of dropped outgoing packets.
+  metric_type: counter
+  title: net.drop_out
+
+net.err_in:
+  brief: number of errors in incoming traffic
+  description: This metric counts the number of errors in incoming traffic.
+  metric_type: counter
+  title: net.err_in
+
+net.err_out:
+  brief: number of errors in outgoing traffic
+  description: This metric counts the number of errors in outgoing traffic.
+  metric_type: counter
+  title: net.err_out
+
+net.packets_recv:
+  brief: number of packets received
+  description: This metric counts the number of packets received.
+  metric_type: counter
+  title: net.packets_recv
+
+net.packets_sent:
+  brief: number of packets sent
+  description: This metric counts the number of packets sent.
+  metric_type: counter
+  title: net.packets_recv
+
+process.blocked:
+  brief: number of blocked processes
+  description: This metric measures the number of blocked processes.
+  metric_type: gauge
+  title: process.blocked
+
+process.idle:
+  brief: number of idle processes
+  description: This metric measures the number of idle processes.
+  metric_type: gauge
+  title: process.idle
+
+process.running:
+  brief: number of running processes
+  description: This metric measures the number of running processes.
+  metric_type: gauge
+  title: process.running
+
+process.sleeping:
+  brief: number of sleeping processes
+  description: This metric measures the number of sleeping processes.
+  metric_type: gauge
+  title: process.sleeping
+
+process.stopped:
+  brief: number of stopped processes
+  description: This metric measures the number of stopped processes.
+  metric_type: gauge
+  title: process.stopped
+
+process.total:
+  brief: total number of processes
+  description: This metric measures the total number of processes.
+  metric_type: gauge
+  title: process.total
+
+process.unknown:
+  brief: number of processes in an unknown state
+  description: This metric measures the number of processes in an unknown state.
+  metric_type: gauge
+  title: process.unknown
+
+process.zombie:
+  brief: number of zombie processes
+  description: This metric measures the number of zombie processes.
+  metric_type: gauge
+  title: process.zombie
+
+swap.free:
+  brief: amount of free swap space in bytes
+  description: This metric measures the amount of free swap space in bytes.
+  metric_type: gauge
+  title: swap.free
+
+swap.in:
+  brief: measures bytes written to swap
+  description: This metric measures of the number of bytes written to swap.
+  metric_type: counter
+  title: swap.in
+
+swap.out:
+  brief: measures bytes read out of swap
+  description: This metric measures of the number of bytes read out of swap.
+  metric_type: counter
+  title: swap.out
+
+swap.total:
+  brief: amount of total swap space
+  description: This metric measures the total amount of swap space.
+  metric_type: gauge
+  title: swap.total
+
+swap.used:
+  brief: amount of used space in bytes
+  description: This metric measures the amount of used swap space in bytes.
+  metric_type: gauge
+  title: swap.used
+
+swap.used_percent:
+  brief: percentage of swap space used
+  description: This metric measures the percentage of swap space used.
+  metric_type: gauge
+  title: swap.used_percent
+
+system.load1:
+  brief: Load average for the past minute
+  description: This metric measures the average load on the system over 1 minute.
+  metric_type: gauge
+  title: system.load1
+
+system.load15:
+  brief: Load average for the past fifteen minutes
+  description: This metric measures the average load on the system over 15 minutes.
+  metric_type: gauge
+  title: system.load15
+
+system.load5:
+  brief: Load average for the past five minutes
+  description: This metric measures the average load on the system over 5 minutes.
+  metric_type: gauge
+  title: system.load5
+
+system.n_cpus:
+  brief: number of cpus on the host
+  description: This metric measures the number of CPUs on the host.
+  metric_type: gauge
+  title: system.n_cpus
+
+system.n_users:
+  brief: number of users on the host
+  description: This metric measures the number of users on the host.
+  metric_type: gauge
+  title: system.n_users
+
+system.uptime:
+  brief: counts the time the system has been up in seconds
+  description: This metric measures the time the system has been up in seconds.
+  metric_type: gauge
+  title: system.uptime
+

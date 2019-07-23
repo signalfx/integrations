@@ -1,9 +1,9 @@
-{ "display_name":"Riak",
-  "description": "Monitor Riak using this plugin by Tapjoy for the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-riak",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/curl_json.c",
-  "featured": true,
-  "logo_small": "/images/repos/collectd-riak/img/integrations_riak.png",
-  "logo_large": "/images/repos/collectd-riak/img/integrations_riak%402x.png",
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd/blob/master/src/curl_json.c
+description: Monitor Riak using this plugin by Tapjoy for the SignalFx collectd agent.
+display_name: Riak
+featured: true
+logo_large: /images/repos/collectd-riak/img/integrations_riak%402x.png
+logo_small: /images/repos/collectd-riak/img/integrations_riak.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-riak

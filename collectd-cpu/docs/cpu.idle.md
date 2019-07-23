@@ -1,7 +1,7 @@
 
 ---
 title: cpu.idle
-brief: CPU time spent not in any other state.
+brief: CPU time spent not in any other state
 metric_type: cumulative
 custom: true
 ---

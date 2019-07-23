@@ -1,11 +1,12 @@
-{ "display_name":"PostgreSQL",
-  "description": "Monitor PostgreSQL using the SignalFx collectd agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-postgresql",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/postgresql.c",
-  "featured": false,
-  "logo_small": "/images/repos/collectd-postgresql/img/integrations_postgresql.png",
-  "logo_large": "/images/repos/collectd-postgresql/img/integrations_postgresql%402x.png",
-  "data_signature": "plugin:\"postgresql\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd/blob/master/src/postgresql.c
+data_signature: plugin:"postgresql"
+description: Monitor PostgreSQL using the SignalFx collectd agent.
+display_name: PostgreSQL
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-postgresql/img/integrations_postgresql%402x.png
+logo_small: /images/repos/collectd-postgresql/img/integrations_postgresql.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-postgresql
