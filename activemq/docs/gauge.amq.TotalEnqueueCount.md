@@ -1,7 +1,7 @@
 
 ---
 title: gauge.amq.TotalEnqueueCount
-brief: Total number of messages that have been sent to the broker.
+brief: Total number of messages that have been sent to the broker
 metric_type: gauge
 custom: false
 ---

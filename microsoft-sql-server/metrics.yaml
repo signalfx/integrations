@@ -1,0 +1,714 @@
+gauge.sqlserver_database_io.read_bytes:
+  brief: Bytes read by the database.
+  description: Bytes read by the database.
+  metric_type: gauge
+  title: sqlserver_database_io.read_bytes
+
+gauge.sqlserver_database_io.read_latency_ms:
+  brief: Latency in milliseconds reading from the database.
+  description: Latency in milliseconds reading from the database.
+  metric_type: gauge
+  title: sqlserver_database_io.read_latency_ms
+
+gauge.sqlserver_database_io.reads:
+  brief: Number of reads from the database.
+  description: Number of reads from the database.
+  metric_type: gauge
+  title: sqlserver_database_io.reads
+
+gauge.sqlserver_database_io.write_bytes:
+  brief: Bytes written to the database.
+  description: Bytes written to the database.
+  metric_type: gauge
+  title: sqlserver_database_io.write_bytes
+
+gauge.sqlserver_database_io.write_latency_ms:
+  brief: Latency in milliseconds writing to the database.
+  description: Latency in milliseconds writing to the database.
+  metric_type: gauge
+  title: sqlserver_database_io.write_latency_ms
+
+gauge.sqlserver_database_io.writes:
+  brief: Number of writes to the database.
+  description: Number of writes to the database.
+  metric_type: gauge
+  title: sqlserver_database_io.writes
+
+gauge.sqlserver_memory_clerks.size_kb.bound_trees:
+  brief: Size in KB of bound trees memory clerk.
+  description: Size in KB of bound trees memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.bound_trees
+
+gauge.sqlserver_memory_clerks.size_kb.buffer_pool:
+  brief: Size in KB of buffer pool memory clerk.
+  description: Size in KB of buffer pool memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.buffer_pool
+
+gauge.sqlserver_memory_clerks.size_kb.connection_pool:
+  brief: Size in KB of connection pool memory clerk.
+  description: Size in KB of connection pool memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.connection_pool
+
+gauge.sqlserver_memory_clerks.size_kb.general:
+  brief: Size in KB of general memory clerk.
+  description: Size in KB of general memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.general
+
+gauge.sqlserver_memory_clerks.size_kb.in-memory_oltp:
+  brief: Size in KB of in in-memoory oltp memory clerk.
+  description: Size in KB of in in-memoory oltp memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.in-memory_oltp
+
+gauge.sqlserver_memory_clerks.size_kb.log_pool:
+  brief: Size in KB of log pool memory clerk.
+  description: Size in KB of log pool memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.log_pool
+
+gauge.sqlserver_memory_clerks.size_kb.memoryclerk_sqltrace:
+  brief: Size in KB of sql trace memory clerk.
+  description: Size in KB of sql trace memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.memoryclerk_sqltrace
+
+gauge.sqlserver_memory_clerks.size_kb.schema_manager_user_store:
+  brief: Size in KB of user store schema manager memory clerk.
+  description: Size in KB of user store schema manager memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.schema_manager_user_store
+
+gauge.sqlserver_memory_clerks.size_kb.sos_node:
+  brief: Size in KB of sos node memory clerk.
+  description: Size in KB of sos node memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.sos_node
+
+gauge.sqlserver_memory_clerks.size_kb.sql_optimizer:
+  brief: Size in KB of SQL optimizer memory clerk.
+  description: Size in KB of SQL optimizer memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.sql_optimizer
+
+gauge.sqlserver_memory_clerks.size_kb.sql_plans:
+  brief: Size in KB of sql plans memory clerk.
+  description: Size in KB of sql plans memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.sql_plans
+
+gauge.sqlserver_memory_clerks.size_kb.sql_reservations:
+  brief: Size in KB of sql reservations memory clerk.
+  description: Size in KB of sql reservations memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.sql_reservations
+
+gauge.sqlserver_memory_clerks.size_kb.sql_storage_engine:
+  brief: Size in KB of sql storage engine memory clerk.
+  description: Size in KB of sql storage engine memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.sql_storage_engine
+
+gauge.sqlserver_memory_clerks.size_kb.system_rowset_store:
+  brief: Size in KB of system rowset store memory clerk.
+  description: Size in KB of system rowset store memory clerk.
+  metric_type: gauge
+  title: sqlserver_memory_clerks.size_kb.system_rowset_store
+
+gauge.sqlserver_performance.active_memory_grant_amount_kb:
+  brief: Amount of active memory in KB granted.
+  description: Amount of active memory in KB granted.
+  metric_type: gauge
+  title: sqlserver_performance.active_memory_grant_amount_kb
+
+gauge.sqlserver_performance.active_temp_tables:
+  brief: Number of active temporary tables.
+  description: Number of active temporary tables.
+  metric_type: gauge
+  title: sqlserver_performance.active_temp_tables
+
+gauge.sqlserver_performance.background_writer_pages_persec:
+  brief: Rate per second of pages written in the background.
+  description: Rate per second of pages written in the background.
+  metric_type: gauge
+  title: sqlserver_performance.background_writer_pages_persec
+
+gauge.sqlserver_performance.backup.restore_throughput_persec:
+  brief: Rate per second of backup/restore throughput.
+  description: Rate per second of backup/restore throughput.
+  metric_type: gauge
+  title: sqlserver_performance.backup.restore_throughput_persec
+
+gauge.sqlserver_performance.batch_requests_persec:
+  brief: Rate per second of batch requests.
+  description: Rate per second of batch requests.
+  metric_type: gauge
+  title: sqlserver_performance.batch_requests_persec
+
+gauge.sqlserver_performance.blocked_tasks:
+  brief: Number of blocked tasks.
+  description: Number of blocked tasks.
+  metric_type: gauge
+  title: sqlserver_performance.blocked_tasks
+
+gauge.sqlserver_performance.buffer_cache_hit_ratio:
+  brief: Buffer cache hit ration.
+  description: Buffer cache hit ration.
+  metric_type: gauge
+  title: sqlserver_performance.buffer_cache_hit_ratio
+
+gauge.sqlserver_performance.bytes_received_from_replica_persec:
+  brief: Rate per second of bytes received from replicas.
+  description: Rate per second of bytes received from replicas.
+  metric_type: gauge
+  title: sqlserver_performance.bytes_received_from_replica_persec
+
+gauge.sqlserver_performance.bytes_sent_to_replica_persec:
+  brief: Rate per second of bytes sent to replicas.
+  description: Rate per second of bytes sent to replicas.
+  metric_type: gauge
+  title: sqlserver_performance.bytes_sent_to_replica_persec
+
+gauge.sqlserver_performance.bytes_sent_to_transport_persec:
+  brief: Rate per second of bytes sent to transports.
+  description: Rate per second of bytes sent to transports.
+  metric_type: gauge
+  title: sqlserver_performance.bytes_sent_to_transport_persec
+
+gauge.sqlserver_performance.checkpoint_pages_persec:
+  brief: Rate per second of checkpoint pages.
+  description: Rate per second of checkpoint pages.
+  metric_type: gauge
+  title: sqlserver_performance.checkpoint_pages_persec
+
+gauge.sqlserver_performance.cpu_limit_violation_count:
+  brief: Number of cpu limit violations.
+  description: Number of cpu limit violations.
+  metric_type: gauge
+  title: sqlserver_performance.cpu_limit_violation_count
+
+gauge.sqlserver_performance.cpu_usage_percent:
+  brief: CPU usage percentage.
+  description: CPU usage percentage.
+  metric_type: gauge
+  title: sqlserver_performance.cpu_usage_percent
+
+gauge.sqlserver_performance.cpu_usage_time:
+  brief: CPU usage time.
+  description: CPU usage time.
+  metric_type: gauge
+  title: sqlserver_performance.cpu_usage_time
+
+gauge.sqlserver_performance.data_files_size_kb:
+  brief: Size in KB of data files.
+  description: Size in KB of data files.
+  metric_type: gauge
+  title: sqlserver_performance.data_files_size_kb
+
+gauge.sqlserver_performance.disk_read_bytes_persec:
+  brief: Rate per second of bytes from disk.
+  description: Rate per second of bytes from disk.
+  metric_type: gauge
+  title: sqlserver_performance.disk_read_bytes_persec
+
+gauge.sqlserver_performance.disk_read_io_persec:
+  brief: Rate per second of read operations from disk.
+  description: Rate per second of read operations from disk.
+  metric_type: gauge
+  title: sqlserver_performance.disk_read_io_persec
+
+gauge.sqlserver_performance.disk_read_io_throttled_persec:
+  brief: Rate per second of throttled read operations.
+  description: Rate per second of throttled read operations.
+  metric_type: gauge
+  title: sqlserver_performance.disk_read_io_throttled_persec
+
+gauge.sqlserver_performance.disk_write_bytes_persec:
+  brief: Rate per second of bytes written to disk.
+  description: Rate per second of bytes written to disk.
+  metric_type: gauge
+  title: sqlserver_performance.disk_write_bytes_persec
+
+gauge.sqlserver_performance.disk_write_io_persec:
+  brief: Rate per second of write operations to disk.
+  description: Rate per second of write operations to disk.
+  metric_type: gauge
+  title: sqlserver_performance.disk_write_io_persec
+
+gauge.sqlserver_performance.disk_write_io_throttled_persec:
+  brief: Rate per second of write operations throttled.
+  description: Rate per second of write operations throttled.
+  metric_type: gauge
+  title: sqlserver_performance.disk_write_io_throttled_persec
+
+gauge.sqlserver_performance.errors_persec:
+  brief: Rate of errors per second.
+  description: Rate of errors per second.
+  metric_type: gauge
+  title: sqlserver_performance.errors_persec
+
+gauge.sqlserver_performance.flow_control_persec:
+  brief: Rate per second of flow control.
+  description: Rate per second of flow control.
+  metric_type: gauge
+  title: sqlserver_performance.flow_control_persec
+
+gauge.sqlserver_performance.flow_control_time_ms_persec:
+  brief: Rate per second of ms of flow control time.
+  description: Rate per second of ms of flow control time.
+  metric_type: gauge
+  title: sqlserver_performance.flow_control_time_ms_persec
+
+gauge.sqlserver_performance.forwarded_records_persec:
+  brief: Rate per second of record forwarding.
+  description: Rate per second of record forwarding.
+  metric_type: gauge
+  title: sqlserver_performance.forwarded_records_persec
+
+gauge.sqlserver_performance.free_list_stalls_persec:
+  brief: Rate per second of stalled free list.
+  description: Rate per second of stalled free list.
+  metric_type: gauge
+  title: sqlserver_performance.free_list_stalls_persec
+
+gauge.sqlserver_performance.free_space_in_tempdb_kb:
+  brief: Free space in KB of tempdb.
+  description: Free space in KB of tempdb.
+  metric_type: gauge
+  title: sqlserver_performance.free_space_in_tempdb_kb
+
+gauge.sqlserver_performance.full_scans_persec:
+  brief: Rate per second of full scans.
+  description: Rate per second of full scans.
+  metric_type: gauge
+  title: sqlserver_performance.full_scans_persec
+
+gauge.sqlserver_performance.index_searches_persec:
+  brief: Rate per second of index searches.
+  description: Rate per second of index searches.
+  metric_type: gauge
+  title: sqlserver_performance.index_searches_persec
+
+gauge.sqlserver_performance.latch_waits_persec:
+  brief: Rate per second of latch waits.
+  description: Rate per second of latch waits.
+  metric_type: gauge
+  title: sqlserver_performance.latch_waits_persec
+
+gauge.sqlserver_performance.lazy_writes_persec:
+  brief: Rate per second of lazy writes.
+  description: Rate per second of lazy writes.
+  metric_type: gauge
+  title: sqlserver_performance.lazy_writes_persec
+
+gauge.sqlserver_performance.lock_timeouts_persec:
+  brief: Rate per second of lock timeouts.
+  description: Rate per second of lock timeouts.
+  metric_type: gauge
+  title: sqlserver_performance.lock_timeouts_persec
+
+gauge.sqlserver_performance.lock_wait_count:
+  brief: Number of lock waits.
+  description: Number of lock waits.
+  metric_type: gauge
+  title: sqlserver_performance.lock_wait_count
+
+gauge.sqlserver_performance.lock_wait_time:
+  brief: Lock wait time.
+  description: Lock wait time.
+  metric_type: gauge
+  title: sqlserver_performance.lock_wait_time
+
+gauge.sqlserver_performance.lock_waits_persec:
+  brief: Rate per second of lock waits.
+  description: Rate per second of lock waits.
+  metric_type: gauge
+  title: sqlserver_performance.lock_waits_persec
+
+gauge.sqlserver_performance.log_apply_pending_queue:
+  brief: Size of the log apply pending queue.
+  description: Size of the log apply pending queue.
+  metric_type: gauge
+  title: sqlserver_performance.log_apply_pending_queue
+
+gauge.sqlserver_performance.log_apply_ready_queue:
+  brief: Size of log apply ready queue.
+  description: Size of log apply ready queue.
+  metric_type: gauge
+  title: sqlserver_performance.log_apply_ready_queue
+
+gauge.sqlserver_performance.log_bytes_flushed_persec:
+  brief: Rate per second of log bytes flushed.
+  description: Rate per second of log bytes flushed.
+  metric_type: gauge
+  title: sqlserver_performance.log_bytes_flushed_persec
+
+gauge.sqlserver_performance.log_bytes_received_persec:
+  brief: Rate per second of log bytes received.
+  description: Rate per second of log bytes received.
+  metric_type: gauge
+  title: sqlserver_performance.log_bytes_received_persec
+
+gauge.sqlserver_performance.log_files_size_kb:
+  brief: Size in KB of log file.
+  description: Size in KB of log file.
+  metric_type: gauge
+  title: sqlserver_performance.log_files_size_kb
+
+gauge.sqlserver_performance.log_files_used_size_kb:
+  brief: Size in KB of log file used.
+  description: Size in KB of log file used.
+  metric_type: gauge
+  title: sqlserver_performance.log_files_used_size_kb
+
+gauge.sqlserver_performance.log_flush_wait_time:
+  brief: Time spent flushing the log.
+  description: Time spent flushing the log.
+  metric_type: gauge
+  title: sqlserver_performance.log_flush_wait_time
+
+gauge.sqlserver_performance.log_flushes_persec:
+  brief: Rate per second of log flushes.
+  description: Rate per second of log flushes.
+  metric_type: gauge
+  title: sqlserver_performance.log_flushes_persec
+
+gauge.sqlserver_performance.log_send_queue:
+  brief: Size of the log send queue.
+  description: Size of the log send queue.
+  metric_type: gauge
+  title: sqlserver_performance.log_send_queue
+
+gauge.sqlserver_performance.logins_persec:
+  brief: Rate of logins per second.
+  description: Rate of logins per second.
+  metric_type: gauge
+  title: sqlserver_performance.logins_persec
+
+gauge.sqlserver_performance.logouts_persec:
+  brief: Rate of logouts per second.
+  description: Rate of logouts per second.
+  metric_type: gauge
+  title: sqlserver_performance.logouts_persec
+
+gauge.sqlserver_performance.memory_broker_clerk_size:
+  brief: Size of memory broker clerk.
+  description: Size of memory broker clerk.
+  metric_type: gauge
+  title: sqlserver_performance.memory_broker_clerk_size
+
+gauge.sqlserver_performance.memory_grants_outstanding:
+  brief: Number of outstanding memory grants.
+  description: Number of outstanding memory grants.
+  metric_type: gauge
+  title: sqlserver_performance.memory_grants_outstanding
+
+gauge.sqlserver_performance.memory_grants_pending:
+  brief: Number of pending memory grants.
+  description: Number of pending memory grants.
+  metric_type: gauge
+  title: sqlserver_performance.memory_grants_pending
+
+gauge.sqlserver_performance.number_of_deadlocks_persec:
+  brief: Rate of deadlocks per second.
+  description: Rate of deadlocks per second.
+  metric_type: gauge
+  title: sqlserver_performance.number_of_deadlocks_persec
+
+gauge.sqlserver_performance.page_life_expectancy:
+  brief: Page life expectancy.
+  description: Page life expectancy.
+  metric_type: gauge
+  title: sqlserver_performance.page_life_expectancy
+
+gauge.sqlserver_performance.page_lookups_persec:
+  brief: Rate of page look ups per second.
+  description: Rate of page look ups per second.
+  metric_type: gauge
+  title: sqlserver_performance.page_lookups_persec
+
+gauge.sqlserver_performance.page_reads_persec:
+  brief: Rate of page reads per second.
+  description: Rate of page reads per second.
+  metric_type: gauge
+  title: sqlserver_performance.page_reads_persec
+
+gauge.sqlserver_performance.page_splits_persec:
+  brief: Rate of page splits per second.
+  description: Rate of page splits per second.
+  metric_type: gauge
+  title: sqlserver_performance.page_splits_persec
+
+gauge.sqlserver_performance.page_writes_persec:
+  brief: Rate of page writes per second.
+  description: Rate of page writes per second.
+  metric_type: gauge
+  title: sqlserver_performance.page_writes_persec
+
+gauge.sqlserver_performance.percent_log_used:
+  brief: Percentage of log used.
+  description: Percentage of log used.
+  metric_type: gauge
+  title: sqlserver_performance.percent_log_used
+
+gauge.sqlserver_performance.processes_blocked:
+  brief: Number of blocked processes.
+  description: Number of blocked processes.
+  metric_type: gauge
+  title: sqlserver_performance.processes_blocked
+
+gauge.sqlserver_performance.queued_request_count:
+  brief: Number of queued requests.
+  description: Number of queued requests.
+  metric_type: gauge
+  title: sqlserver_performance.queued_request_count
+
+gauge.sqlserver_performance.queued_requests:
+  brief: Average number of queued requests.
+  description: Average number of queued requests.
+  metric_type: gauge
+  title: sqlserver_performance.queued_requests
+
+gauge.sqlserver_performance.readahead_pages_persec:
+  brief: Rate per second of read ahead pages.
+  description: Rate per second of read ahead pages.
+  metric_type: gauge
+  title: sqlserver_performance.readahead_pages_persec
+
+gauge.sqlserver_performance.receives_from_replica_persec:
+  brief: Rate receives from replicas per second.
+  description: Rate receives from replicas per second.
+  metric_type: gauge
+  title: sqlserver_performance.receives_from_replica_persec
+
+gauge.sqlserver_performance.recovery_queue:
+  brief: Size of recovery queue.
+  description: Size of recovery queue.
+  metric_type: gauge
+  title: sqlserver_performance.recovery_queue
+
+gauge.sqlserver_performance.redone_bytes_persec:
+  brief: Rate of redone bytes per second.
+  description: Rate of redone bytes per second.
+  metric_type: gauge
+  title: sqlserver_performance.redone_bytes_persec
+
+gauge.sqlserver_performance.reduced_memory_grant_count:
+  brief: Number of reduced memory grants.
+  description: Number of reduced memory grants.
+  metric_type: gauge
+  title: sqlserver_performance.reduced_memory_grant_count
+
+gauge.sqlserver_performance.request_count:
+  brief: Number of requests.
+  description: Number of requests.
+  metric_type: gauge
+  title: sqlserver_performance.request_count
+
+gauge.sqlserver_performance.requests_completed_persec:
+  brief: Rate of completed requests per second.
+  description: Rate of completed requests per second.
+  metric_type: gauge
+  title: sqlserver_performance.requests_completed_persec
+
+gauge.sqlserver_performance.resent_messages_persec:
+  brief: Rate of resent messages per second.
+  description: Rate of resent messages per second.
+  metric_type: gauge
+  title: sqlserver_performance.resent_messages_persec
+
+gauge.sqlserver_performance.sends_to_replica_persec:
+  brief: Rate of sends to replicas per second.
+  description: Rate of sends to replicas per second.
+  metric_type: gauge
+  title: sqlserver_performance.sends_to_replica_persec
+
+gauge.sqlserver_performance.sends_to_transport_persec:
+  brief: Rate of sends to transports per second.
+  description: Rate of sends to transports per second.
+  metric_type: gauge
+  title: sqlserver_performance.sends_to_transport_persec
+
+gauge.sqlserver_performance.sql_compilations_persec:
+  brief: Rate of sql compilations per second.
+  description: Rate of sql compilations per second.
+  metric_type: gauge
+  title: sqlserver_performance.sql_compilations_persec
+
+gauge.sqlserver_performance.sql_re-compilations_persec:
+  brief: Rate of sql recompilations per sec.
+  description: Rate of sql recompilations per sec.
+  metric_type: gauge
+  title: sqlserver_performance.sql_re-compilations_persec
+
+gauge.sqlserver_performance.target_server_memory_kb:
+  brief: Size of target server memory in KB.
+  description: Size of target server memory in KB.
+  metric_type: gauge
+  title: sqlserver_performance.target_server_memory_kb
+
+gauge.sqlserver_performance.temp_tables_creation_rate:
+  brief: Rate of temporary table creations.
+  description: Rate of temporary table creations.
+  metric_type: gauge
+  title: sqlserver_performance.temp_tables_creation_rate
+
+gauge.sqlserver_performance.temp_tables_for_destruction:
+  brief: Number of temporary tables marked for destruction.
+  description: Number of temporary tables marked for destruction.
+  metric_type: gauge
+  title: sqlserver_performance.temp_tables_for_destruction
+
+gauge.sqlserver_performance.total_server_memory_kb:
+  brief: Total server memory in KB.
+  description: Total server memory in KB.
+  metric_type: gauge
+  title: sqlserver_performance.total_server_memory_kb
+
+gauge.sqlserver_performance.transaction_delay:
+  brief: Number of delayed transactions.
+  description: Number of delayed transactions.
+  metric_type: gauge
+  title: sqlserver_performance.transaction_delay
+
+gauge.sqlserver_performance.transactions_persec:
+  brief: Rate of transactions per second.
+  description: Rate of transactions per second.
+  metric_type: gauge
+  title: sqlserver_performance.transactions_persec
+
+gauge.sqlserver_performance.used_memory_kb:
+  brief: Used memory in KB.
+  description: Used memory in KB.
+  metric_type: gauge
+  title: sqlserver_performance.used_memory_kb
+
+gauge.sqlserver_performance.user_connections:
+  brief: Number of user connections.
+  description: Number of user connections.
+  metric_type: gauge
+  title: sqlserver_performance.user_connections
+
+gauge.sqlserver_performance.version_store_size_kb:
+  brief: Size of the version store in KB.
+  description: Size of the version store in KB.
+  metric_type: gauge
+  title: sqlserver_performance.version_store_size_kb
+
+gauge.sqlserver_performance.write_transactions_persec:
+  brief: Rate of write transactions per second.
+  description: Rate of write transactions per second.
+  metric_type: gauge
+  title: sqlserver_performance.write_transactions_persec
+
+gauge.sqlserver_performance.xtp_memory_used_kb:
+  brief: Size of xtp memory used in KB.
+  description: Size of xtp memory used in KB.
+  metric_type: gauge
+  title: sqlserver_performance.xtp_memory_used_kb
+
+gauge.sqlserver_server_properties.available_storage_mb:
+  brief: Available storage in MB.
+  description: Available storage in MB.
+  metric_type: gauge
+  title: sqlserver_server_properties.available_storage_mb
+
+gauge.sqlserver_server_properties.cpu_count:
+  brief: Number of cpus.
+  description: Number of cpus.
+  metric_type: gauge
+  title: sqlserver_server_properties.cpu_count
+
+gauge.sqlserver_server_properties.db_offline:
+  brief: Number of offline databases.
+  description: Number of offline databases.
+  metric_type: gauge
+  title: sqlserver_server_properties.db_offline
+
+gauge.sqlserver_server_properties.db_online:
+  brief: Number of online databases.
+  description: Number of online databases.
+  metric_type: gauge
+  title: sqlserver_server_properties.db_online
+
+gauge.sqlserver_server_properties.db_recovering:
+  brief: Number of databases recovering.
+  description: Number of databases recovering.
+  metric_type: gauge
+  title: sqlserver_server_properties.db_recovering
+
+gauge.sqlserver_server_properties.db_recoverypending:
+  brief: Number of databases pending recovery.
+  description: Number of databases pending recovery.
+  metric_type: gauge
+  title: sqlserver_server_properties.db_recoveryPending
+
+gauge.sqlserver_server_properties.db_restoring:
+  brief: Number of databases restoring.
+  description: Number of databases restoring.
+  metric_type: gauge
+  title: sqlserver_server_properties.db_restoring
+
+gauge.sqlserver_server_properties.db_suspect:
+  brief: Number of suspect databases.
+  description: Number of suspect databases.
+  metric_type: gauge
+  title: sqlserver_server_properties.db_suspect
+
+gauge.sqlserver_server_properties.engine_edition:
+  brief: Sql server engine edition version.
+  description: Sql server engine edition version.
+  metric_type: gauge
+  title: sqlserver_server_properties.engine_edition
+
+gauge.sqlserver_server_properties.server_memory:
+  brief: Amount of memory on the sql server.
+  description: Amount of memory on the sql server.
+  metric_type: gauge
+  title: sqlserver_server_properties.server_memory
+
+gauge.sqlserver_server_properties.total_storage_mb:
+  brief: Amount of storage in MB of the sql server.
+  description: Amount of storage in MB of the sql server.
+  metric_type: gauge
+  title: sqlserver_server_properties.total_storage_mb
+
+gauge.sqlserver_server_properties.uptime:
+  brief: Uptime of the sql server.
+  description: Uptime of the sql server.
+  metric_type: gauge
+  title: sqlserver_server_properties.uptime
+
+gauge.sqlserver_waitstats.max_wait_time_ms:
+  brief: Maximum time in millisecond spent waiting.
+  description: Maximum time in millisecond spent waiting.
+  metric_type: gauge
+  title: sqlserver_waitstats.max_wait_time_ms
+
+gauge.sqlserver_waitstats.resource_wait_ms:
+  brief: Time in milliseconds spent waiting on a resource.
+  description: Time in milliseconds spent waiting on a resource.
+  metric_type: gauge
+  title: sqlserver_waitstats.resource_wait_ms
+
+gauge.sqlserver_waitstats.signal_wait_time_ms:
+  brief: Time in milliseconds waiting on a signal.
+  description: Time in milliseconds waiting on a signal.
+  metric_type: gauge
+  title: sqlserver_waitstats.signal_wait_time_ms
+
+gauge.sqlserver_waitstats.wait_time_ms:
+  brief: Time in milliseconds waiting.
+  description: Time in milliseconds waiting.
+  metric_type: gauge
+  title: sqlserver_waitstats.wait_time_ms
+
+gauge.sqlserver_waitstats.waiting_tasks_count:
+  brief: Time in milliseconds
+  description: Time in milliseconds
+  metric_type: gauge
+  title: sqlserver_waitstats.waiting_tasks_count
+

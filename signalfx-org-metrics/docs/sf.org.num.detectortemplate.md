@@ -1,7 +1,7 @@
 ---
 title: sf.org.num.detectortemplate
 brief: SignalFx internal metric
-metric_type: n/a
+metric_type: cumulative
 ---
 ### sf.org.num.detectortemplate
 

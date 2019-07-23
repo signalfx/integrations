@@ -27,3 +27,5 @@ signalfx-org-metrics/docs/template-plain-internal.md
 signalfx-org-metrics/docs/template-aws.md
 
 signalfx-org-metrics/docs/sf.org.num.gcpTemplate.md
+dist/
+.mypy_cache/

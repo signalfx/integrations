@@ -1,10 +1,11 @@
-{ "display_name":"GitLab",
-  "description": "Monitor GitLab using the SignalFx Smart Agent.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/gitlab",
-  "featured": false,
-  "logo_large": "/images/repos/gitlab/img/integration_gitlab@2x.png",
-  "logo_small": "/images/repos/gitlab/img/integration_gitlab.png",
-  "data_signature": "metric_source:\"gitlab\"",
-  "in_app_categories": ["servicesMonitored"],
-  "browse_categories": ["Development Tools"]
-}
+browse_categories:
+- Development Tools
+data_signature: metric_source:"gitlab"
+description: Monitor GitLab using the SignalFx Smart Agent.
+display_name: GitLab
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/gitlab/img/integration_gitlab@2x.png
+logo_small: /images/repos/gitlab/img/integration_gitlab.png
+project_url: https://github.com/signalfx/integrations/tree/master/gitlab

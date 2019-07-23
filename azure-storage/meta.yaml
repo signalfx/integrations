@@ -1,11 +1,12 @@
-{ "display_name":"Azure Storage",
-  "description": "SignalFx's integration with Azure Storage",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-storage",
-  "code": "https://azure.microsoft.com/en-us/services/storage/",
-  "featured": false,
-  "logo_small": "integrations_azurestorage.png",
-  "logo_large": "integrations_azurestorage%402x.png",
-  "data_signature": "resource_type:\"Microsoft.Storage/storageAccounts\"",
-  "in_app_categories": ["AzureServicesMonitored"],
-  "browse_categories": ["Storage"]
-}
+browse_categories:
+- Storage
+code: https://azure.microsoft.com/en-us/services/storage/
+data_signature: resource_type:"Microsoft.Storage/storageAccounts"
+description: SignalFx's integration with Azure Storage
+display_name: Azure Storage
+featured: false
+in_app_categories:
+- AzureServicesMonitored
+logo_large: integrations_azurestorage%402x.png
+logo_small: integrations_azurestorage.png
+project_url: https://github.com/signalfx/integrations/tree/master/azure-storage

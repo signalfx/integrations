@@ -1,11 +1,12 @@
-{ "display_name":"Azure App Service",
-  "description": "SignalFx's integration with Azure App Service",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-app-service",
-  "code": "https://azure.microsoft.com/en-us/services/app-service/",
-  "featured": false,
-  "logo_small": "integrations_azureappservice.png",
-  "logo_large": "integrations_azureappservice%402x.png",
-  "data_signature": "resource_type:\"Microsoft.Web/sites\"",
-  "in_app_categories": ["AzureServicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://azure.microsoft.com/en-us/services/app-service/
+data_signature: resource_type:"Microsoft.Web/sites"
+description: SignalFx's integration with Azure App Service
+display_name: Azure App Service
+featured: false
+in_app_categories:
+- AzureServicesMonitored
+logo_large: integrations_azureappservice%402x.png
+logo_small: integrations_azureappservice.png
+project_url: https://github.com/signalfx/integrations/tree/master/azure-app-service

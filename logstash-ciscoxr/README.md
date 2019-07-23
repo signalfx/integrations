@@ -78,4 +78,4 @@ export SIGNALFXTOKEN="YOUR_SIGNALFX_API_TOKEN"
 
 ### LICENSE
 
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](../LICENSE) for more details.

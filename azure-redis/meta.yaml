@@ -1,11 +1,12 @@
-{ "display_name":"Azure Redis Cache",
-  "description": "SignalFx's integration with Azure Redis Cache",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-redis",
-  "code": "https://azure.microsoft.com/en-us/services/cache/",
-  "featured": false,
-  "logo_small": "integrations_azurerediscaches.png",
-  "logo_large": "integrations_azurerediscaches%402x.png",
-  "data_signature": "resource_type:\"Microsoft.Cache/Redis\"",
-  "in_app_categories": ["AzureServicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://azure.microsoft.com/en-us/services/cache/
+data_signature: resource_type:"Microsoft.Cache/Redis"
+description: SignalFx's integration with Azure Redis Cache
+display_name: Azure Redis Cache
+featured: false
+in_app_categories:
+- AzureServicesMonitored
+logo_large: integrations_azurerediscaches%402x.png
+logo_small: integrations_azurerediscaches.png
+project_url: https://github.com/signalfx/integrations/tree/master/azure-redis

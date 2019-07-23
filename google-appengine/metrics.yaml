@@ -1,0 +1,146 @@
+flex_cpu_reserved_cores:
+  brief: Total number of CPU cores allocated to an App Engine flexible environment
+    version.
+  description: Total number of CPU cores allocated to an App Engine flexible environment
+    version.
+  metric_type: gauge
+  title: flex/cpu/reserved_cores
+
+flex_cpu_utilization:
+  brief: The fraction of allocated CPU in use across an App Engine flexible environment
+    version. Note that some machine types allow bursting above 1.0.
+  description: The fraction of allocated CPU in use across an App Engine flexible
+    environment version. Note that some machine types allow bursting above 1.0.
+  metric_type: gauge
+  title: flex/cpu/utilization
+
+flex_disk_read_bytes_count:
+  brief: Delta count of bytes read from disk across an App Engine flexible environment
+    version.
+  description: Delta count of bytes read from disk across an App Engine flexible environment
+    version.
+  metric_type: counter
+  title: flex/disk/read_bytes_count
+
+flex_disk_write_bytes_count:
+  brief: Delta count of bytes written from disk across an App Engine flexible environment
+    version.
+  description: Delta count of bytes written from disk across an App Engine flexible
+    environment version.
+  metric_type: counter
+  title: flex/disk/write_bytes_count
+
+flex_instance_cpu_utilization:
+  brief: Fraction of CPU utilization for all cores on a single App Engine flexible
+    instance.
+  description: Fraction of CPU utilization for all cores on a single App Engine flexible
+    instance.
+  metric_type: gauge
+  title: flex/instance/cpu/utilization
+
+flex_network_received_bytes_count:
+  brief: Delta count of incoming network bytes across all VMs in an App Engine flexible
+    environment version
+  description: Delta count of incoming network bytes across all VMs in an App Engine
+    flexible environment version
+  metric_type: counter
+  title: flex/network/received_bytes_count
+
+flex_network_sent_bytes_count:
+  brief: Delta count of outgoing network bytes across all VMs in an App Engine flexible
+    environment version
+  description: Delta count of outgoing network bytes across all VMs in an App Engine
+    flexible environment version
+  metric_type: counter
+  title: flex/network/sent_bytes_count
+
+http_server_dos_intercept_count:
+  brief: Delta count of interceptions performed to prevent DoS attacks.
+  description: Delta count of interceptions performed to prevent DoS attacks.
+  metric_type: counter
+  title: http/server/dos_intercept_count
+
+http_server_quota_denial_count:
+  brief: Delta count of requests that failed due to the app being over quota.
+  description: Delta count of requests that failed due to the app being over quota.
+  metric_type: counter
+  title: http/server/quota_denial_count
+
+http_server_response_count:
+  brief: Delta HTTP response count.
+  description: Delta HTTP response count.
+  metric_type: counter
+  title: http/server/response_count
+
+http_server_response_latencies:
+  brief: HTTP response latency.
+  description: HTTP response latency.
+  metric_type: counter
+  title: http/server/response_latencies
+
+http_server_response_style_count:
+  brief: Delta counts on the HTTP serve style.
+  description: Delta counts on the HTTP serve style.
+  metric_type: counter
+  title: http/server/response_style_count
+
+memcache_centi_mcu_count:
+  brief: Memcache utilization in one hundredth of Memcache Compute Unit grouped by
+    command.
+  description: Memcache utilization in one hundredth of Memcache Compute Unit grouped
+    by command.
+  metric_type: counter
+  title: memcache/centi_mcu_count
+
+memcache_operation_count:
+  brief: Count of memcache key operations, grouped by command and status.
+  description: Count of memcache key operations, grouped by command and status.
+  metric_type: counter
+  title: memcache/operation_count
+
+memcache_received_bytes_count:
+  brief: Number of bytes received by app from the memcache API, grouped by status
+    and memcache command.
+  description: Number of bytes received by app from the memcache API, grouped by status
+    and memcache command.
+  metric_type: counter
+  title: memcache/received_bytes_count
+
+memcache_sent_bytes_count:
+  brief: Number of bytes sent by app through the memcache API, grouped by memcache
+    command.
+  description: Number of bytes sent by app through the memcache API, grouped by memcache
+    command.
+  metric_type: counter
+  title: memcache/sent_bytes_count
+
+system_cpu_usage:
+  brief: CPU usage in megacycles.
+  description: CPU usage in megacycles.
+  metric_type: gauge
+  title: system/cpu/usage
+
+system_instance_count:
+  brief: Number of instances that exist.
+  description: Number of instances that exist.
+  metric_type: gauge
+  title: system/instance_count
+
+system_memory_usage:
+  brief: Total memory used by running instances.
+  description: Total memory used by running instances.
+  metric_type: gauge
+  title: system/memory/usage
+
+system_network_received_bytes_count:
+  brief: Delta count of incoming network bandwidth.
+  description: Delta count of incoming network bandwidth.
+  metric_type: counter
+  title: system/network/received_bytes_count
+
+system_network_sent_bytes_count:
+  brief: Delta count of outgoing network bandwidth.
+  description: Delta count of outgoing network bandwidth.
+  metric_type: counter
+  title: system/network/sent_bytes_count
+

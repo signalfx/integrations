@@ -1,8 +1,7 @@
-{ "display_name":"SignalFx Python Library",
-  "description": "Programmatic interface in Python for SignalFx APIs.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/lib-python",
-  "code": "https://github.com/signalfx/signalfx-python",
-  "featured": false,
-  "logo_small": "/images/repos/lib-python/img/integrations_python.png",
-  "logo_large": "/images/repos/lib-python/img/integrations_python%402x.png"
-}
+code: https://github.com/signalfx/signalfx-python
+description: Programmatic interface in Python for SignalFx APIs.
+display_name: SignalFx Python Library
+featured: false
+logo_large: /images/repos/lib-python/img/integrations_python%402x.png
+logo_small: /images/repos/lib-python/img/integrations_python.png
+project_url: https://github.com/signalfx/integrations/tree/master/lib-python

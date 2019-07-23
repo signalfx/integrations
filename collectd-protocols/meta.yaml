@@ -1,8 +1,8 @@
-{ "display_name":"Protocols",
-  "description": "The Protocols plugin collects information about the network protocols supported by the system, like IP and TCP.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-protocols",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/protocols.c",
-  "featured": false,
-  "logo_large": "/images/repos/collectd-protocols/img/integrations_collectd%402x.png",
-  "logo_small": "/images/repos/collectd-protocols/img/integrations_collectd.png"
-}
+code: https://github.com/signalfx/collectd/blob/master/src/protocols.c
+description: The Protocols plugin collects information about the network protocols
+  supported by the system, like IP and TCP.
+display_name: Protocols
+featured: false
+logo_large: /images/repos/collectd-protocols/img/integrations_collectd%402x.png
+logo_small: /images/repos/collectd-protocols/img/integrations_collectd.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-protocols

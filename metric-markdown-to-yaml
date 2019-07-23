@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+
+# Converts the */docs/*.md metric descriptions to a single file YAML
+# equivalent.
+
+from pathlib import Path
+
+import yaml
+from yaml.scanner import ScannerError
+
+INTEGRATIONS_REPO_ROOT = Path(__file__).parent.resolve()
+
+
+def make_metrics_yaml(integration_dir):
+    """
+    Collects all of the metric docs in separate markdown files into a single
+    dict by integration.
+    """
+    metrics = {}
+    for metric_file in sorted(integration_dir.glob("docs/*.md")):
+        if metric_file.name.lower() == "readme.md":
+            continue
+
+        metric_name = metric_file.stem
+
+        yaml_part, markdown_part = split_metric_doc(metric_file)
+        descriptor = yaml_part
+
+        if (descriptor.get("metric_type") or "").lower() in ["cumulative counter", "cumulative_counter"]:
+            descriptor["metric_type"] = "cumulative"
+
+        if (descriptor.get("metric_type") or "").lower() in ["derive"]:
+            descriptor["metric_type"] = "counter"
+
+        if (descriptor.get("metric_type") or "").lower() in ["n/a"]:
+            descriptor["metric_type"] = None
+
+        assert (descriptor.get("metric_type") or "gauge") in [
+            "gauge",
+            "counter",
+            "cumulative",
+        ], f"Unknown metric type {descriptor.get('metric_type')} in {metric_file}"
+
+        assert markdown_part.strip().startswith("### "), f"Malformed markdown part of {metric_file}"
+
+        descriptor["description"] = "\n".join(
+            [l for l in markdown_part.strip().splitlines()[1:] if l.strip() != ""]
+        ).strip()
+
+        if "brief" in descriptor:
+            descriptor["brief"] = descriptor["brief"].strip()
+
+        metrics[metric_name] = descriptor
+
+    if not metrics:
+        return
+
+    text = ""
+    for name in metrics:
+        text += yaml.dump({name: metrics[name]}) + "\n"
+
+    (integration_dir / "metrics.yaml").write_text(text)
+
+
+def split_metric_doc(metric_file):
+    """
+    Split doc file strings in the form of:
+     ---
+     YAML
+     ---
+     MARKDOWN
+
+     into their corresponding metadata(yaml) and markdown parts
+     """
+    content = metric_file.read_text()
+    parts = content.split("---")
+    assert parts[0].strip() == "", f"Malformed metric doc {metric_file}: {content}; {parts}"
+
+    try:
+        return yaml.safe_load(parts[1]), parts[2]
+    except ScannerError:
+        print(f"Could not parse YAML in {metric_file}")
+        raise
+
+
+for integration_dir in sorted(INTEGRATIONS_REPO_ROOT.glob("*")):
+    if not integration_dir.is_dir():
+        continue
+
+    make_metrics_yaml(integration_dir)

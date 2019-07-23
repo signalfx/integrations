@@ -1,7 +1,7 @@
 ---
 title: sf.org.num.migrationmarker
 brief: SignalFx internal metric 
-metric_type: n/a
+metric_type: gauge
 ---
 ### sf.org.num.migrationmarker
 

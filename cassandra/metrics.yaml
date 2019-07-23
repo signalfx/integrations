@@ -1,0 +1,352 @@
+counter.cassandra.ClientRequest.RangeSlice.Latency.Count:
+  brief: Count of range slice operations since server start
+  custom: false
+  description: 'Count of range slice operations since server start. This typically
+    indicates a server overload condition.
+
+    If this value is increasing across the cluster then the cluster is too small for
+    the application range slice load.
+
+    If this value is increasing for a single server in a cluster, then one of the
+    following conditions may be true:
+
+    - one or more clients are directing more load to this server than the others
+
+    - the server is experiencing hardware or software issues and may require maintenance.'
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.RangeSlice.Latency.Count
+
+counter.cassandra.ClientRequest.RangeSlice.Timeouts.Count:
+  brief: Count of range slice timeouts since server start
+  custom: false
+  description: 'Count of range slice timeouts since server start. This typically indicates
+    a server overload condition.
+
+    If this value is increasing across the cluster then the cluster is too small for
+    the application range slice load.
+
+    If this value is increasing for a single server in a cluster, then one of the
+    following conditions may be true:
+
+    - one or more clients are directing more load to this server than the others
+
+    - the server is experiencing hardware or software issues and may require maintenance.'
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.RangeSlice.Timeouts.Count
+
+counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count:
+  brief: Count of range slice unavailables since server start
+  custom: false
+  description: 'Count of range slice unavailables since server start. A non-zero value
+
+    means that insufficient replicas were available to fulfil a range slice
+
+    request at the requested consistency level.
+
+    This typically means that one or more nodes are down. To fix this condition,
+
+    any down nodes must be restarted, or removed from the cluster.'
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count
+
+counter.cassandra.ClientRequest.Read.Latency.Count:
+  brief: Count of read operations since server start
+  custom: false
+  description: Count of read operations since server start
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.Read.Latency.Count
+
+counter.cassandra.ClientRequest.Read.Timeouts.Count:
+  brief: Count of read timeouts since server start
+  custom: false
+  description: 'Count of read timeouts since server start. This typically indicates
+    a server overload condition.
+
+    If this value is increasing across the cluster then the cluster is too small for
+    the application read load.
+
+    If this value is increasing for a single server in a cluster, then one of the
+    following conditions may be true:
+
+    - one or more clients are directing more load to this server than the others
+
+    - the server is experiencing hardware or software issues and may require maintenance.'
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.Read.Timeouts.Count
+
+counter.cassandra.ClientRequest.Read.Unavailables.Count:
+  brief: Count of read unavailables since server start
+  custom: false
+  description: 'Count of read unavailables since server start. A non-zero value means
+
+    that insufficient replicas were available to fulfil a read request at
+
+    the requested consistency level. This typically means that one or more
+
+    nodes are down. To fix this condition, any down nodes must be
+
+    restarted, or removed from the cluster.'
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.Read.Unavailables.Count
+
+counter.cassandra.ClientRequest.Write.Latency.Count:
+  brief: Count of write operations since server start
+  custom: false
+  description: Count of write operations since server start.
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.Write.Latency.Count
+
+counter.cassandra.ClientRequest.Write.Timeouts.Count:
+  brief: Count of write timeouts since server start
+  custom: false
+  description: 'Count of write timeouts since server start. This typically indicates
+    a server overload condition.
+
+    If this value is increasing across the cluster then the cluster is too small for
+    the application write load.
+
+    If this value is increasing for a single server in a cluster, then one of the
+    following conditions may be true:
+
+    - one or more clients are directing more load to this server than the others
+
+    - the server is experiencing hardware or software issues and may require maintenance.'
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.Write.Timeouts.Count
+
+counter.cassandra.ClientRequest.Write.Unavailables.Count:
+  brief: Count of write unavailables since server start
+  custom: false
+  description: 'Count of write unavailables since server start. A non-zero value means
+
+    that insufficient replicas were available to fulfil a write request at
+
+    the requested consistency level.
+
+    This typically means that one or more nodes are down. To fix this
+
+    condition, any down nodes must be restarted, or removed from the
+
+    cluster.'
+  metric_type: cumulative
+  title: counter.cassandra.ClientRequest.Write.Unavailables.Count
+
+counter.cassandra.Compaction.TotalCompactionsCompleted.Count:
+  brief: Number of compaction operations since node start
+  custom: true
+  description: 'Number of compaction operations since node start. If this value does
+
+    not increase steadily over time then the node may be experiencing
+
+    problems completing compaction operations.'
+  metric_type: cumulative
+  title: counter.cassandra.Compaction.TotalCompactionsCompleted.Count
+
+gauge.cassandra.ClientRequest.RangeSlice.Latency.50thPercentile:
+  brief: 50th percentile (median) of Cassandra range slice latency
+  custom: true
+  description: '50th percentile (median) of Cassandra range slice latency. This value
+
+    should be similar across all nodes in the cluster. If some nodes have higher
+
+    values than the rest of the cluster then they may have more connected clients
+
+    or may be experiencing heavier than usual compaction load.'
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.RangeSlice.Latency.50thPercentile
+
+gauge.cassandra.ClientRequest.RangeSlice.Latency.99thPercentile:
+  brief: 99th percentile of Cassandra range slice latency
+  custom: false
+  description: '99th percentile of Cassandra range slice latency. This value should
+    be
+
+    similar across all nodes in the cluster. If some nodes have higher values than
+
+    the rest of the cluster then they may have more connected clients or may be
+
+    experiencing heavier than usual compaction load.'
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.RangeSlice.Latency.99thPercentile
+
+gauge.cassandra.ClientRequest.RangeSlice.Latency.Max:
+  brief: Maximum Cassandra range slice latency
+  custom: true
+  description: Maximum Cassandra range slice latency
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.RangeSlice.Latency.Max
+
+gauge.cassandra.ClientRequest.Read.Latency.50thPercentile:
+  brief: 50th percentile (median) of Cassandra read latency
+  custom: false
+  description: '50th percentile (median) of Cassandra read latency. This value should
+
+    be similar across all nodes in the cluster. If some nodes have higher
+
+    values than the rest of the cluster then they may have more connected
+
+    clients or may be experiencing heavier than usual compaction load.'
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.Read.Latency.50thPercentile
+
+gauge.cassandra.ClientRequest.Read.Latency.99thPercentile:
+  brief: 99th percentile of Cassandra read latency
+  custom: false
+  description: '99th percentile of Cassandra read latency. This value should be similar
+
+    across all nodes in the cluster. If some nodes have higher values than
+
+    the rest of the cluster then they may have more connected clients or
+
+    may be experiencing heavier than usual compaction load.'
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.Read.Latency.99thPercentile
+
+gauge.cassandra.ClientRequest.Read.Latency.Max:
+  brief: Maximum Cassandra read latency
+  custom: false
+  description: Maximum Cassandra read latency
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.Read.Latency.Max
+
+gauge.cassandra.ClientRequest.Write.Latency.50thPercentile:
+  brief: 50th percentile (median) of Cassandra write latency
+  custom: false
+  description: '50th percentile (median) of Cassandra write latency. This value should
+
+    be similar across all nodes in the cluster. If some nodes have higher
+
+    values than the rest of the cluster then they may have more connected
+
+    clients or may be experiencing heavier than usual compaction load.'
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.Write.Latency.50thPercentile
+
+gauge.cassandra.ClientRequest.Write.Latency.99thPercentile:
+  brief: 99th percentile of Cassandra write latency
+  custom: false
+  description: '99th percentile of Cassandra write latency. This value should be
+
+    similar across all nodes in the cluster. If some nodes have higher
+
+    values than the rest of the cluster then they may have more connected
+
+    clients or may be experiencing heavier than usual compaction load.'
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.Write.Latency.99thPercentile
+
+gauge.cassandra.ClientRequest.Write.Latency.Max:
+  brief: Maximum Cassandra write latency
+  custom: false
+  description: Maximum Cassandra write latency
+  metric_type: gauge
+  title: gauge.cassandra.ClientRequest.Write.Latency.Max
+
+gauge.cassandra.Compaction.PendingTasks.Value:
+  brief: Number of compaction operations waiting to run
+  custom: false
+  description: 'Number of compaction operations waiting to run. If this value is
+
+    continually increasing then the node may be experiencing problems
+
+    completing compaction operations.'
+  metric_type: gauge
+  title: gauge.cassandra.Compaction.PendingTasks.Value
+
+gauge.cassandra.Storage.Load.Count:
+  brief: Storage used for Cassandra data in bytes
+  custom: false
+  description: 'Storage used for Cassandra data in bytes. Use this metric to see how
+    much storage is being used for data by a Cassandra node.
+
+    The value of this metric is influenced by:
+
+    - Total data stored into the database
+
+    - compaction behavior'
+  metric_type: gauge
+  title: gauge.cassandra.Storage.Load.Count
+
+gauge.cassandra.Storage.TotalHints.Count:
+  brief: Total hints since node start
+  custom: true
+  description: 'Total hints since node start. Indicates that write operations cannot
+    be
+
+    delivered to a node, usually because a node is down. If this value is
+
+    increasing and all nodes are up then there may be some connectivity
+
+    issue between nodes in the cluster.'
+  metric_type: gauge
+  title: gauge.cassandra.Storage.TotalHints.Count
+
+gauge.cassandra.Storage.TotalHintsInProgress.Count:
+  brief: Total pending hints
+  custom: false
+  description: 'Total pending hints. Indicates that write operations cannot be
+
+    delivered to a node, usually because a node is down. If this value is
+
+    increasing and all nodes are up then there may be some connectivity
+
+    issue between nodes in the cluster.'
+  metric_type: gauge
+  title: gauge.cassandra.Storage.TotalHintsInProgress.Count
+
+gauge.jvm.threads.count:
+  brief: Number of JVM threads
+  custom: false
+  description: Number of JVM threads
+  metric_type: gauge
+  title: gauge.jvm.threads.count
+
+gauge.loaded_classes:
+  brief: Number of classes loaded in the JVM
+  custom: false
+  description: Number of classes loaded in the JVM
+  metric_type: gauge
+  title: gauge.loaded_classes
+
+invocations:
+  brief: Total number of garbage collection events
+  custom: false
+  description: Total number of garbage collection events
+  metric_type: cumulative
+  title: invocations
+
+jmx_memory.committed:
+  brief: Amount of memory guaranteed to be available in bytes
+  custom: false
+  description: Amount of memory guaranteed to be available in bytes
+  metric_type: gauge
+  title: jmx_memory.committed
+
+jmx_memory.init:
+  brief: Amount of initial memory at startup in bytes
+  custom: false
+  description: Amount of initial memory at startup in bytes
+  metric_type: gauge
+  title: jmx_memory.init
+
+jmx_memory.max:
+  brief: Maximum amount of memory that can be used in bytes
+  custom: false
+  description: Maximum amount of memory that can be used in bytes
+  metric_type: gauge
+  title: jmx_memory.max
+
+jmx_memory.used:
+  brief: Current memory usage in bytes
+  custom: false
+  description: Current memory usage in bytes
+  metric_type: gauge
+  title: jmx_memory.used
+
+total_time_in_ms.collection_time:
+  brief: Amount of time spent garbage collecting in milliseconds
+  custom: false
+  description: Amount of time spent garbage collecting in milliseconds
+  metric_type: cumulative
+  title: total_time_in_ms.collection_time
+

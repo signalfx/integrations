@@ -1,0 +1,86 @@
+df_complex.free:
+  brief: Free disk space in bytes
+  description: This metric measures free disk space in bytes on this file system.
+  metric_type: gauge
+  title: Free disk space
+
+df_complex.reserved:
+  brief: Reserved disk space in bytes
+  description: This metric measures disk space in bytes reserved for the super-user
+    on this file system.
+  metric_type: gauge
+  title: Reserved disk space
+
+df_complex.used:
+  brief: Used disk space in bytes
+  description: This metric measures used disk space in bytes on this file system.
+  metric_type: gauge
+  title: Used disk space
+
+df_inodes.free:
+  brief: Number of inodes that are free.
+  description: This metric measures free inodes in the file system.  Inodes are structures
+    used by Unix filesystems to store metadata about files.
+  metric_type: gauge
+  title: Free inodes
+
+df_inodes.reserved:
+  brief: Number of inodes reserved for the super user.
+  description: This metric measures inodes reserved for the super user in the file
+    system.  Inodes are structures used by Unix filesystems to store metadata about
+    files.
+  metric_type: gauge
+  title: Reserved inodes
+
+df_inodes.used:
+  brief: Number of inodes that are used.
+  description: This metric measures used inodes in the file system.  Inodes are structures
+    used by Unix filesystems to store metadata about files.
+  metric_type: gauge
+  title: Used inodes
+
+percent_bytes.free:
+  brief: Free disk space on the file system, expressed as a percentage.
+  description: This metric measures free disk space as a percentage of total disk
+    space on this file system.
+  metric_type: gauge
+  title: Free disk space percent
+
+percent_bytes.reserved:
+  brief: Reserved disk space on the filesystem, expressed as a percentage.
+  description: This metric measures disk space reserved for the super-user as a percentage
+    of total disk space of this file system.
+  metric_type: gauge
+  title: Reserved disk space percent
+
+percent_bytes.used:
+  brief: Used disk space on the file system, expressed as a percentage.
+  description: This metric measures used disk space as a percentage of total disk
+    space of this file system.
+  metric_type: gauge
+  title: Used disk space percent
+
+percent_inodes.free:
+  brief: Free inodes on the file system, expressed as a percentage.
+  description: This metric measures free inodes as a percentage of total inodes in
+    the file system.  Inodes are structures used by file systems to store information
+    about files (other than its content).
+  metric_type: gauge
+  title: Free inodes percent
+
+percent_inodes.reserved:
+  brief: Reserved inodes on the file system, expressed as a percentage.
+  description: This metric measures inodes reserved for the super-user as a percentage
+    of total inodes in the file system.  Inodes are structures used by file systems
+    to store information about files (other than its content).
+  metric_type: gauge
+  title: Reserved inodes percent
+
+percent_inodes.used:
+  brief: Used inodes on the file system, expressed as a percentage.
+  description: This metric measures used inodes as a percentage of total inodes in
+    the file system.  Inodes are structures used by file systems to store information
+    about files (other than its content).
+  metric_type: gauge
+  title: Used inodes percent
+

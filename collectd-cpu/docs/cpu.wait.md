@@ -1,7 +1,7 @@
 
 ---
 title: cpu.wait
-brief: Amount of total CPU time spent idle while waiting for an I/O operation to complete.
+brief: Amount of total CPU time spent idle while waiting for an I/O operation to complete
 metric_type: cumulative
 custom: true
 ---

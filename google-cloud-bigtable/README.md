@@ -1,4 +1,4 @@
-# ![](./img/integration_googlebigtable.png) Google Cloud Bigtable
+# ![](./img/integration_googlecloudbigtable.png) Google Cloud Bigtable
 
 - [Description](#description)
 - [Installation](#installation)

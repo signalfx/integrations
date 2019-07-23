@@ -1,11 +1,12 @@
-{ "display_name":"Amazon EBS",
-  "description": "SignalFx's integration with Amazon Elastic Block Store (EBS).",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/aws-ebs",
-  "code": "https://aws.amazon.com/ebs/",
-  "featured": false,
-  "logo_large": "integration_awsebs.png",
-  "logo_small": "integration_awsebs.png",
-  "data_signature": "namespace:\"AWS/EBS\"",
-  "in_app_categories": ["AWSservicesMonitored"],
-  "browse_categories": ["Storage"]
-}
+browse_categories:
+- Storage
+code: https://aws.amazon.com/ebs/
+data_signature: namespace:"AWS/EBS"
+description: SignalFx's integration with Amazon Elastic Block Store (EBS).
+display_name: Amazon EBS
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsebs.png
+logo_small: integration_awsebs.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-ebs

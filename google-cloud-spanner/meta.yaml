@@ -1,11 +1,12 @@
-{ "display_name":"Google Cloud Spanner",
-  "description": "SignalFx's integration with Google Cloud Spanner",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-spanner",
-  "code": "https://cloud.google.com/spanner",
-  "featured": false,
-  "logo_small": "integration_googlecloudspanner.png",
-  "logo_large": "integration_googlecloudspanner%402x.png",
-  "data_signature": "service:\"spanner\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://cloud.google.com/spanner
+data_signature: service:"spanner"
+description: SignalFx's integration with Google Cloud Spanner
+display_name: Google Cloud Spanner
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlecloudspanner%402x.png
+logo_small: integration_googlecloudspanner.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-cloud-spanner

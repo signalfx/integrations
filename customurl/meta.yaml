@@ -1,10 +1,10 @@
-{ "display_name":"Custom URL Links",
-  "description": "Link from SignalFx to any URL",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/customurl",
-  "code": "",
-  "featured": false,
-  "logo_large": "integration_externallink@2x.png",
-  "logo_small": "integration_externallink.png",
-  "data_signature": "",
-  "in_app_categories": ["linkedServices"]
-}
+code: ''
+data_signature: ''
+description: Link from SignalFx to any URL
+display_name: Custom URL Links
+featured: false
+in_app_categories:
+- linkedServices
+logo_large: integration_externallink@2x.png
+logo_small: integration_externallink.png
+project_url: https://github.com/signalfx/integrations/tree/master/customurl

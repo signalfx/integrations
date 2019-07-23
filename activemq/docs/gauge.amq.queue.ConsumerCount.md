@@ -1,7 +1,7 @@
 
 ---
 title: gauge.amq.queue.ConsumerCount
-brief: Number of consumers subscribed to this queue.
+brief: Number of consumers subscribed to this queue
 metric_type: gauge
 custom: false
 ---

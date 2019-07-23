@@ -1,11 +1,12 @@
-{ "display_name":"Google Cloud Functions",
-  "description": "SignalFx's integration with Google Cloud Functions",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/google-cloud-functions",
-  "code": "https://cloud.google.com/functions",
-  "featured": false,
-  "logo_small": "integration_googlecloudfunctions.png",
-  "logo_large": "integration_googlecloudfunctions%402x.png",
-  "data_signature": "service:\"cloudfunctions\"",
-  "in_app_categories": ["GCPServicesMonitored"],
-  "browse_categories": ["Compute"]
-}
+browse_categories:
+- Compute
+code: https://cloud.google.com/functions
+data_signature: service:"cloudfunctions"
+description: SignalFx's integration with Google Cloud Functions
+display_name: Google Cloud Functions
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlecloudfunctions%402x.png
+logo_small: integration_googlecloudfunctions.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-cloud-functions

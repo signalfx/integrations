@@ -1,7 +1,7 @@
 
 ---
 title: cpu.system
-brief: CPU time spent running in the kernel.
+brief: CPU time spent running in the kernel
 metric_type: cumulative
 custom: true
 ---

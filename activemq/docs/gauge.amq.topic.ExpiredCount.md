@@ -1,7 +1,7 @@
 
 ---
 title: gauge.amq.topic.ExpiredCount
-brief: The number of messages that have expired from this topic.
+brief: The number of messages that have expired from this topic
 metric_type: gauge
 custom: false
 ---

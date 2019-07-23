@@ -59,10 +59,6 @@ You must include <a target="_blank" href="https://github.com/signalfx/integratio
 | Host | The name of your host (_Please leave the identifier `[hostHasService=hbase]` in the host name)_|
 
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](././docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -1,0 +1,217 @@
+counter.memstats.by_size.frees:
+  brief: Cumulative count of heap objects freed in a class
+  description: Cumulative count of heap objects freed in a class. The class is identified
+    by dimension class and it is as described for metric memstats.by_size.size
+  metric_type: counter
+  title: memstats.by_size.frees
+
+counter.memstats.by_size.mallocs:
+  brief: Cumulative count of heap objects allocated in a class
+  description: Cumulative count of heap objects allocated in a class. The class is
+    identified by dimension class and it is as described for metric memstats.by_size.size
+  metric_type: counter
+  title: memstats.by_size.mallocs
+
+counter.memstats.by_size.size:
+  brief: The maximum byte size of a class as identified by dimension class
+  description: The maximum byte size of a class as identified by dimension class.
+    It is the class interval upper limit. The values of dimension class are numbers
+    between 0 and 60 inclusive. Consecutive classes are of consecutive dimension class
+    values. The lower limit of a class is the upper limit of the consecutive class
+    below. Metrics memstats.by_size.size, memstats.by_size.mallocs and memstats.by_size.frees
+    of the same class are related
+  metric_type: counter
+  title: memstats.by_size.size
+
+counter.memstats.frees:
+  brief: Cumulative count of heap objects freed
+  description: Cumulative count of heap objects freed
+  metric_type: counter
+  title: memstats.frees
+
+counter.memstats.lookups:
+  brief: Number of pointer lookups performed by the runtime
+  description: Number of pointer lookups performed by the runtime
+  metric_type: counter
+  title: memstats.lookups
+
+counter.memstats.mallocs:
+  brief: Cumulative count of heap objects allocated
+  description: Cumulative count of heap objects allocated
+  metric_type: counter
+  title: memstats.mallocs
+
+counter.memstats.num_forced_gc:
+  brief: Number of forced GC cycles
+  description: Number of GC cycles that were forced by the application calling the
+    GC function
+  metric_type: counter
+  title: memstats.num_forced_gc
+
+counter.memstats.num_gc:
+  brief: Number of completed GC cycles
+  description: Number of completed GC cycles
+  metric_type: counter
+  title: memstats.num_gc
+
+counter.memstats.pause_total_ns:
+  brief: Cumulative nanoseconds of GC pauses
+  description: Cumulative nanoseconds in GC stop-the-world pauses since the program
+    started
+  metric_type: counter
+  title: memstats.pause_total_ns
+
+counter.memstats.total_alloc:
+  brief: Cumulative bytes allocated for heap objects
+  description: Cumulative bytes allocated for heap objects
+  metric_type: counter
+  title: memstats.total_alloc
+
+gauge.memstats.alloc:
+  brief: Bytes of allocated heap objects
+  description: Bytes of allocated heap objects. Same as memstats.heap_alloc
+  metric_type: gauge
+  title: memstats.alloc
+
+gauge.memstats.buck_hash_sys:
+  brief: Bytes of memory in profiling bucket hash tables
+  description: Bytes of memory in profiling bucket hash tables
+  metric_type: gauge
+  title: memstats.buck_hash_sys
+
+gauge.memstats.debug_gc:
+  brief: memstats.debug_gc is currently unused
+  description: memstats.debug_gc is currently unused
+  metric_type: gauge
+  title: memstats.debug_gc
+
+gauge.memstats.enable_gc:
+  brief: Id GC enabled boolean
+  description: Boolean that indicates that GC is enabled. It is always true, even
+    if GOGC=off
+  metric_type: gauge
+  title: memstats.enable_gc
+
+gauge.memstats.gc_sys:
+  brief: Bytes of memory in garbage collection metadata
+  description: Bytes of memory in garbage collection metadata
+  metric_type: gauge
+  title: memstats.gc_sys
+
+gauge.memstats.gccpu_fraction:
+  brief: The fraction CPU time used by the GC
+  description: The fraction of this program's available CPU time used by the GC since
+    the program started
+  metric_type: gauge
+  title: memstats.gccpu_fraction
+
+gauge.memstats.heap_alloc:
+  brief: Bytes of allocated heap objects
+  description: Bytes of allocated heap objects
+  metric_type: gauge
+  title: memstats.heap_alloc
+
+gauge.memstats.heap_idle:
+  brief: Bytes in idle (unused) spans
+  description: Bytes in idle (unused) spans
+  metric_type: gauge
+  title: memstats.heap_idle
+
+gauge.memstats.heap_inuse:
+  brief: Bytes in in-use spans
+  description: Bytes in in-use spans
+  metric_type: gauge
+  title: memstats.heap_inuse
+
+gauge.memstats.heap_objects:
+  brief: Number of allocated heap objects
+  description: Number of allocated heap objects
+  metric_type: gauge
+  title: memstats.heap_objects
+
+gauge.memstats.heap_released:
+  brief: Bytes of physical memory returned to the OS
+  description: Bytes of physical memory returned to the OS
+  metric_type: gauge
+  title: memstats.heap_released
+
+gauge.memstats.heap_sys:
+  brief: Bytes of heap memory obtained from the OS
+  description: Bytes of heap memory obtained from the OS
+  metric_type: gauge
+  title: memstats.heap_sys
+
+gauge.memstats.last_gc:
+  brief: The time the last garbage collection finished
+  description: The time the last garbage collection finished, as nanoseconds since
+    1970 (the UNIX epoch)
+  metric_type: gauge
+  title: memstats.last_gc
+
+gauge.memstats.m_cache_inuse:
+  brief: Bytes of allocated mcache structures
+  description: Bytes of allocated mcache structures
+  metric_type: gauge
+  title: memstats.m_cache_inuse
+
+gauge.memstats.m_cache_sys:
+  brief: Bytes of memory obtained from the OS for mcache structures
+  description: Bytes of memory obtained from the OS for mcache structures
+  metric_type: gauge
+  title: memstats.m_cache_sys
+
+gauge.memstats.m_span_inuse:
+  brief: Bytes of allocated mspan structures
+  description: Bytes of allocated mspan structures
+  metric_type: gauge
+  title: memstats.m_span_inuse
+
+gauge.memstats.m_span_sys:
+  brief: Bytes of memory obtained from the OS for mspan
+  description: Bytes of memory obtained from the OS for mspan
+  metric_type: gauge
+  title: memstats.m_span_sys
+
+gauge.memstats.most_recent_gc_pause_end:
+  brief: Most recent GC pause end time
+  description: Most recent GC pause end time, as nanoseconds since 1970 (the UNIX
+    epoch)
+  metric_type: gauge
+  title: memstats.most_recent_gc_pause_end
+
+gauge.memstats.most_recent_gc_pause_ns:
+  brief: Most recent GC stop-the-world pause time in nanoseconds
+  description: Most recent GC stop-the-world pause time in nanoseconds
+  metric_type: gauge
+  title: memstats.most_recent_gc_pause_ns
+
+gauge.memstats.next_gc:
+  brief: Target heap size of the next GC cycle
+  description: Target heap size of the next GC cycle
+  metric_type: gauge
+  title: memstats.next_gc
+
+gauge.memstats.other_sys:
+  brief: Bytes of memory in miscellaneous off-heap runtime allocations
+  description: Bytes of memory in miscellaneous off-heap runtime allocations
+  metric_type: gauge
+  title: memstats.other_sys
+
+gauge.memstats.stack_inuse:
+  brief: Bytes in stack spans
+  description: Bytes in stack spans
+  metric_type: gauge
+  title: memstats.stack_inuse
+
+gauge.memstats.stack_sys:
+  brief: Bytes of stack memory obtained from the OS
+  description: Bytes of stack memory obtained from the OS
+  metric_type: gauge
+  title: memstats.stack_sys
+
+gauge.memstats.sys:
+  brief: total bytes of memory obtained from the OS
+  description: total bytes of memory obtained from the OS
+  metric_type: gauge
+  title: memstats.sys
+

@@ -1,7 +1,7 @@
 
 ---
 title: apache_scoreboard.sending
-brief: This metric shows how many workers are sending responses.
+brief: This metric shows how many workers are sending responses
 metric_type: gauge
 custom: true
 ---

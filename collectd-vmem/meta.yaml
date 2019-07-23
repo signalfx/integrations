@@ -1,8 +1,8 @@
-{ "display_name":"vmem",
-  "description": "The vmem plugin for collectd collects information about the virtual memory subsystem of the kernel.",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-vmem",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/vmem.c",
-  "featured": false,
-  "logo_large": "/images/repos/collectd-vmem/img/integrations_collectd%402x.png",
-  "logo_small": "/images/repos/collectd-vmem/img/integrations_collectd.png"
-}
+code: https://github.com/signalfx/collectd/blob/master/src/vmem.c
+description: The vmem plugin for collectd collects information about the virtual memory
+  subsystem of the kernel.
+display_name: vmem
+featured: false
+logo_large: /images/repos/collectd-vmem/img/integrations_collectd%402x.png
+logo_small: /images/repos/collectd-vmem/img/integrations_collectd.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-vmem

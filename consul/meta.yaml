@@ -1,0 +1,12 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd-consul
+data_signature: plugin:"consul"
+description: Monitor Consul using the SignalFx collectd agent.
+display_name: Consul
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/collectd-consul/img/integrations_consul%402x.png
+logo_small: /images/repos/collectd-consul/img/integrations_consul.png
+project_url: https://github.com/signalfx/integrations/tree/master/collectd-consul

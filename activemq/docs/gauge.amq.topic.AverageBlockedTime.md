@@ -1,7 +1,7 @@
 
 ---
 title: gauge.amq.topic.AverageBlockedTime
-brief: Average time (ms) that messages have been blocked by Flow Control.
+brief: Average time (ms) that messages have been blocked by Flow Control
 metric_type: gauge
 custom: true
 ---

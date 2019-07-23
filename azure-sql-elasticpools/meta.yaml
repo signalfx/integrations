@@ -1,11 +1,12 @@
-{ "display_name":"Azure SQL Elastic Pools",
-  "description": "SignalFx's integration with Azure SQL Elastic Pools",
-  "project_url": "https://github.com/signalfx/integrations/tree/master/azure-sql-elasticpools",
-  "code": "https://azure.microsoft.com/en-us/services/sql-database/",
-  "featured": false,
-  "logo_small": "integrations_azuresqlelasticpools.png",
-  "logo_large": "integrations_azuresqlelasticpools%402x.png",
-  "data_signature": "resource_type:\"Microsoft.Sql/servers/elasticpools\"",
-  "in_app_categories": ["AzureServicesMonitored"],
-  "browse_categories": ["Database"]
-}
+browse_categories:
+- Database
+code: https://azure.microsoft.com/en-us/services/sql-database/
+data_signature: resource_type:"Microsoft.Sql/servers/elasticpools"
+description: SignalFx's integration with Azure SQL Elastic Pools
+display_name: Azure SQL Elastic Pools
+featured: false
+in_app_categories:
+- AzureServicesMonitored
+logo_large: integrations_azuresqlelasticpools%402x.png
+logo_small: integrations_azuresqlelasticpools.png
+project_url: https://github.com/signalfx/integrations/tree/master/azure-sql-elasticpools

@@ -127,4 +127,4 @@ For information on logging see <a target="_blank" href="http://nlog-project.org/
 
 ### LICENSE
 
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+This integration is released under the Apache 2.0 license. See [LICENSE](../LICENSE) for more details.

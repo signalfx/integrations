@@ -1,0 +1,48 @@
+best_received_routes_count:
+  brief: Current number of best routes received by router.
+  description: Current number of best routes received by router.
+  metric_type: gauge
+  title: best_received_routes_count
+
+bgp_received_routes_count:
+  brief: Current number of routes received on a bgp session.
+  description: Current number of routes received on a bgp session.
+  metric_type: gauge
+  title: bgp/received_routes_count
+
+bgp_sent_routes_count:
+  brief: Current number of routes sent on a bgp session.
+  description: Current number of routes sent on a bgp session.
+  metric_type: gauge
+  title: bgp/sent_routes_count
+
+bgp_session_up:
+  brief: Indicator for successful bgp session establishment.
+  description: Indicator for successful bgp session establishment.
+  metric_type: gauge
+  title: bgp/session_up
+
+bgp_sessions_down_count:
+  brief: Number of BGP sessions on the router that are down.
+  description: Number of BGP sessions on the router that are down.
+  metric_type: gauge
+  title: bgp_sessions_down_count
+
+bgp_sessions_up_count:
+  brief: Number of BGP sessions on the router that are up.
+  description: Number of BGP sessions on the router that are up.
+  metric_type: gauge
+  title: bgp_sessions_up_count
+
+router_up:
+  brief: Router status, up or down
+  description: Router status, up or down
+  metric_type: gauge
+  title: router_up
+
+sent_routes_count:
+  brief: Current number of routes sent by router.
+  description: Current number of routes sent by router.
+  metric_type: gauge
+  title: sent_routes_count
+

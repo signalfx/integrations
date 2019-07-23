@@ -1,7 +1,7 @@
 
 ---
 title: apache_requests
-brief: The number of requests that have been served by Apache.
+brief: The number of requests that have been served by Apache
 metric_type: cumulative
 custom: false
 ---

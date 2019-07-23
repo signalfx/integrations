@@ -1,0 +1,14 @@
+---
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: golang:1.12
+    steps:
+      - checkout
+      - run: go get -u github.com/raviqqe/liche
+      - run: ./check-links
+workflows:
+  build_test:
+    jobs:
+      - build

@@ -1,0 +1,397 @@
+ActiveDefragHits:
+  brief: The number of value reallocations per minute performed by the active defragmentation
+    process.
+  description: The number of value reallocations per minute performed by the active
+    defragmentation process.
+  metric_type: null
+  title: ActiveDefragHits
+
+BytesReadIntoMemcached:
+  brief: The number of bytes that have been read from the network by the cache node.
+  description: The number of bytes that have been read from the network by the cache
+    node.
+  metric_type: null
+  title: BytesReadIntoMemcached
+
+BytesUsedForCache:
+  brief: The total number of bytes allocated by Redis for all purposes, including
+    the dataset, buffers, etc.
+  description: The total number of bytes allocated by Redis for all purposes, including
+    the dataset, buffers, etc.
+  metric_type: null
+  title: BytesUsedForCache
+
+BytesUsedForCacheItems:
+  brief: The number of bytes used to store cache items.
+  description: The number of bytes used to store cache items.
+  metric_type: null
+  title: BytesUsedForCacheItems
+
+BytesUsedForHash:
+  brief: The number of bytes currently used by hash tables.
+  description: The number of bytes currently used by hash tables.
+  metric_type: null
+  title: BytesUsedForHash
+
+BytesWrittenOutFromMemcached:
+  brief: The number of bytes that have been written to the network by the cache node.
+  description: The number of bytes that have been written to the network by the cache
+    node.
+  metric_type: null
+  title: BytesWrittenOutFromMemcached
+
+CPUUtilization:
+  brief: The percentage of CPU utilization.
+  description: The percentage of CPU utilization.
+  metric_type: null
+  title: CPUUtilization
+
+CacheHits:
+  brief: The number of successful read-only key lookups in the main dictionary.
+  description: The number of successful read-only key lookups in the main dictionary.
+  metric_type: null
+  title: CacheHits
+
+CacheMisses:
+  brief: The number of unsuccessful read-only key lookups in the main dictionary.
+  description: The number of unsuccessful read-only key lookups in the main dictionary.
+  metric_type: null
+  title: CacheMisses
+
+CasBadval:
+  brief: The number of CAS (check and set) requests the cache has received where the
+    Cas value did not match the Cas value stored.
+  description: The number of CAS (check and set) requests the cache has received where
+    the Cas value did not match the Cas value stored.
+  metric_type: null
+  title: CasBadval
+
+CasHits:
+  brief: The number of Cas requests the cache has received where the requested key
+    was found and the Cas value matched.
+  description: The number of Cas requests the cache has received where the requested
+    key was found and the Cas value matched.
+  metric_type: null
+  title: CasHits
+
+CasMisses:
+  brief: The number of Cas requests the cache has received where the key requested
+    was not found.
+  description: The number of Cas requests the cache has received where the key requested
+    was not found.
+  metric_type: null
+  title: CasMisses
+
+CmdConfigGet:
+  brief: The cumulative number of config get requests.
+  description: The cumulative number of config get requests.
+  metric_type: null
+  title: CmdConfigGet
+
+CmdConfigSet:
+  brief: The cumulative number of config set requests.
+  description: The cumulative number of config set requests.
+  metric_type: null
+  title: CmdConfigSet
+
+CmdFlush:
+  brief: The number of flush commands the cache has received.
+  description: The number of flush commands the cache has received.
+  metric_type: null
+  title: CmdFlush
+
+CmdGet:
+  brief: The number of get commands the cache has received.
+  description: The number of get commands the cache has received.
+  metric_type: null
+  title: CmdGet
+
+CmdSet:
+  brief: The number of set commands the cache has received.
+  description: The number of set commands the cache has received.
+  metric_type: null
+  title: CmdSet
+
+CmdTouch:
+  brief: The cumulative number of touch requests.
+  description: The cumulative number of touch requests.
+  metric_type: null
+  title: CmdTouch
+
+CurrConfig:
+  brief: The current number of configurations stored.
+  description: The current number of configurations stored.
+  metric_type: null
+  title: CurrConfig
+
+CurrConnections:
+  brief: A count of the number of connections connected to the cache at an instant
+    in time.
+  description: A count of the number of connections connected to the cache at an instant
+    in time.
+  metric_type: null
+  title: CurrConnections
+
+CurrItems:
+  brief: A count of the number of items currently stored in the cache.
+  description: A count of the number of items currently stored in the cache.
+  metric_type: null
+  title: CurrItems
+
+DecrHits:
+  brief: The number of decrement requests the cache has received where the requested
+    key was found.
+  description: The number of decrement requests the cache has received where the requested
+    key was found.
+  metric_type: null
+  title: DecrHits
+
+DecrMisses:
+  brief: The number of decrement requests the cache has received where the requested
+    key was not found.
+  description: The number of decrement requests the cache has received where the requested
+    key was not found.
+  metric_type: null
+  title: DecrMisses
+
+DeleteHits:
+  brief: The number of delete requests the cache has received where the requested
+    key was found.
+  description: The number of delete requests the cache has received where the requested
+    key was found.
+  metric_type: null
+  title: DeleteHits
+
+DeleteMisses:
+  brief: The number of delete requests the cache has received where the requested
+    key was not found.
+  description: The number of delete requests the cache has received where the requested
+    key was not found.
+  metric_type: null
+  title: DeleteMisses
+
+EngineCPUUtilization:
+  brief: Provides CPU utilization of the Redis engine thread.
+  description: Provides CPU utilization of the Redis engine thread.
+  metric_type: null
+  title: EngineCPUUtilization
+
+EvictedUnfetched:
+  brief: The number of valid items evicted from the least recently used cache (LRU)
+    which were never touched after being set.
+  description: The number of valid items evicted from the least recently used cache
+    (LRU) which were never touched after being set.
+  metric_type: null
+  title: EvictedUnfetched
+
+Evictions:
+  brief: The number of non-expired items the cache evicted to allow space for new
+    writes.
+  description: The number of non-expired items the cache evicted to allow space for
+    new writes.
+  metric_type: null
+  title: Evictions
+
+ExpiredUnfetched:
+  brief: The number of expired items reclaimed from the LRU which were never touched
+    after being set.
+  description: The number of expired items reclaimed from the LRU which were never
+    touched after being set.
+  metric_type: null
+  title: ExpiredUnfetched
+
+FreeableMemory:
+  brief: The amount of free memory available on the host.
+  description: The amount of free memory available on the host.
+  metric_type: null
+  title: FreeableMemory
+
+GetHits:
+  brief: The number of get requests the cache has received where the key requested
+    was found.
+  description: The number of get requests the cache has received where the key requested
+    was found.
+  metric_type: null
+  title: GetHits
+
+GetMisses:
+  brief: The number of get requests the cache has received where the key requested
+    was not found.
+  description: The number of get requests the cache has received where the key requested
+    was not found.
+  metric_type: null
+  title: GetMisses
+
+GetTypeCmds:
+  brief: The total number of read-only type commands.
+  description: The total number of read-only type commands.
+  metric_type: null
+  title: GetTypeCmds
+
+HashBasedCmds:
+  brief: The total number of commands that are hash-based.
+  description: The total number of commands that are hash-based.
+  metric_type: null
+  title: HashBasedCmds
+
+HyperLogLogBasedCmds:
+  brief: The total number of HyperLogLog-based commands.
+  description: The total number of HyperLogLog-based commands.
+  metric_type: null
+  title: HyperLogLogBasedCmds
+
+IncrHits:
+  brief: The number of increment requests the cache has received where the key requested
+    was found.
+  description: The number of increment requests the cache has received where the key
+    requested was found.
+  metric_type: null
+  title: IncrHits
+
+IncrMisses:
+  brief: The number of increment requests the cache has received where the key requested
+    was not found.
+  description: The number of increment requests the cache has received where the key
+    requested was not found.
+  metric_type: null
+  title: IncrMisses
+
+KeyBasedCmds:
+  brief: The total number of commands that are key-based.
+  description: The total number of commands that are key-based.
+  metric_type: null
+  title: KeyBasedCmds
+
+ListBasedCmds:
+  brief: The total number of commands that are list-based.
+  description: The total number of commands that are list-based.
+  metric_type: null
+  title: ListBasedCmds
+
+NetworkBytesIn:
+  brief: The number of bytes the host has read from the network.
+  description: The number of bytes the host has read from the network.
+  metric_type: null
+  title: NetworkBytesIn
+
+NetworkBytesOut:
+  brief: The number of bytes the host has written to the network.
+  description: The number of bytes the host has written to the network.
+  metric_type: null
+  title: NetworkBytesOut
+
+NetworkPacketsIn:
+  brief: The number of packets received on all network interfaces by the instance.
+  description: The number of packets received on all network interfaces by the instance.
+  metric_type: null
+  title: NetworkPacketsIn
+
+NetworkPacketsOut:
+  brief: The number of packets sent out on all network interfaces by the instance.
+  description: The number of packets sent out on all network interfaces by the instance.
+  metric_type: null
+  title: NetworkPacketsOut
+
+NewConnections:
+  brief: The number of new connections the cache has received.
+  description: The number of new connections the cache has received.
+  metric_type: null
+  title: NewConnections
+
+NewItems:
+  brief: The number of new items the cache has stored.
+  description: The number of new items the cache has stored.
+  metric_type: null
+  title: NewItems
+
+Reclaimed:
+  brief: The number of expired items the cache evicted to allow space for new writes.
+  description: The number of expired items the cache evicted to allow space for new
+    writes.
+  metric_type: null
+  title: Reclaimed
+
+ReplicationBytes:
+  brief: For nodes in a replicated configuration, ReplicationBytes reports the number
+    of bytes that the primary is sending to all of its replicas.
+  description: For nodes in a replicated configuration, ReplicationBytes reports the
+    number of bytes that the primary is sending to all of its replicas.
+  metric_type: null
+  title: ReplicationBytes
+
+ReplicationLag:
+  brief: This metric is only applicable for a node running as a read replica.
+  description: This metric is only applicable for a node running as a read replica.
+  metric_type: null
+  title: ReplicationLag
+
+SaveInProgress:
+  brief: This binary metric returns 1 whenever a background save (forked or forkless)
+    is in progress, and 0 otherwise.
+  description: This binary metric returns 1 whenever a background save (forked or
+    forkless) is in progress, and 0 otherwise.
+  metric_type: null
+  title: SaveInProgress
+
+SetBasedCmds:
+  brief: The total number of commands that are set-based.
+  description: The total number of commands that are set-based.
+  metric_type: null
+  title: SetBasedCmds
+
+SetTypeCmds:
+  brief: The total number of write types of commands.
+  description: The total number of write types of commands.
+  metric_type: null
+  title: SetTypeCmds
+
+SlabsMoved:
+  brief: The total number of slab pages that have been moved.
+  description: The total number of slab pages that have been moved.
+  metric_type: null
+  title: SlabsMoved
+
+SortedSetBasedCmds:
+  brief: The total number of commands that are sorted set-based.
+  description: The total number of commands that are sorted set-based.
+  metric_type: null
+  title: SortedSetBasedCmds
+
+StreamBasedCmds:
+  brief: The total number of commands that are stream-based.
+  description: The total number of commands that are stream-based.
+  metric_type: null
+  title: StreamBasedCmds
+
+StringBasedCmds:
+  brief: The total number of commands that are string-based.
+  description: The total number of commands that are string-based.
+  metric_type: null
+  title: StringBasedCmds
+
+SwapUsage:
+  brief: The amount of swap used on the host.
+  description: The amount of swap used on the host.
+  metric_type: null
+  title: SwapUsage
+
+TouchHits:
+  brief: The number of keys that have been touched and were given a new expiration
+    time.
+  description: The number of keys that have been touched and were given a new expiration
+    time.
+  metric_type: null
+  title: TouchHits
+
+TouchMisses:
+  brief: The number of items that have been touched, but were not found.
+  description: The number of items that have been touched, but were not found.
+  metric_type: null
+  title: TouchMisses
+
+UnusedMemory:
+  brief: The amount of memory not used by data.
+  description: The amount of memory not used by data.
+  metric_type: null
+  title: UnusedMemory
+
