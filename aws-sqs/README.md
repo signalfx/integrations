@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended Statistics](#recommended-statistics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -39,6 +40,24 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 ### METRICS
 
 For more information about the metrics emitted by Amazon Simple Queue Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/sqs/">https://aws.amazon.com/sqs/</a>.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS
+
+The following are a subset of available metrics; these statistics are recommended by Amazon for collection.
+
+| Metric                                | Recommended statistics                |
+| ------------------------------------- | ------------------------------------- |
+| ApproximateAgeOfOldestMessage         | Average, Count, Minimum, Maximum, Sum |
+| ApproximateNumberOfMessagesDelayed    | Average, Count, Minimum, Maximum, Sum |
+| ApproximateNumberOfMessagesNotVisible | Average, Count, Minimum, Maximum, Sum |
+| ApproximateNumberOfMessagesVisible    | Average, Count, Minimum, Maximum, Sum |
+| NumberOfEmptyReceives                 | Average, Count, Minimum, Maximum, Sum |
+| NumberOfMessagesDeleted               | Average, Count, Minimum, Maximum, Sum |
+| NumberOfMessagesReceived              | Average, Count, Minimum, Maximum, Sum |
+| NumberOfMessagesSent                  | Average, Count, Minimum, Maximum, Sum |
+| SentMessageSize                       | Average, Count, Minimum, Maximum, Sum |
+
 
 ### LICENSE
 

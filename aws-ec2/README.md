@@ -1,9 +1,10 @@
-# ![](./img/integration_awsec2.png) Amazon Elastic Compute Cloud (EC2)
+#  ![](./img/integration_awsec2.png) Amazon Elastic Compute Cloud (EC2)
 
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended statistics](#recommended-statistics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -71,6 +72,65 @@ For more information about the filters, see <a target="_blank" href="http://docs
 ### METRICS
 
 For more information about the metrics emitted by Amazon EC2, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ec2/">https://aws.amazon.com/ec2/</a>.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS
+
+The following are a subset of available metrics; these statistics are recommended by Amazon for collection.
+
+
+_Standard EC2 Metrics_
+
+| Metric            | Recommended Statistics                |
+| ----------------- | ------------------------------------- |
+| CPUUtilization    | Average, Count, Minimum, Maximum, Sum |
+| DiskReadOps       | Average, Count, Minimum, Maximum, Sum |
+| DiskWriteOps      | Average, Count, Minimum, Maximum, Sum |
+| DiskReadBytes     | Average, Count, Minimum, Maximum, Sum |
+| DiskWriteBytes    | Average, Count, Minimum, Maximum, Sum |
+| NetworkIn         | Average, Count, Minimum, Maximum, Sum |
+| NetworkOut        | Average, Count, Minimum, Maximum, Sum |
+| NetworkPacketsIn  | Average, Minimum, Maximum             |
+| NetworkPacketsOut | Average, Minimum, Maximum             |
+
+
+
+
+_Credit metrics for burstable instances_
+
+| Metric                   | Recommended Statistics                |
+| ------------------------ | ------------------------------------- |
+| CPUCreditUsage           | Average, Count, Minimum, Maximum, Sum |
+| CPUCreditBalance         | Average, Count, Minimum, Maximum, Sum |
+| CPUSurplusCreditBalance  | Average, Count, Minimum, Maximum, Sum |
+| CPUSurplusCreditsCharged | Average, Count, Minimum, Maximum, Sum |
+
+
+
+
+_Status check metrics_
+
+| Metric                     | Recommended Statistics                |
+| -------------------------- | ------------------------------------- |
+| StatusCheckFailed          | Average, Count, Minimum, Maximum, Sum |
+| StatusCheckFailed_Instance | Average, Count, Minimum, Maximum, Sum |
+| StatusCheckFailed_System   | Average, Count, Minimum, Maximum, Sum |
+
+
+
+
+_EBS metrics for Nitro-based instances_
+
+| Metric          | Recommended Statistics                |
+| --------------- | ------------------------------------- |
+| EBSReadOps      | Average, Count, Minimum, Maximum, Sum |
+| EBSWriteOps     | Average, Count, Minimum, Maximum, Sum |
+| EBSReadBytes    | Average, Count, Minimum, Maximum, Sum |
+| EBSWriteBytes   | Average, Count, Minimum, Maximum, Sum |
+| EBSIOBalance%   | Average, Count, Minimum, Maximum, Sum |
+| EBSByteBalance% | Average, Count, Minimum, Maximum, Sum |
+
+
 
 ### LICENSE
 

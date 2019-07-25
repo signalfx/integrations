@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended Statistics](#recommended-statistics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -71,6 +72,19 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 ### METRICS
 
 For more information about the metrics emitted by Amazon EC2 Container Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ecs/">https://aws.amazon.com/ecs/</a>.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS
+
+The following is a subset of available metrics; these are recommended by Amazon for collection.
+
+| Metric            | Recommended Statistics |
+| ----------------- | ---------------------- |
+| CPUReservation    | Average                |
+| CPUUtilization    | Average                |
+| MemoryReservation | Average                |
+| MemoryUtilization | Average                |
+
 
 ### LICENSE
 
