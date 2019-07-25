@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended Statistics](#Recommended-statistics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -78,6 +79,34 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 ### METRICS
 
 For more information about the metrics emitted by Amazon DynamoDB, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/dynamodb/">https://aws.amazon.com/dynamodb/</a>.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS 
+
+
+The following are a subset of all available metrics; these are the ones recommended by Amazon for collection.
+
+| Metric                           | Recommended Statistics                |
+| -------------------------------- | ------------------------------------- |
+| ConsumedReadCapacityUnits        | Average, Count, Minimum, Maximum, Sum |
+| ConsumedWriteCapacityUnits       | Average, Count, Minimum, Maximum, Sum |
+| OnlineIndexConsumedWriteCapacity | Average, Count, Minimum, Maximum, Sum |
+| OnlineIndexPercentageProgress    | Average, Count, Minimum, Maximum, Sum |
+| PendingReplicationCount          | Average, Count, Sum                   |
+| ProvisionedReadCapacityUnits     | Average, Minimum, Maximum             |
+| ProvisionedWriteCapacityUnits    | Average, Minimum, Maximum             |
+| ReadThrottleEvents               | Count, Sum                            |
+| ReplicationLatency               | Average, Minimum, Maximum             |
+| ReturnedBytes                    | Average, Count, Minimum, Maximum, Sum |
+| ReturnedItemCount                | Average, Count, Minimum, Maximum, Sum |
+| ReturnedRecordsCount             | Average, Count, Minimum, Maximum, Sum |
+| SuccessfulRequestLatency         | Average, Count, Minimum, Maximum      |
+| SystemErrors                     | Count, Sum                            |
+| TimeToLiveDeletedItemCount       | Sum                                   |
+| ThrottledRequests                | Count, Sum                            |
+| UserErrors                       | Count, Sum                            |
+| WriteThrottleEvents              | Count, Sum                            |
+
 
 ### LICENSE
 

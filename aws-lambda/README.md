@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended Statistics](#recommended-statistics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -101,6 +102,11 @@ The Lambda wrappers add several dimensions to data points sent to SignalFx. Thes
 #### CloudWatch
 
 For more information about the metrics emitted by Lambda, see the documentation at <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/aws-info.html#lambda-metadata">https://docs.signalfx.com/en/latest/integrations/aws-info.html#lambda-metadata</a>.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS
+
+No CloudWatch recommended statistics for this integration.
 
 ### LICENSE
 

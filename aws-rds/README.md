@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended Statistics](#recommended-statistics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -76,7 +77,7 @@ For example, the endpoint for sending data in the us1 realm is ingest.us1.signal
 and ingest.eu0.signalfx.com for the eu0 realm. If you try to send data to the incorrect realm,
 your access token will be denied.
 
- 
+
 ##### 4. Deploy function and configure trigger
 Click `Deploy`. Once the function has finished deploying, navigate to the function's main page. 
 
@@ -169,6 +170,11 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 ### METRICS
 
 For more information about the metrics emitted by Amazon Relational Database Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS 
+
+No CloudWatch recommended statistics for this integration.
 
 ### LICENSE
 
