@@ -263,7 +263,7 @@ For this, you will need to specify which port to bind to.  An example config:
 ##### Add Tags to Spans
 
 The SignalFx listener has the ability to add tags to every span that passes through it.
-`AdditionalSpanTags` defines a set of tag name/value pairs that will be included on every span.
+`AdditionalSpanTags` defines a set of tag name/value pairs that will be included on every span. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
 
 Warning: The tags defined by `AdditionalSpanTags` will overwrite any existing values that the incoming spans have set for the configured tag names
 
@@ -282,7 +282,7 @@ The SignalFx listener has the ability to identify and replace variables in span 
 For example, with the configuration below, the Gateway would replace span name `/api/v1/document/321083210/update` with `/api/v1/document/{documentId}/update` and add the tag `"documentId":"321083210"` to the span.
 
 Every rule will be applied in the order they are defined to every span that goes through the listener. The config parameter `SpanNameReplacementBreakAfterMatch` controls whether to stop processing span name replacement rules after the first matching rule for a span. The default value for this parameter is `true`.
-Use caution when leveraging this feature: every expression, and the complexity of those expressions, will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+Use caution when leveraging this feature: every expression, and the complexity of those expressions, will impact the throughput of the Gateway. Make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
 
     {
         "Type": "signalfx",
@@ -293,8 +293,8 @@ Use caution when leveraging this feature: every expression, and the complexity o
 
 ##### Using AdditionalSpanTags and SpanNameReplacementRules Together
 
-If a tag name is configured under both `AdditionalSpanTags` and `SpanNameReplacementRules`, the replacement rule will take precedence, and the additional span tag will only be used if the replacement rule is not matched, effectively creating a default value.
-For example, with the configuration below, `documentId` will be replaced with the proper value if it matches the given regex, or set to "None" for all other spans
+If a tag name is configured under both `AdditionalSpanTags` and `SpanNameReplacementRules`, the replacement rule will take precedence, and the additional span tag will only be used if the replacement rule is not matched, effectively creating a default value. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
+For example, with the configuration below, `documentId` will be replaced with the proper value if it matches the given regex, or set to "None" for all other spans.
 
     {
         "Type": "signalfx",
@@ -311,7 +311,7 @@ For example, with the configuration below, `documentId` will be replaced with th
 `ObfuscateSpanTags` can be used to replace the value of certain tags in the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want redacted in your trace spans.  The tags to obfuscate can be specified by service name and operation name; both support using `*` for wildcard matching, and have a default value of `*` if left empty. All matching tags will have their value replaced with the string `<obfuscated>`.
 For example, with the configuration below, the Gateway will replace the value of the `password` tag with `<obfuscated>` for any span that has a service that starts with `auth` and has an operation name `login`. It will also replace the value of the `zipcode`, `number`, and `CVV` tags with `<obfuscated>` in any span that contains `credit-card` in the operation name, from ANY service.
 
-The Gateway can handle approximately two dozen rules without a significant impact to throughput. If you plan to use a large number of rules, make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+The Gateway can handle approximately two dozen rules without a significant impact to throughput. If you plan to use a large number of rules, make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
 
 ```json
 {
@@ -336,7 +336,7 @@ The Gateway can handle approximately two dozen rules without a significant impac
 `RemoveSpanTags` can be used to remove certain tags from the received trace spans. This can be used if you expect certain tags to contain sensitive information that you want to remove from your trace spans. Like `ObfuscateSpanTags`, the tags to remove can be specified by service name and operation name; both support using `*` for wildcard matching, and have a default value of `*` if left empty.
 For example, with the configuration below, the Gateway will remove the `password` tag in any span that has a service that starts with `auth`.
 
-The Gateway can handle approximately two dozen rules without a significant impact to throughput. If you plan to use a large number of rules, make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs.
+The Gateway can handle approximately two dozen rules without a significant impact to throughput. If you plan to use a large number of rules, make sure to monitor your Gateway's resource utilization and size your instance accordingly to support your needs. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
 
 ```json
 {
@@ -353,7 +353,7 @@ The Gateway can handle approximately two dozen rules without a significant impac
 
 ##### Span Processing Order of Operations
 
-When evaluating a span, the Gateway will add [`AdditionalSpanTags`](#add-tags-to-spans), then apply [`SpanNameReplacementRules`](#identify-and-replace-variables-in-span-names), then [`ObfuscateSpanTags`](#obfuscating-span-tag-metadata), and finally [`RemoveSpanTags`](#removing-span-tag-metadata). This allows the result of `SpanNameReplacementRules` to be configured as an `Operation` for `ObfuscateSpanTags` or `RemoveSpanTags`. This also ensures that any tags that are matched by `ObfuscateSpanTags` or `RemoveSpanTags` cannot be added by a later step of the processing chain.
+When evaluating a span, the Gateway will add [`AdditionalSpanTags`](#add-tags-to-spans), then apply [`SpanNameReplacementRules`](#identify-and-replace-variables-in-span-names), then [`ObfuscateSpanTags`](#obfuscating-span-tag-metadata), and finally [`RemoveSpanTags`](#removing-span-tag-metadata). This allows the result of `SpanNameReplacementRules` to be configured as an `Operation` for `ObfuscateSpanTags` or `RemoveSpanTags`. This also ensures that any tags that are matched by `ObfuscateSpanTags` or `RemoveSpanTags` cannot be added by a later step of the processing chain. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
 
 ##### collectd listener
 
