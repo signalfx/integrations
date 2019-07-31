@@ -12,7 +12,7 @@ Metadata associated with the Java plugin for collectd can be found <a target="_b
 
 ### DESCRIPTION
 
-The Java plugin for collectd is required to use SignalFx's integrations with Java applications like [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq), [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)[](sfx_link:collectd-cassandra) and [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka).
+The Java plugin for collectd is required to use SignalFx's integrations with Java applications like [ActiveMQ](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq), [Cassandra](https://github.com/signalfx/integrations/tree/master/cassandra)[](sfx_link:cassandra) and [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka).
 
 Read more about the Java plugin for collectd on the <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:Java">collectd wiki</a>.
 
@@ -47,13 +47,13 @@ No additional configuration is required, however full configuration details for 
 
 Use the Java collectd plugin to collect metrics from Java applications using JMX. SignalFx supports several integrations that depend on this plugin:
 
-* [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq)
-* [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)[](sfx_link:collectd-cassandra)
+* [ActiveMQ](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq)
+* [Cassandra](https://github.com/signalfx/integrations/tree/master/cassandra)[](sfx_link:cassandra)
 * [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka)
 
 ### METRICS
 
-The metrics emitted by this plugin depend on its configuration and the metrics emitted by the Java application that it is configured to monitor. Examples of SignalFx integrations that rely on this plugin are [ActiveMQ](https://github.com/signalfx/integrations/tree/master/collectd-activemq)[](sfx_link:collectd-activemq), [Cassandra](https://github.com/signalfx/integrations/tree/master/collectd-cassandra)[](sfx_link:collectd-cassandra) and [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka).
+The metrics emitted by this plugin depend on its configuration and the metrics emitted by the Java application that it is configured to monitor. Examples of SignalFx integrations that rely on this plugin are [ActiveMQ](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq), [Cassandra](https://github.com/signalfx/integrations/tree/master/cassandra)[](sfx_link:cassandra) and [Kafka](https://github.com/signalfx/integrations/tree/master/collectd-kafka)[](sfx_link:collectd-kafka).
 
 ### LICENSE
 
