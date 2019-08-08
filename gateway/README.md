@@ -453,7 +453,6 @@ the gateway) and 'forwarder' (in this case 'graphite-west') first in the
 graphite dot delimited name.
 
     {
-      "StatsDelay": "1s",
       "ListenFrom": [
         {
           "Type": "collectd",
@@ -485,7 +484,6 @@ It also sets the timeout on idle connections to 1 minute, from the default of 30
 seconds.
 
     {
-      "StatsDelay": "1s",
       "ListenFrom": [
         {
           "Type": "carbon",
@@ -816,7 +814,6 @@ Example:
       "MaxGracefulWaitTime": "1s",
       "GracefulCheckInterval": "1s",
       "SilentGracefulTime": "2s",
-      "StatsDelay": "1s",
       "LogDir": "/tmp",
       "ListenFrom": [
         {
@@ -843,7 +840,6 @@ This config listens using the SignalFx protocol, buffers, then forwards
 points to SignalFx.
 
     {
-      "StatsDelay": "1s",
       "ListenFrom": [
         {
           "Type": "signalfx",
@@ -941,7 +937,6 @@ you'll see metrics named late.count and future.count emitted counting each type 
 data that was late or in the future respectively.
 
     {
-      "StatsDelay": "10s",
       "ServerName": "gateway-us-east1",
       "LateThreshold": "10s",
       "FutureThreshold": "10s",
@@ -1000,7 +995,6 @@ would be denied and those that were not would be allowed.
 
 
     {
-      "StatsDelay": "1s",
       "LogDir": "/tmp",
       "ListenFrom": [
         {
