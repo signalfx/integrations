@@ -2,6 +2,8 @@
 
 Information associated with the SignalFx Gateway can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/gateway">here</a>. The relevant code for the project can be found <a target="_blank" href="https://github.com/signalfx/gateway">here</a>.
 
+__If you are an APM customer, install the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html">Smart Gateway</a> instead.__
+
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
     - [Migrating From Metricproxy](#migrating-from-metricproxy)
