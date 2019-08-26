@@ -12,10 +12,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.0">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.1">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.0 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.1 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -39,13 +39,20 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v1.1.1 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.0.1 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
 The downloaded checksum assumes that the Smart Gateway binary is in the current directory, in a file named `smart-gateway`
 
 #### Changelog
+
+##### Latest Version: v2.0.1 (August 16th, 2019)
+
+<a target="_blank" href="/#/smart-gateway/download/v2.0.1">Download Smart Gateway v2.0.1</a><br/>
+_SHA256: `68b5f3b5dc7e4e5c874d49344a8bdd9aefc803579f3ccf30e8f75fb51aee6dd8`_
+
+* Bug fix in tdigest
 
 ##### Latest Version: v2.0.0 (August 15th, 2019)
 
