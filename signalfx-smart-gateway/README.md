@@ -50,14 +50,7 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 ##### Latest Version: v2.0.1 (August 16th, 2019)
 
 <a target="_blank" href="/#/smart-gateway/download/v2.0.1">Download Smart Gateway v2.0.1</a><br/>
-_SHA256: `68b5f3b5dc7e4e5c874d49344a8bdd9aefc803579f3ccf30e8f75fb51aee6dd8`_
-
-* Bug fix in tdigest
-
-##### Latest Version: v2.0.0 (August 15th, 2019)
-
-<a target="_blank" href="/#/smart-gateway/download/v2.0.0">Download Smart Gateway v2.0.0</a><br/>
-_SHA256: `68b5f3b5dc7e4e5c874d49344a8bdd9aefc803579f3ccf30e8f75fb51aee6dd8`_
+_SHA256: `cbbc447f5ce714fd06218a65b187e36441f69bad20122b81b66622993f0ee396`_
 
 **Note: this is a major update with breaking changes; existing Smart Gateway clusters cannot be upgraded via a rolling update.**
 
