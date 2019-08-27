@@ -12,10 +12,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v1.1.1">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.1">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v1.1.1 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.1 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -39,7 +39,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v1.1.1 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.0.1 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -47,7 +47,23 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-##### Latest Version: v1.1.1 (June 4, 2019)
+##### Latest Version: v2.0.1 (August 16th, 2019)
+
+<a target="_blank" href="/#/smart-gateway/download/v2.0.1">Download Smart Gateway v2.0.1</a><br/>
+_SHA256: `cbbc447f5ce714fd06218a65b187e36441f69bad20122b81b66622993f0ee396`_
+
+**Note: this is a major update with breaking changes; existing Smart Gateway clusters cannot be upgraded via a rolling update.**
+
+This update significantly increases the performance and accuracy of the Smart Gateway via improvements to Trace and Span sharding, histogram improvements, and an optional trace distribution layer.
+
+_Please refer to the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#instance-sizing">sizing guidelines</a> for updated size recommendations._
+
+* Improved accuracy of tail-based sampling baselines and tracing metrics by utilizing t-digest histograms.
+* Metrics about the Smart Gateway are prefixed with `gateway.*`
+* The runtime flag `-version` will print the Smart Gateway version to the console.
+* The Smart Gateway can be configured as a two-tier deployment with an intelligent distribution tier to route traces and spans to their appropriate Smart Gateway.
+
+##### v1.1.1 (June 4, 2019)
 
 <a target="_blank" href="/#/smart-gateway/download/v1.1.1">Download Smart Gateway v1.1.1</a><br>
 _SHA256: `c85c33dc988f7fe996718b74e616854e5585c36ce5f9af644fb05c77d6c01103`_
