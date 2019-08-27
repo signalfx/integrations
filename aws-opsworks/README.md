@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended Statistics](#recommended-statistics)
 - [License](#license)
 
 ### DESCRIPTION
@@ -38,7 +39,32 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ### METRICS
 
-For more information about the metrics emitted by AWS OpsWorks, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/opsworks/">https://aws.amazon.com/opsworks/</a>.
+For more information about the metrics emitted by AWS OpsWorks, visit the service homepage at <a target="_blank" href="https://aws.amazon.com/opsworks/">https://aws.amazon.com/opsworks/</a>.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS 
+
+The following are a subset of available metrics; these statistics are recommended by Amazon for collection.
+
+| Metric         | Recommended Statistics                |
+| -------------- | ------------------------------------- |
+| cpu_idle       | Average, Count, Minimum, Maximum, Sum |
+| cpu_nice       | Average, Count, Minimum, Maximum, Sum |
+| cpu_steal      | Average, Count, Minimum, Maximum, Sum |
+| cpu_system     | Average, Count, Minimum, Maximum, Sum |
+| cpu_user       | Average, Count, Minimum, Maximum, Sum |
+| cpu_waitio     | Average, Count, Minimum, Maximum, Sum |
+| memory_buffers | Average, Count, Minimum, Maximum, Sum |
+| memory_cached  | Average, Count, Minimum, Maximum, Sum |
+| memory_free    | Average, Count, Minimum, Maximum, Sum |
+| memory_swap    | Average, Count, Minimum, Maximum, Sum |
+| memory_total   | Average, Count, Minimum, Maximum, Sum |
+| memory_used    | Average, Count, Minimum, Maximum, Sum |
+| load_1         | Average, Count, Minimum, Maximum, Sum |
+| load_5         | Average, Count, Minimum, Maximum, Sum |
+| load_15        | Average, Count, Minimum, Maximum, Sum |
+| procs          | Average, Count, Minimum, Maximum, Sum |
+
 
 ### LICENSE
 

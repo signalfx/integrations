@@ -65,19 +65,16 @@ single agent.
 
 ### INSTALLATION
 
-The Smart Agent is available for Linux in both a containerized and standalone form.
-Whatever form you use, the dependencies are completely bundled along with the
-agent, including a Java JRE runtime and a Python runtime, so there are no
-additional dependencies required.  This means that the Smart Agent should work on any
-relatively modern Linux distribution (kernel version 2.6+).  
+To get started deploying the Smart Agent on a single host for Windows or Linux, see the
+[Smart Agent Quick Install](./docs/smart-agent-quick-install.md) guide. For more information to help you set up Smart Agent on your network, see [Smart Agent Next Steps](./docs/smart-agent-next-steps). Technical details for other methods of agent installation are discussed below. 
 
 The Smart Agent is also available on Windows in standalone form.  It
 contains its own Python runtime, but has an external depencency on the
 <a target="_blank" href="https://www.microsoft.com/EN-US/DOWNLOAD/DETAILS.ASPX?ID=44266">Visual C++ Compiler for Python 2.7</a>
 in order to operate.  The Smart Agent supports Windows Server 2008 and above.
 
-To get started deploying the Smart Agent directly on a host, see the
-<a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/docs/smart-agent-quickstart.md">Smart Agent Quickstart</a> guide.
+To get started deploying the Smart Agent on a single host for Windows or Linux, see the
+[Smart Agent Quick Install](./docs/smart-agent-quick-install.md) guide. For more information to help you set up Smart Agent on your network, see [Smart Agent Next Steps](./docs/smart-agent-next-steps). Technical details for other methods of agent installation are discussed below.
 
 #### Deployment
 We support the following deployment/configuration management tools to automate the

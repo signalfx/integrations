@@ -19,7 +19,8 @@ Connecting to Microsoft Azure allows you to take advantage of SignalFx’s exten
 
 ### CONFIGURATION
 
-To connect SignalFx to Microsoft Azure, you’ll create a new Application in Azure for SignalFx to use. You must be an administrator of your SignalFx account to connect SignalFx to Microsoft Azure.
+To connect SignalFx to Microsoft Azure, you’ll create a new Application in Azure for SignalFx to use. You must be an administrator of your SignalFx account to connect SignalFx to Microsoft Azure. <a target="_blank" href=
+"https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Click here for detailed instructions.</a>
 
 ### USAGE
 
