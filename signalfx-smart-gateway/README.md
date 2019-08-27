@@ -58,6 +58,7 @@ This update significantly increases the performance and accuracy of the Smart Ga
 
 _Please refer to the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#instance-sizing">sizing guidelines</a> for updated size recommendations._
 
+* Update base SignalFx Gateway version to v1.2.9
 * Improved accuracy of tail-based sampling baselines and tracing metrics by utilizing t-digest histograms.
 * Metrics about the Smart Gateway are prefixed with `gateway.*`
 * The runtime flag `-version` will print the Smart Gateway version to the console.
