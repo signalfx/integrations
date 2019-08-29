@@ -23,11 +23,11 @@ We recommend placing POPS either on the same server as another existing metrics 
 
 #### Sizing details
 
-The size of the machine that hosts pops depends on the amount of data that will be transmitted through it.
+The size of the machine that hosts POPS depends on the amount of data that will be transmitted through it.
 
 A key performance indicator is `total_datapoints_buffered`. When summed and viewed as an average, it reflects the number of datapoints waiting to be emitted by POPS. This buffer should be a steady value with steady data input. The input rate can be monitored in Datapoints Per Minute by taking the metric `total_datapoints_by_token` with `rate/sec` rollup, summing, and then multiplying by `60`.  If the buffer begins to grow while the rate of input stays the same, then the configurations should be adjusted to prevent the buffer from backing up.
 
-- Increasing the number of draining threads will also increase cpu utilization, but should allow the pops instance to emit more datapoints.
+- Increasing the number of draining threads will also increase cpu utilization, but should allow the POPS instance to emit more datapoints.
 - Increasing the number of channels will increase both cpu utilization and memory utilization, but will allow more work to be processed when there a large number of tokens passing through POPS.
 
 Memory Utilization has the potential to be high when using POPS.
@@ -56,11 +56,11 @@ A host comparable to AWS's m3.large is known to handle up to approximately 400 t
 
 #### Building Binary
 
-If a binary must be executed outside of the pops container, it can be built by checking out this git repository.  The actual build occurs inside of a docker container that includes the go compiler.
+If a binary must be executed outside of the POPS container, it can be built by checking out <a target="_blank" href="https://github.com/signalfx/pops">this git repository</a>.  The actual build occurs inside of a docker container that includes the go compiler.
 
 1. Checkout this repository
 1. `cd` into the repository directory.
-1. Issue the following make command to build the pops binary for linux in a container.  It will output the binary `pops` to `output/linux/`.
+1. Issue the following make command to build the POPS binary for linux in a container.  It will output the binary `pops` to `output/linux/`.
 1. Execute the binary passing in the [configurations](#configuration) as in-line variables.
 
         $ SF_METRICS_AUTH_TOKEN=YOUR_SIGNALFX_API_TOKEN ./output/linux/pops
@@ -85,21 +85,21 @@ The SignalFx Point Of Presence Service is configured by environment variables wh
 | `DATA_SINK_DP_ENDPOINT` | The  datapoint endpoint POPS will forward  datapoints to. | `https://ingest.us0.signalfx.com/v2/datapoint` | `DATA_SINK_DP_ENDPOINT=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint` |
 | `DATA_SINK_EVENT_ENDPOINT` | The event endpoint POPS will forward events to. | `https://ingest.us0.signalfx.com/v2/event`  | `DATA_SINK_EVENT_ENDPOINT=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/event` |
 | `DATA_SINK_SHUTDOWN_TIMEOUT` | The shutdown time out used when shutting down worker threads of a POPS instance. If connections have already been drained, then graceful shutdown period should already have drained connections. Graceful shutdown is a period where POPS waits for connections to stop.  This feature is useful for when POPS is behind something like a load balancer which can stop sending traffic before terminating the POPS instance. | `3s` | `DATA_SINK_SHUTDOWN_TIMEOUT=3s` |
-| `LOG_DIR` | The directory inside the container that POPS should log to. The pops log is named pops.log.json. If no directory is specified, POPS will log to stdout. |  | `LOG_DIR=/var/log/pops` |
+| `LOG_DIR` | The directory inside the container that POPS should log to. The POPS log is named pops.log.json. If no directory is specified, POPS will log to stdout. |  | `LOG_DIR=/var/log/pops` |
 | `MAX_DRAIN_SIZE` | POPS batches  datapoints together for a given token as much as possible. `MAX_DRAIN_SIZE` is the maximum number of  datapoints a single batch of metrics can be. | `5000` | `MAX_DRAIN_SIZE=5000` |
 | `MAX_RETRY` | If an unknown error or an http status code for timeout is encountered, POPS will attempt to retry up to `MAX_RETRY` before dropping the batch of  datapoints. Depending on workloads this number should be very small to prevent POPS from backing up. | `1` | `MAX_RETRY=1` |
 | `NUM_CHANNELS` | Channels are buffers for  datapoint request payloads. Each channel will then have `NUM_DRAINING_THREADS` workers reading and emitting datapoints from the channel. | `50` | `NUM_CHANNELS=50` |
 | `NUM_DRAINING_THREADS` | Number of workers to attach to each channel. Each channel will have  `NUM_DRAINING_THREADS` workers that read and emit datapoints from the channel. | `2` | `NUM_DRAINING_THREADS=2` |
 | `POPS_DEBUGPORT` | The port which the debug server should operate over | `6060` | `POPS_DEBUGPORT=6060` |
 | `POPS_GRACEFUL_MIN_WAIT_TIME` | The minimum wait time to wait for POPS to gracefully shutdown. Graceful shutdown is a period where POPS waits for connections to stop. This feature is useful for when POPS is behind something like a load balancer which can stop sending traffic before terminating the POPS instance. | `5s` | `POPS_GRACEFUL_MIN_WAIT_TIME=5s` |
-| `POPS_GRACEFUL_MAX_WAIT_TIME` | The maximum wait time to wait for pops to gracefully shutdown. Graceful shutdown is a period where POPS waits for connections to stop. This feature is useful for when POPS is behind something like a load balancer which can stop sending traffic before terminating the POPS instance. | `25s` | `POPS_GRACEFUL_MAX_WAIT_TIME=25s` |
-| `POPS_GRACEFUL_CHECK_INTERVAL` | How often during graceful shutdown to check if the pops instance has completed graceful shutdown. | `0s` | `POPS_GRACEFUL_CHECK_INTERVAL=1s` |
-| `POPS_GRACEFUL_SILENT_TIME` | How long pops will sit silent during a graceful shutdown period. Graceful shutdown is a period where POPS waits for connections to stop. This feature is useful for when POPS is behind something like a load balancer which can stop sending traffic before terminating the POPS instance.| `3s` |  `POPS_GRACEFUL_SILENT_TIME=3s` |
+| `POPS_GRACEFUL_MAX_WAIT_TIME` | The maximum wait time to wait for POPS to gracefully shutdown. Graceful shutdown is a period where POPS waits for connections to stop. This feature is useful for when POPS is behind something like a load balancer which can stop sending traffic before terminating the POPS instance. | `25s` | `POPS_GRACEFUL_MAX_WAIT_TIME=25s` |
+| `POPS_GRACEFUL_CHECK_INTERVAL` | How often during graceful shutdown to check if the POPS instance has completed graceful shutdown. | `0s` | `POPS_GRACEFUL_CHECK_INTERVAL=1s` |
+| `POPS_GRACEFUL_SILENT_TIME` | How long POPS will sit silent during a graceful shutdown period. Graceful shutdown is a period where POPS waits for connections to stop. This feature is useful for when POPS is behind something like a load balancer which can stop sending traffic before terminating the POPS instance.| `3s` |  `POPS_GRACEFUL_SILENT_TIME=3s` |
 | `POPS_PORT` | The port for POPS to operate on inside of the container. | `8100` | `POPS_PORT=8100` |
 | `SF_METRICS_AUTH_TOKEN` | The authentication token used for emitting internal metrics from POPS. |  | `SF_METRICS_AUTH_TOKEN=YOUR_SIGNALFX_API_TOKEN` |
 | `SF_METRICS_REPORT_INTERVAL` | The interval for emitting internal metrics about POPS. | `5s` | `SF_METRICS_REPORT_INTERVAL=5s` |
 | `SF_METRICS_STATSENDPOINT` | The ingest url for emitting internal metrics about POPS .| `https://ingest.us0.signalfx.com/v2/datapoint` | `SF_METRICS_STATSENDPOINT=https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint` |
-| `SF_SOURCE_NAME` | A dimension appended to pops internal metrics. |  | `SF_SOURCE_NAME=pops_forwarder` |
+| `SF_SOURCE_NAME` | A dimension appended to POPS internal metrics. |  | `SF_SOURCE_NAME=pops_forwarder` |
 
 #### Listeners
 
@@ -123,7 +123,7 @@ Because the SignalFx POPS instance multiplexes incoming traffic from incoming in
 
 #### Debug Server
 
-There is a debug server that exposes some diagnostic information about the pops instance.  This server operates over port `6060` in the container and has the endpoint `/debug/explorer/`.  An alternate port for the debug server may be defined by setting the environment variable `POPS_DEBUGPORT`.
+There is a debug server that exposes some diagnostic information about the POPS instance.  This server operates over port `6060` in the container and has the endpoint `/debug/explorer/`.  An alternate port for the debug server may be defined by setting the environment variable `POPS_DEBUGPORT`.
 
 ### METRICS
 
