@@ -62,7 +62,7 @@ def collect_docs() -> Dict[str, Any]:
         integration_name = integration_dir.name
         markdown = ""
         for readme in sorted(integration_dir.glob("*.md")):
-            markdown += readme.read_text()
+            markdown += readme.read_text(encoding="utf-8")
 
         if not markdown:
             continue
@@ -85,7 +85,7 @@ def collect_metrics() -> Tuple[Dict[str, Dict[str, Any]], Dict[str, List[str]]]:
         if "Example" in str(metric_yaml_file):
             continue
 
-        for metric_name, metric in (yaml.safe_load(metric_yaml_file.read_text()) or {}).items():
+        for metric_name, metric in (yaml.safe_load(metric_yaml_file.read_text(encoding="utf-8")) or {}).items():
             metrics_by_integration[metric_yaml_file.parent.name].append(metric_name)
 
             if metric_name in metric_docs:
@@ -110,7 +110,7 @@ def split_metric_doc(metric_file) -> Tuple[Dict[str, Any], str]:
 
      into their corresponding metadata(yaml) and markdown parts
      """
-    content = metric_file.read_text()
+    content = metric_file.read_text(encoding="utf-8")
     parts = content.split("---")
     assert parts[0].strip() == "", f"Malformed metric doc {metric_file}: {content}; {parts}"
 
@@ -128,7 +128,7 @@ def collect_meta() -> Dict[str, Any]:
     out = {}
     for meta_file in sorted(INTEGRATIONS_REPO_ROOT.glob("*/meta.yaml")):
         integration_name = meta_file.parent.name
-        out[integration_name] = yaml.safe_load(meta_file.read_text())
+        out[integration_name] = yaml.safe_load(meta_file.read_text(encoding="utf-8"))
         print(f"Processed meta for integration {integration_name}")
     return out
 

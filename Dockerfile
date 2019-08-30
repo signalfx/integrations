@@ -5,5 +5,6 @@ RUN apt update -q &&\
       python3-pip
 
 RUN pip3 install awscli==1.16.229
+WORKDIR /opt/integrations
 
 COPY ./ /opt/integrations/
