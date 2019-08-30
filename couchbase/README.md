@@ -10,10 +10,6 @@ Metadata associated with SignalFx's Couchbase integration can be found <a target
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
-
-The SignalFx Smart Agent can pull metrics from Couchbase using the collectd-couchbase plugin.
-
 #### FEATURES
 
 ##### Built-in dashboards
@@ -47,15 +43,6 @@ The SignalFx Smart Agent can pull metrics from Couchbase using the collectd-couc
 | SignalFx Smart Agent  |  2.0+  |
 | couchbase | 3.0 or later |
 
-
-### CONFIGURATION
-
-This integration is part of the <a
-href="https://docs.signalfx.com/en/latest/integrations/agent/index.html"
-target="_blank">SignalFx Smart Agent</a> -- see the docs for <a
-href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-couchbase.html"
-target="_blank">the collectd/couchbase monitor</a> for details on how to
-configure the Smart Agent to work with this integration.
 
 ### USAGE
 

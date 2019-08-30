@@ -1,0 +1,12 @@
+browse_categories:
+- Networking & Content Delivery
+code: https://github.com/signalfx/collectd-haproxy
+data_signature: plugin:"haproxy"
+description: Monitor HAProxy using the SignalFx Smart agent.
+display_name: HAProxy
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/haproxy/img/integrations_haproxy%402x.png
+logo_small: /images/repos/haproxy/img/integrations_haproxy.png
+project_url: https://github.com/signalfx/integrations/tree/master/haproxy

@@ -1,0 +1,169 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+connections.opened:
+  brief: Number of connections opened since server began running
+  custom: true
+  description: Number of connections opened since server began running
+  metric_type: cumulative
+  title: connections.opened
+
+df.cache.free:
+  brief: Unused storage bytes
+  custom: false
+  description: Unused storage bytes
+  metric_type: gauge
+  title: df.cache.free
+
+df.cache.used:
+  brief: Current number of bytes used to store items
+  custom: false
+  description: Current number of bytes used to store items
+  metric_type: gauge
+  title: df.cache.used
+
+memcached_command.flush:
+  brief: Number of flush requests
+  custom: true
+  description: Number of flush requests
+  metric_type: cumulative
+  title: memcached_command.flush
+
+memcached_command.get:
+  brief: Number of retrieval requests
+  custom: false
+  description: Number of retrieval requests
+  metric_type: cumulative
+  title: memcached_command.get
+
+memcached_command.set:
+  brief: Number of storage requests
+  custom: false
+  description: Number of storage requests
+  metric_type: cumulative
+  title: memcached_command.set
+
+memcached_command.touch:
+  brief: Number of touch requests
+  custom: true
+  description: Number of touch requests
+  metric_type: cumulative
+  title: memcached_command.touch
+
+memcached_connections.current:
+  brief: Current number of open connections
+  custom: false
+  description: Current number of open connections
+  metric_type: gauge
+  title: memcached_connections.current
+
+memcached_items.current:
+  brief: Current number of items stored by this instance
+  custom: false
+  description: Current number of items stored by this instance
+  metric_type: gauge
+  title: memcached_items.current
+
+memcached_octets.rx:
+  brief: Total network bytes read by this server
+  custom: false
+  description: Total network bytes read by this server
+  metric_type: cumulative
+  title: memcached_octets.rx
+
+memcached_octets.tx:
+  brief: Total network bytes written by this server
+  custom: false
+  description: Total network bytes written by this server
+  metric_type: cumulative
+  title: memcached_octets.tx
+
+memcached_ops.decr_hits:
+  brief: Number of successful Decr requests
+  custom: true
+  description: Number of successful Decr requests
+  metric_type: cumulative
+  title: memcached_ops.decr_hits
+
+memcached_ops.decr_misses:
+  brief: Number of decr requests against missing keys
+  custom: true
+  description: Number of decr requests against missing keys
+  metric_type: cumulative
+  title: memcached_ops.decr_misses
+
+memcached_ops.delete_hits:
+  brief: Number of successful delete requests
+  custom: true
+  description: Number of successful delete requests
+  metric_type: cumulative
+  title: memcached_ops.delete_hits
+
+memcached_ops.delete_misses:
+  brief: Number of delete requests against missing keys
+  custom: true
+  description: Number of delete requests against missing keys
+  metric_type: cumulative
+  title: memcached_ops.delete_misses
+
+memcached_ops.evictions:
+  brief: Number of valid items removed from cache
+  custom: false
+  description: Number of valid items removed from cache
+  metric_type: cumulative
+  title: memcached_ops.evictions
+
+memcached_ops.hits:
+  brief: Number of keys that have been requested and found present
+  custom: false
+  description: Number of keys that have been requested and found present
+  metric_type: cumulative
+  title: memcached_ops.hits
+
+memcached_ops.incr_hits:
+  brief: Number of successful incr requests
+  custom: true
+  description: Number of successful incr requests
+  metric_type: cumulative
+  title: memcached_ops.incr_hits
+
+memcached_ops.incr_misses:
+  brief: Number of incr requests against missing keys
+  custom: true
+  description: Number of incr requests against missing keys
+  metric_type: cumulative
+  title: memcached_ops.incr_misses
+
+memcached_ops.misses:
+  brief: Number of items that have been requested and not found
+  custom: false
+  description: Number of items that have been requested and not found
+  metric_type: cumulative
+  title: memcached_ops.misses
+
+ps_count.threads:
+  brief: Number of worker threads requested
+  custom: true
+  description: Number of worker threads requested
+  metric_type: gauge
+  title: ps_count.threads
+
+ps_cputime.syst:
+  brief: Total system time for this instance
+  custom: true
+  description: Total system time for this instance
+  metric_type: cumulative
+  title: ps_cputime.syst
+
+ps_cputime.user:
+  brief: Total user time for this instance
+  custom: true
+  description: Total user time for this instance
+  metric_type: cumulative
+  title: ps_cputime.user
+
+total_events.listen_disabled:
+  brief: Number of times connection limit has been exceeded
+  custom: true
+  description: Number of times connection limit has been exceeded
+  metric_type: cumulative
+  title: total_events.listen_disabled
+

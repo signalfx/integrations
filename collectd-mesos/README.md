@@ -67,7 +67,7 @@ This plugin requires:
 
 ### CONFIGURATION
 
-Using the example configuration files [10-mesos-master.conf](././10-mesos-master.conf) or [10-mesos-slave.conf](././10-mesos-slave.conf) as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Mesos instance to be monitored.
+Using the example configuration files <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-master.conf">10-mesos-master.conf</a> or <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/collectd-mesos/10-mesos-slave.conf">10-mesos-slave.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and allow you to connect to the Mesos instance to be monitored.
 
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|

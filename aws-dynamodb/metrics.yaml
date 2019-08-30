@@ -1,7 +1,7 @@
 ConditionalCheckFailedRequests:
   brief: The number of failed attempts to perform conditional writes.
   description: The number of failed attempts to perform conditional writes.
-  metric_type: null
+  metric_type:
   title: ConditionalCheckFailedRequests
 
 ConsumedReadCapacityUnits:
@@ -9,7 +9,7 @@ ConsumedReadCapacityUnits:
     so you can track how much of your provisioned throughput is used.
   description: The number of read capacity units consumed over the specified time
     period, so you can track how much of your provisioned throughput is used.
-  metric_type: null
+  metric_type:
   title: ConsumedReadCapacityUnits
 
 ConsumedWriteCapacityUnits:
@@ -17,7 +17,7 @@ ConsumedWriteCapacityUnits:
     so you can track how much of your provisioned throughput is used.
   description: The number of write capacity units consumed over the specified time
     period, so you can track how much of your provisioned throughput is used.
-  metric_type: null
+  metric_type:
   title: ConsumedWriteCapacityUnits
 
 OnlineIndexConsumedWriteCapacity:
@@ -25,7 +25,7 @@ OnlineIndexConsumedWriteCapacity:
     index to a table.
   description: The number of write capacity units consumed when adding a new global
     secondary index to a table.
-  metric_type: null
+  metric_type:
   title: OnlineIndexConsumedWriteCapacity
 
 OnlineIndexPercentageProgress:
@@ -33,7 +33,7 @@ OnlineIndexPercentageProgress:
     to a table.
   description: The percentage of completion when a new global secondary index is being
     added to a table.
-  metric_type: null
+  metric_type:
   title: OnlineIndexPercentageProgress
 
 OnlineIndexThrottleEvents:
@@ -41,7 +41,7 @@ OnlineIndexThrottleEvents:
     index to a table.
   description: The number of write throttle events that occur when adding a new global
     secondary index to a table.
-  metric_type: null
+  metric_type:
   title: OnlineIndexThrottleEvents
 
 PendingReplicationCount:
@@ -49,7 +49,7 @@ PendingReplicationCount:
     have not yet been written to another replica in the global table.
   description: The number of item updates that are written to one replica table, but
     that have not yet been written to another replica in the global table.
-  metric_type: null
+  metric_type:
   title: PendingReplicationCount
 
 ProvisionedReadCapacityUnits:
@@ -57,7 +57,7 @@ ProvisionedReadCapacityUnits:
     index.
   description: The number of provisioned read capacity units for a table or a global
     secondary index.
-  metric_type: null
+  metric_type:
   title: ProvisionedReadCapacityUnits
 
 ProvisionedWriteCapacityUnits:
@@ -65,7 +65,7 @@ ProvisionedWriteCapacityUnits:
     index.
   description: The number of provisioned write capacity units for a table or a global
     secondary index.
-  metric_type: null
+  metric_type:
   title: ProvisionedWriteCapacityUnits
 
 ReadThrottleEvents:
@@ -73,7 +73,7 @@ ReadThrottleEvents:
     a table or a global secondary index.
   description: Requests to DynamoDB that exceed the provisioned read capacity units
     for a table or a global secondary index.
-  metric_type: null
+  metric_type:
   title: ReadThrottleEvents
 
 ReplicationLatency:
@@ -83,7 +83,7 @@ ReplicationLatency:
   description: The elapsed time between an updated item appearing in the DynamoDB
     stream for one replica table, and that item appearing in another replica in the
     global table.
-  metric_type: null
+  metric_type:
   title: ReplicationLatency
 
 ReturnedBytes:
@@ -91,7 +91,7 @@ ReturnedBytes:
     during the specified time period.
   description: The number of bytes returned by GetRecords operations (Amazon DynamoDB
     Streams) during the specified time period.
-  metric_type: null
+  metric_type:
   title: ReturnedBytes
 
 ReturnedItemCount:
@@ -99,7 +99,7 @@ ReturnedItemCount:
     time period.
   description: The number of items returned by Query or Scan operations during the
     specified time period.
-  metric_type: null
+  metric_type:
   title: ReturnedItemCount
 
 ReturnedRecordsCount:
@@ -107,7 +107,7 @@ ReturnedRecordsCount:
     Streams) during the specified time period.
   description: The number of stream records returned by GetRecords operations (Amazon
     DynamoDB Streams) during the specified time period.
-  metric_type: null
+  metric_type:
   title: ReturnedRecordsCount
 
 SuccessfulRequestLatency:
@@ -115,7 +115,7 @@ SuccessfulRequestLatency:
     specified time period.
   description: The successful requests to DynamoDB or Amazon DynamoDB Streams during
     the specified time period.
-  metric_type: null
+  metric_type:
   title: SuccessfulRequestLatency
 
 SystemErrors:
@@ -123,7 +123,7 @@ SystemErrors:
     500 status code during the specified time period.
   description: The requests to DynamoDB or Amazon DynamoDB Streams that generate an
     HTTP 500 status code during the specified time period.
-  metric_type: null
+  metric_type:
   title: SystemErrors
 
 ThrottledRequests:
@@ -131,7 +131,7 @@ ThrottledRequests:
     (such as a table or an index).
   description: Requests to DynamoDB that exceed the provisioned throughput limits
     on a resource (such as a table or an index).
-  metric_type: null
+  metric_type:
   title: ThrottledRequests
 
 TimeToLiveDeletedItemCount:
@@ -139,7 +139,7 @@ TimeToLiveDeletedItemCount:
     period.
   description: The number of items deleted by Time to Live (TTL) during the specified
     time period.
-  metric_type: null
+  metric_type:
   title: TimeToLiveDeletedItemCount
 
 TransactionConflict:
@@ -147,7 +147,7 @@ TransactionConflict:
     requests on the same items.
   description: Rejected item-level requests due to transactional conflicts between
     concurrent requests on the same items.
-  metric_type: null
+  metric_type:
   title: TransactionConflict
 
 UserErrors:
@@ -155,7 +155,7 @@ UserErrors:
     status code during the specified time period.
   description: Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP
     400 status code during the specified time period.
-  metric_type: null
+  metric_type:
   title: UserErrors
 
 WriteThrottleEvents:
@@ -163,6 +163,49 @@ WriteThrottleEvents:
     a table or a global secondary index.
   description: Requests to DynamoDB that exceed the provisioned write capacity units
     for a table or a global secondary index.
-  metric_type: null
+  metric_type:
   title: WriteThrottleEvents
-
+AccountMaxReads:
+  title: AccountMaxReads
+  metric_type:
+  brief:
+  description: The maximum number of read capacity units that can be used by an account.
+AccountMaxTableLevelReads:
+  title: AccountMaxTableLevelReads
+  metric_type:
+  brief:
+  description: The maximum number of read capacity units that can be used by a table
+    or global secondary index of an account.
+AccountMaxTableLevelWrites:
+  title: AccountMaxTableLevelWrites
+  metric_type:
+  brief:
+  description: The maximum number of write capacity units that can be used by a table
+    or global secondary index of an account.
+AccountMaxWrites:
+  title: AccountMaxWrites
+  metric_type:
+  brief:
+  description: The maximum number of write capacity units that can be used by an account.
+AccountProvisionedReadCapacityUtilization:
+  title: AccountProvisionedReadCapacityUtilization
+  metric_type:
+  brief:
+  description: The percentage of provisioned read capacity units utilized by an account.
+AccountProvisionedWriteCapacityUtilization:
+  title: AccountProvisionedWriteCapacityUtilization
+  metric_type:
+  brief:
+  description: The percentage of provisioned write capacity units utilized by an account.
+MaxProvisionedTableReadCapacityUtilization:
+  title: MaxProvisionedTableReadCapacityUtilization
+  metric_type:
+  brief:
+  description: The percentage of provisioned read capacity units utilized by the highest
+    provisioned read table or global secondary index of an account.
+MaxProvisionedTableWriteCapacityUtilization:
+  title: MaxProvisionedTableWriteCapacityUtilization
+  metric_type:
+  brief:
+  description: The percentage of provisioned write capacity utilized by the highest
+    provisioned write table or global secondary index of an account.

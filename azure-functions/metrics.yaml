@@ -1,0 +1,105 @@
+BytesReceived:
+  title: BytesReceived
+  metric_type:
+  brief: Data In
+  description: Data In
+BytesSent:
+  title: BytesSent
+  metric_type:
+  brief: Data Out
+  description: Data Out
+Http5xx:
+  title: Http5xx
+  metric_type:
+  brief: Http Server Errors
+  description: Http Server Errors
+MemoryWorkingSet:
+  title: MemoryWorkingSet
+  metric_type:
+  brief: Memory working set
+  description: Memory working set
+AverageMemoryWorkingSet:
+  title: AverageMemoryWorkingSet
+  metric_type:
+  brief: Average memory working set
+  description: Average memory working set
+FunctionExecutionUnits:
+  title: FunctionExecutionUnits
+  metric_type:
+  brief: Function Execution Units
+  description: Function Execution Units
+FunctionExecutionCount:
+  title: FunctionExecutionCount
+  metric_type:
+  brief: Function Execution Count
+  description: Function Execution Count
+PrivateBytes:
+  title: PrivateBytes
+  metric_type:
+  brief: Private Bytes
+  description: Private Bytes
+IoReadBytesPerSecond:
+  title: IoReadBytesPerSecond
+  metric_type:
+  brief: IO Read Bytes Per Second
+  description: IO Read Bytes Per Second
+IoWriteBytesPerSecond:
+  title: IoWriteBytesPerSecond
+  metric_type:
+  brief: IO Write Bytes Per Second
+  description: IO Write Bytes Per Second
+IoOtherBytesPerSecond:
+  title: IoOtherBytesPerSecond
+  metric_type:
+  brief: IO Other Bytes Per Second
+  description: IO Other Bytes Per Second
+IoReadOperationsPerSecond:
+  title: IoReadOperationsPerSecond
+  metric_type:
+  brief: IO Read Operations Per Second
+  description: IO Read Operations Per Second
+IoWriteOperationsPerSecond:
+  title: IoWriteOperationsPerSecond
+  metric_type:
+  brief: IO Write Operations Per Second
+  description: IO Write Operations Per Second
+IoOtherOperationsPerSecond:
+  title: IoOtherOperationsPerSecond
+  metric_type:
+  brief: IO Other Operations Per Second
+  description: IO Other Operations Per Second
+RequestsInApplicationQueue:
+  title: RequestsInApplicationQueue
+  metric_type:
+  brief: Requests In Application Queue
+  description: Requests In Application Queue
+CurrentAssemblies:
+  title: CurrentAssemblies
+  metric_type:
+  brief: Current Assemblies
+  description: Current Assemblies
+TotalAppDomains:
+  title: TotalAppDomains
+  metric_type:
+  brief: Total App Domains
+  description: Total App Domains
+TotalAppDomainsUnloaded:
+  title: TotalAppDomainsUnloaded
+  metric_type:
+  brief: Total App Domains Unloaded
+  description: Total App Domains Unloaded
+Gen0Collections:
+  title: Gen0Collections
+  metric_type:
+  brief: Gen 0 Garbage Collections
+  description: Gen 0 Garbage Collections
+Gen1Collections:
+  title: Gen1Collections
+  metric_type:
+  brief: Gen 1 Garbage Collections
+  description: Gen 1 Garbage Collections
+Gen2Collections:
+  title: Gen2Collections
+  metric_type:
+  brief: Gen 2 Garbage Collections
+  description: Gen 2 Garbage Collections

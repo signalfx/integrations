@@ -1,0 +1,267 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+bytes.used_memory:
+  brief: Number of bytes allocated by Redis
+  custom: false
+  description: Number of bytes allocated by Redis
+  metric_type: gauge
+  title: bytes.used_memory
+
+bytes.used_memory_lua:
+  brief: Number of bytes used by the Lua engine
+  custom: true
+  description: Number of bytes used by the Lua engine
+  metric_type: gauge
+  title: bytes.used_memory_lua
+
+bytes.used_memory_peak:
+  brief: Peak Number of bytes allocated by Redis
+  custom: true
+  description: Peak Number of bytes allocated by Redis
+  metric_type: gauge
+  title: bytes.used_memory_peak
+
+bytes.used_memory_rss:
+  brief: Number of bytes allocated by Redis as seen by the OS
+  custom: false
+  description: Number of bytes allocated by Redis as seen by the OS
+  metric_type: gauge
+  title: bytes.used_memory_rss
+
+counter.commands_processed:
+  brief: Total number of commands processed by the server
+  custom: false
+  description: Total number of commands processed by the server
+  metric_type: cumulative
+  title: counter.commands_processed
+
+counter.connections_received:
+  brief: Total number of connections accepted by the server
+  custom: true
+  description: Total number of connections accepted by the server
+  metric_type: cumulative
+  title: counter.connections_received
+
+counter.evicted_keys:
+  brief: Number of evicted keys due to maxmemory limit
+  custom: false
+  description: Number of evicted keys due to maxmemory limit
+  metric_type: cumulative
+  title: counter.evicted_keys
+
+counter.expired_keys:
+  brief: Total number of key expiration events
+  custom: false
+  description: Total number of key expiration events
+  metric_type: cumulative
+  title: counter.expired_keys
+
+counter.lru_clock:
+  brief: Clock incrementing every minute, for LRU management
+  custom: true
+  description: Clock incrementing every minute, for LRU management
+  metric_type: cumulative
+  title: counter.lru_clock
+
+counter.rejected_connections:
+  brief: Number of connections rejected because of maxclients limit
+  custom: false
+  description: Number of connections rejected because of maxclients limit
+  metric_type: cumulative
+  title: counter.rejected_connections
+
+counter.total_net_input_bytes:
+  brief: Total number of bytes inputted
+  custom: false
+  description: Total number of bytes inputted
+  metric_type: cumulative
+  title: counter.total_net_input_bytes
+
+counter.total_net_output_bytes:
+  brief: Total number of bytes outputted
+  custom: false
+  description: Total number of bytes outputted
+  metric_type: cumulative
+  title: counter.total_net_output_bytes
+
+counter.used_cpu_sys:
+  brief: System CPU consumed by the Redis server
+  custom: false
+  description: System CPU consumed by the Redis server
+  metric_type: cumulative
+  title: counter.used_cpu_sys
+
+counter.used_cpu_sys_children:
+  brief: System CPU consumed by the background processes
+  custom: true
+  description: System CPU consumed by the background processes
+  metric_type: cumulative
+  title: counter.used_cpu_sys_children
+
+counter.used_cpu_user:
+  brief: User CPU consumed by the Redis server
+  custom: false
+  description: User CPU consumed by the Redis server
+  metric_type: cumulative
+  title: counter.used_cpu_user
+
+counter.used_cpu_user_children:
+  brief: User CPU consumed by the background processes
+  custom: true
+  description: User CPU consumed by the background processes
+  metric_type: cumulative
+  title: counter.used_cpu_user_children
+
+derive.keyspace_hits:
+  brief: Number of successful lookup of keys in the main dictionary
+  custom: false
+  description: Number of successful lookup of keys in the main dictionary
+  metric_type: cumulative
+  title: derive.keyspace_hits
+
+derive.keyspace_misses:
+  brief: Number of failed lookup of keys in the main dictionary
+  custom: false
+  description: Number of failed lookup of keys in the main dictionary
+  metric_type: cumulative
+  title: derive.keyspace_misses
+
+gauge.blocked_clients:
+  brief: Number of clients pending on a blocking call
+  custom: false
+  description: Number of clients pending on a blocking call
+  metric_type: gauge
+  title: gauge.blocked_clients
+
+gauge.changes_since_last_save:
+  brief: Number of changes since the last dump
+  custom: true
+  description: Number of changes since the last dump
+  metric_type: gauge
+  title: gauge.changes_since_last_save
+
+gauge.client_biggest_input_buf:
+  brief: Biggest input buffer among current client connections
+  custom: true
+  description: Biggest input buffer among current client connections
+  metric_type: gauge
+  title: gauge.client_biggest_input_buf
+
+gauge.client_longest_output_list:
+  brief: Longest output list among current client connections
+  custom: true
+  description: Longest output list among current client connections
+  metric_type: gauge
+  title: gauge.client_longest_output_list
+
+gauge.connected_clients:
+  brief: Number of client connections (excluding connections from slaves)
+  custom: false
+  description: Number of client connections (excluding connections from slaves)
+  metric_type: gauge
+  title: gauge.connected_clients
+
+gauge.connected_slaves:
+  brief: Number of connected slaves
+  custom: true
+  description: Number of connected slaves
+  metric_type: gauge
+  title: gauge.connected_slaves
+
+gauge.db0_avg_ttl:
+  brief: The average time to live for all keys in redis
+  custom: true
+  description: The average time to live for all keys in redis
+  metric_type: gauge
+  title: gauge.db0_avg_ttl
+
+gauge.db0_expires:
+  brief: The total number of keys in redis that will expire
+  custom: true
+  description: The total number of keys in redis that will expire
+  metric_type: gauge
+  title: gauge.db0_expires
+
+gauge.db0_keys:
+  brief: The total number of keys stored in redis
+  custom: true
+  description: The total number of keys stored in redis
+  metric_type: gauge
+  title: gauge.db0_keys
+
+gauge.instantaneous_ops_per_sec:
+  brief: Number of commands processed per second
+  custom: true
+  description: Number of commands processed per second
+  metric_type: gauge
+  title: gauge.instantaneous_ops_per_sec
+
+gauge.key_llen:
+  brief: Length of an list key
+  custom: true
+  description: Length of an list key
+  metric_type: gauge
+  title: gauge.key_llen
+
+gauge.latest_fork_usec:
+  brief: Duration of the latest fork operation in microseconds
+  custom: true
+  description: Duration of the latest fork operation in microseconds
+  metric_type: gauge
+  title: gauge.latest_fork_usec
+
+gauge.master_last_io_seconds_ago:
+  brief: Number of seconds since the last interaction with master
+  custom: true
+  description: Number of seconds since the last interaction with master
+  metric_type: gauge
+  title: gauge.master_last_io_seconds_ago
+
+gauge.master_repl_offset:
+  brief: Master replication offset
+  custom: false
+  description: Master replication offset
+  metric_type: gauge
+  title: gauge.master_repl_offset
+
+gauge.mem_fragmentation_ratio:
+  brief: Ratio between used_memory_rss and used_memory
+  custom: true
+  description: Ratio between used_memory_rss and used_memory
+  metric_type: gauge
+  title: gauge.mem_fragmentation_ratio
+
+gauge.rdb_bgsave_in_progress:
+  brief: Flag indicating a RDB save is on-going
+  custom: true
+  description: Flag indicating a RDB save is on-going
+  metric_type: gauge
+  title: gauge.rdb_bgsave_in_progress
+
+gauge.repl_backlog_first_byte_offset:
+  brief: Slave replication backlog offset
+  custom: true
+  description: Slave replication backlog offset
+  metric_type: gauge
+  title: gauge.repl_backlog_first_byte_offset
+
+gauge.slave_repl_offset:
+  brief: Slave replication offset
+  custom: false
+  description: Slave replication offset
+  metric_type: gauge
+  title: gauge.slave_repl_offset
+
+gauge.uptime_in_days:
+  brief: Number of days up
+  custom: true
+  description: Number of days up
+  metric_type: gauge
+  title: gauge.uptime_in_days
+
+gauge.uptime_in_seconds:
+  brief: Number of seconds up
+  custom: true
+  description: Number of seconds up
+  metric_type: gauge
+  title: gauge.uptime_in_seconds
+

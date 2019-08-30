@@ -6,5 +6,5 @@ liche --recursive \
   --concurrency 50 \
   --timeout 30 \
   --document-root / \
-  --exclude '(localhost|leader\.mesos|YOUR_SIGNALFX_ORG_ID|YOUR_SIGNALFX_REALM|ingest.*signalfx.com|127\.0\.0\.1|kb\.vmware\.com|support\.signalfx\.com)' \
+  --exclude '(localhost|leader\.mesos|YOUR_SIGNALFX_ORG_ID|YOUR_SIGNALFX_REALM|ingest.*signalfx.com|127\.0\.0\.1|kb\.vmware\.com|support\.signalfx\.com|signalfx-agent/agent_docs|169\.254\.170\.2)' \
   .

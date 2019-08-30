@@ -1,66 +1,89 @@
-query_count:
-  brief: In flight queries.
+query/count:
+  brief: Query count
   description: In flight queries.
   metric_type: gauge
   title: query/count
-
-query_execution_times:
-  brief: Distribution of queries execution times.
+query/execution_times:
+  brief: Query execution times
   description: Distribution of queries execution times.
   metric_type: gauge
   title: query/execution_times
-
-query_scanned_bytes:
-  brief: Scanned bytes per minute.
-  description: Scanned bytes per minute.
+query/scanned_bytes:
+  brief: Scanned bytes
+  description: Scanned bytes.
   metric_type: counter
   title: query/scanned_bytes
-
-query_scanned_bytes_billed:
-  brief: Scanned bytes billed per minute.
-  description: Scanned bytes billed per minute.
+query/scanned_bytes_billed:
+  brief: Scanned bytes billed
+  description: Scanned bytes billed.
   metric_type: counter
   title: query/scanned_bytes_billed
-
-slots_allocated_for_project:
-  brief: Number of BigQuery slots currently allocated for the project.
-  description: Number of BigQuery slots currently allocated for the project.
+query/statement_scanned_bytes:
+  brief: Statement scanned bytes
+  description: Scanned bytes broken down by statement type.
+  metric_type: counter
+  title: query/statement_scanned_bytes
+query/statement_scanned_bytes_billed:
+  brief: Statement scanned bytes billed
+  description: Scanned bytes billed broken down by statement type.
+  metric_type: counter
+  title: query/statement_scanned_bytes_billed
+slots/allocated:
+  brief: Slots used by project, reservation, and job type
+  description: Number of BigQuery slots currently allocated for project. Slot allocation
+    can be broken down based on reservation and job type.
+  metric_type: gauge
+  title: slots/allocated
+slots/allocated_for_project:
+  brief: Slots used by project
+  description: Number of BigQuery slots currently allocated for query jobs in the
+    project.
   metric_type: gauge
   title: slots/allocated_for_project
-
-slots_total_available:
-  brief: Total number of BigQuery slots available for the project.
+slots/allocated_for_project_and_job_type:
+  brief: Slots used by project and job type
+  description: Number of BigQuery slots currently allocated for the project and job
+    type.
+  metric_type: gauge
+  title: slots/allocated_for_project_and_job_type
+slots/allocated_for_reservation:
+  brief: Slots used by project in reservation
+  description: Number of BigQuery slots currently allocated for project in the reservation.
+  metric_type: gauge
+  title: slots/allocated_for_reservation
+slots/total_allocated_for_reservation:
+  brief: Slots used across projects in reservation
+  description: Number of BigQuery slots currently allocated across projects in the
+    reservation. This is only reported while the project is using slots in the reservation.
+  metric_type: gauge
+  title: slots/total_allocated_for_reservation
+slots/total_available:
+  brief: Total slots
   description: Total number of BigQuery slots available for the project.
   metric_type: gauge
   title: slots/total_available
-
-storage_stored_bytes:
-  brief: Number of bytes stored.
+storage/stored_bytes:
+  brief: Stored bytes
   description: Number of bytes stored.
   metric_type: gauge
   title: storage/stored_bytes
-
-storage_table_count:
-  brief: Number of tables.
+storage/table_count:
+  brief: Table count
   description: Number of tables.
   metric_type: gauge
   title: storage/table_count
-
-storage_uploaded_bytes:
-  brief: Uploaded bytes per minute.
-  description: Uploaded bytes per minute.
+storage/uploaded_bytes:
+  brief: Uploaded bytes
+  description: Uploaded bytes.
   metric_type: counter
   title: storage/uploaded_bytes
-
-storage_uploaded_bytes_billed:
-  brief: Uploaded bytes billed per minute.
-  description: Uploaded bytes billed per minute.
+storage/uploaded_bytes_billed:
+  brief: Uploaded bytes billed
+  description: Uploaded bytes billed.
   metric_type: counter
   title: storage/uploaded_bytes_billed
-
-storage_uploaded_row_count:
-  brief: Uploaded rows per minute.
-  description: Uploaded rows per minute.
+storage/uploaded_row_count:
+  brief: Uploaded rows
+  description: Uploaded rows.
   metric_type: counter
   title: storage/uploaded_row_count
-

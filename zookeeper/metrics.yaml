@@ -1,0 +1,113 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+counter.zk_fsync_threshold_exceed_count:
+  brief: Number of times fsync duration has exceeded warning threshold
+  custom: true
+  description: Number of times fsync duration has exceeded warning threshold
+  metric_type: cumulative
+  title: counter.zk_fsync_threshold_exceed_count
+
+counter.zk_packets_received:
+  brief: Count of the number of ZooKeeper packets received by a server
+  custom: false
+  description: Count of the number of ZooKeeper packets received by a server
+  metric_type: cumulative
+  title: counter.zk_packets_received
+
+counter.zk_packets_sent:
+  brief: Count of the number of ZooKeeper packets sent from a server
+  custom: false
+  description: Count of the number of ZooKeeper packets sent from a server
+  metric_type: cumulative
+  title: counter.zk_packets_sent
+
+gauge.zk_approximate_data_size:
+  brief: Size of data in bytes that a ZooKeeper server has in its data tree
+  custom: false
+  description: Size of data in bytes that a ZooKeeper server has in its data tree
+  metric_type: gauge
+  title: gauge.zk_approximate_data_size
+
+gauge.zk_avg_latency:
+  brief: Average time in milliseconds for requests to be processed
+  custom: false
+  description: Average time in milliseconds for requests to be processed
+  metric_type: gauge
+  title: gauge.zk_avg_latency
+
+gauge.zk_ephemerals_count:
+  brief: Number of ephemeral nodes that a ZooKeeper server has in its data tree
+  custom: false
+  description: Number of ephemeral nodes that a ZooKeeper server has in its data tree
+  metric_type: gauge
+  title: gauge.zk_ephemerals_count
+
+gauge.zk_is_leader:
+  brief: 1 if the node is a leader, 0 if the node is a follower
+  custom: true
+  description: 1 if the node is a leader, 0 if the node is a follower
+  metric_type: gauge
+  title: gauge.zk_is_leader
+
+gauge.zk_max_file_descriptor_count:
+  brief: Maximum number of file descriptors that a ZooKeeper server can open
+  custom: false
+  description: Maximum number of file descriptors that a ZooKeeper server can open
+  metric_type: gauge
+  title: gauge.zk_max_file_descriptor_count
+
+gauge.zk_max_latency:
+  brief: Maximum time in milliseconds for a request to be processed
+  custom: true
+  description: Maximum time in milliseconds for a request to be processed
+  metric_type: gauge
+  title: gauge.zk_max_latency
+
+gauge.zk_min_latency:
+  brief: Minimum time in milliseconds for a request to be processed
+  custom: true
+  description: Minimum time in milliseconds for a request to be processed
+  metric_type: gauge
+  title: gauge.zk_min_latency
+
+gauge.zk_num_alive_connections:
+  brief: Number of active clients connected to a ZooKeeper server
+  custom: false
+  description: Number of active clients connected to a ZooKeeper server
+  metric_type: gauge
+  title: gauge.zk_num_alive_connections
+
+gauge.zk_open_file_descriptor_count:
+  brief: Number of file descriptors that a ZooKeeper server has open
+  custom: false
+  description: Number of file descriptors that a ZooKeeper server has open
+  metric_type: gauge
+  title: gauge.zk_open_file_descriptor_count
+
+gauge.zk_outstanding_requests:
+  brief: Number of currently executing requests
+  custom: true
+  description: Number of currently executing requests
+  metric_type: gauge
+  title: gauge.zk_outstanding_requests
+
+gauge.zk_service_health:
+  brief: 1 if server is running, otherwise 0
+  custom: true
+  description: 1 if server is running, otherwise 0
+  metric_type: gauge
+  title: gauge.zk_service_health
+
+gauge.zk_watch_count:
+  brief: Number of watches placed on Z-Nodes on a ZooKeeper server
+  custom: false
+  description: Number of watches placed on Z-Nodes on a ZooKeeper server
+  metric_type: gauge
+  title: gauge.zk_watch_count
+
+gauge.zk_znode_count:
+  brief: Number of z-nodes that a ZooKeeper server has in its data tree
+  custom: false
+  description: Number of z-nodes that a ZooKeeper server has in its data tree
+  metric_type: gauge
+  title: gauge.zk_znode_count
+

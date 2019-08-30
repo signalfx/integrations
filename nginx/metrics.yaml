@@ -1,0 +1,57 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+connections.accepted:
+  brief: Connections accepted by NGINX Web Server
+  custom: false
+  description: Connections accepted by NGINX Web Server
+  metric_type: cumulative
+  title: connections.accepted
+
+connections.failed:
+  brief: Connections failed by the NGINX Web Server
+  custom: true
+  description: Connections failed by the NGINX Web Server
+  metric_type: cumulative
+  title: connections.failed
+
+connections.handled:
+  brief: Connections handled by NGINX Web Server
+  custom: false
+  description: Connections handled by NGINX Web Server
+  metric_type: cumulative
+  title: connections.handled
+
+nginx_connections.active:
+  brief: Connections active in NGINX Web Server
+  custom: false
+  description: Connections active in NGINX Web Server
+  metric_type: gauge
+  title: nginx_connections.active
+
+nginx_connections.reading:
+  brief: Connections being read by NGINX Web Server
+  custom: false
+  description: Connections being read by NGINX Web Server
+  metric_type: gauge
+  title: nginx_connections.reading
+
+nginx_connections.waiting:
+  brief: Connections waited on by NGINX Web Server
+  custom: false
+  description: Connections waited on by NGINX Web Server
+  metric_type: gauge
+  title: nginx_connections.waiting
+
+nginx_connections.writing:
+  brief: Connections being written by NGINX Web Server
+  custom: false
+  description: Connections being written by NGINX Web Server
+  metric_type: gauge
+  title: nginx_connections.writing
+
+nginx_requests:
+  brief: Requests handled by NGINX Web Server
+  custom: false
+  description: Requests handled by NGINX Web Server
+  metric_type: cumulative
+  title: nginx_requests
+

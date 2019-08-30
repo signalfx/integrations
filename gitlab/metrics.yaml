@@ -1,0 +1,365 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+ci_stale_builds:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ci_stale_builds
+
+gitlab_cache_misses_total:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: gitlab_cache_misses_total
+
+gitlab_database_rows:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: gitlab_database_rows
+
+gitlab_projects_with_jid:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: gitlab_projects_with_jid
+
+gitlab_projects_without_jid:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: gitlab_projects_without_jid
+
+gitlab_stuck_import_jobs_worker_runs_total:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: gitlab_stuck_import_jobs_worker_runs_total
+
+http_request_duration_seconds:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: http_request_duration_seconds
+
+http_request_duration_seconds_bucket:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: http_request_duration_seconds_bucket
+
+http_request_duration_seconds_count:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: http_request_duration_seconds_count
+
+pg_stat_table_idx_tup_fetch:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_idx_tup_fetch
+
+pg_stat_table_n_dead_tup:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_n_dead_tup
+
+pg_stat_table_n_tup_del:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_n_tup_del
+
+pg_stat_table_n_tup_hot_upd:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_n_tup_hot_upd
+
+pg_stat_table_n_tup_ins:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_n_tup_ins
+
+pg_stat_table_n_tup_upd:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_n_tup_upd
+
+pg_stat_table_seq_scan:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_seq_scan
+
+pg_stat_table_seq_tup_read:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: pg_stat_table_seq_tup_read
+
+process_age_seconds:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: process_age_seconds
+
+process_count:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: process_count
+
+process_memory_bytes:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: process_memory_bytes
+
+ruby_file_descriptors:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_file_descriptors
+
+ruby_gc_duration_seconds_total:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: ruby_gc_duration_seconds_total
+
+ruby_gc_stat_count:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_count
+
+ruby_gc_stat_heap_allocatable_pages:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_allocatable_pages
+
+ruby_gc_stat_heap_allocated_pages:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_allocated_pages
+
+ruby_gc_stat_heap_available_slots:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_available_slots
+
+ruby_gc_stat_heap_eden_pages:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_eden_pages
+
+ruby_gc_stat_heap_final_slots:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_final_slots
+
+ruby_gc_stat_heap_free_slots:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_free_slots
+
+ruby_gc_stat_heap_live_slots:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_live_slots
+
+ruby_gc_stat_heap_marked_slots:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_marked_slots
+
+ruby_gc_stat_heap_sorted_length:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_sorted_length
+
+ruby_gc_stat_heap_tomb_pages:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_heap_tomb_pages
+
+ruby_gc_stat_major_gc_count:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_major_gc_count
+
+ruby_gc_stat_malloc_increase_bytes:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_malloc_increase_bytes
+
+ruby_gc_stat_malloc_increase_bytes_limit:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_malloc_increase_bytes_limit
+
+ruby_gc_stat_minor_gc_count:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_minor_gc_count
+
+ruby_gc_stat_old_objects:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_old_objects
+
+ruby_gc_stat_old_objects_limit:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_old_objects_limit
+
+ruby_gc_stat_oldmalloc_increase_bytes:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_oldmalloc_increase_bytes
+
+ruby_gc_stat_oldmalloc_increase_bytes_limit:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_oldmalloc_increase_bytes_limit
+
+ruby_gc_stat_remembered_wb_unprotected_objects:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_remembered_wb_unprotected_objects
+
+ruby_gc_stat_remembered_wb_unprotected_objects_limit:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_remembered_wb_unprotected_objects_limit
+
+ruby_gc_stat_total_allocated_objects:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_total_allocated_objects
+
+ruby_gc_stat_total_allocated_pages:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_total_allocated_pages
+
+ruby_gc_stat_total_freed_objects:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_total_freed_objects
+
+ruby_gc_stat_total_freed_pages:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_gc_stat_total_freed_pages
+
+ruby_memory_bytes:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: ruby_memory_bytes
+
+ruby_sampler_duration_seconds_total:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: ruby_sampler_duration_seconds_total
+
+sidekiq_dead_jobs_total:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: sidekiq_dead_jobs_total
+
+sidekiq_queue_latency:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: sidekiq_queue_latency
+
+sidekiq_queue_size:
+  brief: ''
+  custom: false
+  description: ''
+  metric_type: gauge
+  title: sidekiq_queue_size
+

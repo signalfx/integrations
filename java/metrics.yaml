@@ -1,0 +1,57 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+gauge.jvm.threads.count:
+  brief: Number of JVM threads
+  custom: false
+  description: Number of JVM threads
+  metric_type: gauge
+  title: gauge.jvm.threads.count
+
+gauge.loaded_classes:
+  brief: Number of classes loaded in the JVM
+  custom: false
+  description: Number of classes loaded in the JVM
+  metric_type: gauge
+  title: gauge.loaded_classes
+
+invocations:
+  brief: Total number of garbage collection events
+  custom: false
+  description: Total number of garbage collection events
+  metric_type: cumulative
+  title: invocations
+
+jmx_memory.committed:
+  brief: Amount of memory guaranteed to be available in bytes
+  custom: false
+  description: Amount of memory guaranteed to be available in bytes
+  metric_type: gauge
+  title: jmx_memory.committed
+
+jmx_memory.init:
+  brief: Amount of initial memory at startup in bytes
+  custom: false
+  description: Amount of initial memory at startup in bytes
+  metric_type: gauge
+  title: jmx_memory.init
+
+jmx_memory.max:
+  brief: Maximum amount of memory that can be used in bytes
+  custom: false
+  description: Maximum amount of memory that can be used in bytes
+  metric_type: gauge
+  title: jmx_memory.max
+
+jmx_memory.used:
+  brief: Current memory usage in bytes
+  custom: false
+  description: Current memory usage in bytes
+  metric_type: gauge
+  title: jmx_memory.used
+
+total_time_in_ms.collection_time:
+  brief: Amount of time spent garbage collecting in milliseconds
+  custom: false
+  description: Amount of time spent garbage collecting in milliseconds
+  metric_type: cumulative
+  title: total_time_in_ms.collection_time
+

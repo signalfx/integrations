@@ -1,0 +1,155 @@
+CoreCount:
+  title: CoreCount
+  metric_type:
+  brief: Dedicated Core Count
+  description: Total number of dedicated cores in the batch account
+TotalNodeCount:
+  title: TotalNodeCount
+  metric_type:
+  brief: Dedicated Node Count
+  description: Total number of dedicated nodes in the batch account
+LowPriorityCoreCount:
+  title: LowPriorityCoreCount
+  metric_type:
+  brief: LowPriority Core Count
+  description: Total number of low-priority cores in the batch account
+TotalLowPriorityNodeCount:
+  title: TotalLowPriorityNodeCount
+  metric_type:
+  brief: Low-Priority Node Count
+  description: Total number of low-priority nodes in the batch account
+CreatingNodeCount:
+  title: CreatingNodeCount
+  metric_type:
+  brief: Creating Node Count
+  description: Number of nodes being created
+StartingNodeCount:
+  title: StartingNodeCount
+  metric_type:
+  brief: Starting Node Count
+  description: Number of nodes starting
+WaitingForStartTaskNodeCount:
+  title: WaitingForStartTaskNodeCount
+  metric_type:
+  brief: Waiting For Start Task Node Count
+  description: Number of nodes waiting for the Start Task to complete
+StartTaskFailedNodeCount:
+  title: StartTaskFailedNodeCount
+  metric_type:
+  brief: Start Task Failed Node Count
+  description: Number of nodes where the Start Task has failed
+IdleNodeCount:
+  title: IdleNodeCount
+  metric_type:
+  brief: Idle Node Count
+  description: Number of idle nodes
+OfflineNodeCount:
+  title: OfflineNodeCount
+  metric_type:
+  brief: Offline Node Count
+  description: Number of offline nodes
+RebootingNodeCount:
+  title: RebootingNodeCount
+  metric_type:
+  brief: Rebooting Node Count
+  description: Number of rebooting nodes
+ReimagingNodeCount:
+  title: ReimagingNodeCount
+  metric_type:
+  brief: Reimaging Node Count
+  description: Number of reimaging nodes
+RunningNodeCount:
+  title: RunningNodeCount
+  metric_type:
+  brief: Running Node Count
+  description: Number of running nodes
+LeavingPoolNodeCount:
+  title: LeavingPoolNodeCount
+  metric_type:
+  brief: Leaving Pool Node Count
+  description: Number of nodes leaving the Pool
+UnusableNodeCount:
+  title: UnusableNodeCount
+  metric_type:
+  brief: Unusable Node Count
+  description: Number of unusable nodes
+PreemptedNodeCount:
+  title: PreemptedNodeCount
+  metric_type:
+  brief: Preempted Node Count
+  description: Number of preempted nodes
+TaskStartEvent:
+  title: TaskStartEvent
+  metric_type:
+  brief: Task Start Events
+  description: Total number of tasks that have started
+TaskCompleteEvent:
+  title: TaskCompleteEvent
+  metric_type:
+  brief: Task Complete Events
+  description: Total number of tasks that have completed
+TaskFailEvent:
+  title: TaskFailEvent
+  metric_type:
+  brief: Task Fail Events
+  description: Total number of tasks that have completed in a failed state
+PoolCreateEvent:
+  title: PoolCreateEvent
+  metric_type:
+  brief: Pool Create Events
+  description: Total number of pools that have been created
+PoolResizeStartEvent:
+  title: PoolResizeStartEvent
+  metric_type:
+  brief: Pool Resize Start Events
+  description: Total number of pool resizes that have started
+PoolResizeCompleteEvent:
+  title: PoolResizeCompleteEvent
+  metric_type:
+  brief: Pool Resize Complete Events
+  description: Total number of pool resizes that have completed
+PoolDeleteStartEvent:
+  title: PoolDeleteStartEvent
+  metric_type:
+  brief: Pool Delete Start Events
+  description: Total number of pool deletes that have started
+PoolDeleteCompleteEvent:
+  title: PoolDeleteCompleteEvent
+  metric_type:
+  brief: Pool Delete Complete Events
+  description: Total number of pool deletes that have completed
+JobDeleteCompleteEvent:
+  title: JobDeleteCompleteEvent
+  metric_type:
+  brief: Job Delete Complete Events
+  description: Total number of jobs that have been successfully deleted.
+JobDeleteStartEvent:
+  title: JobDeleteStartEvent
+  metric_type:
+  brief: Job Delete Start Events
+  description: Total number of jobs that have been requested to be deleted.
+JobDisableCompleteEvent:
+  title: JobDisableCompleteEvent
+  metric_type:
+  brief: Job Disable Complete Events
+  description: Total number of jobs that have been successfully disabled.
+JobDisableStartEvent:
+  title: JobDisableStartEvent
+  metric_type:
+  brief: Job Disable Start Events
+  description: Total number of jobs that have been requested to be disabled.
+JobStartEvent:
+  title: JobStartEvent
+  metric_type:
+  brief: Job Start Events
+  description: Total number of jobs that have been successfully started.
+JobTerminateCompleteEvent:
+  title: JobTerminateCompleteEvent
+  metric_type:
+  brief: Job Terminate Complete Events
+  description: Total number of jobs that have been successfully terminated.
+JobTerminateStartEvent:
+  title: JobTerminateStartEvent
+  metric_type:
+  brief: Job Terminate Start Events
+  description: Total number of jobs that have been requested to be terminated.

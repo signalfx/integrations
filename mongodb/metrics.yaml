@@ -1,0 +1,530 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+counter.asserts.regular:
+  brief: The number of regular assertions raised since the MongoDB process started
+  custom: true
+  description: The number of regular assertions raised since the MongoDB process started.
+    Check the log file for more information about these messages.
+  metric_type: cumulative
+  title: counter.asserts.regular
+
+counter.asserts.warning:
+  brief: In MongoDB 3.x and earlier, the field returns the number of warnings raised
+    since the MongoDB process started
+  custom: true
+  description: In MongoDB 3.x and earlier, the field returns the number of warnings
+    raised since the MongoDB process started.  In MongodDB 4, this is always 0.
+  metric_type: cumulative
+  title: counter.asserts.warning
+
+counter.backgroundFlushing.flushes:
+  brief: Number of times the database has been flushed
+  custom: false
+  description: Number of times the database has been flushed
+  metric_type: gauge
+  title: counter.backgroundFlushing.flushes
+
+counter.collection.commandsCount:
+  brief: Number of commands issued for a collection
+  custom: true
+  description: Number of commands issued for a collection
+  metric_type: counter
+  title: counter.collection.commandsCount
+
+counter.collection.commandsTime:
+  brief: Time spent in microseconds processing commands issued for a collection
+  custom: true
+  description: Time spent in microseconds processing commands issued for a collection
+  metric_type: counter
+  title: counter.collection.commandsTime
+
+counter.collection.getmoreCount:
+  brief: Number of getMore requests issued for a collection
+  custom: true
+  description: Number of getMore requests issued for a collection
+  metric_type: counter
+  title: counter.collection.getmoreCount
+
+counter.collection.getmoreTime:
+  brief: Time spent in microseconds processing getMore requests for a collection
+  custom: true
+  description: Time spent in microseconds processing getMore requests for a collection
+  metric_type: counter
+  title: counter.collection.getmoreTime
+
+counter.collection.index.accesses.ops:
+  brief: Number of times an index has been used (only on Mongo 3.2+)
+  custom: true
+  description: Number of times an index has been used (only on Mongo 3.2+)
+  metric_type: counter
+  title: counter.collection.index.accesses.ops
+
+counter.collection.insertCount:
+  brief: Number of inserts issued for a collection
+  custom: true
+  description: Number of inserts issued for a collection
+  metric_type: counter
+  title: counter.collection.insertCount
+
+counter.collection.insertTime:
+  brief: Time spent in microseconds processing insert requests for a collection
+  custom: true
+  description: Time spent in microseconds processing insert requests for a collection
+  metric_type: counter
+  title: counter.collection.insertTime
+
+counter.collection.queriesCount:
+  brief: Number of queries issued for a collection
+  custom: true
+  description: Number of queries issued for a collection
+  metric_type: counter
+  title: counter.collection.queriesCount
+
+counter.collection.queriesTime:
+  brief: Time spent in microseconds processing query requests for a collection
+  custom: true
+  description: Time spent in microseconds processing query requests for a collection
+  metric_type: counter
+  title: counter.collection.queriesTime
+
+counter.collection.readLockCount:
+  brief: Number of read locks issued for a collection
+  custom: true
+  description: Number of read locks issued for a collection
+  metric_type: counter
+  title: counter.collection.readLockCount
+
+counter.collection.readLockTime:
+  brief: Time spent in microseconds processing read locks for a collection
+  custom: true
+  description: Time spent in microseconds processing read locks for a collection
+  metric_type: counter
+  title: counter.collection.readLockTime
+
+counter.collection.removeCount:
+  brief: Number of remove requests issued for a collection
+  custom: true
+  description: Number of remove requests issued for a collection
+  metric_type: counter
+  title: counter.collection.removeCount
+
+counter.collection.removeTime:
+  brief: Time spent in microseconds processing remove requests for a collection
+  custom: true
+  description: Time spent in microseconds processing remove requests for a collection
+  metric_type: counter
+  title: counter.collection.removeTime
+
+counter.collection.totalCount:
+  brief: Total number of operations issued for a collection
+  custom: true
+  description: Total number of operations issued for a collection
+  metric_type: counter
+  title: counter.collection.totalCount
+
+counter.collection.totalTime:
+  brief: Time spent in microseconds processing all operations for a collection
+  custom: true
+  description: Time spent in microseconds processing all operations for a collection
+  metric_type: counter
+  title: counter.collection.totalTime
+
+counter.collection.updateCount:
+  brief: Number of update requests issued for a collection
+  custom: true
+  description: Number of update requests issued for a collection
+  metric_type: counter
+  title: counter.collection.updateCount
+
+counter.collection.updateTime:
+  brief: Time spent in microseconds processing update requests for a collection
+  custom: true
+  description: Time spent in microseconds processing update requests for a collection
+  metric_type: counter
+  title: counter.collection.updateTime
+
+counter.collection.writeLockCount:
+  brief: Number of write locks issued for a collection
+  custom: true
+  description: Number of write locks issued for a collection
+  metric_type: counter
+  title: counter.collection.writeLockCount
+
+counter.collection.writeLockTime:
+  brief: Time spent in microseconds processing write locks for a collection
+  custom: true
+  description: Time spent in microseconds processing write locks for a collection
+  metric_type: counter
+  title: counter.collection.writeLockTime
+
+counter.extra_info.page_faults:
+  brief: Mongod page faults
+  custom: false
+  description: Mongod page faults
+  metric_type: gauge
+  title: counter.extra_info.page_faults
+
+counter.lock.Database.acquireCount.intentExclusive:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: counter.lock.Database.acquireCount.intentExclusive
+
+counter.lock.Database.acquireCount.intentShared:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: counter.lock.Database.acquireCount.intentShared
+
+counter.lock.Database.acquireCount.read:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: counter.lock.Database.acquireCount.read
+
+counter.lock.Database.acquireCount.write:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: counter.lock.Database.acquireCount.write
+
+counter.lock.Global.acquireCount.intentExclusive:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: counter.lock.Global.acquireCount.intentExclusive
+
+counter.lock.Global.acquireCount.intentShared:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: counter.lock.Global.acquireCount.intentShared
+
+counter.lock.Global.acquireCount.write:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  title: counter.lock.Global.acquireCount.write
+
+counter.network.bytesIn:
+  brief: Network bytes received by the database server
+  custom: false
+  description: Network bytes received by the database server
+  metric_type: gauge
+  title: counter.network.bytesIn
+
+counter.network.bytesOut:
+  brief: Network bytes sent by the database server
+  custom: false
+  description: Network bytes sent by the database server
+  metric_type: gauge
+  title: counter.network.bytesOut
+
+counter.network.numRequests:
+  brief: Requests received by the server
+  custom: false
+  description: Requests received by the server
+  metric_type: cumulative
+  title: counter.network.numRequests
+
+counter.opcounters.command:
+  brief: Number of commands since last restart
+  custom: true
+  description: Number of commands since last restart
+  metric_type: cumulative
+  title: counter.opcounters.command
+
+counter.opcounters.delete:
+  brief: Number of deletes since last restart
+  custom: false
+  description: Number of deletes since last restart
+  metric_type: cumulative
+  title: counter.opcounters.delete
+
+counter.opcounters.getmore:
+  brief: Number of getmore operations since last restart
+  custom: true
+  description: Number of getmore operations since last restart
+  metric_type: cumulative
+  title: counter.opcounters.getmore
+
+counter.opcounters.insert:
+  brief: Number of inserts since last restart
+  custom: false
+  description: Number of inserts since last restart
+  metric_type: cumulative
+  title: counter.opcounters.insert
+
+counter.opcounters.query:
+  brief: Number of queries since last restart
+  custom: false
+  description: Number of queries since last restart
+  metric_type: cumulative
+  title: counter.opcounters.query
+
+counter.opcounters.update:
+  brief: Number of updates since last restart
+  custom: false
+  description: Number of updates since last restart
+  metric_type: cumulative
+  title: counter.opcounters.update
+
+counter.opcountersRepl.command:
+  brief: Number of replicated commands since last restart
+  custom: true
+  description: Number of replicated commands since last restart
+  metric_type: cumulative
+  title: counter.opcountersRepl.command
+
+counter.opcountersRepl.delete:
+  brief: Number of replicated deletes since last restart
+  custom: true
+  description: Number of replicated deletes since last restart
+  metric_type: cumulative
+  title: counter.opcountersRepl.delete
+
+counter.opcountersRepl.getmore:
+  brief: Number of replicated getmore operations since last restart
+  custom: true
+  description: Number of replicated getmore operations since last restart
+  metric_type: cumulative
+  title: counter.opcountersRepl.getmore
+
+counter.opcountersRepl.insert:
+  brief: Number of replicated inserts since last restart
+  custom: true
+  description: Number of replicated inserts since last restart
+  metric_type: cumulative
+  title: counter.opcountersRepl.insert
+
+counter.opcountersRepl.query:
+  brief: Number of replicated queries since last restart
+  custom: true
+  description: Number of replicated queries since last restart
+  metric_type: cumulative
+  title: counter.opcountersRepl.query
+
+counter.opcountersRepl.update:
+  brief: Number of replicated updates since last restart
+  custom: true
+  description: Number of replicated updates since last restart
+  metric_type: cumulative
+  title: counter.opcountersRepl.update
+
+gauge.backgroundFlushing.average_ms:
+  brief: Average time (ms) to write data to disk
+  custom: false
+  description: Average time (ms) to write data to disk
+  metric_type: gauge
+  title: gauge.backgroundFlushing.average_ms
+
+gauge.backgroundFlushing.last_ms:
+  brief: Most recent time (ms) spent writing data to disk
+  custom: false
+  description: Most recent time (ms) spent writing data to disk
+  metric_type: gauge
+  title: gauge.backgroundFlushing.last_ms
+
+gauge.collection.avgObjSize:
+  brief: Mean object/document size of a collection
+  custom: true
+  description: Mean object/document size of a collection
+  metric_type: gauge
+  title: gauge.collection.avgObjSize
+
+gauge.collection.count:
+  brief: Number of objects/documents in a collection
+  custom: true
+  description: Number of objects/documents in a collection
+  metric_type: gauge
+  title: gauge.collection.count
+
+gauge.collection.indexSize:
+  brief: Size of a particular index on a collection
+  custom: true
+  description: Size of a particular index on a collection
+  metric_type: gauge
+  title: gauge.collection.indexSize
+
+gauge.collection.max:
+  brief: Maximum number of documents in a capped collection
+  custom: true
+  description: Maximum number of documents in a capped collection
+  metric_type: gauge
+  title: gauge.collection.max
+
+gauge.collection.maxSize:
+  brief: Maximum disk usage of a capped collection
+  custom: true
+  description: Maximum disk usage of a capped collection
+  metric_type: gauge
+  title: gauge.collection.maxSize
+
+gauge.collection.size:
+  brief: Size of a collection in bytes, not including indexes
+  custom: true
+  description: Size of a collection in bytes, not including indexes
+  metric_type: gauge
+  title: gauge.collection.size
+
+gauge.collection.storageSize:
+  brief: Size of the collection on disk in bytes, never decreases
+  custom: true
+  description: Size of the collection on disk in bytes, never decreases.
+  metric_type: gauge
+  title: gauge.collection.storageSize
+
+gauge.collections:
+  brief: Number of collections
+  custom: true
+  description: Number of collections
+  metric_type: gauge
+  title: gauge.collections
+
+gauge.connections.available:
+  brief: Number of available incoming connections
+  custom: true
+  description: Number of available incoming connections
+  metric_type: gauge
+  title: gauge.connections.available
+
+gauge.connections.current:
+  brief: Number of current client connections
+  custom: false
+  description: Number of current client connections
+  metric_type: gauge
+  title: gauge.connections.current
+
+gauge.connections.totalCreated:
+  brief: Count of all incoming connections created to the server
+  custom: true
+  description: Count of all incoming connections created to the server. This number
+    includes connections that have since closed.
+  metric_type: cumulative
+  title: gauge.connections.totalCreated
+
+gauge.dataSize:
+  brief: Total size of data, in bytes
+  custom: false
+  description: Total size of data, in bytes
+  metric_type: gauge
+  title: gauge.dataSize
+
+gauge.extra_info.heap_usage_bytes:
+  brief: Heap size used by the mongod process, in bytes
+  custom: false
+  description: Heap size used by the mongod process, in bytes
+  metric_type: gauge
+  title: gauge.extra_info.heap_usage_bytes
+
+gauge.globalLock.activeClients.readers:
+  brief: Number of active client connections performing reads
+  custom: false
+  description: Number of active client connections performing reads
+  metric_type: gauge
+  title: gauge.globalLock.activeClients.readers
+
+gauge.globalLock.activeClients.total:
+  brief: Total number of active client connections
+  custom: true
+  description: Total number of active client connections
+  metric_type: gauge
+  title: gauge.globalLock.activeClients.total
+
+gauge.globalLock.activeClients.writers:
+  brief: Number of active client connections performing writes
+  custom: false
+  description: Number of active client connections performing writes
+  metric_type: gauge
+  title: gauge.globalLock.activeClients.writers
+
+gauge.globalLock.currentQueue.readers:
+  brief: Read operations currently in queue
+  custom: false
+  description: Read operations currently in queue
+  metric_type: gauge
+  title: gauge.globalLock.currentQueue.readers
+
+gauge.globalLock.currentQueue.total:
+  brief: Total operations currently in queue
+  custom: true
+  description: Total operations currently in queue
+  metric_type: gauge
+  title: gauge.globalLock.currentQueue.total
+
+gauge.globalLock.currentQueue.writers:
+  brief: Write operations currently in queue
+  custom: false
+  description: Write operations currently in queue
+  metric_type: gauge
+  title: gauge.globalLock.currentQueue.writers
+
+gauge.indexSize:
+  brief: Total size of indexes, in bytes
+  custom: false
+  description: Total size of indexes, in bytes
+  metric_type: gauge
+  title: gauge.indexSize
+
+gauge.indexes:
+  brief: Number of indexes across all collections
+  custom: true
+  description: Number of indexes across all collections
+  metric_type: gauge
+  title: gauge.indexes
+
+gauge.mem.mapped:
+  brief: Mongodb mapped memory usage, in MB
+  custom: false
+  description: Mongodb mapped memory usage, in MB
+  metric_type: gauge
+  title: gauge.mem.mapped
+
+gauge.mem.resident:
+  brief: Mongodb resident memory usage, in MB
+  custom: false
+  description: Mongodb resident memory usage, in MB
+  metric_type: gauge
+  title: gauge.mem.resident
+
+gauge.mem.virtual:
+  brief: Mongodb virtual memory usage, in MB
+  custom: false
+  description: Mongodb virtual memory usage, in MB
+  metric_type: gauge
+  title: gauge.mem.virtual
+
+gauge.numExtents:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  title: gauge.numExtents
+
+gauge.objects:
+  brief: Number of documents across all collections
+  custom: false
+  description: Number of documents across all collections
+  metric_type: gauge
+  title: gauge.objects
+
+gauge.storageSize:
+  brief: Total bytes allocated to collections for document storage
+  custom: false
+  description: Total bytes allocated to collections for document storage
+  metric_type: gauge
+  title: gauge.storageSize
+
+gauge.uptime:
+  brief: Uptime of this server in milliseconds
+  custom: false
+  description: Uptime of this server in milliseconds
+  metric_type: counter
+  title: gauge.uptime
+

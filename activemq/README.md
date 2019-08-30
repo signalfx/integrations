@@ -9,18 +9,6 @@ Metadata associated with SignalFx's integration with ActiveMQ can be found <a ta
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
-
-SignalFx's integration with ActiveMQ configures the Java plugin for collectd to monitor ActiveMQ.
-
-Use this plugin to monitor the following types of information from ActiveMQ:
-
-* Broker (Totals per broker)
-* Queue (Queue status)
-* Topic (Topic status)
-
-To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age)[](sfx_link:amq-message-age).
-
 #### FEATURES
 
 ##### Built-in dashboards
@@ -51,15 +39,6 @@ To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ message age
 |-------------|----------------|
 | Smart Agent |       *        |
 | ActiveMQ    | 5.8.0 or later |
-
-### CONFIGURATION
-
-This integration is part of the <a
-href="https://docs.signalfx.com/en/latest/integrations/agent/index.html"
-target="_blank">SignalFx Smart Agent</a> -- see the docs for <a
-href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-activemq.html"
-target="_blank">the collectd/activemq monitor</a> for details on how to configure
-the Smart Agent to work with this integration.
 
 ### USAGE
 

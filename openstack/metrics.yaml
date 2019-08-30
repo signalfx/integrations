@@ -1,0 +1,386 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+counter.openstack.nova.server.cpu_time:
+  brief: Virtual CPU time consumed in nanoseconds
+  custom: true
+  description: Virtual CPU time consumed in nanoseconds
+  metric_type: counter
+  title: counter.openstack.nova.server.cpu_time
+
+counter.openstack.nova.server.rx:
+  brief: Size of network packet received in bytes
+  custom: false
+  description: Size of network packet received in bytes
+  metric_type: counter
+  title: counter.openstack.nova.server.rx
+
+counter.openstack.nova.server.rx_packets:
+  brief: Received packets at an instance
+  custom: false
+  description: Received packets at an instance
+  metric_type: counter
+  title: counter.openstack.nova.server.rx_packets
+
+counter.openstack.nova.server.tx:
+  brief: Size of network packet transmitted in bytes
+  custom: false
+  description: Size of network packet transmitted in bytes
+  metric_type: counter
+  title: counter.openstack.nova.server.tx
+
+counter.openstack.nova.server.tx_packets:
+  brief: Transmitted packets at an instance
+  custom: false
+  description: Transmitted packets at an instance
+  metric_type: counter
+  title: counter.openstack.nova.server.tx_packets
+
+gauge.openstack.cinder.limit.maxTotalBackupGigabytes:
+  brief: Maximum backup space available at cinder component for project in Gigabytes
+  custom: false
+  description: Maximum backup space available at cinder component for project in Gigabytes
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.maxTotalBackupGigabytes
+
+gauge.openstack.cinder.limit.maxTotalBackups:
+  brief: Total available backups used at cinder component for project
+  custom: false
+  description: Total available backups used at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.maxTotalBackups
+
+gauge.openstack.cinder.limit.maxTotalSnapshots:
+  brief: Total available snapshots at cinder component for project
+  custom: false
+  description: Total available snapshots at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.maxTotalSnapshots
+
+gauge.openstack.cinder.limit.maxTotalVolumeGigabytes:
+  brief: Total available block storage at cinder component for project
+  custom: false
+  description: Total available block storage at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.maxTotalVolumeGigabytes
+
+gauge.openstack.cinder.limit.maxTotalVolumes:
+  brief: Maximum volume resources available at cinder component for project
+  custom: false
+  description: Maximum volume resources available at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.maxTotalVolumes
+
+gauge.openstack.cinder.limit.totalBackupGigabytesUsed:
+  brief: Total backup space used at cinder component for project in Gigabytes
+  custom: false
+  description: Total backup space used at cinder component for project in Gigabytes
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.totalBackupGigabytesUsed
+
+gauge.openstack.cinder.limit.totalBackupsUsed:
+  brief: Total backups used at cinder component for project
+  custom: false
+  description: Total backups used at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.totalBackupsUsed
+
+gauge.openstack.cinder.limit.totalGigabytesUsed:
+  brief: Total block storage used at cinder component for project
+  custom: false
+  description: Total block storage used at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.totalGigabytesUsed
+
+gauge.openstack.cinder.limit.totalSnapshotsUsed:
+  brief: Total snapshots used at cinder component for project
+  custom: false
+  description: Total snapshots used at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.totalSnapshotsUsed
+
+gauge.openstack.cinder.limit.totalVolumesUsed:
+  brief: Volume resources used at cinder component for project
+  custom: false
+  description: Volume resources used at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.limit.totalVolumesUsed
+
+gauge.openstack.cinder.snapshot.count:
+  brief: Total number of snapshots at cinder component for project
+  custom: false
+  description: Total number of snapshots at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.snapshot.count
+
+gauge.openstack.cinder.snapshot.size:
+  brief: Total snapshot size at cinder component for project
+  custom: false
+  description: Total snapshot size at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.snapshot.size
+
+gauge.openstack.cinder.volume.count:
+  brief: Total number of volumes at cinder component for project
+  custom: false
+  description: Total number of volumes at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.volume.count
+
+gauge.openstack.cinder.volume.size:
+  brief: Total volume size at cinder component for project
+  custom: false
+  description: Total volume size at cinder component for project
+  metric_type: gauge
+  title: gauge.openstack.cinder.volume.size
+
+gauge.openstack.neutron.floatingip.count:
+  brief: Overall floating IPs used across projects
+  custom: false
+  description: Overall floating IPs used across projects
+  metric_type: gauge
+  title: gauge.openstack.neutron.floatingip.count
+
+gauge.openstack.neutron.network.count:
+  brief: Overall Network resources used across projects
+  custom: false
+  description: Overall Network resources used across projects
+  metric_type: gauge
+  title: gauge.openstack.neutron.network.count
+
+gauge.openstack.neutron.router.count:
+  brief: Overall router resources used across projects
+  custom: false
+  description: Overall router resources used across projects
+  metric_type: gauge
+  title: gauge.openstack.neutron.router.count
+
+gauge.openstack.neutron.securitygroup.count:
+  brief: Overall securitygroup resources used across projects
+  custom: false
+  description: Overall securitygroup resources used across projects
+  metric_type: gauge
+  title: gauge.openstack.neutron.securitygroup.count
+
+gauge.openstack.neutron.subnet.count:
+  brief: Overall subnet resources used in all projects
+  custom: false
+  description: Overall subnet resources used in all projects
+  metric_type: gauge
+  title: gauge.openstack.neutron.subnet.count
+
+gauge.openstack.nova.hypervisor.current_workload:
+  brief: Total current active hypervisor tasks in project
+  custom: false
+  description: Total current active hypervisor tasks in project
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.current_workload
+
+gauge.openstack.nova.hypervisor.disk_available_least:
+  brief: Minimum free disk space available in Gigabyte
+  custom: false
+  description: Minimum free disk space available in Gigabyte
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.disk_available_least
+
+gauge.openstack.nova.hypervisor.free_disk_gb:
+  brief: Maximum free disk space available in Gigabyte
+  custom: false
+  description: Maximum free disk space available in Gigabyte
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.free_disk_gb
+
+gauge.openstack.nova.hypervisor.free_ram_mb:
+  brief: Maximum free ram space available in Megabyte
+  custom: false
+  description: Maximum free ram space available in Megabyte
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.free_ram_mb
+
+gauge.openstack.nova.hypervisor.load_average:
+  brief: Average CPU load on the hypervisor
+  custom: true
+  description: Average CPU load on the hypervisor
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.load_average
+
+gauge.openstack.nova.hypervisor.local_gb:
+  brief: Maximum available local disk space in Gigabyte
+  custom: false
+  description: Maximum available local disk space in Gigabyte
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.local_gb
+
+gauge.openstack.nova.hypervisor.local_gb_used:
+  brief: Total disk space used in Gigabyte
+  custom: false
+  description: Total disk space used in Gigabyte
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.local_gb_used
+
+gauge.openstack.nova.hypervisor.memory_mb:
+  brief: Maximum available memory in MB at hypervisor
+  custom: false
+  description: Maximum available memory in MB at hypervisor
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.memory_mb
+
+gauge.openstack.nova.hypervisor.memory_mb_used:
+  brief: Total memory used in MB at hypervisor
+  custom: false
+  description: Total memory used in MB at hypervisor
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.memory_mb_used
+
+gauge.openstack.nova.hypervisor.running_vms:
+  brief: Total running VMs at hypervisor
+  custom: false
+  description: Total running VMs at hypervisor
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.running_vms
+
+gauge.openstack.nova.hypervisor.vcpus:
+  brief: Available physical cores at hypervisor
+  custom: false
+  description: Available physical cores at hypervisor
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.vcpus
+
+gauge.openstack.nova.hypervisor.vcpus_used:
+  brief: Used virtual CPUs used
+  custom: false
+  description: Used virtual CPUs used
+  metric_type: gauge
+  title: gauge.openstack.nova.hypervisor.vcpus_used
+
+gauge.openstack.nova.limit.maxImageMeta:
+  brief: Maximum number of metadata items associated with an image for project
+  custom: false
+  description: Maximum number of metadata items associated with an image for project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.maxImageMeta
+
+gauge.openstack.nova.limit.maxSecurityGroups:
+  brief: Maximum available security groups for project
+  custom: false
+  description: Maximum available security groups for project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.maxSecurityGroups
+
+gauge.openstack.nova.limit.maxTotalCores:
+  brief: Maximum available VCPUs in project
+  custom: false
+  description: Maximum available VCPUs in project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.maxTotalCores
+
+gauge.openstack.nova.limit.maxTotalFloatingIps:
+  brief: Maximum available floating IPs for project
+  custom: false
+  description: Maximum available floating IPs for project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.maxTotalFloatingIps
+
+gauge.openstack.nova.limit.maxTotalInstances:
+  brief: Maximum available instances in project
+  custom: false
+  description: Maximum available instances in project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.maxTotalInstances
+
+gauge.openstack.nova.limit.maxTotalKeypairs:
+  brief: Maximum available keypairs for project
+  custom: false
+  description: Maximum available keypairs for project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.maxTotalKeypairs
+
+gauge.openstack.nova.limit.maxTotalRAMSize:
+  brief: Maximum available RAM size for project
+  custom: false
+  description: Maximum available RAM size for project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.maxTotalRAMSize
+
+gauge.openstack.nova.limit.totalCoresUsed:
+  brief: Total cores used in the project
+  custom: false
+  description: Total cores used in the project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.totalCoresUsed
+
+gauge.openstack.nova.limit.totalFloatingIpsUsed:
+  brief: Total floating IPs used in the project
+  custom: false
+  description: Total floating IPs used in the project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.totalFloatingIpsUsed
+
+gauge.openstack.nova.limit.totalInstancesUsed:
+  brief: Total instances used in the project
+  custom: false
+  description: Total instances used in the project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.totalInstancesUsed
+
+gauge.openstack.nova.limit.totalRAMUsed:
+  brief: Total RAM used in the project
+  custom: false
+  description: Total RAM used in the project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.totalRAMUsed
+
+gauge.openstack.nova.limit.totalSecurityGroupsUsed:
+  brief: Total RAM used in the project
+  custom: false
+  description: Total RAM used in the project
+  metric_type: gauge
+  title: gauge.openstack.nova.limit.totalSecurityGroupsUsed
+
+gauge.openstack.nova.server.memory:
+  brief: Memory provisioned at an instance
+  custom: false
+  description: Memory provisioned at an instance
+  metric_type: gauge
+  title: gauge.openstack.nova.server.memory
+
+gauge.openstack.nova.server.memory-actual:
+  brief: Actual memory used at an instance
+  custom: false
+  description: Actual memory used at an instance
+  metric_type: gauge
+  title: gauge.openstack.nova.server.memory-actual
+
+gauge.openstack.nova.server.memory-rss:
+  brief: Memory used not including disk pages at an instance
+  custom: false
+  description: Memory used not including disk pages at an instance
+  metric_type: gauge
+  title: gauge.openstack.nova.server.memory-rss
+
+gauge.openstack.nova.server.vda_read:
+  brief: Size of virtual disk read requests in bytes
+  custom: false
+  description: Size of virtual disk read requests in bytes
+  metric_type: gauge
+  title: gauge.openstack.nova.server.vda_read
+
+gauge.openstack.nova.server.vda_read_req:
+  brief: Virtual disk read requests from an instance
+  custom: false
+  description: Virtual disk read requests from an instance
+  metric_type: gauge
+  title: gauge.openstack.nova.server.vda_read_req
+
+gauge.openstack.nova.server.vda_write:
+  brief: Size of virtual disk write requests in bytes
+  custom: false
+  description: Size of virtual disk write requests in bytes
+  metric_type: gauge
+  title: gauge.openstack.nova.server.vda_write
+
+gauge.openstack.nova.server.vda_write_req:
+  brief: Virtual disk write requests from an instance
+  custom: false
+  description: Virtual disk write requests from an instance
+  metric_type: gauge
+  title: gauge.openstack.nova.server.vda_write_req
+

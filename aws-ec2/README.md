@@ -69,7 +69,7 @@ For EC2, SignalFx will scan every instance ID from your AWS account and pull out
 
 For more information about the filters, see <a target="_blank" href="http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html">http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstances.html</a>.
 
-### METRICS
+### ADDITIONAL METRIC INFO
 
 For more information about the metrics emitted by Amazon EC2, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ec2/">https://aws.amazon.com/ec2/</a>.
 

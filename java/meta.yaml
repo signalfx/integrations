@@ -1,0 +1,10 @@
+code: https://github.com/signalfx/collectd/blob/master/src/java.c
+data_signature: plugin:"GenericJMX"
+description: The `collectd/genericjmx` monitor for the Smart Agent allows scaping JMX metrics from any properly configured Java application.
+display_name: Java
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/java/img/integrations_java%402x.png
+logo_small: /images/repos/java/img/integrations_java.png
+project_url: https://github.com/signalfx/integrations/tree/master/java

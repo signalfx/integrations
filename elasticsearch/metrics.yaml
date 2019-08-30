@@ -1,3 +1,4 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 elasticsearch.cluster.active-primary-shards:
   brief: Number of active primary shards
   custom: false
@@ -5,19 +6,19 @@ elasticsearch.cluster.active-primary-shards:
   metric_type: gauge
   title: elasticsearch.cluster.active-primary-shards
 
-elasticsearch.cluster.active-shards-percent:
-  brief: Percentaage of shards active
-  custom: true
-  description: Percentaage of shards active
-  metric_type: gauge
-  title: elasticsearch.cluster.active-shards-percent
-
 elasticsearch.cluster.active-shards:
   brief: Number of active shards
   custom: false
   description: Number of active shards
   metric_type: gauge
   title: elasticsearch.cluster.active-shards
+
+elasticsearch.cluster.active-shards-percent:
+  brief: Percentaage of shards active
+  custom: true
+  description: Percentaage of shards active
+  metric_type: gauge
+  title: elasticsearch.cluster.active-shards-percent
 
 elasticsearch.cluster.delayed-unassigned-shards:
   brief: Number of delayed unassigned shards
@@ -159,12 +160,12 @@ elasticsearch.indices.flush.periodic:
   metric_type: gauge
   title: elasticsearch.indices.flush.periodic
 
-elasticsearch.indices.flush.time:
-  brief: Time spent flushing the index to disk
+elasticsearch.indices.flush.total:
+  brief: Number of index flushes to disk
   custom: true
-  description: Time spent flushing the index to disk
+  description: Number of index flushes to disk
   metric_type: cumulative
-  title: elasticsearch.indices.flush.time
+  title: elasticsearch.indices.flush.total
 
 elasticsearch.indices.flush.total-time:
   brief: Time spent flushing the index to disk
@@ -172,13 +173,6 @@ elasticsearch.indices.flush.total-time:
   description: Time spent flushing the index to disk
   metric_type: cumulative
   title: elasticsearch.indices.flush.total-time
-
-elasticsearch.indices.flush.total:
-  brief: Number of index flushes to disk
-  custom: true
-  description: Number of index flushes to disk
-  metric_type: cumulative
-  title: elasticsearch.indices.flush.total
 
 elasticsearch.indices.get.current:
   brief: Number of get requests running
@@ -306,6 +300,13 @@ elasticsearch.indices.merges.auto-throttle-size:
   metric_type: cumulative
   title: elasticsearch.indices.merges.auto-throttle-size
 
+elasticsearch.indices.merges.current:
+  brief: Number of currently active segment merges
+  custom: false
+  description: Number of currently active segment merges
+  metric_type: gauge
+  title: elasticsearch.indices.merges.current
+
 elasticsearch.indices.merges.current-docs:
   brief: Number of docs currently being merged
   custom: true
@@ -319,13 +320,6 @@ elasticsearch.indices.merges.current-size:
   description: Size of the segments currently being merged
   metric_type: gauge
   title: elasticsearch.indices.merges.current-size
-
-elasticsearch.indices.merges.current:
-  brief: Number of currently active segment merges
-  custom: false
-  description: Number of currently active segment merges
-  metric_type: gauge
-  title: elasticsearch.indices.merges.current
 
 elasticsearch.indices.merges.stopped-time:
   brief: Total time merges were stopped for
@@ -341,12 +335,12 @@ elasticsearch.indices.merges.throttle-time:
   metric_type: cumulative
   title: elasticsearch.indices.merges.throttle-time
 
-elasticsearch.indices.merges.time:
-  brief: Total time spent on merging
-  custom: true
-  description: Total time spent on merging
+elasticsearch.indices.merges.total:
+  brief: Number of segment merges
+  custom: false
+  description: Number of segment merges
   metric_type: cumulative
-  title: elasticsearch.indices.merges.time
+  title: elasticsearch.indices.merges.total
 
 elasticsearch.indices.merges.total-docs:
   brief: Number of merged docs across merged segments
@@ -368,13 +362,6 @@ elasticsearch.indices.merges.total-time:
   description: Total time spent on merging
   metric_type: cumulative
   title: elasticsearch.indices.merges.total-time
-
-elasticsearch.indices.merges.total:
-  brief: Number of segment merges
-  custom: false
-  description: Number of segment merges
-  metric_type: cumulative
-  title: elasticsearch.indices.merges.total
 
 elasticsearch.indices.percolate.current:
   brief: Number of percolator queries currently running
@@ -481,12 +468,12 @@ elasticsearch.indices.refresh.listeners:
   metric_type: gauge
   title: elasticsearch.indices.refresh.listeners
 
-elasticsearch.indices.refresh.time:
-  brief: Total time spent on index refreshes
+elasticsearch.indices.refresh.total:
+  brief: Total number of index refreshes
   custom: true
-  description: Total time spent on index refreshes
+  description: Total number of index refreshes
   metric_type: cumulative
-  title: elasticsearch.indices.refresh.time
+  title: elasticsearch.indices.refresh.total
 
 elasticsearch.indices.refresh.total-time:
   brief: Total time spent on index refreshes
@@ -494,13 +481,6 @@ elasticsearch.indices.refresh.total-time:
   description: Total time spent on index refreshes
   metric_type: cumulative
   title: elasticsearch.indices.refresh.total-time
-
-elasticsearch.indices.refresh.total:
-  brief: Total number of index refreshes
-  custom: true
-  description: Total number of index refreshes
-  metric_type: cumulative
-  title: elasticsearch.indices.refresh.total
 
 elasticsearch.indices.request-cache.evictions:
   brief: Number of request cache evictions
@@ -649,26 +629,12 @@ elasticsearch.indices.segments.index-writer-max-memory-size:
   metric_type: gauge
   title: elasticsearch.indices.segments.index-writer-max-memory-size
 
-elasticsearch.indices.segments.index-writer-max-size:
-  brief: Maximum memory used by the index writer
-  custom: true
-  description: Maximum memory used by the index writer
-  metric_type: gauge
-  title: elasticsearch.indices.segments.index-writer-max-size
-
 elasticsearch.indices.segments.index-writer-memory-size:
   brief: Memory used by the index writer
   custom: true
   description: Memory used by the index writer
   metric_type: gauge
   title: elasticsearch.indices.segments.index-writer-memory-size
-
-elasticsearch.indices.segments.index-writer-size:
-  brief: Memory used by the index writer
-  custom: true
-  description: Memory used by the index writer
-  metric_type: gauge
-  title: elasticsearch.indices.segments.index-writer-size
 
 elasticsearch.indices.segments.memory-size:
   brief: Memory used by index segments (in bytes)
@@ -690,13 +656,6 @@ elasticsearch.indices.segments.points-memory-size:
   description: Memory used by points
   metric_type: gauge
   title: elasticsearch.indices.segments.points-memory-size
-
-elasticsearch.indices.segments.size:
-  brief: Memory used by index segments (in bytes)
-  custom: true
-  description: Memory used by index segments (in bytes)
-  metric_type: gauge
-  title: elasticsearch.indices.segments.size
 
 elasticsearch.indices.segments.stored-field-memory-size:
   brief: Memory used by stored fields (in bytes)
@@ -725,13 +684,6 @@ elasticsearch.indices.segments.version-map-memory-size:
   description: Memory used by segment version map (in bytes)
   metric_type: gauge
   title: elasticsearch.indices.segments.version-map-memory-size
-
-elasticsearch.indices.segments.version-map-memory:
-  brief: Memory used by segment version map (in bytes)
-  custom: true
-  description: Memory used by segment version map (in bytes)
-  metric_type: gauge
-  title: elasticsearch.indices.segments.version-map-memory
 
 elasticsearch.indices.store.size:
   brief: Total size (in bytes)
@@ -810,19 +762,19 @@ elasticsearch.indices.warmer.current:
   metric_type: gauge
   title: elasticsearch.indices.warmer.current
 
-elasticsearch.indices.warmer.total-time:
-  brief: Total time spent by warmers
-  custom: true
-  description: Total time spent by warmers
-  metric_type: cumulative
-  title: elasticsearch.indices.warmer.total-time
-
 elasticsearch.indices.warmer.total:
   brief: Total number of warmers
   custom: true
   description: Total number of warmers
   metric_type: cumulative
   title: elasticsearch.indices.warmer.total
+
+elasticsearch.indices.warmer.total-time:
+  brief: Total time spent by warmers
+  custom: true
+  description: Total time spent by warmers
+  metric_type: cumulative
+  title: elasticsearch.indices.warmer.total-time
 
 elasticsearch.jvm.classes.current-loaded-count:
   brief: Number of classes currently loaded
@@ -929,19 +881,19 @@ elasticsearch.jvm.mem.heap-max:
   metric_type: gauge
   title: elasticsearch.jvm.mem.heap-max
 
-elasticsearch.jvm.mem.heap-used-percent:
-  brief: Percent of heap being used
-  custom: true
-  description: Percent of heap being used
-  metric_type: gauge
-  title: elasticsearch.jvm.mem.heap-used-percent
-
 elasticsearch.jvm.mem.heap-used:
   brief: Memory current being used by JVM heap (in bytes)
   custom: false
   description: Memory current being used by JVM heap (in bytes)
   metric_type: gauge
   title: elasticsearch.jvm.mem.heap-used
+
+elasticsearch.jvm.mem.heap-used-percent:
+  brief: Percent of heap being used
+  custom: true
+  description: Percent of heap being used
+  metric_type: gauge
+  title: elasticsearch.jvm.mem.heap-used-percent
 
 elasticsearch.jvm.mem.non-heap-committed:
   brief: Memory guaranteed to be available to JVM non-heap

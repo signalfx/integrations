@@ -1,0 +1,100 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+postgres_block_hit_ratio:
+  brief: The proportion (between 0 and 1, inclusive) of block reads that used the
+    cache and did not have to go to the disk
+  custom: false
+  description: The proportion (between 0 and 1, inclusive) of block reads that used
+    the cache and did not have to go to the disk.  Is sent for `table`, `index`, and
+    the `database` as a whole.
+  metric_type: gauge
+  title: postgres_block_hit_ratio
+
+postgres_database_size:
+  brief: Size in bytes of the database on disk
+  custom: false
+  description: Size in bytes of the database on disk
+  metric_type: gauge
+  title: postgres_database_size
+
+postgres_deadlocks:
+  brief: Total number of deadlocks detected by the system
+  custom: false
+  description: Total number of deadlocks detected by the system
+  metric_type: cumulative
+  title: postgres_deadlocks
+
+postgres_index_scans:
+  brief: Total number of index scans on the `table`
+  custom: false
+  description: Total number of index scans on the `table`.
+  metric_type: cumulative
+  title: postgres_index_scans
+
+postgres_live_rows:
+  brief: Number of rows live (not deleted) in the `table`
+  custom: false
+  description: Number of rows live (not deleted) in the `table`.
+  metric_type: gauge
+  title: postgres_live_rows
+
+postgres_query_count:
+  brief: Total number of queries executed on the `database`, broken down by `user`
+  custom: false
+  description: Total number of queries executed on the `database`, broken down by
+    `user`.  Note that the accuracy of this metric depends on the PostgreSQL [pg_stat_statements.max
+    config option](https://www.postgresql.org/docs/9.3/pgstatstatements.html#AEN160631)
+    being large enough to hold all queries.
+  metric_type: cumulative
+  title: postgres_query_count
+
+postgres_query_time:
+  brief: Total time taken to execute queries on the `database`, broken down by `user`
+  custom: false
+  description: Total time taken to execute queries on the `database`, broken down
+    by `user`.
+  metric_type: cumulative
+  title: postgres_query_time
+
+postgres_rows_deleted:
+  brief: Number of rows deleted from the `table`
+  custom: false
+  description: Number of rows deleted from the `table`.
+  metric_type: cumulative
+  title: postgres_rows_deleted
+
+postgres_rows_inserted:
+  brief: Number of rows inserted into the `table`
+  custom: false
+  description: Number of rows inserted into the `table`.
+  metric_type: cumulative
+  title: postgres_rows_inserted
+
+postgres_rows_updated:
+  brief: Number of rows updated in the `table`
+  custom: false
+  description: Number of rows updated in the `table`.
+  metric_type: cumulative
+  title: postgres_rows_updated
+
+postgres_sequential_scans:
+  brief: Total number of sequential scans on the `table`
+  custom: false
+  description: Total number of sequential scans on the `table`.
+  metric_type: cumulative
+  title: postgres_sequential_scans
+
+postgres_sessions:
+  brief: Number of sessions currently on the server instance
+  custom: false
+  description: Number of sessions currently on the server instance.  The `state` dimension
+    will specify which which type of session (see `state` row of [pg_stat_activity](https://www.postgresql.org/docs/9.2/monitoring-stats.html#PG-STAT-ACTIVITY-VIEW)).
+  metric_type: gauge
+  title: postgres_sessions
+
+postgres_table_size:
+  brief: The size in bytes of the `table` on disk
+  custom: false
+  description: The size in bytes of the `table` on disk.
+  metric_type: gauge
+  title: postgres_table_size
+

@@ -1,0 +1,204 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+counter.etcd.leader.counts.fail:
+  brief: Total number of failed rpc requests to with a follower
+  custom: false
+  description: Total number of failed rpc requests to with a follower
+  metric_type: counter
+  title: counter.etcd.leader.counts.fail
+
+counter.etcd.leader.counts.success:
+  brief: Total number of successful rpc requests to with a follower
+  custom: false
+  description: Total number of successful rpc requests to with a follower
+  metric_type: counter
+  title: counter.etcd.leader.counts.success
+
+counter.etcd.self.recvappendreq.cnt:
+  brief: Total number of append requests received by a member
+  custom: false
+  description: Total number of append requests received by a member
+  metric_type: counter
+  title: counter.etcd.self.recvappendreq.cnt
+
+counter.etcd.self.sendappendreq.cnt:
+  brief: Total number of append requests sent by a member
+  custom: false
+  description: Total number of append requests sent by a member
+  metric_type: counter
+  title: counter.etcd.self.sendappendreq.cnt
+
+counter.etcd.store.compareanddelete.fail:
+  brief: Total number of failed compare-and-delete operations
+  custom: false
+  description: Total number of failed compare-and-delete operations
+  metric_type: counter
+  title: counter.etcd.store.compareanddelete.fail
+
+counter.etcd.store.compareanddelete.success:
+  brief: Total number of successful compare-and-delete operations
+  custom: false
+  description: Total number of successful compare-and-delete operations
+  metric_type: counter
+  title: counter.etcd.store.compareanddelete.success
+
+counter.etcd.store.compareandswap.fail:
+  brief: Total number of failed compare-and-swap operations
+  custom: false
+  description: Total number of failed compare-and-swap operations
+  metric_type: counter
+  title: counter.etcd.store.compareandswap.fail
+
+counter.etcd.store.compareandswap.success:
+  brief: Total number of successful compare-and-swap operations
+  custom: false
+  description: Total number of successful compare-and-swap operations
+  metric_type: counter
+  title: counter.etcd.store.compareandswap.success
+
+counter.etcd.store.create.fail:
+  brief: Total number of failed create operations
+  custom: false
+  description: Total number of failed create operations
+  metric_type: counter
+  title: counter.etcd.store.create.fail
+
+counter.etcd.store.create.success:
+  brief: Total number of successful create operations
+  custom: false
+  description: Total number of successful create operations
+  metric_type: counter
+  title: counter.etcd.store.create.success
+
+counter.etcd.store.delete.fail:
+  brief: Total number of failed delete operations
+  custom: false
+  description: Total number of failed delete operations
+  metric_type: counter
+  title: counter.etcd.store.delete.fail
+
+counter.etcd.store.delete.success:
+  brief: Total number of successful delete operations
+  custom: false
+  description: Total number of successful delete operations
+  metric_type: counter
+  title: counter.etcd.store.delete.success
+
+counter.etcd.store.expire.count:
+  brief: Total number of items expired due to TTL
+  custom: false
+  description: Total number of items expired due to TTL
+  metric_type: counter
+  title: counter.etcd.store.expire.count
+
+counter.etcd.store.gets.fail:
+  brief: Total number of failed get operations
+  custom: false
+  description: Total number of failed get operations
+  metric_type: counter
+  title: counter.etcd.store.gets.fail
+
+counter.etcd.store.gets.success:
+  brief: Total number of successful get operations
+  custom: false
+  description: Total number of successful get operations
+  metric_type: counter
+  title: counter.etcd.store.gets.success
+
+counter.etcd.store.sets.fail:
+  brief: Total number of failed set operations
+  custom: false
+  description: Total number of failed set operations
+  metric_type: counter
+  title: counter.etcd.store.sets.fail
+
+counter.etcd.store.sets.success:
+  brief: Total number of successful set operations
+  custom: false
+  description: Total number of successful set operations
+  metric_type: counter
+  title: counter.etcd.store.sets.success
+
+counter.etcd.store.update.fail:
+  brief: Total number of failed update operations
+  custom: false
+  description: Total number of failed update operations
+  metric_type: counter
+  title: counter.etcd.store.update.fail
+
+counter.etcd.store.update.success:
+  brief: Total number of successful update operations
+  custom: false
+  description: Total number of successful update operations
+  metric_type: counter
+  title: counter.etcd.store.update.success
+
+gauge.etcd.leader.latency.average:
+  brief: Average latency of a follower with respect to the leader
+  custom: true
+  description: Average latency of a follower with respect to the leader
+  metric_type: gauge
+  title: gauge.etcd.leader.latency.average
+
+gauge.etcd.leader.latency.current:
+  brief: Current latency of a follower with respect to the leader
+  custom: false
+  description: Current latency of a follower with respect to the leader
+  metric_type: gauge
+  title: gauge.etcd.leader.latency.current
+
+gauge.etcd.leader.latency.max:
+  brief: Max latency of a follower with respect to the leader
+  custom: true
+  description: Max latency of a follower with respect to the leader
+  metric_type: gauge
+  title: gauge.etcd.leader.latency.max
+
+gauge.etcd.leader.latency.min:
+  brief: Min latency of a follower with respect to the leader
+  custom: true
+  description: Min latency of a follower with respect to the leader
+  metric_type: gauge
+  title: gauge.etcd.leader.latency.min
+
+gauge.etcd.leader.latency.stddev:
+  brief: Std dev latency of a follower with respect to the leader
+  custom: true
+  description: Std dev latency of a follower with respect to the leader
+  metric_type: gauge
+  title: gauge.etcd.leader.latency.stddev
+
+gauge.etcd.self.recvbandwidth.rate:
+  brief: Bandwidth rate of a follower
+  custom: false
+  description: Bandwidth rate of a follower
+  metric_type: gauge
+  title: gauge.etcd.self.recvbandwidth.rate
+
+gauge.etcd.self.recvpkg.rate:
+  brief: Rate at which a follower receives packages
+  custom: false
+  description: Rate at which a follower receives packages
+  metric_type: gauge
+  title: gauge.etcd.self.recvpkg.rate
+
+gauge.etcd.self.sendbandwidth.rate:
+  brief: Bandwidth rate of a leader
+  custom: false
+  description: Bandwidth rate of a leader
+  metric_type: gauge
+  title: gauge.etcd.self.sendbandwidth.rate
+
+gauge.etcd.self.sendpkg.rate:
+  brief: Rate at which a leader sends packages
+  custom: false
+  description: Rate at which a leader sends packages
+  metric_type: gauge
+  title: gauge.etcd.self.sendpkg.rate
+
+gauge.etcd.store.watchers:
+  brief: Number of watchers
+  custom: false
+  description: Number of watchers
+  metric_type: gauge
+  title: gauge.etcd.store.watchers
+

@@ -1,0 +1,895 @@
+connectedclients:
+  title: connectedclients
+  metric_type:
+  brief: Connected Clients
+  description: ShardId
+totalcommandsprocessed:
+  title: totalcommandsprocessed
+  metric_type:
+  brief: Total Operations
+  description: ShardId
+cachehits:
+  title: cachehits
+  metric_type:
+  brief: Cache Hits
+  description: ShardId
+cachemisses:
+  title: cachemisses
+  metric_type:
+  brief: Cache Misses
+  description: ShardId
+getcommands:
+  title: getcommands
+  metric_type:
+  brief: Gets
+  description: ShardId
+setcommands:
+  title: setcommands
+  metric_type:
+  brief: Sets
+  description: ShardId
+operationsPerSecond:
+  title: operationsPerSecond
+  metric_type:
+  brief: Operations Per Second
+  description: ShardId
+evictedkeys:
+  title: evictedkeys
+  metric_type:
+  brief: Evicted Keys
+  description: ShardId
+totalkeys:
+  title: totalkeys
+  metric_type:
+  brief: Total Keys
+  description: ShardId
+expiredkeys:
+  title: expiredkeys
+  metric_type:
+  brief: Expired Keys
+  description: ShardId
+usedmemory:
+  title: usedmemory
+  metric_type:
+  brief: Used Memory
+  description: ShardId
+usedmemorypercentage:
+  title: usedmemorypercentage
+  metric_type:
+  brief: Used Memory Percentage
+  description: ShardId
+usedmemoryRss:
+  title: usedmemoryRss
+  metric_type:
+  brief: Used Memory RSS
+  description: ShardId
+serverLoad:
+  title: serverLoad
+  metric_type:
+  brief: Server Load
+  description: ShardId
+cacheWrite:
+  title: cacheWrite
+  metric_type:
+  brief: Cache Write
+  description: ShardId
+cacheRead:
+  title: cacheRead
+  metric_type:
+  brief: Cache Read
+  description: ShardId
+percentProcessorTime:
+  title: percentProcessorTime
+  metric_type:
+  brief: CPU
+  description: ShardId
+cacheLatency:
+  title: cacheLatency
+  metric_type:
+  brief: Cache Latency Microseconds (Preview)
+  description: ShardId, SampleType
+errors:
+  title: errors
+  metric_type:
+  brief: Errors
+  description: ShardId, ErrorType
+connectedclients0:
+  title: connectedclients0
+  metric_type:
+  brief: Connected Clients (Shard 0)
+  description: No Dimensions
+totalcommandsprocessed0:
+  title: totalcommandsprocessed0
+  metric_type:
+  brief: Total Operations (Shard 0)
+  description: No Dimensions
+cachehits0:
+  title: cachehits0
+  metric_type:
+  brief: Cache Hits (Shard 0)
+  description: No Dimensions
+cachemisses0:
+  title: cachemisses0
+  metric_type:
+  brief: Cache Misses (Shard 0)
+  description: No Dimensions
+getcommands0:
+  title: getcommands0
+  metric_type:
+  brief: Gets (Shard 0)
+  description: No Dimensions
+setcommands0:
+  title: setcommands0
+  metric_type:
+  brief: Sets (Shard 0)
+  description: No Dimensions
+operationsPerSecond0:
+  title: operationsPerSecond0
+  metric_type:
+  brief: Operations Per Second (Shard 0)
+  description: No Dimensions
+evictedkeys0:
+  title: evictedkeys0
+  metric_type:
+  brief: Evicted Keys (Shard 0)
+  description: No Dimensions
+totalkeys0:
+  title: totalkeys0
+  metric_type:
+  brief: Total Keys (Shard 0)
+  description: No Dimensions
+expiredkeys0:
+  title: expiredkeys0
+  metric_type:
+  brief: Expired Keys (Shard 0)
+  description: No Dimensions
+usedmemory0:
+  title: usedmemory0
+  metric_type:
+  brief: Used Memory (Shard 0)
+  description: No Dimensions
+usedmemoryRss0:
+  title: usedmemoryRss0
+  metric_type:
+  brief: Used Memory RSS (Shard 0)
+  description: No Dimensions
+serverLoad0:
+  title: serverLoad0
+  metric_type:
+  brief: Server Load (Shard 0)
+  description: No Dimensions
+cacheWrite0:
+  title: cacheWrite0
+  metric_type:
+  brief: Cache Write (Shard 0)
+  description: No Dimensions
+cacheRead0:
+  title: cacheRead0
+  metric_type:
+  brief: Cache Read (Shard 0)
+  description: No Dimensions
+percentProcessorTime0:
+  title: percentProcessorTime0
+  metric_type:
+  brief: CPU (Shard 0)
+  description: No Dimensions
+connectedclients1:
+  title: connectedclients1
+  metric_type:
+  brief: Connected Clients (Shard 1)
+  description: No Dimensions
+totalcommandsprocessed1:
+  title: totalcommandsprocessed1
+  metric_type:
+  brief: Total Operations (Shard 1)
+  description: No Dimensions
+cachehits1:
+  title: cachehits1
+  metric_type:
+  brief: Cache Hits (Shard 1)
+  description: No Dimensions
+cachemisses1:
+  title: cachemisses1
+  metric_type:
+  brief: Cache Misses (Shard 1)
+  description: No Dimensions
+getcommands1:
+  title: getcommands1
+  metric_type:
+  brief: Gets (Shard 1)
+  description: No Dimensions
+setcommands1:
+  title: setcommands1
+  metric_type:
+  brief: Sets (Shard 1)
+  description: No Dimensions
+operationsPerSecond1:
+  title: operationsPerSecond1
+  metric_type:
+  brief: Operations Per Second (Shard 1)
+  description: No Dimensions
+evictedkeys1:
+  title: evictedkeys1
+  metric_type:
+  brief: Evicted Keys (Shard 1)
+  description: No Dimensions
+totalkeys1:
+  title: totalkeys1
+  metric_type:
+  brief: Total Keys (Shard 1)
+  description: No Dimensions
+expiredkeys1:
+  title: expiredkeys1
+  metric_type:
+  brief: Expired Keys (Shard 1)
+  description: No Dimensions
+usedmemory1:
+  title: usedmemory1
+  metric_type:
+  brief: Used Memory (Shard 1)
+  description: No Dimensions
+usedmemoryRss1:
+  title: usedmemoryRss1
+  metric_type:
+  brief: Used Memory RSS (Shard 1)
+  description: No Dimensions
+serverLoad1:
+  title: serverLoad1
+  metric_type:
+  brief: Server Load (Shard 1)
+  description: No Dimensions
+cacheWrite1:
+  title: cacheWrite1
+  metric_type:
+  brief: Cache Write (Shard 1)
+  description: No Dimensions
+cacheRead1:
+  title: cacheRead1
+  metric_type:
+  brief: Cache Read (Shard 1)
+  description: No Dimensions
+percentProcessorTime1:
+  title: percentProcessorTime1
+  metric_type:
+  brief: CPU (Shard 1)
+  description: No Dimensions
+connectedclients2:
+  title: connectedclients2
+  metric_type:
+  brief: Connected Clients (Shard 2)
+  description: No Dimensions
+totalcommandsprocessed2:
+  title: totalcommandsprocessed2
+  metric_type:
+  brief: Total Operations (Shard 2)
+  description: No Dimensions
+cachehits2:
+  title: cachehits2
+  metric_type:
+  brief: Cache Hits (Shard 2)
+  description: No Dimensions
+cachemisses2:
+  title: cachemisses2
+  metric_type:
+  brief: Cache Misses (Shard 2)
+  description: No Dimensions
+getcommands2:
+  title: getcommands2
+  metric_type:
+  brief: Gets (Shard 2)
+  description: No Dimensions
+setcommands2:
+  title: setcommands2
+  metric_type:
+  brief: Sets (Shard 2)
+  description: No Dimensions
+operationsPerSecond2:
+  title: operationsPerSecond2
+  metric_type:
+  brief: Operations Per Second (Shard 2)
+  description: No Dimensions
+evictedkeys2:
+  title: evictedkeys2
+  metric_type:
+  brief: Evicted Keys (Shard 2)
+  description: No Dimensions
+totalkeys2:
+  title: totalkeys2
+  metric_type:
+  brief: Total Keys (Shard 2)
+  description: No Dimensions
+expiredkeys2:
+  title: expiredkeys2
+  metric_type:
+  brief: Expired Keys (Shard 2)
+  description: No Dimensions
+usedmemory2:
+  title: usedmemory2
+  metric_type:
+  brief: Used Memory (Shard 2)
+  description: No Dimensions
+usedmemoryRss2:
+  title: usedmemoryRss2
+  metric_type:
+  brief: Used Memory RSS (Shard 2)
+  description: No Dimensions
+serverLoad2:
+  title: serverLoad2
+  metric_type:
+  brief: Server Load (Shard 2)
+  description: No Dimensions
+cacheWrite2:
+  title: cacheWrite2
+  metric_type:
+  brief: Cache Write (Shard 2)
+  description: No Dimensions
+cacheRead2:
+  title: cacheRead2
+  metric_type:
+  brief: Cache Read (Shard 2)
+  description: No Dimensions
+percentProcessorTime2:
+  title: percentProcessorTime2
+  metric_type:
+  brief: CPU (Shard 2)
+  description: No Dimensions
+connectedclients3:
+  title: connectedclients3
+  metric_type:
+  brief: Connected Clients (Shard 3)
+  description: No Dimensions
+totalcommandsprocessed3:
+  title: totalcommandsprocessed3
+  metric_type:
+  brief: Total Operations (Shard 3)
+  description: No Dimensions
+cachehits3:
+  title: cachehits3
+  metric_type:
+  brief: Cache Hits (Shard 3)
+  description: No Dimensions
+cachemisses3:
+  title: cachemisses3
+  metric_type:
+  brief: Cache Misses (Shard 3)
+  description: No Dimensions
+getcommands3:
+  title: getcommands3
+  metric_type:
+  brief: Gets (Shard 3)
+  description: No Dimensions
+setcommands3:
+  title: setcommands3
+  metric_type:
+  brief: Sets (Shard 3)
+  description: No Dimensions
+operationsPerSecond3:
+  title: operationsPerSecond3
+  metric_type:
+  brief: Operations Per Second (Shard 3)
+  description: No Dimensions
+evictedkeys3:
+  title: evictedkeys3
+  metric_type:
+  brief: Evicted Keys (Shard 3)
+  description: No Dimensions
+totalkeys3:
+  title: totalkeys3
+  metric_type:
+  brief: Total Keys (Shard 3)
+  description: No Dimensions
+expiredkeys3:
+  title: expiredkeys3
+  metric_type:
+  brief: Expired Keys (Shard 3)
+  description: No Dimensions
+usedmemory3:
+  title: usedmemory3
+  metric_type:
+  brief: Used Memory (Shard 3)
+  description: No Dimensions
+usedmemoryRss3:
+  title: usedmemoryRss3
+  metric_type:
+  brief: Used Memory RSS (Shard 3)
+  description: No Dimensions
+serverLoad3:
+  title: serverLoad3
+  metric_type:
+  brief: Server Load (Shard 3)
+  description: No Dimensions
+cacheWrite3:
+  title: cacheWrite3
+  metric_type:
+  brief: Cache Write (Shard 3)
+  description: No Dimensions
+cacheRead3:
+  title: cacheRead3
+  metric_type:
+  brief: Cache Read (Shard 3)
+  description: No Dimensions
+percentProcessorTime3:
+  title: percentProcessorTime3
+  metric_type:
+  brief: CPU (Shard 3)
+  description: No Dimensions
+connectedclients4:
+  title: connectedclients4
+  metric_type:
+  brief: Connected Clients (Shard 4)
+  description: No Dimensions
+totalcommandsprocessed4:
+  title: totalcommandsprocessed4
+  metric_type:
+  brief: Total Operations (Shard 4)
+  description: No Dimensions
+cachehits4:
+  title: cachehits4
+  metric_type:
+  brief: Cache Hits (Shard 4)
+  description: No Dimensions
+cachemisses4:
+  title: cachemisses4
+  metric_type:
+  brief: Cache Misses (Shard 4)
+  description: No Dimensions
+getcommands4:
+  title: getcommands4
+  metric_type:
+  brief: Gets (Shard 4)
+  description: No Dimensions
+setcommands4:
+  title: setcommands4
+  metric_type:
+  brief: Sets (Shard 4)
+  description: No Dimensions
+operationsPerSecond4:
+  title: operationsPerSecond4
+  metric_type:
+  brief: Operations Per Second (Shard 4)
+  description: No Dimensions
+evictedkeys4:
+  title: evictedkeys4
+  metric_type:
+  brief: Evicted Keys (Shard 4)
+  description: No Dimensions
+totalkeys4:
+  title: totalkeys4
+  metric_type:
+  brief: Total Keys (Shard 4)
+  description: No Dimensions
+expiredkeys4:
+  title: expiredkeys4
+  metric_type:
+  brief: Expired Keys (Shard 4)
+  description: No Dimensions
+usedmemory4:
+  title: usedmemory4
+  metric_type:
+  brief: Used Memory (Shard 4)
+  description: No Dimensions
+usedmemoryRss4:
+  title: usedmemoryRss4
+  metric_type:
+  brief: Used Memory RSS (Shard 4)
+  description: No Dimensions
+serverLoad4:
+  title: serverLoad4
+  metric_type:
+  brief: Server Load (Shard 4)
+  description: No Dimensions
+cacheWrite4:
+  title: cacheWrite4
+  metric_type:
+  brief: Cache Write (Shard 4)
+  description: No Dimensions
+cacheRead4:
+  title: cacheRead4
+  metric_type:
+  brief: Cache Read (Shard 4)
+  description: No Dimensions
+percentProcessorTime4:
+  title: percentProcessorTime4
+  metric_type:
+  brief: CPU (Shard 4)
+  description: No Dimensions
+connectedclients5:
+  title: connectedclients5
+  metric_type:
+  brief: Connected Clients (Shard 5)
+  description: No Dimensions
+totalcommandsprocessed5:
+  title: totalcommandsprocessed5
+  metric_type:
+  brief: Total Operations (Shard 5)
+  description: No Dimensions
+cachehits5:
+  title: cachehits5
+  metric_type:
+  brief: Cache Hits (Shard 5)
+  description: No Dimensions
+cachemisses5:
+  title: cachemisses5
+  metric_type:
+  brief: Cache Misses (Shard 5)
+  description: No Dimensions
+getcommands5:
+  title: getcommands5
+  metric_type:
+  brief: Gets (Shard 5)
+  description: No Dimensions
+setcommands5:
+  title: setcommands5
+  metric_type:
+  brief: Sets (Shard 5)
+  description: No Dimensions
+operationsPerSecond5:
+  title: operationsPerSecond5
+  metric_type:
+  brief: Operations Per Second (Shard 5)
+  description: No Dimensions
+evictedkeys5:
+  title: evictedkeys5
+  metric_type:
+  brief: Evicted Keys (Shard 5)
+  description: No Dimensions
+totalkeys5:
+  title: totalkeys5
+  metric_type:
+  brief: Total Keys (Shard 5)
+  description: No Dimensions
+expiredkeys5:
+  title: expiredkeys5
+  metric_type:
+  brief: Expired Keys (Shard 5)
+  description: No Dimensions
+usedmemory5:
+  title: usedmemory5
+  metric_type:
+  brief: Used Memory (Shard 5)
+  description: No Dimensions
+usedmemoryRss5:
+  title: usedmemoryRss5
+  metric_type:
+  brief: Used Memory RSS (Shard 5)
+  description: No Dimensions
+serverLoad5:
+  title: serverLoad5
+  metric_type:
+  brief: Server Load (Shard 5)
+  description: No Dimensions
+cacheWrite5:
+  title: cacheWrite5
+  metric_type:
+  brief: Cache Write (Shard 5)
+  description: No Dimensions
+cacheRead5:
+  title: cacheRead5
+  metric_type:
+  brief: Cache Read (Shard 5)
+  description: No Dimensions
+percentProcessorTime5:
+  title: percentProcessorTime5
+  metric_type:
+  brief: CPU (Shard 5)
+  description: No Dimensions
+connectedclients6:
+  title: connectedclients6
+  metric_type:
+  brief: Connected Clients (Shard 6)
+  description: No Dimensions
+totalcommandsprocessed6:
+  title: totalcommandsprocessed6
+  metric_type:
+  brief: Total Operations (Shard 6)
+  description: No Dimensions
+cachehits6:
+  title: cachehits6
+  metric_type:
+  brief: Cache Hits (Shard 6)
+  description: No Dimensions
+cachemisses6:
+  title: cachemisses6
+  metric_type:
+  brief: Cache Misses (Shard 6)
+  description: No Dimensions
+getcommands6:
+  title: getcommands6
+  metric_type:
+  brief: Gets (Shard 6)
+  description: No Dimensions
+setcommands6:
+  title: setcommands6
+  metric_type:
+  brief: Sets (Shard 6)
+  description: No Dimensions
+operationsPerSecond6:
+  title: operationsPerSecond6
+  metric_type:
+  brief: Operations Per Second (Shard 6)
+  description: No Dimensions
+evictedkeys6:
+  title: evictedkeys6
+  metric_type:
+  brief: Evicted Keys (Shard 6)
+  description: No Dimensions
+totalkeys6:
+  title: totalkeys6
+  metric_type:
+  brief: Total Keys (Shard 6)
+  description: No Dimensions
+expiredkeys6:
+  title: expiredkeys6
+  metric_type:
+  brief: Expired Keys (Shard 6)
+  description: No Dimensions
+usedmemory6:
+  title: usedmemory6
+  metric_type:
+  brief: Used Memory (Shard 6)
+  description: No Dimensions
+usedmemoryRss6:
+  title: usedmemoryRss6
+  metric_type:
+  brief: Used Memory RSS (Shard 6)
+  description: No Dimensions
+serverLoad6:
+  title: serverLoad6
+  metric_type:
+  brief: Server Load (Shard 6)
+  description: No Dimensions
+cacheWrite6:
+  title: cacheWrite6
+  metric_type:
+  brief: Cache Write (Shard 6)
+  description: No Dimensions
+cacheRead6:
+  title: cacheRead6
+  metric_type:
+  brief: Cache Read (Shard 6)
+  description: No Dimensions
+percentProcessorTime6:
+  title: percentProcessorTime6
+  metric_type:
+  brief: CPU (Shard 6)
+  description: No Dimensions
+connectedclients7:
+  title: connectedclients7
+  metric_type:
+  brief: Connected Clients (Shard 7)
+  description: No Dimensions
+totalcommandsprocessed7:
+  title: totalcommandsprocessed7
+  metric_type:
+  brief: Total Operations (Shard 7)
+  description: No Dimensions
+cachehits7:
+  title: cachehits7
+  metric_type:
+  brief: Cache Hits (Shard 7)
+  description: No Dimensions
+cachemisses7:
+  title: cachemisses7
+  metric_type:
+  brief: Cache Misses (Shard 7)
+  description: No Dimensions
+getcommands7:
+  title: getcommands7
+  metric_type:
+  brief: Gets (Shard 7)
+  description: No Dimensions
+setcommands7:
+  title: setcommands7
+  metric_type:
+  brief: Sets (Shard 7)
+  description: No Dimensions
+operationsPerSecond7:
+  title: operationsPerSecond7
+  metric_type:
+  brief: Operations Per Second (Shard 7)
+  description: No Dimensions
+evictedkeys7:
+  title: evictedkeys7
+  metric_type:
+  brief: Evicted Keys (Shard 7)
+  description: No Dimensions
+totalkeys7:
+  title: totalkeys7
+  metric_type:
+  brief: Total Keys (Shard 7)
+  description: No Dimensions
+expiredkeys7:
+  title: expiredkeys7
+  metric_type:
+  brief: Expired Keys (Shard 7)
+  description: No Dimensions
+usedmemory7:
+  title: usedmemory7
+  metric_type:
+  brief: Used Memory (Shard 7)
+  description: No Dimensions
+usedmemoryRss7:
+  title: usedmemoryRss7
+  metric_type:
+  brief: Used Memory RSS (Shard 7)
+  description: No Dimensions
+serverLoad7:
+  title: serverLoad7
+  metric_type:
+  brief: Server Load (Shard 7)
+  description: No Dimensions
+cacheWrite7:
+  title: cacheWrite7
+  metric_type:
+  brief: Cache Write (Shard 7)
+  description: No Dimensions
+cacheRead7:
+  title: cacheRead7
+  metric_type:
+  brief: Cache Read (Shard 7)
+  description: No Dimensions
+percentProcessorTime7:
+  title: percentProcessorTime7
+  metric_type:
+  brief: CPU (Shard 7)
+  description: No Dimensions
+connectedclients8:
+  title: connectedclients8
+  metric_type:
+  brief: Connected Clients (Shard 8)
+  description: No Dimensions
+totalcommandsprocessed8:
+  title: totalcommandsprocessed8
+  metric_type:
+  brief: Total Operations (Shard 8)
+  description: No Dimensions
+cachehits8:
+  title: cachehits8
+  metric_type:
+  brief: Cache Hits (Shard 8)
+  description: No Dimensions
+cachemisses8:
+  title: cachemisses8
+  metric_type:
+  brief: Cache Misses (Shard 8)
+  description: No Dimensions
+getcommands8:
+  title: getcommands8
+  metric_type:
+  brief: Gets (Shard 8)
+  description: No Dimensions
+setcommands8:
+  title: setcommands8
+  metric_type:
+  brief: Sets (Shard 8)
+  description: No Dimensions
+operationsPerSecond8:
+  title: operationsPerSecond8
+  metric_type:
+  brief: Operations Per Second (Shard 8)
+  description: No Dimensions
+evictedkeys8:
+  title: evictedkeys8
+  metric_type:
+  brief: Evicted Keys (Shard 8)
+  description: No Dimensions
+totalkeys8:
+  title: totalkeys8
+  metric_type:
+  brief: Total Keys (Shard 8)
+  description: No Dimensions
+expiredkeys8:
+  title: expiredkeys8
+  metric_type:
+  brief: Expired Keys (Shard 8)
+  description: No Dimensions
+usedmemory8:
+  title: usedmemory8
+  metric_type:
+  brief: Used Memory (Shard 8)
+  description: No Dimensions
+usedmemoryRss8:
+  title: usedmemoryRss8
+  metric_type:
+  brief: Used Memory RSS (Shard 8)
+  description: No Dimensions
+serverLoad8:
+  title: serverLoad8
+  metric_type:
+  brief: Server Load (Shard 8)
+  description: No Dimensions
+cacheWrite8:
+  title: cacheWrite8
+  metric_type:
+  brief: Cache Write (Shard 8)
+  description: No Dimensions
+cacheRead8:
+  title: cacheRead8
+  metric_type:
+  brief: Cache Read (Shard 8)
+  description: No Dimensions
+percentProcessorTime8:
+  title: percentProcessorTime8
+  metric_type:
+  brief: CPU (Shard 8)
+  description: No Dimensions
+connectedclients9:
+  title: connectedclients9
+  metric_type:
+  brief: Connected Clients (Shard 9)
+  description: No Dimensions
+totalcommandsprocessed9:
+  title: totalcommandsprocessed9
+  metric_type:
+  brief: Total Operations (Shard 9)
+  description: No Dimensions
+cachehits9:
+  title: cachehits9
+  metric_type:
+  brief: Cache Hits (Shard 9)
+  description: No Dimensions
+cachemisses9:
+  title: cachemisses9
+  metric_type:
+  brief: Cache Misses (Shard 9)
+  description: No Dimensions
+getcommands9:
+  title: getcommands9
+  metric_type:
+  brief: Gets (Shard 9)
+  description: No Dimensions
+setcommands9:
+  title: setcommands9
+  metric_type:
+  brief: Sets (Shard 9)
+  description: No Dimensions
+operationsPerSecond9:
+  title: operationsPerSecond9
+  metric_type:
+  brief: Operations Per Second (Shard 9)
+  description: No Dimensions
+evictedkeys9:
+  title: evictedkeys9
+  metric_type:
+  brief: Evicted Keys (Shard 9)
+  description: No Dimensions
+totalkeys9:
+  title: totalkeys9
+  metric_type:
+  brief: Total Keys (Shard 9)
+  description: No Dimensions
+expiredkeys9:
+  title: expiredkeys9
+  metric_type:
+  brief: Expired Keys (Shard 9)
+  description: No Dimensions
+usedmemory9:
+  title: usedmemory9
+  metric_type:
+  brief: Used Memory (Shard 9)
+  description: No Dimensions
+usedmemoryRss9:
+  title: usedmemoryRss9
+  metric_type:
+  brief: Used Memory RSS (Shard 9)
+  description: No Dimensions
+serverLoad9:
+  title: serverLoad9
+  metric_type:
+  brief: Server Load (Shard 9)
+  description: No Dimensions
+cacheWrite9:
+  title: cacheWrite9
+  metric_type:
+  brief: Cache Write (Shard 9)
+  description: No Dimensions
+cacheRead9:
+  title: cacheRead9
+  metric_type:
+  brief: Cache Read (Shard 9)
+  description: No Dimensions
+percentProcessorTime9:
+  title: percentProcessorTime9
+  metric_type:
+  brief: CPU (Shard 9)
+  description: No Dimensions

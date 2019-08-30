@@ -111,7 +111,7 @@ Using the example configuration file <a target="_blank" href="https://github.com
 
 #### Configuration Examples
 
-```apache
+```yaml
 config:
   - host: 192.168.1.60
     username: administrator@vsphere.local
@@ -137,7 +137,7 @@ config:
 
 The application can be configured to collect metrics from multiple VCenters in the following manner.
 
-```apache
+```yaml
 config:
   - host: 192.168.1.60
     username: administrator@vsphere.local

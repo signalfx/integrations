@@ -1,0 +1,206 @@
+Percentage CPU:
+  title: Percentage CPU
+  metric_type:
+  brief: Percentage CPU
+  description: The percentage of allocated compute units that are currently in use
+    by the Virtual Machine(s)
+Network In:
+  title: Network In
+  metric_type:
+  brief: Network In Billable
+  description: The number of billable bytes received on all network interfaces by
+    the Virtual Machine(s) (Incoming Traffic)
+Network Out:
+  title: Network Out
+  metric_type:
+  brief: Network Out Billable
+  description: The number of billable bytes out on all network interfaces by the Virtual
+    Machine(s) (Outgoing Traffic)
+Disk Read Bytes:
+  title: Disk Read Bytes
+  metric_type:
+  brief: Disk Read Bytes
+  description: Bytes read from disk during monitoring period
+Disk Write Bytes:
+  title: Disk Write Bytes
+  metric_type:
+  brief: Disk Write Bytes
+  description: Bytes written to disk during monitoring period
+Disk Read Operations/Sec:
+  title: Disk Read Operations/Sec
+  metric_type:
+  brief: Disk Read Operations/Sec
+  description: Disk Read IOPS
+Disk Write Operations/Sec:
+  title: Disk Write Operations/Sec
+  metric_type:
+  brief: Disk Write Operations/Sec
+  description: Disk Write IOPS
+CPU Credits Remaining:
+  title: CPU Credits Remaining
+  metric_type:
+  brief: CPU Credits Remaining
+  description: Total number of credits available to burst
+CPU Credits Consumed:
+  title: CPU Credits Consumed
+  metric_type:
+  brief: CPU Credits Consumed
+  description: Total number of credits consumed by the Virtual Machine
+Per Disk Read Bytes/sec:
+  title: Per Disk Read Bytes/sec
+  metric_type:
+  brief: Data Disk Read Bytes/Sec (Deprecated)
+  description: Bytes/Sec read from a single disk during monitoring period
+Per Disk Write Bytes/sec:
+  title: Per Disk Write Bytes/sec
+  metric_type:
+  brief: Data Disk Write Bytes/Sec (Deprecated)
+  description: Bytes/Sec written to a single disk during monitoring period
+Per Disk Read Operations/Sec:
+  title: Per Disk Read Operations/Sec
+  metric_type:
+  brief: Data Disk Read Operations/Sec (Deprecated)
+  description: Read IOPS from a single disk during monitoring period
+Per Disk Write Operations/Sec:
+  title: Per Disk Write Operations/Sec
+  metric_type:
+  brief: Data Disk Write Operations/Sec (Deprecated)
+  description: Write IOPS from a single disk during monitoring period
+Per Disk QD:
+  title: Per Disk QD
+  metric_type:
+  brief: Data Disk QD (Deprecated)
+  description: Data Disk Queue Depth(or Queue Length)
+OS Per Disk Read Bytes/sec:
+  title: OS Per Disk Read Bytes/sec
+  metric_type:
+  brief: OS Disk Read Bytes/Sec (Deprecated)
+  description: Bytes/Sec read from a single disk during monitoring period for OS disk
+OS Per Disk Write Bytes/sec:
+  title: OS Per Disk Write Bytes/sec
+  metric_type:
+  brief: OS Disk Write Bytes/Sec (Deprecated)
+  description: Bytes/Sec written to a single disk during monitoring period for OS
+    disk
+OS Per Disk Read Operations/Sec:
+  title: OS Per Disk Read Operations/Sec
+  metric_type:
+  brief: OS Disk Read Operations/Sec (Deprecated)
+  description: Read IOPS from a single disk during monitoring period for OS disk
+OS Per Disk Write Operations/Sec:
+  title: OS Per Disk Write Operations/Sec
+  metric_type:
+  brief: OS Disk Write Operations/Sec (Deprecated)
+  description: Write IOPS from a single disk during monitoring period for OS disk
+OS Per Disk QD:
+  title: OS Per Disk QD
+  metric_type:
+  brief: OS Disk QD (Deprecated)
+  description: OS Disk Queue Depth(or Queue Length)
+Data Disk Read Bytes/sec:
+  title: Data Disk Read Bytes/sec
+  metric_type:
+  brief: Data Disk Read Bytes/Sec (Preview)
+  description: Bytes/Sec read from a single disk during monitoring period
+Data Disk Write Bytes/sec:
+  title: Data Disk Write Bytes/sec
+  metric_type:
+  brief: Data Disk Write Bytes/Sec (Preview)
+  description: Bytes/Sec written to a single disk during monitoring period
+Data Disk Read Operations/Sec:
+  title: Data Disk Read Operations/Sec
+  metric_type:
+  brief: Data Disk Read Operations/Sec (Preview)
+  description: Read IOPS from a single disk during monitoring period
+Data Disk Write Operations/Sec:
+  title: Data Disk Write Operations/Sec
+  metric_type:
+  brief: Data Disk Write Operations/Sec (Preview)
+  description: Write IOPS from a single disk during monitoring period
+Data Disk Queue Depth:
+  title: Data Disk Queue Depth
+  metric_type:
+  brief: Data Disk Queue Depth (Preview)
+  description: Data Disk Queue Depth(or Queue Length)
+OS Disk Read Bytes/sec:
+  title: OS Disk Read Bytes/sec
+  metric_type:
+  brief: OS Disk Read Bytes/Sec (Preview)
+  description: Bytes/Sec read from a single disk during monitoring period for OS disk
+OS Disk Write Bytes/sec:
+  title: OS Disk Write Bytes/sec
+  metric_type:
+  brief: OS Disk Write Bytes/Sec (Preview)
+  description: Bytes/Sec written to a single disk during monitoring period for OS
+    disk
+OS Disk Read Operations/Sec:
+  title: OS Disk Read Operations/Sec
+  metric_type:
+  brief: OS Disk Read Operations/Sec (Preview)
+  description: Read IOPS from a single disk during monitoring period for OS disk
+OS Disk Write Operations/Sec:
+  title: OS Disk Write Operations/Sec
+  metric_type:
+  brief: OS Disk Write Operations/Sec (Preview)
+  description: Write IOPS from a single disk during monitoring period for OS disk
+OS Disk Queue Depth:
+  title: OS Disk Queue Depth
+  metric_type:
+  brief: OS Disk Queue Depth (Preview)
+  description: OS Disk Queue Depth(or Queue Length)
+Inbound Flows:
+  title: Inbound Flows
+  metric_type:
+  brief: Inbound Flows (Preview)
+  description: Inbound Flows are number of current flows in the inbound direction
+    (traffic going into the VM)
+Outbound Flows:
+  title: Outbound Flows
+  metric_type:
+  brief: Outbound Flows (Preview)
+  description: Outbound Flows are number of current flows in the outbound direction
+    (traffic going out of the VM)
+Inbound Flows Maximum Creation Rate:
+  title: Inbound Flows Maximum Creation Rate
+  metric_type:
+  brief: Inbound Flows Maximum Creation Rate (Preview)
+  description: The maximum creation rate of inbound flows (traffic going into the
+    VM)
+Outbound Flows Maximum Creation Rate:
+  title: Outbound Flows Maximum Creation Rate
+  metric_type:
+  brief: Outbound Flows Maximum Creation Rate (Preview)
+  description: The maximum creation rate of outbound flows (traffic going out of the
+    VM)
+Premium Data Disk Cache Read Hit:
+  title: Premium Data Disk Cache Read Hit
+  metric_type:
+  brief: Premium Data Disk Cache Read Hit (Preview)
+  description: Premium Data Disk Cache Read Hit
+Premium Data Disk Cache Read Miss:
+  title: Premium Data Disk Cache Read Miss
+  metric_type:
+  brief: Premium Data Disk Cache Read Miss (Preview)
+  description: Premium Data Disk Cache Read Miss
+Premium OS Disk Cache Read Hit:
+  title: Premium OS Disk Cache Read Hit
+  metric_type:
+  brief: Premium OS Disk Cache Read Hit (Preview)
+  description: Premium OS Disk Cache Read Hit
+Premium OS Disk Cache Read Miss:
+  title: Premium OS Disk Cache Read Miss
+  metric_type:
+  brief: Premium OS Disk Cache Read Miss (Preview)
+  description: Premium OS Disk Cache Read Miss
+Network In Total:
+  title: Network In Total
+  metric_type:
+  brief: Network In Total
+  description: The number of bytes received on all network interfaces by the Virtual
+    Machine(s) (Incoming Traffic)
+Network Out Total:
+  title: Network Out Total
+  metric_type:
+  brief: Network Out Total
+  description: The number of bytes out on all network interfaces by the Virtual Machine(s)
+    (Outgoing Traffic)

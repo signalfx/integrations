@@ -1,0 +1,9 @@
+requests==2.22.0
+pytest==4.6.2
+mistletoe==0.7.2
+tabulate==0.8.3
+beautifulsoup4==4.8.0
+dataclasses==0.6
+protobuf==3.9.1
+ruamel.base==1.0.0
+typing==3.7.4

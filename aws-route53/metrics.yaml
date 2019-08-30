@@ -3,7 +3,7 @@ ChildHealthCheckHealthyCount:
     among the health checks that Route 53 is monitoring.
   description: For a calculated health check, the number of health checks that are
     healthy among the health checks that Route 53 is monitoring.
-  metric_type: null
+  metric_type:
   title: ChildHealthCheckHealthyCount
 
 ConnectionTime:
@@ -11,7 +11,7 @@ ConnectionTime:
     to establish a TCP connection with the endpoint.
   description: The average time, in milliseconds, that it took Route 53 health checkers
     to establish a TCP connection with the endpoint.
-  metric_type: null
+  metric_type:
   title: ConnectionTime
 
 HealthCheckPercentageHealthy:
@@ -19,13 +19,13 @@ HealthCheckPercentageHealthy:
     to be healthy.
   description: The percentage of Route 53 health checkers that consider the selected
     endpoint to be healthy.
-  metric_type: null
+  metric_type:
   title: HealthCheckPercentageHealthy
 
 HealthCheckStatus:
   brief: The status of the health check endpoint that CloudWatch is checking.
   description: The status of the health check endpoint that CloudWatch is checking.
-  metric_type: null
+  metric_type:
   title: HealthCheckStatus
 
 InboundQueryVolume:
@@ -33,7 +33,7 @@ InboundQueryVolume:
     to your VPCs through the endpoint specified by EndpointId.
   description: For inbound endpoints, the number of DNS queries forwarded from your
     network to your VPCs through the endpoint specified by EndpointId.
-  metric_type: null
+  metric_type:
   title: InboundQueryVolume
 
 OutboundQueryVolume:
@@ -41,7 +41,7 @@ OutboundQueryVolume:
     to your network through the endpoint specified by EndpointId.
   description: For outbound endpoints, the number of DNS queries forwarded from your
     VPCs to your network through the endpoint specified by EndpointId.
-  metric_type: null
+  metric_type:
   title: OutboundQueryVolume
 
 SSLHandshakeTime:
@@ -49,7 +49,7 @@ SSLHandshakeTime:
     to complete the SSL handshake.
   description: The average time, in milliseconds, that it took Route 53 health checkers
     to complete the SSL handshake.
-  metric_type: null
+  metric_type:
   title: SSLHandshakeTime
 
 TimeToFirstByte:
@@ -57,6 +57,5 @@ TimeToFirstByte:
     to receive the first byte of the response to an HTTP or HTTPS request.
   description: The average time, in milliseconds, that it took Route 53 health checkers
     to receive the first byte of the response to an HTTP or HTTPS request.
-  metric_type: null
+  metric_type:
   title: TimeToFirstByte
-

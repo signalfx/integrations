@@ -1,174 +1,293 @@
-subscription_backlog_bytes:
-  brief: Total byte size of the unacknowledged messages (a.k.a. backlog messages)
-    in a subscription.
+snapshot/backlog_bytes:
+  brief: Snapshot backlog bytes
+  description: Total byte size of the messages retained in a snapshot.
+  metric_type: gauge
+  title: snapshot/backlog_bytes
+snapshot/backlog_bytes_by_region:
+  brief: Snapshot backlog bytes by region
+  description: Total byte size of the messages retained in a snapshot, broken down
+    by Cloud region.
+  metric_type: gauge
+  title: snapshot/backlog_bytes_by_region
+snapshot/config_updates_count:
+  brief: Snapshot updates
+  description: Cumulative count of configuration changes, grouped by operation type
+    and result.
+  metric_type: counter
+  title: snapshot/config_updates_count
+snapshot/num_messages:
+  brief: Snapshot messages
+  description: Number of messages retained in a snapshot.
+  metric_type: gauge
+  title: snapshot/num_messages
+snapshot/num_messages_by_region:
+  brief: Snapshot messages by region
+  description: Number of messages retained in a snapshot, broken down by Cloud region.
+  metric_type: gauge
+  title: snapshot/num_messages_by_region
+snapshot/oldest_message_age:
+  brief: Oldest snapshot message age
+  description: Age (in seconds) of the oldest message retained in a snapshot.
+  metric_type: gauge
+  title: snapshot/oldest_message_age
+snapshot/oldest_message_age_by_region:
+  brief: Oldest snapshot message age by region
+  description: Age (in seconds) of the oldest message retained in a snapshot, broken
+    down by Cloud region.
+  metric_type: gauge
+  title: snapshot/oldest_message_age_by_region
+subscription/ack_message_count:
+  brief: Ack message count
+  description: Cumulative count of messages acknowledged by Acknowledge requests,
+    grouped by delivery type.
+  metric_type: counter
+  title: subscription/ack_message_count
+subscription/backlog_bytes:
+  brief: Backlog size
   description: Total byte size of the unacknowledged messages (a.k.a. backlog messages)
     in a subscription.
   metric_type: gauge
   title: subscription/backlog_bytes
-
-subscription_byte_cost:
-  brief: Cumulative cost of operations per subscription, measured in bytes. This is
-    used to measure utilization for quotas.
-  description: Cumulative cost of operations per subscription, measured in bytes.
-    This is used to measure utilization for quotas.
+subscription/byte_cost:
+  brief: Subscription byte cost
+  description: Cumulative cost of operations, measured in bytes. This is used to measure
+    quota utilization.
   metric_type: counter
   title: subscription/byte_cost
-
-subscription_config_updates_count:
-  brief: Cumulative count of configuration changes per subscription, grouped by operation
-    type and result.
-  description: Cumulative count of configuration changes per subscription, grouped
+subscription/config_updates_count:
+  brief: Subscription updates
+  description: Cumulative count of configuration changes for each subscription, grouped
     by operation type and result.
   metric_type: counter
   title: subscription/config_updates_count
-
-subscription_mod_ack_deadline_message_operation_count:
-  brief: Cumulative count of ModifyAckDeadline message operations, grouped by result.
+subscription/mod_ack_deadline_message_count:
+  brief: Mod ack deadline message count
+  description: Cumulative count of messages whose deadline was updated by ModifyAckDeadline
+    requests, grouped by delivery type.
+  metric_type: counter
+  title: subscription/mod_ack_deadline_message_count
+subscription/mod_ack_deadline_message_operation_count:
+  brief: ModifyAckDeadline message operations
   description: Cumulative count of ModifyAckDeadline message operations, grouped by
     result.
   metric_type: counter
   title: subscription/mod_ack_deadline_message_operation_count
-
-subscription_mod_ack_deadline_request_count:
-  brief: Cumulative count of ModifyAckDeadline requests, grouped by result.
+subscription/mod_ack_deadline_request_count:
+  brief: ModifyAckDeadline requests
   description: Cumulative count of ModifyAckDeadline requests, grouped by result.
   metric_type: counter
   title: subscription/mod_ack_deadline_request_count
-
-subscription_num_outstanding_messages:
-  brief: Number of messages delivered to a subscription's push endpoint, but not yet
-    acknowledged.
+subscription/num_outstanding_messages:
+  brief: Outstanding push messages
   description: Number of messages delivered to a subscription's push endpoint, but
     not yet acknowledged.
   metric_type: gauge
   title: subscription/num_outstanding_messages
-
-subscription_num_undelivered_messages:
-  brief: Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.
+subscription/num_retained_acked_messages:
+  brief: Retained acked messages
+  description: Number of acknowledged messages retained in a subscription.
+  metric_type: gauge
+  title: subscription/num_retained_acked_messages
+subscription/num_retained_acked_messages_by_region:
+  brief: Retained acked messages by region
+  description: Number of acknowledged messages retained in a subscription, broken
+    down by Cloud region.
+  metric_type: gauge
+  title: subscription/num_retained_acked_messages_by_region
+subscription/num_unacked_messages_by_region:
+  brief: Unacked messages by region
+  description: Number of unacknowledged messages in a subscription, broken down by
+    Cloud region.
+  metric_type: gauge
+  title: subscription/num_unacked_messages_by_region
+subscription/num_undelivered_messages:
+  brief: Unacked messages
   description: Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.
   metric_type: gauge
   title: subscription/num_undelivered_messages
-
-subscription_oldest_unacked_message_age:
-  brief: Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog message)
-    in a subscription.
+subscription/oldest_retained_acked_message_age:
+  brief: Oldest retained acked message age
+  description: Age (in seconds) of the oldest acknowledged message retained in a subscription.
+  metric_type: gauge
+  title: subscription/oldest_retained_acked_message_age
+subscription/oldest_retained_acked_message_age_by_region:
+  brief: Oldest retained acked message age by region
+  description: Age (in seconds) of the oldest acknowledged message retained in a subscription,
+    broken down by Cloud region.
+  metric_type: gauge
+  title: subscription/oldest_retained_acked_message_age_by_region
+subscription/oldest_unacked_message_age:
+  brief: Oldest unacked message age
   description: Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog
     message) in a subscription.
   metric_type: gauge
   title: subscription/oldest_unacked_message_age
-
-subscription_pull_ack_message_operation_count:
-  brief: Cumulative count of acknowledge message operations, grouped by result.
+subscription/oldest_unacked_message_age_by_region:
+  brief: Oldest unacked message age by region
+  description: Age (in seconds) of the oldest unacknowledged message in a subscription,
+    broken down by Cloud region.
+  metric_type: gauge
+  title: subscription/oldest_unacked_message_age_by_region
+subscription/pull_ack_message_operation_count:
+  brief: Acknowledge message operations
   description: Cumulative count of acknowledge message operations, grouped by result.
+    For a definition of message operations, see Cloud Pub/Sub metric subscription/mod_ack_deadline_message_operation_count.
   metric_type: counter
   title: subscription/pull_ack_message_operation_count
-
-subscription_pull_ack_request_count:
-  brief: Cumulative count of acknowledge requests, grouped by result.
+subscription/pull_ack_request_count:
+  brief: Acknowledge requests
   description: Cumulative count of acknowledge requests, grouped by result.
   metric_type: counter
   title: subscription/pull_ack_request_count
-
-subscription_pull_message_operation_count:
-  brief: Cumulative count of pull message operations, grouped by result.
-  description: Cumulative count of pull message operations, grouped by result.
+subscription/pull_message_operation_count:
+  brief: Pull operations
+  description: Cumulative count of pull message operations, grouped by result. For
+    a definition of message operations, see Cloud Pub/Sub metric subscription/mod_ack_deadline_message_operation_count.
   metric_type: counter
   title: subscription/pull_message_operation_count
-
-subscription_pull_request_count:
-  brief: Cumulative count of pull requests, grouped by result.
+subscription/pull_request_count:
+  brief: Pull requests
   description: Cumulative count of pull requests, grouped by result.
   metric_type: counter
   title: subscription/pull_request_count
-
-subscription_push_request_count:
-  brief: Cumulative count of push attempts, grouped by result.
-  description: Cumulative count of push attempts, grouped by result.
+subscription/push_request_count:
+  brief: Push requests
+  description: Cumulative count of push attempts, grouped by result. Unlike pulls,
+    the push server implementation does not batch user messages. So each request only
+    contains one user message. The push server retries on errors, so a given user
+    message can appear multiple times.
   metric_type: counter
   title: subscription/push_request_count
-
-subscription_push_request_latencies:
-  brief: Distribution of push request latencies (in microseconds), grouped by result.
+subscription/push_request_latencies:
+  brief: Push latency
   description: Distribution of push request latencies (in microseconds), grouped by
     result.
   metric_type: counter
   title: subscription/push_request_latencies
-
-subscription_streaming_pull_ack_message_operation_count:
-  brief: Cumulative count of StreamingPull acknowledge message operations, grouped
-    by result.
+subscription/retained_acked_bytes:
+  brief: Retained acked bytes
+  description: Total byte size of the acknowledged messages retained in a subscription.
+  metric_type: gauge
+  title: subscription/retained_acked_bytes
+subscription/retained_acked_bytes_by_region:
+  brief: Retained acked bytes by region
+  description: Total byte size of the acknowledged messages retained in a subscription,
+    broken down by Cloud region.
+  metric_type: gauge
+  title: subscription/retained_acked_bytes_by_region
+subscription/seek_request_count:
+  brief: Seek requests
+  description: Cumulative count of seek attempts, grouped by result.
+  metric_type: counter
+  title: subscription/seek_request_count
+subscription/sent_message_count:
+  brief: Sent message count
+  description: Cumulative count of messages sent by Cloud Pub/Sub to subscriber clients,
+    grouped by delivery type.
+  metric_type: counter
+  title: subscription/sent_message_count
+subscription/streaming_pull_ack_message_operation_count:
+  brief: StreamingPull Acknowledge message operations
   description: Cumulative count of StreamingPull acknowledge message operations, grouped
-    by result.
+    by result. For a definition of message operations, see Cloud Pub/Sub metric subscription/mod_ack_deadline_message_operation_count.
   metric_type: counter
   title: subscription/streaming_pull_ack_message_operation_count
-
-subscription_streaming_pull_ack_request_count:
-  brief: Cumulative count of streaming pull requests with non-empty acknowledge ids,
-    grouped by result.
+subscription/streaming_pull_ack_request_count:
+  brief: StreamingPull Acknowledge requests
   description: Cumulative count of streaming pull requests with non-empty acknowledge
     ids, grouped by result.
   metric_type: counter
   title: subscription/streaming_pull_ack_request_count
-
-subscription_streaming_pull_message_operation_count:
-  brief: Cumulative count of streaming pull message operations, grouped by result.
+subscription/streaming_pull_message_operation_count:
+  brief: StreamingPull message operations
   description: Cumulative count of streaming pull message operations, grouped by result.
+    For a definition of message operations, see Cloud Pub/Sub metric <code>subscription/mod_ack_deadline_message_operation_count</code>.
   metric_type: counter
   title: subscription/streaming_pull_message_operation_count
-
-subscription_streaming_pull_mod_ack_deadline_message_operation_count:
-  brief: Cumulative count of StreamingPull ModifyAckDeadline operations, grouped by
-    result.
+subscription/streaming_pull_mod_ack_deadline_message_operation_count:
+  brief: StreamingPull ModifyAckDeadline message operations
   description: Cumulative count of StreamingPull ModifyAckDeadline operations, grouped
-    by result.
+    by result. For a definition of message operations, see Cloud Pub/Sub metric subscription/mod_ack_deadline_message_operation_count.
   metric_type: counter
   title: subscription/streaming_pull_mod_ack_deadline_message_operation_count
-
-subscription_streaming_pull_mod_ack_deadline_request_count:
-  brief: Cumulative count of streaming pull requests with non-empty ModifyAckDeadline
-    fields, grouped by result.
+subscription/streaming_pull_mod_ack_deadline_request_count:
+  brief: StreamingPull ModifyAckDeadline requests
   description: Cumulative count of streaming pull requests with non-empty ModifyAckDeadline
     fields, grouped by result.
   metric_type: counter
   title: subscription/streaming_pull_mod_ack_deadline_request_count
-
-subscription_streaming_pull_response_count:
-  brief: Cumulative count of streaming pull responses, grouped by result.
+subscription/streaming_pull_response_count:
+  brief: StreamingPull responses
   description: Cumulative count of streaming pull responses, grouped by result.
   metric_type: counter
   title: subscription/streaming_pull_response_count
-
-topic_byte_cost:
-  brief: Cost of operations per topic, measured in bytes. This is used to measure
-    utilization for quotas.
-  description: Cost of operations per topic, measured in bytes. This is used to measure
-    utilization for quotas.
+subscription/unacked_bytes_by_region:
+  brief: Unacked bytes by region
+  description: Total byte size of the unacknowledged messages in a subscription, broken
+    down by Cloud region.
+  metric_type: gauge
+  title: subscription/unacked_bytes_by_region
+topic/byte_cost:
+  brief: Topic byte cost
+  description: Cost of operations, measured in bytes. This is used to measure utilization
+    for quotas.
   metric_type: counter
   title: topic/byte_cost
-
-topic_config_updates_count:
-  brief: Cumulative count of configuration changes per topic, grouped by operation
-    type and result.
-  description: Cumulative count of configuration changes per topic, grouped by operation
-    type and result.
+topic/config_updates_count:
+  brief: Topic updates
+  description: Cumulative count of configuration changes, grouped by operation type
+    and result.
   metric_type: counter
   title: topic/config_updates_count
-
-topic_message_sizes:
-  brief: Distribution of publish message sizes (in bytes).
+topic/message_sizes:
+  brief: Publish message size
   description: Distribution of publish message sizes (in bytes).
   metric_type: counter
   title: topic/message_sizes
-
-topic_send_message_operation_count:
-  brief: Cumulative count of publish message operations, grouped by result.
+topic/num_retained_acked_messages_by_region:
+  brief: Retained acked messages by region
+  description: Number of acknowledged messages retained in a topic, broken down by
+    Cloud region.
+  metric_type: gauge
+  title: topic/num_retained_acked_messages_by_region
+topic/num_unacked_messages_by_region:
+  brief: Unacked messages by region
+  description: Number of unacknowledged messages in a topic, broken down by Cloud
+    region.
+  metric_type: gauge
+  title: topic/num_unacked_messages_by_region
+topic/oldest_retained_acked_message_age_by_region:
+  brief: Oldest retained acked message age by region
+  description: Age (in seconds) of the oldest acknowledged message retained in a topic,
+    broken down by Cloud region.
+  metric_type: gauge
+  title: topic/oldest_retained_acked_message_age_by_region
+topic/oldest_unacked_message_age_by_region:
+  brief: Oldest unacked message age by region
+  description: Age (in seconds) of the oldest unacknowledged message in a topic, broken
+    down by Cloud region.
+  metric_type: gauge
+  title: topic/oldest_unacked_message_age_by_region
+topic/retained_acked_bytes_by_region:
+  brief: Retained acked bytes by region
+  description: Total byte size of the acknowledged messages retained in a topic, broken
+    down by Cloud region.
+  metric_type: gauge
+  title: topic/retained_acked_bytes_by_region
+topic/send_message_operation_count:
+  brief: Publish message operations
   description: Cumulative count of publish message operations, grouped by result.
+    For a definition of message operations, see Cloud Pub/Sub metric subscription/mod_ack_deadline_message_operation_count.
   metric_type: counter
   title: topic/send_message_operation_count
-
-topic_send_request_count:
-  brief: Cumulative count of publish requests, grouped by result.
+topic/send_request_count:
+  brief: Publish requests
   description: Cumulative count of publish requests, grouped by result.
   metric_type: counter
   title: topic/send_request_count
-
+topic/unacked_bytes_by_region:
+  brief: Unacked bytes by region
+  description: Total byte size of the unacknowledged messages in a topic, broken down
+    by Cloud region.
+  metric_type: gauge
+  title: topic/unacked_bytes_by_region

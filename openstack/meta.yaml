@@ -1,0 +1,12 @@
+browse_categories:
+- Compute
+code: https://github.com/signalfx/collectd-openstack
+data_signature: plugin:"openstack"
+description: Monitor OpenStack using the SignalFx Smart Agent.
+display_name: OpenStack
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/openstack/img/integration_openstack%402x.png
+logo_small: /images/repos/openstack/img/integration_openstack.png
+project_url: https://github.com/signalfx/integrations/tree/master/openstack

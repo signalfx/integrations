@@ -1,0 +1,12 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd/blob/master/src/mysql.c
+data_signature: plugin:"mysql"
+description: Monitor MySQL using the SignalFx Smart agent.
+display_name: MySQL
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/mysql/img/integrations_mysql%402x.png
+logo_small: /images/repos/mysql/img/integrations_mysql.png
+project_url: https://github.com/signalfx/integrations/tree/master/mysql

@@ -1,0 +1,12 @@
+browse_categories:
+- Analytics
+code: https://github.com/signalfx/collectd-solr
+data_signature: plugin:"solr"
+description: Monitor apache solr using the SignalFx Smart Agent.
+display_name: Apache Solr
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/solr/img/integrations_solr%402x.png
+logo_small: /images/repos/solr/img/integrations_solr.png
+project_url: https://github.com/signalfx/integrations/tree/master/solr
