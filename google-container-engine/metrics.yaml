@@ -1,66 +1,94 @@
-container_cpu_reserved_cores:
-  brief: Number of cores of CPU reserved for the container. If no core limit is set,
-    this will be zero.
+container/accelerator/duty_cycle:
+  brief: Accelerator duty cycle
+  description: Percent of time over the past sample period (10s)during which the accelerator
+    was actively processing.
+  metric_type: gauge
+  title: container/accelerator/duty_cycle
+container/accelerator/memory_total:
+  brief: Accelerator memory total
+  description: Total accelerator memory in bytes.
+  metric_type: gauge
+  title: container/accelerator/memory_total
+container/accelerator/memory_used:
+  brief: Accelerator memory used
+  description: Total accelerator memory allocated in bytes.
+  metric_type: gauge
+  title: container/accelerator/memory_used
+container/accelerator/request:
+  brief: Request accelerators
+  description: Number of accelerator devices requested by the container.
+  metric_type: gauge
+  title: container/accelerator/request
+container/cpu/reserved_cores:
+  brief: Reserved cores
   description: Number of cores of CPU reserved for the container. If no core limit
     is set, this will be zero.
   metric_type: gauge
   title: container/cpu/reserved_cores
-
-container_cpu_usage_time:
-  brief: Cumulative CPU usage on all cores in seconds. This number divided by the
-    elapsed time represents usage as a number of cores, regardless of any core limit
-    that might be set.
+container/cpu/usage_time:
+  brief: CPU usage
   description: Cumulative CPU usage on all cores in seconds. This number divided by
     the elapsed time represents usage as a number of cores, regardless of any core
     limit that might be set.
   metric_type: cumulative
   title: container/cpu/usage_time
-
-container_cpu_utilization:
-  brief: The percentage of the allocated CPU that is currently in use on the container.
-    If no core limit is set, then this metric is not set.
+container/cpu/utilization:
+  brief: CPU utilization
   description: The percentage of the allocated CPU that is currently in use on the
     container. If no core limit is set, then this metric is not set.
   metric_type: gauge
   title: container/cpu/utilization
-
-container_disk_bytes_total:
-  brief: "Total number of bytes of capacity on the disk identified by label \u2018\
-    device_name\u2019."
-  description: "Total number of bytes of capacity on the disk identified by label\
-    \ \u2018device_name\u2019."
+container/disk/bytes_total:
+  brief: Disk capacity
+  description: Total number of bytes of capacity on the disk identified by label ‘device_name’.
   metric_type: gauge
   title: container/disk/bytes_total
-
-container_disk_bytes_used:
-  brief: "Total number of bytes used on the disk identified by label \u2018device_name\u2019\
-    ."
-  description: "Total number of bytes used on the disk identified by label \u2018\
-    device_name\u2019."
+container/disk/bytes_used:
+  brief: Disk usage
+  description: Total number of bytes used on the disk identified by label ‘device_name’.
   metric_type: gauge
   title: container/disk/bytes_used
-
-container_memory_bytes_total:
-  brief: Memory limit of the container in bytes.
+container/disk/inodes_free:
+  brief: Inode free
+  description: Free number of inodes on the disk identified by label 'device_name'.
+    This metric is only for the `machine` container.
+  metric_type: gauge
+  title: container/disk/inodes_free
+container/disk/inodes_total:
+  brief: Inode capacity
+  description: Total number of inodes on the disk identified by label 'device_name'.
+    This metric is only for the `machine` container.
+  metric_type: gauge
+  title: container/disk/inodes_total
+container/memory/bytes_total:
+  brief: Memory limit
   description: Memory limit of the container in bytes.
   metric_type: gauge
   title: container/memory/bytes_total
-
-container_memory_bytes_used:
-  brief: 'Memory usage in bytes, broken down by type: evictable and non-evictable.'
+container/memory/bytes_used:
+  brief: Memory usage
   description: 'Memory usage in bytes, broken down by type: evictable and non-evictable.'
   metric_type: gauge
   title: container/memory/bytes_used
-
-container_memory_page_fault_count:
-  brief: 'Number of page faults, broken down by type: major and minor.'
+container/memory/page_fault_count:
+  brief: Page faults
   description: 'Number of page faults, broken down by type: major and minor.'
   metric_type: counter
   title: container/memory/page_fault_count
-
-container_uptime:
-  brief: Number of seconds since the container started.
+container/pid_limit:
+  brief: PID capacity
+  description: The max PID of OS on the node. This metric is only for the `machine`
+    container.
+  metric_type: gauge
+  title: container/pid_limit
+container/pid_used:
+  brief: PID usage
+  description: The number of running process in the OS on the node. This metric is
+    only for the `machine` container.
+  metric_type: gauge
+  title: container/pid_used
+container/uptime:
+  brief: Uptime
   description: Number of seconds since the container started.
   metric_type: cumulative
   title: container/uptime
-

@@ -1,0 +1,12 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd/blob/master/src/memcached.c
+data_signature: plugin:"memcached"
+description: Monitor Memcached using the SignalFx Smart agent.
+display_name: Memcached
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/memcached/img/integrations_memcached%402x.png
+logo_small: /images/repos/memcached/img/integrations_memcached.png
+project_url: https://github.com/signalfx/integrations/tree/master/memcached

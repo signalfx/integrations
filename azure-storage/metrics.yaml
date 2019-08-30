@@ -1,0 +1,50 @@
+UsedCapacity:
+  title: UsedCapacity
+  metric_type:
+  brief: Used capacity
+  description: Account used capacity
+Transactions:
+  title: Transactions
+  metric_type:
+  brief: Transactions
+  description: The number of requests made to a storage service or the specified API
+    operation. This number includes successful and failed requests, as well as requests
+    which produced errors. Use ResponseType dimension for the number of different
+    type of response.
+Ingress:
+  title: Ingress
+  metric_type:
+  brief: Ingress
+  description: The amount of ingress data, in bytes. This number includes ingress
+    from an external client into Azure Storage as well as ingress within Azure.
+Egress:
+  title: Egress
+  metric_type:
+  brief: Egress
+  description: The amount of egress data, in bytes. This number includes egress from
+    an external client into Azure Storage as well as egress within Azure. As a result,
+    this number does not reflect billable egress.
+SuccessServerLatency:
+  title: SuccessServerLatency
+  metric_type:
+  brief: Success Server Latency
+  description: The average latency used by Azure Storage to process a successful request,
+    in milliseconds. This value does not include the network latency specified in
+    AverageE2ELatency.
+SuccessE2ELatency:
+  title: SuccessE2ELatency
+  metric_type:
+  brief: Success E2E Latency
+  description: The average end-to-end latency of successful requests made to a storage
+    service or the specified API operation, in milliseconds. This value includes the
+    required processing time within Azure Storage to read the request, send the response,
+    and receive acknowledgment of the response.
+Availability:
+  title: Availability
+  metric_type:
+  brief: Availability
+  description: The percentage of availability for the storage service or the specified
+    API operation. Availability is calculated by taking the TotalBillableRequests
+    value and dividing it by the number of applicable requests, including those that
+    produced unexpected errors. All unexpected errors result in reduced availability
+    for the storage service or the specified API operation.

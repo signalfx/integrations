@@ -1,19 +1,19 @@
 4XXError:
   brief: The number of client-side errors captured in a given period.
   description: The number of client-side errors captured in a given period.
-  metric_type: null
+  metric_type:
   title: 4XXError
 
 5XXError:
   brief: The number of server-side errors captured in a given period.
   description: The number of server-side errors captured in a given period.
-  metric_type: null
+  metric_type:
   title: 5XXError
 
 CacheHitCount:
   brief: The number of requests served from the API cache in a given period.
   description: The number of requests served from the API cache in a given period.
-  metric_type: null
+  metric_type:
   title: CacheHitCount
 
 CacheMissCount:
@@ -21,13 +21,13 @@ CacheMissCount:
     caching is enabled.
   description: The number of requests served from the backend in a given period, when
     API caching is enabled.
-  metric_type: null
+  metric_type:
   title: CacheMissCount
 
 Count:
   brief: The total number API requests in a given period.
   description: The total number API requests in a given period.
-  metric_type: null
+  metric_type:
   title: Count
 
 IntegrationLatency:
@@ -35,7 +35,7 @@ IntegrationLatency:
     it receives a response from the backend.
   description: The time between when API Gateway relays a request to the backend and
     when it receives a response from the backend.
-  metric_type: null
+  metric_type:
   title: IntegrationLatency
 
 Latency:
@@ -43,6 +43,5 @@ Latency:
     it returns a response to the client.
   description: The time between when API Gateway receives a request from a client
     and when it returns a response to the client.
-  metric_type: null
+  metric_type:
   title: Latency
-

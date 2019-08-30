@@ -1,7 +1,7 @@
 CPUUtilization:
   brief: The percentage of CPU utilization.
   description: The percentage of CPU utilization.
-  metric_type: null
+  metric_type:
   title: CPUUtilization
 
 ConcurrencyScalingActiveClusters:
@@ -9,7 +9,7 @@ ConcurrencyScalingActiveClusters:
     at any given time.
   description: The number of concurrency scaling clusters that are actively processing
     queries at any given time.
-  metric_type: null
+  metric_type:
   title: ConcurrencyScalingActiveClusters
 
 ConcurrencyScalingSeconds:
@@ -17,25 +17,25 @@ ConcurrencyScalingSeconds:
     query processing activity.
   description: The number of seconds used by concurrency scaling clusters that have
     active query processing activity.
-  metric_type: null
+  metric_type:
   title: ConcurrencyScalingSeconds
 
 DatabaseConnections:
   brief: The number of database connections to a cluster.
   description: The number of database connections to a cluster.
-  metric_type: null
+  metric_type:
   title: DatabaseConnections
 
 HealthStatus:
   brief: Indicates the health of the cluster.
   description: Indicates the health of the cluster.
-  metric_type: null
+  metric_type:
   title: HealthStatus
 
 MaintenanceMode:
   brief: Indicates whether the cluster is in maintenance mode.
   description: Indicates whether the cluster is in maintenance mode.
-  metric_type: null
+  metric_type:
   title: MaintenanceMode
 
 MaxConfiguredConcurrencyScalingClusters:
@@ -43,61 +43,61 @@ MaxConfiguredConcurrencyScalingClusters:
     group.
   description: Maximum number of concurrency scaling clusters configured from the
     parameter group.
-  metric_type: null
+  metric_type:
   title: MaxConfiguredConcurrencyScalingClusters
 
 NetworkReceiveThroughput:
   brief: The rate at which the node or cluster receives data.
   description: The rate at which the node or cluster receives data.
-  metric_type: null
+  metric_type:
   title: NetworkReceiveThroughput
 
 NetworkTransmitThroughput:
   brief: The rate at which the node or cluster writes data.
   description: The rate at which the node or cluster writes data.
-  metric_type: null
+  metric_type:
   title: NetworkTransmitThroughput
 
 PercentageDiskSpaceUsed:
   brief: The percent of disk space used.
   description: The percent of disk space used.
-  metric_type: null
+  metric_type:
   title: PercentageDiskSpaceUsed
 
 QueriesCompletedPerSecond:
   brief: The average number of queries completed per second.
   description: The average number of queries completed per second.
-  metric_type: null
+  metric_type:
   title: QueriesCompletedPerSecond
 
 QueryDuration:
   brief: The average amount of time to complete a query.
   description: The average amount of time to complete a query.
-  metric_type: null
+  metric_type:
   title: QueryDuration
 
 ReadIOPS:
   brief: The average number of disk read operations per second.
   description: The average number of disk read operations per second.
-  metric_type: null
+  metric_type:
   title: ReadIOPS
 
 ReadLatency:
   brief: The average amount of time taken for disk read I/O operations.
   description: The average amount of time taken for disk read I/O operations.
-  metric_type: null
+  metric_type:
   title: ReadLatency
 
 ReadThroughput:
   brief: The average number of bytes read from disk per second.
   description: The average number of bytes read from disk per second.
-  metric_type: null
+  metric_type:
   title: ReadThroughput
 
 TotalTableCount:
   brief: The number of user tables open at a particular point in time.
   description: The number of user tables open at a particular point in time.
-  metric_type: null
+  metric_type:
   title: TotalTableCount
 
 WLMQueriesCompletedPerSecond:
@@ -105,7 +105,7 @@ WLMQueriesCompletedPerSecond:
     (WLM) queue.
   description: The average number of queries completed per second for a workload management
     (WLM) queue.
-  metric_type: null
+  metric_type:
   title: WLMQueriesCompletedPerSecond
 
 WLMQueryDuration:
@@ -113,31 +113,37 @@ WLMQueryDuration:
     (WLM) queue.
   description: The average length of time to complete a query for a workload management
     (WLM) queue.
-  metric_type: null
+  metric_type:
   title: WLMQueryDuration
 
 WLMQueueLength:
   brief: The number of queries waiting to enter a workload management (WLM) queue.
   description: The number of queries waiting to enter a workload management (WLM)
     queue.
-  metric_type: null
+  metric_type:
   title: WLMQueueLength
 
 WriteIOPS:
   brief: The average number of write operations per second.
   description: The average number of write operations per second.
-  metric_type: null
+  metric_type:
   title: WriteIOPS
 
 WriteLatency:
   brief: The average amount of time taken for disk write I/O operations.
   description: The average amount of time taken for disk write I/O operations.
-  metric_type: null
+  metric_type:
   title: WriteLatency
 
 WriteThroughput:
   brief: The average number of bytes written to disk per second.
   description: The average number of bytes written to disk per second.
-  metric_type: null
+  metric_type:
   title: WriteThroughput
 
+WLMQueueWaitTime:
+  title: WLMQueueWaitTime
+  metric_type:
+  brief:
+  description: The total time queries spent waiting in the workload management (WLM)
+    queue.

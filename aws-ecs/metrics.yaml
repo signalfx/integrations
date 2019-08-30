@@ -2,13 +2,13 @@ CPUReservation:
   brief: The percentage of CPU units that are reserved by running tasks in the cluster.
   description: The percentage of CPU units that are reserved by running tasks in the
     cluster.
-  metric_type: null
+  metric_type:
   title: CPUReservation
 
 CPUUtilization:
   brief: The percentage of CPU units that are used in the cluster or service.
   description: The percentage of CPU units that are used in the cluster or service.
-  metric_type: null
+  metric_type:
   title: CPUUtilization
 
 GPUReservation:
@@ -16,18 +16,17 @@ GPUReservation:
     in the cluster.
   description: The percentage of total available GPUs that are reserved by running
     tasks in the cluster.
-  metric_type: null
+  metric_type:
   title: GPUReservation
 
 MemoryReservation:
   brief: The percentage of memory that is reserved by running tasks in the cluster.
   description: The percentage of memory that is reserved by running tasks in the cluster.
-  metric_type: null
+  metric_type:
   title: MemoryReservation
 
 MemoryUtilization:
   brief: The percentage of memory that is used in the cluster or service.
   description: The percentage of memory that is used in the cluster or service.
-  metric_type: null
+  metric_type:
   title: MemoryUtilization
-

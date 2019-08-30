@@ -1,3 +1,4 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 counter.amq.TotalConnectionsCount:
   brief: Total connections count per broker
   custom: false

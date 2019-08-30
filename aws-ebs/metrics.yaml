@@ -3,13 +3,13 @@ BurstBalance:
     Cold HDD (sc1) volumes only.
   description: Used with General Purpose SSD (gp2), Throughput Optimized HDD (st1),
     and Cold HDD (sc1) volumes only.
-  metric_type: null
+  metric_type:
   title: BurstBalance
 
 VolumeConsumedReadWriteOps:
   brief: Used with Provisioned IOPS SSD volumes only.
   description: Used with Provisioned IOPS SSD volumes only.
-  metric_type: null
+  metric_type:
   title: VolumeConsumedReadWriteOps
 
 VolumeIdleTime:
@@ -17,7 +17,7 @@ VolumeIdleTime:
     write operations were submitted.
   description: The total number of seconds in a specified period of time when no read
     or write operations were submitted.
-  metric_type: null
+  metric_type:
   title: VolumeIdleTime
 
 VolumeQueueLength:
@@ -25,26 +25,26 @@ VolumeQueueLength:
     a specified period of time.
   description: The number of read and write operation requests waiting to be completed
     in a specified period of time.
-  metric_type: null
+  metric_type:
   title: VolumeQueueLength
 
 VolumeReadBytes:
   brief: Provides information on the read operations in a specified period of time.
   description: Provides information on the read operations in a specified period of
     time.
-  metric_type: null
+  metric_type:
   title: VolumeReadBytes
 
 VolumeReadOps:
   brief: The total number of read operations in a specified period of time.
   description: The total number of read operations in a specified period of time.
-  metric_type: null
+  metric_type:
   title: VolumeReadOps
 
 VolumeThroughputPercentage:
   brief: Used with Provisioned IOPS SSD volumes only.
   description: Used with Provisioned IOPS SSD volumes only.
-  metric_type: null
+  metric_type:
   title: VolumeThroughputPercentage
 
 VolumeTotalReadTime:
@@ -52,7 +52,7 @@ VolumeTotalReadTime:
     a specified period of time.
   description: The total number of seconds spent by all read operations that completed
     in a specified period of time.
-  metric_type: null
+  metric_type:
   title: VolumeTotalReadTime
 
 VolumeTotalWriteTime:
@@ -60,19 +60,18 @@ VolumeTotalWriteTime:
     in a specified period of time.
   description: The total number of seconds spent by all write operations that completed
     in a specified period of time.
-  metric_type: null
+  metric_type:
   title: VolumeTotalWriteTime
 
 VolumeWriteBytes:
   brief: Provides information on the write operations in a specified period of time.
   description: Provides information on the write operations in a specified period
     of time.
-  metric_type: null
+  metric_type:
   title: VolumeWriteBytes
 
 VolumeWriteOps:
   brief: The total number of write operations in a specified period of time.
   description: The total number of write operations in a specified period of time.
-  metric_type: null
+  metric_type:
   title: VolumeWriteOps
-

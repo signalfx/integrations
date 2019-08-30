@@ -1,20 +1,20 @@
 4xxErrorRate:
   brief: The percentage of all requests for which the HTTP status code is 4xx.
   description: The percentage of all requests for which the HTTP status code is 4xx.
-  metric_type: null
+  metric_type:
   title: 4xxErrorRate
 
 5xxErrorRate:
   brief: The percentage of all requests for which the HTTP status code is 5xx.
   description: The percentage of all requests for which the HTTP status code is 5xx.
-  metric_type: null
+  metric_type:
   title: 5xxErrorRate
 
 BytesDownloaded:
   brief: The number of bytes downloaded by viewers for GET, HEAD, and OPTIONS requests.
   description: The number of bytes downloaded by viewers for GET, HEAD, and OPTIONS
     requests.
-  metric_type: null
+  metric_type:
   title: BytesDownloaded
 
 BytesUploaded:
@@ -22,20 +22,19 @@ BytesUploaded:
     PUT requests.
   description: The number of bytes uploaded to your origin with CloudFront using POST
     and PUT requests.
-  metric_type: null
+  metric_type:
   title: BytesUploaded
 
 Requests:
   brief: The number of requests for all HTTP methods and for both HTTP and HTTPS requests.
   description: The number of requests for all HTTP methods and for both HTTP and HTTPS
     requests.
-  metric_type: null
+  metric_type:
   title: Requests
 
 TotalErrorRate:
   brief: The percentage of all requests for which the HTTP status code is 4xx or 5xx.
   description: The percentage of all requests for which the HTTP status code is 4xx
     or 5xx.
-  metric_type: null
+  metric_type:
   title: TotalErrorRate
-

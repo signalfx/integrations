@@ -1,19 +1,26 @@
-function_execution_count:
-  brief: Count of function executions broken down by status.
+function/active_instances:
+  brief: Active instances
+  description: The number of active function instances.
+  metric_type: gauge
+  title: function/active_instances
+function/execution_count:
+  brief: Executions
   description: Count of function executions broken down by status.
   metric_type: counter
   title: function/execution_count
-
-function_execution_times:
-  brief: Distribution of functions execution times in nanoseconds.
+function/execution_times:
+  brief: Execution times
   description: Distribution of functions execution times in nanoseconds.
   metric_type: counter
   title: function/execution_times
-
-function_user_memory_bytes:
-  brief: Distribution of maximum function's memory usage during execution, in bytes.
+function/network_egress:
+  brief: Network egress
+  description: Outgoing network traffic of function, in bytes.
+  metric_type: counter
+  title: function/network_egress
+function/user_memory_bytes:
+  brief: Memory usage
   description: Distribution of maximum function's memory usage during execution, in
     bytes.
   metric_type: counter
   title: function/user_memory_bytes
-

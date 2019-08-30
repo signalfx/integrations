@@ -1,3 +1,4 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 apache_bytes:
   brief: Amount of data served by Apache, in bytes
   custom: false

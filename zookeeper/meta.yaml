@@ -1,0 +1,11 @@
+browse_categories:
+- Database
+data_signature: plugin:"zookeeper"
+description: Monitor ZooKeeper using the SignalFx Smart Agent.
+display_name: ZooKeeper
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/zookeeper/img/integrations_zookeeper%402x.png
+logo_small: /images/repos/zookeeper/img/integrations_zookeeper.png
+project_url: https://github.com/signalfx/integrations/tree/master/zookeeper

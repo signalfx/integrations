@@ -1,23 +1,64 @@
-api_request_count:
-  brief: Delta count of API calls, grouped by the API method name and response code.
+api/request_count:
+  brief: Request count
   description: Delta count of API calls, grouped by the API method name and response
     code.
   metric_type: counter
   title: api/request_count
-
-network_received_bytes_count:
-  brief: Delta count of bytes received over the network, grouped by the API method
-    name and response code.
+authn/authentication_count:
+  brief: Authentication count
+  description: Count of HMAC/RSA signed requests grouped by authentication method
+    and access id.
+  metric_type: counter
+  title: authn/authentication_count
+authz/acl_based_object_access_count:
+  brief: Object-ACL based access count
+  description: Delta count of requests that result in an object being granted access
+    solely due to object ACLs.
+  metric_type: counter
+  title: authz/acl_based_object_access_count
+authz/acl_operations_count:
+  brief: ACLs usage
+  description: Usage of ACL operations broken down by type.
+  metric_type: counter
+  title: authz/acl_operations_count
+authz/object_specific_acl_mutation_count:
+  brief: Object ACL changes
+  description: Delta count of changes made to object specific ACLs.
+  metric_type: counter
+  title: authz/object_specific_acl_mutation_count
+network/received_bytes_count:
+  brief: Received bytes
   description: Delta count of bytes received over the network, grouped by the API
     method name and response code.
   metric_type: counter
   title: network/received_bytes_count
-
-network_sent_bytes_count:
-  brief: Delta count of bytes sent over the network, grouped by the API method name
-    and response code.
+network/sent_bytes_count:
+  brief: Sent bytes
   description: Delta count of bytes sent over the network, grouped by the API method
     name and response code.
   metric_type: counter
   title: network/sent_bytes_count
-
+storage/object_count:
+  brief: Object count
+  description: Total number of objects per bucket, grouped by storage class. This
+    value is measured once per day, and the value is repeated at each sampling interval
+    throughout the day. For this metric, the sampling period is a reporting period,
+    not a measurement period.
+  metric_type: gauge
+  title: storage/object_count
+storage/total_byte_seconds:
+  brief: Total byte seconds
+  description: Total daily storage in byte*seconds used by the bucket, grouped by
+    storage class. This value is measured once per day, and the value is repeated
+    at each sampling interval throughout the day. For this metric, the sampling period
+    is a reporting period, not a measurement period.
+  metric_type: gauge
+  title: storage/total_byte_seconds
+storage/total_bytes:
+  brief: Total bytes
+  description: Total size of all objects in the bucket, grouped by storage class.
+    This value is measured once per day, and the value is repeated at each sampling
+    interval throughout the day. For this metric, the sampling period is a reporting
+    period, not a measurement period.
+  metric_type: gauge
+  title: storage/total_bytes

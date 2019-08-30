@@ -1,3 +1,4 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 cpu.idle:
   brief: CPU time spent not in any other state
   custom: true

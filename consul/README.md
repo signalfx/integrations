@@ -10,16 +10,9 @@ Metadata associated with this integration can be found <a target="_blank" href="
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
-
-The SignalFx Consul integration consists primarily of [a
-monitor](https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-consul.html)
-within the [SignalFx Smart
-Agent](https://docs.signalfx.com/en/latest/integrations/agent/index.html).
-
 #### FEATURES
 
-#### Built-in dashboards
+##### Built-in dashboards
 
 - **CONSUL CLUSTER**: Provides a high-level overview of metrics for a single Consul cluster.
 
@@ -45,25 +38,6 @@ Agent](https://docs.signalfx.com/en/latest/integrations/agent/index.html).
 
   [<img src='./img/dashboard_client.png' width=200px>](./img/dashboard_client.png)
 
-
-### REQUIREMENTS AND DEPENDENCIES
-
-#### Version information
-
-| Software  | Version        |
-|-----------|----------------|
-| SignalFx Smart Agent  |  2.0+  |
-| Consul | 0.7.0 or later |
-
-
-### CONFIGURATION
-
-This integration is part of the <a
-href="https://docs.signalfx.com/en/latest/integrations/agent/index.html"
-target="_blank">SignalFx Smart Agent</a> -- see the docs for <a
-href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-consul.html"
-target="_blank">the collectd/consul monitor</a> for details on how to
-configure the Smart Agent to work with this integration.
 
 ### USAGE
 
@@ -212,47 +186,6 @@ A few other details:
 * `plugin` is always set to `consul`
 * To add additional metrics from the telemetry stream or ```/agent/metrics``` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give valid prefixes. For e.g., to add metrics which track time taken to serve http requests, Consul emits these metrics in the form `consul.http.<verb>.<path>`. So to enable metrics which track time taken to service GET requests on Key/Value endpoint, add this `consul.http.GET.v1.kv` to the IncludeMetric cofiguration. If you want to allow metrics which track time taken to service all GET requests, add `consul.http.GET` to the configuration. When enhance metrics are enabled, you can block metrics in a similar manner.
 * The metrics from `/agent/metric` endpoint are aggregated over an interval of 10 seconds. Keep this in mind when changing the default collectd interval from 10 seconds.
-
-### METRICS
-List of default metrics collected from telemetry stream or `agent/metrics` endpoint-
- - consul.raft.state.leader
- - consul.raft.state.candidate
- - consul.raft.leader.lastContact
- - consul.raft.leader.dispatchLog
- - consul.raft.commitTime
- - consul.raft.apply
- - consul.raft.replication.appendEntries.rpc.<FOLLOWER\_IP>
- - consul.rpc.query
- - consul.consul.leader.reconcile
- - consul.serf.events
- - consul.serf.queue.Event
- - consul.serf.queue.Query
- - consul.serf.member.join
- - consul.serf.member.left
- - consul.runtime.heap\_objects
- - consul.runtime.alloc\_bytes
- - consul.runtime.num\_goroutines
- - consul.dns.domain\_query.<HOST>
- - consul.dns.ptr\_query.<HOST>
- - consul.dns.stale\_queries.<HOST>
- - consul.serf.member.flap
- - consul.memberlist.msg.suspect
-
-List of default metrics collected from additional endpoints -
- - consul.is\_leader
- - consul.peers
- - consul.catalog.nodes.total
- - consul.catalog.service.total
- - consul.catalog.nodes\_by\_service
- - consul.catalog.services\_by\_node
- - consul.health.nodes.passing
- - consul.health.nodes.warning
- - consul.health.nodes.critical
- - consul.health.services.passing
- - consul.health.services.warning
- - consul.health.services.critical
- - consul.network.node.latency
- - consul.network.dc.latency
 
 ### LICENSE
 

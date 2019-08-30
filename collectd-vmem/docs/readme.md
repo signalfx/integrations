@@ -53,5 +53,4 @@ Brief filtering-vmem listing:
 
 # Useful links:
 * [Vmem plugin](https://collectd.org/wiki/index.php/Plugin:vmem)
-* [/proc/vmstat content explained](http://www.linuxinsight.com/proc_vmstat.html)
 * [Collectd filter chains explained](http://manpages.ubuntu.com/manpages/precise/en/man5/collectd.conf.5.html#contenttoc6)

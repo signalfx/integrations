@@ -1,0 +1,11 @@
+browse_categories:
+- Management Tools
+data_signature: plugin:"statsd"
+description: The StatsD monitor for the SignalFx Smart Agent aggregates and transmits metrics from StatsD.
+display_name: StatsD
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/statsd/img/integrations_statsd%402x.png
+logo_small: /images/repos/statsd/img/integrations_statsd.png
+project_url: https://github.com/signalfx/integrations/tree/master/statsd

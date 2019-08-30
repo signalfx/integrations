@@ -1,0 +1,165 @@
+CpuTime:
+  title: CpuTime
+  metric_type:
+  brief: CPU Time
+  description: CPU Time
+Requests:
+  title: Requests
+  metric_type:
+  brief: Requests
+  description: Requests
+BytesReceived:
+  title: BytesReceived
+  metric_type:
+  brief: Data In
+  description: Data In
+BytesSent:
+  title: BytesSent
+  metric_type:
+  brief: Data Out
+  description: Data Out
+Http101:
+  title: Http101
+  metric_type:
+  brief: Http 101
+  description: Http 101
+Http2xx:
+  title: Http2xx
+  metric_type:
+  brief: Http 2xx
+  description: Http 2xx
+Http3xx:
+  title: Http3xx
+  metric_type:
+  brief: Http 3xx
+  description: Http 3xx
+Http401:
+  title: Http401
+  metric_type:
+  brief: Http 401
+  description: Http 401
+Http403:
+  title: Http403
+  metric_type:
+  brief: Http 403
+  description: Http 403
+Http404:
+  title: Http404
+  metric_type:
+  brief: Http 404
+  description: Http 404
+Http406:
+  title: Http406
+  metric_type:
+  brief: Http 406
+  description: Http 406
+Http4xx:
+  title: Http4xx
+  metric_type:
+  brief: Http 4xx
+  description: Http 4xx
+Http5xx:
+  title: Http5xx
+  metric_type:
+  brief: Http Server Errors
+  description: Http Server Errors
+MemoryWorkingSet:
+  title: MemoryWorkingSet
+  metric_type:
+  brief: Memory working set
+  description: Memory working set
+AverageMemoryWorkingSet:
+  title: AverageMemoryWorkingSet
+  metric_type:
+  brief: Average memory working set
+  description: Average memory working set
+AverageResponseTime:
+  title: AverageResponseTime
+  metric_type:
+  brief: Average Response Time
+  description: Average Response Time
+AppConnections:
+  title: AppConnections
+  metric_type:
+  brief: Connections
+  description: Connections
+Handles:
+  title: Handles
+  metric_type:
+  brief: Handle Count
+  description: Handle Count
+Threads:
+  title: Threads
+  metric_type:
+  brief: Thread Count
+  description: Thread Count
+PrivateBytes:
+  title: PrivateBytes
+  metric_type:
+  brief: Private Bytes
+  description: Private Bytes
+IoReadBytesPerSecond:
+  title: IoReadBytesPerSecond
+  metric_type:
+  brief: IO Read Bytes Per Second
+  description: IO Read Bytes Per Second
+IoWriteBytesPerSecond:
+  title: IoWriteBytesPerSecond
+  metric_type:
+  brief: IO Write Bytes Per Second
+  description: IO Write Bytes Per Second
+IoOtherBytesPerSecond:
+  title: IoOtherBytesPerSecond
+  metric_type:
+  brief: IO Other Bytes Per Second
+  description: IO Other Bytes Per Second
+IoReadOperationsPerSecond:
+  title: IoReadOperationsPerSecond
+  metric_type:
+  brief: IO Read Operations Per Second
+  description: IO Read Operations Per Second
+IoWriteOperationsPerSecond:
+  title: IoWriteOperationsPerSecond
+  metric_type:
+  brief: IO Write Operations Per Second
+  description: IO Write Operations Per Second
+IoOtherOperationsPerSecond:
+  title: IoOtherOperationsPerSecond
+  metric_type:
+  brief: IO Other Operations Per Second
+  description: IO Other Operations Per Second
+RequestsInApplicationQueue:
+  title: RequestsInApplicationQueue
+  metric_type:
+  brief: Requests In Application Queue
+  description: Requests In Application Queue
+CurrentAssemblies:
+  title: CurrentAssemblies
+  metric_type:
+  brief: Current Assemblies
+  description: Current Assemblies
+TotalAppDomains:
+  title: TotalAppDomains
+  metric_type:
+  brief: Total App Domains
+  description: Total App Domains
+TotalAppDomainsUnloaded:
+  title: TotalAppDomainsUnloaded
+  metric_type:
+  brief: Total App Domains Unloaded
+  description: Total App Domains Unloaded
+Gen0Collections:
+  title: Gen0Collections
+  metric_type:
+  brief: Gen 0 Garbage Collections
+  description: Gen 0 Garbage Collections
+Gen1Collections:
+  title: Gen1Collections
+  metric_type:
+  brief: Gen 1 Garbage Collections
+  description: Gen 1 Garbage Collections
+Gen2Collections:
+  title: Gen2Collections
+  metric_type:
+  brief: Gen 2 Garbage Collections
+  description: Gen 2 Garbage Collections

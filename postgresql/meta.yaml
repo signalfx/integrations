@@ -1,0 +1,11 @@
+browse_categories:
+- Database
+data_signature: plugin:"postgresql"
+description: Monitor PostgreSQL using the SignalFx Smart agent.
+display_name: PostgreSQL
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/postgresql/img/integrations_postgresql%402x.png
+logo_small: /images/repos/postgresql/img/integrations_postgresql.png
+project_url: https://github.com/signalfx/integrations/tree/master/postgresql

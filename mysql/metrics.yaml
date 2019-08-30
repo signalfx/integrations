@@ -1,0 +1,1223 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+cache_result.cache_size:
+  brief: MySQL Qcache Size
+  custom: true
+  description: MySQL Qcache Size
+  metric_type: gauge
+  title: cache_result.cache_size
+
+cache_result.qcache-hits:
+  brief: The number of hits on MySQL query cache
+  custom: false
+  description: The number of hits on MySQL query cache.
+  metric_type: cumulative
+  title: cache_result.qcache-hits
+
+cache_result.qcache-inserts:
+  brief: The number of inserts into MySQL query cache
+  custom: false
+  description: The number of inserts into MySQL query cache.
+  metric_type: cumulative
+  title: cache_result.qcache-inserts
+
+cache_result.qcache-not_cached:
+  brief: The number of MySQL queries that were not cacheable or not cached
+  custom: true
+  description: The number of MySQL queries that were not cacheable or not cached.
+  metric_type: cumulative
+  title: cache_result.qcache-not_cached
+
+cache_result.qcache-prunes:
+  brief: The number of queries that were pruned from query cache because of low-memory
+    condition
+  custom: true
+  description: The number of queries that were pruned from query cache because of
+    low-memory condition.
+  metric_type: cumulative
+  title: cache_result.qcache-prunes
+
+cache_size.qcache:
+  brief: The number of queries in MySQL query cache
+  custom: false
+  description: The number of queries in MySQL query cache.
+  metric_type: gauge
+  title: cache_size.qcache
+
+mysql_commands.admin_commands:
+  brief: The number of MySQL ADMIN commands executed
+  custom: true
+  description: The number of MySQL ADMIN commands executed
+  metric_type: cumulative
+  title: mysql_commands.admin_commands
+
+mysql_commands.alter_db:
+  brief: The number of MySQL ALTER DB commands executed
+  custom: true
+  description: The number of MySQL ALTER DB commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_db
+
+mysql_commands.alter_db_upgrade:
+  brief: The number of MySQL ALTER DB UPGRADE commands executed
+  custom: true
+  description: The number of MySQL ALTER DB UPGRADE commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_db_upgrade
+
+mysql_commands.alter_event:
+  brief: The number of MySQL ALTER EVENT commands executed
+  custom: true
+  description: The number of MySQL ALTER EVENT commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_event
+
+mysql_commands.alter_function:
+  brief: The number of MySQL ALTER FUNCTION commands executed
+  custom: true
+  description: The number of MySQL ALTER FUNCTION commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_function
+
+mysql_commands.alter_procedure:
+  brief: The number of MySQL ALTER PROCEDURE commands executed
+  custom: true
+  description: The number of MySQL ALTER PROCEDURE commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_procedure
+
+mysql_commands.alter_server:
+  brief: The number of MySQL ALTER SERVER commands executed
+  custom: true
+  description: The number of MySQL ALTER SERVER commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_server
+
+mysql_commands.alter_table:
+  brief: The number of MySQL ALTER TABLE commands executed
+  custom: true
+  description: The number of MySQL ALTER TABLE commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_table
+
+mysql_commands.alter_tablespace:
+  brief: The number of MySQL ALTER TABLESPACE commands executed
+  custom: true
+  description: The number of MySQL ALTER TABLESPACE commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_tablespace
+
+mysql_commands.alter_user:
+  brief: The number of MySQL ALTER USER commands executed
+  custom: true
+  description: The number of MySQL ALTER USER commands executed
+  metric_type: cumulative
+  title: mysql_commands.alter_user
+
+mysql_commands.analyze:
+  brief: The number of MySQL ANALYZE commands executed
+  custom: true
+  description: The number of MySQL ANALYZE commands executed
+  metric_type: cumulative
+  title: mysql_commands.analyze
+
+mysql_commands.assign_to_keycache:
+  brief: The number of MySQL ASSIGN TO KEYCACHE commands executed
+  custom: true
+  description: The number of MySQL ASSIGN TO KEYCACHE commands executed
+  metric_type: cumulative
+  title: mysql_commands.assign_to_keycache
+
+mysql_commands.begin:
+  brief: The number of MySQL BEGIN commands executed
+  custom: true
+  description: The number of MySQL BEGIN commands executed
+  metric_type: cumulative
+  title: mysql_commands.begin
+
+mysql_commands.binlog:
+  brief: The number of MySQL BINLOG commands executed
+  custom: true
+  description: The number of MySQL BINLOG commands executed
+  metric_type: cumulative
+  title: mysql_commands.binlog
+
+mysql_commands.call_procedure:
+  brief: The number of MySQL CALL PROCEDURE commands executed
+  custom: true
+  description: The number of MySQL CALL PROCEDURE commands executed
+  metric_type: cumulative
+  title: mysql_commands.call_procedure
+
+mysql_commands.change_db:
+  brief: The number of MySQL CHANGE DB commands executed
+  custom: true
+  description: The number of MySQL CHANGE DB commands executed
+  metric_type: cumulative
+  title: mysql_commands.change_db
+
+mysql_commands.change_master:
+  brief: The number of MySQL CHANGE MASTER commands executed
+  custom: true
+  description: The number of MySQL CHANGE MASTER commands executed
+  metric_type: cumulative
+  title: mysql_commands.change_master
+
+mysql_commands.check:
+  brief: The number of MySQL CHECK commands executed
+  custom: true
+  description: The number of MySQL CHECK commands executed
+  metric_type: cumulative
+  title: mysql_commands.check
+
+mysql_commands.checksum:
+  brief: The number of MySQL CHECKSUM commands executed
+  custom: true
+  description: The number of MySQL CHECKSUM commands executed
+  metric_type: cumulative
+  title: mysql_commands.checksum
+
+mysql_commands.commit:
+  brief: The number of MySQL COMMIT commands executed
+  custom: true
+  description: The number of MySQL COMMIT commands executed
+  metric_type: cumulative
+  title: mysql_commands.commit
+
+mysql_commands.create_db:
+  brief: The number of MySQL CREATE DB commands executed
+  custom: true
+  description: The number of MySQL CREATE DB commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_db
+
+mysql_commands.create_event:
+  brief: The number of MySQL CREATE EVENT commands executed
+  custom: true
+  description: The number of MySQL CREATE EVENT commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_event
+
+mysql_commands.create_function:
+  brief: The number of MySQL CREATE FUNCTION commands executed
+  custom: true
+  description: The number of MySQL CREATE FUNCTION commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_function
+
+mysql_commands.create_index:
+  brief: The number of MySQL CREATE INDEX commands executed
+  custom: true
+  description: The number of MySQL CREATE INDEX commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_index
+
+mysql_commands.create_procedure:
+  brief: The number of MySQL CREATE PROCEDURE commands executed
+  custom: true
+  description: The number of MySQL CREATE PROCEDURE commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_procedure
+
+mysql_commands.create_server:
+  brief: The number of MySQL CREATE SERVER commands executed
+  custom: true
+  description: The number of MySQL CREATE SERVER commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_server
+
+mysql_commands.create_table:
+  brief: The number of MySQL CREATE TABLE commands executed
+  custom: true
+  description: The number of MySQL CREATE TABLE commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_table
+
+mysql_commands.create_trigger:
+  brief: The number of MySQL CREATE TRIGGER commands executed
+  custom: true
+  description: The number of MySQL CREATE TRIGGER commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_trigger
+
+mysql_commands.create_udf:
+  brief: The number of MySQL CREATE UDF commands executed
+  custom: true
+  description: The number of MySQL CREATE UDF commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_udf
+
+mysql_commands.create_user:
+  brief: The number of MySQL CREATE USER commands executed
+  custom: true
+  description: The number of MySQL CREATE USER commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_user
+
+mysql_commands.create_view:
+  brief: The number of MySQL CREATE VIEW commands executed
+  custom: true
+  description: The number of MySQL CREATE VIEW commands executed
+  metric_type: cumulative
+  title: mysql_commands.create_view
+
+mysql_commands.dealloc_sql:
+  brief: The number of MySQL DEALLOC SQL commands executed
+  custom: true
+  description: The number of MySQL DEALLOC SQL commands executed
+  metric_type: cumulative
+  title: mysql_commands.dealloc_sql
+
+mysql_commands.delete:
+  brief: The number of MySQL DELETE commands executed
+  custom: false
+  description: The number of MySQL DELETE commands executed
+  metric_type: cumulative
+  title: mysql_commands.delete
+
+mysql_commands.delete_multi:
+  brief: The number of MySQL DELETE MULTI commands executed
+  custom: true
+  description: The number of MySQL DELETE MULTI commands executed
+  metric_type: cumulative
+  title: mysql_commands.delete_multi
+
+mysql_commands.do:
+  brief: The number of MySQL DO commands executed
+  custom: true
+  description: The number of MySQL DO commands executed
+  metric_type: cumulative
+  title: mysql_commands.do
+
+mysql_commands.drop_db:
+  brief: The number of MySQL DROP DB commands executed
+  custom: true
+  description: The number of MySQL DROP DB commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_db
+
+mysql_commands.drop_event:
+  brief: The number of MySQL DROP EVENT commands executed
+  custom: true
+  description: The number of MySQL DROP EVENT commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_event
+
+mysql_commands.drop_function:
+  brief: The number of MySQL DROP FUNCTION commands executed
+  custom: true
+  description: The number of MySQL DROP FUNCTION commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_function
+
+mysql_commands.drop_index:
+  brief: The number of MySQL DROP INDEX commands executed
+  custom: true
+  description: The number of MySQL DROP INDEX commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_index
+
+mysql_commands.drop_procedure:
+  brief: The number of MySQL DROP PROCEDURE commands executed
+  custom: true
+  description: The number of MySQL DROP PROCEDURE commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_procedure
+
+mysql_commands.drop_server:
+  brief: The number of MySQL DROP SERVER commands executed
+  custom: true
+  description: The number of MySQL DROP SERVER commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_server
+
+mysql_commands.drop_table:
+  brief: The number of MySQL DROP TABLE commands executed
+  custom: true
+  description: The number of MySQL DROP TABLE commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_table
+
+mysql_commands.drop_trigger:
+  brief: The number of MySQL DROP TRIGGER commands executed
+  custom: true
+  description: The number of MySQL DROP TRIGGER commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_trigger
+
+mysql_commands.drop_user:
+  brief: The number of MySQL DROP USER commands executed
+  custom: true
+  description: The number of MySQL DROP USER commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_user
+
+mysql_commands.drop_view:
+  brief: The number of MySQL DROP VIEW commands executed
+  custom: true
+  description: The number of MySQL DROP VIEW commands executed
+  metric_type: cumulative
+  title: mysql_commands.drop_view
+
+mysql_commands.empty_query:
+  brief: The number of MySQL EMPTY QUERY commands executed
+  custom: true
+  description: The number of MySQL EMPTY QUERY commands executed
+  metric_type: cumulative
+  title: mysql_commands.empty_query
+
+mysql_commands.execute_sql:
+  brief: The number of MySQL EXECUTE SQL commands executed
+  custom: true
+  description: The number of MySQL EXECUTE SQL commands executed
+  metric_type: cumulative
+  title: mysql_commands.execute_sql
+
+mysql_commands.flush:
+  brief: The number of MySQL FLUSH commands executed
+  custom: true
+  description: The number of MySQL FLUSH commands executed
+  metric_type: cumulative
+  title: mysql_commands.flush
+
+mysql_commands.get_diagnostics:
+  brief: The number of MySQL GET DIAGNOSTICS commands executed
+  custom: true
+  description: The number of MySQL GET DIAGNOSTICS commands executed
+  metric_type: cumulative
+  title: mysql_commands.get_diagnostics
+
+mysql_commands.grant:
+  brief: The number of MySQL GRANT commands executed
+  custom: true
+  description: The number of MySQL GRANT commands executed
+  metric_type: cumulative
+  title: mysql_commands.grant
+
+mysql_commands.ha_close:
+  brief: The number of MySQL HA CLOSE commands executed
+  custom: true
+  description: The number of MySQL HA CLOSE commands executed
+  metric_type: cumulative
+  title: mysql_commands.ha_close
+
+mysql_commands.ha_open:
+  brief: The number of MySQL HA OPEN commands executed
+  custom: true
+  description: The number of MySQL HA OPEN commands executed
+  metric_type: cumulative
+  title: mysql_commands.ha_open
+
+mysql_commands.ha_read:
+  brief: The number of MySQL HA READ commands executed
+  custom: true
+  description: The number of MySQL HA READ commands executed
+  metric_type: cumulative
+  title: mysql_commands.ha_read
+
+mysql_commands.help:
+  brief: The number of MySQL HELP commands executed
+  custom: true
+  description: The number of MySQL HELP commands executed
+  metric_type: cumulative
+  title: mysql_commands.help
+
+mysql_commands.insert:
+  brief: The number of MySQL INSERT commands executed
+  custom: false
+  description: The number of MySQL INSERT commands executed
+  metric_type: cumulative
+  title: mysql_commands.insert
+
+mysql_commands.insert_select:
+  brief: The number of MySQL INSERT SELECT commands executed
+  custom: true
+  description: The number of MySQL INSERT SELECT commands executed
+  metric_type: cumulative
+  title: mysql_commands.insert_select
+
+mysql_commands.install_plugin:
+  brief: The number of MySQL INSTALL PLUGIN commands executed
+  custom: true
+  description: The number of MySQL INSTALL PLUGIN commands executed
+  metric_type: cumulative
+  title: mysql_commands.install_plugin
+
+mysql_commands.kill:
+  brief: The number of MySQL KILL commands executed
+  custom: true
+  description: The number of MySQL KILL commands executed
+  metric_type: cumulative
+  title: mysql_commands.kill
+
+mysql_commands.load:
+  brief: The number of MySQL LOAD commands executed
+  custom: true
+  description: The number of MySQL LOAD commands executed
+  metric_type: cumulative
+  title: mysql_commands.load
+
+mysql_commands.lock_tables:
+  brief: The number of MySQL LOCK TABLES commands executed
+  custom: true
+  description: The number of MySQL LOCK TABLES commands executed
+  metric_type: cumulative
+  title: mysql_commands.lock_tables
+
+mysql_commands.optimize:
+  brief: The number of MySQL OPTIMIZE commands executed
+  custom: true
+  description: The number of MySQL OPTIMIZE commands executed
+  metric_type: cumulative
+  title: mysql_commands.optimize
+
+mysql_commands.preload_keys:
+  brief: The number of MySQL PRELOAD KEYS commands executed
+  custom: true
+  description: The number of MySQL PRELOAD KEYS commands executed
+  metric_type: cumulative
+  title: mysql_commands.preload_keys
+
+mysql_commands.prepare_sql:
+  brief: The number of MySQL PREPARE SQL commands executed
+  custom: true
+  description: The number of MySQL PREPARE SQL commands executed
+  metric_type: cumulative
+  title: mysql_commands.prepare_sql
+
+mysql_commands.purge:
+  brief: The number of MySQL PURGE commands executed
+  custom: true
+  description: The number of MySQL PURGE commands executed
+  metric_type: cumulative
+  title: mysql_commands.purge
+
+mysql_commands.purge_before_date:
+  brief: The number of MySQL PURGE BEFORE DATE commands executed
+  custom: true
+  description: The number of MySQL PURGE BEFORE DATE commands executed
+  metric_type: cumulative
+  title: mysql_commands.purge_before_date
+
+mysql_commands.release_savepoint:
+  brief: The number of MySQL RELEASE SAVEPOINT commands executed
+  custom: true
+  description: The number of MySQL RELEASE SAVEPOINT commands executed
+  metric_type: cumulative
+  title: mysql_commands.release_savepoint
+
+mysql_commands.rename_table:
+  brief: The number of MySQL RENAME TABLE commands executed
+  custom: true
+  description: The number of MySQL RENAME TABLE commands executed
+  metric_type: cumulative
+  title: mysql_commands.rename_table
+
+mysql_commands.rename_user:
+  brief: The number of MySQL RENAME USER commands executed
+  custom: true
+  description: The number of MySQL RENAME USER commands executed
+  metric_type: cumulative
+  title: mysql_commands.rename_user
+
+mysql_commands.repair:
+  brief: The number of MySQL REPAIR commands executed
+  custom: true
+  description: The number of MySQL REPAIR commands executed
+  metric_type: cumulative
+  title: mysql_commands.repair
+
+mysql_commands.replace:
+  brief: The number of MySQL REPLACE commands executed
+  custom: true
+  description: The number of MySQL REPLACE commands executed
+  metric_type: cumulative
+  title: mysql_commands.replace
+
+mysql_commands.replace_select:
+  brief: The number of MySQL REPLACE SELECT commands executed
+  custom: true
+  description: The number of MySQL REPLACE SELECT commands executed
+  metric_type: cumulative
+  title: mysql_commands.replace_select
+
+mysql_commands.reset:
+  brief: The number of MySQL RESET commands executed
+  custom: true
+  description: The number of MySQL RESET commands executed
+  metric_type: cumulative
+  title: mysql_commands.reset
+
+mysql_commands.resignal:
+  brief: The number of MySQL RESIGNAL commands executed
+  custom: true
+  description: The number of MySQL RESIGNAL commands executed
+  metric_type: cumulative
+  title: mysql_commands.resignal
+
+mysql_commands.revoke:
+  brief: The number of MySQL REVOKE commands executed
+  custom: true
+  description: The number of MySQL REVOKE commands executed
+  metric_type: cumulative
+  title: mysql_commands.revoke
+
+mysql_commands.revoke_all:
+  brief: The number of MySQL REVOKE ALL commands executed
+  custom: true
+  description: The number of MySQL REVOKE ALL commands executed
+  metric_type: cumulative
+  title: mysql_commands.revoke_all
+
+mysql_commands.rollback:
+  brief: The number of MySQL ROLLBACK commands executed
+  custom: true
+  description: The number of MySQL ROLLBACK commands executed
+  metric_type: cumulative
+  title: mysql_commands.rollback
+
+mysql_commands.rollback_to_savepoint:
+  brief: The number of MySQL ROLLBACK TO SAVEPOINT commands executed
+  custom: true
+  description: The number of MySQL ROLLBACK TO SAVEPOINT commands executed
+  metric_type: cumulative
+  title: mysql_commands.rollback_to_savepoint
+
+mysql_commands.savepoint:
+  brief: The number of MySQL SAVEPOINT commands executed
+  custom: true
+  description: The number of MySQL SAVEPOINT commands executed
+  metric_type: cumulative
+  title: mysql_commands.savepoint
+
+mysql_commands.select:
+  brief: The number of MySQL SELECT commands executed
+  custom: false
+  description: The number of MySQL SELECT commands executed
+  metric_type: cumulative
+  title: mysql_commands.select
+
+mysql_commands.set_option:
+  brief: The number of MySQL SET OPTION commands executed
+  custom: true
+  description: The number of MySQL SET OPTION commands executed
+  metric_type: cumulative
+  title: mysql_commands.set_option
+
+mysql_commands.show_binlog_events:
+  brief: The number of MySQL SHOW BINLOG EVENTS commands executed
+  custom: true
+  description: The number of MySQL SHOW BINLOG EVENTS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_binlog_events
+
+mysql_commands.show_binlogs:
+  brief: The number of MySQL SHOW BINLOGS commands executed
+  custom: true
+  description: The number of MySQL SHOW BINLOGS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_binlogs
+
+mysql_commands.show_charsets:
+  brief: The number of MySQL SHOW CHARSETS commands executed
+  custom: true
+  description: The number of MySQL SHOW CHARSETS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_charsets
+
+mysql_commands.show_collations:
+  brief: The number of MySQL SHOW COLLATIONS commands executed
+  custom: true
+  description: The number of MySQL SHOW COLLATIONS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_collations
+
+mysql_commands.show_create_db:
+  brief: The number of MySQL SHOW CREATE DB commands executed
+  custom: true
+  description: The number of MySQL SHOW CREATE DB commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_create_db
+
+mysql_commands.show_create_event:
+  brief: The number of MySQL SHOW CREATE EVENT commands executed
+  custom: true
+  description: The number of MySQL SHOW CREATE EVENT commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_create_event
+
+mysql_commands.show_create_func:
+  brief: The number of MySQL SHOW CREATE FUNC commands executed
+  custom: true
+  description: The number of MySQL SHOW CREATE FUNC commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_create_func
+
+mysql_commands.show_create_proc:
+  brief: The number of MySQL SHOW CREATE PROC commands executed
+  custom: true
+  description: The number of MySQL SHOW CREATE PROC commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_create_proc
+
+mysql_commands.show_create_table:
+  brief: The number of MySQL SHOW CREATE TABLE commands executed
+  custom: true
+  description: The number of MySQL SHOW CREATE TABLE commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_create_table
+
+mysql_commands.show_create_trigger:
+  brief: The number of MySQL SHOW CREATE TRIGGER commands executed
+  custom: true
+  description: The number of MySQL SHOW CREATE TRIGGER commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_create_trigger
+
+mysql_commands.show_databases:
+  brief: The number of MySQL SHOW DATABASES commands executed
+  custom: true
+  description: The number of MySQL SHOW DATABASES commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_databases
+
+mysql_commands.show_engine_logs:
+  brief: The number of MySQL SHOW ENGINE LOGS commands executed
+  custom: true
+  description: The number of MySQL SHOW ENGINE LOGS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_engine_logs
+
+mysql_commands.show_engine_mutex:
+  brief: The number of MySQL SHOW ENGINE MUTEX commands executed
+  custom: true
+  description: The number of MySQL SHOW ENGINE MUTEX commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_engine_mutex
+
+mysql_commands.show_engine_status:
+  brief: The number of MySQL SHOW ENGINE STATUS commands executed
+  custom: true
+  description: The number of MySQL SHOW ENGINE STATUS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_engine_status
+
+mysql_commands.show_errors:
+  brief: The number of MySQL SHOW ERRORS commands executed
+  custom: true
+  description: The number of MySQL SHOW ERRORS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_errors
+
+mysql_commands.show_events:
+  brief: The number of MySQL SHOW EVENTS commands executed
+  custom: true
+  description: The number of MySQL SHOW EVENTS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_events
+
+mysql_commands.show_fields:
+  brief: The number of MySQL SHOW FIELDS commands executed
+  custom: true
+  description: The number of MySQL SHOW FIELDS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_fields
+
+mysql_commands.show_function_code:
+  brief: The number of MySQL SHOW FUNCTION CODE commands executed
+  custom: true
+  description: The number of MySQL SHOW FUNCTION CODE commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_function_code
+
+mysql_commands.show_function_status:
+  brief: The number of MySQL SHOW FUNCTION STATUS commands executed
+  custom: true
+  description: The number of MySQL SHOW FUNCTION STATUS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_function_status
+
+mysql_commands.show_grants:
+  brief: The number of MySQL SHOW GRANTS commands executed
+  custom: true
+  description: The number of MySQL SHOW GRANTS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_grants
+
+mysql_commands.show_keys:
+  brief: The number of MySQL SHOW KEYS commands executed
+  custom: true
+  description: The number of MySQL SHOW KEYS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_keys
+
+mysql_commands.show_master_status:
+  brief: The number of MySQL SHOW MASTER STATUS commands executed
+  custom: true
+  description: The number of MySQL SHOW MASTER STATUS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_master_status
+
+mysql_commands.show_open_tables:
+  brief: The number of MySQL SHOW OPEN TABLES commands executed
+  custom: true
+  description: The number of MySQL SHOW OPEN TABLES commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_open_tables
+
+mysql_commands.show_plugins:
+  brief: The number of MySQL SHOW PLUGINS commands executed
+  custom: true
+  description: The number of MySQL SHOW PLUGINS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_plugins
+
+mysql_commands.show_privileges:
+  brief: The number of MySQL SHOW PRIVILEGES commands executed
+  custom: true
+  description: The number of MySQL SHOW PRIVILEGES commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_privileges
+
+mysql_commands.show_procedure_code:
+  brief: The number of MySQL SHOW PROCEDURE CODE commands executed
+  custom: true
+  description: The number of MySQL SHOW PROCEDURE CODE commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_procedure_code
+
+mysql_commands.show_procedure_status:
+  brief: The number of MySQL SHOW PROCEDURE STATUS commands executed
+  custom: true
+  description: The number of MySQL SHOW PROCEDURE STATUS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_procedure_status
+
+mysql_commands.show_processlist:
+  brief: The number of MySQL SHOW PROCESSLIST commands executed
+  custom: true
+  description: The number of MySQL SHOW PROCESSLIST commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_processlist
+
+mysql_commands.show_profile:
+  brief: The number of MySQL SHOW PROFILE commands executed
+  custom: true
+  description: The number of MySQL SHOW PROFILE commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_profile
+
+mysql_commands.show_profiles:
+  brief: The number of MySQL SHOW PROFILES commands executed
+  custom: true
+  description: The number of MySQL SHOW PROFILES commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_profiles
+
+mysql_commands.show_relaylog_events:
+  brief: The number of MySQL SHOW RELAYLOG EVENTS commands executed
+  custom: true
+  description: The number of MySQL SHOW RELAYLOG EVENTS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_relaylog_events
+
+mysql_commands.show_slave_hosts:
+  brief: The number of MySQL SHOW SLAVE HOSTS commands executed
+  custom: true
+  description: The number of MySQL SHOW SLAVE HOSTS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_slave_hosts
+
+mysql_commands.show_slave_status:
+  brief: The number of MySQL SHOW SLAVE STATUS commands executed
+  custom: true
+  description: The number of MySQL SHOW SLAVE STATUS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_slave_status
+
+mysql_commands.show_status:
+  brief: The number of MySQL SHOW STATUS commands executed
+  custom: true
+  description: The number of MySQL SHOW STATUS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_status
+
+mysql_commands.show_storage_engines:
+  brief: The number of MySQL SHOW STORAGE ENGINES commands executed
+  custom: true
+  description: The number of MySQL SHOW STORAGE ENGINES commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_storage_engines
+
+mysql_commands.show_table_status:
+  brief: The number of MySQL SHOW TABLE STATUS commands executed
+  custom: true
+  description: The number of MySQL SHOW TABLE STATUS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_table_status
+
+mysql_commands.show_tables:
+  brief: The number of MySQL SHOW TABLES commands executed
+  custom: true
+  description: The number of MySQL SHOW TABLES commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_tables
+
+mysql_commands.show_triggers:
+  brief: The number of MySQL SHOW TRIGGERS commands executed
+  custom: true
+  description: The number of MySQL SHOW TRIGGERS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_triggers
+
+mysql_commands.show_variables:
+  brief: The number of MySQL SHOW VARIABLES commands executed
+  custom: true
+  description: The number of MySQL SHOW VARIABLES commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_variables
+
+mysql_commands.show_warnings:
+  brief: The number of MySQL SHOW WARNINGS commands executed
+  custom: true
+  description: The number of MySQL SHOW WARNINGS commands executed
+  metric_type: cumulative
+  title: mysql_commands.show_warnings
+
+mysql_commands.signal:
+  brief: The number of MySQL SIGNAL commands executed
+  custom: true
+  description: The number of MySQL SIGNAL commands executed
+  metric_type: cumulative
+  title: mysql_commands.signal
+
+mysql_commands.slave_start:
+  brief: The number of MySQL SLAVE START commands executed
+  custom: true
+  description: The number of MySQL SLAVE START commands executed
+  metric_type: cumulative
+  title: mysql_commands.slave_start
+
+mysql_commands.slave_stop:
+  brief: The number of MySQL SLAVE STOP commands executed
+  custom: true
+  description: The number of MySQL SLAVE STOP commands executed
+  metric_type: cumulative
+  title: mysql_commands.slave_stop
+
+mysql_commands.truncate:
+  brief: The number of MySQL TRUNCATE commands executed
+  custom: true
+  description: The number of MySQL TRUNCATE commands executed
+  metric_type: cumulative
+  title: mysql_commands.truncate
+
+mysql_commands.uninstall_plugin:
+  brief: The number of MySQL UNINSTALL PLUGIN commands executed
+  custom: true
+  description: The number of MySQL UNINSTALL PLUGIN commands executed
+  metric_type: cumulative
+  title: mysql_commands.uninstall_plugin
+
+mysql_commands.unlock_tables:
+  brief: The number of MySQL UNLOCK TABLES commands executed
+  custom: true
+  description: The number of MySQL UNLOCK TABLES commands executed
+  metric_type: cumulative
+  title: mysql_commands.unlock_tables
+
+mysql_commands.update:
+  brief: The number of MySQL UPDATE commands executed
+  custom: false
+  description: The number of MySQL UPDATE commands executed
+  metric_type: cumulative
+  title: mysql_commands.update
+
+mysql_commands.update_multi:
+  brief: The number of MySQL UPDATE MULTI commands executed
+  custom: true
+  description: The number of MySQL UPDATE MULTI commands executed
+  metric_type: cumulative
+  title: mysql_commands.update_multi
+
+mysql_commands.xa_commit:
+  brief: The number of MySQL XA COMMIT commands executed
+  custom: true
+  description: The number of MySQL XA COMMIT commands executed
+  metric_type: cumulative
+  title: mysql_commands.xa_commit
+
+mysql_commands.xa_end:
+  brief: The number of MySQL XA END commands executed
+  custom: true
+  description: The number of MySQL XA END commands executed
+  metric_type: cumulative
+  title: mysql_commands.xa_end
+
+mysql_commands.xa_prepare:
+  brief: The number of MySQL XA PREPARE commands executed
+  custom: true
+  description: The number of MySQL XA PREPARE commands executed
+  metric_type: cumulative
+  title: mysql_commands.xa_prepare
+
+mysql_commands.xa_recover:
+  brief: The number of MySQL XA RECOVER commands executed
+  custom: true
+  description: The number of MySQL XA RECOVER commands executed
+  metric_type: cumulative
+  title: mysql_commands.xa_recover
+
+mysql_commands.xa_rollback:
+  brief: The number of MySQL XA ROLLBACK commands executed
+  custom: true
+  description: The number of MySQL XA ROLLBACK commands executed
+  metric_type: cumulative
+  title: mysql_commands.xa_rollback
+
+mysql_commands.xa_start:
+  brief: The number of MySQL XA START commands executed
+  custom: true
+  description: The number of MySQL XA START commands executed
+  metric_type: cumulative
+  title: mysql_commands.xa_start
+
+mysql_handler.commit:
+  brief: The number of internal COMMIT statements
+  custom: true
+  description: The number of internal COMMIT statements.
+  metric_type: cumulative
+  title: mysql_handler.commit
+
+mysql_handler.delete:
+  brief: The number of times rows have been deleted from tables
+  custom: true
+  description: The number of times rows have been deleted from tables.
+  metric_type: cumulative
+  title: mysql_handler.delete
+
+mysql_handler.external_lock:
+  brief: The number of external_lock occurences
+  custom: true
+  description: The number of external_lock occurences.
+  metric_type: cumulative
+  title: mysql_handler.external_lock
+
+mysql_handler.prepare:
+  brief: The number of times "Prepare" phase was executed in the two-phase commit
+    operations
+  custom: true
+  description: The number of times "Prepare" phase was executed in the two-phase commit
+    operations.
+  metric_type: cumulative
+  title: mysql_handler.prepare
+
+mysql_handler.read_first:
+  brief: The number of times the first entry in an index was read
+  custom: true
+  description: The number of times the first entry in an index was read.
+  metric_type: cumulative
+  title: mysql_handler.read_first
+
+mysql_handler.read_key:
+  brief: The number of times a row was read based on a key
+  custom: true
+  description: The number of times a row was read based on a key.
+  metric_type: cumulative
+  title: mysql_handler.read_key
+
+mysql_handler.read_next:
+  brief: The number of requests to read the next row in key order
+  custom: true
+  description: The number of requests to read the next row in key order.
+  metric_type: cumulative
+  title: mysql_handler.read_next
+
+mysql_handler.read_prev:
+  brief: The number of requests to read the previous row in key order
+  custom: true
+  description: The number of requests to read the previous row in key order.
+  metric_type: cumulative
+  title: mysql_handler.read_prev
+
+mysql_handler.read_rnd:
+  brief: The number of requests that read a random fixed position in the data file
+  custom: true
+  description: The number of requests that read a random fixed position in the data
+    file.
+  metric_type: cumulative
+  title: mysql_handler.read_rnd
+
+mysql_handler.read_rnd_next:
+  brief: The number of requests for the next row in the data file
+  custom: true
+  description: The number of requests for the next row in the data file.
+  metric_type: cumulative
+  title: mysql_handler.read_rnd_next
+
+mysql_handler.rollback:
+  brief: The number of requests for a rollback operation on the storage engine
+  custom: true
+  description: The number of requests for a rollback operation on the storage engine.
+  metric_type: cumulative
+  title: mysql_handler.rollback
+
+mysql_handler.savepoint:
+  brief: The number of requests to place a savepoint on the storage engine
+  custom: true
+  description: The number of requests to place a savepoint on the storage engine.  This
+    can be used to roll back later.
+  metric_type: cumulative
+  title: mysql_handler.savepoint
+
+mysql_handler.savepoint_rollback:
+  brief: The number of requests to roll back to a savepoint
+  custom: true
+  description: The number of requests to roll back to a savepoint.
+  metric_type: cumulative
+  title: mysql_handler.savepoint_rollback
+
+mysql_handler.update:
+  brief: The number of requests to update a row in a table
+  custom: true
+  description: The number of requests to update a row in a table.
+  metric_type: cumulative
+  title: mysql_handler.update
+
+mysql_handler.write:
+  brief: The number of requests to insert a row in a table
+  custom: true
+  description: The number of requests to insert a row in a table.
+  metric_type: cumulative
+  title: mysql_handler.write
+
+mysql_locks.immediate:
+  brief: The number of MySQL table locks which were granted immediately
+  custom: false
+  description: The number of MySQL table locks which were granted immediately.
+  metric_type: cumulative
+  title: mysql_locks.immediate
+
+mysql_locks.waited:
+  brief: The number of MySQL table locks which had to wait before being granted
+  custom: false
+  description: The number of MySQL table locks which had to wait before being granted.
+  metric_type: cumulative
+  title: mysql_locks.waited
+
+mysql_octets.rx:
+  brief: The number of bytes received by MySQL server from all clients
+  custom: false
+  description: The number of bytes received by MySQL server from all clients.
+  metric_type: cumulative
+  title: mysql_octets.rx
+
+mysql_octets.tx:
+  brief: The number of bytes sent by MySQL server to all clients
+  custom: false
+  description: The number of bytes sent by MySQL server to all clients.
+  metric_type: cumulative
+  title: mysql_octets.tx
+
+mysql_select.full_join:
+  brief: The number of joins that perform full table scans
+  custom: true
+  description: The number of joins that perform full table scans.
+  metric_type: cumulative
+  title: mysql_select.full_join
+
+mysql_select.full_range_join:
+  brief: The number of joins that used a range search on a reference table
+  custom: true
+  description: The number of joins that used a range search on a reference table.
+  metric_type: cumulative
+  title: mysql_select.full_range_join
+
+mysql_select.range:
+  brief: The number of joins that used a range on the first table
+  custom: true
+  description: The number of joins that used a range on the first table.
+  metric_type: cumulative
+  title: mysql_select.range
+
+mysql_select.range_check:
+  brief: The number of joins without keys that check for key usage after each row
+  custom: true
+  description: The number of joins without keys that check for key usage after each
+    row.
+  metric_type: cumulative
+  title: mysql_select.range_check
+
+mysql_select.scan:
+  brief: The number of joins that did a full scan of the first table
+  custom: true
+  description: The number of joins that did a full scan of the first table.
+  metric_type: cumulative
+  title: mysql_select.scan
+
+mysql_slow_queries:
+  brief: The number of queries that have taken more than long_query_time seconds
+  custom: true
+  description: The number of queries that have taken more than long_query_time seconds.
+  metric_type: cumulative
+  title: mysql_slow_queries
+
+mysql_sort.range:
+  brief: The number of sorts that were done using ranges
+  custom: true
+  description: The number of sorts that were done using ranges.
+  metric_type: cumulative
+  title: mysql_sort.range
+
+mysql_sort.scan:
+  brief: The number of sorts that were done by scanning the table
+  custom: true
+  description: The number of sorts that were done by scanning the table.
+  metric_type: cumulative
+  title: mysql_sort.scan
+
+mysql_sort_merge_passes:
+  brief: The number of merge passes done by the sorting algorithm
+  custom: true
+  description: The number of merge passes done by the sorting algorithm.
+  metric_type: cumulative
+  title: mysql_sort_merge_passes
+
+mysql_sort_rows:
+  brief: The number of rows that were sorted
+  custom: true
+  description: The number of rows that were sorted.
+  metric_type: cumulative
+  title: mysql_sort_rows
+
+threads.cached:
+  brief: The number of threads cached by MySQL for re-use on a new client connection
+  custom: false
+  description: The number of threads cached by MySQL for re-use on a new client connection.  A
+    MySQL thread corresponds to a single MySQL connection.
+  metric_type: gauge
+  title: threads.cached
+
+threads.connected:
+  brief: The number of currently open MySQL connections
+  custom: false
+  description: The number of currently open MySQL connections.  A MySQL thread corresponds
+    to a single MySQL connection.
+  metric_type: gauge
+  title: threads.connected
+
+threads.running:
+  brief: The number of MySQL threads that are processing a query
+  custom: true
+  description: The number of MySQL threads that are processing a query.  A MySQL thread
+    corresponds to a single MySQL connection.
+  metric_type: gauge
+  title: threads.running
+
+total_threads.created:
+  brief: The total number of threads created by MySQL for client connections
+  custom: true
+  description: The total number of threads created by MySQL for client connections.  A
+    MySQL thread corresponds to a single MySQL connection.
+  metric_type: cumulative
+  title: total_threads.created
+

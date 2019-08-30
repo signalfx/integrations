@@ -1,0 +1,12 @@
+browse_categories:
+- API Platform and Ecosystems
+code: https://github.com/signalfx/collectd-kong
+data_signature: plugin:"kong"
+description: Monitor Kong API Gateway.
+display_name: Kong
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/kong/img/integrations_kong%402x.png
+logo_small: /images/repos/kong/img/integrations_kong.png
+project_url: https://github.com/signalfx/integrations/tree/master/kong

@@ -1,0 +1,12 @@
+browse_categories:
+- Networking & Content Delivery
+code: https://github.com/signalfx/collectd/blob/master/src/nginx.c
+data_signature: plugin:"nginx"
+description: Monitor NGINX using the SignalFx Smart Agent.
+display_name: NGINX
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/nginx/img/integrations_nginx%402x.png
+logo_small: /images/repos/nginx/img/integrations_nginx.png
+project_url: https://github.com/signalfx/integrations/tree/master/nginx

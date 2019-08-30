@@ -1,7 +1,7 @@
 cpu_idle:
   brief: The percentage of time that the CPU is idle.
   description: The percentage of time that the CPU is idle.
-  metric_type: null
+  metric_type:
   title: cpu_idle
 
 cpu_nice:
@@ -9,7 +9,7 @@ cpu_nice:
     nice value, which have a lower scheduling priority.
   description: The percentage of time that the CPU is handling processes with a positive
     nice value, which have a lower scheduling priority.
-  metric_type: null
+  metric_type:
   title: cpu_nice
 
 cpu_steal:
@@ -19,84 +19,83 @@ cpu_steal:
   description: As AWS allocates hypervisor CPU resources among increasing numbers
     of instances, virtualization load rises, and can affect how often the hypervisor
     can perform requested work on an instance.
-  metric_type: null
+  metric_type:
   title: cpu_steal
 
 cpu_system:
   brief: The percentage of time that the CPU is handling system operations.
   description: The percentage of time that the CPU is handling system operations.
-  metric_type: null
+  metric_type:
   title: cpu_system
 
 cpu_user:
   brief: The percentage of time that the CPU is handling user operations.
   description: The percentage of time that the CPU is handling user operations.
-  metric_type: null
+  metric_type:
   title: cpu_user
 
 cpu_waitio:
   brief: The percentage of time that the CPU is waiting for input/output operations.
   description: The percentage of time that the CPU is waiting for input/output operations.
-  metric_type: null
+  metric_type:
   title: cpu_waitio
 
 load_1:
   brief: The load averaged over a one-minute window.
   description: The load averaged over a one-minute window.
-  metric_type: null
+  metric_type:
   title: load_1
 
 load_15:
   brief: The load averaged over a 15-minute window.
   description: The load averaged over a 15-minute window.
-  metric_type: null
+  metric_type:
   title: load_15
 
 load_5:
   brief: The load averaged over a five-minute window.
   description: The load averaged over a five-minute window.
-  metric_type: null
+  metric_type:
   title: load_5
 
 memory_buffers:
   brief: The amount of buffered memory.
   description: The amount of buffered memory.
-  metric_type: null
+  metric_type:
   title: memory_buffers
 
 memory_cached:
   brief: The amount of cached memory.
   description: The amount of cached memory.
-  metric_type: null
+  metric_type:
   title: memory_cached
 
 memory_free:
   brief: The amount of free memory.
   description: The amount of free memory.
-  metric_type: null
+  metric_type:
   title: memory_free
 
 memory_swap:
   brief: The amount of swap space.
   description: The amount of swap space.
-  metric_type: null
+  metric_type:
   title: memory_swap
 
 memory_total:
   brief: The total amount of memory.
   description: The total amount of memory.
-  metric_type: null
+  metric_type:
   title: memory_total
 
 memory_used:
   brief: The amount of memory in use.
   description: The amount of memory in use.
-  metric_type: null
+  metric_type:
   title: memory_used
 
 procs:
   brief: The number of active processes.
   description: The number of active processes.
-  metric_type: null
+  metric_type:
   title: procs
-

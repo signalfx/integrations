@@ -3,7 +3,7 @@ ConcurrentExecutions:
     functions that have a custom concurrency limit specified.
   description: Emitted as an aggregate metric for all functions in the account, and
     for functions that have a custom concurrency limit specified.
-  metric_type: null
+  metric_type:
   title: ConcurrentExecutions
 
 DeadLetterErrors:
@@ -11,7 +11,7 @@ DeadLetterErrors:
     configured Dead Letter Queues.
   description: Incremented when Lambda is unable to write the failed event payload
     to your configured Dead Letter Queues.
-  metric_type: null
+  metric_type:
   title: DeadLetterErrors
 
 Duration:
@@ -19,7 +19,7 @@ Duration:
     as a result of an invocation to when it stops executing.
   description: Measures the elapsed wall clock time from when the function code starts
     executing as a result of an invocation to when it stops executing.
-  metric_type: null
+  metric_type:
   title: Duration
 
 Errors:
@@ -27,7 +27,7 @@ Errors:
     (response code 4XX).
   description: Measures the number of invocations that failed due to errors in the
     function (response code 4XX).
-  metric_type: null
+  metric_type:
   title: Errors
 
 Invocations:
@@ -35,7 +35,7 @@ Invocations:
     or invocation API call.
   description: Measures the number of times a function is invoked in response to an
     event or invocation API call.
-  metric_type: null
+  metric_type:
   title: Invocations
 
 IteratorAge:
@@ -43,22 +43,21 @@ IteratorAge:
     DynamoDB stream or Kinesis stream).
   description: Emitted for stream-based invocations only (functions triggered by an
     Amazon DynamoDB stream or Kinesis stream).
-  metric_type: null
+  metric_type:
   title: IteratorAge
 
 Throttles:
-  brief: "Measures the number of Lambda function invocation attempts that were throttled\
-    \ due to invocation rates exceeding the customer\u2019s concurrent limits (error\
-    \ code 429)."
-  description: "Measures the number of Lambda function invocation attempts that were\
-    \ throttled due to invocation rates exceeding the customer\u2019s concurrent limits\
-    \ (error code 429)."
-  metric_type: null
+  brief: Measures the number of Lambda function invocation attempts that were throttled
+    due to invocation rates exceeding the customer’s concurrent limits (error code
+    429).
+  description: Measures the number of Lambda function invocation attempts that were
+    throttled due to invocation rates exceeding the customer’s concurrent limits (error
+    code 429).
+  metric_type:
   title: Throttles
 
 UnreservedConcurrentExecutions:
   brief: Emitted as an aggregate metric for all functions in the account only.
   description: Emitted as an aggregate metric for all functions in the account only.
-  metric_type: null
+  metric_type:
   title: UnreservedConcurrentExecutions
-

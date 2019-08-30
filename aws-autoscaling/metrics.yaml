@@ -1,49 +1,48 @@
 GroupDesiredCapacity:
   brief: The number of instances that the Auto Scaling group attempts to maintain.
   description: The number of instances that the Auto Scaling group attempts to maintain.
-  metric_type: null
+  metric_type:
   title: GroupDesiredCapacity
 
 GroupInServiceInstances:
   brief: The number of instances that are running as part of the Auto Scaling group.
   description: The number of instances that are running as part of the Auto Scaling
     group.
-  metric_type: null
+  metric_type:
   title: GroupInServiceInstances
 
 GroupMaxSize:
   brief: The maximum size of the Auto Scaling group.
   description: The maximum size of the Auto Scaling group.
-  metric_type: null
+  metric_type:
   title: GroupMaxSize
 
 GroupMinSize:
   brief: The minimum size of the Auto Scaling group.
   description: The minimum size of the Auto Scaling group.
-  metric_type: null
+  metric_type:
   title: GroupMinSize
 
 GroupPendingInstances:
   brief: The number of instances that are pending.
   description: The number of instances that are pending.
-  metric_type: null
+  metric_type:
   title: GroupPendingInstances
 
 GroupStandbyInstances:
   brief: The number of instances that are in a Standby state.
   description: The number of instances that are in a Standby state.
-  metric_type: null
+  metric_type:
   title: GroupStandbyInstances
 
 GroupTerminatingInstances:
   brief: The number of instances that are in the process of terminating.
   description: The number of instances that are in the process of terminating.
-  metric_type: null
+  metric_type:
   title: GroupTerminatingInstances
 
 GroupTotalInstances:
   brief: The total number of instances in the Auto Scaling group.
   description: The total number of instances in the Auto Scaling group.
-  metric_type: null
+  metric_type:
   title: GroupTotalInstances
-

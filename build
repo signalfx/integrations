@@ -1,0 +1,174 @@
+#!/usr/bin/env python3
+
+# Builds the integration docs in a way that can be consumed by the app.
+
+import json
+import shutil
+import tempfile
+from collections import defaultdict
+from pathlib import Path
+from textwrap import dedent
+from typing import Any, DefaultDict, Dict, List, Tuple
+
+import yaml
+from yaml.scanner import ScannerError
+
+INTEGRATIONS_REPO_ROOT = Path(__file__).parent.resolve()
+OUT_DIR = INTEGRATIONS_REPO_ROOT / "dist/"
+
+
+def json_compact(obj) -> str:
+    """
+    Dumps an object to json in very compact form
+    """
+    return json.dumps(obj, separators=(",", ":"))
+
+
+def symlink_images(output_path):
+    """
+    Make a symlink from the actual images in the integrations to a single
+    directory in the output directory.
+    """
+    image_dest = Path(output_path / "assets/images/integrations")
+    image_dest.mkdir(mode=0o755, parents=True, exist_ok=True)
+
+    processed = set()
+    for img_file in sorted(INTEGRATIONS_REPO_ROOT.glob("**/img/*.png")):
+        if not img_file.is_file():
+            continue
+
+        dest_path = image_dest / img_file.name
+
+        if img_file.name in processed:
+            print(f"WARNING image file {img_file} has duplicate name")
+            continue
+        processed.add(img_file.name)
+
+        dest_path.symlink_to(img_file)
+
+
+def collect_docs() -> Dict[str, Any]:
+    """
+    Gathers all of the markdown docs in each integration directory.  This will
+    merge together the text from all *.md files in an integration directory, in
+    order of file name.
+    """
+    docs = {}
+
+    for integration_dir in sorted(INTEGRATIONS_REPO_ROOT.glob("*")):
+        if not integration_dir.is_dir():
+            continue
+
+        integration_name = integration_dir.name
+        markdown = ""
+        for readme in sorted(integration_dir.glob("*.md")):
+            markdown += readme.read_text()
+
+        if not markdown:
+            continue
+
+        docs[integration_name] = {"markdown": markdown}
+
+    return docs
+
+
+def collect_metrics() -> Tuple[Dict[str, Dict[str, Any]], Dict[str, List[str]]]:
+    """
+    Collects all of the metric docs in separate markdown files into a single
+    dict by integration.
+    """
+    metric_docs: Dict[str, Dict[str, Any]] = {}
+    metrics_by_integration: DefaultDict[str, List[str]] = defaultdict(list)
+    # Reverse to keep backwards-compatible behavior with old script that kept
+    # the last metric seen.
+    for metric_yaml_file in sorted(INTEGRATIONS_REPO_ROOT.glob("*/metrics.yaml")):
+        if "Example" in str(metric_yaml_file):
+            continue
+
+        for metric_name, metric in (yaml.safe_load(metric_yaml_file.read_text()) or {}).items():
+            metrics_by_integration[metric_yaml_file.parent.name].append(metric_name)
+
+            if metric_name in metric_docs:
+                print(f"WARNING metric {metric_name} is duplicated, info will be taken from first one processed only")
+                continue
+
+            desc = ""
+            if "description" in metric:
+                desc = metric["description"]
+                del metric["description"]
+            metric_docs[metric_name] = {"yaml": metric, "markdown": desc}
+    return metric_docs, dict(metrics_by_integration)
+
+
+def split_metric_doc(metric_file) -> Tuple[Dict[str, Any], str]:
+    """
+    Split doc file strings in the form of:
+     ---
+     YAML
+     ---
+     MARKDOWN
+
+     into their corresponding metadata(yaml) and markdown parts
+     """
+    content = metric_file.read_text()
+    parts = content.split("---")
+    assert parts[0].strip() == "", f"Malformed metric doc {metric_file}: {content}; {parts}"
+
+    try:
+        return yaml.safe_load(parts[1]), parts[2]
+    except ScannerError:
+        print(f"Could not parse YAML in {metric_file}")
+        raise
+
+
+def collect_meta() -> Dict[str, Any]:
+    """
+    Returns a dict that contains metadata for each integration.
+    """
+    out = {}
+    for meta_file in sorted(INTEGRATIONS_REPO_ROOT.glob("*/meta.yaml")):
+        integration_name = meta_file.parent.name
+        out[integration_name] = yaml.safe_load(meta_file.read_text())
+        print(f"Processed meta for integration {integration_name}")
+    return out
+
+
+def render_js_module(
+    integration_docs: Dict[str, Any],
+    metric_docs: Dict[str, Any],
+    metrics_by_integration: Dict[str, List[str]],
+    meta: Dict[str, Any],
+) -> str:
+    """
+    Returns the text of the JS module that the web frontend consumes.
+    """
+    return dedent(
+        f"""
+      window.integrationsDocumentation={json_compact(integration_docs)};
+      window.integrationsMeta={json_compact(meta)};
+      window.metricDocumentation={json_compact(metric_docs)};
+      // Plugin docs are omitted since they are rarely used.
+      window.pluginDocumentation={{}};
+      // This is the map of integration name to a list of metrics that that integration supports.
+      window.pluginMetrics={metrics_by_integration};
+    """
+    )
+
+
+def do_build():
+    """
+    Does everything needed to build the doc module to the output dir but does not push it to S3.
+    """
+    tmp_dir = Path(tempfile.mkdtemp())
+    (tmp_dir / "integrations-docs.js").write_text(render_js_module(collect_docs(), *collect_metrics(), collect_meta()))
+
+    symlink_images(tmp_dir)
+
+    shutil.rmtree(OUT_DIR)
+    tmp_dir.replace(OUT_DIR)
+
+
+do_build()
+print(f"\nJS module successfully built to {OUT_DIR}.")
+print("You can serve it locally with the following command:")
+print("\n  python3 -m http.server --directory dist --bind 127.0.0.1 3005\n")

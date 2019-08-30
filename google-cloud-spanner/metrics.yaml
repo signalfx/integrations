@@ -1,36 +1,57 @@
-api_received_bytes_count:
-  brief: Uncompressed request bytes received by Cloud Spanner.
+api/api_request_count:
+  brief: API requests
+  description: Cloud Spanner API requests.
+  metric_type: counter
+  title: api/api_request_count
+api/received_bytes_count:
+  brief: Bytes received by Cloud Spanner.
   description: Uncompressed request bytes received by Cloud Spanner.
   metric_type: counter
   title: api/received_bytes_count
-
-api_request_count:
-  brief: Rate of Cloud Spanner API requests.
+api/request_count:
+  brief: API request rate
   description: Rate of Cloud Spanner API requests.
   metric_type: gauge
   title: api/request_count
-
-api_sent_bytes_count:
-  brief: Uncompressed response bytes sent by Cloud Spanner.
+api/request_latencies:
+  brief: Request latencies
+  description: Distribution of server request latencies for a database. This includes
+    latency of request processing in Cloud Spanner backends and API layer. It does
+    not include network or reverse-proxy overhead between clients and servers.
+  metric_type: counter
+  title: api/request_latencies
+api/sent_bytes_count:
+  brief: Bytes sent by Cloud Spanner.
   description: Uncompressed response bytes sent by Cloud Spanner.
   metric_type: counter
   title: api/sent_bytes_count
-
-instance_cpu_utilization:
-  brief: Utilization of provisioned CPU, between 0 and 1.
+instance/cpu/smoothed_utilization:
+  brief: Smoothed CPU utilization
+  description: 24-hour smoothed utilization of provisioned CPU, between 0 and 1.
+  metric_type: gauge
+  title: instance/cpu/smoothed_utilization
+instance/cpu/utilization:
+  brief: CPU utilization
   description: Utilization of provisioned CPU, between 0 and 1.
   metric_type: gauge
   title: instance/cpu/utilization
-
-instance_node_count:
-  brief: Total number of nodes.
+instance/cpu/utilization_by_priority:
+  brief: CPU utilization by priority
+  description: Utilization of provisioned CPU by priority, between 0 and 1.
+  metric_type: gauge
+  title: instance/cpu/utilization_by_priority
+instance/node_count:
+  brief: Nodes
   description: Total number of nodes.
   metric_type: gauge
   title: instance/node_count
-
-instance_storage_used_bytes:
-  brief: Storage used in bytes.
+instance/session_count:
+  brief: Sessions
+  description: Number of sessions in use.
+  metric_type: gauge
+  title: instance/session_count
+instance/storage/used_bytes:
+  brief: Storage used.
   description: Storage used in bytes.
   metric_type: gauge
   title: instance/storage/used_bytes
-

@@ -1,0 +1,174 @@
+SuccessfulRequests:
+  title: SuccessfulRequests
+  metric_type:
+  brief: Successful Requests
+  description: Successful Requests for Microsoft.EventHub.
+ServerErrors:
+  title: ServerErrors
+  metric_type:
+  brief: Server Errors.
+  description: Server Errors for Microsoft.EventHub.
+UserErrors:
+  title: UserErrors
+  metric_type:
+  brief: User Errors.
+  description: User Errors for Microsoft.EventHub.
+QuotaExceededErrors:
+  title: QuotaExceededErrors
+  metric_type:
+  brief: Quota Exceeded Errors.
+  description: Quota Exceeded Errors for Microsoft.EventHub.
+ThrottledRequests:
+  title: ThrottledRequests
+  metric_type:
+  brief: Throttled Requests.
+  description: Throttled Requests for Microsoft.EventHub.
+IncomingRequests:
+  title: IncomingRequests
+  metric_type:
+  brief: Incoming Requests
+  description: Incoming Requests for Microsoft.EventHub.
+IncomingMessages:
+  title: IncomingMessages
+  metric_type:
+  brief: Incoming Messages
+  description: Incoming Messages for Microsoft.EventHub.
+OutgoingMessages:
+  title: OutgoingMessages
+  metric_type:
+  brief: Outgoing Messages
+  description: Outgoing Messages for Microsoft.EventHub.
+IncomingBytes:
+  title: IncomingBytes
+  metric_type:
+  brief: Incoming Bytes.
+  description: Incoming Bytes for Microsoft.EventHub.
+OutgoingBytes:
+  title: OutgoingBytes
+  metric_type:
+  brief: Outgoing Bytes.
+  description: Outgoing Bytes for Microsoft.EventHub.
+ActiveConnections:
+  title: ActiveConnections
+  metric_type:
+  brief: ActiveConnections
+  description: Total Active Connections for Microsoft.EventHub.
+ConnectionsOpened:
+  title: ConnectionsOpened
+  metric_type:
+  brief: Connections Opened.
+  description: Connections Opened for Microsoft.EventHub.
+ConnectionsClosed:
+  title: ConnectionsClosed
+  metric_type:
+  brief: Connections Closed.
+  description: Connections Closed for Microsoft.EventHub.
+CaptureBacklog:
+  title: CaptureBacklog
+  metric_type:
+  brief: Capture Backlog.
+  description: Capture Backlog for Microsoft.EventHub.
+CapturedMessages:
+  title: CapturedMessages
+  metric_type:
+  brief: Captured Messages.
+  description: Captured Messages for Microsoft.EventHub.
+CapturedBytes:
+  title: CapturedBytes
+  metric_type:
+  brief: Captured Bytes.
+  description: Captured Bytes for Microsoft.EventHub.
+Size:
+  title: Size
+  metric_type:
+  brief: Size
+  description: Size of an EventHub in Bytes.
+INREQS:
+  title: INREQS
+  metric_type:
+  brief: Incoming Requests (Deprecated)
+  description: Total incoming send requests for a namespace (Deprecated)
+SUCCREQ:
+  title: SUCCREQ
+  metric_type:
+  brief: Successful Requests (Deprecated)
+  description: Total successful requests for a namespace (Deprecated)
+FAILREQ:
+  title: FAILREQ
+  metric_type:
+  brief: Failed Requests (Deprecated)
+  description: Total failed requests for a namespace (Deprecated)
+SVRBSY:
+  title: SVRBSY
+  metric_type:
+  brief: Server Busy Errors (Deprecated)
+  description: Total server busy errors for a namespace (Deprecated)
+INTERR:
+  title: INTERR
+  metric_type:
+  brief: Internal Server Errors (Deprecated)
+  description: Total internal server errors for a namespace (Deprecated)
+MISCERR:
+  title: MISCERR
+  metric_type:
+  brief: Other Errors (Deprecated)
+  description: Total failed requests for a namespace (Deprecated)
+INMSGS:
+  title: INMSGS
+  metric_type:
+  brief: Incoming Messages (Deprecated) (Deprecated)
+  description: Total incoming messages for a namespace. This metric is deprecated.
+    Please use Incoming Messages metric instead (Deprecated)
+EHINMSGS:
+  title: EHINMSGS
+  metric_type:
+  brief: Incoming Messages (Deprecated)
+  description: Total incoming messages for a namespace (Deprecated)
+OUTMSGS:
+  title: OUTMSGS
+  metric_type:
+  brief: Outgoing Messages (Deprecated) (Deprecated)
+  description: Total outgoing messages for a namespace. This metric is deprecated.
+    Please use Outgoing Messages metric instead (Deprecated)
+EHOUTMSGS:
+  title: EHOUTMSGS
+  metric_type:
+  brief: Outgoing Messages (Deprecated)
+  description: Total outgoing messages for a namespace (Deprecated)
+EHINMBS:
+  title: EHINMBS
+  metric_type:
+  brief: Incoming bytes (Deprecated) (Deprecated)
+  description: Event Hub incoming message throughput for a namespace. This metric
+    is deprecated. Please use Incoming bytes metric instead (Deprecated)
+EHINBYTES:
+  title: EHINBYTES
+  metric_type:
+  brief: Incoming bytes (Deprecated)
+  description: Event Hub incoming message throughput for a namespace (Deprecated)
+EHOUTMBS:
+  title: EHOUTMBS
+  metric_type:
+  brief: Outgoing bytes (Deprecated) (Deprecated)
+  description: Event Hub outgoing message throughput for a namespace. This metric
+    is deprecated. Please use Outgoing bytes metric instead (Deprecated)
+EHOUTBYTES:
+  title: EHOUTBYTES
+  metric_type:
+  brief: Outgoing bytes (Deprecated)
+  description: Event Hub outgoing message throughput for a namespace (Deprecated)
+EHABL:
+  title: EHABL
+  metric_type:
+  brief: Archive backlog messages (Deprecated)
+  description: Event Hub archive messages in backlog for a namespace (Deprecated)
+EHAMSGS:
+  title: EHAMSGS
+  metric_type:
+  brief: Archive messages (Deprecated)
+  description: Event Hub archived messages in a namespace (Deprecated)
+EHAMBS:
+  title: EHAMBS
+  metric_type:
+  brief: Archive message throughput (Deprecated)
+  description: Event Hub archived message throughput in a namespace (Deprecated)

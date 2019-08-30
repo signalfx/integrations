@@ -1,0 +1,236 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+counter.kafka-bytes-in:
+  brief: Number of bytes received per second across all topics
+  custom: false
+  description: Number of bytes received per second across all topics
+  metric_type: cumulative
+  title: counter.kafka-bytes-in
+
+counter.kafka-bytes-out:
+  brief: Number of bytes transmitted per second across all topics
+  custom: false
+  description: Number of bytes transmitted per second across all topics
+  metric_type: cumulative
+  title: counter.kafka-bytes-out
+
+counter.kafka-isr-expands:
+  brief: When a broker is brought up after a failure, it starts catching up by reading
+    from the leader
+  custom: false
+  description: When a broker is brought up after a failure, it starts catching up
+    by reading from the leader. Once it is caught up, it gets added back to the ISR.
+  metric_type: cumulative
+  title: counter.kafka-isr-expands
+
+counter.kafka-isr-shrinks:
+  brief: When a broker goes down, ISR for some of partitions will shrink
+  custom: false
+  description: When a broker goes down, ISR for some of partitions will shrink. When
+    that broker is up again, ISR will be expanded once the replicas are fully caught
+    up. Other than that, the expected value for both ISR shrink rate and expansion
+    rate is 0.
+  metric_type: cumulative
+  title: counter.kafka-isr-shrinks
+
+counter.kafka-leader-election-rate:
+  brief: Number of leader elections
+  custom: true
+  description: Number of leader elections
+  metric_type: cumulative
+  title: counter.kafka-leader-election-rate
+
+counter.kafka-messages-in:
+  brief: Number of messages received per second across all topics
+  custom: false
+  description: Number of messages received per second across all topics
+  metric_type: cumulative
+  title: counter.kafka-messages-in
+
+counter.kafka-unclean-elections-rate:
+  brief: Number of unclean leader elections
+  custom: false
+  description: Number of unclean leader elections. This happens when a leader goes
+    down and an out-of-sync replica is chosen to be the leader
+  metric_type: cumulative
+  title: counter.kafka-unclean-elections-rate
+
+counter.kafka.fetch-consumer.total-time.count:
+  brief: Number of fetch requests from consumers per second across all partitions
+  custom: false
+  description: Number of fetch requests from consumers per second across all partitions
+  metric_type: cumulative
+  title: counter.kafka.fetch-consumer.total-time.count
+
+counter.kafka.fetch-follower.total-time.count:
+  brief: Number of fetch requests from followers per second across all partitions
+  custom: true
+  description: Number of fetch requests from followers per second across all partitions
+  metric_type: cumulative
+  title: counter.kafka.fetch-follower.total-time.count
+
+counter.kafka.logs.flush-time.count:
+  brief: Number of log flushes
+  custom: true
+  description: Number of log flushes
+  metric_type: cumulative
+  title: counter.kafka.logs.flush-time.count
+
+counter.kafka.produce.total-time.count:
+  brief: Number of producer requests
+  custom: false
+  description: Number of producer requests
+  metric_type: cumulative
+  title: counter.kafka.produce.total-time.count
+
+gauge.jvm.threads.count:
+  brief: Number of JVM threads
+  custom: false
+  description: Number of JVM threads
+  metric_type: gauge
+  title: gauge.jvm.threads.count
+
+gauge.kafka-active-controllers:
+  brief: Specifies if the broker an active controller
+  custom: false
+  description: Specifies if the broker an active controller
+  metric_type: gauge
+  title: gauge.kafka-active-controllers
+
+gauge.kafka-max-lag:
+  brief: Maximum lag in messages between the follower and leader replicas
+  custom: false
+  description: Maximum lag in messages between the follower and leader replicas
+  metric_type: gauge
+  title: gauge.kafka-max-lag
+
+gauge.kafka-offline-partitions-count:
+  brief: "Number of partitions that don\u2019t have an active leader and are hence\
+    \ not writable or readable"
+  custom: false
+  description: "Number of partitions that don\u2019t have an active leader and are\
+    \ hence not writable or readable"
+  metric_type: gauge
+  title: gauge.kafka-offline-partitions-count
+
+gauge.kafka-request-queue:
+  brief: Number of requests in the request queue across all partitions on the broker
+  custom: false
+  description: Number of requests in the request queue across all partitions on the
+    broker
+  metric_type: gauge
+  title: gauge.kafka-request-queue
+
+gauge.kafka-underreplicated-partitions:
+  brief: Number of underreplicated partitions across all topics on the broker
+  custom: false
+  description: Number of underreplicated partitions across all topics on the broker
+  metric_type: gauge
+  title: gauge.kafka-underreplicated-partitions
+
+gauge.kafka.fetch-consumer.total-time.99th:
+  brief: 99th percentile of time in milliseconds to process fetch requests from consumers
+  custom: false
+  description: 99th percentile of time in milliseconds to process fetch requests from
+    consumers
+  metric_type: gauge
+  title: gauge.kafka.fetch-consumer.total-time.99th
+
+gauge.kafka.fetch-consumer.total-time.median:
+  brief: Median time it takes to process a fetch request from consumers
+  custom: false
+  description: Median time it takes to process a fetch request from consumers
+  metric_type: gauge
+  title: gauge.kafka.fetch-consumer.total-time.median
+
+gauge.kafka.fetch-follower.total-time.99th:
+  brief: 99th percentile of time in milliseconds to process fetch requests from followers
+  custom: false
+  description: 99th percentile of time in milliseconds to process fetch requests from
+    followers
+  metric_type: gauge
+  title: gauge.kafka.fetch-follower.total-time.99th
+
+gauge.kafka.fetch-follower.total-time.median:
+  brief: Median time it takes to process a fetch request from follower
+  custom: false
+  description: Median time it takes to process a fetch request from follower
+  metric_type: gauge
+  title: gauge.kafka.fetch-follower.total-time.median
+
+gauge.kafka.logs.flush-time.99th:
+  brief: 99th percentile of time in milliseconds to flush logs
+  custom: true
+  description: 99th percentile of time in milliseconds to flush logs
+  metric_type: gauge
+  title: gauge.kafka.logs.flush-time.99th
+
+gauge.kafka.logs.flush-time.median:
+  brief: Median time it takes to flush logs
+  custom: true
+  description: Median time it takes to flush logs
+  metric_type: gauge
+  title: gauge.kafka.logs.flush-time.median
+
+gauge.kafka.produce.total-time.99th:
+  brief: 99th percentile of time in milliseconds to process produce requests
+  custom: false
+  description: 99th percentile of time in milliseconds to process produce requests
+  metric_type: gauge
+  title: gauge.kafka.produce.total-time.99th
+
+gauge.kafka.produce.total-time.median:
+  brief: Median time it takes to process a produce request
+  custom: false
+  description: Median time it takes to process a produce request
+  metric_type: gauge
+  title: gauge.kafka.produce.total-time.median
+
+gauge.loaded_classes:
+  brief: Number of classes loaded in the JVM
+  custom: false
+  description: Number of classes loaded in the JVM
+  metric_type: gauge
+  title: gauge.loaded_classes
+
+invocations:
+  brief: Total number of garbage collection events
+  custom: false
+  description: Total number of garbage collection events
+  metric_type: cumulative
+  title: invocations
+
+jmx_memory.committed:
+  brief: Amount of memory guaranteed to be available in bytes
+  custom: false
+  description: Amount of memory guaranteed to be available in bytes
+  metric_type: gauge
+  title: jmx_memory.committed
+
+jmx_memory.init:
+  brief: Amount of initial memory at startup in bytes
+  custom: false
+  description: Amount of initial memory at startup in bytes
+  metric_type: gauge
+  title: jmx_memory.init
+
+jmx_memory.max:
+  brief: Maximum amount of memory that can be used in bytes
+  custom: false
+  description: Maximum amount of memory that can be used in bytes
+  metric_type: gauge
+  title: jmx_memory.max
+
+jmx_memory.used:
+  brief: Current memory usage in bytes
+  custom: false
+  description: Current memory usage in bytes
+  metric_type: gauge
+  title: jmx_memory.used
+
+total_time_in_ms.collection_time:
+  brief: Amount of time spent garbage collecting in milliseconds
+  custom: false
+  description: Amount of time spent garbage collecting in milliseconds
+  metric_type: cumulative
+  title: total_time_in_ms.collection_time
+

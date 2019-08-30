@@ -1,0 +1,165 @@
+RunsStarted:
+  title: RunsStarted
+  metric_type:
+  brief: Runs Started
+  description: Number of workflow runs started.
+RunsCompleted:
+  title: RunsCompleted
+  metric_type:
+  brief: Runs Completed
+  description: Number of workflow runs completed.
+RunsSucceeded:
+  title: RunsSucceeded
+  metric_type:
+  brief: Runs Succeeded
+  description: Number of workflow runs succeeded.
+RunsFailed:
+  title: RunsFailed
+  metric_type:
+  brief: Runs Failed
+  description: Number of workflow runs failed.
+RunsCancelled:
+  title: RunsCancelled
+  metric_type:
+  brief: Runs Canceled
+  description: Number of workflow runs canceled.
+RunLatency:
+  title: RunLatency
+  metric_type:
+  brief: Run Latency
+  description: Latency of completed workflow runs.
+RunSuccessLatency:
+  title: RunSuccessLatency
+  metric_type:
+  brief: Run Success Latency
+  description: Latency of succeeded workflow runs.
+RunThrottledEvents:
+  title: RunThrottledEvents
+  metric_type:
+  brief: Run Throttled Events
+  description: Number of workflow action or trigger throttled events.
+RunFailurePercentage:
+  title: RunFailurePercentage
+  metric_type:
+  brief: Run Failure Percentage
+  description: Percentage of workflow runs failed.
+ActionsStarted:
+  title: ActionsStarted
+  metric_type:
+  brief: Actions Started
+  description: Number of workflow actions started.
+ActionsCompleted:
+  title: ActionsCompleted
+  metric_type:
+  brief: Actions Completed
+  description: Number of workflow actions completed.
+ActionsSucceeded:
+  title: ActionsSucceeded
+  metric_type:
+  brief: Actions Succeeded
+  description: Number of workflow actions succeeded.
+ActionsFailed:
+  title: ActionsFailed
+  metric_type:
+  brief: Actions Failed
+  description: Number of workflow actions failed.
+ActionsSkipped:
+  title: ActionsSkipped
+  metric_type:
+  brief: Actions Skipped
+  description: Number of workflow actions skipped.
+ActionLatency:
+  title: ActionLatency
+  metric_type:
+  brief: Action Latency
+  description: Latency of completed workflow actions.
+ActionSuccessLatency:
+  title: ActionSuccessLatency
+  metric_type:
+  brief: Action Success Latency
+  description: Latency of succeeded workflow actions.
+ActionThrottledEvents:
+  title: ActionThrottledEvents
+  metric_type:
+  brief: Action Throttled Events
+  description: Number of workflow action throttled events..
+TriggersStarted:
+  title: TriggersStarted
+  metric_type:
+  brief: Triggers Started
+  description: Number of workflow triggers started.
+TriggersCompleted:
+  title: TriggersCompleted
+  metric_type:
+  brief: Triggers Completed
+  description: Number of workflow triggers completed.
+TriggersSucceeded:
+  title: TriggersSucceeded
+  metric_type:
+  brief: Triggers Succeeded
+  description: Number of workflow triggers succeeded.
+TriggersFailed:
+  title: TriggersFailed
+  metric_type:
+  brief: Triggers Failed
+  description: Number of workflow triggers failed.
+TriggersSkipped:
+  title: TriggersSkipped
+  metric_type:
+  brief: Triggers Skipped
+  description: Number of workflow triggers skipped.
+TriggersFired:
+  title: TriggersFired
+  metric_type:
+  brief: Triggers Fired
+  description: Number of workflow triggers fired.
+TriggerLatency:
+  title: TriggerLatency
+  metric_type:
+  brief: Trigger Latency
+  description: Latency of completed workflow triggers.
+TriggerFireLatency:
+  title: TriggerFireLatency
+  metric_type:
+  brief: Trigger Fire Latency
+  description: Latency of fired workflow triggers.
+TriggerSuccessLatency:
+  title: TriggerSuccessLatency
+  metric_type:
+  brief: Trigger Success Latency
+  description: Latency of succeeded workflow triggers.
+TriggerThrottledEvents:
+  title: TriggerThrottledEvents
+  metric_type:
+  brief: Trigger Throttled Events
+  description: Number of workflow trigger throttled events.
+BillableActionExecutions:
+  title: BillableActionExecutions
+  metric_type:
+  brief: Billable Action Executions
+  description: Number of workflow action executions getting billed.
+BillableTriggerExecutions:
+  title: BillableTriggerExecutions
+  metric_type:
+  brief: Billable Trigger Executions
+  description: Number of workflow trigger executions getting billed.
+TotalBillableExecutions:
+  title: TotalBillableExecutions
+  metric_type:
+  brief: Total Billable Executions
+  description: Number of workflow executions getting billed.
+BillingUsageNativeOperation:
+  title: BillingUsageNativeOperation
+  metric_type:
+  brief: Billing Usage for Native Operation Executions
+  description: Number of native operation executions getting billed.
+BillingUsageStandardConnector:
+  title: BillingUsageStandardConnector
+  metric_type:
+  brief: Billing Usage for Standard Connector Executions
+  description: Number of standard connector executions getting billed.
+BillingUsageStorageConsumption:
+  title: BillingUsageStorageConsumption
+  metric_type:
+  brief: Billing Usage for Storage Consumption Executions
+  description: Number of storage consumption executions getting billed.

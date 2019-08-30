@@ -1,0 +1,13 @@
+browse_categories:
+- Compute
+- Containers
+code: https://github.com/signalfx/collectd-marathon
+data_signature: plugin:"marathon"
+description: Monitor Mesosphere Marathon environments
+display_name: Marathon
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/docker/img/integrations_marathon%402x.png
+logo_small: /images/repos/docker/img/integrations_marathon.png
+project_url: https://github.com/signalfx/integrations/tree/master/marathon

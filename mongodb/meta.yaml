@@ -1,0 +1,12 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/collectd-mongodb
+data_signature: plugin:"mongo"
+description: Monitor MongoDB using the SignalFx Smart agent.
+display_name: MongoDB
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/mongodb/img/integrations_mongodb%402x.png
+logo_small: /images/repos/mongodb/img/integrations_mongodb.png
+project_url: https://github.com/signalfx/mongodb

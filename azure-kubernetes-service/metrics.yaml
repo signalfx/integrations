@@ -1,0 +1,25 @@
+kube_node_status_allocatable_cpu_cores:
+  title: kube_node_status_allocatable_cpu_cores
+  metric_type:
+  brief: Total number of available cpu cores in a managed cluster
+  description: Total number of available cpu cores in a managed cluster
+kube_node_status_allocatable_memory_bytes:
+  title: kube_node_status_allocatable_memory_bytes
+  metric_type:
+  brief: Total amount of available memory in a managed cluster
+  description: Total amount of available memory in a managed cluster
+kube_pod_status_ready:
+  title: kube_pod_status_ready
+  metric_type:
+  brief: Number of pods in Ready state
+  description: Number of pods in Ready state
+kube_node_status_condition:
+  title: kube_node_status_condition
+  metric_type:
+  brief: Statuses for various node conditions
+  description: Statuses for various node conditions
+kube_pod_status_phase:
+  title: kube_pod_status_phase
+  metric_type:
+  brief: Number of pods by phase
+  description: Number of pods by phase

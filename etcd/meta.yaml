@@ -1,0 +1,12 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/siganlfx-agent
+data_signature: plugin:"etcd"
+description: Monitor etcd using the SignalFx Smart agent.
+display_name: etcd
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/etcd/img/integrations_etcd%402x.png
+logo_small: /images/repos/etcd/img/integrations_etcd.png
+project_url: https://github.com/signalfx/integrations/tree/master/etcd

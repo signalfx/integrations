@@ -1,0 +1,12 @@
+browse_categories:
+- Application Integration
+code: https://github.com/signalfx/collectd-rabbitmq
+data_signature: plugin:"rabbitmq"
+description: Monitor RabbitMQ using the SignalFx Smart agent.
+display_name: RabbitMQ
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/rabbitmq/img/integrations_rabbitmq%402x.png
+logo_small: /images/repos/rabbitmq/img/integrations_rabbitmq.png
+project_url: https://github.com/signalfx/integrations/tree/master/rabbitmq

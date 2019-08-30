@@ -1,0 +1,466 @@
+import os
+import codecs
+import re
+import shutil
+
+from distutils import dir_util
+from helpers.helpers import collect_metrics_yaml, extract, get_file_contents, get_output_filename
+from helpers.patterns import metric_row_pattern, image_pattern, image_inline_pattern, sfx_link_pattern, sfx_link_inline_pattern, \
+    integrations_link_pattern, doc_link_pattern, doc_folder_link_pattern
+from helpers.constants import dirs_to_skip, docs_to_skip, rtd_base_url
+from pathlib import Path
+from helpers.toc import toc_sam, toc_non_sam
+
+dirname = os.path.dirname(__file__)
+integrations_path = os.environ.get("INTEGRATIONS_REPO") or os.path.join(dirname, os.path.realpath('./'))
+integrations_agent_doc_path = os.path.join(integrations_path, 'signalfx-agent/agent_docs/')
+product_docs_path = os.environ.get("PRODUCT_DOCS_REPO") or os.path.join(dirname, os.path.realpath('../product-docs'))
+output_doc_path = os.path.join(product_docs_path, 'integrations/integrations-reference/')
+output_agent_doc_path = os.path.join(product_docs_path, 'integrations/agent/')
+output_image_path = os.path.join(product_docs_path, '_images/images-integrations/integrations-reference')
+
+rtd_urls = {}
+smart_agent_monitors = []
+non_smart_agent_monitors_with_readme = []
+non_smart_agent_monitors_without_readme = []
+
+
+def extract_section(src_path, toc_item):
+    input_file = codecs.open(os.path.join(src_path, toc_item.get('content')))
+    contents = input_file.read()
+
+    extracted = ''
+    extracted += extract(contents, toc_item.get('fingerprints').get('starter'),
+                         toc_item.get('fingerprints').get('stopper'))
+    return extracted
+
+
+def collect_metrics(monitor):
+    metrics_yaml = os.path.join(integrations_path, monitor + '/metrics.yaml')
+    return collect_metrics_yaml(metrics_yaml)
+
+
+def tabulate_metrics(metrics):
+    metric_table = ''
+    metric_list = ''
+    show_type_column = False
+    for metric in metrics:
+        if metric.get('metric_type'):
+            show_type_column = True
+            break
+    for metric in metrics:
+        metric_table += ('| [' + metric.get('metric_name') + '](#' + re.sub(r'[\.\s\_\/]', '-', metric.get(
+            'metric_name').lower()) + ') | ' + metric.get('brief'))
+        if show_type_column:
+            metric_table += (' | ' + metric.get('metric_type'))
+        metric_table += ' |\n'
+        metric_list += ('## ' + metric.get('metric_name') + '\n')
+        if metric.get('metric_type'):
+            metric_list += ('`' + metric.get('metric_type') + '`\n\n')
+        metric_list += (metric.get('description') + '\n\n')
+
+    tabulated = '\n| Metric Name | Description | Type |\n| --- | --- | --- |\n'
+    if not show_type_column:
+        tabulated = '\n| Metric Name | Description |\n| --- | --- |\n'
+    tabulated += metric_table
+    tabulated += '\n'
+    tabulated += metric_list
+
+    return tabulated
+
+
+def copy_image(src_path, dest_path):
+    try:
+        shutil.copyfile(src_path, dest_path)
+    except:
+        print('couldn\'t copy image: ' + src_path + ' to ' + dest_path)
+
+
+def process_images(src_path, monitor, contents):
+    os.mkdir(os.path.join(output_image_path, monitor))
+    images = []
+
+    contents = image_inline_pattern.sub(repl='![](\\1)', string=contents)
+
+    cnt_plain_image_pattern = 0
+    for p in re.finditer(image_pattern, contents):
+        image_filename = p.group(1)
+        is_integrations_github = re.match(
+            r'https:\/\/github\.com\/signalfx\/integrations\/blob\/master\/(.*\/img\/([^\/]*))$', image_filename)
+        if is_integrations_github:
+            src_image_path = os.path.join(integrations_path, is_integrations_github.group(1))
+            if not os.path.exists(src_image_path):
+                continue
+            image_filename = is_integrations_github.group(2)
+            dest_image_path = os.path.join(output_image_path, monitor + '/' + image_filename)
+        else:
+            src_image_path = os.path.join(src_path, image_filename)
+            image_filename = image_filename.replace('./img/', '')
+            dest_image_path = os.path.join(output_image_path, monitor + '/' + image_filename)
+        copy_image(src_image_path, dest_image_path)
+
+    for p in re.finditer(image_pattern, contents):
+        image_filename = p.group(1)
+        is_integrations_github = re.match(
+            r'https:\/\/github\.com\/signalfx\/integrations\/blob\/master\/(.*\/img\/([^\/]*))$', image_filename)
+        if is_integrations_github:
+            src_image_path = os.path.join(integrations_path, is_integrations_github.group(1))
+            if not os.path.exists(src_image_path):
+                continue
+            image_filename = is_integrations_github.group(2)
+            dest_image_path = os.path.join(output_image_path, monitor + '/' + image_filename)
+        else:
+            src_image_path = os.path.join(src_path, image_filename)
+            image_filename = image_filename.replace('./img/', '')
+            dest_image_path = os.path.join(output_image_path, monitor + '/' + image_filename)
+        image_filename = image_filename.replace('./', '')
+        contents = contents.replace(p.group(1),
+                                    '../../_images/images-integrations/integrations-reference/' + monitor + '/' + image_filename)
+
+    header = contents.split('\n')[0]
+    contents_no_header = contents.replace(header + '\n', '')
+    for p in re.finditer(image_pattern, contents_no_header):
+        image_link = p.group(1)
+        is_integrations_github = re.match(
+            r'https:\/\/github\.com\/signalfx\/integrations\/blob\/master\/(.*\/img\/([^\/]*))$', image_link)
+        if is_integrations_github:
+            image_link = is_integrations_github.group(2)
+        else:
+            image_link = re.sub(pattern=r'_images\/(.*\/)', repl='_images/', string=image_link)
+
+        contents_no_header = contents_no_header.replace(p.group(0),
+                                                        '<a href="' + image_link + '" target="_blank">' + p.group(
+                                                            0) + '</a>')
+    contents = header + '\n' + contents_no_header
+    return contents
+
+
+def remove_links(contents):
+    contents = sfx_link_pattern.sub(repl='', string=contents)
+    contents = sfx_link_inline_pattern.sub(repl='', string=contents)
+    contents = doc_folder_link_pattern.sub(repl='', string=contents)
+    return contents
+
+
+def process_links(contents):
+    links = []
+    contents = remove_links(contents)
+
+    for p in re.finditer(integrations_link_pattern, contents):
+        old = p.group(0)
+        original_link = old.split('(')[1][:-1]
+        folder = original_link.split('/')[-1]
+        try:
+            contents = contents.replace(original_link, rtd_urls[folder])
+        except:
+            pass
+
+    for p in re.finditer(doc_link_pattern, contents):
+        contents = contents.replace(p.group(1), '#' + p.group(2))
+
+    return contents
+
+
+def prepare_rtd_url(contents):
+    heading = contents.splitlines()[0].split(' ')[1:]
+    if len(heading) == 1:
+        required_name = heading[0].strip().lower()
+    else:
+        required_name = '.'.join(filter(None, heading[1:])).lower()
+
+    url = ('%s%s.html' % (rtd_base_url, required_name))
+    return url
+
+
+def prepare():
+    for folder in os.listdir(integrations_path):
+        full_path = os.path.join(integrations_path, folder)
+        isdir = os.path.isdir(full_path)
+        folder = folder.lower()
+
+        if isdir and folder not in dirs_to_skip:
+            # Prepare mapping
+            readme_path = os.path.join(full_path, 'README.md')
+            if os.path.isfile(readme_path):
+                readme_contents = get_file_contents(readme_path)
+                rtd_urls[folder] = prepare_rtd_url(readme_contents)
+
+    # List of Smart Agent Monitors
+    dirs = os.listdir(integrations_path)
+
+    for dr in dirs:
+        dr = dr.lower()
+
+        sub_path = os.path.join(integrations_path, dr)
+        if not os.path.isdir(sub_path) or dr in dirs_to_skip:
+            continue
+
+        if not os.path.exists(os.path.join(sub_path, 'README.md')):
+            continue
+
+        if os.path.exists(os.path.join(sub_path, 'SMART_AGENT_MONITOR.md')):
+            smart_agent_monitors.append(dr)
+        elif os.path.exists(os.path.join(sub_path, 'docs')):
+            non_smart_agent_monitors_with_readme.append(dr)
+        else:
+            non_smart_agent_monitors_without_readme.append(dr)
+    try:
+        shutil.rmtree(output_image_path)
+    except:
+        pass
+    os.mkdir(output_image_path)
+
+
+def render_header(monitor, sections):
+    src_path = os.path.join(integrations_path, monitor)
+    first_line = get_file_contents(os.path.join(src_path, 'README.md')).split('\n')[0]
+
+    output_filename = re.sub(r'!\[[^\[\]]*\]\([^\(\)]*\)', '', first_line).split('|')[-1].replace('#', '')
+    output_filename = output_filename.strip().lower()
+    output_filename = output_filename.replace(' ', '.').replace('/', '.')
+
+    if not output_filename.strip():
+        first_line = first_line + ' ' + monitor.capitalize()
+
+    header = first_line + '\n\n'
+    for section in sections:
+        header += ('- [' + section.capitalize() + '](#' + section.replace(' ', '-') + ')\n')
+    header += '\n'
+
+    return header
+
+
+def do_smart_agent_monitors():
+    for monitor in smart_agent_monitors:
+        src_path = os.path.join(integrations_path, monitor)
+
+        contents = ''
+        sections = []
+        for toc_item in toc_sam:
+            section = extract_section(src_path, toc_item)
+            if section.strip() == '':
+                continue
+            sections.append(toc_item.get('name'))
+            contents += '## ' + toc_item.get('name').upper() + '\n'
+            if toc_item.get('name') == 'metrics':
+                contents += tabulate_metrics(collect_metrics(monitor))
+            contents += section
+
+        contents = render_header(monitor, sections) + contents
+        contents = process_images(src_path, monitor, contents)
+        contents = process_links(contents)
+
+        output_filename = get_output_filename(monitor, contents.split('\n', 1)[0])
+        output_path = os.path.join(output_doc_path, output_filename)
+
+        try:
+            os.remove(output_path)
+        except:
+            pass
+
+        fout = open(output_path, 'a')
+        fout.write(contents)
+        fout.close()
+
+
+def do_non_smart_agent_monitors_with_readme():
+    for monitor in non_smart_agent_monitors_with_readme:
+        src_path = os.path.join(integrations_path, monitor)
+
+        contents = ''
+        sections = []
+        for toc_item in toc_non_sam:
+            section = extract_section(src_path, toc_item)
+            if section.strip() == '':
+                continue
+            sections.append(toc_item.get('name'))
+            contents += '## ' + toc_item.get('name').upper() + '\n'
+            if toc_item.get('name') == 'metrics':
+                contents += tabulate_metrics(collect_metrics(monitor))
+            contents += section
+
+        contents = render_header(monitor, sections) + contents
+        contents = process_images(src_path, monitor, contents)
+        contents = process_links(contents)
+
+        output_filename = get_output_filename(monitor, contents.split('\n', 1)[0])
+        output_path = os.path.join(output_doc_path, output_filename)
+
+        try:
+            os.remove(output_path)
+        except:
+            pass
+
+        fout = open(output_path, 'a')
+        fout.write(contents)
+        fout.close()
+
+def do_non_smart_agent_monitors_without_readme():
+    for monitor in non_smart_agent_monitors_without_readme:
+        src_path = os.path.join(integrations_path, monitor)
+
+        contents = get_file_contents(os.path.join(src_path, 'README.md'))
+        contents = process_images(src_path, monitor, contents)
+        contents = process_links(contents)
+        contents = re.split(r'#+.*LICENSE', contents, 1)[0]
+
+        output_filename = get_output_filename(monitor, contents.split('\n', 1)[0])
+        output_path = os.path.join(output_doc_path, output_filename)
+
+        try:
+            os.remove(output_path)
+        except:
+            pass
+
+        fout = open(output_path, 'a')
+        fout.write(contents)
+        fout.close()
+
+# Most of the files from the agent docs are copied directly over to product docs.
+# However, there are a few files that need to be renamed or moved to a different
+# location before being synced to product docs. This keeps a map between, the
+# files names relative to the path in "output_agent_doc_path" variable
+# and the target location
+AGENT_DOCS_WITH_DIFFERENT_TARGETS = {
+    'observer-config.md': 'observers/_observer-config.md',
+    'monitor-config.md': 'monitors/_monitor-config.md',
+}
+
+
+def do_smart_agent_docs():
+    """
+    Process and copy Agent docs from
+    https://github.com/signalfx/integrations/tree/master/signalfx-agent/agent-docs
+    to the product-docs repo. The source of these docs are originally:
+    https://github.com/signalfx/signalfx-agent/tree/master/docs
+    """
+    move_agent_docs()
+    fix_relative_links()
+
+
+def move_agent_docs():
+    print("Copying %s to %s" % (integrations_agent_doc_path, output_agent_doc_path))
+    assert os.path.exists(integrations_agent_doc_path)
+    assert os.path.exists(output_agent_doc_path)
+
+    dir_util.copy_tree(integrations_agent_doc_path, output_agent_doc_path)
+
+    for curr_path, target_path in AGENT_DOCS_WITH_DIFFERENT_TARGETS.items():
+        os.rename(os.path.join(output_agent_doc_path, curr_path),
+                  os.path.join(output_agent_doc_path, target_path))
+
+
+RELATIVE_LINK_PATTERN = re.compile(r"(\[.*?\])\((\.\.?/.+?)\)")
+
+
+def fix_relative_links_in_monitor_dir(monitor_docs, agent_docs):
+    monitor_docs_link_pattern = re.compile(r"(\[.*\]\(\.)\/monitors(\/.*\))")
+    for doc in monitor_docs:
+        print("Fixing relative path in %s" % str(doc))
+        content = doc.read_text()
+        if "monitors/_monitor-config.md" in str(doc):
+            # Handle relative links to root level docs
+            for agent_doc in agent_docs:
+                content = content.replace("](./%s" % agent_doc, "](../%s" % agent_doc)
+
+            content = re.sub(monitor_docs_link_pattern, r"\1\2", content)
+            content = content.replace("](./observer-config.md", "](../observers/_observer-config.md")
+            content = content.replace("](./observer-config.html", "](../observers/_observer-config.html")
+        else:  # actual monitor docs
+            content = content.replace("](../monitor-config.", "](./_monitor-config.")
+            content = content.replace("](../observer-config.", "](../observers/_observer-config.")
+        doc.write_text(content)
+
+
+def fix_relative_links_in_observer_dir(observer_docs, agent_docs):
+    obsesrver_docs_link_pattern = re.compile(r"(\[.*\]\(\.)\/observers(\/.*\))")
+    for doc in observer_docs:
+        print("Fixing relative path in %s" % str(doc))
+        content = doc.read_text()
+        if "observers/_observer-config.md" in str(doc):
+            # Handle relative links to root level docs
+            for agent_doc in agent_docs:
+                content = content.replace("](./%s" % agent_doc, "](../%s" % agent_doc)
+
+            content = re.sub(obsesrver_docs_link_pattern, r"\1\2", content)
+            content = content.replace("../observer-config.md", "./_observer-config.md")
+            content = content.replace("../observer-config.html", "./_observer-config.html")
+        else:  # actual observer docs
+            content = content.replace("](../observer-config.", "](./_observer-config.")
+            content = content.replace("](../monitor-config.", "](../monitors/_monitor-config.")
+        doc.write_text(content)
+
+
+def fix_relative_links_in_root_dir(agent_docs):
+    for doc in agent_docs:
+        print("Fixing relative path in %s" % str(doc))
+        content = doc.read_text()
+        content = content.replace("](./monitor-config.", "](./monitors/_monitor-config.")
+        content = content.replace("](./observer-config.", "](./observers/_observer-config.")
+        doc.write_text(content)
+
+
+def get_simple_file_names(full_path):
+    if not full_path:
+        return []
+
+    res = []
+    for p in full_path:
+        res.append(os.path.basename(p)[:-3])
+
+    return res
+
+
+def fix_relative_links():
+    """
+    Since monitor and observer config doc files are placed in different locations
+    in product-docs compared to the agent repo, relative links might be broken. This
+    method should fix all such links that need to be updated
+    """
+    grouped_files = group_files()
+    fix_relative_links_in_root_dir(grouped_files['.'])
+
+    agent_doc_filenames = get_simple_file_names(grouped_files['.'])
+    print(agent_doc_filenames)
+    fix_relative_links_in_monitor_dir(grouped_files['monitors'], agent_doc_filenames)
+    fix_relative_links_in_observer_dir(grouped_files['observers'], agent_doc_filenames)
+
+
+def group_files():
+    """
+    Methods groups file by path
+    """
+    all_files = {'.': [], 'monitors': [], 'observers': []}
+
+    for item in Path(output_agent_doc_path).iterdir():
+        collect_files(item, all_files)
+
+    return all_files
+
+
+def collect_files(path, all_files):
+    if path.is_dir():
+        for item in path.iterdir():
+            collect_files(item, all_files)
+    else:
+        if not str(path).endswith('.md'):
+            return
+        path_parent = os.path.dirname(path)
+
+        if os.path.relpath(path_parent, output_agent_doc_path) == os.path.curdir:
+            all_files['.'].append(path)
+        elif os.path.relpath(path_parent, os.path.join(output_agent_doc_path, "monitors")) == os.path.curdir:
+            all_files['monitors'].append(path)
+        elif os.path.relpath(path_parent, os.path.join(output_agent_doc_path, "observers")) == os.path.curdir:
+            all_files['observers'].append(path)
+        else:
+            print("Unknown relative link: %s" % path)
+
+
+if __name__ == "__main__":
+    prepare()
+    do_smart_agent_monitors()
+    do_non_smart_agent_monitors_with_readme()
+    do_non_smart_agent_monitors_without_readme()
+
+    do_smart_agent_docs()

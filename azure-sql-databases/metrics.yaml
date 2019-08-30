@@ -1,0 +1,145 @@
+cpu_percent:
+  title: cpu_percent
+  metric_type:
+  brief: CPU percentage
+  description: CPU percentage
+physical_data_read_percent:
+  title: physical_data_read_percent
+  metric_type:
+  brief: Data IO percentage
+  description: Data IO percentage
+log_write_percent:
+  title: log_write_percent
+  metric_type:
+  brief: Log IO percentage
+  description: Log IO percentage
+dtu_consumption_percent:
+  title: dtu_consumption_percent
+  metric_type:
+  brief: DTU percentage
+  description: DTU percentage
+storage:
+  title: storage
+  metric_type:
+  brief: Data space used
+  description: Total database size
+connection_successful:
+  title: connection_successful
+  metric_type:
+  brief: Successful Connections
+  description: Successful Connections
+connection_failed:
+  title: connection_failed
+  metric_type:
+  brief: Failed Connections
+  description: Failed Connections
+blocked_by_firewall:
+  title: blocked_by_firewall
+  metric_type:
+  brief: Blocked by Firewall
+  description: Blocked by Firewall
+deadlock:
+  title: deadlock
+  metric_type:
+  brief: Deadlocks
+  description: Deadlocks
+storage_percent:
+  title: storage_percent
+  metric_type:
+  brief: Data space used percent
+  description: Database size percentage
+xtp_storage_percent:
+  title: xtp_storage_percent
+  metric_type:
+  brief: In-Memory OLTP storage percent
+  description: In-Memory OLTP storage percent
+workers_percent:
+  title: workers_percent
+  metric_type:
+  brief: Workers percentage
+  description: Workers percentage
+sessions_percent:
+  title: sessions_percent
+  metric_type:
+  brief: Sessions percentage
+  description: Sessions percentage
+dtu_limit:
+  title: dtu_limit
+  metric_type:
+  brief: DTU Limit
+  description: DTU Limit
+dtu_used:
+  title: dtu_used
+  metric_type:
+  brief: DTU used
+  description: DTU used
+cpu_limit:
+  title: cpu_limit
+  metric_type:
+  brief: CPU limit
+  description: CPU limit
+cpu_used:
+  title: cpu_used
+  metric_type:
+  brief: CPU used
+  description: CPU used
+dwu_limit:
+  title: dwu_limit
+  metric_type:
+  brief: DWU limit
+  description: DWU limit
+dwu_consumption_percent:
+  title: dwu_consumption_percent
+  metric_type:
+  brief: DWU percentage
+  description: DWU percentage
+dwu_used:
+  title: dwu_used
+  metric_type:
+  brief: DWU used
+  description: DWU used
+dw_cpu_percent:
+  title: dw_cpu_percent
+  metric_type:
+  brief: DW node level CPU percentage
+  description: DW node level CPU percentage
+dw_physical_data_read_percent:
+  title: dw_physical_data_read_percent
+  metric_type:
+  brief: DW node level Data IO percentage
+  description: DW node level Data IO percentage
+cache_hit_percent:
+  title: cache_hit_percent
+  metric_type:
+  brief: Cache hit percentage
+  description: Cache hit percentage
+cache_used_percent:
+  title: cache_used_percent
+  metric_type:
+  brief: Cache used percentage
+  description: Cache used percentage
+local_tempdb_usage_percent:
+  title: local_tempdb_usage_percent
+  metric_type:
+  brief: Local tempdb percentage
+  description: Local tempdb percentage
+app_cpu_billed:
+  title: app_cpu_billed
+  metric_type:
+  brief: App CPU billed
+  description: App CPU billed
+app_cpu_percent:
+  title: app_cpu_percent
+  metric_type:
+  brief: App CPU percentage
+  description: App CPU percentage
+app_memory_percent:
+  title: app_memory_percent
+  metric_type:
+  brief: App memory used percentage
+  description: App memory used percentage
+allocated_data_storage:
+  title: allocated_data_storage
+  metric_type:
+  brief: Data space allocated
+  description: Data space allocated
