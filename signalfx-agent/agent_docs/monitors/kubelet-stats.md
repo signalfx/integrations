@@ -40,7 +40,7 @@ The **nested** `kubeletAPI` config object has the following fields:
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `url` | no | `string` | URL of the Kubelet instance.  This will default to `https://<current node hostname>:10250` if not provided. |
+| `url` | no | `string` | URL of the Kubelet instance.  This will default to `http://<current node hostname>:10255` if not provided. |
 | `authType` | no | `string` | Can be `none` for no auth, `tls` for TLS client cert auth, or `serviceAccount` to use the pod's default service account token to authenticate. (**default:** `none`) |
 | `skipVerify` | no | `bool` | Whether to skip verification of the Kubelet's TLS cert (**default:** `true`) |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the Kubelet's TLS cert, unnecessary if `skipVerify` is set to false. |
@@ -82,6 +82,7 @@ Metrics that are categorized as
  - `container_last_seen` (*gauge*)<br>    Last time a container was seen by the exporter
  - `container_memory_failcnt` (*cumulative*)<br>    Number of memory usage hits limits
  - ***`container_memory_failures_total`*** (*cumulative*)<br>    Cumulative count of memory allocation failures
+ - `container_memory_rss` (*gauge*)<br>    Current RSS memory usage in bytes
  - ***`container_memory_usage_bytes`*** (*gauge*)<br>    Current memory usage in bytes
  - `container_memory_working_set_bytes` (*gauge*)<br>    Current working set in bytes
  - ***`container_spec_cpu_period`*** (*gauge*)<br>    The number of microseconds that the [CFS scheduler](https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) uses as a window when limiting container processes

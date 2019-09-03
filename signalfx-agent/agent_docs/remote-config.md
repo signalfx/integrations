@@ -28,10 +28,9 @@ about matching indentation of remote values.
 
 ## Configuration of Remote Configuration
 
-The sources for remote configuration can be configured via the [configSources
-option](./config-schema.html#configsources) in the main agent config file.  A
-full list of config sources and their options are also [documented in the
-config reference](./config-schema.html#configsources).
+For information on the sources for remote configuration, along with a 
+full list of config sources and their options, see [configSources
+option](./config-schema.html#configsources) in the main agent config file.  
 
 ## Simple paths
 

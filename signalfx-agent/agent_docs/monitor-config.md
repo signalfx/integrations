@@ -131,6 +131,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [prometheus/prometheus](./monitors/prometheus-prometheus.md)
 - [prometheus/redis](./monitors/prometheus-redis.md)
 - [python-monitor](./monitors/python-monitor.md)
+- [signalfx-forwarder](./monitors/signalfx-forwarder.md)
 - [sql](./monitors/sql.md)
 - [statsd](./monitors/statsd.md)
 - [telegraf/logparser](./monitors/telegraf-logparser.md)

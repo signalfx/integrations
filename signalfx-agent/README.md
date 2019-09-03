@@ -63,21 +63,11 @@ to SignalFx on a regular basis.  There are a few things that can be
 [configured](https://docs.signalfx.com/en/latest/integrations/agent/./config-schema.html#writer) in the writer, but this is generally only necessary if you have a very large number of metrics flowing through a single agent.
 
 
-<<<<<<< HEAD
-To get started deploying the Smart Agent on a single host for Windows or Linux, see the
-[Smart Agent Quick Install](./docs/smart-agent-quick-install.md) guide. For more information to help you set up Smart Agent on your network, see [Smart Agent Next Steps](./docs/smart-agent-next-steps). Technical details for other methods of agent installation are discussed below. 
-=======
 ## Installation
->>>>>>> Agent docs (#735)
 
 The instructions below are for a command-line installation of a single agent. For other installation options, including bulk deployments, see the Advanced Installation in [Advanced Installation Options](https://docs.signalfx.com/en/latest/integrations/agent/./advanced-install-options.html).
 
-<<<<<<< HEAD
-To get started deploying the Smart Agent on a single host for Windows or Linux, see the
-[Smart Agent Quick Install](./docs/smart-agent-quick-install.md) guide. For more information to help you set up Smart Agent on your network, see [Smart Agent Next Steps](./docs/smart-agent-next-steps). Technical details for other methods of agent installation are discussed below.
-=======
 __Get started with Smart Agent using the 3 steps below.__
->>>>>>> Agent docs (#735)
 
 _Note: if you have previously configured another metric collection agent on your host such as collectd, uninstall or disable that agent before installing the SignalFx Smart Agent._
 
@@ -89,7 +79,7 @@ If you are not installing from the tile on the Integrations page:
 
 - Get your API_TOKEN from: __Organization Settings => Access Token__ tab in the SignalFx application. 
 
-- Determine YOUR\_SIGNAL_FX_REALM from: your profile page in the SignalFx web application.
+- Determine YOUR\_SIGNAL_FX_REALM from your [profile page](https://docs.signalfx.com/en/latest/getting-started/get-around-ui.html#user-profile-avatar-and-color-theme) in the SignalFx web application.
 
 To install the Smart Agent on a single Linux host, enter:
 
@@ -187,4 +177,4 @@ Installation is complete.
 
 To continue your exploration of SignalFx Smart Agent capabilities, see [Advanced Installation Options](https://docs.signalfx.com/en/latest/integrations/agent/./advanced-install-options.html).
 
-__To learn more about how your data is presented in SignalFx, see the [15-Minute SignalFx Quick Start](https://docs.signalfx.com/en/latest/getting-started/quick-start.html)__.
+To learn more about how your data is presented in SignalFx, see the [15-Minute SignalFx Quick Start](https://docs.signalfx.com/en/latest/getting-started/quick-start.html).
