@@ -54,6 +54,9 @@ global
 For a more restricted tcp socket, a backend server can be defined to listen
 to stats on localhost. A frontend proxy can use the backend server on a
 different port, with ACLs to restrict access. See below for example.
+Depending on how restrictive your socket is, you may need to add the
+signalfx-agent user to the haproxy group:
+`sudo usermod -a -G haproxy signalfx-agent`
 
 ```
 global

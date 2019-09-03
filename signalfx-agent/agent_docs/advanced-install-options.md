@@ -147,10 +147,9 @@ _Kubernetes:_  See [Kubernetes Setup](https://github.com/signalfx/signalfx-agent
 
 The Smart Agent is configured primarily from a YAML file. By default, the Smart Agent config is installed at and looked for at /etc/signalfx/agent.yaml on Linux and \ProgramData\SignalFxAgent\agent.yaml on Windows. This can be overridden by the -config command line flag.
 
-For details see [Agent Configuration](https://docs.signalfx.com/en/latest/integrations/agent/config-schema.html).
+For details and the full schema of the config, see [Agent Configuration](./config-schema.md).
 
-For the full schema of the config, see [Config Schema](https://docs.signalfx.com/en/latest/integrations/agent/config-schema.html#config-schema).
-For information on how to configure the Smart Agent from remote sources, such as other files on the filesystem or KV stores such as Etcd, see Remote Configuration.
+For information on how to configure the Smart Agent from remote sources, such as other files on the filesystem or KV stores such as Etcd, see  [Remote Configuration](./remote-config.md).
 
 
 ## Add Monitors
@@ -171,12 +170,11 @@ For metric configuration for your monitor, see individual Windows or Linux monit
 
 See [Built-In Dashboards and Charts](https://docs.signalfx.com/en/latest/getting-started/built-in-content/built-in-dashboards.html).
 
-If you plan to create your own [custom dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-basics.html#custom-dashboard-groups).
+You can also create your own [custom dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-basics.html#custom-dashboard-groups).
 
 See best practices for [Better Dashboards](https://docs.signalfx.com/en/latest/reference/best-practices/better-dashboards.html).
 
-
-__To learn more about how your data is presented in SignalFx, see the [15-Minute SignalFx Quick Start](https://docs.signalfx.com/en/latest/getting-started/quick-start.html)__.
+To learn more about how your data is presented in SignalFx, see the [15-Minute SignalFx Quick Start](https://docs.signalfx.com/en/latest/getting-started/quick-start.html).
 
 
 ## Additional material
