@@ -1,4 +1,4 @@
-# ![](././img/integrations_newrelic.png) New Relic
+# ![](./img/integrations_newrelic.png) New Relic
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
