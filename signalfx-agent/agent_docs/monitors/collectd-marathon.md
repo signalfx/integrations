@@ -16,7 +16,7 @@ Monitors a Mesos Marathon instance using the
 [collectd Marathon Python plugin](https://github.com/signalfx/collectd-marathon).
 
 See the [integrations
-doc](https://github.com/signalfx/integrations/tree/master/collectd-marathon)
+doc](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.marathon.html)
 for more information on configuration.
 
 Sample YAML configuration:

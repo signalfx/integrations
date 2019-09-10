@@ -14,9 +14,6 @@ Monitor Type: `collectd/kafka_producer` ([Source](https://github.com/signalfx/si
 
 Monitors a Java based Kafka producer using GenericJMX.
 
-See the [integration documentation](https://github.com/signalfx/integrations/tree/master/collectd-kafka)
-for more information.
-
 This monitor has a set of [built in MBeans
 configured](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/kafkaproducer/mbeans.go)
 for which it pulls metrics from the Kafka producer's JMX endpoint.

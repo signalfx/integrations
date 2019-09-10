@@ -28,7 +28,7 @@ Observer Type: `k8s-api`
 | --- | --- | --- | --- |
 | `namespace` | no | `string` | If specified, only pods within the given namespace on the same node as the agent will be discovered. If blank, all pods on the same node as the agent will be discovered. |
 | `kubernetesAPI` | no | `object (see below)` | Configuration for the K8s API client |
-| `additionalPortAnnotations` | no | `list of strings` | A list of annotation names that should be used to infer additional ports to be discovered on a particular pod.  The pod's annotation value should be a port number.  This is useful for annotations like `prometheus.io/port: 9230`.  If you don't already have preexisting annotations like this, we recommend using the [SignalFx-specific annotations](https://docs.signalfx.com/en/latest/integrations/agent/kubernetes-setup.html#config-via-k8s-annotations). |
+| `additionalPortAnnotations` | no | `list of strings` | A list of annotation names that should be used to infer additional ports to be discovered on a particular pod.  The pod's annotation value should be a port number.  This is useful for annotations like `prometheus.io/port: 9230`.  If you don't already have preexisting annotations like this, we recommend using the [SignalFx-specific annotations](https://docs.signalfx.com/en/latest/kubernetes/k8s-monitors-observers.html#config-via-k8s-annotations). |
 
 
 The **nested** `kubernetesAPI` config object has the following fields:
