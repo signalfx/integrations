@@ -12,10 +12,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.2">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.3">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.2 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.3 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -39,7 +39,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.0.2 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.0.3 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -47,7 +47,14 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-##### Latest Version: v2.0.2 (September 3, 2019)
+##### Latest Version: v2.0.3 (September 10, 2019)
+
+<a target="_blank" href="/#/smart-gateway/download/v2.0.3">Download Smart Gateway v2.0.3</a><br/>
+_SHA256: `9f334adf76e11df5bb12e41c5aded1ed443efd0960dda37266935fef65ed86fe`_
+
+* Provides code to do seamless rolling upgrade to imminant performance release
+
+##### v2.0.2 (September 3, 2019)
 
 <a target="_blank" href="/#/smart-gateway/download/v2.0.2">Download Smart Gateway v2.0.2</a><br/>
 _SHA256: `e3b7bb4e85a12bbda2a8d7793aa9f7cf710e69c90def9b48bf9a491d22b81f75`_
