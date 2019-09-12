@@ -38,7 +38,7 @@ Use this monitor to gather the following types of information from ActiveMQ:
 * Topic (Topic status)
 
 To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ
-message age listener](https://github.com/signalfx/integrations/tree/master/amq-message-age)[](sfx_link:amq-message-age).
+message age listener](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.activemq.message.age.listener.html)[](sfx_link:amq-message-age).
 
 <!--- SETUP --->
 ## Example config

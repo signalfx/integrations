@@ -16,10 +16,6 @@ Collectd stats about network interfaces on the
 system by using the [collectd interface
 plugin](https://collectd.org/wiki/index.php/Plugin:Interface).
 
-See the [integrations
-doc](https://github.com/signalfx/integrations/tree/master/collectd-interface)
-for more information.
-
 
 ## Configuration
 

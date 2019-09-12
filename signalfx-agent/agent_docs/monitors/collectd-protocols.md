@@ -16,10 +16,6 @@ Gathers metrics about the network protocol
 stacks running on the system by using the [collectd protocols
 plugin](https://collectd.org/wiki/index.php/Plugin:Protocols).
 
-See the [integrations
-doc](https://github.com/signalfx/integrations/tree/master/collectd-protocols)
-for more information.
-
 
 ## Configuration
 
