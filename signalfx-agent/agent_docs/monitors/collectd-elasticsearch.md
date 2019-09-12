@@ -16,8 +16,8 @@ Monitors ElasticSearch instances. We strongly recommend using the
 [elasticsearch](./elasticsearch.md) monitor instead, as it will
 scale much better.
 
-See https://github.com/signalfx/collectd-elasticsearch and
-https://github.com/signalfx/integrations/tree/master/elasticsearch
+You can also [view the source of the Python
+plugin](https://github.com/signalfx/collectd-elasticsearch).
 
 
 ## Configuration

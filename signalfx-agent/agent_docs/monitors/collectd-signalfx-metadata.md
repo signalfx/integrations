@@ -17,8 +17,8 @@ various metrics from other collectd plugins.  It also sends host metadata to
 SignalFx through specially formatted events, and sends active process
 ("top") lists on a periodic basis.
 
-See [Python plugin code](https://github.com/signalfx/collectd-signalfx/) and
-[Integrations docs](https://github.com/signalfx/integrations/tree/master/signalfx-metadata).
+You can also [view the Python plugin
+code](https://github.com/signalfx/collectd-signalfx/).
 
 
 ## Configuration

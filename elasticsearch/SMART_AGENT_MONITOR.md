@@ -143,12 +143,6 @@ monitors:
   enableIndexStatsPrimaries: true
 ```
 
-## Built-in content
-
-For more information on the built-in content we have for Elasticsearch,
-[see
-here](https://github.com/signalfx/integrations/tree/master/elasticsearch).
-
 
 ## Configuration
 
