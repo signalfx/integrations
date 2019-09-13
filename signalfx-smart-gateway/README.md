@@ -66,7 +66,7 @@ _SHA256: `e3b7bb4e85a12bbda2a8d7793aa9f7cf710e69c90def9b48bf9a491d22b81f75`_
 <a target="_blank" href="/#/smart-gateway/download/v2.0.1">Download Smart Gateway v2.0.1</a><br/>
 _SHA256: `cbbc447f5ce714fd06218a65b187e36441f69bad20122b81b66622993f0ee396`_
 
-**Note: this is a major update with breaking changes; existing Smart Gateway clusters cannot be upgraded via a rolling update.**
+**Note: this is a major update with breaking changes; existing Smart Gateway clusters cannot be upgraded via a rolling update. To upgrade a Smart Gateway cluster from 1.x to 2.x, you must fully shutdown your existing cluster, and follow the <a href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway-clusters.html#bootstrapping">bootstrap</a> procedure to start new 2.x instances.**
 
 This update significantly increases the performance and accuracy of the Smart Gateway via improvements to Trace and Span sharding, histogram improvements, and an optional trace distribution layer.
 
