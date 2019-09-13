@@ -12,10 +12,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.3">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.4">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.3 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.4 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -39,7 +39,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.0.3 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.0.4 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -47,11 +47,19 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-##### Latest Version: v2.0.3 (September 10, 2019)
+##### Latest Version: v2.0.4 (September 13, 2019)
+
+<a target="_blank" href="/#/smart-gateway/download/v2.0.4">Download Smart Gateway v2.0.4</a><br/>
+_SHA256: `7429a8f42e2eb7ebfe340656ad7cab9822b52b44a41471fba619bdc77a73909d`_
+
+* Critical bug fix to 2.0.3 around metrics reporting
+
+##### v2.0.3 (September 10, 2019)
 
 <a target="_blank" href="/#/smart-gateway/download/v2.0.3">Download Smart Gateway v2.0.3</a><br/>
 _SHA256: `9f334adf76e11df5bb12e41c5aded1ed443efd0960dda37266935fef65ed86fe`_
 
+* DO NOT USE THIS VERSION, use v2.0.4 instead
 * Provides code to do seamless rolling upgrade to imminant performance release
 
 ##### v2.0.2 (September 3, 2019)
