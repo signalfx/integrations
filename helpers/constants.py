@@ -7,6 +7,7 @@ dirs_to_skip = set(
         "heka-filter-signalfx",
         "telegraf",
         "collectd-iostat",
+        "java",
         "collectd-vmstat",
         "collectd-tail-syslog",
         "collectd",
