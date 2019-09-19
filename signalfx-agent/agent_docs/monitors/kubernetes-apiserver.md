@@ -18,12 +18,13 @@ the Prometheus metric types to SignalFx metric types as described [here](prometh
 
 Example YAML Configuration
 
-  ```
-  monitors:
-  - type: kubernetes-apiserver
-    extraDimensions:
-      metric_source: kubernetes-apiserver
-  ```
+```yaml
+monitors:
+- type: kubernetes-apiserver
+  discoveryRule: Get(container_labels, "component") == "kube-apiserver"
+  extraDimensions:
+    metric_source: kubernetes-apiserver
+```
 
 
 ## Configuration
@@ -67,7 +68,7 @@ Metrics that are categorized as
  - `apiserver_longrunning_gauge` (*gauge*)<br>    Gauge of all active long-running apiserver requests broken out by verb, group, version, resource, scope and component. Not all requests are tracked this way.
  - `apiserver_registered_watchers` (*gauge*)<br>    Number of currently registered watchers for a given resources
  - `authenticated_user_requests` (*cumulative*)<br>    Counter of authenticated requests broken out by username.
- - ***`kubernetes_build_info`*** (*gauge*)<br>    A metric with a constant '1' value labeled by major, minor, git version, git commit, git tree state, build date, Go version, and compiler from which Kubernetes was built, and platform on which it is running.
+ - `kubernetes_build_info` (*gauge*)<br>    A metric with a constant '1' value labeled by major, minor, git version, git commit, git tree state, build date, Go version, and compiler from which Kubernetes was built, and platform on which it is running.
 
 #### Group admission_quota_controller
 All of the following metrics are part of the `admission_quota_controller` metric group. All of
@@ -163,11 +164,11 @@ monitor config option `extraGroups`:
 All of the following metrics are part of the `apiserver_request` metric group. All of
 the non-default metrics below can be turned on by adding `apiserver_request` to the
 monitor config option `extraGroups`:
- - ***`apiserver_request`*** (*cumulative*)<br>    Counter of apiserver requests broken out for each verb, dry run value, group, version, resource, scope, component, client, and HTTP response contentType and code.
+ - `apiserver_request` (*cumulative*)<br>    Counter of apiserver requests broken out for each verb, dry run value, group, version, resource, scope, component, client, and HTTP response contentType and code.
  - `apiserver_request_count` (*cumulative*)<br>    (Deprecated) Counter of apiserver requests broken out for each verb, group, version, resource, scope, component, client, and HTTP response contentType and code.
- - ***`apiserver_request_duration_seconds`*** (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (sum)
- - ***`apiserver_request_duration_seconds_bucket`*** (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (bucket)
- - ***`apiserver_request_duration_seconds_count`*** (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (count)
+ - `apiserver_request_duration_seconds` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (sum)
+ - `apiserver_request_duration_seconds_bucket` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (bucket)
+ - `apiserver_request_duration_seconds_count` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (count)
  - `apiserver_request_latencies` (*cumulative*)<br>    (Deprecated) Response latency distribution in microseconds for each verb, group, version, resource, subresource, scope and component. (sum)
  - `apiserver_request_latencies_bucket` (*cumulative*)<br>    (Deprecated) Response latency distribution in microseconds for each verb, group, version, resource, subresource, scope and component. (bucket)
  - `apiserver_request_latencies_count` (*cumulative*)<br>    (Deprecated) Response latency distribution in microseconds for each verb, group, version, resource, subresource, scope and component. (count)
@@ -312,22 +313,22 @@ monitor config option `extraGroups`:
 All of the following metrics are part of the `etcd` metric group. All of
 the non-default metrics below can be turned on by adding `etcd` to the
 monitor config option `extraGroups`:
- - ***`etcd_helper_cache_entry`*** (*cumulative*)<br>    Counter of etcd helper cache entries. This can be different from etcd_helper_cache_miss_count because two concurrent threads can miss the cache and generate the same entry twice.
+ - `etcd_helper_cache_entry` (*cumulative*)<br>    Counter of etcd helper cache entries. This can be different from etcd_helper_cache_miss_count because two concurrent threads can miss the cache and generate the same entry twice.
  - `etcd_helper_cache_entry_count` (*cumulative*)<br>    (Deprecated) Counter of etcd helper cache entries. This can be different from etcd_helper_cache_miss_count because two concurrent threads can miss the cache and generate the same entry twice.
- - ***`etcd_helper_cache_hit`*** (*cumulative*)<br>    Counter of etcd helper cache hits.
+ - `etcd_helper_cache_hit` (*cumulative*)<br>    Counter of etcd helper cache hits.
  - `etcd_helper_cache_hit_count` (*cumulative*)<br>    (Deprecated) Counter of etcd helper cache hits.
- - ***`etcd_helper_cache_miss`*** (*cumulative*)<br>    Counter of etcd helper cache miss.
+ - `etcd_helper_cache_miss` (*cumulative*)<br>    Counter of etcd helper cache miss.
  - `etcd_helper_cache_miss_count` (*cumulative*)<br>    (Deprecated) Counter of etcd helper cache miss.
- - ***`etcd_object_counts`*** (*gauge*)<br>    Number of stored objects at the time of last check split by kind.
- - ***`etcd_request_cache_add_duration_seconds`*** (*cumulative*)<br>    Latency in seconds of adding an object to etcd cache (sum)
- - ***`etcd_request_cache_add_duration_seconds_bucket`*** (*cumulative*)<br>    Latency in seconds of adding an object to etcd cache (bucket)
- - ***`etcd_request_cache_add_duration_seconds_count`*** (*cumulative*)<br>    Latency in seconds of adding an object to etcd cache (count)
+ - `etcd_object_counts` (*gauge*)<br>    Number of stored objects at the time of last check split by kind.
+ - `etcd_request_cache_add_duration_seconds` (*cumulative*)<br>    Latency in seconds of adding an object to etcd cache (sum)
+ - `etcd_request_cache_add_duration_seconds_bucket` (*cumulative*)<br>    Latency in seconds of adding an object to etcd cache (bucket)
+ - `etcd_request_cache_add_duration_seconds_count` (*cumulative*)<br>    Latency in seconds of adding an object to etcd cache (count)
  - `etcd_request_cache_add_latencies_summary` (*cumulative*)<br>    (Deprecated) Latency in microseconds of adding an object to etcd cache (sum)
  - `etcd_request_cache_add_latencies_summary_count` (*cumulative*)<br>    (Deprecated) Latency in microseconds of adding an object to etcd cache (count)
  - `etcd_request_cache_add_latencies_summary_quantile` (*gauge*)<br>    (Deprecated) Latency in microseconds of adding an object to etcd cache (quantized)
- - ***`etcd_request_cache_get_duration_seconds`*** (*cumulative*)<br>    Latency in seconds of getting an object from etcd cache (sum)
- - ***`etcd_request_cache_get_duration_seconds_bucket`*** (*cumulative*)<br>    Latency in seconds of getting an object from etcd cache (bucket)
- - ***`etcd_request_cache_get_duration_seconds_count`*** (*cumulative*)<br>    Latency in seconds of getting an object from etcd cache (count)
+ - `etcd_request_cache_get_duration_seconds` (*cumulative*)<br>    Latency in seconds of getting an object from etcd cache (sum)
+ - `etcd_request_cache_get_duration_seconds_bucket` (*cumulative*)<br>    Latency in seconds of getting an object from etcd cache (bucket)
+ - `etcd_request_cache_get_duration_seconds_count` (*cumulative*)<br>    Latency in seconds of getting an object from etcd cache (count)
  - `etcd_request_cache_get_latencies_summary` (*cumulative*)<br>    (Deprecated) Latency in microseconds of getting an object from etcd cache (sum)
  - `etcd_request_cache_get_latencies_summary_count` (*cumulative*)<br>    (Deprecated) Latency in microseconds of getting an object from etcd cache (count)
  - `etcd_request_cache_get_latencies_summary_quantile` (*gauge*)<br>    (Deprecated) Latency in microseconds of getting an object from etcd cache (quantized)
@@ -430,24 +431,24 @@ monitor config option `extraGroups`:
 All of the following metrics are part of the `token` metric group. All of
 the non-default metrics below can be turned on by adding `token` to the
 monitor config option `extraGroups`:
- - ***`get_token_count`*** (*cumulative*)<br>    Counter of total Token() requests to the alternate token source
- - ***`get_token_fail_count`*** (*cumulative*)<br>    Counter of failed Token() requests to the alternate token source
+ - `get_token_count` (*cumulative*)<br>    Counter of total Token() requests to the alternate token source
+ - `get_token_fail_count` (*cumulative*)<br>    Counter of failed Token() requests to the alternate token source
 
 #### Group workqueue
 All of the following metrics are part of the `workqueue` metric group. All of
 the non-default metrics below can be turned on by adding `workqueue` to the
 monitor config option `extraGroups`:
- - ***`workqueue_adds`*** (*cumulative*)<br>    Total number of adds handled by workqueue
- - ***`workqueue_depth`*** (*gauge*)<br>    Current depth of workqueue
- - ***`workqueue_longest_running_processor_seconds`*** (*gauge*)<br>    How many seconds has the longest running processor for workqueue been running.
- - ***`workqueue_queue_duration_seconds`*** (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (sum)
- - ***`workqueue_queue_duration_seconds_bucket`*** (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (bucket)
- - ***`workqueue_queue_duration_seconds_count`*** (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (count)
- - ***`workqueue_retries`*** (*cumulative*)<br>    Total number of retries handled by workqueue
- - ***`workqueue_unfinished_work_seconds`*** (*gauge*)<br>    How many seconds of work has done that is in progress and hasn't been observed by work_duration. Large values indicate stuck threads. One can deduce the number of stuck threads by observing the rate at which this increases.
- - ***`workqueue_work_duration_seconds`*** (*cumulative*)<br>    How long in seconds processing an item from workqueue takes. (sum)
- - ***`workqueue_work_duration_seconds_bucket`*** (*cumulative*)<br>    How long in seconds processing an item from workqueue takes. (bucket)
- - ***`workqueue_work_duration_seconds_count`*** (*cumulative*)<br>    How long in seconds processing an item from workqueue takes. (count)
+ - `workqueue_adds` (*cumulative*)<br>    Total number of adds handled by workqueue
+ - `workqueue_depth` (*gauge*)<br>    Current depth of workqueue
+ - `workqueue_longest_running_processor_seconds` (*gauge*)<br>    How many seconds has the longest running processor for workqueue been running.
+ - `workqueue_queue_duration_seconds` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (sum)
+ - `workqueue_queue_duration_seconds_bucket` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (bucket)
+ - `workqueue_queue_duration_seconds_count` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (count)
+ - `workqueue_retries` (*cumulative*)<br>    Total number of retries handled by workqueue
+ - `workqueue_unfinished_work_seconds` (*gauge*)<br>    How many seconds of work has done that is in progress and hasn't been observed by work_duration. Large values indicate stuck threads. One can deduce the number of stuck threads by observing the rate at which this increases.
+ - `workqueue_work_duration_seconds` (*cumulative*)<br>    How long in seconds processing an item from workqueue takes. (sum)
+ - `workqueue_work_duration_seconds_bucket` (*cumulative*)<br>    How long in seconds processing an item from workqueue takes. (bucket)
+ - `workqueue_work_duration_seconds_count` (*cumulative*)<br>    How long in seconds processing an item from workqueue takes. (count)
 
 ### Non-default metrics (version 4.7.0+)
 
