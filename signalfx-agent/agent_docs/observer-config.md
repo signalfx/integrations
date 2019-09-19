@@ -4,7 +4,7 @@
 
 # Observer Configuration
 
-Observers are what discover service endpoints that can then be monitored.  They
+Observers discover service endpoints that can then be monitored.  They
 are configured in a list called `observers` in the [main agent config
 file](./config-schema.md). These are all of the observers included in the agent
 along with their possible configuration options:

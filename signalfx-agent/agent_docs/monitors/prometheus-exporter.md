@@ -63,6 +63,23 @@ monitors:
      metric_source: prometheus
 ```
 
+## Authentication
+For basic HTTP authentication use the `username` and `password` options.
+
+On Kubernetes if the monitored service requires authentication use the `useServiceAccount`
+option to use the service account of the agent when connecting. Make sure that the
+SignalFx Agent service account has sufficient permissions for the monitored service.
+
+## Troubleshooting
+* Log contains the error `net/http: HTTP/1.x transport connection broken: malformed HTTP response`
+
+    **Solution**: enable HTTPS with `useHTTPS`.
+
+* Log contains the error `forbidden: User \"system:anonymous\" cannot get path \"/metrics\"`
+
+    **Solution**: enable `useServiceAccount` and make sure the service account SignalFx agent
+    is running with has the necessary permissions.
+
 
 ## Configuration
 
