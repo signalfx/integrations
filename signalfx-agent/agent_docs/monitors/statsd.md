@@ -74,6 +74,8 @@ will be reported as `egress.update_success`.
 
 `metric` is required for a converter configuration. A converter will be disabled if `metric` is not provided.
 
+```
+
 
 ## Configuration
 
