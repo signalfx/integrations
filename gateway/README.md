@@ -151,9 +151,9 @@ See the <a target="_blank" href="https://github.com/signalfx/gateway/blob/master
 |--------|----------|--------|
 | `Name` | A name for this forwarder. | "ourcarbon" |
 | `type` | The type of data that the gateway will emit. Possible values are `csv` for writing to a CSV file, `carbon` for sending to a Graphite server, and `signalfx` for sending to SignalFx. | "carbon" |
-| `BufferSize` | A performance configuration that specifies how many datapoints/events should be buffered in forwarders.  This is very useful when the gateway is configured with a `StatsDelay`. | `1000000` |
-| `MaxDrainSize` | A performance configuration that specifies the maximum amount of datapoints/events to emit in a single outbound request. This is very useful when the gateway is configured with a `StatsDelay`. | `5000` |
-| `DrainingThreads` | A performance configuration that specifies how many go routines should drain a buffer. This is very useful when the gateway is configured with a `StatsDelay`. | `50` |
+| `BufferSize` | A performance configuration that specifies the max datapoints/events to be buffered in forwarders.  | `1000000` |
+| `MaxDrainSize` | A performance configuration that specifies the maximum amount of datapoints/events to emit in a single outbound request. | `5000` |
+| `DrainingThreads` | A performance configuration that specifies how many go routines should drain a buffer. | `50` |
 
 Additional configuration properties differ depending on the type of data being written.
 
@@ -769,7 +769,7 @@ The following is a full list of overrideable options and their defaults:
 
 | Configuration property | Definition | Example values |
 |--------|----------|--------|
-| `StatsDelay` | If and how often we should self report metrics about the gateway out all forwarders | "1s" |
+| `EmitDebugMetrics` | If you want internal metrics reported | false |
 | `ServerName` | All self-reported metrics emitted from the gatway have a `host` dimension. If this is not set it will be the name of current host system | "gateway-staging-1" |
 | `AdditionalDimensions` | Any additional dimensions you might want to add to all self reported metrics | `{"cluster":"staging-west-1"}` |
 
@@ -924,13 +924,14 @@ using an internal datapoint buffer size of 1,000,000 and sending with 50 threads
 simultaneously with each thread sending no more than 5,000 points in a single
 call.
 
-StatsDelay being set to 10s means every 10s we'll emit metrics out all
+EmitDebugMetrics being set to true means every 10s we'll emit metrics out all
 forwarders about the running Gateway.  If you don't want these metrics, omit
 this config value. These metrics are emitted with both host and
 cluster dimensions. The host dimension will be set to the value of the
 ServerName set in the config file or to the hostname of the machine by default.
 The cluster dimension will be set to what you set in the config file, or to
-the default value of "gateway".
+the default value of "gateway". If using the Smart Agent, the host will be
+overridden with that configured value.
 
 Also note that we're setting LateThreshold and FutureThreshold to 10s.  This means
 we'll count datapoints, events and spans that exceed those thresholds (if set) and
@@ -961,12 +962,11 @@ data that was late or in the future respectively.
       ]
     }
 
-An alternative to using the above `StatsDelay` is to have the gateway provide a
-signalfx datapoint endpoint that contains the same information but can be
-scraped by our Smart Agent.  If you set the config
-`InternalMetricsListenerAddress` to a host port combination and configure
-the smart gateway to scrape that for internal metrics at `/internal-metrics`
-it would accomplish the same thing.
+If you set the config `InternalMetricsListenerAddress` to a host port combination
+and configure the smart gateway to scrape that for internal metrics at
+`/internal-metrics`. By default this will only be the public metrics needed to
+support our curated content, if you want all internal server metrics, you will
+need to also sert `EmitDebugMetrics` to true.
 
 #### Transforming carbon dot-delimited metric names into metrics with dimensions
 
