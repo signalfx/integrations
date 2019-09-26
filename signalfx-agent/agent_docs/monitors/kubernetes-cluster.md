@@ -166,13 +166,6 @@ are set on the dimension values of the dimension specified.
 | ---  | ---       | ---         |
 | `<node label>` | `machine_id/kubernetes_node` | All non-blank labels on a given node will be synced as properties to the `machine_id` or `kubernetes_node` dimension value for that node.  Which dimension gets the properties is determined by the `useNodeName` config option.  Any blank values will be synced as tags on that same dimension. |
 | `<pod label>` | `kubernetes_pod_uid` | Any labels with non-blank values on the pod will be synced as properties to the `kubernetes_pod_uid` dimension. Any blank labels will be synced as tags on that same dimension. |
-| `cronjob_creation_timestamp` | `kubernetes_uid` | Timestamp representing the server time when the cron job was created and is in UTC. This property is synced onto `kubernetes_uid`. |
-| `daemonset_creation_timestamp` | `kubernetes_uid` | Timestamp representing the server time when the daemon set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
-| `deployment_creation_timestamp` | `kubernetes_uid` | Timestamp representing the server time when the deployment was created and is in UTC. This property is synced onto `kubernetes_uid`. |
-| `job_creation_timestamp` | `kubernetes_uid` | Timestamp representing the server time when the job was created and is in UTC. This property is synced onto `kubernetes_uid`. |
-| `pod_creation_timestamp` | `kubernetes_pod_uid` | Timestamp representing the server time when the pod was created and is in UTC. This property is synced onto `kubernetes_pod_uid`. |
-| `replicaset_creation_timestamp` | `kubernetes_uid` | Timestamp representing the server time when the replica set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
-| `statefulset_creation_timestamp` | `kubernetes_uid` | Timestamp representing the server time when the stateful set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 
 
 

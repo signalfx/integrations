@@ -94,7 +94,7 @@ and you want to extract the cumulative `Mallocs` values.
 }
 ```
 The should be configured as shown below so as to fetch the `Mallocs` values. The JSONPath is what maps the
-location of values with the JSON object. The path must terminate primitive values or an array containing
+location of values within the JSON object. The path must terminate with primitive values or an array containing
 primitive values. It cannot terminated on embedded object(s).
 ```
 monitors:
@@ -113,7 +113,7 @@ Because memstats.BySize is an array of size 2 there are 2 values for memstats.By
 Two data points are created for metric memstats.by_size.mallocs for the 2 values. Additionaly, a dimension
 name memstats.by_size containing array index created for each respective datapoint.
 
-Also, custom dimensions can be added to metric as shown below. The dimension name required if a dimension
+Also, custom dimensions can be added to metric as shown below. The dimension name is required if a dimension
 value is provided whereas it is optional when a JSONPath is provided instead.
 ```
 monitors:
@@ -153,8 +153,9 @@ monitors:
   extraDimensions:
     metric_source: expvar
 ```
-DO NOT configure the monitor for memstats metrics because they are standard metrics provided by default.
-memstats was used to provide a realistic example.
+The path separator character `.` of JSONPath can be escaped and treated literally using `\`. DO NOT configure the
+monitor for memstats metrics because they are standard metrics provided by default. memstats was used to provide a
+realistic example.
 
 
 ## Configuration
