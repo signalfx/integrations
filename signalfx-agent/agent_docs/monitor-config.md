@@ -114,6 +114,8 @@ These are all of the monitors included in the agent, along with their possible c
 - [haproxy](./monitors/haproxy.md)
 - [host-metadata](./monitors/host-metadata.md)
 - [internal-metrics](./monitors/internal-metrics.md)
+- [java-monitor](./monitors/java-monitor.md)
+- [jmx](./monitors/jmx.md)
 - [kubelet-stats](./monitors/kubelet-stats.md)
 - [kubernetes-apiserver](./monitors/kubernetes-apiserver.md)
 - [kubernetes-cluster](./monitors/kubernetes-cluster.md)
