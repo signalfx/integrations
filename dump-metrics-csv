@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+
+import csv
+import glob
+import pathlib
+import yaml
+
+path = pathlib.Path.cwd() / 'all_metrics.csv'
+with path.open(mode='w') as csvfile:
+    fieldnames = ['integration', 'metric', 'brief', 'description', 'custom', 'type']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for filename in glob.glob("./*/metrics.yaml", recursive=True):
+        with open(filename) as f:
+            metrics = yaml.safe_load(f)
+            if metrics is None:
+                continue
+            integration = pathlib.Path(filename).parent
+            for mm in metrics:
+                if 'brief' not in metrics[mm].keys():
+                    brief = "THE METRIC BRIEF DESCRIPTION IS BLANK."
+                else:
+                    brief = str(metrics[mm]['brief']).replace("\n", " ")
+                if brief is None:
+                    brief = "THE METRIC BRIEF DESCRIPTION IS BLANK"
+                if 'description' not in metrics[mm].keys():
+                    desc = "THE METRIC DESCRIPTION IS BLANK."
+                else:
+                    desc = str(metrics[mm]['description']).replace("\n", " ")
+                if desc is None:
+                    desc = "THE METRIC DESCRIPTION IS BLANK"
+                if 'custom' not in metrics[mm].keys():
+                    custom = False
+                else:
+                    custom = metrics[mm]['custom']
+                if custom is None:
+                    custom = "THE CUSTOM SETTING IS NOT SPECIFIED."
+                if 'metric_type' not in metrics[mm].keys():
+                    mtype = "THIS METRICS HAS NO TYPE"
+                else:
+                    mtype = metrics[mm]['metric_type']
+                if mtype is None:
+                    mtype = "TYPE IS BLANK"
+                writer.writerow({'integration': integration, 'metric': mm, 'brief': brief, 'description': desc, 'custom': str(custom), 'type': mtype})
+    csvfile.close()
+    
