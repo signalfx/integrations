@@ -39,7 +39,7 @@ def get_output_filename(monitor, header):
 
 def collect_metrics_yaml(file_path):
     contents = get_file_contents(file_path)
-    parsed = yaml.load(contents)
+    parsed = yaml.safe_load(contents)
     metrics = []
     for key in parsed:
         metric = parsed.get(key)
@@ -57,3 +57,8 @@ def collect_metrics_yaml(file_path):
             {"metric_name": metric_name, "brief": brief, "description": description, "metric_type": metric_type}
         )
     return metrics
+
+def sanitize_link(link):
+    link = link.replace("/./", "/")
+    link = re.sub(r"\/[^\/]*\/\.\.\/", "/", link)
+    return link

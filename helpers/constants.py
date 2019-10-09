@@ -24,3 +24,5 @@ dirs_to_skip = set(
 # Skip anything other than metric docs in docs dir
 docs_to_skip = set(["readme.md", "docs-temp.md"])
 rtd_base_url = "https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations."
+
+monitor_doc_base_url = "https://docs.signalfx.com/en/latest/integrations/agent/monitors/"
