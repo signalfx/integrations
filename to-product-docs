@@ -7,8 +7,8 @@ import shutil
 from distutils import dir_util
 from pathlib import Path
 
-from helpers.constants import dirs_to_skip, docs_to_skip, rtd_base_url
-from helpers.helpers import collect_metrics_yaml, extract, get_file_contents, get_output_filename
+from helpers.constants import dirs_to_skip, docs_to_skip, rtd_base_url, monitor_doc_base_url
+from helpers.helpers import collect_metrics_yaml, extract, get_file_contents, get_output_filename, sanitize_link
 from helpers.patterns import (
     doc_folder_link_pattern,
     doc_link_pattern,
@@ -18,6 +18,10 @@ from helpers.patterns import (
     metric_row_pattern,
     sfx_link_inline_pattern,
     sfx_link_pattern,
+    link_md_pattern,
+    link_inline_pattern,
+    sfx_monitor_github_link_pattern,
+    integration_github_link_pattern
 )
 from helpers.toc import toc_non_sam, toc_sam
 
@@ -162,11 +166,40 @@ def remove_links(contents):
     contents = doc_folder_link_pattern.sub(repl="", string=contents)
     return contents
 
+def link_sub(m):
+    link = sanitize_link(m.group('link'))
+    is_monitor_github_link = re.search(sfx_monitor_github_link_pattern, link)
+    if is_monitor_github_link:
+        new_link = monitor_doc_base_url + is_monitor_github_link.group(1) + ".html"
+    else:
+        docUrl = findDocUrl(link)
+        if docUrl:
+            new_link = docUrl
+        else:
+            new_link = link
+
+    prefix = ""
+    if 'check_is_image' in m.groupdict():
+        prefix = m.group('check_is_image')
+
+    
+    if new_link.startswith("./docs/") != True and new_link.startswith("https://docs.signalfx.com/en") != True:
+        # should open in new tab
+        return prefix + "<a target=\"_blank\" href=\"" + new_link + "\">" + m.group('text') + "</a>"
+    else:
+        return prefix + "[" + m.group('text') + "](" + new_link + ")"
+
+def findDocUrl(link):
+    match = re.match(integration_github_link_pattern, link)
+    if match and match.group('monitor') in rtd_urls.keys():
+        return rtd_urls[match.group('monitor')]
+    return None
 
 def process_links(contents):
-    links = []
     contents = remove_links(contents)
-
+    contents = re.sub(link_md_pattern, link_sub, contents)
+    contents = re.sub(link_inline_pattern, link_sub, contents)
+    
     for p in re.finditer(integrations_link_pattern, contents):
         old = p.group(0)
         original_link = old.split("(")[1][:-1]
@@ -181,17 +214,14 @@ def process_links(contents):
 
     return contents
 
-
-def prepare_rtd_url(contents):
-    heading = contents.splitlines()[0].split(" ")[1:]
-    if len(heading) == 1:
-        required_name = heading[0].strip().lower()
-    else:
-        required_name = ".".join(filter(None, heading[1:])).lower()
-
-    url = "%s%s.html" % (rtd_base_url, required_name)
+def prepare_rtd_url(folder, contents):
+    output_filename = re.sub(r"\!\[[^\[\]]*\]\(([^\(\)]*)\)", "", contents.splitlines()[0]).split("|")[-1].replace("#", "")
+    output_filename = output_filename.strip().lower()
+    output_filename = output_filename.replace(" ", ".").replace("/", ".")
+    if output_filename == "":
+        output_filename = folder
+    url = "%s%s.html" % (rtd_base_url, output_filename)
     return url
-
 
 def prepare():
     for folder in os.listdir(integrations_path):
@@ -204,7 +234,7 @@ def prepare():
             readme_path = os.path.join(full_path, "README.md")
             if os.path.isfile(readme_path):
                 readme_contents = get_file_contents(readme_path)
-                rtd_urls[folder] = prepare_rtd_url(readme_contents)
+                rtd_urls[folder] = prepare_rtd_url(folder, readme_contents)
 
     # List of Smart Agent Monitors
     dirs = os.listdir(integrations_path)
@@ -481,8 +511,11 @@ def collect_files(path, all_files):
 
 if __name__ == "__main__":
     prepare()
+
     do_smart_agent_monitors()
+    # non_smart_agent_monitors_with_readme=["cloudfoundry-generic"]
     do_non_smart_agent_monitors_with_readme()
+
     do_non_smart_agent_monitors_without_readme()
 
     do_smart_agent_docs()

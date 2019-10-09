@@ -13,6 +13,8 @@ from typing import Any, DefaultDict, Dict, List, Tuple
 import yaml
 from yaml.scanner import ScannerError
 
+from helpers.process_markdown_for_app import process_markdown_for_app
+
 INTEGRATIONS_REPO_ROOT = Path(__file__).parent.resolve()
 OUT_DIR = INTEGRATIONS_REPO_ROOT / "dist/"
 
@@ -67,7 +69,7 @@ def collect_docs() -> Dict[str, Any]:
         if not markdown:
             continue
 
-        docs[integration_name] = {"markdown": markdown}
+        docs[integration_name] = {"markdown": process_markdown_for_app(markdown)}
 
     return docs
 
