@@ -68,13 +68,13 @@ __Get started with Smart Agent using the 3 steps below.__
 
 _Note: if you have previously configured another metric collection agent on your host such as collectd, uninstall or disable that agent before installing the SignalFx Smart Agent._
 
-### Step 1. Install SignalFx Smart Agent on Single Host 
+### Step 1. Install SignalFx Smart Agent on Single Host
 
 __Linux:__ Dependencies are completely bundled along with the agent, including a Java JRE runtime and a Python runtime, so there are no additional dependencies required. The agent works on any modern Linux distribution (kernel version 2.6+).
 
 If you are not installing from the tile on the Integrations page:
 
-- Get your API_TOKEN from: __Organization Settings => Access Token__ tab in the SignalFx application. 
+- Get your API_TOKEN from: __Organization Settings => Access Token__ tab in the SignalFx application.
 
 - Determine YOUR\_SIGNAL_FX_REALM from your [profile page](https://docs.signalfx.com/en/latest/getting-started/get-around-ui.html#user-profile-avatar-and-color-theme) in the SignalFx web application.
 
@@ -98,14 +98,14 @@ __Windows:__ Ensure that the following dependencies are installed:
 To install the Smart Agent on a single Windows host, enter:
 
 ```sh
-& {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/signalfx-agent.ps1')); $params = @{access_token = "<TOKEN>"; ingest_url = "https://ingest.<REALM>.signalfx.com"; api_url = "https://api.<REALM>.signalfx.com"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+& {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/signalfx-agent.ps1')); $params = @{access_token = YOUR_SIGNALFX_API_TOKEN; ingest_url = "https://ingest.YOUR_SIGNALFX_REALM.signalfx.com"; api_url = "https://api.YOUR_SIGNALFX_REALM.signalfx.com"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 ```
 
 
 The agent will be installed as a Windows service and will log to the Windows Event Log.
 
 
-### Step 2. Confirm your Installation 
+### Step 2. Confirm your Installation
 
 To confirm the SignalFx Smart Agent installation is functional on either platform, enter:
 
@@ -138,9 +138,9 @@ signalfx-agent status monitors - show active monitors
 signalfx-agent status all - show everything
 ```
 
-#### Troubleshoot any discrepancies in the Installation 
+#### Troubleshoot any discrepancies in the Installation
 
-##### Realm 
+##### Realm
 
 By default, the Smart Agent will send data to the us0 realm. If you are not in this realm, you will need to explicitly set the signalFxRealm option in your config like this:
 
@@ -168,7 +168,7 @@ This will default to the endpoints for the realm configured in signalFxRealm if 
 To troubleshoot your installation further, check the FAQ about troubleshooting [here](./faq.md).
 
 
-### Step 3. Login to SignalFx and discover your data displays. 
+### Step 3. Login to SignalFx and discover your data displays.
 
 Installation is complete.
 
