@@ -21,7 +21,7 @@ Monitors <what> using the information provided by <what> which collects metrics 
 
 ## Features
 
-For more information on the source data, see <https://...>
+For more information on the source data, see <https://example.com>
 
 Monitor Source Code <link>
 
