@@ -3,10 +3,12 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: golang:1.12
+      - image: golang:1.13
     steps:
       - checkout
-      - run: go get -u github.com/raviqqe/liche
+        # Do hacky things to install a tool with go modules.
+      - run: |
+          cd ~ && go mod init test && go get -u github.com/raviqqe/liche@4db4b8909d21d62ce97d31a07891183e1440cc7b
       - run: ./check-links
 workflows:
   build_test:
