@@ -34,6 +34,13 @@ memcached_command.get:
   metric_type: cumulative
   title: memcached_command.get
 
+memcached_command.meta:
+  brief: Number of meta requests
+  custom: true
+  description: Number of meta requests
+  metric_type: cumulative
+  title: memcached_command.meta
+
 memcached_command.set:
   brief: Number of storage requests
   custom: false

@@ -1,7 +1,7 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 cpu.idle:
   brief: CPU time spent not in any other state
-  custom: true
+  custom: false
   description: CPU time spent not in any other state. In order to get a percentage
     this value must be compared against the sum of all CPU states.
   metric_type: cumulative

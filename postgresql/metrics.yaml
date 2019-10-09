@@ -37,19 +37,26 @@ postgres_live_rows:
   metric_type: gauge
   title: postgres_live_rows
 
-postgres_longest_running_queries:
-  brief: Top N queries based on the execution time broken down by `database`
+postgres_queries_average_time:
+  brief: Top N queries based on the average execution time broken down by `database`
   custom: true
-  description: Top N queries based on the execution time broken down by `database`
+  description: Top N queries based on the average execution time broken down by `database`
   metric_type: cumulative
-  title: postgres_longest_running_queries
+  title: postgres_queries_average_time
 
-postgres_most_frequent_queries:
+postgres_queries_calls:
   brief: Top N most frequently executed queries broken down by `database`
   custom: true
   description: Top N most frequently executed queries broken down by `database`
   metric_type: cumulative
-  title: postgres_most_frequent_queries
+  title: postgres_queries_calls
+
+postgres_queries_total_time:
+  brief: Top N queries based on the total execution time broken down by `database`
+  custom: true
+  description: Top N queries based on the total execution time broken down by `database`
+  metric_type: cumulative
+  title: postgres_queries_total_time
 
 postgres_query_count:
   brief: Total number of queries executed on the `database`, broken down by `user`
