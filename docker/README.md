@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/collectd-docker/img/integrations_docker.png) Docker
+# ![](https://github.com/signalfx/integrations/blob/master/docker/img/integrations_docker.png) Docker
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
