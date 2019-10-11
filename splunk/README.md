@@ -18,7 +18,7 @@ To read about creating local data links, click [here](https://docs.signalfx.com/
 
 You must be an account administrator to configure new global links.
 
-To access Global Data Link configuration options page, click [here](https://app.signalfx.com/#/organization/CfhbPnRAcAM?selectedKeyValue=sf_section:globaldatalinks). 
+To access Global Data Link configuration options page, click [here](/#/organization/YOUR_SIGNALFX_ORG_ID?selectedKeyValue=sf_section:globaldatalinks). 
 
 Complete the instructions below.
 1. Click **New Link** on that page to configure.  
@@ -26,8 +26,6 @@ Complete the instructions below.
 3. Select a destination for the link.
 4. Enter other choices appropriate for the destination.
 5. Click **Save**.
-
-[Click here to get started](/#/organization/YOUR_SIGNALFX_ORG_ID?selectedKeyValue=sf_section:globaldatalinks). 
 
 ### LICENSE
 
