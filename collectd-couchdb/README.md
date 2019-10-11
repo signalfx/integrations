@@ -164,10 +164,6 @@ All metrics reported by the CouchDB collectd plugin will contain the following d
 * `plugin_instance` will contain the IP address and the port of the member given in the configuration
 
 
-### METRICS
-By default, basic metrics are provided. For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs). See [usage](#usage) for details.
-
-
 
 ### LICENSE
 

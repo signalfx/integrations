@@ -1,0 +1,13 @@
+browse_categories:
+- Management Tools
+- Analytics
+code: https://www.elastic.co
+data_signature: ''
+description: Deep linking from SignalFx to Elastic Stack
+display_name: Elastic Stack
+featured: false
+in_app_categories:
+- linkedServices
+logo_large: integration_elastic_stack@2x.png
+logo_small: integration_elastic_stack.png
+project_url: https://github.com/signalfx/integrations/tree/master/elastic-statck

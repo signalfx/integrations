@@ -20,10 +20,6 @@ Sample of built-in dashboard in SignalFx:
 
 ![Embedded PostgreSQL](./img/gitlab_embedded_postgresql_dashboard.png)
 
-### METRICS
-
-For documentation of the metrics emitted, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -141,7 +141,7 @@ Track week-over-week growth of tasks in your cluster to be informed of changing 
 
 ![connected slaves](./img/connected_slaves.png)
 
-An unexpectedly low number of connected slaves on a Mesos master can indicate a network problem preventing them from connecting. To verify this, check to see if there’s an unexpectedly high number of dropped messages in [counter.master_dropped_messages](./docs/counter.master_dropped_messages.md).
+An unexpectedly low number of connected slaves on a Mesos master can indicate a network problem preventing them from connecting. To verify this, check to see if there’s an unexpectedly high number of dropped messages in counter.master_dropped_messages.
 
 ![connected frameworks and task detail](./img/connected_frameworks.png)
 
@@ -149,10 +149,6 @@ On the Mesos master dashboard, you can view in detail the number of tasks that a
 
 For additional information on how to monitor Mesos, check out Apache's guide <a target="_blank" href="http://mesos.apache.org/documentation/latest/monitoring/">here</a>.
 
-
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
 
 ### LICENSE
 

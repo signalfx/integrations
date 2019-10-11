@@ -10,10 +10,6 @@ Metadata associated with the Kubernetes integration can be found <a target="_bla
 
 See the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/agent/kubernetes-setup.html">Kubernetes setup instructions</a> to start using our Kubernetes integration.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This tool is released under the Apache 2.0 license.

@@ -53,10 +53,6 @@ All metrics reported by the IOStat collectd plugin will contain the following di
 * `plugin` is always set to `iostat`.
 * `plugin_instance` will contain the name of the disk the metrics relevant to.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is licensed under the MIT license.  See [LICENSE](./LICENSE)

@@ -53,10 +53,6 @@ All metrics reported by the VMStat collectd plugin will contain the following di
 * `plugin` is always set to `vmstat`.
 * `plugin_instance` will always be `vmstat`.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is licensed under the MIT license.  See [LICENSE](./LICENSE)

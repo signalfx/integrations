@@ -40,10 +40,6 @@ Sample of built-in dashboard in SignalFx:
 
 ![Process Memory](./img/expvar_process_memory_dashboard.png)
 
-### METRICS
-
-For documentation of the metrics emitted, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -46,10 +46,6 @@ From the <a target="_blank" href="https://collectd.org/documentation/manpages/co
 |----------------------|------|------------|
 |Verbose| true/false|Enables verbose collection of information. This will start collecting page "actions", e. g. page allocations, (de)activations, steals and so on. Part of these statistics are collected on a "per zone" basis.|
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/vmem.c">in the header of the plugin</a>

@@ -39,10 +39,6 @@ Installation and initial configuration options are available as part of the <a t
 
 The Load plugin does not have any configuration settings.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/load.c">in the header of the plugin</a>

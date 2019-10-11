@@ -109,10 +109,6 @@ Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_marathon_overview.png)
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 See [LICENSE](./LICENSE)

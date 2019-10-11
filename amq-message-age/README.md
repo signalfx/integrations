@@ -91,10 +91,6 @@ Using these metrics from inside each message queue, we can create intelligent de
 
 In this example, rate of change tells us how much older the oldest message in each queue is getting each time we measure it. When this function is greater than 0, it tells us that a message is sitting in the queue, aging. If this continues for a long time, it could indicate that one or more messages is stuck and not being picked up.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

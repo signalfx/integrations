@@ -306,10 +306,6 @@ config:
 
     [<img src='./img/chart_vsphere_vms_uptime_top.png' width=200px>](./img/chart_vsphere_vms_uptime_top.png)
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

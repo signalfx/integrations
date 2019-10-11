@@ -114,10 +114,6 @@ Couchbase persists in-memory items to disk. This graph shows the number of items
 
 *This bucket is keeping up with disk writes: the number of items added to the queue is about equal to the number of items successfully written to disk.*
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
