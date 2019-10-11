@@ -78,10 +78,6 @@ along with the CF meta-buildpack.
 To get our agent on to your own **BOSH deployments**, you can use <a target="_blank" href="https://github.com/signalfx/agent-boshrelease">our BOSH
 release</a>.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/collectd-example/blob/master/LICENSE) for more details.

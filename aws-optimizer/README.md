@@ -61,10 +61,6 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 - **EC2 Worksheet**: Charts to help dive deeper into and troubleshoot EC2 Usage.
 ![](./img/dashboard_optimizer_ec2_worksheet.png)
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

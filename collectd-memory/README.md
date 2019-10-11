@@ -48,10 +48,6 @@ Installation and initial configuration options are available as part of the <a t
 
 No configuration is required for this plugin.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/memory.c">in the header of the plugin</a>

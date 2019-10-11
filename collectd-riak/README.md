@@ -119,10 +119,6 @@ This is not an exhaustive list of metrics, there are dozens of metrics that are 
 
 
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 #### Note: Discover _all_ Available Riak Metrics
 
 There are nearly 400 metrics that can be sent to SignalFx using curl. The configurations here include some commonly used stats. The exhaustive list can be obtained by curling any Riak KV node.

@@ -82,10 +82,6 @@ The Traefik-related metrics are for monitoring Traefik itself. For instance, the
 
 The entrypoint-related and backend-related metrics also include metrics for the number of entrypoints connections, backends connections and backend server up/down flag.
 
-### METRICS
-
-For documentation of the metrics emitted, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](https://github.com/signalfx/integrations/blob/master/traefik/LICENSE) for more details.

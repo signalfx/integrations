@@ -43,10 +43,6 @@ There are no configuration options for this plugin.
 
 This plugin provide the time that an individual host has been up since last boot.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/uptime.c">in the header of the plugin</a>

@@ -52,10 +52,6 @@ The primary use of this plugin is to track the I/O of system interfaces. This is
 
 The <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/signalfx-metadata">SignalFx collectd plugin</a> computes aggregated utilization metrics based on the output of this plugin you can learn more by looking at the <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/signalfx-metadata/docs">metrics for the plugin</a>.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/interface.c">in the header of the plugin</a>

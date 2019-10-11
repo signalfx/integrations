@@ -78,10 +78,6 @@ For more information on authentication, see the API's [Authentication documentat
 
 This plugin provides additional aggregated system metrics to SignalFx.
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -38,8 +38,3 @@ Some metrics send a value for each metric type (counter, cumulative counter or g
 For example, you might receive 3 MTS for `sf.org.numMetricTimeSeriesCreated`, one representing the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges. To find the total number of MTS created, you need to sum those values.
 
 Also, you could filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
-
-### METRICS
-
-For documentation of the organization metrics and dimensions sent by SignalFx, [click here](./docs).
-

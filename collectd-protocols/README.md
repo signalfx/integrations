@@ -67,10 +67,6 @@ This is a plugin used to gather data about specific protocols in use by a host o
 |TcpExt| `/^TcpExt:.*Octets/` |To select all "extended" TCP values with an extension including the variable `Octets` |
 
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 License for this plugin can be found <a target="_blank" href="https://github.com/signalfx/collectd/blob/master/src/protocols.c">in the header of the plugin</a>

@@ -46,10 +46,6 @@ Configuration validation will fail when a non-MetricLens enabled filter is liste
 
 The select all filters in combination with select all dimensions options should be used with care because of the potential to generate a large amount of datapoints (i.e. metric time series (MTS)).
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

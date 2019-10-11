@@ -35,10 +35,6 @@ Sample of built-in dashboard in SignalFx:
 
 ![](././img/dashboard_docker.png)
 
-### METRICS
-
-For documentation of the metrics and dimensions emitted by this plugin, [click here](./docs).
-
 ### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
