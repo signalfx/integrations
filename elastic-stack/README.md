@@ -8,8 +8,6 @@
 
 Create links from SignalFx charts and alerts to any URL-addressable destination such as Kibana.
 
-The links appear for metric properties for which they are targeted for (triggered for) in the configuration.
-
 The links appear in the Action menus adjacent to metric property values displayed in dashboards and alerts.
 
 The metric property values are used as query parameter and/or path variable values of the URL link.
