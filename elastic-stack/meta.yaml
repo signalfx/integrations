@@ -3,7 +3,7 @@ browse_categories:
 - Analytics
 code: https://www.elastic.co
 data_signature: ''
-description: Deep linking from SignalFx to Elastic Stack
+description: Enable deep linking from SignalFx to Elastic Stack to pre-select only the logs of interest to you
 display_name: Elastic Stack
 featured: false
 in_app_categories:
