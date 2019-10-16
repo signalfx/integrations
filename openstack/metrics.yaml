@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 counter.openstack.nova.server.cpu_time:
   brief: Virtual CPU time consumed in nanoseconds
   custom: true
   description: Virtual CPU time consumed in nanoseconds
   metric_type: counter
+  monitor: collectd/openstack
   title: counter.openstack.nova.server.cpu_time
 
 counter.openstack.nova.server.rx:
@@ -11,6 +13,7 @@ counter.openstack.nova.server.rx:
   custom: false
   description: Size of network packet received in bytes
   metric_type: counter
+  monitor: collectd/openstack
   title: counter.openstack.nova.server.rx
 
 counter.openstack.nova.server.rx_packets:
@@ -18,6 +21,7 @@ counter.openstack.nova.server.rx_packets:
   custom: false
   description: Received packets at an instance
   metric_type: counter
+  monitor: collectd/openstack
   title: counter.openstack.nova.server.rx_packets
 
 counter.openstack.nova.server.tx:
@@ -25,6 +29,7 @@ counter.openstack.nova.server.tx:
   custom: false
   description: Size of network packet transmitted in bytes
   metric_type: counter
+  monitor: collectd/openstack
   title: counter.openstack.nova.server.tx
 
 counter.openstack.nova.server.tx_packets:
@@ -32,6 +37,7 @@ counter.openstack.nova.server.tx_packets:
   custom: false
   description: Transmitted packets at an instance
   metric_type: counter
+  monitor: collectd/openstack
   title: counter.openstack.nova.server.tx_packets
 
 gauge.openstack.cinder.limit.maxTotalBackupGigabytes:
@@ -39,6 +45,7 @@ gauge.openstack.cinder.limit.maxTotalBackupGigabytes:
   custom: false
   description: Maximum backup space available at cinder component for project in Gigabytes
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.maxTotalBackupGigabytes
 
 gauge.openstack.cinder.limit.maxTotalBackups:
@@ -46,6 +53,7 @@ gauge.openstack.cinder.limit.maxTotalBackups:
   custom: false
   description: Total available backups used at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.maxTotalBackups
 
 gauge.openstack.cinder.limit.maxTotalSnapshots:
@@ -53,6 +61,7 @@ gauge.openstack.cinder.limit.maxTotalSnapshots:
   custom: false
   description: Total available snapshots at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.maxTotalSnapshots
 
 gauge.openstack.cinder.limit.maxTotalVolumeGigabytes:
@@ -60,6 +69,7 @@ gauge.openstack.cinder.limit.maxTotalVolumeGigabytes:
   custom: false
   description: Total available block storage at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.maxTotalVolumeGigabytes
 
 gauge.openstack.cinder.limit.maxTotalVolumes:
@@ -67,6 +77,7 @@ gauge.openstack.cinder.limit.maxTotalVolumes:
   custom: false
   description: Maximum volume resources available at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.maxTotalVolumes
 
 gauge.openstack.cinder.limit.totalBackupGigabytesUsed:
@@ -74,6 +85,7 @@ gauge.openstack.cinder.limit.totalBackupGigabytesUsed:
   custom: false
   description: Total backup space used at cinder component for project in Gigabytes
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.totalBackupGigabytesUsed
 
 gauge.openstack.cinder.limit.totalBackupsUsed:
@@ -81,6 +93,7 @@ gauge.openstack.cinder.limit.totalBackupsUsed:
   custom: false
   description: Total backups used at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.totalBackupsUsed
 
 gauge.openstack.cinder.limit.totalGigabytesUsed:
@@ -88,6 +101,7 @@ gauge.openstack.cinder.limit.totalGigabytesUsed:
   custom: false
   description: Total block storage used at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.totalGigabytesUsed
 
 gauge.openstack.cinder.limit.totalSnapshotsUsed:
@@ -95,6 +109,7 @@ gauge.openstack.cinder.limit.totalSnapshotsUsed:
   custom: false
   description: Total snapshots used at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.totalSnapshotsUsed
 
 gauge.openstack.cinder.limit.totalVolumesUsed:
@@ -102,6 +117,7 @@ gauge.openstack.cinder.limit.totalVolumesUsed:
   custom: false
   description: Volume resources used at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.limit.totalVolumesUsed
 
 gauge.openstack.cinder.snapshot.count:
@@ -109,6 +125,7 @@ gauge.openstack.cinder.snapshot.count:
   custom: false
   description: Total number of snapshots at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.snapshot.count
 
 gauge.openstack.cinder.snapshot.size:
@@ -116,6 +133,7 @@ gauge.openstack.cinder.snapshot.size:
   custom: false
   description: Total snapshot size at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.snapshot.size
 
 gauge.openstack.cinder.volume.count:
@@ -123,6 +141,7 @@ gauge.openstack.cinder.volume.count:
   custom: false
   description: Total number of volumes at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.volume.count
 
 gauge.openstack.cinder.volume.size:
@@ -130,6 +149,7 @@ gauge.openstack.cinder.volume.size:
   custom: false
   description: Total volume size at cinder component for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.cinder.volume.size
 
 gauge.openstack.neutron.floatingip.count:
@@ -137,6 +157,7 @@ gauge.openstack.neutron.floatingip.count:
   custom: false
   description: Overall floating IPs used across projects
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.neutron.floatingip.count
 
 gauge.openstack.neutron.network.count:
@@ -144,6 +165,7 @@ gauge.openstack.neutron.network.count:
   custom: false
   description: Overall Network resources used across projects
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.neutron.network.count
 
 gauge.openstack.neutron.router.count:
@@ -151,6 +173,7 @@ gauge.openstack.neutron.router.count:
   custom: false
   description: Overall router resources used across projects
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.neutron.router.count
 
 gauge.openstack.neutron.securitygroup.count:
@@ -158,6 +181,7 @@ gauge.openstack.neutron.securitygroup.count:
   custom: false
   description: Overall securitygroup resources used across projects
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.neutron.securitygroup.count
 
 gauge.openstack.neutron.subnet.count:
@@ -165,6 +189,7 @@ gauge.openstack.neutron.subnet.count:
   custom: false
   description: Overall subnet resources used in all projects
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.neutron.subnet.count
 
 gauge.openstack.nova.hypervisor.current_workload:
@@ -172,6 +197,7 @@ gauge.openstack.nova.hypervisor.current_workload:
   custom: false
   description: Total current active hypervisor tasks in project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.current_workload
 
 gauge.openstack.nova.hypervisor.disk_available_least:
@@ -179,6 +205,7 @@ gauge.openstack.nova.hypervisor.disk_available_least:
   custom: false
   description: Minimum free disk space available in Gigabyte
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.disk_available_least
 
 gauge.openstack.nova.hypervisor.free_disk_gb:
@@ -186,6 +213,7 @@ gauge.openstack.nova.hypervisor.free_disk_gb:
   custom: false
   description: Maximum free disk space available in Gigabyte
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.free_disk_gb
 
 gauge.openstack.nova.hypervisor.free_ram_mb:
@@ -193,6 +221,7 @@ gauge.openstack.nova.hypervisor.free_ram_mb:
   custom: false
   description: Maximum free ram space available in Megabyte
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.free_ram_mb
 
 gauge.openstack.nova.hypervisor.load_average:
@@ -200,6 +229,7 @@ gauge.openstack.nova.hypervisor.load_average:
   custom: true
   description: Average CPU load on the hypervisor
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.load_average
 
 gauge.openstack.nova.hypervisor.local_gb:
@@ -207,6 +237,7 @@ gauge.openstack.nova.hypervisor.local_gb:
   custom: false
   description: Maximum available local disk space in Gigabyte
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.local_gb
 
 gauge.openstack.nova.hypervisor.local_gb_used:
@@ -214,6 +245,7 @@ gauge.openstack.nova.hypervisor.local_gb_used:
   custom: false
   description: Total disk space used in Gigabyte
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.local_gb_used
 
 gauge.openstack.nova.hypervisor.memory_mb:
@@ -221,6 +253,7 @@ gauge.openstack.nova.hypervisor.memory_mb:
   custom: false
   description: Maximum available memory in MB at hypervisor
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.memory_mb
 
 gauge.openstack.nova.hypervisor.memory_mb_used:
@@ -228,6 +261,7 @@ gauge.openstack.nova.hypervisor.memory_mb_used:
   custom: false
   description: Total memory used in MB at hypervisor
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.memory_mb_used
 
 gauge.openstack.nova.hypervisor.running_vms:
@@ -235,6 +269,7 @@ gauge.openstack.nova.hypervisor.running_vms:
   custom: false
   description: Total running VMs at hypervisor
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.running_vms
 
 gauge.openstack.nova.hypervisor.vcpus:
@@ -242,6 +277,7 @@ gauge.openstack.nova.hypervisor.vcpus:
   custom: false
   description: Available physical cores at hypervisor
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.vcpus
 
 gauge.openstack.nova.hypervisor.vcpus_used:
@@ -249,6 +285,7 @@ gauge.openstack.nova.hypervisor.vcpus_used:
   custom: false
   description: Used virtual CPUs used
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.hypervisor.vcpus_used
 
 gauge.openstack.nova.limit.maxImageMeta:
@@ -256,6 +293,7 @@ gauge.openstack.nova.limit.maxImageMeta:
   custom: false
   description: Maximum number of metadata items associated with an image for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.maxImageMeta
 
 gauge.openstack.nova.limit.maxSecurityGroups:
@@ -263,6 +301,7 @@ gauge.openstack.nova.limit.maxSecurityGroups:
   custom: false
   description: Maximum available security groups for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.maxSecurityGroups
 
 gauge.openstack.nova.limit.maxTotalCores:
@@ -270,6 +309,7 @@ gauge.openstack.nova.limit.maxTotalCores:
   custom: false
   description: Maximum available VCPUs in project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.maxTotalCores
 
 gauge.openstack.nova.limit.maxTotalFloatingIps:
@@ -277,6 +317,7 @@ gauge.openstack.nova.limit.maxTotalFloatingIps:
   custom: false
   description: Maximum available floating IPs for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.maxTotalFloatingIps
 
 gauge.openstack.nova.limit.maxTotalInstances:
@@ -284,6 +325,7 @@ gauge.openstack.nova.limit.maxTotalInstances:
   custom: false
   description: Maximum available instances in project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.maxTotalInstances
 
 gauge.openstack.nova.limit.maxTotalKeypairs:
@@ -291,6 +333,7 @@ gauge.openstack.nova.limit.maxTotalKeypairs:
   custom: false
   description: Maximum available keypairs for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.maxTotalKeypairs
 
 gauge.openstack.nova.limit.maxTotalRAMSize:
@@ -298,6 +341,7 @@ gauge.openstack.nova.limit.maxTotalRAMSize:
   custom: false
   description: Maximum available RAM size for project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.maxTotalRAMSize
 
 gauge.openstack.nova.limit.totalCoresUsed:
@@ -305,6 +349,7 @@ gauge.openstack.nova.limit.totalCoresUsed:
   custom: false
   description: Total cores used in the project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.totalCoresUsed
 
 gauge.openstack.nova.limit.totalFloatingIpsUsed:
@@ -312,6 +357,7 @@ gauge.openstack.nova.limit.totalFloatingIpsUsed:
   custom: false
   description: Total floating IPs used in the project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.totalFloatingIpsUsed
 
 gauge.openstack.nova.limit.totalInstancesUsed:
@@ -319,6 +365,7 @@ gauge.openstack.nova.limit.totalInstancesUsed:
   custom: false
   description: Total instances used in the project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.totalInstancesUsed
 
 gauge.openstack.nova.limit.totalRAMUsed:
@@ -326,6 +373,7 @@ gauge.openstack.nova.limit.totalRAMUsed:
   custom: false
   description: Total RAM used in the project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.totalRAMUsed
 
 gauge.openstack.nova.limit.totalSecurityGroupsUsed:
@@ -333,6 +381,7 @@ gauge.openstack.nova.limit.totalSecurityGroupsUsed:
   custom: false
   description: Total RAM used in the project
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.limit.totalSecurityGroupsUsed
 
 gauge.openstack.nova.server.memory:
@@ -340,6 +389,7 @@ gauge.openstack.nova.server.memory:
   custom: false
   description: Memory provisioned at an instance
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.server.memory
 
 gauge.openstack.nova.server.memory-actual:
@@ -347,6 +397,7 @@ gauge.openstack.nova.server.memory-actual:
   custom: false
   description: Actual memory used at an instance
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.server.memory-actual
 
 gauge.openstack.nova.server.memory-rss:
@@ -354,6 +405,7 @@ gauge.openstack.nova.server.memory-rss:
   custom: false
   description: Memory used not including disk pages at an instance
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.server.memory-rss
 
 gauge.openstack.nova.server.vda_read:
@@ -361,6 +413,7 @@ gauge.openstack.nova.server.vda_read:
   custom: false
   description: Size of virtual disk read requests in bytes
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.server.vda_read
 
 gauge.openstack.nova.server.vda_read_req:
@@ -368,6 +421,7 @@ gauge.openstack.nova.server.vda_read_req:
   custom: false
   description: Virtual disk read requests from an instance
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.server.vda_read_req
 
 gauge.openstack.nova.server.vda_write:
@@ -375,6 +429,7 @@ gauge.openstack.nova.server.vda_write:
   custom: false
   description: Size of virtual disk write requests in bytes
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.server.vda_write
 
 gauge.openstack.nova.server.vda_write_req:
@@ -382,5 +437,6 @@ gauge.openstack.nova.server.vda_write_req:
   custom: false
   description: Virtual disk write requests from an instance
   metric_type: gauge
+  monitor: collectd/openstack
   title: gauge.openstack.nova.server.vda_write_req
 

@@ -1,139 +1,146 @@
-gauge.marathon-api-metric:
-  brief: Metrics reported by the Marathon Metrics API
-  description: '> Metrics reported by the Marathon Metrics API
-
-    The Marathon API offers a set of metrics that are reported by this plugin.
-
-    API Endpoint: `/metrics`
-
-    #### Counters
-
-    This plugin reports all "counters" as `gauge.<metric name>`. The Marathon API
-    does the counting for the plugin, so it reads and reports the counts as a gauge
-    type value.
-
-    #### Gauges
-
-    This plugin reports all gauge metrics as `gauge.<metric name>`.
-
-    #### Meters
-
-    This plugin reports all metrics listed under "meters" as
-
-    `gauge.<metric name>.<unit>.per.<unit>`.'
-  metric_type: gauge
-  title: Marathon Metrics API
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 
 gauge.marathon.app.cpu.allocated:
   brief: Number of CPUs allocated to an application
-  description: "> Number of CPUs allocated to an application\nRepresents the configured\
-    \ instance allocation multiplied by the number of \ninstances."
+  custom: false
+  description: Number of CPUs allocated to an application
   metric_type: gauge
-  title: CPU Allocated (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.cpu.allocated
 
 gauge.marathon.app.cpu.allocated.per.instance:
   brief: Configured number of CPUs allocated to each application instance
-  description: '> Configured number of CPUs allocated to each application instance'
+  custom: false
+  description: Configured number of CPUs allocated to each application instance
   metric_type: gauge
-  title: CPU Allocated Per Instance (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.cpu.allocated.per.instance
 
 gauge.marathon.app.delayed:
   brief: Indicates if the application is delayed or not
-  description: '> Indicates if the application is delayed by returning 1 or 0 if it
-    is not'
+  custom: true
+  description: Indicates if the application is delayed or not
   metric_type: gauge
-  title: Application Delayed
+  monitor: collectd/marathon
+  title: gauge.marathon.app.delayed
 
 gauge.marathon.app.deployments.total:
   brief: Number of application deployments
-  description: '> Number of deployments for an application'
+  custom: true
+  description: Number of application deployments
   metric_type: gauge
-  title: Number of Application Deployments
+  monitor: collectd/marathon
+  title: gauge.marathon.app.deployments.total
 
 gauge.marathon.app.disk.allocated:
   brief: Storage allocated to a Marathon application
-  description: "> Storage allocated to a Marathon application\nRepresents the configured\
-    \ instance allocation multiplied by the number of \ninstances."
+  custom: false
+  description: Storage allocated to a Marathon application
   metric_type: gauge
-  title: Disk Allocated (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.disk.allocated
 
 gauge.marathon.app.disk.allocated.per.instance:
   brief: Configured storage allocated each to application instance
-  description: '> Configured storage allocated to each application instance'
+  custom: false
+  description: Configured storage allocated each to application instance
   metric_type: gauge
-  title: Disk Allocated Per Instance (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.disk.allocated.per.instance
 
 gauge.marathon.app.gpu.allocated:
   brief: GPU Allocated to a Marathon application
-  description: "> GPU Allocated to a Marathon application\nRepresents the configured\
-    \ instance allocation multiplied by the number of \ninstances."
+  custom: true
+  description: GPU Allocated to a Marathon application
   metric_type: gauge
-  title: GPU Allocated (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.gpu.allocated
 
 gauge.marathon.app.gpu.allocated.per.instance:
   brief: Configured number of GPUs allocated to each application instance
-  description: '> Configured number of GPUs allocated to each application instance'
+  custom: true
+  description: Configured number of GPUs allocated to each application instance
   metric_type: gauge
-  title: GPU Allocated Per Instance (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.gpu.allocated.per.instance
 
 gauge.marathon.app.instances.total:
   brief: Number of application instances
-  description: '> Number of application instances'
+  custom: false
+  description: Number of application instances
   metric_type: gauge
-  title: Number of Application Instances
+  monitor: collectd/marathon
+  title: gauge.marathon.app.instances.total
 
 gauge.marathon.app.memory.allocated:
   brief: Memory Allocated to a Marathon application
-  description: "> Memory Allocated to a Marathon application\nRepresents the configured\
-    \ instance allocation multiplied by the number of \ninstances."
+  custom: false
+  description: Memory Allocated to a Marathon application
   metric_type: gauge
-  title: Memory Allocated (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.memory.allocated
 
 gauge.marathon.app.memory.allocated.per.instance:
   brief: Configured amount of memory allocated to each application instance
-  description: '> Configured amount of memory allocated to each application instance'
+  custom: false
+  description: Configured amount of memory allocated to each application instance
   metric_type: gauge
-  title: Memory Allocated Per Instance (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.memory.allocated.per.instance
 
 gauge.marathon.app.tasks.running:
   brief: Number tasks running for an application
-  description: '> Number of tasks running for an application'
+  custom: false
+  description: Number tasks running for an application
   metric_type: gauge
-  title: Number of Tasks Running (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.tasks.running
 
 gauge.marathon.app.tasks.staged:
   brief: Number tasks staged for an application
-  description: '> Number of tasks staged for an application'
+  custom: false
+  description: Number tasks staged for an application
   metric_type: gauge
-  title: Number of Tasks Staged (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.tasks.staged
 
 gauge.marathon.app.tasks.unhealthy:
   brief: Number unhealthy tasks for an application
-  description: '> Number of unhealthy tasks for an application'
+  custom: false
+  description: Number unhealthy tasks for an application
   metric_type: gauge
-  title: Number of Unhealthy Tasks (App)
+  monitor: collectd/marathon
+  title: gauge.marathon.app.tasks.unhealthy
 
 gauge.marathon.task.healthchecks.failing.total:
   brief: The number of failing health checks for a task
-  description: '> The number of failing health checks for a task'
+  custom: false
+  description: The number of failing health checks for a task
   metric_type: gauge
-  title: Number of Failing Health Checks (Task)
+  monitor: collectd/marathon
+  title: gauge.marathon.task.healthchecks.failing.total
 
 gauge.marathon.task.healthchecks.passing.total:
   brief: The number of passing health checks for a task
-  description: '> The number of passing health checks for a task'
+  custom: false
+  description: The number of passing health checks for a task
   metric_type: gauge
-  title: Number of Passing Health Checks (Task)
+  monitor: collectd/marathon
+  title: gauge.marathon.task.healthchecks.passing.total
 
 gauge.marathon.task.staged.time.elapsed:
   brief: The amount of time the task spent in staging
-  description: '> The amount of time the task spent in staging'
+  custom: true
+  description: The amount of time the task spent in staging
   metric_type: gauge
-  title: Time Elapsed In Staged State
+  monitor: collectd/marathon
+  title: gauge.marathon.task.staged.time.elapsed
 
 gauge.marathon.task.start.time.elapsed:
   brief: Time elapsed since the task started
-  description: '> Time elapsed since the task started'
+  custom: true
+  description: Time elapsed since the task started
   metric_type: gauge
-  title: Time Elapsed Since Start
+  monitor: collectd/marathon
+  title: gauge.marathon.task.start.time.elapsed
 

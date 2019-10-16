@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 counter.HiveExternalCatalog.fileCacheHits:
   brief: Total number of file level cache hits occurred
   custom: true
   description: Total number of file level cache hits occurred
   metric_type: counter
+  monitor: collectd/spark
   title: counter.HiveExternalCatalog.fileCacheHits
 
 counter.HiveExternalCatalog.filesDiscovered:
@@ -11,6 +13,7 @@ counter.HiveExternalCatalog.filesDiscovered:
   custom: true
   description: Total number of files discovered
   metric_type: counter
+  monitor: collectd/spark
   title: counter.HiveExternalCatalog.filesDiscovered
 
 counter.HiveExternalCatalog.hiveClientCalls:
@@ -18,6 +21,7 @@ counter.HiveExternalCatalog.hiveClientCalls:
   custom: true
   description: Total number of client calls sent to Hive for query processing
   metric_type: counter
+  monitor: collectd/spark
   title: counter.HiveExternalCatalog.hiveClientCalls
 
 counter.HiveExternalCatalog.parallelListingJobCount:
@@ -25,6 +29,7 @@ counter.HiveExternalCatalog.parallelListingJobCount:
   custom: true
   description: Total number of Hive-specific jobs running in parallel
   metric_type: counter
+  monitor: collectd/spark
   title: counter.HiveExternalCatalog.parallelListingJobCount
 
 counter.HiveExternalCatalog.partitionsFetched:
@@ -32,6 +37,7 @@ counter.HiveExternalCatalog.partitionsFetched:
   custom: true
   description: Total number of partitions fetched
   metric_type: counter
+  monitor: collectd/spark
   title: counter.HiveExternalCatalog.partitionsFetched
 
 counter.spark.driver.completed_tasks:
@@ -39,6 +45,7 @@ counter.spark.driver.completed_tasks:
   custom: true
   description: Total number of completed tasks in driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.completed_tasks
 
 counter.spark.driver.disk_used:
@@ -46,6 +53,7 @@ counter.spark.driver.disk_used:
   custom: false
   description: Amount of disk used by driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.disk_used
 
 counter.spark.driver.failed_tasks:
@@ -53,6 +61,7 @@ counter.spark.driver.failed_tasks:
   custom: true
   description: Total number of failed tasks in driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.failed_tasks
 
 counter.spark.driver.memory_used:
@@ -60,6 +69,7 @@ counter.spark.driver.memory_used:
   custom: false
   description: Amount of memory used by driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.memory_used
 
 counter.spark.driver.total_duration:
@@ -67,6 +77,7 @@ counter.spark.driver.total_duration:
   custom: true
   description: Fraction of time spent by driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.total_duration
 
 counter.spark.driver.total_input_bytes:
@@ -74,6 +85,7 @@ counter.spark.driver.total_input_bytes:
   custom: false
   description: Number of input bytes in driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.total_input_bytes
 
 counter.spark.driver.total_shuffle_read:
@@ -81,6 +93,7 @@ counter.spark.driver.total_shuffle_read:
   custom: false
   description: Size read during a shuffle in driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.total_shuffle_read
 
 counter.spark.driver.total_shuffle_write:
@@ -88,6 +101,7 @@ counter.spark.driver.total_shuffle_write:
   custom: false
   description: Size written to during a shuffle in driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.total_shuffle_write
 
 counter.spark.driver.total_tasks:
@@ -95,6 +109,7 @@ counter.spark.driver.total_tasks:
   custom: false
   description: Total number of tasks in driver mapped to a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.driver.total_tasks
 
 counter.spark.executor.completed_tasks:
@@ -102,6 +117,7 @@ counter.spark.executor.completed_tasks:
   custom: true
   description: Completed tasks across executors working for a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.completed_tasks
 
 counter.spark.executor.disk_used:
@@ -109,6 +125,7 @@ counter.spark.executor.disk_used:
   custom: false
   description: Amount of disk used across executors working for a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.disk_used
 
 counter.spark.executor.failed_tasks:
@@ -116,6 +133,7 @@ counter.spark.executor.failed_tasks:
   custom: true
   description: Failed tasks across executors working for a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.failed_tasks
 
 counter.spark.executor.memory_used:
@@ -123,6 +141,7 @@ counter.spark.executor.memory_used:
   custom: false
   description: Amount of memory used across executors working for a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.memory_used
 
 counter.spark.executor.total_duration:
@@ -130,6 +149,7 @@ counter.spark.executor.total_duration:
   custom: true
   description: Fraction of time spent across executors working for a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.total_duration
 
 counter.spark.executor.total_input_bytes:
@@ -137,6 +157,7 @@ counter.spark.executor.total_input_bytes:
   custom: false
   description: Number of input bytes across executors working for a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.total_input_bytes
 
 counter.spark.executor.total_shuffle_read:
@@ -144,6 +165,7 @@ counter.spark.executor.total_shuffle_read:
   custom: false
   description: Size read during a shuffle in a particular application's executors
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.total_shuffle_read
 
 counter.spark.executor.total_shuffle_write:
@@ -151,6 +173,7 @@ counter.spark.executor.total_shuffle_write:
   custom: false
   description: Size written to during a shuffle in a particular application's executors
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.total_shuffle_write
 
 counter.spark.executor.total_tasks:
@@ -158,6 +181,7 @@ counter.spark.executor.total_tasks:
   custom: true
   description: Total tasks across executors working for a particular application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.executor.total_tasks
 
 counter.spark.streaming.num_processed_records:
@@ -165,6 +189,7 @@ counter.spark.streaming.num_processed_records:
   custom: false
   description: Number of processed records in a streaming application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.streaming.num_processed_records
 
 counter.spark.streaming.num_received_records:
@@ -172,6 +197,7 @@ counter.spark.streaming.num_received_records:
   custom: false
   description: Number of received records in a streaming application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.streaming.num_received_records
 
 counter.spark.streaming.num_total_completed_batches:
@@ -179,6 +205,7 @@ counter.spark.streaming.num_total_completed_batches:
   custom: false
   description: Number of batches completed in a streaming application
   metric_type: counter
+  monitor: collectd/spark
   title: counter.spark.streaming.num_total_completed_batches
 
 gauge.jvm.MarkSweepCompact.count:
@@ -186,6 +213,7 @@ gauge.jvm.MarkSweepCompact.count:
   custom: true
   description: Garbage collection count
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.MarkSweepCompact.count
 
 gauge.jvm.MarkSweepCompact.time:
@@ -193,6 +221,7 @@ gauge.jvm.MarkSweepCompact.time:
   custom: true
   description: Garbage collection time
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.MarkSweepCompact.time
 
 gauge.jvm.heap.committed:
@@ -200,6 +229,7 @@ gauge.jvm.heap.committed:
   custom: false
   description: Amount of committed heap memory (in MB)
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.heap.committed
 
 gauge.jvm.heap.used:
@@ -207,6 +237,7 @@ gauge.jvm.heap.used:
   custom: false
   description: Amount of used heap memory (in MB)
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.heap.used
 
 gauge.jvm.non-heap.committed:
@@ -214,6 +245,7 @@ gauge.jvm.non-heap.committed:
   custom: false
   description: Amount of committed non-heap memory (in MB)
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.non-heap.committed
 
 gauge.jvm.non-heap.used:
@@ -221,6 +253,7 @@ gauge.jvm.non-heap.used:
   custom: false
   description: Amount of used non-heap memory (in MB)
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.non-heap.used
 
 gauge.jvm.pools.Code-Cache.committed:
@@ -228,6 +261,7 @@ gauge.jvm.pools.Code-Cache.committed:
   custom: true
   description: Amount of memory committed for compilation and storage of native code
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Code-Cache.committed
 
 gauge.jvm.pools.Code-Cache.used:
@@ -235,6 +269,7 @@ gauge.jvm.pools.Code-Cache.used:
   custom: true
   description: Amount of memory used to compile and store native code
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Code-Cache.used
 
 gauge.jvm.pools.Compressed-Class-Space.committed:
@@ -242,6 +277,7 @@ gauge.jvm.pools.Compressed-Class-Space.committed:
   custom: true
   description: Amount of memory committed for compressing a class object
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Compressed-Class-Space.committed
 
 gauge.jvm.pools.Compressed-Class-Space.used:
@@ -249,6 +285,7 @@ gauge.jvm.pools.Compressed-Class-Space.used:
   custom: true
   description: Amount of memory used to compress a class object
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Compressed-Class-Space.used
 
 gauge.jvm.pools.Eden-Space.committed:
@@ -256,6 +293,7 @@ gauge.jvm.pools.Eden-Space.committed:
   custom: true
   description: Amount of memory committed for the initial allocation of objects
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Eden-Space.committed
 
 gauge.jvm.pools.Eden-Space.used:
@@ -263,6 +301,7 @@ gauge.jvm.pools.Eden-Space.used:
   custom: true
   description: Amount of memory used for the initial allocation of objects
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Eden-Space.used
 
 gauge.jvm.pools.Metaspace.committed:
@@ -270,6 +309,7 @@ gauge.jvm.pools.Metaspace.committed:
   custom: true
   description: Amount of memory committed for storing classes and classloaders
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Metaspace.committed
 
 gauge.jvm.pools.Metaspace.used:
@@ -277,6 +317,7 @@ gauge.jvm.pools.Metaspace.used:
   custom: true
   description: Amount of memory used to store classes and classloaders
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Metaspace.used
 
 gauge.jvm.pools.Survivor-Space.committed:
@@ -286,6 +327,7 @@ gauge.jvm.pools.Survivor-Space.committed:
   description: Amount of memory committed specifically for objects that have survived
     GC of the Eden Space
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Survivor-Space.committed
 
 gauge.jvm.pools.Survivor-Space.used:
@@ -294,6 +336,7 @@ gauge.jvm.pools.Survivor-Space.used:
   description: Amount of memory used for objects that have survived GC of the Eden
     Space
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Survivor-Space.used
 
 gauge.jvm.pools.Tenured-Gen.committed:
@@ -303,6 +346,7 @@ gauge.jvm.pools.Tenured-Gen.committed:
   description: Amount of memory committed to store objects that have lived in the
     survivor space for a given period of time
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Tenured-Gen.committed
 
 gauge.jvm.pools.Tenured-Gen.used:
@@ -312,6 +356,7 @@ gauge.jvm.pools.Tenured-Gen.used:
   description: Amount of memory used for objects that have lived in the survivor space
     for a given period of time
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.pools.Tenured-Gen.used
 
 gauge.jvm.total.committed:
@@ -319,6 +364,7 @@ gauge.jvm.total.committed:
   custom: false
   description: Amount of committed JVM memory (in MB)
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.total.committed
 
 gauge.jvm.total.used:
@@ -326,6 +372,7 @@ gauge.jvm.total.used:
   custom: false
   description: Amount of used JVM memory (in MB)
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.jvm.total.used
 
 gauge.master.aliveWorkers:
@@ -333,6 +380,7 @@ gauge.master.aliveWorkers:
   custom: false
   description: Total functioning workers
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.master.aliveWorkers
 
 gauge.master.apps:
@@ -340,6 +388,7 @@ gauge.master.apps:
   custom: false
   description: Total number of active applications in the spark cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.master.apps
 
 gauge.master.waitingApps:
@@ -347,6 +396,7 @@ gauge.master.waitingApps:
   custom: false
   description: Total number of waiting applications in the spark cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.master.waitingApps
 
 gauge.master.workers:
@@ -354,6 +404,7 @@ gauge.master.workers:
   custom: false
   description: Total number of workers in spark cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.master.workers
 
 gauge.spark.driver.active_tasks:
@@ -361,6 +412,7 @@ gauge.spark.driver.active_tasks:
   custom: true
   description: Total number of active tasks in driver mapped to a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.driver.active_tasks
 
 gauge.spark.driver.max_memory:
@@ -368,6 +420,7 @@ gauge.spark.driver.max_memory:
   custom: false
   description: Maximum memory used by driver mapped to a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.driver.max_memory
 
 gauge.spark.driver.rdd_blocks:
@@ -375,6 +428,7 @@ gauge.spark.driver.rdd_blocks:
   custom: true
   description: Number of RDD blocks in the driver mapped to a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.driver.rdd_blocks
 
 gauge.spark.executor.active_tasks:
@@ -384,6 +438,7 @@ gauge.spark.executor.active_tasks:
   description: Total number of active tasks across all executors working for a particular
     application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.executor.active_tasks
 
 gauge.spark.executor.count:
@@ -393,6 +448,7 @@ gauge.spark.executor.count:
   description: Total number of executors performing for an active application in the
     spark cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.executor.count
 
 gauge.spark.executor.max_memory:
@@ -400,6 +456,7 @@ gauge.spark.executor.max_memory:
   custom: false
   description: Max memory across all executors working for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.executor.max_memory
 
 gauge.spark.executor.rdd_blocks:
@@ -408,6 +465,7 @@ gauge.spark.executor.rdd_blocks:
   description: Number of RDD blocks across all executors working for a particular
     application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.executor.rdd_blocks
 
 gauge.spark.job.num_active_stages:
@@ -416,6 +474,7 @@ gauge.spark.job.num_active_stages:
   description: Total number of active stages for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_active_stages
 
 gauge.spark.job.num_active_tasks:
@@ -424,6 +483,7 @@ gauge.spark.job.num_active_tasks:
   description: Total number of active tasks for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_active_tasks
 
 gauge.spark.job.num_completed_stages:
@@ -432,6 +492,7 @@ gauge.spark.job.num_completed_stages:
   description: Total number of completed stages for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_completed_stages
 
 gauge.spark.job.num_completed_tasks:
@@ -440,6 +501,7 @@ gauge.spark.job.num_completed_tasks:
   description: Total number of completed tasks for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_completed_tasks
 
 gauge.spark.job.num_failed_stages:
@@ -448,6 +510,7 @@ gauge.spark.job.num_failed_stages:
   description: Total number of failed stages for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_failed_stages
 
 gauge.spark.job.num_failed_tasks:
@@ -456,6 +519,7 @@ gauge.spark.job.num_failed_tasks:
   description: Total number of failed tasks for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_failed_tasks
 
 gauge.spark.job.num_skipped_stages:
@@ -464,6 +528,7 @@ gauge.spark.job.num_skipped_stages:
   description: Total number of skipped stages for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_skipped_stages
 
 gauge.spark.job.num_skipped_tasks:
@@ -472,6 +537,7 @@ gauge.spark.job.num_skipped_tasks:
   description: Total number of skipped tasks for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_skipped_tasks
 
 gauge.spark.job.num_tasks:
@@ -479,6 +545,7 @@ gauge.spark.job.num_tasks:
   custom: false
   description: Total number of tasks for an active application in the spark cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.job.num_tasks
 
 gauge.spark.num_active_stages:
@@ -487,6 +554,7 @@ gauge.spark.num_active_stages:
   description: Total number of active stages for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.num_active_stages
 
 gauge.spark.num_running_jobs:
@@ -495,6 +563,7 @@ gauge.spark.num_running_jobs:
   description: Total number of running jobs for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.num_running_jobs
 
 gauge.spark.stage.disk_bytes_spilled:
@@ -503,6 +572,7 @@ gauge.spark.stage.disk_bytes_spilled:
   description: Actual size written to disk for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.disk_bytes_spilled
 
 gauge.spark.stage.executor_run_time:
@@ -512,6 +582,7 @@ gauge.spark.stage.executor_run_time:
   description: Fraction of time spent by (and averaged across) executors for a particular
     application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.executor_run_time
 
 gauge.spark.stage.input_bytes:
@@ -519,6 +590,7 @@ gauge.spark.stage.input_bytes:
   custom: false
   description: Input size for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.input_bytes
 
 gauge.spark.stage.input_records:
@@ -526,6 +598,7 @@ gauge.spark.stage.input_records:
   custom: false
   description: Input records received for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.input_records
 
 gauge.spark.stage.memory_bytes_spilled:
@@ -534,6 +607,7 @@ gauge.spark.stage.memory_bytes_spilled:
   description: Size spilled to disk from memory for an active application in the spark
     cluster
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.memory_bytes_spilled
 
 gauge.spark.stage.output_bytes:
@@ -541,6 +615,7 @@ gauge.spark.stage.output_bytes:
   custom: false
   description: Output size for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.output_bytes
 
 gauge.spark.stage.output_records:
@@ -548,6 +623,7 @@ gauge.spark.stage.output_records:
   custom: false
   description: Output records written to for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.output_records
 
 gauge.spark.stage.shuffle_read_bytes:
@@ -555,6 +631,7 @@ gauge.spark.stage.shuffle_read_bytes:
   custom: true
   description: Read size during shuffle phase for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.shuffle_read_bytes
 
 gauge.spark.stage.shuffle_read_records:
@@ -562,6 +639,7 @@ gauge.spark.stage.shuffle_read_records:
   custom: true
   description: Number of records read during shuffle phase for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.shuffle_read_records
 
 gauge.spark.stage.shuffle_write_bytes:
@@ -569,6 +647,7 @@ gauge.spark.stage.shuffle_write_bytes:
   custom: true
   description: Size written during shuffle phase for a particular application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.shuffle_write_bytes
 
 gauge.spark.stage.shuffle_write_records:
@@ -577,6 +656,7 @@ gauge.spark.stage.shuffle_write_records:
   description: Number of records written to during shuffle phase for a particular
     application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.stage.shuffle_write_records
 
 gauge.spark.streaming.avg_input_rate:
@@ -585,6 +665,7 @@ gauge.spark.streaming.avg_input_rate:
   description: Average input rate of records across retained batches in a streaming
     application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.streaming.avg_input_rate
 
 gauge.spark.streaming.avg_processing_time:
@@ -592,6 +673,7 @@ gauge.spark.streaming.avg_processing_time:
   custom: false
   description: Average processing time in a streaming application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.streaming.avg_processing_time
 
 gauge.spark.streaming.avg_scheduling_delay:
@@ -599,6 +681,7 @@ gauge.spark.streaming.avg_scheduling_delay:
   custom: false
   description: Average scheduling delay in a streaming application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.streaming.avg_scheduling_delay
 
 gauge.spark.streaming.avg_total_delay:
@@ -606,6 +689,7 @@ gauge.spark.streaming.avg_total_delay:
   custom: false
   description: Average total delay in a streaming application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.streaming.avg_total_delay
 
 gauge.spark.streaming.num_active_batches:
@@ -613,6 +697,7 @@ gauge.spark.streaming.num_active_batches:
   custom: false
   description: Number of active batches in a streaming application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.streaming.num_active_batches
 
 gauge.spark.streaming.num_inactive_receivers:
@@ -620,6 +705,7 @@ gauge.spark.streaming.num_inactive_receivers:
   custom: false
   description: Number of inactive receivers in a streaming application
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.spark.streaming.num_inactive_receivers
 
 gauge.worker.coresFree:
@@ -627,6 +713,7 @@ gauge.worker.coresFree:
   custom: false
   description: Total cores free for a particular worker process
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.worker.coresFree
 
 gauge.worker.coresUsed:
@@ -634,6 +721,7 @@ gauge.worker.coresUsed:
   custom: false
   description: Total cores used by a particular worker process
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.worker.coresUsed
 
 gauge.worker.executors:
@@ -641,6 +729,7 @@ gauge.worker.executors:
   custom: false
   description: Total number of executors for a particular worker process
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.worker.executors
 
 gauge.worker.memFree_MB:
@@ -648,6 +737,7 @@ gauge.worker.memFree_MB:
   custom: false
   description: Total memory free for a particular worker process
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.worker.memFree_MB
 
 gauge.worker.memUsed_MB:
@@ -655,5 +745,6 @@ gauge.worker.memUsed_MB:
   custom: false
   description: Memory used by a particular worker process
   metric_type: gauge
+  monitor: collectd/spark
   title: gauge.worker.memUsed_MB
 

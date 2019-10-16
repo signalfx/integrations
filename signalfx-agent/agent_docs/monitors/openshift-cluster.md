@@ -80,6 +80,10 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
+ - `kubernetes.container_cpu_limit` (*gauge*)<br>    Maximum CPU limit set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
+ - `kubernetes.container_cpu_request` (*gauge*)<br>    CPU requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
+ - `kubernetes.container_memory_limit` (*gauge*)<br>    Maximum memory limit set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
+ - `kubernetes.container_memory_request` (*gauge*)<br>    Memory requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
  - ***`kubernetes.container_ready`*** (*gauge*)<br>    Whether a container has passed its readiness probe (0 for no, 1 for yes)
  - ***`kubernetes.container_restart_count`*** (*gauge*)<br>    How many times the container has restarted in the recent past.  This value is pulled directly from [the K8s API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.11/#containerstatus-v1-core) and the value can go indefinitely high and be reset to 0 at any time depending on how your [kubelet is configured to prune dead containers](https://kubernetes.io/docs/concepts/cluster-administration/kubelet-garbage-collection/). It is best to not depend too much on the exact value but rather look at it as either `== 0`, in which case you can conclude there were no restarts in the recent past, or `> 0`, in which case you can conclude there were restarts in the recent past, and not try and analyze the value beyond that.
  - `kubernetes.cronjob.active` (*gauge*)<br>    The number of actively running jobs for a cronjob.
@@ -101,8 +105,8 @@ Metrics that are categorized as
  - ***`kubernetes.replica_set.desired`*** (*gauge*)<br>    Number of desired pods in this replica set
  - ***`kubernetes.replication_controller.available`*** (*gauge*)<br>    Total number of available pods (ready for at least minReadySeconds) targeted by this replication controller.
  - ***`kubernetes.replication_controller.desired`*** (*gauge*)<br>    Number of desired pods (the `spec.replicas` field)
- - ***`kubernetes.resource_quota_hard`*** (*gauge*)<br>    The upper limit for a particular resource in a specific namespace.  Will only be sent if a quota is specified.  CPU requests/limits will be sent as millicores.
- - ***`kubernetes.resource_quota_used`*** (*gauge*)<br>    The usage for a particular resource in a specific namespace.  Will only be sent if a quota is specified.  CPU requests/limits will be sent as millicores.
+ - ***`kubernetes.resource_quota_hard`*** (*gauge*)<br>    The upper limit for a particular resource in a specific namespace.  Will only be sent if a quota is specified. CPU requests/limits will be sent as millicores.
+ - ***`kubernetes.resource_quota_used`*** (*gauge*)<br>    The usage for a particular resource in a specific namespace.  Will only be sent if a quota is specified. CPU requests/limits will be sent as millicores.
  - `kubernetes.stateful_set.current` (*gauge*)<br>    The number of pods created by the StatefulSet controller from the
     StatefulSet version indicated by `current_revision` property on the
     `kubernetes_uid` dimension for this StatefulSet.
@@ -141,6 +145,18 @@ Metrics that are categorized as
  - ***`openshift.clusterquota.services.nodeports.hard`*** (*gauge*)<br>    Hard limit for number of services.nodeports across all namespaces
  - ***`openshift.clusterquota.services.nodeports.used`*** (*gauge*)<br>    Consumed number of services.nodeports across all namespaces
  - ***`openshift.clusterquota.services.used`*** (*gauge*)<br>    Consumed number of services across all namespaces
+
+#### Group hpa
+All of the following metrics are part of the `hpa` metric group. All of
+the non-default metrics below can be turned on by adding `hpa` to the
+monitor config option `extraGroups`:
+ - `kubernetes.hpa.spec.max_replicas` (*gauge*)<br>    The upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.
+ - `kubernetes.hpa.spec.min_replicas` (*gauge*)<br>    The lower limit for the number of replicas to which the autoscaler can scale down. It defaults to 1 pod.
+ - `kubernetes.hpa.status.condition.able_to_scale` (*gauge*)<br>    A status value that indicates the autoscaler status in reference to the AbleToScale condition. A value of 1 means that the autoscaler is in the AbleToScale condition, a 0 value means that it is not, and -1 means that the status of the AbleToScale condition is unknown. AbleToScale indicates a lack of transient issues which prevent scaling from occurring, such as being in a backoff window, or being unable to access/update the target scale.
+ - `kubernetes.hpa.status.condition.scaling_active` (*gauge*)<br>    A status value that indicates the autoscaler status in reference to the ScalingActive condition. A value of 1 means that the autoscaler is in the ScalingActive condition, a 0 value means that it is not, and -1 means that the status of the ScalingActive condition is unknown. ScalingActive indicates that the HPA controller is able to scale if necessary.
+ - `kubernetes.hpa.status.condition.scaling_limited` (*gauge*)<br>    A status value that indicates the autoscaler status in reference to the ScalingLimited condition. A value of 1 means that the autoscaler is in the ScalingLimited condition, a 0 value means that it is not, and -1 means that the status of the ScalingLimited condition is unknown. ScalingLimited indicates that the calculated scale based on metrics would be above or below the range for the HPA, and has thus been capped.
+ - `kubernetes.hpa.status.current_replicas` (*gauge*)<br>    The current number of pod replicas managed by this autoscaler.
+ - `kubernetes.hpa.status.desired_replicas` (*gauge*)<br>    The desired number of pod replicas managed by this autoscaler.
 
 ### Non-default metrics (version 4.7.0+)
 
@@ -195,6 +211,13 @@ are set on the dimension values of the dimension specified.
 | ---  | ---       | ---         |
 | `<node label>` | `machine_id/kubernetes_node` | All non-blank labels on a given node will be synced as properties to the `machine_id` or `kubernetes_node` dimension value for that node.  Which dimension gets the properties is determined by the `useNodeName` config option.  Any blank values will be synced as tags on that same dimension. |
 | `<pod label>` | `kubernetes_pod_uid` | Any labels with non-blank values on the pod will be synced as properties to the `kubernetes_pod_uid` dimension. Any blank labels will be synced as tags on that same dimension. |
+| `cronjob_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the cron job was created and is in UTC. This property is synced onto `kubernetes_uid`. |
+| `daemonset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the daemon set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
+| `deployment_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the deployment was created and is in UTC. This property is synced onto `kubernetes_uid`. |
+| `job_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the job was created and is in UTC. This property is synced onto `kubernetes_uid`. |
+| `pod_creation_timestamp` | `kubernetes_pod_uid` | Timestamp (in RFC3339 format) representing the server time when the pod was created and is in UTC. This property is synced onto `kubernetes_pod_uid`. |
+| `replicaset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the replica set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
+| `statefulset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the stateful set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 
 
 

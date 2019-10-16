@@ -15,7 +15,7 @@ Monitor Type: `jmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/ma
 This montior allows you to run an arbitrary Groovy script to convert JMX
 MBeans fetched from a remote Java application to SignalFx datapoints.
 This is a much more powerful and flexible alternative to the
-[collectd/genericjmx](../collectd-genericjmx.md] monitor.
+[collectd/genericjmx](./collectd-genericjmx.md) monitor.
 
 The following utility helpers are available to use in the Groovy script
 within the `util` variable that will be set in the script's context:

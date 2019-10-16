@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 gauge.jvm.threads.count:
   brief: Number of JVM threads
   custom: false
   description: Number of JVM threads
   metric_type: gauge
+  monitor: collectd/genericjmx
   title: gauge.jvm.threads.count
 
 gauge.loaded_classes:
@@ -11,6 +13,7 @@ gauge.loaded_classes:
   custom: false
   description: Number of classes loaded in the JVM
   metric_type: gauge
+  monitor: collectd/genericjmx
   title: gauge.loaded_classes
 
 invocations:
@@ -18,6 +21,7 @@ invocations:
   custom: false
   description: Total number of garbage collection events
   metric_type: cumulative
+  monitor: collectd/genericjmx
   title: invocations
 
 jmx_memory.committed:
@@ -25,6 +29,7 @@ jmx_memory.committed:
   custom: false
   description: Amount of memory guaranteed to be available in bytes
   metric_type: gauge
+  monitor: collectd/genericjmx
   title: jmx_memory.committed
 
 jmx_memory.init:
@@ -32,6 +37,7 @@ jmx_memory.init:
   custom: false
   description: Amount of initial memory at startup in bytes
   metric_type: gauge
+  monitor: collectd/genericjmx
   title: jmx_memory.init
 
 jmx_memory.max:
@@ -39,6 +45,7 @@ jmx_memory.max:
   custom: false
   description: Maximum amount of memory that can be used in bytes
   metric_type: gauge
+  monitor: collectd/genericjmx
   title: jmx_memory.max
 
 jmx_memory.used:
@@ -46,6 +53,7 @@ jmx_memory.used:
   custom: false
   description: Current memory usage in bytes
   metric_type: gauge
+  monitor: collectd/genericjmx
   title: jmx_memory.used
 
 total_time_in_ms.collection_time:
@@ -53,5 +61,6 @@ total_time_in_ms.collection_time:
   custom: false
   description: Amount of time spent garbage collecting in milliseconds
   metric_type: cumulative
+  monitor: collectd/genericjmx
   title: total_time_in_ms.collection_time
 

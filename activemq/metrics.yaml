@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 counter.amq.TotalConnectionsCount:
   brief: Total connections count per broker
   custom: false
   description: Total connections count per broker
   metric_type: counter
+  monitor: collectd/activemq
   title: counter.amq.TotalConnectionsCount
 
 gauge.amq.TotalConsumerCount:
@@ -11,6 +13,7 @@ gauge.amq.TotalConsumerCount:
   custom: false
   description: Total number of consumers subscribed to destinations on the broker
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.TotalConsumerCount
 
 gauge.amq.TotalDequeueCount:
@@ -18,6 +21,7 @@ gauge.amq.TotalDequeueCount:
   custom: true
   description: Total number of messages that have been acknowledged from the broker.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.TotalDequeueCount
 
 gauge.amq.TotalEnqueueCount:
@@ -25,6 +29,7 @@ gauge.amq.TotalEnqueueCount:
   custom: false
   description: Total number of messages that have been sent to the broker.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.TotalEnqueueCount
 
 gauge.amq.TotalMessageCount:
@@ -32,6 +37,7 @@ gauge.amq.TotalMessageCount:
   custom: false
   description: Total number of unacknowledged messages on the broker
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.TotalMessageCount
 
 gauge.amq.TotalProducerCount:
@@ -39,6 +45,7 @@ gauge.amq.TotalProducerCount:
   custom: false
   description: Total number of message producers active on destinations on the broker
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.TotalProducerCount
 
 gauge.amq.queue.AverageBlockedTime:
@@ -46,6 +53,7 @@ gauge.amq.queue.AverageBlockedTime:
   custom: true
   description: Average time (ms) that messages have spent blocked by Flow Control.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.AverageBlockedTime
 
 gauge.amq.queue.AverageEnqueueTime:
@@ -53,6 +61,7 @@ gauge.amq.queue.AverageEnqueueTime:
   custom: false
   description: Average time (ms) that messages have been held at this destination
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.AverageEnqueueTime
 
 gauge.amq.queue.AverageMessageSize:
@@ -60,6 +69,7 @@ gauge.amq.queue.AverageMessageSize:
   custom: true
   description: Average size of messages in this queue, in bytes.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.AverageMessageSize
 
 gauge.amq.queue.BlockedSends:
@@ -67,6 +77,7 @@ gauge.amq.queue.BlockedSends:
   custom: true
   description: Number of messages blocked by Flow Control.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.BlockedSends
 
 gauge.amq.queue.ConsumerCount:
@@ -74,6 +85,7 @@ gauge.amq.queue.ConsumerCount:
   custom: false
   description: Number of consumers subscribed to this queue.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.ConsumerCount
 
 gauge.amq.queue.DequeueCount:
@@ -82,6 +94,7 @@ gauge.amq.queue.DequeueCount:
   description: Number of messages that have been acknowledged and removed from the
     queue.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.DequeueCount
 
 gauge.amq.queue.EnqueueCount:
@@ -89,6 +102,7 @@ gauge.amq.queue.EnqueueCount:
   custom: false
   description: Number of messages that have been sent to the queue.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.EnqueueCount
 
 gauge.amq.queue.ExpiredCount:
@@ -96,6 +110,7 @@ gauge.amq.queue.ExpiredCount:
   custom: false
   description: Number of messages that have expired from the queue.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.ExpiredCount
 
 gauge.amq.queue.ForwardCount:
@@ -105,6 +120,7 @@ gauge.amq.queue.ForwardCount:
   description: Number of messages that have been forwarded from this queue to a networked
     broker.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.ForwardCount
 
 gauge.amq.queue.InFlightCount:
@@ -113,6 +129,7 @@ gauge.amq.queue.InFlightCount:
   description: The number of messages that have been dispatched to consumers, but
     not acknowledged.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.InFlightCount
 
 gauge.amq.queue.ProducerCount:
@@ -120,6 +137,7 @@ gauge.amq.queue.ProducerCount:
   custom: false
   description: Number of producers publishing to this queue
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.ProducerCount
 
 gauge.amq.queue.QueueSize:
@@ -127,6 +145,7 @@ gauge.amq.queue.QueueSize:
   custom: false
   description: The number of messages in the queue that have yet to be consumed.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.QueueSize
 
 gauge.amq.queue.TotalBlockedTime:
@@ -134,6 +153,7 @@ gauge.amq.queue.TotalBlockedTime:
   custom: true
   description: The total time (ms) that messages have spent blocked by Flow Control.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.queue.TotalBlockedTime
 
 gauge.amq.topic.AverageBlockedTime:
@@ -141,6 +161,7 @@ gauge.amq.topic.AverageBlockedTime:
   custom: true
   description: Average time (ms) that messages have been blocked by Flow Control.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.AverageBlockedTime
 
 gauge.amq.topic.AverageEnqueueTime:
@@ -148,6 +169,7 @@ gauge.amq.topic.AverageEnqueueTime:
   custom: false
   description: Average time (ms) that messages have been held at this destination.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.AverageEnqueueTime
 
 gauge.amq.topic.AverageMessageSize:
@@ -155,6 +177,7 @@ gauge.amq.topic.AverageMessageSize:
   custom: true
   description: Average size of messages on this topic, in bytes.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.AverageMessageSize
 
 gauge.amq.topic.BlockedSends:
@@ -162,6 +185,7 @@ gauge.amq.topic.BlockedSends:
   custom: true
   description: Number of messages blocked by Flow Control
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.BlockedSends
 
 gauge.amq.topic.ConsumerCount:
@@ -169,6 +193,7 @@ gauge.amq.topic.ConsumerCount:
   custom: false
   description: The number of consumers subscribed to this topic
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.ConsumerCount
 
 gauge.amq.topic.DequeueCount:
@@ -177,6 +202,7 @@ gauge.amq.topic.DequeueCount:
   description: Number of messages that have been acknowledged and removed from the
     topic.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.DequeueCount
 
 gauge.amq.topic.EnqueueCount:
@@ -184,6 +210,7 @@ gauge.amq.topic.EnqueueCount:
   custom: false
   description: The number of messages that have been sent to the topic.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.EnqueueCount
 
 gauge.amq.topic.ExpiredCount:
@@ -191,6 +218,7 @@ gauge.amq.topic.ExpiredCount:
   custom: false
   description: The number of messages that have expired from this topic.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.ExpiredCount
 
 gauge.amq.topic.ForwardCount:
@@ -200,6 +228,7 @@ gauge.amq.topic.ForwardCount:
   description: The number of messages that have been forwarded from this topic to
     a networked broker.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.ForwardCount
 
 gauge.amq.topic.InFlightCount:
@@ -209,6 +238,7 @@ gauge.amq.topic.InFlightCount:
   description: The number of messages that have been dispatched to consumers, but
     have not yet been acknowledged.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.InFlightCount
 
 gauge.amq.topic.ProducerCount:
@@ -216,6 +246,7 @@ gauge.amq.topic.ProducerCount:
   custom: false
   description: Number of producers publishing to this topic.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.ProducerCount
 
 gauge.amq.topic.QueueSize:
@@ -223,6 +254,7 @@ gauge.amq.topic.QueueSize:
   custom: false
   description: Number of messages in the topic that have yet to be consumed.
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.QueueSize
 
 gauge.amq.topic.TotalBlockedTime:
@@ -230,6 +262,7 @@ gauge.amq.topic.TotalBlockedTime:
   custom: true
   description: The total time (ms) that messages have spent blocked by Flow Control
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.amq.topic.TotalBlockedTime
 
 gauge.jvm.threads.count:
@@ -237,6 +270,7 @@ gauge.jvm.threads.count:
   custom: false
   description: Number of JVM threads
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.jvm.threads.count
 
 gauge.loaded_classes:
@@ -244,6 +278,7 @@ gauge.loaded_classes:
   custom: false
   description: Number of classes loaded in the JVM
   metric_type: gauge
+  monitor: collectd/activemq
   title: gauge.loaded_classes
 
 invocations:
@@ -251,6 +286,7 @@ invocations:
   custom: false
   description: Total number of garbage collection events
   metric_type: cumulative
+  monitor: collectd/activemq
   title: invocations
 
 jmx_memory.committed:
@@ -258,6 +294,7 @@ jmx_memory.committed:
   custom: false
   description: Amount of memory guaranteed to be available in bytes
   metric_type: gauge
+  monitor: collectd/activemq
   title: jmx_memory.committed
 
 jmx_memory.init:
@@ -265,6 +302,7 @@ jmx_memory.init:
   custom: false
   description: Amount of initial memory at startup in bytes
   metric_type: gauge
+  monitor: collectd/activemq
   title: jmx_memory.init
 
 jmx_memory.max:
@@ -272,6 +310,7 @@ jmx_memory.max:
   custom: false
   description: Maximum amount of memory that can be used in bytes
   metric_type: gauge
+  monitor: collectd/activemq
   title: jmx_memory.max
 
 jmx_memory.used:
@@ -279,6 +318,7 @@ jmx_memory.used:
   custom: false
   description: Current memory usage in bytes
   metric_type: gauge
+  monitor: collectd/activemq
   title: jmx_memory.used
 
 total_time_in_ms.collection_time:
@@ -286,5 +326,6 @@ total_time_in_ms.collection_time:
   custom: false
   description: Amount of time spent garbage collecting in milliseconds
   metric_type: cumulative
+  monitor: collectd/activemq
   title: total_time_in_ms.collection_time
 

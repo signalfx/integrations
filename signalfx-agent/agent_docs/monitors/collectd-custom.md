@@ -55,6 +55,24 @@ directory, where `<AGENT_BUNDLE>` is the root of the filesystem in the
 containerized version, and is normally `/usr/lib/signalfx-agent` in the
 non-containerized agent.
 
+## Running the collectd/exec plugin
+You can use the collectd/custom monitor to run the collectd/exec plugin.
+If you are not running the Smart Agent in the container, you can use any appropriate user
+on your system.
+If you are running the Smart Agent in a container, 
+then you can use the 'signalfx-agent' user when you run your script:
+
+```yaml
+  - type: collectd/custom
+    template: |
+      LoadPlugin exec
+      <Plugin exec>
+        Exec "signalfx-agent" "/path/to/script.sh"
+      </Plugin>
+```
+To learn how to use the collectd/exec plugin, see [the collectd-exec](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_exec)
+documentation.
+
 
 ## Configuration
 

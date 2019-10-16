@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 counter.etcd.leader.counts.fail:
   brief: Total number of failed rpc requests to with a follower
   custom: false
   description: Total number of failed rpc requests to with a follower
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.leader.counts.fail
 
 counter.etcd.leader.counts.success:
@@ -11,6 +13,7 @@ counter.etcd.leader.counts.success:
   custom: false
   description: Total number of successful rpc requests to with a follower
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.leader.counts.success
 
 counter.etcd.self.recvappendreq.cnt:
@@ -18,6 +21,7 @@ counter.etcd.self.recvappendreq.cnt:
   custom: false
   description: Total number of append requests received by a member
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.self.recvappendreq.cnt
 
 counter.etcd.self.sendappendreq.cnt:
@@ -25,6 +29,7 @@ counter.etcd.self.sendappendreq.cnt:
   custom: false
   description: Total number of append requests sent by a member
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.self.sendappendreq.cnt
 
 counter.etcd.store.compareanddelete.fail:
@@ -32,6 +37,7 @@ counter.etcd.store.compareanddelete.fail:
   custom: false
   description: Total number of failed compare-and-delete operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.compareanddelete.fail
 
 counter.etcd.store.compareanddelete.success:
@@ -39,6 +45,7 @@ counter.etcd.store.compareanddelete.success:
   custom: false
   description: Total number of successful compare-and-delete operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.compareanddelete.success
 
 counter.etcd.store.compareandswap.fail:
@@ -46,6 +53,7 @@ counter.etcd.store.compareandswap.fail:
   custom: false
   description: Total number of failed compare-and-swap operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.compareandswap.fail
 
 counter.etcd.store.compareandswap.success:
@@ -53,6 +61,7 @@ counter.etcd.store.compareandswap.success:
   custom: false
   description: Total number of successful compare-and-swap operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.compareandswap.success
 
 counter.etcd.store.create.fail:
@@ -60,6 +69,7 @@ counter.etcd.store.create.fail:
   custom: false
   description: Total number of failed create operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.create.fail
 
 counter.etcd.store.create.success:
@@ -67,6 +77,7 @@ counter.etcd.store.create.success:
   custom: false
   description: Total number of successful create operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.create.success
 
 counter.etcd.store.delete.fail:
@@ -74,6 +85,7 @@ counter.etcd.store.delete.fail:
   custom: false
   description: Total number of failed delete operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.delete.fail
 
 counter.etcd.store.delete.success:
@@ -81,6 +93,7 @@ counter.etcd.store.delete.success:
   custom: false
   description: Total number of successful delete operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.delete.success
 
 counter.etcd.store.expire.count:
@@ -88,6 +101,7 @@ counter.etcd.store.expire.count:
   custom: false
   description: Total number of items expired due to TTL
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.expire.count
 
 counter.etcd.store.gets.fail:
@@ -95,6 +109,7 @@ counter.etcd.store.gets.fail:
   custom: false
   description: Total number of failed get operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.gets.fail
 
 counter.etcd.store.gets.success:
@@ -102,6 +117,7 @@ counter.etcd.store.gets.success:
   custom: false
   description: Total number of successful get operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.gets.success
 
 counter.etcd.store.sets.fail:
@@ -109,6 +125,7 @@ counter.etcd.store.sets.fail:
   custom: false
   description: Total number of failed set operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.sets.fail
 
 counter.etcd.store.sets.success:
@@ -116,6 +133,7 @@ counter.etcd.store.sets.success:
   custom: false
   description: Total number of successful set operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.sets.success
 
 counter.etcd.store.update.fail:
@@ -123,6 +141,7 @@ counter.etcd.store.update.fail:
   custom: false
   description: Total number of failed update operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.update.fail
 
 counter.etcd.store.update.success:
@@ -130,6 +149,7 @@ counter.etcd.store.update.success:
   custom: false
   description: Total number of successful update operations
   metric_type: counter
+  monitor: collectd/etcd
   title: counter.etcd.store.update.success
 
 gauge.etcd.leader.latency.average:
@@ -137,6 +157,7 @@ gauge.etcd.leader.latency.average:
   custom: true
   description: Average latency of a follower with respect to the leader
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.leader.latency.average
 
 gauge.etcd.leader.latency.current:
@@ -144,6 +165,7 @@ gauge.etcd.leader.latency.current:
   custom: false
   description: Current latency of a follower with respect to the leader
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.leader.latency.current
 
 gauge.etcd.leader.latency.max:
@@ -151,6 +173,7 @@ gauge.etcd.leader.latency.max:
   custom: true
   description: Max latency of a follower with respect to the leader
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.leader.latency.max
 
 gauge.etcd.leader.latency.min:
@@ -158,6 +181,7 @@ gauge.etcd.leader.latency.min:
   custom: true
   description: Min latency of a follower with respect to the leader
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.leader.latency.min
 
 gauge.etcd.leader.latency.stddev:
@@ -165,6 +189,7 @@ gauge.etcd.leader.latency.stddev:
   custom: true
   description: Std dev latency of a follower with respect to the leader
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.leader.latency.stddev
 
 gauge.etcd.self.recvbandwidth.rate:
@@ -172,6 +197,7 @@ gauge.etcd.self.recvbandwidth.rate:
   custom: false
   description: Bandwidth rate of a follower
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.self.recvbandwidth.rate
 
 gauge.etcd.self.recvpkg.rate:
@@ -179,6 +205,7 @@ gauge.etcd.self.recvpkg.rate:
   custom: false
   description: Rate at which a follower receives packages
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.self.recvpkg.rate
 
 gauge.etcd.self.sendbandwidth.rate:
@@ -186,6 +213,7 @@ gauge.etcd.self.sendbandwidth.rate:
   custom: false
   description: Bandwidth rate of a leader
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.self.sendbandwidth.rate
 
 gauge.etcd.self.sendpkg.rate:
@@ -193,6 +221,7 @@ gauge.etcd.self.sendpkg.rate:
   custom: false
   description: Rate at which a leader sends packages
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.self.sendpkg.rate
 
 gauge.etcd.store.watchers:
@@ -200,5 +229,6 @@ gauge.etcd.store.watchers:
   custom: false
   description: Number of watchers
   metric_type: gauge
+  monitor: collectd/etcd
   title: gauge.etcd.store.watchers
 
