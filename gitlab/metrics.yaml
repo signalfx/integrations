@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 ci_stale_builds:
   brief: ''
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ci_stale_builds
 
 gitlab_cache_misses_total:
@@ -11,6 +13,7 @@ gitlab_cache_misses_total:
   custom: true
   description: ''
   metric_type: cumulative
+  monitor: gitlab
   title: gitlab_cache_misses_total
 
 gitlab_database_rows:
@@ -18,6 +21,7 @@ gitlab_database_rows:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: gitlab_database_rows
 
 gitlab_projects_with_jid:
@@ -25,6 +29,7 @@ gitlab_projects_with_jid:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: gitlab_projects_with_jid
 
 gitlab_projects_without_jid:
@@ -32,6 +37,7 @@ gitlab_projects_without_jid:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: gitlab_projects_without_jid
 
 gitlab_stuck_import_jobs_worker_runs_total:
@@ -39,6 +45,7 @@ gitlab_stuck_import_jobs_worker_runs_total:
   custom: true
   description: ''
   metric_type: cumulative
+  monitor: gitlab
   title: gitlab_stuck_import_jobs_worker_runs_total
 
 http_request_duration_seconds:
@@ -46,6 +53,7 @@ http_request_duration_seconds:
   custom: true
   description: ''
   metric_type: cumulative
+  monitor: gitlab
   title: http_request_duration_seconds
 
 http_request_duration_seconds_bucket:
@@ -53,6 +61,7 @@ http_request_duration_seconds_bucket:
   custom: true
   description: ''
   metric_type: cumulative
+  monitor: gitlab
   title: http_request_duration_seconds_bucket
 
 http_request_duration_seconds_count:
@@ -60,6 +69,7 @@ http_request_duration_seconds_count:
   custom: true
   description: ''
   metric_type: cumulative
+  monitor: gitlab
   title: http_request_duration_seconds_count
 
 pg_stat_table_idx_tup_fetch:
@@ -67,6 +77,7 @@ pg_stat_table_idx_tup_fetch:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_idx_tup_fetch
 
 pg_stat_table_n_dead_tup:
@@ -74,6 +85,7 @@ pg_stat_table_n_dead_tup:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_n_dead_tup
 
 pg_stat_table_n_tup_del:
@@ -81,6 +93,7 @@ pg_stat_table_n_tup_del:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_n_tup_del
 
 pg_stat_table_n_tup_hot_upd:
@@ -88,6 +101,7 @@ pg_stat_table_n_tup_hot_upd:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_n_tup_hot_upd
 
 pg_stat_table_n_tup_ins:
@@ -95,6 +109,7 @@ pg_stat_table_n_tup_ins:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_n_tup_ins
 
 pg_stat_table_n_tup_upd:
@@ -102,6 +117,7 @@ pg_stat_table_n_tup_upd:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_n_tup_upd
 
 pg_stat_table_seq_scan:
@@ -109,6 +125,7 @@ pg_stat_table_seq_scan:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_seq_scan
 
 pg_stat_table_seq_tup_read:
@@ -116,6 +133,7 @@ pg_stat_table_seq_tup_read:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: pg_stat_table_seq_tup_read
 
 process_age_seconds:
@@ -123,6 +141,7 @@ process_age_seconds:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: process_age_seconds
 
 process_count:
@@ -130,6 +149,7 @@ process_count:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: process_count
 
 process_memory_bytes:
@@ -137,6 +157,7 @@ process_memory_bytes:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: process_memory_bytes
 
 ruby_file_descriptors:
@@ -144,6 +165,7 @@ ruby_file_descriptors:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_file_descriptors
 
 ruby_gc_duration_seconds_total:
@@ -151,6 +173,7 @@ ruby_gc_duration_seconds_total:
   custom: true
   description: ''
   metric_type: cumulative
+  monitor: gitlab
   title: ruby_gc_duration_seconds_total
 
 ruby_gc_stat_count:
@@ -158,6 +181,7 @@ ruby_gc_stat_count:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_count
 
 ruby_gc_stat_heap_allocatable_pages:
@@ -165,6 +189,7 @@ ruby_gc_stat_heap_allocatable_pages:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_allocatable_pages
 
 ruby_gc_stat_heap_allocated_pages:
@@ -172,6 +197,7 @@ ruby_gc_stat_heap_allocated_pages:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_allocated_pages
 
 ruby_gc_stat_heap_available_slots:
@@ -179,6 +205,7 @@ ruby_gc_stat_heap_available_slots:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_available_slots
 
 ruby_gc_stat_heap_eden_pages:
@@ -186,6 +213,7 @@ ruby_gc_stat_heap_eden_pages:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_eden_pages
 
 ruby_gc_stat_heap_final_slots:
@@ -193,6 +221,7 @@ ruby_gc_stat_heap_final_slots:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_final_slots
 
 ruby_gc_stat_heap_free_slots:
@@ -200,6 +229,7 @@ ruby_gc_stat_heap_free_slots:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_free_slots
 
 ruby_gc_stat_heap_live_slots:
@@ -207,6 +237,7 @@ ruby_gc_stat_heap_live_slots:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_live_slots
 
 ruby_gc_stat_heap_marked_slots:
@@ -214,6 +245,7 @@ ruby_gc_stat_heap_marked_slots:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_marked_slots
 
 ruby_gc_stat_heap_sorted_length:
@@ -221,6 +253,7 @@ ruby_gc_stat_heap_sorted_length:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_sorted_length
 
 ruby_gc_stat_heap_tomb_pages:
@@ -228,6 +261,7 @@ ruby_gc_stat_heap_tomb_pages:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_heap_tomb_pages
 
 ruby_gc_stat_major_gc_count:
@@ -235,6 +269,7 @@ ruby_gc_stat_major_gc_count:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_major_gc_count
 
 ruby_gc_stat_malloc_increase_bytes:
@@ -242,6 +277,7 @@ ruby_gc_stat_malloc_increase_bytes:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_malloc_increase_bytes
 
 ruby_gc_stat_malloc_increase_bytes_limit:
@@ -249,6 +285,7 @@ ruby_gc_stat_malloc_increase_bytes_limit:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_malloc_increase_bytes_limit
 
 ruby_gc_stat_minor_gc_count:
@@ -256,6 +293,7 @@ ruby_gc_stat_minor_gc_count:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_minor_gc_count
 
 ruby_gc_stat_old_objects:
@@ -263,6 +301,7 @@ ruby_gc_stat_old_objects:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_old_objects
 
 ruby_gc_stat_old_objects_limit:
@@ -270,6 +309,7 @@ ruby_gc_stat_old_objects_limit:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_old_objects_limit
 
 ruby_gc_stat_oldmalloc_increase_bytes:
@@ -277,6 +317,7 @@ ruby_gc_stat_oldmalloc_increase_bytes:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_oldmalloc_increase_bytes
 
 ruby_gc_stat_oldmalloc_increase_bytes_limit:
@@ -284,6 +325,7 @@ ruby_gc_stat_oldmalloc_increase_bytes_limit:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_oldmalloc_increase_bytes_limit
 
 ruby_gc_stat_remembered_wb_unprotected_objects:
@@ -291,6 +333,7 @@ ruby_gc_stat_remembered_wb_unprotected_objects:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_remembered_wb_unprotected_objects
 
 ruby_gc_stat_remembered_wb_unprotected_objects_limit:
@@ -298,6 +341,7 @@ ruby_gc_stat_remembered_wb_unprotected_objects_limit:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_remembered_wb_unprotected_objects_limit
 
 ruby_gc_stat_total_allocated_objects:
@@ -305,6 +349,7 @@ ruby_gc_stat_total_allocated_objects:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_total_allocated_objects
 
 ruby_gc_stat_total_allocated_pages:
@@ -312,6 +357,7 @@ ruby_gc_stat_total_allocated_pages:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_total_allocated_pages
 
 ruby_gc_stat_total_freed_objects:
@@ -319,6 +365,7 @@ ruby_gc_stat_total_freed_objects:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_total_freed_objects
 
 ruby_gc_stat_total_freed_pages:
@@ -326,6 +373,7 @@ ruby_gc_stat_total_freed_pages:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_gc_stat_total_freed_pages
 
 ruby_memory_bytes:
@@ -333,6 +381,7 @@ ruby_memory_bytes:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: ruby_memory_bytes
 
 ruby_sampler_duration_seconds_total:
@@ -340,6 +389,7 @@ ruby_sampler_duration_seconds_total:
   custom: true
   description: ''
   metric_type: cumulative
+  monitor: gitlab
   title: ruby_sampler_duration_seconds_total
 
 sidekiq_dead_jobs_total:
@@ -347,6 +397,7 @@ sidekiq_dead_jobs_total:
   custom: true
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: sidekiq_dead_jobs_total
 
 sidekiq_queue_latency:
@@ -354,6 +405,7 @@ sidekiq_queue_latency:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: sidekiq_queue_latency
 
 sidekiq_queue_size:
@@ -361,5 +413,6 @@ sidekiq_queue_size:
   custom: false
   description: ''
   metric_type: gauge
+  monitor: gitlab
   title: sidekiq_queue_size
 

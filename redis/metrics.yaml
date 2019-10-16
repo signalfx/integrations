@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 bytes.used_memory:
   brief: Number of bytes allocated by Redis
   custom: false
   description: Number of bytes allocated by Redis
   metric_type: gauge
+  monitor: collectd/redis
   title: bytes.used_memory
 
 bytes.used_memory_lua:
@@ -11,6 +13,7 @@ bytes.used_memory_lua:
   custom: true
   description: Number of bytes used by the Lua engine
   metric_type: gauge
+  monitor: collectd/redis
   title: bytes.used_memory_lua
 
 bytes.used_memory_peak:
@@ -18,6 +21,7 @@ bytes.used_memory_peak:
   custom: true
   description: Peak Number of bytes allocated by Redis
   metric_type: gauge
+  monitor: collectd/redis
   title: bytes.used_memory_peak
 
 bytes.used_memory_rss:
@@ -25,6 +29,7 @@ bytes.used_memory_rss:
   custom: false
   description: Number of bytes allocated by Redis as seen by the OS
   metric_type: gauge
+  monitor: collectd/redis
   title: bytes.used_memory_rss
 
 counter.commands_processed:
@@ -32,6 +37,7 @@ counter.commands_processed:
   custom: false
   description: Total number of commands processed by the server
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.commands_processed
 
 counter.connections_received:
@@ -39,6 +45,7 @@ counter.connections_received:
   custom: true
   description: Total number of connections accepted by the server
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.connections_received
 
 counter.evicted_keys:
@@ -46,6 +53,7 @@ counter.evicted_keys:
   custom: false
   description: Number of evicted keys due to maxmemory limit
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.evicted_keys
 
 counter.expired_keys:
@@ -53,6 +61,7 @@ counter.expired_keys:
   custom: false
   description: Total number of key expiration events
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.expired_keys
 
 counter.lru_clock:
@@ -60,6 +69,7 @@ counter.lru_clock:
   custom: true
   description: Clock incrementing every minute, for LRU management
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.lru_clock
 
 counter.rejected_connections:
@@ -67,6 +77,7 @@ counter.rejected_connections:
   custom: false
   description: Number of connections rejected because of maxclients limit
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.rejected_connections
 
 counter.total_net_input_bytes:
@@ -74,6 +85,7 @@ counter.total_net_input_bytes:
   custom: false
   description: Total number of bytes inputted
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.total_net_input_bytes
 
 counter.total_net_output_bytes:
@@ -81,6 +93,7 @@ counter.total_net_output_bytes:
   custom: false
   description: Total number of bytes outputted
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.total_net_output_bytes
 
 counter.used_cpu_sys:
@@ -88,6 +101,7 @@ counter.used_cpu_sys:
   custom: false
   description: System CPU consumed by the Redis server
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.used_cpu_sys
 
 counter.used_cpu_sys_children:
@@ -95,6 +109,7 @@ counter.used_cpu_sys_children:
   custom: true
   description: System CPU consumed by the background processes
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.used_cpu_sys_children
 
 counter.used_cpu_user:
@@ -102,6 +117,7 @@ counter.used_cpu_user:
   custom: false
   description: User CPU consumed by the Redis server
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.used_cpu_user
 
 counter.used_cpu_user_children:
@@ -109,6 +125,7 @@ counter.used_cpu_user_children:
   custom: true
   description: User CPU consumed by the background processes
   metric_type: cumulative
+  monitor: collectd/redis
   title: counter.used_cpu_user_children
 
 derive.keyspace_hits:
@@ -116,6 +133,7 @@ derive.keyspace_hits:
   custom: false
   description: Number of successful lookup of keys in the main dictionary
   metric_type: cumulative
+  monitor: collectd/redis
   title: derive.keyspace_hits
 
 derive.keyspace_misses:
@@ -123,6 +141,7 @@ derive.keyspace_misses:
   custom: false
   description: Number of failed lookup of keys in the main dictionary
   metric_type: cumulative
+  monitor: collectd/redis
   title: derive.keyspace_misses
 
 gauge.blocked_clients:
@@ -130,6 +149,7 @@ gauge.blocked_clients:
   custom: false
   description: Number of clients pending on a blocking call
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.blocked_clients
 
 gauge.changes_since_last_save:
@@ -137,6 +157,7 @@ gauge.changes_since_last_save:
   custom: true
   description: Number of changes since the last dump
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.changes_since_last_save
 
 gauge.client_biggest_input_buf:
@@ -144,6 +165,7 @@ gauge.client_biggest_input_buf:
   custom: true
   description: Biggest input buffer among current client connections
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.client_biggest_input_buf
 
 gauge.client_longest_output_list:
@@ -151,6 +173,7 @@ gauge.client_longest_output_list:
   custom: true
   description: Longest output list among current client connections
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.client_longest_output_list
 
 gauge.connected_clients:
@@ -158,6 +181,7 @@ gauge.connected_clients:
   custom: false
   description: Number of client connections (excluding connections from slaves)
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.connected_clients
 
 gauge.connected_slaves:
@@ -165,6 +189,7 @@ gauge.connected_slaves:
   custom: true
   description: Number of connected slaves
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.connected_slaves
 
 gauge.db0_avg_ttl:
@@ -172,6 +197,7 @@ gauge.db0_avg_ttl:
   custom: true
   description: The average time to live for all keys in redis
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.db0_avg_ttl
 
 gauge.db0_expires:
@@ -179,6 +205,7 @@ gauge.db0_expires:
   custom: true
   description: The total number of keys in redis that will expire
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.db0_expires
 
 gauge.db0_keys:
@@ -186,6 +213,7 @@ gauge.db0_keys:
   custom: true
   description: The total number of keys stored in redis
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.db0_keys
 
 gauge.instantaneous_ops_per_sec:
@@ -193,6 +221,7 @@ gauge.instantaneous_ops_per_sec:
   custom: true
   description: Number of commands processed per second
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.instantaneous_ops_per_sec
 
 gauge.key_llen:
@@ -200,6 +229,7 @@ gauge.key_llen:
   custom: true
   description: Length of an list key
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.key_llen
 
 gauge.latest_fork_usec:
@@ -207,6 +237,7 @@ gauge.latest_fork_usec:
   custom: true
   description: Duration of the latest fork operation in microseconds
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.latest_fork_usec
 
 gauge.master_last_io_seconds_ago:
@@ -214,6 +245,7 @@ gauge.master_last_io_seconds_ago:
   custom: true
   description: Number of seconds since the last interaction with master
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.master_last_io_seconds_ago
 
 gauge.master_repl_offset:
@@ -221,6 +253,7 @@ gauge.master_repl_offset:
   custom: false
   description: Master replication offset
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.master_repl_offset
 
 gauge.mem_fragmentation_ratio:
@@ -228,6 +261,7 @@ gauge.mem_fragmentation_ratio:
   custom: true
   description: Ratio between used_memory_rss and used_memory
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.mem_fragmentation_ratio
 
 gauge.rdb_bgsave_in_progress:
@@ -235,6 +269,7 @@ gauge.rdb_bgsave_in_progress:
   custom: true
   description: Flag indicating a RDB save is on-going
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.rdb_bgsave_in_progress
 
 gauge.repl_backlog_first_byte_offset:
@@ -242,6 +277,7 @@ gauge.repl_backlog_first_byte_offset:
   custom: true
   description: Slave replication backlog offset
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.repl_backlog_first_byte_offset
 
 gauge.slave_repl_offset:
@@ -249,6 +285,7 @@ gauge.slave_repl_offset:
   custom: false
   description: Slave replication offset
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.slave_repl_offset
 
 gauge.uptime_in_days:
@@ -256,6 +293,7 @@ gauge.uptime_in_days:
   custom: true
   description: Number of days up
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.uptime_in_days
 
 gauge.uptime_in_seconds:
@@ -263,5 +301,6 @@ gauge.uptime_in_seconds:
   custom: true
   description: Number of seconds up
   metric_type: gauge
+  monitor: collectd/redis
   title: gauge.uptime_in_seconds
 

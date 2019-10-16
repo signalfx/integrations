@@ -1,10 +1,12 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 cpu.idle:
   brief: CPU time spent not in any other state
   custom: false
   description: CPU time spent not in any other state. In order to get a percentage
     this value must be compared against the sum of all CPU states.
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.idle
 
 cpu.interrupt:
@@ -17,6 +19,7 @@ cpu.interrupt:
     be compared against the sum of all CPU states. A sustained high value for this
     metric may be caused by faulty hardware such as a broken peripheral.
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.interrupt
 
 cpu.nice:
@@ -28,6 +31,7 @@ cpu.nice:
     enough CPU capacity for a process, 2) A programming error which causes a process
     to use an unexpected amount of CPU'
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.nice
 
 cpu.softirq:
@@ -41,6 +45,7 @@ cpu.softirq:
     sustained high value for this metric may be caused by a programming error which
     causes a process to unexpectedly request too many services from the kernel.
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.softirq
 
 cpu.steal:
@@ -55,6 +60,7 @@ cpu.steal:
     be caused by: 1) Another VM on the same hypervisor using too many resources, or
     2) An underpowered hypervisor'
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.steal
 
 cpu.system:
@@ -67,6 +73,7 @@ cpu.system:
     that needs to be re-written to use kernel resources more efficiently, or 2) A
     userspace driver that is broken'
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.system
 
 cpu.user:
@@ -78,6 +85,7 @@ cpu.user:
     2) There is an application programming error which is causing the CPU to be used
     unexpectedly.'
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.user
 
 cpu.wait:
@@ -90,5 +98,6 @@ cpu.wait:
     1) A slow hardware device that is taking too long to service requests, or 2) Too
     many requests being sent to an I/O device'
   metric_type: cumulative
+  monitor: collectd/cpu
   title: cpu.wait
 

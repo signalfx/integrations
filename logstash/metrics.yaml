@@ -1,0 +1,644 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
+node.hot_threads.hot_threads.busiest_threads:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  monitor: logstash
+  title: node.hot_threads.hot_threads.busiest_threads
+
+node.hot_threads.hot_threads.threads.percent_of_cpu_time:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  monitor: logstash
+  title: node.hot_threads.hot_threads.threads.percent_of_cpu_time
+
+node.os.os.available_processors:
+  brief: Number of available processors
+  custom: true
+  description: Number of available processors
+  metric_type: gauge
+  monitor: logstash
+  title: node.os.os.available_processors
+
+node.pipelines.batch_delay:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  monitor: logstash
+  title: node.pipelines.batch_delay
+
+node.pipelines.batch_size:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  monitor: logstash
+  title: node.pipelines.batch_size
+
+node.pipelines.workers:
+  brief: Number of workers in pipelines
+  custom: true
+  description: Number of workers in pipelines
+  metric_type: gauge
+  monitor: logstash
+  title: node.pipelines.workers
+
+node.plugins.total:
+  brief: Number of plugins
+  custom: false
+  description: Number of plugins
+  metric_type: gauge
+  monitor: logstash
+  title: node.plugins.total
+
+node.stats.events.events.duration_in_millis:
+  brief: Duration of events
+  custom: false
+  description: Duration of events
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.events.events.duration_in_millis
+
+node.stats.events.events.filtered:
+  brief: Number of filtered events
+  custom: false
+  description: Number of filtered events
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.events.events.filtered
+
+node.stats.events.events.in:
+  brief: Number of received events
+  custom: false
+  description: Number of received events
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.events.events.in
+
+node.stats.events.events.out:
+  brief: Number of events sent out
+  custom: false
+  description: Number of events sent out
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.events.events.out
+
+node.stats.events.events.queue_push_duration_in_millis:
+  brief: Duration that events waited in queue before being processed
+  custom: false
+  description: Duration that events waited in queue before being processed
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.events.events.queue_push_duration_in_millis
+
+node.stats.jvm.jvm.gc.collectors.old.collection_count:
+  brief: Total number of garbage collection events
+  custom: true
+  description: Total number of garbage collection events
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.jvm.jvm.gc.collectors.old.collection_count
+
+node.stats.jvm.jvm.gc.collectors.old.collection_time_in_millis:
+  brief: Amount of time spent garbage collecting in milliseconds
+  custom: true
+  description: Amount of time spent garbage collecting in milliseconds
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.jvm.jvm.gc.collectors.old.collection_time_in_millis
+
+node.stats.jvm.jvm.gc.collectors.young.collection_count:
+  brief: Total number of garbage collection events
+  custom: true
+  description: Total number of garbage collection events
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.jvm.jvm.gc.collectors.young.collection_count
+
+node.stats.jvm.jvm.gc.collectors.young.collection_time_in_millis:
+  brief: Amount of time spent garbage collecting in milliseconds
+  custom: true
+  description: Amount of time spent garbage collecting in milliseconds
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.jvm.jvm.gc.collectors.young.collection_time_in_millis
+
+node.stats.jvm.jvm.mem.heap_committed_in_bytes:
+  brief: Total heap committed by the process
+  custom: false
+  description: Total heap committed by the process
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.heap_committed_in_bytes
+
+node.stats.jvm.jvm.mem.heap_max_in_bytes:
+  brief: Max memory being used
+  custom: false
+  description: Max memory being used
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.heap_max_in_bytes
+
+node.stats.jvm.jvm.mem.heap_used_in_bytes:
+  brief: Total heap used
+  custom: false
+  description: Total heap used
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.heap_used_in_bytes
+
+node.stats.jvm.jvm.mem.heap_used_percent:
+  brief: Total heap used in percentage
+  custom: true
+  description: Total heap used in percentage
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.heap_used_percent
+
+node.stats.jvm.jvm.mem.non_heap_committed_in_bytes:
+  brief: Total non-heap memory committed by the process
+  custom: true
+  description: Total non-heap memory committed by the process
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.non_heap_committed_in_bytes
+
+node.stats.jvm.jvm.mem.non_heap_used_in_bytes:
+  brief: Total non-heap memory used
+  custom: false
+  description: Total non-heap memory used
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.non_heap_used_in_bytes
+
+node.stats.jvm.jvm.mem.pools.old.committed_in_bytes:
+  brief: Memory guaranteed to be available to JVM non-heap by Old gen
+  custom: true
+  description: Memory guaranteed to be available to JVM non-heap by Old gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.old.committed_in_bytes
+
+node.stats.jvm.jvm.mem.pools.old.max_in_bytes:
+  brief: Max memory being used by Old Gen
+  custom: true
+  description: Max memory being used by Old Gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.old.max_in_bytes
+
+node.stats.jvm.jvm.mem.pools.old.peak_max_in_bytes:
+  brief: Memory used by Old gen
+  custom: true
+  description: Memory used by Old gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.old.peak_max_in_bytes
+
+node.stats.jvm.jvm.mem.pools.old.peak_used_in_bytes:
+  brief: Peak memory used by Old gen
+  custom: true
+  description: Peak memory used by Old gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.old.peak_used_in_bytes
+
+node.stats.jvm.jvm.mem.pools.old.used_in_bytes:
+  brief: Memory being used by Old Gen
+  custom: true
+  description: Memory being used by Old Gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.old.used_in_bytes
+
+node.stats.jvm.jvm.mem.pools.survivor.committed_in_bytes:
+  brief: Memory guaranteed to be available to JVM non-heap by Survivor space
+  custom: true
+  description: Memory guaranteed to be available to JVM non-heap by Survivor space
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.survivor.committed_in_bytes
+
+node.stats.jvm.jvm.mem.pools.survivor.max_in_bytes:
+  brief: Max memory being used by Survivor space
+  custom: true
+  description: Max memory being used by Survivor space
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.survivor.max_in_bytes
+
+node.stats.jvm.jvm.mem.pools.survivor.peak_max_in_bytes:
+  brief: Memory used by Survivor space
+  custom: true
+  description: Memory used by Survivor space
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.survivor.peak_max_in_bytes
+
+node.stats.jvm.jvm.mem.pools.survivor.peak_used_in_bytes:
+  brief: Peak memory used by Survivor space
+  custom: true
+  description: Peak memory used by Survivor space
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.survivor.peak_used_in_bytes
+
+node.stats.jvm.jvm.mem.pools.survivor.used_in_bytes:
+  brief: Memory being used by Survivor space
+  custom: true
+  description: Memory being used by Survivor space
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.survivor.used_in_bytes
+
+node.stats.jvm.jvm.mem.pools.young.committed_in_bytes:
+  brief: Memory guaranteed to be available to JVM non-heap by Young gen
+  custom: true
+  description: Memory guaranteed to be available to JVM non-heap by Young gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.young.committed_in_bytes
+
+node.stats.jvm.jvm.mem.pools.young.max_in_bytes:
+  brief: Max memory being used by Young Gen
+  custom: true
+  description: Max memory being used by Young Gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.young.max_in_bytes
+
+node.stats.jvm.jvm.mem.pools.young.peak_max_in_bytes:
+  brief: Memory used by Young gen
+  custom: true
+  description: Memory used by Young gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.young.peak_max_in_bytes
+
+node.stats.jvm.jvm.mem.pools.young.peak_used_in_bytes:
+  brief: Peak memory used by Young gen
+  custom: true
+  description: Peak memory used by Young gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.young.peak_used_in_bytes
+
+node.stats.jvm.jvm.mem.pools.young.used_in_bytes:
+  brief: Memory being used by Young Gen
+  custom: true
+  description: Memory being used by Young Gen
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.mem.pools.young.used_in_bytes
+
+node.stats.jvm.jvm.threads.count:
+  brief: Number of JVM threads
+  custom: false
+  description: Number of JVM threads
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.threads.count
+
+node.stats.jvm.jvm.threads.peak_count:
+  brief: Highest number of JVM threads
+  custom: false
+  description: Highest number of JVM threads
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.threads.peak_count
+
+node.stats.jvm.jvm.uptime_in_millis:
+  brief: Uptime length of JVM
+  custom: true
+  description: Uptime length of JVM
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.jvm.jvm.uptime_in_millis
+
+node.stats.os.os.cgroup.cpu.cfs_period_micros:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.os.os.cgroup.cpu.cfs_period_micros
+
+node.stats.os.os.cgroup.cpu.cfs_quota_micros:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.os.os.cgroup.cpu.cfs_quota_micros
+
+node.stats.os.os.cgroup.cpu.stat.number_of_elapsed_periods:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.os.os.cgroup.cpu.stat.number_of_elapsed_periods
+
+node.stats.os.os.cgroup.cpu.stat.number_of_times_throttled:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.os.os.cgroup.cpu.stat.number_of_times_throttled
+
+node.stats.os.os.cgroup.cpu.stat.time_throttled_nanos:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.os.os.cgroup.cpu.stat.time_throttled_nanos
+
+node.stats.os.os.cgroup.cpuacct.usage_nanos:
+  brief: ''
+  custom: true
+  description: ''
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.os.os.cgroup.cpuacct.usage_nanos
+
+node.stats.pipelines.events.duration_in_millis:
+  brief: Duration of events in pipelines
+  custom: false
+  description: Duration of events in pipelines
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.events.duration_in_millis
+
+node.stats.pipelines.events.filtered:
+  brief: Number of filtered events in pipelines
+  custom: false
+  description: Number of filtered events in pipelines
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.events.filtered
+
+node.stats.pipelines.events.in:
+  brief: Number of received events in pipelines
+  custom: false
+  description: Number of received events in pipelines
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.events.in
+
+node.stats.pipelines.events.out:
+  brief: Number of events sent out from pipelines
+  custom: false
+  description: Number of events sent out from pipelines
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.events.out
+
+node.stats.pipelines.events.queue_push_duration_in_millis:
+  brief: Duration that events waited in queue before being processed in pipelines
+  custom: true
+  description: Duration that events waited in queue before being processed in pipelines
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.events.queue_push_duration_in_millis
+
+node.stats.pipelines.plugins.codecs.decode.duration_in_millis:
+  brief: Duration of decode events in codec plugins
+  custom: true
+  description: Duration of decode events in codec plugins
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.codecs.decode.duration_in_millis
+
+node.stats.pipelines.plugins.codecs.decode.out:
+  brief: Number of decode events sent out from codecs
+  custom: true
+  description: Number of decode events sent out from codecs
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.codecs.decode.out
+
+node.stats.pipelines.plugins.codecs.decode.writes_in:
+  brief: Number of received decode events in codecs
+  custom: true
+  description: Number of received decode events in codecs
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.codecs.decode.writes_in
+
+node.stats.pipelines.plugins.codecs.encode.duration_in_millis:
+  brief: Duration of encode events in codec plugins
+  custom: true
+  description: Duration of encode events in codec plugins
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.codecs.encode.duration_in_millis
+
+node.stats.pipelines.plugins.codecs.encode.writes_in:
+  brief: Number of received encode events in codecs
+  custom: true
+  description: Number of received encode events in codecs
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.codecs.encode.writes_in
+
+node.stats.pipelines.plugins.filters.events.duration_in_millis:
+  brief: Duration of events in filter plugins
+  custom: false
+  description: Duration of events in filter plugins
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.filters.events.duration_in_millis
+
+node.stats.pipelines.plugins.filters.events.in:
+  brief: Number of received events in filters
+  custom: false
+  description: Number of received events in filters
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.filters.events.in
+
+node.stats.pipelines.plugins.filters.events.out:
+  brief: Number of events sent out from filters
+  custom: false
+  description: Number of events sent out from filters
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.filters.events.out
+
+node.stats.pipelines.plugins.inputs.events.out:
+  brief: Number of events sent out from inputs
+  custom: false
+  description: Number of events sent out from inputs
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.inputs.events.out
+
+node.stats.pipelines.plugins.inputs.events.queue_push_duration_in_millis:
+  brief: Duration that events waited in queue before being processed in inputs
+  custom: true
+  description: Duration that events waited in queue before being processed in inputs
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.inputs.events.queue_push_duration_in_millis
+
+node.stats.pipelines.plugins.outputs.events.duration_in_millis:
+  brief: Duration of events in output plugins
+  custom: false
+  description: Duration of events in output plugins
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.outputs.events.duration_in_millis
+
+node.stats.pipelines.plugins.outputs.events.in:
+  brief: Number of received events in output plugins
+  custom: false
+  description: Number of received events in output plugins
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.outputs.events.in
+
+node.stats.pipelines.plugins.outputs.events.out:
+  brief: Number of events sent out from output plugins
+  custom: false
+  description: Number of events sent out from output plugins
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.plugins.outputs.events.out
+
+node.stats.pipelines.queue.events_count:
+  brief: Number of events waiting in queue
+  custom: true
+  description: Number of events waiting in queue
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.pipelines.queue.events_count
+
+node.stats.pipelines.queue.max_queue_size_in_bytes:
+  brief: Max queue size in pipelines
+  custom: true
+  description: Max queue size in pipelines
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.pipelines.queue.max_queue_size_in_bytes
+
+node.stats.pipelines.queue.queue_size_in_bytes:
+  brief: Queue size in pipelines
+  custom: true
+  description: Queue size in pipelines
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.pipelines.queue.queue_size_in_bytes
+
+node.stats.pipelines.reloads.failures:
+  brief: Number of failed reloads
+  custom: true
+  description: Number of failed reloads
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.reloads.failures
+
+node.stats.pipelines.reloads.successes:
+  brief: Number of successful reloads
+  custom: true
+  description: Number of successful reloads
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.pipelines.reloads.successes
+
+node.stats.process.process.cpu.load_average.15m:
+  brief: CPU Load average in 15 minutes
+  custom: true
+  description: CPU Load average in 15 minutes
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.cpu.load_average.15m
+
+node.stats.process.process.cpu.load_average.1m:
+  brief: CPU Load average in 1 minute
+  custom: true
+  description: CPU Load average in 1 minute
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.cpu.load_average.1m
+
+node.stats.process.process.cpu.load_average.5m:
+  brief: CPU Load average in 5 minutes
+  custom: true
+  description: CPU Load average in 5 minutes
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.cpu.load_average.5m
+
+node.stats.process.process.cpu.percent:
+  brief: CPU usage in percent
+  custom: false
+  description: CPU usage in percent
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.cpu.percent
+
+node.stats.process.process.cpu.total_in_millis:
+  brief: Total CPU time (in milliseconds) used by the process on which the process
+    is running
+  custom: true
+  description: Total CPU time (in milliseconds) used by the process on which the process
+    is running
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.process.process.cpu.total_in_millis
+
+node.stats.process.process.max_file_descriptors:
+  brief: Number of opened file descriptors associated with the current process
+  custom: true
+  description: Number of opened file descriptors associated with the current process
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.max_file_descriptors
+
+node.stats.process.process.mem.total_virtual_in_bytes:
+  brief: Size of the virtual memory of this process
+  custom: true
+  description: Size of the virtual memory of this process
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.mem.total_virtual_in_bytes
+
+node.stats.process.process.open_file_descriptors:
+  brief: Number of currently open file descriptors
+  custom: true
+  description: Number of currently open file descriptors
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.open_file_descriptors
+
+node.stats.process.process.peak_open_file_descriptors:
+  brief: Peak number of currently open file descriptors
+  custom: true
+  description: Peak number of currently open file descriptors
+  metric_type: gauge
+  monitor: logstash
+  title: node.stats.process.process.peak_open_file_descriptors
+
+node.stats.reloads.reloads.failures:
+  brief: Number of failed reloads
+  custom: true
+  description: Number of failed reloads
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.reloads.reloads.failures
+
+node.stats.reloads.reloads.successes:
+  brief: Number of successful reloads
+  custom: true
+  description: Number of successful reloads
+  metric_type: cumulative
+  monitor: logstash
+  title: node.stats.reloads.reloads.successes
+

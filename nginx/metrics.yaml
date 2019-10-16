@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 connections.accepted:
   brief: Connections accepted by NGINX Web Server
   custom: false
   description: Connections accepted by NGINX Web Server
   metric_type: cumulative
+  monitor: collectd/nginx
   title: connections.accepted
 
 connections.failed:
@@ -11,6 +13,7 @@ connections.failed:
   custom: true
   description: Connections failed by the NGINX Web Server
   metric_type: cumulative
+  monitor: collectd/nginx
   title: connections.failed
 
 connections.handled:
@@ -18,6 +21,7 @@ connections.handled:
   custom: false
   description: Connections handled by NGINX Web Server
   metric_type: cumulative
+  monitor: collectd/nginx
   title: connections.handled
 
 nginx_connections.active:
@@ -25,6 +29,7 @@ nginx_connections.active:
   custom: false
   description: Connections active in NGINX Web Server
   metric_type: gauge
+  monitor: collectd/nginx
   title: nginx_connections.active
 
 nginx_connections.reading:
@@ -32,6 +37,7 @@ nginx_connections.reading:
   custom: false
   description: Connections being read by NGINX Web Server
   metric_type: gauge
+  monitor: collectd/nginx
   title: nginx_connections.reading
 
 nginx_connections.waiting:
@@ -39,6 +45,7 @@ nginx_connections.waiting:
   custom: false
   description: Connections waited on by NGINX Web Server
   metric_type: gauge
+  monitor: collectd/nginx
   title: nginx_connections.waiting
 
 nginx_connections.writing:
@@ -46,6 +53,7 @@ nginx_connections.writing:
   custom: false
   description: Connections being written by NGINX Web Server
   metric_type: gauge
+  monitor: collectd/nginx
   title: nginx_connections.writing
 
 nginx_requests:
@@ -53,5 +61,6 @@ nginx_requests:
   custom: false
   description: Requests handled by NGINX Web Server
   metric_type: cumulative
+  monitor: collectd/nginx
   title: nginx_requests
 

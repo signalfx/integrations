@@ -75,7 +75,11 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `url` | **yes** | `string` | URL on which to scrape HAProxy. Scheme `http://` for http-type and `unix://` socket-type urls. |
+| `host` | no | `string` | The host/ip address of the HAProxy instance. This is used to construct the `url` option if not provided. |
+| `port` | no | `integer` | The port of the HAProxy instance's stats endpoint (if using HTTP). This is used to construct the `url` option if not provided. (**default:** `0`) |
+| `path` | no | `string` | The path to HAProxy stats. The default is `stats?stats;csv`. This is used to construct the `url` option if not provided. (**default:** `stats?stats;csv`) |
+| `useHTTPS` | no | `bool` | Whether to connect on HTTPS or HTTP. If you want to use a UNIX socket, then specify the `url` config option with the format `unix://...` and omit `host`, `port` and `useHTTPS`. (**default:** `false`) |
+| `url` | no | `string` | URL on which to scrape HAProxy. Scheme `http://` for http-type and `unix://` socket-type urls. If this is not provided, it will be derive from the `host`, `port`, `path`, and `useHTTPS` options. |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
 | `sslVerify` | no | `bool` | Flag that enables SSL certificate verification for the scrape URL. (**default:** `true`) |

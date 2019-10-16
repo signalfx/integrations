@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 elasticsearch.cluster.active-primary-shards:
   brief: Number of active primary shards
   custom: false
   description: Number of active primary shards
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.active-primary-shards
 
 elasticsearch.cluster.active-shards:
@@ -11,6 +13,7 @@ elasticsearch.cluster.active-shards:
   custom: false
   description: Number of active shards
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.active-shards
 
 elasticsearch.cluster.active-shards-percent:
@@ -18,6 +21,7 @@ elasticsearch.cluster.active-shards-percent:
   custom: true
   description: Percentaage of shards active
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.active-shards-percent
 
 elasticsearch.cluster.delayed-unassigned-shards:
@@ -25,6 +29,7 @@ elasticsearch.cluster.delayed-unassigned-shards:
   custom: true
   description: Number of delayed unassigned shards
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.delayed-unassigned-shards
 
 elasticsearch.cluster.in-flight-fetches:
@@ -32,6 +37,7 @@ elasticsearch.cluster.in-flight-fetches:
   custom: true
   description: Number of fetches in-flight
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.in-flight-fetches
 
 elasticsearch.cluster.initializing-shards:
@@ -39,6 +45,7 @@ elasticsearch.cluster.initializing-shards:
   custom: true
   description: Number of shards being initialized
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.initializing-shards
 
 elasticsearch.cluster.number-of-data_nodes:
@@ -46,6 +53,7 @@ elasticsearch.cluster.number-of-data_nodes:
   custom: false
   description: Number of data nodes
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.number-of-data_nodes
 
 elasticsearch.cluster.number-of-nodes:
@@ -53,6 +61,7 @@ elasticsearch.cluster.number-of-nodes:
   custom: false
   description: Number of nodes
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.number-of-nodes
 
 elasticsearch.cluster.pending-tasks:
@@ -60,6 +69,7 @@ elasticsearch.cluster.pending-tasks:
   custom: true
   description: Number of pending tasks
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.pending-tasks
 
 elasticsearch.cluster.relocating-shards:
@@ -67,6 +77,7 @@ elasticsearch.cluster.relocating-shards:
   custom: false
   description: Number of shards being relocated
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.relocating-shards
 
 elasticsearch.cluster.status:
@@ -74,6 +85,7 @@ elasticsearch.cluster.status:
   custom: true
   description: Cluster stats (0, 1, 2 for green, yellow and red respectively)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.status
 
 elasticsearch.cluster.task-max-wait-time:
@@ -81,6 +93,7 @@ elasticsearch.cluster.task-max-wait-time:
   custom: true
   description: Max time a task has to wait
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.task-max-wait-time
 
 elasticsearch.cluster.unassigned-shards:
@@ -88,6 +101,7 @@ elasticsearch.cluster.unassigned-shards:
   custom: false
   description: Number of unassigned shards
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.cluster.unassigned-shards
 
 elasticsearch.http.current_open:
@@ -95,6 +109,7 @@ elasticsearch.http.current_open:
   custom: true
   description: Number of currently open HTTP connections
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.http.current_open
 
 elasticsearch.http.total_open:
@@ -102,6 +117,7 @@ elasticsearch.http.total_open:
   custom: true
   description: Total number of opened HTTP connections
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.http.total_open
 
 elasticsearch.indices.completion.size:
@@ -109,6 +125,7 @@ elasticsearch.indices.completion.size:
   custom: true
   description: Size used by suggest completion (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.completion.size
 
 elasticsearch.indices.docs.count:
@@ -116,6 +133,7 @@ elasticsearch.indices.docs.count:
   custom: false
   description: Number of docs
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.docs.count
 
 elasticsearch.indices.docs.deleted:
@@ -123,6 +141,7 @@ elasticsearch.indices.docs.deleted:
   custom: false
   description: Number of docs deleted
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.docs.deleted
 
 elasticsearch.indices.fielddata.evictions:
@@ -130,6 +149,7 @@ elasticsearch.indices.fielddata.evictions:
   custom: true
   description: Number of evictions from fielddata cache
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.fielddata.evictions
 
 elasticsearch.indices.fielddata.memory-size:
@@ -137,6 +157,7 @@ elasticsearch.indices.fielddata.memory-size:
   custom: true
   description: Size of fielddata cache (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.fielddata.memory-size
 
 elasticsearch.indices.filter-cache.evictions:
@@ -144,6 +165,7 @@ elasticsearch.indices.filter-cache.evictions:
   custom: true
   description: Number of evicttions from filter cache
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.filter-cache.evictions
 
 elasticsearch.indices.filter-cache.memory-size:
@@ -151,6 +173,7 @@ elasticsearch.indices.filter-cache.memory-size:
   custom: true
   description: Filter cache size (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.filter-cache.memory-size
 
 elasticsearch.indices.flush.periodic:
@@ -158,6 +181,7 @@ elasticsearch.indices.flush.periodic:
   custom: true
   description: How long to wait before triggering a flush regardless of translog size
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.flush.periodic
 
 elasticsearch.indices.flush.total:
@@ -165,6 +189,7 @@ elasticsearch.indices.flush.total:
   custom: true
   description: Number of index flushes to disk
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.flush.total
 
 elasticsearch.indices.flush.total-time:
@@ -172,6 +197,7 @@ elasticsearch.indices.flush.total-time:
   custom: true
   description: Time spent flushing the index to disk
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.flush.total-time
 
 elasticsearch.indices.get.current:
@@ -179,6 +205,7 @@ elasticsearch.indices.get.current:
   custom: true
   description: Number of get requests running
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.get.current
 
 elasticsearch.indices.get.exists-time:
@@ -186,6 +213,7 @@ elasticsearch.indices.get.exists-time:
   custom: true
   description: Time spent on get requests where the document existed
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.get.exists-time
 
 elasticsearch.indices.get.exists-total:
@@ -193,6 +221,7 @@ elasticsearch.indices.get.exists-total:
   custom: true
   description: Number of get requests where the document existed
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.get.exists-total
 
 elasticsearch.indices.get.missing-time:
@@ -200,6 +229,7 @@ elasticsearch.indices.get.missing-time:
   custom: true
   description: Time spent on get requests where the document was missing
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.get.missing-time
 
 elasticsearch.indices.get.missing-total:
@@ -207,6 +237,7 @@ elasticsearch.indices.get.missing-total:
   custom: true
   description: Number of get requests where the document was missing
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.get.missing-total
 
 elasticsearch.indices.get.time:
@@ -214,6 +245,7 @@ elasticsearch.indices.get.time:
   custom: true
   description: Time spent on get requests
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.get.time
 
 elasticsearch.indices.get.total:
@@ -221,6 +253,7 @@ elasticsearch.indices.get.total:
   custom: false
   description: Total number of get requests
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.get.total
 
 elasticsearch.indices.id-cache.memory-size:
@@ -228,6 +261,7 @@ elasticsearch.indices.id-cache.memory-size:
   custom: true
   description: Size of id cache (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.id-cache.memory-size
 
 elasticsearch.indices.indexing.delete-current:
@@ -235,6 +269,7 @@ elasticsearch.indices.indexing.delete-current:
   custom: true
   description: Number of documents currently being deleted from an index
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.delete-current
 
 elasticsearch.indices.indexing.delete-time:
@@ -242,6 +277,7 @@ elasticsearch.indices.indexing.delete-time:
   custom: true
   description: Time spent deleting documents from an index
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.delete-time
 
 elasticsearch.indices.indexing.delete-total:
@@ -249,6 +285,7 @@ elasticsearch.indices.indexing.delete-total:
   custom: true
   description: Number of documents deleted from an index
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.delete-total
 
 elasticsearch.indices.indexing.index-current:
@@ -256,6 +293,7 @@ elasticsearch.indices.indexing.index-current:
   custom: true
   description: Number of documents currently being indexed to an index
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.index-current
 
 elasticsearch.indices.indexing.index-failed:
@@ -263,6 +301,7 @@ elasticsearch.indices.indexing.index-failed:
   custom: true
   description: Number of failed indices
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.index-failed
 
 elasticsearch.indices.indexing.index-time:
@@ -270,6 +309,7 @@ elasticsearch.indices.indexing.index-time:
   custom: true
   description: Time spent indexing documents to an index
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.index-time
 
 elasticsearch.indices.indexing.index-total:
@@ -277,6 +317,7 @@ elasticsearch.indices.indexing.index-total:
   custom: false
   description: Total number of documents indexed to an index
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.index-total
 
 elasticsearch.indices.indexing.noop-update-total:
@@ -284,6 +325,7 @@ elasticsearch.indices.indexing.noop-update-total:
   custom: true
   description: Number of noop updates
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.noop-update-total
 
 elasticsearch.indices.indexing.throttle-time:
@@ -291,6 +333,7 @@ elasticsearch.indices.indexing.throttle-time:
   custom: true
   description: Throttle time
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.indexing.throttle-time
 
 elasticsearch.indices.merges.auto-throttle-size:
@@ -298,6 +341,7 @@ elasticsearch.indices.merges.auto-throttle-size:
   custom: true
   description: Merging throttled due to auto-throttling (in bytes)
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.auto-throttle-size
 
 elasticsearch.indices.merges.current:
@@ -305,6 +349,7 @@ elasticsearch.indices.merges.current:
   custom: false
   description: Number of currently active segment merges
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.current
 
 elasticsearch.indices.merges.current-docs:
@@ -312,6 +357,7 @@ elasticsearch.indices.merges.current-docs:
   custom: true
   description: Number of docs currently being merged
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.current-docs
 
 elasticsearch.indices.merges.current-size:
@@ -319,6 +365,7 @@ elasticsearch.indices.merges.current-size:
   custom: true
   description: Size of the segments currently being merged
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.current-size
 
 elasticsearch.indices.merges.stopped-time:
@@ -326,6 +373,7 @@ elasticsearch.indices.merges.stopped-time:
   custom: true
   description: Total time merges were stopped for
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.stopped-time
 
 elasticsearch.indices.merges.throttle-time:
@@ -333,6 +381,7 @@ elasticsearch.indices.merges.throttle-time:
   custom: true
   description: Total time merges spent waiting due to throttling
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.throttle-time
 
 elasticsearch.indices.merges.total:
@@ -340,6 +389,7 @@ elasticsearch.indices.merges.total:
   custom: false
   description: Number of segment merges
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.total
 
 elasticsearch.indices.merges.total-docs:
@@ -347,6 +397,7 @@ elasticsearch.indices.merges.total-docs:
   custom: true
   description: Number of merged docs across merged segments
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.total-docs
 
 elasticsearch.indices.merges.total-size:
@@ -354,6 +405,7 @@ elasticsearch.indices.merges.total-size:
   custom: true
   description: Total size of merged segments
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.total-size
 
 elasticsearch.indices.merges.total-time:
@@ -361,6 +413,7 @@ elasticsearch.indices.merges.total-time:
   custom: true
   description: Total time spent on merging
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.merges.total-time
 
 elasticsearch.indices.percolate.current:
@@ -368,6 +421,7 @@ elasticsearch.indices.percolate.current:
   custom: true
   description: Number of percolator queries currently running
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.percolate.current
 
 elasticsearch.indices.percolate.queries:
@@ -375,6 +429,7 @@ elasticsearch.indices.percolate.queries:
   custom: true
   description: Number of percolator queries
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.percolate.queries
 
 elasticsearch.indices.percolate.time:
@@ -382,6 +437,7 @@ elasticsearch.indices.percolate.time:
   custom: true
   description: Total time spent on percolate requests
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.percolate.time
 
 elasticsearch.indices.percolate.total:
@@ -389,6 +445,7 @@ elasticsearch.indices.percolate.total:
   custom: true
   description: Total number of suggest requests
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.percolate.total
 
 elasticsearch.indices.query-cache.cache-count:
@@ -396,6 +453,7 @@ elasticsearch.indices.query-cache.cache-count:
   custom: true
   description: Number of items in query cache
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.query-cache.cache-count
 
 elasticsearch.indices.query-cache.cache-size:
@@ -403,6 +461,7 @@ elasticsearch.indices.query-cache.cache-size:
   custom: true
   description: Size of query cache (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.query-cache.cache-size
 
 elasticsearch.indices.query-cache.evictions:
@@ -410,6 +469,7 @@ elasticsearch.indices.query-cache.evictions:
   custom: true
   description: Number of query cache evictions
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.query-cache.evictions
 
 elasticsearch.indices.query-cache.hit-count:
@@ -417,6 +477,7 @@ elasticsearch.indices.query-cache.hit-count:
   custom: true
   description: Number of query cache hits
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.query-cache.hit-count
 
 elasticsearch.indices.query-cache.memory-size:
@@ -424,6 +485,7 @@ elasticsearch.indices.query-cache.memory-size:
   custom: true
   description: Size of query cache (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.query-cache.memory-size
 
 elasticsearch.indices.query-cache.miss-count:
@@ -431,6 +493,7 @@ elasticsearch.indices.query-cache.miss-count:
   custom: true
   description: Number of query cache misses
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.query-cache.miss-count
 
 elasticsearch.indices.query-cache.total-count:
@@ -438,6 +501,7 @@ elasticsearch.indices.query-cache.total-count:
   custom: true
   description: Total number of items in the query cache
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.query-cache.total-count
 
 elasticsearch.indices.recovery.current-as-source:
@@ -445,6 +509,7 @@ elasticsearch.indices.recovery.current-as-source:
   custom: true
   description: Number of ongoing recoveries for which a shard serves as a source
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.recovery.current-as-source
 
 elasticsearch.indices.recovery.current-as-target:
@@ -452,6 +517,7 @@ elasticsearch.indices.recovery.current-as-target:
   custom: true
   description: Number of ongoing recoveries for which a shard serves as a target
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.recovery.current-as-target
 
 elasticsearch.indices.recovery.throttle-time:
@@ -459,6 +525,7 @@ elasticsearch.indices.recovery.throttle-time:
   custom: true
   description: Total time recoveries waited due to throttling
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.recovery.throttle-time
 
 elasticsearch.indices.refresh.listeners:
@@ -466,6 +533,7 @@ elasticsearch.indices.refresh.listeners:
   custom: true
   description: Number of listeners waiting for a refresh
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.refresh.listeners
 
 elasticsearch.indices.refresh.total:
@@ -473,6 +541,7 @@ elasticsearch.indices.refresh.total:
   custom: true
   description: Total number of index refreshes
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.refresh.total
 
 elasticsearch.indices.refresh.total-time:
@@ -480,6 +549,7 @@ elasticsearch.indices.refresh.total-time:
   custom: true
   description: Total time spent on index refreshes
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.refresh.total-time
 
 elasticsearch.indices.request-cache.evictions:
@@ -487,6 +557,7 @@ elasticsearch.indices.request-cache.evictions:
   custom: true
   description: Number of request cache evictions
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.request-cache.evictions
 
 elasticsearch.indices.request-cache.hit-count:
@@ -494,6 +565,7 @@ elasticsearch.indices.request-cache.hit-count:
   custom: true
   description: Number of request cache hits
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.request-cache.hit-count
 
 elasticsearch.indices.request-cache.memory-size:
@@ -501,6 +573,7 @@ elasticsearch.indices.request-cache.memory-size:
   custom: true
   description: Memory used by request cache (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.request-cache.memory-size
 
 elasticsearch.indices.request-cache.miss-count:
@@ -508,6 +581,7 @@ elasticsearch.indices.request-cache.miss-count:
   custom: true
   description: Number of request cache misses
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.request-cache.miss-count
 
 elasticsearch.indices.search.fetch-current:
@@ -515,6 +589,7 @@ elasticsearch.indices.search.fetch-current:
   custom: true
   description: Number of query fetches currently running
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.search.fetch-current
 
 elasticsearch.indices.search.fetch-time:
@@ -522,6 +597,7 @@ elasticsearch.indices.search.fetch-time:
   custom: true
   description: Total time spent on query fetches
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.fetch-time
 
 elasticsearch.indices.search.fetch-total:
@@ -529,6 +605,7 @@ elasticsearch.indices.search.fetch-total:
   custom: true
   description: Total number of query feches
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.fetch-total
 
 elasticsearch.indices.search.open-contexts:
@@ -536,6 +613,7 @@ elasticsearch.indices.search.open-contexts:
   custom: true
   description: Number of open contexts
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.search.open-contexts
 
 elasticsearch.indices.search.query-current:
@@ -543,6 +621,7 @@ elasticsearch.indices.search.query-current:
   custom: true
   description: Number of currently active queries
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.search.query-current
 
 elasticsearch.indices.search.query-time:
@@ -550,6 +629,7 @@ elasticsearch.indices.search.query-time:
   custom: false
   description: Total time spent querying on the primary
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.query-time
 
 elasticsearch.indices.search.query-total:
@@ -557,6 +637,7 @@ elasticsearch.indices.search.query-total:
   custom: false
   description: Total number of queries
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.query-total
 
 elasticsearch.indices.search.scroll-current:
@@ -564,6 +645,7 @@ elasticsearch.indices.search.scroll-current:
   custom: true
   description: Currently active scroll queries count
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.search.scroll-current
 
 elasticsearch.indices.search.scroll-time:
@@ -571,6 +653,7 @@ elasticsearch.indices.search.scroll-time:
   custom: true
   description: Total time spent on scroll queries
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.scroll-time
 
 elasticsearch.indices.search.scroll-total:
@@ -578,6 +661,7 @@ elasticsearch.indices.search.scroll-total:
   custom: true
   description: Total number of scroll queries
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.scroll-total
 
 elasticsearch.indices.search.suggest-current:
@@ -585,6 +669,7 @@ elasticsearch.indices.search.suggest-current:
   custom: true
   description: Number of suggest requests currently active
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.search.suggest-current
 
 elasticsearch.indices.search.suggest-time:
@@ -592,6 +677,7 @@ elasticsearch.indices.search.suggest-time:
   custom: true
   description: Total time spent on search suggest
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.suggest-time
 
 elasticsearch.indices.search.suggest-total:
@@ -599,6 +685,7 @@ elasticsearch.indices.search.suggest-total:
   custom: true
   description: Total number of suggest requests
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.search.suggest-total
 
 elasticsearch.indices.segments.count:
@@ -606,6 +693,7 @@ elasticsearch.indices.segments.count:
   custom: false
   description: Number of segments in an index shard
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.count
 
 elasticsearch.indices.segments.doc-values-memory-size:
@@ -613,6 +701,7 @@ elasticsearch.indices.segments.doc-values-memory-size:
   custom: true
   description: Memory used by doc values
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.doc-values-memory-size
 
 elasticsearch.indices.segments.fixed-bit-set-memory-size:
@@ -620,6 +709,7 @@ elasticsearch.indices.segments.fixed-bit-set-memory-size:
   custom: true
   description: Memory used by fixed bit set
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.fixed-bit-set-memory-size
 
 elasticsearch.indices.segments.index-writer-max-memory-size:
@@ -627,6 +717,7 @@ elasticsearch.indices.segments.index-writer-max-memory-size:
   custom: true
   description: Maximum memory used by the index writer
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.index-writer-max-memory-size
 
 elasticsearch.indices.segments.index-writer-memory-size:
@@ -634,6 +725,7 @@ elasticsearch.indices.segments.index-writer-memory-size:
   custom: true
   description: Memory used by the index writer
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.index-writer-memory-size
 
 elasticsearch.indices.segments.memory-size:
@@ -641,6 +733,7 @@ elasticsearch.indices.segments.memory-size:
   custom: true
   description: Memory used by index segments (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.memory-size
 
 elasticsearch.indices.segments.norms-memory-size:
@@ -648,6 +741,7 @@ elasticsearch.indices.segments.norms-memory-size:
   custom: true
   description: Memory used by norms (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.norms-memory-size
 
 elasticsearch.indices.segments.points-memory-size:
@@ -655,6 +749,7 @@ elasticsearch.indices.segments.points-memory-size:
   custom: true
   description: Memory used by points
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.points-memory-size
 
 elasticsearch.indices.segments.stored-field-memory-size:
@@ -662,6 +757,7 @@ elasticsearch.indices.segments.stored-field-memory-size:
   custom: true
   description: Memory used by stored fields (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.stored-field-memory-size
 
 elasticsearch.indices.segments.term-vectors-memory-size:
@@ -669,6 +765,7 @@ elasticsearch.indices.segments.term-vectors-memory-size:
   custom: true
   description: Memory used by term vectors (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.term-vectors-memory-size
 
 elasticsearch.indices.segments.terms-memory-size:
@@ -676,6 +773,7 @@ elasticsearch.indices.segments.terms-memory-size:
   custom: true
   description: Memory used by terms (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.terms-memory-size
 
 elasticsearch.indices.segments.version-map-memory-size:
@@ -683,6 +781,7 @@ elasticsearch.indices.segments.version-map-memory-size:
   custom: true
   description: Memory used by segment version map (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.segments.version-map-memory-size
 
 elasticsearch.indices.store.size:
@@ -690,6 +789,7 @@ elasticsearch.indices.store.size:
   custom: true
   description: Total size (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.store.size
 
 elasticsearch.indices.store.throttle-time:
@@ -697,6 +797,7 @@ elasticsearch.indices.store.throttle-time:
   custom: true
   description: Total time requests are throttled for
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.store.throttle-time
 
 elasticsearch.indices.suggest.current:
@@ -704,6 +805,7 @@ elasticsearch.indices.suggest.current:
   custom: true
   description: Number of currently active suggest requests
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.suggest.current
 
 elasticsearch.indices.suggest.time:
@@ -711,6 +813,7 @@ elasticsearch.indices.suggest.time:
   custom: true
   description: Total time spent in suggest requests
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.suggest.time
 
 elasticsearch.indices.suggest.total:
@@ -718,6 +821,7 @@ elasticsearch.indices.suggest.total:
   custom: true
   description: Total number of suggest requests
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.suggest.total
 
 elasticsearch.indices.translog.earliest_last_modified_age:
@@ -725,6 +829,7 @@ elasticsearch.indices.translog.earliest_last_modified_age:
   custom: true
   description: Earliest last modified age on transaction logs
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.translog.earliest_last_modified_age
 
 elasticsearch.indices.translog.operations:
@@ -732,6 +837,7 @@ elasticsearch.indices.translog.operations:
   custom: true
   description: Number of operations in the transaction log
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.translog.operations
 
 elasticsearch.indices.translog.size:
@@ -739,6 +845,7 @@ elasticsearch.indices.translog.size:
   custom: true
   description: Size of the transaction log
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.translog.size
 
 elasticsearch.indices.translog.uncommitted_operations:
@@ -746,6 +853,7 @@ elasticsearch.indices.translog.uncommitted_operations:
   custom: true
   description: Number of uncommitted operations in the transaction log
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.translog.uncommitted_operations
 
 elasticsearch.indices.translog.uncommitted_size_in_bytes:
@@ -753,6 +861,7 @@ elasticsearch.indices.translog.uncommitted_size_in_bytes:
   custom: true
   description: Size of uncommitted transaction logs (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.translog.uncommitted_size_in_bytes
 
 elasticsearch.indices.warmer.current:
@@ -760,6 +869,7 @@ elasticsearch.indices.warmer.current:
   custom: true
   description: Number of currently active warmers
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.indices.warmer.current
 
 elasticsearch.indices.warmer.total:
@@ -767,6 +877,7 @@ elasticsearch.indices.warmer.total:
   custom: true
   description: Total number of warmers
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.warmer.total
 
 elasticsearch.indices.warmer.total-time:
@@ -774,6 +885,7 @@ elasticsearch.indices.warmer.total-time:
   custom: true
   description: Total time spent by warmers
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.indices.warmer.total-time
 
 elasticsearch.jvm.classes.current-loaded-count:
@@ -781,6 +893,7 @@ elasticsearch.jvm.classes.current-loaded-count:
   custom: true
   description: Number of classes currently loaded
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.classes.current-loaded-count
 
 elasticsearch.jvm.classes.total-loaded-count:
@@ -788,6 +901,7 @@ elasticsearch.jvm.classes.total-loaded-count:
   custom: true
   description: Number of classes loaded
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.jvm.classes.total-loaded-count
 
 elasticsearch.jvm.classes.total-unloaded-count:
@@ -795,6 +909,7 @@ elasticsearch.jvm.classes.total-unloaded-count:
   custom: true
   description: Total number of classes unloaded
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.jvm.classes.total-unloaded-count
 
 elasticsearch.jvm.gc.count:
@@ -802,6 +917,7 @@ elasticsearch.jvm.gc.count:
   custom: true
   description: Total number of garbage collections
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.jvm.gc.count
 
 elasticsearch.jvm.gc.old-count:
@@ -809,6 +925,7 @@ elasticsearch.jvm.gc.old-count:
   custom: true
   description: Total number of garbage collections on Old Gen
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.jvm.gc.old-count
 
 elasticsearch.jvm.gc.old-time:
@@ -816,6 +933,7 @@ elasticsearch.jvm.gc.old-time:
   custom: true
   description: Total time spent in garbage collections on Old Gen
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.jvm.gc.old-time
 
 elasticsearch.jvm.gc.time:
@@ -823,6 +941,7 @@ elasticsearch.jvm.gc.time:
   custom: false
   description: Total time spent on GC
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.jvm.gc.time
 
 elasticsearch.jvm.mem.buffer_pools.direct.count:
@@ -830,6 +949,7 @@ elasticsearch.jvm.mem.buffer_pools.direct.count:
   custom: true
   description: Number of direct buffer pools
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.buffer_pools.direct.count
 
 elasticsearch.jvm.mem.buffer_pools.direct.total_capacity_in_bytes:
@@ -837,6 +957,7 @@ elasticsearch.jvm.mem.buffer_pools.direct.total_capacity_in_bytes:
   custom: true
   description: Total capacity of direct buffer pools
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.buffer_pools.direct.total_capacity_in_bytes
 
 elasticsearch.jvm.mem.buffer_pools.direct.used_in_bytes:
@@ -844,6 +965,7 @@ elasticsearch.jvm.mem.buffer_pools.direct.used_in_bytes:
   custom: true
   description: Memory used by direct buffer pools (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.buffer_pools.direct.used_in_bytes
 
 elasticsearch.jvm.mem.buffer_pools.mapped.count:
@@ -851,6 +973,7 @@ elasticsearch.jvm.mem.buffer_pools.mapped.count:
   custom: true
   description: Number of buffers in the mapped pool
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.buffer_pools.mapped.count
 
 elasticsearch.jvm.mem.buffer_pools.mapped.total_capacity_in_bytes:
@@ -858,6 +981,7 @@ elasticsearch.jvm.mem.buffer_pools.mapped.total_capacity_in_bytes:
   custom: true
   description: Total capacity of the buffers in the mapped pool
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.buffer_pools.mapped.total_capacity_in_bytes
 
 elasticsearch.jvm.mem.buffer_pools.mapped.used_in_bytes:
@@ -865,6 +989,7 @@ elasticsearch.jvm.mem.buffer_pools.mapped.used_in_bytes:
   custom: true
   description: Memory used by mapped buffer pools (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.buffer_pools.mapped.used_in_bytes
 
 elasticsearch.jvm.mem.heap-committed:
@@ -872,6 +997,7 @@ elasticsearch.jvm.mem.heap-committed:
   custom: false
   description: Memory guaranteed to be available to JVM heap
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.heap-committed
 
 elasticsearch.jvm.mem.heap-max:
@@ -879,6 +1005,7 @@ elasticsearch.jvm.mem.heap-max:
   custom: true
   description: Max memory that can be used by JVM heap (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.heap-max
 
 elasticsearch.jvm.mem.heap-used:
@@ -886,6 +1013,7 @@ elasticsearch.jvm.mem.heap-used:
   custom: false
   description: Memory current being used by JVM heap (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.heap-used
 
 elasticsearch.jvm.mem.heap-used-percent:
@@ -893,6 +1021,7 @@ elasticsearch.jvm.mem.heap-used-percent:
   custom: true
   description: Percent of heap being used
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.heap-used-percent
 
 elasticsearch.jvm.mem.non-heap-committed:
@@ -900,6 +1029,7 @@ elasticsearch.jvm.mem.non-heap-committed:
   custom: true
   description: Memory guaranteed to be available to JVM non-heap
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.non-heap-committed
 
 elasticsearch.jvm.mem.non-heap-used:
@@ -907,6 +1037,7 @@ elasticsearch.jvm.mem.non-heap-used:
   custom: true
   description: Memory current being used by JVM non-heap (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.non-heap-used
 
 elasticsearch.jvm.mem.pools.old.max_in_bytes:
@@ -914,6 +1045,7 @@ elasticsearch.jvm.mem.pools.old.max_in_bytes:
   custom: true
   description: Memory used by Old Gen (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.old.max_in_bytes
 
 elasticsearch.jvm.mem.pools.old.peak_max_in_bytes:
@@ -921,6 +1053,7 @@ elasticsearch.jvm.mem.pools.old.peak_max_in_bytes:
   custom: true
   description: Memory pool Old Gen peak max (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.old.peak_max_in_bytes
 
 elasticsearch.jvm.mem.pools.old.peak_used_in_bytes:
@@ -928,6 +1061,7 @@ elasticsearch.jvm.mem.pools.old.peak_used_in_bytes:
   custom: true
   description: Peak memory used by Old Gen (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.old.peak_used_in_bytes
 
 elasticsearch.jvm.mem.pools.old.used_in_bytes:
@@ -935,6 +1069,7 @@ elasticsearch.jvm.mem.pools.old.used_in_bytes:
   custom: true
   description: Memory being used by Old Gen (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.old.used_in_bytes
 
 elasticsearch.jvm.mem.pools.survivor.max_in_bytes:
@@ -942,6 +1077,7 @@ elasticsearch.jvm.mem.pools.survivor.max_in_bytes:
   custom: true
   description: Max memory that can be used by Survivor space (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.survivor.max_in_bytes
 
 elasticsearch.jvm.mem.pools.survivor.peak_max_in_bytes:
@@ -949,6 +1085,7 @@ elasticsearch.jvm.mem.pools.survivor.peak_max_in_bytes:
   custom: true
   description: Memory used by Survivor space (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.survivor.peak_max_in_bytes
 
 elasticsearch.jvm.mem.pools.survivor.peak_used_in_bytes:
@@ -956,6 +1093,7 @@ elasticsearch.jvm.mem.pools.survivor.peak_used_in_bytes:
   custom: true
   description: Peak memory used by Survivor space (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.survivor.peak_used_in_bytes
 
 elasticsearch.jvm.mem.pools.survivor.used_in_bytes:
@@ -963,6 +1101,7 @@ elasticsearch.jvm.mem.pools.survivor.used_in_bytes:
   custom: true
   description: Memory being used currently by Survivor space (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.survivor.used_in_bytes
 
 elasticsearch.jvm.mem.pools.young.max_in_bytes:
@@ -970,6 +1109,7 @@ elasticsearch.jvm.mem.pools.young.max_in_bytes:
   custom: true
   description: Max memory (in bytes) that can be used by Young Gen
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.young.max_in_bytes
 
 elasticsearch.jvm.mem.pools.young.peak_max_in_bytes:
@@ -977,6 +1117,7 @@ elasticsearch.jvm.mem.pools.young.peak_max_in_bytes:
   custom: true
   description: Memory pool Young Gen peak max (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.young.peak_max_in_bytes
 
 elasticsearch.jvm.mem.pools.young.peak_used_in_bytes:
@@ -984,6 +1125,7 @@ elasticsearch.jvm.mem.pools.young.peak_used_in_bytes:
   custom: true
   description: Memory pool Young Gen peak used (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.young.peak_used_in_bytes
 
 elasticsearch.jvm.mem.pools.young.used_in_bytes:
@@ -991,6 +1133,7 @@ elasticsearch.jvm.mem.pools.young.used_in_bytes:
   custom: true
   description: Memory used by Young Gen (in bytes)
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.mem.pools.young.used_in_bytes
 
 elasticsearch.jvm.threads.count:
@@ -998,6 +1141,7 @@ elasticsearch.jvm.threads.count:
   custom: true
   description: Number of active threads in the JVM
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.threads.count
 
 elasticsearch.jvm.threads.peak:
@@ -1005,6 +1149,7 @@ elasticsearch.jvm.threads.peak:
   custom: true
   description: Peak number of threads used
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.jvm.threads.peak
 
 elasticsearch.jvm.uptime:
@@ -1012,6 +1157,7 @@ elasticsearch.jvm.uptime:
   custom: true
   description: Uptime of JVM
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.jvm.uptime
 
 elasticsearch.process.cpu.percent:
@@ -1019,6 +1165,7 @@ elasticsearch.process.cpu.percent:
   custom: true
   description: CPU usage in percent
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.process.cpu.percent
 
 elasticsearch.process.cpu.time:
@@ -1028,6 +1175,7 @@ elasticsearch.process.cpu.time:
   description: CPU time (in milliseconds) used by the process on which the Java virtual
     machine is running
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.process.cpu.time
 
 elasticsearch.process.max_file_descriptors:
@@ -1035,6 +1183,7 @@ elasticsearch.process.max_file_descriptors:
   custom: true
   description: Number of opened file descriptors associated with the current process
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.process.max_file_descriptors
 
 elasticsearch.process.mem.total-virtual-size:
@@ -1044,6 +1193,7 @@ elasticsearch.process.mem.total-virtual-size:
   description: Size in bytes of virtual memory that is guaranteed to be available
     to the running process
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.process.mem.total-virtual-size
 
 elasticsearch.process.open_file_descriptors:
@@ -1051,6 +1201,7 @@ elasticsearch.process.open_file_descriptors:
   custom: false
   description: Number of currently open file descriptors
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.process.open_file_descriptors
 
 elasticsearch.thread_pool.active:
@@ -1058,6 +1209,7 @@ elasticsearch.thread_pool.active:
   custom: true
   description: Number of active threads
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.thread_pool.active
 
 elasticsearch.thread_pool.completed:
@@ -1065,6 +1217,7 @@ elasticsearch.thread_pool.completed:
   custom: true
   description: Number of threads completed in thread pool
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.thread_pool.completed
 
 elasticsearch.thread_pool.largest:
@@ -1072,6 +1225,7 @@ elasticsearch.thread_pool.largest:
   custom: true
   description: Highest active threads in thread pool
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.thread_pool.largest
 
 elasticsearch.thread_pool.queue:
@@ -1079,6 +1233,7 @@ elasticsearch.thread_pool.queue:
   custom: true
   description: Number of Tasks in thread pool
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.thread_pool.queue
 
 elasticsearch.thread_pool.rejected:
@@ -1086,6 +1241,7 @@ elasticsearch.thread_pool.rejected:
   custom: false
   description: Number of rejected threads in thread pool
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.thread_pool.rejected
 
 elasticsearch.thread_pool.threads:
@@ -1093,6 +1249,7 @@ elasticsearch.thread_pool.threads:
   custom: true
   description: Number of Threads in thread pool
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.thread_pool.threads
 
 elasticsearch.transport.rx.count:
@@ -1100,6 +1257,7 @@ elasticsearch.transport.rx.count:
   custom: true
   description: Total size of data received in cluster communication (in bytes)
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.transport.rx.count
 
 elasticsearch.transport.rx.size:
@@ -1107,6 +1265,7 @@ elasticsearch.transport.rx.size:
   custom: true
   description: Total size of data received in cluster communication
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.transport.rx.size
 
 elasticsearch.transport.server_open:
@@ -1114,6 +1273,7 @@ elasticsearch.transport.server_open:
   custom: true
   description: Total number of connections opened for cluster communication
   metric_type: gauge
+  monitor: elasticsearch
   title: elasticsearch.transport.server_open
 
 elasticsearch.transport.tx.count:
@@ -1121,6 +1281,7 @@ elasticsearch.transport.tx.count:
   custom: true
   description: Total number of packets sent in cluster communication
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.transport.tx.count
 
 elasticsearch.transport.tx.size:
@@ -1128,5 +1289,6 @@ elasticsearch.transport.tx.size:
   custom: true
   description: Total size of data sent in cluster communication
   metric_type: cumulative
+  monitor: elasticsearch
   title: elasticsearch.transport.tx.size
 

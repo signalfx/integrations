@@ -164,7 +164,12 @@ monitor config option `extraGroups`:
  - `memory.stats.writeback` (*gauge*)<br>    The amount of memory from file/anon cache that are queued for syncing to the disk
  - ***`memory.usage.limit`*** (*gauge*)<br>    Memory usage limit of the container, in bytes
  - `memory.usage.max` (*gauge*)<br>    Maximum measured memory usage of the container, in bytes
- - ***`memory.usage.total`*** (*gauge*)<br>    Bytes of memory used by the container
+ - ***`memory.usage.total`*** (*gauge*)<br>    Bytes of memory used by the container. Note that this **includes the
+    buffer cache** attributed to the process by the kernel from files that
+    have been read by processes in the container.  If you don't want to
+    count that when monitoring containers, enable the metric
+    `memory.stats.total_cache` and subtract that metric from this one.
+
 
 #### Group network
 All of the following metrics are part of the `network` metric group. All of
