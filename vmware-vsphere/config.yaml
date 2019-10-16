@@ -4,7 +4,7 @@
       password: Abcd123$
       Name: VCenter4
       IngestToken: <YOUR_SIGNALFX_API_TOKEN>
-      IngestEndpoint: 'https://ingest.us0.signalfx.com'
+      IngestEndpoint: 'https://ingest.<REALM>.signalfx.com'
       IngestTimeout: 20
       MORSyncInterval: 300
       MORSyncTimeout: 600
