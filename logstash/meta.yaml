@@ -1,0 +1,12 @@
+browse_categories:
+- Analytics
+code: https://github.com/signalfx/signalfx-agent
+data_signature: plugin:"logstash"
+description: Monitor the health of Logstash and consume metrized events from Logstash TCP output plugin using the SignalFx Smart agent.
+display_name: Logstash
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/elasticsearch/img/integration_logstash%402x.png
+logo_small: /images/repos/elasticsearch/img/integration_logstash.png
+project_url: https://github.com/signalfx/integrations/tree/master/logstash
