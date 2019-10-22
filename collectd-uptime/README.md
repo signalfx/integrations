@@ -41,7 +41,7 @@ There are no configuration options for this plugin.
 
 ### USAGE
 
-This plugin provide the time that an individual host has been up since last boot.
+This plugin provides the time that an individual host has been up since last boot.
 
 ### LICENSE
 
