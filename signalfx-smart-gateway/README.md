@@ -12,10 +12,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.0.4">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.0">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.0.4 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.0 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -39,7 +39,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.0.4 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.0 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -47,7 +47,18 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-##### Latest Version: v2.0.4 (September 13, 2019)
+##### Latest Version: v2.1.0 (October 28, 2019)
+
+<a target="_blank" href="/#/smart-gateway/download/v2.1.0">Download Smart Gateway v2.1.0</a><br/>
+_SHA256: `8308b031b07892131a0bdb0f1bba0b9666c8625398f1645d4b7fb0518cf18494`_
+
+* Scale and performance fixes that allow the Smart Gateway cluster to scale to billions of spans per minute
+* <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html#extended-span-identity-metrics-with-custom-dimensionalization">Custom dimensionalization</a>.
+* Tracing metrics emitted are now based on the previous 10 seconds instead of total history
+* Spans coming through Istio proxies are tagged appropriately
+* Tag initiating spans with the Smart Gateway which selected it
+
+##### v2.0.4 (September 13, 2019)
 
 <a target="_blank" href="/#/smart-gateway/download/v2.0.4">Download Smart Gateway v2.0.4</a><br/>
 _SHA256: `7429a8f42e2eb7ebfe340656ad7cab9822b52b44a41471fba619bdc77a73909d`_
