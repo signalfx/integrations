@@ -15,6 +15,38 @@ Monitor Type: `kubelet-stats` ([Source](https://github.com/signalfx/signalfx-age
 This monitor pulls cadvisor metrics through a
 Kubernetes kubelet instance via the `/stats/container` endpoint.
 
+### Pause Containers
+Network stats for a Kubernetes pod are traditionally accounted for on the
+"pause" container, which is the container responsible for "owning" the
+network namespace that the other containers in the pod will use, among
+other things.  Therefore, the network stats are usually zero for all
+non-pause containers and accounted for in an aggregated way via the pause
+container.
+
+Since the only generally useful stats of the pause container are network
+stats, this montior will omit non-network metrics for any containers named
+`POD`. This is the standard name for the "pause" container in Kubernetes
+when using the Docker runtime, but the pause container has no name under
+other runtimes. Therefore, you need to explicitly filter out non-network
+metrics from pause containers when using non-Docker runtimes.  The following
+configuration will do that:
+
+```yaml
+monitors:
+- type: kubelet-stats
+  datapointsToExclude:
+  - dimensions:
+      container_image:
+       - '*pause-amd64*'
+       - 'k8s.gcr.io/pause*'
+    metricNames:
+      - '*'
+      - '!*network*'
+```
+
+If your K8s deployment using an image name for the pause container that
+does not fit the given patterns, you should tweak it as needed.
+
 
 ## Configuration
 
@@ -95,14 +127,21 @@ Metrics that are categorized as
  - ***`machine_cpu_cores`*** (*gauge*)<br>    Number of CPU cores on the node.
  - `machine_cpu_frequency_khz` (*gauge*)<br>    Node's CPU frequency.
  - ***`machine_memory_bytes`*** (*gauge*)<br>    Amount of memory installed on the node.
- - ***`pod_network_receive_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes received
- - ***`pod_network_receive_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while receiving
- - `pod_network_receive_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while receiving
- - `pod_network_receive_packets_total` (*cumulative*)<br>    Cumulative count of packets received
- - ***`pod_network_transmit_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes transmitted
- - ***`pod_network_transmit_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while transmitting
- - `pod_network_transmit_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while transmitting
- - `pod_network_transmit_packets_total` (*cumulative*)<br>    Cumulative count of packets transmitted
+ - ***`pod_network_receive_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes received. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - ***`pod_network_receive_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while receiving. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_receive_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while receiving. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_receive_packets_total` (*cumulative*)<br>    Cumulative count of packets received. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - ***`pod_network_transmit_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes transmitted. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - ***`pod_network_transmit_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while transmitting. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_transmit_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while transmitting. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_transmit_packets_total` (*cumulative*)<br>    Cumulative count of packets transmitted. **Note that this metric is not emitted when using the cri-o container runtime.**
+
+#### Group podEphemeralStats
+All of the following metrics are part of the `podEphemeralStats` metric group. All of
+the non-default metrics below can be turned on by adding `podEphemeralStats` to the
+monitor config option `extraGroups`:
+ - `pod_ephemeral_storage_capacity_bytes` (*gauge*)<br>    Represents the storage space available (bytes) for the filesystem. This value is a combination of total filesystem usage for the containers and emptyDir-backed volumes in the measured Pod. See more about emptyDir-backed volumes https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+ - `pod_ephemeral_storage_used_bytes` (*gauge*)<br>    Represents the bytes used on the filesystem. This value is a total filesystem usage for the containers and emptyDir-backed volumes in the measured Pod. See more about emptyDir-backed volumes https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
 
 ### Non-default metrics (version 4.7.0+)
 

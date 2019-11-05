@@ -174,18 +174,18 @@ These are the metrics available for this integration.
  - ***`gauge.queue_current`*** (*gauge*)<br>    Corresponds to HAProxy's `qcur` metric -  Current queued requests. For the backend this reports the number queued without a server assigned.
  - `gauge.queue_limit` (*gauge*)<br>    Configured max queue for the server, 0 being no limit. Corresponds to HAProxy's "qlimit" metric.
  - `gauge.queue_max` (*gauge*)<br>    Max number of queued requests, queue_current, corresponds to HAProxy's 'qmax' metric.
- - `gauge.queue_time_avg` (*gauge*)<br>
+ - ***`gauge.queue_time_avg`*** (*gauge*)<br>
  - ***`gauge.request_rate`*** (*gauge*)<br>    Corresponds to HAProxy's `req_rate` metric -  HTTP requests per second over last elapsed second
  - `gauge.request_rate_max` (*gauge*)<br>    Max number of HTTP requests per second observed. Corresponds to HAProxy's "req_rate_max" metric.
- - `gauge.response_time_avg` (*gauge*)<br>    Average total session time in ms over the last 1024 requests. Corresponds to HAProxy's "ttime" metric.
+ - ***`gauge.response_time_avg`*** (*gauge*)<br>    Average total session time in ms over the last 1024 requests. Corresponds to HAProxy's "ttime" metric.
  - `gauge.run_queue` (*gauge*)<br>    Corresponds to HAProxy's `Run_queue` metric.
  - ***`gauge.session_current`*** (*gauge*)<br>    Corresponds to HAProxy's `scur` metric -  Current sessions
  - ***`gauge.session_rate`*** (*gauge*)<br>    Corresponds to HAProxy's `rate` metric -  Number of sessions per second over last elapsed second
- - `gauge.session_rate_all` (*gauge*)<br>
+ - ***`gauge.session_rate_all`*** (*gauge*)<br>
  - `gauge.session_rate_limit` (*gauge*)<br>    Configured limit on number of new sessions per second. Corresponds to HAProxy's "rate_lim" metric.
  - `gauge.session_rate_max` (*gauge*)<br>    Max number of new sessions per second
  - `gauge.session_time_average` (*gauge*)<br>    Average total session time in ms over the last 1024 requests. Corresponds to HAProxy's "ttime" metric.
- - `gauge.session_time_avg` (*gauge*)<br>
+ - ***`gauge.session_time_avg`*** (*gauge*)<br>
  - `gauge.ssl_backend_key_rate` (*gauge*)<br>    Corresponds to HAProxy's `SslBackendKeyRate` metric.
  - `gauge.ssl_frontend_key_rate` (*gauge*)<br>    Corresponds to HAProxy's `SslFrontendKeyRate` metric.
  - `gauge.ssl_rate` (*gauge*)<br>    Corresponds to HAProxy's `SslRate` metric.

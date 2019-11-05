@@ -122,6 +122,7 @@ can be used in discovery rules.
 | Name | Type | Description |
 | ---  | ---  | ---         |
 | `container_name` | `string` | The first and primary name of the container as it is known to the container runtime (e.g. Docker). |
+| `has_port` | `string` | Set to `true` if the endpoint has a port assigned to it.  This will be `false` for endpoints that represent a host/container as a whole. |
 | `ip_address` | `string` | The IP address of the endpoint if the `host` is in the from of an IPv4 address |
 | `network_port` | `string` | An alias for `port` |
 | `private_port` | `string` | The port that the service endpoint runs on inside the container |
@@ -130,17 +131,18 @@ can be used in discovery rules.
 | `container_command` | `string` | The command used when running the container exposing the endpoint |
 | `container_id` | `string` | The ID of the container exposing the endpoint |
 | `container_image` | `string` | The image name of the container exposing the endpoint |
-| `container_labels` | `map of string` | A map that contains container label key/value pairs. You can use the `Contains` and `Get` helper functions in discovery rules to make use of this. See [Endpoint Discovery](../auto-discovery.html#additional-functions). |
+| `container_labels` | `map of string` | A map that contains container label key/value pairs. You can use the `Contains` and `Get` helper functions in discovery rules to make use of this. See [Endpoint Discovery](../auto-discovery.html#additional-functions). For containers managed by Kubernetes, this will be set to the pod's labels, as individual containers do not have labels in Kubernetes proper. |
 | `container_names` | `list of string` | A list of container names of the container exposing the endpoint |
 | `container_state` | `string` | The container state, will usually be "running" since otherwise the container wouldn't have a port exposed to be discovered. |
 | `discovered_by` | `string` | The observer that discovered this endpoint |
 | `host` | `string` | The hostname/IP address of the endpoint.  If this is an IPv6 address, it will be surrounded by `[` and `]`. |
 | `id` | `string` |  |
-| `name` | `string` | A observer assigned name of the endpoint |
+| `name` | `string` | A observer assigned name of the endpoint. For example, if using the `k8s-api` observer, `name` will be the port name in the pod spec, if any. |
 | `orchestrator` | `integer` |  |
 | `port` | `integer` | The TCP/UDP port number of the endpoint |
 | `port_labels` | `map of string` | A map of labels on the container port. You can use the `Contains` and `Get` helper functions in discovery rules to make use of this. See [Endpoint Discovery](../auto-discovery.html#additional-functions). |
 | `port_type` | `string` | TCP or UDP |
+| `target` | `string` | The type of the thing that this endpoint directly refers to.  If the endpoint has a host and port associated with it (most common), the value will be `hostport`.  Other possible values are: `pod`, `container`, `host`.  See the docs for the specific observer you are using for more details on what types that observer emits. |
 
 ## Dimensions
 
@@ -150,6 +152,7 @@ rules.
 
 | Name | Description |
 | ---  | ---         |
+| `container_id` | The container id of the container running this endpoint. |
 | `container_image` | The image name (including tags) of the running container |
 | `container_name` | The primary name of the running container -- Docker containers can have multiple names but this will be the first name, if any. |
 

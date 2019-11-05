@@ -19,12 +19,12 @@ monitor because many K8s nodes do not expose cAdvisor on a network port,
 even though they are running it within Kubelet.
 
 If you are running containers with Docker, there is a fair amount of
-duplication with the `collectd/docker` monitor in terms of the metrics sent
-(under distinct metric names) so you may want to consider not enabling the
-Docker monitor in a K8s environment, or else use filtering to whitelist only
-certain metrics.  Note that this will cause the built-in Docker dashboards
-to be blank, but container metrics will be available on the Kubernetes
-dashboards instead.
+duplication with the `docker-container-stats` monitor in terms of the
+metrics sent (under distinct metric names) so you may want to consider not
+enabling the Docker monitor in a K8s environment, or else use filtering to
+whitelist only certain metrics.  Note that this will cause the built-in
+Docker dashboards to be blank, but container metrics will be available on
+the Kubernetes dashboards instead.
 
 
 ## Configuration
@@ -93,14 +93,14 @@ Metrics that are categorized as
  - ***`machine_cpu_cores`*** (*gauge*)<br>    Number of CPU cores on the node.
  - `machine_cpu_frequency_khz` (*gauge*)<br>    Node's CPU frequency.
  - ***`machine_memory_bytes`*** (*gauge*)<br>    Amount of memory installed on the node.
- - ***`pod_network_receive_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes received
- - ***`pod_network_receive_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while receiving
- - `pod_network_receive_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while receiving
- - `pod_network_receive_packets_total` (*cumulative*)<br>    Cumulative count of packets received
- - ***`pod_network_transmit_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes transmitted
- - ***`pod_network_transmit_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while transmitting
- - `pod_network_transmit_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while transmitting
- - `pod_network_transmit_packets_total` (*cumulative*)<br>    Cumulative count of packets transmitted
+ - ***`pod_network_receive_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes received. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - ***`pod_network_receive_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while receiving. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_receive_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while receiving. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_receive_packets_total` (*cumulative*)<br>    Cumulative count of packets received. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - ***`pod_network_transmit_bytes_total`*** (*cumulative*)<br>    Cumulative count of bytes transmitted. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - ***`pod_network_transmit_errors_total`*** (*cumulative*)<br>    Cumulative count of errors encountered while transmitting. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_transmit_packets_dropped_total` (*cumulative*)<br>    Cumulative count of packets dropped while transmitting. **Note that this metric is not emitted when using the cri-o container runtime.**
+ - `pod_network_transmit_packets_total` (*cumulative*)<br>    Cumulative count of packets transmitted. **Note that this metric is not emitted when using the cri-o container runtime.**
 
 ### Non-default metrics (version 4.7.0+)
 

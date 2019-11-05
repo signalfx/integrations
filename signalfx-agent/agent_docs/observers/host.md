@@ -33,14 +33,16 @@ can be used in discovery rules.
 | Name | Type | Description |
 | ---  | ---  | ---         |
 | `command` | `string` | The full command used to invoke this process, including the executable itself at the beginning. |
+| `has_port` | `string` | Set to `true` if the endpoint has a port assigned to it.  This will be `false` for endpoints that represent a host/container as a whole. |
 | `ip_address` | `string` | The IP address of the endpoint if the `host` is in the from of an IPv4 address |
 | `network_port` | `string` | An alias for `port` |
 | `discovered_by` | `string` | The observer that discovered this endpoint |
 | `host` | `string` | The hostname/IP address of the endpoint.  If this is an IPv6 address, it will be surrounded by `[` and `]`. |
 | `id` | `string` |  |
-| `name` | `string` | A observer assigned name of the endpoint |
+| `name` | `string` | A observer assigned name of the endpoint. For example, if using the `k8s-api` observer, `name` will be the port name in the pod spec, if any. |
 | `port` | `integer` | The TCP/UDP port number of the endpoint |
 | `port_type` | `string` | TCP or UDP |
+| `target` | `string` | The type of the thing that this endpoint directly refers to.  If the endpoint has a host and port associated with it (most common), the value will be `hostport`.  Other possible values are: `pod`, `container`, `host`.  See the docs for the specific observer you are using for more details on what types that observer emits. |
 
 ## Dimensions
 

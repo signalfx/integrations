@@ -513,7 +513,7 @@ gauge.queue_max:
 
 gauge.queue_time_avg:
   brief: ''
-  custom: true
+  custom: false
   description: ''
   metric_type: gauge
   monitor: collectd/haproxy
@@ -540,7 +540,7 @@ gauge.request_rate_max:
 
 gauge.response_time_avg:
   brief: Average total session time in ms over the last 1024 requests
-  custom: true
+  custom: false
   description: Average total session time in ms over the last 1024 requests. Corresponds
     to HAProxy's "ttime" metric.
   metric_type: gauge
@@ -575,7 +575,7 @@ gauge.session_rate:
 
 gauge.session_rate_all:
   brief: ''
-  custom: true
+  custom: false
   description: ''
   metric_type: gauge
   monitor: collectd/haproxy
@@ -609,7 +609,7 @@ gauge.session_time_average:
 
 gauge.session_time_avg:
   brief: ''
-  custom: true
+  custom: false
   description: ''
   metric_type: gauge
   monitor: collectd/haproxy
