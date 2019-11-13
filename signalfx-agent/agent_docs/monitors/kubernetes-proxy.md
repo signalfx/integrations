@@ -111,11 +111,11 @@ Metrics that are categorized as
  - `http_response_size_bytes` (*cumulative*)<br>    The HTTP response sizes in bytes.
  - `http_response_size_bytes_count` (*cumulative*)<br>    The HTTP response sizes in bytes. (count)
  - `http_response_size_bytes_sum` (*cumulative*)<br>    The HTTP response sizes in bytes. (sum)
- - `kubeproxy_network_programming_duration_seconds_bucket` (*cumulative*)<br>    In Cluster Network Programming Latency in seconds (bucket)
- - `kubeproxy_network_programming_duration_seconds_count` (*cumulative*)<br>    In Cluster Network Programming Latency in seconds (count)
+ - ***`kubeproxy_network_programming_duration_seconds_bucket`*** (*cumulative*)<br>    In Cluster Network Programming Latency in seconds (bucket)
+ - ***`kubeproxy_network_programming_duration_seconds_count`*** (*cumulative*)<br>    In Cluster Network Programming Latency in seconds (count)
  - `kubeproxy_network_programming_duration_seconds_sum` (*cumulative*)<br>    In Cluster Network Programming Latency in seconds (sum)
- - `kubeproxy_sync_proxy_rules_duration_seconds_bucket` (*cumulative*)<br>    SyncProxyRules latency in seconds (bucket)
- - `kubeproxy_sync_proxy_rules_duration_seconds_count` (*cumulative*)<br>    SyncProxyRules latency in seconds (count)
+ - ***`kubeproxy_sync_proxy_rules_duration_seconds_bucket`*** (*cumulative*)<br>    SyncProxyRules latency in seconds (bucket)
+ - ***`kubeproxy_sync_proxy_rules_duration_seconds_count`*** (*cumulative*)<br>    SyncProxyRules latency in seconds (count)
  - `kubeproxy_sync_proxy_rules_duration_seconds_sum` (*cumulative*)<br>    SyncProxyRules latency in seconds (sum)
  - `kubeproxy_sync_proxy_rules_endpoint_changes_pending` (*gauge*)<br>    Number of pending endpoint changes that have not yet been synced to the proxy
  - `kubeproxy_sync_proxy_rules_endpoint_changes_total` (*gauge*)<br>    Number of total endpoint changes that have not yet been synced to the proxy
@@ -135,10 +135,10 @@ Metrics that are categorized as
  - `process_virtual_memory_max_bytes` (*gauge*)<br>    Maximum amount of virtual memory available in bytes.
  - `rest_client_request_duration_seconds_bucket` (*cumulative*)<br>    Request latency in seconds. Broken down by verb and URL. (bucket)
  - `rest_client_request_duration_seconds_sum` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (sum)
- - `rest_client_request_latency_seconds_bucket` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (bucket)
+ - ***`rest_client_request_latency_seconds_bucket`*** (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (bucket)
  - `rest_client_request_latency_seconds_count` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (count)
  - `rest_client_request_latency_seconds_sum` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (sum)
- - `rest_client_requests_total` (*cumulative*)<br>    Number of HTTP requests, partitioned by status code, method, and host.
+ - ***`rest_client_requests_total`*** (*cumulative*)<br>    Number of HTTP requests, partitioned by status code, method, and host.
 
 ### Non-default metrics (version 4.7.0+)
 

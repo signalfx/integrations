@@ -77,7 +77,7 @@ Metrics that are categorized as
 All of the following metrics are part of the `admission_quota_controller` metric group. All of
 the non-default metrics below can be turned on by adding `admission_quota_controller` to the
 monitor config option `extraGroups`:
- - `admission_quota_controller_adds` (*cumulative*)<br>    (Deprecated) Total number of adds handled by workqueue: admission_quota_controller
+ - ***`admission_quota_controller_adds`*** (*cumulative*)<br>    (Deprecated) Total number of adds handled by workqueue: admission_quota_controller
  - `admission_quota_controller_depth` (*gauge*)<br>    (Deprecated) Current depth of workqueue: admission_quota_controller
  - `admission_quota_controller_longest_running_processor_microseconds` (*gauge*)<br>    (Deprecated) How many microseconds has the longest running processor for admission_quota_controller been running.
  - `admission_quota_controller_queue_latency` (*cumulative*)<br>    (Deprecated) How long an item stays in workqueueadmission_quota_controller before being requested. (sum)
@@ -168,9 +168,9 @@ All of the following metrics are part of the `apiserver_request` metric group. A
 the non-default metrics below can be turned on by adding `apiserver_request` to the
 monitor config option `extraGroups`:
  - `apiserver_request` (*cumulative*)<br>    Counter of apiserver requests broken out for each verb, dry run value, group, version, resource, scope, component, client, and HTTP response contentType and code.
- - `apiserver_request_count` (*cumulative*)<br>    (Deprecated) Counter of apiserver requests broken out for each verb, group, version, resource, scope, component, client, and HTTP response contentType and code.
+ - ***`apiserver_request_count`*** (*cumulative*)<br>    (Deprecated) Counter of apiserver requests broken out for each verb, group, version, resource, scope, component, client, and HTTP response contentType and code.
  - `apiserver_request_duration_seconds` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (sum)
- - `apiserver_request_duration_seconds_bucket` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (bucket)
+ - ***`apiserver_request_duration_seconds_bucket`*** (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (bucket)
  - `apiserver_request_duration_seconds_count` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (count)
  - `apiserver_request_latencies` (*cumulative*)<br>    (Deprecated) Response latency distribution in microseconds for each verb, group, version, resource, subresource, scope and component. (sum)
  - `apiserver_request_latencies_bucket` (*cumulative*)<br>    (Deprecated) Response latency distribution in microseconds for each verb, group, version, resource, subresource, scope and component. (bucket)
@@ -441,8 +441,8 @@ monitor config option `extraGroups`:
 All of the following metrics are part of the `workqueue` metric group. All of
 the non-default metrics below can be turned on by adding `workqueue` to the
 monitor config option `extraGroups`:
- - `workqueue_adds` (*cumulative*)<br>    Total number of adds handled by workqueue
- - `workqueue_depth` (*gauge*)<br>    Current depth of workqueue
+ - ***`workqueue_adds`*** (*cumulative*)<br>    Total number of adds handled by workqueue
+ - ***`workqueue_depth`*** (*gauge*)<br>    Current depth of workqueue
  - `workqueue_longest_running_processor_seconds` (*gauge*)<br>    How many seconds has the longest running processor for workqueue been running.
  - `workqueue_queue_duration_seconds` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (sum)
  - `workqueue_queue_duration_seconds_bucket` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (bucket)

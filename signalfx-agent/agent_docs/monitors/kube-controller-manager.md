@@ -441,9 +441,9 @@ Metrics that are categorized as
  - `rest_client_request_duration_seconds_bucket` (*cumulative*)<br>    Request latency in seconds. Broken down by verb and URL. (bucket)
  - `rest_client_request_duration_seconds_count` (*cumulative*)<br>    Request latency in seconds. Broken down by verb and URL. (count)
  - `rest_client_request_latency_seconds` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (sum)
- - `rest_client_request_latency_seconds_bucket` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (bucket)
+ - ***`rest_client_request_latency_seconds_bucket`*** (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (bucket)
  - `rest_client_request_latency_seconds_count` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (count)
- - `rest_client_requests_total` (*cumulative*)<br>    Number of HTTP requests, partitioned by status code, method, and host.
+ - ***`rest_client_requests_total`*** (*cumulative*)<br>    Number of HTTP requests, partitioned by status code, method, and host.
  - `service_adds_total` (*cumulative*)<br>    (Deprecated) Total number of adds handled by workqueue: service
  - `service_controller_rate_limiter_use` (*gauge*)<br>    A metric measuring the saturation of the rate limiter for service_controller
  - `service_depth` (*gauge*)<br>    (Deprecated) Current depth of workqueue: service
@@ -546,11 +546,11 @@ Metrics that are categorized as
  - `volumes_work_duration` (*cumulative*)<br>    (Deprecated) How long processing an item from workqueuevolumes takes. (sum)
  - `volumes_work_duration_count` (*cumulative*)<br>    (Deprecated) How long processing an item from workqueuevolumes takes. (count)
  - `volumes_work_duration_quantile` (*gauge*)<br>    (Deprecated) How long processing an item from workqueuevolumes takes. (quantized)
- - `workqueue_adds_total` (*cumulative*)<br>    Total number of adds handled by workqueue
- - `workqueue_depth` (*gauge*)<br>    Current depth of workqueue
+ - ***`workqueue_adds_total`*** (*cumulative*)<br>    Total number of adds handled by workqueue
+ - ***`workqueue_depth`*** (*gauge*)<br>    Current depth of workqueue
  - `workqueue_longest_running_processor_seconds` (*gauge*)<br>    How many seconds has the longest running processor for workqueue been running.
  - `workqueue_queue_duration_seconds` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (sum)
- - `workqueue_queue_duration_seconds_bucket` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (bucket)
+ - ***`workqueue_queue_duration_seconds_bucket`*** (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (bucket)
  - `workqueue_queue_duration_seconds_count` (*cumulative*)<br>    How long in seconds an item stays in workqueue before being requested. (count)
  - `workqueue_retries_total` (*cumulative*)<br>    Total number of retries handled by workqueue
  - `workqueue_unfinished_work_seconds` (*gauge*)<br>    How many seconds of work has done that is in progress and hasn't been observed by work_duration. Large values indicate stuck threads. One can deduce the number of stuck threads by observing the rate at which this increases.

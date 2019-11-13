@@ -161,14 +161,14 @@ Metrics that are categorized as
  - `etcd_network_client_grpc_sent_bytes_total` (*cumulative*)<br>    The total number of bytes sent to grpc clients.
  - `etcd_server_file_descriptors_used_total` (*gauge*)<br>    The total number of file descriptors used.
  - `etcd_server_go_version` (*gauge*)<br>    Which Go version server is running with. 1 for 'server_go_version' label with current version.
- - `etcd_server_has_leader` (*gauge*)<br>    Whether or not a leader exists. 1 is existence, 0 is not.
+ - ***`etcd_server_has_leader`*** (*gauge*)<br>    Whether or not a leader exists. 1 is existence, 0 is not.
  - `etcd_server_health_failures_total` (*cumulative*)<br>    The total number of failed health checks
  - `etcd_server_health_success_total` (*cumulative*)<br>    The total number of successful health checks
  - `etcd_server_heartbeat_send_failures_total` (*cumulative*)<br>    The total number of leader heartbeat send failures (likely overloaded from slow disk).
  - `etcd_server_id` (*gauge*)<br>    Server or member ID in hexadecimal format. 1 for 'server_id' label with current ID.
  - `etcd_server_is_leader` (*gauge*)<br>    Whether or not this member is a leader. 1 if is, 0 otherwise.
  - `etcd_server_is_learner` (*gauge*)<br>    Whether or not this member is a learner. 1 if is, 0 otherwise.
- - `etcd_server_leader_changes_seen_total` (*cumulative*)<br>    The number of leader changes seen.
+ - ***`etcd_server_leader_changes_seen_total`*** (*cumulative*)<br>    The number of leader changes seen.
  - `etcd_server_learner_promote_successes_total` (*cumulative*)<br>    The total number of successful learner promotions while this member is leader.
  - `etcd_server_pending_proposal_total` (*gauge*)<br>    The total number of pending proposals.
  - `etcd_server_proposal_durations_seconds` (*cumulative*)<br>    The latency distributions of committing proposal. (sum)
@@ -177,7 +177,7 @@ Metrics that are categorized as
  - `etcd_server_proposal_failed_total` (*cumulative*)<br>    The total number of failed proposals.
  - `etcd_server_proposals_applied_total` (*gauge*)<br>    The total number of consensus proposals applied.
  - `etcd_server_proposals_committed_total` (*gauge*)<br>    The total number of consensus proposals committed.
- - `etcd_server_proposals_failed_total` (*cumulative*)<br>    The total number of failed proposals seen.
+ - ***`etcd_server_proposals_failed_total`*** (*cumulative*)<br>    The total number of failed proposals seen.
  - `etcd_server_proposals_pending` (*gauge*)<br>    The current number of pending proposals to commit.
  - `etcd_server_quota_backend_bytes` (*gauge*)<br>    Current backend storage quota size in bytes.
  - `etcd_server_read_indexes_failed_total` (*cumulative*)<br>    The total number of failed read indexes seen.
@@ -260,10 +260,10 @@ Metrics that are categorized as
  - `go_memstats_stack_sys_bytes` (*gauge*)<br>    Number of bytes obtained from system for stack allocator.
  - `go_memstats_sys_bytes` (*gauge*)<br>    Number of bytes obtained from system.
  - `go_threads` (*gauge*)<br>    Number of OS threads created.
- - `grpc_server_handled_total` (*cumulative*)<br>    Total number of RPCs completed on the server, regardless of success or failure.
+ - ***`grpc_server_handled_total`*** (*cumulative*)<br>    Total number of RPCs completed on the server, regardless of success or failure.
  - `grpc_server_msg_received_total` (*cumulative*)<br>    Total number of RPC stream messages received on the server.
  - `grpc_server_msg_sent_total` (*cumulative*)<br>    Total number of gRPC stream messages sent by the server.
- - `grpc_server_started_total` (*cumulative*)<br>    Total number of RPCs started on the server.
+ - ***`grpc_server_started_total`*** (*cumulative*)<br>    Total number of RPCs started on the server.
  - `http_request_duration_microseconds` (*cumulative*)<br>    The HTTP request latencies in microseconds. (sum)
  - `http_request_duration_microseconds_count` (*cumulative*)<br>    The HTTP request latencies in microseconds. (count)
  - `http_request_duration_microseconds_quantile` (*gauge*)<br>    The HTTP request latencies in microseconds. (quantized)

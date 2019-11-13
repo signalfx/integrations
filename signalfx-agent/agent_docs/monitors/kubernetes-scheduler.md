@@ -122,26 +122,26 @@ Metrics that are categorized as
  - `rest_client_request_latency_seconds` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (sum)
  - `rest_client_request_latency_seconds_bucket` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (bucket)
  - `rest_client_request_latency_seconds_count` (*cumulative*)<br>    (Deprecated) Request latency in seconds. Broken down by verb and URL. (count)
- - `rest_client_requests_total` (*cumulative*)<br>    Number of HTTP requests, partitioned by status code, method, and host.
- - `scheduler_binding_duration_seconds` (*cumulative*)<br>    Binding latency in seconds (sum)
+ - ***`rest_client_requests_total`*** (*cumulative*)<br>    Number of HTTP requests, partitioned by status code, method, and host.
+ - ***`scheduler_binding_duration_seconds`*** (*cumulative*)<br>    Binding latency in seconds (sum)
  - `scheduler_binding_duration_seconds_bucket` (*cumulative*)<br>    Binding latency in seconds (bucket)
  - `scheduler_binding_duration_seconds_count` (*cumulative*)<br>    Binding latency in seconds (count)
- - `scheduler_binding_latency_microseconds` (*cumulative*)<br>    (Deprecated) Binding latency in microseconds (sum)
+ - ***`scheduler_binding_latency_microseconds`*** (*cumulative*)<br>    (Deprecated) Binding latency in microseconds (sum)
  - `scheduler_binding_latency_microseconds_bucket` (*cumulative*)<br>    (Deprecated) Binding latency in microseconds (bucket)
  - `scheduler_binding_latency_microseconds_count` (*cumulative*)<br>    (Deprecated) Binding latency in microseconds (count)
- - `scheduler_e2e_scheduling_duration_seconds` (*cumulative*)<br>    E2e scheduling latency in seconds (scheduling algorithm + binding) (sum)
+ - ***`scheduler_e2e_scheduling_duration_seconds`*** (*cumulative*)<br>    E2e scheduling latency in seconds (scheduling algorithm + binding) (sum)
  - `scheduler_e2e_scheduling_duration_seconds_bucket` (*cumulative*)<br>    E2e scheduling latency in seconds (scheduling algorithm + binding) (bucket)
  - `scheduler_e2e_scheduling_duration_seconds_count` (*cumulative*)<br>    E2e scheduling latency in seconds (scheduling algorithm + binding) (count)
- - `scheduler_e2e_scheduling_latency_microseconds` (*cumulative*)<br>    (Deprecated) E2e scheduling latency in microseconds (scheduling algorithm + binding) (sum)
+ - ***`scheduler_e2e_scheduling_latency_microseconds`*** (*cumulative*)<br>    (Deprecated) E2e scheduling latency in microseconds (scheduling algorithm + binding) (sum)
  - `scheduler_e2e_scheduling_latency_microseconds_bucket` (*cumulative*)<br>    (Deprecated) E2e scheduling latency in microseconds (scheduling algorithm + binding) (bucket)
  - `scheduler_e2e_scheduling_latency_microseconds_count` (*cumulative*)<br>    (Deprecated) E2e scheduling latency in microseconds (scheduling algorithm + binding) (count)
  - `scheduler_pending_pods` (*gauge*)<br>    Number of pending pods, by the queue type. 'active' means number of pods in activeQ; 'backoff' means number of pods in backoffQ; 'unschedulable' means number of pods in unschedulableQ.
  - `scheduler_pod_preemption_victims` (*gauge*)<br>    Number of selected preemption victims
  - `scheduler_schedule_attempts_total` (*cumulative*)<br>    Number of attempts to schedule pods, by the result. 'unschedulable' means a pod could not be scheduled, while 'error' means an internal scheduler problem.
- - `scheduler_scheduling_algorithm_duration_seconds` (*cumulative*)<br>    Scheduling algorithm latency in seconds (sum)
+ - ***`scheduler_scheduling_algorithm_duration_seconds`*** (*cumulative*)<br>    Scheduling algorithm latency in seconds (sum)
  - `scheduler_scheduling_algorithm_duration_seconds_bucket` (*cumulative*)<br>    Scheduling algorithm latency in seconds (bucket)
  - `scheduler_scheduling_algorithm_duration_seconds_count` (*cumulative*)<br>    Scheduling algorithm latency in seconds (count)
- - `scheduler_scheduling_algorithm_latency_microseconds` (*cumulative*)<br>    (Deprecated) Scheduling algorithm latency in microseconds (sum)
+ - ***`scheduler_scheduling_algorithm_latency_microseconds`*** (*cumulative*)<br>    (Deprecated) Scheduling algorithm latency in microseconds (sum)
  - `scheduler_scheduling_algorithm_latency_microseconds_bucket` (*cumulative*)<br>    (Deprecated) Scheduling algorithm latency in microseconds (bucket)
  - `scheduler_scheduling_algorithm_latency_microseconds_count` (*cumulative*)<br>    (Deprecated) Scheduling algorithm latency in microseconds (count)
  - `scheduler_scheduling_algorithm_predicate_evaluation` (*cumulative*)<br>    (Deprecated) Scheduling algorithm predicate evaluation duration in microseconds (sum)

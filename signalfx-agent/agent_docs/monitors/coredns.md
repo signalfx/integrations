@@ -66,16 +66,18 @@ Metrics that are categorized as
 
 
  - `coredns_build_info` (*gauge*)<br>    A metric with a constant '1' value labeled by version, revision, and goversion from which CoreDNS was built.
+ - `coredns_cache_hits_total` (*cumulative*)<br>    The count of cache misses.
  - `coredns_cache_misses_total` (*cumulative*)<br>    The count of cache misses.
- - `coredns_dns_request_count_total` (*cumulative*)<br>    Counter of DNS requests made per zone, protocol and family.
+ - ***`coredns_cache_size`*** (*cumulative*)<br>    Size of DNS cache.
+ - ***`coredns_dns_request_count_total`*** (*cumulative*)<br>    Counter of DNS requests made per zone, protocol and family.
  - `coredns_dns_request_duration_seconds` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (sum)
  - `coredns_dns_request_duration_seconds_bucket` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (bucket)
  - `coredns_dns_request_duration_seconds_count` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (count)
- - `coredns_dns_request_size_bytes` (*cumulative*)<br>    Size of the EDNS0 UDP buffer in bytes (64K for TCP). (sum)
+ - ***`coredns_dns_request_size_bytes`*** (*cumulative*)<br>    Size of the EDNS0 UDP buffer in bytes (64K for TCP). (sum)
  - `coredns_dns_request_size_bytes_bucket` (*cumulative*)<br>    Size of the EDNS0 UDP buffer in bytes (64K for TCP). (bucket)
  - `coredns_dns_request_size_bytes_count` (*cumulative*)<br>    Size of the EDNS0 UDP buffer in bytes (64K for TCP). (count)
- - `coredns_dns_request_type_count_total` (*cumulative*)<br>    Counter of DNS requests per type, per zone.
- - `coredns_dns_response_rcode_count_total` (*cumulative*)<br>    Counter of response status codes.
+ - ***`coredns_dns_request_type_count_total`*** (*cumulative*)<br>    Counter of DNS requests per type, per zone.
+ - ***`coredns_dns_response_rcode_count_total`*** (*cumulative*)<br>    Counter of response status codes.
  - `coredns_dns_response_size_bytes` (*cumulative*)<br>    Size of the returned response in bytes. (sum)
  - `coredns_dns_response_size_bytes_bucket` (*cumulative*)<br>    Size of the returned response in bytes. (bucket)
  - `coredns_dns_response_size_bytes_count` (*cumulative*)<br>    Size of the returned response in bytes. (count)
