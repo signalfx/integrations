@@ -12,10 +12,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.0">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.3">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.0 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.3 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -39,7 +39,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.0 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.3 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -47,11 +47,12 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-##### Latest Version: v2.1.0 (October 28, 2019)
+##### Latest Version: v2.1.3 (November 19, 2019)
 
-<a target="_blank" href="/#/smart-gateway/download/v2.1.0">Download Smart Gateway v2.1.0</a><br/>
-_SHA256: `8308b031b07892131a0bdb0f1bba0b9666c8625398f1645d4b7fb0518cf18494`_
+<a target="_blank" href="/#/smart-gateway/download/v2.1.3">Download Smart Gateway v2.1.3</a><br/>
+_SHA256: `636de58a65af6e018e4ae87b75e5dc7a9edd7be1b03363dd05b4ecf857cccb9c`_
 
+* Critical bug fixes
 * Scale and performance fixes that allow the Smart Gateway cluster to scale to billions of spans per minute
 * <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html#extended-span-identity-metrics-with-custom-dimensionalization">Custom dimensionalization</a>.
 * Tracing metrics emitted are now based on the previous 10 seconds instead of total history
@@ -63,15 +64,8 @@ _SHA256: `8308b031b07892131a0bdb0f1bba0b9666c8625398f1645d4b7fb0518cf18494`_
 <a target="_blank" href="/#/smart-gateway/download/v2.0.4">Download Smart Gateway v2.0.4</a><br/>
 _SHA256: `7429a8f42e2eb7ebfe340656ad7cab9822b52b44a41471fba619bdc77a73909d`_
 
-* Critical bug fix to 2.0.3 around metrics reporting
-
-##### v2.0.3 (September 10, 2019)
-
-<a target="_blank" href="/#/smart-gateway/download/v2.0.3">Download Smart Gateway v2.0.3</a><br/>
-_SHA256: `9f334adf76e11df5bb12e41c5aded1ed443efd0960dda37266935fef65ed86fe`_
-
-* DO NOT USE THIS VERSION, use v2.0.4 instead
-* Provides code to do seamless rolling upgrade to imminant performance release
+* Critical bug fix
+* Provides code to do seamless rolling upgrade to v2.1.x releases
 
 ##### v2.0.2 (September 3, 2019)
 
