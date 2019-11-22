@@ -7,11 +7,11 @@ from helpers.patterns import check_sfx_link, image_inline_pattern
 
 def link_sub(m):
     prefix = m.group('check_is_image')
-    
+
     # Don't process images
     if prefix == "!":
         return m.group(0)
-    
+
     # Don't process sfx_links
     if m.group('check_is_sfx_link'):
         return m.group(0)

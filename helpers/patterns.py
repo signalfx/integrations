@@ -18,4 +18,4 @@ integration_github_link_pattern = re.compile("https://github\.com/signalfx/integ
 
 
 # patterns for app version
-check_sfx_link = re.compile("(?P<check_is_image>.?)\[(?P<text>(.|\n)*?)\]\((?P<link>[^\(]*?)\)(?P<check_is_sfx_link>\[\]\(sfx_link:(.*?)\))*")
+check_sfx_link = re.compile("(?P<check_is_image>.?)\[(?P<text>([^]]|\n)*?)\]\((?P<link>[^\(]*?)\)(?P<check_is_sfx_link>\[\]\(sfx_link:(.*?)\))*")

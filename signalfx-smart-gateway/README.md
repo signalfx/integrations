@@ -1,6 +1,5 @@
 # ![](https://github.com/signalfx/integrations/blob/master/signalfx-smart-gateway/img/integration_smartgateway.png) SignalFx Smart Gateway
 
-Information associated with the SignalFx Smart Gateway can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/signalfx-smart-gateway">here</a>.
 
 - [Description](#description)
 - [Installation](#installation)
