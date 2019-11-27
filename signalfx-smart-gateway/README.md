@@ -11,10 +11,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.3">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. The latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.4">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.3 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.4 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -38,7 +38,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.3 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.4 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -46,7 +46,14 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 #### Changelog
 
-##### Latest Version: v2.1.3 (November 19, 2019)
+##### Latest Version: v2.1.4 (November 27, 2019)
+
+<a target="_blank" href="/#/smart-gateway/download/v2.1.4">Download Smart Gateway v2.1.4</a><br/>
+_SHA256: `0e834342a8d1fa192e19a9c21df807dae87bbbf03d65f7013cdedf427bc9042e`_
+
+* Support for default zipkin v1 and v2 paths on signalfx listener
+
+##### v2.1.3 (November 19, 2019)
 
 <a target="_blank" href="/#/smart-gateway/download/v2.1.3">Download Smart Gateway v2.1.3</a><br/>
 _SHA256: `636de58a65af6e018e4ae87b75e5dc7a9edd7be1b03363dd05b4ecf857cccb9c`_
