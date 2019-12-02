@@ -25,7 +25,7 @@ Connecting to CloudWatch allows you to take advantage of SignalFx's extensive Cl
 ### CONFIGURATION
 
 To connect SignalFx to CloudWatch, you'll create a new IAM role in AWS for SignalFx to use, provide information from SignalFx to that new role, then provide SignalFx with the role's ARN. You must be an administrator of your SignalFx account to connect SignalFx to CloudWatch. <a target="_blank" href=
-"http://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-aws">Click here for detailed instructions.</a>
+"https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws-cloudwatch">Click here for detailed instructions.</a>
 
 ### USAGE
 
