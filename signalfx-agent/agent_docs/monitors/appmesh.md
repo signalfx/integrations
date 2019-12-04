@@ -125,8 +125,11 @@ Metrics that are categorized as
  - `upstream_cx_total` (*cumulative*)<br>    Total connections
  - `upstream_cx_tx_bytes_buffered` (*gauge*)<br>    Send connection bytes currently buffered
  - `upstream_cx_tx_bytes_total` (*cumulative*)<br>    Total sent connection bytes
- - ***`upstream_rq_<_>`*** (*cumulative*)<br>    Specific HTTP response codes (e.g., 201, 302, etc.)
- - ***`upstream_rq_<_xx>`*** (*cumulative*)<br>    Aggregate HTTP response codes (e.g., 2xx, 3xx, etc.)
+ - `upstream_rq_2xx` (*cumulative*)<br>    Total number of HTTP response codes in the 200-299 range
+ - `upstream_rq_3xx` (*cumulative*)<br>    Total number of HTTP response codes in the 300-399 range
+ - ***`upstream_rq_4xx`*** (*cumulative*)<br>    Total number of HTTP response codes in the 400-499 range
+ - ***`upstream_rq_5xx`*** (*cumulative*)<br>    Total number of HTTP response codes in the 500-599 range
+ - `upstream_rq_<___>` (*cumulative*)<br>    Specific HTTP response codes (e.g., 201, 302, etc.)
  - `upstream_rq_active` (*gauge*)<br>    Total active requests
  - `upstream_rq_cancelled` (*cumulative*)<br>    Total requests cancelled before obtaining a connection pool connection
  - ***`upstream_rq_completed`*** (*cumulative*)<br>    Total upstream requests completed
@@ -138,7 +141,7 @@ Metrics that are categorized as
  - `upstream_rq_per_try_timeout` (*cumulative*)<br>    Total requests that hit the per try timeout
  - ***`upstream_rq_retry`*** (*cumulative*)<br>    Total request retries
  - `upstream_rq_retry_overflow` (*cumulative*)<br>    Total requests not retried due to circuit breaking
- - ***`upstream_rq_retry_success`*** (*cumulative*)<br>    Total request retry successes
+ - `upstream_rq_retry_success` (*cumulative*)<br>    Total request retry successes
  - `upstream_rq_rx_reset` (*cumulative*)<br>    Total requests that were reset remotely
  - ***`upstream_rq_time`*** (*gauge*)<br>    Request time milliseconds
  - `upstream_rq_timeout` (*cumulative*)<br>    Total requests that timed out waiting for a response
