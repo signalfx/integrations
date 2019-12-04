@@ -37,7 +37,7 @@ For greater insight into your ECS environment, SignalFx's Smart Agent can auto-d
 
   [<img src='./img/dashboard_ecs_service.png' width=200px>](./img/dashboard_ecs_service.png)
 
-- **ECS (SignalFx) Task Definition**: Focus on a single ECS Task Defiinition via SignalFx SmartAgent.
+- **ECS (SignalFx) Task Definition**: Focus on a single ECS Task Defiinition via SignalFx Smart Agent.
 
   [<img src='./img/dashboard_ecs_agent_taskdef.png' width=200px>](./img/dashboard_ecs_agent_taskdef.png)
 
@@ -49,9 +49,9 @@ To access this integration, [connect to CloudWatch](https://github.com/signalfx/
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
-#### SmartAgent
+#### Smart Agent
 
-To auto-discover services and collect more detailed metrics, SignalFx SmartAgent can be deployed in two different ways depend on the type of containers to be monitor. To monitor EC2 containers, see the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Smart Agent ECS Deployment Guide</a> and to monitor Fargate containers, see the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/fargate">Smart Agent Fargate Deployment Guide</a> for more detailed instructions.
+To auto-discover services and collect more detailed metrics, SignalFx Smart Agent can be deployed in two different ways depend on the type of containers to be monitor. To monitor EC2 containers, see the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Smart Agent ECS Deployment Guide</a> and to monitor Fargate containers, see the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/fargate">Smart Agent Fargate Deployment Guide</a> for more detailed instructions.
 
 ### USAGE
 

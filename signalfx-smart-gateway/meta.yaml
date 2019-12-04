@@ -1,5 +1,5 @@
 data_signature: sf_metric:"gateway.processedTraces"
-description: "SignalFx's Smart Gateway for Microservices APM and NoSample\u2122\uFE0F"
+description: "SignalFx's Smart Gateway for Microservices APM and NoSample\u2122\uFE0F Tail-Based Distributed Tracing"
 display_name: SignalFx Smart Gateway
 feature: apm
 featured: true

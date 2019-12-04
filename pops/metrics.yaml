@@ -3,7 +3,7 @@ cumulative.batch_sizes.count:
   description: The size of batches emitted by POPS.
   metric_type: cumulative
   title: batch_sizes.count
-
+ 
 cumulative.batch_sizes.max:
   brief: The histogram maximum of sizes of batches emitted by POPS.
   description: The histogram maximum of sizes of batches emitted by POPS.
@@ -149,8 +149,8 @@ cumulative.totaldecodeerrors:
   title: TotalDecodeErrors
 
 cumulative.totalprocessingtimens:
-  brief: The total time spent processing a client connection to POPS.
-  description: The total time spent processing a client connection to POPS.
+  brief: The total time spent processing a client connection to POPS, in nanoseconds.
+  description: The total time spent processing a client connection to POPS, in nanoseconds.
   metric_type: cumulative
   title: TotalProcessingTimeNs
 
@@ -351,8 +351,8 @@ gauge.othersys:
   title: OtherSys
 
 gauge.process.uptime.ns:
-  brief: Time since the pops process started.
-  description: Time since the pops process started.
+  brief: Time since the POPS process started, in nanoseconds.
+  description: Time since the POPS process started, in nanoseconds.
   metric_type: gauge
   title: process.uptime.ns
 
