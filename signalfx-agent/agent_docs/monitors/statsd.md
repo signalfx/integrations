@@ -17,16 +17,15 @@ datapoints.  It listens on a configured address and port in order to
 receive the statsd metrics.  Note that this monitor does not support statsd
 extensions such as tags.
 
-Supports Spark 2.2.0 and later.
-
 The monitor supports the `Counter`, `Timer`, `Gauge` and `Set` types which
 are dispatched as the SignalFx types `counter`, `gauge`, `gauge` and
 `gauge` respectively.
 
 **Note that datapoints will get a `host` dimension of the current host that
-the agent is running on, not the host from which the statsd metric was
-sent.  For this reason, it is recommended to send statsd metrics to a local
-agent instance.**
+the agent is running on, not the host from which the statsd metric was sent.
+For this reason, it is recommended to send statsd metrics to a local agent
+instance. If you don't want the `host` dimension, you can set
+`disableHostDimensions: true` on the monitor configuration**
 
 <!--- SETUP --->
 #### Verifying installation
@@ -65,14 +64,15 @@ You can customize a metric name by providing a format string within the converte
 ```
 converters:
   - pattern: "cluster.cds_{traffic}_{mesh}_{service}-vn_{}.{action}"
-    metric: "{traffic}.{action}"
+    metricName: "{traffic}.{action}"
 ```
 
 The metrics which match to the given pattern will be reported to SignalFx as `{traffic}.{action}`.
 For instance, metric `cluster.cds_egress_ecommerce-demo-mesh_gateway-vn_tcp_8080.update_success`
 will be reported as `egress.update_success`.
 
-`metric` is required for a converter configuration. A converter will be disabled if `metric` is not provided.
+`metricName` is required for a converter configuration. A converter will be
+disabled if `metricName` is not provided.
 
 
 ## Configuration

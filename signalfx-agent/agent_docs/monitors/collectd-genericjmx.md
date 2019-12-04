@@ -110,10 +110,6 @@ the same port as the JMX connect port.  There may be other variations of
 this that say `Connection reset` or `Connection refused` but they all
 generaly indicate a similar cause.
 
-## Useful links
-
- - https://realjenius.com/2012/11/21/java7-jmx-tunneling-freedom/
-
 
 ## Configuration
 
