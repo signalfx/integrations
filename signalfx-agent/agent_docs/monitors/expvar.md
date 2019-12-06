@@ -41,7 +41,7 @@ monitors:
   extraDimensions:
     metric_source: expvar
 ```
-Below is an example showing part of a JSON payload containing the exposed variable requestsPerSecond containing
+Below is an example showing part of a JSON payload containing the exposed variable `requestsPerSecond` containing
 requests per second metric information.
 ```
 {
@@ -51,7 +51,7 @@ requests per second metric information.
 }
 ```
 Suppose that the payload is emanating from endpoint `http://172.17.0.4:6000/appmetrics`. The monitor can be
-configured as shown below in order to scrape requestsPerSecond. The metric name is optional. If not provided,
+configured as shown below in order to scrape `requestsPerSecond`. The metric name is optional. If not provided,
 the JSONPath value `requestsPerSecond` snake cased to `requests_per_second` will be used instead.
 ```
 monitors:
@@ -93,9 +93,12 @@ and you want to extract the cumulative `Mallocs` values.
   ...
 }
 ```
-The should be configured as shown below so as to fetch the `Mallocs` values. The JSONPath is what maps the
-location of values within the JSON object. The path must terminate with primitive values or an array containing
-primitive values. It cannot terminated on embedded object(s).
+To fetch the first cumulative `Mallocs` value in the `BySize` array configure the monitor as shown below. The
+configured path (JSONPath) contains character delimited keys of metric values in the JSON object. The path must
+be defined fully, terminating on primitive values or array of primitive values. The path should not terminated
+on embedded object(s). No metric name was provided for this configuration so the metric name defaults to
+`memstats.by_size.mallocs`. Also, a dimension named `memstats_by_size_index` containing the array index 0 is
+created.
 ```
 monitors:
 - type: expvar
@@ -103,18 +106,13 @@ monitors:
   path: /debug/vars
   port: 5000
   metrics:
-    - JSONPath: memstats.BySize.Mallocs
+    - JSONPath: memstats.BySize.0.Mallocs
       type: cumulative
   extraDimensions:
     metric_source: expvar
 ```
-No metric name was provided for this configuration so the metric name defaults to memstats.by_size.mallocs.
-Because memstats.BySize is an array of size 2 there are 2 values for memstats.BySize.Mallocs (35387 and 35387).
-Two data points are created for metric memstats.by_size.mallocs for the 2 values. Additionaly, a dimension
-name memstats.by_size containing array index created for each respective datapoint.
-
-Also, custom dimensions can be added to metric as shown below. The dimension name is required if a dimension
-value is provided whereas it is optional when a JSONPath is provided instead.
+`.` is the default path separator character and thus no need to specify. Below is the same configuration using
+ `/` as the path separator character.
 ```
 monitors:
 - type: expvar
@@ -122,7 +120,65 @@ monitors:
   path: /debug/vars
   port: 5000
   metrics:
-    - JSONPath: memstats.BySize.Mallocs
+    - JSONPath: memstats/BySize/0/Mallocs
+      pathSeparator: /
+      type: cumulative
+  extraDimensions:
+    metric_source: expvar
+```
+To fetch all `Mallocs` values or a combination thereof, configure JSONPath with regular expression. The
+configuration below configures the monitor to fetch all 2 `Mallocs` values (35387 and 35387). Two data points
+for metric `memstats.by_size.mallocs` containing the values will be fetched. The datapoints will have dimension
+`memstats_by_size_index` containing their respective array index. Note that the escape character `\` is used to
+escape character `.` of regex `.*` in order take `.` literally as opposed to a path separator character.
+```
+monitors:
+- type: expvar
+  host: 172.12.0.5
+  path: /debug/vars
+  port: 5000
+  metrics:
+    - JSONPath: memstats.BySize.\\.*.Mallocs
+      type: cumulative
+  extraDimensions:
+    metric_source: expvar
+```
+The configuration below will fetch all the `BySize` values.
+```
+monitors:
+- type: expvar
+  host: 172.12.0.5
+  path: /debug/vars
+  port: 5000
+  metrics:
+    - JSONPath: memstats.BySize.\\.*.\\.*
+      type: cumulative
+  extraDimensions:
+    metric_source: expvar
+```
+The configuration below will also fetch all the `BySize` values.
+```
+monitors:
+- type: expvar
+  host: 172.12.0.5
+  path: /debug/vars
+  port: 5000
+  metrics:
+    - JSONPath: memstats.BySize.\\d+.\\.*
+      type: cumulative
+  extraDimensions:
+    metric_source: expvar
+```
+Custom dimensions can be added to metrics as shown below. The dimension name is required if a dimension
+value is provided. The dimension name is optional when JSONPath for the dimension is provided.
+```
+monitors:
+- type: expvar
+  host: 172.12.0.5
+  path: /debug/vars
+  port: 5000
+  metrics:
+    - JSONPath: memstats.BySize.\\.*.Mallocs
       type: cumulative
       - dimensions:
         name: physical_memory
@@ -132,10 +188,10 @@ monitors:
   extraDimensions:
     metric_source: expvar
 ```
-A dimension JSONPath is configured as shown below. The monitor gets JSON key at the specified path as the
-dimension value. The dimension name is optional if the dimension JSONPath is specified. When not provided
-the monitor snake cases the dimension JSONPath and uses that for the dimension name. The dimension JSONPath
-must be shorter than the metric JSONPath and have the same root.
+The dimension JSONPathcan be configured as shown below. If the dimension name is not provided the dimension
+name is constructed from snake casing the JSONPath. The dimension JSONPath must be shorter than the metric JSONPath
+and start at same root. So, for the configuration below, dimensions `memory_stats` and `memstats_by_size` will
+contain values `BySize` and `0` respectively.
 ```
 monitors:
 - type: expvar
@@ -143,19 +199,19 @@ monitors:
   path: /debug/vars
   port: 5000
   metrics:
-    - JSONPath: memstats.BySize.Mallocs
+    - JSONPath: memstats.BySize.0.Mallocs
       type: cumulative
       - dimensions:
+        name: memory_stats
         JSONPath: memstats
       - dimensions:
-        name: by_size_index
-        JSONPath: memstats.BySize
+        JSONPath: memstats/BySize
   extraDimensions:
     metric_source: expvar
 ```
-The path separator character `.` of JSONPath can be escaped and treated literally using `\`. DO NOT configure the
-monitor for memstats metrics because they are standard metrics provided by default. memstats was used to provide a
-realistic example.
+ DO NOT
+configure the monitor for memstats metrics because they are standard metrics provided by default. We use memstats
+here to provide a realistic example.
 
 
 ## Configuration
@@ -192,6 +248,7 @@ The **nested** `metrics` config object has the following fields:
 | `JSONPath` | **yes** | `string` | JSON path of the metric value |
 | `type` | **yes** | `string` | SignalFx metric type. Possible values are "gauge" or "cumulative" |
 | `dimensions` | no | `list of objects (see below)` | Metric dimensions |
+| `pathSeparator` | no | `string` | Path separator character of metric value in JSON object (**default:** `.`) |
 
 
 The **nested** `dimensions` config object has the following fields:
