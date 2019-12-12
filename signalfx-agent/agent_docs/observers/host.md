@@ -35,6 +35,7 @@ can be used in discovery rules.
 | `command` | `string` | The full command used to invoke this process, including the executable itself at the beginning. |
 | `has_port` | `string` | Set to `true` if the endpoint has a port assigned to it.  This will be `false` for endpoints that represent a host/container as a whole. |
 | `ip_address` | `string` | The IP address of the endpoint if the `host` is in the from of an IPv4 address |
+| `is_ipv6` | `string` | Will be `true` if the endpoint is IPv6. |
 | `network_port` | `string` | An alias for `port` |
 | `discovered_by` | `string` | The observer that discovered this endpoint |
 | `host` | `string` | The hostname/IP address of the endpoint.  If this is an IPv6 address, it will be surrounded by `[` and `]`. |
