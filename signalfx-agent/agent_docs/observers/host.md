@@ -14,7 +14,7 @@ It will look for all listening sockets on TCP and UDP over IPv4 and IPv6.
 
 Observer Type: `host`
 
-[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/master/internal/observers/host)
+[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/master/pkg/observers/host)
 
 ## Configuration
 

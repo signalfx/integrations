@@ -4,7 +4,7 @@
 
 # collectd/activemq
 
-Monitor Type: `collectd/activemq` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/activemq))
+Monitor Type: `collectd/activemq` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/activemq))
 
 **Accepts Endpoints**: **Yes**
 

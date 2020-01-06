@@ -4,7 +4,7 @@
 
 # collectd/hadoopjmx
 
-Monitor Type: `collectd/hadoopjmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/hadoopjmx))
+Monitor Type: `collectd/hadoopjmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx))
 
 **Accepts Endpoints**: **Yes**
 
@@ -33,10 +33,10 @@ export YARN_RESOURCEMANAGER_OPTS="-Dcom.sun.management.jmxremote.ssl=false -Dcom
 ```
 
 This monitor has a set of built in MBeans configured for:
-  - [Name Nodes](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/hadoopjmx/nameNodeMBeans.go)
-  - [Resource Manager](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/hadoopjmx/resourceManagerMBeans.go)
-  - [Node Manager](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/hadoopjmx/nodeManagerMBeans.go)
-  - [Data Nodes](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/hadoopjmx/dataNodeMBeans.go)
+  - [Name Nodes](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/nameNodeMBeans.go)
+  - [Resource Manager](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/resourceManagerMBeans.go)
+  - [Node Manager](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/nodeManagerMBeans.go)
+  - [Data Nodes](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/dataNodeMBeans.go)
 
 Sample YAML configuration:
 

@@ -4,7 +4,7 @@
 
 # collectd/nginx
 
-Monitor Type: `collectd/nginx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/nginx))
+Monitor Type: `collectd/nginx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/nginx))
 
 **Accepts Endpoints**: **Yes**
 

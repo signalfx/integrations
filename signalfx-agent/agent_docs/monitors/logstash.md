@@ -4,7 +4,7 @@
 
 # logstash
 
-Monitor Type: `logstash` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/logstash/logstash))
+Monitor Type: `logstash` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/logstash/logstash))
 
 **Accepts Endpoints**: **Yes**
 

@@ -4,7 +4,7 @@
 
 # prometheus/go
 
-Monitor Type: `prometheus/go` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/prometheus/go))
+Monitor Type: `prometheus/go` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/go))
 
 **Accepts Endpoints**: **Yes**
 

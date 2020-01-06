@@ -4,7 +4,7 @@
 
 # collectd/rabbitmq
 
-Monitor Type: `collectd/rabbitmq` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/rabbitmq))
+Monitor Type: `collectd/rabbitmq` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/rabbitmq))
 
 **Accepts Endpoints**: **Yes**
 

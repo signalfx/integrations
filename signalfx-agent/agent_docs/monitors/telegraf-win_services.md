@@ -4,7 +4,7 @@
 
 # telegraf/win_services
 
-Monitor Type: `telegraf/win_services` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/telegraf/monitors/winservices))
+Monitor Type: `telegraf/win_services` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/winservices))
 
 **Accepts Endpoints**: No
 

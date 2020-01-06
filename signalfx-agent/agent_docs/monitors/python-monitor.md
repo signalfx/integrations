@@ -4,7 +4,7 @@
 
 # python-monitor
 
-Monitor Type: `python-monitor` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/subproc/signalfx/python))
+Monitor Type: `python-monitor` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/subproc/signalfx/python))
 
 **Accepts Endpoints**: **Yes**
 

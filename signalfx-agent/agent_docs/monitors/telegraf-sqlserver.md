@@ -4,7 +4,7 @@
 
 # telegraf/sqlserver
 
-Monitor Type: `telegraf/sqlserver` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/telegraf/monitors/mssqlserver))
+Monitor Type: `telegraf/sqlserver` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/mssqlserver))
 
 **Accepts Endpoints**: **Yes**
 

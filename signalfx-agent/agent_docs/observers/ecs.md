@@ -102,7 +102,7 @@ Would result in the `app` endpoint getting an interval of 1 second and the
 
 Observer Type: `ecs`
 
-[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/master/internal/observers/ecs)
+[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/master/pkg/observers/ecs)
 
 ## Configuration
 

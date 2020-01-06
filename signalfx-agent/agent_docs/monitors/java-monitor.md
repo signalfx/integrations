@@ -4,7 +4,7 @@
 
 # java-monitor
 
-Monitor Type: `java-monitor` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/subproc/signalfx/java))
+Monitor Type: `java-monitor` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/subproc/signalfx/java))
 
 **Accepts Endpoints**: **Yes**
 

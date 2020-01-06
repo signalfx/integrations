@@ -4,7 +4,7 @@
 
 # collectd/openstack
 
-Monitor Type: `collectd/openstack` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/openstack))
+Monitor Type: `collectd/openstack` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/openstack))
 
 **Accepts Endpoints**: No
 

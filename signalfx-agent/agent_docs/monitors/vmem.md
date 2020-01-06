@@ -4,7 +4,7 @@
 
 # vmem
 
-Monitor Type: `vmem` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/vmem))
+Monitor Type: `vmem` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/vmem))
 
 **Accepts Endpoints**: No
 

@@ -4,7 +4,7 @@
 
 # collectd/haproxy
 
-Monitor Type: `collectd/haproxy` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/haproxy))
+Monitor Type: `collectd/haproxy` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/haproxy))
 
 **Accepts Endpoints**: **Yes**
 

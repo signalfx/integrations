@@ -4,7 +4,7 @@
 
 # collectd/load
 
-Monitor Type: `collectd/load` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/load))
+Monitor Type: `collectd/load` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/load))
 
 **Accepts Endpoints**: No
 

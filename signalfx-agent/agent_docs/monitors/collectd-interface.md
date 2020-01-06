@@ -4,7 +4,7 @@
 
 # collectd/interface
 
-Monitor Type: `collectd/interface` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/netinterface))
+Monitor Type: `collectd/interface` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/netinterface))
 
 **Accepts Endpoints**: No
 

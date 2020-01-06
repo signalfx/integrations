@@ -4,7 +4,7 @@
 
 # net-io
 
-Monitor Type: `net-io` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/netio))
+Monitor Type: `net-io` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/netio))
 
 **Accepts Endpoints**: No
 

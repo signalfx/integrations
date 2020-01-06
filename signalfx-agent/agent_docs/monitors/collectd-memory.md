@@ -4,7 +4,7 @@
 
 # collectd/memory
 
-Monitor Type: `collectd/memory` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/memory))
+Monitor Type: `collectd/memory` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/memory))
 
 **Accepts Endpoints**: No
 

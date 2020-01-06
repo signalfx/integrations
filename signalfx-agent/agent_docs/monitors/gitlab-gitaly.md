@@ -4,7 +4,7 @@
 
 # gitlab-gitaly
 
-Monitor Type: `gitlab-gitaly` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/gitlab))
+Monitor Type: `gitlab-gitaly` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/gitlab))
 
 **Accepts Endpoints**: **Yes**
 

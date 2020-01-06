@@ -4,7 +4,7 @@
 
 # dotnet
 
-Monitor Type: `dotnet` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/dotnet))
+Monitor Type: `dotnet` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/dotnet))
 
 **Accepts Endpoints**: No
 

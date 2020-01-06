@@ -4,7 +4,7 @@
 
 # collectd/couchbase
 
-Monitor Type: `collectd/couchbase` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/couchbase))
+Monitor Type: `collectd/couchbase` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/couchbase))
 
 **Accepts Endpoints**: **Yes**
 

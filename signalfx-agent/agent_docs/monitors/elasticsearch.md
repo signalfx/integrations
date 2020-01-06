@@ -4,7 +4,7 @@
 
 # elasticsearch
 
-Monitor Type: `elasticsearch` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/elasticsearch))
+Monitor Type: `elasticsearch` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/elasticsearch))
 
 **Accepts Endpoints**: **Yes**
 

@@ -4,7 +4,7 @@
 
 # collectd/cpu
 
-Monitor Type: `collectd/cpu` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/cpu))
+Monitor Type: `collectd/cpu` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/cpu))
 
 **Accepts Endpoints**: No
 

@@ -4,7 +4,7 @@
 
 # collectd/processes
 
-Monitor Type: `collectd/processes` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/processes))
+Monitor Type: `collectd/processes` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/processes))
 
 **Accepts Endpoints**: No
 

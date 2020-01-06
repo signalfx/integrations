@@ -4,7 +4,7 @@
 
 # collectd/protocols
 
-Monitor Type: `collectd/protocols` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/protocols))
+Monitor Type: `collectd/protocols` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/protocols))
 
 **Accepts Endpoints**: No
 

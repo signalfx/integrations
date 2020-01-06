@@ -4,7 +4,7 @@
 
 # prometheus/node
 
-Monitor Type: `prometheus/node` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/prometheus/node))
+Monitor Type: `prometheus/node` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/node))
 
 **Accepts Endpoints**: **Yes**
 

@@ -4,7 +4,7 @@
 
 # collectd/solr
 
-Monitor Type: `collectd/solr` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/solr))
+Monitor Type: `collectd/solr` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/solr))
 
 **Accepts Endpoints**: **Yes**
 

@@ -4,7 +4,7 @@
 
 # collectd/disk
 
-Monitor Type: `collectd/disk` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/collectd/disk))
+Monitor Type: `collectd/disk` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/disk))
 
 **Accepts Endpoints**: No
 

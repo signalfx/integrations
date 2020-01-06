@@ -4,7 +4,7 @@
 
 # kube-controller-manager
 
-Monitor Type: `kube-controller-manager` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/kubernetes/controllermanager))
+Monitor Type: `kube-controller-manager` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/controllermanager))
 
 **Accepts Endpoints**: **Yes**
 

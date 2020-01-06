@@ -4,7 +4,7 @@
 
 # kubernetes-proxy
 
-Monitor Type: `kubernetes-proxy` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/kubernetes/proxy))
+Monitor Type: `kubernetes-proxy` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/proxy))
 
 **Accepts Endpoints**: **Yes**
 

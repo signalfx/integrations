@@ -4,7 +4,7 @@
 
 # docker-container-stats
 
-Monitor Type: `docker-container-stats` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/docker))
+Monitor Type: `docker-container-stats` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/docker))
 
 **Accepts Endpoints**: No
 

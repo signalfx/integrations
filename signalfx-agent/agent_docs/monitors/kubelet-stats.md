@@ -4,7 +4,7 @@
 
 # kubelet-stats
 
-Monitor Type: `kubelet-stats` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/cadvisor))
+Monitor Type: `kubelet-stats` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/cadvisor))
 
 **Accepts Endpoints**: No
 

@@ -4,7 +4,7 @@
 
 # cpu
 
-Monitor Type: `cpu` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/cpu))
+Monitor Type: `cpu` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/cpu))
 
 **Accepts Endpoints**: No
 

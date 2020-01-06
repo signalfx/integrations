@@ -4,7 +4,7 @@
 
 # kubernetes-volumes
 
-Monitor Type: `kubernetes-volumes` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/kubernetes/volumes))
+Monitor Type: `kubernetes-volumes` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/volumes))
 
 **Accepts Endpoints**: No
 

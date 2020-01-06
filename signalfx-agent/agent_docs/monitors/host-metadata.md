@@ -4,7 +4,7 @@
 
 # host-metadata
 
-Monitor Type: `host-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/metadata/hostmetadata))
+Monitor Type: `host-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/metadata/hostmetadata))
 
 **Accepts Endpoints**: No
 
