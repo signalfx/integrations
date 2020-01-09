@@ -12,15 +12,12 @@ Monitor Type: `processlist` ([Source](https://github.com/signalfx/signalfx-agent
 
 ## Overview
 
-(Windows Only) This monitor reports processlist
-information for Windows Hosts.
-
-Sample YAML configuration:
-
-```yaml
-monitors:
- - type: processlist
-```
+This monitor reports the currently running processes for a host, analogous
+to how the `top` or `ps` command on Unix/Linux systems works.  The output
+format is a special base64-encoded event that gets processed by our backend
+and displayed under the Infrastructure view for a specific host.
+Historical process information is not retained on the backend, only the
+most recent version.
 
 
 ## Configuration

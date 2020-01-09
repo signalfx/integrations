@@ -114,6 +114,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [gitlab-unicorn](./monitors/gitlab-unicorn.md)
 - [gitlab-workhorse](./monitors/gitlab-workhorse.md)
 - [haproxy](./monitors/haproxy.md)
+- [heroku-metadata](./monitors/heroku-metadata.md)
 - [host-metadata](./monitors/host-metadata.md)
 - [internal-metrics](./monitors/internal-metrics.md)
 - [jaeger-grpc](./monitors/jaeger-grpc.md)
@@ -156,6 +157,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [trace-forwarder](./monitors/trace-forwarder.md)
 - [traefik](./monitors/traefik.md)
 - [vmem](./monitors/vmem.md)
+- [vsphere](./monitors/vsphere.md)
 - [windows-iis](./monitors/windows-iis.md)
 - [windows-legacy](./monitors/windows-legacy.md)
 
