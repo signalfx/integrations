@@ -11,10 +11,10 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. From within the SignalFx UI, the latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.4">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
+The SignalFx Smart Gateway is available as a single, statically-linked binary. From within the SignalFx UI, the latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.5">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.4 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.5 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -38,7 +38,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.4 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.5 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -48,7 +48,13 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 Note: To use the following download links, you must be viewing this content from within the SignalFx UI. Instructions for manually downloading a specific version of the Smart Gateway are shown [above](#installation).
 
-##### Latest Version: v2.1.4 (November 27, 2019)
+##### Latest Version: v2.1.5 (January 16, 2020)
+<a target="_blank" href="/#/smart-gateway/download/v2.1.5">Download Smart Gateway v2.1.5</a><br/>
+_SHA256: `99b47a4ed7fc9adf5badfc7e2316581709aed05818560a834b4fc2c2fc83e794`_
+
+* Log spans that are too large when debug logging is enabled
+
+##### v2.1.4 (November 27, 2019)
 
 <a target="_blank" href="/#/smart-gateway/download/v2.1.4">Download Smart Gateway v2.1.4</a><br/>
 _SHA256: `0e834342a8d1fa192e19a9c21df807dae87bbbf03d65f7013cdedf427bc9042e`_
