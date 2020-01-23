@@ -72,5 +72,14 @@ This monitor emits all metrics by default; however, **none are categorized as
  - ***`disk_time.write`*** (*cumulative*)<br>    (Linux Only) The average amount of time it took to do a write operation.
 The agent does not do any built-in filtering of metrics coming out of this
 monitor.
+## Dimensions
+
+The following dimensions may occur on metrics emitted by this monitor.  Some
+dimensions may be specific to certain metrics.
+
+| Name | Description |
+| ---  | ---         |
+| `disk` | The name of the disk that the metric describes |
+
 
 
