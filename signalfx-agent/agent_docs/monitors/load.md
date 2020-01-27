@@ -16,6 +16,9 @@ Monitors process load on the host. Process load is the average number of
 running or waiting processes over a certain time period (1, 5, and 15
 minutes).
 
+See http://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html
+for a good explanation of load on Linux.
+
 This monitor is only available on Linux.
 
 
@@ -34,7 +37,11 @@ monitors:  # All monitor config goes under this key
 Configuration](../monitor-config.html#common-configuration).**
 
 
-This monitor has no configuration options.
+| Config option | Required | Type | Description |
+| --- | --- | --- | --- |
+| `perCPU` | no | `bool` |  (**default:** `false`) |
+
+
 ## Metrics
 
 These are the metrics available for this monitor.
@@ -43,9 +50,9 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
- - ***`load.longterm`*** (*gauge*)<br>    Average CPU load per core over the last 15 minutes
- - ***`load.midterm`*** (*gauge*)<br>    Average CPU load per core over the last five minutes
- - ***`load.shortterm`*** (*gauge*)<br>    Average CPU load per core over the last one minute
+ - ***`load.longterm`*** (*gauge*)<br>    Average CPU load of the system over the last 15 minutes.  If the `perCPU` config option is `true`, this will be the average load per CPU.
+ - ***`load.midterm`*** (*gauge*)<br>    Average CPU load of the system over the last 5 minutes.  If the `perCPU` config option is `true`, this will be the average load per CPU.
+ - ***`load.shortterm`*** (*gauge*)<br>    Average CPU load of the system over the last minute.  If the `perCPU` config option is `true`, this will be the average load per CPU.
 
 ### Non-default metrics (version 4.7.0+)
 
