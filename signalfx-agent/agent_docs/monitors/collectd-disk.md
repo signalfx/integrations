@@ -17,6 +17,12 @@ physical disks and logical disks (partitions).
 
 See https://collectd.org/wiki/index.php/Plugin:Disk.
 
+**This monitor has been deprecated in favor of the `disk-io` monitor.
+Please migrate to that monitor as this collectd-based monitor will be
+removed in a future release of the agent.**  Note that the `disk-io`
+monitor has a different dimension (`disk` instead of `plugin_instance`) to
+specify the disk.
+
 
 ## Configuration
 

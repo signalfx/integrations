@@ -128,6 +128,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [kubernetes-proxy](./monitors/kubernetes-proxy.md)
 - [kubernetes-scheduler](./monitors/kubernetes-scheduler.md)
 - [kubernetes-volumes](./monitors/kubernetes-volumes.md)
+- [load](./monitors/load.md)
 - [logstash](./monitors/logstash.md)
 - [logstash-tcp](./monitors/logstash-tcp.md)
 - [memory](./monitors/memory.md)
