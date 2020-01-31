@@ -1,3 +1,5 @@
+# ![](./img/integration_heroku.png)  Heroku
+
 <!--- OVERVIEW --->
 ## <!-- -->
 
@@ -5,13 +7,21 @@
 You can use this document to learn how to integrate your Heroku environment with SignalFx.
 
 Based on the information you want to collect, there are two ways to integrate with SignalFx:
-  * To collect and send default Heroku metrics, see Collect default metrics with the Heroku SignalFx Collector.
-  * To collect and send properties from heroku-metadata, as well as configure other smart agent monitors, see Collect heroku-metadata with the SignalFx Smart Agent Heroku Buildpack.
+  * Option 1: Collect and send default Heroku metrics
+  * Option 2: Collect and send properties from heroku-metadata, as well as configure other smart agent monitors
 
 
 ## Installation
 
-### Collect default metrics with the Heroku SignalFx Collector
+Based on the information you want to collect, there are two ways to integrate with SignalFx. Review the appropriate option. 
+
+  * **To collect and send default Heroku metrics**, see <a href="#option1">Option 1: Collect default metrics with the Heroku SignalFx Collector</a>.
+  * **To collect and send properties from heroku-metadata**, as well as configure other smart agent monitors, see <a href="#option2">Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack</a>.
+  
+***  
+
+<a name="option1"></a>
+### Option 1: Collect default metrics with the Heroku SignalFx Collector
 
 You can use these instructions to collect and send default Heroku metrics to SignalFx. Specifically, you can collect:
  * Application metrics
@@ -58,6 +68,7 @@ heroku buildpacks:add heroku/go
 | `SFX_REPORTING_INTERVAL` | Configure a reporting interval for the collector in seconds. The default value is 10 seconds. | 20 | Optional |
 | `SFX_INTERNAL_METRICS`  | Indicate if you want to report internal metrics. By default, this is set to `true`. | `false` | Optional
 
+***
 
 **Step 2: Configure the Heroku app to enable runtime metrics and dyno** metadata
 
@@ -99,6 +110,7 @@ heroku drains:add "https://<SFX_COLLECTOR_APP_NAME>.herokuapp.com?app_name=<APP_
 
 In the above example, the log drain will add `dim1=key1` and `dim2=key2` to all datapoints emitted by the collector.  
 
+***
 
 **Step 3: Deploy the collector and send custom metrics**
 
@@ -144,6 +156,8 @@ When adding custom metrics, you can use the following keywords to construct cust
  * sfxdimension#
     * `dimension`
 
+***
+
 **Step 4: Review internal metrics**
 
 By default, these internal metrics are collected.
@@ -157,9 +171,10 @@ Review the following list of internal metrics:
 | `sfx_heroku.total_drain_requests` | Number of drain requests received by the collector                                                                                                        |
 | `sfx_heroku.tracked_metrics`      | Number of metrics collected per metric type. Metric types are determined by the dimension called `type` (i.e., `cumulative_counter`, `counter`, `gauge`). |
 
+***
 
-
-### Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack
+<a name="option2"></a>
+### Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack
 
 You can use this document to learn how to collect heroku-metadata, as well as configure other agent monitors.  
 
@@ -193,6 +208,8 @@ git commit --allow-empty -m "empty commit"
 ```
 git push heroku master
 ```
+
+***
 
 **Step 2: Configure the buildpack and app**
 
@@ -233,3 +250,5 @@ collectd:
 monitors:
   - type: heroku-metadata
 ```
+
+***
