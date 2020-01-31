@@ -3,8 +3,7 @@ browse_categories:
 - Containers
 code: https://github.com/signalfx/cadvisor-integration
 data_signature: metric_source:"kubernetes"
-description: Monitor Kubernetes using the SignalFx integration with cAdvisor and the
-  Kubernetes API.
+description: Quickly set up monitoring for your Kubernetes environment to view host-level metrics and the health of nodes, pods, and containers in built-in dashboards.
 display_name: Kubernetes
 featured: false
 in_app_categories:
