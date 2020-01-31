@@ -1,0 +1,11 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/siganlfx-agent
+description: Monitor Heroku using SignalFx
+display_name: Heroku
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/etcd/img/integrations_heroku%402x.png
+logo_small: /images/repos/etcd/img/integrations_heroku.png
+project_url: https://github.com/signalfx/integrations/tree/master/heroku
