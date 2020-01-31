@@ -15,12 +15,11 @@ Based on the information you want to collect, there are two ways to integrate wi
 
 Based on the information you want to collect, there are two ways to integrate with SignalFx. Review the appropriate option. 
 
-  * **To collect and send default Heroku metrics**, see <a href="#option1">Option 1: Collect default metrics with the Heroku SignalFx Collector</a>.
-  * **To collect and send properties from heroku-metadata**, as well as configure other smart agent monitors, see <a href="#option2">Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack</a>.
+  * To collect and send default Heroku metrics, navigate to **Option 1: Collect default metrics with the Heroku SignalFx Collector**.
+  * To collect and send properties from heroku-metadata, as well as configure other smart agent monitors, navigate to **Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack**.
   
 ***  
 
-<a name="option1"></a>
 ### Option 1: Collect default metrics with the Heroku SignalFx Collector
 
 You can use these instructions to collect and send default Heroku metrics to SignalFx. Specifically, you can collect:
@@ -173,7 +172,6 @@ Review the following list of internal metrics:
 
 ***
 
-<a name="option2"></a>
 ### Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack
 
 You can use this document to learn how to collect heroku-metadata, as well as configure other agent monitors.  
