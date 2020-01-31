@@ -6,7 +6,7 @@
 
 ### DESCRIPTION
 
-The Microsoft SQL Server monitor is a <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/signalfx-agent">SignalFx Smart Agent</a> monitor used to report metrics about Microsoft SQL Server.  The code from the monitor can be found <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/internal/monitors/telegraf/monitors/mssqlserver">here</a>.  Please refer to the SignalFx Smart Agent documentation for more information about this monitor.
+The Microsoft SQL Server monitor is a <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/signalfx-agent">SignalFx Smart Agent</a> monitor used to report metrics about Microsoft SQL Server.  The code from the monitor can be found <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/mssqlserver">here</a>.  Please refer to the SignalFx Smart Agent documentation for more information about this monitor.
 
 ### INSTALLATION
 
