@@ -1,8 +1,12 @@
 # ![](https://github.com/signalfx/integrations/blob/master/kubernetes/img/integrations_kubernetes.png) Kubernetes
 
+- [Description](#description)
+- [Installation](#installation)
+- [Features](#features)
+- [Troubleshooting](##troubleshooting)
 
-<!--- OVERVIEW --->
-## <!-- -->
+
+## Description
 
 
 SignalFx monitors applications, services, and infrastructure in your Kubernetes environment using the SignalFx Smart Agent for Kubernetes. By default, the Smart Agent for Kubernetes is packaged in a container for deployment as a DaemonSet on each node in your Kubernetes cluster. Install the SignalFx Smart Agent on all Linux-hosted Kubernetes nodes for which you want to collect metrics.
