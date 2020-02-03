@@ -1,7 +1,9 @@
 # ![](./img/integration_heroku.png)  Heroku
 
-<!--- OVERVIEW --->
-## <!-- -->
+- [Description](#description)
+- [Installation](#installation)
+
+## Description
 
 
 You can use this document to learn how to integrate your Heroku environment with SignalFx.
@@ -13,11 +15,11 @@ Based on the information you want to collect, there are two ways to integrate wi
 
 ## Installation
 
-Based on the information you want to collect, there are two ways to integrate with SignalFx. Review the appropriate option. 
+Based on the information you want to collect, there are two ways to integrate with SignalFx. Review the appropriate option.
 
   * To collect and send default Heroku metrics, navigate to **Option 1: Collect default metrics with the Heroku SignalFx Collector**.
   * To collect and send properties from heroku-metadata, as well as configure other smart agent monitors, navigate to **Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack**.
-  
+
 ***  
 
 ### Option 1: Collect default metrics with the Heroku SignalFx Collector
