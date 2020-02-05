@@ -3,10 +3,11 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Features](#features)
+- [Metrics](#metrics)
 - [Troubleshooting](##troubleshooting)
 
 
-## Description
+### DESCRIPTION
 
 
 SignalFx monitors applications, services, and infrastructure in your Kubernetes environment using the SignalFx Smart Agent for Kubernetes. By default, the Smart Agent for Kubernetes is packaged in a container for deployment as a DaemonSet on each node in your Kubernetes cluster. Install the SignalFx Smart Agent on all Linux-hosted Kubernetes nodes for which you want to collect metrics.
@@ -15,7 +16,7 @@ SignalFx monitors applications, services, and infrastructure in your Kubernetes 
 The Smart Agent is installed with a set of pre-configured monitors that collect metrics from the software and services it discovers on the nodes where it is installed. Metrics from the Smart Agent `kubernetes-cluster` and `kubelet-stats` monitors automatically populate built-in dashboards in SignalFx.
 
 
-## Installation
+### INSTALLATION
 
 
 **Requirements**
@@ -73,7 +74,7 @@ $ helm install --set signalFxAccessToken=<YOUR_ACCESS_TOKEN> --set clusterName=<
 Your installation is complete.
 
 
-## Features
+### FEATURES
 
 
 Use the Kubernetes integration to monitor the health and performance of your microservices, the Kubernetes orchestration services, and the infrastructure that they are running on.
@@ -82,13 +83,13 @@ Use the Kubernetes integration to monitor the health and performance of your mic
 - Discover and automatically configure the monitoring of supported services running in the containers
 - Use the built-in dashboards to view key metrics that are indicators of the health of your infrastructure and the orchestrator
 
-### Infrastructure Navigator
+#### Infrastructure Navigator
 
 The Infrastructure Navigator gives you an immediate, at-a-glance view of your Kubernetes overall architecture as well as nodes and pods, colored by critical health metrics.The Infrastructure Navigator also provides visibility all the way through the stack as you drill down and across elements of your environment, reflecting the fact that the infrastructure, the orchestrator, the containers and the apps are all related layers, not just individual system components.
 
   [<img src='./img/Navigator.png' width=200px>](./img/Navigator.png)
 
-### Built-in Dashboards
+#### Built-in Dashboards
 
 SignalFx provides built-in dashboards for Kubernetes. Examples are shown below.
 
@@ -100,11 +101,15 @@ SignalFx provides built-in dashboards for Kubernetes. Examples are shown below.
 
   [<img src='./img/Clusters.png' width=200px>](./img/Clusters.png)
 
-### Learning More
+#### Learning More
 
 After data is flowing, try the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-built-in.html#k8s-built-in">Kubernetes Built-in Content tour</a> to get familiar with the ways to visualize data from your nodes, pods, and network in the Infrastructure tab and built-in dashboards.
 
-## TROUBLESHOOTING
+### METRICS
+
+<!-- This section will be filled by metrics.yaml -->
+
+### TROUBLESHOOTING
 
 #### Where's My Data?
 
