@@ -64,5 +64,7 @@ toc_non_sam = [
         "fingerprints": {"starter": "### CONFIGURATION", "stopper": "### "},
     },
     {"name": "usage", "content": "README.md", "fingerprints": {"starter": "### USAGE", "stopper": "### "}},
+    {"name": "features", "content": "README.md", "fingerprints": {"starter": "### FEATURES", "stopper": "### "}},
     {"name": "metrics", "content": "README.md", "fingerprints": {"starter": "### METRICS", "stopper": "### "}},
+    {"name": "troubleshooting", "content": "README.md", "fingerprints": {"starter": "### TROUBLESHOOTING", "stopper": "### "}},
 ]
