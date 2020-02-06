@@ -54,7 +54,7 @@ Note: To use the following download links, you must be viewing this content from
 
 ##### Latest Version: v2.1.5 (January 16, 2020)
 <a target="_blank" href="/#/smart-gateway/download/v2.1.5">Download Smart Gateway v2.1.5</a><br/>
-_SHA256: `99b47a4ed7fc9adf5badfc7e2316581709aed05818560a834b4fc2c2fc83e794`_
+_SHA256: `3b48072e3cd61c72ea4bde587e41ca59e886c430403da413abf21f75fae9cb31`_
 
 * Log spans that are too large when debug logging is enabled
 
