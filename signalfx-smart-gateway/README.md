@@ -11,6 +11,8 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 ### INSTALLATION
 
+Note: This content appears on a SignalFx documentation page and on the Setup tab of the Smart Gateway tile in the SignalFx UI. The following link to download the current version works only if you are viewing these instructions on the Setup tab.  
+
 The SignalFx Smart Gateway is available as a single, statically-linked binary. From within the SignalFx UI, the latest version can be downloaded <a target="_blank" href="/#/smart-gateway/download/v2.1.5">here</a> from SignalFx. Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
