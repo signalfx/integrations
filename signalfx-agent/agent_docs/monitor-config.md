@@ -104,6 +104,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [dotnet](./monitors/dotnet.md)
 - [ecs-metadata](./monitors/ecs-metadata.md)
 - [elasticsearch](./monitors/elasticsearch.md)
+- [elasticsearch-query](./monitors/elasticsearch-query.md)
 - [etcd](./monitors/etcd.md)
 - [expvar](./monitors/expvar.md)
 - [filesystems](./monitors/filesystems.md)
