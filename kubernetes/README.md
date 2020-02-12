@@ -1,79 +1,7 @@
-# ![](https://github.com/signalfx/integrations/blob/master/kubernetes/img/integrations_kubernetes.png) Kubernetes
-
-- [Description](#description)
-- [Installation](#installation)
-- [Features](#features)
-- [Troubleshooting](##troubleshooting)
+# ![](./img/integrations_kubernetes.png) Kubernetes
 
 
-## Description
-
-
-SignalFx monitors applications, services, and infrastructure in your Kubernetes environment using the SignalFx Smart Agent for Kubernetes. By default, the Smart Agent for Kubernetes is packaged in a container for deployment as a DaemonSet on each node in your Kubernetes cluster. Install the SignalFx Smart Agent on all Linux-hosted Kubernetes nodes for which you want to collect metrics.
-
-
-The Smart Agent is installed with a set of pre-configured monitors that collect metrics from the software and services it discovers on the nodes where it is installed. Metrics from the Smart Agent `kubernetes-cluster` and `kubelet-stats` monitors automatically populate built-in dashboards in SignalFx.
-
-
-## Installation
-
-
-**Requirements**
-- Kubernetes 1.11 or higher
-- OpenShift 3.10 or higher
-- Linux-hosted Kubernetes nodes
-
-
-**Dependencies**
-- Install and configure the Helm client. For details on installing Helm, see <a target="_blank" href="https://helm.sh/docs/intro/install">here</a>.
-- Install the Tiller component on your Kubernetes cluster.
-
-
-**Installation**
-
-We recommend that you use Helm to install and configure the SignalFx Smart Agent in your Kubernetes environment. This section details how to do that. If you want to install the SignalFx Smart Agent on your Kubernetes cluster using kubectl, see <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-advanced-install.html">Kubernetes Advanced Installation</a>.
-
-#### Install the SignalFx Smart Agent on your Kubernetes cluster using Helm
-
-1. Add the SignalFx Helm chart repository to Helm.
-
-```
-$ helm repo add signalfx https://dl.signalfx.com/helm-repo
-```
-
-2. Ensure the latest state of the repository.
-
-```
-$ helm repo update
-```
-
-3. Install the Smart Agent chart with the necessary configuration values for the chart.
-
-```
-$ helm install --set signalFxAccessToken=<YOUR_ACCESS_TOKEN> --set clusterName=<YOUR_CLUSTER_NAME> --set agentVersion=<VERSION_NUMBER> --set signalFxRealm=<YOUR_SIGNALFX_REALM> signalfx/signalfx-agent
-```
-
-
-| Config Options | Required or Optional | Description |
-| ---------------------|------------------------------|-----------------|
-| `YOUR_ACCESS_TOKEN` | Required | The token used to authenticate your connection to SignalFx. |
-| `YOUR_CLUSTER_NAME` | Required (if not overriding the Smart Agent config template and providing your own cluster name) | A name that will be applied as the `kubernetes-cluster` dimension to any metric originating in this cluster. |
-| `VERSION_NUMBER` | Optional | Specify the version to install. By default, the latest released version will be installed. |
-| `SIGNALFX_REALM` | Required | Specify the name of the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-agent.html">realm</a> in which your organization is hosted. The realm name is shown on your profile page in the SignalFx web application. |
-
-
-Optionally, specify `agentConfig` if you want to provide your own agent configuration.
-
-If you are using OpenShift, set `kubernetesDistro` to `openshift` to get OpenShift-specific functionality.
-
-```
-$ helm install --set signalFxAccessToken=<YOUR_ACCESS_TOKEN> --set clusterName=<YOUR_CLUSTER_NAME> --set agentVersion=<VERSION_NUMBER> --set signalFxRealm=<YOUR_SIGNALFX_REALM> signalfx/signalfx-agent --set kubernetesDistro=openshift
-```
-
-Your installation is complete.
-
-
-## Features
+### USAGE
 
 
 Use the Kubernetes integration to monitor the health and performance of your microservices, the Kubernetes orchestration services, and the infrastructure that they are running on.
@@ -82,13 +10,13 @@ Use the Kubernetes integration to monitor the health and performance of your mic
 - Discover and automatically configure the monitoring of supported services running in the containers
 - Use the built-in dashboards to view key metrics that are indicators of the health of your infrastructure and the orchestrator
 
-### Infrastructure Navigator
+#### Infrastructure Navigator
 
 The Infrastructure Navigator gives you an immediate, at-a-glance view of your Kubernetes overall architecture as well as nodes and pods, colored by critical health metrics.The Infrastructure Navigator also provides visibility all the way through the stack as you drill down and across elements of your environment, reflecting the fact that the infrastructure, the orchestrator, the containers and the apps are all related layers, not just individual system components.
 
   [<img src='./img/Navigator.png' width=200px>](./img/Navigator.png)
 
-### Built-in Dashboards
+#### Built-in Dashboards
 
 SignalFx provides built-in dashboards for Kubernetes. Examples are shown below.
 
@@ -100,11 +28,11 @@ SignalFx provides built-in dashboards for Kubernetes. Examples are shown below.
 
   [<img src='./img/Clusters.png' width=200px>](./img/Clusters.png)
 
-### Learning More
+#### Learning More
 
 After data is flowing, try the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-built-in.html#k8s-built-in">Kubernetes Built-in Content tour</a> to get familiar with the ways to visualize data from your nodes, pods, and network in the Infrastructure tab and built-in dashboards.
 
-## TROUBLESHOOTING
+### TROUBLESHOOTING
 
 #### Where's My Data?
 
