@@ -63,7 +63,7 @@ currently support and documentation on the connection string:
 
   - `postgres`: https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters
   - `mysql`: https://github.com/go-sql-driver/mysql#dsn-data-source-name
-  - `mssql`: https://github.com/denisenkom/go-mssqldb#connection-parameters-and-dsn
+  - `sqlserver`: https://github.com/denisenkom/go-mssqldb#connection-parameters-and-dsn
 
 ## Parameterized Connection String
 
@@ -94,7 +94,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `host` | no | `string` |  |
 | `port` | no | `integer` |  (**default:** `0`) |
 | `params` | no | `map of strings` | Parameters to the connectionString that can be templated into that option using Go template syntax (e.g. `{{.key}}`). |
-| `dbDriver` | no | `string` | The database driver to use, valid values are `postgres` and `mysql`. |
+| `dbDriver` | no | `string` | The database driver to use, valid values are `postgres`, `mysql` and `sqlserver`. |
 | `connectionString` | no | `string` | A URL or simple option string used to connect to the database. If using PostgreSQL, [see the list of connection string params](https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters). |
 | `queries` | **yes** | `list of objects (see below)` | A list of queries to make against the database that are used to generate datapoints. |
 | `logQueries` | no | `bool` | If true, query results will be logged at the info level. (**default:** `false`) |
