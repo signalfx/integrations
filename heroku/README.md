@@ -10,7 +10,7 @@ You can use this document to learn how to integrate your Heroku environment with
 
 Based on the information you want to collect, there are two ways to integrate with SignalFx:
   * Option 1: Collect and send default Heroku metrics
-  * Option 2: Collect and send properties from heroku-metadata, as well as configure other smart agent monitors
+  * Option 2: Collect and send properties from heroku-metadata, as well as configure other Smart Agent monitors
 
 
 ## Installation
@@ -18,9 +18,9 @@ Based on the information you want to collect, there are two ways to integrate wi
 Based on the information you want to collect, there are two ways to integrate with SignalFx. Review the appropriate option.
 
   * To collect and send default Heroku metrics, navigate to **Option 1: Collect default metrics with the Heroku SignalFx Collector**.
-  * To collect and send properties from heroku-metadata, as well as configure other smart agent monitors, navigate to **Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack**.
+  * To collect and send properties from heroku-metadata, as well as configure other Smart Agent monitors, navigate to **Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack**.
 
-***  
+***
 
 ### Option 1: Collect default metrics with the Heroku SignalFx Collector
 
@@ -28,6 +28,7 @@ You can use these instructions to collect and send default Heroku metrics to Sig
  * Application metrics
  * Heroku Dyno metrics
  * Custom metric
+
 Before you begin, consider the following statements:
  * In SignalFx, application metrics and Heroku Dyno metrics will be prefixed by `heroku.`.
  * Metrics are collected and sent via a Golang Heroku app.
@@ -36,7 +37,7 @@ Before you begin, consider the following statements:
 
 ##### Install the Heroku SignalFx Collector
 
-**Step 1: Deplpoy the Heroku SignalFx Collector**
+**Step 1: Deploy the Heroku SignalFx Collector**
 
 1. Run the following command to clone the repo:
 
@@ -57,14 +58,14 @@ heroku create
 heroku buildpacks:add heroku/go
 ```
 
-4. Configure the collector with the follwing environment variables:
+4. Configure the collector with the following environment variables:
 
-| Envrionment Variable | Description   | Example | Required or optional |         
+| Environment Variable | Description   | Example | Required or optional |
 | -------------------- | ------------- | ------- | -------------------- |
 | `SFX_TOKEN`          | Enter the SignalFx access token for the organization that will receive the data. | $`somevalidtoken` | Required |
 | `SFX_INGEST_URL`     | Enter the Ingest URL to forward data to your SignalFx account. | `https://ingest.us0.signalfx.com` | Required if `SFX_REALM` is not set |
 | `SFX_REALM`          | Enter the SignalFx realm for your SignalFx account. | `us0`, `us1`, `us2`, `eu0`, `ap0` | Required if `SFX_INGEST_URL` is not set |
-| `SFX_METRICS_TO_EXCLUDE` | To have the collector ignore specific metrics, enter comma-seaprated metrics names. | `metric_name1,metric_name2,metric_name3` | Optional |
+| `SFX_METRICS_TO_EXCLUDE` | To have the collector ignore specific metrics, enter comma-separated metrics names. | `metric_name1,metric_name2,metric_name3` | Optional |
 | `SFX_DIMENSION_PAIRS_TO_EXCLUDE` | To have the collector ignore specific dimension key-value pairs, enter comma-separated dimension key-value pairs. | `key1=val1,key2=val2` | Optional |
 | `SFX_REPORTING_INTERVAL` | Configure a reporting interval for the collector in seconds. The default value is 10 seconds. | 20 | Optional |
 | `SFX_INTERNAL_METRICS`  | Indicate if you want to report internal metrics. By default, this is set to `true`. | `false` | Optional
@@ -73,7 +74,7 @@ heroku buildpacks:add heroku/go
 
 **Step 2: Configure the Heroku app to enable runtime metrics and dyno** metadata
 
-1. Run the following command to Configure the Heroku app to send log run-time metrics:  
+1. Run the following command to Configure the Heroku app to send log run-time metrics:
 
 ```
 heroku labs:enable log-runtime-metrics
@@ -109,7 +110,7 @@ heroku drains:add "https://<SFX_COLLECTOR_APP_NAME>.herokuapp.com?app_name=<APP_
 heroku drains:add "https://<SFX_COLLECTOR_APP_NAME>.herokuapp.com?app_name=<APP_NAME>&dim1=key1&dim2=key2"
 ```
 
-In the above example, the log drain will add `dim1=key1` and `dim2=key2` to all datapoints emitted by the collector.  
+In the above example, the log drain will add `dim1=key1` and `dim2=key2` to all datapoints emitted by the collector.
 
 ***
 
@@ -165,7 +166,7 @@ By default, these internal metrics are collected.
 
 To turn off collection for these internal metrics, set `SFX_INTERNAL_METRICS` to `false`.
 
-Review the following list of internal metrics:  
+Review the following list of internal metrics:
 
 | Metric Name                       | Description                                                                                                                                               |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -176,7 +177,7 @@ Review the following list of internal metrics:
 
 ### Option 2: Collect heroku-metadata metrics with the SignalFx Smart Agent Heroku Buildpack
 
-You can use this document to learn how to collect heroku-metadata, as well as configure other agent monitors.  
+You can use this document to learn how to collect heroku-metadata, as well as configure other agent monitors.
 
 At a high level, you will add a Heroku buildpack to your project, to run the SignalFx Smart Agent on a Dyno.
 
@@ -218,8 +219,8 @@ git push heroku master
 | Environment Variable   | Description   | Required or optional   |
 | ---------------------- | ------------- | ---------------------- |
 | `SFX_TOKEN`            | Enter your SignalFx access token. | Required |
-| `SFX_AGENT_VERSION`    | Enter your SignalFx agent version, which must be at least 4.18.0. | Required |  
-| `SFX_AGENT_LOG_FILE`   | Enter a location of the agent logs. | Optional, but if a location is not specified, then logs will go to `stdout`. |   
+| `SFX_AGENT_VERSION`    | Enter your SignalFx agent version, which must be at least 4.18.0. | Required |
+| `SFX_AGENT_LOG_FILE`   | Enter a location of the agent logs. | Optional, but if a location is not specified, then logs will go to `stdout`. |
 
 
 2. Run the following command to configure Heroku App to expose Dyno metadata:
@@ -250,5 +251,3 @@ collectd:
 monitors:
   - type: heroku-metadata
 ```
-
-
