@@ -1,0 +1,10 @@
+browse_categories:
+- Cloud infrastructure and services
+data_signature: vcenter:"*"
+description: Monitor vSphere using the Smart Agent
+display_name: vSphere
+featured: false
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/vsphere/img/vsphere-logo2x.png
+logo_small: /images/repos/vsphere/img/vsphere-logo.png
