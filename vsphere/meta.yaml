@@ -1,6 +1,6 @@
 browse_categories:
 - Cloud infrastructure and services
-data_signature: vcenter:"*"
+data_signature: _exists_:"vcenter"
 description: Monitor vSphere using the Smart Agent
 display_name: vSphere
 featured: false
