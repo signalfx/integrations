@@ -1,5 +1,4 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
-
 counter.cassandra.ClientRequest.RangeSlice.Latency.Count:
   brief: Count of range slice operations since server start
   custom: false
@@ -19,7 +18,6 @@ counter.cassandra.ClientRequest.RangeSlice.Latency.Count:
 
     - the server is experiencing hardware or software issues and may require maintenance.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.RangeSlice.Latency.Count
 
 counter.cassandra.ClientRequest.RangeSlice.Timeouts.Count:
@@ -40,7 +38,6 @@ counter.cassandra.ClientRequest.RangeSlice.Timeouts.Count:
 
     - the server is experiencing hardware or software issues and may require maintenance.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.RangeSlice.Timeouts.Count
 
 counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count:
@@ -57,7 +54,6 @@ counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count:
 
     any down nodes must be restarted, or removed from the cluster.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count
 
 counter.cassandra.ClientRequest.Read.Latency.Count:
@@ -65,7 +61,6 @@ counter.cassandra.ClientRequest.Read.Latency.Count:
   custom: false
   description: Count of read operations since server start
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Read.Latency.Count
 
 counter.cassandra.ClientRequest.Read.Timeouts.Count:
@@ -86,7 +81,6 @@ counter.cassandra.ClientRequest.Read.Timeouts.Count:
 
     - the server is experiencing hardware or software issues and may require maintenance.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Read.Timeouts.Count
 
 counter.cassandra.ClientRequest.Read.Unavailables.Count:
@@ -102,7 +96,6 @@ counter.cassandra.ClientRequest.Read.Unavailables.Count:
 
     restarted, or removed from the cluster.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Read.Unavailables.Count
 
 counter.cassandra.ClientRequest.Write.Latency.Count:
@@ -110,7 +103,6 @@ counter.cassandra.ClientRequest.Write.Latency.Count:
   custom: false
   description: Count of write operations since server start.
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Write.Latency.Count
 
 counter.cassandra.ClientRequest.Write.Timeouts.Count:
@@ -131,7 +123,6 @@ counter.cassandra.ClientRequest.Write.Timeouts.Count:
 
     - the server is experiencing hardware or software issues and may require maintenance.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Write.Timeouts.Count
 
 counter.cassandra.ClientRequest.Write.Unavailables.Count:
@@ -150,7 +141,6 @@ counter.cassandra.ClientRequest.Write.Unavailables.Count:
 
     cluster.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Write.Unavailables.Count
 
 counter.cassandra.Compaction.TotalCompactionsCompleted.Count:
@@ -162,7 +152,6 @@ counter.cassandra.Compaction.TotalCompactionsCompleted.Count:
 
     problems completing compaction operations.'
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: counter.cassandra.Compaction.TotalCompactionsCompleted.Count
 
 gauge.cassandra.ClientRequest.RangeSlice.Latency.50thPercentile:
@@ -176,7 +165,6 @@ gauge.cassandra.ClientRequest.RangeSlice.Latency.50thPercentile:
 
     or may be experiencing heavier than usual compaction load.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.RangeSlice.Latency.50thPercentile
 
 gauge.cassandra.ClientRequest.RangeSlice.Latency.99thPercentile:
@@ -191,7 +179,6 @@ gauge.cassandra.ClientRequest.RangeSlice.Latency.99thPercentile:
 
     experiencing heavier than usual compaction load.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.RangeSlice.Latency.99thPercentile
 
 gauge.cassandra.ClientRequest.RangeSlice.Latency.Max:
@@ -199,7 +186,6 @@ gauge.cassandra.ClientRequest.RangeSlice.Latency.Max:
   custom: true
   description: Maximum Cassandra range slice latency
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.RangeSlice.Latency.Max
 
 gauge.cassandra.ClientRequest.Read.Latency.50thPercentile:
@@ -213,7 +199,6 @@ gauge.cassandra.ClientRequest.Read.Latency.50thPercentile:
 
     clients or may be experiencing heavier than usual compaction load.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.Read.Latency.50thPercentile
 
 gauge.cassandra.ClientRequest.Read.Latency.99thPercentile:
@@ -227,7 +212,6 @@ gauge.cassandra.ClientRequest.Read.Latency.99thPercentile:
 
     may be experiencing heavier than usual compaction load.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.Read.Latency.99thPercentile
 
 gauge.cassandra.ClientRequest.Read.Latency.Max:
@@ -235,7 +219,6 @@ gauge.cassandra.ClientRequest.Read.Latency.Max:
   custom: false
   description: Maximum Cassandra read latency
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.Read.Latency.Max
 
 gauge.cassandra.ClientRequest.Write.Latency.50thPercentile:
@@ -249,7 +232,6 @@ gauge.cassandra.ClientRequest.Write.Latency.50thPercentile:
 
     clients or may be experiencing heavier than usual compaction load.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.Write.Latency.50thPercentile
 
 gauge.cassandra.ClientRequest.Write.Latency.99thPercentile:
@@ -263,7 +245,6 @@ gauge.cassandra.ClientRequest.Write.Latency.99thPercentile:
 
     clients or may be experiencing heavier than usual compaction load.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.Write.Latency.99thPercentile
 
 gauge.cassandra.ClientRequest.Write.Latency.Max:
@@ -271,7 +252,6 @@ gauge.cassandra.ClientRequest.Write.Latency.Max:
   custom: false
   description: Maximum Cassandra write latency
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.Write.Latency.Max
 
 gauge.cassandra.Compaction.PendingTasks.Value:
@@ -283,7 +263,6 @@ gauge.cassandra.Compaction.PendingTasks.Value:
 
     completing compaction operations.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.Compaction.PendingTasks.Value
 
 gauge.cassandra.Storage.Load.Count:
@@ -299,7 +278,6 @@ gauge.cassandra.Storage.Load.Count:
 
     - compaction behavior'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.Storage.Load.Count
 
 gauge.cassandra.Storage.TotalHints.Count:
@@ -314,7 +292,6 @@ gauge.cassandra.Storage.TotalHints.Count:
 
     issue between nodes in the cluster.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.Storage.TotalHints.Count
 
 gauge.cassandra.Storage.TotalHintsInProgress.Count:
@@ -328,7 +305,6 @@ gauge.cassandra.Storage.TotalHintsInProgress.Count:
 
     issue between nodes in the cluster.'
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.cassandra.Storage.TotalHintsInProgress.Count
 
 gauge.jvm.threads.count:
@@ -336,7 +312,6 @@ gauge.jvm.threads.count:
   custom: false
   description: Number of JVM threads
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.jvm.threads.count
 
 gauge.loaded_classes:
@@ -344,7 +319,6 @@ gauge.loaded_classes:
   custom: false
   description: Number of classes loaded in the JVM
   metric_type: gauge
-  monitor: collectd/cassandra
   title: gauge.loaded_classes
 
 invocations:
@@ -352,7 +326,6 @@ invocations:
   custom: false
   description: Total number of garbage collection events
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: invocations
 
 jmx_memory.committed:
@@ -360,7 +333,6 @@ jmx_memory.committed:
   custom: false
   description: Amount of memory guaranteed to be available in bytes
   metric_type: gauge
-  monitor: collectd/cassandra
   title: jmx_memory.committed
 
 jmx_memory.init:
@@ -368,7 +340,6 @@ jmx_memory.init:
   custom: false
   description: Amount of initial memory at startup in bytes
   metric_type: gauge
-  monitor: collectd/cassandra
   title: jmx_memory.init
 
 jmx_memory.max:
@@ -376,7 +347,6 @@ jmx_memory.max:
   custom: false
   description: Maximum amount of memory that can be used in bytes
   metric_type: gauge
-  monitor: collectd/cassandra
   title: jmx_memory.max
 
 jmx_memory.used:
@@ -384,7 +354,6 @@ jmx_memory.used:
   custom: false
   description: Current memory usage in bytes
   metric_type: gauge
-  monitor: collectd/cassandra
   title: jmx_memory.used
 
 total_time_in_ms.collection_time:
@@ -392,6 +361,5 @@ total_time_in_ms.collection_time:
   custom: false
   description: Amount of time spent garbage collecting in milliseconds
   metric_type: cumulative
-  monitor: collectd/cassandra
   title: total_time_in_ms.collection_time
 

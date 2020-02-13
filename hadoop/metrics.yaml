@@ -1,11 +1,9 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
-
 counter.hadoop.cluster.metrics.total_mb:
   brief: ''
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: collectd/hadoop
   title: counter.hadoop.cluster.metrics.total_mb
 
 counter.hadoop.cluster.metrics.total_nodes:
@@ -13,7 +11,6 @@ counter.hadoop.cluster.metrics.total_nodes:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: collectd/hadoop
   title: counter.hadoop.cluster.metrics.total_nodes
 
 counter.hadoop.cluster.metrics.total_virtual_cores:
@@ -21,7 +18,6 @@ counter.hadoop.cluster.metrics.total_virtual_cores:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: collectd/hadoop
   title: counter.hadoop.cluster.metrics.total_virtual_cores
 
 gauge.hadoop.cluster.metrics.active_nodes:
@@ -29,7 +25,6 @@ gauge.hadoop.cluster.metrics.active_nodes:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.active_nodes
 
 gauge.hadoop.cluster.metrics.allocated_mb:
@@ -37,7 +32,6 @@ gauge.hadoop.cluster.metrics.allocated_mb:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.allocated_mb
 
 gauge.hadoop.cluster.metrics.allocated_virtual_cores:
@@ -45,7 +39,6 @@ gauge.hadoop.cluster.metrics.allocated_virtual_cores:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.allocated_virtual_cores
 
 gauge.hadoop.cluster.metrics.apps_completed:
@@ -53,7 +46,6 @@ gauge.hadoop.cluster.metrics.apps_completed:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.apps_completed
 
 gauge.hadoop.cluster.metrics.apps_failed:
@@ -61,7 +53,6 @@ gauge.hadoop.cluster.metrics.apps_failed:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.apps_failed
 
 gauge.hadoop.cluster.metrics.apps_killed:
@@ -69,7 +60,6 @@ gauge.hadoop.cluster.metrics.apps_killed:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.apps_killed
 
 gauge.hadoop.cluster.metrics.apps_pending:
@@ -77,7 +67,6 @@ gauge.hadoop.cluster.metrics.apps_pending:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.apps_pending
 
 gauge.hadoop.cluster.metrics.apps_running:
@@ -85,7 +74,6 @@ gauge.hadoop.cluster.metrics.apps_running:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.apps_running
 
 gauge.hadoop.cluster.metrics.apps_submitted:
@@ -93,7 +81,6 @@ gauge.hadoop.cluster.metrics.apps_submitted:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.apps_submitted
 
 gauge.hadoop.cluster.metrics.available_mb:
@@ -101,7 +88,6 @@ gauge.hadoop.cluster.metrics.available_mb:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.available_mb
 
 gauge.hadoop.cluster.metrics.available_virtual_cores:
@@ -109,7 +95,6 @@ gauge.hadoop.cluster.metrics.available_virtual_cores:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.available_virtual_cores
 
 gauge.hadoop.cluster.metrics.containers_allocated:
@@ -117,7 +102,6 @@ gauge.hadoop.cluster.metrics.containers_allocated:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.containers_allocated
 
 gauge.hadoop.cluster.metrics.containers_pending:
@@ -125,7 +109,6 @@ gauge.hadoop.cluster.metrics.containers_pending:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.containers_pending
 
 gauge.hadoop.cluster.metrics.containers_reserved:
@@ -133,7 +116,6 @@ gauge.hadoop.cluster.metrics.containers_reserved:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.containers_reserved
 
 gauge.hadoop.cluster.metrics.decommissioned_nodes:
@@ -141,7 +123,6 @@ gauge.hadoop.cluster.metrics.decommissioned_nodes:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.decommissioned_nodes
 
 gauge.hadoop.cluster.metrics.lost_nodes:
@@ -149,7 +130,6 @@ gauge.hadoop.cluster.metrics.lost_nodes:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.lost_nodes
 
 gauge.hadoop.cluster.metrics.rebooted_nodes:
@@ -157,7 +137,6 @@ gauge.hadoop.cluster.metrics.rebooted_nodes:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.rebooted_nodes
 
 gauge.hadoop.cluster.metrics.reserved_mb:
@@ -165,7 +144,6 @@ gauge.hadoop.cluster.metrics.reserved_mb:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.reserved_mb
 
 gauge.hadoop.cluster.metrics.reserved_virtual_cores:
@@ -173,7 +151,6 @@ gauge.hadoop.cluster.metrics.reserved_virtual_cores:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.reserved_virtual_cores
 
 gauge.hadoop.cluster.metrics.total_mb:
@@ -181,7 +158,6 @@ gauge.hadoop.cluster.metrics.total_mb:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.total_mb
 
 gauge.hadoop.cluster.metrics.total_virtual_cores:
@@ -189,7 +165,6 @@ gauge.hadoop.cluster.metrics.total_virtual_cores:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.total_virtual_cores
 
 gauge.hadoop.cluster.metrics.unhealthy_nodes:
@@ -197,7 +172,6 @@ gauge.hadoop.cluster.metrics.unhealthy_nodes:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.cluster.metrics.unhealthy_nodes
 
 gauge.hadoop.mapreduce.job.elapsedTime:
@@ -205,7 +179,6 @@ gauge.hadoop.mapreduce.job.elapsedTime:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.mapreduce.job.elapsedTime
 
 gauge.hadoop.mapreduce.job.failedMapAttempts:
@@ -213,7 +186,6 @@ gauge.hadoop.mapreduce.job.failedMapAttempts:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.mapreduce.job.failedMapAttempts
 
 gauge.hadoop.mapreduce.job.failedReduceAttempts:
@@ -221,7 +193,6 @@ gauge.hadoop.mapreduce.job.failedReduceAttempts:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.mapreduce.job.failedReduceAttempts
 
 gauge.hadoop.mapreduce.job.mapsTotal:
@@ -229,7 +200,6 @@ gauge.hadoop.mapreduce.job.mapsTotal:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.mapreduce.job.mapsTotal
 
 gauge.hadoop.mapreduce.job.successfulMapAttempts:
@@ -237,7 +207,6 @@ gauge.hadoop.mapreduce.job.successfulMapAttempts:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.mapreduce.job.successfulMapAttempts
 
 gauge.hadoop.mapreduce.job.successfulReduceAttempts:
@@ -245,7 +214,6 @@ gauge.hadoop.mapreduce.job.successfulReduceAttempts:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.mapreduce.job.successfulReduceAttempts
 
 gauge.hadoop.resource.manager.apps.allocatedMB:
@@ -253,7 +221,6 @@ gauge.hadoop.resource.manager.apps.allocatedMB:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.allocatedMB
 
 gauge.hadoop.resource.manager.apps.allocatedVCores:
@@ -261,7 +228,6 @@ gauge.hadoop.resource.manager.apps.allocatedVCores:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.allocatedVCores
 
 gauge.hadoop.resource.manager.apps.clusterUsagePercentage:
@@ -269,7 +235,6 @@ gauge.hadoop.resource.manager.apps.clusterUsagePercentage:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.clusterUsagePercentage
 
 gauge.hadoop.resource.manager.apps.memorySeconds:
@@ -277,7 +242,6 @@ gauge.hadoop.resource.manager.apps.memorySeconds:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.memorySeconds
 
 gauge.hadoop.resource.manager.apps.priority:
@@ -285,7 +249,6 @@ gauge.hadoop.resource.manager.apps.priority:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.priority
 
 gauge.hadoop.resource.manager.apps.progress:
@@ -293,7 +256,6 @@ gauge.hadoop.resource.manager.apps.progress:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.progress
 
 gauge.hadoop.resource.manager.apps.queueUsagePercentage:
@@ -301,7 +263,6 @@ gauge.hadoop.resource.manager.apps.queueUsagePercentage:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.queueUsagePercentage
 
 gauge.hadoop.resource.manager.apps.runningContainers:
@@ -309,7 +270,6 @@ gauge.hadoop.resource.manager.apps.runningContainers:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.runningContainers
 
 gauge.hadoop.resource.manager.apps.vcoreSeconds:
@@ -317,7 +277,6 @@ gauge.hadoop.resource.manager.apps.vcoreSeconds:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.apps.vcoreSeconds
 
 gauge.hadoop.resource.manager.nodes.availMemoryMB:
@@ -325,7 +284,6 @@ gauge.hadoop.resource.manager.nodes.availMemoryMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.nodes.availMemoryMB
 
 gauge.hadoop.resource.manager.nodes.availableVirtualCores:
@@ -333,7 +291,6 @@ gauge.hadoop.resource.manager.nodes.availableVirtualCores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.nodes.availableVirtualCores
 
 gauge.hadoop.resource.manager.nodes.numContainers:
@@ -341,7 +298,6 @@ gauge.hadoop.resource.manager.nodes.numContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.nodes.numContainers
 
 gauge.hadoop.resource.manager.nodes.usedMemoryMB:
@@ -349,7 +305,6 @@ gauge.hadoop.resource.manager.nodes.usedMemoryMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.nodes.usedMemoryMB
 
 gauge.hadoop.resource.manager.nodes.usedVirtualCores:
@@ -357,7 +312,6 @@ gauge.hadoop.resource.manager.nodes.usedVirtualCores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.nodes.usedVirtualCores
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteCapacity:
@@ -365,7 +319,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteCapacity
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteMaxCapacity:
@@ -373,7 +326,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteMaxCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteMaxCapacity
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteUsedCapacity:
@@ -381,7 +333,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteUsedCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.absoluteUsedCapacity
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.allocatedContainers:
@@ -389,7 +340,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.allocatedContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.allocatedContainers
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.capacity:
@@ -397,7 +347,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.capacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.capacity
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.maxApplications:
@@ -405,7 +354,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.maxApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.maxApplications
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.maxApplicationsPerUser:
@@ -413,7 +361,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.maxApplicationsPerUser:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.maxApplicationsPerUser
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.maxCapacity:
@@ -421,7 +368,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.maxCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.maxCapacity
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.numActiveApplications:
@@ -429,7 +375,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.numActiveApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.numActiveApplications
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.numApplications:
@@ -437,7 +382,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.numApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.numApplications
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.numContainers:
@@ -445,7 +389,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.numContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.numContainers
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.numPendingApplications:
@@ -453,7 +396,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.numPendingApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.numPendingApplications
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.pendingContainers:
@@ -461,7 +403,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.pendingContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.pendingContainers
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.reservedContainers:
@@ -469,7 +410,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.reservedContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.reservedContainers
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.usedCapacity:
@@ -477,7 +417,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.usedCapacity:
   custom: false
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.usedCapacity
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.userLimit:
@@ -485,7 +424,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.userLimit:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.userLimit
 
 gauge.hadoop.resource.manager.scheduler.leaf.queue.userLimitFactor:
@@ -493,7 +431,6 @@ gauge.hadoop.resource.manager.scheduler.leaf.queue.userLimitFactor:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.leaf.queue.userLimitFactor
 
 gauge.hadoop.resource.manager.scheduler.root.queue.capacity:
@@ -501,7 +438,6 @@ gauge.hadoop.resource.manager.scheduler.root.queue.capacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.root.queue.capacity
 
 gauge.hadoop.resource.manager.scheduler.root.queue.maxCapacity:
@@ -509,7 +445,6 @@ gauge.hadoop.resource.manager.scheduler.root.queue.maxCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.root.queue.maxCapacity
 
 gauge.hadoop.resource.manager.scheduler.root.queue.usedCapacity:
@@ -517,7 +452,6 @@ gauge.hadoop.resource.manager.scheduler.root.queue.usedCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: gauge.hadoop.resource.manager.scheduler.root.queue.usedCapacity
 
 hadoop.cluster.metrics.active_nodes:
@@ -525,7 +459,6 @@ hadoop.cluster.metrics.active_nodes:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.active_nodes
 
 hadoop.cluster.metrics.allocated_mb:
@@ -533,7 +466,6 @@ hadoop.cluster.metrics.allocated_mb:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.allocated_mb
 
 hadoop.cluster.metrics.allocated_virtual_cores:
@@ -541,7 +473,6 @@ hadoop.cluster.metrics.allocated_virtual_cores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.allocated_virtual_cores
 
 hadoop.cluster.metrics.apps_completed:
@@ -549,7 +480,6 @@ hadoop.cluster.metrics.apps_completed:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.apps_completed
 
 hadoop.cluster.metrics.apps_failed:
@@ -557,7 +487,6 @@ hadoop.cluster.metrics.apps_failed:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.apps_failed
 
 hadoop.cluster.metrics.apps_killed:
@@ -565,7 +494,6 @@ hadoop.cluster.metrics.apps_killed:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.apps_killed
 
 hadoop.cluster.metrics.apps_pending:
@@ -573,7 +501,6 @@ hadoop.cluster.metrics.apps_pending:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.apps_pending
 
 hadoop.cluster.metrics.apps_running:
@@ -581,7 +508,6 @@ hadoop.cluster.metrics.apps_running:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.apps_running
 
 hadoop.cluster.metrics.apps_submitted:
@@ -589,7 +515,6 @@ hadoop.cluster.metrics.apps_submitted:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.apps_submitted
 
 hadoop.cluster.metrics.available_mb:
@@ -597,7 +522,6 @@ hadoop.cluster.metrics.available_mb:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.available_mb
 
 hadoop.cluster.metrics.available_virtual_cores:
@@ -605,7 +529,6 @@ hadoop.cluster.metrics.available_virtual_cores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.available_virtual_cores
 
 hadoop.cluster.metrics.containers_allocated:
@@ -613,7 +536,6 @@ hadoop.cluster.metrics.containers_allocated:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.containers_allocated
 
 hadoop.cluster.metrics.containers_pending:
@@ -621,7 +543,6 @@ hadoop.cluster.metrics.containers_pending:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.containers_pending
 
 hadoop.cluster.metrics.containers_reserved:
@@ -629,7 +550,6 @@ hadoop.cluster.metrics.containers_reserved:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.containers_reserved
 
 hadoop.cluster.metrics.decommissioned_nodes:
@@ -637,7 +557,6 @@ hadoop.cluster.metrics.decommissioned_nodes:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.decommissioned_nodes
 
 hadoop.cluster.metrics.lost_nodes:
@@ -645,7 +564,6 @@ hadoop.cluster.metrics.lost_nodes:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.lost_nodes
 
 hadoop.cluster.metrics.rebooted_nodes:
@@ -653,7 +571,6 @@ hadoop.cluster.metrics.rebooted_nodes:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.rebooted_nodes
 
 hadoop.cluster.metrics.reserved_mb:
@@ -661,7 +578,6 @@ hadoop.cluster.metrics.reserved_mb:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.reserved_mb
 
 hadoop.cluster.metrics.reserved_virtual_cores:
@@ -669,7 +585,6 @@ hadoop.cluster.metrics.reserved_virtual_cores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.reserved_virtual_cores
 
 hadoop.cluster.metrics.total_mb:
@@ -677,7 +592,6 @@ hadoop.cluster.metrics.total_mb:
   custom: true
   description: ''
   metric_type: counter
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.total_mb
 
 hadoop.cluster.metrics.total_nodes:
@@ -685,7 +599,6 @@ hadoop.cluster.metrics.total_nodes:
   custom: true
   description: ''
   metric_type: counter
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.total_nodes
 
 hadoop.cluster.metrics.total_virtual_cores:
@@ -693,7 +606,6 @@ hadoop.cluster.metrics.total_virtual_cores:
   custom: true
   description: ''
   metric_type: counter
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.total_virtual_cores
 
 hadoop.cluster.metrics.unhealthy_nodes:
@@ -701,7 +613,6 @@ hadoop.cluster.metrics.unhealthy_nodes:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.cluster.metrics.unhealthy_nodes
 
 hadoop.mapreduce.job.elapsedTime:
@@ -709,7 +620,6 @@ hadoop.mapreduce.job.elapsedTime:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.elapsedTime
 
 hadoop.mapreduce.job.failedMapAttempts:
@@ -717,7 +627,6 @@ hadoop.mapreduce.job.failedMapAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.failedMapAttempts
 
 hadoop.mapreduce.job.failedReduceAttempts:
@@ -725,7 +634,6 @@ hadoop.mapreduce.job.failedReduceAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.failedReduceAttempts
 
 hadoop.mapreduce.job.killedMapAttempts:
@@ -733,7 +641,6 @@ hadoop.mapreduce.job.killedMapAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.killedMapAttempts
 
 hadoop.mapreduce.job.killedReduceAttempts:
@@ -741,7 +648,6 @@ hadoop.mapreduce.job.killedReduceAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.killedReduceAttempts
 
 hadoop.mapreduce.job.mapsCompleted:
@@ -749,7 +655,6 @@ hadoop.mapreduce.job.mapsCompleted:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.mapsCompleted
 
 hadoop.mapreduce.job.mapsPending:
@@ -757,7 +662,6 @@ hadoop.mapreduce.job.mapsPending:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.mapsPending
 
 hadoop.mapreduce.job.mapsRunning:
@@ -765,7 +669,6 @@ hadoop.mapreduce.job.mapsRunning:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.mapsRunning
 
 hadoop.mapreduce.job.mapsTotal:
@@ -773,7 +676,6 @@ hadoop.mapreduce.job.mapsTotal:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.mapsTotal
 
 hadoop.mapreduce.job.newMapAttempts:
@@ -781,7 +683,6 @@ hadoop.mapreduce.job.newMapAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.newMapAttempts
 
 hadoop.mapreduce.job.newReduceAttempts:
@@ -789,7 +690,6 @@ hadoop.mapreduce.job.newReduceAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.newReduceAttempts
 
 hadoop.mapreduce.job.reducesCompleted:
@@ -797,7 +697,6 @@ hadoop.mapreduce.job.reducesCompleted:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.reducesCompleted
 
 hadoop.mapreduce.job.reducesPending:
@@ -805,7 +704,6 @@ hadoop.mapreduce.job.reducesPending:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.reducesPending
 
 hadoop.mapreduce.job.reducesTotal:
@@ -813,7 +711,6 @@ hadoop.mapreduce.job.reducesTotal:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.reducesTotal
 
 hadoop.mapreduce.job.runningMapAttempts:
@@ -821,7 +718,6 @@ hadoop.mapreduce.job.runningMapAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.runningMapAttempts
 
 hadoop.mapreduce.job.runningReduceAttempts:
@@ -829,7 +725,6 @@ hadoop.mapreduce.job.runningReduceAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.runningReduceAttempts
 
 hadoop.mapreduce.job.successfulMapAttempts:
@@ -837,7 +732,6 @@ hadoop.mapreduce.job.successfulMapAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.successfulMapAttempts
 
 hadoop.mapreduce.job.successfulReduceAttempts:
@@ -845,7 +739,6 @@ hadoop.mapreduce.job.successfulReduceAttempts:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.mapreduce.job.successfulReduceAttempts
 
 hadoop.resource.manager.apps.allocatedMB:
@@ -853,7 +746,6 @@ hadoop.resource.manager.apps.allocatedMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.allocatedMB
 
 hadoop.resource.manager.apps.allocatedVCores:
@@ -861,7 +753,6 @@ hadoop.resource.manager.apps.allocatedVCores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.allocatedVCores
 
 hadoop.resource.manager.apps.clusterUsagePercentage:
@@ -869,7 +760,6 @@ hadoop.resource.manager.apps.clusterUsagePercentage:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.clusterUsagePercentage
 
 hadoop.resource.manager.apps.memorySeconds:
@@ -877,7 +767,6 @@ hadoop.resource.manager.apps.memorySeconds:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.memorySeconds
 
 hadoop.resource.manager.apps.numAMContainerPreempted:
@@ -885,7 +774,6 @@ hadoop.resource.manager.apps.numAMContainerPreempted:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.numAMContainerPreempted
 
 hadoop.resource.manager.apps.numNonAMContainerPreempted:
@@ -893,7 +781,6 @@ hadoop.resource.manager.apps.numNonAMContainerPreempted:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.numNonAMContainerPreempted
 
 hadoop.resource.manager.apps.preemptedResourceMB:
@@ -901,7 +788,6 @@ hadoop.resource.manager.apps.preemptedResourceMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.preemptedResourceMB
 
 hadoop.resource.manager.apps.preemptedResourceVCores:
@@ -909,7 +795,6 @@ hadoop.resource.manager.apps.preemptedResourceVCores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.preemptedResourceVCores
 
 hadoop.resource.manager.apps.priority:
@@ -917,7 +802,6 @@ hadoop.resource.manager.apps.priority:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.priority
 
 hadoop.resource.manager.apps.progress:
@@ -925,7 +809,6 @@ hadoop.resource.manager.apps.progress:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.progress
 
 hadoop.resource.manager.apps.queueUsagePercentage:
@@ -933,7 +816,6 @@ hadoop.resource.manager.apps.queueUsagePercentage:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.queueUsagePercentage
 
 hadoop.resource.manager.apps.runningContainers:
@@ -941,7 +823,6 @@ hadoop.resource.manager.apps.runningContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.runningContainers
 
 hadoop.resource.manager.apps.vcoreSeconds:
@@ -949,7 +830,6 @@ hadoop.resource.manager.apps.vcoreSeconds:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.apps.vcoreSeconds
 
 hadoop.resource.manager.node.nodeCPUUsage:
@@ -957,7 +837,6 @@ hadoop.resource.manager.node.nodeCPUUsage:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.node.nodeCPUUsage
 
 hadoop.resource.manager.node.nodePhysicalMemoryMB:
@@ -965,7 +844,6 @@ hadoop.resource.manager.node.nodePhysicalMemoryMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.node.nodePhysicalMemoryMB
 
 hadoop.resource.manager.node.nodeVirtualMemoryMB:
@@ -973,7 +851,6 @@ hadoop.resource.manager.node.nodeVirtualMemoryMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.node.nodeVirtualMemoryMB
 
 hadoop.resource.manager.nodes.availMemoryMB:
@@ -981,7 +858,6 @@ hadoop.resource.manager.nodes.availMemoryMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.nodes.availMemoryMB
 
 hadoop.resource.manager.nodes.availableVirtualCores:
@@ -989,7 +865,6 @@ hadoop.resource.manager.nodes.availableVirtualCores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.nodes.availableVirtualCores
 
 hadoop.resource.manager.nodes.numContainers:
@@ -997,7 +872,6 @@ hadoop.resource.manager.nodes.numContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.nodes.numContainers
 
 hadoop.resource.manager.nodes.usedMemoryMB:
@@ -1005,7 +879,6 @@ hadoop.resource.manager.nodes.usedMemoryMB:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.nodes.usedMemoryMB
 
 hadoop.resource.manager.nodes.usedVirtualCores:
@@ -1013,7 +886,6 @@ hadoop.resource.manager.nodes.usedVirtualCores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.nodes.usedVirtualCores
 
 hadoop.resource.manager.scheduler.fifo.availNodeCapacity:
@@ -1021,7 +893,6 @@ hadoop.resource.manager.scheduler.fifo.availNodeCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.availNodeCapacity
 
 hadoop.resource.manager.scheduler.fifo.capacity:
@@ -1029,7 +900,6 @@ hadoop.resource.manager.scheduler.fifo.capacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.capacity
 
 hadoop.resource.manager.scheduler.fifo.maxQueueMemoryCapacity:
@@ -1037,7 +907,6 @@ hadoop.resource.manager.scheduler.fifo.maxQueueMemoryCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.maxQueueMemoryCapacity
 
 hadoop.resource.manager.scheduler.fifo.minQueueMemoryCapacity:
@@ -1045,7 +914,6 @@ hadoop.resource.manager.scheduler.fifo.minQueueMemoryCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.minQueueMemoryCapacity
 
 hadoop.resource.manager.scheduler.fifo.numContainers:
@@ -1053,7 +921,6 @@ hadoop.resource.manager.scheduler.fifo.numContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.numContainers
 
 hadoop.resource.manager.scheduler.fifo.numNodes:
@@ -1061,7 +928,6 @@ hadoop.resource.manager.scheduler.fifo.numNodes:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.numNodes
 
 hadoop.resource.manager.scheduler.fifo.totalNodeCapacity:
@@ -1069,7 +935,6 @@ hadoop.resource.manager.scheduler.fifo.totalNodeCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.totalNodeCapacity
 
 hadoop.resource.manager.scheduler.fifo.usedCapacity:
@@ -1077,7 +942,6 @@ hadoop.resource.manager.scheduler.fifo.usedCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.usedCapacity
 
 hadoop.resource.manager.scheduler.fifo.usedNodeCapacity:
@@ -1085,7 +949,6 @@ hadoop.resource.manager.scheduler.fifo.usedNodeCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.fifo.usedNodeCapacity
 
 hadoop.resource.manager.scheduler.leaf.queue.absoluteCapacity:
@@ -1093,7 +956,6 @@ hadoop.resource.manager.scheduler.leaf.queue.absoluteCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.absoluteCapacity
 
 hadoop.resource.manager.scheduler.leaf.queue.absoluteMaxCapacity:
@@ -1101,7 +963,6 @@ hadoop.resource.manager.scheduler.leaf.queue.absoluteMaxCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.absoluteMaxCapacity
 
 hadoop.resource.manager.scheduler.leaf.queue.absoluteUsedCapacity:
@@ -1109,7 +970,6 @@ hadoop.resource.manager.scheduler.leaf.queue.absoluteUsedCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.absoluteUsedCapacity
 
 hadoop.resource.manager.scheduler.leaf.queue.allocatedContainers:
@@ -1117,7 +977,6 @@ hadoop.resource.manager.scheduler.leaf.queue.allocatedContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.allocatedContainers
 
 hadoop.resource.manager.scheduler.leaf.queue.capacity:
@@ -1125,7 +984,6 @@ hadoop.resource.manager.scheduler.leaf.queue.capacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.capacity
 
 hadoop.resource.manager.scheduler.leaf.queue.maxActiveApplications:
@@ -1133,7 +991,6 @@ hadoop.resource.manager.scheduler.leaf.queue.maxActiveApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.maxActiveApplications
 
 hadoop.resource.manager.scheduler.leaf.queue.maxActiveApplicationsPerUser:
@@ -1141,7 +998,6 @@ hadoop.resource.manager.scheduler.leaf.queue.maxActiveApplicationsPerUser:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.maxActiveApplicationsPerUser
 
 hadoop.resource.manager.scheduler.leaf.queue.maxApplications:
@@ -1149,7 +1005,6 @@ hadoop.resource.manager.scheduler.leaf.queue.maxApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.maxApplications
 
 hadoop.resource.manager.scheduler.leaf.queue.maxApplicationsPerUser:
@@ -1157,7 +1012,6 @@ hadoop.resource.manager.scheduler.leaf.queue.maxApplicationsPerUser:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.maxApplicationsPerUser
 
 hadoop.resource.manager.scheduler.leaf.queue.maxCapacity:
@@ -1165,7 +1019,6 @@ hadoop.resource.manager.scheduler.leaf.queue.maxCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.maxCapacity
 
 hadoop.resource.manager.scheduler.leaf.queue.numActiveApplications:
@@ -1173,7 +1026,6 @@ hadoop.resource.manager.scheduler.leaf.queue.numActiveApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.numActiveApplications
 
 hadoop.resource.manager.scheduler.leaf.queue.numApplications:
@@ -1181,7 +1033,6 @@ hadoop.resource.manager.scheduler.leaf.queue.numApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.numApplications
 
 hadoop.resource.manager.scheduler.leaf.queue.numContainers:
@@ -1189,7 +1040,6 @@ hadoop.resource.manager.scheduler.leaf.queue.numContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.numContainers
 
 hadoop.resource.manager.scheduler.leaf.queue.numPendingApplications:
@@ -1197,7 +1047,6 @@ hadoop.resource.manager.scheduler.leaf.queue.numPendingApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.numPendingApplications
 
 hadoop.resource.manager.scheduler.leaf.queue.pendingContainers:
@@ -1205,7 +1054,6 @@ hadoop.resource.manager.scheduler.leaf.queue.pendingContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.pendingContainers
 
 hadoop.resource.manager.scheduler.leaf.queue.reservedContainers:
@@ -1213,7 +1061,6 @@ hadoop.resource.manager.scheduler.leaf.queue.reservedContainers:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.reservedContainers
 
 hadoop.resource.manager.scheduler.leaf.queue.usedCapacity:
@@ -1221,7 +1068,6 @@ hadoop.resource.manager.scheduler.leaf.queue.usedCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.usedCapacity
 
 hadoop.resource.manager.scheduler.leaf.queue.userLimit:
@@ -1229,7 +1075,6 @@ hadoop.resource.manager.scheduler.leaf.queue.userLimit:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.userLimit
 
 hadoop.resource.manager.scheduler.leaf.queue.userLimitFactor:
@@ -1237,7 +1082,6 @@ hadoop.resource.manager.scheduler.leaf.queue.userLimitFactor:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.leaf.queue.userLimitFactor
 
 hadoop.resource.manager.scheduler.queue.resource.memory:
@@ -1245,7 +1089,6 @@ hadoop.resource.manager.scheduler.queue.resource.memory:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.queue.resource.memory
 
 hadoop.resource.manager.scheduler.queue.resource.vCores:
@@ -1253,7 +1096,6 @@ hadoop.resource.manager.scheduler.queue.resource.vCores:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.queue.resource.vCores
 
 hadoop.resource.manager.scheduler.queue.users.numActiveApplications:
@@ -1261,7 +1103,6 @@ hadoop.resource.manager.scheduler.queue.users.numActiveApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.queue.users.numActiveApplications
 
 hadoop.resource.manager.scheduler.queue.users.numPendingApplications:
@@ -1269,7 +1110,6 @@ hadoop.resource.manager.scheduler.queue.users.numPendingApplications:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.queue.users.numPendingApplications
 
 hadoop.resource.manager.scheduler.root.queue.capacity:
@@ -1277,7 +1117,6 @@ hadoop.resource.manager.scheduler.root.queue.capacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.root.queue.capacity
 
 hadoop.resource.manager.scheduler.root.queue.maxCapacity:
@@ -1285,7 +1124,6 @@ hadoop.resource.manager.scheduler.root.queue.maxCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.root.queue.maxCapacity
 
 hadoop.resource.manager.scheduler.root.queue.usedCapacity:
@@ -1293,6 +1131,5 @@ hadoop.resource.manager.scheduler.root.queue.usedCapacity:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/hadoop
   title: hadoop.resource.manager.scheduler.root.queue.usedCapacity
 

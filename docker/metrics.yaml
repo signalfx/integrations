@@ -1,11 +1,9 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
-
 blkio.io_merged_recursive.async:
   brief: ''
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_merged_recursive.async
 
 blkio.io_merged_recursive.read:
@@ -13,7 +11,6 @@ blkio.io_merged_recursive.read:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_merged_recursive.read
 
 blkio.io_merged_recursive.sync:
@@ -21,7 +18,6 @@ blkio.io_merged_recursive.sync:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_merged_recursive.sync
 
 blkio.io_merged_recursive.total:
@@ -29,7 +25,6 @@ blkio.io_merged_recursive.total:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_merged_recursive.total
 
 blkio.io_merged_recursive.write:
@@ -37,7 +32,6 @@ blkio.io_merged_recursive.write:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_merged_recursive.write
 
 blkio.io_queue_recursive.async:
@@ -45,7 +39,6 @@ blkio.io_queue_recursive.async:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_queue_recursive.async
 
 blkio.io_queue_recursive.read:
@@ -53,7 +46,6 @@ blkio.io_queue_recursive.read:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_queue_recursive.read
 
 blkio.io_queue_recursive.sync:
@@ -61,7 +53,6 @@ blkio.io_queue_recursive.sync:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_queue_recursive.sync
 
 blkio.io_queue_recursive.total:
@@ -69,7 +60,6 @@ blkio.io_queue_recursive.total:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_queue_recursive.total
 
 blkio.io_queue_recursive.write:
@@ -77,7 +67,6 @@ blkio.io_queue_recursive.write:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_queue_recursive.write
 
 blkio.io_service_bytes_recursive.async:
@@ -85,7 +74,6 @@ blkio.io_service_bytes_recursive.async:
   custom: true
   description: Volume, in bytes, of asynchronous block I/O
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_bytes_recursive.async
 
 blkio.io_service_bytes_recursive.read:
@@ -93,7 +81,6 @@ blkio.io_service_bytes_recursive.read:
   custom: false
   description: Volume, in bytes, of reads from block devices
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_bytes_recursive.read
 
 blkio.io_service_bytes_recursive.sync:
@@ -101,7 +88,6 @@ blkio.io_service_bytes_recursive.sync:
   custom: true
   description: Volume, in bytes, of synchronous block I/O
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_bytes_recursive.sync
 
 blkio.io_service_bytes_recursive.total:
@@ -109,7 +95,6 @@ blkio.io_service_bytes_recursive.total:
   custom: true
   description: Total volume, in bytes, of all block I/O
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_bytes_recursive.total
 
 blkio.io_service_bytes_recursive.write:
@@ -117,7 +102,6 @@ blkio.io_service_bytes_recursive.write:
   custom: false
   description: Volume, in bytes, of writes to block devices
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_bytes_recursive.write
 
 blkio.io_service_time_recursive.async:
@@ -125,7 +109,6 @@ blkio.io_service_time_recursive.async:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_time_recursive.async
 
 blkio.io_service_time_recursive.read:
@@ -133,7 +116,6 @@ blkio.io_service_time_recursive.read:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_time_recursive.read
 
 blkio.io_service_time_recursive.sync:
@@ -141,7 +123,6 @@ blkio.io_service_time_recursive.sync:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_time_recursive.sync
 
 blkio.io_service_time_recursive.total:
@@ -149,7 +130,6 @@ blkio.io_service_time_recursive.total:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_time_recursive.total
 
 blkio.io_service_time_recursive.write:
@@ -157,7 +137,6 @@ blkio.io_service_time_recursive.write:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_service_time_recursive.write
 
 blkio.io_serviced_recursive.async:
@@ -165,7 +144,6 @@ blkio.io_serviced_recursive.async:
   custom: true
   description: Number of asynchronous block I/O requests
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_serviced_recursive.async
 
 blkio.io_serviced_recursive.read:
@@ -173,7 +151,6 @@ blkio.io_serviced_recursive.read:
   custom: true
   description: Number of reads requests from block devices
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_serviced_recursive.read
 
 blkio.io_serviced_recursive.sync:
@@ -181,7 +158,6 @@ blkio.io_serviced_recursive.sync:
   custom: true
   description: Number of synchronous block I/O requests
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_serviced_recursive.sync
 
 blkio.io_serviced_recursive.total:
@@ -189,7 +165,6 @@ blkio.io_serviced_recursive.total:
   custom: true
   description: Total number of block I/O requests
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_serviced_recursive.total
 
 blkio.io_serviced_recursive.write:
@@ -197,7 +172,6 @@ blkio.io_serviced_recursive.write:
   custom: true
   description: Number of write requests to block devices
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_serviced_recursive.write
 
 blkio.io_time_recursive.async:
@@ -205,7 +179,6 @@ blkio.io_time_recursive.async:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_time_recursive.async
 
 blkio.io_time_recursive.read:
@@ -213,7 +186,6 @@ blkio.io_time_recursive.read:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_time_recursive.read
 
 blkio.io_time_recursive.sync:
@@ -221,7 +193,6 @@ blkio.io_time_recursive.sync:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_time_recursive.sync
 
 blkio.io_time_recursive.total:
@@ -229,7 +200,6 @@ blkio.io_time_recursive.total:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_time_recursive.total
 
 blkio.io_time_recursive.write:
@@ -237,7 +207,6 @@ blkio.io_time_recursive.write:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_time_recursive.write
 
 blkio.io_wait_time_recursive.async:
@@ -245,7 +214,6 @@ blkio.io_wait_time_recursive.async:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_wait_time_recursive.async
 
 blkio.io_wait_time_recursive.read:
@@ -253,7 +221,6 @@ blkio.io_wait_time_recursive.read:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_wait_time_recursive.read
 
 blkio.io_wait_time_recursive.sync:
@@ -261,7 +228,6 @@ blkio.io_wait_time_recursive.sync:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_wait_time_recursive.sync
 
 blkio.io_wait_time_recursive.total:
@@ -269,7 +235,6 @@ blkio.io_wait_time_recursive.total:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_wait_time_recursive.total
 
 blkio.io_wait_time_recursive.write:
@@ -277,7 +242,6 @@ blkio.io_wait_time_recursive.write:
   custom: true
   description: ''
   metric_type: cumulative
-  monitor: docker-container-stats
   title: blkio.io_wait_time_recursive.write
 
 cpu.percent:
@@ -285,7 +249,6 @@ cpu.percent:
   custom: true
   description: Percentage of host CPU resources used by the container
   metric_type: gauge
-  monitor: docker-container-stats
   title: cpu.percent
 
 cpu.percpu.usage:
@@ -293,7 +256,6 @@ cpu.percpu.usage:
   custom: true
   description: Jiffies of CPU time spent by the container, per CPU core
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.percpu.usage
 
 cpu.throttling_data.periods:
@@ -301,7 +263,6 @@ cpu.throttling_data.periods:
   custom: true
   description: Number of periods
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.throttling_data.periods
 
 cpu.throttling_data.throttled_periods:
@@ -309,7 +270,6 @@ cpu.throttling_data.throttled_periods:
   custom: true
   description: Number of periods throttled
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.throttling_data.throttled_periods
 
 cpu.throttling_data.throttled_time:
@@ -317,7 +277,6 @@ cpu.throttling_data.throttled_time:
   custom: true
   description: Throttling time in nano seconds
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.throttling_data.throttled_time
 
 cpu.usage.kernelmode:
@@ -325,7 +284,6 @@ cpu.usage.kernelmode:
   custom: true
   description: Jiffies of CPU time spent in kernel mode by the container
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.usage.kernelmode
 
 cpu.usage.system:
@@ -333,7 +291,6 @@ cpu.usage.system:
   custom: false
   description: Jiffies of CPU time used by the system
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.usage.system
 
 cpu.usage.total:
@@ -341,7 +298,6 @@ cpu.usage.total:
   custom: false
   description: Jiffies of CPU time used by the container
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.usage.total
 
 cpu.usage.usermode:
@@ -349,7 +305,6 @@ cpu.usage.usermode:
   custom: true
   description: Jiffies of CPU time spent in user mode by the container
   metric_type: cumulative
-  monitor: docker-container-stats
   title: cpu.usage.usermode
 
 memory.percent:
@@ -359,7 +314,6 @@ memory.percent:
   description: Percent of memory (0-100) used by the container relative to its limit
     (excludes page cache usage)
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.percent
 
 memory.stats.active_anon:
@@ -368,7 +322,6 @@ memory.stats.active_anon:
   description: Amount of memory that has been identified as active by the kernel.
     Anonymous memory is memory that is not linked to disk pages.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.active_anon
 
 memory.stats.active_file:
@@ -377,7 +330,6 @@ memory.stats.active_file:
   description: Amount of active file cache memory. Cache memory = active_file + inactive_file
     + tmpfs
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.active_file
 
 memory.stats.cache:
@@ -388,7 +340,6 @@ memory.stats.cache:
     can be associated with a block on a block device. Also accounts for memory used
     by tmpfs.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.cache
 
 memory.stats.dirty:
@@ -396,7 +347,6 @@ memory.stats.dirty:
   custom: true
   description: The amount of memory waiting to get written to disk
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.dirty
 
 memory.stats.hierarchical_memory_limit:
@@ -404,7 +354,6 @@ memory.stats.hierarchical_memory_limit:
   custom: true
   description: The memory limit in place by the hierarchy cgroup
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.hierarchical_memory_limit
 
 memory.stats.hierarchical_memsw_limit:
@@ -412,7 +361,6 @@ memory.stats.hierarchical_memsw_limit:
   custom: true
   description: The memory+swap limit in place by the hierarchy cgroup
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.hierarchical_memsw_limit
 
 memory.stats.inactive_anon:
@@ -421,7 +369,6 @@ memory.stats.inactive_anon:
   description: Amount of memory that has been identified as inactive by the kernel.
     Anonymous memory is memory that is not linked to disk pages.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.inactive_anon
 
 memory.stats.inactive_file:
@@ -430,7 +377,6 @@ memory.stats.inactive_file:
   description: Amount of inactive file cache memory. Cache memory = active_file +
     inactive_file + tmpfs
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.inactive_file
 
 memory.stats.mapped_file:
@@ -440,7 +386,6 @@ memory.stats.mapped_file:
     \ group. It doesn\u2019t give you information about how much memory is used; it\
     \ rather tells you how it is used."
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.mapped_file
 
 memory.stats.pgfault:
@@ -451,7 +396,6 @@ memory.stats.pgfault:
     is nonexistent or protected. See https://docs.docker.com/config/containers/runmetrics
     for more info.
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.pgfault
 
 memory.stats.pgmajfault:
@@ -462,7 +406,6 @@ memory.stats.pgmajfault:
     which is nonexistent or protected. See https://docs.docker.com/config/containers/runmetrics
     for more info.
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.pgmajfault
 
 memory.stats.pgpgin:
@@ -472,7 +415,6 @@ memory.stats.pgpgin:
     each time a page is accounted as either mapped anon page(RSS) or cache page to
     the cgroup.
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.pgpgin
 
 memory.stats.pgpgout:
@@ -481,7 +423,6 @@ memory.stats.pgpgout:
   description: Number of uncharging events to the memory cgroup. Uncharging events
     happen each time a page is unaccounted from the cgroup.
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.pgpgout
 
 memory.stats.rss:
@@ -491,7 +432,6 @@ memory.stats.rss:
   description: "The amount of memory that doesn\u2019t correspond to anything on disk:\
     \ stacks, heaps, and anonymous memory maps."
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.rss
 
 memory.stats.rss_huge:
@@ -499,7 +439,6 @@ memory.stats.rss_huge:
   custom: true
   description: Amount of memory due to anonymous transparent hugepages.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.rss_huge
 
 memory.stats.shmem:
@@ -509,7 +448,6 @@ memory.stats.shmem:
   description: Amount of [Shared Memory](https://www.kernel.org/doc/gorman/html/understand/understand015.html)
     used by the container, in bytes.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.shmem
 
 memory.stats.swap:
@@ -517,7 +455,6 @@ memory.stats.swap:
   custom: true
   description: Bytes of swap memory used by container
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.swap
 
 memory.stats.total_active_anon:
@@ -526,7 +463,6 @@ memory.stats.total_active_anon:
   description: Total amount of memory that has been identified as active by the kernel.
     Anonymous memory is memory that is not linked to disk pages.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_active_anon
 
 memory.stats.total_active_file:
@@ -535,7 +471,6 @@ memory.stats.total_active_file:
   description: Total amount of active file cache memory. Cache memory = active_file
     + inactive_file + tmpfs
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_active_file
 
 memory.stats.total_cache:
@@ -546,7 +481,6 @@ memory.stats.total_cache:
     that can be associated with a block on a block device. Also accounts for memory
     used by tmpfs.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_cache
 
 memory.stats.total_dirty:
@@ -554,7 +488,6 @@ memory.stats.total_dirty:
   custom: true
   description: Total amount of memory waiting to get written to disk
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_dirty
 
 memory.stats.total_inactive_anon:
@@ -563,7 +496,6 @@ memory.stats.total_inactive_anon:
   description: Total amount of memory that has been identified as inactive by the
     kernel. Anonymous memory is memory that is not linked to disk pages.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_inactive_anon
 
 memory.stats.total_inactive_file:
@@ -572,7 +504,6 @@ memory.stats.total_inactive_file:
   description: Total amount of inactive file cache memory. Cache memory = active_file
     + inactive_file + tmpfs
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_inactive_file
 
 memory.stats.total_mapped_file:
@@ -582,7 +513,6 @@ memory.stats.total_mapped_file:
     \ It doesn\u2019t give you information about how much memory is used; it rather\
     \ tells you how it is used."
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_mapped_file
 
 memory.stats.total_pgfault:
@@ -590,7 +520,6 @@ memory.stats.total_pgfault:
   custom: true
   description: Total number of page faults
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.total_pgfault
 
 memory.stats.total_pgmajfault:
@@ -598,7 +527,6 @@ memory.stats.total_pgmajfault:
   custom: true
   description: Total number of major page faults
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.total_pgmajfault
 
 memory.stats.total_pgpgin:
@@ -606,7 +534,6 @@ memory.stats.total_pgpgin:
   custom: true
   description: Total number of charging events
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.total_pgpgin
 
 memory.stats.total_pgpgout:
@@ -614,7 +541,6 @@ memory.stats.total_pgpgout:
   custom: true
   description: Total number of uncharging events
   metric_type: cumulative
-  monitor: docker-container-stats
   title: memory.stats.total_pgpgout
 
 memory.stats.total_rss:
@@ -624,7 +550,6 @@ memory.stats.total_rss:
   description: "Total amount of memory that doesn\u2019t correspond to anything on\
     \ disk: stacks, heaps, and anonymous memory maps."
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_rss
 
 memory.stats.total_rss_huge:
@@ -632,7 +557,6 @@ memory.stats.total_rss_huge:
   custom: true
   description: Total amount of memory due to anonymous transparent hugepages.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_rss_huge
 
 memory.stats.total_shmem:
@@ -642,7 +566,6 @@ memory.stats.total_shmem:
   description: Available amount of [Shared Memory](https://www.kernel.org/doc/gorman/html/understand/understand015.html)
     used by the container, in bytes.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_shmem
 
 memory.stats.total_swap:
@@ -650,7 +573,6 @@ memory.stats.total_swap:
   custom: true
   description: Total amount of swap memory available to this container
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_swap
 
 memory.stats.total_unevictable:
@@ -658,7 +580,6 @@ memory.stats.total_unevictable:
   custom: true
   description: Total amount of memory that can not be reclaimed
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_unevictable
 
 memory.stats.total_writeback:
@@ -668,7 +589,6 @@ memory.stats.total_writeback:
   description: Total amount of memory from file/anon cache that are queued for syncing
     to the disk
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.total_writeback
 
 memory.stats.unevictable:
@@ -676,7 +596,6 @@ memory.stats.unevictable:
   custom: true
   description: The amount of memory that cannot be reclaimed.
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.unevictable
 
 memory.stats.writeback:
@@ -686,7 +605,6 @@ memory.stats.writeback:
   description: The amount of memory from file/anon cache that are queued for syncing
     to the disk
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.stats.writeback
 
 memory.usage.limit:
@@ -694,7 +612,6 @@ memory.usage.limit:
   custom: false
   description: Memory usage limit of the container, in bytes
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.usage.limit
 
 memory.usage.max:
@@ -702,23 +619,13 @@ memory.usage.max:
   custom: true
   description: Maximum measured memory usage of the container, in bytes
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.usage.max
 
 memory.usage.total:
   brief: Bytes of memory used by the container
   custom: false
-  description: 'Bytes of memory used by the container. Note that this **includes the
-
-    buffer cache** attributed to the process by the kernel from files that
-
-    have been read by processes in the container.  If you don''t want to
-
-    count that when monitoring containers, enable the metric
-
-    `memory.stats.total_cache` and subtract that metric from this one.'
+  description: Bytes of memory used by the container
   metric_type: gauge
-  monitor: docker-container-stats
   title: memory.usage.total
 
 network.usage.rx_bytes:
@@ -726,7 +633,6 @@ network.usage.rx_bytes:
   custom: false
   description: Bytes received by the container via its network interface
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.rx_bytes
 
 network.usage.rx_dropped:
@@ -734,7 +640,6 @@ network.usage.rx_dropped:
   custom: true
   description: Number of inbound network packets dropped by the container
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.rx_dropped
 
 network.usage.rx_errors:
@@ -742,7 +647,6 @@ network.usage.rx_errors:
   custom: true
   description: Errors receiving network packets
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.rx_errors
 
 network.usage.rx_packets:
@@ -750,7 +654,6 @@ network.usage.rx_packets:
   custom: true
   description: Network packets received by the container via its network interface
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.rx_packets
 
 network.usage.tx_bytes:
@@ -758,7 +661,6 @@ network.usage.tx_bytes:
   custom: false
   description: Bytes sent by the container via its network interface
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.tx_bytes
 
 network.usage.tx_dropped:
@@ -766,7 +668,6 @@ network.usage.tx_dropped:
   custom: true
   description: Number of outbound network packets dropped by the container
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.tx_dropped
 
 network.usage.tx_errors:
@@ -774,7 +675,6 @@ network.usage.tx_errors:
   custom: true
   description: Errors sending network packets
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.tx_errors
 
 network.usage.tx_packets:
@@ -782,6 +682,5 @@ network.usage.tx_packets:
   custom: true
   description: Network packets sent by the container via its network interface
   metric_type: cumulative
-  monitor: docker-container-stats
   title: network.usage.tx_packets
 

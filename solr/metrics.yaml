@@ -1,11 +1,9 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
-
 counter.solr.http_2xx_responses:
   brief: Total number of 2xx http responses
   custom: false
   description: Total number of 2xx http responses
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.http_2xx_responses
 
 counter.solr.http_4xx_responses:
@@ -13,7 +11,6 @@ counter.solr.http_4xx_responses:
   custom: false
   description: Total number of 4xx http responses
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.http_4xx_responses
 
 counter.solr.http_5xx_responses:
@@ -21,7 +18,6 @@ counter.solr.http_5xx_responses:
   custom: false
   description: Total number of 5xx http responses
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.http_5xx_responses
 
 counter.solr.http_requests:
@@ -29,7 +25,6 @@ counter.solr.http_requests:
   custom: false
   description: Total number of http requests
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.http_requests
 
 counter.solr.jvm_classes_loaded:
@@ -37,7 +32,6 @@ counter.solr.jvm_classes_loaded:
   custom: true
   description: Number of JVM classes loaded
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.jvm_classes_loaded
 
 counter.solr.node_collections_requests:
@@ -45,7 +39,6 @@ counter.solr.node_collections_requests:
   custom: false
   description: Number of collection level requets to Solr node
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.node_collections_requests
 
 counter.solr.node_cores_requests:
@@ -53,7 +46,6 @@ counter.solr.node_cores_requests:
   custom: false
   description: Number of core level requets to Solr node
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.node_cores_requests
 
 counter.solr.node_metric_request_count:
@@ -61,7 +53,6 @@ counter.solr.node_metric_request_count:
   custom: true
   description: Number of metric requests
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.node_metric_request_count
 
 counter.solr.node_metrics_requests:
@@ -69,7 +60,6 @@ counter.solr.node_metrics_requests:
   custom: false
   description: Number of metrics level requets to Solr node
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.node_metrics_requests
 
 counter.solr.node_zookeeper_requests:
@@ -77,7 +67,6 @@ counter.solr.node_zookeeper_requests:
   custom: false
   description: Number of zookeeper level requets to Solr node
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.node_zookeeper_requests
 
 counter.solr.openFileDescriptorCount:
@@ -85,7 +74,6 @@ counter.solr.openFileDescriptorCount:
   custom: true
   description: Number of open file descriptors
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.openFileDescriptorCount
 
 counter.solr.replication_handler_requests:
@@ -93,7 +81,6 @@ counter.solr.replication_handler_requests:
   custom: true
   description: Number of replication handler requets
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.replication_handler_requests
 
 counter.solr.search_query_requests:
@@ -101,7 +88,6 @@ counter.solr.search_query_requests:
   custom: false
   description: Number of search query requests
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.search_query_requests
 
 counter.solr.update_handler_requests:
@@ -109,7 +95,6 @@ counter.solr.update_handler_requests:
   custom: false
   description: Number of update handler requets
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.update_handler_requests
 
 counter.solr.zookeeper_errors:
@@ -117,7 +102,6 @@ counter.solr.zookeeper_errors:
   custom: true
   description: Number of failures/error at Zookeeper
   metric_type: counter
-  monitor: collectd/solr
   title: counter.solr.zookeeper_errors
 
 gauge.solr.core_deleted_docs:
@@ -125,7 +109,6 @@ gauge.solr.core_deleted_docs:
   custom: false
   description: Number of deleted docs in Solr core
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.core_deleted_docs
 
 gauge.solr.core_index_size:
@@ -133,7 +116,6 @@ gauge.solr.core_index_size:
   custom: false
   description: Size of a core index
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.core_index_size
 
 gauge.solr.core_max_docs:
@@ -141,7 +123,6 @@ gauge.solr.core_max_docs:
   custom: false
   description: Total number of docs in Solr core
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.core_max_docs
 
 gauge.solr.core_num_docs:
@@ -149,7 +130,6 @@ gauge.solr.core_num_docs:
   custom: false
   description: Total number of indexed docs in Solr core
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.core_num_docs
 
 gauge.solr.core_totalspace:
@@ -157,7 +137,6 @@ gauge.solr.core_totalspace:
   custom: false
   description: Total space allocated for core
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.core_totalspace
 
 gauge.solr.core_usablespace:
@@ -165,7 +144,6 @@ gauge.solr.core_usablespace:
   custom: false
   description: Usable space available in core
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.core_usablespace
 
 gauge.solr.document_cache_cumulative_hitratio:
@@ -173,7 +151,6 @@ gauge.solr.document_cache_cumulative_hitratio:
   custom: false
   description: Cummulative hit ration of document cache
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.document_cache_cumulative_hitratio
 
 gauge.solr.field_value_cache_cumulative_hitratio:
@@ -181,7 +158,6 @@ gauge.solr.field_value_cache_cumulative_hitratio:
   custom: false
   description: Cummulative hit ration of filed value cache
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.field_value_cache_cumulative_hitratio
 
 gauge.solr.http_active_requests:
@@ -189,7 +165,6 @@ gauge.solr.http_active_requests:
   custom: true
   description: Number of http active requests
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.http_active_requests
 
 gauge.solr.jetty_get_request_latency:
@@ -197,7 +172,6 @@ gauge.solr.jetty_get_request_latency:
   custom: true
   description: Time to process http get request
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jetty_get_request_latency
 
 gauge.solr.jetty_post_request_latency:
@@ -205,7 +179,6 @@ gauge.solr.jetty_post_request_latency:
   custom: true
   description: Time to process http post request
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jetty_post_request_latency
 
 gauge.solr.jetty_request_latency:
@@ -213,7 +186,6 @@ gauge.solr.jetty_request_latency:
   custom: false
   description: Http request response time
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jetty_request_latency
 
 gauge.solr.jvm_gc_cms_count:
@@ -221,7 +193,6 @@ gauge.solr.jvm_gc_cms_count:
   custom: false
   description: JVM Garbage Collector - CMS invocation count
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_gc_cms_count
 
 gauge.solr.jvm_gc_cms_time:
@@ -229,7 +200,6 @@ gauge.solr.jvm_gc_cms_time:
   custom: false
   description: JVM Garbage Collector - CMS prcoess time
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_gc_cms_time
 
 gauge.solr.jvm_gc_parnew_count:
@@ -237,7 +207,6 @@ gauge.solr.jvm_gc_parnew_count:
   custom: false
   description: JVM Garbage Collector - Parnew invocation count
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_gc_parnew_count
 
 gauge.solr.jvm_gc_parnew_time:
@@ -245,7 +214,6 @@ gauge.solr.jvm_gc_parnew_time:
   custom: false
   description: JVM Garbage Collector - Parnew process time
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_gc_parnew_time
 
 gauge.solr.jvm_heap_usage:
@@ -253,7 +221,6 @@ gauge.solr.jvm_heap_usage:
   custom: false
   description: JVM Heap usage
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_heap_usage
 
 gauge.solr.jvm_mapped_memory_capacity:
@@ -261,7 +228,6 @@ gauge.solr.jvm_mapped_memory_capacity:
   custom: true
   description: Total JVM mapped memory capacity
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_mapped_memory_capacity
 
 gauge.solr.jvm_mapped_memory_used:
@@ -269,7 +235,6 @@ gauge.solr.jvm_mapped_memory_used:
   custom: true
   description: Total JVM mapped memory used
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_mapped_memory_used
 
 gauge.solr.jvm_memory_pools_Code-Cache_usage:
@@ -277,7 +242,6 @@ gauge.solr.jvm_memory_pools_Code-Cache_usage:
   custom: false
   description: JVM memory pools - PCode Cache usage
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_memory_pools_Code-Cache_usage
 
 gauge.solr.jvm_memory_pools_Metaspace_usage:
@@ -285,7 +249,6 @@ gauge.solr.jvm_memory_pools_Metaspace_usage:
   custom: false
   description: JVM memory pools - Metaspace usage
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_memory_pools_Metaspace_usage
 
 gauge.solr.jvm_memory_pools_Par-Eden-Space_usage:
@@ -293,7 +256,6 @@ gauge.solr.jvm_memory_pools_Par-Eden-Space_usage:
   custom: false
   description: JVM memory pools - Par Eden space usage
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_memory_pools_Par-Eden-Space_usage
 
 gauge.solr.jvm_memory_pools_Par-Survivor-Space_usage:
@@ -301,7 +263,6 @@ gauge.solr.jvm_memory_pools_Par-Survivor-Space_usage:
   custom: false
   description: JVM memory pools - Par Survivor space usage
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_memory_pools_Par-Survivor-Space_usage
 
 gauge.solr.jvm_total_memory:
@@ -309,7 +270,6 @@ gauge.solr.jvm_total_memory:
   custom: false
   description: JVM total memory allocated
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_total_memory
 
 gauge.solr.jvm_total_memory_used:
@@ -317,7 +277,6 @@ gauge.solr.jvm_total_memory_used:
   custom: false
   description: JVM memory used
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.jvm_total_memory_used
 
 gauge.solr.node_metric_request_time:
@@ -325,7 +284,6 @@ gauge.solr.node_metric_request_time:
   custom: true
   description: Time to process a metric request
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.node_metric_request_time
 
 gauge.solr.query_result_cache_cumulative_hitratio:
@@ -333,7 +291,6 @@ gauge.solr.query_result_cache_cumulative_hitratio:
   custom: false
   description: Cummulative hit ration of query cache
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.query_result_cache_cumulative_hitratio
 
 gauge.solr.replication_handler_response:
@@ -341,7 +298,6 @@ gauge.solr.replication_handler_response:
   custom: true
   description: Resplication handler response time
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.replication_handler_response
 
 gauge.solr.search_query_response:
@@ -349,7 +305,6 @@ gauge.solr.search_query_response:
   custom: false
   description: Search query response time
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.search_query_response
 
 gauge.solr.searcher_warmup:
@@ -357,7 +312,6 @@ gauge.solr.searcher_warmup:
   custom: false
   description: Time to new searcher to warm up
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.searcher_warmup
 
 gauge.solr.shard_cumulative_docs:
@@ -365,7 +319,6 @@ gauge.solr.shard_cumulative_docs:
   custom: true
   description: ''
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.shard_cumulative_docs
 
 gauge.solr.update_request_handler_response:
@@ -373,7 +326,6 @@ gauge.solr.update_request_handler_response:
   custom: false
   description: Update request handler response time
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.update_request_handler_response
 
 gauge.solr.zookeeper_request_time:
@@ -381,6 +333,5 @@ gauge.solr.zookeeper_request_time:
   custom: true
   description: Time to process a request at zookeeper
   metric_type: gauge
-  monitor: collectd/solr
   title: gauge.solr.zookeeper_request_time
 
