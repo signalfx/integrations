@@ -159,6 +159,23 @@ and defaults, which are not possible with the `${}` syntax.
 The env var remote config source does not pick up changes to envvars that
 happen after the initial source resolution.
 
+## JSONPath
+
+You can further process the remote config values by using the `jsonPath: "<json
+path expression>"` option on the remote config `#from` object.  This will
+treat each of the values that the path resolves to as JSON and will pull out
+the value(s) expressed by the JSON Path expression.  For more information on
+JSONPath syntax, see https://goessner.net/articles/JsonPath/.
+
+For example, if you had the environment variable `SYSTEM_INFO` with the value
+`{"host": "foobar.com", "os": "linux", "env": "prod1"}` and wanted to set a
+global dimension on the agent with the value of the `env` key, you could use the
+following agent config:
+
+```yaml
+hostname: {"#from": "env:SYSTEM_INFO", jsonPath: "$.env"}
+```
+
 ## Other
 
 If you need more sophisticated interpolation of config values from KV stores,

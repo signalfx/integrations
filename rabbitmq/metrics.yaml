@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 counter.channel.message_stats.ack:
   brief: The number of acknowledged messages
   custom: true
   description: The number of acknowledged messages
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.channel.message_stats.ack
 
 counter.channel.message_stats.confirm:
@@ -11,6 +13,7 @@ counter.channel.message_stats.confirm:
   custom: true
   description: Count of messages confirmed.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.channel.message_stats.confirm
 
 counter.channel.message_stats.deliver:
@@ -18,6 +21,7 @@ counter.channel.message_stats.deliver:
   custom: true
   description: Count of messages delivered in acknowledgement mode to consumers.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.channel.message_stats.deliver
 
 counter.channel.message_stats.deliver_get:
@@ -25,6 +29,7 @@ counter.channel.message_stats.deliver_get:
   custom: true
   description: Count of all messages delivered on the channel
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.channel.message_stats.deliver_get
 
 counter.channel.message_stats.publish:
@@ -32,6 +37,7 @@ counter.channel.message_stats.publish:
   custom: true
   description: Count of messages published.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.channel.message_stats.publish
 
 counter.connection.channel_max:
@@ -39,6 +45,7 @@ counter.connection.channel_max:
   custom: true
   description: The maximum number of channels on the connection
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.connection.channel_max
 
 counter.connection.recv_cnt:
@@ -46,6 +53,7 @@ counter.connection.recv_cnt:
   custom: true
   description: Number of packets received on the connection
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.connection.recv_cnt
 
 counter.connection.recv_oct:
@@ -53,6 +61,7 @@ counter.connection.recv_oct:
   custom: true
   description: Number of octets received on the connection
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.connection.recv_oct
 
 counter.connection.send_cnt:
@@ -60,6 +69,7 @@ counter.connection.send_cnt:
   custom: true
   description: Number of packets sent by the connection
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.connection.send_cnt
 
 counter.connection.send_oct:
@@ -67,6 +77,7 @@ counter.connection.send_oct:
   custom: true
   description: Number of octets sent by the connection
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.connection.send_oct
 
 counter.exchange.message_stats.confirm:
@@ -74,6 +85,7 @@ counter.exchange.message_stats.confirm:
   custom: true
   description: Count of messages confirmed.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.exchange.message_stats.confirm
 
 counter.exchange.message_stats.publish_in:
@@ -82,6 +94,7 @@ counter.exchange.message_stats.publish_in:
   description: Count of messages published "in" to an exchange, i.e. not taking account
     of routing.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.exchange.message_stats.publish_in
 
 counter.exchange.message_stats.publish_out:
@@ -90,6 +103,7 @@ counter.exchange.message_stats.publish_out:
   description: Count of messages published "out" of an exchange, i.e. taking account
     of routing.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.exchange.message_stats.publish_out
 
 counter.node.io_read_bytes:
@@ -97,6 +111,7 @@ counter.node.io_read_bytes:
   custom: true
   description: Total number of bytes read from disk by the persister.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.node.io_read_bytes
 
 counter.node.io_read_count:
@@ -104,6 +119,7 @@ counter.node.io_read_count:
   custom: true
   description: Total number of read operations by the persister.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.node.io_read_count
 
 counter.node.mnesia_disk_tx_count:
@@ -113,6 +129,7 @@ counter.node.mnesia_disk_tx_count:
   description: Number of Mnesia transactions which have been performed that required
     writes to disk.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.node.mnesia_disk_tx_count
 
 counter.node.mnesia_ram_tx_count:
@@ -122,6 +139,7 @@ counter.node.mnesia_ram_tx_count:
   description: Number of Mnesia transactions which have been performed that did not
     require writes to disk.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.node.mnesia_ram_tx_count
 
 counter.queue.disk_reads:
@@ -131,6 +149,7 @@ counter.queue.disk_reads:
   description: Total number of times messages have been read from disk by this queue
     since it started.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.queue.disk_reads
 
 counter.queue.disk_writes:
@@ -140,6 +159,7 @@ counter.queue.disk_writes:
   description: Total number of times messages have been written to disk by this queue
     since it started.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.queue.disk_writes
 
 counter.queue.message_stats.ack:
@@ -147,6 +167,7 @@ counter.queue.message_stats.ack:
   custom: true
   description: Number of acknowledged messages processed by the queue
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.queue.message_stats.ack
 
 counter.queue.message_stats.deliver:
@@ -154,6 +175,7 @@ counter.queue.message_stats.deliver:
   custom: false
   description: Count of messages delivered in acknowledgement mode to consumers.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.queue.message_stats.deliver
 
 counter.queue.message_stats.deliver_get:
@@ -161,6 +183,7 @@ counter.queue.message_stats.deliver_get:
   custom: true
   description: Count of all messages delivered on the queue
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.queue.message_stats.deliver_get
 
 counter.queue.message_stats.publish:
@@ -168,6 +191,7 @@ counter.queue.message_stats.publish:
   custom: true
   description: Count of messages published.
   metric_type: counter
+  monitor: collectd/rabbitmq
   title: counter.queue.message_stats.publish
 
 gauge.channel.connection_details.peer_port:
@@ -175,6 +199,7 @@ gauge.channel.connection_details.peer_port:
   custom: true
   description: The peer port number of the channel
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.connection_details.peer_port
 
 gauge.channel.consumer_count:
@@ -182,6 +207,7 @@ gauge.channel.consumer_count:
   custom: true
   description: The number of consumers the channel has
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.consumer_count
 
 gauge.channel.global_prefetch_count:
@@ -189,6 +215,7 @@ gauge.channel.global_prefetch_count:
   custom: true
   description: QoS prefetch limit for the entire channel, 0 if unlimited.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.global_prefetch_count
 
 gauge.channel.message_stats.ack_details.rate:
@@ -198,6 +225,7 @@ gauge.channel.message_stats.ack_details.rate:
   description: How much the channel message ack count has changed per second in the
     most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.message_stats.ack_details.rate
 
 gauge.channel.message_stats.confirm_details.rate:
@@ -207,6 +235,7 @@ gauge.channel.message_stats.confirm_details.rate:
   description: How much the channel message confirm count has changed per second in
     the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.message_stats.confirm_details.rate
 
 gauge.channel.message_stats.deliver_details.rate:
@@ -216,6 +245,7 @@ gauge.channel.message_stats.deliver_details.rate:
   description: How much the channel deliver count has changed per second in the most
     recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.message_stats.deliver_details.rate
 
 gauge.channel.message_stats.deliver_get_details.rate:
@@ -225,6 +255,7 @@ gauge.channel.message_stats.deliver_get_details.rate:
   description: How much the channel message count has changed per second in the most
     recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.message_stats.deliver_get_details.rate
 
 gauge.channel.message_stats.publish_details.rate:
@@ -234,6 +265,7 @@ gauge.channel.message_stats.publish_details.rate:
   description: How much the channel message publish count has changed per second in
     the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.message_stats.publish_details.rate
 
 gauge.channel.messages_unacknowledged:
@@ -241,6 +273,7 @@ gauge.channel.messages_unacknowledged:
   custom: true
   description: Number of messages delivered via this channel but not yet acknowledged.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.messages_unacknowledged
 
 gauge.channel.messages_uncommitted:
@@ -248,6 +281,7 @@ gauge.channel.messages_uncommitted:
   custom: true
   description: Number of messages received in an as yet uncommitted transaction.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.messages_uncommitted
 
 gauge.channel.messages_unconfirmed:
@@ -256,6 +290,7 @@ gauge.channel.messages_unconfirmed:
   description: Number of published messages not yet confirmed. On channels not in
     confirm mode, this remains 0.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.messages_unconfirmed
 
 gauge.channel.number:
@@ -263,6 +298,7 @@ gauge.channel.number:
   custom: false
   description: The number of the channel, which uniquely identifies it within a connection.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.number
 
 gauge.channel.prefetch_count:
@@ -270,6 +306,7 @@ gauge.channel.prefetch_count:
   custom: true
   description: QoS prefetch limit for new consumers, 0 if unlimited.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.channel.prefetch_count
 
 gauge.connection.channels:
@@ -277,6 +314,7 @@ gauge.connection.channels:
   custom: true
   description: The current number of channels on the connection
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.channels
 
 gauge.connection.connected_at:
@@ -284,6 +322,7 @@ gauge.connection.connected_at:
   custom: true
   description: The integer timestamp of the most recent time the connection was established
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.connected_at
 
 gauge.connection.frame_max:
@@ -291,6 +330,7 @@ gauge.connection.frame_max:
   custom: true
   description: Maximum permissible size of a frame (in bytes) to negotiate with clients.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.frame_max
 
 gauge.connection.peer_port:
@@ -298,6 +338,7 @@ gauge.connection.peer_port:
   custom: true
   description: The peer port of the connection
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.peer_port
 
 gauge.connection.port:
@@ -305,6 +346,7 @@ gauge.connection.port:
   custom: true
   description: The port the connection is established on
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.port
 
 gauge.connection.recv_oct_details.rate:
@@ -314,6 +356,7 @@ gauge.connection.recv_oct_details.rate:
   description: How much the connection's octets received count has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.recv_oct_details.rate
 
 gauge.connection.send_oct_details.rate:
@@ -323,6 +366,7 @@ gauge.connection.send_oct_details.rate:
   description: How much the connection's octets sent count has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.send_oct_details.rate
 
 gauge.connection.send_pend:
@@ -330,6 +374,7 @@ gauge.connection.send_pend:
   custom: true
   description: The number of messages in the send queue of the connection
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.send_pend
 
 gauge.connection.timeout:
@@ -337,6 +382,7 @@ gauge.connection.timeout:
   custom: true
   description: The current timeout setting (in seconds) of the connection
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.connection.timeout
 
 gauge.exchange.message_stats.confirm_details.rate:
@@ -346,6 +392,7 @@ gauge.exchange.message_stats.confirm_details.rate:
   description: How much the message confirm count has changed per second in the most
     recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.exchange.message_stats.confirm_details.rate
 
 gauge.exchange.message_stats.publish_in_details.rate:
@@ -355,6 +402,7 @@ gauge.exchange.message_stats.publish_in_details.rate:
   description: How much the exchange publish-in count has changed per second in the
     most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.exchange.message_stats.publish_in_details.rate
 
 gauge.exchange.message_stats.publish_out_details.rate:
@@ -364,6 +412,7 @@ gauge.exchange.message_stats.publish_out_details.rate:
   description: How much the exchange publish-out count has changed per second in the
     most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.exchange.message_stats.publish_out_details.rate
 
 gauge.node.disk_free:
@@ -371,6 +420,7 @@ gauge.node.disk_free:
   custom: false
   description: Disk free space (in bytes) on the node
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.disk_free
 
 gauge.node.disk_free_details.rate:
@@ -380,6 +430,7 @@ gauge.node.disk_free_details.rate:
   description: How much the disk free space has changed per second in the most recent
     sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.disk_free_details.rate
 
 gauge.node.disk_free_limit:
@@ -387,6 +438,7 @@ gauge.node.disk_free_limit:
   custom: false
   description: Point (in bytes) at which the disk alarm will go off.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.disk_free_limit
 
 gauge.node.fd_total:
@@ -394,6 +446,7 @@ gauge.node.fd_total:
   custom: false
   description: Total number of file descriptors available.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.fd_total
 
 gauge.node.fd_used:
@@ -401,6 +454,7 @@ gauge.node.fd_used:
   custom: false
   description: Number of used file descriptors.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.fd_used
 
 gauge.node.fd_used_details.rate:
@@ -410,6 +464,7 @@ gauge.node.fd_used_details.rate:
   description: How much the number of used file descriptors has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.fd_used_details.rate
 
 gauge.node.io_read_avg_time:
@@ -419,6 +474,7 @@ gauge.node.io_read_avg_time:
   description: Average wall time (milliseconds) for each disk read operation in the
     last statistics interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_read_avg_time
 
 gauge.node.io_read_avg_time_details.rate:
@@ -428,6 +484,7 @@ gauge.node.io_read_avg_time_details.rate:
   description: How much the I/O read average time has changed per second in the most
     recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_read_avg_time_details.rate
 
 gauge.node.io_read_bytes_details.rate:
@@ -437,6 +494,7 @@ gauge.node.io_read_bytes_details.rate:
   description: How much the number of bytes read from disk has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_read_bytes_details.rate
 
 gauge.node.io_read_count_details.rate:
@@ -446,6 +504,7 @@ gauge.node.io_read_count_details.rate:
   description: How much the number of read operations has changed per second in the
     most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_read_count_details.rate
 
 gauge.node.io_sync_avg_time:
@@ -455,6 +514,7 @@ gauge.node.io_sync_avg_time:
   description: Average wall time (milliseconds) for each fsync() operation in the
     last statistics interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_sync_avg_time
 
 gauge.node.io_sync_avg_time_details.rate:
@@ -464,6 +524,7 @@ gauge.node.io_sync_avg_time_details.rate:
   description: How much the average I/O sync time has changed per second in the most
     recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_sync_avg_time_details.rate
 
 gauge.node.io_write_avg_time:
@@ -473,6 +534,7 @@ gauge.node.io_write_avg_time:
   description: Average wall time (milliseconds) for each disk write operation in the
     last statistics interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_write_avg_time
 
 gauge.node.io_write_avg_time_details.rate:
@@ -482,6 +544,7 @@ gauge.node.io_write_avg_time_details.rate:
   description: How much the I/O write time has changed per second in the most recent
     sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.io_write_avg_time_details.rate
 
 gauge.node.mem_limit:
@@ -489,6 +552,7 @@ gauge.node.mem_limit:
   custom: false
   description: Point (in bytes) at which the memory alarm will go off.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.mem_limit
 
 gauge.node.mem_used:
@@ -496,6 +560,7 @@ gauge.node.mem_used:
   custom: false
   description: Memory used in bytes.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.mem_used
 
 gauge.node.mem_used_details.rate:
@@ -504,6 +569,7 @@ gauge.node.mem_used_details.rate:
   description: How much the count has changed per second in the most recent sampling
     interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.mem_used_details.rate
 
 gauge.node.mnesia_disk_tx_count_details.rate:
@@ -513,6 +579,7 @@ gauge.node.mnesia_disk_tx_count_details.rate:
   description: How much the Mnesia disk transaction count has changed per second in
     the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.mnesia_disk_tx_count_details.rate
 
 gauge.node.mnesia_ram_tx_count_details.rate:
@@ -522,6 +589,7 @@ gauge.node.mnesia_ram_tx_count_details.rate:
   description: How much the RAM-only Mnesia transaction count has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.mnesia_ram_tx_count_details.rate
 
 gauge.node.net_ticktime:
@@ -529,6 +597,7 @@ gauge.node.net_ticktime:
   custom: true
   description: Current kernel net_ticktime setting for the node.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.net_ticktime
 
 gauge.node.proc_total:
@@ -536,6 +605,7 @@ gauge.node.proc_total:
   custom: true
   description: The maximum number of Erlang processes that can run in an Erlang VM.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.proc_total
 
 gauge.node.proc_used:
@@ -543,6 +613,7 @@ gauge.node.proc_used:
   custom: true
   description: Number of Erlang processes currently running in use.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.proc_used
 
 gauge.node.proc_used_details.rate:
@@ -552,6 +623,7 @@ gauge.node.proc_used_details.rate:
   description: How much the number of erlang processes in use has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.proc_used_details.rate
 
 gauge.node.processors:
@@ -559,6 +631,7 @@ gauge.node.processors:
   custom: true
   description: Number of cores detected and usable by Erlang.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.processors
 
 gauge.node.run_queue:
@@ -566,6 +639,7 @@ gauge.node.run_queue:
   custom: true
   description: Average number of Erlang processes waiting to run.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.run_queue
 
 gauge.node.sockets_total:
@@ -573,6 +647,7 @@ gauge.node.sockets_total:
   custom: true
   description: Number of file descriptors available for use as sockets.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.sockets_total
 
 gauge.node.sockets_used:
@@ -580,6 +655,7 @@ gauge.node.sockets_used:
   custom: true
   description: Number of file descriptors used as sockets.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.sockets_used
 
 gauge.node.sockets_used_details.rate:
@@ -589,6 +665,7 @@ gauge.node.sockets_used_details.rate:
   description: How much the number of sockets used has changed per second in the most
     recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.sockets_used_details.rate
 
 gauge.node.uptime:
@@ -596,6 +673,7 @@ gauge.node.uptime:
   custom: false
   description: Time since the Erlang VM started, in milliseconds.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.node.uptime
 
 gauge.queue.backing_queue_status.avg_ack_egress_rate:
@@ -604,6 +682,7 @@ gauge.queue.backing_queue_status.avg_ack_egress_rate:
   description: Rate at which unacknowledged message records leave RAM, e.g. because
     acks arrive or unacked messages are paged out
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.avg_ack_egress_rate
 
 gauge.queue.backing_queue_status.avg_ack_ingress_rate:
@@ -612,6 +691,7 @@ gauge.queue.backing_queue_status.avg_ack_ingress_rate:
   description: Rate at which unacknowledged message records enter RAM, e.g. because
     messages are delivered requiring acknowledgement
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.avg_ack_ingress_rate
 
 gauge.queue.backing_queue_status.avg_egress_rate:
@@ -621,6 +701,7 @@ gauge.queue.backing_queue_status.avg_egress_rate:
   description: Average egress (outbound) rate, not including messages that are sent
     straight through to auto-acking consumers.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.avg_egress_rate
 
 gauge.queue.backing_queue_status.avg_ingress_rate:
@@ -630,6 +711,7 @@ gauge.queue.backing_queue_status.avg_ingress_rate:
   description: Average ingress (inbound) rate, not including messages that are sent
     straight through to auto-acking consumers.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.avg_ingress_rate
 
 gauge.queue.backing_queue_status.len:
@@ -637,6 +719,7 @@ gauge.queue.backing_queue_status.len:
   custom: true
   description: Total backing queue length, in messages
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.len
 
 gauge.queue.backing_queue_status.next_seq_id:
@@ -644,6 +727,7 @@ gauge.queue.backing_queue_status.next_seq_id:
   custom: true
   description: The next sequence ID to be used in the backing queue
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.next_seq_id
 
 gauge.queue.backing_queue_status.q1:
@@ -651,6 +735,7 @@ gauge.queue.backing_queue_status.q1:
   custom: true
   description: Number of messages in backing queue q1
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.q1
 
 gauge.queue.backing_queue_status.q2:
@@ -658,6 +743,7 @@ gauge.queue.backing_queue_status.q2:
   custom: true
   description: Number of messages in backing queue q2
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.q2
 
 gauge.queue.backing_queue_status.q3:
@@ -665,6 +751,7 @@ gauge.queue.backing_queue_status.q3:
   custom: true
   description: Number of messages in backing queue q3
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.q3
 
 gauge.queue.backing_queue_status.q4:
@@ -672,6 +759,7 @@ gauge.queue.backing_queue_status.q4:
   custom: true
   description: Number of messages in backing queue q4
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.backing_queue_status.q4
 
 gauge.queue.consumer_utilisation:
@@ -681,6 +769,7 @@ gauge.queue.consumer_utilisation:
   description: Fraction of the time (between 0.0 and 1.0) that the queue is able to
     immediately deliver messages to consumers.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.consumer_utilisation
 
 gauge.queue.consumers:
@@ -688,6 +777,7 @@ gauge.queue.consumers:
   custom: false
   description: Number of consumers of the queue
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.consumers
 
 gauge.queue.memory:
@@ -697,6 +787,7 @@ gauge.queue.memory:
   description: Bytes of memory consumed by the Erlang process associated with the
     queue, including stack, heap and internal structures.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.memory
 
 gauge.queue.message_bytes:
@@ -705,6 +796,7 @@ gauge.queue.message_bytes:
   description: Sum of the size of all message bodies in the queue. This does not include
     the message properties (including headers) or any overhead.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_bytes
 
 gauge.queue.message_bytes_persistent:
@@ -714,6 +806,7 @@ gauge.queue.message_bytes_persistent:
   description: Total number of persistent messages in the queue (will always be 0
     for transient queues).
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_bytes_persistent
 
 gauge.queue.message_bytes_ram:
@@ -721,6 +814,7 @@ gauge.queue.message_bytes_ram:
   custom: true
   description: Like message_bytes but counting only those messages which are in RAM.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_bytes_ram
 
 gauge.queue.message_bytes_ready:
@@ -730,6 +824,7 @@ gauge.queue.message_bytes_ready:
   description: Like message_bytes but counting only those messages ready to be delivered
     to clients.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_bytes_ready
 
 gauge.queue.message_bytes_unacknowledged:
@@ -739,6 +834,7 @@ gauge.queue.message_bytes_unacknowledged:
   description: Like message_bytes but counting only those messages delivered to clients
     but not yet acknowledged.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_bytes_unacknowledged
 
 gauge.queue.message_stats.ack_details.rate:
@@ -748,6 +844,7 @@ gauge.queue.message_stats.ack_details.rate:
   description: How much the number of acknowledged messages has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_stats.ack_details.rate
 
 gauge.queue.message_stats.deliver_details.rate:
@@ -757,6 +854,7 @@ gauge.queue.message_stats.deliver_details.rate:
   description: How much the count of messages delivered has changed per second in
     the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_stats.deliver_details.rate
 
 gauge.queue.message_stats.deliver_get_details.rate:
@@ -766,6 +864,7 @@ gauge.queue.message_stats.deliver_get_details.rate:
   description: How much the count of all messages delivered has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_stats.deliver_get_details.rate
 
 gauge.queue.message_stats.publish_details.rate:
@@ -775,6 +874,7 @@ gauge.queue.message_stats.publish_details.rate:
   description: How much the count of messages published has changed per second in
     the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.message_stats.publish_details.rate
 
 gauge.queue.messages:
@@ -782,6 +882,7 @@ gauge.queue.messages:
   custom: true
   description: Sum of ready and unacknowledged messages (queue depth).
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages
 
 gauge.queue.messages_details.rate:
@@ -791,6 +892,7 @@ gauge.queue.messages_details.rate:
   description: How much the queue depth has changed per second in the most recent
     sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_details.rate
 
 gauge.queue.messages_persistent:
@@ -800,6 +902,7 @@ gauge.queue.messages_persistent:
   description: Total number of persistent messages in the queue (will always be 0
     for transient queues).
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_persistent
 
 gauge.queue.messages_ram:
@@ -807,6 +910,7 @@ gauge.queue.messages_ram:
   custom: true
   description: Total number of messages which are resident in RAM.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_ram
 
 gauge.queue.messages_ready:
@@ -814,6 +918,7 @@ gauge.queue.messages_ready:
   custom: false
   description: Number of messages ready to be delivered to clients.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_ready
 
 gauge.queue.messages_ready_details.rate:
@@ -823,6 +928,7 @@ gauge.queue.messages_ready_details.rate:
   description: How much the count of messages ready has changed per second in the
     most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_ready_details.rate
 
 gauge.queue.messages_ready_ram:
@@ -830,6 +936,7 @@ gauge.queue.messages_ready_ram:
   custom: true
   description: Number of messages from messages_ready which are resident in RAM.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_ready_ram
 
 gauge.queue.messages_unacknowledged:
@@ -837,6 +944,7 @@ gauge.queue.messages_unacknowledged:
   custom: true
   description: Number of messages delivered to clients but not yet acknowledged.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_unacknowledged
 
 gauge.queue.messages_unacknowledged_details.rate:
@@ -846,6 +954,7 @@ gauge.queue.messages_unacknowledged_details.rate:
   description: How much the count of unacknowledged messages has changed per second
     in the most recent sampling interval.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_unacknowledged_details.rate
 
 gauge.queue.messages_unacknowledged_ram:
@@ -854,5 +963,6 @@ gauge.queue.messages_unacknowledged_ram:
   description: Number of messages from messages_unacknowledged which are resident
     in RAM.
   metric_type: gauge
+  monitor: collectd/rabbitmq
   title: gauge.queue.messages_unacknowledged_ram
 

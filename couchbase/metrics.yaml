@@ -1,4 +1,5 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 gauge.bucket.basic.dataUsed:
   brief: Size of user data within buckets of the specified state that are resident
     in RAM (%)
@@ -6,6 +7,7 @@ gauge.bucket.basic.dataUsed:
   description: Size of user data within buckets of the specified state that are resident
     in RAM (%)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.basic.dataUsed
 
 gauge.bucket.basic.diskFetches:
@@ -13,6 +15,7 @@ gauge.bucket.basic.diskFetches:
   custom: true
   description: Number of disk fetches
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.basic.diskFetches
 
 gauge.bucket.basic.diskUsed:
@@ -20,6 +23,7 @@ gauge.bucket.basic.diskUsed:
   custom: false
   description: Amount of disk used (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.basic.diskUsed
 
 gauge.bucket.basic.itemCount:
@@ -27,6 +31,7 @@ gauge.bucket.basic.itemCount:
   custom: false
   description: Number of items associated with the bucket
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.basic.itemCount
 
 gauge.bucket.basic.memUsed:
@@ -34,6 +39,7 @@ gauge.bucket.basic.memUsed:
   custom: true
   description: Amount of memory used by the bucket (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.basic.memUsed
 
 gauge.bucket.basic.opsPerSec:
@@ -41,6 +47,7 @@ gauge.bucket.basic.opsPerSec:
   custom: false
   description: Number of operations per second
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.basic.opsPerSec
 
 gauge.bucket.basic.quotaPercentUsed:
@@ -50,6 +57,7 @@ gauge.bucket.basic.quotaPercentUsed:
   description: Percentage of RAM used (for active objects) against the configure bucket
     size (%)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.basic.quotaPercentUsed
 
 gauge.bucket.op.cmd_get:
@@ -57,6 +65,7 @@ gauge.bucket.op.cmd_get:
   custom: false
   description: requested objects
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.cmd_get
 
 gauge.bucket.op.couch_docs_fragmentation:
@@ -64,6 +73,7 @@ gauge.bucket.op.couch_docs_fragmentation:
   custom: false
   description: Percent fragmentation of documents in this bucket.
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.couch_docs_fragmentation
 
 gauge.bucket.op.couch_views_ops:
@@ -71,6 +81,7 @@ gauge.bucket.op.couch_views_ops:
   custom: false
   description: view operations per second
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.couch_views_ops
 
 gauge.bucket.op.curr_connections:
@@ -78,6 +89,7 @@ gauge.bucket.op.curr_connections:
   custom: false
   description: open connection per bucket
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.curr_connections
 
 gauge.bucket.op.curr_items:
@@ -85,6 +97,7 @@ gauge.bucket.op.curr_items:
   custom: true
   description: total number of stored items per bucket
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.curr_items
 
 gauge.bucket.op.disk_write_queue:
@@ -92,6 +105,7 @@ gauge.bucket.op.disk_write_queue:
   custom: true
   description: number of items waiting to be written to disk
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.disk_write_queue
 
 gauge.bucket.op.ep_bg_fetched:
@@ -99,6 +113,7 @@ gauge.bucket.op.ep_bg_fetched:
   custom: false
   description: number of items fetched from disk
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_bg_fetched
 
 gauge.bucket.op.ep_cache_miss_rate:
@@ -106,6 +121,7 @@ gauge.bucket.op.ep_cache_miss_rate:
   custom: false
   description: ratio of requested objects found in cache vs retrieved from disk
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_cache_miss_rate
 
 gauge.bucket.op.ep_diskqueue_drain:
@@ -113,6 +129,7 @@ gauge.bucket.op.ep_diskqueue_drain:
   custom: false
   description: items removed from disk queue
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_diskqueue_drain
 
 gauge.bucket.op.ep_diskqueue_fill:
@@ -120,6 +137,7 @@ gauge.bucket.op.ep_diskqueue_fill:
   custom: false
   description: enqueued items on disk queue
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_diskqueue_fill
 
 gauge.bucket.op.ep_mem_high_wat:
@@ -129,6 +147,7 @@ gauge.bucket.op.ep_mem_high_wat:
   description: memory high water mark - point at which active objects begin to be
     ejected from bucket
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_mem_high_wat
 
 gauge.bucket.op.ep_mem_low_wat:
@@ -136,6 +155,7 @@ gauge.bucket.op.ep_mem_low_wat:
   custom: true
   description: memory low water mark
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_mem_low_wat
 
 gauge.bucket.op.ep_num_value_ejects:
@@ -143,6 +163,7 @@ gauge.bucket.op.ep_num_value_ejects:
   custom: false
   description: number of objects ejected out of the bucket
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_num_value_ejects
 
 gauge.bucket.op.ep_oom_errors:
@@ -150,6 +171,7 @@ gauge.bucket.op.ep_oom_errors:
   custom: false
   description: request rejected - bucket is at quota, panic
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_oom_errors
 
 gauge.bucket.op.ep_queue_size:
@@ -157,6 +179,7 @@ gauge.bucket.op.ep_queue_size:
   custom: false
   description: number of items queued for storage
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_queue_size
 
 gauge.bucket.op.ep_tmp_oom_errors:
@@ -166,6 +189,7 @@ gauge.bucket.op.ep_tmp_oom_errors:
   description: request rejected - couchbase is making room by ejecting objects, try
     again later
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ep_tmp_oom_errors
 
 gauge.bucket.op.mem_used:
@@ -173,6 +197,7 @@ gauge.bucket.op.mem_used:
   custom: false
   description: memory used
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.mem_used
 
 gauge.bucket.op.ops:
@@ -180,6 +205,7 @@ gauge.bucket.op.ops:
   custom: true
   description: total of gets, sets, increment and decrement
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.ops
 
 gauge.bucket.op.vb_active_resident_items_ratio:
@@ -187,6 +213,7 @@ gauge.bucket.op.vb_active_resident_items_ratio:
   custom: false
   description: ratio of items kept in memory vs stored on disk
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.op.vb_active_resident_items_ratio
 
 gauge.bucket.quota.ram:
@@ -194,6 +221,7 @@ gauge.bucket.quota.ram:
   custom: true
   description: Amount of RAM used by the bucket (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.quota.ram
 
 gauge.bucket.quota.rawRAM:
@@ -201,6 +229,7 @@ gauge.bucket.quota.rawRAM:
   custom: true
   description: Amount of raw RAM used by the bucket (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.bucket.quota.rawRAM
 
 gauge.nodes.cmd_get:
@@ -208,6 +237,7 @@ gauge.nodes.cmd_get:
   custom: false
   description: Number of get commands
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.cmd_get
 
 gauge.nodes.couch_docs_actual_disk_size:
@@ -215,6 +245,7 @@ gauge.nodes.couch_docs_actual_disk_size:
   custom: false
   description: Amount of disk space used by Couch docs.(bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.couch_docs_actual_disk_size
 
 gauge.nodes.couch_docs_data_size:
@@ -222,6 +253,7 @@ gauge.nodes.couch_docs_data_size:
   custom: false
   description: Data size of couch documents associated with a node (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.couch_docs_data_size
 
 gauge.nodes.couch_spatial_data_size:
@@ -229,6 +261,7 @@ gauge.nodes.couch_spatial_data_size:
   custom: true
   description: Size of object data for spatial views (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.couch_spatial_data_size
 
 gauge.nodes.couch_spatial_disk_size:
@@ -236,6 +269,7 @@ gauge.nodes.couch_spatial_disk_size:
   custom: true
   description: Amount of disk space occupied by spatial views, in bytes.
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.couch_spatial_disk_size
 
 gauge.nodes.couch_views_actual_disk_size:
@@ -243,6 +277,7 @@ gauge.nodes.couch_views_actual_disk_size:
   custom: true
   description: Amount of disk space occupied by Couch views (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.couch_views_actual_disk_size
 
 gauge.nodes.couch_views_data_size:
@@ -250,6 +285,7 @@ gauge.nodes.couch_views_data_size:
   custom: true
   description: Size of object data for Couch views (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.couch_views_data_size
 
 gauge.nodes.curr_items:
@@ -257,6 +293,7 @@ gauge.nodes.curr_items:
   custom: true
   description: Number of current items
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.curr_items
 
 gauge.nodes.curr_items_tot:
@@ -264,6 +301,7 @@ gauge.nodes.curr_items_tot:
   custom: false
   description: Total number of items associated with node
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.curr_items_tot
 
 gauge.nodes.ep_bg_fetched:
@@ -271,6 +309,7 @@ gauge.nodes.ep_bg_fetched:
   custom: false
   description: Number of disk fetches performed since server was started
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.ep_bg_fetched
 
 gauge.nodes.get_hits:
@@ -278,6 +317,7 @@ gauge.nodes.get_hits:
   custom: true
   description: Number of get hits
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.get_hits
 
 gauge.nodes.mcdMemoryAllocated:
@@ -285,6 +325,7 @@ gauge.nodes.mcdMemoryAllocated:
   custom: true
   description: Amount of memcached memory allocated (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.mcdMemoryAllocated
 
 gauge.nodes.mcdMemoryReserved:
@@ -292,6 +333,7 @@ gauge.nodes.mcdMemoryReserved:
   custom: true
   description: Amount of memcached memory reserved (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.mcdMemoryReserved
 
 gauge.nodes.mem_used:
@@ -299,6 +341,7 @@ gauge.nodes.mem_used:
   custom: false
   description: Memory used by the node (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.mem_used
 
 gauge.nodes.memoryFree:
@@ -306,6 +349,7 @@ gauge.nodes.memoryFree:
   custom: true
   description: Amount of memory free for the node (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.memoryFree
 
 gauge.nodes.memoryTotal:
@@ -313,6 +357,7 @@ gauge.nodes.memoryTotal:
   custom: true
   description: Total memory available to the node (bytes).
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.memoryTotal
 
 gauge.nodes.ops:
@@ -320,6 +365,7 @@ gauge.nodes.ops:
   custom: false
   description: Number of operations performed on Couchbase
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.ops
 
 gauge.nodes.system.cpu_utilization_rate:
@@ -327,6 +373,7 @@ gauge.nodes.system.cpu_utilization_rate:
   custom: false
   description: The CPU utilization rate (%)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.system.cpu_utilization_rate
 
 gauge.nodes.system.mem_free:
@@ -334,6 +381,7 @@ gauge.nodes.system.mem_free:
   custom: false
   description: Free memory available to the node (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.system.mem_free
 
 gauge.nodes.system.mem_total:
@@ -341,6 +389,7 @@ gauge.nodes.system.mem_total:
   custom: false
   description: Total memory available to the node (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.system.mem_total
 
 gauge.nodes.system.swap_total:
@@ -348,6 +397,7 @@ gauge.nodes.system.swap_total:
   custom: false
   description: Total swap size allocated (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.system.swap_total
 
 gauge.nodes.system.swap_used:
@@ -355,6 +405,7 @@ gauge.nodes.system.swap_used:
   custom: false
   description: Amount of swap space used (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.system.swap_used
 
 gauge.nodes.vb_replica_curr_items:
@@ -362,6 +413,7 @@ gauge.nodes.vb_replica_curr_items:
   custom: true
   description: Number of items/documents that are replicas
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.nodes.vb_replica_curr_items
 
 gauge.storage.hdd.free:
@@ -369,6 +421,7 @@ gauge.storage.hdd.free:
   custom: true
   description: Free harddrive space in the cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.hdd.free
 
 gauge.storage.hdd.quotaTotal:
@@ -376,6 +429,7 @@ gauge.storage.hdd.quotaTotal:
   custom: true
   description: Harddrive quota total for the cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.hdd.quotaTotal
 
 gauge.storage.hdd.total:
@@ -383,6 +437,7 @@ gauge.storage.hdd.total:
   custom: true
   description: Total harddrive space available to cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.hdd.total
 
 gauge.storage.hdd.used:
@@ -390,6 +445,7 @@ gauge.storage.hdd.used:
   custom: true
   description: Harddrive space used by the cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.hdd.used
 
 gauge.storage.hdd.usedByData:
@@ -397,6 +453,7 @@ gauge.storage.hdd.usedByData:
   custom: true
   description: Harddrive use by the data in the cluster(bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.hdd.usedByData
 
 gauge.storage.ram.quotaTotal:
@@ -404,6 +461,7 @@ gauge.storage.ram.quotaTotal:
   custom: true
   description: Ram quota total for the cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.ram.quotaTotal
 
 gauge.storage.ram.quotaTotalPerNode:
@@ -411,6 +469,7 @@ gauge.storage.ram.quotaTotalPerNode:
   custom: true
   description: Ram quota total per node (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.ram.quotaTotalPerNode
 
 gauge.storage.ram.quotaUsed:
@@ -418,6 +477,7 @@ gauge.storage.ram.quotaUsed:
   custom: true
   description: Ram quota used by the cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.ram.quotaUsed
 
 gauge.storage.ram.quotaUsedPerNode:
@@ -425,6 +485,7 @@ gauge.storage.ram.quotaUsedPerNode:
   custom: true
   description: Ram quota used per node (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.ram.quotaUsedPerNode
 
 gauge.storage.ram.total:
@@ -432,6 +493,7 @@ gauge.storage.ram.total:
   custom: true
   description: Total ram available to cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.ram.total
 
 gauge.storage.ram.used:
@@ -439,6 +501,7 @@ gauge.storage.ram.used:
   custom: true
   description: Ram used by the cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.ram.used
 
 gauge.storage.ram.usedByData:
@@ -446,5 +509,6 @@ gauge.storage.ram.usedByData:
   custom: true
   description: Ram used by the data in the cluster (bytes)
   metric_type: gauge
+  monitor: collectd/couchbase
   title: gauge.storage.ram.usedByData
 

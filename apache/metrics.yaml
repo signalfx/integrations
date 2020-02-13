@@ -1,9 +1,11 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
 apache_bytes:
   brief: Amount of data served by Apache, in bytes
   custom: false
   description: Amount of data served by Apache, in bytes.
   metric_type: cumulative
+  monitor: collectd/apache
   title: apache_bytes
 
 apache_connections:
@@ -13,6 +15,7 @@ apache_connections:
     also equal to the number of busy worker threads, where 'busy' means any worker
     thread which has been started successfully and is not slated for idle cleanup.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_connections
 
 apache_idle_workers:
@@ -22,6 +25,7 @@ apache_idle_workers:
     low, then your server may be too busy and you may have to increase the number
     of threads.  If it is consistently high, then the system may be under-utilized.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_idle_workers
 
 apache_requests:
@@ -31,6 +35,7 @@ apache_requests:
     is useful to know total requests and the rate at which Apache is able to serve
     them.
   metric_type: cumulative
+  monitor: collectd/apache
   title: apache_requests
 
 apache_scoreboard.closing:
@@ -41,6 +46,7 @@ apache_scoreboard.closing:
     TCP connections after serving a response. If this number is consistently high,
     then there might be a network issue or errant client preventing TCP tear-down.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.closing
 
 apache_scoreboard.dnslookup:
@@ -51,6 +57,7 @@ apache_scoreboard.dnslookup:
     a DNS lookup. If this number is too high, check if there is a DNS resolution problem
     at your server. This can affect Apache server performance.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.dnslookup
 
 apache_scoreboard.finishing:
@@ -60,6 +67,7 @@ apache_scoreboard.finishing:
   description: The number of worker threads that are finishing as part of graceful
     server shutdown.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.finishing
 
 apache_scoreboard.idle_cleanup:
@@ -67,6 +75,7 @@ apache_scoreboard.idle_cleanup:
   custom: true
   description: The number of worker threads that are idle and ready for clean-up.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.idle_cleanup
 
 apache_scoreboard.keepalive:
@@ -79,6 +88,7 @@ apache_scoreboard.keepalive:
     another HTTP request will come on the same connection. At the end of the keep-alive
     interval, the connection is closed.'
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.keepalive
 
 apache_scoreboard.logging:
@@ -88,6 +98,7 @@ apache_scoreboard.logging:
     file.  If this number is consistently high, your logging level may be too high
     or one or more modules may be too verbose.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.logging
 
 apache_scoreboard.open:
@@ -96,6 +107,7 @@ apache_scoreboard.open:
   description: This metric shows how many worker slots are open.  The slots do not
     have a worker thread yet, but they can be spun up based on incoming requests.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.open
 
 apache_scoreboard.reading:
@@ -106,6 +118,7 @@ apache_scoreboard.reading:
     requests (headers or body).  If this number is consistently high, clients may
     be sending large headers or uploading large files.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.reading
 
 apache_scoreboard.sending:
@@ -114,6 +127,7 @@ apache_scoreboard.sending:
   description: This metric shows how many workers are sending responses.  It is normal
     for this to be a large number when measuring sites that serve large downloads.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.sending
 
 apache_scoreboard.starting:
@@ -122,6 +136,7 @@ apache_scoreboard.starting:
   description: This metric shows how many workers are being started up.  If this number
     is consistently high, then the system may be overloaded.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.starting
 
 apache_scoreboard.waiting:
@@ -131,5 +146,6 @@ apache_scoreboard.waiting:
   description: This metric shows how many worker threads are ready and waiting for
     requests to come in.
   metric_type: gauge
+  monitor: collectd/apache
   title: apache_scoreboard.waiting
 
