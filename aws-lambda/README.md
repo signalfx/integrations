@@ -39,25 +39,49 @@ SignalFx enables you to monitor the health and performance of your Lambda functi
 
 ### INSTALLATION
 
+#### SignalFx Wrapper vs Cloudwatch monitoring
+
+While you can use both the SignalFx Wrapper and Cloudwatch methods to monitor Lambda functions at the same time, you also have the option to use only one method. 
+
+Before you select a single method (or both), consider the following statements: 
+
+- Each method sends different metrics and uses different properties to uniquely identify a Lambda function.
+  - The SignalFx Wrapper sends real-time monitoring data of Lambda functions, as well as custom metrics.
+  - All Cloudwatch metrics available in your account are imported. 
+
+- Cloudwatch data is reported with a delay; the delay can range from 1 to 10 minutes. The SignalFx Wrapper sends data immediately when it becomes available. 
+
+- Cloudwatch data is sent automatically for all Lambda functions, whereas the SignalFx Wrapper needs to be added to each function.
+
+- SignalFx Wrapper is the only method to send custom application or business metrics from within a Lambda function.
+
 #### SignalFx Wrapper
 
-SignalFx Wrapper provides real time monitoring of lambda functions as well as ability to send custom metric from your applications to SignalFx.
+The SignalFx Wrapper provides real-time monitoring of Lambda functions, as well as the ability to send custom metrics from your applications to SignalFx.
 
-To use SignalFx Wrapper, include SignalFx Lambda Wrapper in your Lambda function.
+To use the SignalFx Wrapper, you can: 
+  - Include the SignalFx Lambda Wrapper in your Lambda function, or 
+  - Add the Lambda Layer containing the Wrapper to the Lambda function. 
 
-Instructions are provided in each of the Lambda wrapper readme files.
+To support different deployment models, SignalFx provides Lambda Wrappers as libraries, hosted [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) 
+and as [Serverless Applications](https://aws.amazon.com/serverless/sam/) available through [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/) (with language-specific exceptions).
+
+To view the three installation methods for each Lambda wrapper, review the following readme files: 
 
 - <a target="_blank" href="https://github.com/signalfx/lambda-java">Java</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-nodejs">NodeJs</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-python">Python</a>
-- <a target="_blank" href="https://github.com/signalfx/lambda-csharp">C#</a>
-- <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a>
+- <a target="_blank" href="https://github.com/signalfx/lambda-ruby">Ruby</a>
+- <a target="_blank" href="https://github.com/signalfx/lambda-csharp">C#</a> 
+  - SAM application is not supported.
+- <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a> 
+  - Lambda Layers are not supported.
 
 #### CloudWatch
 
-To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, you need to modify the connection on the Integrations page in the SignalFx UI.
 
-By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
+To access this integration, see [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 ### USAGE
 
