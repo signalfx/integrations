@@ -9,7 +9,7 @@
 
 ### DESCRIPTION
 
-SignalFx enables you to monitor the health and performance of your Lambda functions via metrics on total invocations, errors, durations and more. In addition, you can easily send custom application or business metrics from within your Lambda functions.
+SignalFx enables you to monitor the health and performance of your Lambda functions via metrics on total invocations, errors, durations, and more. In addition, you can easily send custom application or business metrics from within your Lambda functions.
 
 - If you have enabled the SignalFx Amazon Web Services integration and are syncing Cloudwatch metrics, <a target="_blank" href="http://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-metrics.html">those metrics</a> will automatically be available to view.
 
@@ -46,8 +46,6 @@ While you can use both the SignalFx Wrapper and Cloudwatch methods to monitor La
 Before you select a single method (or both), consider the following statements: 
 
 - Each method sends different metrics and uses different properties to uniquely identify a Lambda function.
-  - The SignalFx Wrapper sends real-time monitoring data of Lambda functions, as well as custom metrics.
-  - All Cloudwatch metrics available in your account are imported. 
 
 - Cloudwatch data is reported with a delay; the delay can range from 1 to 10 minutes. The SignalFx Wrapper sends data immediately when it becomes available. 
 
