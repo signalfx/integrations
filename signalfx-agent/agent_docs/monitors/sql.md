@@ -38,7 +38,7 @@ monitors:
     # to the connection string as appropriate for your database driver.
     # Also, the values from the `params` config option above can be
     # interpolated.
-    connectionString: 'host={{.host}} port={{.port}} dbname=main user={{.user}} password={{.password}} sslmode=disabled'
+    connectionString: 'host={{.host}} port={{.port}} dbname=main user={{.user}} password={{.password}} sslmode=disable'
     queries:
       - query: 'SELECT COUNT(*) as count, country, status FROM customers GROUP BY country, status;'
         metrics:
