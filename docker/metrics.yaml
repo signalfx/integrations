@@ -708,15 +708,16 @@ memory.usage.max:
 memory.usage.total:
   brief: Bytes of memory used by the container
   custom: false
-  description: 'Bytes of memory used by the container. Note that this **includes the
+  description: 'Bytes of memory used by the container. Note that this **excludes**
+    the
 
-    buffer cache** attributed to the process by the kernel from files that
+    buffer cache accounted to the process by the kernel from files that
 
-    have been read by processes in the container.  If you don''t want to
+    have been read by processes in the container, as well as tmpfs usage.
 
-    count that when monitoring containers, enable the metric
+    If you want to count that when monitoring containers, enable the metric
 
-    `memory.stats.total_cache` and subtract that metric from this one.'
+    `memory.stats.total_cache` and add it to this metric in SignalFlow.'
   metric_type: gauge
   monitor: docker-container-stats
   title: memory.usage.total

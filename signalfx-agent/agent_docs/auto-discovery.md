@@ -6,7 +6,7 @@ The observers are responsible for discovering service endpoints.  For these
 service endpoints to result in a new monitor instance that is watching that
 endpoint, you must apply _discovery rules_ to your monitor configuration. Every
 monitor that supports monitoring specific services (i.e. not a static monitor
-like the `collectd/cpu` monitor) can be configured with a `discoveryRule`
+like the `cpu` monitor) can be configured with a `discoveryRule`
 config option that specifies a rule using a mini rule language.
 
 For example, to monitor a Redis instance that has been discovered by a
@@ -38,7 +38,11 @@ operators are:
 | \|\| | Or | 
 
 For all available operators, see <a target="_blank" 
-href="https://github.com/Knetic/govaluate/blob/master/MANUAL.md">the govaluate documentation</a>.
+href="https://github.com/antonmedv/expr/blob/master/docs/Language-Definition.md">the
+expr language definition</a> (this is what the agent uses under the covers).
+We have a shim set of logic that lets you use the `=~` operator even though it
+is not actually part of the expr language -- mainly to preserve backwards
+compatibility with older agent releases before expr was used.
 
 The variables available in the expression are dependent on which observer you
 are using.  The following three variables are common to all observers:
@@ -115,7 +119,7 @@ For example (making use of YAML references to reduce repetition):
 
 ```yaml
   - &es
-    type: collectd/elasticsearch
+    type: elasticsearch
     username: admin
     password: s3cr3t
     host: es

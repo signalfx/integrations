@@ -70,7 +70,6 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
-
  - ***`net_clr_exceptions.num_exceps_thrown_sec`*** (*gauge*)<br>    The number of exceptions thrown by .NET applications.
  - ***`net_clr_locksandthreads.contention_rate_sec`*** (*gauge*)<br>    The rate of thread of thread contention per second for .NET applications.
  - ***`net_clr_locksandthreads.current_queue_length`*** (*gauge*)<br>    The current thread queue length for .NET applications.

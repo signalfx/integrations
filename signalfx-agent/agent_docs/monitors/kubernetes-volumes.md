@@ -14,7 +14,7 @@ Monitor Type: `kubernetes-volumes` ([Source](https://github.com/signalfx/signalf
 
 This monitor sends usage stats about volumes
 mounted to Kubernetes pods (e.g. free space/inodes).  This information is
-gotten from the Kubelet /stats/summary endpoint.  The normal `collectd/df`
+gotten from the Kubelet /stats/summary endpoint.  The normal `filesystems`
 monitor generally will not report Persistent Volume usage metrics because
 those volumes are not seen by the agent since they can be mounted
 dynamically and older versions of K8s don't support mount propagation of
@@ -76,7 +76,6 @@ These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
-
 
 
  - ***`kubernetes.volume_available_bytes`*** (*gauge*)<br>    The number of available bytes in the volume

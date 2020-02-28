@@ -119,9 +119,8 @@ that may be empty, such as the following:
 signalFxAccessToken: abcd
 monitors:
  - {"#from": "/etc/signalfx/conf2/*.yaml", flatten: true, optional: true}
- - type: collectd/cpu
- - type: collectd/cpufreq
- - type: collectd/df
+ - type: cpu
+ - type: filesystems
 ```
 
 The key here is the `optional: true` value, which makes it accept globs that

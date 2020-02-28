@@ -18,6 +18,10 @@ Below is an overview of that monitor.**
 ### Smart Agent Monitor
 
 
+**This monitor is deprecated in favor of the `cpu` monitor.  Please switch
+to that monitor, as this monitor will be removed in a future agent
+release.**
+
 This monitor collects cpu usage data using the
 collectd `cpu` plugin.  It aggregates the per-core CPU data into a single
 metric and sends it to the SignalFx Metadata plugin in collectd, where the

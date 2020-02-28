@@ -55,7 +55,6 @@ Configuration](../monitor-config.html#common-configuration).**
 | --- | --- | --- | --- |
 | `alwaysClusterReporter` | no | `bool` | If `true`, leader election is skipped and metrics are always reported. (**default:** `false`) |
 | `namespace` | no | `string` | If specified, only resources within the given namespace will be monitored.  If omitted (blank) all supported resources across all namespaces will be monitored. |
-| `useNodeName` | no | `bool` | If set to true, the Kubernetes node name will be used as the dimension to which to sync properties about each respective node.  This is necessary if your cluster's machines do not have unique machine-id values, as can happen when machine images are improperly cloned. (**default:** `false`) |
 | `kubernetesAPI` | no | `object (see below)` | Config for the K8s API client |
 | `nodeConditionTypesToReport` | no | `list of strings` | A list of node status condition types to report as metrics.  The metrics will be reported as datapoints of the form `kubernetes.node_<type_snake_cased>` with a value of `0` corresponding to "False", `1` to "True", and `-1` to "Unknown". (**default:** `[Ready]`) |
 
@@ -133,9 +132,6 @@ monitor config option `extraGroups`:
 
 ### Non-default metrics (version 4.7.0+)
 
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -143,20 +139,6 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions
 
@@ -167,7 +149,7 @@ dimensions may be specific to certain metrics.
 | ---  | ---         |
 | `kubernetes_name` | The name of the resource that the metric describes |
 | `kubernetes_namespace` | The namespace of the resource that the metric describes |
-| `kubernetes_node` | The name of the node, as defined by the `name` field of the node resource. |
+| `kubernetes_node_uid` | The UID of the node, as defined by the `uid` field of the node resource. |
 | `kubernetes_pod_uid` | The UID of the pod that the metric describes |
 | `machine_id` | The machine ID from /etc/machine-id.  This should be unique across all nodes in your cluster, but some cluster deployment tools don't guarantee this.  This will not be sent if the `useNodeName` config option is set to true. |
 | `metric_source` | This is always set to `kubernetes` |
@@ -182,7 +164,7 @@ are set on the dimension values of the dimension specified.
 
 | Name | Dimension | Description |
 | ---  | ---       | ---         |
-| `<node label>` | `machine_id/kubernetes_node` | All non-blank labels on a given node will be synced as properties to the `machine_id` or `kubernetes_node` dimension value for that node.  Which dimension gets the properties is determined by the `useNodeName` config option.  Any blank values will be synced as tags on that same dimension. |
+| `<node label>` | `kubernetes_node_uid` | All non-blank labels on a given node will be synced as properties to the `kubernetes_node_uid` dimension value for that node. Any blank values will be synced as tags on that same dimension. |
 | `<pod label>` | `kubernetes_pod_uid` | Any labels with non-blank values on the pod will be synced as properties to the `kubernetes_pod_uid` dimension. Any blank labels will be synced as tags on that same dimension. |
 | `container_status` | `container_id` | Status of the container such as `running`, `waiting` or `terminated` are synced to the `container_id` dimension. |
 | `container_status_reason` | `container_id` | Reason why a container is in a particular state. This property is synced to `container_id` only if the value of `cotnainer_status` is either `waiting` or `terminated`. |
@@ -190,6 +172,7 @@ are set on the dimension values of the dimension specified.
 | `daemonset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the daemon set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 | `deployment_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the deployment was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 | `job_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the job was created and is in UTC. This property is synced onto `kubernetes_uid`. |
+| `node_creation_timestamp` | `kubernetes_node_uid` | CreationTimestamp is a timestamp representing the server time when the node was created and is in UTC. This property is synced onto `kubernetes_node_uid`. |
 | `pod_creation_timestamp` | `kubernetes_pod_uid` | Timestamp (in RFC3339 format) representing the server time when the pod was created and is in UTC. This property is synced onto `kubernetes_pod_uid`. |
 | `replicaset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the replica set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 | `statefulset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the stateful set was created and is in UTC. This property is synced onto `kubernetes_uid`. |

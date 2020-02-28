@@ -60,7 +60,6 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
-
  - ***`net_conntrack_dialer_conn_attempted_total`*** (*cumulative*)<br>    Total number of connections attempted by the given dialer a given name
  - ***`net_conntrack_dialer_conn_closed_total`*** (*cumulative*)<br>    Total number of connections closed which originated from the dialer of a given name
  - ***`net_conntrack_dialer_conn_established_total`*** (*cumulative*)<br>    Total number of connections successfully established by the given dialer a given name
