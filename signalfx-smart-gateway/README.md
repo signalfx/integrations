@@ -18,7 +18,7 @@ The SignalFx Smart Gateway is available as a single, statically-linked binary. F
 Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.5 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.6 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -42,7 +42,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.5 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.6 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -52,7 +52,14 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 Note: To use the following download links, you must be viewing this content from within the SignalFx UI. Instructions for manually downloading a specific version of the Smart Gateway are shown [above](#installation).
 
-##### Latest Version: v2.1.5 (January 16, 2020)
+##### Latest Version: v2.1.6 (March 4, 2020)
+<a target="_blank" href="/#/smart-gateway/download/v2.1.6">Download Smart Gateway v2.1.6</a><br/>
+_SHA256: `7d9b54617d4e17045cff29d03904b6dd3a96d4237393337f1fd44b08659acaab`_
+
+* Fixes issues emitting directly to SignalFx without trace sampling
+
+##### v2.1.5 (January 16, 2020)
+
 <a target="_blank" href="/#/smart-gateway/download/v2.1.5">Download Smart Gateway v2.1.5</a><br/>
 _SHA256: `3b48072e3cd61c72ea4bde587e41ca59e886c430403da413abf21f75fae9cb31`_
 
