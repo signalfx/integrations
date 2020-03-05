@@ -31,6 +31,7 @@ toc_sam = [
         "fingerprints": {"starter": "## Configuration", "stopper": "## "},
     },
     {"name": "usage", "content": "README.md", "fingerprints": {"starter": "### USAGE", "stopper": "### "}},
+    {"name": "features", "content": "README.md", "fingerprints": {"starter": "### FEATURES", "stopper": "### "}},
     {
         "name": "metrics",
         "content": "SMART_AGENT_MONITOR.md",
