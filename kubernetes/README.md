@@ -1,7 +1,6 @@
 # ![](./img/integrations_kubernetes.png) Kubernetes
 
-
-### USAGE
+### FEATURES
 
 
 Use the Kubernetes integration to monitor the health and performance of your microservices, the Kubernetes orchestration services, and the infrastructure that they are running on.
