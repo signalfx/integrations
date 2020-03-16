@@ -3,8 +3,8 @@ browse_categories:
 - Application integration
 code: https://github.com/signalfx/cloudwatch-event-forwarder
 data_signature: ''
-description: Send AWS CloudWatch Events to SignalFx
-display_name: AWS CloudWatch Events
+description: Send Amazon CloudWatch Events to SignalFx
+display_name: Amazon CloudWatch Events
 featured: false
 in_app_categories:
 - AWSservicesMonitored
