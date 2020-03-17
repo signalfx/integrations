@@ -44,9 +44,9 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
- - ***`load.longterm`*** (*gauge*)<br>    Average CPU load per core over the last 15 minutes
- - ***`load.midterm`*** (*gauge*)<br>    Average CPU load per core over the last five minutes
- - ***`load.shortterm`*** (*gauge*)<br>    Average CPU load per core over the last one minute
+ - ***`load.longterm`*** (*gauge*)<br>    Average CPU load for the whole system over the last 15 minutes
+ - ***`load.midterm`*** (*gauge*)<br>    Average CPU load for the whole system over the last five minutes
+ - ***`load.shortterm`*** (*gauge*)<br>    Average CPU load for the whole system over the last one minute
 
 ### Non-default metrics (version 4.7.0+)
 
