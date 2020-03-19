@@ -11,7 +11,7 @@ Metadata associated with the NGINX Plus plugin for collectd can be found <a targ
 
 ### DESCRIPTION
 
-This is the SignalFx NGINX Plus plugin. Follow these instructions to install the NGINX Plus plugin for collectd.
+This is the SignalFx NGINX Plus plugin. Follow these instructions to install the NGINX Plus plugin as a smart agent <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-custom.html">collectd/custom</a> monitor.
 
 The <a target="_blank" href="https://github.com/signalfx/collectd-nginx-plus">niginx-plus-collectd</a> plugin collects metrics about a single NGINX Plus instance, using the `/status` endpoints exposed with the ngx_http_status_module, documentation <a target="_blank" href="http://nginx.org/en/docs/http/ngx_http_status_module.html">here</a>.
 
@@ -44,11 +44,27 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-nginx-plus">ni
 
         sudo pip install -r install_requirements.txt
 
-3. Download SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/10-nginx-plus.conf">sample configuration file</a> for this plugin to `/etc/collectd/managed_config`.
-
+3. Add the SignalFx’s <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-nginx-plus/10-nginx-plus.conf">sample configuration file</a> to your smart agent YAML configuration. Example:
+    ````
+    monitors:
+      - {"#from": "/etc/signalfx/monitors/*.yaml", flatten: true, optional: true}
+      - type: host-metadata
+      - type: collectd/custom
+        template: |
+            LoadPlugin "python"
+            <Plugin python>
+              ModulePath "/bundle/collectd-python/collectd-nginx-plus/plugin"
+              Import nginx_plus_collectd
+              <Module nginx_plus_collectd>
+                StatusHost "localhost"
+                StatusPort "8080"
+                DebugLogLevel true
+              </Module>
+            </Plugin>
+    ````
 4. Modify the configuration file to provide values that make sense for your environment, as described in [Configuration](#configuration) below.
 
-5. Restart collectd.
+5. Check <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-custom.html">collectd/custom</a> if extra customization is needed.
 
 ### CONFIGURATION
 
