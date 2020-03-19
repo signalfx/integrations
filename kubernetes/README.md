@@ -6,29 +6,27 @@
 
 Use the Kubernetes integration to monitor the health and performance of your microservices, the Kubernetes orchestration services, and the infrastructure that they are running on.
 
-- Explore the relationships between the various layers of your infrastructure with the Navigator
 - Discover and automatically configure the monitoring of supported services running in the containers
 - Use the built-in dashboards to view key metrics that are indicators of the health of your infrastructure and the orchestrator
 
-#### Infrastructure Navigator
+#### Kubernetes Navigator
 
-The Infrastructure Navigator gives you an immediate, at-a-glance view of your Kubernetes overall architecture as well as nodes and pods, colored by critical health metrics.The Infrastructure Navigator also provides visibility all the way through the stack as you drill down and across elements of your environment, reflecting the fact that the infrastructure, Kubernetes control plane, containers, applications, and services are all related layers, not just individual system components.
+The new SignalFx Kubernetes Navigator gives you a real-time, at-a-glance view of the overall health and performance of your Kubernetes environment. It also provides visibility all the way through the stack as you drill down and across elements of your environment, reflecting the fact that the infrastructure, Kubernetes control plane, containers, applications, and services are all related layers, not just individual system components.
 
-  [<img src='./img/Navigator.png' width=200px>](./img/Navigator.png)
+  [<img src='./img/Map_1.png' width=200px>](./img/Map_1.png)
 
-#### Built-in Dashboards
 
-SignalFx provides built-in dashboards for Kubernetes. Examples are shown below.
+The Kubernetes Navigator selection bar provides several tabs for viewing information about your clusters, nodes, pods, containers, and workloads. Examples are shown below.
 
-- **Kubernetes Overview**: This dashboard is populated by the metrics emitted from the ```kubernetes-cluster``` and ```kubelet-stats monitors```. Charts refer to the health of your Kubernetes nodes and pods. When filtered by Deployment or Service, charts will be filtered by the selected pods running on the nodes.
+- **Node Detail**: The Node Detail tab displays detailed information about a selected node, including additional properties, workloads running on the node, containers on this node, and so on. The properties in the upper left are metadata about the node. If desired, you can specify a different cluster or node. The status of the workloads helps you understand the health of the workloads.
 
-  [<img src='./img/Overview.png' width=200px>](./img/Overview.png)
+  [<img src='./img/Node_Detail_1.png' width=200px>](./img/Node_Detail_1.png)
 
-- **Kubernetes Clusters**: Overview of multiple Kubernetes clusters.
+- **Pod Detail**: The Pod Detail tab displays detailed information about a selected pod, including its containers. Use this view to track the activity on one pod or across all pods in your cluster. The properties in the upper left are metadata about the pod. If desired, you can specify a different cluster, node, or pod.
 
-  [<img src='./img/Clusters.png' width=200px>](./img/Clusters.png)
+  [<img src='./img/Pod_Detail_1.png' width=200px>](./img/Pod_Detail_1.png)
 
 #### Learning More
 
-After data is flowing, try the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-built-in.html#k8s-built-in">Kubernetes Built-in Content tour</a> to get familiar with the ways to visualize data from your nodes, pods, and network in the Infrastructure tab and built-in dashboards.
+Once data is flowing, explore the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes/get-around-k8s-navigator.html">Kubernetes Navigator</a> to get familiar with the ways to visualize data from your nodes, pods, containers, and network.
 
