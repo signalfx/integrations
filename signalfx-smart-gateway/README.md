@@ -13,12 +13,12 @@ The SignalFx Smart Gateway observes every transaction across distributed service
 
 Note: This content appears on a SignalFx documentation page and on the Setup tab of the Smart Gateway tile in the SignalFx UI. The following link to download the current version works only if you are viewing these instructions on the Setup tab.  
 
-The SignalFx Smart Gateway is available as a single, statically-linked binary. From within the SignalFx UI, you can download the latest version <a target="_blank" href="/#/smart-gateway/download/v2.1.8">here</a>. 
+The SignalFx Smart Gateway is available as a single, statically-linked binary. From within the SignalFx UI, you can download the latest version <a target="_blank" href="/#/smart-gateway/download/v2.1.9">here</a>. 
 
 Alternatively, you can download a specific version of the SignalFx Smart Gateway from the command line using `curl`:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.8 | gunzip > smart-gateway
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/download/v2.1.9 | gunzip > smart-gateway
 ```
 
 Make sure to mark the `smart-gateway` binary as executable:
@@ -42,7 +42,7 @@ sha256sum smart-gateway
 It is also possible to download the checksum using `curl`, to automate the verification:
 
 ```
-curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.8 > smart-gateway.sha256
+curl -qs -H"X-SF-Token:YOUR_SIGNALFX_API_TOKEN" https://app.YOUR_SIGNALFX_REALM.signalfx.com/v2/smart-gateway/checksum/v2.1.9 > smart-gateway.sha256
 sha256sum -c smart-gateway.sha256
 ```
 
@@ -52,11 +52,12 @@ The downloaded checksum assumes that the Smart Gateway binary is in the current 
 
 Note: To use the following download links, you must be viewing this content from within the SignalFx UI. Instructions for manually downloading a specific version of the Smart Gateway are shown [above](#installation).
 
-##### Latest Version: v2.1.8 (March 11, 2020)
-<a target="_blank" href="/#/smart-gateway/download/v2.1.8">Download Smart Gateway v2.1.8</a><br/>
-_SHA256: `7da43af02275f6da27b8dcd45d8c0c5261e30c8f0b63cb5fbcebfc1628fa0bc1`_
+##### Latest Version: v2.1.9 (March 20, 2020)
+<a target="_blank" href="/#/smart-gateway/download/v2.1.9">Download Smart Gateway v2.1.9</a><br/>
+_SHA256: `49f064ebb532ae74c530a8d071a9d2a8e9858ffe9fc2d5468151743198401d4d`_
 
 * Fixes issues re-distributing spans causing duplicates
+* Fixes issue with metric collision of gateway.dropped_spans
 
 ##### v2.1.6 (March 4, 2020)
 <a target="_blank" href="/#/smart-gateway/download/v2.1.6">Download Smart Gateway v2.1.6</a><br/>
