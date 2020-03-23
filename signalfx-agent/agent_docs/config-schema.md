@@ -50,6 +50,7 @@ if not set.
 | `disableHostDimensions` | no | bool | Our standard agent model is to collect metrics for services running on the same host as the agent.  Therefore, host-specific dimensions (e.g. `host`, `AWSUniqueId`, etc) are automatically added to every datapoint that is emitted from the agent by default.  Set this to true if you are using the agent primarily to monitor things on other hosts.  You can set this option at the monitor level as well. (**default:** `false`) |
 | `intervalSeconds` | no | integer | How often to send metrics to SignalFx.  Monitors can override this individually. (**default:** `10`) |
 | `globalDimensions` | no | map of strings | Dimensions (key:value pairs) that will be added to every datapoint emitted by the agent. To specify that all metrics should be high-resolution, add the dimension `sf_hires: 1` |
+| `globalSpanTags` | no | map of strings | Tags (key:value pairs) that will be added to every span emitted by the agent. |
 | `cluster` | no | string | The logical environment/cluster that this agent instance is running in. All of the services that this instance monitors should be in the same environment as well. This value, if provided, will be synced as a property onto the `host` dimension, or onto any cloud-provided specific dimensions (`AWSUniqueId`, `gcp_id`, and `azure_resource_id`) when available. Example values: "prod-usa", "dev" |
 | `syncClusterOnHostDimension` | no | bool | If true, force syncing of the `cluster` property on the `host` dimension, even when cloud-specific dimensions are present. (**default:** `false`) |
 | `validateDiscoveryRules` | no | bool | If true, a warning will be emitted if a discovery rule contains variables that will never possibly match a rule.  If using multiple observers, it is convenient to set this to false to suppress spurious errors. (**default:** `false`) |
@@ -99,6 +100,10 @@ The following are generic options that apply to all monitors.  Each monitor type
 | `discoveryRule` | no | string | The rule used to match up this configuration with a discovered endpoint. If blank, the configuration will be run immediately when the agent is started.  If multiple endpoints match this rule, multiple instances of the monitor type will be created with the same configuration (except different host/port). |
 | `validateDiscoveryRule` | no | bool | If true, a warning will be emitted if a discovery rule contains variables that will never possibly match a rule.  If using multiple observers, it is convenient to set this to false to suppress spurious errors.  The top-level setting `validateDiscoveryRules` acts as a default if this isn't set. (**default:** `"false"`) |
 | `extraDimensions` | no | map of strings | A set of extra dimensions (key:value pairs) to include on datapoints emitted by the monitor(s) created from this configuration. To specify metrics from this monitor should be high-resolution, add the dimension `sf_hires: 1` |
+| `extraSpanTags` | no | map of strings | A set of extra span tags (key:value pairs) to include on spans emitted by the monitor(s) created from this configuration. |
+| `extraSpanTagsFromEndpoint` | no | map of strings | A mapping of extra span tag names to a [discovery rule expression](https://docs.signalfx.com/en/latest/integrations/agent/auto-discovery.html) that is used to derive the value of the span tag.  For example, to use a certain container label as a span tag, you could use something like this in your monitor config block: `extraSpanTagsFromEndpoint: {env: 'Get(container_labels, "myapp.com/environment")'}` |
+| `defaultSpanTags` | no | map of strings | A set of default span tags (key:value pairs) to include on spans emitted by the monitor(s) created from this configuration. |
+| `defaultSpanTagsFromEndpoint` | no | map of strings | A mapping of default span tag names to a [discovery rule expression](https://docs.signalfx.com/en/latest/integrations/agent/auto-discovery.html) that is used to derive the default value of the span tag.  For example, to use a certain container label as a span tag, you could use something like this in your monitor config block: `defaultSpanTagsFromEndpoint: {env: 'Get(container_labels, "myapp.com/environment")'}` |
 | `extraDimensionsFromEndpoint` | no | map of strings | A mapping of extra dimension names to a [discovery rule expression](https://docs.signalfx.com/en/latest/integrations/agent/auto-discovery.html) that is used to derive the value of the dimension.  For example, to use a certain container label as a dimension, you could use something like this in your monitor config block: `extraDimensionsFromEndpoint: {env: 'Get(container_labels, "myapp.com/environment")'}` |
 | `configEndpointMappings` | no | map of strings | A set of mappings from a configuration option on this monitor to attributes of a discovered endpoint.  The keys are the config option on this monitor and the value can be any valid expression used in discovery rules. |
 | `intervalSeconds` | no | integer | The interval (in seconds) at which to emit datapoints from the monitor(s) created by this configuration.  If not set (or set to 0), the global agent intervalSeconds config option will be used instead. (**default:** `0`) |
@@ -151,9 +156,10 @@ The **nested** `writer` config object has the following fields:
 | `logDimensionUpdates` | no | bool | If `true`, dimension updates will be logged at the INFO level. (**default:** `false`) |
 | `logDroppedDatapoints` | no | bool | If true, and the log level is `debug`, filtered out datapoints will be logged. (**default:** `false`) |
 | `addGlobalDimensionsAsSpanTags` | no | bool | If true, the dimensions specified in the top-level `globalDimensions` configuration will be added to the tag set of all spans that are emitted by the writer.  If this is false, only the "host id" dimensions such as `host`, `AwsUniqueId`, etc. are added to the span tags. (**default:** `false`) |
-| `sendTraceHostCorrelationMetrics` | no | bool | Whether to send host correlation metrics to correlation traced services with the underlying host (**default:** `true`) |
-| `staleServiceTimeout` | no | int64 | How long to wait after a trace span's service name is last seen to continue sending the correlation datapoints for that service.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration.  This option is irrelvant if `sendTraceHostCorrelationMetrics` is false. (**default:** `"5m"`) |
-| `traceHostCorrelationMetricsInterval` | no | int64 | How frequently to send host correlation metrics that are generated from the service name seen in trace spans sent through or by the agent.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration.  This option is irrelvant if `sendTraceHostCorrelationMetrics` is false. (**default:** `"1m"`) |
+| `sendTraceHostCorrelationMetrics` | no | bool | Whether to send host correlation metrics to correlate traced services with the underlying host (**default:** `true`) |
+| `staleServiceTimeout` | no | int64 | How long to wait after a trace span's service name is last seen to continue sending the correlation datapoints for that service.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration.  This option is irrelevant if `sendTraceHostCorrelationMetrics` is false. (**default:** `"5m"`) |
+| `traceHostCorrelationPurgeInterval` | no | int64 | How frequently to purge host correlation caches that are generated from the service and environment names seen in trace spans sent through or by the agent.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration. (**default:** `"1m"`) |
+| `traceHostCorrelationMetricsInterval` | no | int64 | How frequently to send host correlation metrics that are generated from the service name seen in trace spans sent through or by the agent.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration.  This option is irrelevant if `sendTraceHostCorrelationMetrics` is false. (**default:** `"1m"`) |
 | `maxTraceSpansInFlight` | no | unsigned integer | How many trace spans are allowed to be in the process of sending.  While this number is exceeded, the oldest spans will be discarded to accommodate new spans generated to avoid memory exhaustion.  If you see log messages about "Aborting pending trace requests..." or "Dropping new trace spans..." it means that the downstream target for traces is not able to accept them fast enough. Usually if the downstream is offline you will get connection refused errors and most likely spans will not build up in the agent (there is no retry mechanism). In the case of slow downstreams, you might be able to increase `maxRequests` to increase the concurrent stream of spans downstream (if the target can make efficient use of additional connections) or, less likely, increase `traceSpanMaxBatchSize` if your batches are maxing out (turn on debug logging to see the batch sizes being sent) and being split up too much. If neither of those options helps, your downstream is likely too slow to handle the volume of trace spans and should be upgraded to more powerful hardware/networking. (**default:** `100000`) |
 
 
@@ -370,6 +376,7 @@ where applicable:
   disableHostDimensions: false
   intervalSeconds: 10
   globalDimensions: 
+  globalSpanTags: 
   cluster: 
   syncClusterOnHostDimension: false
   validateDiscoveryRules: false
@@ -395,6 +402,7 @@ where applicable:
     addGlobalDimensionsAsSpanTags: false
     sendTraceHostCorrelationMetrics: true
     staleServiceTimeout: "5m"
+    traceHostCorrelationPurgeInterval: "1m"
     traceHostCorrelationMetricsInterval: "1m"
     maxTraceSpansInFlight: 100000
   logging: 
