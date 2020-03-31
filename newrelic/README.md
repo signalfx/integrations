@@ -18,7 +18,7 @@ This integration requires a New Relic account. You must be an administrator of y
 
 1. Follow <a target="_blank" href="https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys">New Relic's instructions</a> to obtain a REST API key for your account.
 
-2. Click the **New Integration** button. In the field labelled **API key**, enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!** If a different message appears, contact [support@signalfx.com](mailto:support@signalfx.com) for help.
+2. Click the **New Integration** button. In the field labelled **API key**, enter the API key that you obtained in step 1, then click **Validate**. A message appears that says **Validated!** If a different message appears, contact [signalfx-support@splunk.com](mailto:signalfx-support@splunk.com) for help.
 
 3. Select a New Relic module to sync to SignalFx (APM, Mobile, or Servers). You will create a sync rule for that module to control which metrics SignalFx will sync from New Relic.
 

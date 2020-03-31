@@ -1,6 +1,6 @@
 # ![](././img/integrations_pivotalcloudfoundry.png) Pivotal Cloud Foundry
 
-Our PCF Tile can be downloaded <a target="_blank" href="https://github.com/signalfx/signalfx-cloudfoundry-bridge-boshrelease/releases">here</a>.
+Our PCF Tile can be downloaded <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -11,7 +11,7 @@ Our PCF Tile can be downloaded <a target="_blank" href="https://github.com/signa
 
 ### DESCRIPTION
 
-Use this integration to monitor a Pivotal Cloud Foundry deployment. This integration provides metrics about the performance of the various components that make up Pivotal Cloud Foundry.
+Use this integration to monitor a Pivotal Cloud Foundry deployment. This integration provides metrics about the performance of the various components that make up Pivotal Cloud Foundry. Click <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting">here</a> for more details.
 
 #### FEATURES
 

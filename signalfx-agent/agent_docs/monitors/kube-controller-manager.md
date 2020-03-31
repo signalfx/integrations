@@ -12,7 +12,8 @@ Monitor Type: `kube-controller-manager` ([Source](https://github.com/signalfx/si
 
 ## Overview
 
-Exports Prometheus metrics from the ([Kube Controller Manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/)).
+Exports Prometheus metrics from the [kube-controller-manager]
+(https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/).
 The monitor queries path `/metrics` by default when no path is configured. The monitor converts
 the Prometheus metric types to SignalFx metric types as described [here](prometheus-exporter.md)
 

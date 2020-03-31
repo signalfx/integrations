@@ -11,7 +11,7 @@
 - Install and configure the Helm client. For details on installing Helm, see <a target="_blank" href="https://helm.sh/docs/intro/install">here</a>.
 - Install the Tiller component on your Kubernetes cluster.
 
-We recommend that you use Helm to install and configure the SignalFx Smart Agent in your Kubernetes environment. This section details how to do that. If you want to install the SignalFx Smart Agent on your Kubernetes cluster using kubectl, see <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-advanced-install.html">Kubernetes Advanced Installation</a>.
+We recommend that you use Helm to install and configure the SignalFx Smart Agent in your Kubernetes environment. Helm allows mulitple resources (that is, DaemonSet, configmap, clusterrole, and clusterrole binding) to be configured by a single script action. If you want to install the SignalFx Smart Agent on your Kubernetes cluster using `kubectl`, see <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-advanced-install.html">Kubernetes Advanced Installation</a>.
 
 #### Install the SignalFx Smart Agent on your Kubernetes cluster using Helm
 
