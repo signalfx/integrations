@@ -46,6 +46,15 @@ monitors:
   username: "admin"
   password: "secret"
 ```
+### Example config using skipVerify
+```yaml
+monitors:
+- type: collectd/openstack
+  authURL: "https://192.168.11.111/identity/v3"
+  username: "admin"
+  password: "secret"
+  skipVerify: true
+```
 
 
 ## Configuration
@@ -72,6 +81,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `projectName` | no | `string` | Specify the name of Project to be monitored (**default**:"demo") |
 | `projectDomainID` | no | `string` | The project domain (**default**:"default") |
 | `userDomainID` | no | `string` | The user domain id (**default**:"default") |
+| `skipVerify` | no | `bool` | Skip SSL certificate validation (**default:** `false`) |
 
 
 ## Metrics
