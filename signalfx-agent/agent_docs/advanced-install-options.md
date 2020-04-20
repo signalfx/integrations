@@ -59,7 +59,7 @@ To use the bundle:
 
     - internalStatusHost - This is the host name that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the agent will listen on to serve internal metrics about the Smart Agent. These metrics can can be scraped by the internal-metrics monitor. This will default to localhost if left blank.
 
-    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agentstatus command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can can be scraped by the internal-metrics monitor. This will default to 8095.
+    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can can be scraped by the internal-metrics monitor. This will default to 8095.
 
     - collectd.configDir - This is where the Smart Agent writes the managed collectd config, since collectd can only be configured by files. Note that this entire dir will be wiped by the Smart Agent upon startup so that it doesn’t pick up stale collectd config, so be sure that it is not used for anything else. Also note that these files could have sensitive information in them if you have passwords configured for collectd monitors, so you might want to place this dir on a tmpfs mount to avoid credentials persisting on disk.
 
@@ -93,7 +93,7 @@ To use the bundle:
 
     - internalStatusHost - This is the hostname that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to localhost if left blank.
 
-    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agentstatus command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to 8095.
+    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to 8095.
 
     See the section on [Privileges](#privileges) for information on the capabilities the Smart Agent requires.
 
@@ -257,7 +257,7 @@ Then execute systemctl daemon-reload and systemctl restart signalfx-agent.servic
 
 ### Diagnostics
 
-The Smart Agent serves diagnostic information on an HTTP server at the address configured by the internalStatusHost and internalStatusPort option. As a convenience, the command signalfx-agentstatus will read this server and dump out its contents. That command will also explain how to get further diagnostic information.
+The Smart Agent serves diagnostic information on an HTTP server at the address configured by the internalStatusHost and internalStatusPort option. As a convenience, the command signalfx-agent status will read this server and dump out its contents. That command will also explain how to get further diagnostic information.
 
 Also see the [FAQ](https://docs.signalfx.com/en/latest/integrations/agent/faq.html) for more troubleshooting help.
 
