@@ -59,7 +59,7 @@ To use the bundle:
 
     - internalStatusHost - This is the host name that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the agent will listen on to serve internal metrics about the Smart Agent. These metrics can can be scraped by the internal-metrics monitor. This will default to localhost if left blank.
 
-    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agentstatus command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can can be scraped by the internal-metrics monitor. This will default to 8095.
+    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can can be scraped by the internal-metrics monitor. This will default to 8095.
 
     - collectd.configDir - This is where the Smart Agent writes the managed collectd config, since collectd can only be configured by files. Note that this entire dir will be wiped by the Smart Agent upon startup so that it doesn’t pick up stale collectd config, so be sure that it is not used for anything else. Also note that these files could have sensitive information in them if you have passwords configured for collectd monitors, so you might want to place this dir on a tmpfs mount to avoid credentials persisting on disk.
 
@@ -79,12 +79,10 @@ By default, the Smart Agent logs only to stdout/err. If you want to persist logs
 
 If you don’t want to use the installer script, we offer a .zip that can be deployed to the target host. This bundle is available for download on the [Github Releases Page](https://github.com/signalfx/signalfx-agent/releases) for each new release.
 
-Before proceeding make sure the following requirements are installed.
+Before proceeding, you should ensure that [.Net Framework 3.5](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10) or later is installed. 
 
-[.Net Framework 3.5 (Windows 8+)](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10)
-
-[Visual C++ Compiler for Python 2.7](https://www.microsoft.com/EN-US/DOWNLOAD/DETAILS.ASPX?ID=44266)
-
+As an optional step, if you want to invoke a Python script for non-default monitors, specifically **exec**, then you must have Python installed.
+   
 To use the bundle:
 
 1. Unzip it to a directory of your choice on the target system.
@@ -93,7 +91,7 @@ To use the bundle:
 
     - internalStatusHost - This is the hostname that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to localhost if left blank.
 
-    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agentstatus command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to 8095.
+    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to 8095.
 
     See the section on [Privileges](#privileges) for information on the capabilities the Smart Agent requires.
 
@@ -257,7 +255,7 @@ Then execute systemctl daemon-reload and systemctl restart signalfx-agent.servic
 
 ### Diagnostics
 
-The Smart Agent serves diagnostic information on an HTTP server at the address configured by the internalStatusHost and internalStatusPort option. As a convenience, the command signalfx-agentstatus will read this server and dump out its contents. That command will also explain how to get further diagnostic information.
+The Smart Agent serves diagnostic information on an HTTP server at the address configured by the internalStatusHost and internalStatusPort option. As a convenience, the command signalfx-agent status will read this server and dump out its contents. That command will also explain how to get further diagnostic information.
 
 Also see the [FAQ](https://docs.signalfx.com/en/latest/integrations/agent/faq.html) for more troubleshooting help.
 

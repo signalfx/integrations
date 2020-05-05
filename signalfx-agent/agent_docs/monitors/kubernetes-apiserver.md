@@ -171,7 +171,7 @@ the non-default metrics below can be turned on by adding `apiserver_request` to 
 monitor config option `extraGroups`:
  - ***`apiserver_request_count`*** (*cumulative*)<br>    (Deprecated) Counter of apiserver requests broken out for each verb, group, version, resource, scope, component, client, and HTTP response contentType and code.
  - `apiserver_request_duration_seconds` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (sum)
- - ***`apiserver_request_duration_seconds_bucket`*** (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (bucket)
+ - `apiserver_request_duration_seconds_bucket` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (bucket)
  - `apiserver_request_duration_seconds_count` (*cumulative*)<br>    Response latency distribution in seconds for each verb, dry run value, group, version, resource, subresource, scope and component. (count)
  - `apiserver_request_latencies` (*cumulative*)<br>    (Deprecated) Response latency distribution in microseconds for each verb, group, version, resource, subresource, scope and component. (sum)
  - `apiserver_request_latencies_bucket` (*cumulative*)<br>    (Deprecated) Response latency distribution in microseconds for each verb, group, version, resource, subresource, scope and component. (bucket)
