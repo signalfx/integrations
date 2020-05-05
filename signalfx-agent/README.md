@@ -36,7 +36,7 @@ Please note that the Smart Agent does not support Mac OS.
 
 **Windows requirements**
 - You must run .Net Framework 3.5 on Windows 8 or higher.
-- You must run Visual C++ Compiler for Python 2.7.
+- (Optional) If you want to invoke a Python script for non-default monitors, specifically **exec**, then you must have Python installed.
 
 
 ### Step 1. Install the SignalFx Smart Agent on your host
@@ -45,7 +45,7 @@ Please note that the Smart Agent does not support Mac OS.
 
 Note: This content appears on a SignalFx documentation page and on the **Setup** tab of the Smart Agent tile in the SignalFx UI. The following code to install the current version works only if you are viewing these instructions on the **Setup** tab.  
 
-From the **Setup** tab, copy and paste the following code into your command line: 
+From the **Setup** tab, copy and paste the following code into your command line or terminal:
 
 
 ```sh
@@ -59,7 +59,7 @@ sudo sh /tmp/signalfx-agent.sh --realm YOUR_SIGNALFX_REALM -- YOUR_SIGNALFX_API_
 
 Note: This content appears on a SignalFx documentation page and on the **Setup** tab of the Smart Agent tile in the SignalFx UI. The following code to install the current version works only if you are viewing these instructions on the **Setup** tab.  
 
-From the **Setup** tab, copy and paste the following code into your command line: 
+From the **Setup** tab, copy and paste the following code into your PowerShell window:
 
 
 ```sh
@@ -72,7 +72,7 @@ The agent will be installed as a Windows service and will log to the Windows Eve
 ### Step 2. Confirm your Installation
 
 
-1. To confirm your installation, enter the following command on the Linux or Windows command line: 
+1. To confirm your installation, enter the following command on the Linux or Windows command line:
 
     ```sh
     sudo signalfx-agent status
@@ -94,7 +94,7 @@ The agent will be installed as a Windows service and will log to the Windows Eve
     Trace Spans Sent (last minute):   0
     ```
 
-2. To confirm your installation, enter the following command on the Linux or Windows command line: 
+2. To confirm your installation, enter the following command on the Linux or Windows command line:
 
     | Command | Description   |
     |---|---|
@@ -106,7 +106,7 @@ The agent will be installed as a Windows service and will log to the Windows Eve
 
 ### Troubleshoot the Smart Agent installation
 
-If you are unable to install the Smart Agent, consider reviewing your error logs: 
+If you are unable to install the Smart Agent, consider reviewing your error logs:
 
 For Linux, use the following command to view error logs via Journal:
 
@@ -120,7 +120,7 @@ For additional installation troubleshooting information, including how to review
 
 ### Review additional documentation
 
-After a successful installation, learn more about the SignalFx agent and the SignalFx UI. 
+After a successful installation, learn more about the SignalFx agent and the SignalFx UI.
 
 * Review the capabilities of the SignalFx Smart Agent. See [Advanced Installation Options](https://docs.signalfx.com/en/latest/integrations/agent/./advanced-install-options.html).
 

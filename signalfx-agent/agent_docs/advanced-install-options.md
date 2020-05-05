@@ -79,12 +79,10 @@ By default, the Smart Agent logs only to stdout/err. If you want to persist logs
 
 If you don’t want to use the installer script, we offer a .zip that can be deployed to the target host. This bundle is available for download on the [Github Releases Page](https://github.com/signalfx/signalfx-agent/releases) for each new release.
 
-Before proceeding make sure the following requirements are installed.
+Before proceeding, you should ensure that [.Net Framework 3.5](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10) or later is installed. 
 
-[.Net Framework 3.5 (Windows 8+)](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10)
-
-[Visual C++ Compiler for Python 2.7](https://www.microsoft.com/EN-US/DOWNLOAD/DETAILS.ASPX?ID=44266)
-
+As an optional step, if you want to invoke a Python script for non-default monitors, specifically **exec**, then you must have Python installed.
+   
 To use the bundle:
 
 1. Unzip it to a directory of your choice on the target system.
