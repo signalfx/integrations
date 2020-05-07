@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Container Engine via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+Use SignalFx to monitor Google Container Engine through [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -116,10 +116,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
   [<img src='./img/pod-major-page-faults-per-container.png' width=200px>](./img/pod-major-page-faults-per-container.png)
 
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google Container Engine, visit [the service's metric page](https://cloud.google.com/monitoring/api/metrics#gcp-container).
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

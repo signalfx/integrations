@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google BigQuery via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+Use SignalFx to monitor Google BigQuery through [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -51,10 +51,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 - **Rows Uploaded / min per Table** - List number of rows uploaded per min aggregated by table.
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google BigQuery, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-bigquery">https://cloud.google.com/monitoring/api/metrics#gcp-bigquery</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
