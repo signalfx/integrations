@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Platform (GCP) services via StackDriver Monitoring. This integration enables data collection from all GCP web services that report to StackDriver.
+Use SignalFx to monitor Google Cloud Platform (GCP) services through StackDriver Monitoring. This integration enables data collection from all GCP web services that report to StackDriver.
 
 ### FEATURES
 

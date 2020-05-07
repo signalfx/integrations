@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Datastore via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+Use SignalFx to monitor Google Cloud Datastore through [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -45,10 +45,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/datastore-overview-read-sizes-type.png' width=200px>](./img/datastore-overview-read-sizes-type.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google Cloud Datastore, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-datastore">https://cloud.google.com/monitoring/api/metrics#gcp-datastore</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

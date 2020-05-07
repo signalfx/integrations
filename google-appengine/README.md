@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google App Engine via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+Use SignalFx to monitor Google App Engine through [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
 ### FEATURES
 
