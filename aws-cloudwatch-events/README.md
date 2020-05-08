@@ -14,6 +14,6 @@ To learn more about Events at SignalFx, see [View Additional Data with Events](h
 There are two ways to deploy SignalFx Lambda for CloudWatch Events:
 
 * AWS Serverless Application Repository
-  * For details, in [AWS Serverless Repository](https://console.aws.amazon.com/serverlessrepo/home#/available-applications), the application in Serverless Repository is called “signalfx-cloudwatch-event-forwarder”.
+    * For details, in [AWS Serverless Repository](https://console.aws.amazon.com/serverlessrepo/home#/available-applications), the application in Serverless Repository is called “signalfx-cloudwatch-event-forwarder”.
 * SignalFx’s GitHub repository
-  * For details, see the repository’s [README](https://github.com/signalfx/cloudwatch-event-forwarder/blob/master/README.md).
+    * For details, see the repository’s [README](https://github.com/signalfx/cloudwatch-event-forwarder/blob/master/README.md).
