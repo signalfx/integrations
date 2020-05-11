@@ -16,7 +16,7 @@ SignalFx enables you to monitor the health and performance of your invidvidual A
 
 -  The wrapper is also a way for you to send in custom application or business metrics from within a Azure Function, analogous to what you can do with our client libraries for code running other environments.
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -87,6 +87,6 @@ The Azure Function wrappers add several dimensions to data points sent to Signal
 
 For more information about the metrics emitted by Azure Functions, see the documentation at <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.microsoft.azure.html">https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.microsoft.azure.html</a>.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

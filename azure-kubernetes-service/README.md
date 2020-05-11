@@ -9,7 +9,7 @@
 
 Use SignalFx to monitor Azure Kubernetes Service via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -55,6 +55,6 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
   [<img src='./img/pods_not_ready_by_namespace.png' width=200px>](./img/pods_not_ready_by_namespace.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Azure Kubernetes Service, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported#microsoftcontainerservicemanagedclusters">here</a>.
