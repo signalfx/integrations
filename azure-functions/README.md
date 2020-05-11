@@ -38,22 +38,20 @@ SignalFx enables you to monitor the health and performance of your invidvidual A
 
 ### INSTALLATION
 
-#### SignalFx Azure Wrapper
+#### Step 1: Add the SignalFx Azure Wrapper
 
 You can use the SignalFx Azure Wrapper for:
 
 - Real-time monitoring of Azure Functions
 - Sending custom metrics from your applications to SignalFx
 
-To use the SignalFx Azure Wrapper, include the wrapper in your Azure Function.
-
-To learn more, review the README file for the desired library:  
+To use the SignalFx Azure Wrapper, include the wrapper in your Azure Function. To learn more, review the README file for the desired library:  
 
 - <a target="_blank" href="https://github.com/signalfx/azure-function-java">Java</a>
 - <a target="_blank" href="https://github.com/signalfx/azure-function-nodejs">NodeJS</a>
 - <a target="_blank" href="https://github.com/signalfx/azure-function-csharp">C#</a>
 
-#### Azure Monitor
+#### Step 2: Connect to Azure Monitor
 
 To access this integration, [connect to Azure Monitor](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
