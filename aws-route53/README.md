@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon Route 53 via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -37,12 +37,12 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_route53_healthcheck.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon Route 53, visit the service homepage at <a target="_blank" href="https://aws.amazon.com/route53/">https://aws.amazon.com/route53/</a>.
 
 <!--- METRICS --->
-### RECOMMENDED STATISTICS 
+### RECOMMENDED STATISTICS
 
 The following are a subset of the available metrics; these are the statistics recommended by Amazon for collection.
 
@@ -56,6 +56,6 @@ The following are a subset of the available metrics; these are the statistics re
 | TimeToFirstByte              | Average                   |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

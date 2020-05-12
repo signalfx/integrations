@@ -10,7 +10,7 @@
 
 Use SignalFx to monitor AWS Kinesis Analytics via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -36,10 +36,10 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_kinesis_analytics.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by AWS Kinesis Analytics, visit the service's monitoring page at <a target="_blank" href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/monitoring-metrics.html">https://docs.aws.amazon.com/kinesisanalytics/latest/dev/monitoring-metrics.html</a>.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
