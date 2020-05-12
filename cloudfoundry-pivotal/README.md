@@ -1,6 +1,5 @@
 # ![](././img/integrations_pivotalcloudfoundry.png) Pivotal Cloud Foundry
 
-Our PCF Tile can be downloaded <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -11,9 +10,9 @@ Our PCF Tile can be downloaded <a target="_blank" href="https://network.pivotal.
 
 ### DESCRIPTION
 
-Use this integration to monitor a Pivotal Cloud Foundry deployment. This integration provides metrics about the performance of the various components that make up Pivotal Cloud Foundry. Click <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting">here</a> for more details.
+Monitor a Pivotal Cloud Foundry (PCF) deployment. Download the PCF tile <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting">here</a>. This integration provides metrics about the performance of the various components that make up Pivotal Cloud Foundry. Click <a target="_blank" href="https://network.pivotal.io/products/signalfx-monitoring-alerting">here</a> for more details.
 
-#### FEATURES
+### FEATURES
 
 ##### Infrastructure Page
 
@@ -50,9 +49,8 @@ This integration includes built-in dashboards listed under **Cloud Foundry** on 
 
   [<img src='./img/garden-containers-dashboard.png' width=200px>](./img/garden-containers-dashboard.png)
 
-  And many more...
 
-### REQUIREMENTS AND DEPENDENCIES
+#### REQUIREMENTS AND DEPENDENCIES
 
 This integration requires administrative access to a Pivotal Cloud Foundry deployment. Pivotal Web Services is not supported. Versions known to work are:
 
@@ -63,20 +61,17 @@ This integration requires administrative access to a Pivotal Cloud Foundry deplo
 
 ### INSTALLATION
 
-Follow these steps to enable this integration:
-
 1. Install the <a target="_blank" href="https://github.com/signalfx/signalfx-cloudfoundry-bridge-boshrelease/releases">latest BOSH release for our Bridge application</a>,
    which pulls metrics from the Loggregator Firehose and sends them to SignalFx.
    This can be installed in any deployment in your CF environment, as long as
    it has access to the BOSH Director and the Traffic Controller server.
 
-Metrics from Pivotal Cloud Foundry should begin streaming into SignalFx.
+- **Metrics** from Pivotal Cloud Foundry should begin streaming into SignalFx.
 
-To monitor services running within **Garden containers** (e.g. webservers) you will
-need to use <a target="_blank" href="https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator">our buildpack decorator</a>
+2. (Optional) To monitor services running within **Garden containers** (for example, webservers),  use <a target="_blank" href="https://github.com/signalfx/signalfx-cloudfoundry-buildpack-decorator">the buildpack decorator</a>
 along with the CF meta-buildpack.
 
-To get our agent on to your own **BOSH deployments**, you can use <a target="_blank" href="https://github.com/signalfx/agent-boshrelease">our BOSH
+3. (Optional) To get our agent on to your own **BOSH deployments**, use <a target="_blank" href="https://github.com/signalfx/agent-boshrelease">our BOSH
 release</a>.
 
 ### LICENSE
