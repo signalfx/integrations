@@ -13,7 +13,7 @@ Use SignalFx to monitor Amazon EC2 Container Service (ECS) via [Amazon Web Servi
 
 For greater insight into your ECS environment, SignalFx's Smart Agent can auto-discover services and provide more in-depth metrics about your containers that are running in ECS.  See the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Smart Agent ECS Deployment Guide</a> for instructions on how to deploy the Smart Agent in ECS. Also, Smart Agent can be deployed in ECS task to monitor AWS Fargate containers. See the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/fargate">Smart Agent Fargate Deployment Guide</a> for more detailed deployment instructions.
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -45,7 +45,7 @@ For greater insight into your ECS environment, SignalFx's Smart Agent can auto-d
 
 #### CloudWatch
 
-To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws). 
+To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
@@ -69,7 +69,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_ecs_agent_taskdef.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon EC2 Container Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ecs/">https://aws.amazon.com/ecs/</a>.
 
@@ -86,6 +86,6 @@ The following is a subset of available metrics; these are recommended by Amazon 
 | MemoryUtilization | Average                |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

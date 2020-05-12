@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor AWS Auto Scaling via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -28,7 +28,7 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 SignalFx provides built-in dashboards for this service. Find them on the Dashboards page in SignalFx.
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by AWS Auto Scaling, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/autoscaling/">https://aws.amazon.com/autoscaling/</a>.
 
@@ -37,6 +37,6 @@ For more information about the metrics emitted by AWS Auto Scaling, visit the se
 
 No CloudWatch recommended statistics for this integration.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

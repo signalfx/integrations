@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon Simple Queue Service (SQS) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -37,7 +37,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_sqs_queue.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon Simple Queue Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/sqs/">https://aws.amazon.com/sqs/</a>.
 
@@ -59,6 +59,6 @@ The following are a subset of available metrics; these statistics are recommende
 | SentMessageSize                       | Average, Count, Minimum, Maximum, Sum |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

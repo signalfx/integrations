@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon DynamoDB via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -76,12 +76,12 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
     - [<img src='./img/returned_item_count.png' width=350px>](./img/returned_item_count.png)
 
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon DynamoDB, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/dynamodb/">https://aws.amazon.com/dynamodb/</a>.
 
 <!--- METRICS --->
-### RECOMMENDED STATISTICS 
+### RECOMMENDED STATISTICS
 
 
 The following are a subset of all available metrics; these are the ones recommended by Amazon for collection.
@@ -108,6 +108,6 @@ The following are a subset of all available metrics; these are the ones recommen
 | WriteThrottleEvents              | Count, Sum                            |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

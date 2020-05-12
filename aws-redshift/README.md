@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon Redshift via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -33,7 +33,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_redshift.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon Redshift, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/redshift/">https://aws.amazon.com/redshift/</a>.
 
@@ -42,6 +42,6 @@ For more information about the metrics emitted by Amazon Redshift, visit the ser
 
 No CloudWatch recommended statistics for this integration.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
