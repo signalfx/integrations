@@ -43,15 +43,19 @@ For greater insight into your ECS environment, SignalFx's Smart Agent can auto-d
 
 ### INSTALLATION
 
-#### CloudWatch
+#### Step 1: Connec to CloudWatch
 
 To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
-#### Smart Agent
+#### Step 2: Deploy the SignalFx Smart Agent
 
-To auto-discover services and collect more detailed metrics, SignalFx Smart Agent can be deployed in two different ways depend on the type of containers to be monitor. To monitor EC2 containers, see the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Smart Agent ECS Deployment Guide</a> and to monitor Fargate containers, see the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/fargate">Smart Agent Fargate Deployment Guide</a> for more detailed instructions.
+Based on the type of container to monitor, there are two ways to deploy the SignalFx Smart Agent to auto-discover services and collect additional detailed metrics.
+
+- To monitor EC2 containers, see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Smart Agent ECS Deployment Guide</a>.
+
+- To monitor Fargate containers, see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/fargate">Smart Agent Fargate Deployment Guide</a>.
 
 ### USAGE
 
