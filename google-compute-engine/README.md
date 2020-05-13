@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Compute Engine via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Compute Engine, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -118,10 +118,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/instances-network-bytes-out-vs-change.png' width=200px>](./img/instances-network-bytes-out-vs-change.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google Compute Engine, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-compute">https://cloud.google.com/monitoring/api/metrics#gcp-compute</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

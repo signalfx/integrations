@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Router via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Router, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -87,10 +87,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/router-overview-routes-sent-per-router.png' width=200px>](./img/router-overview-routes-sent-per-router.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google Cloud Router, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-router">https://cloud.google.com/monitoring/api/metrics#gcp-router</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

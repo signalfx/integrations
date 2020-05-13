@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Bigtable via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Bigtable, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -160,10 +160,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 - **Disk Bytes Used** - Amount of disk used by the table
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google Cloud Bigtable, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-bigtable">https://cloud.google.com/monitoring/api/metrics#gcp-bigtable</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
