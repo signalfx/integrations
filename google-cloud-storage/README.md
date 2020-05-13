@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Storage via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Storage, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -66,10 +66,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 - **Sent Bytes per Bucket** - Lists total bytes sent by each bucket.
 
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google Cloud Storage, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-storage">https://cloud.google.com/monitoring/api/metrics#gcp-storage</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
