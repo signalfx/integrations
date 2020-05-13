@@ -8,9 +8,9 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Spanner via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Spanner, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -78,10 +78,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
   [<img src='./img/overview-storage-used.png' width=200px>](./img/overview-storage-used.png)
 
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Google Cloud Spanner, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-spanner">https://cloud.google.com/monitoring/api/metrics#gcp-spanner</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
