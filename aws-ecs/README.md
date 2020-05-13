@@ -43,7 +43,7 @@ For greater insight into your ECS environment, SignalFx's Smart Agent can auto-d
 
 ### INSTALLATION
 
-#### Step 1: Connec to CloudWatch
+#### Step 1: Connect to CloudWatch
 
 To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
