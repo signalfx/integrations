@@ -10,7 +10,7 @@
 
 Use SignalFx to monitor Azure Batch via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -74,10 +74,10 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Azure Batch, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftbatchbatchaccounts">here</a>.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -10,7 +10,7 @@
 
 Use SignalFx to monitor Azure Virtual Machines via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -123,10 +123,10 @@ The above charts are applicable to all Azure Virtual Machines. The following two
 
 
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Azure Virtual Machines, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines">here</a>.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

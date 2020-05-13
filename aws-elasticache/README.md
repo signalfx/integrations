@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon ElastiCache via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -43,7 +43,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_elasticache_node.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon ElastiCache, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/elasticache/">https://aws.amazon.com/elasticache/</a>.
 
@@ -52,6 +52,6 @@ For more information about the metrics emitted by Amazon ElastiCache, visit the 
 
 There are no CloudWatch recommended statistics for this integration.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Elastic Load Balancing (ELB) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -43,12 +43,12 @@ For ELB, SignalFx will scan every load balancer name from your AWS account and p
 |-----------------|-----------------|-------------|
 | create-time | aws\_create\_time | The time stamp when the load balancer was created |
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Elastic Load Balancing, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/elasticloadbalancing/">https://aws.amazon.com/elasticloadbalancing/</a>.
 
 <!--- METRICS --->
-### RECOMMENDED STATISTICS 
+### RECOMMENDED STATISTICS
 
 The following are a subset of all available metrics; these are the statistics that Amazon recommends for collection.
 
@@ -69,6 +69,6 @@ The following are a subset of all available metrics; these are the statistics th
 | UnHealthyHostCount      | Average, Minimum                      |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

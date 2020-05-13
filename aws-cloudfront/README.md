@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon CloudFront via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -24,7 +24,7 @@ Use SignalFx to monitor Amazon CloudFront via [Amazon Web Services](https://gith
 
 ### INSTALLATION
 
-To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws). 
+To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 Note that CloudWatch metrics for CloudFront are reported only from region `us-east-1` (US East/N. Virginia). To import metrics for CloudFront, ensure that your CloudWatch configuration includes metrics from `us-east-1`.
 
@@ -36,7 +36,7 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_cloudfront_distribution.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon CloudFront, visit the service homepage at <a target="_blank" href="https://aws.amazon.com/cloudfront/">https://aws.amazon.com/cloudfront/</a>.
 
@@ -55,6 +55,6 @@ The following are a subset of available metrics; these statistics are recommende
 | 5xxErrorRate    | Average                |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
