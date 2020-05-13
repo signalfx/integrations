@@ -10,7 +10,7 @@
 
 Use SignalFx to monitor Azure Logic Apps via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -92,12 +92,10 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
   [<img src='./img/logics.billable.png' width=200px>](./img/logics.billable.png)
 
 
-
-
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Azure Logic Apps, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftlogicworkflows">here</a>.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

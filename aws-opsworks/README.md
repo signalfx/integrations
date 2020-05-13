@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor AWS OpsWorks via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -37,12 +37,12 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard_opsworks_instance.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by AWS OpsWorks, visit the service homepage at <a target="_blank" href="https://aws.amazon.com/opsworks/">https://aws.amazon.com/opsworks/</a>.
 
 <!--- METRICS --->
-### RECOMMENDED STATISTICS 
+### RECOMMENDED STATISTICS
 
 The following are a subset of available metrics; these statistics are recommended by Amazon for collection.
 
@@ -66,6 +66,6 @@ The following are a subset of available metrics; these statistics are recommende
 | procs          | Average, Count, Minimum, Maximum, Sum |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
