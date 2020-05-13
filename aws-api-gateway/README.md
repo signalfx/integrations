@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon API Gateway via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -23,12 +23,25 @@ Use SignalFx to monitor Amazon API Gateway via [Amazon Web Services](https://git
 
 ### INSTALLATION
 
+#### Step 1: Connect to CloudWatch
+
 To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-Note that detailed CloudWatch metrics must be enabled for your API `stage` in AWS. To do this, go to the Amazon API Gateway console,
-click the name of your API, and then click `Stages`. Click on your stage. Click `Logs/Tracing`, specify `Enable Detailed CloudWatch Metrics`, and then click `Save Changes`.
+#### Step 2: Enable CloudWatch metrics
 
-Also, if not already added, add an ARN of an IAM role that has write access to CloudWatch logs in the `Settings` section of the Amazon API Gateway console.
+Enable detailed CloudWatch metrics for your API stage in AWS.
+
+1. In your Amazon API Gateway console, click the name of your API.
+2. Click **Stages**.
+3. Click on your stage.
+4. Click **Logs/Tracing**, specify **Enable Detailed CloudWatch Metrics**, and then click **Save Changes**.
+
+#### Step 3: Set up CloudWatch API logging
+
+To set up CloudWatch API logging, add the ARN for the IAM role that has write access to CloudWatch logs.
+
+To do this, visit AWS's documentation site, and see [Set up CloudWatch API logging using the API Gateway console](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html).
+
 
 ### USAGE
 
@@ -38,12 +51,12 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 
 ![](./img/dashboard-awsapigateway-apiresource.png)
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon API Gateway, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/api-gateway/">https://aws.amazon.com/api-gateway/</a>.
 
 <!--- METRICS --->
-### RECOMMENDED STATISTICS 
+### RECOMMENDED STATISTICS
 
 The following is a subset of all available statistics; these are recommended for monitoring by Amazon.
 
@@ -58,6 +71,6 @@ The following is a subset of all available statistics; these are recommended for
 | Latency           | Average, Count, Minimum, Maximum, Sum |
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

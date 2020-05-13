@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Application Load Balancing (ALB) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -35,7 +35,7 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 SignalFx synthesizes a unique ID for each ALB in the dimension `AWSUniqueId`.
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Application Load Balancing, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/elasticloadbalancing/">https://aws.amazon.com/elasticloadbalancing/</a>.
 
@@ -110,6 +110,6 @@ _ELB user authentication metrics_
 
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

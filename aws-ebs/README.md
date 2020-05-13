@@ -11,7 +11,7 @@
 
 Use SignalFx to monitor Amazon Elastic Block Store (EBS) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -52,7 +52,7 @@ For EBS, SignalFx will scan every volume ID from your AWS account and pull out p
 | volume\_id	| aws\_volume\_id |	The volume ID |
 | volume\_type	| aws\_volume\_type |	The Amazon EBS volume type |
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Amazon Elastic Block Store, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ebs/">https://aws.amazon.com/ebs/</a>.
 
@@ -61,6 +61,6 @@ For more information about the metrics emitted by Amazon Elastic Block Store, vi
 
 No CloudWatch recommended statistics for this integration.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
