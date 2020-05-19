@@ -1,8 +1,5 @@
 # ![](https://github.com/signalfx/integrations/blob/master/gateway/img/integration_sfxgateway.png) SignalFx Gateway
 
-The relevant code for the project can be found <a target="_blank" href="https://github.com/signalfx/gateway">here</a>.
-
-__If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html) instead.__
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -56,9 +53,11 @@ __If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.
 
 Use the SignalFx Gateway to aggregate metrics and send them to SignalFx. It is a multilingual datapoint demultiplexer that can accept time series data from the carbon (Graphite), collectd or SignalFx protocols and emit those datapoints to a series of servers using the carbon, collectd or SignalFx protocols.
 
-The SignalFx Gateway can help you get the right data to the right destination in many different scenarios. For details, see [Usage](#usage).
+Note: The relevant code for the project can be found <a target="_blank" href="https://github.com/signalfx/gateway">here</a>.
 
-### REQUIREMENTS AND DEPENDENCIES
+Note: __If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html) instead.__
+
+#### REQUIREMENTS AND DEPENDENCIES
 
 The SignalFx Gateway must be deployed on a system that is capable of running Go. All dependencies for this Go project are included in `/Godeps` in the project repository.
 
