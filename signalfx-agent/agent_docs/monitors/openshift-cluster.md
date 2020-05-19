@@ -92,8 +92,10 @@ Metrics that are categorized as
  - ***`kubernetes.daemon_set.desired_scheduled`*** (*gauge*)<br>    The total number of nodes that should be running the daemon pod (including nodes currently running the daemon pod)
  - ***`kubernetes.daemon_set.misscheduled`*** (*gauge*)<br>    The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod
  - ***`kubernetes.daemon_set.ready`*** (*gauge*)<br>    The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready
+ - `kubernetes.daemon_set.updated` (*gauge*)<br>    The total number of nodes that are running updated daemon pod
  - ***`kubernetes.deployment.available`*** (*gauge*)<br>    Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
  - ***`kubernetes.deployment.desired`*** (*gauge*)<br>    Number of desired pods in this deployment
+ - `kubernetes.deployment.updated` (*gauge*)<br>    Total number of non-terminated pods targeted by this deployment that have the desired template spec
  - `kubernetes.job.active` (*gauge*)<br>    The number of actively running pods for a job.
  - `kubernetes.job.completions` (*gauge*)<br>    The desired number of successfully finished pods the job should be run with.
  - `kubernetes.job.failed` (*counter*)<br>    The number of pods which reased phase Failed for a job.
