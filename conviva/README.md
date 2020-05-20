@@ -14,9 +14,9 @@
 
 
 
-### REQUIREMENTS AND DEPENDENCIES
+#### REQUIREMENTS AND DEPENDENCIES
 
-Only Live Conviva metrics are supported. Conviva MetricLens metrics require MetricLens-enabled filters. MetricLens-enabled filters are listed in the table of filters <a target="_blank" href="https://pulse.conviva.com/filters/">here</a> with a checkmark in the `ML` column. Conviva Pulse credentials are required to access the link to the table of filters.
+Only Live Conviva metrics are supported. Conviva MetricLens metrics require MetricLens-enabled filters. MetricLens-enabled filters are listed in the <a target="_blank" href="https://pulse.conviva.com/filters/">table of filters</a> with a checkmark in the `ML` column. Conviva Pulse credentials are required to access the link to the table of filters.
 
 This monitor requires:
 
@@ -26,11 +26,13 @@ This monitor requires:
 
 ### INSTALLATION
 
-Install the latest version of the SignalFx Smart Agent as described [here](https://github.com/signalfx/integrations/tree/master/signalfx-agent).
+Install the latest version of the SignalFx Smart Agent as described in [Installation](https://github.com/signalfx/integrations/tree/master/signalfx-agent).
 
 ### CONFIGURATION
 
-Find and edit the SignalFx Smart Agent configuration file `agent.yaml` to configure the conviva monitor as described <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/conviva.md">here</a>. Use the metric parameters <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/conviva/docs/conviva_metrics.md">here</a> as values for `metricParameter`.
+1. Open the SignalFX Smart Agent `agent.yaml`configuration file.
+2. Edit the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/conviva.md#overview">`monitors`</a> section.
+3. Add the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/conviva.md#conviva-monitor-metric-parameters-and-metrics">metric parameters</a> as values for `metricParameter`.
 
 ### USAGE
 
@@ -38,13 +40,13 @@ The Conviva monitor emits Live Conviva metrics which can then be used to create 
 
 ![Real-Time Dashboard](./img/conviva_overview_dashboard.png)
 
-#### Important conditions to watch out for
+#### Special considerations 
 
 The Conviva API response may return with filters listed in fields **filters_not_exist**, **filters_warmup** and **filters_incomplete_data**. This means data for these filters may be wholly or partially unavailable. When this happens it is logged in the SignalFx Smart Agent log file.
 
 Configuration validation will fail when a non-MetricLens enabled filter is listed in a MetricLens metric configuration.
 
-The select all filters in combination with select all dimensions options should be used with care because of the potential to generate a large amount of datapoints (i.e. metric time series (MTS)).
+The select all filters in combination with select all dimensions options should be used with care because of the potential to generate a large amount of datapoints (in other words, metric time series (MTS)).
 
 ### LICENSE
 
