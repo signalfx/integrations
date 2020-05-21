@@ -26,7 +26,7 @@ This monitor requires:
 
 ### INSTALLATION
 
-Install the latest version of the SignalFx Smart Agent as described in [SignalFx Smart Agent](https://github.com/signalfx/integrations/tree/master/signalfx-agent)[](sfx_link:signalfx-agent).
+Install the latest version of the SignalFx Smart Agent as described in [SignalFx Smart Agent](https://github.com/signalfx/signalfx-agent)[](sfx_link:signalfx-agent).
 
 ### CONFIGURATION
 
