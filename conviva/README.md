@@ -26,13 +26,13 @@ This monitor requires:
 
 ### INSTALLATION
 
-Install the latest version of the SignalFx Smart Agent as described in [Installation](https://github.com/signalfx/integrations/tree/master/signalfx-agent).
+Install the latest version of the SignalFx Smart Agent as described in [SignalFx Smart Agent].(https://github.com/signalfx/integrations/tree/master/signalfx-agent)[](sfx_link:signalfx-agent)
 
 ### CONFIGURATION
 
 1. Open the SignalFX Smart Agent `agent.yaml`configuration file.
-2. Edit the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/conviva.md#overview">`monitors`</a> section.
-3. Add the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/blob/master/docs/monitors/conviva.md#conviva-monitor-metric-parameters-and-metrics">metric parameters</a> as values for `metricParameter`.
+2. Edit the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/conviva.html">monitors</a> section.
+3. Add the <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/agent/monitors/conviva.html#conviva-monitor-metric-parameters-and-metrics">metric parameters</a> as values for `metricParameter`.
 
 ### USAGE
 
