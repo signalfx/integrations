@@ -54,7 +54,7 @@ Only follow this step if you chose to manually encrypt your access token. Either
 ##### 2. Create the Lambda function
 Click `Create Function` from the list of Lambda functions in your AWS console. Make sure you are in the intended availability zone. Select the `Serverless Application Repository` option in the upper right hand corner. Search for `signalfx rds` and choose the appropriate entry based on whether you encrypted your access token.
 
-To access the templates directly, find the template for encrypted access tokens <a target="_blank" href="https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics-encrypted">here</a>. The template for non-encrypted access tokens is <a target="_blank" href="https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:134183635603:applications~signalfx-enhanced-rds-metrics">here</a>.
+To access the templates directly, find the template for encrypted access tokens <a target="_blank" href="https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-2:254067382080:applications~signalfx-enhanced-rds-metrics-encrypted">here</a>. The template for non-encrypted access tokens is <a target="_blank" href="https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-2:254067382080:applications~signalfx-enhanced-rds-metrics">here</a>.
 
 ##### 3. Fill out application parameters
 Under `Configure application parameters`, choose a name for your function, and fill out the fields accordingly.
