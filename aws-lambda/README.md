@@ -9,7 +9,7 @@
 
 ### DESCRIPTION
 
-SignalFx enables you to monitor the health and performance of your Lambda functions via metrics on total invocations, errors, durations, and more. In addition, you can easily send custom application or business metrics from within your Lambda functions.
+SignalFx enables you to monitor the health and performance of your Lambda functions through metrics on total invocations, errors, durations, and more. In addition, you can easily send custom application or business metrics from within your Lambda functions.
 
 - If you have enabled the SignalFx Amazon Web Services integration and are syncing Cloudwatch metrics, <a target="_blank" href="http://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-metrics.html">those metrics</a> will automatically be available to view.
 
@@ -41,13 +41,13 @@ SignalFx enables you to monitor the health and performance of your Lambda functi
 
 #### SignalFx Wrapper vs Cloudwatch monitoring
 
-While you can use both the SignalFx Wrapper and Cloudwatch methods to monitor Lambda functions at the same time, you also have the option to use only one method. 
+While you can use both the SignalFx Wrapper and Cloudwatch methods to monitor Lambda functions at the same time, you also have the option to use only one method.
 
-Before you select a single method (or both), consider the following statements: 
+Before you select a single method (or both), consider the following statements:
 
 - Each method sends different metrics and uses different properties to uniquely identify a Lambda function.
 
-- Cloudwatch data is reported with a delay; the delay can range from 1 to 10 minutes. The SignalFx Wrapper sends data immediately when it becomes available. 
+- Cloudwatch data is reported with a delay; the delay can range from 1 to 10 minutes. The SignalFx Wrapper sends data immediately when it becomes available.
 
 - Cloudwatch data is sent automatically for all Lambda functions, whereas the SignalFx Wrapper needs to be added to each function.
 
@@ -57,22 +57,22 @@ Before you select a single method (or both), consider the following statements:
 
 The SignalFx Wrapper provides real-time monitoring of Lambda functions, as well as the ability to send custom metrics from your applications to SignalFx.
 
-To use the SignalFx Wrapper, you can: 
-  - Include the SignalFx Lambda Wrapper in your Lambda function, or 
-  - Add the Lambda Layer containing the Wrapper to the Lambda function. 
+To use the SignalFx Wrapper, you can:
+  - Include the SignalFx Lambda Wrapper in your Lambda function, or
+  - Add the Lambda Layer containing the Wrapper to the Lambda function.
 
-To support different deployment models, SignalFx provides Lambda Wrappers as libraries, hosted [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) 
+To support different deployment models, SignalFx provides Lambda Wrappers as libraries, hosted [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 and as [Serverless Applications](https://aws.amazon.com/serverless/sam/) available through [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/) (with language-specific exceptions).
 
-To view the three installation methods for each Lambda wrapper, review the following readme files: 
+To view the three installation methods for each Lambda wrapper, review the following readme files:
 
 - <a target="_blank" href="https://github.com/signalfx/lambda-java">Java</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-nodejs">NodeJs</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-python">Python</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-ruby">Ruby</a>
-- <a target="_blank" href="https://github.com/signalfx/lambda-csharp">C#</a> 
+- <a target="_blank" href="https://github.com/signalfx/lambda-csharp">C#</a>
   - SAM application is not supported.
-- <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a> 
+- <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a>
   - Lambda Layers are not supported.
 
 #### CloudWatch
