@@ -17,7 +17,7 @@ SignalFx enables you to monitor the health and performance of your Lambda functi
 
 -  The wrapper is also a way for you to send in custom application or business metrics from within a Lambda function, analogous to what you can do with our client libraries for code running in non-Lambda environments.
 
-#### FEATURES
+### FEATURES
 
 ##### Built-in dashboards
 
@@ -41,6 +41,8 @@ SignalFx enables you to monitor the health and performance of your Lambda functi
 
 #### SignalFx Wrapper vs Cloudwatch monitoring
 
+*Step 1: Review and Select a Deployment Method*
+
 While you can use both the SignalFx Wrapper and Cloudwatch methods to monitor Lambda functions at the same time, you also have the option to use only one method.
 
 Before you select a single method (or both), consider the following statements:
@@ -53,12 +55,14 @@ Before you select a single method (or both), consider the following statements:
 
 - SignalFx Wrapper is the only method to send custom application or business metrics from within a Lambda function.
 
-#### SignalFx Wrapper
+*Step 2: Review Setup Documentation*
+
+#### Option 1: Use the SignalFx Wrapper
 
 The SignalFx Wrapper provides real-time monitoring of Lambda functions, as well as the ability to send custom metrics from your applications to SignalFx.
 
-To use the SignalFx Wrapper, you can:
-  - Include the SignalFx Lambda Wrapper in your Lambda function, or
+To use the SignalFx Wrapper, you can do either of the following:
+  - Include the SignalFx Lambda Wrapper in your Lambda function
   - Add the Lambda Layer containing the Wrapper to the Lambda function.
 
 To support different deployment models, SignalFx provides Lambda Wrappers as libraries, hosted [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
@@ -75,9 +79,9 @@ To view the three installation methods for each Lambda wrapper, review the follo
 - <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a>
   - Lambda Layers are not supported.
 
-#### CloudWatch
+#### Option 2: Use CloudWatch
 
-By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, you need to modify the connection on the Integrations page in the SignalFx UI.
+By default, SignalFx imports all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, you need to modify the connection on the Integrations page in the SignalFx UI.
 
 To access this integration, see [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
