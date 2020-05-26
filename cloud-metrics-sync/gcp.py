@@ -4,7 +4,7 @@ from typing import List, Mapping
 from google.cloud import monitoring_v3
 from google.cloud.monitoring_v3 import enums
 
-from model import Metric, Fetcher
+from model import Fetcher, Metric
 
 DOCS: Mapping[str, str] = {
     "google-appengine": "appengine.googleapis.com",
@@ -18,6 +18,7 @@ DOCS: Mapping[str, str] = {
     "google-cloud-storage": "storage.googleapis.com",
     "google-compute-engine": "compute.googleapis.com",
     "google-container-engine": "container.googleapis.com",
+    "google-kubernetes-engine": "kubernetes.io",
 }
 
 KIND_MAPPING = {
@@ -56,9 +57,10 @@ class GCPFetcher(Fetcher):
                 continue
 
             name = metric.type.replace(f"{namespace}/", "")
-            yield Metric(
-                title=name,
-                brief=metric.display_name,
-                metric_type=kind,
-                description=metric.description,
-            )
+
+            # Manually filter out anthos metrics since they also start with
+            # kubernetes.io/anthos.
+            if name.startswith("anthos/"):
+                continue
+
+            yield Metric(title=name, brief=metric.display_name, metric_type=kind, description=metric.description)

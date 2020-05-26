@@ -1,0 +1,277 @@
+container/accelerator/duty_cycle:
+  title: container/accelerator/duty_cycle
+  metric_type: gauge
+  brief: Accelerator duty cycle
+  description: Percent of time over the past sample period (10s) during which the
+    accelerator was actively processing. Values are integers between 0 and 100.
+container/accelerator/memory_total:
+  title: container/accelerator/memory_total
+  metric_type: gauge
+  brief: Accelerator memory total
+  description: Total accelerator memory in bytes.
+container/accelerator/memory_used:
+  title: container/accelerator/memory_used
+  metric_type: gauge
+  brief: Accelerator memory used
+  description: Total accelerator memory allocated in bytes.
+container/accelerator/request:
+  title: container/accelerator/request
+  metric_type: gauge
+  brief: Request accelerators
+  description: Number of accelerator devices requested by the container.
+container/cpu/core_usage_time:
+  title: container/cpu/core_usage_time
+  metric_type: cumulative
+  brief: CPU usage time
+  description: Cumulative CPU usage on all cores used by the container in seconds.
+container/cpu/limit_cores:
+  title: container/cpu/limit_cores
+  metric_type: gauge
+  brief: Limit cores
+  description: CPU cores limit of the container.
+container/cpu/limit_utilization:
+  title: container/cpu/limit_utilization
+  metric_type: gauge
+  brief: CPU limit utilization
+  description: The fraction of the CPU limit that is currently in use on the instance.
+    This value cannot exceed 1 as usage cannot exceed the limit.
+container/cpu/request_cores:
+  title: container/cpu/request_cores
+  metric_type: gauge
+  brief: Request cores
+  description: Number of CPU cores requested by the container.
+container/cpu/request_utilization:
+  title: container/cpu/request_utilization
+  metric_type: gauge
+  brief: CPU request utilization
+  description: The fraction of the requested CPU that is currently in use on the instance.
+    This value can be greater than 1 as usage can exceed the request.
+container/ephemeral_storage/limit_bytes:
+  title: container/ephemeral_storage/limit_bytes
+  metric_type: gauge
+  brief: Ephemeral storage limit
+  description: Local ephemeral storage limit in bytes.
+container/ephemeral_storage/request_bytes:
+  title: container/ephemeral_storage/request_bytes
+  metric_type: gauge
+  brief: Ephemeral storage request
+  description: Local ephemeral storage request in bytes.
+container/ephemeral_storage/used_bytes:
+  title: container/ephemeral_storage/used_bytes
+  metric_type: gauge
+  brief: Ephemeral storage usage
+  description: Local ephemeral storage usage in bytes.
+container/memory/limit_bytes:
+  title: container/memory/limit_bytes
+  metric_type: gauge
+  brief: Memory limit
+  description: Memory limit of the container in bytes.
+container/memory/limit_utilization:
+  title: container/memory/limit_utilization
+  metric_type: gauge
+  brief: Memory limit utilization
+  description: The fraction of the memory limit that is currently in use on the instance.
+    This value cannot exceed 1 as usage cannot exceed the limit.
+container/memory/page_fault_count:
+  title: container/memory/page_fault_count
+  metric_type: counter
+  brief: Page faults
+  description: 'Number of page faults, broken down by type: major and minor.'
+container/memory/request_bytes:
+  title: container/memory/request_bytes
+  metric_type: gauge
+  brief: Memory request
+  description: Memory request of the container in bytes.
+container/memory/request_utilization:
+  title: container/memory/request_utilization
+  metric_type: gauge
+  brief: Memory request utilization
+  description: The fraction of the requested memory that is currently in use on the
+    instance. This value can be greater than 1 as usage can exceed the request.
+container/memory/used_bytes:
+  title: container/memory/used_bytes
+  metric_type: gauge
+  brief: Memory usage
+  description: Memory usage in bytes.
+container/restart_count:
+  title: container/restart_count
+  metric_type: cumulative
+  brief: Restart count
+  description: Number of times the container has restarted.
+container/uptime:
+  title: container/uptime
+  metric_type: gauge
+  brief: Uptime
+  description: Time in seconds that the container has been running.
+nginx/connections_accepted:
+  title: nginx/connections_accepted
+  metric_type: cumulative
+  brief: Nginx connections_accepted
+  description: Accepted client connections.
+nginx/connections_active:
+  title: nginx/connections_active
+  metric_type: gauge
+  brief: Nginx connections_active
+  description: Active client connections.
+nginx/connections_handled:
+  title: nginx/connections_handled
+  metric_type: cumulative
+  brief: Nginx connections_handled
+  description: Handled client connections.
+nginx/connections_reading:
+  title: nginx/connections_reading
+  metric_type: gauge
+  brief: Nginx connections_reading
+  description: Connections where NGINX is reading the request header.
+nginx/connections_waiting:
+  title: nginx/connections_waiting
+  metric_type: gauge
+  brief: Nginx connections_waiting
+  description: Idle client connections.
+nginx/connections_writing:
+  title: nginx/connections_writing
+  metric_type: gauge
+  brief: Nginx connections_writing
+  description: Connections where NGINX is writing the response back to the client.
+nginx/http_requests_total:
+  title: nginx/http_requests_total
+  metric_type: cumulative
+  brief: Nginx http_requests_total
+  description: Total http requests.
+nginx/nginxexporter_build_info:
+  title: nginx/nginxexporter_build_info
+  metric_type: gauge
+  brief: Nginx nginxexporter_build_info
+  description: Exporter build information.
+nginx/up:
+  title: nginx/up
+  metric_type: gauge
+  brief: Nginx up
+  description: Status of the last metric scrape. Indicates if the server is up or
+    not.
+node/cpu/allocatable_cores:
+  title: node/cpu/allocatable_cores
+  metric_type: gauge
+  brief: Allocatable cores
+  description: Number of allocatable CPU cores on the node.
+node/cpu/allocatable_utilization:
+  title: node/cpu/allocatable_utilization
+  metric_type: gauge
+  brief: CPU allocatable utilization
+  description: The fraction of the allocatable CPU that is currently in use on the
+    instance.
+node/cpu/core_usage_time:
+  title: node/cpu/core_usage_time
+  metric_type: cumulative
+  brief: CPU usage time
+  description: Cumulative CPU usage on all cores used on the node in seconds.
+node/cpu/total_cores:
+  title: node/cpu/total_cores
+  metric_type: gauge
+  brief: Total cores
+  description: Total number of CPU cores on the node.
+node/ephemeral_storage/allocatable_bytes:
+  title: node/ephemeral_storage/allocatable_bytes
+  metric_type: gauge
+  brief: Allocatable ephemeral storage
+  description: Local ephemeral storage bytes allocatable on the node.
+node/ephemeral_storage/inodes_free:
+  title: node/ephemeral_storage/inodes_free
+  metric_type: gauge
+  brief: Free inodes
+  description: Free number of inodes on local ephemeral storage.
+node/ephemeral_storage/inodes_total:
+  title: node/ephemeral_storage/inodes_total
+  metric_type: gauge
+  brief: Total inodes
+  description: Total number of inodes on local ephemeral storage.
+node/ephemeral_storage/total_bytes:
+  title: node/ephemeral_storage/total_bytes
+  metric_type: gauge
+  brief: Total ephemeral storage
+  description: Total ephemeral storage bytes on the node.
+node/ephemeral_storage/used_bytes:
+  title: node/ephemeral_storage/used_bytes
+  metric_type: gauge
+  brief: Ephemeral storage usage
+  description: Local ephemeral storage bytes used by the node.
+node/memory/allocatable_bytes:
+  title: node/memory/allocatable_bytes
+  metric_type: gauge
+  brief: Allocatable memory
+  description: Cumulative memory bytes used by the node.
+node/memory/allocatable_utilization:
+  title: node/memory/allocatable_utilization
+  metric_type: gauge
+  brief: Memory allocatable utilization
+  description: The fraction of the allocatable memory that is currently in use on
+    the instance. This value cannot exceed 1 as usage cannot exceed allocatable memory
+    bytes.
+node/memory/total_bytes:
+  title: node/memory/total_bytes
+  metric_type: gauge
+  brief: Total memory
+  description: Number of bytes of memory allocatable on the node.
+node/memory/used_bytes:
+  title: node/memory/used_bytes
+  metric_type: gauge
+  brief: Memory usage
+  description: Cumulative memory bytes used by the node.
+node/network/received_bytes_count:
+  title: node/network/received_bytes_count
+  metric_type: cumulative
+  brief: Bytes received
+  description: Cumulative number of bytes received by the node over the network.
+node/network/sent_bytes_count:
+  title: node/network/sent_bytes_count
+  metric_type: cumulative
+  brief: Bytes transmitted
+  description: Cumulative number of bytes transmitted by the node over the network.
+node/pid_limit:
+  title: node/pid_limit
+  metric_type: gauge
+  brief: PID capacity
+  description: The max PID of OS on the node.
+node/pid_used:
+  title: node/pid_used
+  metric_type: gauge
+  brief: PID usage
+  description: The number of running process in the OS on the node.
+node_daemon/cpu/core_usage_time:
+  title: node_daemon/cpu/core_usage_time
+  metric_type: cumulative
+  brief: CPU usage time
+  description: Cumulative CPU usage on all cores used by the node level system daemon
+    in seconds.
+node_daemon/memory/used_bytes:
+  title: node_daemon/memory/used_bytes
+  metric_type: gauge
+  brief: Memory usage
+  description: Memory usage by the system daemon in bytes.
+pod/network/received_bytes_count:
+  title: pod/network/received_bytes_count
+  metric_type: cumulative
+  brief: Bytes received
+  description: Cumulative number of bytes received by the pod over the network.
+pod/network/sent_bytes_count:
+  title: pod/network/sent_bytes_count
+  metric_type: cumulative
+  brief: Bytes transmitted
+  description: Cumulative number of bytes transmitted by the pod over the network.
+pod/volume/total_bytes:
+  title: pod/volume/total_bytes
+  metric_type: gauge
+  brief: Volume capacity
+  description: Total number of disk bytes available to the pod.
+pod/volume/used_bytes:
+  title: pod/volume/used_bytes
+  metric_type: gauge
+  brief: Volume usage
+  description: Number of disk bytes used by the pod.
+pod/volume/utilization:
+  title: pod/volume/utilization
+  metric_type: gauge
+  brief: Volume utilization
+  description: The fraction of the volume that is currently being used by the instance.
+    This value cannot be greater than 1 as usage cannot exceed the total available
+    volume space.
