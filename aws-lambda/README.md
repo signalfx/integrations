@@ -41,7 +41,7 @@ SignalFx enables you to monitor the health and performance of your Lambda functi
 
 #### SignalFx Wrapper vs Cloudwatch monitoring
 
-*Step 1: Review and Select a Deployment Method*
+##### Step 1: Review and Select a Deployment Method
 
 While you can use both the SignalFx Wrapper and Cloudwatch methods to monitor Lambda functions at the same time, you also have the option to use only one method.
 
@@ -55,9 +55,9 @@ Before you select a single method (or both), consider the following statements:
 
 - SignalFx Wrapper is the only method to send custom application or business metrics from within a Lambda function.
 
-*Step 2: Review Setup Documentation*
+##### Step 2: Review Setup Documentation
 
-#### Option 1: Use the SignalFx Wrapper
+*Option 1: Use the SignalFx Wrapper*
 
 The SignalFx Wrapper provides real-time monitoring of Lambda functions, as well as the ability to send custom metrics from your applications to SignalFx.
 
@@ -79,7 +79,7 @@ To view the three installation methods for each Lambda wrapper, review the follo
 - <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a>
     - Lambda Layers are not supported.
 
-#### Option 2: Use CloudWatch
+*Option 2: Use CloudWatch*
 
 By default, SignalFx imports all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, you need to modify the connection on the Integrations page in the SignalFx UI.
 
