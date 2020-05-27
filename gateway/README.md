@@ -53,11 +53,16 @@
 
 Use the SignalFx Gateway to aggregate metrics and send them to SignalFx. It is a multilingual datapoint demultiplexer that can accept time series data from the carbon (Graphite), collectd or SignalFx protocols and emit those datapoints to a series of servers using the carbon, collectd or SignalFx protocols.
 
-Note: The relevant code for the project can be found <a target="_blank" href="https://github.com/signalfx/gateway">here</a>.
+**Note:** These links only open if you are viewing this content from the documentation site, [docs.signalfx.com](docs.signalfx.com). If you are viewing this content from the SignalFx UI, consider redirecting to the [SignalFx Gateway document](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.gateway.html).
 
-Note: __If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html) instead.__
+**Note:** The relevant code for the project can be found in the <a target="_blank" href="https://github.com/signalfx/gateway">signalfx
+/gateway repository</a>.
 
-#### REQUIREMENTS AND DEPENDENCIES
+**Note:** If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html) instead.
+
+### PREREQUISITES
+
+#### Requirements and Dependencies
 
 The SignalFx Gateway must be deployed on a system that is capable of running Go. All dependencies for this Go project are included in `/Godeps` in the project repository.
 
@@ -72,11 +77,11 @@ Ubuntu must be executed before running the install script.
     sudo apt-get update
     sudo apt-get install golang-1.11.1
 
-If `/usr/bin/go` does NOT exist then create a symbolic link
+If `/usr/bin/go` does NOT exist, create a symbolic link:
 
     sudo ln /usr/lib/go-1.11.1/bin/go /usr/bin/go
 
-Or if `/usr/bin/go` does exist, then overwrite the older binary
+Or, if `/usr/bin/go` does exist, overwrite the older binary:
 
     sudo cp /usr/lib/go-1.11.1/bin/go /usr/bin/go
 
@@ -112,7 +117,13 @@ The size of the machine that hosts the gateway depends on the amount of data tha
 Note: If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#install-and-configure-the-smart-gateway) instead.
 
 1. Identify a server on which to deploy the SignalFx Gateway.
-2. Edit the file `gateway.conf` to configure the gateway. Configuration options are defined [below](#configuration), and example configurations are available in the <a target="_blank" href="https://github.com/signalfx/gateway">main project documentation</a>.
+2. Edit the `gateway.conf` file to configure the gateway. Configuration options are defined [below](#configuration), and example configurations are available in the <a target="_blank" href="https://github.com/signalfx/gateway/blob/master/exampleGateway.conf">main project documentation</a>. For a high-level view of the configuration options, review the following table: 
+
+| Configuration option | Definition |Internal link |
+|--------|----------|--------|
+| `ForwardTo` | `ForwardTo` defines the data format that the gateway will transmit, and to where. | See [ForwardTo](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.gateway.html#forwardto) for more information. |
+| `ListenFrom` | `ListenFrom` defines the data format that the gateway will receive, and on what port. It also defines the transformation that the data will undergo, if any. | See [ListenFrom](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.gateway.html#listenfrom) for more information. |
+
 3. Use the <a target="_blank" href="https://raw.githubusercontent.com/signalfx/gateway/master/install.sh">install script</a> to install or upgrade the gateway, as follows.
 
         curl -s https://raw.githubusercontent.com/signalfx/gateway/master/install.sh | sudo sh
@@ -125,18 +136,15 @@ Note: If you are an APM customer, install the [Smart Gateway](https://docs.signa
 
         /etc/init.d/gateway start
 
-5. Configure your endpoints:
+5. Configure your endpoints. 
 
-By default, the SignalFx Gateway sends metrics to the `us0` realm.
-If you are not in this realm, you will need to explicitly set the endpoint urls to use your realm.
-To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to explicitly set the endpoints, check your profile page in the SignalFx web application.
-See the configuration section on [sending to alternate ingest targets](#sending-to-alternate-ingest-targets) below.
+    By default, the SignalFx Gateway sends metrics to the `us0` realm. If you are not in this realm, you will need to explicitly set       the endpoint urls to use your realm. To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to explicitly set     the endpoints, check your profile page in the SignalFx web application. See the configuration section on [sending to alternate ingest targets](#sending-to-alternate-ingest-targets) below.
 
 6. Begin transmitting data to the host and port on which the gateway is running. The data will be transformed and forwarded as specified in the [configuration](#configuration).
 
 #### Docker Container Deployment
 
- The SignalFx Gateway is also packaged as a Docker image that has been built and deployed to <a target="_blank" href="https://quay.io/repository/signalfx/gateway">quay.io</a>. This image does not include configuration. To use this image, ensure that you have a `gateway.conf` file cross-mounted to `/var/config/gateway/gateway.conf` for the container to use. As an example, if you have the configuration file setup on the host at the location `/tmp/gateway/gateway.conf` then the docker command would be `docker run -ti -v /tmp/gateway:/var/config/gateway quay.io/signalfx/gateway`
+ The SignalFx Gateway is also packaged as a Docker image that has been built and deployed to <a target="_blank" href="https://quay.io/repository/signalfx/gateway">quay.io</a>. This image does not include configuration. To use this image, ensure that you have a `gateway.conf` file cross-mounted to `/var/config/gateway/gateway.conf` for the container to use. For example, if you have the configuration file setup on the host at the location `/tmp/gateway/gateway.conf`, the docker command would be `docker run -ti -v /tmp/gateway:/var/config/gateway quay.io/signalfx/gateway`
 
 ### CONFIGURATION
 
@@ -266,7 +274,7 @@ For this, you will need to specify which port to bind to.  An example config:
 The SignalFx listener has the ability to add tags to every span that passes through it.
 `AdditionalSpanTags` defines a set of tag name/value pairs that will be included on every span. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
 
-Warning: The tags defined by `AdditionalSpanTags` will overwrite any existing values that the incoming spans have set for the configured tag names
+**Warning:** The tags defined by `AdditionalSpanTags` will overwrite any existing values that the incoming spans have set for the configured tag names
 
     {
         "Type": "signalfx",
@@ -279,7 +287,8 @@ Warning: The tags defined by `AdditionalSpanTags` will overwrite any existing va
 
 ##### Identify and Replace variables in Span Names
 
-The SignalFx listener has the ability to identify and replace variables in span names and turn them into tags. It uses regex-based replacement rules. See the [syntax here](https://golang.org/pkg/regexp/syntax/).
+The SignalFx listener has the ability to identify and replace variables in span names and turn them into tags. It uses regex-based replacement rules. See the [syntax](https://golang.org/pkg/regexp/syntax/) for more information.
+
 For example, with the configuration below, the Gateway would replace span name `/api/v1/document/321083210/update` with `/api/v1/document/{documentId}/update` and add the tag `"documentId":"321083210"` to the span.
 
 Every rule will be applied in the order they are defined to every span that goes through the listener. The config parameter `SpanNameReplacementBreakAfterMatch` controls whether to stop processing span name replacement rules after the first matching rule for a span. The default value for this parameter is `true`.
@@ -352,9 +361,9 @@ The Gateway can handle approximately two dozen rules without a significant impac
 }
 ```
 
-##### Span Processing Order of Operations
+##### Span processing order of operations
 
-When evaluating a span, the Gateway will add [`AdditionalSpanTags`](#add-tags-to-spans), then apply [`SpanNameReplacementRules`](#identify-and-replace-variables-in-span-names), then [`ObfuscateSpanTags`](#obfuscating-span-tag-metadata), and finally [`RemoveSpanTags`](#removing-span-tag-metadata). This allows the result of `SpanNameReplacementRules` to be configured as an `Operation` for `ObfuscateSpanTags` or `RemoveSpanTags`. This also ensures that any tags that are matched by `ObfuscateSpanTags` or `RemoveSpanTags` cannot be added by a later step of the processing chain. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
+When evaluating a span, the Gateway will add [`AdditionalSpanTags`](#add-tags-to-spans), apply [`SpanNameReplacementRules`](#identify-and-replace-variables-in-span-names), [`ObfuscateSpanTags`](#obfuscating-span-tag-metadata), and [`RemoveSpanTags`](#removing-span-tag-metadata). This allows the result of `SpanNameReplacementRules` to be configured as an `Operation` for `ObfuscateSpanTags` or `RemoveSpanTags`. This also ensures that any tags that are matched by `ObfuscateSpanTags` or `RemoveSpanTags` cannot be added by a later step of the processing chain. For more information, see <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/advanced-gateway-features.html"> Advanced Smart Gateway Features</a>.
 
 ##### collectd listener
 
@@ -371,7 +380,7 @@ When configuring CollectD, the target URL path will be `/post-collectd`.
 ##### Prometheus listener
 
 You can use the gateway as prometheus remote storage. To do this, you will
-need to specify the port to bind to.  An example config:
+need to specify the port to bind to.  For example:
 
     {
         "Type": "prometheus",
@@ -379,12 +388,12 @@ need to specify the port to bind to.  An example config:
         "ListenPath": "/write"
     }
 
-...and then add the following to your prometheus.yml:
+Add the following to your prometheus.yml:
 
     remote_write:
       - url: "http://hostname:12003/write"
 
-If you want something different than the default endpoint of "/write" you can
+If you want something different than the default endpoint of "/write", you can
 specify it with "ListenPath". An alternative example config:
 
     {
@@ -393,7 +402,7 @@ specify it with "ListenPath". An alternative example config:
         "ListenPath": "/receive"
     }
 
-...and then add the following to your prometheus.yml:
+Add the following to your prometheus.yml:
 
     remote_write:
       - url: "http://hostname:12003/receive"
@@ -402,7 +411,7 @@ specify it with "ListenPath". An alternative example config:
 
 You can send wavefront metrics to SignalFx through our gateway in the same
 fashion as you would have sent them to the wavefront proxy. You will need
-to specify the port to bind to.  An example config:
+to specify the port to bind to. For example:
 
     {
         "Type": "wavefront",
@@ -424,7 +433,7 @@ will continue to give you the dimensions you expect.
 
 ##### Carbon listener
 
-You can pretend to be carbon (the graphite database) with this type.  For
+You can pretend to be carbon (the Graphite database) with this type.  For
 this, you will need to specify the port to bind to.  An example config:
 
     {
@@ -444,9 +453,9 @@ to the default of TCP).
 For incoming carbon (Graphite) data only, the gateway supports transforming long dot-delimited metric names into metrics and dimensions for transmission to SignalFx.
 
 
-###### Graphite Options
+###### Graphite options
 
-This config will listen using CollectD's HTTP protocol and forward
+This configuration will listen using CollectD's HTTP protocol and forward
 all those metrics to a single graphite listener.  It will collect
 stats at 1s intervals.  It also signals to graphite that when it creates
 a graphite name for a metric, it should put the 'source' (which is usually
@@ -472,9 +481,9 @@ graphite dot delimited name.
       ]
     }
 
-###### Graphite Dimensions
+###### Graphite dimensions
 
-This config will pull dimensions out of graphite metrics if they fit the commakeys
+This configuration will pull dimensions out of Graphite metrics if they fit the commakeys
 format.  That format is "\_METRIC_NAME\_\[KEY:VALUE,KEY:VALUE]".  For example,
 "user.hit_rate\[host:server1,type:production]".  It also has the extra option
 of adding a metric type to the datapoints.  For example, if one of the
@@ -504,7 +513,7 @@ seconds.
       ]
     }
 
-###### Graphite Dimensions using Regular Expressions
+###### Graphite dimensions using regular expressions
 
 You can use MetricRules to extract dimensions and metric names from the dot-
 separated names of graphite metrics using regular expressions.
@@ -577,7 +586,7 @@ If you sent in the metric "albatros.cpu.idle", this would fall through and go
 to the FallbackDeconstructor and in this case since we're using the nil
 deconstructor, be rejected and won't be passed on to SignalFx.
 
-###### Graphite Dimensions using Delimiters
+###### Graphite dimensions using delimiters
 
 You can use MetricRules to extract dimensions from the dot-separated names of
 graphite metrics.
@@ -599,7 +608,7 @@ and separated by the same delimiter as the incoming metrics. In the following
 example, the configuration contains two rules: one that matches all metrics
 with four terms, and one that matches all metrics with six terms.
 
-If the following example config were used to process a graphite metric called
+If the following example configuration were used to process a Graphite metric called
 `cassandra.cassandra23.production.thread_count`, it would output the following:
 
     metricName = thread_count
@@ -669,14 +678,14 @@ The MetricPath is followed by a DimensionsMap:
 1. The ninth and tenth terms are '%', the default metric character, which
   indicates that they should be used for the metric name.
 
-This config also contains MetricName, the value of which will be prefixed onto
+This configuration also contains MetricName, the value of which will be prefixed onto
 the name of every metric emitted.
 
 Finally, note that the MetricPath contains five terms, but the DimensionsMap
 contains ten. This means that the MetricPath implicitly contains five
 additional metric terms that are '*' (match anything).
 
-If this config were used to process a metric named
+If this configuration were used to process a metric named
 `cassandra.bbac.23.foo.primary.prod.nodefactory.node.counter.count`, it would
 output the following:
 
@@ -686,7 +695,7 @@ output the following:
                   instance=23, type=primary, tier=prod, item=nodefactory.node,
                   business_unit=Coyote}
 
-Config
+For example:
 
     {
       "ListenFrom": [
@@ -763,7 +772,7 @@ The following is a full list of overrideable options and their defaults:
       "EndsWith":""
     }
 
-#### Other Configuration Options
+#### Other configuration options
 
 
 | Configuration property | Definition | Example values |
@@ -788,28 +797,28 @@ SignalFx Gateway can help you get the right data to the right destination in man
 #### Health checks
 
 Health checks are available on the listening port of any collectd or
-SignalFx listener. E.g.  If you had a SignalFx listener at `8080`, the
+SignalFx listener. For example, if you had a SignalFx listener at `8080`, the
 healthcheck would be located at `http://localhost:8080/healthz`.
-Healthchecks are useful when putting the gateway behind a loadbalancer.
+Healthchecks are useful when putting the gateway behind a load balancer.
 
-#### Graceful Shutdown
+#### Graceful shutdown
 The SignalFx Gateway will begin shutting down gracefully
 when it receives a `SIGTERM`.
 
-During graceful shutdown all health checks will prevent
+During graceful shutdown, all health checks will prevent
 load balancers from initiating new connections.  Every `GracefulCheckInterval`
 the number of in flight datapoints and events are checked until there are 0
 for the duration specified by `SilentGracefulTime`, or graceful shutdown has exceeded
 the `MaxGracefulWaitTime`.  When the graceful shutdown has completed or timed out,
 all listeners and forwarders will be closed and the process will exit.
 
-If the SignalFx Gateway is in front of a load balancer the recommended `MaxGracefulWaitTime`
+If the SignalFx Gateway is in front of a load balancer, the recommended `MaxGracefulWaitTime`
 is `30s`.  This gives the load balancer time to hit the health check and divert traffic.
 
 The `MaxGracefulWaitTime` will always be hit if there is no load balancer in front of the gateway.
 If no load balancer is in use, the recommended `MaxGracefulWaitTime` is `1s`
 
-Example:
+For example:
 
     {
       "MaxGracefulWaitTime": "1s",
@@ -837,7 +846,7 @@ Example:
 
 #### Sending SignalFx data to SignalFx
 
-This config listens using the SignalFx protocol, buffers, then forwards
+This configuration listens using the SignalFx protocol, buffers, then forwards
 points to SignalFx.
 
     {
@@ -859,7 +868,7 @@ points to SignalFx.
 
 #### Sending data to multiple destinations
 
-You can use the gateway to duplicate a data stream to multiple destinations. Add each destination to the `ForwardTo` block as in the following example.
+You can use the gateway to duplicate a data stream to multiple destinations. Add each destination to the `ForwardTo` block, as shown in the following example.
 
     "ForwardTo": [
       {
@@ -874,11 +883,11 @@ You can use the gateway to duplicate a data stream to multiple destinations. Add
       }
     ]
 
-#### Sending To Alternate Ingest Targets
+#### Sending to alternate ingest targets
 
 You can configure the forwarder to send to alternate ingest endpoints such as another Gateway or an alternate SignalFx Deployment.
 The SignalFx Gateway sends to the `us0` realm by default. If you are not in this realm, you will need to explicitly set the
-endpoint urls above as shown below. To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to
+endpoint URLs above, as shown below. To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to
 explicitly set the endpoints, check your profile page in the SignalFx web application.
 
 | Key | Description | Default |
@@ -904,7 +913,7 @@ explicitly set the endpoints, check your profile page in the SignalFx web applic
       }
     ]
 
-#### HTTP Proxy Support
+#### HTTP proxy support
 
 The SignalFx Gateway supports the use of http proxies configured
 via environment variable.  Setting the environment variable `HTTP_PROXY` to an
@@ -912,29 +921,29 @@ http proxy will make the SignalFx Gateway proxy all connections through the spec
 This can be put into the start script, or as part of the environment sent into the container
 if using a container solution like maestro.
 
-Example:
+For example:
 
     HTTP_PROXY="http://proxyhost:proxyport"
 
-### SignalFx Performance Options
+### SignalFx performance options
 
-This config below listens for carbon data on port 2003 and forwards it to SignalFx
+This configuration listens for carbon data on port 2003 and forwards it to SignalFx
 using an internal datapoint buffer size of 1,000,000 and sending with 50 threads
 simultaneously with each thread sending no more than 5,000 points in a single
 call.
 
-EmitDebugMetrics being set to true means every 10s we'll emit metrics out all
+`EmitDebugMetrics` being set to `true` means that every 10s we'll emit metrics out all
 forwarders about the running Gateway.  If you don't want these metrics, omit
-this config value. These metrics are emitted with both host and
+this configuration value. These metrics are emitted with both host and
 cluster dimensions. The host dimension will be set to the value of the
 ServerName set in the config file or to the hostname of the machine by default.
 The cluster dimension will be set to what you set in the config file, or to
 the default value of "gateway". If using the Smart Agent, the host will be
 overridden with that configured value.
 
-Also note that we're setting LateThreshold and FutureThreshold to 10s.  This means
+Also note that we're setting `LateThreshold` and `FutureThreshold` to `10s`.  This means
 we'll count datapoints, events and spans that exceed those thresholds (if set) and
-log them up to one per second. When you've turned on as described immediately above
+log them up to one per second. When you've turned on as described immediately above, 
 you'll see metrics named late.count and future.count emitted counting each type of
 data that was late or in the future respectively.
 
@@ -961,21 +970,20 @@ data that was late or in the future respectively.
       ]
     }
 
-If you set the config `InternalMetricsListenerAddress` to a host port combination
-and configure the smart gateway to scrape that for internal metrics at
-`/internal-metrics`. By default this will only be the public metrics needed to
+If you set the `InternalMetricsListenerAddress` configuration to a host port combination, configure the Smart Gateway to scrape that for internal metrics at
+`/internal-metrics`. By default, this will only be the public metrics needed to
 support our curated content, if you want all internal server metrics, you will
-need to also sert `EmitDebugMetrics` to true.
+need to also sert `EmitDebugMetrics` to `true`.
 
 #### Transforming carbon dot-delimited metric names into metrics with dimensions
 
-SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx Gateway's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. <a target="_blank" href="https://github.com/signalfx/gateway#graphite-dimensions">Click here to read more on Github about MetricDeconstructor options</a>.
+SignalFx's chart builder supports treating components of metric names as dimensions for the purpose of chart building. However, it can be more efficient to define dimensions once, before transmission, rather than many times afterward when building charts. Use the SignalFx Gateway's `MetricDeconstructor` for the carbon listener to transform Graphite's long dot-delimited metric names into metrics with dimensions before transmission to SignalFx. See the <a target="_blank" href="https://github.com/signalfx/gateway#graphite-dimensions">signalfx/gateway repository</a> for more information on the MetricDeconstructor options.
 
-Note that you can apply different MetricDeconstructor rules in each `ForwardTo` destination.
+**Note:** You can apply different MetricDeconstructor rules in each `ForwardTo` destination.
 
 #### Concentrate outgoing HTTP connections
 
-SignalFx recommends instrumenting each host with the SignalFx collectd agent, which transmits data to SignalFx over HTTP using the `write_http` plugin. In some environments it is not desirable for every host to maintain its own out-of-network HTTP connection: for instance, when a firewall is in use. In this scenario, you can deploy the SignalFx Gateway, configure each collectd instance to transmit to the gateway, then configure your network to authorize just the gateway to transmit outside the firewall to SignalFx.
+SignalFx recommends instrumenting each host with the SignalFx collectd agent, which transmits data to SignalFx over HTTP using the `write_http` plugin. In some environments, it is not desirable for every host to maintain its own out-of-network HTTP connection. For instance, when a firewall is in use. In this scenario, you can deploy the SignalFx Gateway, configure each collectd instance to transmit to the gateway, and configure your network to authorize just the gateway to transmit outside the firewall to SignalFx.
 
 Because the SignalFx Gateway multiplexes incoming traffic from incoming instances of collectd, it sends larger, more efficient messages to SignalFx. For this reason, it is also a good fit when servers have high transmission latency to the region where SignalFx is located. Forwarding metrics through the gateway reduces hosts' exposure to transmission latency. The gateway can be configured to buffer in-memory if needed.
 
@@ -987,13 +995,14 @@ In addition, because the SignalFx Gateway can apply dimensions to all outgoing d
 
 #### Teeing a subset of metrics on a forwarder
 
-The config listens on signalfx and graphite, and forwards everything to
-graphite, and a smaller subset (excludes anything starting with cpu) to SignalFx.
-Below any metric starting with cpu will be denied, except for cpu.idle.
-If only allow was specificed, those that matched would be allowed and those
-that failed would be denied.  If only deny was provided those that matched
+This configuration listens on SignalFX and Graphite, and forwards everything to
+Graphite, and a smaller subset (excludes anything starting with CPU) to SignalFx.
+Below any metric starting with CPU will be denied, except for `cpu.idle`.
+If `only allow` was specificed, those that matched would be allowed and those
+that failed would be denied. If `only deny` was specified, those that matched
 would be denied and those that were not would be allowed.
 
+For example:
 
     {
       "LogDir": "/tmp",
@@ -1036,8 +1045,8 @@ would be denied and those that were not would be allowed.
 
 The SignalFx Gateway utilizes pprof to provide diagnostic information about the gateway.
 
-To enable pprof configure `LocalDebugServer` in the `gateway.conf` file
-with an address and port to serve information on.
+To enable pprof, configure `LocalDebugServer` in the `gateway.conf` file
+with an address and port to serve information on. For example:
 
     {
       "LocalDebugServer": "0.0.0.0:6009"
@@ -1068,7 +1077,7 @@ You can learn more about pprof on [the pprof help page](http://golang.org/pkg/ne
             }
         }
 
-2. Then, send a request with the debug header set to `secretdebug`
+2. Send a request with the debug header set to `secretdebug`.
 
         curl -H "X-Debug-Id:secretdebug" -H "Content-Type: application/json" -XPOST -d '{"gauge": [{"metric":"bob", "dimensions": {"org":"dev"}, "value": 3}]}' localhost:8080/v2/datapoint
 
@@ -1077,8 +1086,8 @@ You can learn more about pprof on [the pprof help page](http://golang.org/pkg/ne
 
 #### Debugging connections via debug dimensions
 
-1. Setup a local debug server and specify which dimensions are
-logged out.
+1. Set up a local debug server and specify which dimensions are
+logged out:
 
         {
           "LocalDebugServer": "0.0.0.0:6060",
@@ -1090,7 +1099,7 @@ logged out.
             }
         }
 
-2. Then set which dimensions to debug via a POST.
+2. Set which dimensions to debug via a POST:
 
         curl -XPOST -d '{"org":"dev"}' localhost:6060/debug/dims
 
