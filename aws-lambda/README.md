@@ -75,9 +75,9 @@ To view the three installation methods for each Lambda wrapper, review the follo
 - <a target="_blank" href="https://github.com/signalfx/lambda-python">Python</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-ruby">Ruby</a>
 - <a target="_blank" href="https://github.com/signalfx/lambda-csharp">C#</a>
-  - SAM application is not supported.
+    - SAM application is not supported.
 - <a target="_blank" href="https://github.com/signalfx/lambda-go">Go</a>
-  - Lambda Layers are not supported.
+    - Lambda Layers are not supported.
 
 #### Option 2: Use CloudWatch
 
