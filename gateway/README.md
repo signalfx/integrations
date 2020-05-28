@@ -124,7 +124,7 @@ The size of the machine that hosts the Gateway depends on the amount of data tha
 | `ForwardTo` | `ForwardTo` defines the data format that the Gateway will transmit, and to where. | See [ForwardTo](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.gateway.html#forwardto) for more information. |
 | `ListenFrom` | `ListenFrom` defines the data format that the Gateway will receive, and on what port. It also defines the transformation that the data will undergo, if any. | See [ListenFrom](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.gateway.html#listenfrom) for more information. |
 
-3. Use the <a target="_blank" href="https://raw.githubusercontent.com/signalfx/gateway/master/install.sh">install script</a> to install or upgrade the Gateway:
+3. Run the following command to install or upgrade the Gateway. To preview the install script, see <a target="_blank" href="https://raw.githubusercontent.com/signalfx/gateway/master/install.sh">install script</a>.
 
         curl -s https://raw.githubusercontent.com/signalfx/gateway/master/install.sh | sudo sh
         # Config at    /etc/gateway.conf
