@@ -1,6 +1,6 @@
 code: https://github.com/signalfx/telegraf
 data_signature: agent:"telegraf"
-description: SignalFx's build of telegraf, the open-source metrics collection agent.
+description: SignalFx build of Telegraf, the open-source metrics collection agent.
 display_name: SignalFx Telegraf agent
 featured: false
 in_app_categories:
