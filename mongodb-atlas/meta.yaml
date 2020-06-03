@@ -6,6 +6,6 @@ display_name: MongoDB Atlas
 featured: true
 in_app_categories:
 - servicesMonitored
-logo_large: /images/repos/mongodb-atlas/img/integrations_mongodb%402x.png
-logo_small: /images/repos/mongodb-atlas/img/integrations_mongodb.png
+logo_large: /images/repos/mongodb-atlas/img/integration_mongodbatlas@2x.png
+logo_small: /images/repos/mongodb-atlas/img/integration_mongodbatlas.png
 project_url: https://github.com/signalfx/integrations/tree/master/mongodb-atlas
