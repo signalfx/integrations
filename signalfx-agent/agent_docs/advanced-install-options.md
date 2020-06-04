@@ -74,46 +74,108 @@ To use the bundle:
 
 By default, the Smart Agent logs only to stdout/err. If you want to persist logs, you must direct the output to a log file or other log management system. See the [signalfx-agent command doc](https://github.com/signalfx/signalfx-agent/blob/master/docs/signalfx-agent.1.man) for more information on supported command flags.
 
-### Windows Standalone .zip
 
-If you don’t want to use the installer script, we offer a .zip that can be deployed to the target host. This bundle is available for download on the [GitHub Releases Page](https://github.com/signalfx/signalfx-agent/releases) for each new release.
+### Windows Standalone .msi (for Smart Agent TBD or newer)
+
+If you don’t want to use the installer script, we offer a .msi package that can be manually installed on the target host. This package is available for download on the [GitHub Releases Page](https://github.com/signalfx/signalfx-agent/releases) for each new release.
 
 Before proceeding, you should ensure that [.Net Framework 3.5](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10) or later is installed.
 
 As an optional step, if you want to invoke a Python script for non-default monitors, specifically **exec**, then you must have Python installed.
 
-To use the bundle:
+To install the MSI package (requires user with Administrator privileges):
 
-1. Unzip it to a directory of your choice on the target system.
+1. Double-click the downloaded MSI package to install the agent. The files will be installed to `\Program Files\SignalFx\SignalFxAgent`.
 
-2. Ensure a valid configuration file is available somewhere on the target system. The main thing that the installer script provides – but that you will have to provide manually with the bundle – is a run directory for the Smart Agent to use. Because you aren’t installing from a package, there are two config options that you will especially want to consider:
-
-    - internalStatusHost - This is the hostname that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to localhost if left blank.
-
-    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to 8095.
-
-    See [Privileges](#privileges) for information on the capabilities the Smart Agent requires.
+2. Ensure a valid configuration file is available somewhere on the target system. By default, the Smart Agent will look for a configuration file at `\ProgramData\SignalFxAgent\agent.yaml`. A sample configuration file can be found at `\Program Files\SignalFx\SignalFxAgent\etc\signalfx\agent.yaml`. See [Configuration](#configuration) for more information on how to configure the Smart Agent.
 
 3. Run the Smart Agent by invoking the Smart Agent executable:
 
 ```sh
-SignalFxAgent\bin\signalfx-agent.exe-config <path to config.yaml>
+PS> \Program Files\SignalFx\SignalFxAgent\bin\signalfx-agent.exe -config <path to config file>
 
 ```
-By default, the Smart Agent logs only to stdout/err. If you want to persist logs, you must direct the output to a log file or other log management system. See the [signalfx-agent command doc](https://github.com/signalfx/signalfx-agent/blob/master/docs/signalfx-agent.1.man) for more information on supported command flags.
+By default, the Smart Agent runs as a process in the foreground and logs only to stdout/err.
 
-You may optionally install the Smart Agent as a Windows service by invoking the agent executable and specifying a few command line flags. The examples below show how to install and start the Smart Agent as a Windows service.
+You may optionally install the Smart Agent as a Windows service and log the output to the Windows Event Viewer by invoking the agent executable and specifying a few command line flags. The examples below show how to install and start the Smart Agent as a Windows service.
 
 _Install Service_
 
 ```sh
-PS> SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "install" -logEvents -config <path to config file>
+PS> \Program Files\SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "install" -logEvents -config <path to config file>
 ````
 
 _Start Service_
 
 ```sh
-PS> SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "start"
+PS> \Program Files\SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "start"
+````
+
+To stop or uninstall the Smart Agent service:
+
+_Stop Service_
+
+```sh
+PS> \Program Files\SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "stop"
+````
+
+_Uninstall Service_
+
+```sh
+PS> \Program Files\SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "uninstall"
+````
+
+4. The `SignalFx Smart Agent` package can be uninstalled from "Programs and Features" in the Windows Control Panel (if the Smart Agent service is installed, it will be automatically stopped and uninstalled).
+
+
+### Windows Standalone .zip (for Smart Agent TBD or older)
+
+If you don’t want to use the installer script, we offer a .zip that can be deployed to the target host. This bundle is available for download on the [Github Releases Page](https://github.com/signalfx/signalfx-agent/releases) for versions TBD or older.
+
+Before proceeding, you should ensure that [.Net Framework 3.5](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10) or later is installed. 
+
+As an optional step, if you want to invoke a Python script for non-default monitors, specifically **exec**, then you must have Python installed.
+
+To use the bundle (requires user with Administrator privileges):
+
+1. Unzip it to a directory of your choice on the target system.
+
+2. Ensure a valid configuration file is available somewhere on the target system. By default, the Smart Agent will look for a configuration file at `\ProgramData\SignalFxAgent\agent.yaml`. A sample configuration file can be found at `SignalFxAgent\etc\signalfx\agent.yaml` in the extracted directory. See [Configuration](#configuration) for more information on how to configure the Smart Agent.
+
+3. Run the Smart Agent by invoking the Smart Agent executable
+
+```sh
+PS> <extracted path>\SignalFxAgent\bin\signalfx-agent.exe -config <path to config file>.
+
+```
+By default, the Smart Agent runs as a process in the foreground and logs only to stdout/err.
+
+You may optionally install the Smart Agent as a Windows service and log the output to the Windows Event Viewer by invoking the agent executable and specifying a few command line flags. The examples below show how to install and start the Smart Agent as a Windows service.
+
+_Install Service_
+
+```sh
+PS> <extracted path>\SignalFxAgent\bin\signalfx-agent.exe -service "install" -logEvents -config <path to config file>
+````
+
+_Start Service_
+
+```sh
+PS> <extracted path>\SignalFxAgent\bin\signalfx-agent.exe -service "start"
+````
+
+To stop or uninstall the Smart Agent service:
+
+_Stop Service_
+
+```sh
+PS> <extracted path>\SignalFxAgent\bin\signalfx-agent.exe -service "stop"
+````
+
+_Uninstall Service_
+
+```sh
+PS> <extracted path>\SignalFxAgent\bin\signalfx-agent.exe -service "uninstall"
 ````
 
 
