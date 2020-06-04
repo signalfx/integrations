@@ -11,3 +11,4 @@ in_app_categories:
 logo_large: /images/repos/docker/img/integrations_marathon%402x.png
 logo_small: /images/repos/docker/img/integrations_marathon.png
 project_url: https://github.com/signalfx/integrations/tree/master/marathon
+useLegacyBuild: true

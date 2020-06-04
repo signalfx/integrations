@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integrations_azurevm%402x.png
 logo_small: integrations_azurevm.png
 project_url: https://github.com/signalfx/integrations/tree/master/azure-vm
+useLegacyBuild: true

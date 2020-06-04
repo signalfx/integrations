@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/etcd/img/integrations_etcd%402x.png
 logo_small: /images/repos/etcd/img/integrations_etcd.png
 project_url: https://github.com/signalfx/integrations/tree/master/etcd
+useLegacyBuild: true

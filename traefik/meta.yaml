@@ -9,3 +9,4 @@ in_app_categories:
 logo_large: /images/repos/signalfx-agent-traefik/img/integration_traefik%402x.png
 logo_small: /images/repos/signalfx-agent-traefik/img/integration_traefik.png
 project_url: https://github.com/signalfx/integrations/tree/master/traefik
+useLegacyBuild: true

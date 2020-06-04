@@ -9,3 +9,4 @@ logo_large: /images/repos/collectd/img/integration_signalfx.png
 logo_small: /images/repos/collectd/img/integration_signalfx.png
 project_url: https://github.com/signalfx/integrations/tree/master/collectd
 sort_order: 1
+useLegacyBuild: true

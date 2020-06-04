@@ -7,3 +7,4 @@ featured: true
 logo_large: /images/repos/collectd-riak/img/integrations_riak%402x.png
 logo_small: /images/repos/collectd-riak/img/integrations_riak.png
 project_url: https://github.com/signalfx/integrations/tree/master/collectd-riak
+useLegacyBuild: true

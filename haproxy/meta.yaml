@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/haproxy/img/integrations_haproxy%402x.png
 logo_small: /images/repos/haproxy/img/integrations_haproxy.png
 project_url: https://github.com/signalfx/integrations/tree/master/haproxy
+useLegacyBuild: true

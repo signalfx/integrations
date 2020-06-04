@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integrations_azureeventhubs%402x.png
 logo_small: integrations_azureeventhubs.png
 project_url: https://github.com/signalfx/integrations/tree/master/azure-event-hubbs
+useLegacyBuild: true

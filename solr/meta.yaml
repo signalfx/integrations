@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/solr/img/integrations_solr%402x.png
 logo_small: /images/repos/solr/img/integrations_solr.png
 project_url: https://github.com/signalfx/integrations/tree/master/solr
+useLegacyBuild: true

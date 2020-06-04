@@ -6,3 +6,4 @@ featured: false
 logo_large: /images/repos/collectd-write_http/img/integrations_collectd%402x.png
 logo_small: /images/repos/collectd-write_http/img/integrations_collectd.png
 project_url: https://github.com/signalfx/integrations/tree/master/collectd-write_http
+useLegacyBuild: true

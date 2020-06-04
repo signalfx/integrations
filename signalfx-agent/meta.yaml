@@ -11,3 +11,4 @@ logo_large: /images/repos/collectd/img/integration_smartagent@2x.png
 logo_small: /images/repos/collectd/img/integration_smartagent.png
 project_url: https://github.com/signalfx/signalfx-agent
 sort_order: 0
+useLegacyBuild: true

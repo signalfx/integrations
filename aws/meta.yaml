@@ -11,3 +11,4 @@ logo_large: integration_aws.png
 logo_small: integration_aws.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws
 sort_order: 2
+useLegacyBuild: true
