@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/jenkins/img/integrations_jenkins%402x.png
 logo_small: /images/repos/jenkins/img/integrations_jenkins.png
 project_url: https://github.com/signalfx/integrations/tree/master/jenkins
+useLegacyBuild: true

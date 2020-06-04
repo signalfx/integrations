@@ -5,3 +5,4 @@ featured: false
 logo_large: /images/repos/win-metrics.net/img/integrations_windows%402x.png
 logo_small: /images/repos/win-metrics.net/img/integrations_windows.png
 project_url: https://github.com/signalfx/integrations/tree/master/win-metrics.net
+useLegacyBuild: true
