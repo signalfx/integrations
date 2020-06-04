@@ -1,0 +1,8 @@
+{% macro metric_list(metrics) -%}
+
+{% for name, metric in metrics | dictsort %}
+ - {% if not metric.custom %}***{% endif %}`{{ name }}`{% if not metric.custom %}***{% endif %} (*{{ metric.metric_type }}*)<br />
+   {{ metric.description }}
+{% endfor %}
+
+{%- endmacro %}

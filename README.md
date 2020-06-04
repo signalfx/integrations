@@ -100,3 +100,30 @@ An example metrics documentation file can be found in <a target="_blank" href="h
 #### Sample dashboard
 
 Include a dashboard for your users to import into their monitoring solution, so that they can get instant value out of running your integration. SignalFx provides extended trial accounts for plugin developers that you can use to develop your dashboard. <a target="_blank" href="mailto:community@signalfx.com">Contact us to learn more</a>.
+
+## Local Testing
+
+The web app tiles are sourced from a Javascript module that is generated from
+the content in this repo.  That module is built with the `./build` script in
+the root of this repo.  To run this script, first ensure you have Python 3
+installed on your machine.  Then run:
+
+`pip3 install --user -r ./requirements.txt`
+
+from the root of this repo. Then run:
+
+`./build`
+
+If all completes successfully, you will receive a command that you can run to
+serve this JS module and associated images via a local HTTP server.  You can
+then run SignalView (the web app) with the following content in the
+`local.config.js` file in the root of the SignalView repo:
+
+```js
+module.exports = {
+    integrationsDocsUrl: "http://localhost:3005/",
+}
+```
+
+Then you can access the local SignalView instance and preview the latest build
+of this repo.
