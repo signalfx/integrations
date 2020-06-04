@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/gateway/img/integration_sfxgateway%402x.png
 logo_small: /images/repos/gateway/img/integration_sfxgateway.png
 project_url: https://github.com/signalfx/integrations/tree/master/gateway
+useLegacyBuild: true

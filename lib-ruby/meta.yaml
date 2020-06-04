@@ -5,3 +5,4 @@ featured: false
 logo_large: /images/repos/lib-ruby/img/integrations_tuby%402x.png
 logo_small: /images/repos/lib-ruby/img/integrations_ruby.png
 project_url: https://github.com/signalfx/integrations/tree/master/lib-ruby
+useLegacyBuild: true

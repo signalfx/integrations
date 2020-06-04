@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/conviva/img/integration_conviva@2x.png
 logo_small: /images/repos/conviva/img/integration_conviva.png
 project_url: https://github.com/signalfx/integrations/tree/master/conviva
+useLegacyBuild: true

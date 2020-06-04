@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/collectd-consul/img/integrations_consul%402x.png
 logo_small: /images/repos/collectd-consul/img/integrations_consul.png
 project_url: https://github.com/signalfx/integrations/tree/master/collectd-consul
+useLegacyBuild: true

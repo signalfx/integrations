@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integration_awsautoscaling.png
 logo_small: integration_awsautoscaling.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-autoscaling
+useLegacyBuild: true

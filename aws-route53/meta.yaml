@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integration_awsroute53.png
 logo_small: integration_awsroute53.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-route53
+useLegacyBuild: true

@@ -4,3 +4,4 @@ description: Aggregate metrics with different tokens from collectd, json, or pro
 display_name: SignalFx POPS (Point Of Presence Service)
 featured: false
 project_url: https://github.com/signalfx/integrations/tree/master/pops
+useLegacyBuild: true

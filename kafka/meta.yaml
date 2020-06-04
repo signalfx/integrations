@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/kafka/img/integrations_kafka%402x.png
 logo_small: /images/repos/kafka/img/integrations_kafka.png
 project_url: https://github.com/signalfx/integrations/tree/master/kafka
+useLegacyBuild: true

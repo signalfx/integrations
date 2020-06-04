@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/microsoft-iis/img/integration_fluentbit%402x.png
 logo_small: /images/repos/microsoft-iis/img/integration_fluentbit.png
 project_url: https://github.com/signalfx/fluent-bit-plugin/blob/master/README.md
+useLegacyBuild: true

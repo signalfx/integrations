@@ -11,3 +11,4 @@ in_app_categories:
 logo_large: /images/repos/hadoop/img/integrations_hadoop@2x.png
 logo_small: /images/repos/hadoop/img/integrations_hadoop.png
 project_url: https://github.com/signalfx/integrations/tree/master/hadoop
+useLegacyBuild: true
