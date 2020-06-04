@@ -1,4 +1,4 @@
-# ![](https://github.com/signalfx/integrations/blob/master/mongodb-atlas/img/integrations_mongodb.png) MongoDB Atlas
+# ![](https://github.com/signalfx/integrations/blob/master/mongodb-atlas/img/integration_mongodbatlas.png) MongoDB Atlas
 
 #### FEATURES
 
@@ -6,11 +6,11 @@
 
 - **Replica Set**: Overview of an Atlas MongoDB replica sets.
 
-  [<img src='./img/dashboard_atlas_mongodb_replicaset.png' width=200px>](img/dashboard_mongodbatlas_replicaset.png)
+  [<img src='./img/dashboard_mongodbatlas_replicaset.png' width=200px>](img/dashboard_mongodbatlas_replicaset.png)
 
 - **Process**: Focus on a single Atlas MongoDB process.
 
-  [<img src='./img/dashboard_atlas_mongodb_process.png' width=200px>](img/dashboard_mongodbatlas_process.png)
+  [<img src='./img/dashboard_mongodbatlas_process.png' width=200px>](img/dashboard_mongodbatlas_process.png)
 
 
 ### USAGE
