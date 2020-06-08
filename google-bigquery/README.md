@@ -12,7 +12,7 @@ To monitor Google BigQuery, integrate SignalFx with [Google Cloud Platform](http
 
 ## FEATURES
 
-### Built-in dashboards
+### Built-in Dashboards
 
 - **BigQuery Overview** - Overview of project-level metrics for Google BigQuery.
 
@@ -37,9 +37,9 @@ To access this integration, [connect to Google Cloud Platform](https://docs.sign
 
 - **Average Execution Time** - Distribution of queries execution times in seconds.
 
-- **Slots Allocated vs. Slots Available** - Number of BigQuery slots currently allocated for the project versus total number of BigQuery slots available for the project.
+- **Slots Allocated versus Slots Available** - Number of BigQuery slots currently allocated for the project versus total number of BigQuery slots available for the project.
 
-- **Scanned Bytes Billed / min** - Amount of scanned bytes billed per minute.
+- **Scanned Bytes Billed per minute** - Amount of scanned bytes billed per minute.
 
 - **Top Uploaded Bytes Billed per Table** - Tables with top 5 uploaded bytes billed per minute.
 
