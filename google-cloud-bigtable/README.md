@@ -6,33 +6,33 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-To monitor Google Cloud Bigtable, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Bigtable, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Bigtable Overview**: Overview of project level metrics for Google Cloud Bigtable.
+- **Bigtable Overview** - Overview of project-level metrics for Google Cloud Bigtable.
 
   [<img src='./img/bigtable_overview.png' width=200px>](./img/bigtable_overview.png)
 
-- **Bigtable Cluster**: Overview of a cluster metrics for Google Cloud Bigtable.
+- **Bigtable Cluster** - Overview of a cluster metrics for Google Cloud Bigtable.
 
   [<img src='./img/bigtable_cluster.png' width=200px>](./img/bigtable_cluster.png)
 
-- **Bigtable Table**: A table level look at metrics for Google Cloud Bigtable.
+- **Bigtable Table** - A table level look at metrics for Google Cloud Bigtable.
 
   [<img src='./img/bigtable_table.png' width=200px>](./img/bigtable_table.png)
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+## USAGE
 
-**BigTable Cluster**
+**Bigtable Cluster**
 
 - **Node Count** - Number of nodes in the cluster.
 
@@ -42,7 +42,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/cluster-disk-bytes-used.png' width=200px>](./img/cluster-disk-bytes-used.png)
 
-- **Cluster Disk Load** - Utilization of HDD disks in a cluster.
+- **Cluster Disk Load** - Utilization of Hard Disk Drive (HDD) disks in a cluster.
 
   [<img src='./img/cluster-disk-load.png' width=200px>](./img/cluster-disk-load.png)
 
@@ -50,7 +50,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/cluster-error-count-per-table.png' width=200px>](./img/cluster-error-count-per-table.png)
 
-- **Server Latency(ms) per Table** - Distribution of server request latencies aggregated by Table.
+- **Server Latency (ms) per Table** - Distribution of server request latencies aggregated by table.
 
   [<img src='./img/cluster-server-latency-per-table.png' width=200px>](./img/cluster-server-latency-per-table.png)
 
@@ -78,7 +78,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/cluster-sent-bytes-table.png' width=200px>](./img/cluster-sent-bytes-table.png)
 
-**BigTable Overview**
+**Bigtable Overview**
 
 - **Number of Clusters** - Number of clusters.
 
@@ -124,7 +124,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/overview-bytes-sent-cluster.png' width=200px>](./img/overview-bytes-sent-cluster.png)
 
-**BigTable Table**
+**Bigtable Table**
 
 - **Average Request Latency (ms)** - Average latency of server requests for a table.
 
@@ -158,9 +158,9 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/table-server-errors.png' width=200px>](./img/table-server-errors.png)
 
-- **Disk Bytes Used** - Amount of disk used by the table
+- **Disk Bytes Used** - Amount of disk used by the table.
 
-#### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Cloud Bigtable, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-bigtable">https://cloud.google.com/monitoring/api/metrics#gcp-bigtable</a>
 
