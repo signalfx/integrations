@@ -6,13 +6,10 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
 
-To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+## FEATURES
 
-### FEATURES
-
-##### Built-in dashboards
+### Built-in dashboards
 
 - **App Engine System**: Overview of system level metrics for App Engine.
 
@@ -30,13 +27,17 @@ To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](ht
 
   [<img src='./img/appengine_http.png' width=200px>](./img/appengine_http.png)
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+## USAGE
 
-#### Interpreting Built-in dashboards
+## DESCRIPTION
+
+To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+
+### Interpreting Built-in dashboards
 
 **App Engine Flex**
 
@@ -127,8 +128,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
   [<img src='./img/system-network-bytes-out.png' width=200px>](./img/system-network-bytes-out.png)
 
 
-
-#### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google App Engine, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-appengine">https://cloud.google.com/monitoring/api/metrics#gcp-appengine</a>
 
