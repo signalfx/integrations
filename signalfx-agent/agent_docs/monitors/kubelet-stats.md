@@ -6,11 +6,16 @@
 
 Monitor Type: `kubelet-stats` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/cadvisor))
 
-**Accepts Endpoints**: No
+**Accepts Endpoints**: **Yes**
 
 **Multiple Instances Allowed**: Yes
 
 ## Overview
+
+**As of Kubernetes 1.18 the `/spec` and `/stats/containers` endpoint that
+this monitor uses have been deprecated.  Therefore, this monitor is
+deprecated in favor of the kubelet-metrics` monitor, which uses the
+non-deprecated `/stats/summary` endpoint.**
 
 This monitor pulls cadvisor metrics through a
 Kubernetes kubelet instance via the `/stats/container` endpoint.

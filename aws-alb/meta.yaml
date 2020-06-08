@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integration_awsalb.png
 logo_small: integration_awsalb.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-alb
+useLegacyBuild: true

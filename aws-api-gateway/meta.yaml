@@ -11,3 +11,4 @@ in_app_categories:
 logo_large: integration_awsapigateway@2x.png
 logo_small: integration_awsapigateway.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-api-gateway
+useLegacyBuild: true

@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integration_awsdynamodb%402x.png
 logo_small: integration_awsdynamodb.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-dynamodb
+useLegacyBuild: true

@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/elasticsearch/img/integrations_elasticsearch%402x.png
 logo_small: /images/repos/elasticsearch/img/integrations_elasticsearch.png
 project_url: https://github.com/signalfx/integrations/tree/master/elasticsearch
+useLegacyBuild: true

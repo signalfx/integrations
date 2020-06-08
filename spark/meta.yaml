@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/spark/img/integrations_apachespark%402x.png
 logo_small: /images/repos/spark/img/integrations_apachespark.png
 project_url: https://github.com/signalfx/integrations/tree/master/spark
+useLegacyBuild: true

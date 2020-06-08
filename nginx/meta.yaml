@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/nginx/img/integrations_nginx%402x.png
 logo_small: /images/repos/nginx/img/integrations_nginx.png
 project_url: https://github.com/signalfx/integrations/tree/master/nginx
+useLegacyBuild: true

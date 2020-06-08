@@ -6,3 +6,4 @@ featured: false
 logo_large: /images/repos/win-perfcounter/img/integrations_windows%402x.png
 logo_small: /images/repos/win-perfcounter/img/integrations_windows.png
 project_url: https://github.com/signalfx/integrations/tree/master/win-perfcounter
+useLegacyBuild: true
