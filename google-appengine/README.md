@@ -9,21 +9,21 @@
 
 ## FEATURES
 
-### Built-in dashboards
+### Built-in Dashboards
 
-- **App Engine System**: Overview of system level metrics for App Engine.
+- **App Engine System** - Overview of system level metrics for App Engine.
 
   [<img src='./img/appengine_system.png' width=200px>](./img/appengine_system.png)
 
-- **App Engine Flex**: Flex environment specfic metrics for Google App Engine.
+- **App Engine Flex** - Flex environment specfic metrics for Google App Engine.
 
   [<img src='./img/appengine_flex.png' width=200px>](./img/appengine_flex.png)
 
-- **App Engine Memcache**: Memcache environment specfic metrics for Google App Engine.
+- **App Engine Memcache** - Memcache environment specfic metrics for Google App Engine.
 
   [<img src='./img/appengine_memcache.png' width=200px>](./img/appengine_memcache.png)
 
-- **App Engine HTTP**: HTTP specific metrics for Google App Engine
+- **App Engine HTTP** - HTTP specific metrics for Google App Engine.
 
   [<img src='./img/appengine_http.png' width=200px>](./img/appengine_http.png)
 
@@ -35,9 +35,9 @@ To access this integration, [connect to Google Cloud Platform](https://docs.sign
 
 ## DESCRIPTION
 
-To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### Interpreting Built-in dashboards
+### Interpreting Built-in Dashboards
 
 **App Engine Flex**
 
@@ -65,7 +65,7 @@ To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](ht
 
   [<img src='./img/flex-network-bytes-sent.png' width=200px>](./img/flex-network-bytes-sent.png)
 
-**App Engine http**
+**App Engine HTTP**
 
 - **HTTP Response Latency (ms)** - HTTP response latency.
 
@@ -83,13 +83,13 @@ To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](ht
 
   [<img src='./img/http-denied-from-over-quota.png' width=200px>](./img/http-denied-from-over-quota.png)
 
-- **Server DoS Interceptions** - Number of interceptions performed to prevent DoS attacks.
+- **Server DoS Interceptions** - Number of interceptions performed to prevent Denial-of-Service (DoS) attacks.
 
   [<img src='./img/http-server-dos-interceptions.png' width=200px>](./img/http-server-dos-interceptions.png)
 
 **App Engine Memcache**
 
-- **Memcache Operations by Command** - Number of memcache key operations aggregatedby command.
+- **Memcache Operations by Command** - Number of memcache key operations aggregated by command.
 
   [<img src='./img/memcache-operations-by-command.png' width=200px>](./img/memcache-operations-by-command.png)
 
@@ -101,7 +101,7 @@ To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](ht
 
   [<img src='./img/memcache-sent-bytes.png' width=200px>](./img/memcache-sent-bytes.png)
 
-- **Memcache MCU Count** - Memcache utilization in one hundredth of Memcache Compute Unit aggregated by command.
+- **Memcache MCU Count** - Memcache utilization in one hundredth of Memcache Compute Unit (MCU) aggregated by command.
 
   [<img src='./img/memcache-mcu-count.png' width=200px>](./img/memcache-mcu-count.png)
 
