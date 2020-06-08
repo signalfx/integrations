@@ -6,40 +6,40 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-To monitor Google BigQuery, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google BigQuery, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in dashboards
 
-- **BigQuery Overview**: Overview of project level metrics for Google BigQuery.
+- **BigQuery Overview** - Overview of project-level metrics for Google BigQuery.
 
   [<img src='./img/google_bigquery.png' width=200px>](./img/google_bigquery.png)
 
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+## USAGE
 
-#### Interpreting Built-in dashboards
+### Interpreting Built-in Dashboards
 
 **BigQuery Overview**
 
-- **Queries Count** - Number of in flight queries.
+- **Queries Count** - Number of inflight queries.
 
-- **Queries Trend** - Shows the trend of number of in flight queries.
+- **Queries Trend** - Shows the trend of number of inflight queries.
 
 - **Scanned Bytes / min** - Number of bytes scanned per minute.
 
 - **Average Execution Time** - Distribution of queries execution times in seconds.
 
-- **Slots Allocated vs. Slots Available** - Number of BigQuery slots currently allocated for the project vs total number of BigQuery slots available for the project.
+- **Slots Allocated vs. Slots Available** - Number of BigQuery slots currently allocated for the project versus total number of BigQuery slots available for the project.
 
-- **Scanned Bytes Billed / min** - Amount of Scanned bytes billed per minute.
+- **Scanned Bytes Billed / min** - Amount of scanned bytes billed per minute.
 
 - **Top Uploaded Bytes Billed per Table** - Tables with top 5 uploaded bytes billed per minute.
 
@@ -51,7 +51,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 - **Rows Uploaded / min per Table** - List number of rows uploaded per min aggregated by table.
 
-#### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google BigQuery, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-bigquery">https://cloud.google.com/monitoring/api/metrics#gcp-bigquery</a>
 
