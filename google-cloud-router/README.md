@@ -6,38 +6,38 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-To monitor Google Cloud Router, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Router, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Router Overview**: Overview of project level metrics for Google Cloud Router
+- **Router Overview** - Overview of project-level metrics for Google Cloud Router.
 
   [<img src='./img/router_overview.png' width=200px>](./img/router_overview.png)
 
-- **Router**: Metrics for a single instance of Google Cloud Router
+- **Router** - Metrics for a single instance of Google Cloud Router.
 
   [<img src='./img/router_router.png' width=200px>](./img/router_router.png)
 
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+## USAGE
 
-#### Interpreting Built-in dashboards
+### Interpreting Built-in Dashboards
 
 **Router**
 
-- **Router Status** - Indicates whether or not the router is up.
+- **Router Status** - Indicates if the router is up.
 
   [<img src='./img/router-status.png' width=200px>](./img/router-status.png)
 
-- **Router Number of Sent Routes** - Current number of routes sent on a bgp session.
+- **Router Number of Sent Routes** - Current number of routes sent on a Border Gateway Protocol (BGP) session.
 
   [<img src='./img/router-number-of-sent-routes.png' width=200px>](./img/router-number-of-sent-routes.png)
 
@@ -45,7 +45,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/router-number-of-best-received-routes.png' width=200px>](./img/router-number-of-best-received-routes.png)
 
-- **Sent Routes per BGP** - Current number of routes sent aggregated by bgp session.
+- **Sent Routes per BGP** - Current number of routes sent aggregated by a BGP session.
 
   [<img src='./img/router-sent-routes-per-bgp.png' width=200px>](./img/router-sent-routes-per-bgp.png)
 
@@ -57,25 +57,25 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/router-number-of-bgp-sessions-up.png' width=200px>](./img/router-number-of-bgp-sessions-up.png)
 
-- **Received Routes per BGP** - Current number of routes received aggregated by bgp session.
+- **Received Routes per BGP** - Current number of routes received aggregated by a BGP session.
 
   [<img src='./img/router-received-routes-per-bgp.png' width=200px>](./img/router-received-routes-per-bgp.png)
 
-- **BGP Session Status** - Indicator for successful bgp session establishment.
+- **BGP Session Status** - Indicator for successful BGP session establishment.
 
   [<img src='./img/router-bgp-session-status.png' width=200px>](./img/router-bgp-session-status.png)
 
 **Router Overview**
 
-- **Router Status** - Indicates an whether or not majority of the routers are up.
+- **Router Status** - Indicates if the  majority of the routers are up.
 
   [<img src='./img/router-overview-status.png' width=200px>](./img/router-overview-status.png)
 
-- **BGP Session Up per Router** - List of number of bgp sessions up for each router.
+- **BGP Session Up per Router** - List of number of BGP sessions up for each router.
 
   [<img src='./img/router-overview-bgp-sessions-up-per-router.png' width=200px>](./img/router-overview-bgp-sessions-up-per-router.png)
 
-- **BGP Session Down per Router** - List of number of bgp sessions down for each router.
+- **BGP Session Down per Router** - List of number of BGP sessions down for each router.
 
   [<img src='./img/router-overview-bgp-sessions-down-per-router.png' width=200px>](./img/router-overview-bgp-sessions-down-per-router.png)
 
@@ -87,7 +87,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/router-overview-routes-sent-per-router.png' width=200px>](./img/router-overview-routes-sent-per-router.png)
 
-#### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Cloud Router, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-router">https://cloud.google.com/monitoring/api/metrics#gcp-router</a>
 
