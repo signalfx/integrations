@@ -60,6 +60,7 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
+
  - ***`node_arp_entries`*** (*gauge*)<br>    ARP entries by device
  - ***`node_boot_time_seconds`*** (*gauge*)<br>    Node boot time, in unixtime
  - ***`node_context_switches_total`*** (*cumulative*)<br>    Total number of context switches

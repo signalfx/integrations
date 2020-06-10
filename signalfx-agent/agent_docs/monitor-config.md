@@ -29,14 +29,11 @@ The following config options are common to all monitors:
 | `discoveryRule` |  | no | `string` | The rule used to match up this configuration with a discovered endpoint. If blank, the configuration will be run immediately when the agent is started.  If multiple endpoints match this rule, multiple instances of the monitor type will be created with the same configuration (except different host/port). |
 | `validateDiscoveryRule` | `false` | no | `bool` | If true, a warning will be emitted if a discovery rule contains variables that will never possibly match a rule.  If using multiple observers, it is convenient to set this to false to suppress spurious errors.  The top-level setting `validateDiscoveryRules` acts as a default if this isn't set. |
 | `extraDimensions` |  | no | `map of strings` | A set of extra dimensions (key:value pairs) to include on datapoints emitted by the monitor(s) created from this configuration. To specify metrics from this monitor should be high-resolution, add the dimension `sf_hires: 1` |
-| `extraSpanTags` |  | no | `map of strings` | A set of extra span tags (key:value pairs) to include on spans emitted by the monitor(s) created from this configuration. |
-| `extraSpanTagsFromEndpoint` |  | no | `map of strings` | A mapping of extra span tag names to a [discovery rule expression](https://docs.signalfx.com/en/latest/integrations/agent/auto-discovery.html) that is used to derive the value of the span tag.  For example, to use a certain container label as a span tag, you could use something like this in your monitor config block: `extraSpanTagsFromEndpoint: {env: 'Get(container_labels, "myapp.com/environment")'}` |
-| `defaultSpanTags` |  | no | `map of strings` | A set of default span tags (key:value pairs) to include on spans emitted by the monitor(s) created from this configuration. |
-| `defaultSpanTagsFromEndpoint` |  | no | `map of strings` | A mapping of default span tag names to a [discovery rule expression](https://docs.signalfx.com/en/latest/integrations/agent/auto-discovery.html) that is used to derive the default value of the span tag.  For example, to use a certain container label as a span tag, you could use something like this in your monitor config block: `defaultSpanTagsFromEndpoint: {env: 'Get(container_labels, "myapp.com/environment")'}` |
 | `extraDimensionsFromEndpoint` |  | no | `map of strings` | A mapping of extra dimension names to a [discovery rule expression](https://docs.signalfx.com/en/latest/integrations/agent/auto-discovery.html) that is used to derive the value of the dimension.  For example, to use a certain container label as a dimension, you could use something like this in your monitor config block: `extraDimensionsFromEndpoint: {env: 'Get(container_labels, "myapp.com/environment")'}` |
 | `configEndpointMappings` |  | no | `map of strings` | A set of mappings from a configuration option on this monitor to attributes of a discovered endpoint.  The keys are the config option on this monitor and the value can be any valid expression used in discovery rules. |
 | `intervalSeconds` | `0` | no | `integer` | The interval (in seconds) at which to emit datapoints from the monitor(s) created by this configuration.  If not set (or set to 0), the global agent intervalSeconds config option will be used instead. |
 | `solo` | `false` | no | `bool` | If one or more configurations have this set to true, only those configurations will be considered. This setting can be useful for testing. |
+| `metricsToExclude` |  | no | `list of objects` | DEPRECATED in favor of the `datapointsToExclude` option.  That option handles negation of filter items differently. |
 | `datapointsToExclude` |  | no | `list of objects` | A list of datapoint filters.  These filters allow you to comprehensively define which datapoints to exclude by metric name or dimension set, as well as the ability to define overrides to re-include metrics excluded by previous patterns within the same filter item.  See [monitor filtering](./filtering.html#additional-monitor-level-filtering) for examples and more information. |
 | `disableHostDimensions` | `false` | no | `bool` | Some monitors pull metrics from services not running on the same host and should not get the host-specific dimensions set on them (e.g. `host`, `AWSUniqueId`, etc).  Setting this to `true` causes those dimensions to be omitted.  You can disable this globally with the `disableHostDimensions` option on the top level of the config. |
 | `disableEndpointDimensions` | `false` | no | `bool` | This can be set to true if you don't want to include the dimensions that are specific to the endpoint that was discovered by an observer.  This is useful when you have an endpoint whose identity is not particularly important since it acts largely as a proxy or adapter for other metrics. |
@@ -52,7 +49,6 @@ These are all of the monitors included in the agent, along with their possible c
 - [appmesh](./monitors/appmesh.md)
 - [aspdotnet](./monitors/aspdotnet.md)
 - [cadvisor](./monitors/cadvisor.md)
-- [cgroups](./monitors/cgroups.md)
 - [cloudfoundry-firehose-nozzle](./monitors/cloudfoundry-firehose-nozzle.md)
 - [collectd/activemq](./monitors/collectd-activemq.md)
 - [collectd/apache](./monitors/collectd-apache.md)
@@ -65,11 +61,13 @@ These are all of the monitors included in the agent, along with their possible c
 - [collectd/custom](./monitors/collectd-custom.md)
 - [collectd/df](./monitors/collectd-df.md)
 - [collectd/disk](./monitors/collectd-disk.md)
+- [collectd/docker](./monitors/collectd-docker.md)
 - [collectd/elasticsearch](./monitors/collectd-elasticsearch.md)
 - [collectd/etcd](./monitors/collectd-etcd.md)
 - [collectd/genericjmx](./monitors/collectd-genericjmx.md)
 - [collectd/hadoop](./monitors/collectd-hadoop.md)
 - [collectd/hadoopjmx](./monitors/collectd-hadoopjmx.md)
+- [collectd/haproxy](./monitors/collectd-haproxy.md)
 - [collectd/health-checker](./monitors/collectd-health-checker.md)
 - [collectd/interface](./monitors/collectd-interface.md)
 - [collectd/jenkins](./monitors/collectd-jenkins.md)
@@ -85,7 +83,6 @@ These are all of the monitors included in the agent, along with their possible c
 - [collectd/mysql](./monitors/collectd-mysql.md)
 - [collectd/nginx](./monitors/collectd-nginx.md)
 - [collectd/openstack](./monitors/collectd-openstack.md)
-- [collectd/php-fpm](./monitors/collectd-php-fpm.md)
 - [collectd/postgresql](./monitors/collectd-postgresql.md)
 - [collectd/processes](./monitors/collectd-processes.md)
 - [collectd/protocols](./monitors/collectd-protocols.md)
@@ -121,13 +118,11 @@ These are all of the monitors included in the agent, along with their possible c
 - [haproxy](./monitors/haproxy.md)
 - [heroku-metadata](./monitors/heroku-metadata.md)
 - [host-metadata](./monitors/host-metadata.md)
-- [http](./monitors/http.md)
 - [internal-metrics](./monitors/internal-metrics.md)
 - [jaeger-grpc](./monitors/jaeger-grpc.md)
 - [java-monitor](./monitors/java-monitor.md)
 - [jmx](./monitors/jmx.md)
 - [kube-controller-manager](./monitors/kube-controller-manager.md)
-- [kubelet-metrics](./monitors/kubelet-metrics.md)
 - [kubelet-stats](./monitors/kubelet-stats.md)
 - [kubernetes-apiserver](./monitors/kubernetes-apiserver.md)
 - [kubernetes-cluster](./monitors/kubernetes-cluster.md)
@@ -139,9 +134,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [logstash](./monitors/logstash.md)
 - [logstash-tcp](./monitors/logstash-tcp.md)
 - [memory](./monitors/memory.md)
-- [mongodb-atlas](./monitors/mongodb-atlas.md)
 - [net-io](./monitors/net-io.md)
-- [ntp](./monitors/ntp.md)
 - [openshift-cluster](./monitors/openshift-cluster.md)
 - [postgresql](./monitors/postgresql.md)
 - [processlist](./monitors/processlist.md)
@@ -156,9 +149,6 @@ These are all of the monitors included in the agent, along with their possible c
 - [signalfx-forwarder](./monitors/signalfx-forwarder.md)
 - [sql](./monitors/sql.md)
 - [statsd](./monitors/statsd.md)
-- [supervisor](./monitors/supervisor.md)
-- [telegraf/dns](./monitors/telegraf-dns.md)
-- [telegraf/exec](./monitors/telegraf-exec.md)
 - [telegraf/logparser](./monitors/telegraf-logparser.md)
 - [telegraf/procstat](./monitors/telegraf-procstat.md)
 - [telegraf/snmp](./monitors/telegraf-snmp.md)

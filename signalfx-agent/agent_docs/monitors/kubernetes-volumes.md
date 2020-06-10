@@ -14,7 +14,7 @@ Monitor Type: `kubernetes-volumes` ([Source](https://github.com/signalfx/signalf
 
 This monitor sends usage stats about volumes
 mounted to Kubernetes pods (e.g. free space/inodes).  This information is
-gotten from the Kubelet /stats/summary endpoint.  The normal `filesystems`
+gotten from the Kubelet /stats/summary endpoint.  The normal `collectd/df`
 monitor generally will not report Persistent Volume usage metrics because
 those volumes are not seen by the agent since they can be mounted
 dynamically and older versions of K8s don't support mount propagation of
@@ -73,27 +73,16 @@ The **nested** `kubernetesAPI` config object has the following fields:
 ## Metrics
 
 These are the metrics available for this monitor.
-Metrics that are categorized as
+This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+-- they are all custom**.
+
 
 
  - ***`kubernetes.volume_available_bytes`*** (*gauge*)<br>    The number of available bytes in the volume
  - ***`kubernetes.volume_capacity_bytes`*** (*gauge*)<br>    The total capacity in bytes of the volume
- - `kubernetes.volume_inodes` (*gauge*)<br>    The total inodes in the filesystem
- - `kubernetes.volume_inodes_free` (*gauge*)<br>    The free inodes in the filesystem
- - `kubernetes.volume_inodes_used` (*gauge*)<br>    The inodes used by the filesystem. This may not equal `inodes - free` because filesystem may share inodes with other filesystems.
-
-### Non-default metrics (version 4.7.0+)
-
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived
-from specific configuration options that do not appear in the above list of
-metrics do not need to be added to `extraMetrics`.
-
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring this monitor in a running agent instance.
-
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 ## Dimensions
 
 The following dimensions may occur on metrics emitted by this monitor.  Some

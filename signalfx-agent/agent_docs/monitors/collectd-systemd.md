@@ -78,24 +78,25 @@ Configuration](../monitor-config.html#common-configuration).**
 ## Metrics
 
 These are the metrics available for this monitor.
-Metrics that are categorized as
+This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+-- they are all custom**.
 
 
- - `gauge.active_state.activating` (*gauge*)<br>    Indicates that the systemd unit/service has previously been inactive but is currently in the process of entering an active state
- - `gauge.active_state.active` (*gauge*)<br>    Indicates that the systemd unit/service is active
- - `gauge.active_state.deactivating` (*gauge*)<br>    Indicates that the systemd unit/service is currently in the process of deactivation
- - `gauge.active_state.failed` (*gauge*)<br>    Indicates that the systemd unit/service is inactive the previous run was not successful
- - `gauge.active_state.inactive` (*gauge*)<br>    Indicates that the systemd unit/service is inactive and the previous run was successful or no previous run has taken place yet
- - `gauge.active_state.reloading` (*gauge*)<br>    Indicates that the systemd unit/service is active and currently reloading its configuration
- - `gauge.load_state.error` (*gauge*)<br>    Indicates that the systemd unit/service configuration failed to load
- - `gauge.load_state.loaded` (*gauge*)<br>    Indicates that the systemd unit/service configuration was loaded and parsed successfully
- - `gauge.load_state.masked` (*gauge*)<br>    Indicates that the systemd unit/service is currently masked out (i.e. symlinked to /dev/null etc)
- - `gauge.load_state.not-found` (*gauge*)<br>    Indicates that the systemd unit/service configuration was not found
- - `gauge.substate.dead` (*gauge*)<br>    Indicates that the systemd unit/service died
- - `gauge.substate.exited` (*gauge*)<br>    Indicates that the systemd unit/service exited
- - `gauge.substate.failed` (*gauge*)<br>    Indicates that the systemd unit/service failed
+
+ - ***`gauge.active_state.activating`*** (*gauge*)<br>    Indicates that the systemd unit/service has previously been inactive but is currently in the process of entering an active state
+ - ***`gauge.active_state.active`*** (*gauge*)<br>    Indicates that the systemd unit/service is active
+ - ***`gauge.active_state.deactivating`*** (*gauge*)<br>    Indicates that the systemd unit/service is currently in the process of deactivation
+ - ***`gauge.active_state.failed`*** (*gauge*)<br>    Indicates that the systemd unit/service is inactive the previous run was not successful
+ - ***`gauge.active_state.inactive`*** (*gauge*)<br>    Indicates that the systemd unit/service is inactive and the previous run was successful or no previous run has taken place yet
+ - ***`gauge.active_state.reloading`*** (*gauge*)<br>    Indicates that the systemd unit/service is active and currently reloading its configuration
+ - ***`gauge.load_state.error`*** (*gauge*)<br>    Indicates that the systemd unit/service configuration failed to load
+ - ***`gauge.load_state.loaded`*** (*gauge*)<br>    Indicates that the systemd unit/service configuration was loaded and parsed successfully
+ - ***`gauge.load_state.masked`*** (*gauge*)<br>    Indicates that the systemd unit/service is currently masked out (i.e. symlinked to /dev/null etc)
+ - ***`gauge.load_state.not-found`*** (*gauge*)<br>    Indicates that the systemd unit/service configuration was not found
+ - ***`gauge.substate.dead`*** (*gauge*)<br>    Indicates that the systemd unit/service died
+ - ***`gauge.substate.exited`*** (*gauge*)<br>    Indicates that the systemd unit/service exited
+ - ***`gauge.substate.failed`*** (*gauge*)<br>    Indicates that the systemd unit/service failed
  - ***`gauge.substate.running`*** (*gauge*)<br>    Indicates that the systemd unit/service is running
 
 #### Group ActiveState
@@ -112,17 +113,8 @@ monitor config option `extraGroups`:
 All of the following metrics are part of the `SubState` metric group. All of
 the non-default metrics below can be turned on by adding `SubState` to the
 monitor config option `extraGroups`:
-
-### Non-default metrics (version 4.7.0+)
-
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived
-from specific configuration options that do not appear in the above list of
-metrics do not need to be added to `extraMetrics`.
-
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring this monitor in a running agent instance.
-
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 ## Dimensions
 
 The following dimensions may occur on metrics emitted by this monitor.  Some

@@ -60,6 +60,7 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
+
  - ***`redis_aof_current_rewrite_duration_sec`*** (*gauge*)<br>    aof_current_rewrite_duration_sec metric
  - ***`redis_aof_enabled`*** (*gauge*)<br>    aof_enabled metric
  - ***`redis_aof_last_rewrite_duration_sec`*** (*gauge*)<br>    aof_last_rewrite_duration_sec metric

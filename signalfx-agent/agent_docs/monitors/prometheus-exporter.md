@@ -16,9 +16,8 @@ This monitor reads metrics from a [Prometheus
 exporter](https://prometheus.io/docs/instrumenting/exporters/) endpoint.
 
 All metric types are supported.  See
-[Metric Types](https://prometheus.io/docs/concepts/metric_types/) for a
-description of the Prometheus metric types.  The conversion happens as
-follows:
+https://prometheus.io/docs/concepts/metric_types/ for a description of the
+Prometheus metric types.  The conversion happens as follows:
 
  - Gauges are converted directly to SignalFx gauges
  - Counters are converted directly to SignalFx cumulative counters

@@ -69,6 +69,7 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
+
  - ***`procstat.cpu_time`*** (*gauge*)<br>    Amount of cpu time consumed by the process.
  - ***`procstat.cpu_usage`*** (*gauge*)<br>    CPU used by the process.
  - ***`procstat.involuntary_context_switches`*** (*gauge*)<br>    Number of involuntary context switches.
