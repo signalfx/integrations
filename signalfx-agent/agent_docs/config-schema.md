@@ -179,6 +179,9 @@ The **nested** `splunk` config object has the following fields:
 | `source` | no | string | Splunk source field value, description of the source of the event |
 | `sourceType` | no | string | Splunk source type, optional name of a sourcetype field value |
 | `index` | no | string | Splunk index, optional name of the Splunk index to store the event in |
+| `eventsIndex` | no | string | Splunk index, specifically for traces (must be event type) |
+| `eventsSource` | no | string | Splunk source field value, description of the source of the trace |
+| `eventsSourceType` | no | string | Splunk trace source type, optional name of a sourcetype field value |
 | `skipTLSVerify` | no | bool | Skip verifying the certificate of the HTTP Event Collector (**default:** `false`) |
 | `maxBuffered` | no | integer | The maximum number of Splunk log entries of all types (e.g. metric, event) to be buffered before old events are dropped.  Defaults to the writer.maxDatapointsBuffered config if not specified. (**default:** `0`) |
 | `maxRequests` | no | integer | The maximum number of simultaneous requests to the Splunk HEC endpoint. Defaults to the writer.maxBuffered config if not specified. (**default:** `0`) |
@@ -436,6 +439,9 @@ where applicable:
       source: 
       sourceType: 
       index: 
+      eventsIndex: 
+      eventsSource: 
+      eventsSourceType: 
       skipTLSVerify: false
       maxBuffered: 0
       maxRequests: 0
