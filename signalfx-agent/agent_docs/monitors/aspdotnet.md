@@ -62,7 +62,6 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
-
  - ***`asp_net.application_restarts`*** (*gauge*)<br>    Count of ASP.NET application restarts.
  - ***`asp_net.applications_running`*** (*gauge*)<br>    Number of running ASP.NET applications.
  - ***`asp_net.requests_current`*** (*gauge*)<br>    Current number of ASP.NET requests.

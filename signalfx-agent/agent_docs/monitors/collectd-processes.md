@@ -70,7 +70,6 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
-
  - ***`disk_octets.read`*** (*cumulative*)<br>
  - ***`disk_octets.write`*** (*cumulative*)<br>
  - ***`fork_rate`*** (*cumulative*)<br>

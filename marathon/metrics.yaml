@@ -1,146 +1,146 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 
-gauge.marathon.app.cpu.allocated:
+gauge.service.mesosphere.marathon.app.cpu.allocated:
   brief: Number of CPUs allocated to an application
-  custom: false
+  custom: true
   description: Number of CPUs allocated to an application
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.cpu.allocated
+  title: gauge.service.mesosphere.marathon.app.cpu.allocated
 
-gauge.marathon.app.cpu.allocated.per.instance:
+gauge.service.mesosphere.marathon.app.cpu.allocated.per.instance:
   brief: Configured number of CPUs allocated to each application instance
-  custom: false
+  custom: true
   description: Configured number of CPUs allocated to each application instance
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.cpu.allocated.per.instance
+  title: gauge.service.mesosphere.marathon.app.cpu.allocated.per.instance
 
-gauge.marathon.app.delayed:
+gauge.service.mesosphere.marathon.app.delayed:
   brief: Indicates if the application is delayed or not
   custom: true
   description: Indicates if the application is delayed or not
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.delayed
+  title: gauge.service.mesosphere.marathon.app.delayed
 
-gauge.marathon.app.deployments.total:
+gauge.service.mesosphere.marathon.app.deployments.total:
   brief: Number of application deployments
   custom: true
   description: Number of application deployments
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.deployments.total
+  title: gauge.service.mesosphere.marathon.app.deployments.total
 
-gauge.marathon.app.disk.allocated:
+gauge.service.mesosphere.marathon.app.disk.allocated:
   brief: Storage allocated to a Marathon application
-  custom: false
+  custom: true
   description: Storage allocated to a Marathon application
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.disk.allocated
+  title: gauge.service.mesosphere.marathon.app.disk.allocated
 
-gauge.marathon.app.disk.allocated.per.instance:
+gauge.service.mesosphere.marathon.app.disk.allocated.per.instance:
   brief: Configured storage allocated each to application instance
-  custom: false
+  custom: true
   description: Configured storage allocated each to application instance
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.disk.allocated.per.instance
+  title: gauge.service.mesosphere.marathon.app.disk.allocated.per.instance
 
-gauge.marathon.app.gpu.allocated:
+gauge.service.mesosphere.marathon.app.gpu.allocated:
   brief: GPU Allocated to a Marathon application
   custom: true
   description: GPU Allocated to a Marathon application
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.gpu.allocated
+  title: gauge.service.mesosphere.marathon.app.gpu.allocated
 
-gauge.marathon.app.gpu.allocated.per.instance:
+gauge.service.mesosphere.marathon.app.gpu.allocated.per.instance:
   brief: Configured number of GPUs allocated to each application instance
   custom: true
   description: Configured number of GPUs allocated to each application instance
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.gpu.allocated.per.instance
+  title: gauge.service.mesosphere.marathon.app.gpu.allocated.per.instance
 
-gauge.marathon.app.instances.total:
+gauge.service.mesosphere.marathon.app.instances.total:
   brief: Number of application instances
-  custom: false
+  custom: true
   description: Number of application instances
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.instances.total
+  title: gauge.service.mesosphere.marathon.app.instances.total
 
-gauge.marathon.app.memory.allocated:
+gauge.service.mesosphere.marathon.app.memory.allocated:
   brief: Memory Allocated to a Marathon application
-  custom: false
+  custom: true
   description: Memory Allocated to a Marathon application
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.memory.allocated
+  title: gauge.service.mesosphere.marathon.app.memory.allocated
 
-gauge.marathon.app.memory.allocated.per.instance:
+gauge.service.mesosphere.marathon.app.memory.allocated.per.instance:
   brief: Configured amount of memory allocated to each application instance
-  custom: false
+  custom: true
   description: Configured amount of memory allocated to each application instance
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.memory.allocated.per.instance
+  title: gauge.service.mesosphere.marathon.app.memory.allocated.per.instance
 
-gauge.marathon.app.tasks.running:
+gauge.service.mesosphere.marathon.app.tasks.running:
   brief: Number tasks running for an application
-  custom: false
+  custom: true
   description: Number tasks running for an application
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.tasks.running
+  title: gauge.service.mesosphere.marathon.app.tasks.running
 
-gauge.marathon.app.tasks.staged:
+gauge.service.mesosphere.marathon.app.tasks.staged:
   brief: Number tasks staged for an application
-  custom: false
+  custom: true
   description: Number tasks staged for an application
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.tasks.staged
+  title: gauge.service.mesosphere.marathon.app.tasks.staged
 
-gauge.marathon.app.tasks.unhealthy:
+gauge.service.mesosphere.marathon.app.tasks.unhealthy:
   brief: Number unhealthy tasks for an application
-  custom: false
+  custom: true
   description: Number unhealthy tasks for an application
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.app.tasks.unhealthy
+  title: gauge.service.mesosphere.marathon.app.tasks.unhealthy
 
-gauge.marathon.task.healthchecks.failing.total:
+gauge.service.mesosphere.marathon.task.healthchecks.failing.total:
   brief: The number of failing health checks for a task
-  custom: false
+  custom: true
   description: The number of failing health checks for a task
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.task.healthchecks.failing.total
+  title: gauge.service.mesosphere.marathon.task.healthchecks.failing.total
 
-gauge.marathon.task.healthchecks.passing.total:
+gauge.service.mesosphere.marathon.task.healthchecks.passing.total:
   brief: The number of passing health checks for a task
-  custom: false
+  custom: true
   description: The number of passing health checks for a task
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.task.healthchecks.passing.total
+  title: gauge.service.mesosphere.marathon.task.healthchecks.passing.total
 
-gauge.marathon.task.staged.time.elapsed:
+gauge.service.mesosphere.marathon.task.staged.time.elapsed:
   brief: The amount of time the task spent in staging
   custom: true
   description: The amount of time the task spent in staging
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.task.staged.time.elapsed
+  title: gauge.service.mesosphere.marathon.task.staged.time.elapsed
 
-gauge.marathon.task.start.time.elapsed:
+gauge.service.mesosphere.marathon.task.start.time.elapsed:
   brief: Time elapsed since the task started
   custom: true
   description: Time elapsed since the task started
   metric_type: gauge
   monitor: collectd/marathon
-  title: gauge.marathon.task.start.time.elapsed
+  title: gauge.service.mesosphere.marathon.task.start.time.elapsed
 
