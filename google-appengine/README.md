@@ -11,19 +11,19 @@
 
 ### Built-in Dashboards
 
-- **App Engine System** - Overview of system level metrics for App Engine.
+- **App Engine System** - Overview of system-level metrics for App Engine.
 
   [<img src='./img/appengine_system.png' width=200px>](./img/appengine_system.png)
 
-- **App Engine Flex** - Flex environment specfic metrics for Google App Engine.
+- **App Engine Flex** - Flex environment specfic metrics for App Engine.
 
   [<img src='./img/appengine_flex.png' width=200px>](./img/appengine_flex.png)
 
-- **App Engine Memcache** - Memcache environment specfic metrics for Google App Engine.
+- **App Engine Memcache** - Memcache environment specfic metrics for App Engine.
 
   [<img src='./img/appengine_memcache.png' width=200px>](./img/appengine_memcache.png)
 
-- **App Engine HTTP** - HTTP specific metrics for Google App Engine.
+- **App Engine HTTP** - HTTP specific metrics for App Engine.
 
   [<img src='./img/appengine_http.png' width=200px>](./img/appengine_http.png)
 
@@ -35,7 +35,7 @@ To access this integration, [connect to Google Cloud Platform](https://docs.sign
 
 ## DESCRIPTION
 
-To monitor Google App Engine, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
+To monitor App Engine, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
 ### Interpreting Built-in Dashboards
 
