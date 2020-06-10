@@ -22,7 +22,7 @@ To monitor Google Cloud Bigtable, integrate SignalFx with [Google Cloud Platform
 
   [<img src='./img/bigtable_cluster.png' width=200px>](./img/bigtable_cluster.png)
 
-- **Bigtable Table** - A table level look at metrics for Google Cloud Bigtable.
+- **Bigtable Table** - A table-level look at metrics for Google Cloud Bigtable.
 
   [<img src='./img/bigtable_table.png' width=200px>](./img/bigtable_table.png)
 
@@ -46,7 +46,7 @@ To access this integration, [connect to Google Cloud Platform](https://docs.sign
 
   [<img src='./img/cluster-disk-load.png' width=200px>](./img/cluster-disk-load.png)
 
-- **Server Error Count per Table** - Number of server requests for a table that failed with an error aggregated by Table.
+- **Server Error Count per Table** - Number of server requests for a table that failed with an error aggregated by table.
 
   [<img src='./img/cluster-error-count-per-table.png' width=200px>](./img/cluster-error-count-per-table.png)
 
