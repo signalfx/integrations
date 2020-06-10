@@ -21,7 +21,7 @@ To monitor Google Cloud Datastore, integrate SignalFx with [Google Cloud Platfor
 
 ## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](hhttps://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
 ## USAGE
 
