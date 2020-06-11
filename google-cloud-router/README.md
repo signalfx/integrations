@@ -27,6 +27,10 @@ To monitor Google Cloud Router, integrate SignalFx with [Google Cloud Platform](
 
 To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
+### Prerequisites
+
+None
+
 ## USAGE
 
 ### Interpreting Built-in Dashboards

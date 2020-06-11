@@ -28,10 +28,13 @@ To monitor Google Cloud Pub/Sub, integrate SignalFx with [Google Cloud Platform]
 
 - **Pub/Sub Streaming** - Metrics for Google Cloud Pub/Sub if the service is being used for data streaming.
 
-
 ## INSTALLATION
 
 To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
+
+### Prerequisites
+
+None
 
 ## USAGE
 

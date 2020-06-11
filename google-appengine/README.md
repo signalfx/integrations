@@ -31,6 +31,10 @@
 
 To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
+### Prerequisites
+
+None
+
 ## USAGE
 
 ## DESCRIPTION

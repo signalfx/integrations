@@ -31,7 +31,9 @@ To monitor Google Container Engine, integrate SignalFx with [Google Cloud Platfo
 
 To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-**Note:** Stackdriver Monitoring may not be enabled by default for your cluster. To enable it so that these metrics can be retrieved by SignalFx, see <a href="https://cloud.google.com/stackdriver/docs/solutions/kubernetes-engine" target="_blank">Overview of Google Cloud's operations suite for GKE</a>.
+### Prerequisites
+
+**Note:** Stackdriver monitoring may not be enabled by default for your cluster. To enable it so that these metrics can be retrieved by SignalFx, see <a href="https://cloud.google.com/stackdriver/docs/solutions/kubernetes-engine" target="_blank">Overview of Google Cloud's operations suite for GKE</a>.
 
 ## USAGE
 

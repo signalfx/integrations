@@ -19,7 +19,11 @@ Connecting to GCP lets you take advantage of SignalFx’s extensive GCP support.
 
 ## CONFIGURATION
 
+### Prerequisites
+
 Before you begin, you must be an administrator of your SignalFx account.
+
+### Steps
 
 To connect SignalFx to GCP, you must:
 
