@@ -2,7 +2,7 @@ browse_categories:
 - Database
 code: https://aws.amazon.com/rds/
 data_signature: namespace:"AWS/RDS"
-description: SignalFx's integration with Amazon Relational Database Service (RDS).
+description: Monitor Amazon Relational Database Service (RDS) using SignalFx and AWS CloudWatch. 
 display_name: Amazon RDS
 featured: false
 in_app_categories:

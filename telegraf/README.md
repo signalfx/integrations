@@ -13,7 +13,18 @@ Metadata associated with the SignalFx Telegraf Agent can be found <a target="_bl
 
 <a target="_blank" href="https://github.com/influxdata/telegraf">Telegraf</a> is an open source daemon that collects statistics from a system and publishes them to a destination of your choice. You can use Telegraf to monitor infrastructure metrics, and enable Telegraf plugins that monitor a wide range of software.
 
-#### FEATURES
+#### REQUIREMENTS AND DEPENDENCIES
+
+The SignalFx Telegraf Agent is supported on the following operating systems:
+
+| Operating System  | Version        |
+|-----------|----------------|
+| Amazon Linux | 2014.09, 2015.03, 2015.09, & 2016.03 |
+| Debian  | 7 & 8 |
+| RHEL/Centos | 6.x & 7.x |
+| Ubuntu  | 12.04, 14.04, 15.04 & 16.04 |
+
+### FEATURES
 
 Sending data using Telegraf allows you to take advantage of the following features:
 
@@ -26,17 +37,6 @@ Sending data using Telegraf allows you to take advantage of the following featur
 - SignalFx provides <a target="_blank" href="http://docs.signalfx.com/en/latest/built-in-content/recommended-detectors.html">recommended detectors</a> for hosts instrumented with the SignalFx Telegraf Agent. These built-in templates allow you to instantly create intelligent detectors based on SignalFx’s powerful analytics.
 
 - The SignalFx metadata plugin for Telegraf is a plugin that enriches your data by sending metadata about your hosts to SignalFx. This plugin is included by default in SignalFx’s Telegraf Agent.
-
-### REQUIREMENTS AND DEPENDENCIES
-
-The SignalFx Telegraf Agent is supported on the following operating systems:
-
-| Operating System  | Version        |
-|-----------|----------------|
-| Amazon Linux | 2014.09, 2015.03, 2015.09, & 2016.03 |
-| Debian  | 7 & 8 |
-| RHEL/Centos | 6.x & 7.x |
-| Ubuntu  | 12.04, 14.04, 15.04 & 16.04 |
 
 ### INSTALLATION
 
@@ -57,13 +57,13 @@ The SignalFx Telegraf Agent is supported on the following operating systems:
 
         ./telegraf --config <path to the telegraf config file>
 
-Note: This command only starts an executable. To ensure that the SignalFx Telegraf Agent starts as a background process at boot time, take additional steps as appropriate for your platform.
+Note: This command only starts an executable. To ensure that the SignalFx Telegraf Agent starts as a background process at boot time, take additional steps as appropriate for your platform (such as Linux or Windows). Steps you take vary according to your operating system. Consult your OS vendor for background process bootup details if you need them.
 
 ### CONFIGURATION
 
 Edit the configuration file `telegraf.conf` as shown below to configure the agent for use with SignalFx.
 
-#### Enable required plugins
+#### Step 1: Enable required plugins
 
 By default, the following plugin sections are listed in the configuration file but commented out. Uncomment the following configuration sections to enable necessary plugins:
 *  `[[inputs.net]]`
@@ -73,21 +73,18 @@ By default, the following plugin sections are listed in the configuration file b
 
 If you are not using InfluxDB, comment out the InfluxDB plugin configuration section `[[outputs.influxdb]]`.
 
+#### Step 2: Configure your endpoint
 
-### Configuring your endpoint
-
-Before we can send metrics to SignalFx, we need to make sure you are sending them to the correct SignalFx realm.
+Before you send metrics to SignalFx, you need to make sure you are sending them to the correct SignalFx realm.
 To determine what realm you are in (YOUR_SIGNALFX_REALM), check your profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
-If you are not in the `us0` realm, you will need to configure telegraf to send to the correct realm using the `DatapointIngestURL` and `EventIngestURL` configuration options, as shown below.
+If you are not in the `us0` realm, you need to configure telegraf to send to the correct realm using the `DatapointIngestURL` and `EventIngestURL` configuration options, as shown below:
 
 ```
 DatapointIngestURL: https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/datapoint
 EventIngestURL: https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/event
 ```
 
-
-
-#### Set configuration values
+#### Step 3: Set configuration values
 
 In `telegraf.conf`, provide values for the configuration options listed below that make sense for your environment.
 
@@ -103,7 +100,7 @@ In `telegraf.conf`, provide values for the configuration options listed below th
 
 ### USAGE
 
-To use the data transmitted by the SignalFx Telegraf Agent, check out the Infrastructure tab in SignalFx. On this page you'll find a visualization of all transmitting hosts, built-in dashboards to show the health of your infrastructure, and recommended detectors to send intelligent alerts.
+To use the data transmitted by the SignalFx Telegraf Agent, visit the Infrastructure tab in SignalFx. On this page you'll find a visualization of all transmitting hosts, built-in dashboards to show the health of your infrastructure, and recommended detectors to send intelligent alerts.
 
 #### Adding dimensions to all datapoints
 
@@ -114,6 +111,6 @@ You can add a dimension to every datapoint that Telegraf sends to SignalFx by in
   tier='middleware'
 ```
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the MIT license. See [LICENSE](./LICENSE) for more details.
