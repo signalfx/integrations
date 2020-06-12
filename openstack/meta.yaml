@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/openstack/img/integration_openstack%402x.png
 logo_small: /images/repos/openstack/img/integration_openstack.png
 project_url: https://github.com/signalfx/integrations/tree/master/openstack
+useLegacyBuild: true

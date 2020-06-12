@@ -162,6 +162,31 @@ The **nested** `writer` config object has the following fields:
 | `traceHostCorrelationPurgeInterval` | no | int64 | How frequently to purge host correlation caches that are generated from the service and environment names seen in trace spans sent through or by the agent.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration. (**default:** `"1m"`) |
 | `traceHostCorrelationMetricsInterval` | no | int64 | How frequently to send host correlation metrics that are generated from the service name seen in trace spans sent through or by the agent.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration.  This option is irrelevant if `sendTraceHostCorrelationMetrics` is false. (**default:** `"1m"`) |
 | `maxTraceSpansInFlight` | no | unsigned integer | How many trace spans are allowed to be in the process of sending.  While this number is exceeded, the oldest spans will be discarded to accommodate new spans generated to avoid memory exhaustion.  If you see log messages about "Aborting pending trace requests..." or "Dropping new trace spans..." it means that the downstream target for traces is not able to accept them fast enough. Usually if the downstream is offline you will get connection refused errors and most likely spans will not build up in the agent (there is no retry mechanism). In the case of slow downstreams, you might be able to increase `maxRequests` to increase the concurrent stream of spans downstream (if the target can make efficient use of additional connections) or, less likely, increase `traceSpanMaxBatchSize` if your batches are maxing out (turn on debug logging to see the batch sizes being sent) and being split up too much. If neither of those options helps, your downstream is likely too slow to handle the volume of trace spans and should be upgraded to more powerful hardware/networking. (**default:** `100000`) |
+| `splunk` | no | [object (see below)](#splunk) | Configures the writer specifically writing to Splunk. |
+| `signalFxEnabled` | no | bool | If set to `false`, output to SignalFx will be disabled. (**default:** `true`) |
+
+
+## splunk
+The **nested** `splunk` config object has the following fields:
+
+
+
+| Config option | Required | Type | Description |
+| --- | --- | --- | --- |
+| `enabled` | no | bool | Enable logging to a Splunk Enterprise instance (**default:** `false`) |
+| `url` | no | string | Full URL (including path) of Splunk HTTP Event Collector (HEC) endpoint |
+| `token` | no | string | Splunk HTTP Event Collector token |
+| `source` | no | string | Splunk source field value, description of the source of the event |
+| `sourceType` | no | string | Splunk source type, optional name of a sourcetype field value |
+| `index` | no | string | Splunk index, optional name of the Splunk index to store the event in |
+| `eventsIndex` | no | string | Splunk index, specifically for traces (must be event type) |
+| `eventsSource` | no | string | Splunk source field value, description of the source of the trace |
+| `eventsSourceType` | no | string | Splunk trace source type, optional name of a sourcetype field value |
+| `skipTLSVerify` | no | bool | Skip verifying the certificate of the HTTP Event Collector (**default:** `false`) |
+| `maxBuffered` | no | integer | The maximum number of Splunk log entries of all types (e.g. metric, event) to be buffered before old events are dropped.  Defaults to the writer.maxDatapointsBuffered config if not specified. (**default:** `0`) |
+| `maxRequests` | no | integer | The maximum number of simultaneous requests to the Splunk HEC endpoint. Defaults to the writer.maxBuffered config if not specified. (**default:** `0`) |
+| `maxBatchSize` | no | integer | The maximum number of Splunk log entries to submit in one request to the HEC (**default:** `0`) |
+
 
 
 
@@ -407,6 +432,21 @@ where applicable:
     traceHostCorrelationPurgeInterval: "1m"
     traceHostCorrelationMetricsInterval: "1m"
     maxTraceSpansInFlight: 100000
+    splunk: 
+      enabled: false
+      url: 
+      token: 
+      source: 
+      sourceType: 
+      index: 
+      eventsIndex: 
+      eventsSource: 
+      eventsSourceType: 
+      skipTLSVerify: false
+      maxBuffered: 0
+      maxRequests: 0
+      maxBatchSize: 0
+    signalFxEnabled: true
   logging: 
     level: "info"
     format: "text"

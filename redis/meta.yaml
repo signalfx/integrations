@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: /images/repos/redis/img/integrations_redis%402x.png
 logo_small: /images/repos/redis/img/integrations_redis.png
 project_url: https://github.com/signalfx/integrations/tree/master/redis
+useLegacyBuild: true

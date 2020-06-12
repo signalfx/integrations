@@ -8,3 +8,4 @@ in_app_categories:
 - servicesMonitored
 logo_large: /images/repos/vsphere/img/vsphere-logo2x.png
 logo_small: /images/repos/vsphere/img/vsphere-logo.png
+useLegacyBuild: true

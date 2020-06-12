@@ -7,3 +7,4 @@ display_name: New Relic
 featured: false
 logo_large: /images/repos/newrelic/img/integrations_newrelic.png
 logo_small: /images/repos/newrelic/img/integrations_newrelic.png
+useLegacyBuild: true

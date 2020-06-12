@@ -9,3 +9,4 @@ in_app_categories:
 logo_large: /images/repos/expvar/img/integration_expvar@2x.png
 logo_small: /images/repos/expvar/img/integration_expvar.png
 project_url: https://github.com/signalfx/integrations/tree/master/expvar
+useLegacyBuild: true

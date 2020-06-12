@@ -11,3 +11,4 @@ in_app_categories:
 logo_large: integrations_azure.png
 logo_small: integrations_azure.png
 project_url: https://github.com/signalfx/integrations/tree/master/microsoft-azure
+useLegacyBuild: true

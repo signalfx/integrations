@@ -86,34 +86,45 @@ To use the bundle:
 
 1. Unzip it to a directory of your choice on the target system.
 
-2. Ensure a valid configuration file is available somewhere on the target system. The main thing that the installer script provides – but that you will have to provide manually with the bundle – is a run directory for the Smart Agent to use. Because you aren’t installing from a package, there are two config options that you will especially want to consider:
+To use the bundle (requires user with Administrator privileges):
 
-    - internalStatusHost - This is the hostname that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to localhost if left blank.
-
-    - internalStatusPort - This is the port that the Smart Agent will listen on so that the signalfx-agent status command can read diagnostic information from a running agent. This is also the host name the Smart Agent will listen on to serve internal metrics about the Smart Agent. These metrics can be scraped by the internal-metrics monitor. This will default to 8095.
+1. Unzip it to a directory of your choice on the target system.
 
     See [Privileges](#privileges) for information on the capabilities the Smart Agent requires.
 
-3. Run the Smart Agent by invoking the Smart Agent executable:
+2. Run the Smart Agent by invoking the Smart Agent executable:
 
 ```sh
 SignalFxAgent\bin\signalfx-agent.exe-config <path to config.yaml>
-
 ```
-By default, the Smart Agent logs only to stdout/err. If you want to persist logs, you must direct the output to a log file or other log management system. See the [signalfx-agent command doc](https://github.com/signalfx/signalfx-agent/blob/master/docs/signalfx-agent.1.man) for more information on supported command flags.
+By default, the Smart Agent runs as a process in the foreground and logs only to stdout/err.
 
 You may optionally install the Smart Agent as a Windows service by invoking the agent executable and specifying a few command line flags. The examples below show how to install and start the Smart Agent as a Windows service.
 
 _Install Service_
 
 ```sh
-PS> SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "install" -logEvents -config <path to config file>
+& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -service "install" -logEvents -config <path to config file>
 ````
 
 _Start Service_
 
 ```sh
-PS> SignalFx\SignalFxAgent\bin\signalfx-agent.exe -service "start"
+& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -service "start"
+````
+
+To stop or uninstall the Smart Agent service:
+
+_Stop Service_
+
+```sh
+& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -service "stop"
+````
+
+_Uninstall Service_
+
+```sh
+& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -service "uninstall"
 ````
 
 

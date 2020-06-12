@@ -9,3 +9,4 @@ in_app_categories:
 logo_large: /images/repos/zookeeper/img/integrations_zookeeper%402x.png
 logo_small: /images/repos/zookeeper/img/integrations_zookeeper.png
 project_url: https://github.com/signalfx/integrations/tree/master/zookeeper
+useLegacyBuild: true
