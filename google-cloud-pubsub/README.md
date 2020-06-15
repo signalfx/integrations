@@ -6,36 +6,39 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-To monitor Google Cloud Pub/Sub, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Pub/Sub, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Pub/Sub Overview**: Overview of project level metrics for Google Cloud Pub/Sub
+- **Pub/Sub Overview** - Overview of project-level metrics for Google Cloud Pub/Sub.
 
   [<img src='./img/pubsub_overview.png' width=200px>](./img/pubsub_overview.png)
 
-- **Pub/Sub Subscription**: Metrics for a single subscription from Google Cloud Pub/Sub
+- **Pub/Sub Subscription** - Metrics for a single subscription from Google Cloud Pub/Sub.
 
   [<img src='./img/pubsub_subscription.png' width=200px>](./img/pubsub_subscription.png)
 
-- **Pub/Sub Topic**: Metrics for a single topic from Google Cloud Pub/Sub
+- **Pub/Sub Topic** - Metrics for a single topic from Google Cloud Pub/Sub.
 
   [<img src='./img/pubsub_topic.png' width=200px>](./img/pubsub_topic.png)
 
-- **Pub/Sub Streaming**: Metrics for Pub/Sub if the service is being used for data streaming.
+- **Pub/Sub Streaming** - Metrics for Google Cloud Pub/Sub if the service is being used for data streaming.
 
+## INSTALLATION
 
-### INSTALLATION
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+### Prerequisites
 
-### USAGE
+None
 
-#### Interpreting Built-in dashboards
+## USAGE
+
+### Interpreting Built-in Dashboards
 
 **Pub/Sub Overview**
 
@@ -79,13 +82,13 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/subscription-cost-per-operation.png' width=200px>](./img/subscription-cost-per-operation.png)
 
-- **Undelivered Messages** - Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.
+- **Undelivered Messages** - Number of unacknowledged messages (backlog messages) in a subscription.
 
   [<img src='./img/subscription-undelivered-messages.png' width=200px>](./img/subscription-undelivered-messages.png)
 
 - **Outstanding Messages** - Number of messages delivered to a subscription's push endpoint, but not yet acknowledged.
 
-- **Oldest Unacknowledged Message(s)** - Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog message) in a subscription.
+- **Oldest Unacknowledged Message(s)** - Age (in seconds) of the oldest unacknowledged message (backlog message) in a subscription.
 
   [<img src='./img/subscription-unack-messages.png' width=200px>](./img/subscription-unack-messages.png)
 
@@ -108,7 +111,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
   [<img src='./img/topic-average-message-size.png' width=200px>](./img/topic-average-message-size.png)
 
 
-#### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Cloud Pub/Sub, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-pubsub">https://cloud.google.com/monitoring/api/metrics#gcp-pubsub</a>
 

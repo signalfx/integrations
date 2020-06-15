@@ -6,30 +6,34 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-To monitor Google Cloud Storage, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Storage, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Storage Overview**: Overview of project level metrics for Google Cloud Storage
+- **Storage Overview** - Overview of project-level metrics for Google Cloud Storage.
 
   [<img src='./img/storage_overview.png' width=200px>](./img/storage_overview.png)
 
-- **Storage Bucket**: Metrics for a specific Google Cloud Storage Bucket
+- **Storage Bucket** - Metrics for a specific Google Cloud Storage bucket.
 
   [<img src='./img/storage_bucket.png' width=200px>](./img/storage_bucket.png)
 
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+### Prerequisites
 
-#### Interpreting Built-in dashboards
+None
+
+## USAGE
+
+### Interpreting Built-in Dashboards
 
 **Cloud Storage Bucket**
 
@@ -45,7 +49,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 - **Sent Bytes** - Amount of bytes sent over the network by the bucket.
 
-- **Sent Bytes / min per Method** - Amount of bytes sent over the network by the bucket aggregated by Method.
+- **Sent Bytes / min per Method** - Amount of bytes sent over the network by the bucket aggregated by method.
 
 - **Received Bytes** - Amount of bytes received over the network by the bucket.
 
@@ -66,7 +70,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 - **Sent Bytes per Bucket** - Lists total bytes sent by each bucket.
 
 
-#### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Cloud Storage, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-storage">https://cloud.google.com/monitoring/api/metrics#gcp-storage</a>
 
