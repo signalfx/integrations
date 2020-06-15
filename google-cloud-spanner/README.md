@@ -6,38 +6,42 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-To monitor Google Cloud Spanner, integrate SignalFx with [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Spanner, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Spanner Overview**: Overview of project level metrics for Google Cloud Spanner
+- **Spanner Overview** - Overview of project-level metrics for Google Cloud Spanner.
 
   [<img src='./img/spanner_overview.png' width=200px>](./img/spanner_overview.png)
 
-- **Spanner Instance**: Metrics for a single instance of Google Cloud Spanner
+- **Spanner Instance** - Metrics for a single instance of Google Cloud Spanner.
 
   [<img src='./img/spanner_instance.png' width=200px>](./img/spanner_instance.png)
 
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+### Prerequisites
 
-#### Interpreting Built-in dashboards
+None
+
+## USAGE
+
+### Interpreting Built-in Dashboards
 
 **Spanner Instance**
 
-- **API Sent Bytes by Method** - Rate at which uncompressed response bytes sent by Cloud Spanner grouped by method.
+- **API Sent Bytes by Method** - Rate at which uncompressed response bytes are sent by Cloud Spanner grouped by method.
 
   [<img src='./img/instance-api-sent.png' width=200px>](./img/instance-api-sent.png)
 
-- **API Received Bytes by Method** - Rate at which uncompressed response bytes received by Cloud Spanner grouped by method.
+- **API Received Bytes by Method** - Rate at which uncompressed response bytes are received by Cloud Spanner grouped by method.
 
   [<img src='./img/instance-api-received.png' width=200px>](./img/instance-api-received.png)
 
@@ -53,7 +57,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
 **Spanner Overview**
 
-- **Node Count** - Total number nodes in the project.
+- **Node Count** - Total number of nodes in the project.
 
   [<img src='./img/overview-node-count.png' width=200px>](./img/overview-node-count.png)
 
@@ -78,7 +82,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
   [<img src='./img/overview-storage-used.png' width=200px>](./img/overview-storage-used.png)
 
 
-#### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Cloud Spanner, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-spanner">https://cloud.google.com/monitoring/api/metrics#gcp-spanner</a>
 
