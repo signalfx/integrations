@@ -1,7 +1,7 @@
 browse_categories:
 - Cloud infrastructure and services
 code: https://azure.microsoft.com/en-us/?v=18.05
-description: SignalFx's integration with Microsoft Azure's Monitor API.
+description: SignalFx integration with the Microsoft Azure Monitor API.
 display_name: Microsoft Azure
 featured: false
 in_app_categories:
