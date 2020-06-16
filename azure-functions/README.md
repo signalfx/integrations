@@ -8,7 +8,7 @@
 
 ### DESCRIPTION
 
-SignalFx enables you to monitor the health and performance of your invidvidual Azure Functions via metrics on total invocations, errors, and durations. In addition, you can easily send custom application or business metrics from within your Azure Functions.
+SignalFx enables you to monitor the health and performance of your individual Azure Functions through metrics for total invocations, errors, and durations. In addition, you can also send custom application or business metrics from within your Azure Functions.
 
 - If you have enabled the SignalFx Azure integration and are syncing Azure Monitor metrics, <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftwebsites-functions">those metrics</a> will automatically be available to view.
 
@@ -53,9 +53,9 @@ To use the SignalFx Azure Wrapper, include the wrapper in your Azure Function. T
 
 #### Step 2: Connect to Azure Monitor
 
-To access this integration, [connect to Azure Monitor](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Azure Monitor](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-microsoft-azure)[](sfx_link:azure).
 
-By default, SignalFx will import all Azure Monitor metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
+By default, SignalFx imports all Azure Monitor metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
 ### USAGE
 
