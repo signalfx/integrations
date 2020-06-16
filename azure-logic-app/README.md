@@ -25,7 +25,7 @@ Use SignalFx to monitor Azure Logic Apps via [Microsoft Azure](https://github.co
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-microsoft-azure)[](sfx_link:azure).
 
 ### USAGE
 
