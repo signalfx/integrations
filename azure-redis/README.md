@@ -26,7 +26,7 @@ Use SignalFx to monitor Azure Redis Cache via [Microsoft Azure](https://github.c
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-microsoft-azure)[](sfx_link:azure).
 
 ### USAGE
 
@@ -123,7 +123,6 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 - **Total Keys** - Total number of keys stored across all caches.
 
   [<img src='./img/caches.keys.png' width=200px>](./img/caches.keys.png)
-
 
 
 
