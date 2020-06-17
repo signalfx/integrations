@@ -21,8 +21,9 @@ dynamically and older versions of K8s don't support mount propagation of
 those mounts to the agent container.
 
 Dimensions that identify the underlying volume source will be added for
-`awsElasticBlockStore` and `glusterfs` volumes.  Support for more can be
-easily added as needed.
+`awsElasticBlockStore`, `gcePersistentDisk` and `glusterfs` persistent
+volumes, and for `configMap`, `downwardAPI`, `emptyDir` and `secret`
+non-persistent volumes. Support for more can be easily added as needed.
 
 
 ## Configuration
@@ -103,13 +104,15 @@ dimensions may be specific to certain metrics.
 | ---  | ---         |
 | `VolumeId` | (*EBS volumes only*) The EBS volume id of the underlying volume source |
 | `endpoints_name` | (*GlusterFS volumes only*) The endpoint name used for the GlusterFS volume |
+| `fs_type` | (*EBS volumes and GCE persistent disks only*) The filesystem type of the underlying EBS volume or GCE persistent disk |
 | `glusterfs_path` | (*GlusterFS volumes only*) The GlusterFS volume path |
 | `kubernetes_namespace` | The namespace of the pod that has this volume |
 | `kubernetes_pod_name` | The name of the pod that has this volume |
 | `kubernetes_pod_uid` | The UID of the pod that has this volume |
-| `partition` | (*EBS volumes only*) The partition number of the underlying EBS volume (`0` indicates the entire disk) |
+| `partition` | (*EBS volumes and GCE persistent disks only*) The partition number of the underlying EBS volume or GCE persistent disk (`0` indicates the entire disk) |
+| `pd_name` | (*GCE persistent disks only*) The GCE persistent disk name of the underlying volume source |
 | `volume` | The volume name as given in the pod spec under `volumes` |
-| `volume_type` | The type of the underlying volume -- this will be the key used in the k8s volume config spec (e.g. awsElasticBlockStore, etc.) |
+| `volume_type` | The type of the underlying volume -- this will be the key used in the k8s volume config spec (e.g. `awsElasticBlockStore`, `gcePersistentDisk`, `configMap`, `secret`, etc.) |
 
 
 

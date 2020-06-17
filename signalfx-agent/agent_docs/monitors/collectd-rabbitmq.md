@@ -54,6 +54,12 @@ Configuration](../monitor-config.html#common-configuration).**
 | `verbosityLevel` | no | `string` |  |
 | `username` | **yes** | `string` |  |
 | `password` | **yes** | `string` |  |
+| `useHTTPS` | no | `bool` | Whether to enable HTTPS. (**default:** `false`) |
+| `sslCACertFile` | no | `string` | Path to SSL/TLS certificates file of root Certificate Authorities implicitly trusted by this monitor. |
+| `sslCertFile` | no | `string` | Path to this monitor's own SSL/TLS certificate. |
+| `sslKeyFile` | no | `string` | Path to this monitor's private SSL/TLS key file. |
+| `sslKeyPassphrase` | no | `string` | This monitor's private SSL/TLS key file password if any. |
+| `sslVerify` | no | `bool` | Should the monitor verify the RabbitMQ server SSL/TLS certificate. (**default:** `false`) |
 
 
 ## Metrics

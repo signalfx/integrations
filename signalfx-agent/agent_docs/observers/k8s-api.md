@@ -65,14 +65,14 @@ can be used in discovery rules.
 | `container_name` | `string` | The first and primary name of the container as it is known to the container runtime (e.g. Docker). |
 | `has_port` | `string` | Set to `true` if the endpoint has a port assigned to it.  This will be `false` for endpoints that represent a host/container as a whole. |
 | `ip_address` | `string` | The IP address of the endpoint if the `host` is in the from of an IPv4 address |
-| `kubernetes_annotations` | `string` | The set of annotations on the discovered pod or node. |
+| `kubernetes_annotations` | `map of strings` | The set of annotations on the discovered pod or node. |
 | `network_port` | `string` | An alias for `port` |
-| `node_addresses` | `string` | A map of the different Node addresses specified in the Node status object.  The key of the map is the address type and the value is the address string. The address types are `Hostname`, `ExternalIP`, `InternalIP`, `ExternalDNS`, `InternalDNS`.  Most likely not all of these address types will be present for a given Node. |
-| `node_metadata` | `string` | The metadata about the Node, for `k8s-node` targets, with fields in TitleCase.  See [ObjectMeta v1 meta reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#objectmeta-v1-meta). |
-| `node_spec` | `string` | The Node spec object, for `k8s-node` targets.  See [the K8s reference on this resource](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#nodespec-v1-core), but keep in the mind that fields will be in TitleCase due to passing through Go. |
-| `node_status` | `string` | The Node status object, for `k8s-node` targets. See [the K8s reference on Node Status](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#nodestatus-v1-core) but keep in mind that fields will be in TitleCase due to passing through Go. |
-| `pod_metadata` | `string` | The full pod metadata object, as represented by the Go K8s client library (client-go): https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#ObjectMeta. |
-| `pod_spec` | `string` | The full pod spec object, as represented by the Go K8s client library (client-go): https://godoc.org/k8s.io/api/core/v1#PodSpec. |
+| `node_addresses` | `map of strings` | A map of the different Node addresses specified in the Node status object.  The key of the map is the address type and the value is the address string. The address types are `Hostname`, `ExternalIP`, `InternalIP`, `ExternalDNS`, `InternalDNS`.  Most likely not all of these address types will be present for a given Node. |
+| `node_metadata` | `node_metadata` | The metadata about the Node, for `k8s-node` targets, with fields in TitleCase.  See [ObjectMeta v1 meta reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#objectmeta-v1-meta). |
+| `node_spec` | `node_spec` | The Node spec object, for `k8s-node` targets.  See [the K8s reference on this resource](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#nodespec-v1-core), but keep in the mind that fields will be in TitleCase due to passing through Go. |
+| `node_status` | `node_status` | The Node status object, for `k8s-node` targets. See [the K8s reference on Node Status](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#nodestatus-v1-core) but keep in mind that fields will be in TitleCase due to passing through Go. |
+| `pod_metadata` | `pod metadata` | The full pod metadata object, as represented by the Go K8s client library (client-go): https://godoc.org/k8s.io/apimachinery/pkg/apis/meta/v1#ObjectMeta. |
+| `pod_spec` | `pod spec` | The full pod spec object, as represented by the Go K8s client library (client-go): https://godoc.org/k8s.io/api/core/v1#PodSpec. |
 | `private_port` | `string` | The port that the service endpoint runs on inside the container |
 | `public_port` | `string` | The port exposed outside the container |
 | `alternate_port` | `integer` | Used for services that are accessed through some kind of NAT redirection as Docker does.  This could be either the public port or the private one. |

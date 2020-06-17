@@ -154,6 +154,8 @@ Metrics that are categorized as
  - `haproxy_server_aborts` (*cumulative*)<br>    Number of data transfers aborted by the server (inc. in eresp). Values reported for backends and servers.
  - ***`haproxy_server_selected_total`*** (*cumulative*)<br>    Total number of times a server was selected, either for new sessions, or when re-dispatching. The server counter is the number of times that server was selected. Values reported for backends and servers.
  - ***`haproxy_session_current`*** (*gauge*)<br>    Number current sessions. Values reported for listeners, frontends, backends, and servers.
+ - `haproxy_session_limit` (*gauge*)<br>    The maximum number of connections allowed, configured with `maxconn`. Values reported for listeners, frontends, backends, and servers.
+ - `haproxy_session_max` (*gauge*)<br>    The max value of scur. Values reported for listeners, frontends, backends, and servers.
  - ***`haproxy_session_rate`*** (*gauge*)<br>    Number of sessions per second over last elapsed second. Values reported for frontends, backends, and servers.
  - ***`haproxy_session_rate_all`*** (*gauge*)<br>    Corresponds to the HAProxy process `SessRate` value given by the `show info` command issued over UNIX socket.
  - `haproxy_session_rate_limit` (*gauge*)<br>    Configured limit on new sessions per second. Values reported for frontends.
