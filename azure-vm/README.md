@@ -28,7 +28,7 @@ Use SignalFx to monitor Azure Virtual Machines via [Microsoft Azure](https://git
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure)[](sfx_link:azure).
 
 ### USAGE
 
@@ -80,7 +80,7 @@ The above charts are applicable to all Azure Virtual Machines. The following two
 
   [<img src='./img/vms.count.png' width=200px>](./img/vms.count.png)
 
-- **Top Virtual Machines by CPU percent** - List of virtual machines that use most CPU.
+- **Top Virtual Machines by CPU percent** - Virtual machines that use most CPU capacity.
 
   [<img src='./img/vms.top.cpu.png' width=200px>](./img/vms.top.cpu.png)
 
