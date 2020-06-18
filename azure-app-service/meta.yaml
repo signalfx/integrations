@@ -2,7 +2,7 @@ browse_categories:
 - Compute
 code: https://azure.microsoft.com/en-us/services/app-service/
 data_signature: resource_type:"Microsoft.Web/sites"
-description: SignalFx's integration with Azure App Service
+description: SignalFx integration with Azure App Service
 display_name: Azure App Service
 featured: false
 in_app_categories:

@@ -2,7 +2,7 @@ browse_categories:
 - Database
 code: https://azure.microsoft.com/en-us/services/sql-database/
 data_signature: resource_type:"Microsoft.Sql/servers/databases"
-description: SignalFx's integration with Azure SQL Database
+description: SignalFx integration with Azure SQL Database
 display_name: Azure SQL Database
 featured: false
 in_app_categories:

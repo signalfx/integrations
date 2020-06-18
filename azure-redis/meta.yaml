@@ -2,7 +2,7 @@ browse_categories:
 - Database
 code: https://azure.microsoft.com/en-us/services/cache/
 data_signature: resource_type:"Microsoft.Cache/Redis"
-description: SignalFx's integration with Azure Redis Cache
+description: SignalFx integration with Azure Redis Cache
 display_name: Azure Redis Cache
 featured: false
 in_app_categories:
