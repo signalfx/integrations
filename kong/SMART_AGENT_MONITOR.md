@@ -83,7 +83,7 @@ monitors:
         report: false
 ```
 
-Sample YAML configuration with custom /signalfx route and white and blacklists
+Sample YAML configuration with custom /signalfx route and filter lists
 
 ```yaml
 monitors:
