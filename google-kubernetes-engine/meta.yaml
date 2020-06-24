@@ -1,0 +1,13 @@
+browse_categories:
+- Containers
+code: https://cloud.google.com/kubernetes-engine
+data_signature: service:"kubernetes"
+description: SignalFx's integration with Google Kubernetes Engine
+display_name: Google Kubernetes Engine
+featured: false
+in_app_categories:
+- GCPServicesMonitored
+logo_large: integration_googlekubernetesengine%402x.png
+logo_small: integration_googlekubernetesengine.png
+project_url: https://github.com/signalfx/integrations/tree/master/google-kubernetes-engine
+useLegacyBuild: true
