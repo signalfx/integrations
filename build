@@ -13,10 +13,11 @@ from typing import Any, DefaultDict, Dict, List, Tuple
 import yaml
 from yaml.scanner import ScannerError
 
-from helpers.process_markdown_for_app import process_markdown_for_app
+from helpers.markdown import process_markdown_for_app
+from helpers.paths import INTEGRATIONS_PATH
+from helpers.util import all_integrations, uses_legacy_build
 
-INTEGRATIONS_REPO_ROOT = Path(__file__).parent.resolve()
-OUT_DIR = INTEGRATIONS_REPO_ROOT / "dist/"
+OUT_DIR = INTEGRATIONS_PATH / "dist/"
 
 
 def json_compact(obj) -> str:
@@ -35,14 +36,14 @@ def symlink_images(output_path):
     image_dest.mkdir(mode=0o755, parents=True, exist_ok=True)
 
     processed = set()
-    for img_file in sorted(INTEGRATIONS_REPO_ROOT.glob("**/img/*.png")):
+    for img_file in sorted(INTEGRATIONS_PATH.glob("**/img/*.png")):
         if not img_file.is_file():
             continue
 
         dest_path = image_dest / img_file.name
 
         if img_file.name in processed:
-            print(f"WARNING image file {img_file} has duplicate name")
+            # print(f"WARNING image file {img_file} has duplicate name")
             continue
         processed.add(img_file.name)
 
@@ -57,19 +58,18 @@ def collect_docs() -> Dict[str, Any]:
     """
     docs = {}
 
-    for integration_dir in sorted(INTEGRATIONS_REPO_ROOT.glob("*")):
-        if not integration_dir.is_dir():
-            continue
-
+    for integration_dir, meta in all_integrations():
         integration_name = integration_dir.name
         markdown = ""
-        for readme in sorted(integration_dir.glob("*.md")):
+        for readme in sorted(integration_dir.glob("*.md")) + sorted(integration_dir.glob("README.md.jinja")):
             markdown += readme.read_text(encoding="utf-8")
 
         if not markdown:
             continue
 
-        docs[integration_name] = {"markdown": process_markdown_for_app(markdown)}
+        docs[integration_name] = {
+            "markdown": process_markdown_for_app(markdown, integration_dir, uses_legacy_build(meta))
+        }
 
     return docs
 
@@ -83,7 +83,7 @@ def collect_metrics() -> Tuple[Dict[str, Dict[str, Any]], Dict[str, List[str]]]:
     metrics_by_integration: DefaultDict[str, List[str]] = defaultdict(list)
     # Reverse to keep backwards-compatible behavior with old script that kept
     # the last metric seen.
-    for metric_yaml_file in sorted(INTEGRATIONS_REPO_ROOT.glob("*/metrics.yaml")):
+    for metric_yaml_file in sorted(INTEGRATIONS_PATH.glob("*/metrics.yaml")):
         if "Example" in str(metric_yaml_file):
             continue
 
@@ -91,7 +91,7 @@ def collect_metrics() -> Tuple[Dict[str, Dict[str, Any]], Dict[str, List[str]]]:
             metrics_by_integration[metric_yaml_file.parent.name].append(metric_name)
 
             if metric_name in metric_docs:
-                print(f"WARNING metric {metric_name} is duplicated, info will be taken from first one processed only")
+                # print(f"WARNING metric {metric_name} is duplicated, info will be taken from first one processed only")
                 continue
 
             desc = ""
@@ -128,10 +128,10 @@ def collect_meta() -> Dict[str, Any]:
     Returns a dict that contains metadata for each integration.
     """
     out = {}
-    for meta_file in sorted(INTEGRATIONS_REPO_ROOT.glob("*/meta.yaml")):
-        integration_name = meta_file.parent.name
-        out[integration_name] = yaml.safe_load(meta_file.read_text(encoding="utf-8"))
-        print(f"Processed meta for integration {integration_name}")
+    for integrations_dir, meta in all_integrations():
+        integration_name = integrations_dir.name
+        out[integration_name] = meta
+        # print(f"Processed meta for integration {integration_name}")
     return out
 
 

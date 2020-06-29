@@ -381,7 +381,7 @@ sf.org.numAddDatapointCallsByToken:
   description: "One value per token; number of calls to send datapoints to SignalFx.\
     \ \nDimension(s): `orgId, tokenId`\nData Resolution: 1 second\nNote that the sum\
     \ of all the values may be less than the value of `sf.org.numAddDatapointCalls`.\
-    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+    \ For an explanation, see [About ByToken metrics](#about-bytoken-metrics)."
   metric_type: counter
   title: sf.org.numAddDatapointCallsByToken
 
@@ -404,7 +404,7 @@ sf.org.numAddEventsCallsByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numAddEventsCalls`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numAddEventsCallsByToken
 
@@ -415,7 +415,7 @@ sf.org.numBackfillCalls:
     \ orgId`\nData Resolution: 1 second\nYou can have up to three MTS for this metric;\
     \ each MTS is sent with a dimension named  ``category`` with a value of Counter,\
     \ Cumulative Counter, or Gauge. For more information, see [About \"per metric\
-    \ type\" metrics](../readme.md#about-per-metric-type-metrics)."
+    \ type\" metrics](#about-per-metric-type-metrics)."
   metric_type: counter
   title: sf.org.numBackfillCalls
 
@@ -427,9 +427,9 @@ sf.org.numBackfillCallsByToken:
     \ `category, orgId, tokenId`\nData Resolution: 1 second\nYou can have up to three\
     \ MTS associated with each token; each MTS is sent with a dimension named  ``category``\
     \ with a value of Counter, Cumulative Counter, or Gauge. For more information,\
-    \ see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics).\n\
+    \ see [About \"per metric type\" metrics](#about-per-metric-type-metrics).\n\
     Note that the sum of all the values may be less than the value of `sf.org.numBackfillCalls`.\
-    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+    \ For an explanation, see [About ByToken metrics](#about-bytoken-metrics)."
   metric_type: counter
   title: sf.org.numBackfillCallsByToken
 
@@ -452,7 +452,7 @@ sf.org.numCustomMetricsByToken:
     Data Resolution: 10 minutes
 
     Note that the sum of all the values may be less than the value of `sf.org.numCustomMetrics`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numCustomMetricsByToken
 
@@ -467,7 +467,7 @@ sf.org.numDatapointsBackfilled:
 
     You can have up to three MTS for this metric; each MTS is sent with a dimension
     named  ``category`` with a value of Counter, Cumulative Counter, or Gauge. For
-    more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).'
+    more information, see [About "per metric type" metrics](#about-per-metric-type-metrics).'
   metric_type: counter
   title: sf.org.numDatapointsBackfilled
 
@@ -482,10 +482,10 @@ sf.org.numDatapointsBackfilledByToken:
 
     You can have up to three MTS associated with each token; each MTS is sent with
     a dimension named  ``category`` with a value of Counter, Cumulative Counter, or
-    Gauge. For more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).
+    Gauge. For more information, see [About "per metric type" metrics](#about-per-metric-type-metrics).
 
     Note that the sum of all the values may be less than the value of `sf.org.numDatapointsBackfilled`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numDatapointsBackfilledByToken
 
@@ -519,7 +519,7 @@ sf.org.numDatapointsDroppedExceededQuotaByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numDatapointsDroppedExceededQuota`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numDatapointsDroppedExceededQuotaByToken
 
@@ -569,7 +569,7 @@ sf.org.numDatapointsDroppedThrottleByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numDatapointsDroppedThrottle`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numDatapointsDroppedThrottleByToken
 
@@ -581,7 +581,7 @@ sf.org.numDatapointsReceived:
     \ accepted due to limits exceeded.\nDimension(s): `category, orgId`\nData Resolution:\
     \ 1 second\nYou can have up to three MTS for this metric; each MTS is sent with\
     \ a dimension named  ``category`` with a value of Counter, Cumulative Counter,\
-    \ or Gauge. For more information, see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics)."
+    \ or Gauge. For more information, see [About \"per metric type\" metrics](#about-per-metric-type-metrics)."
   metric_type: counter
   title: sf.org.numDatapointsReceived
 
@@ -594,9 +594,9 @@ sf.org.numDatapointsReceivedByToken:
     \ orgId, tokenId`\nData Resolution: 1 second\nYou can have up to three MTS per\
     \ token for this metric; each MTS is sent with a dimension named  ``category``\
     \ with a value of Counter, Cumulative Counter, or Gauge. For more information,\
-    \ see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics).\n\
+    \ see [About \"per metric type\" metrics](#about-per-metric-type-metrics).\n\
     Note that the sum of all the values may be less than the value of `sf.org.numDatapointsReceived`.\
-    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+    \ For an explanation, see [About ByToken metrics](#about-bytoken-metrics)."
   metric_type: counter
   title: sf.org.numDatapointsReceivedByToken
 
@@ -621,7 +621,7 @@ sf.org.numEventTimeSeriesCreatedByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numEventTimeSeriesCreated`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numEventTimeSeriesCreatedByToken
 
@@ -647,7 +647,7 @@ sf.org.numEventsDroppedThrottleByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numEventsDroppedThrottle`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numEventsDroppedThrottleByToken
 
@@ -668,7 +668,7 @@ sf.org.numEventsIngestedByToken:
     \ through the /event POST API \nDimension(s): `orgId, tokenId, category`\nData\
     \ Resolution: 1 second\nNote that the sum of all the values may be less than the\
     \ value of `sf.org.numEventsIngested`. For an explanation, see [About ByToken\
-    \ metrics](../readme.md#about-bytoken-metrics)."
+    \ metrics](#about-bytoken-metrics)."
   metric_type: counter
   title: sf.org.numEventsIngestedByToken
 
@@ -706,7 +706,7 @@ sf.org.numHighResolutionMetricsByToken:
     Data Resolution: 10 minutes
 
     Note that the sum of all the values may be less than the value of `sf.org.numHighResolutionMetrics`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numHighResolutionMetricsByToken
 
@@ -739,7 +739,7 @@ sf.org.numLimitedEventTimeSeriesCreateCallsByToken:
     \ of ETS allowed. \nDimension(s): `category, orgId, tokenId`\nData Resolution:\
     \ 1 second\nNote that the sum of all the values may be less than the value of\
     \ `sf.org.numLimitedEventTimeSeriesCreateCalls`. For an explanation, see [About\
-    \ ByToken metrics](../readme.md#about-bytoken-metrics)."
+    \ ByToken metrics](#about-bytoken-metrics)."
   metric_type: counter
   title: sf.org.numLimitedEventTimeSeriesCreateCallsByToken
 
@@ -755,7 +755,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCalls:
 
     You can have up to three MTS for this metric; each MTS is sent with a dimension
     named  ``category`` with a value of Counter, Cumulative Counter, or Gauge. For
-    more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).'
+    more information, see [About "per metric type" metrics](#about-per-metric-type-metrics).'
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCalls
 
@@ -771,10 +771,10 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByToken:
 
     You can have up to three MTS associated with each token; each MTS is sent with
     a dimension named  ``category`` with a value of Counter, Cumulative Counter, or
-    Gauge. For more information, see [About "per metric type" metrics](../readme.md#about-per-metric-type-metrics).
+    Gauge. For more information, see [About "per metric type" metrics](#about-per-metric-type-metrics).
 
     Note that the sum of all the values may be less than the value of `sf.org.numLimitedMetricTimeSeriesCreateCalls`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByToken
 
@@ -826,7 +826,7 @@ sf.org.numMetricTimeSeriesCreated:
     \ value per metric type, each representing the number of metric time series (MTS)\
     \ created of that type. \nYou can have up to three MTS for this metric; each MTS\
     \ is sent with a dimension named  ``category`` with a value of Counter, Cumulative\
-    \ Counter, or Gauge. For more information, see [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics)."
+    \ Counter, or Gauge. For more information, see [About \"per metric type\" metrics](#about-per-metric-type-metrics)."
   metric_type: counter
   title: sf.org.numMetricTimeSeriesCreated
 
@@ -837,9 +837,9 @@ sf.org.numMetricTimeSeriesCreatedByToken:
     \ series (MTS) created of that type. \nYou can have up to three MTS associated\
     \ with each token; each MTS is sent with a dimension named  ``category`` with\
     \ a value of Counter, Cumulative Counter, or Gauge. For more information, see\
-    \ [About \"per metric type\" metrics](../readme.md#about-per-metric-type-metrics).\n\
+    \ [About \"per metric type\" metrics](#about-per-metric-type-metrics).\n\
     Note that the sum of all the values may be less than the value of `sf.org.numMetricTimeSeriesCreated`.\
-    \ For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+    \ For an explanation, see [About ByToken metrics](#about-bytoken-metrics)."
   metric_type: counter
   title: sf.org.numMetricTimeSeriesCreatedByToken
 
@@ -884,7 +884,7 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
@@ -913,7 +913,7 @@ sf.org.numResourcesMonitoredByToken:
     Data Resolution: 10 minutes
 
     Note that the sum of all the values may be less than the value of `sf.org.numResourcesMonitored`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numResourcesMonitoredByToken
 
@@ -929,7 +929,7 @@ sf.org.numRestCallsByToken:
   description: "One value per token; number of REST calls made to the SignalFx API.\
     \ \nDimension(s): `orgId, tokenId`\nData Resolution: 1 second\nNote that the sum\
     \ of all the values may be less than the value of `sf.org.numRestCalls`. For an\
-    \ explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics)."
+    \ explanation, see [About ByToken metrics](#about-bytoken-metrics)."
   metric_type: counter
   title: sf.org.numRestCallsByToken
 
@@ -956,7 +956,7 @@ sf.org.numRestCallsThrottledByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numRestCallsThrottled`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numRestCallsThrottledByToken
 
@@ -984,7 +984,7 @@ sf.org.numThrottledEventTimeSeriesCreateCallsByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numThrottledEventTimeSeriesCreateCalls`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numThrottledEventTimeSeriesCreateCallsByToken
 
@@ -1012,7 +1012,7 @@ sf.org.numThrottledMetricTimeSeriesCreateCallsByToken:
     Data Resolution: 1 second
 
     Note that the sum of all the values may be less than the value of `sf.org.numThrottledMetricTimeSeriesCreateCalls`.
-    For an explanation, see [About ByToken metrics](../readme.md#about-bytoken-metrics).'
+    For an explanation, see [About ByToken metrics](#about-bytoken-metrics).'
   metric_type: counter
   title: sf.org.numThrottledMetricTimeSeriesCreateCallsByToken
 
