@@ -3,7 +3,7 @@ browse_categories:
 - Internet of Things
 code: https://azure.microsoft.com/en-us/services/logic-apps/
 data_signature: resource_type:"Microsoft.Logic/workflows"
-description: SignalFx's integration with Azure Logic Apps
+description: SignalFx integration with Azure Logic Apps
 display_name: Azure Logic Apps
 featured: false
 in_app_categories:

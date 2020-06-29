@@ -7,7 +7,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Azure Kubernetes Service via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+Use SignalFx to monitor Azure Kubernetes Service using [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
 ### FEATURES
 
@@ -19,7 +19,7 @@ Use SignalFx to monitor Azure Kubernetes Service via [Microsoft Azure](https://g
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-microsoft-azure)[](sfx_link:azure).
 
 ### USAGE
 

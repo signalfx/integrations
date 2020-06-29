@@ -24,7 +24,7 @@ Use SignalFx to monitor Azure Virtual Machine Scale Sets via [Microsoft Azure](h
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure)[](sfx_link:azure).
 
 ### USAGE
 

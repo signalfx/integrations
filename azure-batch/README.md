@@ -20,7 +20,7 @@ Use SignalFx to monitor Azure Batch via [Microsoft Azure](https://github.com/sig
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure)[](sfx_link:azure).
 
 ### USAGE
 

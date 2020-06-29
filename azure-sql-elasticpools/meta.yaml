@@ -2,7 +2,7 @@ browse_categories:
 - Database
 code: https://azure.microsoft.com/en-us/services/sql-database/
 data_signature: resource_type:"Microsoft.Sql/servers/elasticpools"
-description: SignalFx's integration with Azure SQL Elastic Pools
+description: SignalFx integration with Azure SQL Elastic Pools
 display_name: Azure SQL Elastic Pools
 featured: false
 in_app_categories:

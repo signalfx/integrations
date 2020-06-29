@@ -2,7 +2,7 @@ browse_categories:
 - Compute
 code: https://azure.microsoft.com/en-us/services/virtual-machines/
 data_signature: resource_type:"Microsoft.Compute/virtualMachines"
-description: SignalFx's integration with Azure Virtual Machines
+description: SignalFx integration with Azure Virtual Machines
 display_name: Azure Virtual Machines
 featured: false
 in_app_categories:
