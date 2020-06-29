@@ -1,0 +1,21 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+internal-metrics:
+  Config:
+  - default: ''
+    doc: Defaults to the top-level `internalStatusHost` option
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: host
+  - default: null
+    doc: Defaults to the top-level `internalStatusPort` option
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: port
+  - default: /metrics
+    doc: The HTTP request path to use to retrieve the metrics
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: path

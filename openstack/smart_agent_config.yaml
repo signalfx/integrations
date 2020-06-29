@@ -1,0 +1,53 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/openstack:
+  Config:
+  - default: ''
+    doc: Path to a python binary that should be used to execute the Python code. If
+      not set, a built-in runtime will be used.  Can include arguments to the binary
+      as well.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pythonBinary
+  - default: null
+    doc: Keystone authentication URL/endpoint for the OpenStack cloud
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: authURL
+  - default: null
+    doc: Username to authenticate with keystone identity
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: username
+  - default: null
+    doc: Password to authenticate with keystone identity
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: password
+  - default: ''
+    doc: Specify the name of Project to be monitored (**default**:"demo")
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: projectName
+  - default: ''
+    doc: The project domain (**default**:"default")
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: projectDomainID
+  - default: ''
+    doc: The user domain id (**default**:"default")
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: userDomainID
+  - default: 'false'
+    doc: Skip SSL certificate validation
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: skipVerify

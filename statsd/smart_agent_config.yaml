@@ -1,0 +1,58 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+statsd:
+  Config:
+  - default: localhost
+    doc: The host/address on which to bind the UDP listener that accepts statsd datagrams
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: listenAddress
+  - default: null
+    doc: The port on which to listen for statsd messages (**default:** `8125`)
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: listenPort
+  - default: ''
+    doc: A prefix in metric names that needs to be removed before metric name conversion
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: metricPrefix
+  - default: null
+    doc: A list converters to convert StatsD metric names into SignalFx metric names
+      and dimensions
+    elementKind: object
+    elementStruct:
+      doc: ConverterInput is to receive configs to setup metric converters
+      fields:
+      - default: ''
+        doc: A pattern to match against StatsD metric names
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: pattern
+      - default: ''
+        doc: A format to compose a metric name to report to SignalFx
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: metricName
+      name: ConverterInput
+      package: pkg/monitors/statsd
+    required: false
+    type: list
+    yamlName: converters
+  converters:
+  - default: ''
+    doc: A pattern to match against StatsD metric names
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pattern
+  - default: ''
+    doc: A format to compose a metric name to report to SignalFx
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: metricName

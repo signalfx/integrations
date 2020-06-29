@@ -61,7 +61,7 @@ if not set.
 | `logging` | no | [object (see below)](#logging) | Log configuration |
 | `collectd` | no | [object (see below)](#collectd) | Configuration of the managed collectd subprocess |
 | `enableBuiltInFiltering` | no | bool | This must be unset or explicitly set to true. In prior versions of the agent, there was a filtering mechanism that relied heavily on an external whitelist.json file to determine which metrics were sent by default.  This is all inherent to the agent now and the old style of filtering is no longer available. (**default:** `true`) |
-| `metricsToInclude` | no | [list of objects (see below)](#metricstoinclude) | A list of metric filters that will whitelist/include metrics.  These filters take priority over the filters specified in `metricsToExclude`. |
+| `metricsToInclude` | no | [list of objects (see below)](#metricstoinclude) | A list of metric filters that will include metrics.  These filters take priority over the filters specified in `metricsToExclude`. |
 | `metricsToExclude` | no | [list of objects (see below)](#metricstoexclude) | A list of metric filters |
 | `propertiesToExclude` | no | [list of objects (see below)](#propertiestoexclude) | A list of properties filters |
 | `internalStatusHost` | no | string | The host on which the internal status server will listen.  The internal status HTTP server serves internal metrics and diagnostic information about the agent and can be scraped by the `internal-metrics` monitor. Can be set to `0.0.0.0` if you want to monitor the agent from another host.  If you set this to blank/null, the internal status server will not be started.  See `internalStatusPort`. (**default:** `"localhost"`) |

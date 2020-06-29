@@ -1,0 +1,324 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/cassandra:
+  Config:
+  - default: null
+    doc: Host to connect to -- JMX must be configured for remote access and accessible
+      from the agent
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: JMX connection port (NOT the RMI port) on the application.  This correponds
+      to the `com.sun.management.jmxremote.port` Java property that should be set
+      on the JVM when running the application.
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: name
+  - default: ''
+    doc: This is how the service type is identified in the SignalFx UI so that you
+      can get built-in content for it.  For custom JMX integrations, it can be set
+      to whatever you like and metrics will get the special property `sf_hostHasService`
+      set to this value.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: serviceName
+  - default: service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi
+    doc: 'The JMX connection string.  This is rendered as a Go template and has access
+      to the other values in this config. NOTE: under normal circumstances it is not
+      advised to set this string directly - setting the host and port as specified
+      above is preferred.'
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: serviceURL
+  - default: ''
+    doc: Prefixes the generated plugin instance with prefix. If a second `instancePrefix`
+      is specified in a referenced MBean block, the prefix specified in the Connection
+      block will appear at the beginning of the plugin instance, and the prefix specified
+      in the MBean block will be appended to it
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: instancePrefix
+  - default: ''
+    doc: Username to authenticate to the server
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: User password to authenticate to the server
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password
+  - default: null
+    doc: Takes in key-values pairs of custom dimensions at the connection level.
+    elementKind: string
+    required: false
+    type: map
+    yamlName: customDimensions
+  - default: null
+    doc: A list of the MBeans defined in `mBeanDefinitions` to actually collect. If
+      not provided, then all defined MBeans will be collected.
+    elementKind: string
+    required: false
+    type: list
+    yamlName: mBeansToCollect
+  - default: null
+    doc: A list of the MBeans to omit. This will come handy in cases where only a
+      few MBeans need to omitted from the default list
+    elementKind: string
+    required: false
+    type: list
+    yamlName: mBeansToOmit
+  - default: null
+    doc: Specifies how to map JMX MBean values to metrics.  If using a specific service
+      monitor such as cassandra, kafka, or activemq, they come pre-loaded with a set
+      of mappings, and any that you add in this option will be merged with those.  See
+      [collectd GenericJMX](https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin)
+      for more details.
+    elementKind: object
+    elementStruct:
+      doc: MBean represents the <MBean> config object in the collectd config for generic
+        jmx.
+      fields:
+      - default: ''
+        doc: Sets the pattern which is used to retrieve MBeans from the MBeanServer.
+          If more than one MBean is returned you should use the `instanceFrom` option
+          to make the identifiers unique
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: objectName
+      - default: ''
+        doc: Prefixes the generated plugin instance with prefix
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: instancePrefix
+      - default: null
+        doc: The object names used by JMX to identify MBeans include so called "properties"
+          which are basically key-value-pairs. If the given object name is not unique
+          and multiple MBeans are returned, the values of those properties usually
+          differ. You can use this option to build the plugin instance from the appropriate
+          property values. This option is optional and may be repeated to generate
+          the plugin instance from multiple property values
+        elementKind: string
+        required: false
+        type: slice
+        yamlName: instanceFrom
+      - default: null
+        doc: The `value` blocks map one or more attributes of an MBean to a value
+          list in collectd. There must be at least one `value` block within each MBean
+          block
+        elementKind: struct
+        elementStruct:
+          doc: MBeanValue specifies a particular value to pull from the MBean.
+          fields:
+          - default: ''
+            doc: Sets the data set used within collectd to handle the values of the
+              MBean attribute
+            elementKind: ''
+            required: false
+            type: string
+            yamlName: type
+          - default: false
+            doc: Set this to true if the returned attribute is a composite type. If
+              set to true, the keys within the composite type is appended to the type
+              instance.
+            elementKind: ''
+            required: false
+            type: bool
+            yamlName: table
+          - default: ''
+            doc: Works like the option of the same name directly beneath the MBean
+              block, but sets the type instance instead
+            elementKind: ''
+            required: false
+            type: string
+            yamlName: instancePrefix
+          - default: null
+            doc: Works like the option of the same name directly beneath the MBean
+              block, but sets the type instance instead
+            elementKind: string
+            required: false
+            type: slice
+            yamlName: instanceFrom
+          - default: ''
+            doc: "Sets the name of the attribute from which to read the value. You\
+              \ can access the keys of composite types by using a dot to concatenate\
+              \ the key name to the attribute name. For example: \u201Cattrib0.key42\u201D\
+              . If `table` is set to true, path must point to a composite type, otherwise\
+              \ it must point to a numeric type."
+            elementKind: ''
+            required: false
+            type: string
+            yamlName: attribute
+          - default: null
+            doc: The plural form of the `attribute` config above.  Used to derive
+              multiple metrics from a single MBean.
+            elementKind: string
+            required: false
+            type: slice
+            yamlName: attributes
+          name: MBeanValue
+          package: pkg/monitors/collectd/genericjmx
+        required: false
+        type: slice
+        yamlName: values
+      - default: null
+        doc: ''
+        elementKind: string
+        required: false
+        type: slice
+        yamlName: dimensions
+      name: MBean
+      package: pkg/monitors/collectd/genericjmx
+    required: false
+    type: map
+    yamlName: mBeanDefinitions
+  mBeanDefinitions:
+  - default: ''
+    doc: Sets the pattern which is used to retrieve MBeans from the MBeanServer. If
+      more than one MBean is returned you should use the `instanceFrom` option to
+      make the identifiers unique
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: objectName
+  - default: ''
+    doc: Prefixes the generated plugin instance with prefix
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: instancePrefix
+  - default: null
+    doc: The object names used by JMX to identify MBeans include so called "properties"
+      which are basically key-value-pairs. If the given object name is not unique
+      and multiple MBeans are returned, the values of those properties usually differ.
+      You can use this option to build the plugin instance from the appropriate property
+      values. This option is optional and may be repeated to generate the plugin instance
+      from multiple property values
+    elementKind: string
+    required: false
+    type: list
+    yamlName: instanceFrom
+  - default: null
+    doc: The `value` blocks map one or more attributes of an MBean to a value list
+      in collectd. There must be at least one `value` block within each MBean block
+    elementKind: object
+    elementStruct:
+      doc: MBeanValue specifies a particular value to pull from the MBean.
+      fields:
+      - default: ''
+        doc: Sets the data set used within collectd to handle the values of the MBean
+          attribute
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: type
+      - default: false
+        doc: Set this to true if the returned attribute is a composite type. If set
+          to true, the keys within the composite type is appended to the type instance.
+        elementKind: ''
+        required: false
+        type: bool
+        yamlName: table
+      - default: ''
+        doc: Works like the option of the same name directly beneath the MBean block,
+          but sets the type instance instead
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: instancePrefix
+      - default: null
+        doc: Works like the option of the same name directly beneath the MBean block,
+          but sets the type instance instead
+        elementKind: string
+        required: false
+        type: slice
+        yamlName: instanceFrom
+      - default: ''
+        doc: "Sets the name of the attribute from which to read the value. You can\
+          \ access the keys of composite types by using a dot to concatenate the key\
+          \ name to the attribute name. For example: \u201Cattrib0.key42\u201D. If\
+          \ `table` is set to true, path must point to a composite type, otherwise\
+          \ it must point to a numeric type."
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: attribute
+      - default: null
+        doc: The plural form of the `attribute` config above.  Used to derive multiple
+          metrics from a single MBean.
+        elementKind: string
+        required: false
+        type: slice
+        yamlName: attributes
+      name: MBeanValue
+      package: pkg/monitors/collectd/genericjmx
+    required: false
+    type: list
+    yamlName: values
+  - default: null
+    doc: ''
+    elementKind: string
+    required: false
+    type: list
+    yamlName: dimensions
+  values:
+  - default: ''
+    doc: Sets the data set used within collectd to handle the values of the MBean
+      attribute
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: type
+  - default: 'false'
+    doc: Set this to true if the returned attribute is a composite type. If set to
+      true, the keys within the composite type is appended to the type instance.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: table
+  - default: ''
+    doc: Works like the option of the same name directly beneath the MBean block,
+      but sets the type instance instead
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: instancePrefix
+  - default: null
+    doc: Works like the option of the same name directly beneath the MBean block,
+      but sets the type instance instead
+    elementKind: string
+    required: false
+    type: list
+    yamlName: instanceFrom
+  - default: ''
+    doc: "Sets the name of the attribute from which to read the value. You can access\
+      \ the keys of composite types by using a dot to concatenate the key name to\
+      \ the attribute name. For example: \u201Cattrib0.key42\u201D. If `table` is\
+      \ set to true, path must point to a composite type, otherwise it must point\
+      \ to a numeric type."
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: attribute
+  - default: null
+    doc: The plural form of the `attribute` config above.  Used to derive multiple
+      metrics from a single MBean.
+    elementKind: string
+    required: false
+    type: list
+    yamlName: attributes

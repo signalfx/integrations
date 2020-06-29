@@ -1,0 +1,62 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/couchbase:
+  Config:
+  - default: ''
+    doc: Path to a python binary that should be used to execute the Python code. If
+      not set, a built-in runtime will be used.  Can include arguments to the binary
+      as well.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pythonBinary
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: null
+    doc: 'Define what this Module block will monitor: "NODE", for a Couchbase node,
+      or "BUCKET" for a Couchbase bucket.'
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: collectTarget
+  - default: ''
+    doc: If CollectTarget is "BUCKET", CollectBucket specifies the name of the bucket
+      that this will monitor.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: collectBucket
+  - default: ''
+    doc: Name of this Couchbase cluster. (**default**:"default")
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: clusterName
+  - default: ''
+    doc: Change to "detailed" to collect all available metrics from Couchbase stats
+      API. Defaults to "default", collecting a curated set that works well with SignalFx.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: collectMode
+  - default: ''
+    doc: Username to authenticate with
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: Password to authenticate with
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password

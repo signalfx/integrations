@@ -56,9 +56,9 @@ on the datapoint that will not affect matching.
 
 The negation of items in either `metricNames` or a `dimensions` map value list
 item will serve to override (and thus reinclude) only other already excluded
-items from that same list.  Thus, if you want to do "whitelisting" of metric
-names or dimension values.hi, you can provide a list like `[ '*',
-'!whitelisted1', '!whitelisted2' ]` to exclude everything but those two
+items from that same list.  Thus, if you want to filter metric
+names or dimension values, you can provide a list like `[ '*',
+'!inclusionList1', '!inclusionList2' ]` to exclude everything but those two
 metrics.  This, along with the regex and glob capabilities, is explained more
 in [Overridable Filters](#overridable-filters).
 
@@ -80,7 +80,7 @@ globbed (i.e. where `*` is a wildcard for zero or more characters, and `?` is
 a wildcard for a single character) or specified as a Go-compatible regular
 expression (the value must be surrounded by `/` to be considered a regex).
 
-Sometimes it is easier to whitelist the properties you want to allow through,
+Sometimes it is easier to filter the properties you want to allow through,
 and not allow any others.
 You can do this by prefixing any config value with `!`, which will negate the
 matching value. This can be applied to any of the config options.

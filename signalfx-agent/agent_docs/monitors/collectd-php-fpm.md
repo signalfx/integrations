@@ -31,12 +31,11 @@ To configure the PHP-FPM service itself to expose status metrics:
    ```
 3. Restart Webserver (i.e. Nginx) and PHP-FPM.
 
-<!--- SETUP --->
-
 _Note_: Make sure that the URL you provide to reach fpm status
 page through your webserver ends in `?json`. This returns the 
 metrics as `json`, which this plugin requires.
 
+<!--- SETUP --->
 ## Config Examples
 
 ```
@@ -89,8 +88,6 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `name` | **yes** | `string` | This will be sent as the `plugin_instance` dimension and can be any name you like. |
-| `url` | **yes** | `string` | Final URL ending by `?json` (i.e. http://127.0.0.1/_fpmstatus?json). |
 | `host` | no | `string` | The hostname of the webserver (i.e. `127.0.0.1`) |
 | `port` | no | `integer` | The port number of the webserver (i.e. `80`) (**default:** `0`) |
 | `useHTTPS` | no | `bool` | If true, the monitor will connect to Supervisor via HTTPS instead of HTTP. (**default:** `false`) |

@@ -1,0 +1,51 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+mongodb-atlas:
+  Config:
+  - default: null
+    doc: ProjectID is the Atlas project ID.
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: projectID
+  - default: null
+    doc: PublicKey is the Atlas public API key
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: publicKey
+  - default: null
+    doc: PrivateKey is the Atlas private API key
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: privateKey
+  - default: 5s
+    doc: Timeout for HTTP requests to get MongoDB process measurements from Atlas.
+      This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: timeout
+  - default: 'true'
+    doc: EnableCache enables locally cached Atlas metric measurements to be used when
+      true. The metric measurements that were supposed to be fetched are in fact always
+      fetched asynchronously and cached.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: enableCache
+  - default: PT1M
+    doc: Granularity is the duration in ISO 8601 notation that specifies the interval
+      between measurement data points from Atlas over the configured period. The default
+      is shortest duration supported by Atlas of 1 minute.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: granularity
+  - default: PT20M
+    doc: Period the duration in ISO 8601 notation that specifies how far back in the
+      past to retrieve measurements from Atlas.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: period

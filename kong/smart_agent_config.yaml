@@ -1,0 +1,272 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/kong:
+  Config:
+  - default: ''
+    doc: Path to a python binary that should be used to execute the Python code. If
+      not set, a built-in runtime will be used.  Can include arguments to the binary
+      as well.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pythonBinary
+  - default: null
+    doc: Kong host to connect with (used for autodiscovery and URL)
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: Port for kong-plugin-signalfx hosting server (used for autodiscovery and
+      URL)
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: Registration name when using multiple instances in Smart Agent
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: name
+  - default: http://{{.Host}}:{{.Port}}/signalfx
+    doc: kong-plugin-signalfx metric plugin
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: url
+  - default: null
+    doc: Header and its value to use for requests to SFx metric endpoint
+    elementKind: ''
+    elementStruct:
+      doc: Header defines name/value pair for AuthHeader option
+      fields:
+      - default: null
+        doc: Name of header to include with GET
+        elementKind: ''
+        required: true
+        type: string
+        yamlName: header
+      - default: null
+        doc: Value of header
+        elementKind: ''
+        required: true
+        type: string
+        yamlName: value
+      name: Header
+      package: pkg/monitors/collectd/kong
+    required: false
+    type: object
+    yamlName: authHeader
+  - default: 'false'
+    doc: Whether to verify certificates when using ssl/tls
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: verifyCerts
+  - default: ''
+    doc: CA Bundle file or directory
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: caBundle
+  - default: ''
+    doc: Client certificate file (with or without included key)
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: clientCert
+  - default: ''
+    doc: Client cert key if not bundled with clientCert
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: clientCertKey
+  - default: 'false'
+    doc: Whether to use debug logging for collectd-kong
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: verbose
+  - default: null
+    doc: List of metric names and report flags. See monitor description for more details.
+    elementKind: object
+    elementStruct:
+      doc: Metric is for use with `Metric "metric_name" bool` collectd plugin format
+      fields:
+      - default: null
+        doc: Name of metric, per collectd-kong
+        elementKind: ''
+        required: true
+        type: string
+        yamlName: metric
+      - default: null
+        doc: Whether to report this metric
+        elementKind: ''
+        required: true
+        type: bool
+        yamlName: report
+      name: Metric
+      package: pkg/monitors/collectd/kong
+    required: false
+    type: list
+    yamlName: metrics
+  - default: 'false'
+    doc: Report metrics for distinct API IDs where applicable
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportApiIds
+  - default: 'false'
+    doc: Report metrics for distinct API names where applicable
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportApiNames
+  - default: 'false'
+    doc: Report metrics for distinct Service IDs where applicable
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportServiceIds
+  - default: 'false'
+    doc: Report metrics for distinct Service names where applicable
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportServiceNames
+  - default: 'false'
+    doc: Report metrics for distinct Route IDs where applicable
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportRouteIds
+  - default: 'false'
+    doc: Report metrics for distinct HTTP methods where applicable
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportHttpMethods
+  - default: 'false'
+    doc: Report metrics for distinct HTTP status code groups (eg. "5xx") where applicable
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportStatusCodeGroups
+  - default: 'false'
+    doc: Report metrics for distinct HTTP status codes where applicable (mutually
+      exclusive with ReportStatusCodeGroups)
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportStatusCodes
+  - default: null
+    doc: List of API ID patterns to report distinct metrics for, if reportApiIds is
+      false
+    elementKind: string
+    required: false
+    type: list
+    yamlName: apiIds
+  - default: null
+    doc: List of API ID patterns to not report distinct metrics for, if reportApiIds
+      is true or apiIds are specified
+    elementKind: string
+    required: false
+    type: list
+    yamlName: apiIdsBlacklist
+  - default: null
+    doc: List of API name patterns to report distinct metrics for, if reportApiNames
+      is false
+    elementKind: string
+    required: false
+    type: list
+    yamlName: apiNames
+  - default: null
+    doc: List of API name patterns to not report distinct metrics for, if reportApiNames
+      is true or apiNames are specified
+    elementKind: string
+    required: false
+    type: list
+    yamlName: apiNamesBlacklist
+  - default: null
+    doc: List of Service ID patterns to report distinct metrics for, if reportServiceIds
+      is false
+    elementKind: string
+    required: false
+    type: list
+    yamlName: serviceIds
+  - default: null
+    doc: List of Service ID patterns to not report distinct metrics for, if reportServiceIds
+      is true or serviceIds are specified
+    elementKind: string
+    required: false
+    type: list
+    yamlName: serviceIdsBlacklist
+  - default: null
+    doc: List of Service name patterns to report distinct metrics for, if reportServiceNames
+      is false
+    elementKind: string
+    required: false
+    type: list
+    yamlName: serviceNames
+  - default: null
+    doc: List of Service name patterns to not report distinct metrics for, if reportServiceNames
+      is true or serviceNames are specified
+    elementKind: string
+    required: false
+    type: list
+    yamlName: serviceNamesBlacklist
+  - default: null
+    doc: List of Route ID patterns to report distinct metrics for, if reportRouteIds
+      is false
+    elementKind: string
+    required: false
+    type: list
+    yamlName: routeIds
+  - default: null
+    doc: List of Route ID patterns to not report distinct metrics for, if reportRouteIds
+      is true or routeIds are specified
+    elementKind: string
+    required: false
+    type: list
+    yamlName: routeIdsBlacklist
+  - default: null
+    doc: List of HTTP method patterns to report distinct metrics for, if reportHttpMethods
+      is false
+    elementKind: string
+    required: false
+    type: list
+    yamlName: httpMethods
+  - default: null
+    doc: List of HTTP method patterns to not report distinct metrics for, if reportHttpMethods
+      is true or httpMethods are specified
+    elementKind: string
+    required: false
+    type: list
+    yamlName: httpMethodsBlacklist
+  - default: null
+    doc: List of HTTP status code patterns to report distinct metrics for, if reportStatusCodes
+      is false
+    elementKind: string
+    required: false
+    type: list
+    yamlName: statusCodes
+  - default: null
+    doc: List of HTTP status code patterns to not report distinct metrics for, if
+      reportStatusCodes is true or statusCodes are specified
+    elementKind: string
+    required: false
+    type: list
+    yamlName: statusCodesBlacklist
+  metrics:
+  - default: null
+    doc: Name of metric, per collectd-kong
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: metric
+  - default: null
+    doc: Whether to report this metric
+    elementKind: ''
+    required: true
+    type: bool
+    yamlName: report

@@ -33,10 +33,6 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `domains` | no | `list of strings` | Domains or subdomains to query. |
-| `network` | no | `string` | Network is the network protocol name. (**default:** `udp`) |
-| `port` | no | `integer` | Dns server port. (**default:** `53`) |
-| `servers` | no | `list of strings` | Servers to query. |
 | `domains` | no | `list of strings` | Domains or subdomains to query. If this is not provided it will be `["."]` and `RecordType` will be forced to `NS`. |
 | `network` | no | `string` | Network is the network protocol name. (**default:** `udp`) |
 | `port` | no | `integer` | Dns server port. (**default:** `53`) |

@@ -1,0 +1,50 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/marathon:
+  Config:
+  - default: ''
+    doc: Path to a python binary that should be used to execute the Python code. If
+      not set, a built-in runtime will be used.  Can include arguments to the binary
+      as well.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pythonBinary
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: Username used to authenticate with Marathon.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: Password used to authenticate with Marathon.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password
+  - default: http
+    doc: Set to either `http` or `https`.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: scheme
+  - default: ''
+    doc: The dcos authentication URL which the plugin uses to get authentication tokens
+      from. Set scheme to "https" if operating DC/OS in strict mode and dcosAuthURL
+      to "https://leader.mesos/acs/api/v1/auth/login" (which is the default DNS entry
+      provided by DC/OS)
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: dcosAuthURL
