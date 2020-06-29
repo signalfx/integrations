@@ -1,4 +1,5 @@
 description: SignalFx generates a number of metrics you can use to monitor the status
   of your organization.
 display_name: Organization-level metrics sent by SignalFx
-useLegacyBuild: true
+product_docs_name: signalfx.organization.metrics
+useLegacyBuild: false

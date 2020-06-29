@@ -1,5 +1,5 @@
 # Skip certain dirs from github repo
-dirs_to_skip = set(
+DIRS_TO_SKIP = set(
     [
         "example",
         "signalfx-agent",
@@ -22,7 +22,7 @@ dirs_to_skip = set(
 )
 
 # Skip anything other than metric docs in docs dir
-docs_to_skip = set(["readme.md", "docs-temp.md"])
-rtd_base_url = "https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations."
+DOCS_TO_SKIP = set(["readme.md", "docs-temp.md"])
+RTD_BASE_URL = "https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations."
 
-monitor_doc_base_url = "https://docs.signalfx.com/en/latest/integrations/agent/monitors/"
+MONITOR_DOC_BASE_URL = "https://docs.signalfx.com/en/latest/integrations/agent/monitors/"

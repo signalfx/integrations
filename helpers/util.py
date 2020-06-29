@@ -1,7 +1,37 @@
 import pathlib
 import re
+from typing import Any, Dict, List, Tuple
 
 import yaml
+
+from .paths import INTEGRATIONS_PATH
+
+
+def all_integrations() -> List[Tuple[pathlib.Path, Dict[str, Any]]]:
+    """
+    Returns a list of tuples of the directory path for each integration along
+    with its meta deserialized as a dict.
+    """
+    out = []
+
+    for meta_path in sorted(INTEGRATIONS_PATH.glob("**/meta.yaml")):
+        out.append((meta_path.parent, parse_meta(meta_path)))
+
+    return out
+
+
+def parse_meta(meta_path) -> Dict[str, Any]:
+    return yaml.safe_load(meta_path.read_text(encoding="utf-8"))
+
+
+def get_integration(name: str) -> Tuple[pathlib.Path, Dict[str, Any]]:
+    integration_dir = INTEGRATIONS_PATH / name
+    return (integration_dir, parse_meta(integration_dir / "meta.yaml"))
+
+
+# Remove this and associated code when all integrations are migrated.
+def uses_legacy_build(meta):
+    return meta.get("useLegacyBuild", False)
 
 
 def extract(content, starter, stopper):
@@ -57,6 +87,7 @@ def collect_metrics_yaml(file_path):
             {"metric_name": metric_name, "brief": brief, "description": description, "metric_type": metric_type}
         )
     return metrics
+
 
 def sanitize_link(link):
     link = link.replace("/./", "/")
