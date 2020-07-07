@@ -1,0 +1,96 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/mysql:
+  Config:
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: name
+  - default: null
+    doc: A list of databases along with optional authentication credentials.
+    elementKind: object
+    elementStruct:
+      doc: Database configures a particular MySQL database
+      fields:
+      - default: null
+        doc: ''
+        elementKind: ''
+        required: true
+        type: string
+        yamlName: name
+      - default: ''
+        doc: ''
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: username
+      - default: ''
+        doc: ''
+        elementKind: ''
+        required: false
+        type: string
+        yamlName: password
+      name: Database
+      package: pkg/monitors/collectd/mysql
+    required: true
+    type: list
+    yamlName: databases
+  - default: ''
+    doc: These credentials serve as defaults for all databases if not overridden
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password
+  - default: 'false'
+    doc: A SignalFx extension to the plugin that allows us to disable the normal behavior
+      of the MySQL collectd plugin where the `host` dimension is set to the hostname
+      of the MySQL database server.  When `false` (the recommended and default setting),
+      the globally configured `hostname` config is used instead.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: reportHost
+  - default: 'false'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: innodbStats
+  databases:
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: name
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password

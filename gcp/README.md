@@ -6,29 +6,41 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Platform (GCP) services via StackDriver Monitoring. This integration enables data collection from all GCP web services that report to StackDriver.
+Use SignalFx to monitor Google Cloud Platform (GCP) services through StackDriver monitoring. This integration enables data collection from all GCP web services that report to StackDriver.
 
-#### FEATURES
+## FEATURES
 
-Connecting to GCP allows you to take advantage of SignalFx’s extensive GCP support.
+Connecting to GCP lets you take advantage of SignalFx’s extensive GCP support.
 
-- SignalFx can sync metadata about your GCP hosts to enrich metrics reported by StackDriver or the [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd).
-- SignalFx provides built-in dashboards for many GCP services that report to StackDriver, such as [Google Compute Engine](https://github.com/signalfx/integrations/tree/master/google-compute-engine)[](sfx_link:google-compute-engine) and [Google Cloud Datastore](https://github.com/signalfx/integrations/tree/master/google-cloud-datastore)[](sfx_link:google-cloud-datastore).
+- SignalFx can sync metadata about your GCP hosts to enrich metrics reported by StackDriver or the [SignalFx collectd agent](https://docs.signalfx.com/en/latest/integrations/collectd-info.html).
+- SignalFx provides built-in dashboards for many GCP services that report to StackDriver, such as [Google Compute Engine](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.google.compute.engine.html) and [Google Cloud Datastore](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.google.cloud.datastore.html).
 
-### CONFIGURATION
+## CONFIGURATION
 
-To connect SignalFx to Google Cloud Platform (GCP), you’ll create a new GCP project service account key for SignalFx to use and specify services to monitor in SignalFx. You must be an administrator of your SignalFx account to connect SignalFx to GCP. <a target="_blank" href="http://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-google-cloud-platform">Click here for detailed instructions</a>.
+### Prerequisites
 
-### USAGE
+Before you begin, you must be an administrator of your SignalFx account.
+
+### Steps
+
+To connect SignalFx to GCP, you must:
+
+1. Create a new GCP project service account key for SignalFx to use.
+2. Specify the services to monitor in SignalFx.
+
+For detailed instructions, see <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp">Connect to Google Cloud Platform</a>.
+
+
+## USAGE
 
 See <a target="_blank" href="https://docs.signalfx.com/en/latest/integrations/gcp-info.html">our detailed GCP integration guide</a> for more information.
 
-### METRICS
+## METRICS
 
 For more information about the metrics emitted by GCP StackDriver, see the documentation for individual services.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

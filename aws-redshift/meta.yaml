@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integration_awsredshift%402x.png
 logo_small: integration_awsredshift.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-redshift
+useLegacyBuild: true

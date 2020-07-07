@@ -22,7 +22,7 @@ If you are running containers with Docker, there is a fair amount of
 duplication with the `docker-container-stats` monitor in terms of the
 metrics sent (under distinct metric names) so you may want to consider not
 enabling the Docker monitor in a K8s environment, or else use filtering to
-whitelist only certain metrics.  Note that this will cause the built-in
+allow only certain metrics.  Note that this will cause the built-in
 Docker dashboards to be blank, but container metrics will be available on
 the Kubernetes dashboards instead.
 

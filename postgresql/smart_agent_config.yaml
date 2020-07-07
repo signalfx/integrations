@@ -1,0 +1,58 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+postgresql:
+  Config:
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: host
+  - default: '0'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: port
+  - default: postgres
+    doc: The "master" database to which the agent first connects to query the list
+      of databases available in the server.  This database should be accessible to
+      the user specified with `connectionString` and `params` below, and that user
+      should have permission to query `pg_database`.  If you want to filter which
+      databases are monitored, use the `databases` option below.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: masterDBName
+  - default: ''
+    doc: See https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: connectionString
+  - default: null
+    doc: Parameters to the connection string that can be templated into the connection
+      string with the syntax `{{.key}}`.
+    elementKind: string
+    required: false
+    type: map
+    yamlName: params
+  - default: '[*]'
+    doc: List of databases to send database-specific metrics about.  If omitted, metrics
+      about all databases will be sent.  This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters).
+    elementKind: string
+    required: false
+    type: list
+    yamlName: databases
+  - default: '0'
+    doc: How frequently to poll for new/deleted databases in the DB server. Defaults
+      to the same as `intervalSeconds` if not set.
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: databasePollIntervalSeconds
+  - default: '10'
+    doc: The number of top queries to consider when publishing query-related metrics
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: topQueryLimit

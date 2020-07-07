@@ -5,7 +5,7 @@ This page describes the old style of filtering and is deprecated and removed in
 agent version 5.0+. See [Filtering](filtering.md) for how to configure
 filtering in SignalFx Smart Agent 4.7.0+.
 
-## Old-style whitelist filtering
+## Old-style inclusion list filtering
 In the Smart Agent prior to version 4.7.0, custom metrics were filtered out of
 the agent by means of a `whitelist.json` file that was referenced under the
 `metricsToExclude` section of the standard distributed config file.  This
@@ -24,7 +24,7 @@ We recommend upgrading the agent to at least 4.7.0 and setting the
 `enableBuiltInFitlering: true` flag, as it is much easier to configure and
 understand than the old `metricsToExlude`/`metricsToInclude` mechanism.  The
 only reason to not set `enableBuiltInFiltering: true` is if you have extensive
-modifications to the whitelisted metrics (especially via `metricsToInclude`)
+modifications to the allowed metrics (especially via `metricsToInclude`)
 and you don't want to rewrite all of that using `extraMetrics` (the new
 built-in filtering will filter out metrics before they can be processed by
 `metricsToInclude`, so that config will have no effect if built-in filtering is
@@ -54,7 +54,7 @@ used in the monitor config.  This is very useful when trying to filter on a
 heavily overloaded dimension, such as the `plugin_instance` dimension that most
 collectd-based monitors emit.
 
-Sometimes it is easier to whitelist the metrics you want to allow through.
+Sometimes it is easier to filter the metrics you want to allow through.
 You can do this by setting the `negated` option to `true` on a filter item.
 This makes all metric name and dimension matching negated so that only
 datapoints with that name or dimension are allowed through.  You would also
@@ -112,7 +112,7 @@ Examples:
       negated: true
 
     # This will be automatically merged with the above filter to produce one
-    # whitelist filter on three metric names for elasticsearch
+    # Filter on three metric names for elasticsearch
     - metricNames:
       - elasticsearch.thread_pool.inactive
       monitorType: elasticsearch
@@ -152,4 +152,4 @@ For example:
        app: bigapp
 ```
 
-This can be useful for overridding the built-in whitelist for metrics.
+This can be useful for overridding the built-in inclusion list for metrics.

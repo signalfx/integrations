@@ -2,7 +2,7 @@ browse_categories:
 - Compute
 code: https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/
 data_signature: resource_type:"Microsoft.Compute/virtualMachineScaleSets"
-description: SignalFx's integration with Azure Virtual Machine Scale Sets
+description: SignalFx integration with Azure Virtual Machine Scale Sets
 display_name: Azure Virtual Machine Scale Sets
 featured: false
 in_app_categories:
@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integrations_azurevmscaleset%402x.png
 logo_small: integrations_azurevmscaleset.png
 project_url: https://github.com/signalfx/integrations/tree/master/azure-vmscaleset
+useLegacyBuild: true

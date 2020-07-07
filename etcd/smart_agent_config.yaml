@@ -1,0 +1,61 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/etcd:
+  Config:
+  - default: ''
+    doc: Path to a python binary that should be used to execute the Python code. If
+      not set, a built-in runtime will be used.  Can include arguments to the binary
+      as well.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pythonBinary
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: null
+    doc: An arbitrary name of the etcd cluster to make it easier to group together
+      and identify instances.
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: clusterName
+  - default: ''
+    doc: Client private key if using client certificate authentication.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: sslKeyFile
+  - default: ''
+    doc: Client public key if using client certificate authentication.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: sslCertificate
+  - default: ''
+    doc: Certificate authority or host certificate to trust.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: sslCACerts
+  - default: 'false'
+    doc: If `true`, etcd's SSL certificate will not be verified. Enabling this option
+      results in the `sslCACerts` option being ignored.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: skipSSLValidation
+  - default: 'false'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: enhancedMetrics

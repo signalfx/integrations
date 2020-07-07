@@ -10,7 +10,7 @@
 
 Use SignalFx to monitor Azure Event Hubs via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
-#### FEATURES
+### FEATURES
 
 - **Azure Event Hub**: Shows metrics of an Event hub.
 
@@ -22,7 +22,7 @@ Use SignalFx to monitor Azure Event Hubs via [Microsoft Azure](https://github.co
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure)[](sfx_link:azure).
 
 ### USAGE
 
@@ -102,10 +102,10 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 
 
 
-### METRICS
+#### METRICS
 
 For more information about the metrics emitted by Azure Event Hubs, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsofteventhubnamespaces">here</a>.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

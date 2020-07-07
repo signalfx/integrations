@@ -6,30 +6,34 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Functions via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Functions, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-#### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Cloud Functions Overview**: Overview of project level metrics for Google Cloud Functions
+- **Cloud Functions Overview** - Overview of project-level metrics for Google Cloud Functions.
 
   [<img src='./img/cloud_functions_overview.png' width=200px>](./img/cloud_functions_overview.png)
 
-- **Cloud Function**: Metrics for a single cloud function
+- **Cloud Function** - Metrics for a single cloud function.
 
   [<img src='./img/cloud_function.png' width=200px>](./img/cloud_function.png)
 
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+### Prerequisites
 
-#### Interpreting Built-in dashboards
+None
+
+## USAGE
+
+### Interpreting Built-in Dashboards
 
 **Cloud Function**
 
@@ -67,10 +71,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/functions-overview-exec-times.png' width=200px>](./img/functions-overview-exec-times.png)
 
-### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Cloud Functions, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions">https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

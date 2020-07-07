@@ -2,7 +2,7 @@ browse_categories:
 - Storage
 code: https://azure.microsoft.com/en-us/services/storage/
 data_signature: resource_type:"Microsoft.Storage/storageAccounts"
-description: SignalFx's integration with Azure Storage
+description: SignalFx integration with Azure Storage
 display_name: Azure Storage
 featured: false
 in_app_categories:
@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integrations_azurestorage%402x.png
 logo_small: integrations_azurestorage.png
 project_url: https://github.com/signalfx/integrations/tree/master/azure-storage
+useLegacyBuild: true

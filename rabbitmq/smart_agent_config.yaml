@@ -1,0 +1,121 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/rabbitmq:
+  Config:
+  - default: ''
+    doc: Path to a python binary that should be used to execute the Python code. If
+      not set, a built-in runtime will be used.  Can include arguments to the binary
+      as well.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pythonBinary
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: '{{.host}}-{{.port}}'
+    doc: The name of the particular RabbitMQ instance.  Can be a Go template using
+      other config options. This will be used as the `plugin_instance` dimension.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: brokerName
+  - default: 'false'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: collectChannels
+  - default: 'false'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: collectConnections
+  - default: 'false'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: collectExchanges
+  - default: 'false'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: collectNodes
+  - default: 'false'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: collectQueues
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: httpTimeout
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: verbosityLevel
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: username
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: password
+  - default: 'false'
+    doc: Whether to enable HTTPS.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: useHTTPS
+  - default: ''
+    doc: Path to SSL/TLS certificates file of root Certificate Authorities implicitly
+      trusted by this monitor.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: sslCACertFile
+  - default: ''
+    doc: Path to this monitor's own SSL/TLS certificate.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: sslCertFile
+  - default: ''
+    doc: Path to this monitor's private SSL/TLS key file.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: sslKeyFile
+  - default: ''
+    doc: This monitor's private SSL/TLS key file password if any.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: sslKeyPassphrase
+  - default: 'false'
+    doc: Should the monitor verify the RabbitMQ server SSL/TLS certificate.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: sslVerify

@@ -5,3 +5,4 @@ featured: false
 logo_large: /images/repos/lib-java/img/integrations_java%402x.png
 logo_small: /images/repos/lib-java/img/integrations_java.png
 project_url: https://github.com/signalfx/integrations/tree/master/lib-java
+useLegacyBuild: true

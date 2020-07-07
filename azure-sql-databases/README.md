@@ -10,7 +10,7 @@
 
 Use SignalFx to monitor Azure SQL Database via [Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
 
-#### FEATURES
+### FEATURES
 
 - **Azure SQL Database**: Shows metrics of a Database.
 
@@ -18,7 +18,7 @@ Use SignalFx to monitor Azure SQL Database via [Microsoft Azure](https://github.
 
 ### INSTALLATION
 
-To access this integration, [connect to Microsoft Azure](https://github.com/signalfx/integrations/tree/master/azure)[](sfx_link:azure).
+To access this integration, [connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure)[](sfx_link:azure).
 
 ### USAGE
 
@@ -67,10 +67,11 @@ To access this integration, [connect to Microsoft Azure](https://github.com/sign
 - **Top Databases by Log I/O percent** Lists the databases with top Log I/O.
 
 
-### METRICS
+
+#### METRICS
 
 For more information about the metrics emitted by Azure SQL Database, visit <a target="_blank" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftsqlserversdatabases">here</a>.
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -6,26 +6,30 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-Use SignalFx to monitor Google Cloud Datastore via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Cloud Datastore, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-#### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Datastore Overview**: Overview of project level metrics for Google Datastore
+- **Datastore Overview** - Overview of project-level metrics for Google Cloud Datastore.
 
   [<img src='./img/datastore_overview.png' width=200px>](./img/datastore_overview.png)
 
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+### Prerequisites
 
-#### Interpreting Built-in dashboards
+None
+
+## USAGE
+
+### Interpreting Built-in Dashboards
 
 **Datastore Overview**
 
@@ -41,14 +45,14 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/datastore-overview-number-of-writes.png' width=200px>](./img/datastore-overview-number-of-writes.png)
 
-- **Write Sizes by Operation Type** - Average size of written entites by operation.
+- **Write Sizes by Operation Type** - Average size of written entities by operation.
 
   [<img src='./img/datastore-overview-read-sizes-type.png' width=200px>](./img/datastore-overview-read-sizes-type.png)
 
-### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Cloud Datastore, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-datastore">https://cloud.google.com/monitoring/api/metrics#gcp-datastore</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

@@ -1,0 +1,96 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+gitlab:
+  Config:
+  - default: 10s
+    doc: HTTP timeout duration for both read and writes. This should be a duration
+      string that is accepted by https://golang.org/pkg/time/#ParseDuration
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: httpTimeout
+  - default: ''
+    doc: Basic Auth username to use on each request, if any.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: Basic Auth password to use on each request, if any.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password
+  - default: 'false'
+    doc: If true, the agent will connect to the exporter using HTTPS instead of plain
+      HTTP.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: useHTTPS
+  - default: null
+    doc: A map of key=message-header and value=header-value. Comma separated multiple
+      values for the same message-header is supported.
+    elementKind: string
+    required: false
+    type: map
+    yamlName: httpHeaders
+  - default: 'false'
+    doc: If useHTTPS is true and this option is also true, the exporter's TLS cert
+      will not be verified.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: skipVerify
+  - default: ''
+    doc: Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify`
+      is set to false.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: caCertPath
+  - default: ''
+    doc: Path to the client TLS cert to use for TLS required connections
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: clientCertPath
+  - default: ''
+    doc: Path to the client TLS key to use for TLS required connections
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: clientKeyPath
+  - default: null
+    doc: Host of the exporter
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: Port of the exporter
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: 'false'
+    doc: Use pod service account to authenticate.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: useServiceAccount
+  - default: /metrics
+    doc: Path to the metrics endpoint on the exporter server, usually `/metrics` (the
+      default).
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: metricPath
+  - default: 'false'
+    doc: Send all the metrics that come out of the Prometheus exporter without any
+      filtering.  This option has no effect when using the prometheus exporter monitor
+      directly since there is no built-in filtering, only when embedding it in other
+      monitors.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: sendAllMetrics

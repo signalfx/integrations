@@ -10,3 +10,4 @@ in_app_categories:
 logo_large: integration_awscloudfront.png
 logo_small: integration_awscloudfront.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-cloudfront
+useLegacyBuild: true

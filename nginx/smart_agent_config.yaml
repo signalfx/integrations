@@ -1,0 +1,45 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/nginx:
+  Config:
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: name
+  - default: http://{{.Host}}:{{.Port}}/nginx_status
+    doc: The full URL of the status endpoint; can be a template
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: url
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password
+  - default: '0'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: timeout

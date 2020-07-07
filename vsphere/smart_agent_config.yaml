@@ -1,0 +1,67 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+vsphere:
+  Config:
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: host
+  - default: '0'
+    doc: ''
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: The vSphere username
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: The vSphere password
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password
+  - default: 'false'
+    doc: Whether we verify the server's certificate chain and host name
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: insecureSkipVerify
+  - default: 60s
+    doc: How often to reload the inventory and inventory metrics
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: inventoryRefreshInterval
+  - default: '10'
+    doc: Maximum number of inventory objects to be queried for performance data per
+      request. Set this value to zero (0) to request performance data for all inventory
+      objects at a time.
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: perfBatchSize
+  - default: ''
+    doc: Path to the ca file
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: tlsCACertPath
+  - default: ''
+    doc: Configure client certs. Both tlsClientKeyPath and tlsClientCertificatePath
+      must be present. The files must contain PEM encoded data. Path to the client
+      certificate
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: tlsClientCertificatePath
+  - default: ''
+    doc: Path to the keyfile
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: tlsClientKeyPath

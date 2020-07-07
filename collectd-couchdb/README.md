@@ -16,7 +16,16 @@ This is the SignalFx CouchDB plugin. Follow these instructions to install the Co
 
 The <a target="_blank" href="https://github.com/signalfx/collectd-couchdb">couchdb-collectd</a> plugin collects metrics from CouchDB instances by calling the api endpoint: <a target="_blank" href="http://docs.couchdb.org/en/2.1.0/api/server/common.html#stats">stats</a>
 
-#### FEATURES
+#### REQUIREMENTS AND DEPENDENCIES
+
+| Software  | Version        |
+|-----------|----------------|
+| collectd  |  4.9 or later  |
+| python | 2.6 or later |
+| CouchDB | 2.0.0 or later |
+| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
+
+### FEATURES
 
 #### Built-in dashboards
 
@@ -35,16 +44,6 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-couchdb">couch
   [<img src='./img/couchdb-nodes-dashboard.png' width=200px>](./img/couchdb-nodes-dashboard.png)
 
 
-### REQUIREMENTS AND DEPENDENCIES
-
-#### Version information
-
-| Software  | Version        |
-|-----------|----------------|
-| collectd  |  4.9 or later  |
-| python | 2.6 or later |
-| CouchDB | 2.0.0 or later |
-| Python plugin for collectd | (included with [SignalFx collectd agent](https://github.com/signalfx/integrations/tree/master/collectd)[](sfx_link:sfxcollectd)) |
 
 ### INSTALLATION
 
@@ -61,7 +60,7 @@ The <a target="_blank" href="https://github.com/signalfx/collectd-couchdb">couch
 
 ### CONFIGURATION
 
-Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf">10-couchdb.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and lets you to connect to the CouchDB members
+Using the example configuration file <a target="_blank" href="https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf">10-couchdb.conf</a> as a guide, provide values for the configuration options listed below that make sense for your environment and lets you connect to the CouchDB members.
 
 | Configuration option | Definition | Example value |
 | ---------------------|------------|---------------|
@@ -165,6 +164,6 @@ All metrics reported by the CouchDB collectd plugin will contain the following d
 
 
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

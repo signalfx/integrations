@@ -1,0 +1,12 @@
+browse_categories:
+- Database
+code: https://github.com/signalfx/siganlfx-agent
+description: Monitor MongoDB Atlas cluster using the SignalFx Smart Agent.
+display_name: MongoDB Atlas
+featured: true
+in_app_categories:
+- servicesMonitored
+logo_large: /images/repos/mongodb-atlas/img/integration_mongodbatlas@2x.png
+logo_small: /images/repos/mongodb-atlas/img/integration_mongodbatlas.png
+project_url: https://github.com/signalfx/integrations/tree/master/mongodb-atlas
+useLegacyBuild: true

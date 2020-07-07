@@ -42,6 +42,10 @@ databases being monitored, you can specify that in the top-level
 `username`/`password` options, otherwise they can be specified at the
 database level.
 
+<!--- SETUP --->
+### InnoDB metrics
+If you want to enable InnoDB metrics (`innodbStats` to `true`), be sure that
+you granted to your user the `PROCESS` privilege.
 
 <!--- SETUP --->
 ### Example Config
@@ -87,6 +91,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `username` | no | `string` | These credentials serve as defaults for all databases if not overridden |
 | `password` | no | `string` |  |
 | `reportHost` | no | `bool` | A SignalFx extension to the plugin that allows us to disable the normal behavior of the MySQL collectd plugin where the `host` dimension is set to the hostname of the MySQL database server.  When `false` (the recommended and default setting), the globally configured `hostname` config is used instead. (**default:** `false`) |
+| `innodbStats` | no | `bool` |  (**default:** `false`) |
 
 
 The **nested** `databases` config object has the following fields:
@@ -112,6 +117,21 @@ Metrics that are categorized as
  - `cache_result.qcache-not_cached` (*cumulative*)<br>    The number of MySQL queries that were not cacheable or not cached.
  - `cache_result.qcache-prunes` (*cumulative*)<br>    The number of queries that were pruned from query cache because of low-memory condition.
  - ***`cache_size.qcache`*** (*gauge*)<br>    The number of queries in MySQL query cache.
+ - `mysql_bpool_bytes.data` (*gauge*)<br>    The total number of bytes in the InnoDB buffer pool containing data. The number includes both dirty and clean pages.
+ - `mysql_bpool_bytes.dirty` (*gauge*)<br>    The total current number of bytes held in dirty pages in the InnoDB buffer pool.
+ - `mysql_bpool_counters.pages_flushed` (*cumulative*)<br>    The number of requests to flush pages from the InnoDB buffer pool.
+ - `mysql_bpool_counters.read_ahead` (*cumulative*)<br>    The number of pages read into the InnoDB buffer pool by the read-ahead background thread.
+ - `mysql_bpool_counters.read_ahead_evicted` (*cumulative*)<br>    The number of pages read into the InnoDB buffer pool by the read-ahead background thread that were subsequently evicted without having been accessed by queries.
+ - `mysql_bpool_counters.read_ahead_rnd` (*cumulative*)<br>    The number of “random” read-aheads initiated by InnoDB. This happens when a query scans a large portion of a table but in random order.
+ - `mysql_bpool_counters.read_requests` (*cumulative*)<br>    The number of logical read requests.
+ - `mysql_bpool_counters.reads` (*cumulative*)<br>    The number of logical reads that InnoDB could not satisfy from the buffer pool, and had to read directly from disk.
+ - `mysql_bpool_counters.wait_free` (*cumulative*)<br>    Normally, writes to the InnoDB buffer pool happen in the background. When InnoDB needs to read or create a page and no clean pages are available, InnoDB flushes some dirty pages first and waits for that operation to finish. This counter counts instances of these waits.
+ - `mysql_bpool_counters.write_requests` (*cumulative*)<br>    The number of writes done to the InnoDB buffer pool.
+ - `mysql_bpool_pages.data` (*gauge*)<br>    The number of pages in the InnoDB buffer pool containing data. The number includes both dirty and clean pages.
+ - `mysql_bpool_pages.dirty` (*gauge*)<br>    The current number of dirty pages in the InnoDB buffer pool.
+ - `mysql_bpool_pages.free` (*gauge*)<br>    The number of free pages in the InnoDB buffer pool.
+ - `mysql_bpool_pages.misc` (*gauge*)<br>    The number of pages in the InnoDB buffer pool that are busy because they have been allocated for administrative overhead, such as row locks or the adaptive hash index.
+ - `mysql_bpool_pages.total` (*gauge*)<br>    The total size of the InnoDB buffer pool, in pages.
  - `mysql_commands.admin_commands` (*cumulative*)<br>    The number of MySQL ADMIN commands executed
  - `mysql_commands.alter_db` (*cumulative*)<br>    The number of MySQL ALTER DB commands executed
  - `mysql_commands.alter_db_upgrade` (*cumulative*)<br>    The number of MySQL ALTER DB UPGRADE commands executed
@@ -261,6 +281,27 @@ Metrics that are categorized as
  - `mysql_handler.savepoint_rollback` (*cumulative*)<br>    The number of requests to roll back to a savepoint.
  - `mysql_handler.update` (*cumulative*)<br>    The number of requests to update a row in a table.
  - `mysql_handler.write` (*cumulative*)<br>    The number of requests to insert a row in a table.
+ - `mysql_innodb_data.fsyncs` (*cumulative*)<br>    The number of fsync() operations so far.
+ - `mysql_innodb_data.read` (*cumulative*)<br>    The amount of data read since the server was started (in bytes).
+ - `mysql_innodb_data.reads` (*cumulative*)<br>    The total number of data reads (OS file reads).
+ - `mysql_innodb_data.writes` (*cumulative*)<br>    The total number of data writes.
+ - `mysql_innodb_data.written` (*cumulative*)<br>    The amount of data written so far, in bytes.
+ - `mysql_innodb_dblwr.writes` (*cumulative*)<br>    The number of doublewrite operations that have been performed.
+ - `mysql_innodb_dblwr.written` (*cumulative*)<br>    The number of pages that have been written to the doublewrite buffer.
+ - `mysql_innodb_log.fsyncs` (*cumulative*)<br>    The number of fsync() writes done to the InnoDB redo log files.
+ - `mysql_innodb_log.waits` (*cumulative*)<br>    The number of times that the log buffer was too small and a wait was required for it to be flushed before continuing.
+ - `mysql_innodb_log.write_requests` (*cumulative*)<br>    The number of write requests for the InnoDB redo log.
+ - `mysql_innodb_log.writes` (*cumulative*)<br>    The number of physical writes to the InnoDB redo log file.
+ - `mysql_innodb_log.written` (*cumulative*)<br>    The number of bytes written to the InnoDB redo log files.
+ - `mysql_innodb_pages.created` (*cumulative*)<br>    The number of pages created by operations on InnoDB tables.
+ - `mysql_innodb_pages.read` (*cumulative*)<br>    The number of pages read from the InnoDB buffer pool by operations on InnoDB tables.
+ - `mysql_innodb_pages.written` (*cumulative*)<br>    The number of pages written by operations on InnoDB tables.
+ - `mysql_innodb_row_lock.time` (*cumulative*)<br>    The total time spent in acquiring row locks for InnoDB tables, in milliseconds.
+ - `mysql_innodb_row_lock.waits` (*cumulative*)<br>    The number of times operations on InnoDB tables had to wait for a row lock.
+ - `mysql_innodb_rows.deleted` (*cumulative*)<br>    The number of rows deleted from InnoDB tables.
+ - `mysql_innodb_rows.inserted` (*cumulative*)<br>    The number of rows inserted into InnoDB tables.
+ - `mysql_innodb_rows.read` (*cumulative*)<br>    The number of rows read from InnoDB tables.
+ - `mysql_innodb_rows.updated` (*cumulative*)<br>    The number of rows updated in InnoDB tables.
  - ***`mysql_locks.immediate`*** (*cumulative*)<br>    The number of MySQL table locks which were granted immediately.
  - ***`mysql_locks.waited`*** (*cumulative*)<br>    The number of MySQL table locks which had to wait before being granted.
  - ***`mysql_octets.rx`*** (*cumulative*)<br>    The number of bytes received by MySQL server from all clients.

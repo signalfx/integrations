@@ -6,29 +6,33 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-Use SignalFx to monitor Google Compute Engine via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Compute Engine, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-#### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Compute Instances**: Overview of all data from Google Compute Engine.
+- **Compute Instances** - Overview of all data from Google Compute Engine.
 
   [<img src='./img/compute_instances.png' width=200px>](./img/compute_instances.png)
 
-- **Compute Instance**: Focus on a single Compute Engine instance.
+- **Compute Instance** - Focus on a single Compute Engine instance.
 
   [<img src='./img/compute_instance.png' width=200px>](./img/compute_instance.png)
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+### Prerequisites
 
-#### Interpreting Built-in dashboards
+None
+
+## USAGE
+
+### Interpreting Built-in Dashboards
 
 **Compute Engine Instance**
 
@@ -82,7 +86,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/instances-cpu-percent-trend.png' width=200px>](./img/instances-cpu-percent-trend.png)
 
-- **Number of Disk Opertions** - Aggregated disk read/write operations of all instances.
+- **Number of Disk Operations** - Aggregated disk read/write operations of all instances.
 
   [<img src='./img/instances-disk-operations.png' width=200px>](./img/instances-disk-operations.png)
 
@@ -102,7 +106,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/instances-top-network-bytes-in.png' width=200px>](./img/instances-top-network-bytes-in.png)
 
-- **Network Bytes In vs. 24h Change Percent** - Aggregated number of bytes received from the network across all instances vs. the 24 hour change in number of bytes received.
+- **Network Bytes In versus 24h Change Percent** - Aggregated number of bytes received from the network across all instances versus the 24-hour change in number of bytes received.
 
   [<img src='./img/instances-network-bytes-in-vs-change.png' width=200px>](./img/instances-network-bytes-in-vs-change.png)
 
@@ -114,14 +118,14 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/instances-top-network-bytes-out.png' width=200px>](./img/instances-top-network-bytes-out.png)
 
-- **Network Bytes Out vs. 24h Change Percent** - Aggregated number of bytes sent to the network across all instances vs. the 24 hour change in number of bytes sent.
+- **Network Bytes Out versus 24h Change Percent** - Aggregated number of bytes sent to the network across all instances versus the 24-hour change in number of bytes sent.
 
   [<img src='./img/instances-network-bytes-out-vs-change.png' width=200px>](./img/instances-network-bytes-out-vs-change.png)
 
-### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Compute Engine, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-compute">https://cloud.google.com/monitoring/api/metrics#gcp-compute</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

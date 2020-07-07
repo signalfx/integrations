@@ -1,0 +1,64 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+docker-container-stats:
+  Config:
+  - default: 'false'
+    doc: Whether it will send all extra block IO metrics as well.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: enableExtraBlockIOMetrics
+  - default: 'false'
+    doc: Whether it will send all extra CPU metrics as well.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: enableExtraCPUMetrics
+  - default: 'false'
+    doc: Whether it will send all extra memory metrics as well.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: enableExtraMemoryMetrics
+  - default: 'false'
+    doc: Whether it will send all extra network metrics as well.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: enableExtraNetworkMetrics
+  - default: unix:///var/run/docker.sock
+    doc: The URL of the docker server
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: dockerURL
+  - default: '5'
+    doc: The maximum amount of time to wait for docker API requests
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: timeoutSeconds
+  - default: null
+    doc: 'A mapping of container label names to dimension names. The corresponding
+      label values will become the dimension value for the mapped name.  E.g. `io.kubernetes.container.name:
+      container_spec_name` would result in a dimension called `container_spec_name`
+      that has the value of the `io.kubernetes.container.name` container label.'
+    elementKind: string
+    required: false
+    type: map
+    yamlName: labelsToDimensions
+  - default: null
+    doc: 'A mapping of container environment variable names to dimension names.  The
+      corresponding env var values become the dimension values on the emitted metrics.  E.g.
+      `APP_VERSION: version` would result in datapoints having a dimension called
+      `version` whose value is the value of the `APP_VERSION` envvar configured for
+      that particular container, if present.'
+    elementKind: string
+    required: false
+    type: map
+    yamlName: envToDimensions
+  - default: null
+    doc: A list of filters of images to exclude.  Supports literals, globs, and regex.
+    elementKind: string
+    required: false
+    type: list
+    yamlName: excludedImages

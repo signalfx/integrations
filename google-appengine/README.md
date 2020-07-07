@@ -6,37 +6,42 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
 
-Use SignalFx to monitor Google App Engine via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+## FEATURES
 
-#### FEATURES
+### Built-in Dashboards
 
-##### Built-in dashboards
-
-- **App Engine System**: Overview of system level metrics for App Engine.
+- **App Engine System** - Overview of system-level metrics for App Engine.
 
   [<img src='./img/appengine_system.png' width=200px>](./img/appengine_system.png)
 
-- **App Engine Flex**: Flex environment specfic metrics for Google App Engine.
+- **App Engine Flex** - Flex environment specfic metrics for App Engine.
 
   [<img src='./img/appengine_flex.png' width=200px>](./img/appengine_flex.png)
 
-- **App Engine Memcache**: Memcache environment specfic metrics for Google App Engine.
+- **App Engine Memcache** - Memcache environment specfic metrics for App Engine.
 
   [<img src='./img/appengine_memcache.png' width=200px>](./img/appengine_memcache.png)
 
-- **App Engine HTTP**: HTTP specific metrics for Google App Engine
+- **App Engine HTTP** - HTTP specific metrics for App Engine.
 
   [<img src='./img/appengine_http.png' width=200px>](./img/appengine_http.png)
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-### USAGE
+### Prerequisites
 
-#### Interpreting Built-in dashboards
+None
+
+## USAGE
+
+## DESCRIPTION
+
+To monitor App Engine, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
+
+### Interpreting Built-in Dashboards
 
 **App Engine Flex**
 
@@ -64,7 +69,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/flex-network-bytes-sent.png' width=200px>](./img/flex-network-bytes-sent.png)
 
-**App Engine http**
+**App Engine HTTP**
 
 - **HTTP Response Latency (ms)** - HTTP response latency.
 
@@ -82,13 +87,13 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/http-denied-from-over-quota.png' width=200px>](./img/http-denied-from-over-quota.png)
 
-- **Server DoS Interceptions** - Number of interceptions performed to prevent DoS attacks.
+- **Server DoS Interceptions** - Number of interceptions performed to prevent Denial-of-Service (DoS) attacks.
 
   [<img src='./img/http-server-dos-interceptions.png' width=200px>](./img/http-server-dos-interceptions.png)
 
 **App Engine Memcache**
 
-- **Memcache Operations by Command** - Number of memcache key operations aggregatedby command.
+- **Memcache Operations by Command** - Number of memcache key operations aggregated by command.
 
   [<img src='./img/memcache-operations-by-command.png' width=200px>](./img/memcache-operations-by-command.png)
 
@@ -100,7 +105,7 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
 
   [<img src='./img/memcache-sent-bytes.png' width=200px>](./img/memcache-sent-bytes.png)
 
-- **Memcache MCU Count** - Memcache utilization in one hundredth of Memcache Compute Unit aggregated by command.
+- **Memcache MCU Count** - Memcache utilization in one hundredth of Memcache Compute Unit (MCU) aggregated by command.
 
   [<img src='./img/memcache-mcu-count.png' width=200px>](./img/memcache-mcu-count.png)
 
@@ -127,11 +132,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
   [<img src='./img/system-network-bytes-out.png' width=200px>](./img/system-network-bytes-out.png)
 
 
-
-### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google App Engine, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-appengine">https://cloud.google.com/monitoring/api/metrics#gcp-appengine</a>
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

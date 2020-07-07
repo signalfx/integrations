@@ -6,36 +6,38 @@
 - [Metrics](#metrics)
 - [License](#license)
 
-### DESCRIPTION
+## DESCRIPTION
 
-Use SignalFx to monitor Google Container Engine via [Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To monitor Google Container Engine, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-#### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **Container Engine**: Overview of project level metrics for Google Container Engine
+- **Container Engine** - Overview of project-level metrics for Google Container Engine.
 
   [<img src='./img/container_engine.png' width=200px>](./img/container_engine.png)
 
-- **Container Engine Container**: Metrics for a specific container in Google Container Engine
+- **Container Engine Container** - Metrics for a specific container in Google Container Engine.
 
   [<img src='./img/container_engine_container.png' width=200px>](./img/container_engine_container.png)
 
-- **Container Engine Pod**: Pod level metrics for Google Container Engine
+- **Container Engine Pod** - Pod-level metrics for Google Container Engine.
 
   [<img src='./img/container_engine_pod.png' width=200px>](./img/container_engine_pod.png)
 
 
-### INSTALLATION
+## INSTALLATION
 
-To access this integration, [connect to Google Cloud Platform](https://github.com/signalfx/integrations/tree/master/gcp)[](sfx_link:gcp).
+To access this integration, [connect to Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
-**Note**: Stackdriver Monitoring may not be enabled by default for your cluster. To enable it so that these metrics can be retrieved by SignalFx please see <a target="_blank" href="https://cloud.google.com/kubernetes-engine/docs/how-to/monitoring">this page</a>.
+### Prerequisites
 
-### USAGE
+**Note:** Stackdriver monitoring may not be enabled by default for your cluster. To enable it so that these metrics can be retrieved by SignalFx, see <a href="https://cloud.google.com/stackdriver/docs/solutions/kubernetes-engine" target="_blank">Overview of Google Cloud's operations suite for GKE</a>.
 
-#### Interpreting Built-in dashboards
+## USAGE
+
+### Interpreting Built-in Dashboards
 
 **Container Engine Overview**
 
@@ -116,10 +118,10 @@ To access this integration, [connect to Google Cloud Platform](https://github.co
   [<img src='./img/pod-major-page-faults-per-container.png' width=200px>](./img/pod-major-page-faults-per-container.png)
 
 
-### METRICS
+## METRICS
 
 For more information about the metrics emitted by Google Container Engine, visit [the service's metric page](https://cloud.google.com/monitoring/api/metrics#gcp-container).
 
-### LICENSE
+#### LICENSE
 
 This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.

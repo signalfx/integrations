@@ -5,3 +5,4 @@ featured: false
 logo_large: /images/repos/collectd-docker/img/integrations_vmstat%402x.png
 logo_small: /images/repos/collectd-docker/img/integrations_vmstat.png
 project_url: https://github.com/signalfx/integrations/tree/master/vmstat-collectd
+useLegacyBuild: true

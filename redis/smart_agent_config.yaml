@@ -1,0 +1,83 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/redis:
+  Config:
+  - default: ''
+    doc: Path to a python binary that should be used to execute the Python code. If
+      not set, a built-in runtime will be used.  Can include arguments to the binary
+      as well.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: pythonBinary
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: ''
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: 'The name for the node is a canonical identifier which is used as plugin
+      instance. It is limited to 64 characters in length.  (**default**: "{host}:{port}")'
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: name
+  - default: ''
+    doc: Password to use for authentication.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: auth
+  - default: null
+    doc: Specify a pattern of keys to lists for which to send their length as a metric.
+      See below for more details.
+    elementKind: object
+    elementStruct:
+      doc: ListLength defines a database index and key pattern for sending list lengths
+      fields:
+      - default: null
+        doc: The database index.
+        elementKind: ''
+        required: true
+        type: uint16
+        yamlName: databaseIndex
+      - default: null
+        doc: Can be a globbed pattern (only * is supported), in which case all keys
+          matching that glob will be processed.  The pattern should be placed in single
+          quotes (').  Ex. `'mylist*'`
+        elementKind: ''
+        required: true
+        type: string
+        yamlName: keyPattern
+      name: ListLength
+      package: pkg/monitors/collectd/redis
+    required: false
+    type: list
+    yamlName: sendListLengths
+  - default: 'false'
+    doc: If `true`, verbose logging from the plugin will be enabled.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: verbose
+  sendListLengths:
+  - default: null
+    doc: The database index.
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: databaseIndex
+  - default: null
+    doc: Can be a globbed pattern (only * is supported), in which case all keys matching
+      that glob will be processed.  The pattern should be placed in single quotes
+      (').  Ex. `'mylist*'`
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: keyPattern

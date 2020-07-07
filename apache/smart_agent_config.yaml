@@ -1,0 +1,41 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+collectd/apache:
+  Config:
+  - default: null
+    doc: The hostname of the Apache server
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: null
+    doc: The port number of the Apache server
+    elementKind: ''
+    required: true
+    type: integer
+    yamlName: port
+  - default: ''
+    doc: This will be sent as the `plugin_instance` dimension and can be any name
+      you like.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: name
+  - default: http://{{.Host}}:{{.Port}}/mod_status?auto
+    doc: The URL, either a final URL or a Go template that will be populated with
+      the host and port values.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: url
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: username
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: password

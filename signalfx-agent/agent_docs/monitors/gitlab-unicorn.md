@@ -15,7 +15,7 @@ Monitor Type: `gitlab-unicorn` ([Source](https://github.com/signalfx/signalfx-ag
 This is a monitor for GitLab's Unicorn server.  The Unicorn server comes
 with a Prometheus exporter that runs by default on port 8080 at the path
 `/-/metrics`.  The IP address of the SignalFx Smart Agent container or
-host, **needs to be whitelisted** as described
+host, **needs to be allowed** as described
 [here](https://docs.gitlab.com/ee/administration/monitoring/ip_whitelist.html)
 in order for the agent to access the endpoint.
 

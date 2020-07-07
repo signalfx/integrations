@@ -1,0 +1,72 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+logstash:
+  Config:
+  - default: 127.0.0.1
+    doc: The hostname of Logstash monitoring API
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: host
+  - default: '9600'
+    doc: The port number of Logstash monitoring API
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: port
+  - default: 'false'
+    doc: If true, the agent will connect to the host using HTTPS instead of plain
+      HTTP.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: useHTTPS
+  - default: '5'
+    doc: The maximum amount of time to wait for API requests
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: timeoutSeconds
+logstash-tcp:
+  Config:
+  - default: null
+    doc: 'If `mode: server`, the local IP address to listen on.  If `mode: client`,
+      the Logstash host/ip to connect to.'
+    elementKind: ''
+    required: true
+    type: string
+    yamlName: host
+  - default: '0'
+    doc: 'If `mode: server`, the local port to listen on.  If `mode: client`, the
+      port of the Logstash TCP output plugin.  If port is `0`, a random listening
+      port is assigned by the kernel.'
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: port
+  - default: client
+    doc: Whether to act as a `server` or `client`.  The corresponding setting in the
+      Logtash `tcp` output plugin should be set to the opposite of this.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: mode
+  - default: '[mean, max, p99, count]'
+    doc: ''
+    elementKind: string
+    required: false
+    type: list
+    yamlName: desiredTimerFields
+  - default: 5s
+    doc: How long to wait before reconnecting if the TCP connection cannot be made
+      or after it gets broken.
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: reconnectDelay
+  - default: 'false'
+    doc: If true, events received from Logstash will be dumped to the agent's stdout
+      in deserialized form
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: debugEvents

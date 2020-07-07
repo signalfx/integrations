@@ -4,3 +4,4 @@ display_name: Example Python Plugin
 featured: true
 logo_large: https://myavantiservices.files.wordpress.com/2015/02/helloworld%402x.gif
 logo_small: https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif
+useLegacyBuild: true

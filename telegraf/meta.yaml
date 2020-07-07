@@ -1,6 +1,6 @@
 code: https://github.com/signalfx/telegraf
 data_signature: agent:"telegraf"
-description: The SignalFx build of Telegraf, the open-source metrics collection agent.
+description: SignalFx build of Telegraf, the open-source metrics collection agent.
 display_name: SignalFx Telegraf agent
 featured: false
 in_app_categories:
@@ -9,3 +9,4 @@ in_app_categories:
 logo_large: /images/repos/telegraf/img/integrations_telegraf%402x.png
 logo_small: /images/repos/telegraf/img/integrations_telegraf.png
 project_url: https://github.com/signalfx/integrations/tree/master/telegraf
+useLegacyBuild: true
