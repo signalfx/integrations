@@ -1,82 +1,82 @@
 # ![](./img/integrations_solr.png) Apache Solr
 
-#### FEATURES
+## FEATURES
 
-##### Built-in dashboards
+### Built-in Dashboards
 
-- **SOLR CLUSTER**: Provides a high-level overview of metrics for a single solr cluster.
+- **SOLR CLUSTER:** Provides a high-level overview of metrics for a single Solr cluster.
 
   [<img src='./img/solr-cluster-dashboard-top.png' width=200px>](./img/solr-cluster-dashboard-top.png)
 
   [<img src='./img/solr-cluster-dashboard-bottom.png' width=200px>](./img/solr-cluster-dashboard-bottom.png)
 
-- **SOLR COLLECTION**: Provides metrics from a single solr collection.
+- **SOLR COLLECTION:** Provides metrics from a single Solr collection.
 
   [<img src='./img/solr-collection-dashboard.png' width=200px>](./img/solr-collection-dashboard.png)
 
-- **SOLR NODE**: Provides metrics from a single solr instance/node.
+- **SOLR NODE:** Provides metrics from a single Solr instance/node.
 
   [<img src='./img/solr-node-dashboard.png' width=200px>](./img/solr-node-dashboard.png)
 
-- **SOLR NODES**: Provides metrics from nodes on a particular host.
+- **SOLR NODES:** Provides metrics from nodes on a particular host.
 
   [<img src='./img/solr-nodes-dashboard.png' width=200px>](./img/solr-nodes-dashboard.png)
 
 
 ### USAGE
 
-#### Interpreting Built-in dashboards
+#### Interpreting Built-in Dashboards
 
-- **SOLR CLUSTER**:
+- **SOLR CLUSTER:**
 
-  - **Number of Collections**: Shows the number of collections in the cluster.
+  - **Number of Collections:** Shows the number of collections in the cluster.
 
     [<img src='./img/chart-solr-cluster-collections.png' width=200px>](./img/chart-solr-cluster-collections.png)
 
-  - **Number of Nodes**: Shows the number of nodes in the cluster.
+  - **Number of Nodes:** Shows the number of nodes in the cluster.
 
     [<img src='./img/chart-solr-cluster-nodes.png' width=200px>](./img/chart-solr-cluster-nodes.png)
 
-  - **Index Size per Collection**: Shows the total index size by collection for all the collections in the cluster.
+  - **Index Size per Collection:** Shows the total index size by collection for all collections in the cluster.
 
     [<img src='./img/chart-solr-cluster-collection-index-sizes.png' width=200px>](./img/chart-solr-cluster-collection-index-sizes.png)
 
-  - **Document Cache Hit Ratio**: Shows the cumulative document cache hit ration for all collections in the cluster.
+  - **Document Cache Hit Ratio:** Shows the cumulative document cache hit ration for all collections in the cluster.
 
     [<img src='./img/chart-solr-cluster-document-cache-hit-ratio.png' width=200px>](./img/chart-solr-cluster-document-cache-hit-ratio.png)
 
-  - **Query Result Cache Hit Ratio**: Shows the cumulative query result cache hit ration for all collections in the cluster.
+  - **Query Result Cache Hit Ratio:** Shows the cumulative query result cache hit ration for all collections in the cluster.
 
     [<img src='./img/chart-solr-cluster-query-result-cache-hit-ratio.png' width=200px>](./img/chart-solr-cluster-query-result-cache-hit-ratio.png)
 
-  - **Overall Heap Usage**: Shows the average, minimum, maximum, percentile distribution heap usage of the cluster.
+  - **Overall Heap Usage:** Shows the average, minimum, maximum, and percentile distribution heap usage of the cluster.
 
     [<img src='./img/chart-solr-cluster-heap-usage.png' width=200px>](./img/chart-solr-cluster-heap-usage.png)
 
-  - **GC Invocations**: Shows the mean parnew & cms GC invocations over last minute in the cluster.
+  - **GC Invocations:** Shows the mean parnew & cms GC invocations over last minute in the cluster.
 
     [<img src='./img/chart-solr-cluster-gc-over-last-minute.png' width=200px>](./img/chart-solr-cluster-gc-over-last-minute.png)
 
-  - **Search Request Latency**: Shows the average time taken to process a search request in the cluster.
+  - **Search Request Latency:** Shows the average time taken to process a search request in the cluster.
 
     [<img src='./img/chart-solr-cluster-search-request-latency.png' width=200px>](./img/chart-solr-cluster-search-request-latency.png)
 
 
-- **SOLR COLLECTION**:
+- **SOLR COLLECTION:**
 
-  - **Number of Documents**: Shows the number of documents in the collection.
+  - **Number of Documents:** Shows the number of documents in the collection.
 
     [<img src='./img/chart-solr-collection-num-docs.png' width=200px>](./img/chart-solr-collection-num-docs.png)
 
-  - **Number of Shards**: Shows the number of shards & cores per shard in the collection.
+  - **Number of Shards:** Shows the number of shards & cores per shard in the collection.
 
     [<img src='./img/chart-solr-collection-shards-heatmap.png' width=200px>](./img/chart-solr-collection-shards-heatmap.png)
 
-  - **Documents Growth**: Shows growth in the number of documents in the collection.
+  - **Documents Growth:** Shows growth in the number of documents in the collection.
 
     [<img src='./img/chart-solr-collection-doc-growth.png' width=200px>](./img/chart-solr-collection-doc-growth.png)
 
-  - **Overall Cache Hit Ratio**: Shows the various caches cumulative hit ratio in the collection.
+  - **Overall Cache Hit Ratio:** Shows the various caches cumulative hit ratio in the collection.
 
     [<img src='./img/chart-solr-collection-cache-hit-ratio.png' width=200px>](./img/chart-solr-collection-cache-hit-ratio.png)
 
