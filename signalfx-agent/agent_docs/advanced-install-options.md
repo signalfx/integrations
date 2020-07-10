@@ -3,7 +3,7 @@
 # Advanced Installation Options
 
 
-__See [Quick Install](./quick-install.md) for simplified Smart Agent command-line installation on a single host.__
+**Note:** See [Quick Install](./quick-install.md) for simplified Smart Agent command-line installation on a single host.
 
 ## Advanced Installation on a Single Host
 
@@ -11,7 +11,7 @@ Packages and other methods of installation on a single host are discussed below.
 
 ### Packages
 
-We offer the agent in the following packages:
+We offer the agent in the Debian package and the RPM package.
 
 #### Debian Package
 
@@ -81,7 +81,7 @@ A `.zip` bundle is also available that can be deployed to the target host.
 To obtain the bundle, go to [Github Releases Page](https://github.com/signalfx/signalfx-agent/releases)
 and download the most recent release.
 
-Before proceeding, you should ensure that [.Net Framework 3.5](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10) or later is installed. 
+Before proceeding, you should ensure that [.Net Framework 3.5](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10) or later is installed.
 
 As an optional step, if you want to invoke a Python script for non-default monitors, specifically **exec**, then you must have Python installed.
 
@@ -94,7 +94,7 @@ To use the bundle (requires user with Administrator privileges):
 3. Run the Smart Agent by invoking the Smart Agent executable
 
 ```sh
-& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -config <path to config file>.
+& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -config <path to config file>
 
 ```
 By default, the Smart Agent runs as a process in the foreground and logs only to stdout/err.
