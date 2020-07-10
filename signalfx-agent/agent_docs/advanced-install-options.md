@@ -3,7 +3,7 @@
 # Advanced Installation Options
 
 
-.. note:: See [Quick Install](./quick-install.md) for simplified Smart Agent command-line installation on a single host.
+**Note:** See [Quick Install](./quick-install.md) for simplified Smart Agent command-line installation on a single host.
 
 ## Advanced Installation on a Single Host
 
