@@ -27,7 +27,7 @@
 
 #### Interpreting Built-in Dashboards
 
-- **SOLR CLUSTER:**
+- **SOLR CLUSTER**
 
   - **Number of Collections:** Shows the number of collections in the cluster.
 
@@ -53,7 +53,7 @@
 
     [<img src='./img/chart-solr-cluster-heap-usage.png' width=200px>](./img/chart-solr-cluster-heap-usage.png)
 
-  - **GC Invocations:** Shows the mean parnew & cms GC invocations over last minute in the cluster.
+  - **GC Invocations:** Shows the mean parnew and cms GC invocations over last minute in the cluster.
 
     [<img src='./img/chart-solr-cluster-gc-over-last-minute.png' width=200px>](./img/chart-solr-cluster-gc-over-last-minute.png)
 
@@ -62,13 +62,13 @@
     [<img src='./img/chart-solr-cluster-search-request-latency.png' width=200px>](./img/chart-solr-cluster-search-request-latency.png)
 
 
-- **SOLR COLLECTION:**
+- **SOLR COLLECTION**
 
   - **Number of Documents:** Shows the number of documents in the collection.
 
     [<img src='./img/chart-solr-collection-num-docs.png' width=200px>](./img/chart-solr-collection-num-docs.png)
 
-  - **Number of Shards:** Shows the number of shards & cores per shard in the collection.
+  - **Number of Shards:** Shows the number of shards and cores per shard in the collection.
 
     [<img src='./img/chart-solr-collection-shards-heatmap.png' width=200px>](./img/chart-solr-collection-shards-heatmap.png)
 
@@ -81,48 +81,48 @@
     [<img src='./img/chart-solr-collection-cache-hit-ratio.png' width=200px>](./img/chart-solr-collection-cache-hit-ratio.png)
 
 
-- **SOLR NODE**:
+- **SOLR NODE**
 
-  - **Number of Cores**: Shows the number of cores in the node.
+  - **Number of Cores:** Shows the number of cores in the node.
 
     [<img src='./img/chart-solr-node-num-cores.png' width=200px>](./img/chart-solr-node-num-cores.png)
 
-  - **Cores by Indexed Documents**: Shows the top cores by number of indexed documents in the node.
+  - **Cores by Indexed Documents:** Shows the top cores by number of indexed documents in the node.
 
     [<img src='./img/chart-solr-node-top-cores-indexed-docs.png' width=200px>](./img/chart-solr-node-top-cores-indexed-docs.png)
 
-  - **Http Request Latency**: Shows the response time of http requests to the cores in the node.
+  - **Http Request Latency:** Shows the response time of HTTP requests to the cores in the node.
 
     [<img src='./img/chart-solr-node-response-time.png' width=200px>](./img/chart-solr-node-response-time.png)
 
-  - **JVM Memory Pools Usage**: Shows the usage of JVM memory pools.
+  - **JVM Memory Pools Usage:** Shows the usage of JVM memory pools.
 
     [<img src='./img/chart-solr-node-jvm-memory-pools-usage.png' width=200px>](./img/chart-solr-node-jvm-memory-pools-usage.png)
 
 
-- **SOLR NODES**:
+- **SOLR NODES**
 
-  - **Number of Nodes**: Shows the total number of Solr nodes monitored in the org.
+  - **Number of Nodes:** Shows the total number of Solr nodes monitored in the org.
 
     [<img src='./img/chart-solr-nodes-num-nodes.png' width=200px>](./img/chart-solr-nodes-num-nodes.png)
 
-  - **Number of Cores Heatmap**: Shows the total number of cores in heapmap for each node.
+  - **Number of Cores Heatmap:** Shows the total number of cores in the heapmap for each node.
 
     [<img src='./img/chart-solr-nodes-cores-per-node.png' width=200px>](./img/chart-solr-nodes-cores-per-node.png)
 
-  - **Http response time**: Shows the http response time of each node.
+  - **HTTP response time:** Shows the HTTP response time of each node.
 
     [<img src='./img/chart-solr-nodes-response-times.png' width=200px>](./img/chart-solr-nodes-response-times.png)
 
-  - **Number of Requests**: Shows the number of requests for each node.
+  - **Number of Requests:** Shows the number of requests for each node.
 
     [<img src='./img/chart-solr-nodes-requests-per-sec.png' width=200px>](./img/chart-solr-nodes-requests-per-sec.png)
 
 
 A few other details:
 
-* `plugin` is always set to `solr`
-* `plugin_instance` will contain the IP address and the port of the node given in the configuration
+* `plugin` is always set to `solr`.
+* `plugin_instance` will contain the IP address and the port of the node given in the configuration.
 * To add metrics from the `/admin/metrics` endpoint, use the configuration options mentioned in [configuration](#configuration). If metrics are being included individually, make sure to give names that are valid.
 
 
