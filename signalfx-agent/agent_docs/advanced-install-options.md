@@ -3,7 +3,7 @@
 # Advanced Installation Options
 
 
-__See [Quick Install](./quick-install.md) for simplified Smart Agent command-line installation on a single host.__
+.. note:: See [Quick Install](./quick-install.md) for simplified Smart Agent command-line installation on a single host.
 
 ## Advanced Installation on a Single Host
 
@@ -94,7 +94,7 @@ To use the bundle (requires user with Administrator privileges):
 3. Run the Smart Agent by invoking the Smart Agent executable
 
 ```sh
-& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -config <path to config file>.
+& "<extracted path>\SignalFxAgent\bin\signalfx-agent.exe" -config <path to config file>
 
 ```
 By default, the Smart Agent runs as a process in the foreground and logs only to stdout/err.
