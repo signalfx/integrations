@@ -34,14 +34,14 @@ By default, SignalFx will import all CloudWatch metrics that are available in yo
 
 SignalFx supports an integration with <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">RDS Enhanced Monitoring</a> using an AWS Lambda function, described below. This integration also includes built-in dashboards designed specifically for the metrics from Enhanced Monitoring. This Enhanced Monitoring integration complements the CloudWatch-based integration described above.  
 
-You can choose to deploy the function either from the Serverless Application Repository (recommended) or from source. Choose a deployment method and follow the steps below to encrypt your SignalFx access token, customize the metrics that will be sent to SignalFx, and create and deploy the new function. 
+You can choose to deploy the function either from the Serverless Application Repository (recommended) or from source. Choose a deployment method and follow the steps below to encrypt your SignalFx access token, customize the metrics that will be sent to SignalFx, and create and deploy the new function.
 
 Before you begin, you must enable the Enhanced Monitoring option for the RDS instances you want to monitor using this integration. <a target="_blank" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Click here for instructions on enabling Enhanced Monitoring</a>.
 
 ##### Note: Encryption of your SignalFx access token
-This Lambda function uses your SignalFx access token to send metrics to SignalFx, as an environment variable to the function. While Lambda encrypts all environment variables at rest and decrypts them upon invocation, AWS recommends that all sensitive information such as access tokens be encrypted using a KMS key before function deployment, and decrypted at runtime within the code. 
+This Lambda function uses your SignalFx access token to send metrics to SignalFx, as an environment variable to the function. While Lambda encrypts all environment variables at rest and decrypts them upon invocation, AWS recommends that all sensitive information such as access tokens be encrypted using a KMS key before function deployment, and decrypted at runtime within the code.
 
-Both procedures below include instructions for using either an encrypted or non-encrypted access token. 
+Both procedures below include instructions for using either an encrypted or non-encrypted access token.
 
 - [Deploying through the Serverless Application Repository](#deploying-through-the-serverless-application-repository)
 - [Building from source](#building-from-source)
@@ -75,15 +75,14 @@ Under `Configure application parameters`, choose a name for your function, and f
 A realm is a self-contained deployment of SignalFx in which your organization is hosted.
 Different realms have different API endpoints.
 For example, the endpoint for sending data in the us1 realm is ingest.us1.signalfx.com,
-and ingest.eu0.signalfx.com for the eu0 realm. If you try to send data to the incorrect realm,
-your access token will be denied.
+and the endpoint for the eu0 realm is ingest.eu0.signalfx.com. If you try to send data to the incorrect realm, your access token will be denied.
 
 
 ##### 4. Deploy function and configure trigger
-Click `Deploy`. Once the function has finished deploying, navigate to the function's main page. 
+Click `Deploy`. After the function has finished deploying, navigate to the function's main page.
 
 
-By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
+By default, SignalFx imports all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
 To complete this task, access the AWS tile, and review the listed instructions to [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
@@ -113,11 +112,11 @@ SignalFx provides built-in dashboards for this service. Examples are shown below
 <!--- METRICS --->
 ### RECOMMENDED STATISTICS
 
-No CloudWatch recommended statistics for this integration.
+There are no CloudWatch recommended statistics for this integration.
 
 #### METRICS
 
-For more information about the metrics emitted by Amazon Relational Database Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
+For more information about the metrics emitted by Amazon Relational Database Service, visit the RDS service homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
 
 #### LICENSE
 
