@@ -106,7 +106,7 @@
 
     [<img src='./img/chart-solr-nodes-num-nodes.png' width=200px>](./img/chart-solr-nodes-num-nodes.png)
 
-  - **Number of Cores Heatmap:** Shows the total number of cores in the heapmap for each node.
+  - **Number of Cores Heatmap:** Shows the total number of cores in the heatmap for each node.
 
     [<img src='./img/chart-solr-nodes-cores-per-node.png' width=200px>](./img/chart-solr-nodes-cores-per-node.png)
 
