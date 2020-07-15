@@ -30,7 +30,7 @@ $ helm repo update
 3. Install the Smart Agent chart with the necessary configuration values for the chart.
 
 ```
-$ helm install --set signalFxAccessToken=<YOUR_ACCESS_TOKEN> --set clusterName=<YOUR_CLUSTER_NAME> --set agentVersion=<VERSION_NUMBER> --set signalFxRealm=<YOUR_SIGNALFX_REALM> signalfx/signalfx-agent
+$ helm install --set signalFxAccessToken=<YOUR_ACCESS_TOKEN> --set clusterName=<YOUR_CLUSTER_NAME> --set agentVersion=<VERSION_NUMBER> --set signalFxRealm=<YOUR_SIGNALFX_REALM> <SIGNALFX_AGENT_APPNAME> signalfx/signalfx-agent
 ```
 
 
@@ -40,6 +40,7 @@ $ helm install --set signalFxAccessToken=<YOUR_ACCESS_TOKEN> --set clusterName=<
 | `YOUR_CLUSTER_NAME` | Required (if not overriding the Smart Agent config template and providing your own cluster name) | A name that will be applied as the `kubernetes-cluster` dimension to any metric originating in this cluster. |
 | `VERSION_NUMBER` | Optional | Specify the version to install. By default, the latest released version will be installed. |
 | `SIGNALFX_REALM` | Required | Specify the name of the <a target="_blank" href="https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-agent.html">realm</a> in which your organization is hosted. The realm name is shown on your profile page in the SignalFx web application. |
+| `SIGNALFX_AGENT_APPNAME` | Optional | Provide a name to identify the Smart Agent, or specify `--generate-name` to generate an identifier for the Smart Agent automatically.
 
 
 Optionally, specify `agentConfig` if you want to provide your own agent configuration.
