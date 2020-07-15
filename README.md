@@ -16,13 +16,13 @@ describing the integration.  The fields are:
 | field name | description |
 |------------|-------------|
 | display\_name | name that will display in the integration tile|
-| description | description of integration |
+| description | short description of integration |
 | project\_url | URL of 'metadata' directory (`https://github.com/signalfx/integrations/tree/master/[integration-foo]`)|
 | code | URL of code repository |
-| featured | flag to put integration in "Top Integrations" section |
+| featured | flag 'true' to put integration in "Top Integrations" section but 'false' otherwise |
 | logo\_large | URL of 300x300 pixel logo image |
 | logo\_small | URL of 150x150 pixel logo image |
-| feature | the feature associated with the integration |
+| feature | optional line to specify the feature associated with the integration |
 | useLegacyBuild | If `false`, the new build templating system will be used |
 
 
