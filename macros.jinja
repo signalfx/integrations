@@ -1,0 +1,46 @@
+{% macro metric_list(metrics) -%}
+    {% for name, metric in metrics | dictsort -%}
+     - {% if not metric.custom %}***{% endif %}`{{ name }}`{% if not metric.custom %}***{% endif %} (*{{ metric.metric_type }}*)<br />
+       {{ metric.description }}
+    {% endfor %}
+
+{%- endmacro %}
+
+{% macro link(text, href, target, new_window=False, tile_link="") -%}
+
+    {% if new_window -%}
+        <a target="_blank" href="{{href}}">{{text}}</a>
+    {%- else -%}
+        [{{text}}]({{href}}){% if tile_link != "" %}[](sfx_link:{{ tile_link }}){% endif %}
+    {%- endif %}
+
+{%- endmacro %}
+
+{% macro integrations_href(integration_dir) -%}
+    https://github.com/signalfx/integrations/tree/master/{{integration_dir}}
+{%- endmacro %}
+
+{% macro smart_agent_doc_link(text, path, target) -%}
+    {{link(text, "https://github.com/signalfx/signalfx-agent/tree/master/"+path, target, new_window=True)}}
+{%- endmacro %}
+
+{% macro monitor_config_table(smart_agent_config, monitor) -%}
+    {% set config = smart_agent_config[monitor] -%}
+    **For a list of monitor options that are common to all monitors, see {{smart_agent_doc_link("Common Configuration", "docs/monitor-config.md#common-configuration", target)}}.**
+
+    {% if config.values() -%}
+        {% for table, fields in config.items() -%}
+            {% if table != "Config" -%}
+            The **nested** `{{ table }}` config object has the following fields:
+            {%- endif %}
+
+| Config option | Required | Type | Description |
+| --- | --- | --- | --- |
+            {% for field in fields -%}
+                | `{{ field.yamlName }}` | {% if field.required %}**yes**{% else %}no{% endif %} | {% if field.elementKind %}`{{ field.type }} of {{ field.elementKind }}s{% if field.elementKind == "object" %} (see below){% endif %}`{% else %}`{{ field.type }}{% if field.type == "object" %} (see below){% endif %}`{% endif %} | {{ field.doc }}{% if field.default %} (**default:** `{{ field.default }}`){% endif %} |
+            {% endfor %}
+        {%- endfor %}
+    {% else -%}
+        This monitor has no configuration options.
+    {%- endif %}
+{%- endmacro %}
