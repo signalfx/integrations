@@ -19,6 +19,9 @@ for datapoints (v2) and spans (v1) that our ingest server supports and at
 the same path (`/v2/datapoint`, `/v1/trace`).  By default, the server listens on
 localhost port 9080 but can be configured to anything.
 
+The `defaultSpanTagsFromEndpoint` and `extraSpanTagsFromEndpoint` config
+options are not compatible with the `signalfx-forwarder` monitor.
+
 
 ## Configuration
 
