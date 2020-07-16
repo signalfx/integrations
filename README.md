@@ -11,7 +11,7 @@ For any **new integrations**, you should set `useLegacyBuild: false` in the
 ## Meta.yaml
 
 Each integration requires a `meta.yaml` file that provides basic metadata
-describing the integration.  The fields are:
+describing the integration.  The fields in the meta.yaml file are:
 
 | field name | description |
 |------------|-------------|
@@ -23,7 +23,7 @@ describing the integration.  The fields are:
 | logo\_large | URL of 300x300 pixel logo image |
 | logo\_small | URL of 150x150 pixel logo image |
 | feature | optional line to specify the feature associated with the integration |
-| useLegacyBuild | If `false`, the new build templating system will be used |
+| useLegacyBuild | If set to `false`, the Jinja (new) build templating system will be used |
 
 
 Example:
@@ -56,14 +56,14 @@ Include a dashboard for your users to import into their monitoring solution, so 
 To make it easier to control the docs generated from this repo (the integration
 tiles in app and on the product docs site), there is now a new build system
 that is based entirely on [Jinja templates](https://jinja.palletsprojects.com/en/2.11.x/templates/)
-for maximum control from the documentation team and other contributors.
+for maximum control by the documentation team and other contributors.
 
-For this to be enabled for a particular integration the `useLegacyBuild` flag
-in the integration's `meta.yaml` must be set to `false`.
+For new template functionality to be enabled for a particular integration, the `useLegacyBuild` flag
+in the integration's `meta.yaml` file must be set to `false`.
 
 The Jinja template for each integration is the `README.md.jinja` file in that
 integration directory.  That file must be present and named exactly that.  No
-other markdown files will be considered in the directory.
+other markdown files in the directory will be considered by the build process.
 
 All `*.yaml` files in the integration directory will be deserialized and made
 available in the context of the template as a variable with the base name of
@@ -75,6 +75,16 @@ helpers](https://jinja.palletsprojects.com/en/2.11.x/templates/#macros) defined
 in `macros.jinja` available for use.  The template just needs to have the line 
 `{% import "macros.jinja" as macros %}` somewhere towards the top.
 
+To apply the Jinja template to an existing integration:
+1. Create a README.md.jinja file in the directory for that integration.
+2. Ensure that the README.md.jinja file has the content about the integration that you intend to document, because it will be 
+the single source for both tiles and product-docs.
+3. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
+becomes default behavior.
+
+It may be convenient to include all three steps of the template application process in a single commit to whatever branch you
+are using for development. If the 'useLegacyBuild' flag is set to 'true', then the build process ignores your jinja file or generates
+unexpected results.
 
 ### Tile Tabs
 The tabs in the integration tiles in the web app (SignalView) are determined by
