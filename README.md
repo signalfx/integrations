@@ -78,13 +78,14 @@ in `macros.jinja` available for use.  The template just needs to have the line
 To apply the Jinja template to an existing integration:
 1. Create a README.md.jinja file in the directory for that integration.
 2. Ensure that the README.md.jinja file has the content about the integration that you intend to document, because it will be 
-the single source for both tiles and product-docs.
-3. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
+the single source for both tiles and product-docs repos.
+3. Verify that the README.md.jinja file includes the line 
+`{% import "macros.jinja" as macros %}` above your original content.
+4. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
 becomes default behavior.
 
-It may be convenient to include all three steps of the template application process in a single commit to whatever branch you
-are using for development. If the 'useLegacyBuild' flag is set to 'true', then the build process ignores your jinja file or generates
-unexpected results.
+It may be convenient to include all steps of the template application process in a single commit to whatever branch you
+are using for development, so as to reduce the possibility of lag between what you intend and what is actually built. If the 'useLegacyBuild' flag is set to 'true', then the build process ignores your jinja file or generates unexpected results.
 
 ### Tile Tabs
 The tabs in the integration tiles in the web app (SignalView) are determined by
