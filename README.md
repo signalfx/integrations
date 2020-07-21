@@ -82,8 +82,8 @@ the single source for both tiles and product-docs repos.
 3. Verify that the README.md.jinja file includes the line 
 `{% import "macros.jinja" as macros %}` above your original content.
 4. Set your `target` context variable for the repo hosting the file:
-   `tile` for the Integrations repo when you are working with SignalFx/Splunk integrations
-   `docs` for the product-docs repo
+      `tile` for the Integrations repo when you are working with SignalFx/Splunk integrations
+      `docs` for the product-docs repo
 5. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
 becomes default behavior.
 
