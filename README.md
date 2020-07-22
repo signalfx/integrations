@@ -26,7 +26,7 @@ describing the integration.  The fields in the meta.yaml file are:
 | useLegacyBuild | If set to `false`, the Jinja (new) build templating system will be used |
 
 
-Example:
+Example 1:
 
 ```
 display_name: "AppDynamics Metrics Integration"
@@ -37,6 +37,24 @@ featured: false
 logo_large: "/images/repos/appdynamics/img/integrations_appdynamics%402x.png"
 logo_small: "/images/repos/appdynamics/img/integrations_appdynamics.png"
 feature: "<feature_name>"
+```
+
+Example 2:
+
+```
+browse_categories:
+- Database
+code: https://aws.amazon.com/rds/
+data_signature: namespace:"AWS/RDS"
+description: Monitor Amazon Relational Database Service (RDS) using SignalFx and AWS CloudWatch. 
+display_name: Amazon RDS
+featured: false
+in_app_categories:
+- AWSservicesMonitored
+logo_large: integration_awsrds.png
+logo_small: integration_awsrds.png
+project_url: https://github.com/signalfx/integrations/tree/master/aws-rds
+useLegacyBuild: true
 ```
 
 ## metrics.yaml
