@@ -96,13 +96,10 @@ in `macros.jinja` available for use.  The template just needs to have the line
 To apply the Jinja template to an existing integration:
 1. Create a README.md.jinja file in the directory for that integration.
 2. Ensure that the README.md.jinja file has the content about the integration that you intend to document, because it will be 
-the single source for both tiles and product-docs repos.
+the single source for both tiles and product-docs repos. Automated scripts render the template for `tile` in the Integrations repository and `docs` in the product docs repository.
 3. Verify that the README.md.jinja file includes the line 
 `{% import "macros.jinja" as macros %}` above your original content.
-4. Set your `target` context variable for the repo hosting the file:
-      - `tile` for the Integrations repo when you are working with SignalFx/Splunk integrations
-      - `docs` for the product-docs repo
-5. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
+4. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
 becomes default behavior.
 
 It may be convenient to include all steps of the template application process in a single commit to whatever branch you
