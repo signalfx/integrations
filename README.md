@@ -128,7 +128,7 @@ context variable `target` with a value of `tile`. For product docs builds, the
 The web app tiles are sourced from a Javascript module that is generated from
 the content in this repo.  That module is built with the `./build` script in
 the root of this repo.  To run this script, do the following: 
-1. Verify that you have Python 3installed on your machine.  
+1. Verify that you have Python 3 installed on your machine.  
 2. In your terminal application, navigate to the root of this integrations repo.
 3. Run the following command:
 
