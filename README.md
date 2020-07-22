@@ -118,10 +118,9 @@ will be ignored by SignalView when rendering the tiles.
 To differentiate content based on where the docs are being rendered for, you
 can use [conditional statements in
 Jinja](https://jinja.palletsprojects.com/en/2.11.x/templates/#if) along with
-the `target` variable. For Web App Tile builds, the template will have a
+the `target` variable. For Web App Tile builds, the template uses a
 context variable `target` with a value of `tile`. For product docs builds, the
-`target` variable will be equal to `docs`.
-
+`target` variable is `docs`.
 
 ## Local Testing of Tiles
 
