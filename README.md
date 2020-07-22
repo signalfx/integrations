@@ -127,17 +127,21 @@ context variable `target` with a value of `tile`. For product docs builds, the
 
 The web app tiles are sourced from a Javascript module that is generated from
 the content in this repo.  That module is built with the `./build` script in
-the root of this repo.  To run this script, first ensure you have Python 3
-installed on your machine.  Then run:
+the root of this repo.  To run this script, do the following: 
+1. Verify that you have Python 3installed on your machine.  
+2. In your terminal application, navigate to the root of this integrations repo.
+3. Run the following command:
 
 `pip3 install --user -r ./requirements.txt`
 
-from the root of this repo. Then run:
+4. Run the following command:
 
 `./build`
 
-If all completes successfully, you will receive a command that you can run to
-serve this JS module and associated images via a local HTTP server.  You can
+If the build completes successfully, you receive a command that you can run to
+serve this JS module and associated images via a local HTTP server.  
+
+You can
 then run SignalView (the web app) with the following content in the
 `local.config.js` file in the root of the SignalView repo:
 
@@ -147,5 +151,5 @@ module.exports = {
 }
 ```
 
-Then you can access the local SignalView instance and preview the latest build
+Access the local SignalView instance to preview the latest build
 of this repo.
