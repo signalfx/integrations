@@ -126,7 +126,7 @@ Automated scripts render the template for `tile` in the Integrations repository 
 repository. For example, the conditional "if" statements in the example below render the content between them for the Integrations repo, but
 not for the product-docs repo. Note that conditional statements are paired, so that an if statement is closed by an endif statement:
 
-**Conditional text example*
+**Conditional text example**
 
 `{% if target == "tile" -%}`
 
