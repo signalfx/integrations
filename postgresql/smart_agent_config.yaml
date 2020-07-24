@@ -50,6 +50,12 @@ postgresql:
     required: false
     type: integer
     yamlName: databasePollIntervalSeconds
+  - default: 'false'
+    doc: If true, queries will be logged at the info level.
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: logQueries
   - default: '10'
     doc: The number of top queries to consider when publishing query-related metrics
     elementKind: ''

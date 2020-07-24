@@ -1,6 +1,6 @@
 code: https://github.com/signalfx/signalfx-agent
 data_signature: plugin:"host-metadata"
-description: SignalFx's newer agent with auto-discovery that supersedes our old collectd
+description: SignalFx agent with auto-discovery that supersedes the original collectd
   agent
 display_name: ' SignalFx SmartAgent'
 featured: true
