@@ -1,13 +1,16 @@
 # ![](./img/integration_awsrds.png) Amazon Relational Database Service (RDS)
 {% import "macros.jinja" as macros %}
 
+{% if target == "docs" -%}
+# ![](../../_images/images-integrations/integrations-reference/aws-rds/integration_awsrds.png) AWS RDS
 
-- [Description](#description)
-- [Installation](#installation)
+- [Overview](#overview)
+- [Setup](#setup)
+- [Built-in Content](#built-in-content)
 - [Usage](#usage)
 - [Metrics](#metrics)
-- [Recommended Statistics](#recommended-statistics)
-- [License](#license)
+
+{%- endif %}
 
 ## OVERVIEW
 
@@ -163,6 +166,7 @@ Under basic settings, set `Timeout` to `0 min 5 sec`.
 Click `Save`, and once the trigger is enabled, your function will start sending
 your metrics to SignalFx!
 
+{% if target == "tile" -%}
 ## BUILT-IN CONTENT
 
 ### Built-in dashboards
@@ -174,6 +178,25 @@ your metrics to SignalFx!
 - **RDS Instance**: Focus on a single RDS instance.
 
   [<img src='./img/dashboard_rds_instance.png' width=200px>](./img/dashboard_rds_instance.png)
+{%- endif %}
+
+## USAGE
+
+SignalFx provides built-in dashboards for the Amazon RDS to enable real-time monitoring and intelligent
+alerting in a way that is aggregated with metrics from the other services in your environment. Examples are shown below.
+
+![](./img/dashboard_rds_instances.png)
+
+![](./img/dashboard_rds_instance.png)
+
+#### LICENSE
+
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS
+
+No CloudWatch recommended statistics for this integration.
 
 ## METRICS
 
@@ -204,25 +227,4 @@ The following metric groups are collected by this integration. To collect all of
 \* Process-based metric group added by SignalFx; does not appear in AWS
 documentation.
 
-
-## USAGE
-
-SignalFx provides built-in dashboards for the Amazon RDS to enable real-time monitoring and intelligent
-alerting in a way that is aggregated with metrics from the other services in your environment. Examples are shown below.
-
-![](./img/dashboard_rds_instances.png)
-
-![](./img/dashboard_rds_instance.png)
-
-#### LICENSE
-
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
-
-<!--- METRICS --->
-### RECOMMENDED STATISTICS
-
-No CloudWatch recommended statistics for this integration.
-
-## METRICS
-
-For more information about the metrics emitted by Amazon Relational Database Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
+For more information about the metrics emitted by Amazon Relational Database Service (RDS), visit its homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
