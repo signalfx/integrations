@@ -76,27 +76,27 @@ tiles in app and on the product docs site), there is now a new build system
 that is based entirely on [Jinja templates](https://jinja.palletsprojects.com/en/2.11.x/templates/)
 for maximum control by the documentation team and other contributors.
 
-For new template functionality to be enabled for a particular integration, the `useLegacyBuild` flag
-in the integration's `meta.yaml` file must be set to `false`.
-
 The Jinja template for each integration is the `README.md.jinja` file in that
 integration directory.  That file must be present and named exactly that.  No
 other markdown files in the directory will be considered by the build process.
+
+For new template functionality to be enabled for a particular integration, the `useLegacyBuild` flag
+in the integration's `meta.yaml` file must be set to `false`.
 
 All `*.yaml` files in the integration directory will be deserialized and made
 available in the context of the template as a variable with the base name of
 the yaml file.  For example, `metrics.yaml` is available as `metrics` in the
 template.
 
-All rendered templates will have the [macro
+The 'README.md.jinja' file must inclue the line 
+`{% import "macros.jinja" as macros %}` somewhere near the top, so that all rendered templates in this new system have the [macro
 helpers](https://jinja.palletsprojects.com/en/2.11.x/templates/#macros) defined
-in `macros.jinja` available for use.  The template just needs to have the line 
-`{% import "macros.jinja" as macros %}` somewhere towards the top.
+in `macros.jinja` available for use.  
 
 To apply the Jinja template to an existing integration:
-1. Create a README.md.jinja file in the directory for that integration.
-2. Ensure that the README.md.jinja file has the content about the integration that you intend to document, because it will be 
-the single source for both tiles and product-docs repos. Automated scripts render the template for `tile` in the Integrations repository and `docs` in the product docs repository.
+1. Create a 'README.md.jinja' file in the directory for that integration, either from scratch or by copying and renaming a legacy README.md file.
+2. Ensure that the 'README.md.jinja' file has the content that you intend to document, because it will be treated as
+the single source for both tiles and product-docs repos. 
 3. Verify that the README.md.jinja file includes the line 
 `{% import "macros.jinja" as macros %}` above your original content.
 4. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
@@ -120,7 +120,27 @@ can use [conditional statements in
 Jinja](https://jinja.palletsprojects.com/en/2.11.x/templates/#if) along with
 the `target` variable. For Web App Tile builds, the template uses a
 context variable `target` with a value of `tile`. For product docs builds, the
-`target` variable is `docs`.
+`target` variable is `docs`. 
+
+Automated scripts render the template for `tile` in the Integrations repository and for `docs` in the product-docs 
+repository. For example, the conditional "if" statements in the example below render the content between them for the Integrations repo, but
+not for the product-docs repo. Note that conditional statements are paired, so that an if statement is closed by an endif statement:
+
+**Conditional text example*
+
+`{% if target == "tile" -%}`
+
+### Built-in dashboards
+
+- **Apache Web Servers**: Overview of data from all Apache webserver instances.
+
+ `[<img src='./img/dashboard_apache_webservers.png' width=200px>](./img/dashboard_apache_webservers.png)`
+
+- **Apache Web Server**: Focus on a single Apache webserver instance.
+
+`[<img src='./img/dashboard_apache_webserver.png' width=200px>](./img/dashboard_apache_webserver.png)`
+
+`{%- endif %}`
 
 ## Local Testing of Tiles
 
