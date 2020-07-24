@@ -103,16 +103,17 @@ the single source for both tiles and product-docs repos.
 becomes default behavior.
 
 It may be convenient to include all steps of the template application process in a single commit to whatever branch you
-are using for development, so as to reduce the possibility of lag between what you intend and what is actually built. If the 'useLegacyBuild' flag is set to 'true', then the build process ignores your jinja file or generates unexpected results.
+are using for development, so as to reduce the possibility of lag between what you intend and what is actually built. If the 'useLegacyBuild' flag is set to 'true', then the build process ignores your jinja file and generates unexpected results.
 
 ### Tile Tabs
 The tabs in the integration tiles in the web app (SignalView) are determined by
 the presence of `##` (second) level headers in the `README.md.jinja` template.
-Any header at that level will be a tab and all content under it until the next
-second level header (or the end of the file) will be under that tab.  You
-should not use first level headers (`#`) except when sending the docs to
+Any header at that level is considered a tab title, and all content under it until the next
+second-level header (or the end of the file) will be under that tab.  
+
+You should not use first level headers (`#`) except when sending the docs to
 product-docs.  Anything not inside a `##` header in the `README.md.jinja` file
-will be ignored by SignalView when rendering the tiles.
+is ignored by SignalView when rendering the tiles.
 
 ### Differentiating between tiles and docs
 To differentiate content based on where the docs are being rendered for, you
