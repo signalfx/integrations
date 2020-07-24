@@ -46,7 +46,7 @@ browse_categories:
 - Database
 code: https://aws.amazon.com/rds/
 data_signature: namespace:"AWS/RDS"
-description: Monitor Amazon Relational Database Service (RDS) using SignalFx and AWS CloudWatch. 
+description: Monitor Amazon Relational Database Service (RDS) using SignalFx and AWS CloudWatch.
 display_name: Amazon RDS
 featured: false
 in_app_categories:
@@ -76,19 +76,19 @@ tiles in app and on the product docs site), there is now a new build system
 that is based entirely on [Jinja templates](https://jinja.palletsprojects.com/en/2.11.x/templates/)
 for maximum control by the documentation team and other contributors.
 
+For new template functionality to be enabled for a particular integration, the `useLegacyBuild` flag
+in the integration's `meta.yaml` file must be set to `false`.
+
 The Jinja template for each integration is the `README.md.jinja` file in that
 integration directory.  That file must be present and named exactly that.  No
 other markdown files in the directory will be considered by the build process.
-
-For new template functionality to be enabled for a particular integration, the `useLegacyBuild` flag
-in the integration's `meta.yaml` file must be set to `false`.
 
 All `*.yaml` files in the integration directory will be deserialized and made
 available in the context of the template as a variable with the base name of
 the yaml file.  For example, `metrics.yaml` is available as `metrics` in the
 template.
 
-The 'README.md.jinja' file must inclue the line 
+The 'README.md.jinja' file must inclue the line
 `{% import "macros.jinja" as macros %}` somewhere near the top, so that all rendered templates in this new system have the [macro
 helpers](https://jinja.palletsprojects.com/en/2.11.x/templates/#macros) defined
 in `macros.jinja` available for use.  
@@ -121,9 +121,9 @@ can use [conditional statements in
 Jinja](https://jinja.palletsprojects.com/en/2.11.x/templates/#if) along with
 the `target` variable. For Web App Tile builds, the template uses a
 context variable `target` with a value of `tile`. For product docs builds, the
-`target` variable is `docs`. 
+`target` variable is `docs`.
 
-Automated scripts render the template for `tile` in the Integrations repository and for `docs` in the product-docs 
+Automated scripts render the template for `tile` in the Integrations repository and for `docs` in the product-docs
 repository. For example, the conditional "if" statements in the example below render the content between them for the Integrations repo, but
 not for the product-docs repo. Note that conditional statements are paired, so that an if statement is closed by an endif statement:
 
@@ -147,7 +147,7 @@ not for the product-docs repo. Note that conditional statements are paired, so t
 
 The web app tiles are sourced from a Javascript module that is generated from
 the content in this repo.  That module is built with the `./build` script in
-the root of this repo.  To run this script, do the following: 
+the root of this repo.  To run this script, do the following:
 1. Verify that you have Python 3 installed on your machine.  
 2. In your terminal application, navigate to the root of this integrations repo.
 3. Run the following command:
