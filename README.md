@@ -88,7 +88,7 @@ available in the context of the template as a variable with the base name of
 the yaml file.  For example, `metrics.yaml` is available as `metrics` in the
 template.
 
-The 'README.md.jinja' file must inclue the line
+The 'README.md.jinja' file must include the line
 `{% import "macros.jinja" as macros %}` somewhere near the top, so that all rendered templates in this new system have the [macro
 helpers](https://jinja.palletsprojects.com/en/2.11.x/templates/#macros) defined
 in `macros.jinja` available for use.  
