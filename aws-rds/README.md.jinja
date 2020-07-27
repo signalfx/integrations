@@ -72,6 +72,7 @@ Under `Configure application parameters`, choose a name for your function and co
 - `Realm`: Your SignalFx realm. To determine what realm you are in, check your profile page in the SignalFx web application. Default: `us0`.
 
 **SignalFx Realms Defined**
+
 A realm is a self-contained deployment of SignalFx in which your organization is hosted.
 Different realms have different API endpoints.
 For example, the endpoint for sending data in the us1 realm is ingest.us1.signalfx.com,
@@ -161,10 +162,10 @@ To use `encrypted_access_token`, follow the steps below to encrypt it:
 If you are not in the `us0` realm in SignalFx, you need to specify a `realm` environment variable. To determine which realm you are in, check your profile page in the SignalFx web application.
 
 #### Basic settings
-Under basic settings, set `Timeout` to `0 min 5 sec`.
+1. Under basic settings, set `Timeout` to `0 min 5 sec`.
 
-Click `Save`, and once the trigger is enabled, your function will start sending
-your metrics to SignalFx!
+2. Click `Save`, and once the trigger is enabled, your function will start sending
+your metrics to SignalFx.
 
 {% if target == "tile" -%}
 ## BUILT-IN CONTENT
