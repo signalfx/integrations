@@ -101,7 +101,7 @@ the single source for both tiles and product-docs repos.
 `{% import "macros.jinja" as macros %}` above your original content.
 4. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
 becomes default behavior.
-5. Delete the original (non-Jinja) README.md file, if one exists
+5. Delete the original (non-Jinja) README.md file, if one exists.
 
 It may be convenient to include all steps of the template application process in a single commit to whatever branch you
 are using for development, so as to reduce the possibility of lag between what you intend and what is actually built. If the 'useLegacyBuild' flag is set to 'true', then the build process ignores your jinja file and generates unexpected results.
