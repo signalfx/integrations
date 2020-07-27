@@ -1,22 +1,29 @@
 # ![](./img/integration_awsrds.png) Amazon Relational Database Service (RDS)
-{% import "macros.jinja" as macros %}
 
-{% if target == "docs" -%}
-# ![](../../_images/images-integrations/integrations-reference/aws-rds/integration_awsrds.png) AWS RDS
-
-- [Overview](#overview)
-- [Setup](#setup)
-- [Built-in Content](#built-in-content)
+- [Description](#description)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Metrics](#metrics)
+- [Recommended Statistics](#recommended-statistics)
+- [License](#license)
 
-{%- endif %}
-
-## OVERVIEW
+## DESCRIPTION
 
 Use SignalFx to monitor Amazon Relational Database Service (RDS) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
-## SETUP
+## FEATURES
+
+### Built-in dashboards
+
+- **RDS Instances**: Overview of all data from RDS.
+
+  [<img src='./img/dashboard_rds_instances.png' width=200px>](./img/dashboard_rds_instances.png)
+
+- **RDS Instance**: Focus on a single RDS instance.
+
+  [<img src='./img/dashboard_rds_instance.png' width=200px>](./img/dashboard_rds_instance.png)
+
+## INSTALLATION
 Choose a deployment method and follow the steps below to encrypt your SignalFx access token, customize the metrics sent to SignalFx, and create and deploy the AWS Lamda function.
 
 ### Prerequisites
@@ -34,10 +41,10 @@ The AWS Lambda function uses your SignalFx access token to send metrics to Signa
 
 Both Serverless Application Repository and build from source deployment procedures below include instructions for using either an encrypted or non-encrypted access token.
 
-### Deploying through the Serverless Application Repository*
+## Deploying through the Serverless Application Repository
 Deploying through the Serverless Application Repository is a four-step process if you manually encrypt your access token, and a three-step process otherwise:
 
-#### 1. Set up an encryption key and encrypt your access token (if desired).
+### 1. Set up an encryption key and encrypt your access token (if desired).
 Start with this step only if you chose to manually encrypt your access token.
 Either create a new KMS encryption key or select a preexisting one. **The key
 must be in the same availability zone as the RDS instances you are
@@ -45,7 +52,7 @@ monitoring.** You can create and manage encryption keys from IAM in the AWS
 management console. Documentation about KMS encryption from the CLI can be found
 [in the KMS encryption topic](http://docs.aws.amazon.com/cli/latest/reference/kms/encrypt.html). Make sure you have access to the cipher text output by the encryption as well as the key ID of the encryption key you used.
 
-#### 2. Create the Lambda function.
+### 2. Create the Lambda function.
 a. Click `Create Function` from the list of Lambda functions in your AWS console.
 Make sure you are in the intended availability zone.
 b. Select the
@@ -57,7 +64,7 @@ To access the templates directly, find the template for encrypted access
 tokens [here](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-2:254067382080:applications~signalfx-enhanced-rds-metrics-encrypted).
 The template for non-encrypted access tokens is [here](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-2:254067382080:applications~signalfx-enhanced-rds-metrics).
 
-#### 3. Fill out application parameters.
+### 3. Fill out application parameters.
 Under `Configure application parameters`, choose a name for your function and complete the fields accordingly.
 
 **Parameters for the template using encrypted access tokens**
@@ -71,14 +78,14 @@ Under `Configure application parameters`, choose a name for your function and co
 - `SelectedMetricGroups`: The metric groups you wish to send. Enter `All` if you want all available metrics. Otherwise, list the names of desired metric groups, spelled exactly as they are below, separated by single spaces. See [Metrics collected by this integration](#metric-groups-collected-by-this-integration) for options.
 - `Realm`: Your SignalFx realm. To determine what realm you are in, check your profile page in the SignalFx web application. Default: `us0`.
 
-**SignalFx Realms Defined**
+#### SignalFx Realms Defined
 A realm is a self-contained deployment of SignalFx in which your organization is hosted.
 Different realms have different API endpoints.
 For example, the endpoint for sending data in the us1 realm is ingest.us1.signalfx.com,
 and the endpoint for the eu0 realm is ingest.eu0.signalfx.com. If you try to send data to the incorrect realm,
 your access token will be denied.
 
-#### 4. Deploy the function and configure the trigger.
+### 4. Deploy the function and configure the trigger.
 a. Click `Deploy`. After the function has finished deploying, navigate to the
 function's main page.
 
@@ -92,17 +99,17 @@ blank.
 
 c. Click `Add`, then click `Save` in the upper right corner.
 
-Your metrics are on the way to SignalFx ingest.
+That's it! Your metrics are on the way to SignalFx ingest.
 
-### Building from source
+## Building from source
 
-#### 1. Set up the execution role
+### 1. Set up the execution role
 The execution role requires basic AWS Lambda execution permissions and KMS
 decrypt permissions (if you want to encrypt your SignalFx access token). If you
 don't want to create an execution role, you can select from a list of templates when you
 create the lambda function.
 
-#### 2. Set up an encryption key and encrypt access token
+### 2. Set up an encryption key and encrypt access token
 Only follow this step if you chose to encrypt your access token. Either create
 a new KMS encryption key or select a preexisting one. **The key must be in the
 same availability zone as the RDS instances you are monitoring.** You can
@@ -112,7 +119,7 @@ Documentation on KMS encryption from the CLI can be found
 Make sure you have access to the cipher text output by the encryption as well
 as the key id of the encryption key you used.
 
-#### 3. Clone the source repo and build the deployment package
+### 3. Clone the source repo and build the deployment package
 You can find the repo
 [here](https://github.com/signalfx/enhanced-rds-monitoring).
 After you have cloned the repo, do the following:
@@ -122,7 +129,7 @@ $ ./build.sh
 ```
 The package will be named `enhanced_rds.zip`. This is the file to upload for the Lambda.
 
-#### 4. Create and configure the AWS Lambda function
+### 4. Create and configure the AWS Lambda function
 a. From the Lambda creation screen, make sure you have selected
 `Build from scratch`.
 b. Select a name for your function. For `Runtime` select
@@ -166,39 +173,7 @@ Under basic settings, set `Timeout` to `0 min 5 sec`.
 Click `Save`, and once the trigger is enabled, your function will start sending
 your metrics to SignalFx!
 
-{% if target == "tile" -%}
-## BUILT-IN CONTENT
-
-### Built-in dashboards
-
-- **RDS Instances**: Overview of all data from RDS.
-
-  [<img src='./img/dashboard_rds_instances.png' width=200px>](./img/dashboard_rds_instances.png)
-
-- **RDS Instance**: Focus on a single RDS instance.
-
-  [<img src='./img/dashboard_rds_instance.png' width=200px>](./img/dashboard_rds_instance.png)
-{%- endif %}
-
-## USAGE
-
-SignalFx provides built-in dashboards for the Amazon RDS to enable real-time monitoring and intelligent
-alerting in a way that is aggregated with metrics from the other services in your environment. Examples are shown below.
-
-![](./img/dashboard_rds_instances.png)
-
-![](./img/dashboard_rds_instance.png)
-
-#### LICENSE
-
-This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
-
-<!--- METRICS --->
-### RECOMMENDED STATISTICS
-
-No CloudWatch recommended statistics for this integration.
-
-## METRICS
+## Metric groups collected by this integration
 
 The following metric groups are collected by this integration. To collect all of them, use `All` at configuration time. To select a subset, choose metric groups by name. You can find documentation on the available metrics
 [here](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html).
@@ -227,4 +202,25 @@ The following metric groups are collected by this integration. To collect all of
 \* Process-based metric group added by SignalFx; does not appear in AWS
 documentation.
 
-For more information about the metrics emitted by Amazon Relational Database Service (RDS), visit its homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
+
+## USAGE
+
+SignalFx provides built-in dashboards for this service. Examples are shown below.
+
+![](./img/dashboard_rds_instances.png)
+
+![](./img/dashboard_rds_instance.png)
+
+
+<!--- METRICS --->
+### RECOMMENDED STATISTICS
+
+No CloudWatch recommended statistics for this integration.
+
+#### METRICS
+
+For more information about the metrics emitted by Amazon Relational Database Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/rds/">https://aws.amazon.com/rds/<a>.
+
+#### LICENSE
+
+This integration is released under the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
