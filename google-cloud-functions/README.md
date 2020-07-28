@@ -10,11 +10,19 @@
 
 To monitor Google Cloud Functions, integrate SignalFx with [Google Cloud Platform](https://docs.signalfx.com/en/latest/integrations/google-cloud-platform.html#connect-to-gcp).
 
+### Wrappers
+
+SignalFx enables you to monitor the health and performance of Cloud Functions through metrics on total invocations, errors, durations, and more. In addition, you can easily send custom application or business metrics from within Cloud Functions.
+
+- You can use one of our language-specific wrappers to monitor your functions. Using a wrapper lets you see invocations, errors, and durations for your functions in real time, and also provides insight into whether a given function is being impacted by cold starts.
+
+- The wrapper is also a way for you to send in custom application or business metrics from within a function, analogous to what you can do with our client libraries for code running in non-Function environments. See [Wrappers](#wrappers)for more information.
+
 ## FEATURES
 
 ### Built-in Dashboards
 
-- **Cloud Functions Overview** - Overview of project-level metrics for Google Cloud Functions.
+- **Cloud Functions Overview** - Overview of project-level metrics for Cloud Functions.
 
   [<img src='./img/cloud_functions_overview.png' width=200px>](./img/cloud_functions_overview.png)
 
@@ -30,6 +38,24 @@ To access this integration, [connect to Google Cloud Platform](https://docs.sign
 ### Prerequisites
 
 None
+
+### Wrappers
+
+#### SignalFx Wrapper vs CloudWatch monitoring
+
+##### Step 1: Review and Select a Deployment Method
+
+While you can use both the SignalFx Wrapper and CloudWatch methods to monitor functions at the same time, you also have the option to use only one method.
+
+Before you select a single method (or both), consider the following statements:
+
+- Each method sends different metrics and uses different properties to uniquely identify Cloud Functions.
+
+- CloudWatch data is reported with a delay; the delay can range from 1 to 10 minutes. The SignalFx Wrapper sends data immediately when it becomes available.
+
+- CloudWatch data is sent automatically for all Cloud Functions, whereas the SignalFx Wrapper needs to be added to each function.
+
+- SignalFx Wrapper is the only method to send custom application or business metrics from within Cloud Functions.
 
 ## USAGE
 
