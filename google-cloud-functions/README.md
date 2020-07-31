@@ -16,7 +16,7 @@ SignalFx enables you to monitor the health and performance of Cloud Functions th
 
 - You can use one of our language-specific wrappers to monitor your functions. Using a wrapper lets you see invocations, errors, and durations for your functions in real time, and also provides insight into whether a given function is being impacted by cold starts.
 
-- The wrapper is also a way for you to send in custom application or business metrics from within a function, analogous to what you can do with our client libraries for code running in non-Function environments. See [Wrappers](#wrappers)for more information.
+- The wrapper is also a way for you to send in custom application or business metrics from within a function, analogous to what you can do with our client libraries for code running in non-Function environments. See [Wrappers](#wrappers) for more information.
 
 ## FEATURES
 
@@ -56,6 +56,24 @@ Before you select a single method (or both), consider the following statements:
 - CloudWatch data is sent automatically for all Cloud Functions, whereas the SignalFx Wrapper needs to be added to each function.
 
 - SignalFx Wrapper is the only method to send custom application or business metrics from within Cloud Functions.
+
+##### Step 2: Review Setup Documentation
+
+*Option 1: Use the SignalFx Wrapper*
+
+You can include the SignalFx Wrapper in your Cloud Function to provide real-time monitoring, as well as the ability to send custom metrics from your applications to SignalFx.
+
+Review the installation methods for each Cloud Function wrapper:
+
+- <a href="https://github.com/signalfx/serverless-go/blob/master/gcfwrapper/README.md" target="_blank">Go</a>
+- <a href="https://github.com/signalfx/serverless-nodejs/blob/master/gcf-wrapper/README.md" target="_blank">Node.js</a>
+- <a href="https://github.com/signalfx/serverless-python/blob/master/signalfx_gcf/README.rst" target="_blank">Python</a>
+
+*Option 2: Use CloudWatch*
+
+By default, SignalFx imports all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, you need to modify the connection on the Integrations page in the SignalFx UI.
+
+For more information, see <a href="https://github.com/signalfx/integrations/tree/master/aws">connect to CloudWatch</a>.
 
 ## USAGE
 
@@ -99,7 +117,7 @@ Before you select a single method (or both), consider the following statements:
 
 ## METRICS
 
-For more information about the metrics emitted by Google Cloud Functions, visit the service's metric page at <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions">https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions</a>
+For more information about the metrics emitted by Cloud Functions, see <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions">Metrics list</a>.
 
 #### LICENSE
 
