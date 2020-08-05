@@ -11,4 +11,4 @@ in_app_categories:
 logo_large: integration_awsecs.png
 logo_small: integration_awsecs.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-ecs
-useLegacyBuild: true
+useLegacyBuild: false
