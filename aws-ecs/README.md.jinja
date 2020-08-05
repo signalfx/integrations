@@ -23,17 +23,29 @@ For greater insight into your ECS environment, SignalFx's Smart Agent can auto-d
 
 None
 
-#### Step 1: Connect to CloudWatch
+### Step 1: Connect to CloudWatch
 
 To access this integration, [connect to CloudWatch](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 By default, SignalFx will import all CloudWatch metrics that are available in your account. To retrieve metrics for a subset of available services or regions, modify the connection on the Integrations page.
 
-#### Step 2: Deploy the SignalFx Smart Agent
+### Step 2: Deploy the SignalFx Smart Agent
 
 Based on the type of container to monitor, there are two ways to deploy the SignalFx Smart Agent to auto-discover services and collect additional detailed metrics.
 
-- To monitor EC2 containers, see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Smart Agent ECS Deployment Guide</a>.
+#### Option 1: Monitor EC2 containers
+
+##### Step 1: Create task definition
+
+To deploy the agent on AWS ECS, create the agent task definition from the web admin console:
+
+1. Select **Task Definitions**.
+2. Click **Create new Task Definition**.
+3. Select **EC2** and click **Next step**. The agent only supports EC2 mode and not Fargate at this time.
+4. Scroll to the bottom of the page and click **Configure via JSON**.
+
+
+#### Option 2: Monitor Fargate containers
 
 - To monitor Fargate containers, see <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/fargate">Smart Agent Fargate Deployment Guide</a>.
 
@@ -91,7 +103,7 @@ For more information about the metrics emitted by Amazon EC2 Container Service, 
 
 The following table shows a subset of available metrics. These metrics are recommended by Amazon for collection.
 
-| Metric            | Recommended Statistics |
+| Metric            | Recommended statistics |
 | ----------------- | ---------------------- |
 | CPUReservation    | Average                |
 | CPUUtilization    | Average                |
