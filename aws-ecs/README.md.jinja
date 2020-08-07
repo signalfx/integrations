@@ -87,7 +87,7 @@ The default configuration supports various environment variable overrides, which
 
 ##### Step 1: Create the task definition
 
-The agent is designed to be run as a sidecar in a task with AWS Fargate containers to be monitored. This means you must add a Smart Agent container into each task definition for applications that you wish to monitor with the agent.
+The agent is designed to be run as a sidecar in a task with AWS Fargate containers to be monitored. This means you must add a Smart Agent container into each task definition for applications that you want to monitor with the agent.
 
 If you want to use a common configuration of agent and have the service auto-discovered, make sure that all of the AWS Fargate containers that you want to monitor have Docker labels to specify ports to be monitored in your task definition, as shown in the following example:
 
