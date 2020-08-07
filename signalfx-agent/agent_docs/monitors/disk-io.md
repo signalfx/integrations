@@ -63,6 +63,7 @@ Metrics that are categorized as
  - `disk_octets.write` (*cumulative*)<br>    (Linux Only) The number of bytes (octets) written to a disk.
  - ***`disk_ops.avg_read`*** (*gauge*)<br>    (Windows Only) The average disk read queue length.
  - ***`disk_ops.avg_write`*** (*gauge*)<br>    (Windows Only) The average disk write queue length.
+ - `disk_ops.pending` (*gauge*)<br>    Number of pending operations
  - ***`disk_ops.read`*** (*cumulative*)<br>    (Linux Only) The number of disk read operations.
  - ***`disk_ops.total`*** (*gauge*)<br>    (Linux Only) The number of both read and write disk operations across all disks in the last reporting interval.
  - ***`disk_ops.write`*** (*cumulative*)<br>    (Linux Only) The number of disk write operations.

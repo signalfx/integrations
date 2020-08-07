@@ -162,6 +162,7 @@ The **nested** `writer` config object has the following fields:
 | `staleServiceTimeout` | no | int64 | How long to wait after a trace span's service name is last seen to continue sending the correlation datapoints for that service.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration.  This option is irrelevant if `sendTraceHostCorrelationMetrics` is false. (**default:** `"5m"`) |
 | `traceHostCorrelationPurgeInterval` | no | int64 | How frequently to purge host correlation caches that are generated from the service and environment names seen in trace spans sent through or by the agent.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration. (**default:** `"1m"`) |
 | `traceHostCorrelationMetricsInterval` | no | int64 | How frequently to send host correlation metrics that are generated from the service name seen in trace spans sent through or by the agent.  This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration.  This option is irrelevant if `sendTraceHostCorrelationMetrics` is false. (**default:** `"1m"`) |
+| `traceHostCorrelationMaxRequestRetries` | no | unsigned integer | How many times to retry requests related to trace host correlation (**default:** `2`) |
 | `maxTraceSpansInFlight` | no | unsigned integer | How many trace spans are allowed to be in the process of sending.  While this number is exceeded, the oldest spans will be discarded to accommodate new spans generated to avoid memory exhaustion.  If you see log messages about "Aborting pending trace requests..." or "Dropping new trace spans..." it means that the downstream target for traces is not able to accept them fast enough. Usually if the downstream is offline you will get connection refused errors and most likely spans will not build up in the agent (there is no retry mechanism). In the case of slow downstreams, you might be able to increase `maxRequests` to increase the concurrent stream of spans downstream (if the target can make efficient use of additional connections) or, less likely, increase `traceSpanMaxBatchSize` if your batches are maxing out (turn on debug logging to see the batch sizes being sent) and being split up too much. If neither of those options helps, your downstream is likely too slow to handle the volume of trace spans and should be upgraded to more powerful hardware/networking. (**default:** `100000`) |
 | `splunk` | no | [object (see below)](#splunk) | Configures the writer specifically writing to Splunk. |
 | `signalFxEnabled` | no | bool | If set to `false`, output to SignalFx will be disabled. (**default:** `true`) |
@@ -432,6 +433,7 @@ where applicable:
     staleServiceTimeout: "5m"
     traceHostCorrelationPurgeInterval: "1m"
     traceHostCorrelationMetricsInterval: "1m"
+    traceHostCorrelationMaxRequestRetries: 2
     maxTraceSpansInFlight: 100000
     splunk: 
       enabled: false

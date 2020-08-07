@@ -162,6 +162,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [telegraf/dns](./monitors/telegraf-dns.md)
 - [telegraf/exec](./monitors/telegraf-exec.md)
 - [telegraf/logparser](./monitors/telegraf-logparser.md)
+- [telegraf/ntpq](./monitors/telegraf-ntpq.md)
 - [telegraf/procstat](./monitors/telegraf-procstat.md)
 - [telegraf/snmp](./monitors/telegraf-snmp.md)
 - [telegraf/sqlserver](./monitors/telegraf-sqlserver.md)

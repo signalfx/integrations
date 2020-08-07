@@ -24,6 +24,34 @@ sfxagent.configured_monitors:
   monitor: internal-metrics
   title: sfxagent.configured_monitors
 
+sfxagent.correlation_updates_client_errors:
+  brief: The number of HTTP status code 4xx responses received while updating trace
+    host correlations
+  custom: true
+  description: The number of HTTP status code 4xx responses received while updating
+    trace host correlations
+  metric_type: cumulative
+  monitor: internal-metrics
+  title: sfxagent.correlation_updates_client_errors
+
+sfxagent.correlation_updates_invalid:
+  brief: The number of trace host correlation updates attempted against invalid dimensions
+  custom: true
+  description: The number of trace host correlation updates attempted against invalid
+    dimensions
+  metric_type: cumulative
+  monitor: internal-metrics
+  title: sfxagent.correlation_updates_invalid
+
+sfxagent.correlation_updates_retries:
+  brief: The total number of times a trace host correlation requests have been retried
+  custom: true
+  description: The total number of times a trace host correlation requests have been
+    retried
+  metric_type: cumulative
+  monitor: internal-metrics
+  title: sfxagent.correlation_updates_retries
+
 sfxagent.datapoint_channel_len:
   brief: The total number of datapoints that have been emitted by monitors but have
     yet to be accepted by the writer
