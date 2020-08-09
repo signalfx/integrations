@@ -88,16 +88,18 @@ available in the context of the template as a variable with the base name of
 the yaml file.  For example, `metrics.yaml` is available as `metrics` in the
 template.
 
-The 'README.md.jinja' file must include the line 
+The 'README.md.jinja' file must include the line
 `{% import "macros.jinja" as macros %}` somewhere near the top, so that all rendered templates in this new system have the [macro
 helpers](https://jinja.palletsprojects.com/en/2.11.x/templates/#macros) defined
 in `macros.jinja` available for use.  
 
 To apply the Jinja template to an existing integration:
-1. Create a README.md.jinja file in the directory for that integration.
-2. Ensure that the README.md.jinja file has the content about the integration that you intend to document, because it will be
-the single source for both tiles and product-docs.
-3. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
+1. Create a 'README.md.jinja' file in the directory for that integration, either from scratch or by copying and renaming a legacy README.md file.
+2. Ensure that the 'README.md.jinja' file has the content that you intend to document, because it will be treated as
+the single source for both tiles and product-docs repos.
+3. Verify that the README.md.jinja file includes the line
+`{% import "macros.jinja" as macros %}` above your original content.
+4. In the meta.yaml file for the integration, set the 'useLegacyBuild' flag to 'false' so that a build with the Jinja template
 becomes default behavior.
 5. Delete the original (non-Jinja) README.md file, if one exists.
 
