@@ -1,6 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/couchbase/img/integrations_couchbase.png) Couchbase
 
-Metadata associated with the SignalFx Couchbase integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/couchbase">here</a>..
+Metadata associated with the SignalFx Couchbase integration can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/couchbase">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
