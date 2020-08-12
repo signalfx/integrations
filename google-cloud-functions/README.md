@@ -111,6 +111,15 @@ For more information, see <a href="https://docs.signalfx.com/en/latest/integrati
 
 ## METRICS
 
+The SignalFx Google Cloud Functions wrapper sends the following metrics to SignalFx:
+
+| Metric Name  | Type | Description |
+| ------------- | ------------- | ---|
+| function.invocations  | Counter  | Count of invocations|
+| function.cold_starts  | Counter  | Count of cold starts|
+| function.errors  | Counter  | Count of errors from underlying handler|
+| function.duration  | Gauge  | Milliseconds in execution time of underlying handler|
+
 For more information about the metrics emitted by Google Cloud Functions, see <a target="_blank" href="https://cloud.google.com/monitoring/api/metrics#gcp-cloudfunctions">Metrics list</a>.
 
 #### LICENSE
