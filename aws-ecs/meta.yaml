@@ -3,7 +3,7 @@ browse_categories:
 - Containers
 code: https://aws.amazon.com/ecs/
 data_signature: namespace:"AWS/ECS"
-description: SignalFx's integration with Amazon EC2 Container Service (ECS).
+description: Integrate SignalFx with Amazon EC2 Container Service (ECS)
 display_name: Amazon ECS
 featured: false
 in_app_categories:
@@ -11,4 +11,4 @@ in_app_categories:
 logo_large: integration_awsecs.png
 logo_small: integration_awsecs.png
 project_url: https://github.com/signalfx/integrations/tree/master/aws-ecs
-useLegacyBuild: true
+useLegacyBuild: false
