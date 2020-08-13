@@ -96,13 +96,13 @@ The Couchbase Buckets overview shows activity for all buckets being monitored.
 
 **Monitoring a single Couchbase bucket**
 
-Selecting a particular bucket to show on the Couchbase Bucket dashboard lets us go deep on that bucket's performance.
+Selecting a particular bucket to show on the Couchbase Bucket dashboard lets you monitor details of that bucket's performance.
 
 Resident items ratio and cache miss rate are inversely related: as the ratio of items in this bucket that are resident in memory drops, the number of get requests that require a fetch from disk will increase.
 
 ![Bucket cache performance](././img/bucket_cache_miss_rate.png)
 
-*This bucket has a 100% resident items ratio: all of the items that it contains can be served from memory, instead of disk.*
+*This bucket has a 100% resident items ratio: all of the items that it contains can be served from memory rather than disk.*
 
 The performance of Couchbase buckets is bound by memory. When memory is exhausted, new items can be stored only by ejecting old items. An attempt to store a new item in a bucket with insufficient memory headroom produces an out-of-memory error: either a "temp" error (an old item will be ejected, try again) or a "non-temp" error (this item cannot be stored at all). Any out-of-memory error is cause for concern.
 
