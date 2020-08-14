@@ -12,7 +12,8 @@
 
 ## OVERVIEW
 
-You can use SignalFx to monitor the Amazon EC2 Container Service (ECS) through [Amazon Web Services (AWS)](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.web.services.html).
+You can use SignalFx to monitor the Amazon EC2 Container Service (ECS) through [Amazon Web Services (AWS)](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.web.services.html). For greater insight into your Amazon ECS environment, the SignalFx Smart Agent can auto discover services and provide more in-depth metrics about your containers that are 
+running in ECS. See the Installation section for more information.
 
 ## SETUP
 
@@ -30,7 +31,7 @@ By default, SignalFx imports all Amazon CloudWatch metrics that are available in
 
 #### Step 2: Deploy the SignalFx Smart Agent
 
-Based on the type of container to monitor, there are two ways to deploy the SignalFx Smart Agent to auto-discover services and collect additional detailed metrics.
+Based on the type of container to monitor, there are two ways to deploy the SignalFx Smart Agent to auto discover services and collect additional detailed metrics.
 
 #### Option 1: Monitor Amazon ECS containers
 
@@ -89,7 +90,7 @@ The default configuration supports various environment variable overrides, which
 
 The SignalFx Smart Agent is designed to be run as a sidecar in a task with AWS Fargate containers to be monitored. This means you must add a Smart Agent container into each task definition for applications that you want to monitor with the SignalFx Smart Agent.
 
-If you want to use a common configuration of the SignalFx Smart Agent and have the service auto-discovered, make sure that all of the AWS Fargate containers that you want to monitor have Docker labels to specify ports to be monitored in your task definition, as shown in the following example:
+If you want to use a common configuration of the SignalFx Smart Agent and have the service auto discovered, make sure that all of the AWS Fargate containers that you want to monitor have Docker labels to specify ports to be monitored in your task definition, as shown in the following example:
 
 ```
 "containerDefinitions": [
@@ -106,7 +107,7 @@ If you want to use a common configuration of the SignalFx Smart Agent and have t
 ]
 ```
 
-The `agent.signalfx.com.port.<port>: "true"` label specifies the port number to be auto-discovered on the AWS Fargate container. There is no other way for the SignalFx Smart Agent to know about these port than by using the autodiscovery process.
+The `agent.signalfx.com.port.<port>: "true"` label specifies the port number to be auto discovered on the AWS Fargate container. There is no other way for the SignalFx Smart Agent to know about these ports than by using the auto-discovery process.
 
 The `agent.signalfx.com.monitorType.<port>: "<monitor type>"` label specifies the <a href="https://docs.signalfx.com/en/latest/integrations/agent/monitor-config.html#monitor-list" target="_blank">monitor type</a> to use for monitoring this endpoint. You can specify other configurations for that monitor using labels similar to the  `agent.signalfx.com.config.6379.intervalSeconds": "1"` label shown in the previous example. The format is `agent.signalfx.com.config.<port>.<config key>: "<value as string">`. The value string is interpreted as YAML, so you can use compact YAML notation to specify non-scalar values.
 
@@ -154,7 +155,7 @@ The SignalFx Smart Agent does not send any metrics about itself by default, alth
 
 ## USAGE
 
-The SignalFx Smart Agent can auto-discover services and provide more in-depth metrics about the containers running in your Amazon ECS environment. The SignalFx Smart Agent can also be deployed in an Amazon ECS task to monitor AWS Fargate containers. See the Installation section for deployment instructions.
+The SignalFx Smart Agent can auto discover services and provide more in-depth metrics about the containers running in your Amazon ECS environment. The SignalFx Smart Agent can also be deployed in an Amazon ECS task to monitor AWS Fargate containers. See the Installation section for deployment instructions.
 
 ## METRICS
 
