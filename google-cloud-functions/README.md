@@ -15,7 +15,7 @@ To monitor Google Cloud Functions, integrate SignalFx with [Google Cloud Platfor
 You can monitor the health and performance of Google Cloud Functions through metrics on total invocations, errors, durations, and more. In addition, you can send custom application or business metrics from within Google Cloud Functions.
 
 - You can use a language-specific wrapper to monitor your functions. Using a wrapper lets you see invocations, errors, and durations for your functions in real time, and also provides insight into whether a given function is being impacted by cold starts.
-- The wrapper is also a way for you to send in custom application or business metrics from within a function, analogous to what you can do with client libraries for code running in non-Function environments. See [installing wrappers](#installing-wrappers) for more information.
+- The wrapper is also a way for you to send in custom application or business metrics from within a function, analogous to what you can do with client libraries for code running in non-Function environments. See [installing wrappers](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.google.cloud.functions.html#installing-wrappers) for more information.
 
 ## FEATURES
 
@@ -71,7 +71,7 @@ For more information, see <a href="https://docs.signalfx.com/en/latest/integrati
 
 ## USAGE
 
-### Interpreting Built-in Dashboards
+### Interpreting Built-in dashboards
 
 **Cloud Function**
 
