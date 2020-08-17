@@ -1,11 +1,10 @@
 {% import "macros.jinja" as macros %}
 
 {% if target == "docs" -%}
-# ![](./img/integration_awsecs.png)Amazon EC2 Container Service (ECS)
+# ![](https://github.com/signalfx/integrations/blob/master/aws-ecs/img/integration_awsecs.png) Amazon EC2 Container Service (ECS)
 
 - [Overview](#overview)
 - [Setup](#setup)
-- [Built-in Content](#built-in-content)
 - [Usage](#usage)
 - [Metrics](#metrics)
 
@@ -13,11 +12,12 @@
 
 ## OVERVIEW
 
-You can use SignalFx to monitor the Amazon EC2 Container Service (ECS) through [Amazon Web Services (AWS)](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.web.services.html).
+You can use SignalFx to monitor the Amazon EC2 Container Service (ECS) through [Amazon Web Services (AWS)](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.amazon.web.services.html). For greater insight into your Amazon ECS environment, the SignalFx Smart Agent can auto discover services and provide more in-depth metrics about your containers that are 
+running in ECS. See the Installation section for more information.
 
 ## SETUP
 
-#### Prerequisites
+### Prerequisites
 
 None
 
@@ -31,17 +31,17 @@ By default, SignalFx imports all Amazon CloudWatch metrics that are available in
 
 #### Step 2: Deploy the SignalFx Smart Agent
 
-Based on the type of container to monitor, there are two ways to deploy the SignalFx Smart Agent to auto-discover services and collect additional detailed metrics.
+Based on the type of container to monitor, there are two ways to deploy the SignalFx Smart Agent to auto discover services and collect additional detailed metrics.
 
 #### Option 1: Monitor Amazon ECS containers
 
 ##### Step 1: Create the task definition
 
-To deploy the agent on Amazon ECS, create the agent task definition from the web admin console:
+To deploy the SignalFx Smart Agent on Amazon ECS, create the task definition from the web admin console:
 
 1. Select **Task Definitions**.
 2. Click **Create new Task Definition**.
-3. Select **EC2** and click **Next step**. The agent only supports EC2 mode and not Fargate at this time.
+3. Select **EC2** and click **Next step**. The SignalFx Smart Agent only supports EC2 mode and not Fargate at this time.
 4. Scroll to the bottom of the page and click **Configure via JSON**.
 5. Paste in the contents of the signalfx-agent-task.json.
 6. Click **Save.**
@@ -55,9 +55,9 @@ You can also do this using the AWS CLI tool by issuing the following command:
 ```
 aws ecs register-task-definition --cli-input-json file:///path/to/signalfx-agent-task.json
 ```
-##### Step 2: Launch the agent
+##### Step 2: Launch the SignalFx Smart Agent
 
-**Note:** The agent is designed to be run as a daemon service in an Amazon ECS cluster.
+**Note:** The SignalFx Smart Agent is designed to be run as a daemon service in an Amazon ECS cluster.
 
 To create an agent service from the Amazon ECS web admin console:
 
@@ -65,32 +65,32 @@ To create an agent service from the Amazon ECS web admin console:
 2. Click **Services**.
 3. Click **Create**.
 4. Make the following selections:
-  a. **Launch Type:** EC2
-  b. **Task Definition (Family):** signalfx-agent
-  c. **Task Definition (Revision):** 1 (or whatever the latest is in your case)
-  d. **Service Name:** signalfx-agent
-  e. **Service type:** DAEMON
+   * **Launch Type:** EC2
+   * **Task Definition (Family):** signalfx-agent
+   * **Task Definition (Revision):** 1 (or whatever the latest is in your case)
+   * **Service Name:** signalfx-agent
+   * **Service type:** DAEMON
 5. Choose the default setting for the remaining options.
 6. Click **Next step**.
 7. Choose the default setting for the remaining options.
 8. Click **Next step**.
 9. Choose the default setting for the remaining options.
 10. Click **Next step**.
-11. Click **Create Service**. The agent is deployed onto each node in the Amazon ECS cluster, and the infrastructure and docker metrics start flowing soon.
+11. Click **Create Service**. The agent is deployed onto each node in the Amazon ECS cluster, and the infrastructure and Docker metrics start flowing soon.
 
 ##### Step 3: Configuration
 
-The main technique for configuring the agent is to have a configuration file downloaded from the network using curl in the agent container's initialization script. By default, the agent pulls from the <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/ecs/agent.yaml" target="_blank">configuration file</a> in the GitHub repository that provides a basic configuration that might suffice for basic monitoring cases. If you want to provide a more complex configuration file, you can set the `CONFIG_URL` environment variables in the agent task definition to the URL of the configuration file. This location must be accessible from the Amazon ECS cluster.
+The main technique for configuring the SignalFx Smart Agent is to have a configuration file downloaded from the network using curl in the agent container's initialization script. By default, the SignalFx Smart Agent pulls from the <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/ecs/agent.yaml" target="_blank">configuration file</a> in the GitHub repository that provides a basic configuration that might suffice for basic monitoring cases. If you want to provide a more complex configuration file, you can set the `CONFIG_URL` environment variables in the task definition to the URL of the configuration file. This location must be accessible from the Amazon ECS cluster.
 
-The default configuration supports various environment variable overrides, which you can set in the environment variable section of the agent task definition. See <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/ecs/agent.yaml" target="_blank">agent.yaml</a> for more information. Note that the configuration values are of the form `{"#from": "env:VARNAME"...})`.
+The default configuration supports various environment variable overrides, which you can set in the environment variable section of the task definition. See <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/ecs/agent.yaml" target="_blank">agent.yaml</a> for more information. Note that the configuration values are of the form `{"#from": "env:VARNAME"...})`.
 
 #### Option 2: Monitor AWS Fargate containers
 
 ##### Step 1: Create the task definition
 
-The agent is designed to be run as a sidecar in a task with AWS Fargate containers to be monitored. This means you must add a Smart Agent container into each task definition for applications that you want to monitor with the agent.
+The SignalFx Smart Agent is designed to be run as a sidecar in a task with AWS Fargate containers to be monitored. This means you must add a Smart Agent container into each task definition for applications that you want to monitor with the SignalFx Smart Agent.
 
-If you want to use a common configuration of agent and have the service auto-discovered, make sure that all of the AWS Fargate containers that you want to monitor have Docker labels to specify ports to be monitored in your task definition, as shown in the following example:
+If you want to use a common configuration of the SignalFx Smart Agent and have the service auto discovered, make sure that all of the AWS Fargate containers that you want to monitor have Docker labels to specify ports to be monitored in your task definition, as shown in the following example:
 
 ```
 "containerDefinitions": [
@@ -107,19 +107,19 @@ If you want to use a common configuration of agent and have the service auto-dis
 ]
 ```
 
-The `agent.signalfx.com.port.<port>: "true"` label specifies the port number to be auto-discovered on the AWS Fargate container. There is no other way for the agent to know about these port than by using the autodiscovery process.
+The `agent.signalfx.com.port.<port>: "true"` label specifies the port number to be auto discovered on the AWS Fargate container. There is no other way for the SignalFx Smart Agent to know about these ports than by using the auto-discovery process.
 
 The `agent.signalfx.com.monitorType.<port>: "<monitor type>"` label specifies the <a href="https://docs.signalfx.com/en/latest/integrations/agent/monitor-config.html#monitor-list" target="_blank">monitor type</a> to use for monitoring this endpoint. You can specify other configurations for that monitor using labels similar to the  `agent.signalfx.com.config.6379.intervalSeconds": "1"` label shown in the previous example. The format is `agent.signalfx.com.config.<port>.<config key>: "<value as string">`. The value string is interpreted as YAML, so you can use compact YAML notation to specify non-scalar values.
 
-See <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/example-fargate-task.json" target="_blank">example task definition</a> to view an AWS Fargate task definition. This example shows how to launch the agent alongside a Redis cache instance. The example uses auto-discovery, but you could also hardcode the monitor configuration in the agent.yaml (or reference the configuration from envvars using remote configuration, as shown in <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank"> agent.yaml</a>).
+See <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/example-fargate-task.json" target="_blank">example task definition</a> to view an AWS Fargate task definition. This example shows how to launch the SignalFx Smart Agent alongside a Redis cache instance. The example uses auto-discovery, but you could also hardcode the monitor configuration in the agent.yaml (or reference the configuration from envvars using remote configuration, as shown in <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank">agent.yaml</a>).
 
 ##### Step 2: Configuration
 
-The main technique for configuring the agent is to have a configuration file downloaded from the network using curl in the agent container's initialization script. By default, the agent pulls from the <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank">configuration file</a> in the GitHub repository that provides a basic configuration that might suffice for basic monitoring cases. If you want to provide a more complex configuration file, you can set the `CONFIG_URL` environment variable in the agent task definition to the URL of the configuration file. This location must be accessible from the Amazon ECS cluster.
+The main technique for configuring the SignalFx Smart Agent is to have a configuration file downloaded from the network using curl in the agent container's initialization script. By default, the SignalFx Smart Agent pulls from the <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank">configuration file</a> in the GitHub repository that provides a basic configuration that might suffice for basic monitoring cases. If you want to provide a more complex configuration file, you can set the `CONFIG_URL` environment variable in the task definition to the URL of the configuration file. This location must be accessible from the Amazon ECS cluster.
 
-The default configuration supports various environment variable overrides, which you can set in the environment variable section of the agent task definition. See <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank">agent.yaml</a> for more information. Note that the configuration values are of the form `{"#from": "env:VARNAME"...})`.
+The default configuration supports various environment variable overrides, which you can set in the environment variable section of the task definition. See <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank">agent.yaml</a> for more information. Note that the configuration values are of the form `{"#from": "env:VARNAME"...})`.
 
-The agent does not send any metrics about itself by default, although it is also a running container. If you want to see the metrics about the agent, you can remove `signalfx-agent` from the `excludedImages` configuration in<a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank">agent.yaml</a>.
+The SignalFx Smart Agent does not send any metrics about itself by default, although it is also a running container. If you want to see the metrics about the SignalFx Smart Agent, you can remove `signalfx-agent` from the `excludedImages` configuration in <a href="https://github.com/signalfx/signalfx-agent/blob/master/deployments/fargate/agent.yaml" target="_blank">agent.yaml</a>.
 
 {% if target == "tile" -%}
 ## BUILT-IN CONTENT
@@ -155,11 +155,11 @@ The agent does not send any metrics about itself by default, although it is also
 
 ## USAGE
 
-SignalFx Smart Agent can auto-discover services and provide more in-depth metrics about the containers running in your Amazon ECS environment. See the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs">Amazon ECS Deployment Guide</a> for instructions on how to deploy the Smart Agent in Amazon ECS. Smart Agent can also be deployed in an Amazon ECS task to monitor AWS Fargate containers. See the <a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments/fargate">AWS Fargate Deployment Guide</a> for deployment instructions.
+The SignalFx Smart Agent can auto discover services and provide more in-depth metrics about the containers running in your Amazon ECS environment. The SignalFx Smart Agent can also be deployed in an Amazon ECS task to monitor AWS Fargate containers. See the Installation section for deployment instructions.
 
 ## METRICS
 
-For more information about the metrics emitted by Amazon EC2 Container Service, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ecs/">https://aws.amazon.com/ecs/</a>.
+For more information about the metrics emitted by Amazon EC2, visit the service's homepage at <a target="_blank" href="https://aws.amazon.com/ecs/">https://aws.amazon.com/ecs/</a>.
 
 ### Recommended statistics
 
