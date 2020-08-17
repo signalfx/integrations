@@ -66,6 +66,18 @@ sf.org.apm.numSpansReceivedByToken:
   metric_type: counter
   title: sf.org.apm.numSpansReceivedByToken
 
+sf.org.apm.invalidSpansReceived:
+  brief:
+  description:
+  metric_type: counter
+  title: sf.org.apm.invalidSpansReceived
+
+sf.org.apm.invalidSpansReceivedByToken:
+  brief:
+  description:
+  metric_type: counter
+  title: sf.org.apm.invalidSpansReceivedByToken
+
 sf.org.apm.grossSpanBytesReceived:
   brief: The number of bytes SignalFx receives from spans after decompression
     but before filtering and throttling.
@@ -123,7 +135,7 @@ sf.org.apm.numAddSpansCalls:
 
   Data resolution: 1 second'
   metric_type: counter
-  title: sf.org.apm.numAddSpansCalls
+  title: sf.org.apm.numAddSpansCallsByToken
 
 sf.org.apm.numAddSpansCallsByToken:
   brief: The number of calls to the `/v2/trace` endpoint for a specific access token.
