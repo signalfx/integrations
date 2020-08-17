@@ -1,6 +1,6 @@
 sf.org.apm.numSpansDroppedThrottle:
-  brief: The number of spans SignalFx receives beyond the allowed ingest volume.
-  description: 'The number of spans SignalFx receives beyond the allowed ingest volume.
+  brief: The number of spans SignalFx accepts beyond the allowed ingest volume.
+  description: 'The number of spans SignalFx accepts beyond the allowed ingest volume.
     SignalFx drops spans it receives after the ingestion volume limit is reached.
 
     Dimension(s): `orgId`
@@ -8,6 +8,19 @@ sf.org.apm.numSpansDroppedThrottle:
     Data resolution: 1 second'
   metric_type: counter
   title: sf.org.apm.numSpansDroppedThrottle
+
+sf.org.apm.numSpansDroppedThrottleByToken:
+  brief: The number of spans SignalFx accepts for a specific access token
+    beyond the allowed ingest volume.
+  description: 'The number of spans SignalFx accepts for a specific access token
+    beyond the allowed ingest volume. SignalFx drops spans it receives after
+    the ingestion volume limit is reached.
+
+    Dimension(s): `orgId`, `tokenId`
+    
+    Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedThrottleByToken
 
 sf.org.apm.grossSpansReceived:
   brief: The number of spans SignalFx receives before filtering and throttling.
@@ -32,8 +45,8 @@ sf.org.apm.grossSpansReceivedByToken:
   title: sf.org.apm.grossSpansReceivedByToken
 
 sf.org.apm.numSpansReceived:
-  brief: The number of spans SignalFx receives after filtering and throttling.
-  description: 'The number of spans SignalFx receives after filtering and throttling.
+  brief: The number of spans SignalFx accepts after filtering and throttling.
+  description: 'The number of spans SignalFx accepts after filtering and throttling.
 
   Dimension(s): `orgId`
     
@@ -41,23 +54,10 @@ sf.org.apm.numSpansReceived:
   metric_type: counter
   title: sf.org.apm.numSpansReceived
 
-sf.org.apm.numSpansDroppedThrottleByToken:
-  brief: The number of spans SignalFx receives for a specific access token
-    beyond the allowed ingest volume.
-  description: 'The number of spans SignalFx receives for a specific access token
-    beyond the allowed ingest volume. SignalFx drops spans it receives after
-    the ingestion volume limit is reached.
-
-    Dimension(s): `orgId`, `tokenId`
-    
-    Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.numSpansDroppedThrottleByToken
-
 sf.org.apm.numSpansReceivedByToken:
-  brief: The number of spans SignalFx receives for a specific access token
+  brief: The number of spans SignalFx accepts for a specific access token
     after filtering and throttling.
-  description: 'The number of spans SignalFx receives for a specific access token
+  description: 'The number of spans SignalFx accepts for a specific access token
     after filtering and throttling.
 
   Dimension(s): `orgId`, `tokenId`
@@ -65,74 +65,6 @@ sf.org.apm.numSpansReceivedByToken:
   Data resolution: 1 second'
   metric_type: counter
   title: sf.org.apm.numSpansReceivedByToken
-
-sf.org.apm.grossSpanBytesReceived:
-  brief: The number of bytes SignalFx receives for a span after decompression
-    before filtering and throttling.
-  description: 'The number of bytes SignalFx receives for a span after
-    decompression before filtering and throttling.
-  
-  Dimension(s): `orgId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.grossSpanBytesReceived
-
-sf.org.apm.grossSpanBytesReceivedByToken:
-  brief: The number of bytes SignalFx receives for a specific access token
-    for a span after decompression before filtering and throttling.
-  description: 'The number of bytes SignalFx receives for a specific access token
-    for a span after decompression before filtering and throttling.
-  
-  Dimension(s): `orgId`, `tokenId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.grossSpanBytesReceivedByToken
-
-sf.org.apm.numSpanBytesReceived:
-  brief: The number of bytes SignalFx receives for a span after decompression
-    after filtering and throttling.
-  description: 'The number of bytes SignalFx receives for a span after
-    decompression after filtering and throttling.
-  
-  Dimension(s): `orgId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.numSpanBytesReceived
-
-sf.org.apm.numSpanBytesReceivedByToken:
- brief: The number of bytes SignalFx receives for a specific access token
-    for a span after decompression after filtering and throttling.
-  description: 'The number of bytes SignalFx receives for a specific access token
-    for a span after decompression after filtering and throttling.
-  
-  Dimension(s): `orgId`, `tokenId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.numSpanBytesReceivedByToken
-
-sf.org.apm.numAddSpansCallsByToken:
-  brief: The number of calls to a SignalFx ingest endpoint for a specific access token.
-  description: 'The number of calls to a SignalFx ingest endpoint for a specific access token.
-  
-  Dimension(s): `orgId`, `tokenId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.numAddSpansCallsByToken
-
-sf.org.apm.numAddSpansCalls:
-  brief: The number of calls to a SignalFx ingest endpoint.
-  description: 'The number of calls to a SignalFx ingest endpoint.
-  
-  Dimension(s): `orgId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.numAddSpansCalls
 
 sf.org.apm.invalidSpansReceived:
   brief: 
@@ -146,17 +78,103 @@ sf.org.apm.invalidSpansReceivedByToken:
   metric_type: counter
   title: sf.org.apm.invalidSpansReceivedByToken
 
+sf.org.apm.grossSpanBytesReceived:
+  brief: The number of bytes SignalFx receives from spans after decompression
+    but before filtering and throttling.
+  description: 'The number of bytes SignalFx receives from spans after
+    decompression but before filtering and throttling.
+  
+  Dimension(s): `orgId`
+  
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.grossSpanBytesReceived
+
+sf.org.apm.grossSpanBytesReceivedByToken:
+  brief: The number of bytes SignalFx receives for a specific access token
+    from spans after decompression but before filtering and throttling.
+  description: 'The number of bytes SignalFx receives for a specific access token
+    from spans after decompression but before filtering and throttling.
+  
+  Dimension(s): `orgId`, `tokenId`
+  
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.grossSpanBytesReceivedByToken
+
+sf.org.apm.numSpanBytesReceived:
+  brief: The number of bytes SignalFx accepts for a span after decompression
+    after filtering and throttling.
+  description: 'The number of bytes SignalFx accepts for a span after
+    decompression after filtering and throttling.
+  
+  Dimension(s): `orgId`
+  
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.numSpanBytesReceived
+
+sf.org.apm.numSpanBytesReceivedByToken:
+ brief: The number of bytes SignalFx accepts for a specific access token
+    for a span after decompression after filtering and throttling.
+  description: 'The number of bytes SignalFx accepts for a specific access token
+    for a span after decompression after filtering and throttling.
+  
+  Dimension(s): `orgId`, `tokenId`
+  
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.numSpanBytesReceivedByToken
+
+sf.org.apm.numAddSpansCalls:
+  brief: The number of calls to the `/v2/trace` endpoint.
+  description: 'The number of calls to the `/v2/trace` endpoint.
+  
+  Dimension(s): `orgId`
+  
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.numAddSpansCalls
+
+sf.org.apm.numAddSpansCallsByToken:
+  brief: The number of calls to the `/v2/trace` endpoint for a specific access token.
+  description: 'The number of calls to the `/v2/trace` endpoint for a specific access token.
+  
+  Dimension(s): `orgId`, `tokenId`
+  
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.numAddSpansCallsByToken
+
 sf.org.apm.numTracesReceived:
-  brief: 
-  description: 
+  brief: The number of traces SignalFx receives and processes.
+  description: 'The number of traces SignalFx receives and processes.
+
+  Dimension(s): `orgId`
+
+  Data resolution: 1 minute'
   metric_type: counter
   title: sf.org.apm.numTracesReceived
 
 sf.org.apm.numTroubleshootingMetricSets10s:
-  brief: 
-  description: 
-  metric_type: counter
+  brief: The cardinality of Troubleshooting MetricSets for each 10-second window.
+  description: 'The cardinality of Troubleshooting MetricSets for each 10-second window.
+
+  Dimension(s): `orgId`
+  
+  Data resolution: 10 seconds'
+  metric_type: gauge
   title: sf.org.apm.numTroubleshootingMetricSets10s
+
+sf.org.apm.numTroubleshootingMetricSets:
+  brief: The cardinality of Troubleshooting MetricSets for each 1-minute window.
+  description: 'The cardinality of Troubleshooting MetricSets for each 1-minute window.
+
+  Dimension(s): `orgId`
+  
+  Data resolution: 1 minute'
+  metric_type: 
+  title: sf.org.apm.numTroubleshootingMetricSets
 
 sf.org.apm.numSpansDroppedInvalid:
   brief: The number of invalid spans SignalFx receives.
@@ -169,16 +187,6 @@ sf.org.apm.numSpansDroppedInvalid:
   metric_type: counter
   title: sf.org.apm.numSpansDroppedInvalid
 
-sf.org.apm.numSpansDroppedOversize:
-  brief: The number of spans SignalFx receives that are too large to process.
-  description: 'The number of spans SignalFx receives that are too large to process.
-  
-  Dimension(s): `orgId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.numSpansDroppedOversize
-
 sf.org.apm.numSpansDroppedInvalidByToken:
   brief: The number of invalid spans SignalFx receives for a specific access token.
   description: 'The number of invalid spans SignalFx receives for a specific access token.
@@ -189,6 +197,16 @@ sf.org.apm.numSpansDroppedInvalidByToken:
     Data resolution: 1 second'
   metric_type: counter
   title: sf.org.apm.numSpansDroppedInvalidByToken
+
+sf.org.apm.numSpansDroppedOversize:
+  brief: The number of spans SignalFx receives that are too large to process.
+  description: 'The number of spans SignalFx receives that are too large to process.
+  
+  Dimension(s): `orgId`
+  
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedOversize
 
 sf.org.apm.numSpansDroppedOversizeByToken:
   brief: The number of spans SignalFx receives that are too large to process
@@ -202,22 +220,10 @@ sf.org.apm.numSpansDroppedOversizeByToken:
   metric_type: counter
   title: sf.org.apm.numSpansDroppedOversizeByToken
 
-sf.org.apm.grossContentBytesReceivedByToken:
-  brief: The size of bytes SignalFx receives off the wire for a specific access
-    token before filtering and throttling.
-  description: 'The size of bytes SignalFx receives off the wire for a specific
-    access token before filtering and throttling. This content could be compressed.
-  
-  Dimension(s): `orgId`, `tokenId`
-  
-  Data resolution: 1 second'
-  metric_type: counter
-  title: sf.org.apm.grossContentBytesReceivedByToken
-
 sf.org.apm.grossContentBytesReceived:
-  brief: The size of bytes SignalFx receives off the wire before filtering
+  brief: The volume of bytes SignalFx receives off the wire before filtering
     and throttling.
-  description: 'The size of bytes SignalFx receives off the wire before filtering
+  description: 'The volume of bytes SignalFx receives off the wire before filtering
     and throttling. This content could be compressed.
   
   Dimension(s): `orgId`
@@ -226,22 +232,22 @@ sf.org.apm.grossContentBytesReceived:
   metric_type: counter
   title: sf.org.apm.grossContentBytesReceived
 
-sf.org.apm.numContentBytesReceivedByToken:
-  brief: The size of bytes SignalFx receives off the wire for a specific access
-    token after filtering and throttling.
-  description: 'The size of bytes SignalFx receives off the wire for a specific
-    access token after filtering and throttling. This content could be compressed.
+sf.org.apm.grossContentBytesReceivedByToken:
+  brief: The volume of bytes SignalFx receives off the wire for a specific access
+    token before filtering and throttling.
+  description: 'The volume of bytes SignalFx receives off the wire for a specific
+    access token before filtering and throttling. This content could be compressed.
   
   Dimension(s): `orgId`, `tokenId`
-
+  
   Data resolution: 1 second'
   metric_type: counter
-  title: sf.org.apm.numContentBytesReceivedByToken
+  title: sf.org.apm.grossContentBytesReceivedByToken
 
 sf.org.apm.numContentBytesReceived:
-  brief: The size of bytes SignalFx receives off the wire after filtering
+  brief: The volume of bytes SignalFx accepts off the wire after filtering
     and throttling.
-  description: 'The size of bytes SignalFx receives off the wire after filtering
+  description: 'The volume of bytes SignalFx accepts off the wire after filtering
     and throttling. This content could be compressed.
   
   Dimension(s): `orgId`
@@ -249,6 +255,18 @@ sf.org.apm.numContentBytesReceived:
   Data resolution: 1 second'
   metric_type: counter
   title: sf.org.apm.numContentBytesReceived
+
+sf.org.apm.numContentBytesReceivedByToken:
+  brief: The volume of bytes SignalFx accepts off the wire for a specific access
+    token after filtering and throttling.
+  description: 'The volume of bytes SignalFx accepts off the wire for a specific
+    access token after filtering and throttling. This content could be compressed.
+  
+  Dimension(s): `orgId`, `tokenId`
+
+  Data resolution: 1 second'
+  metric_type: counter
+  title: sf.org.apm.numContentBytesReceivedByToken
 
 sf.org.grossDatapointsReceived:
   brief: SignalFx internal metric
