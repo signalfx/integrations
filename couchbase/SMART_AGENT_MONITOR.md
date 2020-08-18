@@ -12,18 +12,18 @@ configuration instructions below.
 
 ## Description
 
-**This integration primarily consists of the Smart Agent monitor `collectd/couchbase`.
-Below is an overview of that monitor.**
+This integration primarily consists of the Smart Agent monitor `collectd/couchbase`.
+Below is an overview of that monitor.
 
 ### Smart Agent Monitor
 
 
 This is a Smart Agent monitor for [Couchbase](https://www.couchbase.com/)
 that uses the [couchbase collectd Python
-plugin](https://github.com/signalfx/collectd-couchbase) to collect metrics
+plugin](https://github.com/signalfx/collectd-couchbase) that you configure to collect metrics
 from Couchbase server instances.
 
-For general reference on how to monitor Couchbase, see <a target="_blank"
+For general information on how to monitor Couchbase, see <a target="_blank"
 href="http://blog.couchbase.com/monitoring-couchbase-cluster">Couchbase
 Monitoring</a> and <a target="_blank"
 href="http://developer.couchbase.com/documentation/server/4.0/monitoring/monitoring-rest.html">Monitor
@@ -233,7 +233,7 @@ monitor config option `extraGroups`:
  - `gauge.bucket.op.ep_tap_total_queue_backfillremaining` (*gauge*)<br>    Total number of items in the backfill queues of TAP connections to this bucket
  - `gauge.bucket.op.ep_tap_total_queue_backoff` (*gauge*)<br>    Total number of back-offs received per second while sending data over TAP connections to this bucket
  - `gauge.bucket.op.ep_tap_total_queue_drain` (*gauge*)<br>    Total number of items per second being sent over TAP connections to this bucket
- - `gauge.bucket.op.ep_tap_total_queue_fill` (*gauge*)<br>    Total enqueued items in the queue. 
+ - `gauge.bucket.op.ep_tap_total_queue_fill` (*gauge*)<br>    Total enqueued items in the queue.
  - `gauge.bucket.op.ep_tap_total_queue_itemondisk` (*gauge*)<br>    The number of items waiting to be written to disk for this bucket for this state.
  - `gauge.bucket.op.ep_tap_total_total_backlog_size` (*gauge*)<br>    Number of remaining items for replication
  - `gauge.bucket.op.ep_tap_user_count` (*gauge*)<br>    Number of internal user TAP queues in this bucket
@@ -383,4 +383,3 @@ that allow list, then you need to add an item to the top-level
 `metricsToInclude` config option to override that allow list (see [Inclusion
 filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
 copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
-
