@@ -115,6 +115,8 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
+ - `bytes.maxmemory` (*gauge*)<br>    Maximum memory configured on Redis server
+ - `bytes.total_system_memory` (*gauge*)<br>    Total memory available on the OS
  - ***`bytes.used_memory`*** (*gauge*)<br>    Number of bytes allocated by Redis
  - `bytes.used_memory_lua` (*gauge*)<br>    Number of bytes used by the Lua engine
  - `bytes.used_memory_peak` (*gauge*)<br>    Peak Number of bytes allocated by Redis
@@ -146,9 +148,12 @@ Metrics that are categorized as
  - `gauge.key_llen` (*gauge*)<br>    Length of an list key
  - `gauge.latest_fork_usec` (*gauge*)<br>    Duration of the latest fork operation in microseconds
  - `gauge.master_last_io_seconds_ago` (*gauge*)<br>    Number of seconds since the last interaction with master
+ - `gauge.master_link_down_since_seconds` (*gauge*)<br>    Number of seconds since the link is down
+ - `gauge.master_link_status` (*gauge*)<br>    Status of the link (up/down)
  - ***`gauge.master_repl_offset`*** (*gauge*)<br>    Master replication offset
  - `gauge.mem_fragmentation_ratio` (*gauge*)<br>    Ratio between used_memory_rss and used_memory
  - `gauge.rdb_bgsave_in_progress` (*gauge*)<br>    Flag indicating a RDB save is on-going
+ - `gauge.rdb_last_save_time` (*gauge*)<br>    Unix timestamp for last save to disk, when using persistence
  - `gauge.repl_backlog_first_byte_offset` (*gauge*)<br>    Slave replication backlog offset
  - ***`gauge.slave_repl_offset`*** (*gauge*)<br>    Slave replication offset
  - `gauge.uptime_in_days` (*gauge*)<br>    Number of days up

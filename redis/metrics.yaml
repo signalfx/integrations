@@ -1,5 +1,21 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 
+bytes.maxmemory:
+  brief: Maximum memory configured on Redis server
+  custom: true
+  description: Maximum memory configured on Redis server
+  metric_type: gauge
+  monitor: collectd/redis
+  title: bytes.maxmemory
+
+bytes.total_system_memory:
+  brief: Total memory available on the OS
+  custom: true
+  description: Total memory available on the OS
+  metric_type: gauge
+  monitor: collectd/redis
+  title: bytes.total_system_memory
+
 bytes.used_memory:
   brief: Number of bytes allocated by Redis
   custom: false
@@ -248,6 +264,22 @@ gauge.master_last_io_seconds_ago:
   monitor: collectd/redis
   title: gauge.master_last_io_seconds_ago
 
+gauge.master_link_down_since_seconds:
+  brief: Number of seconds since the link is down
+  custom: true
+  description: Number of seconds since the link is down
+  metric_type: gauge
+  monitor: collectd/redis
+  title: gauge.master_link_down_since_seconds
+
+gauge.master_link_status:
+  brief: Status of the link (up/down)
+  custom: true
+  description: Status of the link (up/down)
+  metric_type: gauge
+  monitor: collectd/redis
+  title: gauge.master_link_status
+
 gauge.master_repl_offset:
   brief: Master replication offset
   custom: false
@@ -271,6 +303,14 @@ gauge.rdb_bgsave_in_progress:
   metric_type: gauge
   monitor: collectd/redis
   title: gauge.rdb_bgsave_in_progress
+
+gauge.rdb_last_save_time:
+  brief: Unix timestamp for last save to disk, when using persistence
+  custom: true
+  description: Unix timestamp for last save to disk, when using persistence
+  metric_type: gauge
+  monitor: collectd/redis
+  title: gauge.rdb_last_save_time
 
 gauge.repl_backlog_first_byte_offset:
   brief: Slave replication backlog offset
