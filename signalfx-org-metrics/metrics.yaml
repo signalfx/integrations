@@ -407,8 +407,8 @@ sf.org.num.detector:
   title: sf.org.num.detector
 
 sf.org.numDetectorsAborted:
-  brief: Number of detectors that were stopped
-  description: 'Number of detector jobs stopped because they reached a resource limit (usually MTS limit).
+  brief: Number of detectors that were aborted
+  description: 'Number of detector jobs stopped because MTS load (250K+) conflicts with hard resource limits.
 
     Dimension(s): `orgId`
 
