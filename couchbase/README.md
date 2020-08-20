@@ -46,7 +46,7 @@ Metadata associated with the SignalFx Couchbase integration can be found <a targ
 
 ### USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
+The following screen captures of dashboards created for this plugin by SignalFx illustrate the metrics emitted by this plugin.
 
 For general reference on how to monitor Couchbase, see <a target="_blank" href="http://blog.couchbase.com/monitoring-couchbase-cluster">Couchbase Monitoring</a> and <a target="_blank" href="http://developer.couchbase.com/documentation/server/4.0/monitoring/monitoring-rest.html">Monitor using the REST API</a>.
 
@@ -54,17 +54,17 @@ For general reference on how to monitor Couchbase, see <a target="_blank" href="
 
 This plugin emits some metrics about the bucket's performance across the cluster, and some metrics about the bucket's performance per node.
 
-Metrics beginning with `gauge.bucket.basic.​*` and `gauge.bucket.quota.*`​ are reported once per cluster. All other bucket metrics (`gauge.bucket.*`) are reported by every node that hosts that bucket. In order to analyze bucket performance for the entire bucket, apply functions like Sum or Mean to group node-level metrics together by bucket.
+Metrics beginning with `gauge.bucket.basic.​*` and `gauge.bucket.quota.*`​ are reported once per cluster. All other bucket metrics (`gauge.bucket.*`) are reported by every node that hosts that bucket. In order to analyze bucket performance for the entire bucket, apply functions like `sum` or `mean` to group node-level metrics together by bucket.
 
 **Monitoring a Couchbase cluster**
 
-On the Couchbase Nodes overview dashboard, you can see at a glance the status the nodes and buckets in a given cluster. Nodes in the cluster should be seeing balanced activity. Buckets in the cluster should each have adequate memory remaining.
+On the Couchbase Nodes overview dashboard, you can see at a glance the status of the nodes and buckets in a given cluster. Nodes in the cluster should show balanced activity. Buckets in the cluster should each have a portion of memory remaining free.
 
 ![Couchbase - Nodes and buckets in a cluster](././img/nodes_and_buckets_snapshot.png)
 
 *This cluster's three nodes have roughly the same number of gets per second, and its two buckets have plenty of headroom.*
 
-This dashboard also includes a percentile distribution of CPU utilization per node, allowing quick identification of unusually hot nodes. This chart shows minimum, 10th percentile, median (50th percentile), 90th percentile, and maximum CPU utilization for each node in the cluster.
+This dashboard also includes a percentile distribution of CPU utilization per node, enabling quick identification of unusually hot nodes, meaning those at > 80% capacity. This chart shows minimum, 10th percentile, median (50th percentile), 90th percentile, and maximum CPU utilization for each node in the cluster.
 
 ![Nodes CPU distribution](././img/nodes_cpu.png)
 
@@ -94,7 +94,7 @@ The Couchbase Buckets overview shows activity for all buckets being monitored.
 
 **Monitoring a single Couchbase bucket**
 
-Selecting a particular bucket to show on the Couchbase Bucket dashboard lets us go deep on that bucket's performance.
+Selecting a particular bucket to show on the Couchbase Bucket dashboard enables you to monitor details of that bucket's performance.
 
 Resident items ratio and cache miss rate are inversely related: as the ratio of items in this bucket that are resident in memory drops, the number of get requests that require a fetch from disk will increase.
 

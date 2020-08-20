@@ -2,7 +2,7 @@ browse_categories:
 - Database
 code: https://github.com/signalfx/collectd-couchbase
 data_signature: plugin:"couchbase"
-description: Monitor Couchbase using the SignalFx Smart Agent.
+description: Monitor Couchbase using the SignalFx Smart Agent
 display_name: Couchbase
 featured: false
 in_app_categories:
