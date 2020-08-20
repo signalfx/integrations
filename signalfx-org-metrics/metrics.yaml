@@ -66,18 +66,6 @@ sf.org.apm.numSpansReceivedByToken:
   metric_type: counter
   title: sf.org.apm.numSpansReceivedByToken
 
-sf.org.apm.invalidSpansReceived:
-  brief:
-  description:
-  metric_type: counter
-  title: sf.org.apm.invalidSpansReceived
-
-sf.org.apm.invalidSpansReceivedByToken:
-  brief:
-  description:
-  metric_type: counter
-  title: sf.org.apm.invalidSpansReceivedByToken
-
 sf.org.apm.grossSpanBytesReceived:
   brief: The number of bytes SignalFx receives from spans after decompression
     but before filtering and throttling.
