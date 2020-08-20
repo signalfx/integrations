@@ -46,27 +46,25 @@ Metadata associated with the SignalFx Couchbase integration can be found <a targ
 
 ### USAGE
 
-Screen captures below of dashboards created for this plugin by SignalFx illustrate the metrics emitted by this plugin.
+The following screen captures of dashboards created for this plugin by SignalFx illustrate the metrics emitted by this plugin.
 
 For general reference on how to monitor Couchbase, see <a target="_blank" href="http://blog.couchbase.com/monitoring-couchbase-cluster">Couchbase Monitoring</a> and <a target="_blank" href="http://developer.couchbase.com/documentation/server/4.0/monitoring/monitoring-rest.html">Monitor using the REST API</a>.
 
 **Note on bucket metrics**
 
-This plugin emits metrics about bucket performance across the cluster, and also metrics about bucket performance per node.
+This plugin emits some metrics about the bucket's performance across the cluster, and some metrics about the bucket's performance per node.
 
-Metrics beginning with `gauge.bucket.basic.​*` and `gauge.bucket.quota.*`​ are reported once per cluster. All other bucket metrics (`gauge.bucket.*`) are reported by every node that hosts that bucket.
-
-To analyze performance for the entire bucket, you can group node-level metrics together by applying functions like Sum or Mean to them.
+Metrics beginning with `gauge.bucket.basic.​*` and `gauge.bucket.quota.*`​ are reported once per cluster. All other bucket metrics (`gauge.bucket.*`) are reported by every node that hosts that bucket. In order to analyze bucket performance for the entire bucket, apply functions like `sum` or `mean` to group node-level metrics together by bucket.
 
 **Monitoring a Couchbase cluster**
 
-On the Couchbase Nodes overview dashboard, you can see at a glance the status of nodes and buckets in a given cluster. Nodes in the cluster should show balanced activity. Buckets in the cluster should each have adequate memory remaining.
+On the Couchbase Nodes overview dashboard, you can see at a glance the status of the nodes and buckets in a given cluster. Nodes in the cluster should show balanced activity. Buckets in the cluster should each have a portion of memory remaining free.
 
 ![Couchbase - Nodes and buckets in a cluster](././img/nodes_and_buckets_snapshot.png)
 
 *This cluster's three nodes have roughly the same number of gets per second, and its two buckets have plenty of headroom.*
 
-This dashboard also includes a percentile distribution of CPU utilization per node, enabling quick identification of unusually hot nodes. This chart shows minimum, 10th percentile, median (50th percentile), 90th percentile, and maximum CPU utilization for each node in the cluster.
+This dashboard also includes a percentile distribution of CPU utilization per node, enabling quick identification of unusually hot nodes, meaning those at > 80% capacity. This chart shows minimum, 10th percentile, median (50th percentile), 90th percentile, and maximum CPU utilization for each node in the cluster.
 
 ![Nodes CPU distribution](././img/nodes_cpu.png)
 
@@ -78,9 +76,9 @@ Zooming in to an individual node shows that node's activity, cache performance, 
 
 ![Node overview](././img/node.png)
 
-*This node is lightly loaded. To compare its activity to other nodes in this cluster, use the Couchbase Nodes dashboard above.*
+*This node is lightly loaded. To compare its activity to other nodes in this cluster, we'd use the Couchbase Nodes dashboard above.*
 
-You can check node cache performance using a graph that shows the number of gets per second in yellow, overlaid on the number of cache hits in blue. The ratio between gets and cache hits is computed as "hit ratio" and shown as a dotted line. When every get request results in a cache hit, the graph is green and the dotted line remains high. When there are fewer cache hits than gets, the graph shows yellow areas and the dotted line drops.
+We can check the node's cache performance using a graph that shows the number of gets per second in yellow, overlaid on the number of cache hits in blue. The ratio between gets and cache hits is computed as "hit ratio" and is shown as a dotted line. When every get request results in a cache hit, the graph is green and the dotted line remains high. When there are fewer cache hits than gets, the graph shows yellow areas and the dotted line drops.
 
 ![Gets and hits](././img/node_gets_and_hits.png)
 
@@ -96,13 +94,13 @@ The Couchbase Buckets overview shows activity for all buckets being monitored.
 
 **Monitoring a single Couchbase bucket**
 
-Selecting a particular bucket to show on the Couchbase Bucket dashboard lets you monitor details of that bucket's performance.
+Selecting a particular bucket to show on the Couchbase Bucket dashboard enables you to monitor details of that bucket's performance.
 
 Resident items ratio and cache miss rate are inversely related: as the ratio of items in this bucket that are resident in memory drops, the number of get requests that require a fetch from disk will increase.
 
 ![Bucket cache performance](././img/bucket_cache_miss_rate.png)
 
-*This bucket has a 100% resident items ratio: all of the items that it contains can be served from memory rather than disk.*
+*This bucket has a 100% resident items ratio: all of the items that it contains can be served from memory, instead of disk.*
 
 The performance of Couchbase buckets is bound by memory. When memory is exhausted, new items can be stored only by ejecting old items. An attempt to store a new item in a bucket with insufficient memory headroom produces an out-of-memory error: either a "temp" error (an old item will be ejected, try again) or a "non-temp" error (this item cannot be stored at all). Any out-of-memory error is cause for concern.
 
