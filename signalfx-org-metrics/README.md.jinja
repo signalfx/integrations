@@ -42,6 +42,13 @@ For example, you might receive 3 MTS for `sf.org.numMetricTimeSeriesCreated`, on
 
 Also, you could filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
 
+### About the metric tracking stopped detectors
+
+The `sf.org.numDetectorsAborted` metric monitors the number of detectors that were stopped because they reached a resource limit (usually an MTS limit of 250K or higher). That condition also generates an `sf.org.abortedDetectors` event to record detailed context including the detector ID and reason it stopped with the value/limit of MTS or datapoints, whichever caused it to stop.
+
+For information about events, see [View Additional Data With Events](https://docs.signalfx.com/en/latest/detect-alert/events-intro.html).
+
+
 ## Metrics
 
 {{ macros.metric_list(metrics) }}
