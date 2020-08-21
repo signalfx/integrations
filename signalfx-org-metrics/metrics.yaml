@@ -95,29 +95,30 @@ sf.org.apm.numSpanBytesReceived:
     after filtering and throttling.
   description: 'The number of bytes SignalFx accepts for a span after
     decompression after filtering and throttling.
-  
-  Dimension(s): `orgId`
-  
-  Data resolution: 1 second'
+
+    Dimension(s): `orgId`
+
+    Data resolution: 1 second'
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceived
 
 sf.org.apm.numSpanBytesReceivedByToken:
- brief: The number of bytes SignalFx accepts for a specific access token
+  brief: The number of bytes SignalFx accepts for a specific access token
     for a span after decompression after filtering and throttling.
-  description: 'The number of bytes SignalFx accepts for a specific access token
+  description: |
+    The number of bytes SignalFx accepts for a specific access token
     for a span after decompression after filtering and throttling.
-  
-  Dimension(s): `orgId`, `tokenId`
-  
-  Data resolution: 1 second'
+
+    Dimension(s): `orgId`, `tokenId`
+
+    Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceivedByToken
 
 sf.org.apm.numAddSpansCalls:
   brief: The number of calls to the `/v2/trace` endpoint.
   description: 'The number of calls to the `/v2/trace` endpoint.
-  
+
   Dimension(s): `orgId`
   
   Data resolution: 1 second'
@@ -491,15 +492,18 @@ sf.org.num.metrictimeseries:
 
 sf.org.num.migrationmarker:
   brief: SignalFx internal metric
-  description: While you may see this metric in your organization, it is for SignalFx
-    internal use only.
+  description: While you may see this metric in your organization, it is for SignalFx internal use only.
   metric_type: gauge
   title: sf.org.num.migrationmarker
 
 sf.org.num.namedtoken:
   brief: Number of access tokens
-  description: "Number of organization access tokens, including disabled tokens. \n\
-    Dimension(s): `orgId`\nData Resolution: 15 minutes"
+  description: |
+    Number of organization access tokens, including disabled tokens.
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.namedtoken
 
