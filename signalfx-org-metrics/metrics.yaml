@@ -400,6 +400,16 @@ sf.org.num.detector:
   metric_type: gauge
   title: sf.org.num.detector
 
+sf.org.numDetectorsAborted:
+  brief: Number of detectors that were stopped
+  description: 'Number of detector jobs stopped because they reached a resource limit (usually MTS limit).
+
+    Dimension(s): `orgId`
+
+    Data Resolution: 5 seconds'
+  metric_type: counter
+  title: sf.org.numDetectorsAborted
+
 sf.org.num.detectortemplate:
   brief: SignalFx internal metric
   description: While you may see this metric in your organization, it is for SignalFx
@@ -1310,4 +1320,3 @@ sf.org.ui.num.pagevisits:
     internal use only.
   metric_type: null
   title: sf.org.ui.num.pagevisits
-
