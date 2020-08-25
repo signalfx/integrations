@@ -20,7 +20,7 @@ To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration]
 
 ##### Built-in dashboards
 
-These dashboards accompany [SignalFx's ActiveMQ integration](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq)).
+These dashboards accompany [SignalFx's ActiveMQ integration](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq).
 
 - **ActiveMQ Message Age**: Shows the average age of messages in ActiveMQ queues.
 
