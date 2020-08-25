@@ -1,6 +1,6 @@
 # ![](./img/integrations_activemq.png) ActiveMQ
 
-Metadata associated with SignalFx's integration with ActiveMQ can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/activemq">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/activemq-integration">here</a>.
+Metadata associated with the SignalFx integration with ActiveMQ can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/activemq">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/activemq-integration">here</a>.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
