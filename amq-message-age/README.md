@@ -36,7 +36,7 @@ These dashboards accompany [SignalFx's ActiveMQ integration](https://github.com/
 
 ### INSTALLATION
 
-1. Download SignalFx's ActiveMQ message age listener from <a target="_blank" href="https://github.com/signalfx/activemq-integration">https://github.com/signalfx/activemq-integration</a>.
+1. Download the SignalFx ActiveMQ message age listener from <a target="_blank" href="https://github.com/signalfx/activemq-integration">https://github.com/signalfx/activemq-integration</a>.
 
 2. Modify `/activemq-integration/amq-message-age/properties` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -50,11 +50,12 @@ These dashboards accompany [SignalFx's ActiveMQ integration](https://github.com/
 
 #### Configuring your endpoint
 
-Before we can send metrics to SignalFx, we need to make sure you are sending them to the correct SignalFx realm.
-To determine what realm you are in (YOUR_SIGNALFX_REALM), check your profile page in the SignalFx web application (click the avatar in the upper right and click My Profile).
-If you are not in the `us0` realm, you will need to set the `sfx_host` configuration option, as shown below.
-
-You will also need to set the `token` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
+Before you can send metrics to SignalFx, you need to make sure you are sending them to the correct SignalFx realm.
+To determine what realm you are in (YOUR_SIGNALFX_REALM), check your profile page in the SignalFx web application, as follows:
+1. Click the avatar in the upper right.
+2. Click My Profile.
+3. If you are not in the `us0` realm, you will need to set the `sfx_host` configuration option, as shown below.
+4. Set the `token` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
 For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
 
 #### Configuration options
@@ -77,13 +78,13 @@ In some versions of ActiveMQ, messages sometimes get “stuck” in the queue, a
 
 This tool provides visibility into "stuck" messages in ActiveMQ by inspecting each enqueued message, calculating the average and maximum age of messages per queue, and reporting those metrics to SignalFx using our <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/lib-java">Java client library</a>.
 
-Our built-in dashboard for this data makes it immediately visible when messages have been waiting a long time to be delivered.
+The built-in dashboard for this data makes it immediately visible when messages have been waiting too long to be delivered.
 
 ![](./img/dashboard_activemq_messageage.png)
 
 *In this example, one queue has messages that are nearly 40 seconds old.*
 
-Using these metrics from inside each message queue, we can create intelligent detectors that alert when there’s a message stuck in the queue and unable to be delivered. For example, you can create a detector that fires when the oldest message in the queue has been getting older for at least 5 minutes. To build this, we use the analytics function “Rate of change”, which lets us know how quickly a metric is changing.
+Using these metrics from inside each message queue, we can create intelligent detectors that alert when there’s a message stuck in the queue and unable to be delivered. For example, you can create a detector that fires when the oldest message in the queue has been getting older for at least 5 minutes. To build this, use the analytics function “Rate of change”, which lets us know how quickly a metric is changing.
 
 ![](./img/detector_activemq_messageage.png)
 
