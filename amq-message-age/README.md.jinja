@@ -1,7 +1,7 @@
 # ![](./img/integrations_activemq.png) ActiveMQ Message Age Listener
 {% import "macros.jinja" as macros %}
 
-Metadata associated with the ActiveMQ message age listener can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/amq-message-age">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/activemq-integration">here</a>.
+Metadata associated with ActiveMQ Message Age can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/amq-message-age">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/activemq-integration">in the ActiveMQ Message Age</a> directory.
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
@@ -13,13 +13,13 @@ Metadata associated with the ActiveMQ message age listener can be found <a targe
 
 ## OVERVIEW
 
-SignalFx uses ActiveMQ Message Age to measures the age of messages in ActiveMQ queues and publish the results to SignalFx.
+You can use ActiveMQ Message Age Listener to measure the age of messages in ActiveMQ queues and publish the results to SignalFx.
 
 ### DESCRIPTION
 
 ActiveMQ Message Age Listener actively inspects the messages that are waiting to be delivered in each queue, and therefore is especially useful for detecting messages that are "stuck" in ActiveMQ queues and unable to be delivered.
 
-To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq).
+To monitor the general health of ActiveMQ, see [the ActiveMQ integration for SignalFx](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq).
 
 #### FEATURES
 
@@ -45,7 +45,7 @@ These dashboards accompany [SignalFx's ActiveMQ integration](https://github.com/
 
 To access this tool, perform the following steps:
 
-1. Download the SignalFx ActiveMQ message age listener from <a target="_blank" href="https://github.com/signalfx/activemq-integration">https://github.com/signalfx/activemq-integration</a>.
+1. Download the SignalFx ActiveMQ Message Age Listener from <a target="_blank" href="https://github.com/signalfx/activemq-integration">https://github.com/signalfx/activemq-integration</a>.
 
 2. Modify `/activemq-integration/amq-message-age/properties` to provide values that make sense for your environment, as described in [Configuration](#configuration), below.
 
@@ -62,7 +62,7 @@ To access this tool, perform the following steps:
 Before you can send metrics to SignalFx, you need to make sure you are sending them to the correct SignalFx realm.
 To determine what realm you are in (YOUR_SIGNALFX_REALM), check your profile page in the SignalFx web application, as follows:
 1. Click the avatar in the upper right.
-2. Click My Profile.
+2. Click **My Profile**.
 3. If you are not in the `us0` realm, you will need to set the `sfx_host` configuration option, as shown below.
 4. Set the `token` configuration option to your SignalFx organization access token (YOUR_SIGNALFX_API_TOKEN).
 For more information on authentication, see the API's [Authentication documentation](https://developers.signalfx.com/basics/authentication.html).
