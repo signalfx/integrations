@@ -1,4 +1,5 @@
 # ![](./img/integrations_activemq.png) ActiveMQ Message Age Listener
+{% import "macros.jinja" as macros %}
 
 Metadata associated with the ActiveMQ message age listener can be found <a target="_blank" href="https://github.com/signalfx/integrations/tree/release/amq-message-age">here</a>. The relevant code for the plugin can be found <a target="_blank" href="https://github.com/signalfx/activemq-integration">here</a>.
 
@@ -10,9 +11,13 @@ Metadata associated with the ActiveMQ message age listener can be found <a targe
 - [Metrics](#metrics)
 - [License](#license)
 
+## OVERVIEW
+
+This tool measures the age of messages in ActiveMQ queues, and publishes the results to SignalFx.
+
 ### DESCRIPTION
 
-This tool measures the age of messages in ActiveMQ queues, and publishes the results to SignalFx. It actively inspects the messages that are waiting to be delivered in each queue, and therefore is especially useful for detecting messages that are "stuck" in ActiveMQ queues and unable to be delivered.
+ActiveMQ Message Age Listener actively inspects the messages that are waiting to be delivered in each queue, and therefore is especially useful for detecting messages that are "stuck" in ActiveMQ queues and unable to be delivered.
 
 To monitor the general health of ActiveMQ, see [SignalFx's ActiveMQ integration](https://github.com/signalfx/integrations/tree/master/activemq)[](sfx_link:activemq).
 
@@ -33,6 +38,8 @@ These dashboards accompany [SignalFx's ActiveMQ integration](https://github.com/
 | ActiveMQ  | 5.8.0 or later |
 | Java | 1.5 or later |
 | Maven | (match with Java version) |
+
+## SETUP
 
 ### INSTALLATION
 
@@ -72,7 +79,7 @@ Supply values for the following properties in the `/activemq-integration/amq-mes
 | host\_name | Name of this ActiveMQ host. This value appears in the dimension `host` in SignalFx. | ActiveMQ_Host1 |
 | broker\_name | Name of this ActiveMQ broker. This value appears in the dimension `broker` in SignalFx. | Broker1 |
 
-### USAGE
+## USAGE
 
 In some versions of ActiveMQ, messages sometimes get “stuck” in the queue, and message consumers won’t pick them up even if they have available capacity. This bug causes messages to never be delivered. Monitoring tools are typically unable to detect this condition due to a lack of visibility into the messages that never make it out of the queue.
 
