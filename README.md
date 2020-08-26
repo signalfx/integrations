@@ -103,7 +103,7 @@ the single source for both tiles and product-docs repos.
 becomes default behavior.
 5. Delete the original (non-Jinja) README.md file, if one exists.
 
-It may be convenient to include all steps of the template application process in a single commit to whatever branch you
+It may be convenient to include all steps of the template application process in a single commit or pull request to whatever branch you
 are using for development. If the 'useLegacyBuild' flag is set to 'true', then the build process ignores your README.md.jinja file or generates
 unexpected results. Similarly, if a Jinja README and a non-Jinja README are in the same directory, your pull requests may generate file conflicts, because
 the build process merges all markdown (.md) files in a directory.
