@@ -43,7 +43,7 @@ def process_integration(integration_dir, meta):
         rendered = render_template(readme_path.read_text(encoding="utf-8"), integration_dir, {"target": "docs"})
         core_name = meta.get("product_docs_name", integration_dir.name)
         target_path = OUTPUT_DOC_PATH / f"integrations.{core_name}.md"
-        target_path.write_text(rendered)
+        target_path.write_bytes(rendered.encode('utf-8'))
 
         move_images(integration_dir, rendered)
 
