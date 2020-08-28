@@ -15,7 +15,7 @@
 
 ## OVERVIEW
 
-Use SignalFx to monitor Amazon Relational Database Service (RDS) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+Use SignalFx to monitor Amazon Relational Database Service (RDS) using [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 ## SETUP
 Choose a deployment method and follow the steps below to encrypt your SignalFx access token, customize the metrics sent to SignalFx, and create and deploy the AWS Lamda function.
@@ -33,7 +33,7 @@ If you are upgrading to version 0.2.0, ensure that the AWS Lambda handler is set
 #### Encrypting your SignalFx access token
 The AWS Lambda function uses your SignalFx access token to send metrics to SignalFx, as an environment variable to the function. While Lambda encrypts all environment variables at rest and decrypts them upon invocation, AWS recommends that all sensitive information such as access tokens be encrypted using a Key Management Service (KMS) key before function deployment, and decrypted at runtime within the code.
 
-Both Serverless Application Repository and build from source deployment procedures below include instructions for using either an encrypted or non-encrypted access token.
+Both Serverless Application Repository and build from source deployment procedures include instructions for using either an encrypted or non-encrypted access token.
 
 ### Deploying through the Serverless Application Repository*
 Deploying through the Serverless Application Repository is a four-step process if you manually encrypt your access token, and a three-step process otherwise:
