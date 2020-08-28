@@ -33,7 +33,9 @@ To connect SignalFx to CloudWatch, you'll create a new IAM role in AWS for Signa
 
 ##### Importing CloudWatch metrics and dimensions
 
-SignalFx can sync CloudWatch metrics from AWS into SignalFx. By default, AWS CloudWatch metric data is sent in 5-minute periods. If you are using Detailed Monitoring on an AWS service, you can change the interval for syncing data from CloudWatch to SignalFx in 1-minute periods.
+SignalFx can sync CloudWatch metrics from AWS into SignalFx. By default, CloudWatch metric data is sent in 5-minute periods. If you are using Detailed Monitoring on an AWS service, you can change the interval for syncing data from CloudWatch to SignalFx in 1-minute periods.
+
+SignalFx checks the number of metrics that a CloudWatch integration is syncing and disables an integration if it exceeds the arbitrary value set. This value is currently set to 100,000 metrics. This check only occurs once during the import process. 
 
 To enable CloudWatch metrics to be sent to SignalFx, make sure the "Import CloudWatch" checkbox is checked. SignalFx syncs all CloudWatch metrics data for all services and all regions in use in a given AWS account, but this can be filtered down by clicking on the "All Services" link and selecting the desired services, or by clicking on the "All Regions" link and selecting the desired regions.
 
@@ -58,7 +60,7 @@ SignalFx also syncs AWS tags and makes them available as properties on metrics a
 
 ##### Recognizing CloudWatch statistics in SignalFx
 
-Much like SignalFx, AWS CloudWatch uses rollups to summarize metrics, and it refers to them as "statistics". However, because there is not a one-for-one mapping to SignalFx's data model, the CloudWatch rollups are not directly accessible through the rollup selection menu in the chart builder. Instead, they are captured as individual time series through the use of the dimension `stat`.
+Much like SignalFx, CloudWatch uses rollups to summarize metrics, and it refers to them as "statistics". However, because there is not a one-for-one mapping to SignalFx's data model, the CloudWatch rollups are not directly accessible through the rollup selection menu in the chart builder. Instead, they are captured as individual time series through the use of the dimension `stat`.
 
 | AWS Statistic	| SignalFx dimension |	Definition |
 |---------------|--------------------|-------------|
@@ -68,7 +70,7 @@ Much like SignalFx, AWS CloudWatch uses rollups to summarize metrics, and it ref
 | Data Samples	| stat:count	| Number of samples over the sampling period |
 | Sum	| stat:sum	| Sum of all values that occurred over the sampling period |
 
-To use a CloudWatch metric in a plot, you must always specify the metric name along with a filter for `stat` that is appropriate to the metric you have chosen. For example, if you are using the metric `NetworkPacketsIn`, per the AWS CloudWatch documentation for EC2 metrics, the only statistics that are meaningful are Minimum, Maximum and Average, so you should choose the dimension stat with a value of either `lower`, `upper` or `mean`, respectively, depending on which statistic you want to use.
+To use a CloudWatch metric in a plot, you must always specify the metric name along with a filter for `stat` that is appropriate to the metric you have chosen. For example, if you are using the metric `NetworkPacketsIn`, per the CloudWatch documentation for EC2 metrics, the only statistics that are meaningful are Minimum, Maximum and Average, so you should choose the dimension stat with a value of either `lower`, `upper` or `mean`, respectively, depending on which statistic you want to use.
 
 When syncing data from CloudWatch to SignalFx a 60-second sampling period is used. See <a target="_blank" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">CloudWatch documentation</a> for more detailed information.
 
