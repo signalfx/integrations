@@ -35,6 +35,8 @@ To connect SignalFx to CloudWatch, you'll create a new IAM role in AWS for Signa
 
 SignalFx can sync CloudWatch metrics from AWS into SignalFx. By default, CloudWatch metric data is sent in 5-minute periods. If you are using Detailed Monitoring on an AWS service, you can change the interval for syncing data from CloudWatch to SignalFx in 1-minute periods.
 
+SignalFx checks the number of metrics that a CloudWatch integration is syncing and disables an integration if it exceeds the arbitrary value set. This value is currently set to 100,000 metrics. This check only occurs once during the import process. 
+
 To enable CloudWatch metrics to be sent to SignalFx, make sure the "Import CloudWatch" checkbox is checked. SignalFx syncs all CloudWatch metrics data for all services and all regions in use in a given AWS account, but this can be filtered down by clicking on the "All Services" link and selecting the desired services, or by clicking on the "All Regions" link and selecting the desired regions.
 
 SignalFx automatically imports relevant dimensions for each CloudWatch metric. For example, if you are using Detailed Monitoring for EC2 instances, SignalFx imports the dimensions AutoScalingGroupName, ImageId, InstanceId and InstanceType. These dimensions can be used to filter EC2 instance data.
