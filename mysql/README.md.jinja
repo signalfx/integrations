@@ -33,18 +33,15 @@ returned by a `SHOW STATUS` command. This includes the following:
 
 ### Creating a MySQL user for collectd
 
-To create a MySQL user for collectd:
+If you're monitoring a secured MySQL deployment, it is a good practice to create a MySQL user with minimal read-only roles, as follows:
 
 ```
- CREATE USER 'collectd'@'localhost' IDENTIFIED BY 'collectdUserPassword';
- -- Give appropriate permissions
- -- ("GRANT USAGE" is synonymous to "no privileges")
- GRANT USAGE ON *.* TO 'collectd'@'localhost';
- -- Permissions for the stats options
- GRANT REPLICATION CLIENT ON *.* TO 'collectd'@'localhost';
+db.createUser( {
+  user: "collectd",
+  pwd: "collectd",
+  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
+});
 ```
-
-The new user will only have privileges to connect to the database. Additional privileges are not required.
 
 ## SETUP
 

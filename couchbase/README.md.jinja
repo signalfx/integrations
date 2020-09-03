@@ -29,10 +29,15 @@ using the REST API</a>.
 
 ### Creating a Couchbase user for collectd
 
-Couchbase provides Role-Based Access Control (RBAC) to restrict system access. A Couchbase role permits one or more resources to be accessed according to defined privileges.
+If you're monitoring a secured Couchbase deployment, it is a good practice to create a Couchbase user with minimal read-only roles, as follows:
 
-The [`data_monitoring` role](https://docs.couchbase.com/server/6.6/learn/security/roles.html#data-monitor) has the minimum permissions required to use the integration. For
-more information on the associations of privileges to resources and roles, see [Roles.](https://docs.couchbase.com/server/6.6/learn/security/roles.html)
+```
+db.createUser( {
+  user: "collectd",
+  pwd: "collectd",
+  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
+});
+```
 
 ## SETUP
 
@@ -93,7 +98,6 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monit
 - **Couchbase Bucket**: Focus on a single Couchbase bucket.
 
   [<img src='./img/dashboard_couchbase_bucket.png' width=200px>](./img/dashboard_couchbase_bucket.png)
-{%- endif %}
 
 ## USAGE
 
