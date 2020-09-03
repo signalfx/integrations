@@ -10,4 +10,5 @@ in_app_categories:
 logo_large: /images/repos/mysql/img/integrations_mysql%402x.png
 logo_small: /images/repos/mysql/img/integrations_mysql.png
 project_url: https://github.com/signalfx/integrations/tree/master/mysql
-useLegacyBuild: true
+product_docs_name: mysql
+useLegacyBuild: false
