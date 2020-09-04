@@ -1,4 +1,5 @@
 # ![](./img/integration_awsrds.png) Amazon Relational Database Service (RDS)
+
 {% import "macros.jinja" as macros %}
 
 {% if target == "docs" -%}
@@ -14,7 +15,7 @@
 
 ## OVERVIEW
 
-Use SignalFx to monitor Amazon Relational Database Service (RDS) via [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
+Use SignalFx to monitor Amazon Relational Database Service (RDS) using [Amazon Web Services](https://github.com/signalfx/integrations/tree/master/aws)[](sfx_link:aws).
 
 ## SETUP
 Choose a deployment method and follow the steps below to encrypt your SignalFx access token, customize the metrics sent to SignalFx, and create and deploy the AWS Lamda function.
@@ -32,7 +33,7 @@ If you are upgrading to version 0.2.0, ensure that the AWS Lambda handler is set
 #### Encrypting your SignalFx access token
 The AWS Lambda function uses your SignalFx access token to send metrics to SignalFx, as an environment variable to the function. While Lambda encrypts all environment variables at rest and decrypts them upon invocation, AWS recommends that all sensitive information such as access tokens be encrypted using a Key Management Service (KMS) key before function deployment, and decrypted at runtime within the code.
 
-Both Serverless Application Repository and build from source deployment procedures below include instructions for using either an encrypted or non-encrypted access token.
+Both Serverless Application Repository and build from source deployment procedures include instructions for using either an encrypted or non-encrypted access token.
 
 ### Deploying through the Serverless Application Repository*
 Deploying through the Serverless Application Repository is a four-step process if you manually encrypt your access token, and a three-step process otherwise:
@@ -101,7 +102,7 @@ Your metrics are on the way to SignalFx ingest.
 The execution role requires basic AWS Lambda execution permissions and KMS
 decrypt permissions (if you want to encrypt your SignalFx access token). If you
 don't want to create an execution role, you can select from a list of templates when you
-create the lambda function.
+create the Lambda function.
 
 #### 2. Set up an encryption key and encrypt access token
 Only follow this step if you chose to encrypt your access token. Either create
@@ -126,12 +127,14 @@ The package will be named `enhanced_rds.zip`. This is the file to upload for the
 #### 4. Create and configure the AWS Lambda function
 a. From the Lambda creation screen, make sure you have selected
 `Build from scratch`.
+
 b. Select a name for your function. For `Runtime` select
 `Python3.8` (although `Python3.6` and `Python3.7` are also supported). For the execution role, either select the role you want to use or
 select `Create from Template` and add KMS decrypt permissions if necessary.
+
 c. Choose (enter) a name for the role.
 
-For other tabs, follow the instructions below.
+For other tabs, use the following instructions.
 
 #### Designer
 To set up the trigger from CloudWatch Logs:
