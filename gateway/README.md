@@ -53,7 +53,7 @@
 
 Use the SignalFx Gateway to aggregate metrics and send them to SignalFx. It is a multilingual datapoint demultiplexer that can accept time series data from the carbon (Graphite), collectd, or SignalFx protocols and emit those datapoints to a series of servers using the carbon, collectd, or SignalFx protocols.
 
-**Note:** These links only open if you are viewing this content from the documentation site, [docs.signalfx.com](docs.signalfx.com). If you are viewing this content from the SignalFx UI, consider redirecting to the [SignalFx Gateway document](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.gateway.html).
+**Note:** These links only open if you are viewing this content from the documentation site, [docs.signalfx.com](https://docs.signalfx.com). If you are viewing this content from the SignalFx UI, consider redirecting to the [SignalFx Gateway document](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.signalfx.gateway.html).
 
 **Note:** The relevant code for the project can be found in the <a target="_blank" href="https://github.com/signalfx/gateway">signalfx
 /gateway repository</a>.
