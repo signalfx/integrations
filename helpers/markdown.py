@@ -41,7 +41,10 @@ def render_template(template, integration_dir, extra_context=None):
     for yaml_file in sorted(integration_dir.glob("*.yaml")):
         context[yaml_file.stem] = yaml.safe_load(yaml_file.read_text(encoding="utf-8"))
 
-    return env.from_string(template).render(**context)
+    try:
+        return env.from_string(template).render(**context)
+    except Exception as e:
+        raise RuntimeError("Failed to render %s" % integration_dir) from e
 
 
 def process_markdown_for_app(markdown, integration_dir, is_legacy):
