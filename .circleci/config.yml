@@ -1,7 +1,7 @@
 ---
 version: 2.1
 jobs:
-  build:
+  checklinks:
     docker:
       - image: golang:1.13
     steps:
@@ -10,7 +10,15 @@ jobs:
       - run: |
           cd ~ && go mod init test && go get -u github.com/raviqqe/liche@4db4b8909d21d62ce97d31a07891183e1440cc7b
       - run: ./check-links
+  build-tile:
+    docker:
+      - image: python:3.7
+    steps:
+      - checkout
+      - run: pip install -r requirements.txt
+      - run: ./build
 workflows:
   build_test:
     jobs:
-      - build
+      - checklinks
+      - build-tile
