@@ -37,11 +37,11 @@ returned by a `SHOW STATUS` command. This includes the following:
 To create a MySQL user for collectd:
 
 ```
- CREATE USER 'collectd'@'localhost' IDENTIFIED BY 'Fat4ohse';
+ CREATE USER 'collectd'@'localhost' IDENTIFIED BY 'collectdUserPassword';
  -- Give appropriate permissions
  -- ("GRANT USAGE" is synonymous to "no privileges")
  GRANT USAGE ON *.* TO 'collectd'@'localhost';
- -- Permissions for the MasterStats and SlaveStats options
+ -- Permissions for the stats options
  GRANT REPLICATION CLIENT ON *.* TO 'collectd'@'localhost';
 ```
 
