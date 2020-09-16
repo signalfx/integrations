@@ -25,6 +25,15 @@ For detailed information on `memory` cgroup metrics, see [Red Hat's guide to the
 You can limit the cgroups for which metrics are generated with the
 `cgroups` config option to the monitor.
 
+For example, the following will only monitor docker generated cgroups:
+
+```yaml
+monitors:
+ - type: cgroups
+   cgroups:
+    - "/docker/*"
+```
+
 
 ## Configuration
 

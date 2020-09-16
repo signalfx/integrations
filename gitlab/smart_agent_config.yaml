@@ -21,15 +21,15 @@ gitlab:
     type: string
     yamlName: password
   - default: 'false'
-    doc: If true, the agent will connect to the exporter using HTTPS instead of plain
+    doc: If true, the agent will connect to the server using HTTPS instead of plain
       HTTP.
     elementKind: ''
     required: false
     type: bool
     yamlName: useHTTPS
   - default: null
-    doc: A map of key=message-header and value=header-value. Comma separated multiple
-      values for the same message-header is supported.
+    doc: A map of HTTP header names to values. Comma separated multiple values for
+      the same message-header is supported.
     elementKind: string
     required: false
     type: map

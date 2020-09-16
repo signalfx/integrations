@@ -72,6 +72,14 @@ These are the metrics available for this integration.
  - ***`gauge.zk_watch_count`*** (*gauge*)<br>    Number of watches placed on Z-Nodes on a ZooKeeper server
  - ***`gauge.zk_znode_count`*** (*gauge*)<br>    Number of z-nodes that a ZooKeeper server has in its data tree
 
+#### Group leader
+All of the following metrics are part of the `leader` metric group. All of
+the non-default metrics below can be turned on by adding `leader` to the
+monitor config option `extraGroups`:
+ - `gauge.zk_followers` (*gauge*)<br>    Number of followers within the ensemble. Only exposed by the leader.
+ - `gauge.zk_pending_syncs` (*gauge*)<br>    Number of pending syncs from the followers. Only exposed by the leader.
+ - `gauge.zk_synced_followers` (*gauge*)<br>    Number of synced followers. Only exposed by the leader.
+
 ### Non-default metrics (version 4.7.0+)
 
 **The following information applies to the agent version 4.7.0+ that has
