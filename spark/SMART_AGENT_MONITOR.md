@@ -12,13 +12,13 @@ configuration instructions below.
 
 ## Description
 
-**This integration primarily consists of the Smart Agent monitor `collectd/spark`.
-Below is an overview of that monitor.**
+This integration primarily consists of the Smart Agent monitor `collectd/spark`.
+Below is an overview of that monitor.
 
 ### Smart Agent Monitor
 
 
-Collects metrics about a Spark cluster using the [collectd Spark Python
+This integration collects metrics about a Spark cluster using the [collectd Spark Python
 plugin](https://github.com/signalfx/collectd-spark). That plugin collects
 metrics from Spark cluster and instances by hitting endpoints specified in
 Spark's [Monitoring and Instrumentation
