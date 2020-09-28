@@ -103,6 +103,10 @@ This monitor will also emit by default any metrics that are not listed below.
  - `kubernetes.job.parallelism` (*gauge*)<br>    The max desired number of pods the job should run at any given time.
  - `kubernetes.job.succeeded` (*counter*)<br>    The number of pods which reached phase Succeeded for a job.
  - ***`kubernetes.namespace_phase`*** (*gauge*)<br>    The current phase of namespaces (`1` for _active_ and `0` for _terminating_)
+ - `kubernetes.node_allocatable_cpu` (*gauge*)<br>    How many CPU cores remaining that the node can allocate to pods
+ - `kubernetes.node_allocatable_ephemeral_storage` (*gauge*)<br>    How many bytes of ephemeral storage remaining that the node can allocate to pods
+ - `kubernetes.node_allocatable_memory` (*gauge*)<br>    How many bytes of RAM memory remaining that the node can allocate to pods
+ - `kubernetes.node_allocatable_storage` (*gauge*)<br>    How many bytes of storage remaining that the node can allocate to pods
  - ***`kubernetes.node_ready`*** (*gauge*)<br>    Whether this node is ready (1), not ready (0) or in an unknown state (-1)
  - ***`kubernetes.pod_phase`*** (*gauge*)<br>    Current phase of the pod (1 - Pending, 2 - Running, 3 - Succeeded, 4 - Failed, 5 - Unknown)
  - ***`kubernetes.replica_set.available`*** (*gauge*)<br>    Total number of available pods (ready for at least minReadySeconds) targeted by this replica set

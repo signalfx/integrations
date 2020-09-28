@@ -59,6 +59,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `urls` | no | `list of strings` | DEPRECATED: list of HTTP URLs to monitor. Use `host`/`port`/`useHTTPS`/`path` instead. |
 | `regex` | no | `string` | Optional Regex to match on URL(s) response(s). |
 | `desiredCode` | no | `integer` | Desired code to match for URL(s) response(s). (**default:** `200`) |
+| `addRedirectURL` | no | `bool` | Add `redirect_url` dimension which could differ from `url` when redirection is followed. (**default:** `false`) |
 
 
 ## Metrics
@@ -69,8 +70,10 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
- - ***`http.cert_expiry`*** (*gauge*)<br>    Certificate expiry in seconds. This metric is reported only if HTTPS is available (from last followed URL).
+ - ***`http.cert_expiry`*** (*gauge*)<br>    Certificate expiry in seconds. This metric is reported only if HTTPS  is available (from last followed URL).
+
  - ***`http.cert_valid`*** (*gauge*)<br>    Value is 1 if certificate is valid (including expiration test) or 0 else. This metric is reported only if HTTPS is available (from last followed URL).
+
  - ***`http.code_matched`*** (*gauge*)<br>    Value is 1 if `status_code` value match `desiredCode` set in config. Always reported.
  - ***`http.content_length`*** (*gauge*)<br>    HTTP response body length. Always reported.
  - ***`http.regex_matched`*** (*gauge*)<br>    Value is 1 if pattern match in response body. Only reported if `regex` is configured.
@@ -95,9 +98,8 @@ dimensions may be specific to certain metrics.
 | Name | Description |
 | ---  | ---         |
 | `method` | HTTP method used to do request. Not available on `http.cert_*` metrics. |
-| `original_url` | The original URL used in the configuration of this monitor.  May differ from `url` if the URL responds with a redirect and `noRedirects: false`. |
-| `server_name` | ServerName used for TLS validation. Always and only available on `http.cert_expiry` metric. |
-| `url` | Last URL retrieved (after redirects) from configured one. Always available on every metrics. |
+| `redirect_url` | Last URL retrieved (after redirects) from configured one. Only sent if `noRedirects: false` and `addLastURL: true` and if URL responds with a redirect different from the original `url`. |
+| `url` | The normalized URL (including port and path) from the configuration of this monitor. Always available on every metrics. |
 
 
 
