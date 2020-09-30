@@ -6,28 +6,32 @@
 <!--- OVERVIEW --->
 ## <!-- -->
 
-SignalFx Smart Agent Integration installs the Smart Agent application on a single host machine from which you want to collect monitoring data. Smart Agent collects infrastructure monitoring, µAPM, and Kubernetes data.
+This integration installs the SignalFx Smart Agent application on a
+single host machine from which you want to collect monitoring data.
+Use this integration if you want to evaluate monitoring on a single host.
+The Smart Agent collects infrastructure monitoring, APM, and Kubernetes data.
 
-For other installation options, including bulk deployments, see [Advanced Installation Options](https://docs.signalfx.com/en/latest/integrations/agent/./advanced-install-options.html).
+For other installation options, including bulk deployments to production,
+see [Install and Configure the Smart Agent](https://docs.signalfx.com/en/latest/integrations/agent/agent-install-methods.html).
 
 ## Installation
 
 ### Prerequisites
 
 #### General
-- Ensure that you've installed the applications and services you want to monitor on a Linux or Windows host. SignalFx doesn't support Smart Agent on MacOS or any other OS besides Linux and Windows.
+- Ensure that you've installed the applications and services you want to monitor on a Linux or Windows host. SignalFx doesn't support installing the Smart Agent on macOS or any other OS besides Linux and Windows.
 - Uninstall or disable any previously-installed collector agents from your host, such as `collectd`.
-- If you have any questions about compatibility between Smart Agent and your host machine or its applications and services, contact your Splunk support representative.
+- If you have any questions about compatibility between the Smart Agent and your host machine or its applications and services, contact your Splunk support representative.
 
 #### Linux
 - Ensure that you have access to `terminal` or a similar command line interface application.
 - Ensure that your Linux username has permission to run the following commands:
     - `curl`
     - `sudo`
-- Ensure that your machine is running Linux kernel version 2.6 or higher.
+- Ensure that your machine is running Linux kernel version 2.6.32 or higher.
 
 #### Windows
-- Ensure that you have access to Windows PowerShell 6
+- Ensure that you have access to Windows PowerShell 6.
 - Ensure that your machine is running Windows 8 or higher.
 - Ensure that .Net Framework 3.5 or higher is installed.
 - While SignalFx recommends that you use TLS 1.2, if you use TLS 1.0 and want to continue using TLS 1.0, then:
@@ -44,7 +48,7 @@ For other installation options, including bulk deployments, see [Advanced Instal
         - TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
         - TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
         - TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
-    - Review and follow this [article from Microsoft](https://docs.microsoft.com/en-us/security/engineering/solving-tls1-problem).
+    - See [Solving the TLS 1.0 Problem, 2nd Edition](https://docs.microsoft.com/en-us/security/engineering/solving-tls1-problem) for more information.
 
 ### Steps
 
@@ -59,9 +63,9 @@ To access this content from the SignalFx UI:
 2. Locate and select **SignalFx SmartAgent**.
 3. Click **Setup**, and continue reading the instructions.
 
-#### Install Signalfx Smart Agent on Linux
+#### Install the Smart Agent on Linux
 
-This section lists the steps for installing SignalFx Smart Agent on Linux. If you want to install it on Windows, proceed to the next section, **Install SignalFx Smart Agent on Windows**.
+This section lists the steps for installing the Smart Agent on Linux. If you want to install the Smart Agent on Windows, proceed to the next section, **Install SignalFx Smart Agent on Windows**.
 
 Copy and paste the following code into your command line or terminal:
 
@@ -82,7 +86,7 @@ The agent's main configuration file is located at /etc/signalfx/agent.yaml.
 
 If your installation succeeds, proceed to the section **Verify Your Installation**. Otherwise, see the section **Troubleshoot Your Installation**.
 
-#### Install SignalFx Smart Agent on Windows
+#### Install the Smart Agent on Windows
 
 Copy and paste the following code into your Windows PowerShell terminal:
 
@@ -98,7 +102,7 @@ If your installation succeeds, proceed to the section **Verify Your Installation
 
 ### Verify Your Installation
 
-1. To verify that you've successfully installed the SignalFx Smart Agent, copy and paste the following command into your terminal.
+1. To verify that you've successfully installed the Smart Agent, copy and paste the following command into your terminal.
 
 **For Linux:**
 
@@ -172,4 +176,3 @@ journalctl -u signalfx-agent -f
 
 #### Windows troubleshooting
 Open **Administrative Tools > Event Viewer > Windows Logs > Application** to view the `signalfx-agent` error logs.
-
