@@ -13,10 +13,10 @@ Monitor Type: `collectd/spark` ([Source](https://github.com/signalfx/signalfx-ag
 ## Overview
 
 Collects metrics about a Spark cluster using the [collectd Spark Python
-plugin](https://github.com/signalfx/collectd-spark). That plugin collects
+plugin](https://github.com/signalfx/collectd-spark). The plugin collects
 metrics from Spark cluster and instances by hitting endpoints specified in
-Spark's [Monitoring and Instrumentation
-documentation](https://spark.apache.org/docs/latest/monitoring.html) under
+the [Monitoring and Instrumentation
+documentation](https://spark.apache.org/docs/latest/monitoring.html) for Spark under
 `REST API` and `Metrics`.
 
 We currently only support cluster modes Standalone, Mesos, and Hadoop Yarn
@@ -189,6 +189,3 @@ dimensions may be specific to certain metrics.
 | ---  | ---         |
 | `cluster` | set to value corresponding to key `cluster` in configuration file |
 | `spark_process` | Either master or worker to differentiate master- and worker- specific metrics like master.apps and worker.coresFree |
-
-
-
