@@ -20,7 +20,7 @@ documentation](https://spark.apache.org/docs/latest/monitoring.html) for Spark u
 `REST API` and `Metrics`.
 
 We currently only support cluster modes Standalone, Mesos, and Hadoop Yarn
-via HTTP endpoints.
+through HTTP endpoints.
 
 You have to specify distinct monitor configurations and discovery rules for
 master and worker processes.  For the master configuration, set `isMaster`
