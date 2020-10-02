@@ -1,6 +1,6 @@
-
 # ![](./img/integrations_mysql.png) MySQL
 {% import "macros.jinja" as macros %}
+
 
 {% if target == "docs" -%}
 # ![](../../_images/images-integrations/integrations-reference/mysql/integrations_mysql.png) MySQL
@@ -46,6 +46,18 @@ db.createUser( {
   roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
 });
 ```
+
+
+
+```
+db.createUser( {
+  user: "collectd",
+  pwd: "collectd",
+  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
+});
+```
+
+The new user will only have privileges to connect to the database. Additional privileges are not required.
 
 ## SETUP
 

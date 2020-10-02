@@ -17,6 +17,22 @@
 
 ## OVERVIEW
 
+=======
+{% import "macros.jinja" as macros %}
+
+{% if target == "docs" -%}
+# Couchbase
+
+- [Overview](#overview)
+- [Setup](#setup)
+- [Built-in Content](#built-in-content)
+- [Usage](#usage)
+- [Metrics](#metrics)
+
+{%- endif %}
+
+## OVERVIEW
+
 This integration primarily consists of the Smart Agent monitor `collectd/couchbase`.
 Below is an overview of that monitor.
 
@@ -25,6 +41,7 @@ Below is an overview of that monitor.
 This is a Smart Agent monitor for [Couchbase](https://www.couchbase.com/)
 
 that uses the [Couchbase collectd Python plugin](https://github.com/signalfx/collectd-couchbase) that you configure to collect metrics from Couchbase server instances.
+
 
 For general information on how to monitor Couchbase, see <a target="_blank"
 href="http://blog.couchbase.com/monitoring-couchbase-cluster">Couchbase
@@ -35,6 +52,26 @@ using the REST API</a>.
 ### Creating a Couchbase user for collectd
 
 If you're monitoring a secured Couchbase deployment, it is a good practice to create a Couchbase user with minimal read-only roles, as follows:
+
+```
+db.createUser( {
+  user: "collectd",
+  pwd: "collectd",
+  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
+});
+```
+
+## SETUP
+
+#### Requirements
+
+* SignalFx Smart Agent 2.0 or higher
+* Couchbase 3.0 or higher
+
+### Configuration
+
+=======
+Couchbase provides Role-Based Access Control (RBAC) to restrict system access. A Couchbase role permits one or more resources to be accessed according to defined privileges.
 
 ```
 db.createUser( {
