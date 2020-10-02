@@ -257,12 +257,6 @@ sf.org.apm.numContentBytesReceivedByToken:
   metric_type: counter
   title: sf.org.apm.numContentBytesReceivedByToken
 
-sf.org.abortedDetectors:
-  brief: Detailed events for any aborted detectors
-  description: Contains the detectorID and reason for abort with the value/limit of MTS or datapoints, whichever caused the detector to stop.
-  metric_type: cumulative
-  title: sf.org.abortedDetectors
-
 sf.org.grossDatapointsReceived:
   brief: SignalFx internal metric
   description: While you may see this metric in your organization, it is for SignalFx
