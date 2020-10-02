@@ -168,6 +168,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [telegraf/sqlserver](./monitors/telegraf-sqlserver.md)
 - [telegraf/statsd](./monitors/telegraf-statsd.md)
 - [telegraf/tail](./monitors/telegraf-tail.md)
+- [telegraf/varnish](./monitors/telegraf-varnish.md)
 - [telegraf/win_perf_counters](./monitors/telegraf-win_perf_counters.md)
 - [telegraf/win_services](./monitors/telegraf-win_services.md)
 - [trace-forwarder](./monitors/trace-forwarder.md)

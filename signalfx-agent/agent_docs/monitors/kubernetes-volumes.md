@@ -25,6 +25,20 @@ Dimensions that identify the underlying volume source will be added for
 volumes, and for `configMap`, `downwardAPI`, `emptyDir` and `secret`
 non-persistent volumes. Support for more can be easily added as needed.
 
+If interested in collecting metrics from Persistent Volumes and Persistent
+Volume Claims from a RBAC enabled cluster the following permissions need to
+be granted to the Agent.
+
+```yaml
+- apiGroups:
+    - ""
+  resources:
+    - persistentvolumes
+    - persistentvolumeclaims
+  verbs:
+    - get
+```
+
 
 ## Configuration
 
