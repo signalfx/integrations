@@ -1,7 +1,6 @@
 # ![](./img/integrations_mysql.png) MySQL
 {% import "macros.jinja" as macros %}
 
-
 {% if target == "docs" -%}
 # ![](../../_images/images-integrations/integrations-reference/mysql/integrations_mysql.png) MySQL
 
@@ -46,8 +45,7 @@ db.createUser( {
   roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
 });
 ```
-
-
+To create a MySQL user for collectd:
 
 ```
 db.createUser( {
