@@ -1,4 +1,3 @@
-<<<<<<< HEAD:couchbase/README.md.jinja
 # ![](./img/integrations_couchbase.png) Couchbase
 {% import "macros.jinja" as macros %}
 
@@ -17,34 +16,13 @@
 
 ## OVERVIEW
 
-=======
-{% import "macros.jinja" as macros %}
-
-{% if target == "docs" -%}
-# Couchbase
-
-- [Overview](#overview)
-- [Setup](#setup)
-- [Built-in Content](#built-in-content)
-- [Usage](#usage)
-- [Metrics](#metrics)
-
-{%- endif %}
-
-## OVERVIEW
-
->>>>>>> dcb68c5fffabac207e0a84b514a416e0161627e7:couchbase/SMART_AGENT_MONITOR.md
 This integration primarily consists of the Smart Agent monitor `collectd/couchbase`.
 Below is an overview of that monitor.
 
 ### Smart Agent Monitor
 
 This is a Smart Agent monitor for [Couchbase](https://www.couchbase.com/)
-<<<<<<< HEAD:couchbase/README.md.jinja
 that uses the [couchbase collectd Python plugin](https://github.com/signalfx/collectd-couchbase) that you configure to collect metrics from Couchbase server instances.
-=======
-that uses the [Couchbase collectd Python plugin](https://github.com/signalfx/collectd-couchbase) that you configure to collect metrics from Couchbase server instances.
->>>>>>> dcb68c5fffabac207e0a84b514a416e0161627e7:couchbase/SMART_AGENT_MONITOR.md
 
 For general information on how to monitor Couchbase, see <a target="_blank"
 href="http://blog.couchbase.com/monitoring-couchbase-cluster">Couchbase
@@ -54,7 +32,6 @@ using the REST API</a>.
 
 ### Creating a Couchbase user for collectd
 
-<<<<<<< HEAD:couchbase/README.md.jinja
 If you're monitoring a secured Couchbase deployment, it is a good practice to create a Couchbase user with minimal read-only roles, as follows:
 
 ```
@@ -74,22 +51,6 @@ db.createUser( {
 
 ### Configuration
 
-=======
-Couchbase provides Role-Based Access Control (RBAC) to restrict system access. A Couchbase role permits one or more resources to be accessed according to defined privileges.
-
-The [`data_monitoring` role](https://docs.couchbase.com/server/6.6/learn/security/roles.html#data-monitor) has the minimum permissions required to use the integration. For
-more information on the associations of privileges to resources and roles, see [Roles.](https://docs.couchbase.com/server/6.6/learn/security/roles.html)
-
-## SETUP
-
-#### Requirements
-
-* SignalFx Smart Agent 2.0 or higher
-* Couchbase 3.0 or higher
-
-### Configuration
-
->>>>>>> dcb68c5fffabac207e0a84b514a416e0161627e7:couchbase/SMART_AGENT_MONITOR.md
 To activate this monitor in the Smart Agent, add the following to your agent config:
 
 ```
