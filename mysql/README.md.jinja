@@ -36,15 +36,6 @@ returned by a `SHOW STATUS` command. This includes the following:
 
 ### Creating a MySQL user for collectd
 
-If you're monitoring a secured MySQL deployment, it is a good practice to create a MySQL user with minimal read-only roles, as follows:
-
-```
-db.createUser( {
-  user: "collectd",
-  pwd: "collectd",
-  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
-});
-```
 To create a MySQL user for collectd:
 
 ```
