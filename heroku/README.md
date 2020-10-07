@@ -64,7 +64,7 @@ heroku buildpacks:add heroku/go
 | -------------------- | ------------- | ------- | -------------------- |
 | `SFX_TOKEN`          | Enter the SignalFx access token for the organization that will receive the data. | $`somevalidtoken` | Required |
 | `SFX_INGEST_URL`     | Enter the Ingest URL to forward data to your SignalFx account. | `https://ingest.us0.signalfx.com` | Required if `SFX_REALM` is not set |
-| `SFX_REALM`          | Enter the SignalFx realm for your SignalFx account. | `us0`, `us1`, `us2`, `eu0`, `ap0` | Required if `SFX_INGEST_URL` is not set |
+| `SFX_REALM`          | Enter the SignalFx realm for your SignalFx account. | `us0`, `us1`, `us2`, `eu0` | Required if `SFX_INGEST_URL` is not set |
 | `SFX_METRICS_TO_EXCLUDE` | To have the collector ignore specific metrics, enter comma-separated metrics names. | `metric_name1,metric_name2,metric_name3` | Optional |
 | `SFX_DIMENSION_PAIRS_TO_EXCLUDE` | To have the collector ignore specific dimension key-value pairs, enter comma-separated dimension key-value pairs. | `key1=val1,key2=val2` | Optional |
 | `SFX_REPORTING_INTERVAL` | Configure a reporting interval for the collector in seconds. The default value is 10 seconds. | 20 | Optional |
