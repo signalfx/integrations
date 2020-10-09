@@ -1,0 +1,10 @@
+code: https://github.com/open-telemetry/opentelemetry-collector
+description: The OpenTelemetry Collector receives, processes and exports telemetry data.
+display_name: 'OpenTelemetry Collector'
+featured: true
+in_app_categories:
+- essential
+logo_large: /images/repos/collectd/img/integration_opentelemetry@2x.png
+logo_small: /images/repos/collectd/img/integration_opentelemetry.png
+project_url: https://github.com/open-telemetry/opentelemetry-collector
+useLegacyBuild: true
