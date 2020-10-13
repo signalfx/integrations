@@ -4,7 +4,7 @@ display_name: SignalFx Smart Gateway
 feature: apm
 featured: true
 in_app_categories:
-- essential
+- deprecatedServices
 logo_large: integration_smartgateway@2x.png
 logo_small: integration_smartgateway.png
 project_url: https://docs.signalfx.com/en/latest/apm/apm-overview/index.html
