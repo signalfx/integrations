@@ -10,7 +10,7 @@ The OpenTelemetry Collector offers a vendor-agnostic implementation on how to re
 
 ### INSTALLATION
 
-After installing the SignalFx Smart Agent on each instance, you can optionally send data from the SignalFx Smart Agent to the OpenTelemetry Collector. This topic describes how to deploy data collection for SignalFx Infrastructure Monitoring.
+After installing the SignalFx Smart Agent on each instance, you can optionally send data from the SignalFx Smart Agent to the OpenTelemetry Collector. 
 
 ### USAGE
 
