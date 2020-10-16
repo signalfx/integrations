@@ -6,7 +6,7 @@
 
 ### DESCRIPTION
 
-SignalFx Infrastructure Monitoring helps you gather metrics related to your system's performance. The SignalFx Smart Agent is a metric agent for monitoring infrastructure and application services in various environments. While you are waiting for data to start coming in from your cloud services (which can take a few minutes), install the SignalFx Smart Agent.
+The OpenTelemetry Collector offers a vendor-agnostic implementation on how to receive, process and export telemetry data. In addition, it removes the need to run, operate and maintain multiple agents/collectors in order to support open-source telemetry data formats sending to multiple open-source or commercial back-ends.
 
 ### INSTALLATION
 
