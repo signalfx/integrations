@@ -58,7 +58,7 @@ Use the SignalFx Gateway to aggregate metrics and send them to SignalFx. It is a
 **Note:** The relevant code for the project can be found in the <a target="_blank" href="https://github.com/signalfx/gateway">signalfx
 /gateway repository</a>.
 
-**Note:** The SignalFx Gateway is deprecated. You should now deploy the OpenTelemetry Collector and send data from the SignalFx Smart Agent to an OpenTelemetry Collector. See the [OpenTelemetry Collector Transition Guide](https://docs.signalfx.com/en/latest/otel/gateway-otel-migration.html) for more information.
+**Note:** The SignalFx Gateway is deprecated. Deploy the OpenTelemetry Collector and send data from the SignalFx Smart Agent to an OpenTelemetry Collector. See the [OpenTelemetry Collector Transition Guide](https://docs.signalfx.com/en/latest/otel/gateway-otel-migration.html) for more information.
 
 **Note:** If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html) instead.
 
