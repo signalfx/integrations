@@ -58,6 +58,8 @@ Use the SignalFx Gateway to aggregate metrics and send them to SignalFx. It is a
 **Note:** The relevant code for the project can be found in the <a target="_blank" href="https://github.com/signalfx/gateway">signalfx
 /gateway repository</a>.
 
+**Note:** The SignalFx Gateway is deprecated. Deploy the OpenTelemetry Collector and send data from the SignalFx Smart Agent to an OpenTelemetry Collector. See the [OpenTelemetry Collector Transition Guide](https://docs.signalfx.com/en/latest/otel/gateway-otel-migration.html) for more information.
+
 **Note:** If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html) instead.
 
 ### PREREQUISITES
@@ -117,7 +119,7 @@ The size of the machine that hosts the Gateway depends on the amount of data tha
 **Note:** If you are an APM customer, install the [Smart Gateway](https://docs.signalfx.com/en/latest/apm/apm-deployment/smart-gateway.html#install-and-configure-the-smart-gateway) instead.
 
 1. Identify a server on which to deploy the Gateway.
-2. Edit the `gateway.conf` file to configure the Gateway. Configuration options are defined [below](#configuration), and example configurations are available in the <a target="_blank" href="https://github.com/signalfx/gateway/blob/master/exampleGateway.conf">main project documentation</a>. For a high-level view of the configuration options, review the following table: 
+2. Edit the `gateway.conf` file to configure the Gateway. Configuration options are defined [below](#configuration), and example configurations are available in the <a target="_blank" href="https://github.com/signalfx/gateway/blob/master/exampleGateway.conf">main project documentation</a>. For a high-level view of the configuration options, review the following table:
 
 | Configuration option | Definition |Internal link |
 |--------|----------|--------|
@@ -136,7 +138,7 @@ The size of the machine that hosts the Gateway depends on the amount of data tha
 
         /etc/init.d/gateway start
 
-5. Configure your endpoints. 
+5. Configure your endpoints.
 
     By default, the Gateway sends metrics to the `us0` realm. If you are not in this realm, you will need to explicitly set the             endpoint URLs to use your realm. To determine if you are in a different realm (YOUR_SIGNALFX_REALM) and need to explicitly set         the endpoints, check your profile page in the SignalFx web application. See the configuration section on [sending to alternate   ingest targets](#sending-to-alternate-ingest-targets) below.
 
@@ -949,7 +951,7 @@ overridden with that configured value.
 
 Also note that we're setting `LateThreshold` and `FutureThreshold` to `10s`. This means
 we'll count datapoints, events, and spans that exceed those thresholds (if set) and
-log them up to one per second. When you've turned on as described immediately above, 
+log them up to one per second. When you've turned on as described immediately above,
 you'll see metrics named `late.count` and `future.count` emitted counting each type of
 data that was late or in the future respectively.
 
