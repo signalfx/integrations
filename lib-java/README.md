@@ -7,9 +7,9 @@
 
 ### DESCRIPTION
 
-This <a target="_blank" href="https://github.com/signalfx/signalfx-java">repository</a> contains libraries for instrumenting Java applications and reporting metrics to SignalFx, using Codahale Metrics.
+This <a target="_blank" href="https://github.com/signalfx/signalfx-java">repository</a> contains libraries for instrumenting Java applications and reporting metrics to Splunk Infrastructure Monitoring, using Codahale Metrics.
 
-You can also use the module `signalfx-java` to send metrics directly to SignalFx using protocol buffers, without using Codahale or Yammer metrics.
+You can also use the module `signalfx-java` to send metrics directly to Splunk Infrastructure Monitoring using protocol buffers, without using Codahale or Yammer metrics.
 
 For more information regarding installation, usage, and examples see https://github.com/signalfx/signalfx-java
 
