@@ -1,4 +1,4 @@
-description: Splunk Infrastructure  Monitoring generates a number of metrics you can use to monitor the status
+description: Splunk Infrastructure Monitoring generates a number of metrics you can use to monitor the status
   of your organization.
 display_name: Organization-level metrics sent by Infrastructure Monitoring
 product_docs_name: signalfx.organization.metrics
