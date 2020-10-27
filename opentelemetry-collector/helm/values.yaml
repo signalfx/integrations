@@ -1,0 +1,84 @@
+# This configures a single OpenTelemetry Collector in forwarding mode.
+
+# Search for REPLACE and set deployment-specific values. This could be done inside this file,
+# in a separate values file, or as --set parameters. See env.yaml for an example secondary
+# values file.
+
+# Full set of values that can be set are at:
+#    https://github.com/open-telemetry/opentelemetry-helm-charts/blob/master/charts/opentelemetry-collector/values.yaml
+
+image:
+  repository: otel/opentelemetry-collector-contrib
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  # REPLACE
+  tag: "<VERSION>"
+
+# OpenTelemetry Collector executable
+command:
+  name: otelcontribcol
+
+ports:
+  signalfx:
+    enabled: true
+    containerPort: 9943
+    servicePort: 9943
+    hostPort: 9943
+    protocol: TCP
+  sapm:
+    enabled: true
+    containerPort: 7276
+    servicePort: 7276
+    hostPort: 7276
+    protocol: TCP
+  zpages:
+    enabled: true
+    containerPort: 55679
+    servicePort: 55679
+    hostPort: 55679
+    protocol: TCP
+
+# Configuration for agent OpenTelemetry Collector daemonset, enabled by default
+agentCollector:
+  enabled: false
+
+# Configuration for standalone OpenTelemetry Collector deployment, disabled by default
+standaloneCollector:
+  enabled: true
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 1
+      memory: 2Gi
+  # Configuration override that will be merged into the standalone collector default config
+  configOverride:
+    receivers:
+      sapm: {}
+      signalfx: {}
+    extensions:
+      zpages:
+        endpoint: ":55679"
+    exporters:
+      signalfx:
+        # REPLACE
+        realm: <REALM> # e.g. us0, us1, etc.
+        # REPLACE
+        access_token: <ACCESS TOKEN>
+      sapm:
+        # REPLACE
+        access_token: <ACCESS TOKEN>
+        # REPLACE
+        endpoint: https://ingest.<REALM>.signalfx.com/v2/trace
+    service:
+      extensions: [zpages, health_check]
+      pipelines:
+        traces:
+          receivers: [sapm, otlp, jaeger, zipkin]
+          exporters: [sapm]
+        metrics:
+          receivers: [signalfx, prometheus]
+          exporters: [signalfx]
+
+service:
+  type: ClusterIP
+  annotations: {}
