@@ -12,30 +12,28 @@ Monitor Type: `collectd/spark` ([Source](https://github.com/signalfx/signalfx-ag
 
 ## Overview
 
-This integration collects metrics about a Spark cluster using the [collectd Spark Python
+Collects metrics about a Spark cluster using the [collectd Spark Python
 plugin](https://github.com/signalfx/collectd-spark). That plugin collects
 metrics from Spark cluster and instances by hitting endpoints specified in
 Spark's [Monitoring and Instrumentation
 documentation](https://spark.apache.org/docs/latest/monitoring.html) under
 `REST API` and `Metrics`.
 
-The following cluster modes are supported only through HTTP endpoints:
-- Standalone
-- Mesos
-- Hadoop YARN
+We currently only support cluster modes Standalone, Mesos, and Hadoop Yarn
+via HTTP endpoints.
 
-You must specify distinct monitor configurations and discovery rules for
+You have to specify distinct monitor configurations and discovery rules for
 master and worker processes.  For the master configuration, set `isMaster`
 to true.
 
-When running Spark on Apache Hadoop / YARN, this integration is only capable
-of reporting application metrics from the master node.  Use the
+When running Spark on Apache Hadoop / Yarn, this integration is only capable
+of reporting application metrics from the master node.  Please use the
 collectd/hadoop monitor to report on the health of the cluster.
 
 <!--- SETUP --->
 ### Example config:
 
-An example configuration for monitoring applications on YARN
+An example configuration for monitoring applications on Yarn
 ```yaml
 monitors:
   - type: collectd/spark

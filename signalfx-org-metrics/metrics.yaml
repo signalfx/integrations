@@ -123,7 +123,7 @@ sf.org.apm.numAddSpansCalls:
 
   Data resolution: 1 second'
   metric_type: counter
-  title: sf.org.apm.numAddSpansCallsByToken
+  title: sf.org.apm.numAddSpansCalls
 
 sf.org.apm.numAddSpansCallsByToken:
   brief: The number of calls to the `/v2/trace` endpoint for a specific access token.
