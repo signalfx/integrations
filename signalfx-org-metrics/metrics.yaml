@@ -25,6 +25,7 @@ sf.org.apm.numContainers:
   Dimension(s): `orgId`
   
   Data resolution: 1 minute'
+  metric_type: gauge
   title: sf.org.apm.numContainers
 
 sf.org.apm.numHosts:
@@ -37,19 +38,10 @@ sf.org.apm.numHosts:
   metric_type: gauge
   title: sf.org.apm.numHosts
 
-sf.org.apm.numMonitoringMetricSets:
-  brief: The number of Monitoring MetricSets Splunk APM generates.
-  description: 'The number of Monitoring MetricSets Splunk APM generates.
-  
-  Dimension(s): `orgId`
-  
-  Data resolution: 1 minute'
-  title: sf.org.apm.numMonitoringMetricSets
-
 sf.org.apm.grossSpanBytesReceived:
-  brief: The number of bytes SignalFx receives from spans after decompression
+  brief: The number of bytes Splunk APM receives from spans after decompression
     but before filtering and throttling.
-  description: 'The number of bytes SignalFx receives from spans after
+  description: 'The number of bytes Splunk APM receives from spans after
     decompression but before filtering and throttling.
 
   Dimension(s): `orgId`
@@ -59,9 +51,9 @@ sf.org.apm.grossSpanBytesReceived:
   title: sf.org.apm.grossSpanBytesReceived
 
 sf.org.apm.numSpanBytesReceived:
-  brief: The number of bytes SignalFx accepts for a span after decompression
+  brief: The number of bytes Splunk APM accepts for a span after decompression
     after filtering and throttling.
-  description: 'The number of bytes SignalFx accepts for a span after
+  description: 'The number of bytes Splunk APM accepts for a span after
     decompression after filtering and throttling.
 
     Dimension(s): `orgId`
@@ -71,9 +63,9 @@ sf.org.apm.numSpanBytesReceived:
   title: sf.org.apm.numSpanBytesReceived
 
 sf.org.apm.grossSpanBytesReceivedByToken:
-  brief: The number of bytes SignalFx receives for a specific access token
+  brief: The number of bytes Splunk APM receives for a specific access token
     from spans after decompression but before filtering and throttling.
-  description: 'The number of bytes SignalFx receives for a specific access token
+  description: 'The number of bytes Splunk APM receives for a specific access token
     from spans after decompression but before filtering and throttling.
 
   Dimension(s): `orgId`, `tokenId`
@@ -83,10 +75,10 @@ sf.org.apm.grossSpanBytesReceivedByToken:
   title: sf.org.apm.grossSpanBytesReceivedByToken
 
 sf.org.apm.numSpanBytesReceivedByToken:
-  brief: The number of bytes SignalFx accepts for a specific access token
+  brief: The number of bytes Splunk APM accepts for a specific access token
     for a span after decompression after filtering and throttling.
   description: |
-    The number of bytes SignalFx accepts for a specific access token
+    The number of bytes Splunk APM accepts for a specific access token
     for a span after decompression after filtering and throttling.
 
     Dimension(s): `orgId`, `tokenId`
@@ -96,8 +88,8 @@ sf.org.apm.numSpanBytesReceivedByToken:
   title: sf.org.apm.numSpanBytesReceivedByToken
 
 sf.org.apm.numSpansDroppedInvalid:
-  brief: The number of invalid spans SignalFx receives.
-  description: 'The number of invalid spans SignalFx receives. A span can be invalid
+  brief: The number of invalid spans Splunk APM receives.
+  description: 'The number of invalid spans Splunk APM receives. A span can be invalid
     if there is no start time, trace ID, or service associated with it.
 
     Dimension(s): `orgId`
@@ -107,8 +99,8 @@ sf.org.apm.numSpansDroppedInvalid:
   title: sf.org.apm.numSpansDroppedInvalid
 
 sf.org.apm.numSpansDroppedInvalidByToken:
-  brief: The number of invalid spans SignalFx receives for a specific access token.
-  description: 'The number of invalid spans SignalFx receives for a specific access token.
+  brief: The number of invalid spans Splunk APM receives for a specific access token.
+  description: 'The number of invalid spans Splunk APM receives for a specific access token.
     A span can be invalid if there is no start time, trace ID, or service associated with it.
 
     Dimension(s): `orgId`, `tokenId`
@@ -118,8 +110,8 @@ sf.org.apm.numSpansDroppedInvalidByToken:
   title: sf.org.apm.numSpansDroppedInvalidByToken
 
 sf.org.apm.numSpansDroppedOversize:
-  brief: The number of spans SignalFx receives that are too large to process.
-  description: 'The number of spans SignalFx receives that are too large to process.
+  brief: The number of spans Splunk APM receives that are too large to process.
+  description: 'The number of spans Splunk APM receives that are too large to process.
 
   Dimension(s): `orgId`
 
@@ -128,9 +120,9 @@ sf.org.apm.numSpansDroppedOversize:
   title: sf.org.apm.numSpansDroppedOversize
 
 sf.org.apm.numSpansDroppedOversizeByToken:
-  brief: The number of spans SignalFx receives that are too large to process
+  brief: The number of spans Splunk APM receives that are too large to process
     for a specific access token.
-  description: 'The number of spans SignalFx receives that are too large to process
+  description: 'The number of spans Splunk APM receives that are too large to process
     for a specific access token.
 
   Dimension(s): `orgId`, `tokenId`
@@ -140,9 +132,9 @@ sf.org.apm.numSpansDroppedOversizeByToken:
   title: sf.org.apm.numSpansDroppedOversizeByToken
 
 sf.org.apm.numSpansDroppedThrottle:
-  brief: The number of spans SignalFx accepts beyond the allowed ingest volume.
-  description: 'The number of spans SignalFx accepts beyond the allowed ingest volume.
-    SignalFx drops spans it receives after the ingestion volume limit is reached.
+  brief: The number of spans Splunk APM accepts beyond the allowed ingest volume.
+  description: 'The number of spans Splunk APM accepts beyond the allowed ingest volume.
+    APM drops spans it receives after the ingestion volume limit is reached.
 
     Dimension(s): `orgId`
 
@@ -151,10 +143,10 @@ sf.org.apm.numSpansDroppedThrottle:
   title: sf.org.apm.numSpansDroppedThrottle
 
 sf.org.apm.numSpansDroppedThrottleByToken:
-  brief: The number of spans SignalFx accepts for a specific access token
+  brief: The number of spans Splunk APM accepts for a specific access token
     beyond the allowed ingest volume.
-  description: 'The number of spans SignalFx accepts for a specific access token
-    beyond the allowed ingest volume. SignalFx drops spans it receives after
+  description: 'The number of spans Splunk APM accepts for a specific access token
+    beyond the allowed ingest volume. APM drops spans it receives after
     the ingestion volume limit is reached.
 
     Dimension(s): `orgId`, `tokenId`
@@ -164,8 +156,8 @@ sf.org.apm.numSpansDroppedThrottleByToken:
   title: sf.org.apm.numSpansDroppedThrottleByToken
 
 sf.org.apm.grossSpansReceived:
-  brief: The number of spans SignalFx receives before filtering and throttling.
-  description: 'The number of spans SignalFx receives before filtering or throttling.
+  brief: The number of spans Splunk APM receives before filtering and throttling.
+  description: 'The number of spans Splunk APM receives before filtering or throttling.
 
   Dimension(s): `orgId`
 
@@ -174,8 +166,8 @@ sf.org.apm.grossSpansReceived:
   title: sf.org.apm.grossSpansReceived
 
 sf.org.apm.numSpansReceived:
-  brief: The number of spans SignalFx accepts after filtering and throttling.
-  description: 'The number of spans SignalFx accepts after filtering and throttling.
+  brief: The number of spans Splunk APM accepts after filtering and throttling.
+  description: 'The number of spans Splunk APM accepts after filtering and throttling.
 
   Dimension(s): `orgId`
 
@@ -184,9 +176,9 @@ sf.org.apm.numSpansReceived:
   title: sf.org.apm.numSpansReceived
 
 sf.org.apm.grossSpansReceivedByToken:
-  brief: The number of spans SignalFx receives for a specific access token
+  brief: The number of spans Splunk APM receives for a specific access token
     before filtering and throttling.
-  description: 'The number of spans SignalFx receives for a specific access token
+  description: 'The number of spans Splunk APM receives for a specific access token
     before filtering or throttling.
 
     Dimension(s): `orgId`, `tokenId`
@@ -196,9 +188,9 @@ sf.org.apm.grossSpansReceivedByToken:
   title: sf.org.apm.grossSpansReceivedByToken
 
 sf.org.apm.numSpansReceivedByToken:
-  brief: The number of spans SignalFx accepts for a specific access token
+  brief: The number of spans Splunk APM accepts for a specific access token
     after filtering and throttling.
-  description: 'The number of spans SignalFx accepts for a specific access token
+  description: 'The number of spans Splunk APM accepts for a specific access token
     after filtering and throttling.
 
   Dimension(s): `orgId`, `tokenId`
@@ -208,7 +200,7 @@ sf.org.apm.numSpansReceivedByToken:
   title: sf.org.apm.numSpansReceivedByToken
 
 sf.org.apm.subscription.containers:
-  brief: The entitlement for the number of containers for your subscription plan.
+  brief: The entitlement for the number of containers for your host-based subscription plan.
   description: 'The entitlement for the number of containers for your subscription plan.
   
   Dimension(s): `orgId`
@@ -218,7 +210,7 @@ sf.org.apm.subscription.containers:
   title: sf.org.apm.subscription.containers
 
 sf.org.apm.subscription.hosts:
-  brief: The entitlement for the number of hosts for your subscription plan.
+  brief: The entitlement for the number of hosts for your host-based subscription plan.
   description: 'The entitlement for the number of hosts for your subscription plan.
   
   Dimension(s): `orgId`
@@ -248,7 +240,7 @@ sf.org.apm.subscription.spanBytes:
   title: sf.org.apm.subscription.spanBytes
 
 sf.org.apm.subscription.traces:
-  brief: The entitlement for the number of TAPM as part of your subscription plan.
+  brief: The entitlement for the number of TAPM as part of your usage-based subscription plan.
   description: 'The entitlement for the number of TAPM as part of your subscription plan.
   
   Dimension(s): `orgId`
@@ -268,8 +260,8 @@ sf.org.apm.subscription.troubleshootingMetricSets:
   title: sf.org.apm.subscription.troubleshootingMetricSets
 
 sf.org.apm.numTracesReceived:
-  brief: The number of traces SignalFx receives and processes.
-  description: 'The number of traces SignalFx receives and processes.
+  brief: The number of traces Splunk APM receives and processes.
+  description: 'The number of traces Splunk APM receives and processes.
 
   Dimension(s): `orgId`
 
@@ -298,9 +290,9 @@ sf.org.apm.numTroubleshootingMetricSets:
   title: sf.org.apm.numTroubleshootingMetricSets
 
 sf.org.apm.grossContentBytesReceived:
-  brief: The volume of bytes SignalFx receives off the wire before filtering
+  brief: The volume of bytes Splunk APM receives off the wire before filtering
     and throttling.
-  description: 'The volume of bytes SignalFx receives off the wire before filtering
+  description: 'The volume of bytes Splunk APM receives off the wire before filtering
     and throttling. This content could be compressed.
 
   Dimension(s): `orgId`
@@ -310,9 +302,9 @@ sf.org.apm.grossContentBytesReceived:
   title: sf.org.apm.grossContentBytesReceived
 
 sf.org.apm.numContentBytesReceived:
-  brief: The volume of bytes SignalFx accepts off the wire after filtering
+  brief: The volume of bytes Splunk APM accepts off the wire after filtering
     and throttling.
-  description: 'The volume of bytes SignalFx accepts off the wire after filtering
+  description: 'The volume of bytes Splunk APM accepts off the wire after filtering
     and throttling. This content could be compressed.
 
   Dimension(s): `orgId`
@@ -322,9 +314,9 @@ sf.org.apm.numContentBytesReceived:
   title: sf.org.apm.numContentBytesReceived
 
 sf.org.apm.grossContentBytesReceivedByToken:
-  brief: The volume of bytes SignalFx receives off the wire for a specific access
+  brief: The volume of bytes Splunk APM receives off the wire for a specific access
     token before filtering and throttling.
-  description: 'The volume of bytes SignalFx receives off the wire for a specific
+  description: 'The volume of bytes Splunk APM receives off the wire for a specific
     access token before filtering and throttling. This content could be compressed.
 
   Dimension(s): `orgId`, `tokenId`
@@ -334,9 +326,9 @@ sf.org.apm.grossContentBytesReceivedByToken:
   title: sf.org.apm.grossContentBytesReceivedByToken
 
 sf.org.apm.numContentBytesReceivedByToken:
-  brief: The volume of bytes SignalFx accepts off the wire for a specific access
+  brief: The volume of bytes Splunk APM accepts off the wire for a specific access
     token after filtering and throttling.
-  description: 'The volume of bytes SignalFx accepts off the wire for a specific
+  description: 'The volume of bytes Splunk APM accepts off the wire for a specific
     access token after filtering and throttling. This content could be compressed.
 
   Dimension(s): `orgId`, `tokenId`
