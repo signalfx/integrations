@@ -65,7 +65,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monit
 | `sslCertFile` | no | `string` | Path to this monitor's own SSL/TLS certificate. |
 | `sslKeyFile` | no | `string` | Path to this monitor's private SSL/TLS key file. |
 | `sslKeyPassphrase` | no | `string` | This monitor's private SSL/TLS key file password if any. |
-| `sslVerify` | no | `bool` | Should the monitor verify the RabbitMQ Management plugin SSL/TLS certificate. (**default:** `false`) |
+| `sslVerify` | no | `bool` | Should the monitor verify the RabbitMQ server SSL/TLS certificate. (**default:** `false`) |
 
 
 ## Metrics

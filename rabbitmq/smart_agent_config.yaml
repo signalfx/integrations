@@ -114,7 +114,7 @@ collectd/rabbitmq:
     type: string
     yamlName: sslKeyPassphrase
   - default: 'false'
-    doc: Should the monitor verify the RabbitMQ Management plugin SSL/TLS certificate.
+    doc: Should the monitor verify the RabbitMQ server SSL/TLS certificate.
     elementKind: ''
     required: false
     type: bool
