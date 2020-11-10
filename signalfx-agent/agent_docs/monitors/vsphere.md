@@ -67,6 +67,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `insecureSkipVerify` | no | `bool` | Whether we verify the server's certificate chain and host name (**default:** `false`) |
 | `inventoryRefreshInterval` | no | `int64` | How often to reload the inventory and inventory metrics (**default:** `60s`) |
 | `perfBatchSize` | no | `integer` | Maximum number of inventory objects to be queried for performance data per request. Set this value to zero (0) to request performance data for all inventory objects at a time. (**default:** `10`) |
+| `filter` | no | `string` | An 'expr' expression to limit the inventory traversed by the monitor. Leave blank or omit to traverse and get metrics for the entire vSphere inventory. Otherwise, this expression is evaluated per cluster. If the expression evaluates to true, metrics are collected for the objects in the cluster, otherwise it is skipped. Made available to the expr expression environment are the variables: `Datacenter` and `Cluster`. For example: filter: "Datacenter == 'MyDatacenter' && Cluster == 'MyCluster'" The above expr value will cause metrics collection for only the given datacenter + cluster. See https://github.com/antonmedv/expr for more advanced syntax. |
 | `tlsCACertPath` | no | `string` | Path to the ca file |
 | `tlsClientCertificatePath` | no | `string` | Configure client certs. Both tlsClientKeyPath and tlsClientCertificatePath must be present. The files must contain PEM encoded data. Path to the client certificate |
 | `tlsClientKeyPath` | no | `string` | Path to the keyfile |

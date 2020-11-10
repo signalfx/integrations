@@ -444,17 +444,19 @@ gauge.collections:
   title: gauge.collections
 
 gauge.connections.available:
-  brief: Number of available incoming connections
+  brief: The number of unused incoming connections available
   custom: true
-  description: Number of available incoming connections
+  description: "The number of unused incoming connections available. Consider this\
+    \ value \nin combination with the value of `gauge.connections.current` to \nunderstand\
+    \ the connection load on the database."
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.connections.available
 
 gauge.connections.current:
-  brief: Number of current client connections
+  brief: The number of incoming connections from clients to the database server
   custom: false
-  description: Number of current client connections
+  description: The number of incoming connections from clients to the database server.
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.connections.current
@@ -587,6 +589,34 @@ gauge.objects:
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.objects
+
+gauge.repl.active_nodes:
+  brief: Number of healthy members in a replicaset (reporting 1 for [health](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].health))
+  custom: false
+  description: Number of healthy members in a replicaset (reporting 1 for [health](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].health)).
+  metric_type: gauge
+  monitor: collectd/mongodb
+  title: gauge.repl.active_nodes
+
+gauge.repl.is_primary_node:
+  brief: Report 1 when member [state](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].stateStr)
+    of replicaset is `PRIMARY` and 2 else
+  custom: false
+  description: Report 1 when member [state](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].stateStr)
+    of replicaset is `PRIMARY` and 2 else.
+  metric_type: gauge
+  monitor: collectd/mongodb
+  title: gauge.repl.is_primary_node
+
+gauge.repl.max_lag:
+  brief: "Replica lag in seconds calculated from the difference between the \ntimestamp\
+    \ of the last oplog entry of primary and secondary [see mongo \ndoc](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].optimeDate)"
+  custom: false
+  description: "Replica lag in seconds calculated from the difference between the\
+    \ \ntimestamp of the last oplog entry of primary and secondary [see mongo \ndoc](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].optimeDate)."
+  metric_type: gauge
+  monitor: collectd/mongodb
+  title: gauge.repl.max_lag
 
 gauge.storageSize:
   brief: Total bytes allocated to collections for document storage

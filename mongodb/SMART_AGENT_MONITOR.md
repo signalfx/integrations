@@ -124,8 +124,11 @@ These are the metrics available for this integration.
  - `gauge.collection.max` (*gauge*)<br>    Maximum number of documents in a capped collection
  - `gauge.collection.maxSize` (*gauge*)<br>    Maximum disk usage of a capped collection
  - `gauge.collections` (*gauge*)<br>    Number of collections
- - `gauge.connections.available` (*gauge*)<br>    Number of available incoming connections
- - ***`gauge.connections.current`*** (*gauge*)<br>    Number of current client connections
+ - `gauge.connections.available` (*gauge*)<br>    The number of unused incoming connections available. Consider this value 
+    in combination with the value of `gauge.connections.current` to 
+    understand the connection load on the database.
+
+ - ***`gauge.connections.current`*** (*gauge*)<br>    The number of incoming connections from clients to the database server.
  - `gauge.connections.totalCreated` (*cumulative*)<br>    Count of all incoming connections created to the server. This number includes connections that have since closed.
  - ***`gauge.dataSize`*** (*gauge*)<br>    Total size of data, in bytes
  - ***`gauge.extra_info.heap_usage_bytes`*** (*gauge*)<br>    Heap size used by the mongod process, in bytes
@@ -142,6 +145,12 @@ These are the metrics available for this integration.
  - ***`gauge.mem.virtual`*** (*gauge*)<br>    Mongodb virtual memory usage, in MB
  - `gauge.numExtents` (*gauge*)<br>
  - ***`gauge.objects`*** (*gauge*)<br>    Number of documents across all collections
+ - ***`gauge.repl.active_nodes`*** (*gauge*)<br>    Number of healthy members in a replicaset (reporting 1 for [health](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].health)).
+ - ***`gauge.repl.is_primary_node`*** (*gauge*)<br>    Report 1 when member [state](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].stateStr) of replicaset is `PRIMARY` and 2 else.
+ - ***`gauge.repl.max_lag`*** (*gauge*)<br>    Replica lag in seconds calculated from the difference between the 
+    timestamp of the last oplog entry of primary and secondary [see mongo 
+    doc](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].optimeDate).
+
  - ***`gauge.storageSize`*** (*gauge*)<br>    Total bytes allocated to collections for document storage
  - ***`gauge.uptime`*** (*counter*)<br>    Uptime of this server in milliseconds
 

@@ -227,7 +227,7 @@ monitor config option `extraGroups`:
  - `gauge.bucket.op.ep_tap_total_queue_backfillremaining` (*gauge*)<br>    Total number of items in the backfill queues of TAP connections to this bucket
  - `gauge.bucket.op.ep_tap_total_queue_backoff` (*gauge*)<br>    Total number of back-offs received per second while sending data over TAP connections to this bucket
  - `gauge.bucket.op.ep_tap_total_queue_drain` (*gauge*)<br>    Total number of items per second being sent over TAP connections to this bucket
- - `gauge.bucket.op.ep_tap_total_queue_fill` (*gauge*)<br>    Total enqueued items in the queue.
+ - `gauge.bucket.op.ep_tap_total_queue_fill` (*gauge*)<br>    Total enqueued items in the queue. 
  - `gauge.bucket.op.ep_tap_total_queue_itemondisk` (*gauge*)<br>    The number of items waiting to be written to disk for this bucket for this state.
  - `gauge.bucket.op.ep_tap_total_total_backlog_size` (*gauge*)<br>    Number of remaining items for replication
  - `gauge.bucket.op.ep_tap_user_count` (*gauge*)<br>    Number of internal user TAP queues in this bucket
@@ -360,3 +360,6 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
+
+
+

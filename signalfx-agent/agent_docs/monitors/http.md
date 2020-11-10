@@ -12,16 +12,128 @@ Monitor Type: `http` ([Source](https://github.com/signalfx/signalfx-agent/tree/m
 
 ## Overview
 
-This monitor will generate metrics based on whether the HTTP responses from
-the configured URLs match expectations (e.g. correct body, status code,
+This monitor will generate metrics based on whether the HTTP response from
+the configured URL match expectations (e.g. correct body, status code,
 etc).
 
 TLS information will automatically be fetched if applicable (from base URL
-or redirection).
+or redirection depending on `useHTTPS` parameter).
 
-The configuration will be applied to every requests URLs from configured
-list so you need to instance multiple times this monitor for different
-behavior on multiple URLs.
+<!--- SETUP --->
+## Setup
+
+To create a webcheck from a URL, you need to split it into different 
+configuration options. All of these will determine the `url` dimension 
+value from its "normalized" url `{scheme}://{host}:{port}{path}`:
+  * `scheme` will be `https` if `useHTTPS:true` or `http` else.
+  * `host` should be the hostname of the site to check. It is mandatory.
+  * `port` should be the port to connect to. If not defined, it will 
+  be `443` if `useHTTPS:true` or `80` else.
+  * `path` will contain the full query including resource path and 
+  finally the `GET` method parameters with `?` separator.
+
+__Notice__: `:port` will be removed from `url` if default because 
+it is implicit and makes the behavior similar to what `curl` does.
+
+In addition to information from the URL you can also configure the 
+behavior of the request done on this URL:
+  * request type like `GET` or `POST` are defined from `method`. [See go 
+  doc](https://golang.org/src/net/http/method.go) for full list of 
+  available methods.
+  * basic authentification could be done from `username` and `password`
+  configuration options.
+  * request headers could be defined with `httpHeaders`. It could be 
+  useful to override the `host` header.
+  * it is possible to provide a body to the request through `requestBody`.
+  The form of this body will often depend on the `Content-Type` header.
+  For example, `{"foo":"bar"}` with `Content-Type: application/json`.
+  * By default, it will follow redirects. It is possible to disable that behavior using 
+  `noRedirects:false`.
+
+See [Config Examples](#config-examples) for different request behaviors.
+
+Some configuration options change the resulting values:
+  * the `desiredCode` option will determine the `http.code_matched` value.
+  By default it is `200` it could be useful to change it if you 
+  expect different "normal" value.
+  For example, use `desiredCode:301` and `noRedirects:false` to check a 
+  redirect (and not the end redirected url) keeping value to `1` (success).
+  * the `regex` option will do the same with `http.regex_matched` metric 
+  where value will be `1` only if provided regex matchs the response body.
+  * the `addRedirectURL` does not have impact on metrics but will add a 
+  new dimension `redirect_url` with "dynamic" value. Indeed, if `url` 
+  dimension could only change with monitor configuration, the `redirect_url` 
+  could be impacted by any server change and will always be the last url 
+  redirected. Disabled by default because this could cause problem with 
+  heartbeat detector for example.
+
+Common useful headers are:
+  * `Cache-Control: no-cache` to ignore cache.
+  * `Host` to change the request (i.e. bypass cdn or load balancer requesting 
+  directly the backend)
+  * `Content-Type` will allow to change application type (json, xml, octet-stream..)
+
+<!--- SETUP --->
+## Config Examples
+
+Here are some `curl` examples commands with their corresponding configuration.
+
+* `curl -L http://signalfx.com` (`http.status_code=200` because does follow 
+redirect to splunk)
+
+```
+monitors:
+ - type: http
+   host: signalfx.com
+```
+
+* `curl -I http://signalfx.com` (`http.status_code=301` because it does not 
+follow redirect to splunk)
+
+```
+monitors:
+ - type: http
+   host: signalfx.com
+   noRedirects: true
+   method: HEAD
+```
+
+* `curl -L -H 'Host: foobar' -A 'customAgent' https://signalfx.com` 
+(`http.cert_valid=0` because host does not match certificate)
+
+```
+monitors:
+ - type: http
+   host: signalfx.com
+   useHTTPS: true
+   httpHeaders: 
+     Host: foobar
+     User-Agent: customAgent
+```
+
+* `curl -G -X GET -d 'foo=bar' -d 'leet=1337' http://signalfx.com/fakepage`
+
+```
+monitors:
+ - type: http
+   host: signalfx.com
+   path: '/fakepage?foo=bar&leet=1337'
+   method: GET
+   httpHeaders:
+     Content-Type: application/x-www-form-urlencoded
+```
+
+* `curl -X POST -d '{"foo":"bar"}' http://signalfx.com`
+
+```
+monitors:
+ - type: http
+   host: signalfx.com
+   method: POST
+   requestBody: '{"foo":"bar"}'
+```
+
+For a full list of options, see [Configuration](#configuration).
 
 
 ## Configuration
