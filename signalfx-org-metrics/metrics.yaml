@@ -286,7 +286,7 @@ sf.org.apm.numTroubleshootingMetricSets:
   Dimension(s): `orgId`
 
   Data resolution: 1 minute'
-  metric_type: gauge
+  metric_type: counter
   title: sf.org.apm.numTroubleshootingMetricSets
 
 sf.org.apm.grossContentBytesReceived:
