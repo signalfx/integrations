@@ -72,15 +72,12 @@ you granted to your user the `PROCESS` privilege.
 ```
 monitors:
  - type: collectd/mysql
-   host: 127.0.0.1
-   port: 3306
-   databases:
-     - name: dbname
-     - name: securedb
-       username: admin
-       password: s3cr3t
-   username: dbuser
-   password: passwd
+    host: 127.0.0.1
+    port: 3306
+    databases:
+      - name:
+    username: collectd
+    password: YOURPASSWORDHERE
 ```
 
 ### Installation
