@@ -95,7 +95,7 @@ These are the metrics available for this integration.
 
  - `counter.asserts.regular` (*cumulative*)<br>    The number of regular assertions raised since the MongoDB process started. Check the log file for more information about these messages.
  - `counter.asserts.warning` (*cumulative*)<br>    In MongoDB 3.x and earlier, the field returns the number of warnings raised since the MongoDB process started.  In MongodDB 4, this is always 0.
- - ***`counter.backgroundFlushing.flushes`*** (*gauge*)<br>    Number of times the database has been flushed
+ - ***`counter.backgroundFlushing.flushes`*** (*gauge*)<br>    Number of times the database has been flushed. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
  - ***`counter.extra_info.page_faults`*** (*gauge*)<br>    Mongod page faults
  - `counter.lock.Database.acquireCount.intentExclusive` (*cumulative*)<br>
  - `counter.lock.Database.acquireCount.intentShared` (*cumulative*)<br>
@@ -119,8 +119,8 @@ These are the metrics available for this integration.
  - `counter.opcountersRepl.insert` (*cumulative*)<br>    Number of replicated inserts since last restart
  - `counter.opcountersRepl.query` (*cumulative*)<br>    Number of replicated queries since last restart
  - `counter.opcountersRepl.update` (*cumulative*)<br>    Number of replicated updates since last restart
- - ***`gauge.backgroundFlushing.average_ms`*** (*gauge*)<br>    Average time (ms) to write data to disk
- - ***`gauge.backgroundFlushing.last_ms`*** (*gauge*)<br>    Most recent time (ms) spent writing data to disk
+ - ***`gauge.backgroundFlushing.average_ms`*** (*gauge*)<br>    Average time (ms) to write data to disk. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
+ - ***`gauge.backgroundFlushing.last_ms`*** (*gauge*)<br>    Most recent time (ms) spent writing data to disk. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
  - `gauge.collection.max` (*gauge*)<br>    Maximum number of documents in a capped collection
  - `gauge.collection.maxSize` (*gauge*)<br>    Maximum disk usage of a capped collection
  - `gauge.collections` (*gauge*)<br>    Number of collections
@@ -131,7 +131,7 @@ These are the metrics available for this integration.
  - ***`gauge.connections.current`*** (*gauge*)<br>    The number of incoming connections from clients to the database server.
  - `gauge.connections.totalCreated` (*cumulative*)<br>    Count of all incoming connections created to the server. This number includes connections that have since closed.
  - ***`gauge.dataSize`*** (*gauge*)<br>    Total size of data, in bytes
- - ***`gauge.extra_info.heap_usage_bytes`*** (*gauge*)<br>    Heap size used by the mongod process, in bytes
+ - ***`gauge.extra_info.heap_usage_bytes`*** (*gauge*)<br>    Heap size used by the mongod process, in bytes. Deprecated in mongo version > 3.3, use gauge.tcmalloc.generic.heap_size instead.
  - ***`gauge.globalLock.activeClients.readers`*** (*gauge*)<br>    Number of active client connections performing reads
  - `gauge.globalLock.activeClients.total` (*gauge*)<br>    Total number of active client connections
  - ***`gauge.globalLock.activeClients.writers`*** (*gauge*)<br>    Number of active client connections performing writes
@@ -140,7 +140,7 @@ These are the metrics available for this integration.
  - ***`gauge.globalLock.currentQueue.writers`*** (*gauge*)<br>    Write operations currently in queue
  - ***`gauge.indexSize`*** (*gauge*)<br>    Total size of indexes, in bytes
  - `gauge.indexes` (*gauge*)<br>    Number of indexes across all collections
- - ***`gauge.mem.mapped`*** (*gauge*)<br>    Mongodb mapped memory usage, in MB
+ - ***`gauge.mem.mapped`*** (*gauge*)<br>    Mongodb mapped memory usage, in MB. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
  - ***`gauge.mem.resident`*** (*gauge*)<br>    Mongodb resident memory usage, in MB
  - ***`gauge.mem.virtual`*** (*gauge*)<br>    Mongodb virtual memory usage, in MB
  - `gauge.numExtents` (*gauge*)<br>
@@ -152,6 +152,7 @@ These are the metrics available for this integration.
     doc](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].optimeDate).
 
  - ***`gauge.storageSize`*** (*gauge*)<br>    Total bytes allocated to collections for document storage
+ - ***`gauge.tcmalloc.generic.heap_size`*** (*gauge*)<br>    Heap size used by the mongod process, in bytes. Same as gauge.extra_info.heap_usage_bytes but supports 64-bit values.
  - ***`gauge.uptime`*** (*counter*)<br>    Uptime of this server in milliseconds
 
 #### Group collection
