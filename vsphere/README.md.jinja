@@ -14,24 +14,29 @@
 
 ### Description
 
-**This integration primarily consists of the Smart Agent monitor `vsphere`.
-Below is an overview of that monitor.**
+**This integration primarily consists of the Smart Agent monitor `vsphere`. Below is an overview of that monitor.**
 
 #### Smart Agent Monitor
 
 A VMware vSphere deployment includes physical hosts, ESXi hypervisors, virtual machines, and a vCenter Server.
 
-To report metrics for a vSphere deployment, this monitor logs into a vCenter Server and retrieves data about the deployment and its real-time performance data on a regular interval.
+To report metrics for a vSphere deployment, this monitor logs into a vCenter Server and retrieves data about the deployment and its 
+real-time performance data on a regular interval.
 
-When the monitor first runs, it logs into the vCenter Server and traverses the inventory, gathering and caching all of the hosts and virtual machines, and their available metrics.
+When the monitor first runs, it logs into the vCenter Server and traverses the inventory, gathering and caching all of the hosts and 
+virtual machines, and their available metrics.
 
-After this initial sweep, the monitor will query the vCenter for performance data and metrics. This query takes place every 20 seconds, which is the interval at which the vCenter makes real-time performance data available. As a result, regardless of the `intervalSeconds` value in the agent config, this monitor will run every 20 seconds.
+After this initial sweep, the monitor will query the vCenter for performance data and metrics. This query takes place every 20 seconds, 
+which is the interval at which the vCenter makes real-time performance data available. As a result, regardless of the `intervalSeconds` 
+value in the agent config, this monitor will run every 20 seconds.
 
-The monitor also refreshes, at a configurable interval, the cache of hosts, virtual machines, and metrics. By default, this refresh takes place every 60 seconds; however, this interval can be changed by updating the configuration field `InventoryRefreshInterval`.
+The monitor also refreshes, at a configurable interval, the cache of hosts, virtual machines, and metrics. By default, this refresh takes 
+place every 60 seconds; however, this interval can be changed by updating the configuration field `InventoryRefreshInterval`.
 
 #### Compatibility
 
-This monitor uses VMware’s govmomi SDK, which officially supports vCenter 6.0, 6.5, 6.7, and 7.0. While this monitor may work with vCenter 5.5 and 5.1, these versions are not officially supported.
+This monitor uses VMware’s govmomi SDK, which officially supports vCenter 6.0, 6.5, 6.7, and 7.0. While this monitor may work with 
+vCenter 5.5 and 5.1, these versions are not officially supported.
 
 #### Sample YAML configuration
 
@@ -50,7 +55,8 @@ monitors:
 
 This integration is part of the {{ macros.link("SignalFx Smart Agent", "https://github.com/signalfx/signalfx-agent", new_window=True, tile_link="signalfx-agent") }} as the `vsphere` monitor. You should first deploy the Smart Agent to the same host as the service you want to monitor, and then continue with the configuration instructions below.
 
-_Note_: When you add a custom role and do not assign any privileges to it, the role is created as a Read Only role with three system-defined privileges: System.Anonymous, System.View, and System.Read. See {{ macros.link("Using Roles to Assign Privileges", "https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-18071E9A-EED1-4968-8D51-E0B4F526FDA3.html", new_window=True) }} for more information.
+_Note_: When you add a custom role and do not assign any privileges to it, the role is created as a Read Only role with three 
+system-defined privileges: System.Anonymous, System.View, and System.Read. See {{ macros.link("Using Roles to Assign Privileges", "https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-18071E9A-EED1-4968-8D51-E0B4F526FDA3.html", new_window=True) }} for more information.
 
 ### CONFIGURATION
 
