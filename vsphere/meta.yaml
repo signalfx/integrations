@@ -1,7 +1,7 @@
 browse_categories:
 - Cloud infrastructure and services
 data_signature: _exists_:"vcenter"
-description: Monitor vSphere using the Smart Agent
+description: Monitor vSphere using the SignalFx Smart Agent
 display_name: vSphere
 featured: false
 in_app_categories:
