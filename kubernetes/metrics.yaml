@@ -284,21 +284,21 @@ kubernetes.replication_controller.desired:
   metric_type: gauge
   title: kubernetes.replication_controller.desired
 
-kubernetes_container_restart_count:
+kubernetes.container_restart_count:
   brief: How many times the container has restarted (capped at 5 due to K8s GC)
   description: How many times the container has restarted (capped at 5 due to K8s
     GC)
   metric_type: gauge
   title: kubernetes.container_restart_count
 
-kubernetes_node_ready:
+kubernetes.node_ready:
   brief: Whether this node is ready (1), not ready (0) or in an unknown state (-1)
   description: Whether this node is ready (1), not ready (0) or in an unknown state
     (-1)
   metric_type: gauge
   title: kubernetes.node_ready
 
-kubernetes_pod_phase:
+kubernetes.pod_phase:
   brief: Current phase of the pod (1 - Pending, 2 - Running, 3 - Succeeded, 4 - Failed,
     5 - Unknown)
   description: Current phase of the pod (1 - Pending, 2 - Running, 3 - Succeeded,
@@ -323,4 +323,3 @@ machine_memory_bytes:
   description: Amount of memory installed on the node.
   metric_type: gauge
   title: machine_memory_bytes
-

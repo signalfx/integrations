@@ -1,6 +1,9 @@
+# ![](./img/integrations_mysql.png) MySQL
 {% import "macros.jinja" as macros %}
 
 {% if target == "docs" -%}
+# ![](../../_images/images-integrations/integrations-reference/mysql/integrations_mysql.png) MySQL
+
 # MySQL
 
 - [Overview](#overview)
@@ -36,12 +39,11 @@ returned by a `SHOW STATUS` command. This includes the following:
 To create a MySQL user for collectd:
 
 ```
- CREATE USER 'collectd'@'localhost' IDENTIFIED BY 'collectdUserPassword';
- -- Give appropriate permissions
- -- ("GRANT USAGE" is synonymous to "no privileges")
- GRANT USAGE ON *.* TO 'collectd'@'localhost';
- -- Permissions for the stats options
- GRANT REPLICATION CLIENT ON *.* TO 'collectd'@'localhost';
+db.createUser( {
+  user: "collectd",
+  pwd: "collectd",
+  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
+});
 ```
 
 The new user will only have privileges to connect to the database. Additional privileges are not required.
@@ -70,7 +72,7 @@ If you want to enable InnoDB metrics (`innodbStats` to `true`), be sure that
 you granted to your user the `PROCESS` privilege.
 
 <!--- SETUP --->
-### Example configuration
+### Example configuration to connect multiple MySQL databases
 
 ```
 monitors:
@@ -85,6 +87,21 @@ monitors:
    username: dbuser
    password: passwd
 ```
+
+### Example configuration to connect a single MySQL database
+
+```
+monitors:
+ - type: collectd/mysql
+    host: 127.0.0.1
+    port: 3306
+    databases:
+      - name:
+    username: collectd
+    password: YOURPASSWORDHERE
+```
+
+See [MySQL plugin](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_mysql) for more information.
 
 ### Installation
 
@@ -148,21 +165,7 @@ If you have configured MySQL to use replication you may want to collect informat
 
 ## USAGE
 
-Below are screen captures of dashboards created for this plugin by SignalFx, illustrating the metrics emitted by this plugin.
-
 For general reference on how to monitor MySQL performance using this plugin, see <a target="_blank" href="https://collectd.org/wiki/index.php/Plugin:MySQL">documentation on collectd.org</a>.
-
-**Monitoring multiple MySQL nodes**
-
-![Example dashboard showing MySQL nodes](././img/MySQL_nodes_dashboard.png)
-
-*Example dashboard showing performance of multiple MySQL nodes.*
-
-**Monitoring a single MySQL node**
-
-![Example dashboard showing a single MySQL host](././img/MySQL_node_dashboard.png)
-
-*Example dashboard showing performance of a single MySQL node.*
 
 ## METRICS
 
