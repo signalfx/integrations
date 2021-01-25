@@ -13,44 +13,45 @@
 
 Splunk Infrastructure Monitoring provides the following types of metrics that measure your usage:
 
--  Ingest metrics that measure the data you're sending to Infrastructure Monitoring, such as the number of datapoints you've sent, or the number of metric time series (**MTS**) created from the datapoints and dimensions you sent
-
--  App usage or engagement metrics that measure your use of application features, such as the number of dashboards or charts in your organization
-
--  Cloud service integration metrics that measure how Infrastructure Monitoring pulls data from cloud services such as Amazon Web Services (**AWS**) or Google Cloud Platform (**GCP**), such as the number of calls to each GCP Stackdriver client method, or the number of the calls to the AWS CloudWatch API that AWS has throttled
-
--  Metrics that measure your use of resources for which you can specify limits, such as the number of custom MTS you've created. These metrics
-   help you track usage and avoid going over your organization limits.
+* Ingest metrics: Measure the data you're sending to Infrastructure Monitoring, such as the number of datapoints you've sent
+* App usage metrics: Measure your use of application features, such as the number of dashboards in your organization
+* Integration metrics: Measure the use cloud services integrated with your organization, such as the number of calls to the AWS CloudWatch API
+* Metrics that measure your use of resources for which you can specify limits, such as the number of custom MTS you've created
 
 You're not charged for these metrics, and they do not count against any limits.
 
 
 ## USAGE
 
-Admins can view some of these metrics in built-in charts on the Organization Overview page. Like other metrics, you can display them in custom charts you create in order to monitor your system health.
+If you're an admin, you can view some of these metrics in built-in charts on the Organization Overview page.
+Anyone can display these metrics in custom charts.
 
-### Metric pairs that provide total and ByToken values
+### Metrics for values by token
 
-Some metrics send both a total value and a ByToken value, such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`.
+In some cases, Infrastructure Monitoring has two similar metrics:
 
-The sum of all the ByToken values for a metric may be less than the value of its non-token-based counterpart metric.
-The sums differ because Infrastructure Monitoring doesn't use a token to retrieve cloud service data you've requested with an integration.
-This applies to AWS CloudWatch, GCP StackDriver, AppDynamics, and New Relic.
+* One metric, such as `sf.org.numAddDatapointCalls`, represents the total across your entire organization.
+* The similar metric, `sf.org.numAddDatapointCallsByToken` represents the total for each unique access token you use.
 
-For example, if you sum the values for `sf.org.numAddDatapointCallsByToken`, the result may be less than the value of
-`sf.org.numAddDatapointCalls`, because `sf.org.numAddDatapointCalls` includes data from cloud service integrations,
-while `sf.org.numAddDatapointCallsByToken` does not.
+The sum of all the by token metric values for a measurement might be less than the total value metric value. For
+example, the sum, of all `sf.org.numAddDatapointCallsByToken` values might be less than the value of
+`sf.org.numAddDatapointCalls`. The sums differ because Infrastructure Monitoring doesn't use a token to retrieve
+data from cloud services you've integrated. Infrastructure Monitoring counts the datapoint calls for the integrated
+services, but it doesn't have a way to count the calls for any specific token.
+
+This difference in values applies to AWS CloudWatch, GCP StackDriver, AppDynamics, and New Relic integrations.
 
 ### Metrics with values for each metric type
 
-Some metrics have a value for each metric type (counter, cumulative counter or gauge), so you have three MTS per metric. Each MTS has a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have multiple MTS for these metrics, you need to use the `sum()` SignalFlow function to see the total value.
+Some metrics have a value for each metric type (counter, cumulative counter, or gauge), so you have three MTS per metric.
+Each MTS has a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have
+multiple MTS for these metrics, you need to use the `sum()` SignalFlow function to see the total value.
 
-For example, you might receive three MTS for `sf.org.numMetricTimeSeriesCreated`, one for the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges. To find the total number of MTS created, you need to sum those values.
-Use this SignalFlow expression:
+For example, you might receive three MTS for `sf.org.numMetricTimeSeriesCreated`, one for the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges.
 
 Also, you can filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
 
-### Metric that counts stopped detectors
+### A metric that counts stopped detectors
 
 The metric `sf.org.numDetectorsAborted` monitors the number of detectors that Infrastructure Monitoring
 stopped because the detector reached a resource limit. In most cases, the detector exceeds the limit of 250K MTS.
