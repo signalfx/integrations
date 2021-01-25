@@ -52,7 +52,11 @@ Also, you can filter by a single value of `category`, such as `GAUGE`, to see on
 
 ### Metric that counts stopped detectors
 
-The metric `sf.org.numDetectorsAborted` monitors the number of detectors that Infrastructure Monitoring stopped because the detector reached a resource limit; this usually occurs when the number of MTS exceeds 250K. This condition also generates the event `sf.org.abortedDetectors`, which records details including the detector ID, the reason it stopped, and the value or limit of MTS or datapoints, whichever caused the detector to stop.
+The metric `sf.org.numDetectorsAborted` monitors the number of detectors that Infrastructure Monitoring
+stopped because the detector reached a resource limit. In most cases, the detector exceeds the limit of 250K MTS.
+MTS exceeds 250K. This condition also generates the event
+`sf.org.abortedDetectors`, which records details including the detector ID, the reason it stopped, and
+the value or limit of MTS or datapoints, whichever caused the detector to stop.
 
 To learn more, see [View Additional Data With Events](https://docs.signalfx.com/en/latest/detect-alert/events-intro.html).
 

@@ -1,7 +1,7 @@
 sf.org.apm.numSpansDroppedThrottle:
-  brief: The number of spans Splunk APM accepts beyond the allowed ingest volume.
+  brief: The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
   description: |
-    The number of spans Splunk APM accepts beyond the allowed ingest volume.
+    The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
     Splunk APM drops spans it receives after the ingestion volume limit is reached.
 
       * Dimension(s): `orgId`
@@ -10,10 +10,10 @@ sf.org.apm.numSpansDroppedThrottle:
   title: sf.org.apm.numSpansDroppedThrottle
 
 sf.org.apm.numSpansDroppedThrottleByToken:
-  brief: The number of spans Splunk APM accepts for a specific access token
-    beyond the allowed ingest volume.
+  brief: The number of spans Splunk APM dropped for a specific access token
+    after you exceeded the allowed ingest volume.
   description: |
-    The number of spans Splunk APM accepts for a specific access token
+    The number of spans Splunk APM received for a specific access token
     beyond the allowed ingest volume. Splunk APM drops spans it receives after
     the ingestion volume limit is reached.
 
@@ -23,9 +23,9 @@ sf.org.apm.numSpansDroppedThrottleByToken:
   title: sf.org.apm.numSpansDroppedThrottleByToken
 
 sf.org.apm.grossSpansReceived:
-  brief: The number of spans Splunk APM receives before filtering and throttling.
+  brief: The number of spans Splunk APM received before filtering and throttling.
   description: |
-    The number of spans Splunk APM receives before filtering or throttling.
+    The number of spans Splunk APM received before filtering or throttling.
 
       * Dimension(s): `orgId`
       * Data resolution: 1 second
@@ -33,11 +33,11 @@ sf.org.apm.grossSpansReceived:
   title: sf.org.apm.grossSpansReceived
 
 sf.org.apm.grossSpansReceivedByToken:
-  brief: The number of spans Splunk APM receives for a specific access token
+  brief: The number of spans Splunk APM received for a specific access token
     before filtering and throttling.
   description: |
-    The number of spans Splunk APM receives for a specific access token
-    before filtering or throttling.
+    The number of spans Splunk APM received for a specific access token
+    before filtering and throttling.
 
       * Dimension(s): `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -45,9 +45,9 @@ sf.org.apm.grossSpansReceivedByToken:
   title: sf.org.apm.grossSpansReceivedByToken
 
 sf.org.apm.numSpansReceived:
-  brief: The number of spans Splunk APM accepts after filtering and throttling.
+  brief: The number of spans Splunk APM received after filtering and throttling.
   description: |
-    The number of spans Splunk APM accepts after filtering and throttling.
+    The number of spans Splunk APM received after filtering and throttling.
 
       * Dimension(s): `orgId`
       * Data resolution: 1 second
@@ -55,7 +55,7 @@ sf.org.apm.numSpansReceived:
   title: sf.org.apm.numSpansReceived
 
 sf.org.apm.numSpansReceivedByToken:
-  brief: The number of spans Splunk APM accepts for a specific access token
+  brief: The number of spans Splunk APM received for a specific access token
     after filtering and throttling.
   description: |
     The number of spans Splunk APM accepts for a specific access token
@@ -67,7 +67,7 @@ sf.org.apm.numSpansReceivedByToken:
   title: sf.org.apm.numSpansReceivedByToken
 
 sf.org.apm.grossSpanBytesReceived:
-  brief: The number of bytes Splunk APM receives from spans after decompression
+  brief: The number of bytes Splunk APM received from spans after decompression
     but before filtering and throttling.
   description: |
     The number of bytes Splunk APM receives from spans after
@@ -79,7 +79,7 @@ sf.org.apm.grossSpanBytesReceived:
   title: sf.org.apm.grossSpanBytesReceived
 
 sf.org.apm.grossSpanBytesReceivedByToken:
-  brief: The number of bytes Splunk APM receives for a specific access token
+  brief: The number of bytes Splunk APM received for a specific access token
     from spans after decompression but before filtering and throttling.
   description: |
     The number of bytes Splunk APM receives for a specific access token
@@ -95,7 +95,7 @@ sf.org.apm.numSpanBytesReceived:
     after filtering and throttling.
   description: |
     The number of bytes Splunk APM accepts for a span after
-    decompression after filtering and throttling.
+    decompression, filtering, and throttling.
 
       * Dimension(s): `orgId`
       * Data resolution: 1 second
@@ -107,7 +107,7 @@ sf.org.apm.numSpanBytesReceivedByToken:
     for a span after decompression after filtering and throttling.
   description: |
     The number of bytes Splunk APM accepts for a specific access token
-    for a span after decompression after filtering and throttling.
+    for a span after decompression, filtering, and throttling.
 
       * Dimension(s): `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -209,11 +209,11 @@ sf.org.apm.numSpansDroppedOversizeByToken:
   title: sf.org.apm.numSpansDroppedOversizeByToken
 
 sf.org.apm.grossContentBytesReceived:
-  brief: The volume of bytes Splunk APM receives off the wire before filtering
+  brief: The number of bytes Splunk APM receives before filtering
     and throttling.
   description: |
-    The volume of bytes Splunk APM receives off the wire before filtering
-    and throttling. This content could be compressed.
+    The number of bytes Splunk APM receives before filtering
+    and throttling. The content might be compressed or uncompressed.
   
       * Dimension(s):  `orgId`
       * Data resolution: 1 second
@@ -221,11 +221,11 @@ sf.org.apm.grossContentBytesReceived:
   title: sf.org.apm.grossContentBytesReceived
 
 sf.org.apm.grossContentBytesReceivedByToken:
-  brief: The volume of bytes Splunk APM receives off the wire for a specific access
+  brief: The number of bytes Splunk APM receives for a specific access
     token before filtering and throttling.
   description: |
-    The volume of bytes Splunk APM receives off the wire for a specific
-    access token before filtering and throttling. This content could be compressed.
+    The number of bytes Splunk APM receives for a specific
+    access token before filtering and throttling. The content might be compressed or uncompressed.
   
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -233,11 +233,11 @@ sf.org.apm.grossContentBytesReceivedByToken:
   title: sf.org.apm.grossContentBytesReceivedByToken
 
 sf.org.apm.numContentBytesReceived:
-  brief: The volume of bytes Splunk APM accepts off the wire after filtering
+  brief: The number of bytes Splunk APM accepts after filtering
     and throttling.
   description: |
-    The volume of bytes Splunk APM accepts off the wire after filtering
-    and throttling. This content could be compressed.
+    The number of bytes Splunk APM accepts after filtering
+    and throttling. The content might be compressed or uncompressed.
   
       * Dimension(s):  `orgId`
       * Data resolution: 1 second
@@ -245,11 +245,11 @@ sf.org.apm.numContentBytesReceived:
   title: sf.org.apm.numContentBytesReceived
 
 sf.org.apm.numContentBytesReceivedByToken:
-  brief: The volume of bytes Splunk APM accepts off the wire for a specific access
+  brief: The number of bytes Splunk APM accepts for a specific access
     token after filtering and throttling.
   description: |
-    The volume of bytes Splunk APM accepts off the wire for a specific
-    access token after filtering and throttling. This content could be compressed.
+    The number of bytes Splunk APM accepts for a specific
+    access token after filtering and throttling. The content might be compressed or uncompressed.
   
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -266,13 +266,13 @@ sf.org.abortedDetectors:
 
 sf.org.grossDatapointsReceived:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: sf.org.grossDatapointsReceived is reserved for Infrastructure Monitoring internal use only.
   metric_type: cumulative
   title: sf.org.grossDatapointsReceived
 
 sf.org.grossDatapointsReceivedByToken:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: sf.org.grossDatapointsReceivedByToken is reserved for Infrastructure Monitoring internal use only.
   metric_type: cumulative
   title: sf.org.grossDatapointsReceivedByToken
 
@@ -417,7 +417,7 @@ sf.org.numDetectorsAborted:
 
 sf.org.num.detectortemplate:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: sf.org.num.detectortemplate is reserved for Infrastructure Monitoring internal use only.
   metric_type: cumulative
   title: sf.org.num.detectortemplate
 
@@ -506,7 +506,7 @@ sf.org.num.metrictimeseries:
 
 sf.org.num.migrationmarker:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: gauge
   title: sf.org.num.migrationmarker
 
@@ -532,13 +532,13 @@ sf.org.num.navigator:
 
 sf.org.num.notifications:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: cumulative
   title: sf.org.num.notifications
 
 sf.org.num.orgpreference:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.num.orgpreference
 
@@ -577,19 +577,19 @@ sf.org.num.property:
 
 sf.org.num.service:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.num.service
 
 sf.org.num.shareablesnapshot:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.num.shareablesnapshot
 
 sf.org.num.source:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.num.source
 
@@ -798,13 +798,13 @@ sf.org.numDatapointsDroppedExceededQuotaByToken:
 
 sf.org.numDatapointsDroppedInTimeout:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numDatapointsDroppedInTimeout
 
 sf.org.numDatapointsDroppedInTimeoutByToken:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numDatapointsDroppedInTimeoutByToken
 
@@ -950,13 +950,13 @@ sf.org.numEventsIngestedByToken:
 sf.org.numEventsReceived:
   brief: Infrastructure Monitoring internal metric
   description: |
-    This metric is reserved for Infrastructure Monitoring internal use only.
+    Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numEventsReceived
 
 sf.org.numEventsReceivedByToken:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numEventsReceivedByToken
 
@@ -1053,37 +1053,37 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByToken:
 
 sf.org.numMappingsAdded:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numMappingsAdded
 
 sf.org.numMappingsAddedByToken:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numMappingsAddedByToken
 
 sf.org.numMetadataWrites:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numMetadataWrites
 
 sf.org.numMetadataWritesByToken:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numMetadataWritesByToken
 
 sf.org.numMetadataWritesThrottled:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numMetadataWritesThrottled
 
 sf.org.numMetadataWrttesThrottledByToken:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numMetadataWrttesThrottledByToken
 
@@ -1318,7 +1318,7 @@ sf.org.subscription.datapointsPerMinute:
 
 sf.org.ui.num.pagevisits:
   brief: Infrastructure Monitoring internal metric
-  description: This metric is reserved for Infrastructure Monitoring internal use only.
+  description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.ui.num.pagevisits
 
@@ -1333,7 +1333,7 @@ sf.org.limit.activeTimeSeries:
 sf.org.limit.metricTimeSeriesCreatedPerMinute:
   brief: Number of MTS you can create per minute
   description: |
-    As part of your contract, Infrastructure Monitoring lets you create this number of MTS
+    Your contract specifies this limit for the number of MTS you can create per
     per minute. If you exceed this rate, Infrastructure Monitoring stops creating MTS.
   metric_type: gauge
   title: sf.org.limit.metricTimeSeriesCreatedPerMinute
