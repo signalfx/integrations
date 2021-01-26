@@ -1165,7 +1165,7 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
 sf.org.numResourcesMonitored:
   brief: Number of host-based resources monitored
   description: |
-    Number of hosts or containers that Infrastructure Monitoring is monitoring
+    Number of hosts or containers that Infrastructure Monitoring is currently monitoring.
     The `resourceType` dimension indicates whether the value represents hosts or containers.
 
         * Dimension(s):  `orgId`, `resourceType`
@@ -1341,6 +1341,14 @@ sf.org.limit.metricTimeSeriesCreatedPerMinute:
 sf.org.limit.hosts:
   brief: Maximum number of hosts that can send data to your organization
   description: |
+    Maximum number of hosts that can send data to Infrastructure Monitoring.
+    This limit prevents degradation of Infrastructure Monitoring performance.
+    It applies to host-based contracts, and it’s typically a multiple of your contractual limit.
+    If you exceed this limit, Infrastructure Monitoring drops datapoints
+    from newly-added hosts but keeps accepting datapoints for existing hosts.
+    While this metric allows you to monitor the limit, `sf.org.numResourcesMonitored` lets you
+    monitor the usage against the limit.
+
     Maximum number of hosts that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
     drops datapoints from newly-added hosts but keeps datapoints for existing hosts.
   metric_type: gauge
