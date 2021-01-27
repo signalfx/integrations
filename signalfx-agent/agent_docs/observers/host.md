@@ -20,6 +20,7 @@ Observer Type: `host`
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
+| `omitPIDDimension` | no | `bool` | If `true`, the `pid` dimension will be omitted from the generated endpoints, which means it will not appear on datapoints emitted by monitors instantiated from discovery rules matching this endpoint. (**default:** `false`) |
 | `pollIntervalSeconds` | no | `integer` |  (**default:** `10`) |
 
 
