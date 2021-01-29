@@ -51,10 +51,10 @@ sf.org.apm.grossSpanBytesReceived:
   title: sf.org.apm.grossSpanBytesReceived
 
 sf.org.apm.numSpanBytesReceived:
-  brief: The number of bytes Splunk APM accepts for a span after decompression
-    after filtering and throttling.
-  description: 'The number of bytes Splunk APM accepts for a span after
-    decompression after filtering and throttling.
+  brief: The number of bytes Splunk APM accepts from ingested span data
+    after decompression after filtering and throttling.
+  description: 'The number of bytes Splunk APM accepts from ingested span
+    data after decompression after filtering and throttling.
 
     Dimension(s): `orgId`
 
@@ -64,9 +64,10 @@ sf.org.apm.numSpanBytesReceived:
 
 sf.org.apm.grossSpanBytesReceivedByToken:
   brief: The number of bytes Splunk APM receives for a specific access token
-    from spans after decompression but before filtering and throttling.
+    from ingested span data after decompression but before filtering and
+    throttling.
   description: 'The number of bytes Splunk APM receives for a specific access token
-    from spans after decompression but before filtering and throttling.
+    from ingested span data after decompression but before filtering and throttling.
 
   Dimension(s): `orgId`, `tokenId`
 
@@ -89,8 +90,9 @@ sf.org.apm.numSpanBytesReceivedByToken:
 
 sf.org.apm.numSpansDroppedInvalid:
   brief: The number of invalid spans Splunk APM receives.
-  description: 'The number of invalid spans Splunk APM receives. A span can be invalid
-    if there is no start time, trace ID, or service associated with it.
+  description: 'The number of invalid spans Splunk APM receives. A span can be
+    invalid if there is no start time, trace ID, or service associated with it,
+    or if there are too many spans in the trace.
 
     Dimension(s): `orgId`
 
@@ -99,9 +101,11 @@ sf.org.apm.numSpansDroppedInvalid:
   title: sf.org.apm.numSpansDroppedInvalid
 
 sf.org.apm.numSpansDroppedInvalidByToken:
-  brief: The number of invalid spans Splunk APM receives for a specific access token.
-  description: 'The number of invalid spans Splunk APM receives for a specific access token.
-    A span can be invalid if there is no start time, trace ID, or service associated with it.
+  brief: The number of invalid spans Splunk APM receives for a specific access
+    token.
+  description: 'The number of invalid spans Splunk APM receives for a specific
+    access token. A span can be invalid if there is no start time, trace ID, or
+    service associated with it, or if there are too many spans in the trace.
 
     Dimension(s): `orgId`, `tokenId`
 
