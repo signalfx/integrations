@@ -145,9 +145,9 @@ sf.org.apm.numTracesReceived:
   title: sf.org.apm.numTracesReceived
 
 sf.org.apm.numTroubleshootingMetricSets10s:
-  brief: The cardinality of Troubleshooting MetricSets for each 10-second window.
+  brief: The cardinality of Troubleshooting MetricSets for each 10-second time window.
   description: |
-    The cardinality of Troubleshooting MetricSets for each 10-second window.
+    The cardinality of Troubleshooting MetricSets for each 10-second time window.
 
       * Dimension(s):  `orgId`
       * Data resolution: 10 seconds
@@ -155,9 +155,9 @@ sf.org.apm.numTroubleshootingMetricSets10s:
   title: sf.org.apm.numTroubleshootingMetricSets10s
 
 sf.org.apm.numTroubleshootingMetricSets:
-  brief: The cardinality of Troubleshooting MetricSets for each 1-minute window.
+  brief: The cardinality of Troubleshooting MetricSets for each 1-minute time window.
   description: |
-    The cardinality of Troubleshooting MetricSets for each 1-minute window.
+    The cardinality of Troubleshooting MetricSets for each 1-minute time window.
 
       * Dimension(s):  `orgId`
       * Data resolution: 1 minute
@@ -1325,47 +1325,52 @@ sf.org.ui.num.pagevisits:
 sf.org.limit.activeTimeSeries:
   brief: Number of active MTS allowed for your organization
   description: |
-    As part of your contract, Infrastructure Monitoring lets you have this number of active MTS in your organization. If you
-    exceed your limit, Infrastructure Monitoring stops creating new MTS while continuing to add datapoints to existing MTS.
+    Maximum number of active MTS your organization can have in a 25 hour time window. If you exceed this limit,
+    Infrastructure Monitoring stops accepting data points of new MTS but continues to accept datapoints for existing
+    MTS. To monitor your usage against the limit, use the metric `sf.org.numActiveTimeSeries`.
   metric_type: gauge
   title: sf.org.limit.activeTimeSeries
 
 sf.org.limit.metricTimeSeriesCreatedPerMinute:
   brief: Number of MTS you can create per minute
   description: |
-    Your contract specifies this limit for the number of MTS you can create per
-    per minute. If you exceed this rate, Infrastructure Monitoring stops creating MTS.
+    Maximum number of new MTS per minute that you can create in your organization.
+    If you exceed this rate, Infrastructure Monitoring stops accepting data points of new MTS but continues to accept
+    data points for existing MTS.
   metric_type: gauge
   title: sf.org.limit.metricTimeSeriesCreatedPerMinute
 
 sf.org.limit.hosts:
   brief: Maximum number of hosts that can send data to your organization
   description: |
-    Maximum number of hosts that can send data to Infrastructure Monitoring.
-    This limit prevents degradation of Infrastructure Monitoring performance.
-    It applies to host-based contracts, and it’s typically a multiple of your contractual limit.
-    If you exceed this limit, Infrastructure Monitoring drops datapoints
-    from newly-added hosts but keeps accepting datapoints for existing hosts.
-    While this metric allows you to monitor the limit, `sf.org.numResourcesMonitored` lets you
-    monitor the usage against the limit.
-
-    Maximum number of hosts that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
-    drops datapoints from newly-added hosts but keeps datapoints for existing hosts.
+    Maximum number of hosts for your organization that can send data to Infrastructure Monitoring.
+    If you exceed this limit, Infrastructure Monitoring drops data points from newly-added hosts but continues to
+    accept data points from existing hosts. To monitor your usage against the limit,
+    use the metric `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
   metric_type: gauge
   title: sf.org.limit.hosts
 
 sf.org.limit.containers:
   brief: Maximum number of Docker containers that can send data to your organization
   description: |
-    Maximum number of Docker containers that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
-    drops datapoints from newly-added containers but keeps datapoints for existing containers.
+    Maximum number of Docker containers for your organization that can send data to Infrastructure Monitoring.
+    If you exceed this limit, Infrastructure Monitoring drops data points from newly-added containers but continues to
+    accept data points from existing containers. To monitor your usage against the limit,
+    use the metric `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:containers`.
   metric_type: gauge
   title: sf.org.limit.containers
 
 sf.org.limit.customMetricTimeSeries:
-  brief: Maximum number of custom MTS you can create in your organization
+  brief: Maximum number of custom MTS you can create in your organization within a 1 hour time window
   description: |
-    Maximum number of custom MTS you can create in your organization. Custom MTS use a metric defined by
-    you, rather than a metric defined by an integration. If you exceed this limit, Infrastructure Monitoring stops creating new custom MTS.
+
+  Maximum number of custom MTS you can create in your organization in a 1 hour time window.
+  If you exceed this limit, Infrastructure Monitoring stops accepting datapoints for new custom MTS,
+  but keeps accepting datapoints for existing custom MTS. To see the overall number of custom metrics
+  you've define, use the metric `sf.org.numCustomMetrics`.
+
+  Custom MTS use a metric defined by you, rather than a metric defined by an integration. To learn more about custom
+  MTS, see the user documentation section
+  (About custom, bundled, and high-resolution metrics)[https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics].
   metric_type: gauge
   title: sf.org.limit.customMetricTimeSeries
