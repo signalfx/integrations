@@ -99,9 +99,9 @@ This monitor will also emit by default any metrics that are not listed below.
  - `kubernetes.deployment.updated` (*gauge*)<br>    Total number of non-terminated pods targeted by this deployment that have the desired template spec
  - `kubernetes.job.active` (*gauge*)<br>    The number of actively running pods for a job.
  - `kubernetes.job.completions` (*gauge*)<br>    The desired number of successfully finished pods the job should be run with.
- - `kubernetes.job.failed` (*counter*)<br>    The number of pods which reased phase Failed for a job.
+ - `kubernetes.job.failed` (*cumulative*)<br>    The number of pods which reased phase Failed for a job.
  - `kubernetes.job.parallelism` (*gauge*)<br>    The max desired number of pods the job should run at any given time.
- - `kubernetes.job.succeeded` (*counter*)<br>    The number of pods which reached phase Succeeded for a job.
+ - `kubernetes.job.succeeded` (*cumulative*)<br>    The number of pods which reached phase Succeeded for a job.
  - ***`kubernetes.namespace_phase`*** (*gauge*)<br>    The current phase of namespaces (`1` for _active_ and `0` for _terminating_)
  - `kubernetes.node_allocatable_cpu` (*gauge*)<br>    How many CPU cores remaining that the node can allocate to pods
  - `kubernetes.node_allocatable_ephemeral_storage` (*gauge*)<br>    How many bytes of ephemeral storage remaining that the node can allocate to pods
