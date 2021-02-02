@@ -179,7 +179,7 @@ monitor config option `extraGroups`:
  - `apiserver_request_latencies_summary` (*cumulative*)<br>    (Deprecated) Response latency summary in microseconds for each verb, group, version, resource, subresource, scope and component. (sum)
  - `apiserver_request_latencies_summary_count` (*cumulative*)<br>    (Deprecated) Response latency summary in microseconds for each verb, group, version, resource, subresource, scope and component. (count)
  - `apiserver_request_latencies_summary_quantile` (*gauge*)<br>    (Deprecated) Response latency summary in microseconds for each verb, group, version, resource, subresource, scope and component. (quantized)
- - `apiserver_request_total` (*cumulative*)<br>    Counter of apiserver requests broken out for each verb, dry run value, group, version, resource, scope, component, client, and HTTP response contentType and code.
+ - ***`apiserver_request_total`*** (*cumulative*)<br>    Counter of apiserver requests broken out for each verb, dry run value, group, version, resource, scope, component, client, and HTTP response contentType and code.
 
 #### Group apiserver_response
 All of the following metrics are part of the `apiserver_response` metric group. All of

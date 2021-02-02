@@ -36,7 +36,8 @@ It will also give the ability to create a dashboard similar to what nagios user 
 
 __Note__: the last sent event is cached into memory to avoid sending the same event for each collection 
 interval over and over but already sent event will be send again when you restart the agent erasing its 
-cache.
+cache. If your check always "normally" produces a different output for each run like the uptime check 
+does so you can use the `FilterStdOut: true` parameter to ignore it in comparison.
 
 
 ## Configuration
@@ -59,6 +60,8 @@ Configuration](../monitor-config.html#common-configuration).**
 | `command` | **yes** | `string` | The command to exec with any arguments like: `"LC_ALL=\"en_US.utf8\" /usr/lib/nagios/plugins/check_ntp_time -H pool.ntp.typhon.net -w 0.5 -c 1"` |
 | `service` | **yes** | `string` | Corresponds to the nagios `service` column and allows to aggregate all instances of the same service (when calling the same check script with different arguments) |
 | `timeout` | no | `integer` | The max execution time allowed in seconds before sending SIGKILL (**default:** `9`) |
+| `ignoreStdOut` | no | `bool` | If `false` and change is detected on `stdout` compared to the last event it will send a new one (**default:** `false`) |
+| `ignoreStdErr` | no | `bool` | If `false` and change is detected on `stderr` compared to the last event it will send a new one (**default:** `false`) |
 
 
 ## Metrics
