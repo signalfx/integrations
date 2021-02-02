@@ -1363,12 +1363,10 @@ sf.org.limit.containers:
 sf.org.limit.customMetricTimeSeries:
   brief: Maximum number of custom MTS you can create in your organization within a 1 hour time window
   description: |
-
   Maximum number of custom MTS you can create in your organization in a 1 hour time window.
   If you exceed this limit, Infrastructure Monitoring stops accepting datapoints for new custom MTS,
   but keeps accepting datapoints for existing custom MTS. To see the overall number of custom metrics
   you've define, use the metric `sf.org.numCustomMetrics`.
-
   Custom MTS use a metric defined by you, rather than a metric defined by an integration. To learn more about custom
   MTS, see the user documentation section
   (About custom, bundled, and high-resolution metrics)[https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics].
