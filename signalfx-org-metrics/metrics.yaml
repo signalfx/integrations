@@ -651,7 +651,7 @@ sf.org.numAddDatapointCallsByToken:
   description: |
     One value per token; number of calls to send data points to Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numAddDatapointCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -673,7 +673,7 @@ sf.org.numAddEventsCallsByToken:
   description: |
     One value per token; number of calls to send custom events to Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numAddEventsCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -705,7 +705,7 @@ sf.org.numBackfillCallsByToken:
     with a value of "counter","cumulative_counter", or "gauge". To learn more,
     see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numBackfillCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s): `category`, `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -727,7 +727,7 @@ sf.org.numCustomMetricsByToken:
   description: |
     One value per token; number of custom metrics monitored by Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numCustomMetrics`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 10 minutes
@@ -758,7 +758,7 @@ sf.org.numDatapointsBackfilledByToken:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numDatapointsBackfilled`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category, orgId, tokenId`
         * Data resolution: 1 second
@@ -789,7 +789,7 @@ sf.org.numDatapointsDroppedExceededQuotaByToken:
     To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription
     limits, see [DPM Limits - FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedExceededQuota`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -834,7 +834,7 @@ sf.org.numDatapointsDroppedThrottleByToken:
     it isn't keeping any of your data. Contact [support](https://support.signalfx.com/hc/en-us/requests/new)
     for help with this issue.
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedThrottle`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -868,7 +868,7 @@ sf.org.numDatapointsReceivedByToken:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numDatapointsReceived`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category`, `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -891,7 +891,7 @@ sf.org.numEventTimeSeriesCreatedByToken:
     One value per token; number of event time series (ETS) created. For
     MTS values, see `sf.org.numMetricTimeSeriesCreatedByToken`.
     The sum of all the values might be less than the value of `sf.org.numEventTimeSeriesCreated`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -916,7 +916,7 @@ sf.org.numEventsDroppedThrottleByToken:
     but that Infrastructure Monitoring didn't accept, because your organization significantly exceeded
     its per-minute limit.
     The sum of all the values might be less than the value of `sf.org.numEventsDroppedThrottle`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -976,7 +976,7 @@ sf.org.numHighResolutionMetricsByToken:
     For each token, this is the number of high resolution metrics monitored by
     Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numHighResolutionMetrics`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 10 minutes
@@ -1012,7 +1012,7 @@ sf.org.numLimitedEventTimeSeriesCreateCallsByToken:
     (ETS) Infrastructure Monitoring was unable to create because you exceeded the maximum number
     of ETS allowed.
     The sum of all the values might be less than the value of
-    `sf.org.numLimitedEventTimeSeriesCreateCalls`. To learn more, [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    `sf.org.numLimitedEventTimeSeriesCreateCalls`. To learn more, [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category`, `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -1044,7 +1044,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByToken:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numLimitedMetricTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category, orgId, tokenId`
         * Data resolution: 1 second
@@ -1109,7 +1109,7 @@ sf.org.numMetricTimeSeriesCreatedByToken:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numMetricTimeSeriesCreated`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s): `category`, `orgId`, `tokenId`
         * Data resolution: 5 seconds
@@ -1155,7 +1155,7 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
     One value per token; number of metric time series (MTS) Infrastructure Monitoring was
     unable to create because you reached your maximum number of unique dimension names.
     The sum of all the values might be less than the value of `sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -1180,7 +1180,7 @@ sf.org.numResourcesMonitoredByToken:
     This metric isn't created until a host or container starts sending a host or container metric.
     The `resourceType` dimension indicates whether the value represents hosts or containers.
     The sum of all the values might be less than the value of `sf.org.numResourcesMonitored`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `resourceType`, tokenId`
         * Data resolution: 10 minutes
@@ -1202,7 +1202,7 @@ sf.org.numRestCallsByToken:
   description: |
     For each token, the number of REST calls made to the Infrastructure Monitoring API.
     The sum of all the values might be less than the value of `sf.org.numRestCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -1228,7 +1228,7 @@ sf.org.numRestCallsThrottledByToken:
     API that were not accepted by Infrastructure Monitoring because your organization significantly
     exceeded its per-minute limit.
     The sum of all the values might be less than the value of `sf.org.numRestCallsThrottled`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -1255,7 +1255,7 @@ sf.org.numThrottledEventTimeSeriesCreateCallsByToken:
     unable to create because you significantly exceeded your per-minute event creation
     limit.
     The sum of all the values might be less than the value of `sf.org.numThrottledEventTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -1282,7 +1282,7 @@ sf.org.numThrottledMetricTimeSeriesCreateCallsByToken:
     create because your organization significantly exceeded its per-minute or per-hour
     MTS creation limit.
     The sum of all the values might be less than the value of `sf.org.numThrottledMetricTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics for values by token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
