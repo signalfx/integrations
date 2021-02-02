@@ -260,7 +260,7 @@ sf.org.abortedDetectors:
   brief: Detailed events for any aborted detectors
   description: |
     Contains the detectorID and reason for abort with the value/limit of MTS,
-    or datapoints, whichever caused the detector to stop
+    or data points, whichever caused the detector to stop
   metric_type: cumulative
   title: sf.org.abortedDetectors
 
@@ -637,9 +637,9 @@ sf.org.numActiveTimeSeries:
   title: sf.org.numActiveTimeSeries
 
 sf.org.numAddDatapointCalls:
-  brief: Number of calls to send datapoints to Infrastructure Monitoring
+  brief: Number of calls to send data points to Infrastructure Monitoring
   description: |
-    Number of calls to send datapoints to Infrastructure Monitoring.
+    Number of calls to send data points to Infrastructure Monitoring.
 
         * Dimension(s):  `orgId`
         * Data resolution: 1 second
@@ -647,11 +647,11 @@ sf.org.numAddDatapointCalls:
   title: sf.org.numAddDatapointCalls
 
 sf.org.numAddDatapointCallsByToken:
-  brief: Per token number of calls to send datapoints to Infrastructure Monitoring
+  brief: Per token number of calls to send data points to Infrastructure Monitoring
   description: |
-    One value per token; number of calls to send datapoints to Infrastructure Monitoring.
+    One value per token; number of calls to send data points to Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numAddDatapointCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -673,7 +673,7 @@ sf.org.numAddEventsCallsByToken:
   description: |
     One value per token; number of calls to send custom events to Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numAddEventsCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -705,7 +705,7 @@ sf.org.numBackfillCallsByToken:
     with a value of "counter","cumulative_counter", or "gauge". To learn more,
     see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numBackfillCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s): `category`, `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -727,7 +727,7 @@ sf.org.numCustomMetricsByToken:
   description: |
     One value per token; number of custom metrics monitored by Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numCustomMetrics`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 10 minutes
@@ -736,9 +736,9 @@ sf.org.numCustomMetricsByToken:
   title: sf.org.numCustomMetricsByToken
 
 sf.org.numDatapointsBackfilled:
-  brief: Number of datapoints that were sent using a backfill API
+  brief: Number of data points that were sent using a backfill API
   description: |
-    One value per metric type, each representing the number of datapoints
+    One value per metric type, each representing the number of data points
     that were sent using a backfill API.
     You can have up to three MTS for this metric; each MTS is sent with a dimension
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
@@ -750,15 +750,15 @@ sf.org.numDatapointsBackfilled:
   title: sf.org.numDatapointsBackfilled
 
 sf.org.numDatapointsBackfilledByToken:
-  brief: Per token number of datapoints that were sent using a backfill API
+  brief: Per token number of data points that were sent using a backfill API
   description: |
     One value per metric type per token, each representing the number
-    of datapoints that were sent using a backfill API.
+    of data points that were sent using a backfill API.
     You can have up to three MTS for this metric; each MTS is sent with a dimension
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numDatapointsBackfilled`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category, orgId, tokenId`
         * Data resolution: 1 second
@@ -766,10 +766,10 @@ sf.org.numDatapointsBackfilledByToken:
   title: sf.org.numDatapointsBackfilledByToken
 
 sf.org.numDatapointsDroppedExceededQuota:
-  brief: Number of new datapoints not processed by Infrastructure Monitoring; exceeded subscription
+  brief: Number of new data points not processed by Infrastructure Monitoring; exceeded subscription
     limit
   description: |
-    Total number of new datapoints you sent to Infrastructure Monitoring but that Infrastructure Monitoring
+    Total number of new data points you sent to Infrastructure Monitoring but that Infrastructure Monitoring
     didn't accept, because your organization exceeded its subscription limit.
     To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription
     limits, see [this FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
@@ -780,16 +780,16 @@ sf.org.numDatapointsDroppedExceededQuota:
   title: sf.org.numDatapointsDroppedExceededQuota
 
 sf.org.numDatapointsDroppedExceededQuotaByToken:
-  brief: Number of new datapoints not processed by Infrastructure Monitoring; exceeded subscription
+  brief: Number of new data points not processed by Infrastructure Monitoring; exceeded subscription
     limit
   description: |
-    One value per token; number of new datapoints you sent to Infrastructure Monitoring
+    One value per token; number of new data points you sent to Infrastructure Monitoring
     but that Infrastructure Monitoring didn't accept, because your organization exceeded its subscription
     limit.
     To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription
     limits, see [DPM Limits - FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedExceededQuota`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -809,12 +809,12 @@ sf.org.numDatapointsDroppedInTimeoutByToken:
   title: sf.org.numDatapointsDroppedInTimeoutByToken
 
 sf.org.numDatapointsDroppedThrottle:
-  brief: Number of datapoints not processed by Infrastructure Monitoring; exceeded DPM limit
+  brief: Number of data points not processed by Infrastructure Monitoring; exceeded DPM limit
   description: |
-    Total number of datapoints you sent to Infrastructure Monitoring that Infrastructure Monitoring
+    Total number of data points you sent to Infrastructure Monitoring that Infrastructure Monitoring
     didn't accept because your organization significantly exceeded its DPM limit.
     Unlike `sf.org.numDatapointsDroppedExceededQuota`, this metric represents
-    datapoints for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
+    data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
     it isn't keeping any of your data. Contact [support](https://support.signalfx.com/hc/en-us/requests/new)
     for help with this issue.
 
@@ -824,17 +824,17 @@ sf.org.numDatapointsDroppedThrottle:
   title: sf.org.numDatapointsDroppedThrottle
 
 sf.org.numDatapointsDroppedThrottleByToken:
-  brief: Per token number of datapoints not processed by Infrastructure Monitoring; exceeded DPM limit
+  brief: Per token number of data points not processed by Infrastructure Monitoring; exceeded DPM limit
   description: |
-    One value per token; number of datapoints you sent to Infrastructure Monitoring but
+    One value per token; number of data points you sent to Infrastructure Monitoring but
     that Infrastructure Monitoring didn't accept because your organization significantly exceeded
     its DPM limit.
     Unlike `sf.org.numDatapointsDroppedExceededQuota`, this metric represents
-    datapoints for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
+    data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
     it isn't keeping any of your data. Contact [support](https://support.signalfx.com/hc/en-us/requests/new)
     for help with this issue.
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedThrottle`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -842,15 +842,15 @@ sf.org.numDatapointsDroppedThrottleByToken:
   title: sf.org.numDatapointsDroppedThrottleByToken
 
 sf.org.numDatapointsReceived:
-  brief: Number of datapoints Infrastructure Monitoring received
+  brief: Number of data points Infrastructure Monitoring received
   description: |
-    One value per metric type, each representing the number of datapoints that
+    One value per metric type, each representing the number of data points that
     Infrastructure Monitoring received and processed.
     You can have up to three MTS for this metric; each MTS is sent with a dimension
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
-    The sum of the values represents the total number of datapoints you sent to Infrastructure Monitoring minus any
-    datapoints that weren't accepted because you exceeded a limit.
+    The sum of the values represents the total number of data points you sent to Infrastructure Monitoring minus any
+    data points that weren't accepted because you exceeded a limit.
 
         * Dimension(s):  `category, orgId`
         * Data resolution: 1 second
@@ -858,17 +858,17 @@ sf.org.numDatapointsReceived:
   title: sf.org.numDatapointsReceived
 
 sf.org.numDatapointsReceivedByToken:
-  brief: Per token number of datapoints Infrastructure Monitoring received
+  brief: Per token number of data points Infrastructure Monitoring received
   description: |
     One value per metric type per token, each representing the number
-    of datapoints Infrastructure Monitoring received and processed. The sum of values for a
-    token is the total number of datapoints you sent to Infrastructure Monitoring minus the number of
-    datapoints that Infrastructure Monitoring didn't accept because you exceeded a limit.
+    of data points Infrastructure Monitoring received and processed. The sum of values for a
+    token is the total number of data points you sent to Infrastructure Monitoring minus the number of
+    data points that Infrastructure Monitoring didn't accept because you exceeded a limit.
     You can have up to three MTS for this metric; each MTS is sent with a dimension
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numDatapointsReceived`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category`, `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -891,7 +891,7 @@ sf.org.numEventTimeSeriesCreatedByToken:
     One value per token; number of event time series (ETS) created. For
     MTS values, see `sf.org.numMetricTimeSeriesCreatedByToken`.
     The sum of all the values might be less than the value of `sf.org.numEventTimeSeriesCreated`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -916,7 +916,7 @@ sf.org.numEventsDroppedThrottleByToken:
     but that Infrastructure Monitoring didn't accept, because your organization significantly exceeded
     its per-minute limit.
     The sum of all the values might be less than the value of `sf.org.numEventsDroppedThrottle`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -976,7 +976,7 @@ sf.org.numHighResolutionMetricsByToken:
     For each token, this is the number of high resolution metrics monitored by
     Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numHighResolutionMetrics`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 10 minutes
@@ -1012,7 +1012,7 @@ sf.org.numLimitedEventTimeSeriesCreateCallsByToken:
     (ETS) Infrastructure Monitoring was unable to create because you exceeded the maximum number
     of ETS allowed.
     The sum of all the values might be less than the value of
-    `sf.org.numLimitedEventTimeSeriesCreateCalls`. To learn more, [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    `sf.org.numLimitedEventTimeSeriesCreateCalls`. To learn more, [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category`, `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -1044,7 +1044,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByToken:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numLimitedMetricTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `category, orgId, tokenId`
         * Data resolution: 1 second
@@ -1109,7 +1109,7 @@ sf.org.numMetricTimeSeriesCreatedByToken:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numMetricTimeSeriesCreated`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s): `category`, `orgId`, `tokenId`
         * Data resolution: 5 seconds
@@ -1155,7 +1155,7 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
     One value per token; number of metric time series (MTS) Infrastructure Monitoring was
     unable to create because you reached your maximum number of unique dimension names.
     The sum of all the values might be less than the value of `sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -1180,7 +1180,7 @@ sf.org.numResourcesMonitoredByToken:
     This metric isn't created until a host or container starts sending a host or container metric.
     The `resourceType` dimension indicates whether the value represents hosts or containers.
     The sum of all the values might be less than the value of `sf.org.numResourcesMonitored`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `resourceType`, tokenId`
         * Data resolution: 10 minutes
@@ -1202,7 +1202,7 @@ sf.org.numRestCallsByToken:
   description: |
     For each token, the number of REST calls made to the Infrastructure Monitoring API.
     The sum of all the values might be less than the value of `sf.org.numRestCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 1 second
@@ -1228,7 +1228,7 @@ sf.org.numRestCallsThrottledByToken:
     API that were not accepted by Infrastructure Monitoring because your organization significantly
     exceeded its per-minute limit.
     The sum of all the values might be less than the value of `sf.org.numRestCallsThrottled`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -1255,7 +1255,7 @@ sf.org.numThrottledEventTimeSeriesCreateCallsByToken:
     unable to create because you significantly exceeded your per-minute event creation
     limit.
     The sum of all the values might be less than the value of `sf.org.numThrottledEventTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -1282,7 +1282,7 @@ sf.org.numThrottledMetricTimeSeriesCreateCallsByToken:
     create because your organization significantly exceeded its per-minute or per-hour
     MTS creation limit.
     The sum of all the values might be less than the value of `sf.org.numThrottledMetricTimeSeriesCreateCalls`.
-    To learn more, see [Metric pairs that provide total and ByToken values](#metric-pairs-that-provide-total-and-bytoken-values).
+    To learn more, see [Metrics for values by token](#metrics for values by token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
@@ -1307,9 +1307,9 @@ sf.org.subscription.activeTimeSeries:
   title: sf.org.subscription.activeTimeSeries
 
 sf.org.subscription.datapointsPerMinute:
-  brief: Maximum number of datapoints per minute (DPM)
+  brief: Maximum number of data points per minute (DPM)
   description: |
-    Maximum number of datapoints per minute (DPM) that Infrastructure Monitoring will process
+    Maximum number of data points per minute (DPM) that Infrastructure Monitoring will process
     and store.
 
         * Data resolution: 15 minutes
@@ -1326,7 +1326,7 @@ sf.org.limit.activeTimeSeries:
   brief: Number of active MTS allowed for your organization
   description: |
     Maximum number of active MTS your organization can have in a 25 hour time window. If you exceed this limit,
-    Infrastructure Monitoring stops accepting data points of new MTS but continues to accept datapoints for existing
+    Infrastructure Monitoring stops accepting data points of new MTS but continues to accept data points for existing
     MTS. To monitor your usage against the limit, use the metric `sf.org.numActiveTimeSeries`.
   metric_type: gauge
   title: sf.org.limit.activeTimeSeries
@@ -1351,9 +1351,9 @@ sf.org.limit.hosts:
   title: sf.org.limit.hosts
 
 sf.org.limit.containers:
-  brief: Maximum number of Docker containers that can send data to your organization
+  brief: Maximum number of containers that can send data to your organization
   description: |
-    Maximum number of Docker containers for your organization that can send data to Infrastructure Monitoring.
+    Maximum number of containers for your organization that can send data to Infrastructure Monitoring.
     If you exceed this limit, Infrastructure Monitoring drops data points from newly-added containers but continues to
     accept data points from existing containers. To monitor your usage against the limit,
     use the metric `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:containers`.
@@ -1364,8 +1364,8 @@ sf.org.limit.customMetricTimeSeries:
   brief: Maximum number of custom MTS you can create in your organization within a 1 hour time window
   description: |
     Maximum number of custom MTS you can create in your organization in a 1 hour time window.
-    If you exceed this limit, Infrastructure Monitoring stops accepting datapoints for new custom MTS,
-    but keeps accepting datapoints for existing custom MTS. To see the overall number of custom metrics
+    If you exceed this limit, Infrastructure Monitoring stops accepting data points for new custom MTS,
+    but keeps accepting data points for existing custom MTS. To see the overall number of custom metrics
     you've define, use the metric `sf.org.numCustomMetrics`.
     Custom MTS use a metric defined by you, rather than a metric defined by an integration. To learn more about custom
     MTS, see the user documentation section
