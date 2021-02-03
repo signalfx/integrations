@@ -61,24 +61,13 @@ the value or limit of MTS or datapoints, whichever caused the detector to stop.
 
 To learn more, see [View Additional Data With Events](https://docs.signalfx.com/en/latest/detect-alert/events-intro.html).
 
-### Metrics that track contractual limits
-
-Two metrics track limits set for your organization as part of your contract:
-
-* `sf.org.limit.activeTimeSeries`: As part of your contract, Infrastructure Monitoring lets you have this number of active MTS in your organization. If you
-  exceed your limit, Infrastructure Monitoring stops creating new MTS while continuing to add datapoints to existing MTS.
-* `sf.org.limit.metricTimeSeriesCreatedPerMinute`: As part of your contract, Infrastructure Monitoring lets you create this number of MTS
-  per minute. If you exceed this rate, Infrastructure Monitoring stops creating MTS.
-
-Infrastructure Monitoring only sends datapoints if the value is not zero.
-
 ### Metrics that track system limits
 
 Three metrics track limits that Infrastructure Monitoring enforces for all organizations:
 
 * `sf.org.limit.hosts`: Maximum number of hosts that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
   drops datapoints from newly-added hosts but keeps datapoints for existing hosts.
-* `sf.org.limit.containers`: Maximum number of Docker containers that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
+* `sf.org.limit.containers`: Maximum number of containers that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
   drops datapoints from newly-added containers but keeps datapoints for existing containers.
 * `sf.org.limit.customMetricTimeSeries`: Maximum number of custom MTS you can create in your organization. Custom MTS use a metric defined by
   you, rather than a metric defined by an integration. If you exceed this limit, Infrastructure Monitoring stops creating new custom MTS.
