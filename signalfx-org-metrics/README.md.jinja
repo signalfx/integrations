@@ -63,14 +63,37 @@ To learn more, see [View Additional Data With Events](https://docs.signalfx.com/
 
 ### Metrics that track system limits
 
-Three metrics track limits that Infrastructure Monitoring enforces for all organizations:
+These metrics track limits that Infrastructure Monitoring enforces for your organization:
 
-* `sf.org.limit.hosts`: Maximum number of hosts that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
-  drops datapoints from newly-added hosts but keeps datapoints for existing hosts.
-* `sf.org.limit.containers`: Maximum number of containers that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
-  drops datapoints from newly-added containers but keeps datapoints for existing containers.
-* `sf.org.limit.customMetricTimeSeries`: Maximum number of custom MTS you can create in your organization. Custom MTS use a metric defined by
-  you, rather than a metric defined by an integration. If you exceed this limit, Infrastructure Monitoring stops creating new custom MTS.
+* `sf.org.limit.hosts` (gauge): Maximum number of hosts that can send data to your organization.
+   The limit is higher than your contractual limit to allow for burst and overage usage. If you
+   exceed this limit, Infrastructure Monitoring drops data points from new hosts but keeps
+   data points for existing hosts. To monitor your usage against the limit, use the metric
+   `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
+
+* `sf.org.limit.containers` (gauge): Maximum number of containers that can send data to your
+   organization. This limit is higher than your contractual limit to give room for burst and overage usage.
+   If you exceed this limit, Infrastructure Monitoring drops datapoints from new containers but keeps
+   data points for existing containers. To monitor your usage against the limit, use the metric
+   `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:containers`.
+
+* `sf.org.limit.customMetricTimeSeries` (gauge): Maximum number of active custom MTS,
+   within a moving window of the previous 60 minutes, that can send data to your organization.
+   If you exceed this limit, Infrastructure Monitoring drops data points for the custom MTS
+   that exceeded the limit, but it continues to accept data points for custom MTS that already existed.
+   you’ve defined, use the metric `sf.org.numCustomMetrics`. To learn more about custom MTS, see the
+   section [About custom, bundled, and high-resolution metrics](https://docs.signalfx.com/en/latest/admin-guide/usage.html)
+   in the user documentation.
+
+* `sf.org.limit.activeTimeSeries` (gauge): Maximum number of active MTS, within a moving window of the past 25 hours,
+   that your organization can have. If you exceed this limit, Infrastructure Monitoring stops accepting data points for
+   new MTS, but continues to accept data points for existing MTS. To monitor your usage against the limit,
+   use the `metric sf.org.numActiveTimeSeries`.
+
+* `sf.org.limit.metricTimeSeriesCreatedPerMinute` (gauge): Maximum rate at which you can create new MTS
+   in your organization, measured in MTS per minute. If you exceed this rate,
+   Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS.
+   To monitor the number of metrics you've created overall, use the metric `sf.org.numMetricTimeSeriesCreated`.
 
 ## Metrics
 
