@@ -1431,7 +1431,7 @@ sf.org.limit.hosts:
     Maximum number of hosts that can send data to your organization.
     This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but
-    keeps data points for existing hosts. To monitor your usage against the limit, use the metric
+    keeps accepting data points for existing hosts. To monitor your usage against the limit, use the metric
     `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
   metric_type: gauge
   title: sf.org.limit.hosts
@@ -1442,7 +1442,7 @@ sf.org.limit.containers:
     Maximum number of containers that can send data to your
     organization. This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops datapoints from new containers but keeps
-    data points for existing containers. To monitor your usage against the limit, use the metric
+    accepting data points for existing containers. To monitor your usage against the limit, use the metric
     `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:containers`.
   metric_type: gauge
   title: sf.org.limit.containers
@@ -1450,13 +1450,12 @@ sf.org.limit.containers:
 sf.org.limit.customMetricTimeSeries:
   brief: Maximum number of active custom MTS you can have in your organization within a 1 hour time window
   description: |
-    Maximum number of active custom MTS,
-    within a moving window of the previous 60 minutes, that you can have in your organization.
-    If you exceed this limit, Infrastructure Monitoring drops data points for the custom MTS
-    that exceeded the limit, but it continues to accept data points for custom MTS that already existed.
-    To see the overall number of custom metrics you’ve defined, use the metric `sf.org.numCustomMetrics`.
-    To learn more about custom MTS, see the
-    section [About custom, bundled, and high-resolution metrics](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+    Maximum number of active custom MTS, within a moving window of the
+    previous 60 minutes, that you're allowed to have in your organization. If you exceed this limit,
+    Infrastructure Monitoring stops accepting data points for new custom MTS, but it continues to accept
+    data points for custom MTS that already existed. To see the number of MTS you're allowed to have, use the metric
+    `sf.org.numCustomMetrics`. To learn more about custom MTS, see the section
+    [About custom, bundled, and high-resolution metrics](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
     in the user documentation.
   metric_type: gauge
   title: sf.org.limit.customMetricTimeSeries
