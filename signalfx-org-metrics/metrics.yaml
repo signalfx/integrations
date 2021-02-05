@@ -1346,7 +1346,7 @@ sf.org.limit.hosts:
   brief: Maximum number of hosts that can send data to your organization
   description: |
     Maximum number of hosts that can send data to your organization.
-    This limit is higher than your contractual limit to allow burst and overage usage.
+    This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but
     keeps data points for existing hosts. To monitor your usage against the limit, use the metric
     `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
@@ -1357,7 +1357,7 @@ sf.org.limit.containers:
   brief: Maximum number of containers that can send data to your organization
   description: |
     Maximum number of containers that can send data to your
-    organization. This limit is higher than your contractual limit to give room for burst and overage usage.
+    organization. This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops datapoints from new containers but keeps
     data points for existing containers. To monitor your usage against the limit, use the metric
     `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:containers`.
@@ -1373,7 +1373,7 @@ sf.org.limit.customMetricTimeSeries:
     that exceeded the limit, but it continues to accept data points for custom MTS that already existed.
     To see the overall number of custom metrics you’ve defined, use the metric `sf.org.numCustomMetrics`.
     To learn more about custom MTS, see the
-    section [About custom, bundled, and high-resolution metrics](https://docs.signalfx.com/en/latest/admin-guide/usage.html)
+    section [About custom, bundled, and high-resolution metrics](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
     in the user documentation.
   metric_type: gauge
   title: sf.org.limit.customMetricTimeSeries
