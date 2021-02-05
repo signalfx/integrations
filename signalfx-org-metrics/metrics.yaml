@@ -1,187 +1,112 @@
-sf.org.apm.numSpansDroppedThrottle:
-  brief: The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
+sf.org.apm.numAddSpansCalls:
+  brief: The number of calls to the `/v2/trace` endpoint.
   description: |
-    The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
-    Splunk APM drops spans it receives after the ingestion volume limit is reached.
+    The number of calls to the `/v2/trace` endpoint.
 
-      * Dimension(s): `orgId`
-      * Data resolution: 1 second
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
   metric_type: counter
-  title: sf.org.apm.numSpansDroppedThrottle
+  title: sf.org.apm.numAddSpansCallsByToken
 
-sf.org.apm.numSpansDroppedThrottleByToken:
-  brief: The number of spans Splunk APM dropped for a specific access token
-    after you exceeded the allowed ingest volume.
+sf.org.apm.numAddSpansCallsByToken:
+  brief: The number of calls to the `/v2/trace` endpoint for a specific access token.
   description: |
-    The number of spans Splunk APM received for a specific access token
-    beyond the allowed ingest volume. Splunk APM drops spans it receives after
-    the ingestion volume limit is reached.
+    The number of calls to the `/v2/trace` endpoint for a specific access token.
 
-      * Dimension(s): `orgId`, `tokenId`
-      * Data resolution: 1 second
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
   metric_type: counter
-  title: sf.org.apm.numSpansDroppedThrottleByToken
+  title: sf.org.apm.numAddSpansCallsByToken
 
-sf.org.apm.grossSpansReceived:
-  brief: The number of spans Splunk APM received before filtering and throttling.
+sf.org.apm.numContainers:
+  brief: The number of containers actively sending data to Splunk APM.
   description: |
-    The number of spans Splunk APM received before filtering or throttling.
+    The number of containers actively sending data to Splunk APM.
+  
+        * Dimension(s): `orgId`
+        * Data resolution: 1 minute
+  metric_type: gauge
+  title: sf.org.apm.numContainers
 
-      * Dimension(s): `orgId`
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossSpansReceived
-
-sf.org.apm.grossSpansReceivedByToken:
-  brief: The number of spans Splunk APM received for a specific access token
-    before filtering and throttling.
+sf.org.apm.numHosts:
+  brief: The number of hosts that are actively sending data to Splunk APM.
   description: |
-    The number of spans Splunk APM received for a specific access token
-    before filtering and throttling.
-
-      * Dimension(s): `orgId`, `tokenId`
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossSpansReceivedByToken
-
-sf.org.apm.numSpansReceived:
-  brief: The number of spans Splunk APM received after filtering and throttling.
-  description: |
-    The number of spans Splunk APM received after filtering and throttling.
-
-      * Dimension(s): `orgId`
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.numSpansReceived
-
-sf.org.apm.numSpansReceivedByToken:
-  brief: The number of spans Splunk APM received for a specific access token
-    after filtering and throttling.
-  description: |
-    The number of spans Splunk APM accepts for a specific access token
-    after filtering and throttling.
-
-      * Dimension(s): `orgId`, `tokenId`
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.numSpansReceivedByToken
+    The number of hosts that are actively sending data to Splunk APM.
+        * Dimension(s): `orgId`
+        * Data resolution: 1 minute
+  metric_type: gauge
+  title: sf.org.apm.numHosts
 
 sf.org.apm.grossSpanBytesReceived:
-  brief: The number of bytes Splunk APM received from spans after decompression
+  brief: The number of bytes Splunk APM receives from spans after decompression
     but before filtering and throttling.
   description: |
     The number of bytes Splunk APM receives from spans after
     decompression but before filtering and throttling.
-  
-      * Dimension(s): `orgId`
-      * Data resolution: 1 second
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpanBytesReceived
 
-sf.org.apm.grossSpanBytesReceivedByToken:
-  brief: The number of bytes Splunk APM received for a specific access token
-    from spans after decompression but before filtering and throttling.
-  description: |
-    The number of bytes Splunk APM receives for a specific access token
-    from spans after decompression but before filtering and throttling.
-  
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossSpanBytesReceivedByToken
-
 sf.org.apm.numSpanBytesReceived:
-  brief: The number of bytes Splunk APM accepts for a span after decompression
-    after filtering and throttling.
+  brief: The number of bytes Splunk APM accepts from ingested span data
+    after decompression after filtering and throttling.
   description: |
-    The number of bytes Splunk APM accepts for a span after
-    decompression, filtering, and throttling.
+    The number of bytes Splunk APM accepts from ingested span
+    data after decompression after filtering and throttling.
 
-      * Dimension(s): `orgId`
-      * Data resolution: 1 second
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceived
+
+sf.org.apm.grossSpanBytesReceivedByToken:
+  brief: The number of bytes Splunk APM receives for a specific access token
+    from ingested span data after decompression but before filtering and
+    throttling.
+  description: |
+    The number of bytes Splunk APM receives for a specific access token
+    from ingested span data after decompression but before filtering and throttling.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossSpanBytesReceivedByToken
 
 sf.org.apm.numSpanBytesReceivedByToken:
   brief: The number of bytes Splunk APM accepts for a specific access token
     for a span after decompression after filtering and throttling.
   description: |
     The number of bytes Splunk APM accepts for a specific access token
-    for a span after decompression, filtering, and throttling.
+    for a span after decompression after filtering and throttling.
 
-      * Dimension(s): `orgId`, `tokenId`
-      * Data resolution: 1 second
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceivedByToken
-
-sf.org.apm.numAddSpansCalls:
-  brief: The number of calls to the `/v2/trace` endpoint.
-  description: |
-    The number of calls to the `/v2/trace` endpoint.
-
-      * Dimension(s): `orgId`
-      * Data resolution:  1 second
-  metric_type: counter
-  title: sf.org.apm.numAddSpansCalls
-
-sf.org.apm.numAddSpansCallsByToken:
-  brief: The number of calls to the `/v2/trace` endpoint for a specific access token.
-  description: |
-    The number of calls to the `/v2/trace` endpoint for a specific access token.
-  
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.numAddSpansCallsByToken
-
-sf.org.apm.numTracesReceived:
-  brief: The number of traces Splunk APM receives and processes.
-  description: |
-    The number of traces Splunk APM receives and processes.
-
-      * Dimension(s):  `orgId`
-      * Data resolution: 1 minute
-  metric_type: counter
-  title: sf.org.apm.numTracesReceived
-
-sf.org.apm.numTroubleshootingMetricSets10s:
-  brief: The cardinality of Troubleshooting MetricSets for each 10-second time window.
-  description: |
-    The cardinality of Troubleshooting MetricSets for each 10-second time window.
-
-      * Dimension(s):  `orgId`
-      * Data resolution: 10 seconds
-  metric_type: gauge
-  title: sf.org.apm.numTroubleshootingMetricSets10s
-
-sf.org.apm.numTroubleshootingMetricSets:
-  brief: The cardinality of Troubleshooting MetricSets for each 1-minute time window.
-  description: |
-    The cardinality of Troubleshooting MetricSets for each 1-minute time window.
-
-      * Dimension(s):  `orgId`
-      * Data resolution: 1 minute
-  metric_type: 
-  title: sf.org.apm.numTroubleshootingMetricSets
 
 sf.org.apm.numSpansDroppedInvalid:
   brief: The number of invalid spans Splunk APM receives.
   description: |
-    The number of invalid spans Splunk APM receives. A span can be invalid
-    if there is no start time, trace ID, or service associated with it.
+    The number of invalid spans Splunk APM receives. A span can be
+    invalid if there is no start time, trace ID, or service associated with it,
+    or if there are too many spans in the trace.
     
-        * Dimension(s):  `orgId`
+        * Dimension(s): `orgId`
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedInvalid
 
 sf.org.apm.numSpansDroppedInvalidByToken:
-  brief: The number of invalid spans Splunk APM receives for a specific access token.
+  brief: The number of invalid spans Splunk APM receives for a specific access
+    token.
   description: |
-    The number of invalid spans Splunk APM receives for a specific access token.
-    A span can be invalid if there is no start time, trace ID, or service associated with it.
-    
-        * Dimension(s):  `orgId`, `tokenId`
+    The number of invalid spans Splunk APM receives for a specific
+    access token. A span can be invalid if there is no start time, trace ID, or
+    service associated with it, or if there are too many spans in the trace.
+
+        * Dimension(s): `orgId`, `tokenId`
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedInvalidByToken
@@ -190,9 +115,9 @@ sf.org.apm.numSpansDroppedOversize:
   brief: The number of spans Splunk APM receives that are too large to process.
   description: |
     The number of spans Splunk APM receives that are too large to process.
-  
-      * Dimension(s):  `orgId`
-      * Data resolution: 1 second
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedOversize
 
@@ -202,57 +127,215 @@ sf.org.apm.numSpansDroppedOversizeByToken:
   description: |
     The number of spans Splunk APM receives that are too large to process
     for a specific access token.
-  
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 1 second
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedOversizeByToken
 
+sf.org.apm.numSpansDroppedThrottle:
+  brief: The number of spans Splunk APM accepts beyond the allowed ingest volume.
+  description: |
+    The number of spans Splunk APM accepts beyond the allowed ingest volume.
+    APM drops spans it receives after the ingestion volume limit is reached.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedThrottle
+
+sf.org.apm.numSpansDroppedThrottleByToken:
+  brief: The number of spans Splunk APM accepts for a specific access token
+    beyond the allowed ingest volume.
+  description: |
+    The number of spans Splunk APM accepts for a specific access token
+    beyond the allowed ingest volume. APM drops spans it receives after
+    the ingestion volume limit is reached.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedThrottleByToken
+
+sf.org.apm.grossSpansReceived:
+  brief: The number of spans Splunk APM receives before filtering and throttling.
+  description: |
+    The number of spans Splunk APM receives before filtering or throttling.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossSpansReceived
+
+sf.org.apm.numSpansReceived:
+  brief: The number of spans Splunk APM accepts after filtering and throttling.
+  description: |
+    The number of spans Splunk APM accepts after filtering and throttling.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansReceived
+
+sf.org.apm.grossSpansReceivedByToken:
+  brief: The number of spans Splunk APM receives for a specific access token
+    before filtering and throttling.
+  description: |
+    The number of spans Splunk APM receives for a specific access token
+    before filtering or throttling.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossSpansReceivedByToken
+
+sf.org.apm.numSpansReceivedByToken:
+  brief: The number of spans Splunk APM accepts for a specific access token
+    after filtering and throttling.
+  description: |
+    The number of spans Splunk APM accepts for a specific access token
+    after filtering and throttling.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansReceivedByToken
+
+sf.org.apm.subscription.containers:
+  brief: The entitlement for the number of containers for your host-based subscription plan.
+  description: |
+    The entitlement for the number of containers for your subscription plan.
+  
+        * Dimension(s): `orgId`
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.apm.subscription.containers
+
+sf.org.apm.subscription.hosts:
+  brief: The entitlement for the number of hosts for your host-based subscription plan.
+  description: |
+    The entitlement for the number of hosts for your subscription plan.
+  
+        * Dimension(s): `orgId`
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.apm.subscription.hosts
+
+sf.org.apm.subscription.monitoringMetricSets:
+  brief: The entitlement for the number of Monitoring MetricSets as part of your subscription plan.
+  description: |
+    The entitlement for the number of Monitoring MetricSets as part of your subscription plan.
+  
+        * Dimension(s): `orgId`
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.apm.subscription.monitoringMetricSets
+
+sf.org.apm.subscription.spanBytes:
+  brief: The entitlement for the number of bytes per minutes for your subscription plan.
+  description: |
+    The entitlement for the number of bytes per minutes for your subscription plan.
+  
+        * Dimension(s): `orgId`
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.apm.subscription.spanBytes
+
+sf.org.apm.subscription.traces:
+  brief: The entitlement for the number of TAPM as part of your usage-based subscription plan.
+  description: |
+    The entitlement for the number of TAPM as part of your subscription plan.
+  
+        * Dimension(s): `orgId`
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.apm.subscription.traces
+
+sf.org.apm.subscription.troubleshootingMetricSets:
+  brief: The entitlement for the number of Troubleshooting MetricSets as part of your subscription plan.
+  description: |
+    The entitlement for the number of Troubleshooting MetricSets as part of your subscription plan.
+  
+        * Dimension(s): `orgId`
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.apm.subscription.troubleshootingMetricSets
+
+sf.org.apm.numTracesReceived:
+  brief: The number of traces Splunk APM receives and processes.
+  description: |
+    The number of traces Splunk APM receives and processes.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 minute
+  metric_type: counter
+  title: sf.org.apm.numTracesReceived
+
+sf.org.apm.numTroubleshootingMetricSets10s:
+  brief: The cardinality of Troubleshooting MetricSets for each 10-second window.
+  description: |
+    The cardinality of Troubleshooting MetricSets for each 10-second window.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.apm.numTroubleshootingMetricSets10s
+
+sf.org.apm.numTroubleshootingMetricSets:
+  brief: The cardinality of Troubleshooting MetricSets for each 1-minute time window.
+  description: |
+    The cardinality of Troubleshooting MetricSets for each 1-minute time window.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 minute
+  metric_type: counter
+  title: sf.org.apm.numTroubleshootingMetricSets
+
 sf.org.apm.grossContentBytesReceived:
-  brief: The number of bytes Splunk APM receives before filtering
+  brief: The volume of bytes Splunk APM receives off the wire before filtering
     and throttling.
   description: |
-    The number of bytes Splunk APM receives before filtering
-    and throttling. The content might be compressed or uncompressed.
-  
-      * Dimension(s):  `orgId`
-      * Data resolution: 1 second
+    The volume of bytes Splunk APM receives off the wire before filtering
+    and throttling. This content could be compressed.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossContentBytesReceived
 
-sf.org.apm.grossContentBytesReceivedByToken:
-  brief: The number of bytes Splunk APM receives for a specific access
-    token before filtering and throttling.
-  description: |
-    The number of bytes Splunk APM receives for a specific
-    access token before filtering and throttling. The content might be compressed or uncompressed.
-  
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossContentBytesReceivedByToken
-
 sf.org.apm.numContentBytesReceived:
-  brief: The number of bytes Splunk APM accepts after filtering
+  brief: The volume of bytes Splunk APM accepts off the wire after filtering
     and throttling.
   description: |
-    The number of bytes Splunk APM accepts after filtering
-    and throttling. The content might be compressed or uncompressed.
-  
-      * Dimension(s):  `orgId`
-      * Data resolution: 1 second
+    The volume of bytes Splunk APM accepts off the wire after filtering
+    and throttling. This content could be compressed.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numContentBytesReceived
 
+sf.org.apm.grossContentBytesReceivedByToken:
+  brief: The volume of bytes Splunk APM receives off the wire for a specific access
+    token before filtering and throttling.
+  description: |
+    The volume of bytes Splunk APM receives off the wire for a specific
+    access token before filtering and throttling. This content could be compressed.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossContentBytesReceivedByToken
+
 sf.org.apm.numContentBytesReceivedByToken:
-  brief: The number of bytes Splunk APM accepts for a specific access
+  brief: The volume of bytes Splunk APM accepts off the wire for a specific access
     token after filtering and throttling.
   description: |
-    The number of bytes Splunk APM accepts for a specific
-    access token after filtering and throttling. The content might be compressed or uncompressed.
-  
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 1 second
+    The volume of bytes Splunk APM accepts off the wire for a specific
+    access token after filtering and throttling. This content could be compressed.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numContentBytesReceivedByToken
 

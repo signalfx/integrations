@@ -94,6 +94,14 @@ These metrics track limits that Infrastructure Monitoring enforces for your orga
    Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS.
    To monitor the number of metrics you've created overall, use the metric `sf.org.numMetricTimeSeriesCreated`.
 
+### Compare gross and num metric values
+
+Some metrics report a `gross` value and a `num` value. Compare the `gross` and `num` values of a metric to learn about how the system limits or filters data for whatever the metric represents.
+
+A `gross` metric reports the total number of datapoints the system receives before any throttling or filtering kicks in. 
+
+A `num` metric reports the total number of datapoints the system receives after it completes any throttling or filtering.
+
 ## Metrics
 
 {{ macros.metric_list(metrics) }}
