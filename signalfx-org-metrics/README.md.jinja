@@ -1,7 +1,7 @@
 {% import "macros.jinja" as macros %}
 
 {% if target == "docs" -%}
-# SignalFx organization metrics
+# Splunk Infrastructure Monitoring Organization Metrics
 
 
 - [Description](#description)
@@ -11,42 +11,66 @@
 
 ## DESCRIPTION
 
-Splunk Infrastructure Monitoring generates a number of metrics you can use to monitor your usage of the application, including:
+Splunk Infrastructure Monitoring provides the following types of metrics that measure your usage:
 
--  Ingest-related metrics that characterize the volume and nature of data that you are sending to Infrastructure Monitoring, such as the number of datapoints that were sent or how many metric time series were created in response to the datapoints and dimensions sent.
+* Ingest metrics: Measure the data you're sending to Infrastructure Monitoring, such as the number of datapoints you've sent
+* App usage metrics: Measure your use of application features, such as the number of dashboards in your organization
+* Integration metrics: Measure the use cloud services integrated with your organization, such as the number of calls to the AWS CloudWatch API
+* Metrics that measure your use of resources for which you can specify limits, such as the number of custom MTS you've created
 
--  Usage or engagement metrics, such as the number of dashboards or charts in the organization.
-
--  Metrics that tell you how the application pulls data on your behalf from cloud services like Amazon Web Services or Google Cloud Platform, such as the number of calls to each GCP Stackdriver client method or how many of the calls to the AWS CloudWatch API are being throttled by AWS.
-
-Your organization is not charged for these metrics, and they do not count against any limits.
+You're not charged for these metrics, and they do not count against any limits.
 
 
 ## USAGE
 
-Admins can see some of these values in built-in charts on the Organization Overview page. And, like any other metrics, you can display them on charts you build to monitor your system health.
+If you're an admin, you can view some of these metrics in built-in charts on the Organization Overview page.
+Anyone can display these metrics in custom charts.
 
+### Metrics for values by token
 
-### About ByToken metrics
+In some cases, Infrastructure Monitoring has two similar metrics:
 
-Some metrics send both a total value and a ByToken value, such as `sf.org.numAddDatapointCalls` and `sf.org.numAddDatapointCallsByToken`.
+* One metric, such as `sf.org.numAddDatapointCalls`, represents the total across your entire organization.
+* The similar metric, `sf.org.numAddDatapointCallsByToken` represents the total for each unique access token you use.
 
-The sum of all the ByToken values may be less than the value of the counterpart (non-token-based) metric; this is because no per-token value is sent for data that SignalFx retrieves on your behalf via AWS CloudWatch, GCP StackDriver, AppDynamics, or New Relic, because data sent from those integrations is not associated with a token. For example, if you sum the values sent for `sf.org.numAddDatapointCallsByToken`, the value may be less than the value of `sf.org.numAddDatapointCalls`, because the latter includes data from the specified integrations while the former does not.
+The sum of all the by token metric values for a measurement might be less than the total value metric value. For
+example, the sum, of all `sf.org.numAddDatapointCallsByToken` values might be less than the value of
+`sf.org.numAddDatapointCalls`. The sums differ because Infrastructure Monitoring doesn't use a token to retrieve
+data from cloud services you've integrated. Infrastructure Monitoring counts the datapoint calls for the integrated
+services, but it doesn't have a way to count the calls for any specific token.
 
+This difference in values applies to AWS CloudWatch, GCP StackDriver, AppDynamics, and New Relic integrations.
 
-### About "per metric type" metrics
+### Metrics with values for each metric type
 
-Some metrics send a value for each metric type (counter, cumulative counter or gauge), resulting in three MTS for these metrics. Each MTS is sent with a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have multiple MTS for these metrics, you would need to use the Sum analytics function to see the total value.
+Some metrics have a value for each metric type (counter, cumulative counter, or gauge), so you have three MTS per metric.
+Each MTS has a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have
+multiple MTS for these metrics, you need to use the `sum()` SignalFlow function to see the total value.
 
-For example, you might receive 3 MTS for `sf.org.numMetricTimeSeriesCreated`, one representing the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges. To find the total number of MTS created, you need to sum those values.
+For example, you might receive three MTS for `sf.org.numMetricTimeSeriesCreated`, one for the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges.
 
-Also, you could filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
+Also, you can filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
 
-### About the metric tracking stopped detectors
+### A metric that counts stopped detectors
 
-The `sf.org.numDetectorsAborted` metric monitors the number of detectors that were stopped because they reached a resource limit (usually an MTS limit of 250K or higher). That condition also generates an `sf.org.abortedDetectors` event to record detailed context including the detector ID and reason it stopped with the value/limit of MTS or datapoints, whichever caused it to stop.
+The metric `sf.org.numDetectorsAborted` monitors the number of detectors that Infrastructure Monitoring
+stopped because the detector reached a resource limit. In most cases, the detector exceeds the limit of 250K MTS.
+MTS exceeds 250K. This condition also generates the event
+`sf.org.abortedDetectors`, which records details including the detector ID, the reason it stopped, and
+the value or limit of MTS or datapoints, whichever caused the detector to stop.
 
-For information about events, see [View Additional Data With Events](https://docs.signalfx.com/en/latest/detect-alert/events-intro.html).
+To learn more, see [View Additional Data With Events](https://docs.signalfx.com/en/latest/detect-alert/events-intro.html).
+
+### Metrics that track system limits
+
+Three metrics track limits that Infrastructure Monitoring enforces for all organizations:
+
+* `sf.org.limit.hosts`: Maximum number of hosts that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
+  drops datapoints from newly-added hosts but keeps datapoints for existing hosts.
+* `sf.org.limit.containers`: Maximum number of containers that can send data to your organization. If you exceed this limit, Infrastructure Monitoring
+  drops datapoints from newly-added containers but keeps datapoints for existing containers.
+* `sf.org.limit.customMetricTimeSeries`: Maximum number of custom MTS you can create in your organization. Custom MTS use a metric defined by
+  you, rather than a metric defined by an integration. If you exceed this limit, Infrastructure Monitoring stops creating new custom MTS.
 
 ### Compare gross and num metric values
 
