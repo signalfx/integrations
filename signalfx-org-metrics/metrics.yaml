@@ -134,10 +134,10 @@ sf.org.apm.numSpansDroppedOversizeByToken:
   title: sf.org.apm.numSpansDroppedOversizeByToken
 
 sf.org.apm.numSpansDroppedThrottle:
-  brief: The number of spans Splunk APM accepts beyond the allowed ingest volume.
+  brief: The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
   description: |
-    The number of spans Splunk APM accepts beyond the allowed ingest volume.
-    APM drops spans it receives after the ingestion volume limit is reached.
+    The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
+    Splunk APM drops spans it receives after the ingestion volume limit is reached.
 
         * Dimension(s): `orgId`
         * Data resolution: 1 second
@@ -145,11 +145,11 @@ sf.org.apm.numSpansDroppedThrottle:
   title: sf.org.apm.numSpansDroppedThrottle
 
 sf.org.apm.numSpansDroppedThrottleByToken:
-  brief: The number of spans Splunk APM accepts for a specific access token
-    beyond the allowed ingest volume.
+  brief: The number of spans Splunk APM dropped for a specific access token
+    after you exceeded the allowed ingest volume.
   description: |
-    The number of spans Splunk APM accepts for a specific access token
-    beyond the allowed ingest volume. APM drops spans it receives after
+    The number of spans Splunk APM received for a specific access token
+    beyond the allowed ingest volume. Splunk APM drops spans it receives after
     the ingestion volume limit is reached.
 
         * Dimension(s): `orgId`, `tokenId`
@@ -158,9 +158,9 @@ sf.org.apm.numSpansDroppedThrottleByToken:
   title: sf.org.apm.numSpansDroppedThrottleByToken
 
 sf.org.apm.grossSpansReceived:
-  brief: The number of spans Splunk APM receives before filtering and throttling.
+  brief: The number of spans Splunk APM received before filtering and throttling.
   description: |
-    The number of spans Splunk APM receives before filtering or throttling.
+    The number of spans Splunk APM received before filtering or throttling.
 
         * Dimension(s): `orgId`
         * Data resolution: 1 second
@@ -190,10 +190,10 @@ sf.org.apm.grossSpansReceivedByToken:
   title: sf.org.apm.grossSpansReceivedByToken
 
 sf.org.apm.numSpansReceivedByToken:
-  brief: The number of spans Splunk APM accepts for a specific access token
+  brief: The number of spans Splunk APM received for a specific access token
     after filtering and throttling.
   description: |
-    The number of spans Splunk APM accepts for a specific access token
+    The number of spans Splunk APM received for a specific access token
     after filtering and throttling.
 
         * Dimension(s): `orgId`, `tokenId`
@@ -242,9 +242,9 @@ sf.org.apm.subscription.spanBytes:
   title: sf.org.apm.subscription.spanBytes
 
 sf.org.apm.subscription.traces:
-  brief: The entitlement for the number of TAPM as part of your usage-based subscription plan.
+  brief: The entitlement for the number of traces analyzed per minute (TAPM) as part of your usage-based subscription plan.
   description: |
-    The entitlement for the number of TAPM as part of your subscription plan.
+    The entitlement for the number of traces analyzed per minute (TAPM) as part of your subscription plan.
   
         * Dimension(s): `orgId`
         * Data resolution: 2 minutes
