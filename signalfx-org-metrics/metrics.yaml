@@ -193,7 +193,7 @@ sf.org.apm.numSpansReceivedByToken:
   brief: The number of spans Splunk APM received for a specific access token
     after filtering and throttling.
   description: |
-    The number of spans Splunk APM receiced for a specific access token
+    The number of spans Splunk APM received for a specific access token
     after filtering and throttling.
 
         * Dimension(s): `orgId`, `tokenId`
