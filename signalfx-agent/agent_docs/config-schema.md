@@ -147,6 +147,7 @@ The **nested** `writer` config object has the following fields:
 | `traceExportFormat` | no | string | Format to export traces in. Choices are "zipkin" and "sapm" (**default:** `"zipkin"`) |
 | `datapointMaxRequests` | no | integer | Deprecated: use `maxRequests` instead. (**default:** `0`) |
 | `maxRequests` | no | integer | The maximum number of concurrent requests to make to a single ingest server with datapoints/events/trace spans.  This number multiplied by `datapointMaxBatchSize` is more or less the maximum number of datapoints that can be "in-flight" at any given time.  Same thing for the `traceSpanMaxBatchSize` option and trace spans. (**default:** `10`) |
+| `timeout` | no | int64 | Timeout specifies a time limit for requests made to the ingest server. The timeout includes connection time, any redirects, and reading the response body. Default is 5 seconds, a Timeout of zero means no timeout. (**default:** `"5s"`) |
 | `eventSendIntervalSeconds` | no | integer | The agent does not send events immediately upon a monitor generating them, but buffers them and sends them in batches.  The lower this number, the less delay for events to appear in SignalFx. (**default:** `1`) |
 | `propertiesMaxRequests` | no | unsigned integer | The analogue of `maxRequests` for dimension property requests. (**default:** `20`) |
 | `propertiesMaxBuffered` | no | unsigned integer | How many dimension property updates to hold pending being sent before dropping subsequent property updates.  Property updates will be resent eventually and they are slow to change so dropping them (esp on agent start up) usually isn't a big deal. (**default:** `10000`) |
@@ -418,6 +419,7 @@ where applicable:
     traceExportFormat: "zipkin"
     datapointMaxRequests: 0
     maxRequests: 10
+    timeout: "5s"
     eventSendIntervalSeconds: 1
     propertiesMaxRequests: 20
     propertiesMaxBuffered: 10000
