@@ -1,0 +1,31 @@
+{
+  "remappings": {
+    "k8s.pod.network.errors": {
+      "dimName": "direction",
+      "remappings": [
+      {
+        "metric": "pod_network_receive_errors_total",
+        "dim": "receive"
+      },
+      {
+        "metric": "pod_network_transmit_errors_total",
+        "dim": "transmit"
+      }
+      ],
+      "type": "ADD_RESULT"
+    },
+    "k8s.replication_controller.available": {
+      "metric": "kubernetes.replication_controller.available",
+      "type": "SIMPLE"
+    },
+    "pod_network_transmit_errors_total": {
+      "dimName": "direction",
+      "dimValue": "transmit",
+      "metric": "k8s.pod.network.errors",
+      "type": "QUERY_DIM"
+    }
+  },
+  "simpleRenames": {
+    "k8s.container.name": "container_spec_name"
+  }
+}

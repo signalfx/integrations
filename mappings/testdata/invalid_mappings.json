@@ -1,0 +1,18 @@
+{
+  "remappings": {
+    "k8s.pod.network.errors": {
+      "dimName": "direction",
+      "remappings": [
+        {
+          "metric": "pod_network_receive_errors_total",
+          "dim": "receive"
+        },
+        {
+          "metric": 10,
+          "dim": "transmit"
+        }
+      ],
+      "type": "ADD_RESULT"
+    }
+  }
+}
