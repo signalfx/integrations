@@ -114,6 +114,7 @@ Observer Type: `docker`
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `dockerURL` | no | `string` |  (**default:** `unix:///var/run/docker.sock`) |
+| `cacheSyncInterval` | no | `int64` | The time to wait before resyncing the list of containers the monitor maintains through the docker event listener example: cacheSyncInterval: "20m" (**default:** `60m`) |
 | `labelsToDimensions` | no | `map of strings` | A mapping of container label names to dimension names that will get applied to the metrics of all discovered services. The corresponding label values will become the dimension values for the mapped name.  E.g. `io.kubernetes.container.name: container_spec_name` would result in a dimension called `container_spec_name` that has the value of the `io.kubernetes.container.name` container label. |
 | `useHostnameIfPresent` | no | `bool` | If true, the "Config.Hostname" field (if present) of the docker container will be used as the discovered host that is used to configure monitors.  If false or if no hostname is configured, the field `NetworkSettings.IPAddress` is used instead. (**default:** `false`) |
 | `useHostBindings` | no | `bool` | If true, the observer will configure monitors for matching container endpoints using the host bound ip and port.  This is useful if containers exist that are not accessible to an instance of the agent running outside of the docker network stack. (**default:** `false`) |

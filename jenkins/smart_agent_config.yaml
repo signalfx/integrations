@@ -21,6 +21,12 @@ collectd/jenkins:
     required: true
     type: integer
     yamlName: port
+  - default: ''
+    doc: ''
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: path
   - default: null
     doc: Key required for collecting metrics.  The access key located at `Manage Jenkins
       > Configure System > Metrics > ADD.` If empty, click `Generate`.

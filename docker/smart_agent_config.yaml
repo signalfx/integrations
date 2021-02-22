@@ -37,6 +37,13 @@ docker-container-stats:
     required: false
     type: integer
     yamlName: timeoutSeconds
+  - default: 60m
+    doc: 'The time to wait before resyncing the list of containers the monitor maintains
+      through the docker event listener example: cacheSyncInterval: "20m"'
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: cacheSyncInterval
   - default: null
     doc: 'A mapping of container label names to dimension names. The corresponding
       label values will become the dimension value for the mapped name.  E.g. `io.kubernetes.container.name:

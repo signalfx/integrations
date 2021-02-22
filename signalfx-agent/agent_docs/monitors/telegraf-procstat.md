@@ -51,7 +51,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `exe` | no | `string` | The name of an executable to monitor.  (ie: `exe: "signalfx-agent*"`) |
-| `pattern` | no | `string` | Pattern to match against.  On Windows the pattern should be in the form of a WMI query. (ie: `pattern: "%signalfx-agent%"`) |
+| `pattern` | no | `string` | Regular expression pattern to match against. |
 | `user` | no | `string` | Username to match against |
 | `pidFile` | no | `string` | Path to Pid file to monitor.  (ie: `pidFile: "/var/run/signalfx-agent.pid"`) |
 | `processName` | no | `string` | Used to override the process name dimension |

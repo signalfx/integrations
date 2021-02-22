@@ -55,6 +55,9 @@ Metrics that are categorized as
  - ***`memory.free`*** (*gauge*)<br>    (Linux Only) Bytes of memory available for use.
  - ***`memory.slab_recl`*** (*gauge*)<br>    (Linux Only) Bytes of memory, used for SLAB-allocation of kernel objects, that can be reclaimed.
  - ***`memory.slab_unrecl`*** (*gauge*)<br>    (Linux Only) Bytes of memory, used for SLAB-allocation of kernel objects, that can't be reclaimed.
+ - `memory.swap_free` (*gauge*)<br>    Bytes of swap memory available for use.
+ - `memory.swap_total` (*gauge*)<br>    Total bytes of swap memory on the system.
+ - `memory.swap_used` (*gauge*)<br>    Bytes of swap memory in use by the system.
  - ***`memory.total`*** (*gauge*)<br>    Total bytes of system memory on the system.
  - ***`memory.used`*** (*gauge*)<br>    Bytes of memory in use by the system.
  - ***`memory.utilization`*** (*gauge*)<br>    Percent of memory in use on this host.  This does NOT include buffer or cache memory on Linux.
