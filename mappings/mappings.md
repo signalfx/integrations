@@ -69,6 +69,14 @@
 | `system.cpu.load_average.15m` (metric)                                                   | `load.longterm` (metric)                                  |
 | `system.cpu.load_average.1m` (metric)                                                    | `load.shortterm` (metric)                                 |
 | `system.cpu.load_average.5m` (metric)                                                    | `load.midterm` (metric)                                   |
+| `system.disk.io` (metric) with dimension name `direction` equal to `read`                | `disk_octets.read` (metric)                               |
+| `system.disk.io` (metric) with dimension name `direction` equal to `write`               | `disk_octets.write` (metric)                              |
+| `system.disk.merged` (metric) with dimension name `direction` equal to `read`            | `disk_merged.read` (metric)                               |
+| `system.disk.merged` (metric) with dimension name `direction` equal to `write`           | `disk_merged.write` (metric)                              |
+| `system.disk.operations` (metric) with dimension name `direction` equal to `read`        | `disk_ops.read` (metric)                                  |
+| `system.disk.operations` (metric) with dimension name `direction` equal to `write`       | `disk_ops.write` (metric)                                 |
+| `system.disk.time` (metric) with dimension name `direction` equal to `read`              | `disk_time.read` (metric)                                 |
+| `system.disk.time` (metric) with dimension name `direction` equal to `write`             | `disk_time.write` (metric)                                |
 | `system.filesystem.inodes.usage` (metric) with dimension name `state` equal to `free`    | `df_inodes.free` (metric)                                 |
 | `system.filesystem.inodes.usage` (metric) with dimension name `state` equal to `used`    | `df_inodes.used` (metric)                                 |
 | `system.filesystem.usage` (metric) with dimension name `state` equal to `free`           | `df_complex.free` (metric)                                |
@@ -81,3 +89,11 @@
 | `system.memory.usage` (metric) with dimension name `state` equal to `slab_reclaimable`   | `memory.slab_recl` (metric)                               |
 | `system.memory.usage` (metric) with dimension name `state` equal to `slab_unreclaimable` | `memory.slab_unrecl` (metric)                             |
 | `system.memory.usage` (metric) with dimension name `state` equal to `used`               | `memory.used` (metric)                                    |
+| `system.network.dropped` (metric) with dimension name `direction` equal to `receive`     | `if_dropped.rx` (metric)                                  |
+| `system.network.dropped` (metric) with dimension name `direction` equal to `transmit`    | `if_dropped.tx` (metric)                                  |
+| `system.network.errors` (metric) with dimension name `direction` equal to `receive`      | `if_errors.rx` (metric)                                   |
+| `system.network.errors` (metric) with dimension name `direction` equal to `transmit`     | `if_errors.tx` (metric)                                   |
+| `system.network.io` (metric) with dimension name `direction` equal to `receive`          | `if_octets.rx` (metric)                                   |
+| `system.network.io` (metric) with dimension name `direction` equal to `transmit`         | `if_octets.tx` (metric)                                   |
+| `system.network.packets` (metric) with dimension name `direction` equal to `receive`     | `if_packets.rx` (metric)                                  |
+| `system.network.packets` (metric) with dimension name `direction` equal to `transmit`    | `if_packets.tx` (metric)                                  |
