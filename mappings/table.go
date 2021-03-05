@@ -13,6 +13,8 @@ const (
 	legacyMetricTemplate          = "`${legacyMetric}` (metric)"
 	otelDimensionRenameTemplate   = "`${otelDimension}` (dimension)"
 	legacyDimensionRenameTemplate = "`${legacyDimension}` (dimension)"
+	otelPropertyRenameTemplate    = "`${otelProperty}` (property)"
+	legacyPropertyRenameTemplate  = "`${legacyProperty}` (property)"
 )
 
 var (
@@ -38,6 +40,7 @@ func makeTable(m *mappings) string {
 	var rows []row
 	remappings := parseRemappings(m.Remappings)
 	simpleRenames := parseSimpleRenames(m.SimpleRenames)
+	propertyRenames := parsePropertyRenames(m.PropertyRenames)
 	rows = append(rows, []row{
 		{
 			otelColumn:   "**OpenTelemetry Semantics**",
@@ -50,6 +53,7 @@ func makeTable(m *mappings) string {
 	}...)
 	rows = append(rows, remappings...)
 	rows = append(rows, simpleRenames...)
+	rows = append(rows, propertyRenames...)
 	sort.Slice(rows[:], func(i, j int) bool {
 		return rows[i].otelColumn < rows[j].otelColumn
 	})
@@ -181,6 +185,10 @@ func (t *dimensionTemplateHelper) fill(s string) string {
 		return t.sourceDimension
 	case "legacyDimension":
 		return t.targetDimension
+	case "otelProperty":
+		return t.sourceDimension
+	case "legacyProperty":
+		return t.targetDimension
 	}
 	return ""
 }
@@ -212,4 +220,25 @@ func parseSimpleRenames(simpleRenames map[string]string) []row {
 		updateLongest(currentRow)
 	}
 	return table
+}
+
+func parsePropertyRenames(propertyRenames map[string]string) []row {
+	table := make([]row, 0, len(propertyRenames))
+	for otelName, legacyName := range propertyRenames {
+		if skipSimpleRenaming(otelName) {
+			continue
+		}
+		th := dimensionTemplateHelper{
+			sourceDimension: otelName,
+			targetDimension: legacyName,
+		}
+		currentRow := row{
+			otelColumn:   th.getTemplate(otelPropertyRenameTemplate),
+			legacyColumn: th.getTemplate(legacyPropertyRenameTemplate),
+		}
+		table = append(table, currentRow)
+		updateLongest(currentRow)
+	}
+	return table
+
 }
