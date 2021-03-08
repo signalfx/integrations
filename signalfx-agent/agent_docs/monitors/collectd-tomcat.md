@@ -80,9 +80,10 @@ The **nested** `values` config object has the following fields:
 ## Metrics
 
 These are the metrics available for this monitor.
-Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+**All of the metrics emitted from this monitor are categorized as
+[custom](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)**
+but the ones that are emitted by default from the monitor are ***in bold and italics*** in the list below.
+
 
 This monitor will also emit by default any metrics that are not listed below.
 

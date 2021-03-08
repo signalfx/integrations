@@ -85,6 +85,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [collectd/mongodb](./monitors/collectd-mongodb.md)
 - [collectd/mysql](./monitors/collectd-mysql.md)
 - [collectd/nginx](./monitors/collectd-nginx.md)
+- [collectd/opcache](./monitors/collectd-opcache.md)
 - [collectd/openstack](./monitors/collectd-openstack.md)
 - [collectd/php-fpm](./monitors/collectd-php-fpm.md)
 - [collectd/postgresql](./monitors/collectd-postgresql.md)
