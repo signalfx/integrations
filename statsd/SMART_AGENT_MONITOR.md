@@ -18,7 +18,7 @@ Below is an overview of that monitor.**
 ### Smart Agent Monitor
 
 
-This monitor will receive and aggergate Statsd metrics and convert them to
+This monitor will receive and aggregate Statsd metrics and convert them to
 datapoints.  It listens on a configured address and port in order to
 receive the statsd metrics.  Note that this monitor does not support statsd
 extensions such as tags.
