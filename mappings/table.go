@@ -55,7 +55,7 @@ func makeTable(m *mappings) string {
 	rows = append(rows, simpleRenames...)
 	rows = append(rows, propertyRenames...)
 	sort.Slice(rows[:], func(i, j int) bool {
-		return rows[i].otelColumn < rows[j].otelColumn
+		return rows[i].legacyColumn < rows[j].legacyColumn
 	})
 	return generateTable(rows)
 }
@@ -64,15 +64,15 @@ func generateTable(rows []row) string {
 	var finalTable string
 	for i, m := range rows {
 		if i == 1 {
-			finalTable += fmt.Sprintf("|%s|%s|\n", m.otelColumn, m.legacyColumn)
+			finalTable += fmt.Sprintf("|%s|%s|\n", m.legacyColumn, m.otelColumn)
 			continue
 		}
 		finalRow := fmt.Sprintf(
 			"| %s%s | %s%s |\n",
-			m.otelColumn,
-			spaces(longestOTelRow-len(m.otelColumn)),
 			m.legacyColumn,
 			spaces(longestLegacyRow-len(m.legacyColumn)),
+			m.otelColumn,
+			spaces(longestOTelRow-len(m.otelColumn)),
 		)
 		finalTable += finalRow
 	}
