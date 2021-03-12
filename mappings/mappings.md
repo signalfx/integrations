@@ -1,6 +1,7 @@
 | **OpenTelemetry Semantics**                                                              | **Legacy Semantics**                                      |
 |------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | `container.filesystem.usage` (metric)                                                    | `container_fs_usage_bytes` (metric)                       |
+| `container.id` (dimension)                                                               | `container_id` (dimension)                                |
 | `container.image.name` (dimension)                                                       | `container_image` (dimension)                             |
 | `container.memory.available` (metric)                                                    | `container_memory_available_bytes` (metric)               |
 | `container.memory.major_page_faults` (metric)                                            | `container_memory_major_page_faults` (metric)             |
@@ -10,6 +11,7 @@
 | `container.name` (dimension)                                                             | `container_name` (dimension)                              |
 | `container.status.reason` (property)                                                     | `container_status_reason` (property)                      |
 | `container.status` (property)                                                            | `container_status` (property)                             |
+| `host.name` (dimension)                                                                  | `host` (dimension)                                        |
 | `k8s.cluster.name` (dimension)                                                           | `kubernetes_cluster` (dimension)                          |
 | `k8s.container.cpu_limit` (metric)                                                       | `kubernetes.container_cpu_limit` (metric)                 |
 | `k8s.container.cpu_request` (metric)                                                     | `kubernetes.container_cpu_request` (metric)               |
@@ -113,3 +115,5 @@
 | `system.network.io` (metric) with dimension name `direction` equal to `transmit`         | `if_octets.tx` (metric)                                   |
 | `system.network.packets` (metric) with dimension name `direction` equal to `receive`     | `if_packets.rx` (metric)                                  |
 | `system.network.packets` (metric) with dimension name `direction` equal to `transmit`    | `if_packets.tx` (metric)                                  |
+| `system.paging.faults` (metric) with dimension name `type` equal to `major`              | `vmpage_faults.majflt` (metric)                           |
+| `system.paging.faults` (metric) with dimension name `type` equal to `minor`              | `vmpage_faults.minflt` (metric)                           |
