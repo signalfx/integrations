@@ -167,6 +167,7 @@ The **nested** `writer` config object has the following fields:
 | `maxTraceSpansInFlight` | no | unsigned integer | How many trace spans are allowed to be in the process of sending.  While this number is exceeded, the oldest spans will be discarded to accommodate new spans generated to avoid memory exhaustion.  If you see log messages about "Aborting pending trace requests..." or "Dropping new trace spans..." it means that the downstream target for traces is not able to accept them fast enough. Usually if the downstream is offline you will get connection refused errors and most likely spans will not build up in the agent (there is no retry mechanism). In the case of slow downstreams, you might be able to increase `maxRequests` to increase the concurrent stream of spans downstream (if the target can make efficient use of additional connections) or, less likely, increase `traceSpanMaxBatchSize` if your batches are maxing out (turn on debug logging to see the batch sizes being sent) and being split up too much. If neither of those options helps, your downstream is likely too slow to handle the volume of trace spans and should be upgraded to more powerful hardware/networking. (**default:** `100000`) |
 | `splunk` | no | [object (see below)](#splunk) | Configures the writer specifically writing to Splunk. |
 | `signalFxEnabled` | no | bool | If set to `false`, output to SignalFx will be disabled. (**default:** `true`) |
+| `extraHeaders` | no | map of strings | Additional headers to add to any outgoing HTTP requests from the agent. |
 
 
 ## splunk
@@ -452,6 +453,7 @@ where applicable:
       maxRequests: 0
       maxBatchSize: 0
     signalFxEnabled: true
+    extraHeaders: 
   logging: 
     level: "info"
     format: "text"

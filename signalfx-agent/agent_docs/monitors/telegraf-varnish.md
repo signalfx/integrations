@@ -59,14 +59,14 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
- - `varnish.backend_busy` (*gauge*)<br>    Maximum number of connections to a given backend.
- - `varnish.backend_conn` (*gauge*)<br>    Successful connections to a given backend.
- - ***`varnish.backend_fail`*** (*gauge*)<br>    Failed connections for a given backend.
- - `varnish.backend_recycle` (*gauge*)<br>    Backend connections with keep-alive that are returned to the pool of connections.
- - ***`varnish.backend_req`*** (*gauge*)<br>    Number of requests to the backend.
- - `varnish.backend_reuse` (*gauge*)<br>    Recycled connections that has were reused.
- - `varnish.backend_toolate` (*gauge*)<br>    Backend connections closed because they were idle too long.
- - ***`varnish.backend_unhealthy`*** (*gauge*)<br>    Backend connections not tried because the backend was unhealthy.
+ - `varnish.backend_busy` (*cumulative*)<br>    Maximum number of connections to a given backend.
+ - `varnish.backend_conn` (*cumulative*)<br>    Successful connections to a given backend.
+ - ***`varnish.backend_fail`*** (*cumulative*)<br>    Failed connections for a given backend.
+ - `varnish.backend_recycle` (*cumulative*)<br>    Backend connections with keep-alive that are returned to the pool of connections.
+ - ***`varnish.backend_req`*** (*cumulative*)<br>    Number of requests to the backend.
+ - `varnish.backend_reuse` (*cumulative*)<br>    Recycled connections that has were reused.
+ - `varnish.backend_toolate` (*cumulative*)<br>    Backend connections closed because they were idle too long.
+ - ***`varnish.backend_unhealthy`*** (*cumulative*)<br>    Backend connections not tried because the backend was unhealthy.
  - ***`varnish.cache_hit`*** (*cumulative*)<br>    Requests served from the cache.
  - `varnish.cache_hitpass` (*cumulative*)<br>    Requests passed to a backend where the decision to pass them found in the cache..
  - ***`varnish.cache_miss`*** (*cumulative*)<br>    Requests fetched from a backend server.
