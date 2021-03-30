@@ -31,6 +31,7 @@ type remapping struct {
 	MetricName     string            `json:"metric"`
 	DimensionName  string            `json:"dimName"`
 	DimensionValue string            `json:"dimValue"`
+	SimpleRenames  map[string]string `json:"simpleRenames"`
 	Remappings     []remappingsInner `json:"remappings"`
 }
 
