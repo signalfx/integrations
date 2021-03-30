@@ -101,10 +101,19 @@ type metricTemplateHelper struct {
 	sourceDimension      string
 	sourceDimensionValue string
 	targetMetric         string
+	dimensionRenames     map[string]string
 }
 
 func (t *metricTemplateHelper) getTemplate(template string) string {
 	return os.Expand(template, t.fill)
+}
+
+func (t *metricTemplateHelper) getDimensionRenames() string {
+	withDims := " and with the following dimensions renamed: "
+	for k, v := range t.dimensionRenames {
+		withDims += fmt.Sprintf("`%v` to `%v`, ", k, v)
+	}
+	return withDims[:len(withDims)-2]
 }
 
 func (t *metricTemplateHelper) fill(s string) string {
@@ -144,22 +153,29 @@ func parseRemappings(metricMappings map[string]remapping) []row {
 					sourceDimension:      m.DimensionName,
 					sourceDimensionValue: m.Remappings[i].DimensionValue,
 					targetMetric:         m.Remappings[i].MetricName,
+					dimensionRenames:     m.SimpleRenames,
 				}
 				currentRow := row{}
 				currentRow.otelColumn = th.getTemplate(addResultTypeTemplate)
+				if th.dimensionRenames != nil {
+					currentRow.otelColumn += th.getDimensionRenames()
+				}
 				currentRow.legacyColumn = th.getTemplate(legacyMetricTemplate)
 				table = append(table, currentRow)
 				updateLongest(currentRow)
 			}
 		case simpleType:
 			th := metricTemplateHelper{
-				sourceMetric:    sourceMetric,
-				sourceDimension: m.DimensionName,
-				targetMetric:    m.MetricName,
+				sourceMetric:     sourceMetric,
+				sourceDimension:  m.DimensionName,
+				targetMetric:     m.MetricName,
+				dimensionRenames: m.SimpleRenames,
 			}
-			currentRow := row{
-				otelColumn:   th.getTemplate(simpleTypeTemplate),
-				legacyColumn: th.getTemplate(legacyMetricTemplate),
+			currentRow := row{}
+			currentRow.otelColumn = th.getTemplate(simpleTypeTemplate)
+			currentRow.legacyColumn = th.getTemplate(legacyMetricTemplate)
+			if th.dimensionRenames != nil {
+				currentRow.otelColumn += th.getDimensionRenames()
 			}
 			table = append(table, currentRow)
 			updateLongest(currentRow)
