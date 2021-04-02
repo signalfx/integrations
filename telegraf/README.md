@@ -9,6 +9,13 @@ Metadata associated with the SignalFx Telegraf Agent can be found <a target="_bl
 - [Configuration](#configuration)
 - [License](#license)
 
+### DEPRECATION NOTICE
+
+Please be advised this integration is deprecated. We recommend using the
+official [telegraf agent](https://github.com/influxdata/telegraf#installation)
+with the [signalfx
+output](https://github.com/influxdata/telegraf/tree/master/plugins/outputs/signalfx).
+
 ### DESCRIPTION
 
 <a target="_blank" href="https://github.com/influxdata/telegraf">Telegraf</a> is an open source daemon that collects statistics from a system and publishes them to a destination of your choice. You can use Telegraf to monitor infrastructure metrics, and enable Telegraf plugins that monitor a wide range of software.
