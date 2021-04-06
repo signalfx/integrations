@@ -11,7 +11,7 @@ Metadata associated with the SignalFx Telegraf Agent can be found <a target="_bl
 
 ### DESCRIPTION
 
-**Deprecation Notice**: Please be advised this integration is deprecated. We recommend using the
+**Deprecation Notice**: Be advised this integration is deprecated. Use the
 official [telegraf agent](https://github.com/influxdata/telegraf#installation)
 with the [signalfx
 output](https://github.com/influxdata/telegraf/tree/master/plugins/outputs/signalfx).
