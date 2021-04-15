@@ -40,6 +40,12 @@ collectd/jenkins:
     required: false
     type: bool
     yamlName: enhancedMetrics
+  - default: 'false'
+    doc: Set to *true* to to exclude job metrics retrieved from `/api/json` endpoint
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: excludeJobMetrics
   - default: null
     doc: Used to enable individual enhanced metrics when `enhancedMetrics` is false
     elementKind: string

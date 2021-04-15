@@ -12,7 +12,7 @@ Monitor Type: `prometheus/go` ([Source](https://github.com/signalfx/signalfx-age
 
 ## Overview
 
-This monitor scrapes [Prmoetheus Go
+This monitor scrapes [Prometheus Go
 collector](https://godoc.org/github.com/prometheus/client_golang/prometheus#NewGoCollector)
 and [Prometheus process
 collector](https://godoc.org/github.com/prometheus/client_golang/prometheus#NewProcessCollector)

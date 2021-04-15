@@ -12,8 +12,8 @@ configuration instructions below.
 
 ## Description
 
-**This integration primarily consists of the Smart Agent monitor `collectd/rabbitmq`.
-Below is an overview of that monitor.**
+This integration primarily consists of the Smart Agent monitor `collectd/rabbitmq`.
+Below is an overview of that monitor.
 
 ### Smart Agent Monitor
 
@@ -225,7 +225,7 @@ monitors` after configuring this monitor in a running agent instance.
 
 ### Legacy non-default metrics (version < 4.7.0)
 
-**The following information only applies to agent version older than 4.7.0. If
+**The following information only applies to agent versions prior to 4.7.0. If
 you have a newer agent and have set `enableBuiltInFiltering: true` at the top
 level of your agent config, see the section above. See upgrade instructions in
 [Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**

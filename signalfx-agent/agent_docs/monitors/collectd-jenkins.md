@@ -90,6 +90,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `path` | no | `string` |  |
 | `metricsKey` | **yes** | `string` | Key required for collecting metrics.  The access key located at `Manage Jenkins > Configure System > Metrics > ADD.` If empty, click `Generate`. |
 | `enhancedMetrics` | no | `bool` | Whether to enable enhanced metrics (**default:** `false`) |
+| `excludeJobMetrics` | no | `bool` | Set to *true* to to exclude job metrics retrieved from `/api/json` endpoint (**default:** `false`) |
 | `includeMetrics` | no | `list of strings` | Used to enable individual enhanced metrics when `enhancedMetrics` is false |
 | `username` | no | `string` | User with security access to jenkins |
 | `apiToken` | no | `string` | API Token of the user |
@@ -103,9 +104,9 @@ Configuration](../monitor-config.html#common-configuration).**
 ## Metrics
 
 These are the metrics available for this monitor.
-Metrics that are categorized as
+This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+-- they are all custom**.
 
 
  - ***`gauge.jenkins.job.duration`*** (*gauge*)<br>    Time taken to complete the job in ms.
@@ -122,16 +123,7 @@ Metrics that are categorized as
  - ***`gauge.jenkins.node.vm.memory.heap.usage`*** (*gauge*)<br>    Percent utilization of the heap memory
  - ***`gauge.jenkins.node.vm.memory.non-heap.used`*** (*gauge*)<br>    Total amount of non-heap memory used
  - ***`gauge.jenkins.node.vm.memory.total.used`*** (*gauge*)<br>    Total Memory used by instance
-
-### Non-default metrics (version 4.7.0+)
-
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived
-from specific configuration options that do not appear in the above list of
-metrics do not need to be added to `extraMetrics`.
-
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring this monitor in a running agent instance.
-
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 
 

@@ -12,7 +12,7 @@ Monitor Type: `prometheus/redis` ([Source](https://github.com/signalfx/signalfx-
 
 ## Overview
 
-This monitor scrapes [Prmoetheus Redis
+This monitor scrapes [Prometheus Redis
 Exporter](https://github.com/oliver006/redis_exporter) metrics and sends
 them to SignalFx.  It is a wrapper around the
 [prometheus-exporter](./prometheus-exporter.md) monitor that provides a

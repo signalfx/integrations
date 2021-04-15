@@ -12,8 +12,8 @@ configuration instructions below.
 
 ## Description
 
-**This integration primarily consists of the Smart Agent monitor `statsd`.
-Below is an overview of that monitor.**
+This integration primarily consists of the Smart Agent monitor `statsd`.
+Below is an overview of that monitor.
 
 ### Smart Agent Monitor
 

@@ -12,7 +12,7 @@ Monitor Type: `prometheus/node` ([Source](https://github.com/signalfx/signalfx-a
 
 ## Overview
 
-This monitor scrapes [Prmoetheus Node
+This monitor scrapes [Prometheus Node
 Exporter](https://github.com/prometheus/node_exporter) metrics and sends
 them to SignalFx.  It is a wrapper around the
 [prometheus-exporter](./prometheus-exporter.md) monitor that provides a

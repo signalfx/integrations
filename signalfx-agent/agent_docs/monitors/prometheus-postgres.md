@@ -12,7 +12,7 @@ Monitor Type: `prometheus/postgres` ([Source](https://github.com/signalfx/signal
 
 ## Overview
 
-This monitor scrapes [Prmoetheus PostgreSQL Server
+This monitor scrapes [Prometheus PostgreSQL Server
 Exporter](https://github.com/wrouesnel/postgres_exporter) metrics and sends
 them to SignalFx.  It is a wrapper around the
 [prometheus-exporter](./prometheus-exporter.md) monitor that provides a
