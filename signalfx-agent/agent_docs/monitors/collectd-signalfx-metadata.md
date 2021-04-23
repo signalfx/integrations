@@ -4,7 +4,7 @@
 
 # collectd/signalfx-metadata
 
-Monitor Type: `collectd/signalfx-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/metadata))
+Monitor Type: `collectd/signalfx-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/metadata))
 
 **Accepts Endpoints**: No
 

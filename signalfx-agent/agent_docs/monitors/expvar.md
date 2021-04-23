@@ -4,7 +4,7 @@
 
 # expvar
 
-Monitor Type: `expvar` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/expvar))
+Monitor Type: `expvar` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/expvar))
 
 **Accepts Endpoints**: **Yes**
 

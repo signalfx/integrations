@@ -4,7 +4,7 @@
 
 # ecs-metadata
 
-Monitor Type: `ecs-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/ecs))
+Monitor Type: `ecs-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/ecs))
 
 **Accepts Endpoints**: No
 

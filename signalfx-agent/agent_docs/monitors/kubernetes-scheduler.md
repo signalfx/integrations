@@ -4,7 +4,7 @@
 
 # kubernetes-scheduler
 
-Monitor Type: `kubernetes-scheduler` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/scheduler))
+Monitor Type: `kubernetes-scheduler` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/kubernetes/scheduler))
 
 **Accepts Endpoints**: **Yes**
 

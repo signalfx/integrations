@@ -4,7 +4,7 @@
 
 # postgresql
 
-Monitor Type: `postgresql` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/postgresql))
+Monitor Type: `postgresql` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/postgresql))
 
 **Accepts Endpoints**: **Yes**
 
@@ -51,7 +51,7 @@ The metric `postgres_replication_state` will only be reported for `master` and
 ## Example Configuration
 
 This example uses the [Vault remote config
-source](https://github.com/signalfx/signalfx-agent/blob/master/docs/remote-config.html#nested-values-vault-only)
+source](https://github.com/signalfx/signalfx-agent/blob/main/docs/remote-config.html#nested-values-vault-only)
 to connect to PostgreSQL using the `params` map that allows you to pull
 out the username and password individually from Vault and interpolate
 them into the `connectionString` config option.

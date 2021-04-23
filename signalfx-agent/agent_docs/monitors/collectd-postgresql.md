@@ -4,7 +4,7 @@
 
 # collectd/postgresql
 
-Monitor Type: `collectd/postgresql` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/postgresql))
+Monitor Type: `collectd/postgresql` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/postgresql))
 
 **Accepts Endpoints**: **Yes**
 

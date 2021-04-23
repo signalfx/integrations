@@ -279,7 +279,8 @@ For more information about how to use config sources, see [Remote Config](./remo
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `watch` | no | bool | Whether to watch config sources for changes.  If this is `true` and any of the config changes (either the main agent.yaml, or remote config values), the agent will dynamically reconfigure itself with minimal disruption.  This is generally better than restarting the agent on config changes since that can result in larger gaps in metric data.  The main disadvantage of watching is slightly greater network and compute resource usage. This option is not itself watched for changes. If you change the value of this option, you must restart the agent. (**default:** `true`) |
+| `watch` | no | bool | Whether to watch config sources for changes.  If this is `true` and the main agent.yaml changes, the agent will dynamically reconfigure itself with minimal disruption. This is generally better than restarting the agent on config changes since that can result in larger gaps in metric data.  The main disadvantage of watching is slightly greater network and compute resource usage. This option is not itself watched for changes. If you change the value of this option, you must restart the agent. (**default:** `true`) |
+| `remoteWatch` | no | bool | Whether to watch remote config sources for changes.  If this is `true` and the remote configs changes, the agent will dynamically reconfigure itself with minimal disruption. This is generally better than restarting the agent on config changes since that can result in larger gaps in metric data.  The main disadvantage of watching is slightly greater network and compute resource usage. This option is not itself watched for changes. If you change the value of this option, you must restart the agent. (**default:** `true`) |
 | `file` | no | [object (see below)](#file) | Configuration for other file sources |
 | `zookeeper` | no | [object (see below)](#zookeeper) | Configuration for a Zookeeper remote config source |
 | `etcd2` | no | [object (see below)](#etcd2) | Configuration for an Etcd 2 remote config source |
@@ -482,6 +483,7 @@ where applicable:
   scratch: 
   configSources: 
     watch: true
+    remoteWatch: true
     file: 
       pollRateSeconds: 5
     zookeeper: 

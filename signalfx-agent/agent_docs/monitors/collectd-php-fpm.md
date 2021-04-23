@@ -4,7 +4,7 @@
 
 # collectd/php-fpm
 
-Monitor Type: `collectd/php-fpm` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/php))
+Monitor Type: `collectd/php-fpm` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/php))
 
 **Accepts Endpoints**: **Yes**
 

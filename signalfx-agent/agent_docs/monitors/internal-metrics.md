@@ -4,7 +4,7 @@
 
 # internal-metrics
 
-Monitor Type: `internal-metrics` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/internalmetrics))
+Monitor Type: `internal-metrics` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/internalmetrics))
 
 **Accepts Endpoints**: **Yes**
 

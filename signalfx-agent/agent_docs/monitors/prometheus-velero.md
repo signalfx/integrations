@@ -4,7 +4,7 @@
 
 # prometheus/velero
 
-Monitor Type: `prometheus/velero` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/velero))
+Monitor Type: `prometheus/velero` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheus/velero))
 
 **Accepts Endpoints**: **Yes**
 

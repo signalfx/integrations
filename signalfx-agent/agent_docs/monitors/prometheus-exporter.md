@@ -4,7 +4,7 @@
 
 # prometheus-exporter
 
-Monitor Type: `prometheus-exporter` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheusexporter))
+Monitor Type: `prometheus-exporter` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheusexporter))
 
 **Accepts Endpoints**: **Yes**
 

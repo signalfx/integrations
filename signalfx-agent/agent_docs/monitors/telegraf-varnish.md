@@ -4,7 +4,7 @@
 
 # telegraf/varnish
 
-Monitor Type: `telegraf/varnish` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/varnish))
+Monitor Type: `telegraf/varnish` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/varnish))
 
 **Accepts Endpoints**: **Yes**
 

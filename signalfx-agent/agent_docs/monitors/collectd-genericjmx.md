@@ -4,7 +4,7 @@
 
 # collectd/genericjmx
 
-Monitor Type: `collectd/genericjmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/genericjmx))
+Monitor Type: `collectd/genericjmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/genericjmx))
 
 **Accepts Endpoints**: **Yes**
 

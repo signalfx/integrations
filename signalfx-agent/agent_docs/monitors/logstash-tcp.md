@@ -4,7 +4,7 @@
 
 # logstash-tcp
 
-Monitor Type: `logstash-tcp` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/logstash/tcp))
+Monitor Type: `logstash-tcp` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/logstash/tcp))
 
 **Accepts Endpoints**: **Yes**
 

@@ -29,7 +29,7 @@ confuse you.
 
 Observer Type: `k8s-api`
 
-[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/master/pkg/observers/kubernetes)
+[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/main/pkg/observers/kubernetes)
 
 ## Configuration
 

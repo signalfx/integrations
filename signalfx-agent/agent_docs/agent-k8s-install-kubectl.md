@@ -36,7 +36,7 @@ Kubernetes secret for your access token and update settings in the Smart Agent's
 ### Download configuration files
 
 On the same host, download the following configuration files from the
-[Kubernetes Deployments](https://github.com/signalfx/signalfx-agent/tree/master/deployments/k8s) area in GitHub:
+[Kubernetes Deployments](https://github.com/signalfx/signalfx-agent/tree/main/deployments/k8s) area in GitHub:
 
 | File                      | Description                                                                                    |
 |:--------------------------|:-----------------------------------------------------------------------------------------------|

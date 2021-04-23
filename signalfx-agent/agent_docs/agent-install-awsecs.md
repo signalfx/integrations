@@ -23,7 +23,7 @@ Configure the Smart Agent for AWS ECS by following these steps:
 1. [Edit the main configuration file](#edit-the-main-configuration-file)
 2. Optional: [Edit additional options](#edit-additional-options)
    Create a Smart Agent task definition for AWS ECS.
-3. Download the [signalfx-agent-task.json](https://github.com/signalfx/signalfx-agent/tree/master/deployments/ecs/signalfx-agent-task.json) file.
+3. Download the [signalfx-agent-task.json](https://github.com/signalfx/signalfx-agent/tree/main/deployments/ecs/signalfx-agent-task.json) file.
 
 ### Edit signalfx-agent-task.json
 
@@ -45,13 +45,13 @@ uses to discover running services.
 
 To change additional configuration options, follow these steps:
 
-1. Download the [agent.yaml](https://github.com/signalfx/signalfx-agent/blob/master/deployments/ecs/agent.yaml) file.
+1. Download the [agent.yaml](https://github.com/signalfx/signalfx-agent/blob/main/deployments/ecs/agent.yaml) file.
 2. Copy agent.yaml to a new .yaml file with a custom name.
 3. In the signalfx-agent-task.json file, change the environment variable `CONFIG_URL` to the URL of your
    custom version of agent.yaml. The URL must be accessible from your ECS cluster.
 4. Deploy the custom .yaml file to your ECS cluster.
 
-To learn more, see [agent.yaml](https://github.com/signalfx/signalfx-agent/blob/master/deployments/ecs/agent.yaml).
+To learn more, see [agent.yaml](https://github.com/signalfx/signalfx-agent/blob/main/deployments/ecs/agent.yaml).
 
 ## Deploy the Smart Agent task definition to ECS
 

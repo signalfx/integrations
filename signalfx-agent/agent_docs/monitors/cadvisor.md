@@ -4,7 +4,7 @@
 
 # cadvisor
 
-Monitor Type: `cadvisor` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/cadvisor))
+Monitor Type: `cadvisor` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/cadvisor))
 
 **Accepts Endpoints**: No
 

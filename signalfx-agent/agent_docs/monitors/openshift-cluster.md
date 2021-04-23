@@ -4,7 +4,7 @@
 
 # openshift-cluster
 
-Monitor Type: `openshift-cluster` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/cluster))
+Monitor Type: `openshift-cluster` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/kubernetes/cluster))
 
 **Accepts Endpoints**: No
 

@@ -4,7 +4,7 @@
 
 # cloudfoundry-firehose-nozzle
 
-Monitor Type: `cloudfoundry-firehose-nozzle` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/cloudfoundry))
+Monitor Type: `cloudfoundry-firehose-nozzle` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/cloudfoundry))
 
 **Accepts Endpoints**: No
 

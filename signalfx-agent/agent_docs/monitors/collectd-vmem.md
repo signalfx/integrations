@@ -4,7 +4,7 @@
 
 # collectd/vmem
 
-Monitor Type: `collectd/vmem` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/vmem))
+Monitor Type: `collectd/vmem` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/vmem))
 
 **Accepts Endpoints**: No
 

@@ -4,7 +4,7 @@
 
 # collectd/spark
 
-Monitor Type: `collectd/spark` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/spark))
+Monitor Type: `collectd/spark` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/spark))
 
 **Accepts Endpoints**: **Yes**
 

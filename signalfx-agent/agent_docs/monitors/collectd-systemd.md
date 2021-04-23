@@ -4,7 +4,7 @@
 
 # collectd/systemd
 
-Monitor Type: `collectd/systemd` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/systemd))
+Monitor Type: `collectd/systemd` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/systemd))
 
 **Accepts Endpoints**: **Yes**
 

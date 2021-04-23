@@ -4,7 +4,7 @@
 
 # telegraf/procstat
 
-Monitor Type: `telegraf/procstat` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/procstat))
+Monitor Type: `telegraf/procstat` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/procstat))
 
 **Accepts Endpoints**: No
 

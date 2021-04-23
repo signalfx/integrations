@@ -65,7 +65,7 @@ monitors:  # All monitor config goes under this key
 ```
 
 **For a list of monitor options that are common to all monitors, see [Common
-Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../monitor-config.md#common-configuration).**
+Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../monitor-config.md#common-configuration).**
 
 
 | Config option | Required | Type | Description |
@@ -196,13 +196,13 @@ monitors` after configuring this monitor in a running agent instance.
 **The following information only applies to agent versions prior to 4.7.0. If
 you have a newer agent and have set `enableBuiltInFiltering: true` at the top
 level of your agent config, see the section above. See upgrade instructions in
-[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
+[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
 
 If you have a reference to the `whitelist.json` in your agent's top-level
 `metricsToExclude` config option, and you want to emit metrics that are not in
 that allow list, then you need to add an item to the top-level
 `metricsToInclude` config option to override that allow list (see [Inclusion
-filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
+filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
 copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions

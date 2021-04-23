@@ -4,7 +4,7 @@
 
 # memory
 
-Monitor Type: `memory` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/memory))
+Monitor Type: `memory` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/memory))
 
 **Accepts Endpoints**: No
 

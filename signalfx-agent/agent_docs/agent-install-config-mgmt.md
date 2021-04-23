@@ -38,7 +38,7 @@ packages:
 
 You can use an Ansible role for installing the Smart Agent:
 
-The main role site is the GitHub repo [SignalFx Agent Ansible Role](https://github.com/signalfx/signalfx-agent/tree/master/deployments/ansible).
+The main role site is the GitHub repo [SignalFx Agent Ansible Role](https://github.com/signalfx/signalfx-agent/tree/main/deployments/ansible).
 
 To install the role from GitHub:
 
@@ -99,7 +99,7 @@ using the Ansible core service module. This module automatically determines the
 host's init system for starting and stopping the `signalfx-agent` service, with a preference for `systemd` (`systemctl`).
 
 To learn more about the Smart Agent configuration options,
-see the [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/master/docs/config-schema.md).
+see the [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md).
 
 ### Install the Smart Agent with Ansible
 
@@ -118,7 +118,7 @@ Before you install, configure a Smart Agent Chef cookbook.
 
 1. Download the Smart Agent Chef cookbook from one of these sites:
 
-   - [GitHub Smart Agent Chef Cookbook](https://github.com/signalfx/signalfx-agent/tree/master/deployments/chef#signalfx-agent-cookbook)
+   - [GitHub Smart Agent Chef Cookbook](https://github.com/signalfx/signalfx-agent/tree/main/deployments/chef#signalfx-agent-cookbook)
    - [Chef Supermarket Smart Agent Cookbook](https://supermarket.chef.io/cookbooks/signalfx_agent)
 
    **NOTE:**
@@ -177,7 +177,7 @@ Before you install, configure a Smart Agent Chef cookbook.
      - For Windows, the default is `$agent_version`.
 
 To see all of the Smart Agent configuration options,
-refer to [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/master/docs/config-schema.md).
+refer to [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md).
 
 ### Install the Smart Agent with Chef
 
@@ -214,7 +214,7 @@ To configure the Docker image for the Smart Agent, perform these steps:
 2. In the agent configuration agent.yaml file that's downloaded with the Docker image,
    update any incorrect property values to match your system.
 3. In agent.yaml, add additional properties such as monitors and observers. To learn
-   more about all the available configuration options, see [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/master/docs/config-schema.md).
+   more about all the available configuration options, see [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md).
 4. In your agent container, copy the agent.yaml file to the `/etc/signalfx/` directory.
 5. If you have the Docker API available through the conventional *nix domain socket, mount it so
    you can use the docker-container-stats monitor. See [docker-container-stats](monitors/docker-container-stats.md).
@@ -257,7 +257,7 @@ To configure optional monitors, add the following lines to the agent.yaml file:
    ```
 
 To learn more about configuring monitors and observers for the Smart Agent in Docker, see
-[Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/master/docs/config-schema.md).
+[Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md).
 
 ### Install the Smart Agent in Docker
 
@@ -313,7 +313,7 @@ Before you install, configure a Smart Agent Puppet manifest.
 
 1. Download the Puppet module from one of these sites:
 
-   * [GitHub Agent Puppet Module](https://github.com/signalfx/signalfx-agent/tree/master/deployments/puppet)
+   * [GitHub Agent Puppet Module](https://github.com/signalfx/signalfx-agent/tree/main/deployments/puppet)
    * [Puppet Forge Agent Puppet Module](https://forge.puppet.com/signalfx/signalfx_agent)
 
 2. From the downloaded module, add the Smart Agent manifest to your Puppet installation.
@@ -359,7 +359,7 @@ Before you install, configure a Smart Agent Puppet manifest.
      The defaults are `$service_user = signalfx-agent` and `$service_group = signalfx-agent`.
 
 To learn more about the Smart Agent configuration options,
-see [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/master/docs/config-schema.md).
+see [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md).
 
 ### Install the Smart Agent with Puppet
 
@@ -381,7 +381,7 @@ See [Verify the Smart Agent](#verify-the-smart-agent).
 ## Install the Smart Agent using a Salt formula
 
 You can use a Salt formula that installs and configures the Smart Agent on Linux.
-Download the formula from the [SignalFx Agent Salt formula site](https://github.com/signalfx/signalfx-agent/tree/master/deployments/salt).
+Download the formula from the [SignalFx Agent Salt formula site](https://github.com/signalfx/signalfx-agent/tree/main/deployments/salt).
 
 ### Configure the Smart Agent for Salt
 
@@ -423,7 +423,7 @@ Download the formula from the [SignalFx Agent Salt formula site](https://github.
      The default value for both properties is `signalfx-agent`.
 
 To learn more about the Smart Agent configuration options,  
-see [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/master/docs/config-schema.md).
+see [Agent Configuration](https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md).
 
 ### Install the Smart Agent with Salt
 

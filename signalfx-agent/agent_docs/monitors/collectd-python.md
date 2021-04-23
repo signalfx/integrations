@@ -4,7 +4,7 @@
 
 # collectd/python
 
-Monitor Type: `collectd/python` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/python))
+Monitor Type: `collectd/python` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/python))
 
 **Accepts Endpoints**: **Yes**
 

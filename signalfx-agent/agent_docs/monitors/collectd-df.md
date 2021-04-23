@@ -4,7 +4,7 @@
 
 # collectd/df
 
-Monitor Type: `collectd/df` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/df))
+Monitor Type: `collectd/df` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/df))
 
 **Accepts Endpoints**: No
 

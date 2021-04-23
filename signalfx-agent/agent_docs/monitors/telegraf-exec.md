@@ -4,7 +4,7 @@
 
 # telegraf/exec
 
-Monitor Type: `telegraf/exec` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/exec))
+Monitor Type: `telegraf/exec` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/exec))
 
 **Accepts Endpoints**: No
 

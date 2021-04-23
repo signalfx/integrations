@@ -4,7 +4,7 @@
 
 # process
 
-Monitor Type: `process` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/process))
+Monitor Type: `process` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/process))
 
 **Accepts Endpoints**: No
 

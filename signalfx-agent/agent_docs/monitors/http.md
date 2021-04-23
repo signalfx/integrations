@@ -4,7 +4,7 @@
 
 # http
 
-Monitor Type: `http` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/http))
+Monitor Type: `http` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/http))
 
 **Accepts Endpoints**: **Yes**
 

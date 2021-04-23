@@ -4,7 +4,7 @@
 
 # elasticsearch-query
 
-Monitor Type: `elasticsearch-query` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/elasticsearch/query))
+Monitor Type: `elasticsearch-query` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/elasticsearch/query))
 
 **Accepts Endpoints**: **Yes**
 

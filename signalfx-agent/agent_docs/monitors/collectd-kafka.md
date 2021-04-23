@@ -4,7 +4,7 @@
 
 # collectd/kafka
 
-Monitor Type: `collectd/kafka` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/kafka))
+Monitor Type: `collectd/kafka` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka))
 
 **Accepts Endpoints**: **Yes**
 
@@ -19,7 +19,7 @@ how to configure custom MBeans, as well as information on troubleshooting
 JMX setup.
 
 This monitor has a set of [built in MBeans
-configured](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/kafka/mbeans.go)
+configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go)
 for which it pulls metrics from Kafka's JMX endpoint.
 
 Note that this monitor supports Kafka v0.8.2.x and above. For Kafka v1.x.x and above,

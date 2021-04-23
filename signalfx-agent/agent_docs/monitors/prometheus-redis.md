@@ -4,7 +4,7 @@
 
 # prometheus/redis
 
-Monitor Type: `prometheus/redis` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/redis))
+Monitor Type: `prometheus/redis` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheus/redis))
 
 **Accepts Endpoints**: **Yes**
 

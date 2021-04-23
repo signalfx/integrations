@@ -4,7 +4,7 @@
 
 # kubelet-metrics
 
-Monitor Type: `kubelet-metrics` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/kubeletmetrics))
+Monitor Type: `kubelet-metrics` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/kubernetes/kubeletmetrics))
 
 **Accepts Endpoints**: **Yes**
 

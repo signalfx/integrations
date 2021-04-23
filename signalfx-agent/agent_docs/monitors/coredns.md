@@ -4,7 +4,7 @@
 
 # coredns
 
-Monitor Type: `coredns` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/coredns))
+Monitor Type: `coredns` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/coredns))
 
 **Accepts Endpoints**: **Yes**
 

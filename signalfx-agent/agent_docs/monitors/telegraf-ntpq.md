@@ -4,7 +4,7 @@
 
 # telegraf/ntpq
 
-Monitor Type: `telegraf/ntpq` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/ntpq))
+Monitor Type: `telegraf/ntpq` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/ntpq))
 
 **Accepts Endpoints**: **Yes**
 

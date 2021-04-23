@@ -4,7 +4,7 @@
 
 # sql
 
-Monitor Type: `sql` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/sql))
+Monitor Type: `sql` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/sql))
 
 **Accepts Endpoints**: **Yes**
 

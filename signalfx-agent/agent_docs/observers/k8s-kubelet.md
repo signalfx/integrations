@@ -14,7 +14,7 @@ this observer may break more easily in future K8s versions.
 
 Observer Type: `k8s-kubelet`
 
-[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/master/pkg/observers/kubelet)
+[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/main/pkg/observers/kubelet)
 
 ## Configuration
 

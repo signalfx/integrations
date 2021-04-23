@@ -4,7 +4,7 @@
 
 # prometheus/nginx-vts
 
-Monitor Type: `prometheus/nginx-vts` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/nginxvts))
+Monitor Type: `prometheus/nginx-vts` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheus/nginxvts))
 
 **Accepts Endpoints**: **Yes**
 

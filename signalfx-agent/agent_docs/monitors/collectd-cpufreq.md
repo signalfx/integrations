@@ -4,7 +4,7 @@
 
 # collectd/cpufreq
 
-Monitor Type: `collectd/cpufreq` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/cpufreq))
+Monitor Type: `collectd/cpufreq` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/cpufreq))
 
 **Accepts Endpoints**: No
 

@@ -4,7 +4,7 @@
 
 # collectd/jenkins
 
-Monitor Type: `collectd/jenkins` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/jenkins))
+Monitor Type: `collectd/jenkins` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/jenkins))
 
 **Accepts Endpoints**: **Yes**
 

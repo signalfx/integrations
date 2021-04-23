@@ -63,16 +63,16 @@ metrics are just targets `gitlab_monitor_database`,
 | Agent Monitor Type    |     Gitlab Doc                           | Standard Port | Standard Path |
 |-----------------------|------------------------------------------|---------------|---------------|
 | gitlab | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_exporter.html) | 9168 | /metrics |
-| [gitlab-gitaly](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./gitlab-gitaly.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/gitaly/#doc-nav) | 9236 | /metrics |
-| [gitlab-sidekiq](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./gitlab-sidekiq.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 8082 | /metrics |
-| [gitlab-unicorn](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./gitlab-unicorn.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_metrics.html#unicorn-metrics-available) | 8080 | /-/metrics |
-| [gitlab-workhorse](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./gitlab-workhorse.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9229 | /metrics |
-| [prometheus/nginx-vts](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./prometheus-nginx-vts.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 8060 | /metrics |
-| [prometheus/node](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./prometheus-node.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/node_exporter.html) | 9100 | /metrics |
-| [promteheus/postgres](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./prometheus-postgres.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/postgres_exporter.html) | 9187 | /metrics |
-| [prometheus/prometheus](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./prometheus-prometheus.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9090 | /metrics |
-| [prometheus/redis](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./prometheus-redis.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/redis_exporter.html) | 9121 | /metrics |
-| [gitlab-runner](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/./gitlab-runner.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9252 | /metrics |
+| [gitlab-gitaly](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./gitlab-gitaly.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/gitaly/#doc-nav) | 9236 | /metrics |
+| [gitlab-sidekiq](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./gitlab-sidekiq.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 8082 | /metrics |
+| [gitlab-unicorn](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./gitlab-unicorn.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_metrics.html#unicorn-metrics-available) | 8080 | /-/metrics |
+| [gitlab-workhorse](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./gitlab-workhorse.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9229 | /metrics |
+| [prometheus/nginx-vts](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./prometheus-nginx-vts.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 8060 | /metrics |
+| [prometheus/node](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./prometheus-node.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/node_exporter.html) | 9100 | /metrics |
+| [promteheus/postgres](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./prometheus-postgres.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/postgres_exporter.html) | 9187 | /metrics |
+| [prometheus/prometheus](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./prometheus-prometheus.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9090 | /metrics |
+| [prometheus/redis](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./prometheus-redis.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/redis_exporter.html) | 9121 | /metrics |
+| [gitlab-runner](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./gitlab-runner.md) | [Gitlab doc](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9252 | /metrics |
 
 GitLab Prometheus exporters, Nginx and GitLab Runner must be configured to
 listen to IP address(es) that include the IP address of the host or docker
@@ -171,7 +171,7 @@ monitors:  # All monitor config goes under this key
 ```
 
 **For a list of monitor options that are common to all monitors, see [Common
-Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../monitor-config.md#common-configuration).**
+Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../monitor-config.md#common-configuration).**
 
 
 | Config option | Required | Type | Description |
@@ -271,12 +271,12 @@ monitors` after configuring this monitor in a running agent instance.
 **The following information only applies to agent versions prior to 4.7.0. If
 you have a newer agent and have set `enableBuiltInFiltering: true` at the top
 level of your agent config, see the section above. See upgrade instructions in
-[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
+[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
 
 If you have a reference to the `whitelist.json` in your agent's top-level
 `metricsToExclude` config option, and you want to emit metrics that are not in
 that allow list, then you need to add an item to the top-level
 `metricsToInclude` config option to override that allow list (see [Inclusion
-filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
+filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
 copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 

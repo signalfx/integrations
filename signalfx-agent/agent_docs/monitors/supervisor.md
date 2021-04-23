@@ -4,7 +4,7 @@
 
 # supervisor
 
-Monitor Type: `supervisor` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/supervisor))
+Monitor Type: `supervisor` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/supervisor))
 
 **Accepts Endpoints**: No
 

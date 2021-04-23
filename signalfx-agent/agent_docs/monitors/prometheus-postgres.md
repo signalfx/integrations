@@ -4,7 +4,7 @@
 
 # prometheus/postgres
 
-Monitor Type: `prometheus/postgres` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/postgres))
+Monitor Type: `prometheus/postgres` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheus/postgres))
 
 **Accepts Endpoints**: **Yes**
 

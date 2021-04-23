@@ -33,7 +33,7 @@ The SignalFx Smart Agent chart for Helm comes with a values.yaml configuration
 file that contains useful default values. If you want to modify these values,
 override them by creating your own values file. Follow these steps:
 
-1. Download the default [values.yaml](https://github.com/signalfx/signalfx-agent/blob/master/deployments/k8s/helm/signalfx-agent/values.yaml) file.
+1. Download the default [values.yaml](https://github.com/signalfx/signalfx-agent/blob/main/deployments/k8s/helm/signalfx-agent/values.yaml) file.
 2. Rename the file. For example, rename it to myValues.yaml.
 3. Edit the file to update the values with your own choices, then save the file.
 

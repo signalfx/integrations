@@ -4,7 +4,7 @@
 
 # collectd/tomcat
 
-Monitor Type: `collectd/tomcat` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/tomcat))
+Monitor Type: `collectd/tomcat` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/tomcat))
 
 **Accepts Endpoints**: **Yes**
 

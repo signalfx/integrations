@@ -117,7 +117,7 @@ the agent instead of the default `/bin/signalfx-agent`, as well by adding the
 ```
 
 The source for the script `/bin/umount-hostfs-non-persistent` can be [found
-here](https://github.com/signalfx/signalfx-agent/blob/master/scripts/umount-hostfs-non-persistent),
+here](https://github.com/signalfx/signalfx-agent/blob/main/scripts/umount-hostfs-non-persistent),
 but basically it just does a `umount` on all of the potentially problematic
 mounts that we know of.  You can add arguments to the script invocation for
 additional directories to unmount if necessary.

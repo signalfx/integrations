@@ -4,7 +4,7 @@
 
 # collectd/kong
 
-Monitor Type: `collectd/kong` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/kong))
+Monitor Type: `collectd/kong` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kong))
 
 **Accepts Endpoints**: **Yes**
 

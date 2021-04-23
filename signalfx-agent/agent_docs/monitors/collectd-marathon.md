@@ -4,7 +4,7 @@
 
 # collectd/marathon
 
-Monitor Type: `collectd/marathon` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/marathon))
+Monitor Type: `collectd/marathon` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/marathon))
 
 **Accepts Endpoints**: **Yes**
 

@@ -4,7 +4,7 @@
 
 # jmx
 
-Monitor Type: `jmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/jmx))
+Monitor Type: `jmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/jmx))
 
 **Accepts Endpoints**: **Yes**
 

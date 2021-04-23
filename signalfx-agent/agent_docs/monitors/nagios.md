@@ -4,7 +4,7 @@
 
 # nagios
 
-Monitor Type: `nagios` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/nagios))
+Monitor Type: `nagios` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/nagios))
 
 **Accepts Endpoints**: No
 

@@ -107,7 +107,7 @@ Would result in the `app` endpoint getting an interval of 1 second and the
 
 Observer Type: `docker`
 
-[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/master/pkg/observers/docker)
+[Observer Source Code](https://github.com/signalfx/signalfx-agent/tree/main/pkg/observers/docker)
 
 ## Configuration
 

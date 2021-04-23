@@ -4,7 +4,7 @@
 
 # collectd/elasticsearch
 
-Monitor Type: `collectd/elasticsearch` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/elasticsearch))
+Monitor Type: `collectd/elasticsearch` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/elasticsearch))
 
 **Accepts Endpoints**: **Yes**
 

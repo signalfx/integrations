@@ -4,7 +4,7 @@
 
 # conviva
 
-Monitor Type: `conviva` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/conviva))
+Monitor Type: `conviva` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/conviva))
 
 **Accepts Endpoints**: No
 

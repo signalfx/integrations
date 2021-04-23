@@ -4,7 +4,7 @@
 
 # traefik
 
-Monitor Type: `traefik` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/traefik))
+Monitor Type: `traefik` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/traefik))
 
 **Accepts Endpoints**: **Yes**
 
@@ -51,7 +51,7 @@ See <a target="_blank" href="https://docs.traefik.io/">here</a> for complete Tra
 
 SignalFx Smart Agent docs can be found <a target="_blank" href="https://github.com/signalfx/signalfx-agent">here</a>.
 Choose deployment specific configuration instruction
-<a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/master/deployments">here</a>. The
+<a target="_blank" href="https://github.com/signalfx/signalfx-agent/tree/main/deployments">here</a>. The
 SignalFx Smart Agent must have network access to Traefik.
 
 Below is an example configuration that enables the traefik monitor. For the given configuration below, the monitor

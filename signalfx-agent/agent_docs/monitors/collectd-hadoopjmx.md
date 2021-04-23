@@ -4,7 +4,7 @@
 
 # collectd/hadoopjmx
 
-Monitor Type: `collectd/hadoopjmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx))
+Monitor Type: `collectd/hadoopjmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/hadoopjmx))
 
 **Accepts Endpoints**: **Yes**
 
@@ -14,7 +14,7 @@ Monitor Type: `collectd/hadoopjmx` ([Source](https://github.com/signalfx/signalf
 
 Collects metrics about a Hadoop 2.0+ cluster using using collectd's GenericJMX
 plugin. You may also configure the
-[collectd/hadoop](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/collectd-hadoop.md)
+[collectd/hadoop](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/collectd-hadoop.md)
 monitor to collect additional metrics about the hadoop cluster from the
 REST API
 
@@ -33,10 +33,10 @@ export YARN_RESOURCEMANAGER_OPTS="-Dcom.sun.management.jmxremote.ssl=false -Dcom
 ```
 
 This monitor has a set of built in MBeans configured for:
-  - [Name Nodes](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/nameNodeMBeans.go)
-  - [Resource Manager](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/resourceManagerMBeans.go)
-  - [Node Manager](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/nodeManagerMBeans.go)
-  - [Data Nodes](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/hadoopjmx/dataNodeMBeans.go)
+  - [Name Nodes](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/hadoopjmx/nameNodeMBeans.go)
+  - [Resource Manager](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/hadoopjmx/resourceManagerMBeans.go)
+  - [Node Manager](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/hadoopjmx/nodeManagerMBeans.go)
+  - [Data Nodes](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/hadoopjmx/dataNodeMBeans.go)
 
 Sample YAML configuration:
 

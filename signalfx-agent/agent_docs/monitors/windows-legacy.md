@@ -4,7 +4,7 @@
 
 # windows-legacy
 
-Monitor Type: `windows-legacy` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/windowslegacy))
+Monitor Type: `windows-legacy` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/windowslegacy))
 
 **Accepts Endpoints**: No
 

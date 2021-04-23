@@ -4,7 +4,7 @@
 
 # collectd/cassandra
 
-Monitor Type: `collectd/cassandra` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/cassandra))
+Monitor Type: `collectd/cassandra` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/cassandra))
 
 **Accepts Endpoints**: **Yes**
 

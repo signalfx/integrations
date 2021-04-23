@@ -4,7 +4,7 @@
 
 # telegraf/dns
 
-Monitor Type: `telegraf/dns` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/dns))
+Monitor Type: `telegraf/dns` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/dns))
 
 **Accepts Endpoints**: **Yes**
 
