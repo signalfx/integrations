@@ -22,7 +22,7 @@ sf.org.apm.numContainers:
   brief: The number of containers actively sending data to Splunk APM.
   description: |
     The number of containers actively sending data to Splunk APM.
-  
+
         * Dimension(s): `orgId`
         * Data resolution: 1 minute
   metric_type: gauge
@@ -92,7 +92,7 @@ sf.org.apm.numSpansDroppedInvalid:
     The number of invalid spans Splunk APM receives. A span can be
     invalid if there is no start time, trace ID, or service associated with it,
     or if there are too many spans in the trace.
-    
+
         * Dimension(s): `orgId`
         * Data resolution: 1 second
   metric_type: counter
@@ -205,7 +205,7 @@ sf.org.apm.subscription.containers:
   brief: The entitlement for the number of containers for your host-based subscription plan.
   description: |
     The entitlement for the number of containers for your subscription plan.
-  
+
         * Dimension(s): `orgId`
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -215,7 +215,7 @@ sf.org.apm.subscription.hosts:
   brief: The entitlement for the number of hosts for your host-based subscription plan.
   description: |
     The entitlement for the number of hosts for your subscription plan.
-  
+
         * Dimension(s): `orgId`
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -225,7 +225,7 @@ sf.org.apm.subscription.monitoringMetricSets:
   brief: The entitlement for the number of Monitoring MetricSets as part of your subscription plan.
   description: |
     The entitlement for the number of Monitoring MetricSets as part of your subscription plan.
-  
+
         * Dimension(s): `orgId`
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -235,7 +235,7 @@ sf.org.apm.subscription.spanBytes:
   brief: The entitlement for the number of bytes per minutes for your subscription plan.
   description: |
     The entitlement for the number of bytes per minutes for your subscription plan.
-  
+
         * Dimension(s): `orgId`
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -245,7 +245,7 @@ sf.org.apm.subscription.traces:
   brief: The entitlement for the number of traces analyzed per minute (TAPM) as part of your usage-based subscription plan.
   description: |
     The entitlement for the number of traces analyzed per minute (TAPM) as part of your subscription plan.
-  
+
         * Dimension(s): `orgId`
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -255,7 +255,7 @@ sf.org.apm.subscription.troubleshootingMetricSets:
   brief: The entitlement for the number of Troubleshooting MetricSets as part of your subscription plan.
   description: |
     The entitlement for the number of Troubleshooting MetricSets as part of your subscription plan.
-  
+
         * Dimension(s): `orgId`
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -767,7 +767,7 @@ sf.org.numBackfillCalls:
   brief: Number of of times a backfill API call was used to send metrics to Infrastructure Monitoring
   description: |
     One value per metric type, each representing the number of times a
-    backfill API call was used to send metrics to Infrastructure Monitoring. 
+    backfill API call was used to send metrics to Infrastructure Monitoring.
     You can have up to three MTS for this metric;
     each MTS is sent with a dimension named `category` with a value of "counter",
     "cumulative_counter", or "gauge".
@@ -783,7 +783,7 @@ sf.org.numBackfillCallsByToken:
     Infrastructure Monitoring
   description: |
     One value per metric type per token, each representing the number
-    of times a backfill API call was used to send metrics to Infrastructure Monitoring. 
+    of times a backfill API call was used to send metrics to Infrastructure Monitoring.
     You can have up to three MTS associated with each token; each MTS is sent with a dimension named `category`
     with a value of "counter","cumulative_counter", or "gauge". To learn more,
     see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
@@ -896,10 +896,10 @@ sf.org.numDatapointsDroppedThrottle:
   description: |
     Total number of data points you sent to Infrastructure Monitoring that Infrastructure Monitoring
     didn't accept because your organization significantly exceeded its DPM limit.
+    For help with this issue, reach out to support at observability-support@splunk.com.
     Unlike `sf.org.numDatapointsDroppedExceededQuota`, this metric represents
     data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
-    it isn't keeping any of your data. Contact [support](https://support.signalfx.com/hc/en-us/requests/new)
-    for help with this issue.
+    it isn't keeping any of your data.
 
         * Dimension(s):  `orgId`
         * Data resolution: 1 second
@@ -911,11 +911,10 @@ sf.org.numDatapointsDroppedThrottleByToken:
   description: |
     One value per token; number of data points you sent to Infrastructure Monitoring but
     that Infrastructure Monitoring didn't accept because your organization significantly exceeded
-    its DPM limit.
+    its DPM limit. For help with this issue, reach out to support at observability-support@splunk.com.
     Unlike `sf.org.numDatapointsDroppedExceededQuota`, this metric represents
     data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
-    it isn't keeping any of your data. Contact [support](https://support.signalfx.com/hc/en-us/requests/new)
-    for help with this issue.
+    it isn't keeping any of your data.
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedThrottle`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
@@ -1177,7 +1176,7 @@ sf.org.numMetricTimeSeriesCreated:
     created that have that type. You can have up to three MTS for this metric; each MTS
     is sent with a dimension named `category` with a value of "counter", "cumulative_counter", or
     "gauge". To learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
-      
+
         * Dimension(s):  `category`, `orgId`
         * Data resolution: 5 seconds
   metric_type: counter
@@ -1274,7 +1273,7 @@ sf.org.numRestCalls:
   brief: Number of REST calls made to the Infrastructure Monitoring API
   description: |
     Number of REST calls made to the Infrastructure Monitoring API.
-    
+
         * Dimension(s):  `orgId`
         * Data resolution: 1 second"
   metric_type: counter
