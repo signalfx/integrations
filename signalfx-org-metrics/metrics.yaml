@@ -896,7 +896,7 @@ sf.org.numDatapointsDroppedThrottle:
   description: |
     Total number of data points you sent to Infrastructure Monitoring that Infrastructure Monitoring
     didn't accept because your organization significantly exceeded its DPM limit.
-    For help with this issue, reach out to support at observability-support@splunk.com.
+    For help with this issue, reach out to support at [observability-support@splunk.com](mailto:observability-support@splunk.com).
     Unlike `sf.org.numDatapointsDroppedExceededQuota`, this metric represents
     data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
     it isn't keeping any of your data.
@@ -911,7 +911,7 @@ sf.org.numDatapointsDroppedThrottleByToken:
   description: |
     One value per token; number of data points you sent to Infrastructure Monitoring but
     that Infrastructure Monitoring didn't accept because your organization significantly exceeded
-    its DPM limit. For help with this issue, reach out to support at observability-support@splunk.com.
+    its DPM limit. For help with this issue, reach out to support at [observability-support@splunk.com](mailto:observability-support@splunk.com).
     Unlike `sf.org.numDatapointsDroppedExceededQuota`, this metric represents
     data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
     it isn't keeping any of your data.
