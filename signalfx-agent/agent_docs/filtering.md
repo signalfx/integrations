@@ -21,7 +21,7 @@ to match on datapoints to determine whether to drop them.  For example:
 ```yaml
 monitors:
    # Prometheus node exporter scraper
- - type: promtheus-exporter
+ - type: prometheus-exporter
    host: 127.0.0.1
    port: 9090
    datapointsToExclude:
