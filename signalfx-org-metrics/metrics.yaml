@@ -1458,3 +1458,28 @@ sf.org.limit.customMetricTimeSeries:
     in the user documentation.
   metric_type: gauge
   title: sf.org.limit.customMetricTimeSeries
+
+sf.org.debug.numNullDatapointsDropped:
+  brief: (Debug only - apply min across paths) Number of null data points dropped
+  description: |
+    Number of data points dropped which are null. Apply the min analytics function before charting this metric to count the number of points dropped. 
+    This metric publishes the results from redundant dual paths alpha and bravo; the minimum number across alpha and bravo is the number of dropped 
+    points that visibly impact this org.
+
+        * Dimension(s):  `orgId`, `path`
+        * Data resolution: 5s
+  metric_type: cumulative
+  title: sf.org.debug.numNullDatapointsDropped
+  
+sf.org.debug.numOutOfOrderDatapointsDropped:
+  brief: (Debug only - apply min across paths) Number of out of order data points dropped
+  description: |
+    Number of data points dropped which are out of order. Apply the min analytics function before charting this metric to count the number of points dropped. 
+    This metric publishes the results from redundant dual paths alpha and bravo; the minimum number across alpha and bravo is the number of dropped 
+    points that visibly impact this org.
+
+        * Dimension(s):  `orgId`, `path`
+        * Data resolution: 5s
+  metric_type: cumulative
+  title: sf.org.debug.numOutOfOrderDatapointsDropped
+  
