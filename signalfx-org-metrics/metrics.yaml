@@ -1464,7 +1464,7 @@ sf.org.debug.numNullDatapointsDropped:
   description: |
     Number of data points dropped which are null. Apply the min analytics function before charting this metric to count the number of points dropped. 
     This metric publishes the results from redundant dual paths alpha and bravo; the minimum number across alpha and bravo is the number of dropped 
-    points that visibly impact this org.
+    points that visibly impact this org. As a debug metric, this may not be available for all the orgs.
 
         * Dimension(s):  `orgId`, `path`
         * Data resolution: 5s
@@ -1476,7 +1476,7 @@ sf.org.debug.numOutOfOrderDatapointsDropped:
   description: |
     Number of data points dropped which are out of order. Apply the min analytics function before charting this metric to count the number of points dropped. 
     This metric publishes the results from redundant dual paths alpha and bravo; the minimum number across alpha and bravo is the number of dropped 
-    points that visibly impact this org.
+    points that visibly impact this org. As a debug metric, this may not be available for all the orgs.
 
         * Dimension(s):  `orgId`, `path`
         * Data resolution: 5s
