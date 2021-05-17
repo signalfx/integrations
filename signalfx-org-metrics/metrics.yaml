@@ -1454,7 +1454,7 @@ sf.org.limit.customMetricTimeSeries:
     Infrastructure Monitoring stops accepting data points for new custom MTS, but it continues to accept
     data points for custom MTS that already existed. To see the number of MTS you're allowed to have, use the metric
     `sf.org.numCustomMetrics`. To learn more about custom MTS, see the section
-    [About custom, bundled, and high-resolution metrics](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+    [About custom, bundled, and high-resolution metrics](https://docs.splunk.com/Observability/admin/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
     in the user documentation.
   metric_type: gauge
   title: sf.org.limit.customMetricTimeSeries
