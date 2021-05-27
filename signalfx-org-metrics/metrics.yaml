@@ -1414,27 +1414,6 @@ sf.org.limit.activeTimeSeries:
   metric_type: gauge
   title: sf.org.limit.activeTimeSeries
 
-sf.org.limit.metricTimeSeriesCreatedPerMinute:
-  brief: Number of MTS you can create per minute
-  description: |
-    Maximum rate at which you can create new MTS
-    in your organization, measured in MTS per minute. If you exceed this rate,
-    Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS.
-    To monitor the number of metrics you've created overall, use the metric `sf.org.numMetricTimeSeriesCreated`.
-  metric_type: gauge
-  title: sf.org.limit.metricTimeSeriesCreatedPerMinute
-
-sf.org.limit.hosts:
-  brief: Maximum number of hosts that can send data to your organization
-  description: |
-    Maximum number of hosts that can send data to your organization.
-    This limit is higher than your contractual limit to allow for burst and overage usage.
-    If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but
-    keeps accepting data points for existing hosts. To monitor your usage against the limit, use the metric
-    `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
-  metric_type: gauge
-  title: sf.org.limit.hosts
-
 sf.org.limit.containers:
   brief: Maximum number of containers that can send data to your organization
   description: |
@@ -1458,3 +1437,38 @@ sf.org.limit.customMetricTimeSeries:
     in the user documentation.
   metric_type: gauge
   title: sf.org.limit.customMetricTimeSeries
+
+sf.org.limit.detector:
+  brief: Maximum number of detectors you can use for your organization
+  description: |
+    Maximum number of detectors you can use for your organization. After you reach this limit, 
+    you can't create more new detectors. 
+    To monitor the number of detectors you create, 
+    use the metric `sf.org.num.detector`.
+  metric_type: gauge
+  title: sf.org.limit.detector
+
+sf.org.limit.hosts:
+  brief: Maximum number of hosts that can send data to your organization
+  description: |
+    Maximum number of hosts that can send data to your organization.
+    This limit is higher than your contractual limit to allow for burst and overage usage.
+    If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but
+    keeps accepting data points for existing hosts. To monitor your usage against the limit, use the metric
+    `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
+  metric_type: gauge
+  title: sf.org.limit.hosts
+
+sf.org.limit.metricTimeSeriesCreatedPerMinute:
+  brief: Number of MTS you can create per minute
+  description: |
+    Maximum rate at which you can create new MTS
+    in your organization, measured in MTS per minute. If you exceed this rate,
+    Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS.
+    To monitor the number of metrics you've created overall, use the metric `sf.org.numMetricTimeSeriesCreated`.
+  metric_type: gauge
+  title: sf.org.limit.metricTimeSeriesCreatedPerMinute
+
+
+
+
