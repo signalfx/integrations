@@ -1441,9 +1441,9 @@ sf.org.limit.customMetricTimeSeries:
 sf.org.limit.detector:
   brief: Maximum number of detectors you can use for your organization
   description: |
-    Maximum number of detectors you can use for your organization.
-    This limit is higher than your contractual limit to allow for burst and overage usage.
-    After you reach this limit, you can't create more new detectors. To monitor the number of detectors you create, 
+    Maximum number of detectors you can use for your organization. After you reach this limit, 
+    you can't create more new detectors. 
+    To monitor the number of detectors you create, 
     use the metric `sf.org.num.detector`.
   metric_type: gauge
   title: sf.org.limit.detector
