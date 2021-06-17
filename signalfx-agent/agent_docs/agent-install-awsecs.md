@@ -64,7 +64,7 @@ After you finish editing the configuration files, continue with these steps:
 
 1. Start the web console and navigate to the **Task Definitions** tab.
 2. Click **Create new Task Definition**.
-3. Click **EC2**, then click **Next step**. The Smart Agent doesn't support Fargate.
+3. Click **EC2**, then click **Next step**.
 4. Click **Configure via JSON**.
 5. Open the signalfx-agent-task.json file, copy the contents, paste the contents into the text box, and click **Save**.
 6. Click **Update** and then **Create**.

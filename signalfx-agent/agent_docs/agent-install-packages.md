@@ -15,7 +15,7 @@ run Linux distributions based on Debian.
 ### Prerequisites for Debian
 
 * *nix distribution that's based on Debian or supports Debian packages
-* Kernel version 2.6.32 or higher
+* Kernel version 3.2 or higher
 * cap_dac_read_search and cap_sys_ptrace capabilities
 * APT or similar package tools. These instructions show you how to install the package using `apt-get`.
 * Internet access. If necessary, set up proxies to allow your package tools to access the Internet.
@@ -69,7 +69,7 @@ run Linux and use the RPM package manager.
 ### Prerequisites for RPM
 
 * *nix distribution that supports RPM, such as CentOS or Oracle Linux
-* Kernel version 2.6.32 or higher
+* Kernel version 3.2 or higher
 * cap_dac_read_search and cap_sys_ptrace capabilities
 * `yum` or similar package tools. These instructions show you how to install the package using `yum`.
 * Write access to `/etc/yum.repos.d/`

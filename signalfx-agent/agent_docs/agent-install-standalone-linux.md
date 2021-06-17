@@ -9,7 +9,7 @@ Install the Smart Agent to Linux host using a compressed
 
 ## Prerequisites
 
-* Kernel version 2.6.32 or higher
+* Kernel version 3.2 or higher
 * cap_dac_read_search and cap_sys_ptrace Linux capabilities
 * Terminal or a similar command-line interface application
 * Program that can uncompress and unbundle a `.tar.gz` file.

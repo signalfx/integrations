@@ -118,6 +118,7 @@ currently support and documentation on the connection string:
   - `postgres`: https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters
   - `mysql`: https://github.com/go-sql-driver/mysql#dsn-data-source-name
   - `sqlserver`: https://github.com/denisenkom/go-mssqldb#connection-parameters-and-dsn
+  - `snowflake`: https://pkg.go.dev/github.com/snowflakedb/gosnowflake#hdr-Connection_Parameters
 
 ## Parameterized Connection String
 
@@ -126,6 +127,30 @@ consisting of the variables: `host`, `port`, and all the values from
 the `params` config option map.  You interpolate variables into it
 with the Go template syntax `{{.varname}}` (see example config
 above).
+
+## Snowflake Performance and Usage Metrics
+
+To configure the agent to collect Snowflake performance and usage metrics:
+- Copy pkg/sql/snowflake-metrics.yaml from this repo into the same location as your agent.yaml file (for example, /etc/signalfx).
+- Configure the sql monitor as follows:
+```
+monitors:
+  - type: sql
+    intervalSeconds: 3600
+    dbDriver: snowflake
+    params:
+      account: "account.region"
+      database: "SNOWFLAKE"
+      schema: "ACCOUNT_USAGE"
+      role: "ACCOUNTADMIN"
+      user: "user"
+      password: "password"
+    connectionString: "{{.user}}:{{.password}}@{{.account}}/{{.database}}/{{.schema}}?role={{.role}}"
+    queries: 
+      {"#from": "/etc/signalfx/snowflake-metrics.yaml"}
+```
+
+You can also cut/paste the contents of snowflake-metrics.yaml into agent.yaml under "queries" if needed or preferred.  And you can edit snowflake-metrics.yaml to only include metrics you care about.
 
 
 ## Configuration
@@ -148,8 +173,8 @@ Configuration](../monitor-config.html#common-configuration).**
 | `host` | no | `string` |  |
 | `port` | no | `integer` |  (**default:** `0`) |
 | `params` | no | `map of strings` | Parameters to the connectionString that can be templated into that option using Go template syntax (e.g. `{{.key}}`). |
-| `dbDriver` | no | `string` | The database driver to use, valid values are `postgres`, `mysql` and `sqlserver`. |
-| `connectionString` | no | `string` | A URL or simple option string used to connect to the database. If using PostgreSQL, [see the list of connection string params](https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters). |
+| `dbDriver` | no | `string` | The database driver to use, valid values are `postgres`, `mysql`, `sqlserver`, and `snowflake`. |
+| `connectionString` | no | `string` | A URL or simple option string used to connect to the database. For example, if using PostgreSQL, [see the list of connection string params](https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters). |
 | `queries` | **yes** | `list of objects (see below)` | A list of queries to make against the database that are used to generate datapoints. |
 | `logQueries` | no | `bool` | If true, query results will be logged at the info level. (**default:** `false`) |
 

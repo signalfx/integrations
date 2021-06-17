@@ -13,7 +13,7 @@ to install the Smart Agent. To learn more, see
 
 ## Prerequisites
 
-* Linux kernel version 2.6.32 or higher
+* Linux kernel version 3.2 or higher
 * Terminal or a similar command-line interface application
 * Helm:
 

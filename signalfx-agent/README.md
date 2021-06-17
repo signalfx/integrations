@@ -27,7 +27,7 @@ see [Install and Configure the Smart Agent](https://docs.signalfx.com/en/latest/
 - Ensure that your Linux username has permission to run the following commands:
     - `curl`
     - `sudo`
-- Ensure that your machine is running Linux kernel version 2.6.32 or higher.
+- Ensure that your machine is running Linux kernel version 3.2 or higher.
 
 #### Windows
 - Ensure that you have access to Windows PowerShell 6.

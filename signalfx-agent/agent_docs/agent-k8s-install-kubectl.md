@@ -12,7 +12,7 @@ to install the Smart Agent. To learn more, see
 
 ## Prerequisites
 
-* Linux kernel version 2.6.32 or higher
+* Linux kernel version 3.2 or higher
 * cap_dac_read_search and cap_sys_ptrace capabilities
 * Terminal or a similar command-line interface application
 * SignalFx access token. See [Smart Agent Access Token](../../../_sidebars-and-includes/smart-agent-access-token.html).
