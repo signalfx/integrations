@@ -1,5 +1,6 @@
 # ![](https://github.com/signalfx/integrations/blob/master/gateway/img/integration_sfxgateway.png) SignalFx Gateway
 
+:note: **SignalFX Gateway is deprecated and must be replaced with the Splunk OTel Collector. For instructions, see [Replace the SignalFX Gateway with the OpenTelemetry Collector](https://docs.signalfx.com/en/latest/otel/gateway-otel-migration.html).** :note:
 
 - [Description](#description)
 - [Requirements and Dependencies](#requirements-and-dependencies)
