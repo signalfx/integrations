@@ -165,7 +165,7 @@ postgres_sessions:
   brief: Number of sessions currently on the server instance
   custom: false
   description: Number of sessions currently on the server instance.  The `state` dimension
-    will specify which which type of session (see `state` row of [pg_stat_activity](https://www.postgresql.org/docs/9.2/monitoring-stats.html#PG-STAT-ACTIVITY-VIEW)).
+    will specify which type of session (see `state` row of [pg_stat_activity](https://www.postgresql.org/docs/9.2/monitoring-stats.html#PG-STAT-ACTIVITY-VIEW)).
   metric_type: gauge
   monitor: postgresql
   title: postgres_sessions

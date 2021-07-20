@@ -138,7 +138,7 @@ These are the metrics available for this integration.
  - ***`postgres_rows_inserted`*** (*cumulative*)<br>    Number of rows inserted into the `table`.
  - ***`postgres_rows_updated`*** (*cumulative*)<br>    Number of rows updated in the `table`.
  - ***`postgres_sequential_scans`*** (*cumulative*)<br>    Total number of sequential scans on the `table`.
- - ***`postgres_sessions`*** (*gauge*)<br>    Number of sessions currently on the server instance.  The `state` dimension will specify which which type of session (see `state` row of [pg_stat_activity](https://www.postgresql.org/docs/9.2/monitoring-stats.html#PG-STAT-ACTIVITY-VIEW)).
+ - ***`postgres_sessions`*** (*gauge*)<br>    Number of sessions currently on the server instance.  The `state` dimension will specify which type of session (see `state` row of [pg_stat_activity](https://www.postgresql.org/docs/9.2/monitoring-stats.html#PG-STAT-ACTIVITY-VIEW)).
 
  - ***`postgres_table_size`*** (*gauge*)<br>    The size in bytes of the `table` on disk.
  - `postgres_xact_commits` (*cumulative*)<br>    The number of transactions that have been committed in this database.

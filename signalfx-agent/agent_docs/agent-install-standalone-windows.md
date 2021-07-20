@@ -14,7 +14,6 @@ a ZIP file.
 * Windows decompression application, such as WinZip or the native Windows
   decompression feature.
 * .NET Framework 3.5 or higher
-* Visual C++ compiler for Python
 * TLS 1.0 or 1.2
 * Administrator account in which to run the Smart Agent
 

@@ -32,7 +32,6 @@ packages:
 
 - Windows 8 or higher
 - Windows PowerShell access
-- Microsoft Visual C++ Compiler for Python
 
 ## Install the Smart Agent using an Ansible role
 
