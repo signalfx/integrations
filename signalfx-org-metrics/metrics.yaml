@@ -1279,18 +1279,6 @@ sf.org.numRestCalls:
   metric_type: counter
   title: sf.org.numRestCalls
 
-sf.org.numRestCallsByToken:
-  brief: Per token number of REST calls made to the Infrastructure Monitoring API
-  description: |
-    For each token, the number of REST calls made to the Infrastructure Monitoring API.
-    The sum of all the values might be less than the value of `sf.org.numRestCalls`.
-    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
-
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.numRestCallsByToken
-
 sf.org.numRestCallsThrottled:
   brief: Number of REST calls not accepted by Infrastructure Monitoring; exceeded per-minute limit
   description: |
