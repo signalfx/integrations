@@ -1409,7 +1409,7 @@ sf.org.limit.containers:
     organization. This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops datapoints from new containers but keeps
     accepting data points for existing containers. To monitor your usage against the limit, use the metric
-    `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:containers`.
+    `sf.org.numResourcesMonitored` and filter for the dimension `resourceType:containers`.
   metric_type: gauge
   title: sf.org.limit.containers
 
@@ -1443,7 +1443,7 @@ sf.org.limit.hosts:
     This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but
     keeps accepting data points for existing hosts. To monitor your usage against the limit, use the metric
-    `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
+    `sf.org.numResourcesMonitored` and filter for the dimension `resourceType:hosts`.
   metric_type: gauge
   title: sf.org.limit.hosts
 
