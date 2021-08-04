@@ -1279,18 +1279,6 @@ sf.org.numRestCalls:
   metric_type: counter
   title: sf.org.numRestCalls
 
-sf.org.numRestCallsByToken:
-  brief: Per token number of REST calls made to the Infrastructure Monitoring API
-  description: |
-    For each token, the number of REST calls made to the Infrastructure Monitoring API.
-    The sum of all the values might be less than the value of `sf.org.numRestCalls`.
-    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
-
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.numRestCallsByToken
-
 sf.org.numRestCallsThrottled:
   brief: Number of REST calls not accepted by Infrastructure Monitoring; exceeded per-minute limit
   description: |
@@ -1421,7 +1409,7 @@ sf.org.limit.containers:
     organization. This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops datapoints from new containers but keeps
     accepting data points for existing containers. To monitor your usage against the limit, use the metric
-    `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:containers`.
+    `sf.org.numResourcesMonitored` and filter for the dimension `resourceType:containers`.
   metric_type: gauge
   title: sf.org.limit.containers
 
@@ -1455,7 +1443,7 @@ sf.org.limit.hosts:
     This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but
     keeps accepting data points for existing hosts. To monitor your usage against the limit, use the metric
-    `sf.org.numResourcesMonitored` and filter for the dimension `resourceId:hosts`.
+    `sf.org.numResourcesMonitored` and filter for the dimension `resourceType:hosts`.
   metric_type: gauge
   title: sf.org.limit.hosts
 
