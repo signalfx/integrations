@@ -20,12 +20,12 @@ You can capture any kind of Redis metrics like:
 
  * Memory used
  * Commands processed per second
- * Number of connected clients and slaves
+ * Number of connected clients and followers
  * Number of blocked clients
  * Number of keys stored (per database)
  * Uptime
  * Changes since last save
- * Replication delay (per slave)
+ * Replication delay (per follower)
 
 
 <!--- OVERVIEW --->
@@ -48,7 +48,7 @@ match something that is very big, as this command is not highly optimized and
 can block other commands from executing.
 
 Note: To avoid duplication reporting, this should only be reported in one node.
-Keys can be defined in either the master or slave config.
+Keys can be defined in either the leader or follower config.
 
 Sample YAML configuration with list lengths:
 
@@ -139,15 +139,15 @@ Metrics that are categorized as
  - `gauge.changes_since_last_save` (*gauge*)<br>    Number of changes since the last dump
  - `gauge.client_biggest_input_buf` (*gauge*)<br>    Biggest input buffer among current client connections
  - `gauge.client_longest_output_list` (*gauge*)<br>    Longest output list among current client connections
- - ***`gauge.connected_clients`*** (*gauge*)<br>    Number of client connections (excluding connections from slaves)
- - `gauge.connected_slaves` (*gauge*)<br>    Number of connected slaves
+ - ***`gauge.connected_clients`*** (*gauge*)<br>    Number of client connections (excluding connections from followers)
+ - `gauge.connected_slaves` (*gauge*)<br>    Number of connected followers
  - `gauge.db0_avg_ttl` (*gauge*)<br>    The average time to live for all keys in redis
  - `gauge.db0_expires` (*gauge*)<br>    The total number of keys in redis that will expire
  - `gauge.db0_keys` (*gauge*)<br>    The total number of keys stored in redis
  - `gauge.instantaneous_ops_per_sec` (*gauge*)<br>    Number of commands processed per second
  - `gauge.key_llen` (*gauge*)<br>    Length of an list key
  - `gauge.latest_fork_usec` (*gauge*)<br>    Duration of the latest fork operation in microseconds
- - `gauge.master_last_io_seconds_ago` (*gauge*)<br>    Number of seconds since the last interaction with master
+ - `gauge.master_last_io_seconds_ago` (*gauge*)<br>    Number of seconds since the last interaction with leader
  - `gauge.master_link_down_since_seconds` (*gauge*)<br>    Number of seconds since the link is down
  - `gauge.master_link_status` (*gauge*)<br>    Status of the link (up/down)
  - ***`gauge.master_repl_offset`*** (*gauge*)<br>    Master replication offset

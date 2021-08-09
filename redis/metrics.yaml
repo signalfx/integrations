@@ -193,17 +193,17 @@ gauge.client_longest_output_list:
   title: gauge.client_longest_output_list
 
 gauge.connected_clients:
-  brief: Number of client connections (excluding connections from slaves)
+  brief: Number of client connections (excluding connections from followers)
   custom: false
-  description: Number of client connections (excluding connections from slaves)
+  description: Number of client connections (excluding connections from followers)
   metric_type: gauge
   monitor: collectd/redis
   title: gauge.connected_clients
 
 gauge.connected_slaves:
-  brief: Number of connected slaves
+  brief: Number of connected followers
   custom: true
-  description: Number of connected slaves
+  description: Number of connected followers
   metric_type: gauge
   monitor: collectd/redis
   title: gauge.connected_slaves
@@ -257,9 +257,9 @@ gauge.latest_fork_usec:
   title: gauge.latest_fork_usec
 
 gauge.master_last_io_seconds_ago:
-  brief: Number of seconds since the last interaction with master
+  brief: Number of seconds since the last interaction with leader
   custom: true
-  description: Number of seconds since the last interaction with master
+  description: Number of seconds since the last interaction with leader
   metric_type: gauge
   monitor: collectd/redis
   title: gauge.master_last_io_seconds_ago
