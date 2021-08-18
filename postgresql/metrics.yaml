@@ -11,14 +11,6 @@ postgres_block_hit_ratio:
   monitor: postgresql
   title: postgres_block_hit_ratio
 
-postgres_conflicts:
-  brief: The number of conflicts
-  custom: true
-  description: The number of conflicts.
-  metric_type: cumulative
-  monitor: postgresql
-  title: postgres_conflicts
-
 postgres_database_size:
   brief: Size in bytes of the database on disk
   custom: false
@@ -50,24 +42,6 @@ postgres_live_rows:
   metric_type: gauge
   monitor: postgresql
   title: postgres_live_rows
-
-postgres_locks:
-  brief: The number of locks active
-  custom: true
-  description: The number of locks active.
-  metric_type: gauge
-  monitor: postgresql
-  title: postgres_locks
-
-postgres_pct_connections:
-  brief: The number of connections to this database as a fraction of the maximum number
-    of allowed connections
-  custom: true
-  description: The number of connections to this database as a fraction of the maximum
-    number of allowed connections.
-  metric_type: gauge
-  monitor: postgresql
-  title: postgres_pct_connections
 
 postgres_queries_average_time:
   brief: Top N queries based on the average execution time broken down by `database`
@@ -113,22 +87,6 @@ postgres_query_time:
   monitor: postgresql
   title: postgres_query_time
 
-postgres_replication_lag:
-  brief: The current replication delay in seconds
-  custom: true
-  description: The current replication delay in seconds. Always = 0 on master.
-  metric_type: gauge
-  monitor: postgresql
-  title: postgres_replication_lag
-
-postgres_replication_state:
-  brief: The current replication state
-  custom: true
-  description: The current replication state.
-  metric_type: gauge
-  monitor: postgresql
-  title: postgres_replication_state
-
 postgres_rows_deleted:
   brief: Number of rows deleted from the `table`
   custom: false
@@ -165,7 +123,7 @@ postgres_sessions:
   brief: Number of sessions currently on the server instance
   custom: false
   description: Number of sessions currently on the server instance.  The `state` dimension
-    will specify which type of session (see `state` row of [pg_stat_activity](https://www.postgresql.org/docs/9.2/monitoring-stats.html#PG-STAT-ACTIVITY-VIEW)).
+    will specify which which type of session (see `state` row of [pg_stat_activity](https://www.postgresql.org/docs/9.2/monitoring-stats.html#PG-STAT-ACTIVITY-VIEW)).
   metric_type: gauge
   monitor: postgresql
   title: postgres_sessions
@@ -177,20 +135,4 @@ postgres_table_size:
   metric_type: gauge
   monitor: postgresql
   title: postgres_table_size
-
-postgres_xact_commits:
-  brief: The number of transactions that have been committed in this database
-  custom: true
-  description: The number of transactions that have been committed in this database.
-  metric_type: cumulative
-  monitor: postgresql
-  title: postgres_xact_commits
-
-postgres_xact_rollbacks:
-  brief: The number of transactions that have been rolled back in this database
-  custom: true
-  description: The number of transactions that have been rolled back in this database.
-  metric_type: cumulative
-  monitor: postgresql
-  title: postgres_xact_rollbacks
 

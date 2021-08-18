@@ -4,7 +4,7 @@
 
 # telegraf/win_services
 
-Monitor Type: `telegraf/win_services` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/winservices))
+Monitor Type: `telegraf/win_services` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/winservices))
 
 **Accepts Endpoints**: No
 
@@ -57,6 +57,7 @@ These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
+
 
 
  - ***`win_services.startup_mode`*** (*gauge*)<br>    The configured start up mode of the window windows service.  Possible values are: `0` (Boot Start), `1` (System Start), `2` (Auto Start), `3` (Demand Start), `4` (disabled).

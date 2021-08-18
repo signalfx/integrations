@@ -1,51 +1,5 @@
 # This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
 
-counter.cassandra.ClientRequest.CASRead.Latency.Count:
-  brief: Count of transactional read operations since server start
-  custom: true
-  description: Count of transactional read operations since server start.
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.ClientRequest.CASRead.Latency.Count
-
-counter.cassandra.ClientRequest.CASRead.TotalLatency.Count:
-  brief: The total number of microseconds elapsed in servicing client transactional
-    read requests
-  custom: true
-  description: 'The total number of microseconds elapsed in servicing client transactional
-    read requests.
-
-
-    It can be devided by `counter.cassandra.ClientRequest.CASRead.Latency.Count`
-
-    to find the real time transactional read latency.'
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.ClientRequest.CASRead.TotalLatency.Count
-
-counter.cassandra.ClientRequest.CASWrite.Latency.Count:
-  brief: Count of transactional write operations since server start
-  custom: true
-  description: Count of transactional write operations since server start.
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.ClientRequest.CASWrite.Latency.Count
-
-counter.cassandra.ClientRequest.CASWrite.TotalLatency.Count:
-  brief: The total number of microseconds elapsed in servicing client transactional
-    write requests
-  custom: true
-  description: 'The total number of microseconds elapsed in servicing client transactional
-    write requests.
-
-
-    It can be devided by `counter.cassandra.ClientRequest.CASWrite.Latency.Count`
-
-    to find the real time transactional write latency.'
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.ClientRequest.CASWrite.TotalLatency.Count
-
 counter.cassandra.ClientRequest.RangeSlice.Latency.Count:
   brief: Count of range slice operations since server start
   custom: false
@@ -89,14 +43,6 @@ counter.cassandra.ClientRequest.RangeSlice.Timeouts.Count:
   monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.RangeSlice.Timeouts.Count
 
-counter.cassandra.ClientRequest.RangeSlice.TotalLatency.Count:
-  brief: The total number of microseconds elapsed in servicing range slice requests
-  custom: true
-  description: The total number of microseconds elapsed in servicing range slice requests.
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.ClientRequest.RangeSlice.TotalLatency.Count
-
 counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count:
   brief: Count of range slice unavailables since server start
   custom: false
@@ -117,7 +63,7 @@ counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count:
 counter.cassandra.ClientRequest.Read.Latency.Count:
   brief: Count of read operations since server start
   custom: false
-  description: Count of read operations since server start.
+  description: Count of read operations since server start
   metric_type: cumulative
   monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Read.Latency.Count
@@ -142,20 +88,6 @@ counter.cassandra.ClientRequest.Read.Timeouts.Count:
   metric_type: cumulative
   monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Read.Timeouts.Count
-
-counter.cassandra.ClientRequest.Read.TotalLatency.Count:
-  brief: The total number of microseconds elapsed in servicing client read requests
-  custom: true
-  description: 'The total number of microseconds elapsed in servicing client read
-    requests.
-
-
-    It can be devided by `counter.cassandra.ClientRequest.Read.Latency.Count`
-
-    to find the real time read latency.'
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.ClientRequest.Read.TotalLatency.Count
 
 counter.cassandra.ClientRequest.Read.Unavailables.Count:
   brief: Count of read unavailables since server start
@@ -202,20 +134,6 @@ counter.cassandra.ClientRequest.Write.Timeouts.Count:
   monitor: collectd/cassandra
   title: counter.cassandra.ClientRequest.Write.Timeouts.Count
 
-counter.cassandra.ClientRequest.Write.TotalLatency.Count:
-  brief: The total number of microseconds elapsed in servicing client write requests
-  custom: true
-  description: 'The total number of microseconds elapsed in servicing client write
-    requests.
-
-
-    It can be devided by `counter.cassandra.ClientRequest.Write.Latency.Count`
-
-    to find the real time write latency.'
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.ClientRequest.Write.TotalLatency.Count
-
 counter.cassandra.ClientRequest.Write.Unavailables.Count:
   brief: Count of write unavailables since server start
   custom: false
@@ -246,108 +164,6 @@ counter.cassandra.Compaction.TotalCompactionsCompleted.Count:
   metric_type: cumulative
   monitor: collectd/cassandra
   title: counter.cassandra.Compaction.TotalCompactionsCompleted.Count
-
-counter.cassandra.Storage.Exceptions.Count:
-  brief: Number of internal exceptions caught
-  custom: true
-  description: Number of internal exceptions caught. Under normal exceptions this
-    should be zero.
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.Storage.Exceptions.Count
-
-counter.cassandra.Storage.Load.Count:
-  brief: Storage used for Cassandra data in bytes
-  custom: false
-  description: 'Storage used for Cassandra data in bytes. Use this metric to see how
-    much storage is being used for data by a Cassandra node.
-
-
-    The value of this metric is influenced by:
-
-    - Total data stored into the database
-
-    - compaction behavior'
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.Storage.Load.Count
-
-counter.cassandra.Storage.TotalHints.Count:
-  brief: Total hints since node start
-  custom: true
-  description: 'Total hints since node start. Indicates that write operations cannot
-    be
-
-    delivered to a node, usually because a node is down. If this value is
-
-    increasing and all nodes are up then there may be some connectivity
-
-    issue between nodes in the cluster.'
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.Storage.TotalHints.Count
-
-counter.cassandra.Storage.TotalHintsInProgress.Count:
-  brief: Total pending hints
-  custom: false
-  description: 'Total pending hints. Indicates that write operations cannot be
-
-    delivered to a node, usually because a node is down. If this value is
-
-    increasing and all nodes are up then there may be some connectivity
-
-    issue between nodes in the cluster.'
-  metric_type: cumulative
-  monitor: collectd/cassandra
-  title: counter.cassandra.Storage.TotalHintsInProgress.Count
-
-gauge.cassandra.ClientRequest.CASRead.Latency.50thPercentile:
-  brief: 50th percentile (median) of Cassandra transactional read latency
-  custom: true
-  description: 50th percentile (median) of Cassandra transactional read latency.
-  metric_type: gauge
-  monitor: collectd/cassandra
-  title: gauge.cassandra.ClientRequest.CASRead.Latency.50thPercentile
-
-gauge.cassandra.ClientRequest.CASRead.Latency.99thPercentile:
-  brief: 99th percentile of Cassandra transactional read latency
-  custom: true
-  description: 99th percentile of Cassandra transactional read latency.
-  metric_type: gauge
-  monitor: collectd/cassandra
-  title: gauge.cassandra.ClientRequest.CASRead.Latency.99thPercentile
-
-gauge.cassandra.ClientRequest.CASRead.Latency.Max:
-  brief: Maximum Cassandra transactional read latency
-  custom: true
-  description: Maximum Cassandra transactional read latency.
-  metric_type: gauge
-  monitor: collectd/cassandra
-  title: gauge.cassandra.ClientRequest.CASRead.Latency.Max
-
-gauge.cassandra.ClientRequest.CASWrite.Latency.50thPercentile:
-  brief: 50th percentile (median) of Cassandra transactional write latency
-  custom: true
-  description: 50th percentile (median) of Cassandra transactional write latency.
-  metric_type: gauge
-  monitor: collectd/cassandra
-  title: gauge.cassandra.ClientRequest.CASWrite.Latency.50thPercentile
-
-gauge.cassandra.ClientRequest.CASWrite.Latency.99thPercentile:
-  brief: 99th percentile of Cassandra transactional write latency
-  custom: true
-  description: 99th percentile of Cassandra transactional write latency.
-  metric_type: gauge
-  monitor: collectd/cassandra
-  title: gauge.cassandra.ClientRequest.CASWrite.Latency.99thPercentile
-
-gauge.cassandra.ClientRequest.CASWrite.Latency.Max:
-  brief: Maximum Cassandra transactional write latency
-  custom: true
-  description: Maximum Cassandra transactional write latency.
-  metric_type: gauge
-  monitor: collectd/cassandra
-  title: gauge.cassandra.ClientRequest.CASWrite.Latency.Max
 
 gauge.cassandra.ClientRequest.RangeSlice.Latency.50thPercentile:
   brief: 50th percentile (median) of Cassandra range slice latency
@@ -381,7 +197,7 @@ gauge.cassandra.ClientRequest.RangeSlice.Latency.99thPercentile:
 gauge.cassandra.ClientRequest.RangeSlice.Latency.Max:
   brief: Maximum Cassandra range slice latency
   custom: true
-  description: Maximum Cassandra range slice latency.
+  description: Maximum Cassandra range slice latency
   metric_type: gauge
   monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.RangeSlice.Latency.Max
@@ -417,7 +233,7 @@ gauge.cassandra.ClientRequest.Read.Latency.99thPercentile:
 gauge.cassandra.ClientRequest.Read.Latency.Max:
   brief: Maximum Cassandra read latency
   custom: false
-  description: Maximum Cassandra read latency.
+  description: Maximum Cassandra read latency
   metric_type: gauge
   monitor: collectd/cassandra
   title: gauge.cassandra.ClientRequest.Read.Latency.Max
@@ -469,6 +285,51 @@ gauge.cassandra.Compaction.PendingTasks.Value:
   metric_type: gauge
   monitor: collectd/cassandra
   title: gauge.cassandra.Compaction.PendingTasks.Value
+
+gauge.cassandra.Storage.Load.Count:
+  brief: Storage used for Cassandra data in bytes
+  custom: false
+  description: 'Storage used for Cassandra data in bytes. Use this metric to see how
+    much storage is being used for data by a Cassandra node.
+
+
+    The value of this metric is influenced by:
+
+    - Total data stored into the database
+
+    - compaction behavior'
+  metric_type: gauge
+  monitor: collectd/cassandra
+  title: gauge.cassandra.Storage.Load.Count
+
+gauge.cassandra.Storage.TotalHints.Count:
+  brief: Total hints since node start
+  custom: true
+  description: 'Total hints since node start. Indicates that write operations cannot
+    be
+
+    delivered to a node, usually because a node is down. If this value is
+
+    increasing and all nodes are up then there may be some connectivity
+
+    issue between nodes in the cluster.'
+  metric_type: gauge
+  monitor: collectd/cassandra
+  title: gauge.cassandra.Storage.TotalHints.Count
+
+gauge.cassandra.Storage.TotalHintsInProgress.Count:
+  brief: Total pending hints
+  custom: false
+  description: 'Total pending hints. Indicates that write operations cannot be
+
+    delivered to a node, usually because a node is down. If this value is
+
+    increasing and all nodes are up then there may be some connectivity
+
+    issue between nodes in the cluster.'
+  metric_type: gauge
+  monitor: collectd/cassandra
+  title: gauge.cassandra.Storage.TotalHintsInProgress.Count
 
 gauge.jvm.threads.count:
   brief: Number of JVM threads

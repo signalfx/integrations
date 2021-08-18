@@ -4,7 +4,7 @@
 
 # collectd/spark
 
-Monitor Type: `collectd/spark` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/spark))
+Monitor Type: `collectd/spark` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/spark))
 
 **Accepts Endpoints**: **Yes**
 
@@ -12,30 +12,28 @@ Monitor Type: `collectd/spark` ([Source](https://github.com/signalfx/signalfx-ag
 
 ## Overview
 
-This integration collects metrics about a Spark cluster using the [collectd Spark Python
+Collects metrics about a Spark cluster using the [collectd Spark Python
 plugin](https://github.com/signalfx/collectd-spark). That plugin collects
 metrics from Spark cluster and instances by hitting endpoints specified in
 Spark's [Monitoring and Instrumentation
 documentation](https://spark.apache.org/docs/latest/monitoring.html) under
 `REST API` and `Metrics`.
 
-The following cluster modes are supported only through HTTP endpoints:
-- Standalone
-- Mesos
-- Hadoop YARN
+We currently only support cluster modes Standalone, Mesos, and Hadoop Yarn
+via HTTP endpoints.
 
-You must specify distinct monitor configurations and discovery rules for
+You have to specify distinct monitor configurations and discovery rules for
 master and worker processes.  For the master configuration, set `isMaster`
 to true.
 
-When running Spark on Apache Hadoop / YARN, this integration is only capable
-of reporting application metrics from the master node.  Use the
+When running Spark on Apache Hadoop / Yarn, this integration is only capable
+of reporting application metrics from the master node.  Please use the
 collectd/hadoop monitor to report on the health of the cluster.
 
 <!--- SETUP --->
 ### Example config:
 
-An example configuration for monitoring applications on YARN
+An example configuration for monitoring applications on Yarn
 ```yaml
 monitors:
   - type: collectd/spark
@@ -174,6 +172,9 @@ Metrics that are categorized as
 
 ### Non-default metrics (version 4.7.0+)
 
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
+
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -181,6 +182,20 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
+
+### Legacy non-default metrics (version < 4.7.0)
+
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
+
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions
 

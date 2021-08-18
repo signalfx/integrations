@@ -12,8 +12,8 @@ configuration instructions below.
 
 ## Description
 
-This integration primarily consists of the Smart Agent monitor `collectd/mongodb`.
-Below is an overview of that monitor.
+**This integration primarily consists of the Smart Agent monitor `collectd/mongodb`.
+Below is an overview of that monitor.**
 
 ### Smart Agent Monitor
 
@@ -65,7 +65,7 @@ monitors:  # All monitor config goes under this key
 ```
 
 **For a list of monitor options that are common to all monitors, see [Common
-Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../monitor-config.md#common-configuration).**
+Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../monitor-config.md#common-configuration).**
 
 
 | Config option | Required | Type | Description |
@@ -95,7 +95,7 @@ These are the metrics available for this integration.
 
  - `counter.asserts.regular` (*cumulative*)<br>    The number of regular assertions raised since the MongoDB process started. Check the log file for more information about these messages.
  - `counter.asserts.warning` (*cumulative*)<br>    In MongoDB 3.x and earlier, the field returns the number of warnings raised since the MongoDB process started.  In MongodDB 4, this is always 0.
- - ***`counter.backgroundFlushing.flushes`*** (*gauge*)<br>    Number of times the database has been flushed. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
+ - ***`counter.backgroundFlushing.flushes`*** (*gauge*)<br>    Number of times the database has been flushed
  - ***`counter.extra_info.page_faults`*** (*gauge*)<br>    Mongod page faults
  - `counter.lock.Database.acquireCount.intentExclusive` (*cumulative*)<br>
  - `counter.lock.Database.acquireCount.intentShared` (*cumulative*)<br>
@@ -119,19 +119,16 @@ These are the metrics available for this integration.
  - `counter.opcountersRepl.insert` (*cumulative*)<br>    Number of replicated inserts since last restart
  - `counter.opcountersRepl.query` (*cumulative*)<br>    Number of replicated queries since last restart
  - `counter.opcountersRepl.update` (*cumulative*)<br>    Number of replicated updates since last restart
- - ***`gauge.backgroundFlushing.average_ms`*** (*gauge*)<br>    Average time (ms) to write data to disk. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
- - ***`gauge.backgroundFlushing.last_ms`*** (*gauge*)<br>    Most recent time (ms) spent writing data to disk. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
+ - ***`gauge.backgroundFlushing.average_ms`*** (*gauge*)<br>    Average time (ms) to write data to disk
+ - ***`gauge.backgroundFlushing.last_ms`*** (*gauge*)<br>    Most recent time (ms) spent writing data to disk
  - `gauge.collection.max` (*gauge*)<br>    Maximum number of documents in a capped collection
  - `gauge.collection.maxSize` (*gauge*)<br>    Maximum disk usage of a capped collection
  - `gauge.collections` (*gauge*)<br>    Number of collections
- - `gauge.connections.available` (*gauge*)<br>    The number of unused incoming connections available. Consider this value 
-    in combination with the value of `gauge.connections.current` to 
-    understand the connection load on the database.
-
- - ***`gauge.connections.current`*** (*gauge*)<br>    The number of incoming connections from clients to the database server.
+ - `gauge.connections.available` (*gauge*)<br>    Number of available incoming connections
+ - ***`gauge.connections.current`*** (*gauge*)<br>    Number of current client connections
  - `gauge.connections.totalCreated` (*cumulative*)<br>    Count of all incoming connections created to the server. This number includes connections that have since closed.
  - ***`gauge.dataSize`*** (*gauge*)<br>    Total size of data, in bytes
- - ***`gauge.extra_info.heap_usage_bytes`*** (*gauge*)<br>    Heap size used by the mongod process, in bytes. Deprecated in mongo version > 3.3, use gauge.tcmalloc.generic.heap_size instead.
+ - ***`gauge.extra_info.heap_usage_bytes`*** (*gauge*)<br>    Heap size used by the mongod process, in bytes
  - ***`gauge.globalLock.activeClients.readers`*** (*gauge*)<br>    Number of active client connections performing reads
  - `gauge.globalLock.activeClients.total` (*gauge*)<br>    Total number of active client connections
  - ***`gauge.globalLock.activeClients.writers`*** (*gauge*)<br>    Number of active client connections performing writes
@@ -140,19 +137,12 @@ These are the metrics available for this integration.
  - ***`gauge.globalLock.currentQueue.writers`*** (*gauge*)<br>    Write operations currently in queue
  - ***`gauge.indexSize`*** (*gauge*)<br>    Total size of indexes, in bytes
  - `gauge.indexes` (*gauge*)<br>    Number of indexes across all collections
- - ***`gauge.mem.mapped`*** (*gauge*)<br>    Mongodb mapped memory usage, in MB. Only available when MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
+ - ***`gauge.mem.mapped`*** (*gauge*)<br>    Mongodb mapped memory usage, in MB
  - ***`gauge.mem.resident`*** (*gauge*)<br>    Mongodb resident memory usage, in MB
  - ***`gauge.mem.virtual`*** (*gauge*)<br>    Mongodb virtual memory usage, in MB
  - `gauge.numExtents` (*gauge*)<br>
  - ***`gauge.objects`*** (*gauge*)<br>    Number of documents across all collections
- - ***`gauge.repl.active_nodes`*** (*gauge*)<br>    Number of healthy members in a replicaset (reporting 1 for [health](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].health)).
- - ***`gauge.repl.is_primary_node`*** (*gauge*)<br>    Report 1 when member [state](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].stateStr) of replicaset is `PRIMARY` and 2 else.
- - ***`gauge.repl.max_lag`*** (*gauge*)<br>    Replica lag in seconds calculated from the difference between the 
-    timestamp of the last oplog entry of primary and secondary [see mongo 
-    doc](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].optimeDate).
-
  - ***`gauge.storageSize`*** (*gauge*)<br>    Total bytes allocated to collections for document storage
- - ***`gauge.tcmalloc.generic.heap_size`*** (*gauge*)<br>    Heap size used by the mongod process, in bytes. Same as gauge.extra_info.heap_usage_bytes but supports 64-bit values.
  - ***`gauge.uptime`*** (*counter*)<br>    Uptime of this server in milliseconds
 
 #### Group collection
@@ -204,16 +194,16 @@ monitors` after configuring this monitor in a running agent instance.
 
 ### Legacy non-default metrics (version < 4.7.0)
 
-**The following information only applies to agent versions prior to 4.7.0. If
+**The following information only applies to agent version older than 4.7.0. If
 you have a newer agent and have set `enableBuiltInFiltering: true` at the top
 level of your agent config, see the section above. See upgrade instructions in
-[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
+[Old-style whitelist filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-whitelist-filtering).**
 
 If you have a reference to the `whitelist.json` in your agent's top-level
 `metricsToExclude` config option, and you want to emit metrics that are not in
-that allow list, then you need to add an item to the top-level
-`metricsToInclude` config option to override that allow list (see [Inclusion
-filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
 copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions
