@@ -4,7 +4,7 @@
 
 # docker-container-stats
 
-Monitor Type: `docker-container-stats` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/docker))
+Monitor Type: `docker-container-stats` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/docker))
 
 **Accepts Endpoints**: No
 
@@ -54,6 +54,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `enableExtraNetworkMetrics` | no | `bool` | Whether it will send all extra network metrics as well. (**default:** `false`) |
 | `dockerURL` | no | `string` | The URL of the docker server (**default:** `unix:///var/run/docker.sock`) |
 | `timeoutSeconds` | no | `integer` | The maximum amount of time to wait for docker API requests (**default:** `5`) |
+| `cacheSyncInterval` | no | `int64` | The time to wait before resyncing the list of containers the monitor maintains through the docker event listener example: cacheSyncInterval: "20m" (**default:** `60m`) |
 | `labelsToDimensions` | no | `map of strings` | A mapping of container label names to dimension names. The corresponding label values will become the dimension value for the mapped name.  E.g. `io.kubernetes.container.name: container_spec_name` would result in a dimension called `container_spec_name` that has the value of the `io.kubernetes.container.name` container label. |
 | `envToDimensions` | no | `map of strings` | A mapping of container environment variable names to dimension names.  The corresponding env var values become the dimension values on the emitted metrics.  E.g. `APP_VERSION: version` would result in datapoints having a dimension called `version` whose value is the value of the `APP_VERSION` envvar configured for that particular container, if present. |
 | `excludedImages` | no | `list of strings` | A list of filters of images to exclude.  Supports literals, globs, and regex. |
@@ -164,11 +165,11 @@ monitor config option `extraGroups`:
  - `memory.stats.writeback` (*gauge*)<br>    The amount of memory from file/anon cache that are queued for syncing to the disk
  - ***`memory.usage.limit`*** (*gauge*)<br>    Memory usage limit of the container, in bytes
  - `memory.usage.max` (*gauge*)<br>    Maximum measured memory usage of the container, in bytes
- - ***`memory.usage.total`*** (*gauge*)<br>    Bytes of memory used by the container. Note that this **includes the
-    buffer cache** attributed to the process by the kernel from files that
-    have been read by processes in the container.  If you don't want to
-    count that when monitoring containers, enable the metric
-    `memory.stats.total_cache` and subtract that metric from this one.
+ - ***`memory.usage.total`*** (*gauge*)<br>    Bytes of memory used by the container. Note that this **excludes** the
+    buffer cache accounted to the process by the kernel from files that
+    have been read by processes in the container, as well as tmpfs usage.
+    If you want to count that when monitoring containers, enable the metric
+    `memory.stats.total_cache` and add it to this metric in SignalFlow.
 
 
 #### Group network
@@ -186,9 +187,6 @@ monitor config option `extraGroups`:
 
 ### Non-default metrics (version 4.7.0+)
 
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -196,20 +194,6 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 
 

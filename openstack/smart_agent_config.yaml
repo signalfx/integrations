@@ -40,6 +40,13 @@ collectd/openstack:
     type: string
     yamlName: projectDomainID
   - default: ''
+    doc: The region name for URL discovery, defaults to the first region if multiple
+      regions are available.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: regionName
+  - default: ''
     doc: The user domain id (**default**:"default")
     elementKind: ''
     required: false

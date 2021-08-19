@@ -4,7 +4,7 @@
 
 # collectd/cpufreq
 
-Monitor Type: `collectd/cpufreq` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/cpufreq))
+Monitor Type: `collectd/cpufreq` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/cpufreq))
 
 **Accepts Endpoints**: No
 
@@ -40,7 +40,6 @@ These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
-
 
 
  - ***`cpufreq.<N>`*** (*gauge*)<br>    The processor frequency in Hertz for the <N>th processor on the system.

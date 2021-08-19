@@ -12,34 +12,36 @@ configuration instructions below.
 
 ## Description
 
-**This integration primarily consists of the Smart Agent monitor `collectd/spark`.
-Below is an overview of that monitor.**
+This integration primarily consists of the Smart Agent monitor `collectd/spark`.
+Below is an overview of that monitor.
 
 ### Smart Agent Monitor
 
 
-Collects metrics about a Spark cluster using the [collectd Spark Python
+This integration collects metrics about a Spark cluster using the [collectd Spark Python
 plugin](https://github.com/signalfx/collectd-spark). That plugin collects
 metrics from Spark cluster and instances by hitting endpoints specified in
 Spark's [Monitoring and Instrumentation
 documentation](https://spark.apache.org/docs/latest/monitoring.html) under
 `REST API` and `Metrics`.
 
-We currently only support cluster modes Standalone, Mesos, and Hadoop Yarn
-via HTTP endpoints.
+The following cluster modes are supported only through HTTP endpoints:
+- Standalone
+- Mesos
+- Hadoop YARN
 
-You have to specify distinct monitor configurations and discovery rules for
+You must specify distinct monitor configurations and discovery rules for
 master and worker processes.  For the master configuration, set `isMaster`
 to true.
 
-When running Spark on Apache Hadoop / Yarn, this integration is only capable
-of reporting application metrics from the master node.  Please use the
+When running Spark on Apache Hadoop / YARN, this integration is only capable
+of reporting application metrics from the master node.  Use the
 collectd/hadoop monitor to report on the health of the cluster.
 
 <!--- SETUP --->
 ### Example config:
 
-An example configuration for monitoring applications on Yarn
+An example configuration for monitoring applications on YARN
 ```yaml
 monitors:
   - type: collectd/spark
@@ -63,7 +65,7 @@ monitors:  # All monitor config goes under this key
 ```
 
 **For a list of monitor options that are common to all monitors, see [Common
-Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../monitor-config.md#common-configuration).**
+Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../monitor-config.md#common-configuration).**
 
 
 | Config option | Required | Type | Description |
@@ -191,16 +193,16 @@ monitors` after configuring this monitor in a running agent instance.
 
 ### Legacy non-default metrics (version < 4.7.0)
 
-**The following information only applies to agent version older than 4.7.0. If
+**The following information only applies to agent versions prior to 4.7.0. If
 you have a newer agent and have set `enableBuiltInFiltering: true` at the top
 level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-whitelist-filtering).**
+[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
 
 If you have a reference to the `whitelist.json` in your agent's top-level
 `metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
+that allow list, then you need to add an item to the top-level
+`metricsToInclude` config option to override that allow list (see [Inclusion
+filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
 copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions

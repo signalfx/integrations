@@ -4,7 +4,7 @@
 
 # collectd/processes
 
-Monitor Type: `collectd/processes` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/processes))
+Monitor Type: `collectd/processes` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/processes))
 
 **Accepts Endpoints**: No
 
@@ -68,7 +68,6 @@ These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
-
 
 
  - ***`disk_octets.read`*** (*cumulative*)<br>

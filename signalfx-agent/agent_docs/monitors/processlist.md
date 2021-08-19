@@ -4,7 +4,7 @@
 
 # processlist
 
-Monitor Type: `processlist` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/processlist))
+Monitor Type: `processlist` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/processlist))
 
 **Accepts Endpoints**: No
 

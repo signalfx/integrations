@@ -4,7 +4,7 @@
 
 # collectd/marathon
 
-Monitor Type: `collectd/marathon` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/marathon))
+Monitor Type: `collectd/marathon` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/marathon))
 
 **Accepts Endpoints**: **Yes**
 
@@ -70,56 +70,30 @@ Configuration](../monitor-config.html#common-configuration).**
 ## Metrics
 
 These are the metrics available for this monitor.
-Metrics that are categorized as
+This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+-- they are all custom**.
 
 
- - ***`gauge.marathon.app.cpu.allocated`*** (*gauge*)<br>    Number of CPUs allocated to an application
- - ***`gauge.marathon.app.cpu.allocated.per.instance`*** (*gauge*)<br>    Configured number of CPUs allocated to each application instance
- - `gauge.marathon.app.delayed` (*gauge*)<br>    Indicates if the application is delayed or not
- - `gauge.marathon.app.deployments.total` (*gauge*)<br>    Number of application deployments
- - ***`gauge.marathon.app.disk.allocated`*** (*gauge*)<br>    Storage allocated to a Marathon application
- - ***`gauge.marathon.app.disk.allocated.per.instance`*** (*gauge*)<br>    Configured storage allocated each to application instance
- - `gauge.marathon.app.gpu.allocated` (*gauge*)<br>    GPU Allocated to a Marathon application
- - `gauge.marathon.app.gpu.allocated.per.instance` (*gauge*)<br>    Configured number of GPUs allocated to each application instance
- - ***`gauge.marathon.app.instances.total`*** (*gauge*)<br>    Number of application instances
- - ***`gauge.marathon.app.memory.allocated`*** (*gauge*)<br>    Memory Allocated to a Marathon application
- - ***`gauge.marathon.app.memory.allocated.per.instance`*** (*gauge*)<br>    Configured amount of memory allocated to each application instance
- - ***`gauge.marathon.app.tasks.running`*** (*gauge*)<br>    Number tasks running for an application
- - ***`gauge.marathon.app.tasks.staged`*** (*gauge*)<br>    Number tasks staged for an application
- - ***`gauge.marathon.app.tasks.unhealthy`*** (*gauge*)<br>    Number unhealthy tasks for an application
- - ***`gauge.marathon.task.healthchecks.failing.total`*** (*gauge*)<br>    The number of failing health checks for a task
- - ***`gauge.marathon.task.healthchecks.passing.total`*** (*gauge*)<br>    The number of passing health checks for a task
- - `gauge.marathon.task.staged.time.elapsed` (*gauge*)<br>    The amount of time the task spent in staging
- - `gauge.marathon.task.start.time.elapsed` (*gauge*)<br>    Time elapsed since the task started
-
-### Non-default metrics (version 4.7.0+)
-
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived
-from specific configuration options that do not appear in the above list of
-metrics do not need to be added to `extraMetrics`.
-
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
-
+ - ***`gauge.service.mesosphere.marathon.app.cpu.allocated`*** (*gauge*)<br>    Number of CPUs allocated to an application
+ - ***`gauge.service.mesosphere.marathon.app.cpu.allocated.per.instance`*** (*gauge*)<br>    Configured number of CPUs allocated to each application instance
+ - ***`gauge.service.mesosphere.marathon.app.delayed`*** (*gauge*)<br>    Indicates if the application is delayed or not
+ - ***`gauge.service.mesosphere.marathon.app.deployments.total`*** (*gauge*)<br>    Number of application deployments
+ - ***`gauge.service.mesosphere.marathon.app.disk.allocated`*** (*gauge*)<br>    Storage allocated to a Marathon application
+ - ***`gauge.service.mesosphere.marathon.app.disk.allocated.per.instance`*** (*gauge*)<br>    Configured storage allocated each to application instance
+ - ***`gauge.service.mesosphere.marathon.app.gpu.allocated`*** (*gauge*)<br>    GPU Allocated to a Marathon application
+ - ***`gauge.service.mesosphere.marathon.app.gpu.allocated.per.instance`*** (*gauge*)<br>    Configured number of GPUs allocated to each application instance
+ - ***`gauge.service.mesosphere.marathon.app.instances.total`*** (*gauge*)<br>    Number of application instances
+ - ***`gauge.service.mesosphere.marathon.app.memory.allocated`*** (*gauge*)<br>    Memory Allocated to a Marathon application
+ - ***`gauge.service.mesosphere.marathon.app.memory.allocated.per.instance`*** (*gauge*)<br>    Configured amount of memory allocated to each application instance
+ - ***`gauge.service.mesosphere.marathon.app.tasks.running`*** (*gauge*)<br>    Number tasks running for an application
+ - ***`gauge.service.mesosphere.marathon.app.tasks.staged`*** (*gauge*)<br>    Number tasks staged for an application
+ - ***`gauge.service.mesosphere.marathon.app.tasks.unhealthy`*** (*gauge*)<br>    Number unhealthy tasks for an application
+ - ***`gauge.service.mesosphere.marathon.task.healthchecks.failing.total`*** (*gauge*)<br>    The number of failing health checks for a task
+ - ***`gauge.service.mesosphere.marathon.task.healthchecks.passing.total`*** (*gauge*)<br>    The number of passing health checks for a task
+ - ***`gauge.service.mesosphere.marathon.task.staged.time.elapsed`*** (*gauge*)<br>    The amount of time the task spent in staging
+ - ***`gauge.service.mesosphere.marathon.task.start.time.elapsed`*** (*gauge*)<br>    Time elapsed since the task started
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 
 

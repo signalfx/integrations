@@ -4,7 +4,7 @@
 
 # jmx
 
-Monitor Type: `jmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/jmx))
+Monitor Type: `jmx` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/jmx))
 
 **Accepts Endpoints**: **Yes**
 
@@ -142,11 +142,21 @@ Configuration](../monitor-config.html#common-configuration).**
 | --- | --- | --- | --- |
 | `host` | no | `string` | Host will be filled in by auto-discovery if this monitor has a discovery rule. |
 | `port` | no | `integer` | Port will be filled in by auto-discovery if this monitor has a discovery rule. (**default:** `0`) |
-| `serviceURL` | no | `string` | The service URL for the JMX RMI endpoint.  If empty it will be filled in with values from `host` and `port` using a standard template: service:jmx:rmi:///jndi/rmi://<host>:<port>/jmxrmi.  If overridden, `host` and `port` will have no effect. |
-| `groovyScript` | no | `string` | A literal Groovy script that generates datapoints from JMX MBeans.  See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with the [remote config reference](https://docs.signalfx.com/en/latest/integrations/agent/remote-config.html) `{"#from": "/path/to/file.groovy", raw: true}`, or you can put it straight in YAML by using the `|` heredoc syntax. |
+| `serviceURL` | no | `string` | The service URL for the JMX RMI/JMXMP endpoint. If empty it will be filled in with values from `host` and `port` using a standard JMX RMI template: `service:jmx:rmi:///jndi/rmi://<host>:<port>/jmxrmi`. If overridden, `host` and `port` will have no effect. For JMXMP endpoint the service URL must be specified. The JMXMP endpoint URL format is `service:jmx:jmxmp://<host>:<port>`. |
+| `groovyScript` | **yes** | `string` | A literal Groovy script that generates datapoints from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with the [remote config reference](https://docs.signalfx.com/en/latest/integrations/agent/remote-config.html) `{"#from": "/path/to/file.groovy", raw: true}`, or you can put it straight in YAML by using the `|` heredoc syntax. |
 | `username` | no | `string` | Username for JMX authentication, if applicable. |
-| `password` | no | `string` | Password for JMX autentication, if applicable. |
+| `password` | no | `string` | Password for JMX authentication, if applicable. |
+| `keyStorePath` | no | `string` | The key store path is required if client authentication is enabled on the target JVM. |
+| `keyStorePassword` | no | `string` | The key store file password if required. |
+| `keyStoreType` | no | `string` | The key store type. (**default:** `jks`) |
+| `trustStorePath` | no | `string` | The trusted store path if the TLS profile is required. |
+| `trustStorePassword` | no | `string` | The trust store file password if required. |
+| `jmxRemoteProfiles` | no | `string` | Supported JMX remote profiles are TLS in combination with SASL profiles: SASL/PLAIN, SASL/DIGEST-MD5 and SASL/CRAM-MD5. Thus valid `jmxRemoteProfiles` values are: `SASL/PLAIN`, `SASL/DIGEST-MD5`, `SASL/CRAM-MD5`, `TLS SASL/PLAIN`, `TLS SASL/DIGEST-MD5` and `TLS SASL/CRAM-MD5`. |
+| `realm` | no | `string` | The realm is required by profile SASL/DIGEST-MD5. |
 
 
+
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 
 
