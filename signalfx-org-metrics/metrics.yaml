@@ -1247,7 +1247,7 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
 sf.org.numResourceMetrics:
   brief: Number of metric time series (MTS) that Infrastructure Monitoring is monitoring.
   description: |
-    
+  Number of metric time series (MTS) that Infrastructure Monitoring is monitoring.  
 
         * Dimension(s):  `orgId`, `resourceType`
         * Data resolution: 10 minutes
@@ -1375,9 +1375,9 @@ sf.org.subscription.activeTimeSeries:
   title: sf.org.subscription.activeTimeSeries
 
 sf.org.subscription.containers:
-  brief: Maximum number of active containers
+  brief: Maximum number of containers
   description: |
-    Maximum number of active containers.
+    Maximum number of containers.
         
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -1403,9 +1403,9 @@ sf.org.subscription.datapointsPerMinute:
   title: sf.org.suscription.datapointsPerMinute
 
 sf.org.subscription.function:
-  brief: Maximum number of active functions
+  brief: Maximum number of functions
   description: |
-    Maximum number of active functions.
+    Maximum number of functions.
         
         * Data resolution: 2 minutes
   metric_type: gauge
@@ -1421,9 +1421,9 @@ sf.org.subscription.highResolutionMetrics:
   title: sf.org.subscription.highResolutionMetrics
 
 sf.org.subscription.hosts:
-  brief: Maximum number of active hosts
+  brief: Maximum number of hosts
   description: |
-    Maximum number of active hosts.
+    Maximum number of hosts.
         
         * Data resolution: 2 minutes
   metric_type: gauge
