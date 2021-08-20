@@ -1244,16 +1244,15 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
   metric_type: counter
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
-sf.org.numResourcesMonitored:
-  brief: Number of host-based resources monitored
+sf.org.numResourceMetrics:
+  brief: Number of metric time series (MTS) that Infrastructure Monitoring is monitoring.
   description: |
-    Number of hosts or containers that Infrastructure Monitoring is currently monitoring.
-    The `resourceType` dimension indicates whether the value represents hosts or containers.
+    
 
         * Dimension(s):  `orgId`, `resourceType`
         * Data resolution: 10 minutes
   metric_type: counter
-  title: sf.org.numResourcesMonitored
+  title: sf.org.numResourceMetrics
 
 sf.org.numResourcesMonitoredByToken:
   brief: Per-token number of host-based resources monitored
@@ -1261,7 +1260,6 @@ sf.org.numResourcesMonitoredByToken:
     One value per token; number of hosts or containers that Infrastructure Monitoring is monitoring.
     This metric isn't created until a host or container starts sending a host or container metric.
     The `resourceType` dimension indicates whether the value represents hosts or containers.
-    The sum of all the values might be less than the value of `sf.org.numResourcesMonitored`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId`, `resourceType`, tokenId`
@@ -1371,20 +1369,65 @@ sf.org.subscription.activeTimeSeries:
   brief: Maximum number of active MTS
   description: |
     Maximum number of active metric time series (MTS).
-
+        
         * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.subscription.activeTimeSeries
+
+sf.org.subscription.containers:
+  brief: Maximum number of active containers
+  description: |
+    Maximum number of active containers.
+        
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.subscription.containers
+
+sf.org.subscription.customMetrics:
+  brief: Maximum number of custom metric time series (MTS).
+  description: |
+    Maximum number of custom metric time series (MTS).
+        
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.subscription.customMetrics
 
 sf.org.subscription.datapointsPerMinute:
   brief: Maximum number of data points per minute (DPM)
   description: |
     Maximum number of data points per minute (DPM) that Infrastructure Monitoring will process
     and store.
-
+        
         * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.suscription.datapointsPerMinute
+
+sf.org.subscription.function:
+  brief: Maximum number of active functions
+  description: |
+    Maximum number of active functions.
+        
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.subscription.function
+
+sf.org.subscription.highResolutionMetrics:
+  brief: Maximum number of high resolution metric time series (MTS).
+  description: |
+    Maximum number of high resolution metric time series (MTS).
+        
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.subscription.highResolutionMetrics
+
+sf.org.subscription.hosts:
+  brief: Maximum number of active hosts
+  description: |
+    Maximum number of active hosts.
+        
+        * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.subscription.hosts
 
 sf.org.ui.num.pagevisits:
   brief: Infrastructure Monitoring internal metric
@@ -1408,8 +1451,7 @@ sf.org.limit.containers:
     Maximum number of containers that can send data to your
     organization. This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops datapoints from new containers but keeps
-    accepting data points for existing containers. To monitor your usage against the limit, use the metric
-    `sf.org.numResourcesMonitored` and filter for the dimension `resourceType:containers`.
+    accepting data points for existing containers.
   metric_type: gauge
   title: sf.org.limit.containers
 
@@ -1442,8 +1484,7 @@ sf.org.limit.hosts:
     Maximum number of hosts that can send data to your organization.
     This limit is higher than your contractual limit to allow for burst and overage usage.
     If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but
-    keeps accepting data points for existing hosts. To monitor your usage against the limit, use the metric
-    `sf.org.numResourcesMonitored` and filter for the dimension `resourceType:hosts`.
+    keeps accepting data points for existing hosts.
   metric_type: gauge
   title: sf.org.limit.hosts
 
