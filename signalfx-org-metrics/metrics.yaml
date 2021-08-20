@@ -1245,9 +1245,9 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
 sf.org.numResourceMetrics:
-  brief: Number of metric time series (MTS) that Infrastructure Monitoring is monitoring.
+  brief: Number of active metric time series (MTS) associated with any host or container
   description: |
-  Number of metric time series (MTS) that Infrastructure Monitoring is monitoring.  
+    Number of active metric time series (MTS) associated with any host or container.
 
         * Dimension(s):  `orgId`, `resourceType`
         * Data resolution: 10 minutes
