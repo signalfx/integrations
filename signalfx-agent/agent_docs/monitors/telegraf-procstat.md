@@ -71,13 +71,14 @@ This monitor emits all metrics by default; however, **none are categorized as
 
 
  - ***`procstat.cpu_time`*** (*gauge*)<br>    Amount of cpu time consumed by the process.
- - ***`procstat.cpu_usage`*** (*gauge*)<br>    CPU used by the process.
+ - ***`procstat.cpu_usage`*** (*gauge*)<br>    CPU percentage used by the process.
  - ***`procstat.involuntary_context_switches`*** (*gauge*)<br>    Number of involuntary context switches.
  - ***`procstat.memory_data`*** (*gauge*)<br>    VMData memory used by the process.
  - ***`procstat.memory_locked`*** (*gauge*)<br>    VMLocked memory used by the process.
  - ***`procstat.memory_rss`*** (*gauge*)<br>    VMRSS memory used by the process.
  - ***`procstat.memory_stack`*** (*gauge*)<br>    VMStack memory used by the process.
  - ***`procstat.memory_swap`*** (*gauge*)<br>    VMSwap memory used by the process.
+ - ***`procstat.memory_usage`*** (*gauge*)<br>    Memory percentage used by the process.
  - ***`procstat.memory_vms`*** (*gauge*)<br>    VMS memory used by the process.
  - ***`procstat.nice_priority`*** (*gauge*)<br>    Nice priority number of the process.
  - ***`procstat.num_fds`*** (*gauge*)<br>    Number of file descriptors.  This may require the agent to be running as root.
