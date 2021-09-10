@@ -17,8 +17,7 @@ to install the Smart Agent. To learn more, see
 * Terminal or a similar command-line interface application
 * Helm:
 
-  - The installation chart for the Smart Agent is compatible with Helm version 2 or Helm version 3.
-  - To learn more, see the [Helm site](https://helm.sh/).
+  - The installation chart for the Smart Agent is compatible with Helm version 3 or higher. Helm version 2 is [deprecated](https://helm.sh/blog/helm-v2-deprecation-timeline/). To learn more, see the [Helm site](https://helm.sh/).
 
 * Tiller installed on all of your Kubernetes hosts. Because of
   the way that the installation chart works, you need Tiller even if you're using
@@ -86,14 +85,16 @@ Determine if you want OpenShift support:
    - If you want OpenShift support, substitute the values from the previous steps and run this command:
 
      ```
-     helm install -f <values_yaml_file> --set signalFxAccessToken=<access_token> --set clusterName=<cluster_name> --set agentVersion=<version> --set signalFxRealm=<realm> signalfx/signalfx-agent --set kubernetesDistro=openshift
+     helm install -f <values_yaml_file> --set signalFxAccessToken=<access_token> --set clusterName=<cluster_name> --set agentVersion=<version> --set signalFxRealm=<realm> --generate-name --set kubernetesDistro=openshift signalfx/signalfx-agent
      ```
-
+     
    - If you don't want OpenShift support, substitute the values from the previous steps and run this command:
 
      ```
-     helm install -f <values_yaml_file> --set signalFxAccessToken=<access_token> --set clusterName=<cluster_name> --set agentVersion=<version> --set signalFxRealm=<realm> signalfx/signalfx-agent
+     helm install -f <values_yaml_file> --set signalFxAccessToken=<access_token> --set clusterName=<cluster_name> --set agentVersion=<version> --set signalFxRealm=<realm> --generate-name signalfx/signalfx-agent
      ```
+
+**Note:** The ``--generate-name`` option is only supported for Helm version 3 or higher.
 
 ### Verify the SignalFx Smart Agent
 

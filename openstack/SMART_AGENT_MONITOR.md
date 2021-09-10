@@ -51,8 +51,12 @@ monitors:
   authURL: "http://192.168.11.111/identity/v3"
   username: "admin"
   password: "secret"
+  requestBatchSize: 10
+  novaListServersSearchOpts:
+    all_tenants: "TRUE"
+    status: "ACTIVE"
 ```
-### Example config using skipVerify
+### Example config using skipVerify and disabling querying server metrics
 ```yaml
 monitors:
 - type: collectd/openstack
@@ -60,6 +64,7 @@ monitors:
   username: "admin"
   password: "secret"
   skipVerify: true
+  queryServerMetrics: false
 ```
 
 
@@ -89,6 +94,10 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 | `regionName` | no | `string` | The region name for URL discovery, defaults to the first region if multiple regions are available. |
 | `userDomainID` | no | `string` | The user domain id (**default**:"default") |
 | `skipVerify` | no | `bool` | Skip SSL certificate validation (**default:** `false`) |
+| `httpTimeout` | no | `float64` | The HTTP client timeout in seconds for all requests (**default:** `0`) |
+| `requestBatchSize` | no | `integer` | The maximum number of concurrent requests for each metric class (**default:** `5`) |
+| `queryServerMetrics` | no | `bool` | Whether to query server metrics (useful to disable for TripleO Undercloud) (**default:** `true`) |
+| `novaListServersSearchOpts` | no | `map of strings` | Optional search_opts mapping for collectd-openstack Nova client servers.list(search_opts=novaListServerSearchOpts). For more information see https://docs.openstack.org/api-ref/compute/#list-servers. |
 
 
 ## Metrics
