@@ -1,0 +1,7 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
+cluster: set to value corresponding to key `cluster` in configuration file
+
+spark_process: Either master or worker to differentiate master- and worker- specific
+  metrics like master.apps and worker.coresFree
+

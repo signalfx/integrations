@@ -1,0 +1,7 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
+plugin: This is always set to `openstack`.
+
+plugin_instance: This will contain the project id and name of the project given in
+  the configuration.
+

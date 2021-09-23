@@ -30269,9 +30269,9 @@ procstat.cpu_time:
   title: procstat.cpu_time
 
 procstat.cpu_usage:
-  brief: CPU used by the process
+  brief: CPU percentage used by the process
   custom: true
-  description: CPU used by the process.
+  description: CPU percentage used by the process.
   metric_type: gauge
   monitor: telegraf/procstat
   title: procstat.cpu_usage
@@ -30323,6 +30323,14 @@ procstat.memory_swap:
   metric_type: gauge
   monitor: telegraf/procstat
   title: procstat.memory_swap
+
+procstat.memory_usage:
+  brief: Memory percentage used by the process
+  custom: true
+  description: Memory percentage used by the process.
+  metric_type: gauge
+  monitor: telegraf/procstat
+  title: procstat.memory_usage
 
 procstat.memory_vms:
   brief: VMS memory used by the process
