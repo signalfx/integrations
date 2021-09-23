@@ -1,0 +1,25 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
+database: The name of the database within a PostgreSQL server to which the metric
+  pertains.
+
+index: For index metrics, the name of the index
+
+replication_role: For "replication_lag" metric only, could be "master" or "standby".
+
+schemaname: The name of the schema within which the object being monitored resides
+  (e.g. `public`).
+
+slot_name: For "replication_state" metric only, the name of replication slot.
+
+slot_type: For "replication_state" metric only, the type of replication.
+
+table: The name of the table to which the metric pertains.
+
+tablespace: For table metrics, the tablespace in which the table belongs, if not null.
+
+type: Whether the object (table, index, function, etc.) belongs to the `system` or
+  `user`.
+
+user: For query metrics, the user name of the user that executed the queries.
+

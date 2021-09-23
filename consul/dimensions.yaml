@@ -1,0 +1,8 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
+consul_mode: Whether this consul instance is running as a server or client
+
+consul_node: The name of the consul node
+
+datacenter: The name of the consul datacenter
+

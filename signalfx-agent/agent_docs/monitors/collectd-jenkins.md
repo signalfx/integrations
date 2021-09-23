@@ -16,9 +16,9 @@ Monitors jenkins by using the
 [jenkins collectd Python
 plugin](https://github.com/signalfx/collectd-jenkins), which collects
 metrics from Jenkins instances by hitting these endpoints:
-[../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api)
+[../api/json](https://www.jenkins.io/doc/book/using/remote-access-api/)
 (job metrics)  and
-[metrics/&lt;MetricsKey&gt;/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin)
+[metrics/&lt;MetricsKey&gt;/..](https://plugins.jenkins.io/metrics/)
 (default and optional Codahale/Dropwizard JVM metrics).
 
 Requires Jenkins 1.580.3 or later, as well as the Jenkins Metrics Plugin (see Setup).

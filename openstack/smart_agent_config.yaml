@@ -40,6 +40,13 @@ collectd/openstack:
     type: string
     yamlName: projectDomainID
   - default: ''
+    doc: The region name for URL discovery, defaults to the first region if multiple
+      regions are available.
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: regionName
+  - default: ''
     doc: The user domain id (**default**:"default")
     elementKind: ''
     required: false
@@ -51,3 +58,28 @@ collectd/openstack:
     required: false
     type: bool
     yamlName: skipVerify
+  - default: '0'
+    doc: The HTTP client timeout in seconds for all requests
+    elementKind: ''
+    required: false
+    type: float64
+    yamlName: httpTimeout
+  - default: '5'
+    doc: The maximum number of concurrent requests for each metric class
+    elementKind: ''
+    required: false
+    type: integer
+    yamlName: requestBatchSize
+  - default: 'true'
+    doc: Whether to query server metrics (useful to disable for TripleO Undercloud)
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: queryServerMetrics
+  - default: null
+    doc: Optional search_opts mapping for collectd-openstack Nova client servers.list(search_opts=novaListServerSearchOpts).
+      For more information see https://docs.openstack.org/api-ref/compute/#list-servers.
+    elementKind: string
+    required: false
+    type: map
+    yamlName: novaListServersSearchOpts
