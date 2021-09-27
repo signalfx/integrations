@@ -1,0 +1,4 @@
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
+plugin_instance: Identifies the Redis instance -- will be of the form `<host>_<port>`.
+

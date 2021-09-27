@@ -133,6 +133,19 @@ monitors:
    requestBody: '{"foo":"bar"}'
 ```
 
+* `curl --resolve signalfx.com:443:127.0.0.1 https://signalfx.com`
+
+```
+monitors:
+ - type: http
+   host: 127.0.0.1
+   port: 443
+   useHTTPS: true
+   sniServerName: signalfx.com
+   httpHeaders:
+     Host: signalfx.com
+```
+
 For a full list of options, see [Configuration](#configuration).
 
 
