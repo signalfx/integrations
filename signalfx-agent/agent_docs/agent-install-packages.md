@@ -131,3 +131,27 @@ For Debian or RPM, verify that your installation and configuration are working.
 
 * For SignalFx Microservice APM monitoring, learn how to install, configure, and verify the SignalFx Smart Agent for Microservices APM (**µAPM**). See
   [Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+
+### Uninstall the Smart Agent
+
+#### Debian
+
+To uninstall the Smart Agent on Debian-based distributions, run the following
+command:
+
+```sh
+sudo dpkg --remove signalfx-agent
+```
+
+**Note:** Configuration files may persist in `/etc/signalfx`.
+
+#### RPM
+
+To uninstall the Smart Agent on RPM-based distributions, run the following
+command:
+
+```sh
+sudo rpm -e signalfx-agent
+```
+
+**Note:** Configuration files may persist in `/etc/signalfx`.

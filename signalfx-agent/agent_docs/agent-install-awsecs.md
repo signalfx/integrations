@@ -123,3 +123,9 @@ To create this service in the ECS web admin console:
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
 [Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+
+### Uninstall the Smart Agent
+
+- To deregister the `signalfx-agent` task definitions, see [Deregistering task definition revisions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deregister-task-definition.html).
+
+- To delete the `signalfx-agent` service, see [Deleting a service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/delete-service.html).

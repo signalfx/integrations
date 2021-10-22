@@ -63,7 +63,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | --- | --- | --- | --- |
 | `commands` | no | `list of strings` |  |
 | `command` | no | `string` |  |
-| `timeout` | no | `int64` |  (**default:** `0`) |
+| `timeout` | no | `int64` |  (**default:** `5s`) |
 | `telegrafParser` | no | `object (see below)` | telegrafParser is a nested object that defines configurations for a Telegraf parser. Please refer to the Telegraf documentation for more information on Telegraf parsers. |
 | `signalFxCumulativeMetrics` | no | `list of strings` | A list of metric names that should be typed as "cumulative counters" in SignalFx.  The Telegraf exec plugin only emits `untyped` metrics, which will by default be sent as SignalFx gauges. |
 

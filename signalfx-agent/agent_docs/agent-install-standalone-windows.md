@@ -110,3 +110,14 @@ To verify your installation and configuration, perform these steps:
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
   [Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+
+### Uninstall the Smart Agent
+
+1. If the `signalfx-agent` service was installed, run the following PowerShell
+   commands to stop and uninstall the service:
+   ```powershell
+   SignalFxAgent\bin\signalfx-agent.exe -service "stop"
+   SignalFxAgent\bin\signalfx-agent.exe -service "uninstall"
+   ```
+
+1. Back up any files as necessary and delete the `SignalFxAgent` folder.

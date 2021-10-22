@@ -95,7 +95,7 @@ On the same host, download the following configuration files from the
 2. Run the following command to update `kubectl` with the configuration files you've just modified:
 
    ```
-   cat *.yaml | kubectl apply -f-
+   cat *.yaml | kubectl apply -f -
    ```
 
 ## Verify the Smart Agent
@@ -133,3 +133,14 @@ In addition, you can do the following in SignalFx:
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
 [Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+
+### Uninstall the Smart Agent
+
+To delete all Smart Agent resources, run the following command in the directory
+containing the `.yaml` configuration files:
+
+```
+cat *.yaml | kubectl delete -f -
+```
+
+See the [Kubectl Reference](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete) for more details.
