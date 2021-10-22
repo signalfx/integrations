@@ -110,3 +110,8 @@ To verify that your installation and configuration, perform these steps:
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
   [Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+
+### Uninstall the Smart Agent
+
+To uninstall the Smart Agent, stop the `signalfx-agent` process (if running),
+backup any files as necessary, and delete the `signalfx-agent` directory.

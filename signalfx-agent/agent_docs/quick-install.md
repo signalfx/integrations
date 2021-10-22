@@ -167,8 +167,39 @@ tail -f /var/log/signalfx-agent.log
 - For systemd hosts, run:
 
 ```sh
-journalctl -u signalfx-agent -f
+sudo journalctl -u signalfx-agent -f
 ```
 
 #### Windows troubleshooting
 Open **Administrative Tools > Event Viewer > Windows Logs > Application** to view the `signalfx-agent` error logs.
+
+### Uninstall the Smart Agent
+
+#### Debian
+
+To uninstall the Smart Agent on Debian-based distributions, run the following
+command:
+
+```sh
+sudo dpkg --remove signalfx-agent
+```
+
+**Note:** Configuration files may persist in `/etc/signalfx`.
+
+#### RPM
+
+To uninstall the Smart Agent on RPM-based distributions, run the following
+command:
+
+```sh
+sudo rpm -e signalfx-agent
+```
+
+**Note:** Configuration files may persist in `/etc/signalfx`.
+
+#### Windows
+
+The Smart Agent can be uninstalled from `Programs and Features` in the Windows
+Control Panel.
+
+**Note:** Configuration files may persist in `\ProgramData\SignalFxAgent`.

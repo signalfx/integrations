@@ -121,3 +121,10 @@ To verify that your installation and config is working:
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
   [Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+
+### Uninstall the Smart Agent
+
+- To uninstall the Smart Agent Helm release, see [Helm Uninstall](https://helm.sh/docs/helm/helm_uninstall/).
+  See [Helm List](https://helm.sh/docs/helm/helm_list/) to get the release name.
+
+- To remove the SignalFx Helm repo, see [Helm Repo Remove](https://helm.sh/docs/helm/helm_repo_remove/).

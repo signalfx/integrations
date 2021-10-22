@@ -1,320 +1,422 @@
-counter.go_gc_duration_seconds:
-  brief: A summary of the GC invocation durations.
+# This file was generated in the Smart Agent repo and copied here, DO NOT EDIT HERE.
+
+go_gc_duration_seconds:
+  brief: A summary of the GC invocation durations
+  custom: true
   description: A summary of the GC invocation durations.
   metric_type: cumulative
+  monitor: traefik
   title: go_gc_duration_seconds
 
-counter.go_gc_duration_seconds_count:
-  brief: A count of the GC invocation durations.
+go_gc_duration_seconds_count:
+  brief: A count of the GC invocation durations
+  custom: true
   description: A count of the GC invocation durations.
   metric_type: cumulative
+  monitor: traefik
   title: go_gc_duration_seconds_count
 
-counter.go_gc_duration_seconds_sum:
-  brief: The sum of the GC invocation durations.
+go_gc_duration_seconds_sum:
+  brief: The sum of the GC invocation durations, in seconds
+  custom: true
   description: The sum of the GC invocation durations, in seconds.
   metric_type: cumulative
+  monitor: traefik
   title: go_gc_duration_seconds_sum
 
-counter.go_memstats_alloc_bytes_total:
-  brief: Total number of bytes allocated, even if freed.
+go_goroutines:
+  brief: Number of goroutines that currently exist
+  custom: true
+  description: Number of goroutines that currently exist.
+  metric_type: cumulative
+  monitor: traefik
+  title: go_goroutines
+
+go_memstats_alloc_bytes:
+  brief: Number of bytes allocated and still in use
+  custom: true
+  description: Number of bytes allocated and still in use.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_alloc_bytes
+
+go_memstats_alloc_bytes_total:
+  brief: Total number of bytes allocated, even if freed
+  custom: true
   description: Total number of bytes allocated, even if freed.
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: go_memstats_alloc_bytes_total
 
-counter.go_memstats_frees_total:
-  brief: Total number of frees.
+go_memstats_buck_hash_sys_bytes:
+  brief: Number of bytes used by the profiling bucket hash table
+  custom: true
+  description: Number of bytes used by the profiling bucket hash table.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_buck_hash_sys_bytes
+
+go_memstats_frees_total:
+  brief: Total number of frees
+  custom: true
   description: Total number of frees.
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: go_memstats_frees_total
 
-counter.go_memstats_lookups_total:
-  brief: Total number of pointer lookups.
+go_memstats_gc_cpu_fraction:
+  brief: The fraction of this program's available CPU time used by the GC since the
+    program started
+  custom: true
+  description: The fraction of this program's available CPU time used by the GC since
+    the program started.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_gc_cpu_fraction
+
+go_memstats_gc_sys_bytes:
+  brief: Number of bytes used for garbage collection system metadata
+  custom: true
+  description: Number of bytes used for garbage collection system metadata.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_gc_sys_bytes
+
+go_memstats_heap_alloc_bytes:
+  brief: Number of heap bytes allocated and still in use
+  custom: true
+  description: Number of heap bytes allocated and still in use.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_heap_alloc_bytes
+
+go_memstats_heap_idle_bytes:
+  brief: Number of heap bytes waiting to be used
+  custom: true
+  description: Number of heap bytes waiting to be used.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_heap_idle_bytes
+
+go_memstats_heap_inuse_bytes:
+  brief: Number of heap bytes that are in use
+  custom: true
+  description: Number of heap bytes that are in use.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_heap_inuse_bytes
+
+go_memstats_heap_objects:
+  brief: Number of allocated objects
+  custom: true
+  description: Number of allocated objects.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_heap_objects
+
+go_memstats_heap_released_bytes:
+  brief: Number of heap bytes released to OS
+  custom: true
+  description: Number of heap bytes released to OS.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_heap_released_bytes
+
+go_memstats_heap_sys_bytes:
+  brief: Number of heap bytes obtained from system
+  custom: true
+  description: Number of heap bytes obtained from system.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_heap_sys_bytes
+
+go_memstats_last_gc_time_seconds:
+  brief: Length of time since last garbage collection, in seconds since unix epoch
+  custom: true
+  description: Length of time since last garbage collection, in seconds since unix
+    epoch.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_last_gc_time_seconds
+
+go_memstats_lookups_total:
+  brief: Total number of pointer lookups
+  custom: true
   description: Total number of pointer lookups.
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: go_memstats_lookups_total
 
-counter.go_memstats_mallocs_total:
-  brief: Total number of mallocs.
+go_memstats_mallocs_total:
+  brief: Total number of mallocs
+  custom: true
   description: Total number of mallocs.
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: go_memstats_mallocs_total
 
-counter.process_cpu_seconds_total:
-  brief: Total user and system CPU time spent, in seconds.
+go_memstats_mcache_inuse_bytes:
+  brief: Number of bytes in use by mcache structures
+  custom: true
+  description: Number of bytes in use by mcache structures.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_mcache_inuse_bytes
+
+go_memstats_mcache_sys_bytes:
+  brief: Number of bytes used for mcache structures obtained from system
+  custom: true
+  description: Number of bytes used for mcache structures obtained from system.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_mcache_sys_bytes
+
+go_memstats_mspan_inuse_bytes:
+  brief: Number of bytes in use by mspan structures
+  custom: true
+  description: Number of bytes in use by mspan structures.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_mspan_inuse_bytes
+
+go_memstats_mspan_sys_bytes:
+  brief: Number of bytes used for mspan structures obtained from system
+  custom: true
+  description: Number of bytes used for mspan structures obtained from system.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_mspan_sys_bytes
+
+go_memstats_next_gc_bytes:
+  brief: Number of heap bytes when next garbage collection will take place
+  custom: true
+  description: Number of heap bytes when next garbage collection will take place.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_next_gc_bytes
+
+go_memstats_other_sys_bytes:
+  brief: Number of bytes used for other system allocations
+  custom: true
+  description: Number of bytes used for other system allocations.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_other_sys_bytes
+
+go_memstats_stack_inuse_bytes:
+  brief: Number of bytes in use by the stack allocator
+  custom: true
+  description: Number of bytes in use by the stack allocator.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_stack_inuse_bytes
+
+go_memstats_stack_sys_bytes:
+  brief: Number of bytes obtained from system for stack allocator
+  custom: true
+  description: Number of bytes obtained from system for stack allocator.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_stack_sys_bytes
+
+go_memstats_sys_bytes:
+  brief: Number of bytes obtained from system
+  custom: true
+  description: Number of bytes obtained from system.
+  metric_type: gauge
+  monitor: traefik
+  title: go_memstats_sys_bytes
+
+go_threads:
+  brief: Number of OS threads created
+  custom: true
+  description: Number of OS threads created
+  metric_type: gauge
+  monitor: traefik
+  title: go_threads
+
+process_cpu_seconds_total:
+  brief: Total user and system CPU time spent, in seconds
+  custom: true
   description: Total user and system CPU time spent, in seconds.
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: process_cpu_seconds_total
 
-counter.traefik_backend_request_duration_seconds_bucket:
-  brief: The sum of request durations within a configured time interval.
+process_max_fds:
+  brief: Maximum number of open file descriptors
+  custom: true
+  description: Maximum number of open file descriptors.
+  metric_type: gauge
+  monitor: traefik
+  title: process_max_fds
+
+process_open_fds:
+  brief: Number of open file descriptors
+  custom: true
+  description: Number of open file descriptors.
+  metric_type: gauge
+  monitor: traefik
+  title: process_open_fds
+
+process_resident_memory_bytes:
+  brief: Resident memory size in bytes
+  custom: true
+  description: Resident memory size in bytes.
+  metric_type: gauge
+  monitor: traefik
+  title: process_resident_memory_bytes
+
+process_start_time_seconds:
+  brief: Start time of the process since unix epoch in seconds
+  custom: false
+  description: Start time of the process since unix epoch in seconds.
+  metric_type: gauge
+  monitor: traefik
+  title: process_start_time_seconds
+
+process_virtual_memory_bytes:
+  brief: Virtual memory size in bytes
+  custom: true
+  description: Virtual memory size in bytes.
+  metric_type: gauge
+  monitor: traefik
+  title: process_virtual_memory_bytes
+
+traefik_backend_open_connections:
+  brief: How many open connections exist on a backend, partitioned by method and protocol
+  custom: false
+  description: How many open connections exist on a backend, partitioned by method
+    and protocol.
+  metric_type: gauge
+  monitor: traefik
+  title: traefik_backend_open_connections
+
+traefik_backend_request_duration_seconds_bucket:
+  brief: The sum of request durations that are within a configured time interval
+  custom: true
   description: The sum of request durations that are within a configured time interval.
     The request durations are measured at a backend in seconds. This value is partitioned
     by status code, protocol, and method.
   metric_type: cumulative
+  monitor: traefik
   title: traefik_backend_request_duration_seconds_bucket
 
-counter.traefik_backend_request_duration_seconds_count:
+traefik_backend_request_duration_seconds_count:
   brief: The number of request durations that were measured on a backend
+  custom: true
   description: The number of request durations that were measured on a backend. The
     values are partitioned by status code, protocol, and method.
   metric_type: cumulative
+  monitor: traefik
   title: traefik_backend_request_duration_seconds_count
 
-counter.traefik_backend_request_duration_seconds_sum:
+traefik_backend_request_duration_seconds_sum:
   brief: The sum of the request durations in seconds, measured on a backend, partitioned
-    by status code, protocol, and method.
+    by status code, protocol, and method
+  custom: false
   description: The sum of the request durations in seconds, measured on a backend,
     partitioned by status code, protocol, and method.
   metric_type: cumulative
+  monitor: traefik
   title: traefik_backend_request_duration_seconds_sum
 
-counter.traefik_backend_requests_total:
+traefik_backend_requests_total:
   brief: How many HTTP requests were processed on a backend, partitioned by status
-    code, protocol, and method.
+    code, protocol, and method
+  custom: false
   description: How many HTTP requests were processed on a backend, partitioned by
     status code, protocol, and method.
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: traefik_backend_requests_total
 
-counter.traefik_config_reloads_failure_total:
+traefik_backend_server_up:
+  brief: Backend server is up, described by gauge value of 0 (down) or 1 (up)
+  custom: false
+  description: Backend server is up, described by gauge value of 0 (down) or 1 (up).
+  metric_type: gauge
+  monitor: traefik
+  title: traefik_backend_server_up
+
+traefik_config_last_reload_failure:
+  brief: Last config reload failure
+  custom: true
+  description: Last config reload failure
+  metric_type: gauge
+  monitor: traefik
+  title: traefik_config_last_reload_failure
+
+traefik_config_last_reload_success:
+  brief: Last config reload success
+  custom: true
+  description: Last config reload success
+  metric_type: gauge
+  monitor: traefik
+  title: traefik_config_last_reload_success
+
+traefik_config_reloads_failure_total:
   brief: Total number of config reloads that failed
+  custom: true
   description: Total number of config reloads that failed
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: traefik_config_reloads_failure_total
 
-counter.traefik_config_reloads_total:
+traefik_config_reloads_total:
   brief: Config reloads
+  custom: true
   description: Config reloads
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: traefik_config_reloads_total
 
-counter.traefik_entrypoint_request_duration_seconds_bucket:
-  brief: The sum of request durations within a configured time intervals.
+traefik_entrypoint_open_connections:
+  brief: How many open connections exist on an entrypoint, partitioned by method and
+    protocol
+  custom: false
+  description: How many open connections exist on an entrypoint, partitioned by method
+    and protocol.
+  metric_type: gauge
+  monitor: traefik
+  title: traefik_entrypoint_open_connections
+
+traefik_entrypoint_request_duration_seconds_bucket:
+  brief: The sum of request durations that are within a configured time interval
+  custom: true
   description: The sum of request durations that are within a configured time interval.
     The request durations are measured at an entrypoint in seconds. This value is
     partitioned by status code, protocol, and method.
   metric_type: cumulative
+  monitor: traefik
   title: traefik_entrypoint_request_duration_seconds_bucket
 
-counter.traefik_entrypoint_request_duration_seconds_count:
-  brief: The number of request durations that were measured on an entrypoint.
+traefik_entrypoint_request_duration_seconds_count:
+  brief: The number of request durations that were measured on an entrypoint
+  custom: false
   description: The number of request durations that were measured on an entrypoint.
     The values are partitioned by status code, protocol, and method.
   metric_type: cumulative
+  monitor: traefik
   title: traefik_entrypoint_request_duration_seconds_count
 
-counter.traefik_entrypoint_request_duration_seconds_sum:
+traefik_entrypoint_request_duration_seconds_sum:
   brief: The sum of the request durations in seconds measured on an entrypoint, partitioned
-    by status code, protocol, and method.
+    by status code, protocol, and method
+  custom: false
   description: The sum of the request durations in seconds measured on an entrypoint,
     partitioned by status code, protocol, and method.
   metric_type: cumulative
+  monitor: traefik
   title: traefik_entrypoint_request_duration_seconds_sum
 
-counter.traefik_entrypoint_requests_total:
+traefik_entrypoint_requests_total:
   brief: How many HTTP requests processed on an entrypoint, partitioned by status
-    code, protocol, and method.
+    code, protocol, and method
+  custom: false
   description: How many HTTP requests processed on an entrypoint, partitioned by status
     code, protocol, and method.
-  metric_type: counter
+  metric_type: cumulative
+  monitor: traefik
   title: traefik_entrypoint_requests_total
-
-gauge.go_goroutines:
-  brief: Number of goroutines that currently exist.
-  description: Number of goroutines that currently exist.
-  metric_type: gauge
-  title: go_goroutines
-
-gauge.go_memstats_alloc_bytes:
-  brief: Number of bytes allocated and still in use.
-  description: Number of bytes allocated and still in use.
-  metric_type: gauge
-  title: go_memstats_alloc_bytes
-
-gauge.go_memstats_buck_hash_sys_bytes:
-  brief: Number of bytes used by the profiling bucket hash table.
-  description: Number of bytes used by the profiling bucket hash table.
-  metric_type: gauge
-  title: go_memstats_buck_hash_sys_bytes
-
-gauge.go_memstats_gc_cpu_fraction:
-  brief: The fraction of this program's available CPU time used by the GC since the
-    program started.
-  description: The fraction of this program's available CPU time used by the GC since
-    the program started.
-  metric_type: gauge
-  title: go_memstats_gc_cpu_fraction
-
-gauge.go_memstats_gc_sys_bytes:
-  brief: Number of bytes used for garbage collection system metadata.
-  description: Number of bytes used for garbage collection system metadata.
-  metric_type: gauge
-  title: go_memstats_gc_sys_bytes
-
-gauge.go_memstats_heap_alloc_bytes:
-  brief: Number of heap bytes allocated and still in use.
-  description: Number of heap bytes allocated and still in use.
-  metric_type: gauge
-  title: go_memstats_heap_alloc_bytes
-
-gauge.go_memstats_heap_idle_bytes:
-  brief: Number of heap bytes waiting to be used.
-  description: Number of heap bytes waiting to be used.
-  metric_type: gauge
-  title: go_memstats_heap_idle_bytes
-
-gauge.go_memstats_heap_inuse_bytes:
-  brief: Number of heap bytes that are in use.
-  description: Number of heap bytes that are in use.
-  metric_type: gauge
-  title: go_memstats_heap_inuse_bytes
-
-gauge.go_memstats_heap_objects:
-  brief: Number of allocated objects.
-  description: Number of allocated objects.
-  metric_type: gauge
-  title: go_memstats_heap_objects
-
-gauge.go_memstats_heap_released_bytes:
-  brief: Number of heap bytes released to OS.
-  description: Number of heap bytes released to OS.
-  metric_type: gauge
-  title: go_memstats_heap_released_bytes
-
-gauge.go_memstats_heap_sys_bytes:
-  brief: Number of heap bytes obtained from system.
-  description: Number of heap bytes obtained from system.
-  metric_type: gauge
-  title: go_memstats_heap_sys_bytes
-
-gauge.go_memstats_last_gc_time_seconds:
-  brief: Length of time since last garbage collection, in seconds since unix epoch.
-  description: Length of time since last garbage collection, in seconds since unix
-    epoch.
-  metric_type: gauge
-  title: go_memstats_last_gc_time_seconds
-
-gauge.go_memstats_mcache_inuse_bytes:
-  brief: Number of bytes in use by mcache structures.
-  description: Number of bytes in use by mcache structures.
-  metric_type: gauge
-  title: go_memstats_mcache_inuse_bytes
-
-gauge.go_memstats_mcache_sys_bytes:
-  brief: Number of bytes used for mcache structures obtained from system.
-  description: Number of bytes used for mcache structures obtained from system.
-  metric_type: gauge
-  title: go_memstats_mcache_sys_bytes
-
-gauge.go_memstats_mspan_inuse_bytes:
-  brief: Number of bytes in use by mspan structures.
-  description: Number of bytes in use by mspan structures.
-  metric_type: gauge
-  title: go_memstats_mspan_inuse_bytes
-
-gauge.go_memstats_mspan_sys_bytes:
-  brief: Number of bytes used for mspan structures obtained from system.
-  description: Number of bytes used for mspan structures obtained from system.
-  metric_type: gauge
-  title: go_memstats_mspan_sys_bytes
-
-gauge.go_memstats_next_gc_bytes:
-  brief: Number of heap bytes when next garbage collection will take place.
-  description: Number of heap bytes when next garbage collection will take place.
-  metric_type: gauge
-  title: go_memstats_next_gc_bytes
-
-gauge.go_memstats_other_sys_bytes:
-  brief: Number of bytes used for other system allocations.
-  description: Number of bytes used for other system allocations.
-  metric_type: gauge
-  title: go_memstats_other_sys_bytes
-
-gauge.go_memstats_stack_inuse_bytes:
-  brief: Number of bytes in use by the stack allocator.
-  description: Number of bytes in use by the stack allocator.
-  metric_type: gauge
-  title: go_memstats_stack_inuse_bytes
-
-gauge.go_memstats_stack_sys_bytes:
-  brief: Number of bytes obtained from system for stack allocator.
-  description: Number of bytes obtained from system for stack allocator.
-  metric_type: gauge
-  title: go_memstats_stack_sys_bytes
-
-gauge.go_memstats_sys_bytes:
-  brief: Number of bytes obtained from system.
-  description: Number of bytes obtained from system.
-  metric_type: gauge
-  title: go_memstats_sys_bytes
-
-gauge.go_threads:
-  brief: Number of OS threads created
-  description: Number of OS threads created
-  metric_type: gauge
-  title: go_threads
-
-gauge.process_max_fds:
-  brief: Maximum number of open file descriptors.
-  description: Maximum number of open file descriptors.
-  metric_type: gauge
-  title: process_max_fds
-
-gauge.process_open_fds:
-  brief: Number of open file descriptors.
-  description: Number of open file descriptors.
-  metric_type: gauge
-  title: process_open_fds
-
-gauge.process_resident_memory_bytes:
-  brief: Resident memory size in bytes.
-  description: Resident memory size in bytes.
-  metric_type: gauge
-  title: process_resident_memory_bytes
-
-gauge.process_start_time_seconds:
-  brief: Start time of the process since unix epoch in seconds.
-  description: Start time of the process since unix epoch in seconds.
-  metric_type: gauge
-  title: process_start_time_seconds
-
-gauge.process_virtual_memory_bytes:
-  brief: Virtual memory size in bytes.
-  description: Virtual memory size in bytes.
-  metric_type: gauge
-  title: process_virtual_memory_bytes
-
-gauge.traefik_backend_open_connections:
-  brief: How many open connections exist on a backend, partitioned by method and protocol.
-  description: How many open connections exist on a backend, partitioned by method
-    and protocol.
-  metric_type: gauge
-  title: traefik_backend_open_connections
-
-gauge.traefik_backend_server_up:
-  brief: Backend server is up, described by gauge value of 0 (down) or 1 (up).
-  description: Backend server is up, described by gauge value of 0 (down) or 1 (up).
-  metric_type: gauge
-  title: traefik_backend_server_up
-
-gauge.traefik_config_last_reload_failure:
-  brief: Last config reload failure
-  description: Last config reload failure
-  metric_type: gauge
-  title: traefik_config_last_reload_failure
-
-gauge.traefik_config_last_reload_success:
-  brief: Last config reload success
-  description: Last config reload success
-  metric_type: gauge
-  title: traefik_config_last_reload_success
-
-gauge.traefik_entrypoint_open_connections:
-  brief: How many open connections exist on an entrypoint, partitioned by method and
-    protocol.
-  description: How many open connections exist on an entrypoint, partitioned by method
-    and protocol.
-  metric_type: gauge
-  title: traefik_entrypoint_open_connections
 
