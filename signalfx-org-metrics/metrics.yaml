@@ -1550,7 +1550,7 @@ sf.org.log.numMessagesDroppedOversizeByToken:
        * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesDroppedOversizeByToken
-
+ 
 sf.org.log.grossContentBytesReceivedByToken:
   brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
   description: |
