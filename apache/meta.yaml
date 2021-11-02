@@ -10,4 +10,4 @@ in_app_categories:
 logo_large: /images/repos/apache/img/integrations_apache%402x.png
 logo_small: /images/repos/apache/img/integrations_apache.png
 project_url: https://github.com/signalfx/integrations/tree/master/apache
-useLegacyBuild: false
+useLegacyBuild: true
