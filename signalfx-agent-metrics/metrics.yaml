@@ -13534,6 +13534,523 @@ gitlab_workhorse_static_error_responses:
   title: gitlab_workhorse_static_error_responses
 
 
+sap.hana.connection.count:
+  brief: Number of connections
+  custom: false
+  description: Number of connections
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.connection.count
+
+sap.hana.connection.message.received.count:
+  brief: Total count of messages received
+  custom: false
+  description: Total count of messages received
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.connection.message.received.count
+
+sap.hana.connection.message.received.size:
+  brief: Total size of messages received
+  custom: false
+  description: Total size of messages received
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.connection.message.received.size
+
+sap.hana.connection.message.sent.count:
+  brief: Total count of messages sent
+  custom: false
+  description: Total count of messages sent
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.connection.message.sent.count
+
+sap.hana.connection.message.sent.size:
+  brief: Total size of messages sent
+  custom: false
+  description: Total size of messages sent
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.connection.message.sent.size
+
+sap.hana.connection.record.affected:
+  brief: The sum of the record count affected by DML/DDL statements
+  custom: false
+  description: The sum of the record count affected by DML/DDL statements
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.connection.record.affected
+
+sap.hana.connection.record.fetched:
+  brief: Number of records fetched by select statements
+  custom: false
+  description: Number of records fetched by select statements
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.connection.record.fetched
+
+sap.hana.disk.total_size:
+  brief: Total device size returned by the operating system in bytes
+  custom: false
+  description: Total device size returned by the operating system in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.disk.total_size
+
+sap.hana.disk.used_size:
+  brief: Size of used disk space in bytes
+  custom: false
+  description: Size of used disk space in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.disk.used_size
+
+sap.hana.host.cpu.idle:
+  brief: CPU idle time in milliseconds
+  custom: false
+  description: CPU idle time in milliseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.host.cpu.idle
+
+sap.hana.host.cpu.system:
+  brief: CPU time spent in kernel mode
+  custom: false
+  description: CPU time spent in kernel mode
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.host.cpu.system
+
+sap.hana.host.cpu.user:
+  brief: CPU time spent in user mode in milliseconds
+  custom: false
+  description: CPU time spent in user mode in milliseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.host.cpu.user
+
+sap.hana.host.cpu.wio:
+  brief: CPU time spent in wait IO (Linux only, Windows always 0) in milliseconds
+  custom: false
+  description: CPU time spent in wait IO (Linux only, Windows always 0) in milliseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.host.cpu.wio
+
+sap.hana.host.file.open:
+  brief: Number of open files
+  custom: false
+  description: Number of open files
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.file.open
+
+sap.hana.host.memory.allocation_limit:
+  brief: Allocation limit for all processes in bytes
+  custom: false
+  description: Allocation limit for all processes in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.allocation_limit
+
+sap.hana.host.memory.code:
+  brief: Code size, including shared libraries of instance processes in bytes
+  custom: false
+  description: Code size, including shared libraries of instance processes in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.code
+
+sap.hana.host.memory.physical.free:
+  brief: Free physical memory on the host in bytes
+  custom: false
+  description: Free physical memory on the host in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.physical.free
+
+sap.hana.host.memory.physical.used:
+  brief: Used physical memory on the host in bytes
+  custom: false
+  description: Used physical memory on the host in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.physical.used
+
+sap.hana.host.memory.shared:
+  brief: Shared memory size of instance processes in bytes
+  custom: false
+  description: Shared memory size of instance processes in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.shared
+
+sap.hana.host.memory.swap.free:
+  brief: Free swap memory on the host in bytes
+  custom: false
+  description: Free swap memory on the host in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.swap.free
+
+sap.hana.host.memory.swap.used:
+  brief: Used swap memory on the host in bytes
+  custom: false
+  description: Used swap memory on the host in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.swap.used
+
+sap.hana.host.memory.total_allocated:
+  brief: Size of the memory pool for all instance processes in bytes
+  custom: false
+  description: Size of the memory pool for all instance processes in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.total_allocated
+
+sap.hana.host.memory.total_used:
+  brief: Amount of memory from the memory pool that is currently being used by SAP
+    HANA processes in bytes
+  custom: false
+  description: Amount of memory from the memory pool that is currently being used
+    by SAP HANA processes in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.host.memory.total_used
+
+sap.hana.io.append.count:
+  brief: Number of appends
+  custom: false
+  description: Number of appends
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.append.count
+
+sap.hana.io.read.async.count:
+  brief: Number of triggered asynchronous reads
+  custom: false
+  description: Number of triggered asynchronous reads
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.read.async.count
+
+sap.hana.io.read.count:
+  brief: Number of synchronous reads
+  custom: false
+  description: Number of synchronous reads
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.read.count
+
+sap.hana.io.read.failed:
+  brief: Number of failed reads
+  custom: false
+  description: Number of failed reads
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.read.failed
+
+sap.hana.io.read.size:
+  brief: Size of read data in bytes
+  custom: false
+  description: Size of read data in bytes
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.read.size
+
+sap.hana.io.read.time:
+  brief: Total read time in microseconds
+  custom: false
+  description: Total read time in microseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.read.time
+
+sap.hana.io.total.time:
+  brief: Total write time in microseconds
+  custom: false
+  description: Total write time in microseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.total.time
+
+sap.hana.io.write.async.count:
+  brief: Number of triggered asynchronous writes
+  custom: false
+  description: Number of triggered asynchronous writes
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.write.async.count
+
+sap.hana.io.write.count:
+  brief: Number of synchronous writes
+  custom: false
+  description: Number of synchronous writes
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.write.count
+
+sap.hana.io.write.failed:
+  brief: Number of failed writes
+  custom: false
+  description: Number of failed writes
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.write.failed
+
+sap.hana.io.write.size:
+  brief: Size of written data in bytes
+  custom: false
+  description: Size of written data in bytes
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.write.size
+
+sap.hana.io.write.time:
+  brief: Total write time in microseconds
+  custom: false
+  description: Total write time in microseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.io.write.time
+
+sap.hana.service.component.memory.used:
+  brief: Amount of memory from the memory pool currently in use by component
+  custom: false
+  description: Amount of memory from the memory pool currently in use by component
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.component.memory.used
+
+sap.hana.service.cpu.utilization:
+  brief: CPU utilization in percent
+  custom: false
+  description: CPU utilization in percent
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.cpu.utilization
+
+sap.hana.service.file.open:
+  brief: Number of open files
+  custom: false
+  description: Number of open files
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.file.open
+
+sap.hana.service.memory.allocation_limit:
+  brief: Maximum configured memory pool size in bytes
+  custom: false
+  description: Maximum configured memory pool size in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.allocation_limit
+
+sap.hana.service.memory.allocation_limit_effective:
+  brief: Effective maximum memory pool size in bytes, considering the pool sizes of
+    other processes
+  custom: false
+  description: Effective maximum memory pool size in bytes, considering the pool sizes
+    of other processes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.allocation_limit_effective
+
+sap.hana.service.memory.code:
+  brief: Code size, including shared libraries in bytes
+  custom: false
+  description: Code size, including shared libraries in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.code
+
+sap.hana.service.memory.heap.allocated:
+  brief: Heap part of the memory pool in bytes
+  custom: false
+  description: Heap part of the memory pool in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.heap.allocated
+
+sap.hana.service.memory.heap.used:
+  brief: Amount of pool heap memory in use in bytes
+  custom: false
+  description: Amount of pool heap memory in use in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.heap.used
+
+sap.hana.service.memory.logical:
+  brief: Virtual memory size in bytes
+  custom: false
+  description: Virtual memory size in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.logical
+
+sap.hana.service.memory.physical:
+  brief: Physical memory size in bytes
+  custom: false
+  description: Physical memory size in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.physical
+
+sap.hana.service.memory.shared.allocated:
+  brief: Shared memory part of the memory pool in bytes
+  custom: false
+  description: Shared memory part of the memory pool in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.shared.allocated
+
+sap.hana.service.memory.shared.used:
+  brief: Amount of shared memory pool in use in bytes
+  custom: false
+  description: Amount of shared memory pool in use in bytes
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.shared.used
+
+sap.hana.service.memory.stack:
+  brief: Stack size
+  custom: false
+  description: Stack size
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.stack
+
+sap.hana.service.memory.total_used:
+  brief: Amount of memory in use from the memory pool
+  custom: false
+  description: Amount of memory in use from the memory pool
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.service.memory.total_used
+
+sap.hana.statement.active.count:
+  brief: Number of active statements
+  custom: false
+  description: Number of active statements
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.statement.active.count
+
+sap.hana.statement.active.execution.memory.max:
+  brief: Max memory size used during execution
+  custom: false
+  description: Max memory size used during execution
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.statement.active.execution.memory.max
+
+sap.hana.statement.active.execution.memory.mean:
+  brief: Average memory size used during execution
+  custom: false
+  description: Average memory size used during execution
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.statement.active.execution.memory.mean
+
+sap.hana.statement.active.execution.memory.sum:
+  brief: Sum of memory size used during execution
+  custom: true
+  description: Sum of memory size used during execution
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.statement.active.execution.memory.sum
+
+sap.hana.statement.active.execution.sum:
+  brief: Sum of statement execution time
+  custom: true
+  description: Sum of statement execution time
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.statement.active.execution.sum
+
+sap.hana.statement.active.execution.time.max:
+  brief: Maximum time of statement execution
+  custom: false
+  description: Maximum time of statement execution
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.statement.active.execution.time.max
+
+sap.hana.statement.active.execution.time.mean:
+  brief: Average time of statement execution
+  custom: false
+  description: Average time of statement execution
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.statement.active.execution.time.mean
+
+sap.hana.statement.expensive.count:
+  brief: Number of occurances of the statement
+  custom: false
+  description: Number of occurances of the statement
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.statement.expensive.count
+
+sap.hana.statement.expensive.cpu_time:
+  brief: CPU time consumed to compute the statement in microseconds
+  custom: false
+  description: CPU time consumed to compute the statement in microseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.statement.expensive.cpu_time
+
+sap.hana.statement.expensive.duration:
+  brief: Time elapsed during execution of the statement in microseconds
+  custom: false
+  description: Time elapsed during execution of the statement in microseconds
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.statement.expensive.duration
+
+sap.hana.statement.expensive.errors:
+  brief: Number of errors
+  custom: false
+  description: Number of errors
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.statement.expensive.errors
+
+sap.hana.statement.expensive.lock_wait_duration:
+  brief: Accumulated lock wait duration
+  custom: false
+  description: Accumulated lock wait duration
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.statement.expensive.lock_wait_duration
+
+sap.hana.statement.expensive.records:
+  brief: Number of records
+  custom: false
+  description: Number of records
+  metric_type: counter
+  monitor: hana
+  title: sap.hana.statement.expensive.records
+
+sap.hana.table.record.count:
+  brief: Number of records in the table
+  custom: false
+  description: Number of records in the table
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.table.record.count
+
+sap.hana.table.size:
+  brief: Allocated memory size for fixed-size and variable-size part
+  custom: false
+  description: Allocated memory size for fixed-size and variable-size part
+  metric_type: gauge
+  monitor: hana
+  title: sap.hana.table.size
+
+
 haproxy_active_servers:
   brief: Number of active servers (backend), server is active (server)
   custom: true

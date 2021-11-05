@@ -76,6 +76,12 @@ collectd/openstack:
     required: false
     type: bool
     yamlName: queryServerMetrics
+  - default: 'true'
+    doc: Whether to query hypervisor metrics (useful to disable for TripleO Undercloud)
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: queryHypervisorMetrics
   - default: null
     doc: Optional search_opts mapping for collectd-openstack Nova client servers.list(search_opts=novaListServerSearchOpts).
       For more information see https://docs.openstack.org/api-ref/compute/#list-servers.

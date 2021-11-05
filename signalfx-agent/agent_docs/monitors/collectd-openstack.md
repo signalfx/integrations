@@ -59,6 +59,7 @@ monitors:
   password: "secret"
   skipVerify: true
   queryServerMetrics: false
+  queryHypervisorMetrics: false
 ```
 
 
@@ -91,6 +92,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `httpTimeout` | no | `float64` | The HTTP client timeout in seconds for all requests (**default:** `0`) |
 | `requestBatchSize` | no | `integer` | The maximum number of concurrent requests for each metric class (**default:** `5`) |
 | `queryServerMetrics` | no | `bool` | Whether to query server metrics (useful to disable for TripleO Undercloud) (**default:** `true`) |
+| `queryHypervisorMetrics` | no | `bool` | Whether to query hypervisor metrics (useful to disable for TripleO Undercloud) (**default:** `true`) |
 | `novaListServersSearchOpts` | no | `map of strings` | Optional search_opts mapping for collectd-openstack Nova client servers.list(search_opts=novaListServerSearchOpts). For more information see https://docs.openstack.org/api-ref/compute/#list-servers. |
 
 

@@ -121,6 +121,7 @@ These are all of the monitors included in the agent, along with their possible c
 - [gitlab-sidekiq](./monitors/gitlab-sidekiq.md)
 - [gitlab-unicorn](./monitors/gitlab-unicorn.md)
 - [gitlab-workhorse](./monitors/gitlab-workhorse.md)
+- [hana](./monitors/hana.md)
 - [haproxy](./monitors/haproxy.md)
 - [heroku-metadata](./monitors/heroku-metadata.md)
 - [host-metadata](./monitors/host-metadata.md)
