@@ -142,7 +142,7 @@ Metrics that are categorized as
  - `process_max_fds` (*gauge*)<br>    Maximum number of open file descriptors.
  - `process_open_fds` (*gauge*)<br>    Number of open file descriptors.
  - `process_resident_memory_bytes` (*gauge*)<br>    Resident memory size in bytes.
- - ***`process_start_time_seconds`*** (*gauge*)<br>    Start time of the process since unix epoch in seconds.
+ - `process_start_time_seconds` (*gauge*)<br>    Start time of the process since unix epoch in seconds.
  - `process_virtual_memory_bytes` (*gauge*)<br>    Virtual memory size in bytes.
  - ***`traefik_backend_open_connections`*** (*gauge*)<br>    How many open connections exist on a backend, partitioned by method and protocol.
  - `traefik_backend_request_duration_seconds_bucket` (*cumulative*)<br>    The sum of request durations that are within a configured time interval. The request durations are measured at a backend in seconds. This value is partitioned by status code, protocol, and method.

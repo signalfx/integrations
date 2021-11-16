@@ -25481,7 +25481,7 @@ process_resident_memory_bytes:
 
 process_start_time_seconds:
   brief: Start time of the process since unix epoch in seconds
-  custom: false
+  custom: true
   description: Start time of the process since unix epoch in seconds
   metric_type: gauge
   monitor: prometheus/go
