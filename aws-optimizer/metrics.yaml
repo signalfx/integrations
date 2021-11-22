@@ -390,7 +390,7 @@ ri.normailized_count:
     platform, and tenancy), normalized to the small instance type of the RI's instance
     family.
   description: '> Number of EC2 Reserved Instances used (of a given instance type,
-    region, platform, and tenancy), normalized to the small instance type of the RI''s
+    region, platform, and tenancy), normalized to the small instance type of the RI\'s
     instance family.
 
     Associated Dimensions :
@@ -423,7 +423,7 @@ ri.normalized_cost:
   brief: Amortized average cost of a purchased EC2 Reserved Instance, normalized to
     the small instance type of the RI's instance family.
   description: '> Amortized average cost of a purchased EC2 Reserved Instance, normalized
-    to the small instance type of the RI''s instance family.
+    to the small instance type of the RI\'s instance family.
 
     Associated Dimensions :
 
