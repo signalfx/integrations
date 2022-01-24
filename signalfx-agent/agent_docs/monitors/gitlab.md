@@ -35,7 +35,7 @@ Follow the instructions
 [here](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html)
 to configure the GitLab's Prometheus exporters to expose metric endpoint
 targets. For GitLab Runner monitoring configuration go
-[here](https://docs.gitlab.com/runner/monitoring/README.html).
+[here](https://docs.gitlab.com/runner/monitoring/index.html).
 
 Note that configuring GitLab by editing `/etc/gitlab/gitlab.rb` should be
 accompanied by running the command `gitlab-ctl reconfigure` in order for

@@ -21,7 +21,7 @@ monitors:
   port: 9252
 ```
 
-For more information on configuring monitoring within Gitlab runner itself, see https://docs.gitlab.com/runner/monitoring/README.html.
+For more information on configuring monitoring within Gitlab runner itself, see https://docs.gitlab.com/runner/monitoring/index.html.
 
 See the [Gitlab monitor](gitlab.md) for more information.
 

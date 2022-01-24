@@ -22205,7 +22205,7 @@ kubernetes.container_cpu_limit:
   brief: Maximum CPU limit set for the container
   custom: false
   description: Maximum CPU limit set for the container. This value is derived from
-    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: kubernetes-cluster
@@ -22214,7 +22214,7 @@ kubernetes.container_cpu_limit:
 kubernetes.container_cpu_request:
   brief: CPU requested for the container
   custom: true
-  description: CPU requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+  description: CPU requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: kubernetes-cluster
@@ -22224,7 +22224,7 @@ kubernetes.container_ephemeral_storage_limit:
   brief: Maximum ephemeral storage set for the container
   custom: true
   description: Maximum ephemeral storage set for the container. This value is derived
-    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
     See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage
     for details.
@@ -22236,7 +22236,7 @@ kubernetes.container_ephemeral_storage_request:
   brief: Ephemeral storage requested for the container
   custom: true
   description: Ephemeral storage requested for the container. This value is derived
-    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
     See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage
     for details
@@ -22248,7 +22248,7 @@ kubernetes.container_memory_limit:
   brief: Maximum memory limit set for the container
   custom: false
   description: Maximum memory limit set for the container. This value is derived from
-    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: kubernetes-cluster
@@ -22257,7 +22257,7 @@ kubernetes.container_memory_limit:
 kubernetes.container_memory_request:
   brief: Memory requested for the container
   custom: true
-  description: Memory requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+  description: Memory requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: kubernetes-cluster
@@ -22276,7 +22276,7 @@ kubernetes.container_restart_count:
   brief: How many times the container has restarted in the recent past
   custom: false
   description: How many times the container has restarted in the recent past.  This
-    value is pulled directly from [the K8s API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#containerstatus-v1-core)
+    value is pulled directly from [the K8s API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#containerstatus-v1-core)
     and the value can go indefinitely high and be reset to 0 at any time depending
     on how your [kubelet is configured to prune dead containers](https://kubernetes.io/docs/concepts/cluster-administration/kubelet-garbage-collection/).
     It is best to not depend too much on the exact value but rather look at it as
@@ -24514,7 +24514,7 @@ kubernetes.container_cpu_limit:
   brief: Maximum CPU limit set for the container
   custom: false
   description: Maximum CPU limit set for the container. This value is derived from
-    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: openshift-cluster
@@ -24523,7 +24523,7 @@ kubernetes.container_cpu_limit:
 kubernetes.container_cpu_request:
   brief: CPU requested for the container
   custom: true
-  description: CPU requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+  description: CPU requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: openshift-cluster
@@ -24533,7 +24533,7 @@ kubernetes.container_ephemeral_storage_limit:
   brief: Maximum ephemeral storage set for the container
   custom: true
   description: Maximum ephemeral storage set for the container. This value is derived
-    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
     See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage
     for details.
@@ -24545,7 +24545,7 @@ kubernetes.container_ephemeral_storage_request:
   brief: Ephemeral storage requested for the container
   custom: true
   description: Ephemeral storage requested for the container. This value is derived
-    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
     See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage
     for details
@@ -24557,7 +24557,7 @@ kubernetes.container_memory_limit:
   brief: Maximum memory limit set for the container
   custom: false
   description: Maximum memory limit set for the container. This value is derived from
-    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+    https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: openshift-cluster
@@ -24566,7 +24566,7 @@ kubernetes.container_memory_limit:
 kubernetes.container_memory_request:
   brief: Memory requested for the container
   custom: true
-  description: Memory requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#resourcerequirements-v1-core
+  description: Memory requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core
     which comes from the pod spec and is reported only if a non null value is available.
   metric_type: gauge
   monitor: openshift-cluster
@@ -24585,7 +24585,7 @@ kubernetes.container_restart_count:
   brief: How many times the container has restarted in the recent past
   custom: false
   description: How many times the container has restarted in the recent past.  This
-    value is pulled directly from [the K8s API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#containerstatus-v1-core)
+    value is pulled directly from [the K8s API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#containerstatus-v1-core)
     and the value can go indefinitely high and be reset to 0 at any time depending
     on how your [kubelet is configured to prune dead containers](https://kubernetes.io/docs/concepts/cluster-administration/kubelet-garbage-collection/).
     It is best to not depend too much on the exact value but rather look at it as
