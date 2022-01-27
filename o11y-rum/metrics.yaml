@@ -8,84 +8,84 @@ rum.workflow.count:
 rum.workflow.time.ns.p75:
   brief: The p75 time in nanoseconds of spans with the selected custom event in the given time range.
   description: |
-  The p75 time in nanoseconds of spans with the selected custom event in the given time range.
-metric_type: gauge
+    The p75 time in nanoseconds of spans with the selected custom event in the given time range.
+  metric_type: gauge
   title: rum.workflow.time.ns.p75
 
 rum.page_view.count:
   brief: The total number of page views and route changes sorted by page for the given time range.
   description: |
-  The total number of page views and route changes sorted by page for the given time range.
+    The total number of page views and route changes sorted by page for the given time range.
   metric_type: counter
   title: rum.page_view.count
 
 rum.page_view.time.ns.p75:
   brief: The p75 time in nanoseconds of the page load and route change time for the given time range. Route changes in Splunk RUM are events with zero second durations.
   description: |
-  The p75 time in nanoseconds of the page load and route change time for the given time range. Route changes in Splunk RUM are events with zero second durations.
+    The p75 time in nanoseconds of the page load and route change time for the given time range. Route changes in Splunk RUM are events with zero second durations.
   metric_type: gauge
   title: rum.page_view.time.ns.p75
 
 rum.client_error.count:
   brief: The total number of spans with Javascript errors in the given time range.
   description: |
-  The total number of spans with Javascript errors in the given time range.
+    The total number of spans with Javascript errors in the given time range.
   metric_type:
   title: rum.client_error.count
 
 rum.webvitals_lcp.time.ns.p75:
   brief: The p75 time of the LCP (Largest Contentful Paint) in nanoseconds for the given time range.
   description: |
-  The p75 time of the LCP (Largest Contentful Paint) in nanoseconds for the given time range.
+    The p75 time of the LCP (Largest Contentful Paint) in nanoseconds for the given time range.
   metric_type: gauge
   title: rum.webvitals_lcp.time.ns.p75
 
 rum.webvitals_fid.time.ns.p75:
   brief: The p75 time of the FID (First Input Delay) in nanoseconds for the given time range.
   description: |
-  The p75 time of the FID (First Input Delay) in nanoseconds for the given time range.
+    The p75 time of the FID (First Input Delay) in nanoseconds for the given time range.
   metric_type: gauge
   title: rum.webvitals_fid.time.ns.p75
 
 rum.webvitals_cls.score.p75:
   brief: The p75 time of the CLS (Cumulative Layout Shift)  in nanoseconds for the given time range.
   description: |
-  The p75 time of the CLS (Cumulative Layout Shift)  in nanoseconds for the given time range.
+    The p75 time of the CLS (Cumulative Layout Shift)  in nanoseconds for the given time range.
   metric_type: gauge
   title: rum.webvitals_cls.score.p75
 
 rum.long_task.count:
   brief: The total number of long tasks in the given time range.
   description: |
-  The total number of long tasks in the given time range.
+    The total number of long tasks in the given time range.
   metric_type:
   title: rum.long_task.count
 
 rum.long_task.time.ns.p75:
   brief: The p75 time for long task duration in nanoseconds.
   description: |
-  The p75 time for long task duration in nanoseconds.
+    The p75 time for long task duration in nanoseconds.
   metric_type: gauge
   title: rum.long_task.time.ns.p75
 
 rum.resource_request.count:
   brief: The total number of network requests such as HTTPS, XHR, AJAX, and fetch events in a given time range.
   description: |
-  The total number of network requests such as HTTPS, XHR, AJAX, and fetch events in a given time range.
+    The total number of network requests such as HTTPS, XHR, AJAX, and fetch events in a given time range.
   metric_type:
   title: rum.resource_request.count
 
 rum.resource_request.time.ns.p75:
   brief: The p75 time in nanoseconds for AJAX and backend latency in the given time range.
   description: |
-  The p75 time in nanoseconds for AJAX and backend latency in the given time range.
+    The p75 time in nanoseconds for AJAX and backend latency in the given time range.
   metric_type: gauge
   title: rum.resource_request.time.ns.p75
 
 rum.resource_request.ttfb.time.ns.p75:
   brief: The p75 time in nanoseconds for TTFB (Time to First Byte) for the given time range.
   description: |
-  The p75 time in nanoseconds for TTFB (Time to First Byte) for the given time range.
+    The p75 time in nanoseconds for TTFB (Time to First Byte) for the given time range.
   metric_type: gauge
     title: rum.resource_request.ttfb.time.ns.p75
 
