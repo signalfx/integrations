@@ -22,7 +22,7 @@ rum.page_view.count:
 rum.page_view.time.ns.p75:
   brief: The p75 time in nanoseconds of the page load and route change time for the given time range. Route changes in Splunk RUM are events with zero second durations.
   description: |
-    The p75 time in nanoseconds of the page load and route change time for the given time range. Route changes in Splunk RUM are events with zero second durations.
+  The p75 time in nanoseconds of the page load and route change time for the given time range. Route changes in Splunk RUM are events with zero second durations.
   metric_type: gauge
   title: rum.page_view.time.ns.p75
 
