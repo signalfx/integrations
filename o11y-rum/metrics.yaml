@@ -9,7 +9,7 @@ rum.workflow.time.ns.p75:
   brief: The p75 time in nanoseconds of spans with the selected custom event in the given time range.
   description: |
   The p75 time in nanoseconds of spans with the selected custom event in the given time range.
-metric_type: gauge
+  metric_type: gauge
   title: rum.workflow.time.ns.p75
 
 rum.page_view.count:
