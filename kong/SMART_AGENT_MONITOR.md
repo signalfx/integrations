@@ -62,7 +62,7 @@ This plugin requires:
 
 | Software          | Version        |
 |-------------------|----------------|
-| Kong | 0.11.2+ |
+| Kong Community Edition (CE) | 0.11.2+ |
 | Configured [kong-plugin-signalfx](https://github.com/signalfx/kong-plugin-signalfx) | 0.0.1+ |
 
 
