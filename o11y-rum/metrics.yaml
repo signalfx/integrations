@@ -48,9 +48,9 @@ rum.webvitals_fid.time.ns.p75:
   title: rum.webvitals_fid.time.ns.p75
 
 rum.webvitals_cls.score.p75:
-  brief: The p75 time of the CLS (Cumulative Layout Shift)  in nanoseconds for the given time range.
+  brief: The p75 time of the CLS (Cumulative Layout Shift) in nanoseconds for the given time range.
   description: |
-    The p75 time of the CLS (Cumulative Layout Shift)  in nanoseconds for the given time range.
+    The p75 time of the CLS (Cumulative Layout Shift) in nanoseconds for the given time range.
   metric_type: gauge
   title: rum.webvitals_cls.score.p75
 
@@ -58,7 +58,7 @@ rum.long_task.count:
   brief: The total number of long tasks in the given time range.
   description: |
     The total number of long tasks in the given time range.
-  metric_type:
+  metric_type: counter
   title: rum.long_task.count
 
 rum.long_task.time.ns.p75:
@@ -72,7 +72,7 @@ rum.resource_request.count:
   brief: The total number of network requests such as HTTPS, XHR, AJAX, and fetch events in a given time range.
   description: |
     The total number of network requests such as HTTPS, XHR, AJAX, and fetch events in a given time range.
-  metric_type:
+  metric_type: counter
   title: rum.resource_request.count
 
 rum.resource_request.time.ns.p75:
