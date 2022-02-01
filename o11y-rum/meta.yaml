@@ -1,0 +1,4 @@
+description: Real User Monitoring application generates a number of metrics you can use to monitor the front end performance, javascript errors and user behaviour.
+display_name: Metrics sent by Real User Monitoring application
+product_docs_name: o11y.rum
+useLegacyBuild: false

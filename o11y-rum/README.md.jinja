@@ -1,0 +1,18 @@
+{% import "macros.jinja" as macros %}
+
+{% if target == "docs" -%}
+# Splunk Real User Monitoring Metrics
+
+
+- [Description](#description)
+- [Usage](#usage)
+- [Metrics](#metrics)
+{%- endif %}
+
+## DESCRIPTION
+
+Real User Monitoring provides the following types of metrics that measure your analytics:
+
+* Counter metrics: Measure the count of different metrics captured by Real User Monitoring application for the given time range.
+* Guage metrics: Measure The p75 time in nanoseconds of a metric for the given time range.
+
