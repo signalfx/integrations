@@ -8297,6 +8297,14 @@ coredns_build_info:
   monitor: coredns
   title: coredns_build_info
 
+coredns_cache_entries:
+  brief: Size of DNS cache
+  custom: false
+  description: Size of DNS cache.
+  metric_type: cumulative
+  monitor: coredns
+  title: coredns_cache_entries
+
 coredns_cache_hits_total:
   brief: The count of cache misses
   custom: true
@@ -8314,17 +8322,18 @@ coredns_cache_misses_total:
   title: coredns_cache_misses_total
 
 coredns_cache_size:
-  brief: Size of DNS cache
+  brief: Deprecated in coredns version 1.7.0
   custom: false
-  description: Size of DNS cache.
+  description: Deprecated in coredns version 1.7.0. Size of DNS cache.
   metric_type: cumulative
   monitor: coredns
   title: coredns_cache_size
 
 coredns_dns_request_count_total:
-  brief: Counter of DNS requests made per zone, protocol and family
+  brief: Deprecated in coredns version 1.7.0
   custom: false
-  description: Counter of DNS requests made per zone, protocol and family.
+  description: Deprecated in coredns version 1.7.0. Counter of DNS requests made per
+    zone, protocol and family.
   metric_type: cumulative
   monitor: coredns
   title: coredns_dns_request_count_total
@@ -8385,10 +8394,18 @@ coredns_dns_request_type_count_total:
   monitor: coredns
   title: coredns_dns_request_type_count_total
 
-coredns_dns_response_rcode_count_total:
-  brief: Counter of response status codes
+coredns_dns_requests_total:
+  brief: Counter of DNS requests made per zone, protocol and family
   custom: false
-  description: Counter of response status codes.
+  description: Counter of DNS requests made per zone, protocol and family.
+  metric_type: cumulative
+  monitor: coredns
+  title: coredns_dns_requests_total
+
+coredns_dns_response_rcode_count_total:
+  brief: Deprecated in coredns version 1.7.0
+  custom: false
+  description: Deprecated in coredns version 1.7.0. Counter of response status codes.
   metric_type: cumulative
   monitor: coredns
   title: coredns_dns_response_rcode_count_total
@@ -8417,6 +8434,14 @@ coredns_dns_response_size_bytes_count:
   monitor: coredns
   title: coredns_dns_response_size_bytes_count
 
+coredns_dns_responses_total:
+  brief: Counter of response status codes
+  custom: false
+  description: Counter of response status codes.
+  metric_type: cumulative
+  monitor: coredns
+  title: coredns_dns_responses_total
+
 coredns_health_request_duration_seconds:
   brief: Histogram of the time (in seconds) each request took
   custom: true
@@ -8442,12 +8467,21 @@ coredns_health_request_duration_seconds_count:
   title: coredns_health_request_duration_seconds_count
 
 coredns_panic_count_total:
+  brief: Deprecated in coredns version 1.7.0
+  custom: true
+  description: Deprecated in coredns version 1.7.0. A metrics that counts the number
+    of panics.
+  metric_type: cumulative
+  monitor: coredns
+  title: coredns_panic_count_total
+
+coredns_panics_total:
   brief: A metrics that counts the number of panics
   custom: true
   description: A metrics that counts the number of panics.
   metric_type: cumulative
   monitor: coredns
-  title: coredns_panic_count_total
+  title: coredns_panics_total
 
 coredns_proxy_request_count_total:
   brief: Counter of requests made per protocol, proxy protocol, family and upstream
