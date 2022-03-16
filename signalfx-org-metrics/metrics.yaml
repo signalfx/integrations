@@ -849,8 +849,7 @@ sf.org.numDatapointsDroppedExceededQuota:
     Total number of new data points you sent to Infrastructure Monitoring but that Infrastructure Monitoring
     didn't accept, because your organization exceeded its subscription limit.
     To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription
-    limits, see [Monitor Splunk Infrastructure Monitoring billing and usage - DPM plans only]
-    (https://docs.splunk.com/Observability/admin/imm-billing-usage/dpm-usage.html#monitor-splunk-infrastructure-monitoring-billing-and-usage-dpm-plans-only).
+    limits, see [this FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
 
         * Dimension(s):  `orgId`
         * Data resolution: 1 second
@@ -865,8 +864,7 @@ sf.org.numDatapointsDroppedExceededQuotaByToken:
     but that Infrastructure Monitoring didn't accept, because your organization exceeded its subscription
     limit.
     To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription
-    limits, see [Monitor Splunk Infrastructure Monitoring billing and usage - DPM plans only]
-    (https://docs.splunk.com/Observability/admin/imm-billing-usage/dpm-usage.html#monitor-splunk-infrastructure-monitoring-billing-and-usage-dpm-plans-only).
+    limits, see [DPM Limits - FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedExceededQuota`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
