@@ -1136,9 +1136,9 @@ sf.org.numLimitedMetricTimeSeriesCreateCalls:
   title: sf.org.numLimitedMetricTimeSeriesCreateCalls
 
 sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType:
-  brief: Number of metric time series (MTS) not created because a category limit was reached.
+  brief: Number of MTS not created because your account reached a category limit (or subscription limit).
   description: |
-    Number of metric time series (MTS) not created because a category limit was reached. Category limits can be understood as subscription limits. There is a dimension for each applicable category for the customer. See attached for a screenshot of each of the dimensions.
+    Number of metric time series (MTS) not created because your account reached a category limit (or subscription limit).
 
         * Dimension(s):  `categoryType`, `orgId`
         * Data resolution: 35 seconds
