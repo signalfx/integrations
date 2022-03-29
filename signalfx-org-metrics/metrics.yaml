@@ -894,9 +894,9 @@ sf.org.numDatapointsDroppedInvalid:
   title: sf.org.numDatapointsDroppedInvalid
 
 sf.org.numDatapointsDroppedInTimeout:
-  brief: Number data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds.
+  brief: Number of data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds.
   description: |
-    Number data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds and creation was very unlikely to succeed.
+    Number of data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds and creation was very unlikely to succeed.
 
         * Dimension(s):  `orgId`
         * Data resolution: 10 seconds
