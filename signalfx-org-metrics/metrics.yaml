@@ -1130,7 +1130,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCalls:
   title: sf.org.numLimitedMetricTimeSeriesCreateCalls
 
 sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType:
-  brief: Number of MTS not sent; over maximum allowed
+  brief: Number of MTS not sent; over maximum allowed.
   description: |
     One value per metric type, each representing the number of metric
     time series (MTS) not sent to Infrastructure Monitoring because you've reached your maximum limit for active
