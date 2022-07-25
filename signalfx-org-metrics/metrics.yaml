@@ -1120,7 +1120,17 @@ sf.org.numLimitedEventTimeSeriesCreateCallsByToken:
   title: sf.org.numLimitedEventTimeSeriesCreateCallsByToken
 
 sf.org.numLimitedMetricTimeSeriesCreateCalls:
-  brief: Number of MTS not sent; over maximum allowed
+  brief: Number of MTS not created because your account reached a category limit (or subscription limit).
+  description: |
+    Number of metric time series (MTS) not created because your account reached a category limit (or subscription limit).
+
+        * Dimension(s):  `category`, `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numLimitedMetricTimeSeriesCreateCalls
+
+sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType:
+  brief: Number of MTS not sent; over maximum allowed.
   description: |
     One value per metric type, each representing the number of metric
     time series (MTS) not sent to Infrastructure Monitoring because you've reached your maximum limit for active
@@ -1130,18 +1140,8 @@ sf.org.numLimitedMetricTimeSeriesCreateCalls:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
 
-        * Dimension(s):  `category`, `orgId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.numLimitedMetricTimeSeriesCreateCalls
-
-sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType:
-  brief: Number of MTS not created because your account reached a category limit (or subscription limit).
-  description: |
-    Number of metric time series (MTS) not created because your account reached a category limit (or subscription limit).
-
         * Dimension(s):  `categoryType`, `orgId`
-        * Data resolution: 35 seconds
+        * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType
 
