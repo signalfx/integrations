@@ -1125,7 +1125,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCalls:
     Number of metric time series (MTS) not created because your account reached a category limit (or subscription limit).
 
         * Dimension(s):  `category`, `orgId`
-        * Data resolution: 1 second
+        * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCalls
 
@@ -1141,7 +1141,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType:
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
 
         * Dimension(s):  `categoryType`, `orgId`
-        * Data resolution: 35 seconds
+        * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType
 
