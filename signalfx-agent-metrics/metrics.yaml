@@ -1261,6 +1261,14 @@ cgroup.memory_stat_hierarchical_memory_limit:
   monitor: cgroups
   title: cgroup.memory_stat_hierarchical_memory_limit
 
+cgroup.memory_stat_hierarchical_memsw_limit:
+  brief: The memory+swap limit in place by the hierarchy cgroup
+  custom: true
+  description: The memory+swap limit in place by the hierarchy cgroup
+  metric_type: gauge
+  monitor: cgroups
+  title: cgroup.memory_stat_hierarchical_memsw_limit
+
 cgroup.memory_stat_inactive_anon:
   brief: Bytes of anonymous and swap cache memory on inactive LRU list
   custom: true
@@ -1343,6 +1351,14 @@ cgroup.memory_stat_shmem:
   metric_type: gauge
   monitor: cgroups
   title: cgroup.memory_stat_shmem
+
+cgroup.memory_stat_swap:
+  brief: Bytes of swap memory used by the cgroup
+  custom: true
+  description: Bytes of swap memory used by the cgroup
+  metric_type: gauge
+  monitor: cgroups
+  title: cgroup.memory_stat_swap
 
 cgroup.memory_stat_total_active_anon:
   brief: The equivalent of `cgroup.memory_stat_active_anon` that also includes the
@@ -1483,6 +1499,14 @@ cgroup.memory_stat_total_shmem:
   metric_type: gauge
   monitor: cgroups
   title: cgroup.memory_stat_total_shmem
+
+cgroup.memory_stat_total_swap:
+  brief: Total amount of swap memory available to this cgroup
+  custom: true
+  description: Total amount of swap memory available to this cgroup
+  metric_type: gauge
+  monitor: cgroups
+  title: cgroup.memory_stat_total_swap
 
 cgroup.memory_stat_total_unevictable:
   brief: The equivalent of `cgroup.memory_stat_unevictable` that also includes the

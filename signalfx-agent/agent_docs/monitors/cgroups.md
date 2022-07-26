@@ -108,6 +108,7 @@ monitor config option `extraGroups`:
  - ***`cgroup.memory_stat_cache`*** (*gauge*)<br>    Page cache, including tmpfs (shmem), in bytes
  - `cgroup.memory_stat_dirty` (*gauge*)<br>    Bytes that are waiting to get written back to the disk
  - `cgroup.memory_stat_hierarchical_memory_limit` (*gauge*)<br>    Bytes of memory limit with regard to hierarchy under which the memory cgroup is
+ - `cgroup.memory_stat_hierarchical_memsw_limit` (*gauge*)<br>    The memory+swap limit in place by the hierarchy cgroup
  - `cgroup.memory_stat_inactive_anon` (*gauge*)<br>    Bytes of anonymous and swap cache memory on inactive LRU list
  - `cgroup.memory_stat_inactive_file` (*gauge*)<br>    Bytes of file-backed memory on inactive LRU list
  - `cgroup.memory_stat_mapped_file` (*gauge*)<br>    Bytes of mapped file (includes tmpfs/shmem)
@@ -120,6 +121,7 @@ monitor config option `extraGroups`:
  - ***`cgroup.memory_stat_rss`*** (*gauge*)<br>    Anonymous and swap cache, not including tmpfs (shmem), in bytes
  - `cgroup.memory_stat_rss_huge` (*gauge*)<br>    Bytes of anonymous transparent hugepages
  - `cgroup.memory_stat_shmem` (*gauge*)<br>    Bytes of shared memory
+ - `cgroup.memory_stat_swap` (*gauge*)<br>    Bytes of swap memory used by the cgroup
  - `cgroup.memory_stat_total_active_anon` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_active_anon` that also includes the sum total of that metric for all descendant cgroups
  - `cgroup.memory_stat_total_active_file` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_active_file` that also includes the sum total of that metric for all descendant cgroups
  - `cgroup.memory_stat_total_cache` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_cache` that also includes the sum total of that metric for all descendant cgroups
@@ -134,6 +136,7 @@ monitor config option `extraGroups`:
  - `cgroup.memory_stat_total_rss` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_rss` that also includes the sum total of that metric for all descendant cgroups
  - `cgroup.memory_stat_total_rss_huge` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_rss_huge` that also includes the sum total of that metric for all descendant cgroups
  - `cgroup.memory_stat_total_shmem` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_shmem` that also includes the sum total of that metric for all descendant cgroups
+ - `cgroup.memory_stat_total_swap` (*gauge*)<br>    Total amount of swap memory available to this cgroup
  - `cgroup.memory_stat_total_unevictable` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_unevictable` that also includes the sum total of that metric for all descendant cgroups
  - `cgroup.memory_stat_total_writeback` (*gauge*)<br>    The equivalent of `cgroup.memory_stat_writeback` that also includes the sum total of that metric for all descendant cgroups
  - `cgroup.memory_stat_unevictable` (*gauge*)<br>    Bytes of memory that cannot be reclaimed (mlocked, etc).

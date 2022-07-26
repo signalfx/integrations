@@ -35,7 +35,7 @@ stats_sinks:
 ```
 Please remember to provide the prefix to the agent monitor configuration.
 
-See [Envoy API reference](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/metrics/v2/stats.proto#envoy-api-msg-config-metrics-v2-statsdsink) for more info
+See [Envoy API reference](https://www.envoyproxy.io/docs/envoy/v1.6.0/api-v2/config/metrics/v2/stats.proto#envoy-api-msg-config-metrics-v2-statsdsink) for more info
 
 Sample SignalFx SmartAgent configuration:
 
