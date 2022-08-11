@@ -1662,3 +1662,40 @@ sf.org.log.numContentBytesReceivedByToken:
        * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numContentBytesReceivedByToken
+
+sf.org.subscription.hosts:
+  brief: Host limit.
+  description: |
+    The maximum number of subscription hosts.
+    
+      * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.subscription.hosts
+
+sf.org.subscription.containers:
+  brief: Container limit.
+  description: |
+    The maximum number of containers.
+    
+    * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.subscription.containers
+ 
+ sf.org.subscription.customMetrics:
+  brief: Custom metric time series limit.
+  description: |
+    The maximum number of custom metric time series.
+    
+    * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.subscription.customMetrics
+  
+ sf.org.subscription.highResolutionMetrics:
+  brief: High resolution metric time series limit.
+  description: |
+    The maximum number of high resolution metric time series.
+      
+    * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.subscription.highResolutionMetrics
+  
