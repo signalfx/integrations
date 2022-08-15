@@ -1291,9 +1291,10 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
 sf.org.numResourceMetrics:
-  brief: Number of host-based resource metric time series.
+  brief: Number of resource metric time series (MTS).
   description: |
-    Number of host-based resource metric time series.
+    Number of resource metric time series (MTS) received from host and container 
+    categories. 
     
     * Dimension(s): `orgId`, `resourceType`
     * Data resolution: 10 minutes
