@@ -1290,6 +1290,16 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
   metric_type: counter
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
+sf.org.numResourceMetrics:
+  brief: Number of host-based resource metric time series.
+  description: |
+    Number of host-based resource metric time series.
+    
+    * Dimension(s): `orgId`, `resourceType`
+    * Data resolution: 10 minutes
+  metric_type: gauge
+  title: sf.org.numResourceMetrics
+
 sf.org.numResourcesMonitored:
   brief: Number of host-based resources monitored
   description: |
@@ -1698,3 +1708,13 @@ sf.org.subscription.hosts:
       * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.hosts
+ 
+sf.org.subscription.function:
+  brief: Number of functions.
+  description: |
+    Number of functions.
+    
+    * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.subscription.function
+  
