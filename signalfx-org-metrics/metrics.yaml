@@ -706,10 +706,12 @@ sf.org.numActiveTimeSeries:
   brief: Number of currently active MTS
   description: |
     Total number of metric time series (MTS) currently active in the organization.
+    An active MTS reported at least one data point with a moving window of the last 25 hours.
+     
     (Use `sf.org.numInactiveTimeSeries` to see how many MTS are not active.)
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+     * Dimension(s):  `orgId`
+     * Data resolution: 1 second
   metric_type: gauge
   title: sf.org.numActiveTimeSeries
 
@@ -1087,10 +1089,13 @@ sf.org.numInactiveTimeSeries:
   brief: Number of inactive MTS
   description: |
     Total number of previously active metric time series (MTS) that are
-    no longer active. Use `sf.org.numActiveTimeSeries` to see how many MTS are active.
+    no longer active. An inactive MTS has not received any data points in the last 25 hours. 
+    The inactive MTS is still available until its retention period expires. The retention period is 13 months. 
+    
+    Use `sf.org.numActiveTimeSeries` to see how many MTS are active.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: gauge
   title: sf.org.numInactiveTimeSeries
 
