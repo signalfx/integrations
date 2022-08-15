@@ -88,6 +88,8 @@ These metrics track limits that Infrastructure Monitoring enforces for your orga
    new MTS, but continues to accept data points for existing MTS. To monitor your usage against the limit,
    use the `metric sf.org.numActiveTimeSeries`.
 
+   The number of active MTS is the total number of MTS that have received at least one data point within a moving window of the last 25 hours.
+
 * `sf.org.limit.metricTimeSeriesCreatedPerMinute` (gauge): Maximum rate at which you can create new MTS
    in your organization, measured in MTS per minute. If you exceed this rate,
    Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS.
