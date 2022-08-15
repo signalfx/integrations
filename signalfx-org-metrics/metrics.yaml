@@ -1677,25 +1677,25 @@ sf.org.log.numContentBytesReceivedByToken:
 sf.org.subscription.containers:
   brief: Number of containers.
   description: |
-    Number of containers.
+    Number of containers included in the subscription.
     
     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.containers
 
 sf.org.subscription.customMetrics:
-  brief: Number of custom metric time series.
+  brief: Number of custom metric time series (MTS).
   description: |
-    Number of custom metric time series.
+    Number of custom metric time series (MTS) included in the subscription.
     
     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.customMetrics
 
 sf.org.subscription.highResolutionMetrics:
-  brief: Number of high resolution metric time series.
+  brief: Number of high resolution metric time series (MTS).
   description: |
-    Number of high resolution metric time series.
+    Number of high resolution metric time series (MTS) included in the subscription.
       
     * Data resolution: 10 seconds
   metric_type: gauge
@@ -1704,7 +1704,7 @@ sf.org.subscription.highResolutionMetrics:
 sf.org.subscription.hosts:
   brief: Number of hosts.
   description: |
-    Number of hosts.
+    Number of hosts included in the subscription.
     
       * Data resolution: 10 seconds
   metric_type: gauge
