@@ -1291,10 +1291,13 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
 sf.org.numResourceMetrics:
-  brief: Number of resource metric time series (MTS).
+  brief: Number of resource metric time series (MTS) monitored.
   description: |
     Number of resource metric time series (MTS) received from host and container 
-    categories. 
+    categories. Resource MTS measure the use of limited subscription resources, such as 
+    custom MTS. 
+    
+    The `resourceType` dimension indicates whether the value represents hosts or containers.
     
     * Dimension(s): `orgId`, `resourceType`
     * Data resolution: 10 minutes
@@ -1713,7 +1716,7 @@ sf.org.subscription.hosts:
 sf.org.subscription.function:
   brief: Number of functions.
   description: |
-    Number of serverless functions included in the subscription.
+    Number of AWS Lambda functions included in the subscription.
     
     * Data resolution: 2 minutes
   metric_type: gauge
