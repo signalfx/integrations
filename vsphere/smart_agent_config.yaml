@@ -59,6 +59,15 @@ vsphere:
     required: false
     type: string
     yamlName: filter
+  - default: ip
+    doc: 'The host dimension value set for monitored VMs. The options are: `ip`, `hostname`
+      and `disable`. Default is `ip`. `ip`       : the VM IP if available `hostname`
+      : the VM Hostname if available `disable`  : the vsphere monitor does not set
+      the host dimension on the VM metrics'
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: vmHostDimension
   - default: ''
     doc: Path to the ca file
     elementKind: ''
