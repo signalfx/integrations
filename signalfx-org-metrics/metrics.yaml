@@ -1294,8 +1294,7 @@ sf.org.numResourceMetrics:
   brief: Number of resource metric time series (MTS) monitored.
   description: |
     Number of resource metric time series (MTS) received from host and container 
-    categories. Resource MTS measure the use of limited subscription resources, such as 
-    custom MTS. 
+    categories. 
     
     The `resourceType` dimension indicates whether the value represents hosts or containers.
     
@@ -1716,7 +1715,7 @@ sf.org.subscription.hosts:
 sf.org.subscription.function:
   brief: Number of functions.
   description: |
-    Number of AWS Lambda functions included in the subscription.
+    Number of serverless functions included in the subscription.
     
     * Data resolution: 2 minutes
   metric_type: gauge
