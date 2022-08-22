@@ -1300,6 +1300,19 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
   metric_type: counter
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
+sf.org.numResourceMetrics:
+  brief: Number of resource metric time series (MTS) monitored.
+  description: |
+    Number of resource metric time series (MTS) received from host and container 
+    categories. 
+    
+    The `resourceType` dimension indicates whether the value represents hosts or containers.
+    
+    * Dimension(s): `orgId`, `resourceType`
+    * Data resolution: 10 minutes
+  metric_type: gauge
+  title: sf.org.numResourceMetrics
+
 sf.org.numResourcesMonitored:
   brief: Number of host-based resources monitored
   description: |
@@ -1680,25 +1693,25 @@ sf.org.log.numContentBytesReceivedByToken:
 sf.org.subscription.containers:
   brief: Number of containers.
   description: |
-    Number of containers.
+    Number of containers included in the subscription.
     
     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.containers
 
 sf.org.subscription.customMetrics:
-  brief: Number of custom metric time series.
+  brief: Number of custom metric time series (MTS).
   description: |
-    Number of custom metric time series.
+    Number of custom metric time series (MTS) included in the subscription.
     
     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.customMetrics
 
 sf.org.subscription.highResolutionMetrics:
-  brief: Number of high resolution metric time series.
+  brief: Number of high resolution metric time series (MTS).
   description: |
-    Number of high resolution metric time series.
+    Number of high resolution metric time series (MTS) included in the subscription.
       
     * Data resolution: 10 seconds
   metric_type: gauge
@@ -1707,8 +1720,18 @@ sf.org.subscription.highResolutionMetrics:
 sf.org.subscription.hosts:
   brief: Number of hosts.
   description: |
-    Number of hosts.
+    Number of hosts included in the subscription.
     
       * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.hosts
+ 
+sf.org.subscription.function:
+  brief: Number of functions.
+  description: |
+    Number of serverless functions included in the subscription.
+    
+    * Data resolution: 2 minutes
+  metric_type: gauge
+  title: sf.org.subscription.function
+  
