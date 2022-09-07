@@ -59,6 +59,15 @@ vsphere:
     required: false
     type: string
     yamlName: filter
+  - default: ip
+    doc: 'The host dimension value set for monitored VMs. The options are: `ip`, `hostname`
+      and `disable`. Default is `ip`. `ip`       : the VM IP if available `hostname`
+      : the VM Hostname if available `disable`  : the vsphere monitor does not set
+      the host dimension on the VM metrics'
+    elementKind: ''
+    required: false
+    type: string
+    yamlName: vmHostDimension
   - default: ''
     doc: Path to the ca file
     elementKind: ''
@@ -79,3 +88,11 @@ vsphere:
     required: false
     type: string
     yamlName: tlsClientKeyPath
+  - default: 'false'
+    doc: When set to true, all the SOAP requests and responses will be logged. This
+      generates lots of data, only use it for debugging. For this setting to take
+      effect, make sure to restart the agent
+    elementKind: ''
+    required: false
+    type: bool
+    yamlName: soapClientDebug
