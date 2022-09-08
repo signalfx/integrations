@@ -382,7 +382,7 @@ sf.org.num.awsServiceCallCount:
   title: sf.org.num.awsServiceCallCount
 
 sf.org.num.awsServiceCallCountExceptions:
-  brief: Number of Amazon API calls that threw exceptions
+  brief:  Number of Amazon API calls that threw exceptions
   description: |
     Number of calls made to the Amazon API that threw exceptions.
 
