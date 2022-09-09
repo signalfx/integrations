@@ -371,7 +371,7 @@ sf.org.num.alertmuting:
   title: sf.org.num.alertmuting
 
 sf.org.num.awsServiceAuthErrorCount
-brief: Authentication errors thrown by AWS services
+  brief: Authentication errors thrown by AWS services
   description: |
     Total number authentication errors thrown by AWS services.
 
