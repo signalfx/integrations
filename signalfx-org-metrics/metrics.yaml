@@ -370,6 +370,16 @@ sf.org.num.alertmuting:
   metric_type: gauge
   title: sf.org.num.alertmuting
 
+sf.org.num.awsServiceAuthErrorCount
+  brief: Authentication errors thrown by AWS services
+  description: |
+    Total number authentication errors thrown by AWS services.
+
+        * Dimension(s):  `integrationId`,`orgId`,`namespace` (AWS Cloudwatch namespace),`clientInterface` (AWS SDK Interface),`method` (AWS SDK method)
+        * Data resolution: 1 second
+  metric_type: gauge
+  title: sf.org.num.awsServiceAuthErrorCount
+
 sf.org.num.awsServiceCallCount:
   brief: Number of calls made to the Amazon API
   description: |
@@ -382,7 +392,7 @@ sf.org.num.awsServiceCallCount:
   title: sf.org.num.awsServiceCallCount
 
 sf.org.num.awsServiceCallCountExceptions:
-  brief: Number of Amazon API calls that threw exceptions
+  brief:  Number of Amazon API calls that threw exceptions
   description: |
     Number of calls made to the Amazon API that threw exceptions.
 
