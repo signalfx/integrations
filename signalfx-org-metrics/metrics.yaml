@@ -370,7 +370,7 @@ sf.org.num.alertmuting:
   metric_type: gauge
   title: sf.org.num.alertmuting
 
-sf.org.num.awsServiceAuthErrorCount
+sf.org.num.awsServiceAuthErrorCount:
   brief: Authentication errors thrown by AWS services
   description: |
     Total number authentication errors thrown by AWS services.
