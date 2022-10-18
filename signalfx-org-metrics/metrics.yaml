@@ -899,12 +899,22 @@ sf.org.numDatapointsDroppedExceededQuotaByToken:
 sf.org.numDatapointsDroppedInvalid:
   brief: Number of data points dropped because they didn't follow documented guidelines for data points.
   description: |
-    Number of data points dropped because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
+    Number of data points that are dropped because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
 
         * Dimension(s):  `orgId`
         * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedInvalid
+
+sf.org.numDatapointsDroppedInvalidByToken:
+  brief: Number of data points dropped because they didn't follow documented guidelines for data points.
+  description: |
+    Number of data points for a specific access token that are dropped because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numDatapointsDroppedInvalidByToken
 
 sf.org.numDatapointsDroppedInTimeout:
   brief: Number of data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds.
