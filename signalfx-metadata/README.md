@@ -66,8 +66,8 @@ For more information on authentication, see the API's [Authentication documentat
 | configuration option | definition | default value |
 | ---------------------|------------|---------------|
 | ModulePath | Path on disk where collectd can find this module. | "/opt/signalfx-collectd-plugin" |
-| URL | URL for where metrics are sent from collectd. If you are looking to limit the number of connections from your infrastructure to the SignalFx service you can optioally configure the use of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/metricproxy">SignalFx metricproxy</a> | "https://ingest.us0.signalfx.com/v1/collectd" |
-| Token | Your SignalFx Organization Acess Token | none |
+| URL | URL for where metrics are sent from collectd. If you are looking to limit the number of connections from your infrastructure to the SignalFx service you can optionally configure the use of the <a target="_blank" href="https://github.com/signalfx/integrations/tree/master/metricproxy">SignalFx metricproxy</a> | "https://ingest.us0.signalfx.com/v1/collectd" |
+| Token | Your SignalFx Organization Access Token | none |
 | LogTraces | Enable log traces | true |
 | Notifications | Enable notification on this plugin | true |
 | NotifyLevel | Set the notification level | "OKAY" |
