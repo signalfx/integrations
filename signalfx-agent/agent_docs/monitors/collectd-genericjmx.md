@@ -108,7 +108,7 @@ The easiest thing to do here is to make sure the
 `com.sun.management.jmxremote.rmi.port` property in your Java app is set to
 the same port as the JMX connect port.  There may be other variations of
 this that say `Connection reset` or `Connection refused` but they all
-generaly indicate a similar cause.
+generally indicate a similar cause.
 
 
 ## Configuration
