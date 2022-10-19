@@ -17,6 +17,10 @@ guest_fullname: For virtual machine metrics, the full name of the guest operatin
 guest_id: For virtual machine metrics, the guest identifier of the virtual machine
   to which the metric pertains.
 
+host: For virtual machine metrics, the host dimension will be set to the VM IP instead
+  of the running agent hostname. This behavior is configurable; check the `vmHostDimension`
+  option for details.
+
 object: For some metrics, the source of the metric. For example, the identifier of
   a NIC for a network metric, or the processor number for a CPU metric.
 
