@@ -49,6 +49,16 @@ sf.org.apm.grossSpanBytesReceived:
   metric_type: counter
   title: sf.org.apm.grossSpanBytesReceived
 
+sf.org.apm.ingestLatency.duration.ns.min:
+  brief: The duration of the ingest latency.
+  description: |
+    The duration of the ingest latency.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.apm.ingestLatency.duration.ns.min
+
 sf.org.apm.numSpanBytesReceived:
   brief: The number of bytes Splunk APM accepts from ingested span data
     after decompression after filtering and throttling.
