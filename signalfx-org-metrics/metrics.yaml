@@ -49,18 +49,6 @@ sf.org.apm.grossSpanBytesReceived:
   metric_type: counter
   title: sf.org.apm.grossSpanBytesReceived
 
-sf.org.apm.numSpanBytesReceived:
-  brief: The number of bytes Splunk APM accepts from ingested span data
-    after decompression after filtering and throttling.
-  description: |
-    The number of bytes Splunk APM accepts from ingested span
-    data after decompression after filtering and throttling.
-
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.numSpanBytesReceived
-
 sf.org.apm.grossSpanBytesReceivedByToken:
   brief: The number of bytes Splunk APM receives for a specific access token
     from ingested span data after decompression but before filtering and
@@ -73,6 +61,18 @@ sf.org.apm.grossSpanBytesReceivedByToken:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpanBytesReceivedByToken
+
+sf.org.apm.numSpanBytesReceived:
+  brief: The number of bytes Splunk APM accepts from ingested span data
+    after decompression after filtering and throttling.
+  description: |
+    The number of bytes Splunk APM accepts from ingested span
+    data after decompression after filtering and throttling.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpanBytesReceived
 
 sf.org.apm.numSpanBytesReceivedByToken:
   brief: The number of bytes Splunk APM accepts for a specific access token
@@ -167,16 +167,6 @@ sf.org.apm.grossSpansReceived:
   metric_type: counter
   title: sf.org.apm.grossSpansReceived
 
-sf.org.apm.numSpansReceived:
-  brief: The number of spans Splunk APM accepts after filtering and throttling.
-  description: |
-    The number of spans Splunk APM accepts after filtering and throttling.
-
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.numSpansReceived
-
 sf.org.apm.grossSpansReceivedByToken:
   brief: The number of spans Splunk APM receives for a specific access token
     before filtering and throttling.
@@ -188,6 +178,16 @@ sf.org.apm.grossSpansReceivedByToken:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpansReceivedByToken
+
+sf.org.apm.numSpansReceived:
+  brief: The number of spans Splunk APM accepts after filtering and throttling.
+  description: |
+    The number of spans Splunk APM accepts after filtering and throttling.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansReceived
 
 sf.org.apm.numSpansReceivedByToken:
   brief: The number of spans Splunk APM received for a specific access token
@@ -911,7 +911,7 @@ sf.org.numDatapointsDroppedInvalidByToken:
   description: |
     Number of data points for a specific access token that are dropped because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
 
-        * Dimension(s):  `orgId`
+        * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedInvalidByToken
