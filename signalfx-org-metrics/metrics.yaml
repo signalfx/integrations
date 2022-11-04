@@ -50,14 +50,34 @@ sf.org.apm.grossSpanBytesReceived:
   title: sf.org.apm.grossSpanBytesReceived
 
 sf.org.apm.ingestLatency.duration.ns.min:
-  brief: The minimum duration of the ingest latency.
+  brief: The minimum duration of the ingest latency in Splunk APM.
   description: |
-    The minimum duration of the ingest latency.
+    The minimum duration of the ingest latency in Splunk APM.
 
         * Dimension(s): `orgId`
         * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.apm.ingestLatency.duration.ns.min
+  
+sf.org.apm.limit.spanBytes:
+  brief: The ingested span data limit in Splunk APM????
+  description: |
+    DEF.
+
+        * Dimension(s): ????
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.apm.limit.spanBytes
+
+sf.org.apm.limit.troubleshootingMetricSets:
+  brief: DEF.
+  description: |
+    DEF.
+
+        * Dimension(s): ????
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.apm.limit.troubleshootingMetricSets
 
 sf.org.apm.numSpanBytesReceived:
   brief: The number of bytes Splunk APM accepts from ingested span data
