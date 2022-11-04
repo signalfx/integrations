@@ -50,9 +50,9 @@ sf.org.apm.grossSpanBytesReceived:
   title: sf.org.apm.grossSpanBytesReceived
 
 sf.org.apm.ingestLatency.duration.ns.min:
-  brief: The duration of the ingest latency.
+  brief: The minimum duration of the ingest latency.
   description: |
-    The duration of the ingest latency.
+    The minimum duration of the ingest latency.
 
         * Dimension(s): `orgId`
         * Data resolution: 10 seconds
