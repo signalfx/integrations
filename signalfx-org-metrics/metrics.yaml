@@ -376,7 +376,17 @@ sf.org.abortedDetectors:
     or data points, whichever caused the detector to stop
   metric_type: cumulative
   title: sf.org.abortedDetectors
-
+  
+sf.org.datapointsTotalCountByToken:
+  brief: Total datapoints by token
+  description: |
+    Total datapoints by token
+    
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 10 second
+  metric_type: counter
+  title: sf.org.datapointsTotalCountByToken  
+  
 sf.org.grossDatapointsReceived:
   brief: Infrastructure Monitoring internal metric
   description: sf.org.grossDatapointsReceived is reserved for Infrastructure Monitoring internal use only.
