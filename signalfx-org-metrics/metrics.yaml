@@ -383,7 +383,7 @@ sf.org.datapointsTotalCountByToken:
     Total datapoints by token
     
         * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 10 second
+        * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.datapointsTotalCountByToken  
   
