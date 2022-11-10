@@ -398,7 +398,13 @@ sf.org.grossDatapointsReceivedByToken:
   description: sf.org.grossDatapointsReceivedByToken is reserved for Infrastructure Monitoring internal use only.
   metric_type: cumulative
   title: sf.org.grossDatapointsReceivedByToken
-
+    
+sf.org.grossDpmContentBytesReceived:
+  brief: Infrastructure Monitoring internal metric
+  description: sf.org.grossDpmContentBytesReceived is reserved for Infrastructure Monitoring internal use only.
+  metric_type: counter
+  title: sf.org.grossDpmContentBytesReceived
+  
 sf.org.num.alertmuting:
   brief: Total number of alert muting rules
   description: |
