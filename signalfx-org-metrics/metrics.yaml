@@ -1,3 +1,80 @@
+sf.org.apm.grossContentBytesReceived:
+  brief: The volume of bytes Splunk APM receives off the wire before filtering
+    and throttling.
+  description: |
+    The volume of bytes Splunk APM receives off the wire before filtering
+    and throttling. This content could be compressed.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossContentBytesReceived  
+
+sf.org.apm.grossSpanBytesReceived:
+  brief: The number of bytes Splunk APM receives from spans after decompression
+    but before filtering and throttling.
+  description: |
+    The number of bytes Splunk APM receives from spans after
+    decompression but before filtering and throttling.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossSpanBytesReceived
+  
+sf.org.apm.grossSpanBytesReceivedByToken:
+  brief: The number of bytes Splunk APM receives for a specific access token
+    from ingested span data after decompression but before filtering and
+    throttling.
+  description: |
+    The number of bytes Splunk APM receives for a specific access token
+    from ingested span data after decompression but before filtering and throttling.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossSpanBytesReceivedByToken  
+  
+sf.org.apm.grossSpansReceived:
+  brief: The number of spans Splunk APM received before filtering and throttling.
+  description: |
+    The number of spans Splunk APM received before filtering or throttling.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossSpansReceived  
+  
+sf.org.apm.ingestLatency.duration.ns.min:
+  brief: The minimum duration of the ingest latency in Splunk APM.
+  description: |
+    The minimum duration of the ingest latency in Splunk APM.
+
+        * Dimension(s): `orgId`
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.apm.ingestLatency.duration.ns.min
+  
+sf.org.apm.limit.spanBytes:
+  brief: The ingested span data limit in Splunk APM????
+  description: |
+    DEF.
+
+        * Dimension(s): ????
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.apm.limit.spanBytes
+
+sf.org.apm.limit.troubleshootingMetricSets:
+  brief: DEF.
+  description: |
+    DEF.
+
+        * Dimension(s): ????
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.apm.limit.troubleshootingMetricSets
+
 sf.org.apm.numAddSpansCalls:
   brief: The number of calls to the `/v2/trace` endpoint.
   description: |
@@ -37,48 +114,6 @@ sf.org.apm.numHosts:
   metric_type: gauge
   title: sf.org.apm.numHosts
 
-sf.org.apm.grossSpanBytesReceived:
-  brief: The number of bytes Splunk APM receives from spans after decompression
-    but before filtering and throttling.
-  description: |
-    The number of bytes Splunk APM receives from spans after
-    decompression but before filtering and throttling.
-
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossSpanBytesReceived
-
-sf.org.apm.ingestLatency.duration.ns.min:
-  brief: The minimum duration of the ingest latency in Splunk APM.
-  description: |
-    The minimum duration of the ingest latency in Splunk APM.
-
-        * Dimension(s): `orgId`
-        * Data resolution: 10 seconds
-  metric_type: gauge
-  title: sf.org.apm.ingestLatency.duration.ns.min
-  
-sf.org.apm.limit.spanBytes:
-  brief: The ingested span data limit in Splunk APM????
-  description: |
-    DEF.
-
-        * Dimension(s): ????
-        * Data resolution: 10 seconds
-  metric_type: gauge
-  title: sf.org.apm.limit.spanBytes
-
-sf.org.apm.limit.troubleshootingMetricSets:
-  brief: DEF.
-  description: |
-    DEF.
-
-        * Dimension(s): ????
-        * Data resolution: 10 seconds
-  metric_type: gauge
-  title: sf.org.apm.limit.troubleshootingMetricSets
-
 sf.org.apm.numSpanBytesReceived:
   brief: The number of bytes Splunk APM accepts from ingested span data
     after decompression after filtering and throttling.
@@ -90,19 +125,6 @@ sf.org.apm.numSpanBytesReceived:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceived
-
-sf.org.apm.grossSpanBytesReceivedByToken:
-  brief: The number of bytes Splunk APM receives for a specific access token
-    from ingested span data after decompression but before filtering and
-    throttling.
-  description: |
-    The number of bytes Splunk APM receives for a specific access token
-    from ingested span data after decompression but before filtering and throttling.
-
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossSpanBytesReceivedByToken
 
 sf.org.apm.numSpanBytesReceivedByToken:
   brief: The number of bytes Splunk APM accepts for a specific access token
@@ -187,16 +209,6 @@ sf.org.apm.numSpansDroppedThrottleByToken:
   metric_type: counter
   title: sf.org.apm.numSpansDroppedThrottleByToken
 
-sf.org.apm.grossSpansReceived:
-  brief: The number of spans Splunk APM received before filtering and throttling.
-  description: |
-    The number of spans Splunk APM received before filtering or throttling.
-
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossSpansReceived
-
 sf.org.apm.numSpansReceived:
   brief: The number of spans Splunk APM accepts after filtering and throttling.
   description: |
@@ -206,18 +218,6 @@ sf.org.apm.numSpansReceived:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansReceived
-
-sf.org.apm.grossSpansReceivedByToken:
-  brief: The number of spans Splunk APM receives for a specific access token
-    before filtering and throttling.
-  description: |
-    The number of spans Splunk APM receives for a specific access token
-    before filtering or throttling.
-
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossSpansReceivedByToken
 
 sf.org.apm.numSpansReceivedByToken:
   brief: The number of spans Splunk APM received for a specific access token
@@ -230,6 +230,18 @@ sf.org.apm.numSpansReceivedByToken:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansReceivedByToken
+
+sf.org.apm.grossSpansReceivedByToken:
+  brief: The number of spans Splunk APM receives for a specific access token
+    before filtering and throttling.
+  description: |
+    The number of spans Splunk APM receives for a specific access token
+    before filtering or throttling.
+
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.grossSpansReceivedByToken
 
 sf.org.apm.subscription.containers:
   brief: The entitlement for the number of containers for your host-based subscription plan.
@@ -320,18 +332,6 @@ sf.org.apm.numTroubleshootingMetricSets:
         * Data resolution: 1 minute
   metric_type: counter
   title: sf.org.apm.numTroubleshootingMetricSets
-
-sf.org.apm.grossContentBytesReceived:
-  brief: The volume of bytes Splunk APM receives off the wire before filtering
-    and throttling.
-  description: |
-    The volume of bytes Splunk APM receives off the wire before filtering
-    and throttling. This content could be compressed.
-
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.apm.grossContentBytesReceived
 
 sf.org.apm.numContentBytesReceived:
   brief: The volume of bytes Splunk APM accepts off the wire after filtering
@@ -472,25 +472,45 @@ sf.org.limit.metricTimeSeriesCreatedPerMinute:
   metric_type: gauge
   title: sf.org.limit.metricTimeSeriesCreatedPerMinute
 
-sf.org.log.numMessagesReceived:
-  brief: The total number of log messages Splunk Log Observer accepts after filtering and throttling.
+sf.org.log.grossContentBytesReceived:
+  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire before filtering and throttling. This content can be compressed.
   description: |
-    The total number of log messages Splunk Log Observer accepts after filtering and throttling.
+    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire before filtering and throttling. This content can be compressed.
     
         * Dimension(s): `orgId`
         * Data resolution: 10 second
   metric_type: counter
-  title: sf.org.log.numMessagesReceived
+  title: sf.org.log.grossContentBytesReceived
 
-sf.org.log.numContentBytesReceived:
-  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire after filtering and throttling. This content can be compressed.
+sf.org.log.grossContentBytesReceivedByToken:
+  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
   description: |
-    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire after filtering and throttling. This content can be compressed.
+    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
     
         * Dimension(s): `orgId`
         * Data resolution: 10 second
   metric_type: counter
-  title: sf.org.log.numContentBytesReceived
+  title: sf.org.log.grossContentBytesReceivedByToken    
+  
+sf.org.log.grossMessageBytesReceived:
+  brief: The number of bytes Splunk Log Observer receives from ingested logs after decompression but before filtering and throttling are complete.
+  description: |
+    The number of bytes Splunk Log Observer receives from ingested logs after decompression but before filtering and throttling are complete.
+    
+        * Dimension(s): `orgId`
+        * Data resolution: 10 second
+  metric_type: counter
+  title: sf.org.log.grossMessageBytesReceived  
+  
+sf.org.log.grossMessageBytesReceivedByToken:
+  brief: The number of bytes Splunk Log Observer receives for a specific access token from ingested logs after decompression but before filtering and throttling are complete.
+  description: |
+    The number of bytes received by Splunk Log Observer for a specific access token from ingested logs after decompression but before filtering and throttling are complete.
+    
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 10 second
+  metric_type: counter
+  title: sf.org.log.grossMessageBytesReceivedByToken  
 
 sf.org.log.grossMessagesReceived:
   brief: The total number of log messages Splunk Log Observer receives before filtering and throttling.
@@ -502,6 +522,36 @@ sf.org.log.grossMessagesReceived:
   metric_type: counter
   title: sf.org.log.grossMessagesReceived
 
+sf.org.log.grossMessagesReceivedByToken:
+  brief: The total number of log messages Splunk Log Observer receives for a specific access token before filtering and throttling.
+  description: |
+    The total number of log messages Splunk Log Observer receives for a specific access token before filtering and throttling.
+    
+        * Dimension(s): `orgId`, `tokenId`
+        * Data resolution: 10 second
+  metric_type: counter
+  title: sf.org.log.grossMessagesReceivedByToken
+  
+sf.org.log.numContentBytesReceived:
+  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire after filtering and throttling. This content can be compressed.
+  description: |
+    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire after filtering and throttling. This content can be compressed.
+    
+        * Dimension(s): `orgId`
+        * Data resolution: 10 second
+  metric_type: counter
+  title: sf.org.log.numContentBytesReceived
+  
+sf.org.log.numContentBytesReceivedByToken:
+  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
+  description: |
+    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
+    
+        * Dimension(s): `orgId`
+        * Data resolution: 10 second
+  metric_type: counter
+  title: sf.org.log.numContentBytesReceivedByToken  
+
 sf.org.log.numMessageBytesReceived:
   brief: The number of bytes Splunk Log Observer receives from ingested logs after decompression, filtering, and throttling are complete.
   description: |
@@ -512,25 +562,25 @@ sf.org.log.numMessageBytesReceived:
   metric_type: counter
   title: sf.org.log.numMessageBytesReceived
 
-sf.org.log.grossContentBytesReceived:
-  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire before filtering and throttling. This content can be compressed.
+sf.org.log.numMessageBytesReceivedByToken:
+  brief: The number of bytes Splunk Log Observer receives for a specific access token from ingested logs after decompression, filtering, and throttling are complete.
   description: |
-    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire before filtering and throttling. This content can be compressed.
+    The number of bytes Splunk Log Observer receives for a specific access token from ingested logs after decompression, filtering, and throttling are complete.
     
         * Dimension(s): `orgId`
         * Data resolution: 10 second
   metric_type: counter
-  title: sf.org.log.grossContentBytesReceived
-
-sf.org.log.numMessagesReceivedByToken:
-  brief: The total number of log messages Splunk Log Observer accepts for a specific access token after filtering and throttling.
+  title: sf.org.log.numMessageBytesReceivedByToken
+  
+sf.org.log.numMessagesDroppedThrottle:
+  brief: The number of log messages Splunk Log Observer drops after the allowed ingest volume is exceeded. Splunk Log Observer drops messages it receives after the ingestion volume is reached.
   description: |
-    The total number of log messages Splunk Log Observer accepts for a specific access token after filtering and throttling.
+    The number of log messages Splunk Log Observer drops after the allowed ingest volume is exceeded. Splunk Log Observer drops messages it receives after the ingestion volume is reached.
     
         * Dimension(s): `orgId`
         * Data resolution: 10 second
   metric_type: counter
-  title: sf.org.log.numMessagesReceivedByToken
+  title: sf.org.log.numMessagesDroppedThrottle   
 
 sf.org.log.numMessagesDroppedOversize:
   brief: The number of log messages Splunk Log Observer receives that are too large to process.
@@ -542,26 +592,6 @@ sf.org.log.numMessagesDroppedOversize:
   metric_type: counter
   title: sf.org.log.numMessagesDroppedOversize
 
-sf.org.log.numMessagesDroppedThrottle:
-  brief: The number of log messages Splunk Log Observer drops after the allowed ingest volume is exceeded. Splunk Log Observer drops messages it receives after the ingestion volume is reached.
-  description: |
-    The number of log messages Splunk Log Observer drops after the allowed ingest volume is exceeded. Splunk Log Observer drops messages it receives after the ingestion volume is reached.
-    
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
-  metric_type: counter
-  title: sf.org.log.numMessagesDroppedThrottle
-
-sf.org.log.grossMessageBytesReceived:
-  brief: The number of bytes Splunk Log Observer receives from ingested logs after decompression but before filtering and throttling are complete.
-  description: |
-    The number of bytes Splunk Log Observer receives from ingested logs after decompression but before filtering and throttling are complete.
-    
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
-  metric_type: counter
-  title: sf.org.log.grossMessageBytesReceived
-
 sf.org.log.numMessagesDroppedOversizeByToken:
   brief: The number of log messages Splunk Log Observer receives that are too large to process for a specific access token.
   description: |
@@ -571,27 +601,7 @@ sf.org.log.numMessagesDroppedOversizeByToken:
         * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesDroppedOversizeByToken
-
-sf.org.log.grossContentBytesReceived:
-  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire after filtering and throttling. This content can be compressed.
-  description: |
-    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire after filtering and throttling. This content can be compressed.
-    
-        * Dimension(s): `orgId` ??????
-        * Data resolution: 10 second DOES IT EXIST?
-  metric_type: counter
-  title: sf.org.log.grossContentBytesReceived
   
-sf.org.log.grossContentBytesReceivedByToken:
-  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
-  description: |
-    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
-    
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
-  metric_type: counter
-  title: sf.org.log.grossContentBytesReceivedByToken  
-
 sf.org.log.numMessagesDroppedThrottleByToken:
   brief: The number of log messages Splunk Log Observer drops for a specific access token after the allowed ingest volume is exceeded. Splunk Log Observer drops messages it receives after the ingestion volume is reached.
   description: |
@@ -600,47 +610,27 @@ sf.org.log.numMessagesDroppedThrottleByToken:
         * Dimension(s): `orgId`
         * Data resolution: 10 second
   metric_type: counter
-  title: sf.org.log.numMessagesDroppedThrottleByToken
+  title: sf.org.log.numMessagesDroppedThrottleByToken  
 
-sf.org.log.grossMessageBytesReceivedByToken:
-  brief: The number of bytes Splunk Log Observer receives for a specific access token from ingested logs after decompression but before filtering and throttling are complete.
+sf.org.log.numMessagesReceived:
+  brief: The total number of log messages Splunk Log Observer accepts after filtering and throttling.
   description: |
-    The number of bytes received by Splunk Log Observer for a specific access token from ingested logs after decompression but before filtering and throttling are complete.
+    The total number of log messages Splunk Log Observer accepts after filtering and throttling.
     
         * Dimension(s): `orgId`
         * Data resolution: 10 second
   metric_type: counter
-  title: sf.org.log.grossMessageBytesReceivedByToken
+  title: sf.org.log.numMessagesReceived
 
-sf.org.log.numMessageBytesReceivedByToken:
-  brief: The number of bytes Splunk Log Observer receives for a specific access token from ingested logs after decompression, filtering, and throttling are complete.
+sf.org.log.numMessagesReceivedByToken:
+  brief: The total number of log messages Splunk Log Observer accepts for a specific access token after filtering and throttling.
   description: |
-    The number of bytes Splunk Log Observer receives for a specific access token from ingested logs after decompression, filtering, and throttling are complete.
+    The total number of log messages Splunk Log Observer accepts for a specific access token after filtering and throttling.
     
         * Dimension(s): `orgId`
         * Data resolution: 10 second
   metric_type: counter
-  title: sf.org.log.numMessageBytesReceivedByToken
-
-sf.org.log.grossMessagesReceivedByToken:
-  brief: The total number of log messages Splunk Log Observer receives for a specific access token before filtering and throttling.
-  description: |
-    The total number of log messages Splunk Log Observer receives for a specific access token before filtering and throttling.
-    
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
-  metric_type: counter
-  title: sf.org.log.grossMessagesReceivedByToken
-
-sf.org.log.numContentBytesReceivedByToken:
-  brief: The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
-  description: |
-    The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
-    
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
-  metric_type: counter
-  title: sf.org.log.numContentBytesReceivedByToken
+  title: sf.org.log.numMessagesReceivedByToken
 
 sf.org.num.alertmuting:
   brief: Total number of alert muting rules
