@@ -56,22 +56,14 @@ sf.org.apm.ingestLatency.duration.ns.min:
   title: sf.org.apm.ingestLatency.duration.ns.min
   
 sf.org.apm.limit.spanBytes:
-  brief: The ingested span data limit in Splunk APM????
-  description: |
-    DEF.
-
-        * Dimension(s): ????
-        * Data resolution: 10 seconds
+  brief: The ingested span data limit in Splunk APM.
+  description: The ingested span data limit in Splunk APM.
   metric_type: gauge
   title: sf.org.apm.limit.spanBytes
 
 sf.org.apm.limit.troubleshootingMetricSets:
-  brief: DEF.
-  description: |
-    DEF.
-
-        * Dimension(s): ????
-        * Data resolution: 10 seconds
+  brief: The limit for troubleshooting Metric Sets in Splunk APM.
+  description: The limit for troubleshooting Metric Sets in Splunk APM.
   metric_type: gauge
   title: sf.org.apm.limit.troubleshootingMetricSets
 
