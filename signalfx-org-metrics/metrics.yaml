@@ -543,6 +543,16 @@ sf.org.log.numContentBytesReceivedByToken:
         * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numContentBytesReceivedByToken  
+  
+sf.org.log.numLogsDroppedInvalidEvent:
+  brief: The number of logs Splunk Log Observer drops TBC
+  description: |
+    The number of logs Splunk Log Observer drops TBC
+    
+        * Dimension(s): `orgId`??
+        * Data resolution: 10 second ??
+  metric_type: counter ??
+  title: sf.org.log.numLogsDroppedInvalidEvent    
 
 sf.org.log.numMessageBytesReceived:
   brief: The number of bytes Splunk Log Observer receives from ingested logs after decompression, filtering, and throttling are complete.
