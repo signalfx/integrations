@@ -553,6 +553,26 @@ sf.org.log.numLogsDroppedInvalidEvent:
         * Data resolution: 10 second ??
   metric_type: counter ??
   title: sf.org.log.numLogsDroppedInvalidEvent    
+  
+sf.org.log.numLogsDroppedInvalidEventByToken:
+  brief: The number of logs Splunk Log Observer drops TBC
+  description: |
+    The number of logs Splunk Log Observer drops TBC
+    
+        * Dimension(s): `orgId`??
+        * Data resolution: 10 second ??
+  metric_type: counter ??
+  title: sf.org.log.numLogsDroppedInvalidEventbyToken    
+
+sf.org.log.numLogsDroppedInvalidTimetByToken:
+  brief: The number of logs Splunk Log Observer drops TBC
+  description: |
+    The number of logs Splunk Log Observer drops TBC
+    
+        * Dimension(s): `orgId`??
+        * Data resolution: 10 second ??
+  metric_type: counter ??
+  title: sf.org.log.numLogsDroppedInvalidTimebyToken    
 
 sf.org.log.numMessageBytesReceived:
   brief: The number of bytes Splunk Log Observer receives from ingested logs after decompression, filtering, and throttling are complete.
@@ -745,6 +765,16 @@ sf.org.num.credentials:
         * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.credentials
+  
+sf.org.num.crosslink:
+  brief: ???
+  description: |
+    ???.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 15 minutes
+  metric_type: gauge
+  title: sf.org.num.crosslink 
 
 sf.org.num.dashboard:
   brief: Total number of dashboards
@@ -871,6 +901,12 @@ sf.org.num.migrationmarker:
   description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: gauge
   title: sf.org.num.migrationmarker
+
+sf.org.num.mutingactive:
+  brief: Infrastructure Monitoring internal metric
+  description: Reserved for Infrastructure Monitoring internal use only.
+  metric_type: gauge
+  title: sf.org.num.mutingactive
 
 sf.org.num.namedtoken:
   brief: Number of access tokens
