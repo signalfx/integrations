@@ -543,36 +543,6 @@ sf.org.log.numContentBytesReceivedByToken:
         * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numContentBytesReceivedByToken  
-  
-sf.org.log.numLogsDroppedInvalidEvent:
-  brief: The number of logs Splunk Log Observer drops TBC
-  description: |
-    The number of logs Splunk Log Observer drops TBC
-    
-        * Dimension(s): `orgId`??
-        * Data resolution: 10 second ??
-  metric_type: counter ??
-  title: sf.org.log.numLogsDroppedInvalidEvent    
-  
-sf.org.log.numLogsDroppedInvalidEventByToken:
-  brief: The number of logs Splunk Log Observer drops TBC
-  description: |
-    The number of logs Splunk Log Observer drops TBC
-    
-        * Dimension(s): `orgId`??
-        * Data resolution: 10 second ??
-  metric_type: counter ??
-  title: sf.org.log.numLogsDroppedInvalidEventbyToken    
-
-sf.org.log.numLogsDroppedInvalidTimetByToken:
-  brief: The number of logs Splunk Log Observer drops TBC
-  description: |
-    The number of logs Splunk Log Observer drops TBC
-    
-        * Dimension(s): `orgId`??
-        * Data resolution: 10 second ??
-  metric_type: counter ??
-  title: sf.org.log.numLogsDroppedInvalidTimebyToken    
 
 sf.org.log.numMessageBytesReceived:
   brief: The number of bytes Splunk Log Observer receives from ingested logs after decompression, filtering, and throttling are complete.
@@ -767,9 +737,9 @@ sf.org.num.credentials:
   title: sf.org.num.credentials
   
 sf.org.num.crosslink:
-  brief: ???
+  brief: Total number of crosslinks
   description: |
-    ???.
+    Total number of crosslinks.
 
         * Dimension(s):  `orgId`
         * Data resolution: 15 minutes
