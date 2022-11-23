@@ -735,6 +735,16 @@ sf.org.num.credentials:
         * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.credentials
+  
+sf.org.num.crosslink:
+  brief: Total number of crosslinks
+  description: |
+    Total number of crosslinks.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 15 minutes
+  metric_type: gauge
+  title: sf.org.num.crosslink 
 
 sf.org.num.dashboard:
   brief: Total number of dashboards
@@ -861,6 +871,12 @@ sf.org.num.migrationmarker:
   description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: gauge
   title: sf.org.num.migrationmarker
+
+sf.org.num.mutingactive:
+  brief: Infrastructure Monitoring internal metric
+  description: Reserved for Infrastructure Monitoring internal use only.
+  metric_type: gauge
+  title: sf.org.num.mutingactive
 
 sf.org.num.namedtoken:
   brief: Number of access tokens
