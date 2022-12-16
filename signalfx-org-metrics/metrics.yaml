@@ -1799,3 +1799,93 @@ sf.org.ui.num.pagevisits:
   description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.ui.num.pagevisits
+
+sf.org.rum.numSpansReceived:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numSpansReceived
+
+sf.org.rum.numAddSpansCalls:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numAddSpansCalls
+
+sf.org.rum.numSpansDroppedInvalid:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedInvalid
+
+sf.org.rum.numSpansReceivedByToken:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numSpansReceivedByToken
+
+sf.org.rum.numSpansDroppedThrottle:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedThrottle
+
+sf.org.rum.numSpanBytesReceivedByToken:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numSpanBytesReceivedByToken
+
+sf.org.rum.numContentBytesReceived:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numContentBytesReceived
+
+
+sf.org.rum.gross.ContentBytesReceived:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.gross.ContentBytesReceived
+
+sf.org.rum.numSpansDroppedOversizeByToken:
+  brief: 
+  description: 
+  metric_type: 
+  title: sf.org.rum.numSpansDroppedOversizeByToken
+
+sf.org.rum.grossSpanBytesReceivedByToken:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.grossSpanBytesReceivedByToken
+
+
+sf.org.rum.numSpansDroppedThrottleByToken:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedThrottleByToken
+
+sf.org.rum.numSpansDroppedInvalidByToken:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedInvalidByToken
+
+sf.org.rum.grossContentBytesReceivedByToken:
+  brief: 
+  description: 
+  metric_type: Counter
+  title: sf.org.rum.grossContentBytesReceivedByToken
+
+
+
+
+
+
+
+
+
+
