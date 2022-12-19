@@ -1811,10 +1811,10 @@ sf.org.rum.numSpansReceived:
   title: sf.org.rum.numSpansReceived
 
 sf.org.rum.numSpansReceivedByToken:
-  brief: The number of spans Splunk APM received for a specific access token
+  brief: The number of spans Splunk RUM received for a specific access token
     after filtering and throttling.
   description: |
-    The number of spans Splunk APM received for a specific access token
+    The number of spans Splunk RUM received for a specific access token
     after filtering and throttling.
 
     * Dimension: orgId, tokenId
@@ -1855,9 +1855,9 @@ sf.org.rum.numSpansDroppedInvalid:
 
 
 sf.org.rum.numSpansDroppedThrottle:
-  brief: The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
+  brief: The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume.
   description: |
-    The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
+    The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume.
 
     * Dimension: orgId
     * Data resolution: 10 seconds
@@ -1865,9 +1865,9 @@ sf.org.rum.numSpansDroppedThrottle:
   title: sf.org.rum.numSpansDroppedThrottle
 
 sf.org.rum.numSpansDroppedThrottleByToken:
-  brief: The number of spans Splunk APM dropped after you exceeded the allowed ingest volume for a specific access token. 
+  brief: The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume for a specific access token. 
   description: |
-    The number of spans Splunk APM dropped after you exceeded the allowed ingest volume for a specific access token. 
+    The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume for a specific access token. 
 
     * Dimension: orgId, tokenId
     * Data resolution: 10 seconds
@@ -1879,7 +1879,7 @@ sf.org.rum.numSpanBytesReceivedByToken:
   brief: The number of bytes Splunk RUM accepts for a specific access token
     for a span after decompression after filtering and throttling.
   description: |
-    The number of bytes Splunk APM accepts for a specific access token
+    The number of bytes Splunk RUM accepts for a specific access token
     for a span after decompression after filtering and throttling.
 
     * Dimensions: orgId, tokenId
