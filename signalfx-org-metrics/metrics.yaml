@@ -1834,9 +1834,9 @@ sf.org.rum.numAddSpansCalls:
   title: sf.org.rum.numAddSpansCalls
 
 sf.org.rum.numAddSpansCallsByToken:
- brief:  The number of calls to the `/v2/trace` endpoint for a specific access token.
+ brief:  The number of calls to the ... endpoint for a specific access token.
  description: |
-    The number of calls to the `/v2/trace` endpoint for a specific access token.
+    The number of calls to the ... endpoint for a specific access token.
 
     * Dimension: orgId, tokenId
     * Data resolution: 10 seconds
@@ -1848,11 +1848,24 @@ sf.org.rum.numSpansDroppedInvalid:
   description: |
     Number of spans dropped because they were invalid. 
 
-    * Dimension: orgId
+    * Dimension: orgId, reason, 
     * Data resolution: 10 seconds
   metric_type: Counter
   title: sf.org.rum.numSpansDroppedInvalid
 
+sf.org.rum.numSpansDroppedInvalidByToken:
+  brief: The number of invalid spans Splunk RUM receives for a specific access
+    token.
+  description: | 
+    The number of invalid spans Splunk RUM receives for a specific
+    access token. A span can be invalid if there is no start time, trace ID, or
+    service associated with it, or if there are too many spans in the trace.
+
+    * Dimensions: orgId, tokenId, reason
+    * Data resolution: 10 seconds
+
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedInvalidByToken
 
 sf.org.rum.numSpansDroppedThrottle:
   brief: The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume.
@@ -1887,6 +1900,18 @@ sf.org.rum.numSpanBytesReceivedByToken:
   metric_type: Counter
   title: sf.org.rum.numSpanBytesReceivedByToken
 
+
+sf.org.rum.grossSpanBytesReceivedByToken:
+    brief: The total number of bytes Splunk RUM accepts for a specific access token for a span after decompression after filtering and throttling for each token.
+    description: |
+      The total number of bytes Splunk RUM accepts for a specific access token
+      for a span after decompression after filtering and throttling for each token.
+
+      * Dimensions: orgId, tokenId
+      * Data resolution: 10 seconds
+      metric_type: Counter
+      title: sf.org.rum.grossSpanBytesReceivedByToken
+
 sf.org.rum.numContentBytesReceived:
   brief: The volume of bytes Splunk RUM receives after filtering and throttling.
   description: |
@@ -1912,33 +1937,15 @@ sf.org.rum.gross.ContentBytesReceived:
   brief: The total number of bytes Splunk RUM receives after filtering and throttling. This content can be compressed.
   description: |
     The total number of bytes Splunk RUM receives after filtering and throttling. This content can be compressed.
-      * Dimensions: orgId
-      * Data resolution: 10 seconds
+    
+    * Dimensions: orgId
+    * Data resolution: 10 seconds
 
   metric_type: Counter
   title: sf.org.rum.gross.ContentBytesReceived
 
 
 
-#sf.org.rum.grossSpanBytesReceivedByToken:
-#    brief: 
-#    description: 
-#    metric_type: Counter
-#    title: sf.org.rum.grossSpanBytesReceivedByToken
-
-sf.org.rum.numSpansDroppedInvalidByToken:
-  brief: The number of invalid spans Splunk RUM receives for a specific access
-    token.
-  description: | 
-    The number of invalid spans Splunk RUM receives for a specific
-    access token. A span can be invalid if there is no start time, trace ID, or
-    service associated with it, or if there are too many spans in the trace.
-
-    * Dimensions: orgId, tokenId
-    * Data resolution: 10 seconds
-
-  metric_type: Counter
-  title: sf.org.rum.numSpansDroppedInvalidByToken
 
 
 
