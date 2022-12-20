@@ -1824,9 +1824,9 @@ sf.org.rum.numSpansReceivedByToken:
 
 
 sf.org.rum.numAddSpansCalls:
-  brief:  The number of calls to the `/v2/trace` endpoint.
+  brief:  The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint.
   description: |
-    The number of calls to the `/v2/trace` endpoint.
+    The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint.
 
     * Dimension: orgId
     * Data resolution: 10 seconds
@@ -1834,9 +1834,9 @@ sf.org.rum.numAddSpansCalls:
   title: sf.org.rum.numAddSpansCalls
 
 sf.org.rum.numAddSpansCallsByToken:
- brief:  The number of calls to the ... endpoint for a specific access token.
+ brief:  The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint for a specific access token.
  description: |
-    The number of calls to the ... endpoint for a specific access token.
+    The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint for a specific access token.
 
     * Dimension: orgId, tokenId
     * Data resolution: 10 seconds
