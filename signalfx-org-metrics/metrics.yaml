@@ -1846,7 +1846,7 @@ sf.org.rum.numAddSpansCallsByToken:
 sf.org.rum.numSpansDroppedInvalid:
   brief: Number of spans dropped because they were invalid. 
   description: |
-    Number of spans dropped because they were invalid. 
+    Number of spans dropped because they were invalid. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
 
     * Dimension: orgId, reason, 
     * Data resolution: 10 seconds
@@ -1858,8 +1858,7 @@ sf.org.rum.numSpansDroppedInvalidByToken:
     token.
   description: | 
     The number of invalid spans Splunk RUM receives for a specific
-    access token. A span can be invalid if there is no start time, trace ID, or
-    service associated with it, or if there are too many spans in the trace.
+    access token. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
 
     * Dimensions: orgId, tokenId, reason
     * Data resolution: 10 seconds
@@ -1887,6 +1886,19 @@ sf.org.rum.numSpansDroppedThrottleByToken:
   metric_type: Counter
   title: sf.org.rum.numSpansDroppedThrottleByToken
 
+
+
+sf.org.rum.numSpanBytesReceived:
+  brief: The number of bytes Splunk RUM accepts
+    for a span after decompression after filtering and throttling.
+  description: |
+    The number of bytes Splunk RUM accepts
+    for a span after decompression after filtering and throttling.
+
+    * Dimensions: orgId, tokenId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpanBytesReceived
 
 sf.org.rum.numSpanBytesReceivedByToken:
   brief: The number of bytes Splunk RUM accepts for a specific access token
