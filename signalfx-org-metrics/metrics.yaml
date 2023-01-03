@@ -378,6 +378,46 @@ sf.org.datapointsTotalCountByToken:
         * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.datapointsTotalCountByToken  
+ 
+sf.org.datainventoryAdded:
+  brief: DEF
+  description: |
+    DEF
+    
+        * Dimension(s): `orgId`, ?
+        * Data resolution: ?
+  metric_type: ?
+  title: sf.org.datainventoryAdded
+  
+sf.org.datainventory.latestTimestamp:
+  brief: DEF
+  description: |
+    DEF
+    
+        * Dimension(s): `orgId`, ?
+        * Data resolution: ?
+  metric_type: ?
+  title: sf.org.datainventory.latestTimestamp 
+  
+sf.org.datainventory.mtses:
+  brief: DEF
+  description: |
+    DEF
+    
+        * Dimension(s): `orgId`, ?
+        * Data resolution: ?
+  metric_type: ?
+  title: sf.org.datainventory.mtses 
+  
+sf.org.datainventory.resources:
+  brief: DEF
+  description: |
+    DEF
+    
+        * Dimension(s): `orgId`, ?
+        * Data resolution: ?
+  metric_type: ?
+  title: sf.org.datainventory.resources 
   
 sf.org.grossDatapointsReceived:
   brief: Infrastructure Monitoring internal metric
