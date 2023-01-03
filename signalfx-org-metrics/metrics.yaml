@@ -379,44 +379,43 @@ sf.org.datapointsTotalCountByToken:
   metric_type: counter
   title: sf.org.datapointsTotalCountByToken  
  
-sf.org.datainventoryAdded:
+sf.org.datainventory.datapointsAdded:
   brief: DEF
   description: |
-    DEF
+    It's **only** generated when metrics are pushed with Metric Streams.
     
-        * Dimension(s): `orgId`, ?
-        * Data resolution: ?
-  metric_type: ?
-  title: sf.org.datainventoryAdded
+        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+        * Data resolution: 10 seconds
+  metric_type: count
+  title: sf.org.datainventory.datapointsAdded 
   
 sf.org.datainventory.latestTimestamp:
   brief: DEF
-  description: |
-    DEF
+  description: |   
     
-        * Dimension(s): `orgId`, ?
-        * Data resolution: ?
-  metric_type: ?
+        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+        * Data resolution: 10 seconds
+  metric_type: gauge
   title: sf.org.datainventory.latestTimestamp 
   
 sf.org.datainventory.mtses:
   brief: DEF
   description: |
-    DEF
+    It's **only** generated when metrics are polled.
     
-        * Dimension(s): `orgId`, ?
-        * Data resolution: ?
-  metric_type: ?
+        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+        * Data resolution: 10 seconds
+  metric_type: gauge
   title: sf.org.datainventory.mtses 
   
 sf.org.datainventory.resources:
   brief: DEF
   description: |
-    DEF
+    It's **only** generated when metrics are polled.
     
-        * Dimension(s): `orgId`, ?
-        * Data resolution: ?
-  metric_type: ?
+        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+        * Data resolution: 10 seconds
+  metric_type: gauge
   title: sf.org.datainventory.resources 
   
 sf.org.grossDatapointsReceived:
