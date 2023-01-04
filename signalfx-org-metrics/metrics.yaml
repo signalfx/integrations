@@ -380,9 +380,9 @@ sf.org.datapointsTotalCountByToken:
   title: sf.org.datapointsTotalCountByToken  
  
 sf.org.datainventory.datapointsAdded:
-  brief: DEF
+  brief: Number of data points retrieved from the AWS integration
   description: |
-    It's **only** generated when metrics are pushed with Metric Streams.
+    Number of data points retrieved from the AWS integration
     
         * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
         * Data resolution: 10 seconds
@@ -390,8 +390,9 @@ sf.org.datainventory.datapointsAdded:
   title: sf.org.datainventory.datapointsAdded 
   
 sf.org.datainventory.latestTimestamp:
-  brief: DEF
+  brief: Timestamp of the last data point retrieved from an integration
   description: |   
+    Timestamp of the last data point retrieved from an integration
     
         * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
         * Data resolution: 10 seconds
@@ -399,9 +400,9 @@ sf.org.datainventory.latestTimestamp:
   title: sf.org.datainventory.latestTimestamp 
   
 sf.org.datainventory.mtses:
-  brief: DEF
+  brief: Number of MTS retrieved from an AWS integration
   description: |
-    It's **only** generated when metrics are polled.
+    Number of Metric Time Series retrieved from an AWS integration. It’s only generated when AWS metrics are polled, and is not available with Metric Streams
     
         * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
         * Data resolution: 10 seconds
@@ -409,9 +410,9 @@ sf.org.datainventory.mtses:
   title: sf.org.datainventory.mtses 
   
 sf.org.datainventory.resources:
-  brief: DEF
+  brief: Number of AWS resources polled by an AWS integration 
   description: |
-    It's **only** generated when metrics are polled.
+    Number of AWS resources polled by an AWS integration. It's only generated when AWS metrics are polled, and is not available with Metric Streams
     
         * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
         * Data resolution: 10 seconds
