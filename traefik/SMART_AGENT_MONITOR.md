@@ -110,7 +110,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 ## Metrics
 
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 These are the metrics available for this integration.

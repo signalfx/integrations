@@ -66,7 +66,7 @@ Configuration](../monitor-config.html#common-configuration).**
 
 These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
 
 

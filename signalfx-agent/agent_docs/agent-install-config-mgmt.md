@@ -55,7 +55,7 @@ To install the role from GitHub:
 The Smart Agent Ansible role uses the following variables:
 
 * `sfx_agent_config`: A mapping that Ansible converts to the Smart Agent configuration YAML file.
-  See [Agent Configuration](https://docs.signalfx.com/en/latest/integrations/agent/config-schema.html)
+  See [Agent Configuration](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#configure-the-smart-agent)
   for a full list of acceptable options and their default values. In this mapping, replace
   `<access_token>` with the access token value you obtained previously, as described in the
   section [Prerequisites for all platforms](#prerequisites-for-all-platforms).
@@ -289,7 +289,7 @@ To verify that your installation and configuration is working:
 
   The charts display metrics from your infrastructure.
 
-  To learn more, see [Built-In Dashboards and Charts](https://docs.signalfx.com/en/latest/getting-started/built-in-content/built-in-dashboards.html).
+  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/Observability/data-visualization/dashboards/built-in-dashboards.html).
 
 * For Kubernetes monitoring, perform these steps:
   1. In SignalFx, from the main menu select **Infrastructure** > **Kubernetes Navigator** > **Cluster map**.
@@ -298,10 +298,10 @@ To verify that your installation and configuration is working:
 
   The detail pane displays details of your cluster and nodes.
 
-  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.signalfx.com/en/latest/integrations/kubernetes/get-around-k8s-navigator.html)
+  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/Observability/infrastructure/monitor/k8s.html)
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
-[Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+[Get started with SignalFx µAPM](https://docs.splunk.com/Observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
 
 
 ## Install the Smart Agent using a Puppet module

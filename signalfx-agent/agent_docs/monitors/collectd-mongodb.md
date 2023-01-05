@@ -38,11 +38,31 @@ Documentation for MongoDB can be found [here](http://docs.mongodb.org/manual/).
 
 If you're monitoring a secured MongoDB deployment, it is a good practice to create a MongoDB user with minimal read-only roles, as follows:
 
+If the monitor is configured to send collection level metrics, you need to create and add this role so your user has permission to run collStats and indexStats 
+against system collections and any collection in the db you're monitoring.
+In the below role, we're adding the appropriate permissions for system collections under the admin db.
+For more details on how to add all your non-admin collections, check https://www.mongodb.com/docs/manual/reference/resource-document/
+
 ```
+use admin
+db.createRole( 
+  {
+    role: "splunkMonitor",
+    privileges: [ { resource: { db: 'admin', collection: 'system.roles' }, actions: [ 'collStats', 'indexStats' ] },
+                  { resource: { db: 'admin', collection: 'system.users' }, actions: [ 'collStats', 'indexStats' ] },
+                  { resource: { db: 'admin', collection: 'system.version' }, actions: [ 'collStats', 'indexStats' ] } ],
+    roles: [ { role: "read", db: "admin" } ]
+  },
+  { w: "majority" , wtimeout: 5000 }
+)
+```
+
+```
+use admin
 db.createUser( {
   user: "collectd",
   pwd: "collectd",
-  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
+  roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" }, {role: "splunkMonitor", db: "admin"} ]
 });
 ```
 
@@ -83,7 +103,7 @@ Configuration](../monitor-config.html#common-configuration).**
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 

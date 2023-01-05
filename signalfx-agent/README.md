@@ -11,7 +11,7 @@ SignalFx Smart Agent is deprecated. For details, see the [Deprecation Notice](ht
 SignalFx Smart Agent Integration installs the Smart Agent application on a single host machine from which you want to collect monitoring data. Smart Agent collects infrastructure monitoring, µAPM, and Kubernetes data.
 
 For other installation options, including bulk deployments to production,
-see [Install and Configure the Smart Agent](https://docs.signalfx.com/en/latest/integrations/agent/agent-install-methods.html).
+see [Install and Configure the Smart Agent](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#install-the-smart-agent).
 
 ## Installation
 

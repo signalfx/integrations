@@ -109,7 +109,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 | `masterDBName` | no | `string` | The "master" database to which the agent first connects to query the list of databases available in the server.  This database should be accessible to the user specified with `connectionString` and `params` below, and that user should have permission to query `pg_database`.  If you want to filter which databases are monitored, use the `databases` option below. (**default:** `postgres`) |
 | `connectionString` | no | `string` | See https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters. |
 | `params` | no | `map of strings` | Parameters to the connection string that can be templated into the connection string with the syntax `{{.key}}`. |
-| `databases` | no | `list of strings` | List of databases to send database-specific metrics about.  If omitted, metrics about all databases will be sent.  This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters). (**default:** `[*]`) |
+| `databases` | no | `list of strings` | List of databases to send database-specific metrics about.  If omitted, metrics about all databases will be sent.  This is an [overridable set](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). (**default:** `[*]`) |
 | `databasePollIntervalSeconds` | no | `integer` | How frequently to poll for new/deleted databases in the DB server. Defaults to the same as `intervalSeconds` if not set. (**default:** `0`) |
 | `logQueries` | no | `bool` | If true, queries will be logged at the info level. (**default:** `false`) |
 | `topQueryLimit` | no | `integer` | The number of top queries to consider when publishing query-related metrics (**default:** `10`) |
@@ -118,7 +118,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 ## Metrics
 
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 These are the metrics available for this integration.
@@ -133,7 +133,7 @@ These are the metrics available for this integration.
  - `postgres_pct_connections` (*gauge*)<br>    The number of connections to this database as a fraction of the maximum number of allowed connections.
  - ***`postgres_query_count`*** (*cumulative*)<br>    Total number of queries executed on the `database`, broken down by `user`.  Note that the accuracy of this metric depends on the PostgreSQL [pg_stat_statements.max config option](https://www.postgresql.org/docs/9.3/pgstatstatements.html#AEN160631) being large enough to hold all queries.
 
- - ***`postgres_query_time`*** (*cumulative*)<br>    Total time taken to execute queries on the `database`, broken down by `user`.
+ - ***`postgres_query_time`*** (*cumulative*)<br>    Total time taken to execute queries on the `database`, broken down by `user`. Measured in ms unless otherwise indicated.
  - ***`postgres_rows_deleted`*** (*cumulative*)<br>    Number of rows deleted from the `table`.
  - ***`postgres_rows_inserted`*** (*cumulative*)<br>    Number of rows inserted into the `table`.
  - ***`postgres_rows_updated`*** (*cumulative*)<br>    Number of rows updated in the `table`.

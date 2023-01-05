@@ -52,7 +52,7 @@ On the same host, download the following configuration files from the
    - Cluster name: For each of your Kubernetes clusters, replace `MY-CLUSTER` with a unique cluster name.
    - Realm: Update the value of `signalFxRealm` with the name of your SignalFx realm.
    - To avoid sending docker and cadvisor metrics from some containers,
-     update the `datapointsToExclude` property. To learn more, see [Filtering](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#filtering).
+     update the `datapointsToExclude` property. To learn more, see [Filtering](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent).
 2. In the clusterrolebinding.yaml file, update `MY_AGENT_NAMESPACE` or the service account token reference with the Smart
    Agent namespace in which you're deploying the agent.
 
@@ -120,7 +120,7 @@ In addition, you can do the following in SignalFx:
 
   The charts display metrics from the infrastructure for that node.
 
-  To learn more, see [Built-In Dashboards and Charts](https://docs.signalfx.com/en/latest/getting-started/built-in-content/built-in-dashboards.html).
+  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/Observability/data-visualization/dashboards/built-in-dashboards.html).
 
 * For Kubernetes monitoring:
   1. In SignalFx, from the main menu select **Infrastructure** > **Kubernetes Navigator** > **Cluster map**.
@@ -129,10 +129,10 @@ In addition, you can do the following in SignalFx:
 
   The detail pane displays details of that cluster and nodes.
 
-  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.signalfx.com/en/latest/integrations/kubernetes/get-around-k8s-navigator.html).
+  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/Observability/infrastructure/monitor/k8s.html).
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
-[Get started with SignalFx µAPM](https://docs.signalfx.com/en/latest/apm/apm-getting-started/apm-index.html).
+[Get started with SignalFx µAPM](https://docs.splunk.com/Observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
 
 ### Uninstall the Smart Agent
 

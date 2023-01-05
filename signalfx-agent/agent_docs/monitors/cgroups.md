@@ -52,14 +52,14 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `cgroups` | no | `list of strings` | The cgroup names to include/exclude, based on the full hierarchy path. This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters). If not provided, this defaults to all cgroups. E.g. to monitor all Docker container cgroups, you could use a value of `["/docker/*"]`. |
+| `cgroups` | no | `list of strings` | The cgroup names to include/exclude, based on the full hierarchy path. This is an [overridable set](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). If not provided, this defaults to all cgroups. E.g. to monitor all Docker container cgroups, you could use a value of `["/docker/*"]`. |
 
 
 ## Metrics
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 
