@@ -1,4 +1,4 @@
-name: build-and-test
+name: test
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   checklinks:
     runs-on: ubuntu-latest
     steps:
-      - name: Check
+      - name: Check links
         uses: gaurav-nelson/github-action-markdown-link-check@v1
   build-tile:
     runs-on: ubuntu-latest
