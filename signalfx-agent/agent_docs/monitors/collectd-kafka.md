@@ -27,7 +27,7 @@ apart from the list of default metrics, kafka.server:type=ZooKeeperClientMetrics
 is a good metric to monitor since it gives an understanding of how long brokers wait for
 requests to Zookeeper to be completed. Since Zookeeper is an integral part of a Kafka cluster,
 monitoring it using the [Zookeeper
-monitor](https://docs.splunk.com/Observability/gdi/zookeeper/zookeeper.html)
+monitor](https://docs.splunk.com/observability/gdi/zookeeper/zookeeper.html)
 is recommended. It is also a good idea to monitor disk utilization and network metrics of
 the underlying host.
 
@@ -91,7 +91,7 @@ The **nested** `values` config object has the following fields:
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 This monitor will also emit by default any metrics that are not listed below.

@@ -109,7 +109,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 | `masterDBName` | no | `string` | The "master" database to which the agent first connects to query the list of databases available in the server.  This database should be accessible to the user specified with `connectionString` and `params` below, and that user should have permission to query `pg_database`.  If you want to filter which databases are monitored, use the `databases` option below. (**default:** `postgres`) |
 | `connectionString` | no | `string` | See https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters. |
 | `params` | no | `map of strings` | Parameters to the connection string that can be templated into the connection string with the syntax `{{.key}}`. |
-| `databases` | no | `list of strings` | List of databases to send database-specific metrics about.  If omitted, metrics about all databases will be sent.  This is an [overridable set](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). (**default:** `[*]`) |
+| `databases` | no | `list of strings` | List of databases to send database-specific metrics about.  If omitted, metrics about all databases will be sent.  This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). (**default:** `[*]`) |
 | `databasePollIntervalSeconds` | no | `integer` | How frequently to poll for new/deleted databases in the DB server. Defaults to the same as `intervalSeconds` if not set. (**default:** `0`) |
 | `logQueries` | no | `bool` | If true, queries will be logged at the info level. (**default:** `false`) |
 | `topQueryLimit` | no | `integer` | The number of top queries to consider when publishing query-related metrics (**default:** `10`) |
@@ -118,7 +118,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 ## Metrics
 
 Metrics that are categorized as
-[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 These are the metrics available for this integration.

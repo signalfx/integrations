@@ -38,7 +38,7 @@ postgresql:
     yamlName: params
   - default: '[*]'
     doc: List of databases to send database-specific metrics about.  If omitted, metrics
-      about all databases will be sent.  This is an [overridable set](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent).
+      about all databases will be sent.  This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent).
     elementKind: string
     required: false
     type: list

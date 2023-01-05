@@ -42,14 +42,14 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `interfaces` | no | `list of strings` | The network interfaces to send metrics about. This is an [overridable set](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). (**default:** `[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]`) |
+| `interfaces` | no | `list of strings` | The network interfaces to send metrics about. This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). (**default:** `[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]`) |
 
 
 ## Metrics
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 

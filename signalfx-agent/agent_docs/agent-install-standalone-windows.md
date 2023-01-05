@@ -97,7 +97,7 @@ To start the Smart Agent as a Windows service, run the following command in a co
   ```
 
 To learn about other Windows service options, see
-[Service Configuration](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#install-the-smart-agent).
+[Service Configuration](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#install-the-smart-agent).
 
 ### Verify the Smart Agent
 
@@ -109,7 +109,7 @@ To verify your installation and configuration, perform these steps:
 
   The charts display metrics from your infrastructure.
 
-  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/Observability/data-visualization/dashboards/built-in-dashboards.html).
+  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/observability/data-visualization/dashboards/built-in-dashboards.html).
 
 * For Kubernetes monitoring, perform these steps:
   1. In SignalFx, from the main menu select **Infrastructure** > **Kubernetes Navigator** > **Cluster map**.
@@ -118,10 +118,10 @@ To verify your installation and configuration, perform these steps:
 
   The detail pane on the right hand side of the page displays details of your cluster and nodes.
 
-  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/Observability/infrastructure/monitor/k8s.html)
+  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/observability/infrastructure/monitor/k8s.html)
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
-  [Get started with SignalFx µAPM](https://docs.splunk.com/Observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
+  [Get started with SignalFx µAPM](https://docs.splunk.com/observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
 
 ### Uninstall the Smart Agent
 

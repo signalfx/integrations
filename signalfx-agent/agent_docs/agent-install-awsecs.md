@@ -34,7 +34,7 @@ Edit the signalfx-agent-task.json file and make these replacements:
 | `MY_ACCESS_TOKEN`       | Your SignalFx access token. See [Prerequisites](#prerequisites).                                                                                                                                                                                                |
 | `MY_INGEST_URL`         | `https://ingest.<REALM>.signalfx.com`. Replace `<REALM>` with your realm. See [Prerequisites](#prerequisites)                                                                                                                                                   |
 | `MY_API_URL`            | `https://api.<REALM>.signalfx.com`. Replace `<REALM>` with your realm. See [Prerequisites](#prerequisites)                                                                                                                                                      |
-| `MY_TRACE_ENDPOINT_URL` | `null`. The Smart Agent only uses the property for Microservices APM. To learn more about the Smart Agent and Microservice APM, see [Deploy a SignalFx Smart Agent for µAPM](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html). |
+| `MY_TRACE_ENDPOINT_URL` | `null`. The Smart Agent only uses the property for Microservices APM. To learn more about the Smart Agent and Microservice APM, see [Deploy a SignalFx Smart Agent for µAPM](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html). |
 
 ### Edit additional options
 
@@ -110,7 +110,7 @@ To create this service in the ECS web admin console:
 
   The charts display metrics from the infrastructure for that node.
 
-  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/Observability/data-visualization/dashboards/built-in-dashboards.html).
+  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/observability/data-visualization/dashboards/built-in-dashboards.html).
 
 * For Kubernetes monitoring, perform these steps:
   1. In SignalFx, from the main menu select **Infrastructure** > **Kubernetes Navigator** > **Cluster map**.
@@ -119,10 +119,10 @@ To create this service in the ECS web admin console:
 
   The detail pane on the right hand side of the page displays details of that cluster and nodes.
 
-  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/Observability/infrastructure/monitor/k8s.html).
+  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/observability/infrastructure/monitor/k8s.html).
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
-[Get started with SignalFx µAPM](https://docs.splunk.com/Observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
+[Get started with SignalFx µAPM](https://docs.splunk.com/observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
 
 ### Uninstall the Smart Agent
 

@@ -108,7 +108,7 @@ To verify that your installation and config is working:
 
   The charts display metrics from the infrastructure for that node.
 
-  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/Observability/data-visualization/dashboards/built-in-dashboards.html).
+  To learn more, see [Built-In Dashboards and Charts](https://docs.splunk.com/observability/data-visualization/dashboards/built-in-dashboards.html).
 
 * For Kubernetes monitoring:
   1. In SignalFx UI, from the main menu select **Infrastructure** > **Kubernetes Navigator** > **Cluster map**.
@@ -117,10 +117,10 @@ To verify that your installation and config is working:
 
   The detail pane on the right hand side of the page displays details of your cluster and nodes.
 
-  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/Observability/infrastructure/monitor/k8s.html).
+  To learn more, see [Getting Around the Kubernetes Navigator](https://docs.splunk.com/observability/infrastructure/monitor/k8s.html).
 
 * For APM monitoring, learn how to install, configure, and verify the Smart Agent for Microservices APM (**µAPM**). See
-  [Get started with SignalFx µAPM](https://docs.splunk.com/Observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
+  [Get started with SignalFx µAPM](https://docs.splunk.com/observability/apm/intro-to-apm.html#nav-Introduction-to-Splunk-APM).
 
 ### Uninstall the Smart Agent
 

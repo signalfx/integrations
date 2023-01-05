@@ -19,14 +19,14 @@ It will run the script set in `command` parameter and send the
 [state](https://nagios-plugins.org/doc/guidelines.html#AEN78) of the check depending on the 
 exit code of the command.
 
-It is very similar to [telegraf/exec](https://docs.splunk.com/Observability/gdi/exec/telegraf-exec.html) 
+It is very similar to [telegraf/exec](https://docs.splunk.com/observability/gdi/exec/telegraf-exec.html) 
 monitor configured with `dataFormat: nagios` but:
   - it does not retrieve perfdata metrics, only the state of the script for alerting purpose.
   - it will override the state if exit code == 0 but output string starts with `warn`, `crit` or `unkn` 
   (not case sensitive).
 
 Also the main advantage and purpose of this monitor is to add more context to this status check state 
-thougth SignalFx [events](https://docs.splunk.com/Observability/metrics-and-metadata/view-data-events.html).
+thougth SignalFx [events](https://docs.splunk.com/observability/metrics-and-metadata/view-data-events.html).
 Indeed, in addition to the state metric, it will send an event which includes the output and the error 
 caught from the command execution.
 
@@ -68,7 +68,7 @@ Configuration](../monitor-config.html#common-configuration).**
 
 These are the metrics available for this monitor.
 **All of the metrics emitted from this monitor are categorized as
-[custom](https://docs.splunk.com/Observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)**
+[custom](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)**
 but the ones that are emitted by default from the monitor are ***in bold and italics*** in the list below.
 
 

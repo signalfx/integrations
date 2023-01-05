@@ -39,7 +39,7 @@ This monitor has no configuration options.
 ## Properties
 
 The following
-[properties](https://docs.splunk.com/Observability/metrics-and-metadata/metrics-dimensions-mts.html#properties)
+[properties](https://docs.splunk.com/observability/metrics-and-metadata/metrics-dimensions-mts.html#properties)
 are set on the dimension values of the dimension specified.
 
 | Name | Dimension | Description |
