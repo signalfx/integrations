@@ -30,15 +30,15 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `processes` | no | `list of strings` | A list of process command names to match and send metrics about.  This is the name contained in /proc/<pid>/comm and is limited to just 15 characters on Linux.  Only one of `processes` or `executables` must match a process for it to have metrics generated about it. This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters) that supports regexp and glob values. |
-| `executables` | no | `list of strings` | A list of process executable paths to match against and send metrics about.  This is the binary executable that is symlinked in the /proc/<pid>/exe file on Linux.  This must match the full path.  Only one of `processes` or `executables` must match a process for it to have metrics generated about it. This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters) that supports regexp and glob values. |
+| `processes` | no | `list of strings` | A list of process command names to match and send metrics about.  This is the name contained in /proc/<pid>/comm and is limited to just 15 characters on Linux.  Only one of `processes` or `executables` must match a process for it to have metrics generated about it. This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent) that supports regexp and glob values. |
+| `executables` | no | `list of strings` | A list of process executable paths to match against and send metrics about.  This is the binary executable that is symlinked in the /proc/<pid>/exe file on Linux.  This must match the full path.  Only one of `processes` or `executables` must match a process for it to have metrics generated about it. This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent) that supports regexp and glob values. |
 
 
 ## Metrics
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 
