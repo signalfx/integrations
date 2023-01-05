@@ -1,0 +1,27 @@
+name: build-and-test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  checklinks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+  build-tile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip' # caching pip dependencies
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - run: ./build
