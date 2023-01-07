@@ -1891,8 +1891,7 @@ sf.org.rum.numSpansDroppedThrottleByToken:
 sf.org.rum.numSpanBytesReceived:
   brief:  The bytes of all the spans accepted and counted by the metric numSpansReceived.
   description: |
-    The number of bytes Splunk RUM accepts
-    for a span after decompression after filtering and throttling.
+    The bytes of all the spans accepted and counted by the metric numSpansReceived.
 
     * Dimensions: orgId, tokenId
     * Data resolution: 10 seconds
