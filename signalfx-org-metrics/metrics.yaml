@@ -1889,8 +1889,7 @@ sf.org.rum.numSpansDroppedThrottleByToken:
 
 
 sf.org.rum.numSpanBytesReceived:
-  brief: The number of bytes Splunk RUM accepts
-    for a span after decompression after filtering and throttling.
+  brief:  The bytes of all the spans accepted and counted by the metric numSpansReceived.
   description: |
     The number of bytes Splunk RUM accepts
     for a span after decompression after filtering and throttling.
@@ -1901,11 +1900,9 @@ sf.org.rum.numSpanBytesReceived:
   title: sf.org.rum.numSpanBytesReceived
 
 sf.org.rum.numSpanBytesReceivedByToken:
-  brief: The number of bytes Splunk RUM accepts for a specific access token
-    for a span after decompression after filtering and throttling.
+  brief: The bytes of all the spans accepted and counted by the metric numSpansReceived by token. 
   description: |
-    The number of bytes Splunk RUM accepts for a specific access token
-    for a span after decompression after filtering and throttling.
+    The bytes of all the spans accepted and counted by the metric numSpansReceived by token. 
 
     * Dimensions: orgId, tokenId
     * Data resolution: 10 seconds
@@ -1914,10 +1911,9 @@ sf.org.rum.numSpanBytesReceivedByToken:
 
 
 sf.org.rum.grossSpanBytesReceivedByToken:
-    brief: The total number of bytes Splunk RUM accepts for a specific access token for a span after decompression after filtering and throttling for each token.
+    brief: The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
     description: |
-      The total number of bytes Splunk RUM accepts for a specific access token
-      for a span after decompression after filtering and throttling for each token.
+      The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
 
       * Dimensions: orgId, tokenId
       * Data resolution: 10 seconds
@@ -1935,9 +1931,9 @@ sf.org.rum.numContentBytesReceived:
   title: sf.org.rum.numContentBytesReceived
 
 sf.org.rum.grossContentBytesReceivedByToken:
-  brief: The volume of bytes Splunk RUM receives after filtering and throttling for a specific access token.
+  brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded by token. 
   description: |
-    The volume of bytes Splunk RUM receives after filtering and throttling for a specific access token.
+    The possibly compressed wire size of the payloads before the payloads are decompressed and decoded by token.
 
     * Dimensions: orgId, tokenId
     * Data resolution: 10 seconds
@@ -1946,9 +1942,9 @@ sf.org.rum.grossContentBytesReceivedByToken:
 
 
 sf.org.rum.gross.ContentBytesReceived:
-  brief: The total number of bytes Splunk RUM receives after filtering and throttling. This content can be compressed.
+  brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
   description: |
-    The total number of bytes Splunk RUM receives after filtering and throttling. This content can be compressed.
+    The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
     
     * Dimensions: orgId
     * Data resolution: 10 seconds
