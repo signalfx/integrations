@@ -1940,7 +1940,7 @@ sf.org.rum.grossContentBytesReceivedByToken:
   title: sf.org.rum.grossContentBytesReceivedByToken
 
 
-sf.org.rum.gross.ContentBytesReceived:
+sf.org.rum.grossContentBytesReceived:
   brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
   description: |
     The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
@@ -1949,7 +1949,7 @@ sf.org.rum.gross.ContentBytesReceived:
     * Data resolution: 10 seconds
 
   metric_type: Counter
-  title: sf.org.rum.gross.ContentBytesReceived
+  title: sf.org.rum.grossContentBytesReceived
 
 
 
