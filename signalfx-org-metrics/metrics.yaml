@@ -1790,7 +1790,8 @@ sf.org.subscription.function:
   description: |
     Number of serverless functions included in the subscription.
     
-    * Data resolution: 2 minutes
+    * Data resolution: 10 seconds
+    
   metric_type: gauge
   title: sf.org.subscription.function
 
@@ -1887,13 +1888,12 @@ sf.org.rum.numSpansDroppedThrottleByToken:
   title: sf.org.rum.numSpansDroppedThrottleByToken
 
 
-
 sf.org.rum.numSpanBytesReceived:
   brief:  The bytes of all the spans accepted and counted by the metric numSpansReceived.
   description: |
     The bytes of all the spans accepted and counted by the metric numSpansReceived.
 
-    * Dimensions: orgId, tokenId
+    * Dimensions: orgId
     * Data resolution: 10 seconds
   metric_type: Counter
   title: sf.org.rum.numSpanBytesReceived
