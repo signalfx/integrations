@@ -114,7 +114,7 @@ The easiest thing to do here is to make sure the
 `com.sun.management.jmxremote.rmi.port` property in your Java app is set to
 the same port as the JMX connect port.  There may be other variations of
 this that say `Connection reset` or `Connection refused` but they all
-generaly indicate a similar cause.
+generally indicate a similar cause.
 
 
 ## Configuration
@@ -174,7 +174,7 @@ The **nested** `values` config object has the following fields:
 ## Metrics
 
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 These are the metrics available for this integration.

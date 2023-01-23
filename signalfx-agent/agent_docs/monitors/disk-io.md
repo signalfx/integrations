@@ -42,7 +42,7 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `disks` | no | `list of strings` | The devices to include/exclude. This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters). (**default:** `[* !/^loop[0-9]+$/ !/^dm-[0-9]+$/]`) |
+| `disks` | no | `list of strings` | The devices to include/exclude. This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). (**default:** `[* !/^loop[0-9]+$/ !/^dm-[0-9]+$/]`) |
 | `counterRefreshInterval` | no | `int64` | (Windows Only) The frequency that wildcards in counter paths should be expanded and how often to refresh counters from configuration. This is expressed as a duration. (**default:** `60s`) |
 | `printValid` | no | `bool` | (Windows Only) Print out the configurations that match available performance counters.  This used for debugging. (**default:** `false`) |
 
@@ -51,7 +51,7 @@ Configuration](../monitor-config.html#common-configuration).**
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 
