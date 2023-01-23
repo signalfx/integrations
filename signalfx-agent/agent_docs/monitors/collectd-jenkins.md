@@ -90,7 +90,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `path` | no | `string` |  |
 | `metricsKey` | **yes** | `string` | Key required for collecting metrics.  The access key located at `Manage Jenkins > Configure System > Metrics > ADD.` If empty, click `Generate`. |
 | `enhancedMetrics` | no | `bool` | Whether to enable enhanced metrics (**default:** `false`) |
-| `excludeJobMetrics` | no | `bool` | Set to *true* to to exclude job metrics retrieved from `/api/json` endpoint (**default:** `false`) |
+| `excludeJobMetrics` | no | `bool` | Set to *true* to exclude job metrics retrieved from `/api/json` endpoint (**default:** `false`) |
 | `includeMetrics` | no | `list of strings` | Used to enable individual enhanced metrics when `enhancedMetrics` is false |
 | `username` | no | `string` | User with security access to jenkins |
 | `apiToken` | no | `string` | API Token of the user |
@@ -105,7 +105,7 @@ Configuration](../monitor-config.html#common-configuration).**
 
 These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
 
 
