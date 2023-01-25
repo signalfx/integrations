@@ -75,7 +75,7 @@ sf.org.apm.numAddSpansCalls:
         * Dimension(s): `orgId`
         * Data resolution: 1 second
   metric_type: counter
-  title: sf.org.apm.numAddSpansCallsByToken
+  title: sf.org.apm.numAddSpansCalls
 
 sf.org.apm.numAddSpansCallsByToken:
   brief: The number of calls to the `/v2/trace` endpoint for a specific access token.
@@ -1271,7 +1271,7 @@ sf.org.numDatapointsReceivedByToken:
 
 sf.org.numEventTimeSeriesCreated:
   brief: Number of event time series created
-  description: |
+  description: | 
     Total number of event time series (ETS) created. For MTS values, see `sf.org.numMetricTimeSeriesCreated`.
 
         * Dimension(s):  `orgId`
@@ -1790,7 +1790,8 @@ sf.org.subscription.function:
   description: |
     Number of serverless functions included in the subscription.
     
-    * Data resolution: 2 minutes
+    * Data resolution: 10 seconds
+    
   metric_type: gauge
   title: sf.org.subscription.function
 
@@ -1799,3 +1800,153 @@ sf.org.ui.num.pagevisits:
   description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.ui.num.pagevisits
+
+sf.org.rum.numSpansReceived:
+  brief: The number of spans Splunk RUM accepts after filtering and throttling. 
+  description: |
+    Number of spans received. 
+
+    * Dimension: orgId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpansReceived
+
+sf.org.rum.numSpansReceivedByToken:
+  brief: The number of spans Splunk RUM received for a specific access token
+    after filtering and throttling.
+  description: |
+    The number of spans Splunk RUM received for a specific access token
+    after filtering and throttling.
+
+    * Dimension: orgId, tokenId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpansReceivedByToken
+
+
+sf.org.rum.numAddSpansCalls:
+  brief:  The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint.
+  description: |
+    The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint.
+
+    * Dimension: orgId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numAddSpansCalls
+
+sf.org.rum.numAddSpansCallsByToken:
+ brief:  The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint for a specific access token.
+ description: |
+    The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint for a specific access token.
+
+    * Dimension: orgId, tokenId
+    * Data resolution: 10 seconds
+ metric_type: Counter
+ title: sf.org.rum.numAddSpansCalls
+
+sf.org.rum.numSpansDroppedInvalid:
+  brief: Number of spans dropped because they were invalid. 
+  description: |
+    Number of spans dropped because they were invalid. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
+
+    * Dimension: orgId, reason, 
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedInvalid
+
+sf.org.rum.numSpansDroppedInvalidByToken:
+  brief: The number of invalid spans Splunk RUM receives for a specific access
+    token.
+  description: | 
+    The number of invalid spans Splunk RUM receives for a specific
+    access token. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
+
+    * Dimensions: orgId, tokenId, reason
+    * Data resolution: 10 seconds
+
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedInvalidByToken
+
+sf.org.rum.numSpansDroppedThrottle:
+  brief: The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume.
+  description: |
+    The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume.
+
+    * Dimension: orgId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedThrottle
+
+sf.org.rum.numSpansDroppedThrottleByToken:
+  brief: The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume for a specific access token. 
+  description: |
+    The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume for a specific access token. 
+
+    * Dimension: orgId, tokenId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpansDroppedThrottleByToken
+
+
+sf.org.rum.numSpanBytesReceived:
+  brief:  The bytes of all the spans accepted and counted by the metric numSpansReceived.
+  description: |
+    The bytes of all the spans accepted and counted by the metric numSpansReceived.
+
+    * Dimensions: orgId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpanBytesReceived
+
+sf.org.rum.numSpanBytesReceivedByToken:
+  brief: The bytes of all the spans accepted and counted by the metric numSpansReceived by token. 
+  description: |
+    The bytes of all the spans accepted and counted by the metric numSpansReceived by token. 
+
+    * Dimensions: orgId, tokenId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numSpanBytesReceivedByToken
+
+
+sf.org.rum.grossSpanBytesReceivedByToken:
+    brief: The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
+    description: |
+      The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
+
+      * Dimensions: orgId, tokenId
+      * Data resolution: 10 seconds
+      metric_type: Counter
+      title: sf.org.rum.grossSpanBytesReceivedByToken
+
+sf.org.rum.numContentBytesReceived:
+  brief: The volume of bytes Splunk RUM receives after filtering and throttling.
+  description: |
+    The volume of bytes Splunk RUM receives after filtering and throttling.
+
+    * Dimensions: orgId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.numContentBytesReceived
+
+sf.org.rum.grossContentBytesReceivedByToken:
+  brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded by token. 
+  description: |
+    The possibly compressed wire size of the payloads before the payloads are decompressed and decoded by token.
+
+    * Dimensions: orgId, tokenId
+    * Data resolution: 10 seconds
+  metric_type: Counter
+  title: sf.org.rum.grossContentBytesReceivedByToken
+
+
+sf.org.rum.grossContentBytesReceived:
+  brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
+  description: |
+    The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
+    
+    * Dimensions: orgId
+    * Data resolution: 10 seconds
+
+  metric_type: Counter
+  title: sf.org.rum.grossContentBytesReceived
