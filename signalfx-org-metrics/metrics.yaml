@@ -624,6 +624,16 @@ sf.org.log.numMessagesReceivedByToken:
   metric_type: counter
   title: sf.org.log.numMessagesReceivedByToken
 
+sf.org.log.numMessageBytesIndexed:
+  brief: Bytes of data stored in Log Observer index after applying pipeline management rules.
+  description: |
+    Bytes of data stored in the Log Observer index after applying pipeline management rules.
+    
+        * Dimension(s): `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.log.numMessageBytesIndexed
+
 sf.org.num.alertmuting:
   brief: Total number of alert muting rules
   description: |
