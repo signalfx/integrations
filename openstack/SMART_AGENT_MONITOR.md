@@ -12,8 +12,8 @@ configuration instructions below.
 
 ## Description
 
-This integration primarily consists of the Smart Agent monitor `collectd/openstack`.
-Below is an overview of that monitor.
+**This integration primarily consists of the Smart Agent monitor `collectd/openstack`.
+Below is an overview of that monitor.**
 
 ### Smart Agent Monitor
 
@@ -51,21 +51,6 @@ monitors:
   authURL: "http://192.168.11.111/identity/v3"
   username: "admin"
   password: "secret"
-  requestBatchSize: 10
-  novaListServersSearchOpts:
-    all_tenants: "TRUE"
-    status: "ACTIVE"
-```
-### Example config using skipVerify and disabling querying server metrics
-```yaml
-monitors:
-- type: collectd/openstack
-  authURL: "https://192.168.11.111/identity/v3"
-  username: "admin"
-  password: "secret"
-  skipVerify: true
-  queryServerMetrics: false
-  queryHypervisorMetrics: false
 ```
 
 
@@ -81,7 +66,7 @@ monitors:  # All monitor config goes under this key
 ```
 
 **For a list of monitor options that are common to all monitors, see [Common
-Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../monitor-config.md#common-configuration).**
+Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../monitor-config.md#common-configuration).**
 
 
 | Config option | Required | Type | Description |
@@ -92,14 +77,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 | `password` | **yes** | `string` | Password to authenticate with keystone identity |
 | `projectName` | no | `string` | Specify the name of Project to be monitored (**default**:"demo") |
 | `projectDomainID` | no | `string` | The project domain (**default**:"default") |
-| `regionName` | no | `string` | The region name for URL discovery, defaults to the first region if multiple regions are available. |
 | `userDomainID` | no | `string` | The user domain id (**default**:"default") |
-| `skipVerify` | no | `bool` | Skip SSL certificate validation (**default:** `false`) |
-| `httpTimeout` | no | `float64` | The HTTP client timeout in seconds for all requests (**default:** `0`) |
-| `requestBatchSize` | no | `integer` | The maximum number of concurrent requests for each metric class (**default:** `5`) |
-| `queryServerMetrics` | no | `bool` | Whether to query server metrics (useful to disable for TripleO Undercloud) (**default:** `true`) |
-| `queryHypervisorMetrics` | no | `bool` | Whether to query hypervisor metrics (useful to disable for TripleO Undercloud) (**default:** `true`) |
-| `novaListServersSearchOpts` | no | `map of strings` | Optional search_opts mapping for collectd-openstack Nova client servers.list(search_opts=novaListServerSearchOpts). For more information see https://docs.openstack.org/api-ref/compute/#list-servers. |
 
 
 ## Metrics
@@ -181,16 +159,16 @@ monitors` after configuring this monitor in a running agent instance.
 
 ### Legacy non-default metrics (version < 4.7.0)
 
-**The following information only applies to agent versions prior to 4.7.0. If
+**The following information only applies to agent version older than 4.7.0. If
 you have a newer agent and have set `enableBuiltInFiltering: true` at the top
 level of your agent config, see the section above. See upgrade instructions in
-[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
+[Old-style whitelist filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-whitelist-filtering).**
 
 If you have a reference to the `whitelist.json` in your agent's top-level
 `metricsToExclude` config option, and you want to emit metrics that are not in
-that allow list, then you need to add an item to the top-level
-`metricsToInclude` config option to override that allow list (see [Inclusion
-filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
 copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions

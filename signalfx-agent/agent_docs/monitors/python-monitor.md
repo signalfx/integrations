@@ -4,7 +4,7 @@
 
 # python-monitor
 
-Monitor Type: `python-monitor` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/subproc/signalfx/python))
+Monitor Type: `python-monitor` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/subproc/signalfx/python))
 
 **Accepts Endpoints**: **Yes**
 
@@ -44,14 +44,14 @@ function should accept two parameters: `config` and `output`.  The `run`
 function will be called on a regular interval, specified by the common
 `intervalSeconds` config option on the monitor config.
 
-Here is [an example of a simple monitor](https://github.com/signalfx/signalfx-agent/tree/main/python/sample/monitor_simple.py).
+Here is [an example of a simple monitor](https://github.com/signalfx/signalfx-agent/tree/master/python/sample/monitor_simple.py).
 
 ## Complex monitor
 
 If you need more power and flexibility in defining your monitor, you can
 use the complex monitor format.  With this, you define a class called
 `Monitor` in a Python module. Here is [a documented example of a complex
-monitor](https://github.com/signalfx/signalfx-agent/tree/main/python/sample/monitor_complex.py).
+monitor](https://github.com/signalfx/signalfx-agent/tree/master/python/sample/monitor_complex.py).
 
 ## Auto-discovery
 

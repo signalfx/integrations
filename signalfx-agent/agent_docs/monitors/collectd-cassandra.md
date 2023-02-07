@@ -4,7 +4,7 @@
 
 # collectd/cassandra
 
-Monitor Type: `collectd/cassandra` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/cassandra))
+Monitor Type: `collectd/cassandra` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/cassandra))
 
 **Accepts Endpoints**: **Yes**
 
@@ -90,20 +90,6 @@ Metrics that are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
-This monitor will also emit by default any metrics that are not listed below.
-
-
- - `counter.cassandra.ClientRequest.CASRead.Latency.Count` (*cumulative*)<br>    Count of transactional read operations since server start.
- - `counter.cassandra.ClientRequest.CASRead.TotalLatency.Count` (*cumulative*)<br>    The total number of microseconds elapsed in servicing client transactional read requests.
-
-    It can be devided by `counter.cassandra.ClientRequest.CASRead.Latency.Count`
-    to find the real time transactional read latency.
-
- - `counter.cassandra.ClientRequest.CASWrite.Latency.Count` (*cumulative*)<br>    Count of transactional write operations since server start.
- - `counter.cassandra.ClientRequest.CASWrite.TotalLatency.Count` (*cumulative*)<br>    The total number of microseconds elapsed in servicing client transactional write requests.
-
-    It can be devided by `counter.cassandra.ClientRequest.CASWrite.Latency.Count`
-    to find the real time transactional write latency.
 
  - ***`counter.cassandra.ClientRequest.RangeSlice.Latency.Count`*** (*cumulative*)<br>    Count of range slice operations since server start. This typically indicates a server overload condition.
 
@@ -122,7 +108,6 @@ This monitor will also emit by default any metrics that are not listed below.
     - one or more clients are directing more load to this server than the others
     - the server is experiencing hardware or software issues and may require maintenance.
 
- - `counter.cassandra.ClientRequest.RangeSlice.TotalLatency.Count` (*cumulative*)<br>    The total number of microseconds elapsed in servicing range slice requests.
  - ***`counter.cassandra.ClientRequest.RangeSlice.Unavailables.Count`*** (*cumulative*)<br>    Count of range slice unavailables since server start. A non-zero value
     means that insufficient replicas were available to fulfil a range slice
     request at the requested consistency level.
@@ -130,7 +115,7 @@ This monitor will also emit by default any metrics that are not listed below.
     This typically means that one or more nodes are down. To fix this condition,
     any down nodes must be restarted, or removed from the cluster.
 
- - ***`counter.cassandra.ClientRequest.Read.Latency.Count`*** (*cumulative*)<br>    Count of read operations since server start.
+ - ***`counter.cassandra.ClientRequest.Read.Latency.Count`*** (*cumulative*)<br>    Count of read operations since server start
  - ***`counter.cassandra.ClientRequest.Read.Timeouts.Count`*** (*cumulative*)<br>    Count of read timeouts since server start. This typically indicates a server overload condition.
 
     If this value is increasing across the cluster then the cluster is too small for the application read load.
@@ -138,11 +123,6 @@ This monitor will also emit by default any metrics that are not listed below.
     If this value is increasing for a single server in a cluster, then one of the following conditions may be true:
     - one or more clients are directing more load to this server than the others
     - the server is experiencing hardware or software issues and may require maintenance.
-
- - `counter.cassandra.ClientRequest.Read.TotalLatency.Count` (*cumulative*)<br>    The total number of microseconds elapsed in servicing client read requests.
-
-    It can be devided by `counter.cassandra.ClientRequest.Read.Latency.Count`
-    to find the real time read latency.
 
  - ***`counter.cassandra.ClientRequest.Read.Unavailables.Count`*** (*cumulative*)<br>    Count of read unavailables since server start. A non-zero value means
     that insufficient replicas were available to fulfil a read request at
@@ -159,11 +139,6 @@ This monitor will also emit by default any metrics that are not listed below.
     - one or more clients are directing more load to this server than the others
     - the server is experiencing hardware or software issues and may require maintenance.
 
- - `counter.cassandra.ClientRequest.Write.TotalLatency.Count` (*cumulative*)<br>    The total number of microseconds elapsed in servicing client write requests.
-
-    It can be devided by `counter.cassandra.ClientRequest.Write.Latency.Count`
-    to find the real time write latency.
-
  - ***`counter.cassandra.ClientRequest.Write.Unavailables.Count`*** (*cumulative*)<br>    Count of write unavailables since server start. A non-zero value means
     that insufficient replicas were available to fulfil a write request at
     the requested consistency level.
@@ -176,34 +151,6 @@ This monitor will also emit by default any metrics that are not listed below.
     not increase steadily over time then the node may be experiencing
     problems completing compaction operations.
 
- - `counter.cassandra.Storage.Exceptions.Count` (*cumulative*)<br>    Number of internal exceptions caught. Under normal exceptions this should be zero.
-
- - ***`counter.cassandra.Storage.Load.Count`*** (*cumulative*)<br>    Storage used for Cassandra data in bytes. Use this metric to see how much storage is being used for data by a Cassandra node.
-
-    The value of this metric is influenced by:
-    - Total data stored into the database
-    - compaction behavior
-
- - `counter.cassandra.Storage.TotalHints.Count` (*cumulative*)<br>    Total hints since node start. Indicates that write operations cannot be
-    delivered to a node, usually because a node is down. If this value is
-    increasing and all nodes are up then there may be some connectivity
-    issue between nodes in the cluster.
-
- - ***`counter.cassandra.Storage.TotalHintsInProgress.Count`*** (*cumulative*)<br>    Total pending hints. Indicates that write operations cannot be
-    delivered to a node, usually because a node is down. If this value is
-    increasing and all nodes are up then there may be some connectivity
-    issue between nodes in the cluster.
-
- - `gauge.cassandra.ClientRequest.CASRead.Latency.50thPercentile` (*gauge*)<br>    50th percentile (median) of Cassandra transactional read latency.
-
- - `gauge.cassandra.ClientRequest.CASRead.Latency.99thPercentile` (*gauge*)<br>    99th percentile of Cassandra transactional read latency.
-
- - `gauge.cassandra.ClientRequest.CASRead.Latency.Max` (*gauge*)<br>    Maximum Cassandra transactional read latency.
- - `gauge.cassandra.ClientRequest.CASWrite.Latency.50thPercentile` (*gauge*)<br>    50th percentile (median) of Cassandra transactional write latency.
-
- - `gauge.cassandra.ClientRequest.CASWrite.Latency.99thPercentile` (*gauge*)<br>    99th percentile of Cassandra transactional write latency.
-
- - `gauge.cassandra.ClientRequest.CASWrite.Latency.Max` (*gauge*)<br>    Maximum Cassandra transactional write latency.
  - `gauge.cassandra.ClientRequest.RangeSlice.Latency.50thPercentile` (*gauge*)<br>    50th percentile (median) of Cassandra range slice latency. This value
     should be similar across all nodes in the cluster. If some nodes have higher
     values than the rest of the cluster then they may have more connected clients
@@ -214,7 +161,7 @@ This monitor will also emit by default any metrics that are not listed below.
     the rest of the cluster then they may have more connected clients or may be
     experiencing heavier than usual compaction load.
 
- - `gauge.cassandra.ClientRequest.RangeSlice.Latency.Max` (*gauge*)<br>    Maximum Cassandra range slice latency.
+ - `gauge.cassandra.ClientRequest.RangeSlice.Latency.Max` (*gauge*)<br>    Maximum Cassandra range slice latency
  - ***`gauge.cassandra.ClientRequest.Read.Latency.50thPercentile`*** (*gauge*)<br>    50th percentile (median) of Cassandra read latency. This value should
     be similar across all nodes in the cluster. If some nodes have higher
     values than the rest of the cluster then they may have more connected
@@ -225,7 +172,7 @@ This monitor will also emit by default any metrics that are not listed below.
     the rest of the cluster then they may have more connected clients or
     may be experiencing heavier than usual compaction load.
 
- - ***`gauge.cassandra.ClientRequest.Read.Latency.Max`*** (*gauge*)<br>    Maximum Cassandra read latency.
+ - ***`gauge.cassandra.ClientRequest.Read.Latency.Max`*** (*gauge*)<br>    Maximum Cassandra read latency
  - ***`gauge.cassandra.ClientRequest.Write.Latency.50thPercentile`*** (*gauge*)<br>    50th percentile (median) of Cassandra write latency. This value should
     be similar across all nodes in the cluster. If some nodes have higher
     values than the rest of the cluster then they may have more connected
@@ -240,6 +187,22 @@ This monitor will also emit by default any metrics that are not listed below.
  - ***`gauge.cassandra.Compaction.PendingTasks.Value`*** (*gauge*)<br>    Number of compaction operations waiting to run. If this value is
     continually increasing then the node may be experiencing problems
     completing compaction operations.
+
+ - ***`gauge.cassandra.Storage.Load.Count`*** (*gauge*)<br>    Storage used for Cassandra data in bytes. Use this metric to see how much storage is being used for data by a Cassandra node.
+
+    The value of this metric is influenced by:
+    - Total data stored into the database
+    - compaction behavior
+
+ - `gauge.cassandra.Storage.TotalHints.Count` (*gauge*)<br>    Total hints since node start. Indicates that write operations cannot be
+    delivered to a node, usually because a node is down. If this value is
+    increasing and all nodes are up then there may be some connectivity
+    issue between nodes in the cluster.
+
+ - ***`gauge.cassandra.Storage.TotalHintsInProgress.Count`*** (*gauge*)<br>    Total pending hints. Indicates that write operations cannot be
+    delivered to a node, usually because a node is down. If this value is
+    increasing and all nodes are up then there may be some connectivity
+    issue between nodes in the cluster.
 
 
 #### Group jvm
@@ -257,6 +220,9 @@ monitor config option `extraGroups`:
 
 ### Non-default metrics (version 4.7.0+)
 
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
+
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -264,6 +230,20 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
+
+### Legacy non-default metrics (version < 4.7.0)
+
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
+
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 
 

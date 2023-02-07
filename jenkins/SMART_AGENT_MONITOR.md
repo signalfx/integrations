@@ -12,8 +12,8 @@ configuration instructions below.
 
 ## Description
 
-This integration primarily consists of the Smart Agent monitor `collectd/jenkins`.
-Below is an overview of that monitor.
+**This integration primarily consists of the Smart Agent monitor `collectd/jenkins`.
+Below is an overview of that monitor.**
 
 ### Smart Agent Monitor
 
@@ -22,9 +22,9 @@ Monitors jenkins by using the
 [jenkins collectd Python
 plugin](https://github.com/signalfx/collectd-jenkins), which collects
 metrics from Jenkins instances by hitting these endpoints:
-[../api/json](https://www.jenkins.io/doc/book/using/remote-access-api/)
+[../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api)
 (job metrics)  and
-[metrics/&lt;MetricsKey&gt;/..](https://plugins.jenkins.io/metrics/)
+[metrics/&lt;MetricsKey&gt;/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin)
 (default and optional Codahale/Dropwizard JVM metrics).
 
 Requires Jenkins 1.580.3 or later, as well as the Jenkins Metrics Plugin (see Setup).
@@ -85,7 +85,7 @@ monitors:  # All monitor config goes under this key
 ```
 
 **For a list of monitor options that are common to all monitors, see [Common
-Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../monitor-config.md#common-configuration).**
+Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../monitor-config.md#common-configuration).**
 
 
 | Config option | Required | Type | Description |
@@ -93,10 +93,8 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 | `pythonBinary` | no | `string` | Path to a python binary that should be used to execute the Python code. If not set, a built-in runtime will be used.  Can include arguments to the binary as well. |
 | `host` | **yes** | `string` |  |
 | `port` | **yes** | `integer` |  |
-| `path` | no | `string` |  |
 | `metricsKey` | **yes** | `string` | Key required for collecting metrics.  The access key located at `Manage Jenkins > Configure System > Metrics > ADD.` If empty, click `Generate`. |
 | `enhancedMetrics` | no | `bool` | Whether to enable enhanced metrics (**default:** `false`) |
-| `excludeJobMetrics` | no | `bool` | Set to *true* to to exclude job metrics retrieved from `/api/json` endpoint (**default:** `false`) |
 | `includeMetrics` | no | `list of strings` | Used to enable individual enhanced metrics when `enhancedMetrics` is false |
 | `username` | no | `string` | User with security access to jenkins |
 | `apiToken` | no | `string` | API Token of the user |
@@ -109,9 +107,9 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitor
 
 ## Metrics
 
-All metrics of this integration are emitted by default; however, **none are categorized as
+Metrics that are categorized as
 [container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
--- they are all custom**.
+(*default*) are ***in bold and italics*** in the list below.
 
 These are the metrics available for this integration.
 
@@ -130,5 +128,30 @@ These are the metrics available for this integration.
  - ***`gauge.jenkins.node.vm.memory.non-heap.used`*** (*gauge*)<br>    Total amount of non-heap memory used
  - ***`gauge.jenkins.node.vm.memory.total.used`*** (*gauge*)<br>    Total Memory used by instance
 
-The agent does not do any built-in filtering of metrics coming out of this
-monitor.
+### Non-default metrics (version 4.7.0+)
+
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
+
+To emit metrics that are not _default_, you can add those metrics in the
+generic monitor-level `extraMetrics` config option.  Metrics that are derived
+from specific configuration options that do not appear in the above list of
+metrics do not need to be added to `extraMetrics`.
+
+To see a list of metrics that will be emitted you can run `agent-status
+monitors` after configuring this monitor in a running agent instance.
+
+### Legacy non-default metrics (version < 4.7.0)
+
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-whitelist-filtering).**
+
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
+

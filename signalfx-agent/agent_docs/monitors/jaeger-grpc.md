@@ -4,7 +4,7 @@
 
 # jaeger-grpc
 
-Monitor Type: `jaeger-grpc` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/jaegergrpc))
+Monitor Type: `jaeger-grpc` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/jaegergrpc))
 
 **Accepts Endpoints**: No
 

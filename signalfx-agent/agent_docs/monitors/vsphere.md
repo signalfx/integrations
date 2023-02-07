@@ -4,7 +4,7 @@
 
 # vsphere
 
-Monitor Type: `vsphere` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/vsphere))
+Monitor Type: `vsphere` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/vsphere))
 
 **Accepts Endpoints**: **Yes**
 
@@ -29,8 +29,8 @@ By default, this refresh takes place every 60 seconds; however, this interval ca
 `InventoryRefreshInterval`.
 
 Compatibility:
-This monitor uses VMware's govmomi SDK, which officially supports vCenter 6.5, 6.7, and 7.0.
-While this monitor may work with vCenter 5.1, 5.5, and 6.0, these versions are not officially supported.
+This monitor uses VMware's govmomi SDK, which officially supports vCenter 6.0, 6.5 and 6.7.
+While this monitor may work with vCenter 5.5 and 5.1, these versions are not officially supported.
 
 Sample YAML configuration:
 ```yaml
@@ -66,13 +66,9 @@ Configuration](../monitor-config.html#common-configuration).**
 | `password` | no | `string` | The vSphere password |
 | `insecureSkipVerify` | no | `bool` | Whether we verify the server's certificate chain and host name (**default:** `false`) |
 | `inventoryRefreshInterval` | no | `int64` | How often to reload the inventory and inventory metrics (**default:** `60s`) |
-| `perfBatchSize` | no | `integer` | Maximum number of inventory objects to be queried for performance data per request. Set this value to zero (0) to request performance data for all inventory objects at a time. (**default:** `10`) |
-| `filter` | no | `string` | An 'expr' expression to limit the inventory traversed by the monitor. Leave blank or omit to traverse and get metrics for the entire vSphere inventory. Otherwise, this expression is evaluated per cluster. If the expression evaluates to true, metrics are collected for the objects in the cluster, otherwise it is skipped. Made available to the expr expression environment are the variables: `Datacenter` and `Cluster`. For example: filter: "Datacenter == 'MyDatacenter' && Cluster == 'MyCluster'" The above expr value will cause metrics collection for only the given datacenter + cluster. See https://github.com/antonmedv/expr for more advanced syntax. |
-| `vmHostDimension` | no | `string` | The host dimension value set for monitored VMs. The options are: `ip`, `hostname` and `disable`. Default is `ip`. `ip`       : the VM IP if available `hostname` : the VM Hostname if available `disable`  : the vsphere monitor does not set the host dimension on the VM metrics (**default:** `ip`) |
 | `tlsCACertPath` | no | `string` | Path to the ca file |
 | `tlsClientCertificatePath` | no | `string` | Configure client certs. Both tlsClientKeyPath and tlsClientCertificatePath must be present. The files must contain PEM encoded data. Path to the client certificate |
 | `tlsClientKeyPath` | no | `string` | Path to the keyfile |
-| `soapClientDebug` | no | `bool` | When set to true, all the SOAP requests and responses will be logged. This generates lots of data, only use it for debugging. For this setting to take effect, make sure to restart the agent (**default:** `false`) |
 
 
 ## Metrics
@@ -343,6 +339,9 @@ monitor config option `extraGroups`:
 
 ### Non-default metrics (version 4.7.0+)
 
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
+
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -350,6 +349,20 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
+
+### Legacy non-default metrics (version < 4.7.0)
+
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
+
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions
 
@@ -364,7 +377,6 @@ dimensions may be specific to certain metrics.
 | `guest_family` | For virtual machine metrics, the guest operating system family for the virtual machine to which this metric pertains. For example 'linuxGuest'. |
 | `guest_fullname` | For virtual machine metrics, the full name of the guest operating system for the virtual machine to which the metric pertains. For example 'Windows 2000 Professional'. |
 | `guest_id` | For virtual machine metrics, the guest identifier of the virtual machine to which the metric pertains. |
-| `host` | For virtual machine metrics, the host dimension will be set to the VM IP instead of the running agent hostname. This behavior is configurable; check the `vmHostDimension` option for details. |
 | `object` | For some metrics, the source of the metric. For example, the identifier of a NIC for a network metric, or the processor number for a CPU metric. |
 | `object_type` | The type of the resource to which the metric pertains. Values can be 'VirtualMachine' for a VM, or 'HostSystem' for an ESX host. |
 | `ref_id` | The unique vCenter identifier for the resource to which the metric pertains. |
