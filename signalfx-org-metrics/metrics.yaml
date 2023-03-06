@@ -1093,6 +1093,16 @@ sf.org.numBackfillCallsByToken:
   metric_type: counter
   title: sf.org.numBackfillCallsByToken
 
+sf.org.numBadMetricMetricTimeSeriesCreateCalls:
+  brief: Number of bad calls to create MTS
+  description: |
+    Number of calls to create MTS that have failed.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numBadMetricMetricTimeSeriesCreateCalls
+
 sf.org.numCustomMetrics:
   brief: Number of custom metrics monitored
   description: |
