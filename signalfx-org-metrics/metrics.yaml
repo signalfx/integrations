@@ -829,7 +829,7 @@ sf.org.num.gcpStackdriverClientCallCount (DEPRECATED):
   brief: Number of calls to each Stackdriver client method
   description: |
     THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE sf.org.num.gcpServiceClientCallCount INSTEAD
+    PLEASE USE `sf.org.num.gcpServiceClientCallCount` INSTEAD
     Number of calls to each Stackdriver client method.
 
         * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
@@ -841,7 +841,7 @@ sf.org.num.gcpStackdriverClientCallCountErrors (DEPRECATED):
   brief: Number of calls to each Stackdriver client method that threw errors
   description: |
     THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE sf.org.num.gcpServiceClientCallCountErrors INSTEAD
+    PLEASE USE `sf.org.num.gcpServiceClientCallCountErrors` INSTEAD
     Number of calls to each Stackdriver client method that threw errors.
 
         * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
@@ -853,7 +853,7 @@ sf.org.num.gcpStackdriverClientCallCountThrottles (DEPRECATED):
   brief: Number of calls to each Stackdriver client method that were throttled
   description: |
     THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE sf.org.num.gcpServiceClientCallCountThrottles INSTEAD
+    PLEASE USE `sf.org.num.gcpServiceClientCallCountThrottles` INSTEAD
     Number of calls to each Stackdriver client method that were throttled.
 
         * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
