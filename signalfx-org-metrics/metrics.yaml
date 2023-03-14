@@ -825,9 +825,11 @@ sf.org.num.eventtype:
   metric_type: gauge
   title: sf.org.num.eventtype
 
-sf.org.num.gcpStackdriverClientCallCount:
+sf.org.num.gcpStackdriverClientCallCount (DEPRECATED):
   brief: Number of calls to each Stackdriver client method
   description: |
+    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
+    PLEASE USE `sf.org.num.gcpServiceClientCallCount` INSTEAD
     Number of calls to each Stackdriver client method.
 
         * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
@@ -835,9 +837,11 @@ sf.org.num.gcpStackdriverClientCallCount:
   metric_type: counter
   title: sf.org.num.gcpStackdriverClientCallCount
 
-sf.org.num.gcpStackdriverClientCallCountErrors:
+sf.org.num.gcpStackdriverClientCallCountErrors (DEPRECATED):
   brief: Number of calls to each Stackdriver client method that threw errors
   description: |
+    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
+    PLEASE USE `sf.org.num.gcpServiceClientCallCountErrors` INSTEAD
     Number of calls to each Stackdriver client method that threw errors.
 
         * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
@@ -845,15 +849,47 @@ sf.org.num.gcpStackdriverClientCallCountErrors:
   metric_type: counter
   title: sf.org.num.gcpStackdriverClientCallCountErrors
 
-sf.org.num.gcpStackdriverClientCallCountThrottles:
+sf.org.num.gcpStackdriverClientCallCountThrottles (DEPRECATED):
   brief: Number of calls to each Stackdriver client method that were throttled
   description: |
+    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
+    PLEASE USE `sf.org.num.gcpServiceClientCallCountThrottles` INSTEAD
     Number of calls to each Stackdriver client method that were throttled.
 
         * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.gcpStackdriverClientCallCountThrottles
+
+sf.org.num.gcpServiceClientCallCount:
+  brief: Number of calls to each GCP API client method
+  description: |
+    Number of calls to each GCP API client method.
+
+        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.num.gcpSeviceClientCallCount
+
+sf.org.num.gcpServiceClientCallCountErrors:
+  brief: Number of calls to each GCP API client method that threw errors
+  description: |
+    Number of calls to each GCP API client method that threw errors.
+
+        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.num.gcpServiceClientCallCountErrors
+
+sf.org.num.gcpServiceClientCallCountThrottles:
+  brief: Number of calls to each GCP API client method that were throttled
+  description: |
+    Number of calls to each GCP API client method that were throttled.
+
+        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.num.gcpServiceClientCallCountThrottles
 
 sf.org.num.metric:
   brief: Number of unique metrics across all MTS
