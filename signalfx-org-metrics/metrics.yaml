@@ -953,6 +953,15 @@ sf.org.num.property:
   metric_type: gauge
   title: sf.org.num.property
 
+sf.org.num.role:
+  brief: Number of roles in your system
+  description: |
+    Number of roles in your system.
+        * Dimension(s):  `orgId`
+        * Data resolution: 63 minutes
+  metric_type: gauge
+  title: sf.org.num.role
+
 sf.org.num.service:
   brief: Infrastructure Monitoring internal metric
   description: Reserved for Infrastructure Monitoring internal use only.
@@ -1093,15 +1102,45 @@ sf.org.numBackfillCallsByToken:
   metric_type: counter
   title: sf.org.numBackfillCallsByToken
 
-sf.org.numBadMetricMetricTimeSeriesCreateCalls:
-  brief: Number of bad calls to create MTS
+sf.org.numBadDimensionMetricTimeSeriesCreateCalls:
+  brief: Number of bad calls to create MTS due to an error with dimensions
   description: |
-    Number of calls to create MTS that have failed.
+    Number of calls to create MTS that have failed due to an error with dimensions.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numBadDimensionMetricTimeSeriesCreateCalls
+
+sf.org.numBadDimensionMetricTimeSeriesCreateCallsByToken:
+  brief: Number of bad calls to create MTS due to an error with dimensions, per token 
+  description: |
+    Number of calls to create MTS that have failed due to an error with dimensions, per token.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 35 seconds
+  metric_type: counter
+  title: sf.org.numBadDimensionMetricTimeSeriesCreateCallsByToken
+
+sf.org.numBadMetricMetricTimeSeriesCreateCalls:
+  brief: Number of bad calls to create MTS due to an error with metrics
+  description: |
+    Number of calls to create MTS that have failed due to an error with metrics.
 
         * Dimension(s):  `orgId`
         * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numBadMetricMetricTimeSeriesCreateCalls
+  
+sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken:
+  brief: Number of bad calls to create MTS due to an error with metrics, per token 
+  description: |
+    Number of calls to create MTS that have failed due to an error with metrics, per token.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 35 seconds
+  metric_type: counter
+  title: sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken
 
 sf.org.numCustomMetrics:
   brief: Number of custom metrics monitored
