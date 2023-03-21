@@ -1386,19 +1386,6 @@ sf.org.numEventsIngestedByToken:
   metric_type: counter
   title: sf.org.numEventsIngestedByToken
 
-sf.org.numEventsReceived:
-  brief: Infrastructure Monitoring internal metric
-  description: |
-    Reserved for Infrastructure Monitoring internal use only.
-  metric_type: null
-  title: sf.org.numEventsReceived
-
-sf.org.numEventsReceivedByToken:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
-  metric_type: null
-  title: sf.org.numEventsReceivedByToken
-
 sf.org.numHighResolutionMetrics:
   brief: Number of high resolution metrics monitored
   description: |
