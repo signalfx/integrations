@@ -1361,30 +1361,19 @@ sf.org.numEventsDroppedThrottleByToken:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numEventsDroppedThrottleByToken
-
-sf.org.numEventsIngested:
-  brief: Number of custom events received via the /event POST API
+  
+sf.org.numEventsReceived:
+  brief: Infrastructure Monitoring internal metric
   description: |
-    Number of custom events received by Infrastructure Monitoring through the /event POST
-    API.
+    Reserved for Infrastructure Monitoring internal use only.
+  metric_type: null
+  title: sf.org.numEventsReceived
 
-        * Dimension(s):  `orgId, category`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.numEventsIngested
-
-sf.org.numEventsIngestedByToken:
-  brief: |
-    For each token, this is the number of custom events sent by the *POST* `/event` operation.
-  description: |
-    For each token, this is the number of custom events sent by the *POST* `/event` operation.
-    The sum of all the values might be less than the value of `sf.org.numEventsIngested`. To learn more,
-    see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
-
-        * Dimension(s):  `orgId`, `tokenId`, `category`
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.numEventsIngestedByToken
+sf.org.numEventsReceivedByToken:
+  brief: Infrastructure Monitoring internal metric
+  description: Reserved for Infrastructure Monitoring internal use only.
+  metric_type: null
+  title: sf.org.numEventsReceivedByToken  
 
 sf.org.numHighResolutionMetrics:
   brief: Number of high resolution metrics monitored
