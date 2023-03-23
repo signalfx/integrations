@@ -1070,6 +1070,36 @@ sf.org.numAddEventsCallsByToken:
   metric_type: counter
   title: sf.org.numAddEventsCallsByToken
 
+sf.org.numApmApiCalls:
+  brief: Number of calls made to APM’s public APIs
+  description: |
+    Number of calls made to APM’s public APIs.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numApmApiCalls
+
+sf.org.numApmBundledMetrics:
+  brief: APM Bundled Metrics limit for your org
+  description: |
+    APM Bundled Metrics limit for your org.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 minutes
+  metric_type: gauge
+  title: sf.org.numApmBundledMetrics
+
+sf.org.numApmBundledMetricsByToken:
+  brief: APM Bundled Metrics limit for your org, for a token
+  description: |
+    APM Bundled Metrics limit for your org for a specific token.
+
+        * Dimension(s):  `orgId`, `tokenId`
+        * Data resolution: 10 minutes
+  metric_type: gauge
+  title: sf.org.numApmBundledMetricsByToken
+
 sf.org.numBackfillCalls:
   brief: Number of of times a backfill API call was used to send metrics to Infrastructure Monitoring
   description: |
@@ -1137,7 +1167,7 @@ sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken:
   description: |
     Number of calls to create MTS that have failed due to an error with metrics, per token.
 
-        * Dimension(s):  `orgId`
+        * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 35 seconds
   metric_type: counter
   title: sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken
