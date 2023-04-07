@@ -730,9 +730,11 @@ sf.org.num.awsServiceCallThrottles:
   metric_type: gauge
   title: sf.org.num.awsServiceCallThrottles
 
-sf.org.num.azureMonitorClientCallCount:
+sf.org.num.azureMonitorClientCallCount (DEPRECATED):
   brief: Number of calls made to the Azure Monitor API
   description: |
+    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
+    PLEASE USE `sf.org.num.azureServiceClientCallCount` INSTEAD
     Total number of calls made to the Azure Monitor API.
 
         * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
@@ -741,9 +743,11 @@ sf.org.num.azureMonitorClientCallCount:
   metric_type: counter
   title: sf.org.num.azureMonitorClientCallCount
 
-sf.org.num.azureMonitorClientCallCountErrors:
+sf.org.num.azureMonitorClientCallCountErrors (DEPRECATED):
   brief: Number of calls to Azure Monitor API method that threw errors
   description: |
+    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
+    PLEASE USE `sf.org.num.azureServiceClientCallCountErrors` INSTEAD
     Number of calls to Azure Monitor API method that threw errors.
 
         * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
@@ -752,9 +756,11 @@ sf.org.num.azureMonitorClientCallCountErrors:
   metric_type: counter
   title: sf.org.num.azureMonitorClientCallCountErrors
 
-sf.org.num.azureMonitorClientCallCountThrottles:
+sf.org.num.azureMonitorClientCallCountThrottles (DEPRECATED):
   brief: Number of calls to Azure Monitor method that were throttled
   description: |
+    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
+    PLEASE USE `sf.org.num.azureServiceClientCallCountThrottles` INSTEAD
     Number of calls to Azure Monitor method that were throttled.
 
         * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
@@ -762,6 +768,36 @@ sf.org.num.azureMonitorClientCallCountThrottles:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.azureMonitorClientCallCountThrottles
+  
+sf.org.num.azureServiceClientCallCount:
+  brief: Number of calls made to the Azure API
+  description: |
+    Total number of calls made to the Azure API.
+
+        * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
+        * Data resolution: 5 seconds
+  metric_type: counter
+  title: sf.org.num.azureServiceClientCallCount
+
+sf.org.num.azureServiceClientCallCountErrors:
+  brief: Number of calls to Azure API that threw errors
+  description: |
+    Number of calls to Azure API that threw errors.
+
+        * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.num.azureServiceClientCallCountErrors
+
+sf.org.num.azureServiceClientCallCountThrottles:
+  brief: Number of calls to Azure API that were throttled
+  description: |
+    Number of calls to Azure API that were throttled.
+
+        * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
+        * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.num.azureServiceClientCallCountThrottles
 
 sf.org.num.chart:
   brief: Total number of charts
