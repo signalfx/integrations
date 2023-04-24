@@ -584,6 +584,16 @@ sf.org.log.numContentBytesReceivedByToken:
   metric_type: counter
   title: sf.org.log.numContentBytesReceivedByToken  
 
+sf.org.log.numLogsDroppedIndexThrottle:
+  brief: The number of logs Splunk Log Observer drops after the organization's allowed logs index limit threshold is met.
+  description: |
+    The number of logs Splunk Log Observer drops after the organization's allowed logs index limit threshold is met.
+    
+        * Dimension(s): `orgId`
+        * Data resolution: 10 second
+  metric_type: counter
+  title: sf.org.log.numLogsDroppedIndexThrottle
+
 sf.org.log.numMessageBytesReceived:
   brief: The number of bytes Splunk Log Observer receives from ingested logs after decompression, filtering, and throttling are complete.
   description: |
