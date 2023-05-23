@@ -1374,6 +1374,26 @@ sf.org.numDatapointsReceivedByToken:
   metric_type: counter
   title: sf.org.numDatapointsReceivedByToken
 
+sf.org.numDimensionObjectsCreated:
+  brief: Number of dimensions created
+  description: |
+    Total number of dimensions created. 
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.numDimensionObjectsCreated
+
+sf.org.numDimensionObjectsCreatedByToken:
+  brief: Number of dimensions created by token
+  description: |
+    Total number of dimensions created by token. 
+
+        * Dimension(s):  `orgId`, `tokenId`
+        * Data resolution: 40 seconds
+  metric_type: gauge
+  title: sf.org.numDimensionObjectsCreatedByToken
+
 sf.org.numEventTimeSeriesCreated:
   brief: Number of event time series created
   description: |
@@ -1398,7 +1418,7 @@ sf.org.numEventTimeSeriesCreatedByToken:
   title: sf.org.numEventTimeSeriesCreatedByToken
 
 sf.org.numEventsDroppedThrottle:
-  brief: Number of events over per-minute limit
+  brief: Number of events over per-minute limit NBED
   description: |
     Number of custom events you sent to Infrastructure Monitoring but that Infrastructure Monitoring didn't
     accept, because your organization exceeded its per-minute limit.
