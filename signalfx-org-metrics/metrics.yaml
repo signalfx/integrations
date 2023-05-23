@@ -1168,6 +1168,16 @@ sf.org.numBackfillCallsByToken:
         * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numBackfillCallsByToken
+  
+sf.org.numComputationsStarted:
+  brief: Rate at which you're starting new jobs
+  description: |
+    Number of computations started, use it to know the rate at which you're starting new jobs.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numComputationsStarted
 
 sf.org.numCustomMetrics:
   brief: Number of custom metrics monitored
@@ -1231,6 +1241,16 @@ sf.org.numDatapointsDroppedBatchSize:
         * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedBatchSize
+  
+sf.org.numDatapointsDroppedBatchSizeByToken: 
+  brief: Number of data points dropped because a single request contained more than 100,000 data points, by token.
+  description: |
+    Number of data points dropped because a single request contained more than 100,000 data points, per token. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
+
+        * Dimension(s):  `orgId`, `tokenId`
+        * Data resolution: 40 seconds
+  metric_type: counter
+  title: sf.org.numDatapointsDroppedBatchSizeByToken  
 
 sf.org.numDatapointsDroppedExceededQuota:
   brief: Number of new data points not processed by Infrastructure Monitoring; exceeded subscription
