@@ -1622,6 +1622,16 @@ sf.org.numHighResolutionMetricsByToken:
         * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numHighResolutionMetricsByToken
+  
+sf.org.numHostMetaDataEventsDroppedThrottleByToken:
+  brief: 
+  description: |
+    Number of metadata NBED????
+
+        * Dimension(s):  `orgId, tokenId`
+        * Data resolution: 40 seconds
+  metric_type: counter
+  title: sf.org.numHostMetaDataEventsDroppedThrottleByToken 
 
 sf.org.numInactiveTimeSeries:
   brief: Number of inactive MTS
