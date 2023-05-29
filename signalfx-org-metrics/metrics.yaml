@@ -1394,6 +1394,26 @@ sf.org.numDimensionObjectsCreatedByToken:
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreatedByToken
 
+sf.org.numEventSearches:
+  brief: Number of event searches
+  description: |
+    Number of event searches.
+    
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numEventSearches
+
+sf.org.numEventSearchesThrottled:
+  brief: Number of event searches that were throttled
+  description: |
+    Number of event searches that were throttled.
+    
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numEventSearchesThrottled
+
 sf.org.numEventTimeSeriesCreated:
   brief: Number of event time series created
   description: |
@@ -1418,7 +1438,7 @@ sf.org.numEventTimeSeriesCreatedByToken:
   title: sf.org.numEventTimeSeriesCreatedByToken
 
 sf.org.numEventsDroppedThrottle:
-  brief: Number of events over per-minute limit NBED
+  brief: Number of events over per-minute limit
   description: |
     Number of custom events you sent to Infrastructure Monitoring but that Infrastructure Monitoring didn't
     accept, because your organization exceeded its per-minute limit.
@@ -1454,7 +1474,7 @@ sf.org.numEventsReceivedByToken:
   description: Reserved for Infrastructure Monitoring internal use only.
   metric_type: null
   title: sf.org.numEventsReceivedByToken  
-
+  
 sf.org.numHighResolutionMetrics:
   brief: Number of high resolution metrics monitored
   description: |
