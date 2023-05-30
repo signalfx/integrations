@@ -1623,10 +1623,20 @@ sf.org.numHighResolutionMetricsByToken:
   metric_type: counter
   title: sf.org.numHighResolutionMetricsByToken
   
-sf.org.numHostMetaDataEventsDroppedThrottleByToken:
-  brief: 
+sf.org.numHostMetaDataEventsDroppedThrottle:
+  brief: Number of host metadata events dropped due to throttling 
   description: |
-    Number of metadata NBED????
+    Number of host metadata events dropped because of throttling.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 40 seconds
+  metric_type: counter
+  title: sf.org.numHostMetaDataEventsDroppedThrottle 
+
+sf.org.numHostMetaDataEventsDroppedThrottleByToken:
+  brief: Number of host metadata events dropped due to throttling by token
+  description: |
+    Number of host metadata events dropped because of throttling, per token.
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 40 seconds
@@ -1647,6 +1657,16 @@ sf.org.numInactiveTimeSeries:
       * Data resolution: 1 second
   metric_type: gauge
   title: sf.org.numInactiveTimeSeries
+  
+sf.org.numInvalidEventsDropped:
+  brief: Number of events dropped as invalid
+  description: |
+    Number of events dropped due to being invalid.
+
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
+  metric_type: gauge
+  title: sf.org.numInvalidEventsDropped
 
 sf.org.numLimitedEventTimeSeriesCreateCalls:
   brief: Number of event time series over maximum ETS allowed
@@ -1698,7 +1718,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType:
         * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType
-
+  
 sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryTypeByToken:
   brief: Number of MTS not sent per token; over maximum allowed.
   description: |
@@ -1735,6 +1755,16 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByToken:
       * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByToken
+
+sf.org.numLogsReceivedByToken:
+  brief: Number of logs received by token
+  description: |
+    Number of logs received by token.
+    
+      * Dimension(s):  `orgId, tokenId`
+      * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numLogsReceivedByToken
 
 sf.org.numMappingsAdded:
   brief: Infrastructure Monitoring internal metric
@@ -1801,6 +1831,16 @@ sf.org.numMetricTimeSeriesCreatedByToken:
   metric_type: counter
   title: sf.org.numMetricTimeSeriesCreatedByToken
 
+sf.org.numMetricObjectsCreatedByToken:
+  brief: Number of metric objects created by token
+  description: |
+    Number of metric objects created by token.
+
+        * Dimension(s):  `tokenId`, `orgId`
+        * Data resolution: 40 seconds
+  metric_type: gauge
+  title: sf.org.numMetricObjectsCreatedByToken
+
 sf.org.numNewDimensions:
   brief: Number of new dimensions that were created
   description: |
@@ -1821,6 +1861,15 @@ sf.org.numNewDimensionsByName:
         * Data resolution: 5 minutes
   metric_type: counter
   title: sf.org.numNewDimensionsByName
+  
+sf.org.numProcessDataEventsDroppedThrottleByToken:
+  brief: Number of data events dropped by token
+  description: |
+    Number of data events dropped by token. NBED
+
+        * Data resolution: 40 seconds
+  metric_type: counter
+  title: sf.org.numProcessDataEventsDroppedThrottleByToken 
 
 sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls:
   brief: Number of MTS that Infrastructure Monitoring was not able to create because you exceeded the dimension name limit
@@ -1859,6 +1908,18 @@ sf.org.numResourceMetrics:
     * Data resolution: 10 minutes
   metric_type: gauge
   title: sf.org.numResourceMetrics
+
+sf.org.numResourceMetricsbyToken:
+  brief: Number of resource metric time series (MTS) monitored per token.
+  description: |
+    Number of resource metric time series (MTS) received from host and container categories, per token. 
+    
+    The `resourceType` dimension indicates whether the value represents hosts or containers.
+    
+    * Dimension(s): `orgId`, `resourceType`, `tokenId`
+    * Data resolution: 10 minutes
+  metric_type: gauge
+  title: sf.org.numResourceMetricsbyToken
 
 sf.org.numResourcesMonitored:
   brief: Number of host-based resources monitored
