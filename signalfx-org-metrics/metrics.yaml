@@ -1863,10 +1863,11 @@ sf.org.numNewDimensionsByName:
   title: sf.org.numNewDimensionsByName
   
 sf.org.numProcessDataEventsDroppedThrottleByToken:
-  brief: Number of data events dropped by token
+  brief: Number of data ingest process events dropped due to throttling by token
   description: |
-    Number of data events dropped by token. NBED
+    Per token, number of data ingest process events dropped due to throttling, because you exceeded your system limits. 
 
+        * Dimension(s):  `orgId, tokenIn`
         * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numProcessDataEventsDroppedThrottleByToken 
