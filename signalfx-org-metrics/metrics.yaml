@@ -420,20 +420,20 @@ sf.org.datainventory.resources:
   title: sf.org.datainventory.resources 
   
 sf.org.grossDatapointsReceived:
-  brief: Infrastructure Monitoring internal metric
-  description: sf.org.grossDatapointsReceived is reserved for Infrastructure Monitoring internal use only.
+  brief: Number of data points received, but not necessarily admitted
+  description: Number of data points received, but not necessarily admitted.
   metric_type: cumulative
   title: sf.org.grossDatapointsReceived
 
 sf.org.grossDatapointsReceivedByToken:
-  brief: Infrastructure Monitoring internal metric
-  description: sf.org.grossDatapointsReceivedByToken is reserved for Infrastructure Monitoring internal use only.
+  brief: Number of data points received, but not necessarily admitted, per token
+  description: Number of data points receuved, but not necessarily admitted, per token.
   metric_type: cumulative
   title: sf.org.grossDatapointsReceivedByToken
     
 sf.org.grossDpmContentBytesReceived:
-  brief: Infrastructure Monitoring internal metric
-  description: sf.org.grossDpmContentBytesReceived is reserved for Infrastructure Monitoring internal use only.
+  brief: Number of content bytes received, but not necessarily admitted
+  description: Number of content bytes received, but not necessarily admitted.
   metric_type: counter
   title: sf.org.grossDpmContentBytesReceived
   
@@ -874,8 +874,8 @@ sf.org.numDetectorsAborted:
   title: sf.org.numDetectorsAborted
 
 sf.org.num.detectortemplate:
-  brief: Infrastructure Monitoring internal metric
-  description: sf.org.num.detectortemplate is reserved for Infrastructure Monitoring internal use only.
+  brief: Number of detector templates
+  description: Number of detector templates.
   metric_type: cumulative
   title: sf.org.num.detectortemplate
 
