@@ -999,14 +999,14 @@ sf.org.num.metrictimeseries:
   title: sf.org.num.metrictimeseries
 
 sf.org.num.migrationmarker:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of migration markers
+  description: Number of migration markers.
   metric_type: gauge
   title: sf.org.num.migrationmarker
 
 sf.org.num.mutingactive:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of active muting rules NBED
+  description: Number of active muting rules NBED.
   metric_type: gauge
   title: sf.org.num.mutingactive
 
@@ -1031,14 +1031,14 @@ sf.org.num.navigator:
   title: sf.org.num.navigator
 
 sf.org.num.notifications:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of notifications
+  description: Number of notifications.
   metric_type: cumulative
   title: sf.org.num.notifications
 
 sf.org.num.orgpreference:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of org preferences
+  description: Number of org preferences.
   metric_type: null
   title: sf.org.num.orgpreference
 
@@ -1085,20 +1085,20 @@ sf.org.num.role:
   title: sf.org.num.role
 
 sf.org.num.service:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of services
+  description: Number of services.
   metric_type: null
   title: sf.org.num.service
 
 sf.org.num.shareablesnapshot:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of shareable snapshots
+  description: Number of shareable snapshots.
   metric_type: null
   title: sf.org.num.shareablesnapshot
 
 sf.org.num.source:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of sources
+  description: Number of sources.
   metric_type: null
   title: sf.org.num.source
 
@@ -1438,8 +1438,8 @@ sf.org.numDatapointsDroppedInTimeout:
   title: sf.org.numDatapointsDroppedInTimeout
 
 sf.org.numDatapointsDroppedInTimeoutByToken:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds, per token
+  description: Per token, number of data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds and creation was very unlikely to succeed.
   metric_type: null
   title: sf.org.numDatapointsDroppedInTimeoutByToken
 
@@ -1588,15 +1588,15 @@ sf.org.numEventsDroppedThrottleByToken:
   title: sf.org.numEventsDroppedThrottleByToken
   
 sf.org.numEventsReceived:
-  brief: Infrastructure Monitoring internal metric
+  brief: Number of events received
   description: |
-    Reserved for Infrastructure Monitoring internal use only.
+    Number of events received.
   metric_type: null
   title: sf.org.numEventsReceived
 
 sf.org.numEventsReceivedByToken:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of events received per token
+  description: Number of events received, per token.
   metric_type: null
   title: sf.org.numEventsReceivedByToken  
   
@@ -1767,38 +1767,38 @@ sf.org.numLogsReceivedByToken:
   title: sf.org.numLogsReceivedByToken
 
 sf.org.numMappingsAdded:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of mappings added
+  description: Number of mappings added.
   metric_type: null
   title: sf.org.numMappingsAdded
 
 sf.org.numMappingsAddedByToken:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of mappings added by token
+  description: Per token, number of mappings added.
   metric_type: null
   title: sf.org.numMappingsAddedByToken
 
 sf.org.numMetadataWrites:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of metadata writes
+  description: Number of metadata writes.
   metric_type: null
   title: sf.org.numMetadataWrites
 
 sf.org.numMetadataWritesByToken:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of metadata writes by token
+  description: Per token, number of metadata writes.
   metric_type: null
   title: sf.org.numMetadataWritesByToken
 
 sf.org.numMetadataWritesThrottled:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of metadata writes throttled
+  description: Number of metadata writes throttled.
   metric_type: null
   title: sf.org.numMetadataWritesThrottled
 
 sf.org.numMetadataWritesThrottledByToken:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of metadata writes throttled per token
+  description: Number of metadata writes throttled per token.
   metric_type: null
   title: sf.org.numMetadataWritesThrottledByToken
 
@@ -2114,8 +2114,8 @@ sf.org.subscription.function:
   title: sf.org.subscription.function
 
 sf.org.ui.num.pagevisits:
-  brief: Infrastructure Monitoring internal metric
-  description: Reserved for Infrastructure Monitoring internal use only.
+  brief: Number of UI page visits
+  description: Number of UI page visits.
   metric_type: null
   title: sf.org.ui.num.pagevisits
 
