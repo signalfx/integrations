@@ -1381,10 +1381,8 @@ sf.org.numDatapointsDroppedExceededQuota:
   brief: Number of new data points not processed by Infrastructure Monitoring; exceeded subscription
     limit
   description: |
-    Total number of new data points you sent to Infrastructure Monitoring but that Infrastructure Monitoring
-    didn't accept, because your organization exceeded its subscription limit.
-    To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription
-    limits, see [this FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
+    Total number of new data points you sent to Infrastructure Monitoring but that Infrastructure Monitoring didn't accept, because your organization exceeded its subscription limit. 
+    To learn more, see [Exceeding your system limits](https://docs.splunk.com/Observability/admin/subscription-usage/dpm-usage.html#exceeding-your-system-limits).
 
         * Dimension(s):  `orgId`
         * Data resolution: 1 second
@@ -1397,11 +1395,9 @@ sf.org.numDatapointsDroppedExceededQuotaByToken:
   description: |
     One value per token; number of new data points you sent to Infrastructure Monitoring
     but that Infrastructure Monitoring didn't accept, because your organization exceeded its subscription
-    limit.
-    To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription
-    limits, see [DPM Limits - FAQ](https://docs.signalfx.com/en/latest/_sidebars-and-includes/dpm-faq.html).
-    The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedExceededQuota`.
-    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
+    limit. To learn more, see [Exceeding your system limits](https://docs.splunk.com/Observability/admin/subscription-usage/dpm-usage.html#exceeding-your-system-limits).
+    
+    The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedExceededQuota`. To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
         * Dimension(s):  `orgId, tokenId`
         * Data resolution: 1 second
