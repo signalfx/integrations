@@ -5,8 +5,8 @@ sf.org.apm.grossContentBytesReceived:
     The volume of bytes Splunk APM receives off the wire before filtering
     and throttling. This content could be compressed.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+     * Dimension(s): `orgId`
+     * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossContentBytesReceived  
 
@@ -17,8 +17,8 @@ sf.org.apm.grossSpanBytesReceived:
     The number of bytes Splunk APM receives from spans after
     decompression but before filtering and throttling.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+     * Dimension(s): `orgId`
+     * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpanBytesReceived
   
@@ -30,8 +30,8 @@ sf.org.apm.grossSpanBytesReceivedByToken:
     The number of bytes Splunk APM receives for a specific access token
     from ingested span data after decompression but before filtering and throttling.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+     * Dimension(s): `orgId`, `tokenId`
+     * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpanBytesReceivedByToken  
   
@@ -40,8 +40,8 @@ sf.org.apm.grossSpansReceived:
   description: |
     The number of spans Splunk APM received before filtering or throttling.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+     * Dimension(s): `orgId`
+     * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpansReceived  
   
@@ -50,8 +50,8 @@ sf.org.apm.ingestLatency.duration.ns.min:
   description: |
     The minimum duration of the ingest latency in Splunk APM.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 10 seconds
+     * Dimension(s): `orgId`
+     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.apm.ingestLatency.duration.ns.min
   
@@ -72,8 +72,8 @@ sf.org.apm.numAddSpansCalls:
   description: |
     The number of calls to the `/v2/trace` endpoint.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numAddSpansCalls
 
@@ -82,8 +82,8 @@ sf.org.apm.numAddSpansCallsByToken:
   description: |
     The number of calls to the `/v2/trace` endpoint for a specific access token.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numAddSpansCallsByToken
 
@@ -92,8 +92,8 @@ sf.org.apm.numContainers:
   description: |
     The number of containers actively sending data to Splunk APM.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 minute
+      * Dimension(s): `orgId`
+      * Data resolution: 1 minute
   metric_type: gauge
   title: sf.org.apm.numContainers
 
@@ -101,8 +101,8 @@ sf.org.apm.numHosts:
   brief: The number of hosts that are actively sending data to Splunk APM.
   description: |
     The number of hosts that are actively sending data to Splunk APM.
-        * Dimension(s): `orgId`
-        * Data resolution: 1 minute
+      * Dimension(s): `orgId`
+      * Data resolution: 1 minute
   metric_type: gauge
   title: sf.org.apm.numHosts
 
@@ -113,8 +113,8 @@ sf.org.apm.numSpanBytesReceived:
     The number of bytes Splunk APM accepts from ingested span
     data after decompression after filtering and throttling.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceived
 
@@ -125,8 +125,8 @@ sf.org.apm.numSpanBytesReceivedByToken:
     The number of bytes Splunk APM accepts for a specific access token
     for a span after decompression after filtering and throttling.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceivedByToken
 
@@ -137,8 +137,8 @@ sf.org.apm.numSpansDroppedInvalid:
     invalid if there is no start time, trace ID, or service associated with it,
     or if there are too many spans in the trace.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedInvalid
 
@@ -150,8 +150,8 @@ sf.org.apm.numSpansDroppedInvalidByToken:
     access token. A span can be invalid if there is no start time, trace ID, or
     service associated with it, or if there are too many spans in the trace.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedInvalidByToken
 
@@ -160,8 +160,8 @@ sf.org.apm.numSpansDroppedOversize:
   description: |
     The number of spans Splunk APM receives that are too large to process.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedOversize
 
@@ -172,8 +172,8 @@ sf.org.apm.numSpansDroppedOversizeByToken:
     The number of spans Splunk APM receives that are too large to process
     for a specific access token.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedOversizeByToken
 
@@ -183,8 +183,8 @@ sf.org.apm.numSpansDroppedThrottle:
     The number of spans Splunk APM dropped after you exceeded the allowed ingest volume.
     Splunk APM drops spans it receives after the ingestion volume limit is reached.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedThrottle
 
@@ -196,8 +196,8 @@ sf.org.apm.numSpansDroppedThrottleByToken:
     beyond the allowed ingest volume. Splunk APM drops spans it receives after
     the ingestion volume limit is reached.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansDroppedThrottleByToken
 
@@ -206,8 +206,8 @@ sf.org.apm.numSpansReceived:
   description: |
     The number of spans Splunk APM accepts after filtering and throttling.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansReceived
 
@@ -218,8 +218,8 @@ sf.org.apm.numSpansReceivedByToken:
     The number of spans Splunk APM received for a specific access token
     after filtering and throttling.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numSpansReceivedByToken
 
@@ -230,8 +230,8 @@ sf.org.apm.grossSpansReceivedByToken:
     The number of spans Splunk APM receives for a specific access token
     before filtering or throttling.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpansReceivedByToken
 
@@ -240,8 +240,8 @@ sf.org.apm.subscription.containers:
   description: |
     The entitlement for the number of containers for your subscription plan.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 2 minutes
+      * Dimension(s): `orgId`
+      * Data resolution: 2 minutes
   metric_type: gauge
   title: sf.org.apm.subscription.containers
 
@@ -250,8 +250,8 @@ sf.org.apm.subscription.hosts:
   description: |
     The entitlement for the number of hosts for your subscription plan.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 2 minutes
+      * Dimension(s): `orgId`
+      * Data resolution: 2 minutes
   metric_type: gauge
   title: sf.org.apm.subscription.hosts
 
@@ -260,8 +260,8 @@ sf.org.apm.subscription.monitoringMetricSets:
   description: |
     The entitlement for the number of Monitoring MetricSets as part of your subscription plan.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 2 minutes
+      * Dimension(s): `orgId`
+      * Data resolution: 2 minutes
   metric_type: gauge
   title: sf.org.apm.subscription.monitoringMetricSets
 
@@ -270,8 +270,8 @@ sf.org.apm.subscription.spanBytes:
   description: |
     The entitlement for the number of bytes per minutes for your subscription plan.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 2 minutes
+      * Dimension(s): `orgId`
+      * Data resolution: 2 minutes
   metric_type: gauge
   title: sf.org.apm.subscription.spanBytes
 
@@ -280,8 +280,8 @@ sf.org.apm.subscription.traces:
   description: |
     The entitlement for the number of traces analyzed per minute (TAPM) as part of your subscription plan.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 2 minutes
+      * Dimension(s): `orgId`
+      * Data resolution: 2 minutes
   metric_type: gauge
   title: sf.org.apm.subscription.traces
 
@@ -290,8 +290,8 @@ sf.org.apm.subscription.troubleshootingMetricSets:
   description: |
     The entitlement for the number of Troubleshooting MetricSets as part of your subscription plan.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 2 minutes
+      * Dimension(s): `orgId`
+      * Data resolution: 2 minutes
   metric_type: gauge
   title: sf.org.apm.subscription.troubleshootingMetricSets
 
@@ -300,8 +300,8 @@ sf.org.apm.numTracesReceived:
   description: |
     The number of traces Splunk APM receives and processes.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 minute
+      * Dimension(s): `orgId`
+      * Data resolution: 1 minute
   metric_type: counter
   title: sf.org.apm.numTracesReceived
 
@@ -310,8 +310,8 @@ sf.org.apm.numTroubleshootingMetricSets10s:
   description: |
     The cardinality of Troubleshooting MetricSets for each 10-second window.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s): `orgId`
+      * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.apm.numTroubleshootingMetricSets10s
 
@@ -320,8 +320,8 @@ sf.org.apm.numTroubleshootingMetricSets:
   description: |
     The cardinality of Troubleshooting MetricSets for each 1-minute time window.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 minute
+      * Dimension(s): `orgId`
+      * Data resolution: 1 minute
   metric_type: counter
   title: sf.org.apm.numTroubleshootingMetricSets
 
@@ -332,8 +332,8 @@ sf.org.apm.numContentBytesReceived:
     The volume of bytes Splunk APM accepts off the wire after filtering
     and throttling. This content could be compressed.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numContentBytesReceived
 
@@ -344,8 +344,8 @@ sf.org.apm.grossContentBytesReceivedByToken:
     The volume of bytes Splunk APM receives off the wire for a specific
     access token before filtering and throttling. This content could be compressed.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossContentBytesReceivedByToken
 
@@ -356,8 +356,8 @@ sf.org.apm.numContentBytesReceivedByToken:
     The volume of bytes Splunk APM accepts off the wire for a specific
     access token after filtering and throttling. This content could be compressed.
 
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.numContentBytesReceivedByToken
 
@@ -374,8 +374,8 @@ sf.org.datapointsTotalCountByToken:
   description: |
     Total datapoints by token
     
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 10 seconds
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.datapointsTotalCountByToken  
  
@@ -384,8 +384,8 @@ sf.org.datainventory.datapointsAdded:
   description: |
     Number of data points retrieved from the AWS integration
     
-        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
-        * Data resolution: 10 seconds
+      * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+      * Data resolution: 10 seconds
   metric_type: count
   title: sf.org.datainventory.datapointsAdded 
   
@@ -394,8 +394,8 @@ sf.org.datainventory.latestTimestamp:
   description: |   
     Timestamp of the last data point retrieved from an integration
     
-        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
-        * Data resolution: 10 seconds
+      * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+      * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.datainventory.latestTimestamp 
   
@@ -404,8 +404,8 @@ sf.org.datainventory.mtses:
   description: |
     Number of Metric Time Series retrieved from an AWS integration. It’s only generated when AWS metrics are polled, and is not available with Metric Streams
     
-        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
-        * Data resolution: 10 seconds
+      * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+      * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.datainventory.mtses 
   
@@ -414,8 +414,8 @@ sf.org.datainventory.resources:
   description: |
     Number of AWS resources polled by an AWS integration. It's only generated when AWS metrics are polled, and is not available with Metric Streams
     
-        * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
-        * Data resolution: 10 seconds
+      * Dimension(s): `type: AWS`, `service`, `region`, `integrationId`
+      * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.datainventory.resources 
   
@@ -509,8 +509,8 @@ sf.org.log.grossContentBytesReceived:
   description: |
     The volume of bytes Splunk Log Observer receives from ingesting logs off the wire before filtering and throttling. This content can be compressed.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.grossContentBytesReceived
 
@@ -519,8 +519,8 @@ sf.org.log.grossContentBytesReceivedByToken:
   description: |
     The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.grossContentBytesReceivedByToken    
   
@@ -529,8 +529,8 @@ sf.org.log.grossMessageBytesReceived:
   description: |
     The number of bytes Splunk Log Observer receives from ingested logs after decompression but before filtering and throttling are complete.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.grossMessageBytesReceived  
   
@@ -539,8 +539,8 @@ sf.org.log.grossMessageBytesReceivedByToken:
   description: |
     The number of bytes received by Splunk Log Observer for a specific access token from ingested logs after decompression but before filtering and throttling are complete.
     
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.grossMessageBytesReceivedByToken  
 
@@ -549,8 +549,8 @@ sf.org.log.grossMessagesReceived:
   description: |
     The total number of log messages Splunk Log Observer receives before filtering and throttling.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.grossMessagesReceived
 
@@ -559,8 +559,8 @@ sf.org.log.grossMessagesReceivedByToken:
   description: |
     The total number of log messages Splunk Log Observer receives for a specific access token before filtering and throttling.
     
-        * Dimension(s): `orgId`, `tokenId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`, `tokenId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.grossMessagesReceivedByToken
   
@@ -569,8 +569,8 @@ sf.org.log.numContentBytesReceived:
   description: |
     The volume of bytes Splunk Log Observer receives from ingesting logs off the wire after filtering and throttling. This content can be compressed.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numContentBytesReceived
   
@@ -579,8 +579,8 @@ sf.org.log.numContentBytesReceivedByToken:
   description: |
     The volume of bytes Splunk Log Observer receives from ingesting logs off the wire for a specific access token after filtering and throttling. This content can be compressed.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numContentBytesReceivedByToken  
 
@@ -589,8 +589,8 @@ sf.org.log.numLogsDroppedIndexThrottle:
   description: |
     The number of logs Splunk Log Observer drops after the organization's allowed logs index limit threshold is met.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numLogsDroppedIndexThrottle
 
@@ -599,8 +599,8 @@ sf.org.log.numMessageBytesReceived:
   description: |
     The number of bytes Splunk Log Observer receives from ingested logs after decompression, filtering, and throttling are complete.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessageBytesReceived
 
@@ -609,8 +609,8 @@ sf.org.log.numMessageBytesReceivedByToken:
   description: |
     The number of bytes Splunk Log Observer receives for a specific access token from ingested logs after decompression, filtering, and throttling are complete.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessageBytesReceivedByToken
   
@@ -619,8 +619,8 @@ sf.org.log.numMessagesDroppedThrottle:
   description: |
     The number of log messages Splunk Log Observer drops after the allowed ingest volume is exceeded. Splunk Log Observer drops messages it receives after the ingestion volume is reached.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesDroppedThrottle   
 
@@ -629,8 +629,8 @@ sf.org.log.numMessagesDroppedOversize:
   description: |
     The number of log messages Splunk Log Observer receives that are too large to process.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesDroppedOversize
 
@@ -639,8 +639,8 @@ sf.org.log.numMessagesDroppedOversizeByToken:
   description: |
     The number of log messages Splunk Log Observer receives that are too large to process for a specific access token.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesDroppedOversizeByToken
   
@@ -649,8 +649,8 @@ sf.org.log.numMessagesDroppedThrottleByToken:
   description: |
     The number of log messages Splunk Log Observer drops for a specific access token after the allowed ingest volume is exceeded. Splunk Log Observer drops messages it receives after the ingestion volume is reached.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesDroppedThrottleByToken  
 
@@ -659,8 +659,8 @@ sf.org.log.numMessagesReceived:
   description: |
     The total number of log messages Splunk Log Observer accepts after filtering and throttling.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesReceived
 
@@ -669,8 +669,8 @@ sf.org.log.numMessagesReceivedByToken:
   description: |
     The total number of log messages Splunk Log Observer accepts for a specific access token after filtering and throttling.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 second
+      * Dimension(s): `orgId`
+      * Data resolution: 10 second
   metric_type: counter
   title: sf.org.log.numMessagesReceivedByToken
 
@@ -679,8 +679,8 @@ sf.org.log.numMessageBytesIndexed:
   description: |
     Bytes of data stored in the Log Observer index after applying pipeline management rules.
     
-        * Dimension(s): `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s): `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.log.numMessageBytesIndexed
 
@@ -690,8 +690,8 @@ sf.org.num.alertmuting:
     Total number of alert muting rules; includes rules currently in effect
     and rules not currently in effect (e.g. scheduled muting rules).
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.alertmuting
 
@@ -699,9 +699,9 @@ sf.org.num.awsServiceAuthErrorCount:
   brief: Authentication errors thrown by AWS services
   description: |
     Total number authentication errors thrown by AWS services.
-    
-       * Dimension(s):  `integrationId`,`orgId`,`namespace` (AWS Cloudwatch namespace),`clientInterface` (AWS SDK Interface),`method` (AWS SDK method)
-       * Data resolution: 1 second
+  
+      * Dimension(s):  `integrationId`,`orgId`,`namespace` (AWS Cloudwatch namespace),`clientInterface` (AWS SDK Interface),`method` (AWS SDK method)
+      * Data resolution: 1 second
   metric_type: gauge
   title: sf.org.num.awsServiceAuthErrorCount
 
@@ -710,9 +710,9 @@ sf.org.num.awsServiceCallCount:
   description: |
     Total number of calls made to the Amazon API.
 
-        * Dimension(s):  `orgId`, `namespace` (AWS service, such as `AWS/Cloudwatch`), `method`
-          (the API being called, such as `getMetricStatistics`)
-        * Data resolution: 5 seconds
+      * Dimension(s):  `orgId`, `namespace` (AWS service, such as `AWS/Cloudwatch`), `method`
+        (the API being called, such as `getMetricStatistics`)
+      * Data resolution: 5 seconds
   metric_type: gauge
   title: sf.org.num.awsServiceCallCount
 
@@ -721,10 +721,10 @@ sf.org.num.awsServiceCallCountExceptions:
   description: |
     Number of calls made to the Amazon API that threw exceptions.
 
-        * Dimension(s):  `orgId`, `namespace` (AWS service, such as AWS/Cloudwatch), `method`
-          (the API being called, such as `getMetricStatistics`), `location` (where the exception
-          occurred, either `client` or `server`)
-        * Data resolution: 5 seconds
+      * Dimension(s):  `orgId`, `namespace` (AWS service, such as AWS/Cloudwatch), `method`
+        (the API being called, such as `getMetricStatistics`), `location` (where the exception
+        occurred, either `client` or `server`)
+      * Data resolution: 5 seconds
   metric_type: gauge
   title: sf.org.num.awsServiceCallCountExceptions
 
@@ -734,9 +734,9 @@ sf.org.num.awsServiceCallThrottles:
     Number of calls made to the Amazon API that are being throttled by
     AWS because you have exceeded your AWS API Call limits.
 
-        * Dimension(s):  `orgId`, `namespace` (AWS service, such as AWS/Cloudwatch), `method`
-          (the API being called, such as `getMetricStatistics`)
-        * Data resolution: 5 seconds
+      * Dimension(s):  `orgId`, `namespace` (AWS service, such as AWS/Cloudwatch), `method`
+        (the API being called, such as `getMetricStatistics`)
+      * Data resolution: 5 seconds
   metric_type: gauge
   title: sf.org.num.awsServiceCallThrottles
 
@@ -747,22 +747,21 @@ sf.org.num.azureMonitorClientCallCount (DEPRECATED):
     PLEASE USE `sf.org.num.azureServiceClientCallCount` INSTEAD
     Total number of calls made to the Azure Monitor API.
 
-        * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-          syncing and `metric_metadata_sync` for property syncing)
-        * Data resolution: 5 seconds
+      * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
+        syncing and `metric_metadata_sync` for property syncing)
+      * Data resolution: 5 seconds
   metric_type: counter
   title: sf.org.num.azureMonitorClientCallCount
 
 sf.org.num.azureMonitorClientCallCountErrors (DEPRECATED):
   brief: Number of calls to Azure Monitor API method that threw errors
   description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.azureServiceClientCallCountErrors` INSTEAD
+    Note: This metric is deprecated. Use `sf.org.num.azureServiceClientCallCountErrors` instead.
     Number of calls to Azure Monitor API method that threw errors.
 
-        * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-          syncing and `metric_metadata_sync` for property syncing)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
+        syncing and `metric_metadata_sync` for property syncing)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.azureMonitorClientCallCountErrors
 
@@ -773,9 +772,9 @@ sf.org.num.azureMonitorClientCallCountThrottles (DEPRECATED):
     PLEASE USE `sf.org.num.azureServiceClientCallCountThrottles` INSTEAD
     Number of calls to Azure Monitor method that were throttled.
 
-        * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-          syncing and `metric_metadata_sync` for property syncing)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
+        syncing and `metric_metadata_sync` for property syncing)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.azureMonitorClientCallCountThrottles
   
@@ -784,8 +783,8 @@ sf.org.num.azureServiceClientCallCount:
   description: |
     Total number of calls made to the Azure API.
 
-        * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
-        * Data resolution: 5 seconds
+      * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
+      * Data resolution: 5 seconds
   metric_type: counter
   title: sf.org.num.azureServiceClientCallCount
 
@@ -794,8 +793,8 @@ sf.org.num.azureServiceClientCallCountErrors:
   description: |
     Number of calls to Azure API that threw errors.
 
-        * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.azureServiceClientCallCountErrors
 
@@ -804,8 +803,8 @@ sf.org.num.azureServiceClientCallCountThrottles:
   description: |
     Number of calls to Azure API that were throttled.
 
-        * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `integrationId`, `subscriptionId`, `api` (`AzureMonitor` or `AzureResourceManager`), `method` (only for `api`=`AzureMonitor`, the API being called, such as `getTimeseries`), `resource` (only for `api`=`AzureResourceMonitor`, resource asked for, such as `microsoft.compute/virtualmachines`) 
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.azureServiceClientCallCountThrottles
 
@@ -815,8 +814,8 @@ sf.org.num.chart:
     Total number of charts; includes any charts created using the Infrastructure Monitoring
     API but not associated with a dashboard.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.chart
 
@@ -827,8 +826,8 @@ sf.org.num.credentials:
     in Infrastructure Monitoring, for the purpose of retrieving metrics (example: AWS Cloudwatch) or
     sending alerts (example: PagerDuty).
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.credentials
   
@@ -837,8 +836,8 @@ sf.org.num.crosslink:
   description: |
     Total number of crosslinks.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.crosslink 
 
@@ -848,8 +847,8 @@ sf.org.num.dashboard:
     Total number of dashboards; includes all user, custom, and built-in
     dashboards
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.dashboard
 
@@ -858,8 +857,8 @@ sf.org.num.detector:
   description: |
     Total number of detectors; includes detectors that are muted.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.detector
 
@@ -868,8 +867,8 @@ sf.org.numDetectorsAborted:
   description: |
     Number of detector jobs stopped because they reached a resource limit (usually MTS limit).
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 5 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 5 seconds
   metric_type: counter
   title: sf.org.numDetectorsAborted
 
@@ -884,8 +883,8 @@ sf.org.num.dimension:
   description: |
     Number of unique dimensions across all time series.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.dimension
 
@@ -896,8 +895,8 @@ sf.org.num.eventtimeseries:
     Number of event time series (ETS) available to be visualized in charts
     and detectors.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.eventtimeseries
 
@@ -906,44 +905,41 @@ sf.org.num.eventtype:
   description: |
     Number of unique event types across all ETS.
 
-        * Dimension(s): `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s): `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.eventtype
 
 sf.org.num.gcpStackdriverClientCallCount (DEPRECATED):
   brief: Number of calls to each Stackdriver client method
   description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.gcpServiceClientCallCount` INSTEAD
+    Note: This metric is deprecated. Use `sf.org.num.gcpServiceClientCallCount` instead.
     Number of calls to each Stackdriver client method.
 
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.gcpStackdriverClientCallCount
 
 sf.org.num.gcpStackdriverClientCallCountErrors (DEPRECATED):
   brief: Number of calls to each Stackdriver client method that threw errors
   description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.gcpServiceClientCallCountErrors` INSTEAD
+    Note: This metric is deprecated. Use `sf.org.num.gcpServiceClientCallCountErrors` instead.
     Number of calls to each Stackdriver client method that threw errors.
 
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.gcpStackdriverClientCallCountErrors
 
 sf.org.num.gcpStackdriverClientCallCountThrottles (DEPRECATED):
   brief: Number of calls to each Stackdriver client method that were throttled
   description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.gcpServiceClientCallCountThrottles` INSTEAD
+    Note: This metric is deprecated. Use `sf.org.num.gcpServiceClientCallCountThrottles` instead.
     Number of calls to each Stackdriver client method that were throttled.
 
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.gcpStackdriverClientCallCountThrottles
 
@@ -952,8 +948,8 @@ sf.org.num.gcpServiceClientCallCount:
   description: |
     Number of calls to each GCP API client method.
 
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.gcpSeviceClientCallCount
 
@@ -962,8 +958,8 @@ sf.org.num.gcpServiceClientCallCountErrors:
   description: |
     Number of calls to each GCP API client method that threw errors.
 
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.gcpServiceClientCallCountErrors
 
@@ -972,8 +968,8 @@ sf.org.num.gcpServiceClientCallCountThrottles:
   description: |
     Number of calls to each GCP API client method that were throttled.
 
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.num.gcpServiceClientCallCountThrottles
 
@@ -982,8 +978,8 @@ sf.org.num.metric:
   description: |
     Number of unique metrics across all MTS.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.metric
 
@@ -993,8 +989,8 @@ sf.org.num.metrictimeseries:
     Number of metric time series (MTS) available to be visualized in charts
     and detectors.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.metrictimeseries
 
@@ -1015,8 +1011,8 @@ sf.org.num.namedtoken:
   description: |
     Number of organization access tokens, including disabled tokens.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.namedtoken
 
@@ -1025,8 +1021,8 @@ sf.org.num.navigator:
   description: |
     Number of options available in the sidebar in the Infrastructure Navigator.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.navigator
 
@@ -1048,8 +1044,8 @@ sf.org.num.orguser:
     Total number of members and admins associated with an organization;
     includes invited users who have not yet logged in.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.orguser
 
@@ -1059,8 +1055,8 @@ sf.org.num.page:
     Total number of dashboard groups; includes user, custom, and built-in
     dashboard groups.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.page
 
@@ -1070,8 +1066,8 @@ sf.org.num.property:
     Number of properties; includes only properties you have created, not
     dimensions. For the latter, use ``sf.org.num.dimension``.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.property
 
@@ -1079,8 +1075,8 @@ sf.org.num.role:
   brief: Number of roles in your system
   description: |
     Number of roles in your system.
-        * Dimension(s):  `orgId`
-        * Data resolution: 63 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 63 minutes
   metric_type: gauge
   title: sf.org.num.role
 
@@ -1107,8 +1103,8 @@ sf.org.num.tag:
   description: |
     Number of tags available for use.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.tag
 
@@ -1117,8 +1113,8 @@ sf.org.num.team:
   description: |
     Number of teams in the organization.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.team
 
@@ -1129,8 +1125,8 @@ sf.org.num.teammember:
     total number of users. For example, if team A has 30 members and team B has 20
     members, the value is 50 even if there are only 30 members in the org.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 15 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.teammember
 
@@ -1153,8 +1149,8 @@ sf.org.numAddDatapointCalls:
   description: |
     Number of calls to send data points to Infrastructure Monitoring.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+     * Dimension(s):  `orgId`
+     * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numAddDatapointCalls
 
@@ -1165,8 +1161,8 @@ sf.org.numAddDatapointCallsByToken:
     The sum of all the values might be less than the value of `sf.org.numAddDatapointCalls`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numAddDatapointCallsByToken
 
@@ -1175,8 +1171,8 @@ sf.org.numAddEventsCalls:
   description: |
     Number of calls to send custom events to Infrastructure Monitoring.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numAddEventsCalls
 
@@ -1187,8 +1183,8 @@ sf.org.numAddEventsCallsByToken:
     The sum of all the values might be less than the value of `sf.org.numAddEventsCalls`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numAddEventsCallsByToken
 
@@ -1197,8 +1193,8 @@ sf.org.numApmApiCalls:
   description: |
     Number of calls made to APM’s public APIs.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numApmApiCalls
 
@@ -1207,8 +1203,8 @@ sf.org.numApmBundledMetrics:
   description: |
     APM Bundled Metrics limit for your org.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 minutes
   metric_type: gauge
   title: sf.org.numApmBundledMetrics
 
@@ -1217,8 +1213,8 @@ sf.org.numApmBundledMetricsByToken:
   description: |
     APM Bundled Metrics limit for your org for a specific token.
 
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 10 minutes
   metric_type: gauge
   title: sf.org.numApmBundledMetricsByToken
 
@@ -1232,8 +1228,8 @@ sf.org.numBackfillCalls:
     "cumulative_counter", or "gauge".
     To learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
 
-        * Dimension(s):  `category, orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `category, orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numBackfillCalls
 
@@ -1249,28 +1245,18 @@ sf.org.numBackfillCallsByToken:
     The sum of all the values might be less than the value of `sf.org.numBackfillCalls`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s): `category`, `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s): `category`, `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numBackfillCallsByToken
-  
-sf.org.numComputationsStarted:
-  brief: Rate at which you're starting new jobs
-  description: |
-    Number of computations started, use it to know the rate at which you're starting new jobs.
-
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
-  metric_type: counter
-  title: sf.org.numComputationsStarted
 
 sf.org.numBadDimensionMetricTimeSeriesCreateCalls:
   brief: Number of bad calls to create MTS due to an error with dimensions
   description: |
     Number of calls to create MTS that have failed due to an error with dimensions.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numBadDimensionMetricTimeSeriesCreateCalls
 
@@ -1279,8 +1265,8 @@ sf.org.numBadDimensionMetricTimeSeriesCreateCallsByToken:
   description: |
     Number of calls to create MTS that have failed due to an error with dimensions, per token.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 35 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 35 seconds
   metric_type: counter
   title: sf.org.numBadDimensionMetricTimeSeriesCreateCallsByToken
 
@@ -1289,8 +1275,8 @@ sf.org.numBadMetricMetricTimeSeriesCreateCalls:
   description: |
     Number of calls to create MTS that have failed due to an error with metrics.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numBadMetricMetricTimeSeriesCreateCalls
   
@@ -1299,8 +1285,8 @@ sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken:
   description: |
     Number of calls to create MTS that have failed due to an error with metrics, per token.
 
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 35 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 35 seconds
   metric_type: counter
   title: sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken
 
@@ -1309,20 +1295,60 @@ sf.org.numCustomMetrics:
   description: |
     Number of custom metrics monitored by Infrastructure Monitoring.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numCustomMetrics
+
+sf.org.numComputationsStarted:
+  brief: Rate at which you're starting new jobs
+  description: |
+    Number of computations started. Use this metric to know the rate at which you're starting new jobs.
+
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numComputationsStarted
+
+sf.org.numComputationsStartedByToken:
+  brief: Rate at which you're starting new jobs, per token
+  description: |
+    One value per token. The number of computations started. Use this metric to know the rate at which you're starting new jobs.
+
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numComputationsStartedByToken
+
+sf.org.numComputationsThrottled:
+  brief: Rate at which jobs are being throttled
+  description: |
+    The number of computations throttled because you reach the maximum number of SignalFlow jobs you can run for your organization. To learn more about this limit, see (Maximum number of SignalFlow jobs per organization)[https://docs.splunk.com/observability/admin/references/system-limits/sys-limits-infra.html#maximum-number-of-signalflow-jobs-per-organization].
+
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numComputationsThrottled
+
+sf.org.numComputationsThrottledByToken:
+  brief: Rate at which jobs are being throttled
+  description: |
+    One value per token. The number of computations throttled because you reach the maximum number of SignalFlow jobs you can run for your organization. To learn more about this limit, see (Maximum number of SignalFlow jobs per organization)[https://docs.splunk.com/observability/admin/references/system-limits/sys-limits-infra.html#maximum-number-of-signalflow-jobs-per-organization].
+
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numComputationsThrottledByToken
 
 sf.org.numCustomMetricsByToken:
   brief: Per token number of custom metrics monitored
   description: |
-    One value per token; number of custom metrics monitored by Infrastructure Monitoring.
+    One value per token; number of custom metrics monitored by Splunk Observability Cloud.
     The sum of all the values might be less than the value of `sf.org.numCustomMetrics`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 10 minutes
 
   metric_type: counter
   title: sf.org.numCustomMetricsByToken
@@ -1336,8 +1362,8 @@ sf.org.numDatapointsBackfilled:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
 
-        * Dimension(s):  `category, orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `category`, `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numDatapointsBackfilled
 
@@ -1352,8 +1378,8 @@ sf.org.numDatapointsBackfilledByToken:
     The sum of all the values might be less than the value of `sf.org.numDatapointsBackfilled`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `category, orgId, tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `category`, `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numDatapointsBackfilledByToken
 
@@ -1362,8 +1388,8 @@ sf.org.numDatapointsDroppedBatchSize:
   description: |
     Number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedBatchSize
   
@@ -1372,8 +1398,8 @@ sf.org.numDatapointsDroppedBatchSizeByToken:
   description: |
     Number of data points dropped because a single request contained more than 100,000 data points, per token. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
 
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedBatchSizeByToken  
 
@@ -1384,8 +1410,8 @@ sf.org.numDatapointsDroppedExceededQuota:
     Total number of new data points you sent to Infrastructure Monitoring but that Infrastructure Monitoring didn't accept, because your organization exceeded its subscription limit. 
     To learn more, see [Exceeding your system limits](https://docs.splunk.com/Observability/admin/subscription-usage/dpm-usage.html#exceeding-your-system-limits).
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numDatapointsDroppedExceededQuota
 
@@ -1399,8 +1425,8 @@ sf.org.numDatapointsDroppedExceededQuotaByToken:
     
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedExceededQuota`. To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numDatapointsDroppedExceededQuotaByToken
 
@@ -1409,8 +1435,8 @@ sf.org.numDatapointsDroppedInvalid:
   description: |
     Number of data points dropped because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedInvalid
 
@@ -1418,8 +1444,8 @@ sf.org.numDatapointsDroppedInvalidByToken:
   brief: Number of data points dropped because they didn't follow documented guidelines for data points.
   description: |
     Number of data points for a specific access token that are dropped because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedInvalidByToken
 
@@ -1428,8 +1454,8 @@ sf.org.numDatapointsDroppedInTimeout:
   description: |
     Number of data points Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds and creation was very unlikely to succeed.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedInTimeout
 
@@ -1449,8 +1475,8 @@ sf.org.numDatapointsDroppedThrottle:
     data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization,
     it isn't keeping any of your data.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numDatapointsDroppedThrottle
 
@@ -1466,8 +1492,8 @@ sf.org.numDatapointsDroppedThrottleByToken:
     The sum of all the values might be less than the value of `sf.org.numDatapointsDroppedThrottle`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numDatapointsDroppedThrottleByToken
 
@@ -1491,7 +1517,7 @@ sf.org.numDatapointsReceivedByToken:
     You can have up to three MTS for this metric. To learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
     The sum of all the values might be less than the value of `sf.org.numDatapointsReceived`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
-        * Data resolution: 1 second
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numDatapointsReceivedByToken
 
@@ -1500,8 +1526,8 @@ sf.org.numDimensionObjectsCreated:
   description: |
     Total number of dimensions created. 
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreated
 
@@ -1510,8 +1536,8 @@ sf.org.numDimensionObjectsCreatedByToken:
   description: |
     Total number of dimensions created by token. 
 
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 40 seconds
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreatedByToken
 
@@ -1519,9 +1545,9 @@ sf.org.numEventSearches:
   brief: Number of event searches
   description: |
     Number of event searches.
-    
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+  
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numEventSearches
 
@@ -1529,9 +1555,9 @@ sf.org.numEventSearchesThrottled:
   brief: Number of event searches that were throttled
   description: |
     Number of event searches that were throttled.
-    
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+  
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numEventSearchesThrottled
 
@@ -1540,8 +1566,8 @@ sf.org.numEventTimeSeriesCreated:
   description: |
     Total number of event time series (ETS) created. For MTS values, see `sf.org.numMetricTimeSeriesCreated`.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numEventTimeSeriesCreated
 
@@ -1553,8 +1579,8 @@ sf.org.numEventTimeSeriesCreatedByToken:
     The sum of all the values might be less than the value of `sf.org.numEventTimeSeriesCreated`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numEventTimeSeriesCreatedByToken
 
@@ -1564,8 +1590,8 @@ sf.org.numEventsDroppedThrottle:
     Number of custom events you sent to Infrastructure Monitoring but that Infrastructure Monitoring didn't
     accept, because your organization exceeded its per-minute limit.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numEventsDroppedThrottle
 
@@ -1578,8 +1604,8 @@ sf.org.numEventsDroppedThrottleByToken:
     The sum of all the values might be less than the value of `sf.org.numEventsDroppedThrottle`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numEventsDroppedThrottleByToken
   
@@ -1601,8 +1627,8 @@ sf.org.numHighResolutionMetrics:
   description: |
     Number of high resolution metrics monitored by Infrastructure Monitoring
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numHighResolutionMetrics
 
@@ -1614,8 +1640,8 @@ sf.org.numHighResolutionMetricsByToken:
     The sum of all the values might be less than the value of `sf.org.numHighResolutionMetrics`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numHighResolutionMetricsByToken
   
@@ -1624,8 +1650,8 @@ sf.org.numHostMetaDataEventsDroppedThrottle:
   description: |
     Number of host metadata events dropped because of throttling.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numHostMetaDataEventsDroppedThrottle 
 
@@ -1634,8 +1660,8 @@ sf.org.numHostMetaDataEventsDroppedThrottleByToken:
   description: |
     Number of host metadata events dropped because of throttling, per token.
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numHostMetaDataEventsDroppedThrottleByToken 
 
@@ -1670,8 +1696,8 @@ sf.org.numLimitedEventTimeSeriesCreateCalls:
     Number of event time series (ETS) that Infrastructure Monitoring was unable to create because
     you exceeded the maximum number of ETS allowed.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numLimitedEventTimeSeriesCreateCalls
 
@@ -1684,8 +1710,8 @@ sf.org.numLimitedEventTimeSeriesCreateCallsByToken:
     The sum of all the values might be less than the value of
     `sf.org.numLimitedEventTimeSeriesCreateCalls`. To learn more, [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `category`, `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `category`, `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numLimitedEventTimeSeriesCreateCallsByToken
 
@@ -1710,8 +1736,8 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
 
-        * Dimension(s):  `categoryType`, `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `categoryType`, `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType
   
@@ -1726,8 +1752,8 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryTypeByToken:
     named `category` with a value of "counter", "cumulative_counter", or "gauge". To
     learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `categoryType`, `orgId`, `tokenId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `categoryType`, `orgId`, `tokenId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryTypeByToken
 
@@ -1757,7 +1783,7 @@ sf.org.numLogsReceivedByToken:
   description: |
     Number of logs received by token.
     
-      * Dimension(s):  `orgId, tokenId`
+      * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLogsReceivedByToken
@@ -1806,8 +1832,8 @@ sf.org.numMetricTimeSeriesCreated:
     is sent with a dimension named `category` with a value of "counter", "cumulative_counter", or
     "gauge". To learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
 
-        * Dimension(s):  `category`, `orgId`
-        * Data resolution: 5 seconds
+      * Dimension(s):  `category`, `orgId`
+      * Data resolution: 5 seconds
   metric_type: counter
   title: sf.org.numMetricTimeSeriesCreated
 
@@ -1822,8 +1848,8 @@ sf.org.numMetricTimeSeriesCreatedByToken:
     The sum of all the values might be less than the value of `sf.org.numMetricTimeSeriesCreated`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s): `category`, `orgId`, `tokenId`
-        * Data resolution: 5 seconds
+      * Dimension(s): `category`, `orgId`, `tokenId`
+      * Data resolution: 5 seconds
   metric_type: counter
   title: sf.org.numMetricTimeSeriesCreatedByToken
 
@@ -1832,8 +1858,8 @@ sf.org.numMetricObjectsCreatedByToken:
   description: |
     Number of metric objects created by token.
 
-        * Dimension(s):  `tokenId`, `orgId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `tokenId`, `orgId`
+      * Data resolution: 40 seconds
   metric_type: gauge
   title: sf.org.numMetricObjectsCreatedByToken
 
@@ -1854,7 +1880,7 @@ sf.org.numNewDimensionsByName:
     created) are included, in addition to dimension name `sf_metric`, which is always
     included.
 
-        * Data resolution: 5 minutes
+      * Data resolution: 5 minutes
   metric_type: counter
   title: sf.org.numNewDimensionsByName
   
@@ -1863,8 +1889,8 @@ sf.org.numProcessDataEventsDroppedThrottleByToken:
   description: |
     Per token, number of data ingest process events dropped due to throttling, because you exceeded your system limits. 
 
-        * Dimension(s):  `orgId, tokenIn`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numProcessDataEventsDroppedThrottleByToken 
 
@@ -1874,8 +1900,8 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls:
     Number of metric time series (MTS) Infrastructure Monitoring was unable to create because
     you reached your maximum number of unique dimension names.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls
 
@@ -1888,8 +1914,8 @@ sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken:
     The sum of all the values might be less than the value of `sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken
 
@@ -1901,8 +1927,8 @@ sf.org.numResourceMetrics:
     
     The `resourceType` dimension indicates whether the value represents hosts or containers.
     
-    * Dimension(s): `orgId`, `resourceType`
-    * Data resolution: 10 minutes
+     * Dimension(s): `orgId`, `resourceType`
+     * Data resolution: 10 minutes
   metric_type: gauge
   title: sf.org.numResourceMetrics
 
@@ -1913,8 +1939,8 @@ sf.org.numResourceMetricsbyToken:
     
     The `resourceType` dimension indicates whether the value represents hosts or containers.
     
-    * Dimension(s): `orgId`, `resourceType`, `tokenId`
-    * Data resolution: 10 minutes
+     * Dimension(s): `orgId`, `resourceType`, `tokenId`
+     * Data resolution: 10 minutes
   metric_type: gauge
   title: sf.org.numResourceMetricsbyToken
 
@@ -1924,8 +1950,8 @@ sf.org.numResourcesMonitored:
     Number of hosts or containers that Infrastructure Monitoring is currently monitoring.
     The `resourceType` dimension indicates whether the value represents hosts or containers.
 
-        * Dimension(s):  `orgId`, `resourceType`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`, `resourceType`
+      * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numResourcesMonitored
 
@@ -1938,8 +1964,8 @@ sf.org.numResourcesMonitoredByToken:
     The sum of all the values might be less than the value of `sf.org.numResourcesMonitored`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId`, `resourceType`, tokenId`
-        * Data resolution: 10 minutes
+      * Dimension(s):  `orgId`, `resourceType`, tokenId`
+      * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numResourcesMonitoredByToken
 
@@ -1948,8 +1974,8 @@ sf.org.numRestCalls:
   description: |
     Number of REST calls made to the Infrastructure Monitoring API.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second"
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second"
   metric_type: counter
   title: sf.org.numRestCalls
 
@@ -1959,8 +1985,8 @@ sf.org.numRestCallsThrottled:
     Number of REST calls you made to the Infrastructure Monitoring API that were not accepted
     by Infrastructure Monitoring, because your organization significantly exceeded its per-minute limit.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numRestCallsThrottled
 
@@ -1974,8 +2000,8 @@ sf.org.numRestCallsThrottledByToken:
     The sum of all the values might be less than the value of `sf.org.numRestCallsThrottled`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numRestCallsThrottledByToken
 
@@ -1986,8 +2012,8 @@ sf.org.numThrottledEventTimeSeriesCreateCalls:
     Total number of event time series (ETS) that Infrastructure Monitoring was unable to create,
     because you significantly exceeded your per-minute event creation limit.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numThrottledEventTimeSeriesCreateCalls
 
@@ -2001,8 +2027,8 @@ sf.org.numThrottledEventTimeSeriesCreateCallsByToken:
     The sum of all the values might be less than the value of `sf.org.numThrottledEventTimeSeriesCreateCalls`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numThrottledEventTimeSeriesCreateCallsByToken
 
@@ -2013,8 +2039,8 @@ sf.org.numThrottledMetricTimeSeriesCreateCalls:
     Number of metric time series (MTS) that Infrastructure Monitoring was unable to create because
     you significantly exceeded your per-minute or per-hour MTS creation limit.
 
-        * Dimension(s):  `orgId`
-        * Data resolution: 1 second
+      * Dimension(s):  `orgId`
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numThrottledMetricTimeSeriesCreateCalls
 
@@ -2028,8 +2054,8 @@ sf.org.numThrottledMetricTimeSeriesCreateCallsByToken:
     The sum of all the values might be less than the value of `sf.org.numThrottledMetricTimeSeriesCreateCalls`.
     To learn more, see [Metrics for values by token](#metrics for values by token).
 
-        * Dimension(s):  `orgId, tokenId`
-        * Data resolution: 1 second
+     * Dimension(s):  `orgId`, `tokenId`
+     * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numThrottledMetricTimeSeriesCreateCallsByToken
 
@@ -2037,7 +2063,7 @@ sf.org.numUniqueNamesInNewDimensions:
   brief: Number of unique dimension names that were created
   description: |
     The number of unique dimension names (keys) created in all new dimensions
-        * Data resolution: 5 minutes
+     * Data resolution: 5 minutes
   metric_type: counter
   title: sf.org.numUniqueNamesInNewDimensions
 
@@ -2048,7 +2074,7 @@ sf.org.subscription.activeTimeSeries:
     
     The number of active MTS is the total number of MTS that have received at least one data point within a moving window of the last 25 hours.
 
-      * Data resolution: 15 minutes
+     * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.subscription.activeTimeSeries
 
@@ -2058,7 +2084,7 @@ sf.org.subscription.datapointsPerMinute:
     Maximum number of data points per minute (DPM) that Infrastructure Monitoring will process
     and store.
 
-        * Data resolution: 15 minutes
+     * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.subscription.datapointsPerMinute
 
@@ -2068,7 +2094,7 @@ sf.org.subscription.containers:
     Number of containers included in the subscription.
 
     
-    * Data resolution: 10 seconds
+     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.containers
 
@@ -2077,7 +2103,7 @@ sf.org.subscription.customMetrics:
   description: |
     Number of custom metric time series (MTS) included in the subscription.
     
-    * Data resolution: 10 seconds
+     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.customMetrics
 
@@ -2086,7 +2112,7 @@ sf.org.subscription.highResolutionMetrics:
   description: |
     Number of high resolution metric time series (MTS) included in the subscription.
     
-    * Data resolution: 10 seconds
+     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.highResolutionMetrics
 
@@ -2095,7 +2121,7 @@ sf.org.subscription.hosts:
   description: |
     Number of hosts included in the subscription.
     
-      * Data resolution: 10 seconds
+     * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.subscription.hosts
 
@@ -2104,7 +2130,7 @@ sf.org.subscription.function:
   description: |
     Number of serverless functions included in the subscription.
     
-    * Data resolution: 10 seconds
+     * Data resolution: 10 seconds
     
   metric_type: gauge
   title: sf.org.subscription.function
@@ -2120,9 +2146,9 @@ sf.org.rum.numSpansReceived:
   description: |
     Number of spans received. 
 
-    * Dimension: orgId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimension: `orgId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numSpansReceived
 
 sf.org.rum.numSpansReceivedByToken:
@@ -2132,9 +2158,9 @@ sf.org.rum.numSpansReceivedByToken:
     The number of spans Splunk RUM received for a specific access token
     after filtering and throttling.
 
-    * Dimension: orgId, tokenId
+    * Dimension: `orgId`, `tokenId`
     * Data resolution: 10 seconds
-  metric_type: Counter
+  metric_type: counter
   title: sf.org.rum.numSpansReceivedByToken
 
 
@@ -2143,9 +2169,9 @@ sf.org.rum.numAddSpansCalls:
   description: |
     The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint.
 
-    * Dimension: orgId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimension: `orgId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numAddSpansCalls
 
 sf.org.rum.numAddSpansCallsByToken:
@@ -2153,9 +2179,9 @@ sf.org.rum.numAddSpansCallsByToken:
  description: |
     The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint for a specific access token.
 
-    * Dimension: orgId, tokenId
-    * Data resolution: 10 seconds
- metric_type: Counter
+     * Dimension: `orgId`, `tokenId`
+     * Data resolution: 10 seconds
+ metric_type: counter
  title: sf.org.rum.numAddSpansCalls
 
 sf.org.rum.numSpansDroppedInvalid:
@@ -2163,9 +2189,9 @@ sf.org.rum.numSpansDroppedInvalid:
   description: |
     Number of spans dropped because they were invalid. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
 
-    * Dimension: orgId, reason, 
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimension: `orgId`, `reason`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numSpansDroppedInvalid
 
 sf.org.rum.numSpansDroppedInvalidByToken:
@@ -2175,10 +2201,10 @@ sf.org.rum.numSpansDroppedInvalidByToken:
     The number of invalid spans Splunk RUM receives for a specific
     access token. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
 
-    * Dimensions: orgId, tokenId, reason
-    * Data resolution: 10 seconds
+     * Dimensions: `orgId`, `tokenId`, `reason`
+     * Data resolution: 10 seconds
 
-  metric_type: Counter
+  metric_type: counter
   title: sf.org.rum.numSpansDroppedInvalidByToken
 
 sf.org.rum.numSpansDroppedThrottle:
@@ -2186,9 +2212,9 @@ sf.org.rum.numSpansDroppedThrottle:
   description: |
     The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume.
 
-    * Dimension: orgId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimension: `orgId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numSpansDroppedThrottle
 
 sf.org.rum.numSpansDroppedThrottleByToken:
@@ -2196,9 +2222,9 @@ sf.org.rum.numSpansDroppedThrottleByToken:
   description: |
     The number of spans Splunk RUM dropped after you exceeded the allowed ingest volume for a specific access token. 
 
-    * Dimension: orgId, tokenId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimension: `orgId`, `tokenId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numSpansDroppedThrottleByToken
 
 
@@ -2207,9 +2233,9 @@ sf.org.rum.numSpanBytesReceived:
   description: |
     The bytes of all the spans accepted and counted by the metric numSpansReceived.
 
-    * Dimensions: orgId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimensions: `orgId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numSpanBytesReceived
 
 sf.org.rum.numSpanBytesReceivedByToken:
@@ -2217,9 +2243,9 @@ sf.org.rum.numSpanBytesReceivedByToken:
   description: |
     The bytes of all the spans accepted and counted by the metric numSpansReceived by token. 
 
-    * Dimensions: orgId, tokenId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimensions: `orgId`, `tokenId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numSpanBytesReceivedByToken
 
 
@@ -2228,9 +2254,9 @@ sf.org.rum.grossSpanBytesReceivedByToken:
     description: |
       The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
 
-      * Dimensions: orgId, tokenId
-      * Data resolution: 10 seconds
-      metric_type: Counter
+       * Dimensions: `orgId`, `tokenId`
+       * Data resolution: 10 seconds
+      metric_type: counter
       title: sf.org.rum.grossSpanBytesReceivedByToken
 
 sf.org.rum.numContentBytesReceived:
@@ -2238,9 +2264,9 @@ sf.org.rum.numContentBytesReceived:
   description: |
     The volume of bytes Splunk RUM receives after filtering and throttling.
 
-    * Dimensions: orgId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimensions: `orgId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.numContentBytesReceived
 
 sf.org.rum.grossContentBytesReceivedByToken:
@@ -2248,9 +2274,9 @@ sf.org.rum.grossContentBytesReceivedByToken:
   description: |
     The possibly compressed wire size of the payloads before the payloads are decompressed and decoded by token.
 
-    * Dimensions: orgId, tokenId
-    * Data resolution: 10 seconds
-  metric_type: Counter
+     * Dimensions: `orgId`, `tokenId`
+     * Data resolution: 10 seconds
+  metric_type: counter
   title: sf.org.rum.grossContentBytesReceivedByToken
 
 
@@ -2259,8 +2285,8 @@ sf.org.rum.grossContentBytesReceived:
   description: |
     The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
     
-    * Dimensions: orgId
-    * Data resolution: 10 seconds
+     * Dimensions: `orgId`
+     * Data resolution: 10 seconds
 
-  metric_type: Counter
+  metric_type: counter
   title: sf.org.rum.grossContentBytesReceived
