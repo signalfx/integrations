@@ -7,7 +7,7 @@
 
 ### DESCRIPTION
 
-Use SignalFx to monitor Elastic Container Service for Kubernetes (EKS) through the SignalFx Smart Agent.
+Use SignalFx to monitor Elastic Container Service for Kubernetes (EKS) through the SignalFx Smart Agent
 
 ### FEATURES
 
