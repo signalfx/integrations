@@ -1303,7 +1303,7 @@ sf.org.numCustomMetrics:
 sf.org.numComputationsStarted:
   brief: Rate at which you're starting new SignalFlow jobs
   description: |
-    Number of computations started. Use this metric to know the rate at which you're starting new SignalFlow jobs.
+    Number of SignalFlow computations, which mostly consist of chart views and detectors, started. Use this metric to know the rate at which you're starting new SignalFlow jobs.
 
       * Dimension(s):  `orgId`
       * Data resolution: 10 seconds
@@ -1313,7 +1313,7 @@ sf.org.numComputationsStarted:
 sf.org.numComputationsStartedByToken:
   brief: Rate at which you're starting new SignalFlow jobs, per token
   description: |
-    One value per token. The number of computations started. Use this metric to know the rate at which you're starting new SignalFlow jobs.
+    One value per token. Number of SignalFlow computations, which mostly consist of chart views and detectors, started. Use this metric to know the rate at which you're starting new SignalFlow jobs.
 
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 10 seconds
@@ -1323,7 +1323,7 @@ sf.org.numComputationsStartedByToken:
 sf.org.numComputationsThrottled:
   brief: Rate at which SignalFlow jobs are being throttled
   description: |
-    The number of computations throttled because you reach the maximum number of SignalFlow jobs you can run for your organization. To learn more about this limit, see (Maximum number of SignalFlow jobs per organization)[https://docs.splunk.com/observability/admin/references/system-limits/sys-limits-infra.html#maximum-number-of-signalflow-jobs-per-organization].
+    The number of SignalFlow computations, which mostly consist of chart views and detectors, throttled because you reach the maximum number of SignalFlow jobs you can run for your organization. To learn more about this limit, see (Maximum number of SignalFlow jobs per organization)[https://docs.splunk.com/observability/admin/references/system-limits/sys-limits-infra.html#maximum-number-of-signalflow-jobs-per-organization].
 
       * Dimension(s):  `orgId`
       * Data resolution: 10 seconds
@@ -1333,7 +1333,7 @@ sf.org.numComputationsThrottled:
 sf.org.numComputationsThrottledByToken:
   brief: Rate at which SignalFlow jobs are being throttled
   description: |
-    One value per token. The number of computations throttled because you reach the maximum number of SignalFlow jobs you can run for your organization. To learn more about this limit, see (Maximum number of SignalFlow jobs per organization)[https://docs.splunk.com/observability/admin/references/system-limits/sys-limits-infra.html#maximum-number-of-signalflow-jobs-per-organization].
+    One value per token. The number of computations, which mostly consist of chart views and detectors, throttled because you reach the maximum number of SignalFlow jobs you can run for your organization. To learn more about this limit, see (Maximum number of SignalFlow jobs per organization)[https://docs.splunk.com/observability/admin/references/system-limits/sys-limits-infra.html#maximum-number-of-signalflow-jobs-per-organization].
 
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 10 seconds
