@@ -4,7 +4,7 @@
 
 # telegraf/logparser
 
-Monitor Type: `telegraf/logparser` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/telegraflogparser))
+Monitor Type: `telegraf/logparser` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/telegraflogparser))
 
 **Accepts Endpoints**: No
 

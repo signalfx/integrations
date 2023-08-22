@@ -4,7 +4,7 @@
 
 # trace-forwarder
 
-Monitor Type: `trace-forwarder` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/traceforwarder))
+Monitor Type: `trace-forwarder` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/traceforwarder))
 
 **Accepts Endpoints**: No
 

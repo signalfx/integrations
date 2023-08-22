@@ -4,7 +4,7 @@
 
 # sql
 
-Monitor Type: `sql` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/sql))
+Monitor Type: `sql` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/sql))
 
 **Accepts Endpoints**: **Yes**
 
@@ -53,60 +53,6 @@ is the number of customers that belong to that combination of `country`
 and `status`.  You could also specify multiple `metrics` items to
 generate more than one metric from a single query.
 
-## Metric Expressions
-
-**Metric Expressions are a beta feature and may break in subsequent
-non-major releases.  The example documented will be maintained for backwards
-compatibility, however.**
-
-If you need to do more complex logic than simply mapping columns to metric
-values and dimensions, you can use the `datapointExpressions` option to the
-individual metric configurations.  This allows you to use the
-[expr](https://github.com/antonmedv/expr/blob/master/docs/Language-Definition.md)
-expression language to derive datapoints from individual rows using more
-sophisticated logic.  These expressions should evaluate to datapoints
-created by the `GAUGE` or `CUMULATIVE` helper functions available in the
-expression's context.  You can also have the expression evaluate to `nil`
-if no datapoint should be generated for a particular row.
-
-The signature for both the `GAUGE` and `CUMULATIVE` functions is
-`(metricName, dimensions, value)`, where `metricName` should be a string
-value, `dimensions` should be a map of string keys and values, and `value`
-should be any numeric value.
-
-Each of the columns in the row is mapped to a variable in the context of
-the expression with the same name.  So if there was a column called `name`
-in your SQL query result, there will be a variable called `name` that you
-can use in the expression.  Note that literal string values used in your
-expressions must be surrounded by `"`.
-
-For example, the MySQL [SHOW SLAVE STATS
-query](https://dev.mysql.com/doc/refman/8.0/en/show-slave-status.html)
-does not let you pre-process columns using SQL but let us say
-you wanted to convert the `Slave_IO_Running` column, which is a
-string `Yes`/`No` value, to a gauge datapoint that has a value
-of 0 or 1.  You can do that with the following configuration:
-
-```yaml
-   - type: sql
-     # Example discovery rule, your environment will probably be different
-     discoveryRule: container_labels["mysql.slave"] == "true" && port == 3306
-     dbDriver: mysql
-     params:
-       user: root
-       password: password
-     connectionString: '{{.user}}:{{.password}}@tcp({{.host}})/mysql'
-     queries:
-      - query: 'SHOW SLAVE STATUS'
-        datapointExpressions:
-          - 'GAUGE("mysql.slave_sql_running", {master_uuid: Master_UUID, channel: Channel_name}, Slave_SQL_Running == "Yes" ? 1 : 0)'
-```
-
-This would generate a single gauge datapoint for each row in the slave
-status output, with two dimension, `master_uuid` and `channel` and with a
-value of 0 or 1 depending on if the slave's SQL thread is running.
-
-
 ## Supported Drivers
 
 The `dbDriver` config option must specify the database driver to use.
@@ -118,7 +64,6 @@ currently support and documentation on the connection string:
   - `postgres`: https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters
   - `mysql`: https://github.com/go-sql-driver/mysql#dsn-data-source-name
   - `sqlserver`: https://github.com/denisenkom/go-mssqldb#connection-parameters-and-dsn
-  - `snowflake`: https://pkg.go.dev/github.com/snowflakedb/gosnowflake#hdr-Connection_Parameters
 
 ## Parameterized Connection String
 
@@ -127,30 +72,6 @@ consisting of the variables: `host`, `port`, and all the values from
 the `params` config option map.  You interpolate variables into it
 with the Go template syntax `{{.varname}}` (see example config
 above).
-
-## Snowflake Performance and Usage Metrics
-
-To configure the agent to collect Snowflake performance and usage metrics:
-- Copy pkg/sql/snowflake-metrics.yaml from this repo into the same location as your agent.yaml file (for example, /etc/signalfx).
-- Configure the sql monitor as follows:
-```
-monitors:
-  - type: sql
-    intervalSeconds: 3600
-    dbDriver: snowflake
-    params:
-      account: "account.region"
-      database: "SNOWFLAKE"
-      schema: "ACCOUNT_USAGE"
-      role: "ACCOUNTADMIN"
-      user: "user"
-      password: "password"
-    connectionString: "{{.user}}:{{.password}}@{{.account}}/{{.database}}/{{.schema}}?role={{.role}}"
-    queries: 
-      {"#from": "/etc/signalfx/snowflake-metrics.yaml"}
-```
-
-You can also cut/paste the contents of snowflake-metrics.yaml into agent.yaml under "queries" if needed or preferred.  And you can edit snowflake-metrics.yaml to only include metrics you care about.
 
 
 ## Configuration
@@ -173,8 +94,8 @@ Configuration](../monitor-config.html#common-configuration).**
 | `host` | no | `string` |  |
 | `port` | no | `integer` |  (**default:** `0`) |
 | `params` | no | `map of strings` | Parameters to the connectionString that can be templated into that option using Go template syntax (e.g. `{{.key}}`). |
-| `dbDriver` | no | `string` | The database driver to use, valid values are `postgres`, `mysql`, `sqlserver`, and `snowflake`. |
-| `connectionString` | no | `string` | A URL or simple option string used to connect to the database. For example, if using PostgreSQL, [see the list of connection string params](https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters). |
+| `dbDriver` | no | `string` | The database driver to use, valid values are `postgres`, `mysql` and `sqlserver`. |
+| `connectionString` | no | `string` | A URL or simple option string used to connect to the database. If using PostgreSQL, [see the list of connection string params](https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters). |
 | `queries` | **yes** | `list of objects (see below)` | A list of queries to make against the database that are used to generate datapoints. |
 | `logQueries` | no | `bool` | If true, query results will be logged at the info level. (**default:** `false`) |
 
@@ -186,7 +107,6 @@ The **nested** `queries` config object has the following fields:
 | `query` | **yes** | `string` | A SQL query text that selects one or more rows from a database |
 | `params` | no | `list of any` | Optional parameters that will replace placeholders in the query string. |
 | `metrics` | no | `list of objects (see below)` | Metrics that should be generated from the query. |
-| `datapointExpressions` | no | `list of strings` | A set of [expr] expressions that will be used to convert each row to a set of metrics.  Each of these will be run for each row in the query result set, allowing you to generate multiple datapoints per row.  Each expression should evaluate to a single datapoint or nil. |
 
 
 The **nested** `metrics` config object has the following fields:

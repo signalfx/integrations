@@ -4,7 +4,7 @@
 
 # telegraf/win_perf_counters
 
-Monitor Type: `telegraf/win_perf_counters` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/telegraf/monitors/winperfcounters))
+Monitor Type: `telegraf/win_perf_counters` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/telegraf/monitors/winperfcounters))
 
 **Accepts Endpoints**: No
 

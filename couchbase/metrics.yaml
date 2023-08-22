@@ -60,177 +60,6 @@ gauge.bucket.basic.quotaPercentUsed:
   monitor: collectd/couchbase
   title: gauge.bucket.basic.quotaPercentUsed
 
-gauge.bucket.hot_keys.0:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.0
-
-gauge.bucket.hot_keys.1:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.1
-
-gauge.bucket.hot_keys.10:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.10
-
-gauge.bucket.hot_keys.2:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.2
-
-gauge.bucket.hot_keys.3:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.3
-
-gauge.bucket.hot_keys.4:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.4
-
-gauge.bucket.hot_keys.5:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.5
-
-gauge.bucket.hot_keys.6:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.6
-
-gauge.bucket.hot_keys.7:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.7
-
-gauge.bucket.hot_keys.8:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.8
-
-gauge.bucket.hot_keys.9:
-  brief: One of the most used keys in this bucket
-  custom: true
-  description: One of the most used keys in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.hot_keys.9
-
-gauge.bucket.op.avg_bg_wait_time:
-  brief: Average background wait time
-  custom: true
-  description: Average background wait time
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.avg_bg_wait_time
-
-gauge.bucket.op.avg_disk_commit_time:
-  brief: Average disk commit time
-  custom: true
-  description: Average disk commit time
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.avg_disk_commit_time
-
-gauge.bucket.op.avg_disk_update_time:
-  brief: Average disk update time
-  custom: true
-  description: Average disk update time
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.avg_disk_update_time
-
-gauge.bucket.op.bg_wait_count:
-  brief: ''
-  custom: true
-  description: ''
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.bg_wait_count
-
-gauge.bucket.op.bg_wait_total:
-  brief: The total background wait time
-  custom: true
-  description: The total background wait time
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.bg_wait_total
-
-gauge.bucket.op.bytes_read:
-  brief: Number of bytes read
-  custom: true
-  description: Number of bytes read
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.bytes_read
-
-gauge.bucket.op.bytes_written:
-  brief: Number of bytes written
-  custom: true
-  description: Number of bytes written
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.bytes_written
-
-gauge.bucket.op.cas_badval:
-  brief: Number of CAS operations per second using an incorrect CAS ID for data that
-    this bucket contains
-  custom: true
-  description: Number of CAS operations per second using an incorrect CAS ID for data
-    that this bucket contains
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.cas_badval
-
-gauge.bucket.op.cas_hits:
-  brief: Number of CAS operations per second for data that this bucket contains
-  custom: true
-  description: Number of CAS operations per second for data that this bucket contains
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.cas_hits
-
-gauge.bucket.op.cas_misses:
-  brief: Number of CAS operations per second for data that this bucket does not contain
-  custom: true
-  description: Number of CAS operations per second for data that this bucket does
-    not contain
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.cas_misses
-
 gauge.bucket.op.cmd_get:
   brief: requested objects
   custom: false
@@ -239,112 +68,13 @@ gauge.bucket.op.cmd_get:
   monitor: collectd/couchbase
   title: gauge.bucket.op.cmd_get
 
-gauge.bucket.op.cmd_set:
-  brief: Number of writes (set operations) per second to this bucket
-  custom: true
-  description: Number of writes (set operations) per second to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.cmd_set
-
-gauge.bucket.op.couch_docs_actual_disk_size:
-  brief: The size of the couchbase docs on disk
-  custom: true
-  description: The size of the couchbase docs on disk
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_docs_actual_disk_size
-
-gauge.bucket.op.couch_docs_data_size:
-  brief: The size of active data in this bucket
-  custom: true
-  description: The size of active data in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_docs_data_size
-
-gauge.bucket.op.couch_docs_disk_size:
-  brief: Couch docs total size in bytes
-  custom: true
-  description: Couch docs total size in bytes
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_docs_disk_size
-
 gauge.bucket.op.couch_docs_fragmentation:
   brief: Percent fragmentation of documents in this bucket
   custom: false
-  description: Percent fragmentation of documents in this bucket
+  description: Percent fragmentation of documents in this bucket.
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.op.couch_docs_fragmentation
-
-gauge.bucket.op.couch_spatial_data_size:
-  brief: The size of object data for spatial views
-  custom: true
-  description: The size of object data for spatial views
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_spatial_data_size
-
-gauge.bucket.op.couch_spatial_disk_size:
-  brief: The amount of disk space occupied by spatial views
-  custom: true
-  description: The amount of disk space occupied by spatial views
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_spatial_disk_size
-
-gauge.bucket.op.couch_spatial_ops:
-  brief: Number of spatial operations
-  custom: true
-  description: Number of spatial operations
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_spatial_ops
-
-gauge.bucket.op.couch_total_disk_size:
-  brief: The total size on disk of all data and view files for this bucket
-  custom: true
-  description: The total size on disk of all data and view files for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_total_disk_size
-
-gauge.bucket.op.couch_views_actual_disk_size:
-  brief: The size of all active items in all the indexes for this bucket on disk
-  custom: true
-  description: The size of all active items in all the indexes for this bucket on
-    disk
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_views_actual_disk_size
-
-gauge.bucket.op.couch_views_data_size:
-  brief: The size of object data for views
-  custom: true
-  description: The size of object data for views
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_views_data_size
-
-gauge.bucket.op.couch_views_disk_size:
-  brief: The amount of disk space occupied by views
-  custom: true
-  description: The amount of disk space occupied by views
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_views_disk_size
-
-gauge.bucket.op.couch_views_fragmentation:
-  brief: How much fragmented data there is to be compacted compared to real data for
-    the view index files in this bucket
-  custom: true
-  description: How much fragmented data there is to be compacted compared to real
-    data for the view index files in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.couch_views_fragmentation
 
 gauge.bucket.op.couch_views_ops:
   brief: view operations per second
@@ -353,22 +83,6 @@ gauge.bucket.op.couch_views_ops:
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.op.couch_views_ops
-
-gauge.bucket.op.cpu_idle_ms:
-  brief: CPU Idle milliseconds
-  custom: true
-  description: CPU Idle milliseconds
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.cpu_idle_ms
-
-gauge.bucket.op.cpu_utilization_rate:
-  brief: Percentage of CPU in use across all available cores on this server
-  custom: true
-  description: Percentage of CPU in use across all available cores on this server
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.cpu_utilization_rate
 
 gauge.bucket.op.curr_connections:
   brief: open connection per bucket
@@ -385,78 +99,6 @@ gauge.bucket.op.curr_items:
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.op.curr_items
-
-gauge.bucket.op.curr_items_tot:
-  brief: Total number of items
-  custom: true
-  description: Total number of items
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.curr_items_tot
-
-gauge.bucket.op.decr_hits:
-  brief: Number of decrement hits
-  custom: true
-  description: Number of decrement hits
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.decr_hits
-
-gauge.bucket.op.decr_misses:
-  brief: Number of decrement misses
-  custom: true
-  description: Number of decrement misses
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.decr_misses
-
-gauge.bucket.op.delete_hits:
-  brief: Number of delete hits
-  custom: true
-  description: Number of delete hits
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.delete_hits
-
-gauge.bucket.op.delete_misses:
-  brief: Number of delete misses
-  custom: true
-  description: Number of delete misses
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.delete_misses
-
-gauge.bucket.op.disk_commit_count:
-  brief: Number of disk commits
-  custom: true
-  description: Number of disk commits
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.disk_commit_count
-
-gauge.bucket.op.disk_commit_total:
-  brief: Total number of disk commits
-  custom: true
-  description: Total number of disk commits
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.disk_commit_total
-
-gauge.bucket.op.disk_update_count:
-  brief: Number of disk updates
-  custom: true
-  description: Number of disk updates
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.disk_update_count
-
-gauge.bucket.op.disk_update_total:
-  brief: Total number of disk updates
-  custom: true
-  description: Total number of disk updates
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.disk_update_total
 
 gauge.bucket.op.disk_write_queue:
   brief: number of items waiting to be written to disk
@@ -482,278 +124,6 @@ gauge.bucket.op.ep_cache_miss_rate:
   monitor: collectd/couchbase
   title: gauge.bucket.op.ep_cache_miss_rate
 
-gauge.bucket.op.ep_dcp_2i_backoff:
-  brief: Number of backoffs for indexes DCP connections
-  custom: true
-  description: Number of backoffs for indexes DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_2i_backoff
-
-gauge.bucket.op.ep_dcp_2i_count:
-  brief: Number of indexes DCP connections
-  custom: true
-  description: Number of indexes DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_2i_count
-
-gauge.bucket.op.ep_dcp_2i_items_remaining:
-  brief: Number of indexes items remaining to be sent
-  custom: true
-  description: Number of indexes items remaining to be sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_2i_items_remaining
-
-gauge.bucket.op.ep_dcp_2i_items_sent:
-  brief: Number of indexes items sent
-  custom: true
-  description: Number of indexes items sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_2i_items_sent
-
-gauge.bucket.op.ep_dcp_2i_producer_count:
-  brief: Number of indexes producers
-  custom: true
-  description: Number of indexes producers
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_2i_producer_count
-
-gauge.bucket.op.ep_dcp_2i_total_backlog_size:
-  brief: Number of items in dcp backlog
-  custom: true
-  description: Number of items in dcp backlog
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_2i_total_backlog_size
-
-gauge.bucket.op.ep_dcp_2i_total_bytes:
-  brief: Number bytes per second being sent for indexes DCP connections
-  custom: true
-  description: Number bytes per second being sent for indexes DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_2i_total_bytes
-
-gauge.bucket.op.ep_dcp_other_backoff:
-  brief: Number of backoffs for other DCP connections
-  custom: true
-  description: Number of backoffs for other DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_other_backoff
-
-gauge.bucket.op.ep_dcp_other_count:
-  brief: Number of other DCP connections
-  custom: true
-  description: Number of other DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_other_count
-
-gauge.bucket.op.ep_dcp_other_items_remaining:
-  brief: Number of other items remaining to be sent
-  custom: true
-  description: Number of other items remaining to be sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_other_items_remaining
-
-gauge.bucket.op.ep_dcp_other_items_sent:
-  brief: Number of other items sent
-  custom: true
-  description: Number of other items sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_other_items_sent
-
-gauge.bucket.op.ep_dcp_other_producer_count:
-  brief: Number of other producers
-  custom: true
-  description: Number of other producers
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_other_producer_count
-
-gauge.bucket.op.ep_dcp_other_total_backlog_size:
-  brief: Number of remaining items for replication
-  custom: true
-  description: Number of remaining items for replication
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_other_total_backlog_size
-
-gauge.bucket.op.ep_dcp_other_total_bytes:
-  brief: Number bytes per second being sent for other DCP connections
-  custom: true
-  description: Number bytes per second being sent for other DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_other_total_bytes
-
-gauge.bucket.op.ep_dcp_replica_backoff:
-  brief: Number of backoffs for replica DCP connections
-  custom: true
-  description: Number of backoffs for replica DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_replica_backoff
-
-gauge.bucket.op.ep_dcp_replica_count:
-  brief: Number of replica DCP connections
-  custom: true
-  description: Number of replica DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_replica_count
-
-gauge.bucket.op.ep_dcp_replica_items_remaining:
-  brief: Number of replica items remaining to be sent
-  custom: true
-  description: Number of replica items remaining to be sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_replica_items_remaining
-
-gauge.bucket.op.ep_dcp_replica_items_sent:
-  brief: Number of replica items sent
-  custom: true
-  description: Number of replica items sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_replica_items_sent
-
-gauge.bucket.op.ep_dcp_replica_producer_count:
-  brief: Number of replica producers
-  custom: true
-  description: Number of replica producers
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_replica_producer_count
-
-gauge.bucket.op.ep_dcp_replica_total_backlog_size:
-  brief: Number of remaining items for replication
-  custom: true
-  description: Number of remaining items for replication
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_replica_total_backlog_size
-
-gauge.bucket.op.ep_dcp_replica_total_bytes:
-  brief: Number bytes per second being sent for replica DCP connections
-  custom: true
-  description: Number bytes per second being sent for replica DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_replica_total_bytes
-
-gauge.bucket.op.ep_dcp_views_backoff:
-  brief: Number of backoffs for views DCP connections
-  custom: true
-  description: Number of backoffs for views DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_views_backoff
-
-gauge.bucket.op.ep_dcp_views_count:
-  brief: Number of views DCP connections
-  custom: true
-  description: Number of views DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_views_count
-
-gauge.bucket.op.ep_dcp_views_items_remaining:
-  brief: Number of views items remaining to be sent
-  custom: true
-  description: Number of views items remaining to be sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_views_items_remaining
-
-gauge.bucket.op.ep_dcp_views_items_sent:
-  brief: Number of view items sent
-  custom: true
-  description: Number of view items sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_views_items_sent
-
-gauge.bucket.op.ep_dcp_views_producer_count:
-  brief: Number of views producers
-  custom: true
-  description: Number of views producers
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_views_producer_count
-
-gauge.bucket.op.ep_dcp_views_total_bytes:
-  brief: Number bytes per second being sent for views DCP connections
-  custom: true
-  description: Number bytes per second being sent for views DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_views_total_bytes
-
-gauge.bucket.op.ep_dcp_xdcr_backoff:
-  brief: Number of backoffs for xdcr DCP connections
-  custom: true
-  description: Number of backoffs for xdcr DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_xdcr_backoff
-
-gauge.bucket.op.ep_dcp_xdcr_count:
-  brief: Number of xdcr DCP connections
-  custom: true
-  description: Number of xdcr DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_xdcr_count
-
-gauge.bucket.op.ep_dcp_xdcr_items_remaining:
-  brief: Number of xdcr items remaining to be sent
-  custom: true
-  description: Number of xdcr items remaining to be sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_xdcr_items_remaining
-
-gauge.bucket.op.ep_dcp_xdcr_items_sent:
-  brief: Number of xdcr items sent
-  custom: true
-  description: Number of xdcr items sent
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_xdcr_items_sent
-
-gauge.bucket.op.ep_dcp_xdcr_producer_count:
-  brief: Number of xdcr producers
-  custom: true
-  description: Number of xdcr producers
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_xdcr_producer_count
-
-gauge.bucket.op.ep_dcp_xdcr_total_backlog_size:
-  brief: Number of items waiting replication
-  custom: true
-  description: Number of items waiting replication
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_xdcr_total_backlog_size
-
-gauge.bucket.op.ep_dcp_xdcr_total_bytes:
-  brief: Number bytes per second being sent for xdcr DCP connections
-  custom: true
-  description: Number bytes per second being sent for xdcr DCP connections
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_dcp_xdcr_total_bytes
-
 gauge.bucket.op.ep_diskqueue_drain:
   brief: items removed from disk queue
   custom: false
@@ -769,48 +139,6 @@ gauge.bucket.op.ep_diskqueue_fill:
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.op.ep_diskqueue_fill
-
-gauge.bucket.op.ep_diskqueue_items:
-  brief: The number of items waiting to be written to disk for this bucket for this
-    state
-  custom: true
-  description: The number of items waiting to be written to disk for this bucket for
-    this state
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_diskqueue_items
-
-gauge.bucket.op.ep_flusher_todo:
-  brief: Number of items currently being written
-  custom: true
-  description: Number of items currently being written
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_flusher_todo
-
-gauge.bucket.op.ep_item_commit_failed:
-  brief: Number of times a transaction failed to commit due to storage errors
-  custom: true
-  description: Number of times a transaction failed to commit due to storage errors
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_item_commit_failed
-
-gauge.bucket.op.ep_kv_size:
-  brief: Total amount of user data cached in RAM in this bucket
-  custom: true
-  description: Total amount of user data cached in RAM in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_kv_size
-
-gauge.bucket.op.ep_max_size:
-  brief: The maximum amount of memory this bucket can use
-  custom: true
-  description: The maximum amount of memory this bucket can use
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_max_size
 
 gauge.bucket.op.ep_mem_high_wat:
   brief: memory high water mark - point at which active objects begin to be ejected
@@ -830,70 +158,6 @@ gauge.bucket.op.ep_mem_low_wat:
   monitor: collectd/couchbase
   title: gauge.bucket.op.ep_mem_low_wat
 
-gauge.bucket.op.ep_meta_data_memory:
-  brief: Total amount of item  metadata consuming RAM in this bucket
-  custom: true
-  description: Total amount of item  metadata consuming RAM in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_meta_data_memory
-
-gauge.bucket.op.ep_num_non_resident:
-  brief: Number of non-resident items
-  custom: true
-  description: Number of non-resident items
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_num_non_resident
-
-gauge.bucket.op.ep_num_ops_del_meta:
-  brief: Number of delete operations per second for this bucket as the target for
-    XDCR
-  custom: true
-  description: Number of delete operations per second for this bucket as the target
-    for XDCR
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_num_ops_del_meta
-
-gauge.bucket.op.ep_num_ops_del_ret_meta:
-  brief: Number of delRetMeta operations per second for this bucket as the target
-    for XDCR
-  custom: true
-  description: Number of delRetMeta operations per second for this bucket as the target
-    for XDCR
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_num_ops_del_ret_meta
-
-gauge.bucket.op.ep_num_ops_get_meta:
-  brief: Number of read operations per second for this bucket as the target for XDCR
-  custom: true
-  description: Number of read operations per second for this bucket as the target
-    for XDCR
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_num_ops_get_meta
-
-gauge.bucket.op.ep_num_ops_set_meta:
-  brief: Number of set operations per second for this bucket as the target for XDCR
-  custom: true
-  description: Number of set operations per second for this bucket as the target for
-    XDCR
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_num_ops_set_meta
-
-gauge.bucket.op.ep_num_ops_set_ret_meta:
-  brief: Number of setRetMeta operations per second for this bucket as the target
-    for XDCR
-  custom: true
-  description: Number of setRetMeta operations per second for this bucket as the target
-    for XDCR
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_num_ops_set_ret_meta
-
 gauge.bucket.op.ep_num_value_ejects:
   brief: number of objects ejected out of the bucket
   custom: false
@@ -910,30 +174,6 @@ gauge.bucket.op.ep_oom_errors:
   monitor: collectd/couchbase
   title: gauge.bucket.op.ep_oom_errors
 
-gauge.bucket.op.ep_ops_create:
-  brief: Total number of new items being inserted into this bucket
-  custom: true
-  description: Total number of new items being inserted into this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_ops_create
-
-gauge.bucket.op.ep_ops_update:
-  brief: Number of update operations
-  custom: true
-  description: Number of update operations
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_ops_update
-
-gauge.bucket.op.ep_overhead:
-  brief: Extra memory used by transient data like persistence queues or checkpoints
-  custom: true
-  description: Extra memory used by transient data like persistence queues or checkpoints
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_overhead
-
 gauge.bucket.op.ep_queue_size:
   brief: number of items queued for storage
   custom: false
@@ -941,274 +181,6 @@ gauge.bucket.op.ep_queue_size:
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.op.ep_queue_size
-
-gauge.bucket.op.ep_resident_items_rate:
-  brief: Number of resident items
-  custom: true
-  description: Number of resident items
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_resident_items_rate
-
-gauge.bucket.op.ep_tap_rebalance_count:
-  brief: Number of internal rebalancing TAP queues in this bucket
-  custom: true
-  description: Number of internal rebalancing TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_rebalance_count
-
-gauge.bucket.op.ep_tap_rebalance_qlen:
-  brief: Number of items in the rebalance TAP queues in this bucket
-  custom: true
-  description: Number of items in the rebalance TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_rebalance_qlen
-
-gauge.bucket.op.ep_tap_rebalance_queue_backfillremaining:
-  brief: Number of items in the backfill queues of rebalancing TAP connections to
-    this bucket
-  custom: true
-  description: Number of items in the backfill queues of rebalancing TAP connections
-    to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_rebalance_queue_backfillremaining
-
-gauge.bucket.op.ep_tap_rebalance_queue_backoff:
-  brief: Number of back-offs received per second while sending data over rebalancing
-    TAP connections to this bucket
-  custom: true
-  description: Number of back-offs received per second while sending data over rebalancing
-    TAP connections to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_rebalance_queue_backoff
-
-gauge.bucket.op.ep_tap_rebalance_queue_drain:
-  brief: Number of items per second being sent over rebalancing TAP connections to
-    this bucket, i.e
-  custom: true
-  description: Number of items per second being sent over rebalancing TAP connections
-    to this bucket, i.e. removed from queue.
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_rebalance_queue_drain
-
-gauge.bucket.op.ep_tap_rebalance_queue_itemondisk:
-  brief: Number of items still on disk to be loaded for rebalancing TAP connections
-    to this bucket
-  custom: true
-  description: Number of items still on disk to be loaded for rebalancing TAP connections
-    to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_rebalance_queue_itemondisk
-
-gauge.bucket.op.ep_tap_rebalance_total_backlog_size:
-  brief: Number of items remaining for replication
-  custom: true
-  description: Number of items remaining for replication
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_rebalance_total_backlog_size
-
-gauge.bucket.op.ep_tap_replica_count:
-  brief: Number of internal replication TAP queues in this bucket
-  custom: true
-  description: Number of internal replication TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_replica_count
-
-gauge.bucket.op.ep_tap_replica_qlen:
-  brief: Number of items in the replication TAP queues in this bucket
-  custom: true
-  description: Number of items in the replication TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_replica_qlen
-
-gauge.bucket.op.ep_tap_replica_queue_backoff:
-  brief: Number of back-offs received per second while sending data over replication
-    TAP connections to this bucket
-  custom: true
-  description: Number of back-offs received per second while sending data over replication
-    TAP connections to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_replica_queue_backoff
-
-gauge.bucket.op.ep_tap_replica_queue_drain:
-  brief: Number of items per second being sent over replication TAP connections to
-    this bucket, i.e
-  custom: true
-  description: Number of items per second being sent over replication TAP connections
-    to this bucket, i.e. removed from queue
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_replica_queue_drain
-
-gauge.bucket.op.ep_tap_replica_queue_itemondisk:
-  brief: Number of items still on disk to be loaded for replication TAP connections
-    to this bucket
-  custom: true
-  description: Number of items still on disk to be loaded for replication TAP connections
-    to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_replica_queue_itemondisk
-
-gauge.bucket.op.ep_tap_replica_total_backlog_size:
-  brief: Number of remaining items for replication
-  custom: true
-  description: Number of remaining items for replication
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_replica_total_backlog_size
-
-gauge.bucket.op.ep_tap_total_count:
-  brief: Total number of internal TAP queues in this bucket
-  custom: true
-  description: Total number of internal TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_count
-
-gauge.bucket.op.ep_tap_total_qlen:
-  brief: Total number of items in TAP queues in this bucket
-  custom: true
-  description: Total number of items in TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_qlen
-
-gauge.bucket.op.ep_tap_total_queue_backfillremaining:
-  brief: Total number of items in the backfill queues of TAP connections to this bucket
-  custom: true
-  description: Total number of items in the backfill queues of TAP connections to
-    this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_queue_backfillremaining
-
-gauge.bucket.op.ep_tap_total_queue_backoff:
-  brief: Total number of back-offs received per second while sending data over TAP
-    connections to this bucket
-  custom: true
-  description: Total number of back-offs received per second while sending data over
-    TAP connections to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_queue_backoff
-
-gauge.bucket.op.ep_tap_total_queue_drain:
-  brief: Total number of items per second being sent over TAP connections to this
-    bucket
-  custom: true
-  description: Total number of items per second being sent over TAP connections to
-    this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_queue_drain
-
-gauge.bucket.op.ep_tap_total_queue_fill:
-  brief: Total enqueued items in the queue
-  custom: true
-  description: Total enqueued items in the queue.
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_queue_fill
-
-gauge.bucket.op.ep_tap_total_queue_itemondisk:
-  brief: The number of items waiting to be written to disk for this bucket for this
-    state
-  custom: true
-  description: The number of items waiting to be written to disk for this bucket for
-    this state.
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_queue_itemondisk
-
-gauge.bucket.op.ep_tap_total_total_backlog_size:
-  brief: Number of remaining items for replication
-  custom: true
-  description: Number of remaining items for replication
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_total_total_backlog_size
-
-gauge.bucket.op.ep_tap_user_count:
-  brief: Number of internal user TAP queues in this bucket
-  custom: true
-  description: Number of internal user TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_count
-
-gauge.bucket.op.ep_tap_user_qlen:
-  brief: Number of items in user TAP queues in this bucket
-  custom: true
-  description: Number of items in user TAP queues in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_qlen
-
-gauge.bucket.op.ep_tap_user_queue_backfillremaining:
-  brief: Number of items in the backfill queues of user TAP connections to this bucket
-  custom: true
-  description: Number of items in the backfill queues of user TAP connections to this
-    bucket.
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_queue_backfillremaining
-
-gauge.bucket.op.ep_tap_user_queue_backoff:
-  brief: Number of back-offs received per second while sending data over user TAP
-    connections to this bucket
-  custom: true
-  description: Number of back-offs received per second while sending data over user
-    TAP connections to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_queue_backoff
-
-gauge.bucket.op.ep_tap_user_queue_drain:
-  brief: Number of items per second being sent over user TAP connections to this bucket,
-    i.e
-  custom: true
-  description: Number of items per second being sent over user TAP connections to
-    this bucket, i.e. removed from queue
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_queue_drain
-
-gauge.bucket.op.ep_tap_user_queue_fill:
-  brief: Number of items per second being put on the user TAP queues
-  custom: true
-  description: Number of items per second being put on the user TAP queues
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_queue_fill
-
-gauge.bucket.op.ep_tap_user_queue_itemondisk:
-  brief: Number of items still on disk to be loaded for client TAP connections to
-    this bucket
-  custom: true
-  description: Number of items still on disk to be loaded for client TAP connections
-    to this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_queue_itemondisk
-
-gauge.bucket.op.ep_tap_user_total_backlog_size:
-  brief: Number of remaining items for replication
-  custom: true
-  description: Number of remaining items for replication
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_tap_user_total_backlog_size
 
 gauge.bucket.op.ep_tmp_oom_errors:
   brief: request rejected - couchbase is making room by ejecting objects, try again
@@ -1220,110 +192,6 @@ gauge.bucket.op.ep_tmp_oom_errors:
   monitor: collectd/couchbase
   title: gauge.bucket.op.ep_tmp_oom_errors
 
-gauge.bucket.op.ep_vb_total:
-  brief: Total number of vBuckets for this bucket
-  custom: true
-  description: Total number of vBuckets for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.ep_vb_total
-
-gauge.bucket.op.evictions:
-  brief: Number of evictions
-  custom: true
-  description: Number of evictions
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.evictions
-
-gauge.bucket.op.get_hits:
-  brief: Number of get hits
-  custom: true
-  description: Number of get hits
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.get_hits
-
-gauge.bucket.op.get_misses:
-  brief: Number of get misses
-  custom: true
-  description: Number of get misses
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.get_misses
-
-gauge.bucket.op.hibernated_requests:
-  brief: Number of streaming requests now idle
-  custom: true
-  description: Number of streaming requests now idle
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.hibernated_requests
-
-gauge.bucket.op.hibernated_waked:
-  brief: Rate of streaming request wakeups
-  custom: true
-  description: Rate of streaming request wakeups
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.hibernated_waked
-
-gauge.bucket.op.hit_ratio:
-  brief: Hit ratio
-  custom: true
-  description: Hit ratio.
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.hit_ratio
-
-gauge.bucket.op.incr_hits:
-  brief: Number of increment hits
-  custom: true
-  description: Number of increment hits
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.incr_hits
-
-gauge.bucket.op.incr_misses:
-  brief: Number of increment misses
-  custom: true
-  description: Number of increment misses
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.incr_misses
-
-gauge.bucket.op.mem_actual_free:
-  brief: Amount of RAM available
-  custom: true
-  description: Amount of RAM available
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.mem_actual_free
-
-gauge.bucket.op.mem_actual_used:
-  brief: Used memory
-  custom: true
-  description: Used memory
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.mem_actual_used
-
-gauge.bucket.op.mem_free:
-  brief: Free memory
-  custom: true
-  description: Free memory
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.mem_free
-
-gauge.bucket.op.mem_total:
-  brief: Total available memory
-  custom: true
-  description: Total available memory
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.mem_total
-
 gauge.bucket.op.mem_used:
   brief: memory used
   custom: false
@@ -1331,22 +199,6 @@ gauge.bucket.op.mem_used:
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.op.mem_used
-
-gauge.bucket.op.mem_used_sys:
-  brief: System memory usage
-  custom: true
-  description: System memory usage
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.mem_used_sys
-
-gauge.bucket.op.misses:
-  brief: Total number of misses
-  custom: true
-  description: Total number of misses
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.misses
 
 gauge.bucket.op.ops:
   brief: total of gets, sets, increment and decrement
@@ -1356,120 +208,6 @@ gauge.bucket.op.ops:
   monitor: collectd/couchbase
   title: gauge.bucket.op.ops
 
-gauge.bucket.op.rest_requests:
-  brief: Number of HTTP requests
-  custom: true
-  description: Number of HTTP requests
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.rest_requests
-
-gauge.bucket.op.swap_total:
-  brief: Total amount of swap available
-  custom: true
-  description: Total amount of swap available
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.swap_total
-
-gauge.bucket.op.swap_used:
-  brief: Amount of swap used
-  custom: true
-  description: Amount of swap used
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.swap_used
-
-gauge.bucket.op.vb_active_eject:
-  brief: Number of items per second being ejected to disk from active vBuckets
-  custom: true
-  description: Number of items per second being ejected to disk from active vBuckets
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_eject
-
-gauge.bucket.op.vb_active_itm_memory:
-  brief: Amount of active user data cached in RAM in this bucket
-  custom: true
-  description: Amount of active user data cached in RAM in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_itm_memory
-
-gauge.bucket.op.vb_active_meta_data_memory:
-  brief: Amount of active item metadata consuming RAM in this bucket
-  custom: true
-  description: Amount of active item metadata consuming RAM in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_meta_data_memory
-
-gauge.bucket.op.vb_active_num:
-  brief: Number of vBuckets in the active state for this bucket
-  custom: true
-  description: Number of vBuckets in the active state for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_num
-
-gauge.bucket.op.vb_active_num_non_resident:
-  brief: Number of non resident vBuckets in the active state for this bucket
-  custom: true
-  description: Number of non resident vBuckets in the active state for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_num_non_resident
-
-gauge.bucket.op.vb_active_ops_create:
-  brief: New items per second being inserted into active vBuckets in this bucket
-  custom: true
-  description: New items per second being inserted into active vBuckets in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_ops_create
-
-gauge.bucket.op.vb_active_ops_update:
-  brief: Number of items updated on active vBucket per second for this bucket
-  custom: true
-  description: Number of items updated on active vBucket per second for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_ops_update
-
-gauge.bucket.op.vb_active_queue_age:
-  brief: Sum of disk queue item age in milliseconds
-  custom: true
-  description: Sum of disk queue item age in milliseconds
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_queue_age
-
-gauge.bucket.op.vb_active_queue_drain:
-  brief: Number of active items per second being written to disk in this bucket
-  custom: true
-  description: Number of active items per second being written to disk in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_queue_drain
-
-gauge.bucket.op.vb_active_queue_fill:
-  brief: Number of active items per second being put on the active item disk queue
-    in this bucket
-  custom: true
-  description: Number of active items per second being put on the active item disk
-    queue in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_queue_fill
-
-gauge.bucket.op.vb_active_queue_size:
-  brief: Number of active items waiting to be written to disk in this bucket
-  custom: true
-  description: Number of active items waiting to be written to disk in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_active_queue_size
-
 gauge.bucket.op.vb_active_resident_items_ratio:
   brief: ratio of items kept in memory vs stored on disk
   custom: false
@@ -1478,286 +216,10 @@ gauge.bucket.op.vb_active_resident_items_ratio:
   monitor: collectd/couchbase
   title: gauge.bucket.op.vb_active_resident_items_ratio
 
-gauge.bucket.op.vb_avg_active_queue_age:
-  brief: Average age in seconds of active items in the active item queue for this
-    bucket
-  custom: true
-  description: Average age in seconds of active items in the active item queue for
-    this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_avg_active_queue_age
-
-gauge.bucket.op.vb_avg_pending_queue_age:
-  brief: Average age in seconds of pending items in the pending item queue for this
-    bucket and should be transient during rebalancing
-  custom: true
-  description: Average age in seconds of pending items in the pending item queue for
-    this bucket and should be transient during rebalancing
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_avg_pending_queue_age
-
-gauge.bucket.op.vb_avg_replica_queue_age:
-  brief: Average age in seconds of replica items in the replica item queue for this
-    bucket
-  custom: true
-  description: Average age in seconds of replica items in the replica item queue for
-    this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_avg_replica_queue_age
-
-gauge.bucket.op.vb_avg_total_queue_age:
-  brief: Average age of items in the queue
-  custom: true
-  description: Average age of items in the queue
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_avg_total_queue_age
-
-gauge.bucket.op.vb_pending_curr_items:
-  brief: Number of items in pending vBuckets in this bucket and should be transient
-    during rebalancing
-  custom: true
-  description: Number of items in pending vBuckets in this bucket and should be transient
-    during rebalancing
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_curr_items
-
-gauge.bucket.op.vb_pending_eject:
-  brief: Number of items per second being ejected to disk from pending vBuckets
-  custom: true
-  description: Number of items per second being ejected to disk from pending vBuckets
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_eject
-
-gauge.bucket.op.vb_pending_itm_memory:
-  brief: Amount of pending user data cached in RAM in this bucket and should be transient
-    during rebalancing
-  custom: true
-  description: Amount of pending user data cached in RAM in this bucket and should
-    be transient during rebalancing
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_itm_memory
-
-gauge.bucket.op.vb_pending_meta_data_memory:
-  brief: Amount of pending item metadata consuming RAM in this bucket and should be
-    transient during rebalancing
-  custom: true
-  description: Amount of pending item metadata consuming RAM in this bucket and should
-    be transient during rebalancing
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_meta_data_memory
-
-gauge.bucket.op.vb_pending_num:
-  brief: Number of pending items
-  custom: true
-  description: Number of pending items
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_num
-
-gauge.bucket.op.vb_pending_num_non_resident:
-  brief: Number of non resident vBuckets in the pending state for this bucket
-  custom: true
-  description: Number of non resident vBuckets in the pending state for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_num_non_resident
-
-gauge.bucket.op.vb_pending_ops_create:
-  brief: New items per second being instead into pending vBuckets in this bucket and
-    should be transient during rebalancing
-  custom: true
-  description: New items per second being instead into pending vBuckets in this bucket
-    and should be transient during rebalancing
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_ops_create
-
-gauge.bucket.op.vb_pending_ops_update:
-  brief: Number of items updated on pending vBucket per second for this bucket
-  custom: true
-  description: Number of items updated on pending vBucket per second for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_ops_update
-
-gauge.bucket.op.vb_pending_queue_age:
-  brief: Sum of disk pending queue item age in milliseconds
-  custom: true
-  description: Sum of disk pending queue item age in milliseconds
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_queue_age
-
-gauge.bucket.op.vb_pending_queue_drain:
-  brief: Number of pending items per second being written to disk in this bucket and
-    should be transient during rebalancing
-  custom: true
-  description: Number of pending items per second being written to disk in this bucket
-    and should be transient during rebalancing
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_queue_drain
-
-gauge.bucket.op.vb_pending_queue_fill:
-  brief: Total enqueued pending items on disk queue
-  custom: true
-  description: Total enqueued pending items on disk queue
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_queue_fill
-
-gauge.bucket.op.vb_pending_queue_size:
-  brief: Number of pending items waiting to be written to disk in this bucket and
-    should be transient during rebalancing
-  custom: true
-  description: Number of pending items waiting to be written to disk in this bucket
-    and should be transient during rebalancing
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_queue_size
-
-gauge.bucket.op.vb_pending_resident_items_ratio:
-  brief: Number of resident pending items
-  custom: true
-  description: Number of resident pending items
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_pending_resident_items_ratio
-
-gauge.bucket.op.vb_replica_curr_items:
-  brief: Number of in memory items
-  custom: true
-  description: Number of in memory items
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_curr_items
-
-gauge.bucket.op.vb_replica_eject:
-  brief: Number of items per second being ejected to disk from replica vBuckets
-  custom: true
-  description: Number of items per second being ejected to disk from replica vBuckets
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_eject
-
-gauge.bucket.op.vb_replica_itm_memory:
-  brief: Amount of replica user data cached in RAM in this bucket
-  custom: true
-  description: Amount of replica user data cached in RAM in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_itm_memory
-
-gauge.bucket.op.vb_replica_meta_data_memory:
-  brief: Amount of replica item metadata consuming in RAM in this bucket
-  custom: true
-  description: Amount of replica item metadata consuming in RAM in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_meta_data_memory
-
-gauge.bucket.op.vb_replica_num:
-  brief: Number of replica vBuckets
-  custom: true
-  description: Number of replica vBuckets
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_num
-
-gauge.bucket.op.vb_replica_num_non_resident:
-  brief: Number of non resident vBuckets in the replica state for this bucket
-  custom: true
-  description: Number of non resident vBuckets in the replica state for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_num_non_resident
-
-gauge.bucket.op.vb_replica_ops_create:
-  brief: Number of replica create operations
-  custom: true
-  description: Number of replica create operations
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_ops_create
-
-gauge.bucket.op.vb_replica_ops_update:
-  brief: Number of items updated on replica vBucket per second for this bucket
-  custom: true
-  description: Number of items updated on replica vBucket per second for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_ops_update
-
-gauge.bucket.op.vb_replica_queue_age:
-  brief: Sum of disk replica queue item age in milliseconds
-  custom: true
-  description: Sum of disk replica queue item age in milliseconds
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_queue_age
-
-gauge.bucket.op.vb_replica_queue_drain:
-  brief: Total drained replica items in the queue
-  custom: true
-  description: Total drained replica items in the queue
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_queue_drain
-
-gauge.bucket.op.vb_replica_queue_fill:
-  brief: Number of replica items per second being put on the replica item disk queue
-    in this bucket
-  custom: true
-  description: Number of replica items per second being put on the replica item disk
-    queue in this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_queue_fill
-
-gauge.bucket.op.vb_replica_queue_size:
-  brief: Number of replica items in disk queue
-  custom: true
-  description: Number of replica items in disk queue
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_queue_size
-
-gauge.bucket.op.vb_replica_resident_items_ratio:
-  brief: Percentage of replica items cached in RAM in this bucket
-  custom: true
-  description: Percentage of replica items cached in RAM in this bucket.
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_replica_resident_items_ratio
-
-gauge.bucket.op.vb_total_queue_age:
-  brief: Sum of disk queue item age in milliseconds
-  custom: true
-  description: Sum of disk queue item age in milliseconds
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.vb_total_queue_age
-
-gauge.bucket.op.xdc_ops:
-  brief: Cross datacenter replication operations per second for this bucket
-  custom: true
-  description: Cross datacenter replication operations per second for this bucket
-  metric_type: gauge
-  monitor: collectd/couchbase
-  title: gauge.bucket.op.xdc_ops
-
 gauge.bucket.quota.ram:
   brief: Amount of RAM used by the bucket (bytes)
   custom: true
-  description: Amount of RAM used by the bucket (bytes)
+  description: Amount of RAM used by the bucket (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.quota.ram
@@ -1765,7 +227,7 @@ gauge.bucket.quota.ram:
 gauge.bucket.quota.rawRAM:
   brief: Amount of raw RAM used by the bucket (bytes)
   custom: true
-  description: Amount of raw RAM used by the bucket (bytes)
+  description: Amount of raw RAM used by the bucket (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.bucket.quota.rawRAM
@@ -1779,9 +241,9 @@ gauge.nodes.cmd_get:
   title: gauge.nodes.cmd_get
 
 gauge.nodes.couch_docs_actual_disk_size:
-  brief: Amount of disk space used by Couch docs (bytes)
+  brief: Amount of disk space used by Couch docs
   custom: false
-  description: Amount of disk space used by Couch docs (bytes)
+  description: Amount of disk space used by Couch docs.(bytes)
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.couch_docs_actual_disk_size
@@ -1805,7 +267,7 @@ gauge.nodes.couch_spatial_data_size:
 gauge.nodes.couch_spatial_disk_size:
   brief: Amount of disk space occupied by spatial views, in bytes
   custom: true
-  description: Amount of disk space occupied by spatial views, in bytes
+  description: Amount of disk space occupied by spatial views, in bytes.
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.couch_spatial_disk_size
@@ -1813,7 +275,7 @@ gauge.nodes.couch_spatial_disk_size:
 gauge.nodes.couch_views_actual_disk_size:
   brief: Amount of disk space occupied by Couch views (bytes)
   custom: true
-  description: Amount of disk space occupied by Couch views (bytes)
+  description: Amount of disk space occupied by Couch views (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.couch_views_actual_disk_size
@@ -1821,7 +283,7 @@ gauge.nodes.couch_views_actual_disk_size:
 gauge.nodes.couch_views_data_size:
   brief: Size of object data for Couch views (bytes)
   custom: true
-  description: Size of object data for Couch views (bytes)
+  description: Size of object data for Couch views (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.couch_views_data_size
@@ -1861,7 +323,7 @@ gauge.nodes.get_hits:
 gauge.nodes.mcdMemoryAllocated:
   brief: Amount of memcached memory allocated (bytes)
   custom: true
-  description: Amount of memcached memory allocated (bytes)
+  description: Amount of memcached memory allocated (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.mcdMemoryAllocated
@@ -1869,7 +331,7 @@ gauge.nodes.mcdMemoryAllocated:
 gauge.nodes.mcdMemoryReserved:
   brief: Amount of memcached memory reserved (bytes)
   custom: true
-  description: Amount of memcached memory reserved (bytes)
+  description: Amount of memcached memory reserved (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.mcdMemoryReserved
@@ -1885,7 +347,7 @@ gauge.nodes.mem_used:
 gauge.nodes.memoryFree:
   brief: Amount of memory free for the node (bytes)
   custom: true
-  description: Amount of memory free for the node (bytes)
+  description: Amount of memory free for the node (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.memoryFree
@@ -1893,7 +355,7 @@ gauge.nodes.memoryFree:
 gauge.nodes.memoryTotal:
   brief: Total memory available to the node (bytes)
   custom: true
-  description: Total memory available to the node (bytes)
+  description: Total memory available to the node (bytes).
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.nodes.memoryTotal
@@ -2035,9 +497,9 @@ gauge.storage.ram.total:
   title: gauge.storage.ram.total
 
 gauge.storage.ram.used:
-  brief: RAM used by the cluster (bytes)
+  brief: Ram used by the cluster (bytes)
   custom: true
-  description: RAM used by the cluster (bytes)
+  description: Ram used by the cluster (bytes)
   metric_type: gauge
   monitor: collectd/couchbase
   title: gauge.storage.ram.used
