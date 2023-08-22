@@ -52,9 +52,9 @@ Configuration](../monitor-config.html#common-configuration).**
 ## Metrics
 
 These are the metrics available for this monitor.
-Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+This monitor emits all metrics by default; however, **none are categorized as
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
+-- they are all custom**.
 
 
  - ***`sfxagent.active_monitors`*** (*gauge*)<br>    The total number of monitor instances actively working

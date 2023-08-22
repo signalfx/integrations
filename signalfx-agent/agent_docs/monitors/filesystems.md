@@ -43,19 +43,17 @@ Configuration](../monitor-config.html#common-configuration).**
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `hostFSPath` | no | `string` | Path to the root of the host filesystem.  Useful when running in a container and the host filesystem is mounted in some subdirectory under /. |
-| `fsTypes` | no | `list of strings` | The filesystem types to include/exclude.  This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters). (**default:** `[* !aufs !overlay !tmpfs !proc !sysfs !nsfs !cgroup !devpts !selinuxfs !devtmpfs !debugfs !mqueue !hugetlbfs !securityfs !pstore !binfmt_misc !autofs]`) |
-| `mountPoints` | no | `list of strings` | The mount paths to include/exclude. This is an [overridable set](https://docs.signalfx.com/en/latest/integrations/agent/filtering.html#overridable-filters). NOTE: If you are using the hostFSPath option you should not include the `/hostfs/` mount in the filter. (**default:** `[* !/^/var/lib/docker/containers/ !/^/var/lib/rkt/pods/ !/^/net// !/^/smb// !/^/tmp/scratch/]`) |
-| `includeLogical` | no | `bool` | (Linux Only) If true, then metrics will be reported about logical devices. (**default:** `false`) |
-| `reportByDevice` | no | `bool` | If true, then metrics will report with their plugin_instance set to the device's name instead of the mountpoint. (**default:** `false`) |
-| `reportInodes` | no | `bool` | (Linux Only) If true metrics will be reported about inodes. (**default:** `false`) |
+| `hostFSPath` | no | `string` | Path to the root of the host filesystem.  Useful when running in a container and the host filesystem is mounted in some subdirectory under /.  The disk usage metrics emitted will be based at this path. |
+| `fsTypes` | no | `list of strings` | The filesystem types to include/exclude.  This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). If this is not set, the default value is the set of all **non-logical/virtual filesystems** on the system.  On Linux this list is determined by reading the `/proc/filesystems` file and choosing the filesystems that do not have the `nodev` modifier. |
+| `mountPoints` | no | `list of strings` | The mount paths to include/exclude. This is an [overridable set](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). NOTE: If you are using the hostFSPath option you should not include the `/hostfs/` mount in the filter.  If both this and `fsTypes` is specified, the two filters combine in an AND relationship. |
+| `sendModeDimension` | no | `bool` | Set to true to emit the "mode" dimension, which represents whether the mount is "rw" or "ro". (**default:** `false`) |
 
 
 ## Metrics
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 

@@ -22,7 +22,7 @@ Monitors a Mesos Marathon instance using the
 [collectd Marathon Python plugin](https://github.com/signalfx/collectd-marathon).
 
 See the [integrations
-doc](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.marathon.html)
+doc](https://docs.splunk.com/observability/gdi/marathon/marathon.html)
 for more information on configuration.
 
 Sample YAML configuration:
@@ -75,9 +75,9 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monit
 
 ## Metrics
 
-Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+All metrics of this integration are emitted by default; however, **none are categorized as
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
+-- they are all custom**.
 
 These are the metrics available for this integration.
 

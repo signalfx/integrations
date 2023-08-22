@@ -6,13 +6,8 @@
 
 The SignalFx Smart Agent is a metric-based agent written in Go that is used to monitor infrastructure and application services from a variety of environments.
 
-The Smart Agent contains three main components:
-
-| Component | Description |
-|-----------|-------------|
-| Monitors  |  This component collects metrics from the host and applications. For a list of supported monitors and their configurations, see [Monitor Configuration](./monitor-config.md).            |
-| Observers |   This component collects metrics from services that are running in your environment. For a list of supported observers and their configurations, see [Observer Configuration](./observer-config.md).           |
-| Writer    |   This component collects metrics from configured monitors and then sends these metrics to SignalFx on a regular basis. If you are expecting your monitors to send large volumes of metrics through a single agent, then you must update the configurations. To learn more, see [Agent Configurations](./config-schema.html#writer).          |
+For other installation options, including bulk deployments to production,
+see [Install and Configure the Smart Agent](https://docs.splunk.com/observability/gdi/smart-agent/smart-agent-resources.html#install-the-smart-agent).
 
 ## Installation
 

@@ -1,4 +1,4 @@
-# ![](./img/integrations_java.png) Java client library for SignalFx
+# ![](./img/integrations_java.png) Java instrumentation for Splunk Observability Cloud
 
 
 - [Description](#description)
@@ -7,12 +7,14 @@
 
 ### DESCRIPTION
 
-This <a target="_blank" href="https://github.com/signalfx/signalfx-java">repository</a> contains libraries for instrumenting Java applications and reporting metrics to Splunk Infrastructure Monitoring, using Codahale Metrics.
+Java instrumentation is available from the
+[Splunk Distribution of OpenTelemetry Java](https://github.com/signalfx/splunk-otel-java). This instrumentation agent provides
+feature-rich auto-instrumentation with very little manual configuration.
+It is built on top of the industry standard [OpenTelemetry](https://opentelemetry.io/).
 
-You can also use the module `signalfx-java` to send metrics directly to Splunk Infrastructure Monitoring using protocol buffers, without using Codahale or Yammer metrics.
-
-For more information regarding installation, usage, and examples see https://github.com/signalfx/signalfx-java
-
+Users building manual instrumentation can also leverage the 
+[OpenTelemetry Java SDK](https://github.com/open-telemetry/opentelemetry-java)
+to send telemetry to Splunk.
 
 ### LICENSE
 

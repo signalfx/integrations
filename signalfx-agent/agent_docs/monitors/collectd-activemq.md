@@ -13,7 +13,7 @@ Monitor Type: `collectd/activemq` ([Source](https://github.com/signalfx/signalfx
 ## Overview
 
 SignalFx's integration with ActiveMQ wraps the [Collectd GenericJMX
-monitor](https://docs.signalfx.com/en/latest/integrations/agent/monitors/collectd-genericjmx.html)
+monitor](https://docs.splunk.com/observability/gdi/genericjmx/genericjmx.html)
 to monitor ActiveMQ.
 
 Use this monitor to gather the following types of information from ActiveMQ:
@@ -23,7 +23,7 @@ Use this monitor to gather the following types of information from ActiveMQ:
 * Topic (Topic status)
 
 To monitor the age of messages inside ActiveMQ queues, see [ActiveMQ
-message age listener](https://docs.signalfx.com/en/latest/integrations/integrations-reference/integrations.activemq.message.age.listener.html).
+message age listener](https://docs.splunk.com/observability/gdi/activemq/activemq.html).
 
 <!--- SETUP --->
 ## Example config
@@ -95,7 +95,7 @@ The **nested** `values` config object has the following fields:
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 

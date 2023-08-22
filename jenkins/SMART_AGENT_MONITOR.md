@@ -95,6 +95,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monit
 | `port` | **yes** | `integer` |  |
 | `metricsKey` | **yes** | `string` | Key required for collecting metrics.  The access key located at `Manage Jenkins > Configure System > Metrics > ADD.` If empty, click `Generate`. |
 | `enhancedMetrics` | no | `bool` | Whether to enable enhanced metrics (**default:** `false`) |
+| `excludeJobMetrics` | no | `bool` | Set to *true* to exclude job metrics retrieved from `/api/json` endpoint (**default:** `false`) |
 | `includeMetrics` | no | `list of strings` | Used to enable individual enhanced metrics when `enhancedMetrics` is false |
 | `username` | no | `string` | User with security access to jenkins |
 | `apiToken` | no | `string` | API Token of the user |
@@ -107,9 +108,9 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monit
 
 ## Metrics
 
-Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
-(*default*) are ***in bold and italics*** in the list below.
+All metrics of this integration are emitted by default; however, **none are categorized as
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
+-- they are all custom**.
 
 These are the metrics available for this integration.
 

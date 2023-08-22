@@ -82,7 +82,7 @@ postgres_query_time:
   brief: Total time taken to execute queries on the `database`, broken down by `user`
   custom: false
   description: Total time taken to execute queries on the `database`, broken down
-    by `user`.
+    by `user`. Measured in ms unless otherwise indicated.
   metric_type: cumulative
   monitor: postgresql
   title: postgres_query_time

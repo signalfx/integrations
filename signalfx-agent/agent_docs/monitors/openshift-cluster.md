@@ -76,7 +76,7 @@ The **nested** `kubernetesAPI` config object has the following fields:
 
 These are the metrics available for this monitor.
 Metrics that are categorized as
-[container/host](https://docs.signalfx.com/en/latest/admin-guide/usage.html#about-custom-bundled-and-high-resolution-metrics)
+[container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
 
@@ -206,7 +206,7 @@ dimensions may be specific to certain metrics.
 ## Properties
 
 The following
-[properties](https://docs.signalfx.com/en/latest/metrics-metadata/metrics-metadata.html#properties)
+[properties](https://docs.splunk.com/observability/metrics-and-metadata/metrics-dimensions-mts.html#properties)
 are set on the dimension values of the dimension specified.
 
 | Name | Dimension | Description |
