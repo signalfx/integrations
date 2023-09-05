@@ -739,45 +739,6 @@ sf.org.num.awsServiceCallThrottles:
         * Data resolution: 5 seconds
   metric_type: gauge
   title: sf.org.num.awsServiceCallThrottles
-
-sf.org.num.azureMonitorClientCallCount (DEPRECATED):
-  brief: Number of calls made to the Azure Monitor API
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.azureServiceClientCallCount` INSTEAD
-    Total number of calls made to the Azure Monitor API.
-
-        * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-          syncing and `metric_metadata_sync` for property syncing)
-        * Data resolution: 5 seconds
-  metric_type: counter
-  title: sf.org.num.azureMonitorClientCallCount
-
-sf.org.num.azureMonitorClientCallCountErrors (DEPRECATED):
-  brief: Number of calls to Azure Monitor API method that threw errors
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.azureServiceClientCallCountErrors` INSTEAD
-    Number of calls to Azure Monitor API method that threw errors.
-
-        * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-          syncing and `metric_metadata_sync` for property syncing)
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.azureMonitorClientCallCountErrors
-
-sf.org.num.azureMonitorClientCallCountThrottles (DEPRECATED):
-  brief: Number of calls to Azure Monitor method that were throttled
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.azureServiceClientCallCountThrottles` INSTEAD
-    Number of calls to Azure Monitor method that were throttled.
-
-        * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-          syncing and `metric_metadata_sync` for property syncing)
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.azureMonitorClientCallCountThrottles
   
 sf.org.num.azureServiceClientCallCount:
   brief: Number of calls made to the Azure API
@@ -910,42 +871,6 @@ sf.org.num.eventtype:
         * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.eventtype
-
-sf.org.num.gcpStackdriverClientCallCount (DEPRECATED):
-  brief: Number of calls to each Stackdriver client method
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.gcpServiceClientCallCount` INSTEAD
-    Number of calls to each Stackdriver client method.
-
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.gcpStackdriverClientCallCount
-
-sf.org.num.gcpStackdriverClientCallCountErrors (DEPRECATED):
-  brief: Number of calls to each Stackdriver client method that threw errors
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.gcpServiceClientCallCountErrors` INSTEAD
-    Number of calls to each Stackdriver client method that threw errors.
-
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.gcpStackdriverClientCallCountErrors
-
-sf.org.num.gcpStackdriverClientCallCountThrottles (DEPRECATED):
-  brief: Number of calls to each Stackdriver client method that were throttled
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.gcpServiceClientCallCountThrottles` INSTEAD
-    Number of calls to each Stackdriver client method that were throttled.
-
-        * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-        * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.gcpStackdriverClientCallCountThrottles
 
 sf.org.num.gcpServiceClientCallCount:
   brief: Number of calls to each GCP API client method
