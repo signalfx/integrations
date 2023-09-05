@@ -739,44 +739,6 @@ sf.org.num.awsServiceCallThrottles:
       * Data resolution: 5 seconds
   metric_type: gauge
   title: sf.org.num.awsServiceCallThrottles
-
-sf.org.num.azureMonitorClientCallCount (DEPRECATED):
-  brief: Number of calls made to the Azure Monitor API
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.azureServiceClientCallCount` INSTEAD
-    Total number of calls made to the Azure Monitor API.
-
-      * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-        syncing and `metric_metadata_sync` for property syncing)
-      * Data resolution: 5 seconds
-  metric_type: counter
-  title: sf.org.num.azureMonitorClientCallCount
-
-sf.org.num.azureMonitorClientCallCountErrors (DEPRECATED):
-  brief: Number of calls to Azure Monitor API method that threw errors
-  description: |
-    Note: This metric is deprecated. Use `sf.org.num.azureServiceClientCallCountErrors` instead.
-    Number of calls to Azure Monitor API method that threw errors.
-
-      * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-        syncing and `metric_metadata_sync` for property syncing)
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.azureMonitorClientCallCountErrors
-
-sf.org.num.azureMonitorClientCallCountThrottles (DEPRECATED):
-  brief: Number of calls to Azure Monitor method that were throttled
-  description: |
-    THIS METRIC IS DEPRECATED AND WILL BE REMOVED.
-    PLEASE USE `sf.org.num.azureServiceClientCallCountThrottles` INSTEAD
-    Number of calls to Azure Monitor method that were throttled.
-
-      * Dimension(s):  `orgId`, `subscription_id`, `type` (`metric_data_sync` for metric
-        syncing and `metric_metadata_sync` for property syncing)
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.azureMonitorClientCallCountThrottles
   
 sf.org.num.azureServiceClientCallCount:
   brief: Number of calls made to the Azure API
@@ -909,39 +871,6 @@ sf.org.num.eventtype:
       * Data resolution: 15 minutes
   metric_type: gauge
   title: sf.org.num.eventtype
-
-sf.org.num.gcpStackdriverClientCallCount (DEPRECATED):
-  brief: Number of calls to each Stackdriver client method
-  description: |
-    Note: This metric is deprecated. Use `sf.org.num.gcpServiceClientCallCount` instead.
-    Number of calls to each Stackdriver client method.
-
-      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.gcpStackdriverClientCallCount
-
-sf.org.num.gcpStackdriverClientCallCountErrors (DEPRECATED):
-  brief: Number of calls to each Stackdriver client method that threw errors
-  description: |
-    Note: This metric is deprecated. Use `sf.org.num.gcpServiceClientCallCountErrors` instead.
-    Number of calls to each Stackdriver client method that threw errors.
-
-      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.gcpStackdriverClientCallCountErrors
-
-sf.org.num.gcpStackdriverClientCallCountThrottles (DEPRECATED):
-  brief: Number of calls to each Stackdriver client method that were throttled
-  description: |
-    Note: This metric is deprecated. Use `sf.org.num.gcpServiceClientCallCountThrottles` instead.
-    Number of calls to each Stackdriver client method that were throttled.
-
-      * Dimension(s):  `orgId`, `project_id`, `method` (the API being called, such as `getTimeSeries`)
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.num.gcpStackdriverClientCallCountThrottles
 
 sf.org.num.gcpServiceClientCallCount:
   brief: Number of calls to each GCP API client method
@@ -1249,6 +1178,16 @@ sf.org.numBackfillCallsByToken:
       * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numBackfillCallsByToken
+  
+sf.org.numComputationsStarted:
+  brief: Rate at which you're starting new jobs
+  description: |
+    Number of computations started, use it to know the rate at which you're starting new jobs.
+
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.numComputationsStarted
 
 sf.org.numBadDimensionMetricTimeSeriesCreateCalls:
   brief: Number of bad calls to create MTS due to an error with dimensions
@@ -1396,9 +1335,9 @@ sf.org.numDatapointsDroppedBatchSizeByToken:
   brief: Number of data points dropped because a single request contained more than 100,000 data points, by token.
   description: |
     Number of data points dropped because a single request contained more than 100,000 data points, per token. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
+        * Dimension(s):  `orgId`, `tokenId`
+        * Data resolution: 40 seconds
 
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numDatapointsDroppedBatchSizeByToken  
 
@@ -1524,9 +1463,9 @@ sf.org.numDimensionObjectsCreated:
   brief: Number of dimensions created
   description: |
     Total number of dimensions created. 
-
-      * Dimension(s):  `orgId`
-      * Data resolution: 10 seconds
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
+        
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreated
 
@@ -1534,9 +1473,9 @@ sf.org.numDimensionObjectsCreatedByToken:
   brief: Number of dimensions created by token
   description: |
     Total number of dimensions created by token. 
-
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 40 seconds
+
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreatedByToken
 
@@ -1544,9 +1483,9 @@ sf.org.numEventSearches:
   brief: Number of event searches
   description: |
     Number of event searches.
-  
       * Dimension(s):  `orgId`
       * Data resolution: 10 seconds
+
   metric_type: counter
   title: sf.org.numEventSearches
 
@@ -1554,9 +1493,9 @@ sf.org.numEventSearchesThrottled:
   brief: Number of event searches that were throttled
   description: |
     Number of event searches that were throttled.
-  
       * Dimension(s):  `orgId`
       * Data resolution: 10 seconds
+
   metric_type: counter
   title: sf.org.numEventSearchesThrottled
 
@@ -1648,9 +1587,9 @@ sf.org.numHostMetaDataEventsDroppedThrottle:
   brief: Number of host metadata events dropped due to throttling 
   description: |
     Number of host metadata events dropped because of throttling.
+        * Dimension(s):  `orgId`
+        * Data resolution: 40 seconds
 
-      * Dimension(s):  `orgId`
-      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numHostMetaDataEventsDroppedThrottle 
 
@@ -1658,9 +1597,9 @@ sf.org.numHostMetaDataEventsDroppedThrottleByToken:
   brief: Number of host metadata events dropped due to throttling by token
   description: |
     Number of host metadata events dropped because of throttling, per token.
-
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 40 seconds
+
   metric_type: counter
   title: sf.org.numHostMetaDataEventsDroppedThrottleByToken 
 
@@ -1781,9 +1720,9 @@ sf.org.numLogsReceivedByToken:
   brief: Number of logs received by token
   description: |
     Number of logs received by token.
-    
-      * Dimension(s):  `orgId`, `tokenId`
+      * Dimension(s):  `orgId, tokenId`
       * Data resolution: 10 seconds
+      
   metric_type: counter
   title: sf.org.numLogsReceivedByToken
 
@@ -1856,9 +1795,9 @@ sf.org.numMetricObjectsCreatedByToken:
   brief: Number of metric objects created by token
   description: |
     Number of metric objects created by token.
-
       * Dimension(s):  `tokenId`, `orgId`
       * Data resolution: 40 seconds
+
   metric_type: gauge
   title: sf.org.numMetricObjectsCreatedByToken
 
@@ -1866,8 +1805,8 @@ sf.org.numNewDimensions:
   brief: Number of new dimensions that were created
   description: |
     The number of new dimensions (key:value pairs) created.
-
       * Data resolution: 5 minutes
+  
   metric_type: counter
   title: sf.org.numNewDimensions
 
@@ -1878,8 +1817,8 @@ sf.org.numNewDimensionsByName:
     (key from key:value pair). Only the top 100 dimension names (by number of dimensions
     created) are included, in addition to dimension name `sf_metric`, which is always
     included.
-
       * Data resolution: 5 minutes
+  
   metric_type: counter
   title: sf.org.numNewDimensionsByName
   
@@ -1887,9 +1826,9 @@ sf.org.numProcessDataEventsDroppedThrottleByToken:
   brief: Number of data ingest process events dropped due to throttling by token
   description: |
     Per token, number of data ingest process events dropped due to throttling, because you exceeded your system limits. 
+        * Dimension(s):  `orgId, tokenIn`
+        * Data resolution: 40 seconds
 
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numProcessDataEventsDroppedThrottleByToken 
 
@@ -1938,8 +1877,9 @@ sf.org.numResourceMetricsbyToken:
     
     The `resourceType` dimension indicates whether the value represents hosts or containers.
     
-     * Dimension(s): `orgId`, `resourceType`, `tokenId`
-     * Data resolution: 10 minutes
+    * Dimension(s): `orgId`, `resourceType`, `tokenId`
+    * Data resolution: 10 minutes
+
   metric_type: gauge
   title: sf.org.numResourceMetricsbyToken
 
