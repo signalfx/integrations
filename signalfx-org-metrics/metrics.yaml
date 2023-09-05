@@ -1805,8 +1805,8 @@ sf.org.numNewDimensions:
   brief: Number of new dimensions that were created
   description: |
     The number of new dimensions (key:value pairs) created.
-
       * Data resolution: 5 minutes
+  
   metric_type: counter
   title: sf.org.numNewDimensions
 
