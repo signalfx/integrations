@@ -4,7 +4,7 @@
 
 # haproxy
 
-Monitor Type: `haproxy` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/haproxy))
+Monitor Type: `haproxy` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/haproxy))
 
 **Accepts Endpoints**: **Yes**
 
@@ -154,8 +154,6 @@ Metrics that are categorized as
  - `haproxy_server_aborts` (*cumulative*)<br>    Number of data transfers aborted by the server (inc. in eresp). Values reported for backends and servers.
  - ***`haproxy_server_selected_total`*** (*cumulative*)<br>    Total number of times a server was selected, either for new sessions, or when re-dispatching. The server counter is the number of times that server was selected. Values reported for backends and servers.
  - ***`haproxy_session_current`*** (*gauge*)<br>    Number current sessions. Values reported for listeners, frontends, backends, and servers.
- - `haproxy_session_limit` (*gauge*)<br>    The maximum number of connections allowed, configured with `maxconn`. Values reported for listeners, frontends, backends, and servers.
- - `haproxy_session_max` (*gauge*)<br>    The max value of scur. Values reported for listeners, frontends, backends, and servers.
  - ***`haproxy_session_rate`*** (*gauge*)<br>    Number of sessions per second over last elapsed second. Values reported for frontends, backends, and servers.
  - ***`haproxy_session_rate_all`*** (*gauge*)<br>    Corresponds to the HAProxy process `SessRate` value given by the `show info` command issued over UNIX socket.
  - `haproxy_session_rate_limit` (*gauge*)<br>    Configured limit on new sessions per second. Values reported for frontends.
@@ -176,6 +174,9 @@ Metrics that are categorized as
 
 ### Non-default metrics (version 4.7.0+)
 
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
+
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -183,6 +184,20 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
+
+### Legacy non-default metrics (version < 4.7.0)
+
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
+
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions
 

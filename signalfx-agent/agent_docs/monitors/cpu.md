@@ -4,7 +4,7 @@
 
 # cpu
 
-Monitor Type: `cpu` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/cpu))
+Monitor Type: `cpu` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/cpu))
 
 **Accepts Endpoints**: No
 
@@ -40,11 +40,7 @@ monitors:  # All monitor config goes under this key
 Configuration](../monitor-config.html#common-configuration).**
 
 
-| Config option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `reportPerCPU` | no | `bool` | If `true`, stats will be generated for the system as a whole _as well as_ for each individual CPU/core in the system and will be distinguished by the `cpu` dimension.  If `false`, stats will only be generated for the system as a whole that will not include a `cpu` dimension. (**default:** `false`) |
-
-
+This monitor has no configuration options.
 ## Metrics
 
 These are the metrics available for this monitor.
@@ -53,27 +49,13 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
- - ***`cpu.idle`*** (*cumulative*)<br>    CPU time spent not in any other state. In order to get a percentage this value must be compared against the sum of all CPU states.
-
- - `cpu.interrupt` (*cumulative*)<br>    CPU time spent while servicing hardware interrupts. A hardware interrupt happens at the physical layer. When this occurs, the CPU will stop whatever else it is doing and service the interrupt. This metric measures how many jiffies were spent handling these interrupts. In order to get a percentage this value must be compared against the sum of all CPU states. A sustained high value for this metric may be caused by faulty hardware such as a broken peripheral.
-
- - `cpu.nice` (*cumulative*)<br>    CPU time spent in userspace running 'nice'-ed processes. In order to get a percentage this value must be compared against the sum of all CPU states. A sustained high value for this metric may be caused by: 1) The server not having enough CPU capacity for a process, 2) A programming error which causes a process to use an unexpected amount of CPU
-
- - ***`cpu.num_processors`*** (*gauge*)<br>    The number of logical processors on the host.
- - `cpu.softirq` (*cumulative*)<br>    CPU time spent while servicing software interrupts. Unlike a hardware interrupt, a software interrupt happens at the sofware layer. Usually it is a userspace program requesting a service of the kernel. This metric measures how many jiffies were spent by the CPU handling these interrupts. In order to get a percentage this value must be compared against the sum of all CPU states. A sustained high value for this metric may be caused by a programming error which causes a process to unexpectedly request too many services from the kernel.
-
- - `cpu.steal` (*cumulative*)<br>    CPU time spent waiting for a hypervisor to service requests from other virtual machines. This metric is only present on virtual machines. This metric records how much time this virtual machine had to wait to have the hypervisor kernel service a request. In order to get a percentage this value must be compared against the sum of all CPU states. A sustained high value for this metric may be caused by: 1) Another VM on the same hypervisor using too many resources, or 2) An underpowered hypervisor
-
- - `cpu.system` (*cumulative*)<br>    CPU time spent running in the kernel. This value reflects how often processes are calling into the kernel for services (e.g to log to the console). In order to get a percentage this value must be compared against the sum of all CPU states. A sustained high value for this metric may be caused by: 1) A process that needs to be re-written to use kernel resources more efficiently, or 2) A userspace driver that is broken
-
- - `cpu.user` (*cumulative*)<br>    CPU time spent running in userspace. In order to get a percentage this value must be compared against the sum of all CPU states. If this value is high: 1) A process requires more CPU to run than is available on the server, or 2) There is an application programming error which is causing the CPU to be used unexpectedly.
-
- - ***`cpu.utilization`*** (*gauge*)<br>    Percent of CPU used on this host.
- - `cpu.utilization_per_core` (*gauge*)<br>    Percent of CPU used on each core
- - `cpu.wait` (*cumulative*)<br>    Amount of total CPU time spent idle while waiting for an I/O operation to complete. In order to get a percentage this value must be compared against the sum of all CPU states. A high value for a sustained period may be caused by: 1) A slow hardware device that is taking too long to service requests, or 2) Too many requests being sent to an I/O device
-
+ - ***`cpu.utilization`*** (*gauge*)<br>    Percent of CPU used on this host. This metric is emitted with a plugin dimension set to "signalfx-metadata".
+ - `cpu.utilization_per_core` (*gauge*)<br>    Percent of CPU used on each core. This metric is emitted with the plugin dimension set to "signalfx-metadata"
 
 ### Non-default metrics (version 4.7.0+)
+
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
 
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
@@ -83,14 +65,19 @@ metrics do not need to be added to `extraMetrics`.
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
 
-## Dimensions
+### Legacy non-default metrics (version < 4.7.0)
 
-The following dimensions may occur on metrics emitted by this monitor.  Some
-dimensions may be specific to certain metrics.
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
 
-| Name | Description |
-| ---  | ---         |
-| `cpu` | The number/id of the core/cpu on the system.  Only present if `reportPerCPU: true`. |
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 
 
