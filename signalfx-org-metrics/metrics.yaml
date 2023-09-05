@@ -1795,8 +1795,8 @@ sf.org.numMetricObjectsCreatedByToken:
   brief: Number of metric objects created by token
   description: |
     Number of metric objects created by token.
-        * Dimension(s):  `tokenId`, `orgId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `tokenId`, `orgId`
+      * Data resolution: 40 seconds
 
 metric_type: gauge
   title: sf.org.numMetricObjectsCreatedByToken
@@ -1817,8 +1817,8 @@ sf.org.numNewDimensionsByName:
     (key from key:value pair). Only the top 100 dimension names (by number of dimensions
     created) are included, in addition to dimension name `sf_metric`, which is always
     included.
-
       * Data resolution: 5 minutes
+  
   metric_type: counter
   title: sf.org.numNewDimensionsByName
   
