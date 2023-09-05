@@ -1798,7 +1798,7 @@ sf.org.numMetricObjectsCreatedByToken:
       * Dimension(s):  `tokenId`, `orgId`
       * Data resolution: 40 seconds
 
-metric_type: gauge
+  metric_type: gauge
   title: sf.org.numMetricObjectsCreatedByToken
 
 sf.org.numNewDimensions:
