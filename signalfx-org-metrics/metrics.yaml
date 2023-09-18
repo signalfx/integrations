@@ -1325,8 +1325,8 @@ sf.org.numDatapointsDroppedBatchSizeByToken:
   brief: Number of data points dropped because a single request contained more than 100,000 data points, by token.
   description: |
     Number of data points dropped because a single request contained more than 100,000 data points, per token. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
-        * Dimension(s):  `orgId`, `tokenId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 40 seconds
 
   metric_type: counter
   title: sf.org.numDatapointsDroppedBatchSizeByToken  
@@ -1816,8 +1816,8 @@ sf.org.numProcessDataEventsDroppedThrottleByToken:
   brief: Number of data ingest process events dropped due to throttling by token
   description: |
     Per token, number of data ingest process events dropped due to throttling, because you exceeded your system limits. 
-        * Dimension(s):  `orgId, tokenIn`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId, tokenIn`
+      * Data resolution: 40 seconds
 
   metric_type: counter
   title: sf.org.numProcessDataEventsDroppedThrottleByToken 
