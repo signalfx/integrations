@@ -1453,8 +1453,8 @@ sf.org.numDimensionObjectsCreated:
   brief: Number of dimensions created
   description: |
     Total number of dimensions created. 
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 10 seconds
         
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreated
@@ -1577,8 +1577,8 @@ sf.org.numHostMetaDataEventsDroppedThrottle:
   brief: Number of host metadata events dropped due to throttling 
   description: |
     Number of host metadata events dropped because of throttling.
-        * Dimension(s):  `orgId`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`
+      * Data resolution: 40 seconds
 
   metric_type: counter
   title: sf.org.numHostMetaDataEventsDroppedThrottle 
@@ -1648,8 +1648,8 @@ sf.org.numLimitedMetricTimeSeriesCreateCalls:
   description: |
     Number of metric time series (MTS) not created because your account reached a category limit (or subscription limit).
 
-        * Dimension(s):  `category`, `orgId`
-        * Data resolution: 10 seconds
+      * Dimension(s):  `category`, `orgId`
+      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCalls
 
@@ -2179,14 +2179,14 @@ sf.org.rum.numSpanBytesReceivedByToken:
 
 
 sf.org.rum.grossSpanBytesReceivedByToken:
-    brief: The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
-    description: |
-      The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
+  brief: The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
+  description: |
+    The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
 
-       * Dimensions: `orgId`, `tokenId`
-       * Data resolution: 10 seconds
-      metric_type: counter
-      title: sf.org.rum.grossSpanBytesReceivedByToken
+     * Dimensions: `orgId`, `tokenId`
+     * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.rum.grossSpanBytesReceivedByToken
 
 sf.org.rum.numContentBytesReceived:
   brief: The volume of bytes Splunk RUM receives after filtering and throttling.
