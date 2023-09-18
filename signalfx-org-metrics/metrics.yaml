@@ -1701,7 +1701,7 @@ sf.org.numLimitedMetricTimeSeriesCreateCallsByToken:
     The sum of all the values might be less than the value of `sf.org.numLimitedMetricTimeSeriesCreateCalls`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
     
-      * Dimension(s):  `category, orgId, tokenId`
+      * Dimension(s):  `category, `orgId`, `tokenId`
       * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numLimitedMetricTimeSeriesCreateCallsByToken
@@ -1710,7 +1710,7 @@ sf.org.numLogsReceivedByToken:
   brief: Number of logs received by token
   description: |
     Number of logs received by token.
-      * Dimension(s):  `orgId, tokenId`
+      * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 10 seconds
       
   metric_type: counter
@@ -1816,7 +1816,7 @@ sf.org.numProcessDataEventsDroppedThrottleByToken:
   brief: Number of data ingest process events dropped due to throttling by token
   description: |
     Per token, number of data ingest process events dropped due to throttling, because you exceeded your system limits. 
-      * Dimension(s):  `orgId, tokenIn`
+      * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 40 seconds
 
   metric_type: counter
@@ -1893,7 +1893,7 @@ sf.org.numResourcesMonitoredByToken:
     The sum of all the values might be less than the value of `sf.org.numResourcesMonitored`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
-      * Dimension(s):  `orgId`, `resourceType`, tokenId`
+      * Dimension(s):  `orgId`, `resourceType`, `tokenId`
       * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numResourcesMonitoredByToken
@@ -1904,7 +1904,7 @@ sf.org.numRestCalls:
     Number of REST calls made to the Infrastructure Monitoring API.
 
       * Dimension(s):  `orgId`
-      * Data resolution: 1 second"
+      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numRestCalls
 
