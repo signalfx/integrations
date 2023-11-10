@@ -1213,9 +1213,9 @@ sf.org.numApmBundledMetrics:
   title: sf.org.numApmBundledMetrics
 
 sf.org.numApmBundledMetricsByToken:
-  brief: Number of APM Bundled Metrics limit for your org, for a token
+  brief: Number of APM Bundled Metrics for your org, for a token
   description: |
-    Number of APM Bundled Metrics limit for your org for a specific token.
+    Number of APM Bundled Metrics for your org for a specific token.
 
         * Dimension(s):  `orgId`, `tokenId`
         * Data resolution: 10 minutes
