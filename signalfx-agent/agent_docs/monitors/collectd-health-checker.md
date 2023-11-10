@@ -4,7 +4,7 @@
 
 # collectd/health-checker
 
-Monitor Type: `collectd/health-checker` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/healthchecker))
+Monitor Type: `collectd/health-checker` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/healthchecker))
 
 **Accepts Endpoints**: **Yes**
 

@@ -48,14 +48,6 @@ gauge.zk_ephemerals_count:
   monitor: collectd/zookeeper
   title: gauge.zk_ephemerals_count
 
-gauge.zk_followers:
-  brief: Number of followers within the ensemble
-  custom: true
-  description: Number of followers within the ensemble. Only exposed by the leader.
-  metric_type: gauge
-  monitor: collectd/zookeeper
-  title: gauge.zk_followers
-
 gauge.zk_is_leader:
   brief: 1 if the node is a leader, 0 if the node is a follower
   custom: true
@@ -112,14 +104,6 @@ gauge.zk_outstanding_requests:
   monitor: collectd/zookeeper
   title: gauge.zk_outstanding_requests
 
-gauge.zk_pending_syncs:
-  brief: Number of pending syncs from the followers
-  custom: true
-  description: Number of pending syncs from the followers. Only exposed by the leader.
-  metric_type: gauge
-  monitor: collectd/zookeeper
-  title: gauge.zk_pending_syncs
-
 gauge.zk_service_health:
   brief: 1 if server is running, otherwise 0
   custom: true
@@ -127,14 +111,6 @@ gauge.zk_service_health:
   metric_type: gauge
   monitor: collectd/zookeeper
   title: gauge.zk_service_health
-
-gauge.zk_synced_followers:
-  brief: Number of synced followers
-  custom: true
-  description: Number of synced followers. Only exposed by the leader.
-  metric_type: gauge
-  monitor: collectd/zookeeper
-  title: gauge.zk_synced_followers
 
 gauge.zk_watch_count:
   brief: Number of watches placed on Z-Nodes on a ZooKeeper server

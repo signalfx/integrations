@@ -4,7 +4,7 @@
 
 # cloudfoundry-firehose-nozzle
 
-Monitor Type: `cloudfoundry-firehose-nozzle` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/cloudfoundry))
+Monitor Type: `cloudfoundry-firehose-nozzle` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/cloudfoundry))
 
 **Accepts Endpoints**: No
 
@@ -442,6 +442,9 @@ monitor config option `extraGroups`:
 
 ### Non-default metrics (version 4.7.0+)
 
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
+
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -450,6 +453,20 @@ metrics do not need to be added to `extraMetrics`.
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
 
+### Legacy non-default metrics (version < 4.7.0)
+
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
+
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
+
 ## Dimensions
 
 The following dimensions may occur on metrics emitted by this monitor.  Some
@@ -457,22 +474,8 @@ dimensions may be specific to certain metrics.
 
 | Name | Description |
 | ---  | ---         |
-| `app_id` | Application ID (GUID). This is equal to the value of `source_id` dimension. Only available for applications on TAS/PCF 2.8.0+ (cf-deployment v11.1.0+). |
-| `app_name` | Application name. Only available for applications on TAS/PCF 2.8.0+ (cf-deployment v11.1.0+). Name change does not take effect until process is restarted on TAS 2.8. |
-| `deployment` | Name of the BOSH deployment. |
-| `index` | ID of the BOSH instance. |
-| `instance_id` | Numerical index of the application instance for applications (`rep.` metrics). Also present for `bbs.` metrics, where it is the BOSH instance ID (equal to `index`). |
-| `ip` | IP address of the BOSH instance. |
-| `job` | Name of the BOSH job. |
-| `organization_id` | Organization ID (GUID). Only available for applications on TAS/PCF 2.8.0+ (cf-deployment v11.1.0+). |
-| `organization_name` | Organization name. Only available for applications on TAS/PCF 2.8.0+ (cf-deployment v11.1.0+). Name change does not take effect until process is restarted on TAS 2.8. |
-| `origin` | Origin name of the metric. Equal to the prefix of the metric name. |
-| `process_id` | Process ID. Only present for applications (`rep.` metrics). For a process of type "web" (main process of an application), this is equal to `source_id` and `app_id`. |
-| `process_instance_id` | Unique ID for the application process instance. Only present for applications (`rep.` metrics). |
-| `process_type` | Type of the process (each application has one process with type "web"). Only present for applications (`rep.` metrics). |
-| `source_id` | For application container metrics, this is the GUID of the application (equal to `app_id`), for system metrics, this is the origin name (equal to `origin`). |
-| `space_id` | Space ID (GUID). Only available for applications on TAS/PCF 2.8.0+ (cf-deployment v11.1.0+). |
-| `space_name` | Space name. Only available for applications on TAS/PCF 2.8.0+ (cf-deployment v11.1.0+). Name change does not take effect until process is restarted on TAS 2.8. |
+| `instance_id` | The BOSH instance id that pertains to the metric, if any. |
+| `source_id` | The source of the metric |
 
 
 

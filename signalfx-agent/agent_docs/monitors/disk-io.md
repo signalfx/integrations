@@ -4,7 +4,7 @@
 
 # disk-io
 
-Monitor Type: `disk-io` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/diskio))
+Monitor Type: `disk-io` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/diskio))
 
 **Accepts Endpoints**: No
 
@@ -63,7 +63,6 @@ Metrics that are categorized as
  - `disk_octets.write` (*cumulative*)<br>    (Linux Only) The number of bytes (octets) written to a disk.
  - ***`disk_ops.avg_read`*** (*gauge*)<br>    (Windows Only) The average disk read queue length.
  - ***`disk_ops.avg_write`*** (*gauge*)<br>    (Windows Only) The average disk write queue length.
- - `disk_ops.pending` (*gauge*)<br>    Number of pending operations
  - ***`disk_ops.read`*** (*cumulative*)<br>    (Linux Only) The number of disk read operations.
  - ***`disk_ops.total`*** (*gauge*)<br>    (Linux Only) The number of both read and write disk operations across all disks in the last reporting interval.
  - ***`disk_ops.write`*** (*cumulative*)<br>    (Linux Only) The number of disk write operations.
@@ -74,6 +73,9 @@ Metrics that are categorized as
 
 ### Non-default metrics (version 4.7.0+)
 
+**The following information applies to the agent version 4.7.0+ that has
+`enableBuiltInFiltering: true` set on the top level of the agent config.**
+
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -81,6 +83,20 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
+
+### Legacy non-default metrics (version < 4.7.0)
+
+**The following information only applies to agent version older than 4.7.0. If
+you have a newer agent and have set `enableBuiltInFiltering: true` at the top
+level of your agent config, see the section above. See upgrade instructions in
+[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
+
+If you have a reference to the `whitelist.json` in your agent's top-level
+`metricsToExclude` config option, and you want to emit metrics that are not in
+that whitelist, then you need to add an item to the top-level
+`metricsToInclude` config option to override that whitelist (see [Inclusion
+filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
+copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions
 

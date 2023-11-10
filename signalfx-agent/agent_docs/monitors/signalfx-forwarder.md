@@ -4,7 +4,7 @@
 
 # signalfx-forwarder
 
-Monitor Type: `signalfx-forwarder` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/forwarder))
+Monitor Type: `signalfx-forwarder` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/forwarder))
 
 **Accepts Endpoints**: No
 
@@ -18,9 +18,6 @@ and forwards them to SignalFx (or the configured ingest host in the
 for datapoints (v2) and spans (v1) that our ingest server supports and at
 the same path (`/v2/datapoint`, `/v1/trace`).  By default, the server listens on
 localhost port 9080 but can be configured to anything.
-
-The `defaultSpanTagsFromEndpoint` and `extraSpanTagsFromEndpoint` config
-options are not compatible with the `signalfx-forwarder` monitor.
 
 
 ## Configuration
