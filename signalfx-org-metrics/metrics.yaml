@@ -368,6 +368,16 @@ sf.org.abortedDetectors:
     or data points, whichever caused the detector to stop
   metric_type: cumulative
   title: sf.org.abortedDetectors
+
+sf.org.cloud.grossDpmContentBytesReceived: 
+  brief: Number of content bytes received, but not necessarily admitted, for Cloud services
+  description: |
+    Number of content bytes received, but not necessarily admitted, for Cloud services
+    
+      * Dimension(s): `orgId`
+      * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.cloud.grossDpmContentBytesReceived
   
 sf.org.datapointsTotalCountByToken:
   brief: Total datapoints by token
@@ -930,8 +940,8 @@ sf.org.num.migrationmarker:
   title: sf.org.num.migrationmarker
 
 sf.org.num.mutingactive:
-  brief: Number of active muting rules NBED
-  description: Number of active muting rules NBED.
+  brief: Number of active muting rules 
+  description: Number of active muting rules 
   metric_type: gauge
   title: sf.org.num.mutingactive
 
@@ -2092,7 +2102,6 @@ sf.org.rum.numSpansReceivedByToken:
   metric_type: counter
   title: sf.org.rum.numSpansReceivedByToken
 
-
 sf.org.rum.numAddSpansCalls:
   brief:  The number of calls to the `/v1/rum?auth={AUTH_TOKEN}` endpoint.
   description: |
@@ -2177,7 +2186,6 @@ sf.org.rum.numSpanBytesReceivedByToken:
   metric_type: counter
   title: sf.org.rum.numSpanBytesReceivedByToken
 
-
 sf.org.rum.grossSpanBytesReceivedByToken:
   brief: The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
   description: |
@@ -2208,7 +2216,6 @@ sf.org.rum.grossContentBytesReceivedByToken:
   metric_type: counter
   title: sf.org.rum.grossContentBytesReceivedByToken
 
-
 sf.org.rum.grossContentBytesReceived:
   brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded.
   description: |
@@ -2219,3 +2226,14 @@ sf.org.rum.grossContentBytesReceived:
 
   metric_type: counter
   title: sf.org.rum.grossContentBytesReceived
+
+  sf.org.rum.grossReplayContentBytesReceived: 
+  brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded, per RUM session replay.
+  description: |
+    The possibly compressed wire size of the payloads before the payloads are decompressed and decoded, per RUM session replay.
+    
+     * Dimensions: `orgId`
+     * Data resolution: 10 seconds
+
+  metric_type: counter
+  title: sf.org.rum.grossReplayContentBytesReceived
