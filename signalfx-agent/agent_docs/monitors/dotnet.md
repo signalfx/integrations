@@ -4,7 +4,7 @@
 
 # dotnet
 
-Monitor Type: `dotnet` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/dotnet))
+Monitor Type: `dotnet` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/dotnet))
 
 **Accepts Endpoints**: No
 
@@ -68,7 +68,6 @@ These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
-
 
 
  - ***`net_clr_exceptions.num_exceps_thrown_sec`*** (*gauge*)<br>    The number of exceptions thrown by .NET applications.

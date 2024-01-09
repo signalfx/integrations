@@ -4,7 +4,7 @@
 
 # collectd/jenkins
 
-Monitor Type: `collectd/jenkins` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/jenkins))
+Monitor Type: `collectd/jenkins` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/jenkins))
 
 **Accepts Endpoints**: **Yes**
 
@@ -16,9 +16,9 @@ Monitors jenkins by using the
 [jenkins collectd Python
 plugin](https://github.com/signalfx/collectd-jenkins), which collects
 metrics from Jenkins instances by hitting these endpoints:
-[../api/json](https://wiki.jenkins.io/display/jenkins/remote+access+api)
+[../api/json](https://www.jenkins.io/doc/book/using/remote-access-api/)
 (job metrics)  and
-[metrics/&lt;MetricsKey&gt;/..](https://wiki.jenkins.io/display/JENKINS/Metrics+Plugin)
+[metrics/&lt;MetricsKey&gt;/..](https://plugins.jenkins.io/metrics/)
 (default and optional Codahale/Dropwizard JVM metrics).
 
 Requires Jenkins 1.580.3 or later, as well as the Jenkins Metrics Plugin (see Setup).
@@ -87,6 +87,7 @@ Configuration](../monitor-config.html#common-configuration).**
 | `pythonBinary` | no | `string` | Path to a python binary that should be used to execute the Python code. If not set, a built-in runtime will be used.  Can include arguments to the binary as well. |
 | `host` | **yes** | `string` |  |
 | `port` | **yes** | `integer` |  |
+| `path` | no | `string` |  |
 | `metricsKey` | **yes** | `string` | Key required for collecting metrics.  The access key located at `Manage Jenkins > Configure System > Metrics > ADD.` If empty, click `Generate`. |
 | `enhancedMetrics` | no | `bool` | Whether to enable enhanced metrics (**default:** `false`) |
 | `excludeJobMetrics` | no | `bool` | Set to *true* to exclude job metrics retrieved from `/api/json` endpoint (**default:** `false`) |
@@ -122,33 +123,7 @@ This monitor emits all metrics by default; however, **none are categorized as
  - ***`gauge.jenkins.node.vm.memory.heap.usage`*** (*gauge*)<br>    Percent utilization of the heap memory
  - ***`gauge.jenkins.node.vm.memory.non-heap.used`*** (*gauge*)<br>    Total amount of non-heap memory used
  - ***`gauge.jenkins.node.vm.memory.total.used`*** (*gauge*)<br>    Total Memory used by instance
-
-### Non-default metrics (version 4.7.0+)
-
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived
-from specific configuration options that do not appear in the above list of
-metrics do not need to be added to `extraMetrics`.
-
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
-
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 
 

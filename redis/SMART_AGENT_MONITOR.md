@@ -12,8 +12,8 @@ configuration instructions below.
 
 ## Description
 
-**This integration primarily consists of the Smart Agent monitor `collectd/redis`.
-Below is an overview of that monitor.**
+This integration primarily consists of the Smart Agent monitor `collectd/redis`.
+Below is an overview of that monitor.
 
 ### Smart Agent Monitor
 
@@ -26,12 +26,12 @@ You can capture any kind of Redis metrics like:
 
  * Memory used
  * Commands processed per second
- * Number of connected clients and slaves
+ * Number of connected clients and followers
  * Number of blocked clients
  * Number of keys stored (per database)
  * Uptime
  * Changes since last save
- * Replication delay (per slave)
+ * Replication delay (per follower)
 
 
 <!--- OVERVIEW --->
@@ -54,7 +54,7 @@ match something that is very big, as this command is not highly optimized and
 can block other commands from executing.
 
 Note: To avoid duplication reporting, this should only be reported in one node.
-Keys can be defined in either the master or slave config.
+Keys can be defined in either the leader or follower config.
 
 Sample YAML configuration with list lengths:
 
@@ -91,7 +91,7 @@ monitors:  # All monitor config goes under this key
 ```
 
 **For a list of monitor options that are common to all monitors, see [Common
-Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../monitor-config.md#common-configuration).**
+Configuration](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../monitor-config.md#common-configuration).**
 
 
 | Config option | Required | Type | Description |
@@ -102,6 +102,7 @@ Configuration](https://github.com/signalfx/signalfx-agent/tree/master/docs/monit
 | `name` | no | `string` | The name for the node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.  (**default**: "{host}:{port}") |
 | `auth` | no | `string` | Password to use for authentication. |
 | `sendListLengths` | no | `list of objects (see below)` | Specify a pattern of keys to lists for which to send their length as a metric. See below for more details. |
+| `verbose` | no | `bool` | If `true`, verbose logging from the plugin will be enabled. (**default:** `false`) |
 
 
 The **nested** `sendListLengths` config object has the following fields:
@@ -120,6 +121,8 @@ Metrics that are categorized as
 
 These are the metrics available for this integration.
 
+ - `bytes.maxmemory` (*gauge*)<br>    Maximum memory configured on Redis server
+ - `bytes.total_system_memory` (*gauge*)<br>    Total memory available on the OS
  - ***`bytes.used_memory`*** (*gauge*)<br>    Number of bytes allocated by Redis
  - `bytes.used_memory_lua` (*gauge*)<br>    Number of bytes used by the Lua engine
  - `bytes.used_memory_peak` (*gauge*)<br>    Peak Number of bytes allocated by Redis
@@ -142,18 +145,21 @@ These are the metrics available for this integration.
  - `gauge.changes_since_last_save` (*gauge*)<br>    Number of changes since the last dump
  - `gauge.client_biggest_input_buf` (*gauge*)<br>    Biggest input buffer among current client connections
  - `gauge.client_longest_output_list` (*gauge*)<br>    Longest output list among current client connections
- - ***`gauge.connected_clients`*** (*gauge*)<br>    Number of client connections (excluding connections from slaves)
- - `gauge.connected_slaves` (*gauge*)<br>    Number of connected slaves
+ - ***`gauge.connected_clients`*** (*gauge*)<br>    Number of client connections (excluding connections from followers)
+ - `gauge.connected_slaves` (*gauge*)<br>    Number of connected followers
  - `gauge.db0_avg_ttl` (*gauge*)<br>    The average time to live for all keys in redis
  - `gauge.db0_expires` (*gauge*)<br>    The total number of keys in redis that will expire
  - `gauge.db0_keys` (*gauge*)<br>    The total number of keys stored in redis
  - `gauge.instantaneous_ops_per_sec` (*gauge*)<br>    Number of commands processed per second
  - `gauge.key_llen` (*gauge*)<br>    Length of an list key
  - `gauge.latest_fork_usec` (*gauge*)<br>    Duration of the latest fork operation in microseconds
- - `gauge.master_last_io_seconds_ago` (*gauge*)<br>    Number of seconds since the last interaction with master
+ - `gauge.master_last_io_seconds_ago` (*gauge*)<br>    Number of seconds since the last interaction with leader
+ - `gauge.master_link_down_since_seconds` (*gauge*)<br>    Number of seconds since the link is down
+ - `gauge.master_link_status` (*gauge*)<br>    Status of the link (up/down)
  - ***`gauge.master_repl_offset`*** (*gauge*)<br>    Master replication offset
  - `gauge.mem_fragmentation_ratio` (*gauge*)<br>    Ratio between used_memory_rss and used_memory
  - `gauge.rdb_bgsave_in_progress` (*gauge*)<br>    Flag indicating a RDB save is on-going
+ - `gauge.rdb_last_save_time` (*gauge*)<br>    Unix timestamp for last save to disk, when using persistence
  - `gauge.repl_backlog_first_byte_offset` (*gauge*)<br>    Slave replication backlog offset
  - ***`gauge.slave_repl_offset`*** (*gauge*)<br>    Slave replication offset
  - `gauge.uptime_in_days` (*gauge*)<br>    Number of days up
@@ -174,16 +180,16 @@ monitors` after configuring this monitor in a running agent instance.
 
 ### Legacy non-default metrics (version < 4.7.0)
 
-**The following information only applies to agent version older than 4.7.0. If
+**The following information only applies to agent versions prior to 4.7.0. If
 you have a newer agent and have set `enableBuiltInFiltering: true` at the top
 level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#old-style-whitelist-filtering).**
+[Old-style inclusion list filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#old-style-inclusion-list-filtering).**
 
 If you have a reference to the `whitelist.json` in your agent's top-level
 `metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](https://github.com/signalfx/signalfx-agent/tree/master/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
+that allow list, then you need to add an item to the top-level
+`metricsToInclude` config option to override that allow list (see [Inclusion
+filtering](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/../legacy-filtering.md#inclusion-filtering).  Or you can just
 copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions

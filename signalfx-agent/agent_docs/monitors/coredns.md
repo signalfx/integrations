@@ -4,7 +4,7 @@
 
 # coredns
 
-Monitor Type: `coredns` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/coredns))
+Monitor Type: `coredns` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/coredns))
 
 **Accepts Endpoints**: **Yes**
 
@@ -46,9 +46,10 @@ Configuration](../monitor-config.html#common-configuration).**
 | `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration (**default:** `10s`) |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
-| `useHTTPS` | no | `bool` | If true, the agent will connect to the exporter using HTTPS instead of plain HTTP. (**default:** `false`) |
-| `httpHeaders` | no | `map of strings` | A map of key=message-header and value=header-value. Comma separated multiple values for the same message-header is supported. |
+| `useHTTPS` | no | `bool` | If true, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
+| `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
 | `skipVerify` | no | `bool` | If useHTTPS is true and this option is also true, the exporter's TLS cert will not be verified. (**default:** `false`) |
+| `sniServerName` | no | `string` | If useHTTPS is true and skipVerify is true, the sniServerName is used to verify the hostname on the returned certificates. It is also included in the client's handshake to support virtual hosting unless it is an IP address. |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to false. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |
@@ -68,10 +69,11 @@ Metrics that are categorized as
 
 
  - `coredns_build_info` (*gauge*)<br>    A metric with a constant '1' value labeled by version, revision, and goversion from which CoreDNS was built.
+ - ***`coredns_cache_entries`*** (*cumulative*)<br>    Size of DNS cache.
  - `coredns_cache_hits_total` (*cumulative*)<br>    The count of cache misses.
  - `coredns_cache_misses_total` (*cumulative*)<br>    The count of cache misses.
- - ***`coredns_cache_size`*** (*cumulative*)<br>    Size of DNS cache.
- - ***`coredns_dns_request_count_total`*** (*cumulative*)<br>    Counter of DNS requests made per zone, protocol and family.
+ - ***`coredns_cache_size`*** (*cumulative*)<br>    Deprecated in coredns version 1.7.0. Size of DNS cache.
+ - ***`coredns_dns_request_count_total`*** (*cumulative*)<br>    Deprecated in coredns version 1.7.0. Counter of DNS requests made per zone, protocol and family.
  - `coredns_dns_request_duration_seconds` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (sum)
  - `coredns_dns_request_duration_seconds_bucket` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (bucket)
  - `coredns_dns_request_duration_seconds_count` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (count)
@@ -79,14 +81,17 @@ Metrics that are categorized as
  - `coredns_dns_request_size_bytes_bucket` (*cumulative*)<br>    Size of the EDNS0 UDP buffer in bytes (64K for TCP). (bucket)
  - `coredns_dns_request_size_bytes_count` (*cumulative*)<br>    Size of the EDNS0 UDP buffer in bytes (64K for TCP). (count)
  - ***`coredns_dns_request_type_count_total`*** (*cumulative*)<br>    Counter of DNS requests per type, per zone.
- - ***`coredns_dns_response_rcode_count_total`*** (*cumulative*)<br>    Counter of response status codes.
+ - ***`coredns_dns_requests_total`*** (*cumulative*)<br>    Counter of DNS requests made per zone, protocol and family.
+ - ***`coredns_dns_response_rcode_count_total`*** (*cumulative*)<br>    Deprecated in coredns version 1.7.0. Counter of response status codes.
  - `coredns_dns_response_size_bytes` (*cumulative*)<br>    Size of the returned response in bytes. (sum)
  - `coredns_dns_response_size_bytes_bucket` (*cumulative*)<br>    Size of the returned response in bytes. (bucket)
  - `coredns_dns_response_size_bytes_count` (*cumulative*)<br>    Size of the returned response in bytes. (count)
+ - ***`coredns_dns_responses_total`*** (*cumulative*)<br>    Counter of response status codes.
  - `coredns_health_request_duration_seconds` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (sum)
  - `coredns_health_request_duration_seconds_bucket` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (bucket)
  - `coredns_health_request_duration_seconds_count` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (count)
- - `coredns_panic_count_total` (*cumulative*)<br>    A metrics that counts the number of panics.
+ - `coredns_panic_count_total` (*cumulative*)<br>    Deprecated in coredns version 1.7.0. A metrics that counts the number of panics.
+ - `coredns_panics_total` (*cumulative*)<br>    A metrics that counts the number of panics.
  - `coredns_proxy_request_count_total` (*cumulative*)<br>    Counter of requests made per protocol, proxy protocol, family and upstream.
  - `coredns_proxy_request_duration_seconds` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (sum)
  - `coredns_proxy_request_duration_seconds_bucket` (*cumulative*)<br>    Histogram of the time (in seconds) each request took. (bucket)
@@ -127,9 +132,6 @@ Metrics that are categorized as
 
 ### Non-default metrics (version 4.7.0+)
 
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -137,20 +139,6 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 
 

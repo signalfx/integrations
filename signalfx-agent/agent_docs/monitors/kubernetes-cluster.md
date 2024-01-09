@@ -4,7 +4,7 @@
 
 # kubernetes-cluster
 
-Monitor Type: `kubernetes-cluster` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/cluster))
+Monitor Type: `kubernetes-cluster` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/kubernetes/cluster))
 
 **Accepts Endpoints**: No
 
@@ -55,7 +55,6 @@ Configuration](../monitor-config.html#common-configuration).**
 | --- | --- | --- | --- |
 | `alwaysClusterReporter` | no | `bool` | If `true`, leader election is skipped and metrics are always reported. (**default:** `false`) |
 | `namespace` | no | `string` | If specified, only resources within the given namespace will be monitored.  If omitted (blank) all supported resources across all namespaces will be monitored. |
-| `useNodeName` | no | `bool` | If set to true, the Kubernetes node name will be used as the dimension to which to sync properties about each respective node.  This is necessary if your cluster's machines do not have unique machine-id values, as can happen when machine images are improperly cloned. (**default:** `false`) |
 | `kubernetesAPI` | no | `object (see below)` | Config for the K8s API client |
 | `nodeConditionTypesToReport` | no | `list of strings` | A list of node status condition types to report as metrics.  The metrics will be reported as datapoints of the form `kubernetes.node_<type_snake_cased>` with a value of `0` corresponding to "False", `1` to "True", and `-1` to "Unknown". (**default:** `[Ready]`) |
 
@@ -78,28 +77,36 @@ Metrics that are categorized as
 [container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
+This monitor will also emit by default any metrics that are not listed below.
 
- - `kubernetes.container_cpu_limit` (*gauge*)<br>    Maximum CPU limit set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
- - `kubernetes.container_cpu_request` (*gauge*)<br>    CPU requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
- - `kubernetes.container_ephemeral_storage_limit` (*gauge*)<br>    Maximum ephemeral storage set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available. See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage for details.
- - `kubernetes.container_ephemeral_storage_request` (*gauge*)<br>    Ephemeral storage requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available. See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage for details
- - `kubernetes.container_memory_limit` (*gauge*)<br>    Maximum memory limit set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
- - `kubernetes.container_memory_request` (*gauge*)<br>    Memory requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
+
+ - ***`kubernetes.container_cpu_limit`*** (*gauge*)<br>    Maximum CPU limit set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
+ - `kubernetes.container_cpu_request` (*gauge*)<br>    CPU requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
+ - `kubernetes.container_ephemeral_storage_limit` (*gauge*)<br>    Maximum ephemeral storage set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available. See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage for details.
+ - `kubernetes.container_ephemeral_storage_request` (*gauge*)<br>    Ephemeral storage requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available. See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#local-ephemeral-storage for details
+ - ***`kubernetes.container_memory_limit`*** (*gauge*)<br>    Maximum memory limit set for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
+ - `kubernetes.container_memory_request` (*gauge*)<br>    Memory requested for the container. This value is derived from https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#resourcerequirements-v1-core which comes from the pod spec and is reported only if a non null value is available.
  - ***`kubernetes.container_ready`*** (*gauge*)<br>    Whether a container has passed its readiness probe (0 for no, 1 for yes)
- - ***`kubernetes.container_restart_count`*** (*gauge*)<br>    How many times the container has restarted in the recent past.  This value is pulled directly from [the K8s API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.11/#containerstatus-v1-core) and the value can go indefinitely high and be reset to 0 at any time depending on how your [kubelet is configured to prune dead containers](https://kubernetes.io/docs/concepts/cluster-administration/kubelet-garbage-collection/). It is best to not depend too much on the exact value but rather look at it as either `== 0`, in which case you can conclude there were no restarts in the recent past, or `> 0`, in which case you can conclude there were restarts in the recent past, and not try and analyze the value beyond that.
+ - ***`kubernetes.container_restart_count`*** (*gauge*)<br>    How many times the container has restarted in the recent past.  This value is pulled directly from [the K8s API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#containerstatus-v1-core) and the value can go indefinitely high and be reset to 0 at any time depending on how your [kubelet is configured to prune dead containers](https://kubernetes.io/docs/concepts/cluster-administration/kubelet-garbage-collection/). It is best to not depend too much on the exact value but rather look at it as either `== 0`, in which case you can conclude there were no restarts in the recent past, or `> 0`, in which case you can conclude there were restarts in the recent past, and not try and analyze the value beyond that.
  - `kubernetes.cronjob.active` (*gauge*)<br>    The number of actively running jobs for a cronjob.
  - ***`kubernetes.daemon_set.current_scheduled`*** (*gauge*)<br>    The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod
  - ***`kubernetes.daemon_set.desired_scheduled`*** (*gauge*)<br>    The total number of nodes that should be running the daemon pod (including nodes currently running the daemon pod)
  - ***`kubernetes.daemon_set.misscheduled`*** (*gauge*)<br>    The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod
  - ***`kubernetes.daemon_set.ready`*** (*gauge*)<br>    The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready
+ - `kubernetes.daemon_set.updated` (*gauge*)<br>    The total number of nodes that are running updated daemon pod
  - ***`kubernetes.deployment.available`*** (*gauge*)<br>    Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
  - ***`kubernetes.deployment.desired`*** (*gauge*)<br>    Number of desired pods in this deployment
+ - `kubernetes.deployment.updated` (*gauge*)<br>    Total number of non-terminated pods targeted by this deployment that have the desired template spec
  - `kubernetes.job.active` (*gauge*)<br>    The number of actively running pods for a job.
  - `kubernetes.job.completions` (*gauge*)<br>    The desired number of successfully finished pods the job should be run with.
- - `kubernetes.job.failed` (*counter*)<br>    The number of pods which reased phase Failed for a job.
+ - `kubernetes.job.failed` (*cumulative*)<br>    The number of pods which reased phase Failed for a job.
  - `kubernetes.job.parallelism` (*gauge*)<br>    The max desired number of pods the job should run at any given time.
- - `kubernetes.job.succeeded` (*counter*)<br>    The number of pods which reached phase Succeeded for a job.
+ - `kubernetes.job.succeeded` (*cumulative*)<br>    The number of pods which reached phase Succeeded for a job.
  - ***`kubernetes.namespace_phase`*** (*gauge*)<br>    The current phase of namespaces (`1` for _active_ and `0` for _terminating_)
+ - `kubernetes.node_allocatable_cpu` (*gauge*)<br>    How many CPU cores remaining that the node can allocate to pods
+ - `kubernetes.node_allocatable_ephemeral_storage` (*gauge*)<br>    How many bytes of ephemeral storage remaining that the node can allocate to pods
+ - `kubernetes.node_allocatable_memory` (*gauge*)<br>    How many bytes of RAM memory remaining that the node can allocate to pods
+ - `kubernetes.node_allocatable_storage` (*gauge*)<br>    How many bytes of storage remaining that the node can allocate to pods
  - ***`kubernetes.node_ready`*** (*gauge*)<br>    Whether this node is ready (1), not ready (0) or in an unknown state (-1)
  - ***`kubernetes.pod_phase`*** (*gauge*)<br>    Current phase of the pod (1 - Pending, 2 - Running, 3 - Succeeded, 4 - Failed, 5 - Unknown)
  - ***`kubernetes.replica_set.available`*** (*gauge*)<br>    Total number of available pods (ready for at least minReadySeconds) targeted by this replica set
@@ -133,9 +140,6 @@ monitor config option `extraGroups`:
 
 ### Non-default metrics (version 4.7.0+)
 
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -143,20 +147,6 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 ## Dimensions
 
@@ -167,7 +157,7 @@ dimensions may be specific to certain metrics.
 | ---  | ---         |
 | `kubernetes_name` | The name of the resource that the metric describes |
 | `kubernetes_namespace` | The namespace of the resource that the metric describes |
-| `kubernetes_node` | The name of the node, as defined by the `name` field of the node resource. |
+| `kubernetes_node_uid` | The UID of the node, as defined by the `uid` field of the node resource. |
 | `kubernetes_pod_uid` | The UID of the pod that the metric describes |
 | `machine_id` | The machine ID from /etc/machine-id.  This should be unique across all nodes in your cluster, but some cluster deployment tools don't guarantee this.  This will not be sent if the `useNodeName` config option is set to true. |
 | `metric_source` | This is always set to `kubernetes` |
@@ -182,7 +172,7 @@ are set on the dimension values of the dimension specified.
 
 | Name | Dimension | Description |
 | ---  | ---       | ---         |
-| `<node label>` | `machine_id/kubernetes_node` | All non-blank labels on a given node will be synced as properties to the `machine_id` or `kubernetes_node` dimension value for that node.  Which dimension gets the properties is determined by the `useNodeName` config option.  Any blank values will be synced as tags on that same dimension. |
+| `<node label>` | `kubernetes_node_uid` | All non-blank labels on a given node will be synced as properties to the `kubernetes_node_uid` dimension value for that node. Any blank values will be synced as tags on that same dimension. |
 | `<pod label>` | `kubernetes_pod_uid` | Any labels with non-blank values on the pod will be synced as properties to the `kubernetes_pod_uid` dimension. Any blank labels will be synced as tags on that same dimension. |
 | `container_status` | `container_id` | Status of the container such as `running`, `waiting` or `terminated` are synced to the `container_id` dimension. |
 | `container_status_reason` | `container_id` | Reason why a container is in a particular state. This property is synced to `container_id` only if the value of `cotnainer_status` is either `waiting` or `terminated`. |
@@ -190,6 +180,7 @@ are set on the dimension values of the dimension specified.
 | `daemonset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the daemon set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 | `deployment_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the deployment was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 | `job_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the job was created and is in UTC. This property is synced onto `kubernetes_uid`. |
+| `node_creation_timestamp` | `kubernetes_node_uid` | CreationTimestamp is a timestamp representing the server time when the node was created and is in UTC. This property is synced onto `kubernetes_node_uid`. |
 | `pod_creation_timestamp` | `kubernetes_pod_uid` | Timestamp (in RFC3339 format) representing the server time when the pod was created and is in UTC. This property is synced onto `kubernetes_pod_uid`. |
 | `replicaset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the replica set was created and is in UTC. This property is synced onto `kubernetes_uid`. |
 | `statefulset_creation_timestamp` | `kubernetes_uid` | Timestamp (in RFC3339 format) representing the server time when the stateful set was created and is in UTC. This property is synced onto `kubernetes_uid`. |

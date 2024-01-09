@@ -4,7 +4,7 @@
 
 # collectd/custom
 
-Monitor Type: `collectd/custom` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/custom))
+Monitor Type: `collectd/custom` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/custom))
 
 **Accepts Endpoints**: **Yes**
 

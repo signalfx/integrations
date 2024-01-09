@@ -4,7 +4,7 @@
 
 # logstash-tcp
 
-Monitor Type: `logstash-tcp` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/logstash/tcp))
+Monitor Type: `logstash-tcp` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/logstash/tcp))
 
 **Accepts Endpoints**: **Yes**
 
@@ -125,5 +125,8 @@ Configuration](../monitor-config.html#common-configuration).**
 | `debugEvents` | no | `bool` | If true, events received from Logstash will be dumped to the agent's stdout in deserialized form (**default:** `false`) |
 
 
+
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 
 

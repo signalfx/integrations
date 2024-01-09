@@ -4,7 +4,7 @@
 
 # collectd/kafka
 
-Monitor Type: `collectd/kafka` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/kafka))
+Monitor Type: `collectd/kafka` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka))
 
 **Accepts Endpoints**: **Yes**
 
@@ -19,7 +19,7 @@ how to configure custom MBeans, as well as information on troubleshooting
 JMX setup.
 
 This monitor has a set of [built in MBeans
-configured](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/kafka/mbeans.go)
+configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go)
 for which it pulls metrics from Kafka's JMX endpoint.
 
 Note that this monitor supports Kafka v0.8.2.x and above. For Kafka v1.x.x and above,
@@ -94,6 +94,8 @@ Metrics that are categorized as
 [container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 (*default*) are ***in bold and italics*** in the list below.
 
+This monitor will also emit by default any metrics that are not listed below.
+
 
  - ***`counter.kafka-bytes-in`*** (*cumulative*)<br>    Number of bytes received per second across all topics
  - ***`counter.kafka-bytes-out`*** (*cumulative*)<br>    Number of bytes transmitted per second across all topics
@@ -135,9 +137,6 @@ monitor config option `extraGroups`:
 
 ### Non-default metrics (version 4.7.0+)
 
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
 from specific configuration options that do not appear in the above list of
@@ -145,20 +144,6 @@ metrics do not need to be added to `extraMetrics`.
 
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
 
 
 

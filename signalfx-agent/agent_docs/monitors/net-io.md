@@ -4,7 +4,7 @@
 
 # net-io
 
-Monitor Type: `net-io` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/netio))
+Monitor Type: `net-io` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/netio))
 
 **Accepts Endpoints**: No
 
@@ -53,18 +53,17 @@ Metrics that are categorized as
 (*default*) are ***in bold and italics*** in the list below.
 
 
+ - `if_dropped.rx` (*cumulative*)<br>    Count of received packets dropped by the interface
+ - `if_dropped.tx` (*cumulative*)<br>    Count of transmitted packets dropped by the interface
  - ***`if_errors.rx`*** (*cumulative*)<br>    Count of receive errors on the interface
  - ***`if_errors.tx`*** (*cumulative*)<br>    Count of transmit errors on the interface
  - ***`if_octets.rx`*** (*cumulative*)<br>    Count of bytes (octets) received on the interface
  - ***`if_octets.tx`*** (*cumulative*)<br>    Count of bytes (octets) transmitted by the interface
  - `if_packets.rx` (*cumulative*)<br>    Count of packets received on the interface
  - `if_packets.tx` (*cumulative*)<br>    Count of packets transmitted by the interface
- - ***`network.total`*** (*cumulative*)<br>    Total amount of inbound and outbound network traffic on this host, in bytes.  This metric reports with plugin dimension set to "signalfx-metadata".
+ - ***`network.total`*** (*cumulative*)<br>    Total amount of inbound and outbound network traffic on this host, in bytes.
 
 ### Non-default metrics (version 4.7.0+)
-
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
 
 To emit metrics that are not _default_, you can add those metrics in the
 generic monitor-level `extraMetrics` config option.  Metrics that are derived
@@ -74,19 +73,14 @@ metrics do not need to be added to `extraMetrics`.
 To see a list of metrics that will be emitted you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
 
-### Legacy non-default metrics (version < 4.7.0)
+## Dimensions
 
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
+The following dimensions may occur on metrics emitted by this monitor.  Some
+dimensions may be specific to certain metrics.
 
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
+| Name | Description |
+| ---  | ---         |
+| `interface` | The name of the network interface (e.g. `eth0`) |
 
 
 
