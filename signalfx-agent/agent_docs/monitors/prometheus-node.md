@@ -4,7 +4,7 @@
 
 # prometheus/node
 
-Monitor Type: `prometheus/node` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/node))
+Monitor Type: `prometheus/node` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheus/node))
 
 **Accepts Endpoints**: **Yes**
 
@@ -12,7 +12,7 @@ Monitor Type: `prometheus/node` ([Source](https://github.com/signalfx/signalfx-a
 
 ## Overview
 
-This monitor scrapes [Prmoetheus Node
+This monitor scrapes [Prometheus Node
 Exporter](https://github.com/prometheus/node_exporter) metrics and sends
 them to SignalFx.  It is a wrapper around the
 [prometheus-exporter](./prometheus-exporter.md) monitor that provides a
@@ -39,9 +39,10 @@ Configuration](../monitor-config.html#common-configuration).**
 | `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration (**default:** `10s`) |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
-| `useHTTPS` | no | `bool` | If true, the agent will connect to the exporter using HTTPS instead of plain HTTP. (**default:** `false`) |
-| `httpHeaders` | no | `map of strings` | A map of key=message-header and value=header-value. Comma separated multiple values for the same message-header is supported. |
+| `useHTTPS` | no | `bool` | If true, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
+| `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
 | `skipVerify` | no | `bool` | If useHTTPS is true and this option is also true, the exporter's TLS cert will not be verified. (**default:** `false`) |
+| `sniServerName` | no | `string` | If useHTTPS is true and skipVerify is true, the sniServerName is used to verify the hostname on the returned certificates. It is also included in the client's handshake to support virtual hosting unless it is an IP address. |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to false. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |
@@ -58,7 +59,6 @@ These are the metrics available for this monitor.
 This monitor emits all metrics by default; however, **none are categorized as
 [container/host](https://docs.splunk.com/observability/admin/subscription-usage/monitor-imm-billing-usage.html#about-custom-bundled-and-high-resolution-metrics)
 -- they are all custom**.
-
 
 
  - ***`node_arp_entries`*** (*gauge*)<br>    ARP entries by device

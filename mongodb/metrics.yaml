@@ -22,7 +22,8 @@ counter.asserts.warning:
 counter.backgroundFlushing.flushes:
   brief: Number of times the database has been flushed
   custom: false
-  description: Number of times the database has been flushed
+  description: Number of times the database has been flushed. Only available when
+    MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
   metric_type: gauge
   monitor: collectd/mongodb
   title: counter.backgroundFlushing.flushes
@@ -366,7 +367,8 @@ counter.opcountersRepl.update:
 gauge.backgroundFlushing.average_ms:
   brief: Average time (ms) to write data to disk
   custom: false
-  description: Average time (ms) to write data to disk
+  description: Average time (ms) to write data to disk. Only available when MMAPv1
+    is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.backgroundFlushing.average_ms
@@ -374,7 +376,8 @@ gauge.backgroundFlushing.average_ms:
 gauge.backgroundFlushing.last_ms:
   brief: Most recent time (ms) spent writing data to disk
   custom: false
-  description: Most recent time (ms) spent writing data to disk
+  description: Most recent time (ms) spent writing data to disk. Only available when
+    MMAPv1 is enabled. (MMAPv1 is not supported in MongoDB version > 4.2)
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.backgroundFlushing.last_ms
@@ -444,17 +447,19 @@ gauge.collections:
   title: gauge.collections
 
 gauge.connections.available:
-  brief: Number of available incoming connections
+  brief: The number of unused incoming connections available
   custom: true
-  description: Number of available incoming connections
+  description: "The number of unused incoming connections available. Consider this\
+    \ value \nin combination with the value of `gauge.connections.current` to \nunderstand\
+    \ the connection load on the database."
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.connections.available
 
 gauge.connections.current:
-  brief: Number of current client connections
+  brief: The number of incoming connections from clients to the database server
   custom: false
-  description: Number of current client connections
+  description: The number of incoming connections from clients to the database server.
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.connections.current
@@ -479,7 +484,8 @@ gauge.dataSize:
 gauge.extra_info.heap_usage_bytes:
   brief: Heap size used by the mongod process, in bytes
   custom: false
-  description: Heap size used by the mongod process, in bytes
+  description: Heap size used by the mongod process, in bytes. Deprecated in mongo
+    version > 3.3, use gauge.tcmalloc.generic.heap_size instead.
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.extra_info.heap_usage_bytes
@@ -551,7 +557,8 @@ gauge.indexes:
 gauge.mem.mapped:
   brief: Mongodb mapped memory usage, in MB
   custom: false
-  description: Mongodb mapped memory usage, in MB
+  description: Mongodb mapped memory usage, in MB. Only available when MMAPv1 is enabled.
+    (MMAPv1 is not supported in MongoDB version > 4.2)
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.mem.mapped
@@ -588,6 +595,34 @@ gauge.objects:
   monitor: collectd/mongodb
   title: gauge.objects
 
+gauge.repl.active_nodes:
+  brief: Number of healthy members in a replicaset (reporting 1 for [health](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].health))
+  custom: false
+  description: Number of healthy members in a replicaset (reporting 1 for [health](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].health)).
+  metric_type: gauge
+  monitor: collectd/mongodb
+  title: gauge.repl.active_nodes
+
+gauge.repl.is_primary_node:
+  brief: Report 1 when member [state](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].stateStr)
+    of replicaset is `PRIMARY` and 2 else
+  custom: false
+  description: Report 1 when member [state](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].stateStr)
+    of replicaset is `PRIMARY` and 2 else.
+  metric_type: gauge
+  monitor: collectd/mongodb
+  title: gauge.repl.is_primary_node
+
+gauge.repl.max_lag:
+  brief: "Replica lag in seconds calculated from the difference between the \ntimestamp\
+    \ of the last oplog entry of primary and secondary [see mongo \ndoc](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].optimeDate)"
+  custom: false
+  description: "Replica lag in seconds calculated from the difference between the\
+    \ \ntimestamp of the last oplog entry of primary and secondary [see mongo \ndoc](https://docs.mongodb.com/manual/reference/command/replSetGetStatus/#replSetGetStatus.members[n].optimeDate)."
+  metric_type: gauge
+  monitor: collectd/mongodb
+  title: gauge.repl.max_lag
+
 gauge.storageSize:
   brief: Total bytes allocated to collections for document storage
   custom: false
@@ -595,6 +630,15 @@ gauge.storageSize:
   metric_type: gauge
   monitor: collectd/mongodb
   title: gauge.storageSize
+
+gauge.tcmalloc.generic.heap_size:
+  brief: Heap size used by the mongod process, in bytes
+  custom: false
+  description: Heap size used by the mongod process, in bytes. Same as gauge.extra_info.heap_usage_bytes
+    but supports 64-bit values.
+  metric_type: gauge
+  monitor: collectd/mongodb
+  title: gauge.tcmalloc.generic.heap_size
 
 gauge.uptime:
   brief: Uptime of this server in milliseconds

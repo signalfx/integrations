@@ -4,7 +4,7 @@
 
 # prometheus-exporter
 
-Monitor Type: `prometheus-exporter` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheusexporter))
+Monitor Type: `prometheus-exporter` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheusexporter))
 
 **Accepts Endpoints**: **Yes**
 
@@ -16,8 +16,9 @@ This monitor reads metrics from a [Prometheus
 exporter](https://prometheus.io/docs/instrumenting/exporters/) endpoint.
 
 All metric types are supported.  See
-https://prometheus.io/docs/concepts/metric_types/ for a description of the
-Prometheus metric types.  The conversion happens as follows:
+[Metric Types](https://prometheus.io/docs/concepts/metric_types/) for a
+description of the Prometheus metric types.  The conversion happens as
+follows:
 
  - Gauges are converted directly to SignalFx gauges
  - Counters are converted directly to SignalFx cumulative counters
@@ -101,9 +102,10 @@ Configuration](../monitor-config.html#common-configuration).**
 | `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration (**default:** `10s`) |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
-| `useHTTPS` | no | `bool` | If true, the agent will connect to the exporter using HTTPS instead of plain HTTP. (**default:** `false`) |
-| `httpHeaders` | no | `map of strings` | A map of key=message-header and value=header-value. Comma separated multiple values for the same message-header is supported. |
+| `useHTTPS` | no | `bool` | If true, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
+| `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
 | `skipVerify` | no | `bool` | If useHTTPS is true and this option is also true, the exporter's TLS cert will not be verified. (**default:** `false`) |
+| `sniServerName` | no | `string` | If useHTTPS is true and skipVerify is true, the sniServerName is used to verify the hostname on the returned certificates. It is also included in the client's handshake to support virtual hosting unless it is an IP address. |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to false. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |

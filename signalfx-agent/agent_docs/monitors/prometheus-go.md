@@ -4,7 +4,7 @@
 
 # prometheus/go
 
-Monitor Type: `prometheus/go` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/prometheus/go))
+Monitor Type: `prometheus/go` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/prometheus/go))
 
 **Accepts Endpoints**: **Yes**
 
@@ -12,7 +12,7 @@ Monitor Type: `prometheus/go` ([Source](https://github.com/signalfx/signalfx-age
 
 ## Overview
 
-This monitor scrapes [Prmoetheus Go
+This monitor scrapes [Prometheus Go
 collector](https://godoc.org/github.com/prometheus/client_golang/prometheus#NewGoCollector)
 and [Prometheus process
 collector](https://godoc.org/github.com/prometheus/client_golang/prometheus#NewProcessCollector)
@@ -41,9 +41,10 @@ Configuration](../monitor-config.html#common-configuration).**
 | `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration (**default:** `10s`) |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
-| `useHTTPS` | no | `bool` | If true, the agent will connect to the exporter using HTTPS instead of plain HTTP. (**default:** `false`) |
-| `httpHeaders` | no | `map of strings` | A map of key=message-header and value=header-value. Comma separated multiple values for the same message-header is supported. |
+| `useHTTPS` | no | `bool` | If true, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
+| `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
 | `skipVerify` | no | `bool` | If useHTTPS is true and this option is also true, the exporter's TLS cert will not be verified. (**default:** `false`) |
+| `sniServerName` | no | `string` | If useHTTPS is true and skipVerify is true, the sniServerName is used to verify the hostname on the returned certificates. It is also included in the client's handshake to support virtual hosting unless it is an IP address. |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to false. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |
@@ -62,70 +63,44 @@ This monitor emits all metrics by default; however, **none are categorized as
 -- they are all custom**.
 
 
- - `go_gc_duration_seconds` (*cumulative*)<br>    A summary of the GC invocation durations
- - `go_gc_duration_seconds_bucket` (*cumulative*)<br>    A summary of the GC invocation durations
- - `go_gc_duration_seconds_count` (*cumulative*)<br>    A summary of the GC invocation durations
- - `go_goroutines` (*gauge*)<br>    Number of goroutines that currently exist
- - `go_info` (*gauge*)<br>    Information about the Go environment
- - `go_memstats_alloc_bytes` (*gauge*)<br>    Number of bytes allocated and still in use
- - `go_memstats_alloc_bytes_total` (*cumulative*)<br>    Total number of bytes allocated, even if freed
- - `go_memstats_buck_hash_sys_bytes` (*gauge*)<br>    Number of bytes used by the profiling bucket hash table
- - `go_memstats_frees_total` (*cumulative*)<br>    Total number of frees
- - `go_memstats_gc_cpu_fraction` (*gauge*)<br>    The fraction of this program's available CPU time used by the GC since the program started
- - `go_memstats_gc_sys_bytes` (*gauge*)<br>    Number of bytes used for garbage collection system metadata
- - `go_memstats_heap_alloc_bytes` (*gauge*)<br>    Number of heap bytes allocated and still in use
- - `go_memstats_heap_idle_bytes` (*gauge*)<br>    Number of heap bytes waiting to be used
- - `go_memstats_heap_inuse_bytes` (*gauge*)<br>    Number of heap bytes that are in use
- - `go_memstats_heap_objects` (*gauge*)<br>    Number of allocated objects
- - `go_memstats_heap_released_bytes` (*gauge*)<br>    Number of heap bytes released to OS
- - `go_memstats_heap_sys_bytes` (*gauge*)<br>    Number of heap bytes obtained from system
- - `go_memstats_last_gc_time_seconds` (*gauge*)<br>    Number of seconds since 1970 of last garbage collection
- - `go_memstats_lookups_total` (*cumulative*)<br>    Total number of pointer lookups
- - `go_memstats_mallocs_total` (*cumulative*)<br>    Total number of mallocs
- - `go_memstats_mcache_inuse_bytes` (*gauge*)<br>    Number of bytes in use by mcache structures
- - `go_memstats_mcache_sys_bytes` (*gauge*)<br>    Number of bytes used for mcache structures obtained from system
- - `go_memstats_mspan_inuse_bytes` (*gauge*)<br>    Number of bytes in use by mspan structures
- - `go_memstats_mspan_sys_bytes` (*gauge*)<br>    Number of bytes used for mspan structures obtained from system
- - `go_memstats_next_gc_bytes` (*gauge*)<br>    Number of heap bytes when next garbage collection will take place
- - `go_memstats_other_sys_bytes` (*gauge*)<br>    Number of bytes used for other system allocations
- - `go_memstats_stack_inuse_bytes` (*gauge*)<br>    Number of bytes in use by the stack allocator
- - `go_memstats_stack_sys_bytes` (*gauge*)<br>    Number of bytes obtained from system for stack allocator
- - `go_memstats_sys_bytes` (*gauge*)<br>    Number of bytes obtained from system
- - `go_threads` (*gauge*)<br>    Number of OS threads created
- - `process_cpu_seconds_total` (*cumulative*)<br>    Total user and system CPU time spent in seconds
- - `process_max_fds` (*gauge*)<br>    Maximum number of open file descriptors
- - `process_open_fds` (*gauge*)<br>    Number of open file descriptors
- - `process_resident_memory_bytes` (*gauge*)<br>    Resident memory size in bytes
+ - ***`go_gc_duration_seconds`*** (*cumulative*)<br>    A summary of the GC invocation durations
+ - ***`go_gc_duration_seconds_bucket`*** (*cumulative*)<br>    A summary of the GC invocation durations
+ - ***`go_gc_duration_seconds_count`*** (*cumulative*)<br>    A summary of the GC invocation durations
+ - ***`go_goroutines`*** (*gauge*)<br>    Number of goroutines that currently exist
+ - ***`go_info`*** (*gauge*)<br>    Information about the Go environment
+ - ***`go_memstats_alloc_bytes`*** (*gauge*)<br>    Number of bytes allocated and still in use
+ - ***`go_memstats_alloc_bytes_total`*** (*cumulative*)<br>    Total number of bytes allocated, even if freed
+ - ***`go_memstats_buck_hash_sys_bytes`*** (*gauge*)<br>    Number of bytes used by the profiling bucket hash table
+ - ***`go_memstats_frees_total`*** (*cumulative*)<br>    Total number of frees
+ - ***`go_memstats_gc_cpu_fraction`*** (*gauge*)<br>    The fraction of this program's available CPU time used by the GC since the program started
+ - ***`go_memstats_gc_sys_bytes`*** (*gauge*)<br>    Number of bytes used for garbage collection system metadata
+ - ***`go_memstats_heap_alloc_bytes`*** (*gauge*)<br>    Number of heap bytes allocated and still in use
+ - ***`go_memstats_heap_idle_bytes`*** (*gauge*)<br>    Number of heap bytes waiting to be used
+ - ***`go_memstats_heap_inuse_bytes`*** (*gauge*)<br>    Number of heap bytes that are in use
+ - ***`go_memstats_heap_objects`*** (*gauge*)<br>    Number of allocated objects
+ - ***`go_memstats_heap_released_bytes`*** (*gauge*)<br>    Number of heap bytes released to OS
+ - ***`go_memstats_heap_sys_bytes`*** (*gauge*)<br>    Number of heap bytes obtained from system
+ - ***`go_memstats_last_gc_time_seconds`*** (*gauge*)<br>    Number of seconds since 1970 of last garbage collection
+ - ***`go_memstats_lookups_total`*** (*cumulative*)<br>    Total number of pointer lookups
+ - ***`go_memstats_mallocs_total`*** (*cumulative*)<br>    Total number of mallocs
+ - ***`go_memstats_mcache_inuse_bytes`*** (*gauge*)<br>    Number of bytes in use by mcache structures
+ - ***`go_memstats_mcache_sys_bytes`*** (*gauge*)<br>    Number of bytes used for mcache structures obtained from system
+ - ***`go_memstats_mspan_inuse_bytes`*** (*gauge*)<br>    Number of bytes in use by mspan structures
+ - ***`go_memstats_mspan_sys_bytes`*** (*gauge*)<br>    Number of bytes used for mspan structures obtained from system
+ - ***`go_memstats_next_gc_bytes`*** (*gauge*)<br>    Number of heap bytes when next garbage collection will take place
+ - ***`go_memstats_other_sys_bytes`*** (*gauge*)<br>    Number of bytes used for other system allocations
+ - ***`go_memstats_stack_inuse_bytes`*** (*gauge*)<br>    Number of bytes in use by the stack allocator
+ - ***`go_memstats_stack_sys_bytes`*** (*gauge*)<br>    Number of bytes obtained from system for stack allocator
+ - ***`go_memstats_sys_bytes`*** (*gauge*)<br>    Number of bytes obtained from system
+ - ***`go_threads`*** (*gauge*)<br>    Number of OS threads created
+ - ***`process_cpu_seconds_total`*** (*cumulative*)<br>    Total user and system CPU time spent in seconds
+ - ***`process_max_fds`*** (*gauge*)<br>    Maximum number of open file descriptors
+ - ***`process_open_fds`*** (*gauge*)<br>    Number of open file descriptors
+ - ***`process_resident_memory_bytes`*** (*gauge*)<br>    Resident memory size in bytes
  - ***`process_start_time_seconds`*** (*gauge*)<br>    Start time of the process since unix epoch in seconds
- - `process_virtual_memory_bytes` (*gauge*)<br>    Virtual memory size in bytes
- - `process_virtual_memory_max_bytes` (*gauge*)<br>    Maximum amount of virtual memory available in bytes
-
-### Non-default metrics (version 4.7.0+)
-
-**The following information applies to the agent version 4.7.0+ that has
-`enableBuiltInFiltering: true` set on the top level of the agent config.**
-
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived
-from specific configuration options that do not appear in the above list of
-metrics do not need to be added to `extraMetrics`.
-
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring this monitor in a running agent instance.
-
-### Legacy non-default metrics (version < 4.7.0)
-
-**The following information only applies to agent version older than 4.7.0. If
-you have a newer agent and have set `enableBuiltInFiltering: true` at the top
-level of your agent config, see the section above. See upgrade instructions in
-[Old-style whitelist filtering](../legacy-filtering.html#old-style-whitelist-filtering).**
-
-If you have a reference to the `whitelist.json` in your agent's top-level
-`metricsToExclude` config option, and you want to emit metrics that are not in
-that whitelist, then you need to add an item to the top-level
-`metricsToInclude` config option to override that whitelist (see [Inclusion
-filtering](../legacy-filtering.html#inclusion-filtering).  Or you can just
-copy the whitelist.json, modify it, and reference that in `metricsToExclude`.
-
+ - ***`process_virtual_memory_bytes`*** (*gauge*)<br>    Virtual memory size in bytes
+ - ***`process_virtual_memory_max_bytes`*** (*gauge*)<br>    Maximum amount of virtual memory available in bytes
+The agent does not do any built-in filtering of metrics coming out of this
+monitor.
 
 

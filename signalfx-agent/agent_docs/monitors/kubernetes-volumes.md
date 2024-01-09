@@ -4,7 +4,7 @@
 
 # kubernetes-volumes
 
-Monitor Type: `kubernetes-volumes` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/kubernetes/volumes))
+Monitor Type: `kubernetes-volumes` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/kubernetes/volumes))
 
 **Accepts Endpoints**: No
 
@@ -14,15 +14,30 @@ Monitor Type: `kubernetes-volumes` ([Source](https://github.com/signalfx/signalf
 
 This monitor sends usage stats about volumes
 mounted to Kubernetes pods (e.g. free space/inodes).  This information is
-gotten from the Kubelet /stats/summary endpoint.  The normal `collectd/df`
+gotten from the Kubelet /stats/summary endpoint.  The normal `filesystems`
 monitor generally will not report Persistent Volume usage metrics because
 those volumes are not seen by the agent since they can be mounted
 dynamically and older versions of K8s don't support mount propagation of
 those mounts to the agent container.
 
 Dimensions that identify the underlying volume source will be added for
-`awsElasticBlockStore` and `glusterfs` volumes.  Support for more can be
-easily added as needed.
+`awsElasticBlockStore`, `gcePersistentDisk` and `glusterfs` persistent
+volumes, and for `configMap`, `downwardAPI`, `emptyDir` and `secret`
+non-persistent volumes. Support for more can be easily added as needed.
+
+If interested in collecting metrics from Persistent Volumes and Persistent
+Volume Claims from a RBAC enabled cluster the following permissions need to
+be granted to the Agent.
+
+```yaml
+- apiGroups:
+    - ""
+  resources:
+    - persistentvolumes
+    - persistentvolumeclaims
+  verbs:
+    - get
+```
 
 
 ## Configuration
@@ -80,8 +95,20 @@ Metrics that are categorized as
 
  - ***`kubernetes.volume_available_bytes`*** (*gauge*)<br>    The number of available bytes in the volume
  - ***`kubernetes.volume_capacity_bytes`*** (*gauge*)<br>    The total capacity in bytes of the volume
-The agent does not do any built-in filtering of metrics coming out of this
-monitor.
+ - `kubernetes.volume_inodes` (*gauge*)<br>    The total inodes in the filesystem
+ - `kubernetes.volume_inodes_free` (*gauge*)<br>    The free inodes in the filesystem
+ - `kubernetes.volume_inodes_used` (*gauge*)<br>    The inodes used by the filesystem. This may not equal `inodes - free` because filesystem may share inodes with other filesystems.
+
+### Non-default metrics (version 4.7.0+)
+
+To emit metrics that are not _default_, you can add those metrics in the
+generic monitor-level `extraMetrics` config option.  Metrics that are derived
+from specific configuration options that do not appear in the above list of
+metrics do not need to be added to `extraMetrics`.
+
+To see a list of metrics that will be emitted you can run `agent-status
+monitors` after configuring this monitor in a running agent instance.
+
 ## Dimensions
 
 The following dimensions may occur on metrics emitted by this monitor.  Some
@@ -91,13 +118,15 @@ dimensions may be specific to certain metrics.
 | ---  | ---         |
 | `VolumeId` | (*EBS volumes only*) The EBS volume id of the underlying volume source |
 | `endpoints_name` | (*GlusterFS volumes only*) The endpoint name used for the GlusterFS volume |
+| `fs_type` | (*EBS volumes and GCE persistent disks only*) The filesystem type of the underlying EBS volume or GCE persistent disk |
 | `glusterfs_path` | (*GlusterFS volumes only*) The GlusterFS volume path |
 | `kubernetes_namespace` | The namespace of the pod that has this volume |
 | `kubernetes_pod_name` | The name of the pod that has this volume |
 | `kubernetes_pod_uid` | The UID of the pod that has this volume |
-| `partition` | (*EBS volumes only*) The partition number of the underlying EBS volume (`0` indicates the entire disk) |
+| `partition` | (*EBS volumes and GCE persistent disks only*) The partition number of the underlying EBS volume or GCE persistent disk (`0` indicates the entire disk) |
+| `pd_name` | (*GCE persistent disks only*) The GCE persistent disk name of the underlying volume source |
 | `volume` | The volume name as given in the pod spec under `volumes` |
-| `volume_type` | The type of the underlying volume -- this will be the key used in the k8s volume config spec (e.g. awsElasticBlockStore, etc.) |
+| `volume_type` | The type of the underlying volume -- this will be the key used in the k8s volume config spec (e.g. `awsElasticBlockStore`, `gcePersistentDisk`, `configMap`, `secret`, etc.) |
 
 
 

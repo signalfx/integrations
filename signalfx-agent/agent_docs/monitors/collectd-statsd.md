@@ -4,7 +4,7 @@
 
 # collectd/statsd
 
-Monitor Type: `collectd/statsd` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/collectd/statsd))
+Monitor Type: `collectd/statsd` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/statsd))
 
 **Accepts Endpoints**: No
 

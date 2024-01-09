@@ -2,7 +2,7 @@
 
 gauge.jenkins.job.duration:
   brief: Time taken to complete the job in ms
-  custom: false
+  custom: true
   description: Time taken to complete the job in ms.
   metric_type: gauge
   monitor: collectd/jenkins
@@ -10,7 +10,7 @@ gauge.jenkins.job.duration:
 
 gauge.jenkins.node.executor.count.value:
   brief: Total Number of executors in an instance
-  custom: false
+  custom: true
   description: Total Number of executors in an instance
   metric_type: gauge
   monitor: collectd/jenkins
@@ -18,7 +18,7 @@ gauge.jenkins.node.executor.count.value:
 
 gauge.jenkins.node.executor.in-use.value:
   brief: Total number of executors being used in an instance
-  custom: false
+  custom: true
   description: Total number of executors being used in an instance
   metric_type: gauge
   monitor: collectd/jenkins
@@ -26,7 +26,7 @@ gauge.jenkins.node.executor.in-use.value:
 
 gauge.jenkins.node.health-check.score:
   brief: Mean health score of an instance
-  custom: false
+  custom: true
   description: Mean health score of an instance
   metric_type: gauge
   monitor: collectd/jenkins
@@ -34,7 +34,7 @@ gauge.jenkins.node.health-check.score:
 
 gauge.jenkins.node.health.disk.space:
   brief: Binary value of disk space health
-  custom: false
+  custom: true
   description: Binary value of disk space health
   metric_type: gauge
   monitor: collectd/jenkins
@@ -42,7 +42,7 @@ gauge.jenkins.node.health.disk.space:
 
 gauge.jenkins.node.health.plugins:
   brief: Boolean value indicating state of plugins
-  custom: false
+  custom: true
   description: Boolean value indicating state of plugins
   metric_type: gauge
   monitor: collectd/jenkins
@@ -50,7 +50,7 @@ gauge.jenkins.node.health.plugins:
 
 gauge.jenkins.node.health.temporary.space:
   brief: Binary value of temporary space health
-  custom: false
+  custom: true
   description: Binary value of temporary space health
   metric_type: gauge
   monitor: collectd/jenkins
@@ -58,7 +58,7 @@ gauge.jenkins.node.health.temporary.space:
 
 gauge.jenkins.node.health.thread-deadlock:
   brief: Boolean value indicating a deadlock
-  custom: false
+  custom: true
   description: Boolean value indicating a deadlock
   metric_type: gauge
   monitor: collectd/jenkins
@@ -66,7 +66,7 @@ gauge.jenkins.node.health.thread-deadlock:
 
 gauge.jenkins.node.online.status:
   brief: Boolean value of instance is reachable or not
-  custom: false
+  custom: true
   description: Boolean value of instance is reachable or not
   metric_type: gauge
   monitor: collectd/jenkins
@@ -74,7 +74,7 @@ gauge.jenkins.node.online.status:
 
 gauge.jenkins.node.queue.size.value:
   brief: Total number pending jobs in queue
-  custom: false
+  custom: true
   description: Total number pending jobs in queue
   metric_type: gauge
   monitor: collectd/jenkins
@@ -82,7 +82,7 @@ gauge.jenkins.node.queue.size.value:
 
 gauge.jenkins.node.slave.online.status:
   brief: Boolean value for slave is reachable or not
-  custom: false
+  custom: true
   description: Boolean value for slave is reachable or not
   metric_type: gauge
   monitor: collectd/jenkins
@@ -90,7 +90,7 @@ gauge.jenkins.node.slave.online.status:
 
 gauge.jenkins.node.vm.memory.heap.usage:
   brief: Percent utilization of the heap memory
-  custom: false
+  custom: true
   description: Percent utilization of the heap memory
   metric_type: gauge
   monitor: collectd/jenkins
@@ -98,7 +98,7 @@ gauge.jenkins.node.vm.memory.heap.usage:
 
 gauge.jenkins.node.vm.memory.non-heap.used:
   brief: Total amount of non-heap memory used
-  custom: false
+  custom: true
   description: Total amount of non-heap memory used
   metric_type: gauge
   monitor: collectd/jenkins
@@ -106,7 +106,7 @@ gauge.jenkins.node.vm.memory.non-heap.used:
 
 gauge.jenkins.node.vm.memory.total.used:
   brief: Total Memory used by instance
-  custom: false
+  custom: true
   description: Total Memory used by instance
   metric_type: gauge
   monitor: collectd/jenkins

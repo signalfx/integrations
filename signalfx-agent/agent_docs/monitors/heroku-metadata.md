@@ -4,7 +4,7 @@
 
 # heroku-metadata
 
-Monitor Type: `heroku-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/master/pkg/monitors/heroku))
+Monitor Type: `heroku-metadata` ([Source](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/heroku))
 
 **Accepts Endpoints**: **Yes**
 
