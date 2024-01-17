@@ -1188,16 +1188,6 @@ sf.org.numBackfillCallsByToken:
       * Data resolution: 1 second
   metric_type: counter
   title: sf.org.numBackfillCallsByToken
-  
-sf.org.numComputationsStarted:
-  brief: Rate at which you're starting new jobs
-  description: |
-    Number of computations started, use it to know the rate at which you're starting new jobs.
-
-        * Dimension(s):  `orgId`
-        * Data resolution: 10 seconds
-  metric_type: counter
-  title: sf.org.numComputationsStarted
 
 sf.org.numBadDimensionMetricTimeSeriesCreateCalls:
   brief: Number of bad calls to create MTS due to an error with dimensions
