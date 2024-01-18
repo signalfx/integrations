@@ -130,6 +130,26 @@ sf.org.apm.numSpanBytesReceivedByToken:
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceivedByToken
 
+sf.org.apm.numSpansDroppedBlocked:
+  brief: The number of spans that APM was unable to process or has dropped due to a blocked trace or too many spans in the trace.
+  description: |
+    The number of spans that APM was unable to process or has dropped because the trace has a blocked trace ID or too many spans in the trace.
+
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedBlocked
+
+sf.org.apm.numSpansDroppedBlockedByToken:
+  brief: The number of spans for a specific token that APM was unable to process or has dropped due to a blocked trace or too many spans in the trace 
+  description: |
+    The number of spans for a specific token that APM was unable to process or has dropped because the trace has a blocked trace ID or too many spans in the trace.
+
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedBlockedByToken
+
 sf.org.apm.numSpansDroppedInvalid:
   brief: The number of invalid spans Splunk APM receives.
   description: |
