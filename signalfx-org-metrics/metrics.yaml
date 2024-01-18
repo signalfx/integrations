@@ -1741,8 +1741,8 @@ sf.org.numLogsReceivedByToken:
   brief: Number of logs received by token
   description: |
     Number of logs received by token.
-    
-      * Dimension(s):  `orgId, tokenId`
+
+      * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numLogsReceivedByToken
@@ -1848,8 +1848,8 @@ sf.org.numProcessDataEventsDroppedThrottleByToken:
   description: |
     Per token, number of data ingest process events dropped due to throttling, because you exceeded your system limits. 
 
-        * Dimension(s):  `orgId, tokenIn`
-        * Data resolution: 40 seconds
+      * Dimension(s):  `orgId`, `tokenId`
+      * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numProcessDataEventsDroppedThrottleByToken 
 
