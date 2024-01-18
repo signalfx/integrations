@@ -130,6 +130,26 @@ sf.org.apm.numSpanBytesReceivedByToken:
   metric_type: counter
   title: sf.org.apm.numSpanBytesReceivedByToken
 
+sf.org.apm.numSpansDroppedBlocked:
+  brief: The number of spans that APM was unable to process or has dropped due to a blocked trace or too many spans in the trace.
+  description: |
+    The number of spans that APM was unable to process or has dropped because the trace has a blocked trace ID or too many spans in the trace.
+
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedBlocked
+
+sf.org.apm.numSpansDroppedBlockedByToken:
+  brief: The number of spans for a specific token that APM was unable to process or has dropped due to a blocked trace or too many spans in the trace 
+  description: |
+    The number of spans for a specific token that APM was unable to process or has dropped because the trace has a blocked trace ID or too many spans in the trace.
+
+      * Dimension(s): `orgId`
+      * Data resolution: 1 second
+  metric_type: counter
+  title: sf.org.apm.numSpansDroppedBlockedByToken
+
 sf.org.apm.numSpansDroppedInvalid:
   brief: The number of invalid spans Splunk APM receives.
   description: |
@@ -368,6 +388,16 @@ sf.org.abortedDetectors:
     or data points, whichever caused the detector to stop
   metric_type: cumulative
   title: sf.org.abortedDetectors
+
+sf.org.cloud.grossDpmContentBytesReceived: 
+  brief: Number of content bytes received, but not necessarily admitted, for Cloud services
+  description: |
+    Number of content bytes received, but not necessarily admitted, for Cloud services
+    
+      * Dimension(s): `orgId`
+      * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.cloud.grossDpmContentBytesReceived
   
 sf.org.datapointsTotalCountByToken:
   brief: Total datapoints by token
@@ -930,8 +960,8 @@ sf.org.num.migrationmarker:
   title: sf.org.num.migrationmarker
 
 sf.org.num.mutingactive:
-  brief: Number of active muting rules NBED
-  description: Number of active muting rules NBED.
+  brief: Number of active muting rules 
+  description: Number of active muting rules 
   metric_type: gauge
   title: sf.org.num.mutingactive
 
@@ -1128,9 +1158,9 @@ sf.org.numApmApiCalls:
   title: sf.org.numApmApiCalls
 
 sf.org.numApmBundledMetrics:
-  brief: APM Bundled Metrics limit for your org
+  brief: Number of APM Bundled Metrics for your org
   description: |
-    APM Bundled Metrics limit for your org.
+    Number of APM Bundled Metrics for your org.
 
       * Dimension(s):  `orgId`
       * Data resolution: 10 minutes
@@ -1138,9 +1168,9 @@ sf.org.numApmBundledMetrics:
   title: sf.org.numApmBundledMetrics
 
 sf.org.numApmBundledMetricsByToken:
-  brief: APM Bundled Metrics limit for your org, for a token
+  brief: Number of APM Bundled Metrics for your org, for a token
   description: |
-    APM Bundled Metrics limit for your org for a specific token.
+    Number of APM Bundled Metrics for your org for a specific token.
 
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 10 minutes
@@ -1325,6 +1355,7 @@ sf.org.numDatapointsDroppedBatchSizeByToken:
   brief: Number of data points dropped because a single request contained more than 100,000 data points, by token.
   description: |
     Number of data points dropped because a single request contained more than 100,000 data points, per token. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
+
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 40 seconds
 
@@ -1453,9 +1484,9 @@ sf.org.numDimensionObjectsCreated:
   brief: Number of dimensions created
   description: |
     Total number of dimensions created. 
+
       * Dimension(s):  `orgId`
-      * Data resolution: 10 seconds
-        
+      * Data resolution: 10 seconds        
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreated
 
@@ -1463,9 +1494,9 @@ sf.org.numDimensionObjectsCreatedByToken:
   brief: Number of dimensions created by token
   description: |
     Total number of dimensions created by token. 
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 40 seconds
 
+        * Dimension(s):  `orgId`, `tokenId`
+        * Data resolution: 40 seconds
   metric_type: gauge
   title: sf.org.numDimensionObjectsCreatedByToken
 
@@ -1473,9 +1504,9 @@ sf.org.numEventSearches:
   brief: Number of event searches
   description: |
     Number of event searches.
-      * Dimension(s):  `orgId`
-      * Data resolution: 10 seconds
-
+    
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numEventSearches
 
@@ -1483,9 +1514,9 @@ sf.org.numEventSearchesThrottled:
   brief: Number of event searches that were throttled
   description: |
     Number of event searches that were throttled.
-      * Dimension(s):  `orgId`
-      * Data resolution: 10 seconds
-
+    
+        * Dimension(s):  `orgId`
+        * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.numEventSearchesThrottled
 
@@ -1577,9 +1608,9 @@ sf.org.numHostMetaDataEventsDroppedThrottle:
   brief: Number of host metadata events dropped due to throttling 
   description: |
     Number of host metadata events dropped because of throttling.
-      * Dimension(s):  `orgId`
-      * Data resolution: 40 seconds
 
+        * Dimension(s):  `orgId`
+        * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numHostMetaDataEventsDroppedThrottle 
 
@@ -1587,9 +1618,9 @@ sf.org.numHostMetaDataEventsDroppedThrottleByToken:
   brief: Number of host metadata events dropped due to throttling by token
   description: |
     Number of host metadata events dropped because of throttling, per token.
-      * Dimension(s):  `orgId`, `tokenId`
-      * Data resolution: 40 seconds
 
+        * Dimension(s):  `orgId, tokenId`
+        * Data resolution: 40 seconds
   metric_type: counter
   title: sf.org.numHostMetaDataEventsDroppedThrottleByToken 
 
@@ -1710,9 +1741,9 @@ sf.org.numLogsReceivedByToken:
   brief: Number of logs received by token
   description: |
     Number of logs received by token.
+
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 10 seconds
-      
   metric_type: counter
   title: sf.org.numLogsReceivedByToken
 
@@ -1785,9 +1816,9 @@ sf.org.numMetricObjectsCreatedByToken:
   brief: Number of metric objects created by token
   description: |
     Number of metric objects created by token.
-      * Dimension(s):  `tokenId`, `orgId`
-      * Data resolution: 40 seconds
 
+        * Dimension(s):  `tokenId`, `orgId`
+        * Data resolution: 40 seconds
   metric_type: gauge
   title: sf.org.numMetricObjectsCreatedByToken
 
@@ -1816,9 +1847,9 @@ sf.org.numProcessDataEventsDroppedThrottleByToken:
   brief: Number of data ingest process events dropped due to throttling by token
   description: |
     Per token, number of data ingest process events dropped due to throttling, because you exceeded your system limits. 
+
       * Dimension(s):  `orgId`, `tokenId`
       * Data resolution: 40 seconds
-
   metric_type: counter
   title: sf.org.numProcessDataEventsDroppedThrottleByToken 
 
@@ -2219,3 +2250,13 @@ sf.org.rum.grossContentBytesReceived:
 
   metric_type: counter
   title: sf.org.rum.grossContentBytesReceived
+
+sf.org.rum.grossReplayContentBytesReceived: 
+  brief: The possibly compressed wire size of the payloads before the payloads are decompressed and decoded, per RUM session replay.
+  description: |
+    The possibly compressed wire size of the payloads before the payloads are decompressed and decoded, per RUM session replay.
+    
+     * Dimensions: `orgId`
+     * Data resolution: 10 seconds
+  metric_type: counter
+  title: sf.org.rum.grossReplayContentBytesReceived
