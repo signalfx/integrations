@@ -1456,30 +1456,14 @@ sf.org.numDatapointsDroppedThrottleByToken:
   metric_type: counter
   title: sf.org.numDatapointsDroppedThrottleByToken
 
-sf.org.numDatapointsReceived:
+sf.org.numDatapointsReceivedByMetricType:
   brief: Number of data points Infrastructure Monitoring received
   description: |
-    One value per metric type, each representing the number of data points that
-    Infrastructure Monitoring received and processed.
-    You can have up to three MTS for this metric. To
-    learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
-    The sum of the values represents the total number of data points you sent to Infrastructure Monitoring minus any
-    data points that weren't accepted because you exceeded a limit.
-
-sf.org.numDatapointsReceivedByToken:
-  brief: Per token number of data points Infrastructure Monitoring received
-  description: |
-    One value per metric type per token, each representing the number
-    of data points Infrastructure Monitoring received and processed. The sum of values for a
-    token is the total number of data points you sent to Infrastructure Monitoring minus the number of
-    data points that Infrastructure Monitoring didn't accept because you exceeded a limit.
-    You can have up to three MTS for this metric. To learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
-    The sum of all the values might be less than the value of `sf.org.numDatapointsReceived`.
-    To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
-      * Data resolution: 1 second
-  metric_type: counter
-  title: sf.org.numDatapointsReceivedByToken
-
+    One value per metric type, each representing the number of data points that Infrastructure Monitoring received and processed.
+    You can have up to four MTS for this metric, one for each metric type: gauge, counter, cumulative counter, and histogram. To learn more, see [Metrics with values for each metric type](#metrics-with-values-for-each-metric-type).
+    The sum of the values represents the total number of data points you sent to Infrastructure Monitoring minus any data points that weren't accepted because you exceeded a limit.
+  title: sf.org.numDatapointsReceivedByMetricType
+  
 sf.org.numDimensionObjectsCreated:
   brief: Number of dimensions created
   description: |
