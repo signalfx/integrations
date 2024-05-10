@@ -12,10 +12,10 @@ sf.org.apm.grossContentBytesReceived:
 
 sf.org.apm.grossSpanBytesReceived:
   brief: The number of bytes Splunk APM receives from spans after decompression
-    but before filtering and throttling.
+    but before discarding invalid and throttled spans.
   description: |
     The number of bytes Splunk APM receives from spans after
-    decompression but before filtering and throttling.
+    decompression but before discarding invalid and throttled spans.
 
      * Dimension(s): `orgId`
      * Data resolution: 1 second
@@ -24,11 +24,10 @@ sf.org.apm.grossSpanBytesReceived:
   
 sf.org.apm.grossSpanBytesReceivedByToken:
   brief: The number of bytes Splunk APM receives for a specific access token
-    from ingested span data after decompression but before filtering and
-    throttling.
+    from ingested span data after decompression but before discarding invalid and throttled spans.
   description: |
     The number of bytes Splunk APM receives for a specific access token
-    from ingested span data after decompression but before filtering and throttling.
+    from ingested span data after decompression but before discarding invalid and throttled spans.
 
      * Dimension(s): `orgId`, `tokenId`
      * Data resolution: 1 second
@@ -36,9 +35,9 @@ sf.org.apm.grossSpanBytesReceivedByToken:
   title: sf.org.apm.grossSpanBytesReceivedByToken  
   
 sf.org.apm.grossSpansReceived:
-  brief: The number of spans Splunk APM received before filtering and throttling.
+  brief: The number of spans Splunk APM received before discarding invalid and throttled spans.
   description: |
-    The number of spans Splunk APM received before filtering or throttling.
+    The number of spans Splunk APM received before discarding invalid and throttled spans.
 
      * Dimension(s): `orgId`
      * Data resolution: 1 second
@@ -108,10 +107,10 @@ sf.org.apm.numHosts:
 
 sf.org.apm.numSpanBytesReceived:
   brief: The number of bytes Splunk APM accepts from ingested span data
-    after decompression after filtering and throttling.
+    after decompression and discarding invalid and throttled spans.
   description: |
     The number of bytes Splunk APM accepts from ingested span
-    data after decompression after filtering and throttling.
+    data after decompression and discarding invalid and throttled spans.
 
       * Dimension(s): `orgId`
       * Data resolution: 1 second
@@ -120,10 +119,10 @@ sf.org.apm.numSpanBytesReceived:
 
 sf.org.apm.numSpanBytesReceivedByToken:
   brief: The number of bytes Splunk APM accepts for a specific access token
-    for a span after decompression after filtering and throttling.
+    for a span after decompression and discarding invalid and throttled spans.
   description: |
     The number of bytes Splunk APM accepts for a specific access token
-    for a span after decompression after filtering and throttling.
+    for a span after decompression and discarding invalid and throttled spans.
 
       * Dimension(s): `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -243,9 +242,9 @@ sf.org.apm.numSpansDroppedThrottleByToken:
   title: sf.org.apm.numSpansDroppedThrottleByToken
 
 sf.org.apm.numSpansReceived:
-  brief: The number of spans Splunk APM accepts after filtering and throttling.
+  brief: The number of spans Splunk APM accepts after discarding invalid and throttled spans.
   description: |
-    The number of spans Splunk APM accepts after filtering and throttling.
+    The number of spans Splunk APM accepts after discarding invalid and throttled spans.
 
       * Dimension(s): `orgId`
       * Data resolution: 1 second
@@ -254,10 +253,10 @@ sf.org.apm.numSpansReceived:
 
 sf.org.apm.numSpansReceivedByToken:
   brief: The number of spans Splunk APM received for a specific access token
-    after filtering and throttling.
+    after discarding invalid and throttled spans.
   description: |
     The number of spans Splunk APM received for a specific access token
-    after filtering and throttling.
+    after discarding invalid and throttled spans.
 
       * Dimension(s): `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -266,10 +265,10 @@ sf.org.apm.numSpansReceivedByToken:
 
 sf.org.apm.grossSpansReceivedByToken:
   brief: The number of spans Splunk APM receives for a specific access token
-    before filtering and throttling.
+    before discarding invalid and throttled spans.
   description: |
     The number of spans Splunk APM receives for a specific access token
-    before filtering or throttling.
+    before discarding invalid and throttled spans.
 
       * Dimension(s): `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -380,10 +379,10 @@ sf.org.apm.numContentBytesReceived:
 
 sf.org.apm.grossContentBytesReceivedByToken:
   brief: The volume of bytes Splunk APM receives off the wire for a specific access
-    token before filtering and throttling.
+    token before discarding invalid and throttled spans.
   description: |
     The volume of bytes Splunk APM receives off the wire for a specific
-    access token before filtering and throttling. This content could be compressed.
+    access token before discarding invalid and throttled spans. This content could be compressed.
 
       * Dimension(s): `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -392,10 +391,10 @@ sf.org.apm.grossContentBytesReceivedByToken:
 
 sf.org.apm.numContentBytesReceivedByToken:
   brief: The volume of bytes Splunk APM accepts off the wire for a specific access
-    token after filtering and throttling.
+    token after discarding invalid and throttled spans.
   description: |
     The volume of bytes Splunk APM accepts off the wire for a specific
-    access token after filtering and throttling. This content could be compressed.
+    access token after discarding invalid and throttled spans. This content could be compressed.
 
       * Dimension(s): `orgId`, `tokenId`
       * Data resolution: 1 second
@@ -2123,7 +2122,7 @@ sf.org.ui.num.pagevisits:
   title: sf.org.ui.num.pagevisits
 
 sf.org.rum.numSpansReceived:
-  brief: The number of spans Splunk RUM accepts after filtering and throttling. 
+  brief: The number of spans Splunk RUM accepts after discarding invalid and throttled spans. 
   description: |
     Number of spans received. 
 
@@ -2134,10 +2133,10 @@ sf.org.rum.numSpansReceived:
 
 sf.org.rum.numSpansReceivedByToken:
   brief: The number of spans Splunk RUM received for a specific access token
-    after filtering and throttling.
+    after discarding invalid and throttled spans.
   description: |
     The number of spans Splunk RUM received for a specific access token
-    after filtering and throttling.
+    after discarding invalid and throttled spans.
 
     * Dimension: `orgId`, `tokenId`
     * Data resolution: 10 seconds
@@ -2230,10 +2229,10 @@ sf.org.rum.numSpanBytesReceivedByToken:
   title: sf.org.rum.numSpanBytesReceivedByToken
 
 
-sf.org.rum.grossSpanBytesReceivedByToken:
-  brief: The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
+sf.org.rum.grossSpanBytesReceivedByToken: 
+  brief: The uncompressed bytes of all the spans received and counted by the metric grossSpansReceived for a specific access token before discarding invalid and throttled spans. This is a per token metric.
   description: |
-    The bytes (uncompressed) of all the spans received and counted by the metric grossSpansReceived before throttling or filtering by token. 
+    The uncompressed bytes of all the spans received and counted by the metric grossSpansReceived for a specific access token before discarding invalid and throttled spans. This is a per token metric.
 
      * Dimensions: `orgId`, `tokenId`
      * Data resolution: 10 seconds
@@ -2241,9 +2240,9 @@ sf.org.rum.grossSpanBytesReceivedByToken:
   title: sf.org.rum.grossSpanBytesReceivedByToken
 
 sf.org.rum.numContentBytesReceived:
-  brief: The volume of bytes Splunk RUM receives after filtering and throttling.
+  brief: The volume of bytes Splunk RUM receives after discarding invalid and throttled spans.
   description: |
-    The volume of bytes Splunk RUM receives after filtering and throttling.
+    The volume of bytes Splunk RUM receives after discarding invalid and throttled spans.
 
      * Dimensions: `orgId`
      * Data resolution: 10 seconds
