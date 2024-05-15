@@ -1,8 +1,7 @@
 sf.org.apm.grossContentBytesReceived:
   brief: The volume of bytes Splunk APM receives off the wire before discarding invalid and throttled spans.
   description: |
-    The volume of bytes Splunk APM receives off the wire before filtering
-    and throttling. This content could be compressed.
+    The volume of bytes Splunk APM receives off the wire before discarding invalid and throttled spans. This content could be compressed.
 
      * Dimension(s): `orgId`
      * Data resolution: 1 second
