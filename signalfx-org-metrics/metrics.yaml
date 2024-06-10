@@ -363,6 +363,16 @@ sf.org.apm.numTroubleshootingMetricSets:
   metric_type: counter
   title: sf.org.apm.numTroubleshootingMetricSets
 
+sf.org.apm.MonitoringMetricSets:
+  brief: The cardinality of Monitor MetricSets for each 10-minute time window.
+  description: |
+    The cardinality of Monitoring MetricSets for each 10-minute time window.
+
+      * Dimension(s): `orgId`
+      * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.apm.numMonitoringMetricSets
+
 sf.org.apm.numContentBytesReceived:
   brief: The volume of bytes Splunk APM accepts off the wire after discarding invalid and throttled spans.
   description: |
