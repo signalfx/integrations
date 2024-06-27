@@ -2270,3 +2270,23 @@ sf.org.rum.grossReplayContentBytesReceived:
      * Data resolution: 10 seconds
   metric_type: counter
   title: sf.org.rum.grossReplayContentBytesReceived
+
+sf.org.numHistogramCustomMetrics:
+  brief: The number of custom histogram metrics. 
+  description: |
+    The number of custom histogram metrics monitored in Infrastructure Monitoring.
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numHistogramCustomMetrics
+
+sf.org.numHistogramCustomMetricsByToken:
+  brief: The number of custom histogram metrics by token.
+  description: |
+    The number of custom histogram metrics monitored in Infrastructure Monitoring.
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes.
+  metric_type: counter
+  title: sf.org.numHistogramCustomMetricsByToken
