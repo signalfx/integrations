@@ -2274,7 +2274,8 @@ sf.org.rum.grossReplayContentBytesReceived:
 sf.org.numHistogramCustomMetrics:
   brief: The number of custom histogram metrics. 
   description: |
-    The number of custom histogram metrics monitored in Infrastructure Monitoring.
+    The number of custom histogram metrics monitored in Splunk Observability Cloud. For billing purposes, this is the raw number of custom histogram metrics
+    and isn't multiplied.
 
     * Dimension(s): `orgId`
     * Data resolution: 10 minutes
@@ -2284,9 +2285,10 @@ sf.org.numHistogramCustomMetrics:
 sf.org.numHistogramCustomMetricsByToken:
   brief: The number of custom histogram metrics by token.
   description: |
-    The number of custom histogram metrics monitored in Infrastructure Monitoring.
+    The number of custom histogram metrics monitred in Splunk Observability Cloud for a specific token. For billing purposes, this is the raw number of 
+    custom histogram metrics and isn't multiplied.
 
-    * Dimension(s): `orgId`
+    * Dimension(s): `orgId`, `tokenId`
     * Data resolution: 10 minutes.
   metric_type: counter
   title: sf.org.numHistogramCustomMetricsByToken
