@@ -2157,6 +2157,8 @@ sf.org.rum.numAddSpansCallsByToken:
 sf.org.rum.numSpansDroppedInvalid:
   brief: Number of spans dropped because they were invalid. 
   description: |
+    This metric is deprecated. See `sf.org.apm.numSpansDroppedInvalid` with the `spanTooLarge` dimension.
+    
     Number of spans dropped because they were invalid. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
 
      * Dimension: `orgId`, `reason`
@@ -2168,6 +2170,8 @@ sf.org.rum.numSpansDroppedInvalidByToken:
   brief: The number of invalid spans Splunk RUM receives for a specific access
     token.
   description: | 
+    This metric is deprecated. See `sf.org.apm.numSpansDroppedInvalid` with the `spanTooLarge` dimension.
+    
     The number of invalid spans Splunk RUM receives for a specific
     access token. Some of the reasons that spans are invalid are: spans are too large, missing required tags and invalid Trace IDs. Look through the reason column in the data table to see details for specific spans. 
 
