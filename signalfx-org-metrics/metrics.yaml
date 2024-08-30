@@ -344,9 +344,9 @@ sf.org.apm.numTracesReceived:
   title: sf.org.apm.numTracesReceived
 
 sf.org.apm.numTroubleshootingMetricSets10s:
-  brief: The cardinality of Troubleshooting MetricSets for each 10-second window.
+  brief: The cardinality of Troubleshooting MetricSets (TMS) for each 10-second window.
   description: |
-    The cardinality of Troubleshooting MetricSets for each 10-second window.
+    The cardinality of Troubleshooting MetricSets (TMS) for each 10-second window.
 
       * Dimension(s): `orgId`
       * Data resolution: 10 seconds
@@ -354,9 +354,9 @@ sf.org.apm.numTroubleshootingMetricSets10s:
   title: sf.org.apm.numTroubleshootingMetricSets10s
 
 sf.org.apm.numTroubleshootingMetricSets:
-  brief: The cardinality of Troubleshooting MetricSets for each 1-minute time window.
+  brief: The cardinality of Troubleshooting MetricSets (TMS) for each 1-minute time window.
   description: |
-    The cardinality of Troubleshooting MetricSets for each 1-minute time window.
+    The cardinality of Troubleshooting MetricSets (TMS) for each 1-minute time window.
 
       * Dimension(s): `orgId`
       * Data resolution: 1 minute
@@ -364,10 +364,10 @@ sf.org.apm.numTroubleshootingMetricSets:
   title: sf.org.apm.numTroubleshootingMetricSets
 
 sf.org.apm.MonitoringMetricSets:
-  brief: The cardinality of Monitor MetricSets for each 10-minute time window.
-  description: |
-    The cardinality of Monitoring MetricSets for each 10-minute time window.
 
+  brief: The cardinality of histogram Monitoring MetricSets (MMS) for each 10-minute time window.
+  description: |
+    The cardinality of histogram Monitoring MetricSets (MMS) for each 10-minute time window.
       * Dimension(s): `orgId`
       * Data resolution: 10 minutes
   metric_type: counter
