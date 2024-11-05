@@ -51,6 +51,12 @@ sf.org.apm.ingestLatency.duration.ns.min:
      * Data resolution: 10 seconds
   metric_type: gauge
   title: sf.org.apm.ingestLatency.duration.ns.min
+
+sf.org.apm.limit.monitoringMetricSets:
+  brief: The ingested Metric Set data limit in Splunk APM.
+  description: The ingested Metric Set data limit in Splunk APM.
+  metric_type: gauge
+  title: sf.org.apm.limit.monitoringMetricSets
   
 sf.org.apm.limit.spanBytes:
   brief: The ingested span data limit in Splunk APM.
