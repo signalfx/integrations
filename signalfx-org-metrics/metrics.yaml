@@ -373,7 +373,7 @@ sf.org.apm.numTroubleshootingMetricSets:
   metric_type: counter
   title: sf.org.apm.numTroubleshootingMetricSets
 
-sf.org.apm.MonitoringMetricSets:
+sf.org.apm.numMonitoringMetricSets:
 
   brief: The cardinality of histogram Monitoring MetricSets (MMS) for each 10-minute time window.
   description: |
