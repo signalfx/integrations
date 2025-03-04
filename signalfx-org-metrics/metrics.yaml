@@ -1288,7 +1288,7 @@ sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken:
 sf.org.numCustomMetrics:
   brief: Number of custom metrics monitored
   description: |
-    Number of custom metrics monitored by Infrastructure Monitoring.
+    Number of custom metrics monitored by Infrastructure Monitoring. For billing purposes, 10 archived metrics are converted to 1 real-time metric, and 1 histogram metric is converted to 8 real-time metrics.
 
       * Dimension(s):  `orgId`
       * Data resolution: 10 minutes
@@ -1337,7 +1337,8 @@ sf.org.numComputationsThrottledByToken:
 sf.org.numCustomMetricsByToken:
   brief: Per token number of custom metrics monitored
   description: |
-    One value per token; number of custom metrics monitored by Splunk Observability Cloud.
+    One value per token; number of custom metrics monitored by Splunk Observability Cloud. For billing purposes, 10 archived metrics are converted to 1 real-time metric, and 1 histogram metric is converted to 8 real-time metrics.
+    
     The sum of all the values might be less than the value of `sf.org.numCustomMetrics`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
 
@@ -2295,10 +2296,90 @@ sf.org.numHistogramCustomMetrics:
 sf.org.numHistogramCustomMetricsByToken:
   brief: The number of custom histogram metrics by token.
   description: |
-    The number of custom histogram metrics monitred in Splunk Observability Cloud for a specific token. For billing purposes, this is the raw number of 
+    The number of custom histogram metrics monitored in Splunk Observability Cloud for a specific token. For billing purposes, this is the raw number of 
     custom histogram metrics and isn't multiplied.
 
     * Dimension(s): `orgId`, `tokenId`
     * Data resolution: 10 minutes.
   metric_type: counter
   title: sf.org.numHistogramCustomMetricsByToken
+
+sf.org.numArchivedCustomMetrics:
+  brief: Number of archived custom metrics.
+  description: |
+    The raw number of archived custom metrics monitored in Splunk Observability Cloud. 
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes.
+  metric_type: counter
+  title: sf.org.numArchivedCustomMetrics
+
+sf.org.numArchivedCustomMetricsByToken:
+  brief: Number of archived custom metrics by token.
+  description: |
+    The raw number of archived custom metrics monitored in Splunk Observability Cloud for a specific token. 
+
+    * Dimension(s): `orgId`, `tokenId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numArchivedCustomMetricsByToken
+
+sf.org.numBillableArchivedCustomMetrics:
+  brief:
+  description: |
+    The number of billable archived custom metrics monitored in Splunk Observability Cloud. This number is adjusted from the raw number in `sf.org.numArchivedCustomMetrics`.
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numBillableArchivedCustomMetrics
+
+sf.org.numBillableArchivedCustomMetricsByToken:
+  brief: Number of archived custom metrics by token.
+  description: |
+    The number of billable archived custom metrics monitored in Splunk Observability Cloud for a specific token. This number is adjusted from the raw number in `sf.org.numArchivedCustomMetricsByToken`.
+
+    * Dimension(s): `orgId`, `tokenId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numBillableArchivedCustomMetricsByToken
+
+sf.org.numArchivedDatapointsReceived:
+  brief: Number of data points from archived metrics.
+  description: |
+    The raw number of data points received from archived metrics in Splunk Observability Cloud. 
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numArchivedDatapointsReceived
+
+sf.org.numBillableDatapoints:
+  brief: Number of billable data points.
+  description: |
+    The total number of billable data points received in Splunk Observability Cloud.
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numBillableDatapoints
+
+sf.org.numBillableArchivedDatapoints:
+  brief: Number of billable archived metrics data points.
+  description: |
+    The number of billable data points from archived metrics in Splunk Observability Cloud. This number is adjusted from the raw number in `sf.org.numArchivedCustomMetrics`.
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numBillableArchivedDatapoints
+
+sf.org.numBillableHistogramDatapoints:
+  brief: Number of billable archived metrics data points.
+  description: |
+    The number of billable data points from histogram metrics in Splunk Observability Cloud. This number is adjusted from the raw number in `sf.org.numArchivedCustomMetricsByToken`.
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numBillableHistogramDatapoints
