@@ -1,0 +1,17 @@
+{% import "macros.jinja" as macros %}
+
+{% if target == "docs" -%}
+# Splunk Synthetic Monitoring Metrics
+
+
+- [Description](#description)
+- [Usage](#usage)
+- [Metrics](#metrics)
+{%- endif %}
+
+## DESCRIPTION
+
+Synthetic Monitoring provides the following types of metrics that measure your analytics:
+
+* Counter metrics: Measure the various count metrics captured by Synthetic Monitoring like error and resource counts.
+* Gauge metrics: Measure The performance, percentage, and score metrics captured by Synthetic Monitoring runs.
