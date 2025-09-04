@@ -136,11 +136,6 @@ sf.org.apm.numSpanBytesReceivedByToken:
 sf.org.apm.numSpansDroppedBlocked:
   brief: The number of spans that APM was unable to process or has dropped due to a blocked trace or too many spans in the trace.
   description: |
-    The number of spans that APM was unable to process or has dropped. A span can be dropped for the following reasons: 
-      * blockedTraceID: If any ingest endpoint reaches the 100k limit for spans in a given trace, then the trace is added to the list of blocked traces so that all the ingest endpoints block any future spans.
-      * tooManySpansInTrace: Trace submitted over 100k spans at the first ingest stage
-
-      ``sf.org.apm.numSpansDroppedBlocked`` has the following dimensions and data resolution:
 
       * Dimension(s): `orgId`
       * Data resolution: 1 second
@@ -150,12 +145,7 @@ sf.org.apm.numSpansDroppedBlocked:
 sf.org.apm.numSpansDroppedBlockedByToken:
   brief: The number of spans for a specific token that APM was unable to process or has dropped due to a blocked trace or too many spans in the trace 
   description: |
-    The number of spans for a specific token that APM was unable to process or has dropped. A span can be
-    dropped for the following reasons: 
-      * blockedTraceID: If any ingest endpoint reaches the 100k limit for spans in a given trace, then the trace is added to the list of blocked traces so that all the ingest endpoints block any future spans.
-      * tooManySpansInTrace: Trace submitted over 100k spans at the first ingest stage
-
-      ``sf.org.apm.numSpansDroppedBlocked`` has the following dimensions and data resolution:
+    The number of spans for a specific token that APM was unable to process or has dropped because the trace has a blocked trace ID or too many spans in the trace.
 
       * Dimension(s): `orgId`
       * Data resolution: 1 second
