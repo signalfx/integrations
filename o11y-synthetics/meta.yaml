@@ -1,0 +1,4 @@
+description: Synthetic Monitoring application generates a number of metrics you can use to monitor performance and availability.
+display_name: Metrics sent by Synthetic Monitoring application
+product_docs_name: o11y.synthetics
+useLegacyBuild: false

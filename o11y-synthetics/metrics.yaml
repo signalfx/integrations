@@ -1,0 +1,251 @@
+synthetics.run.duration.time.ms:
+  brief: The total duration of the entire run.
+  description: |
+    The total duration of the entire run.
+  metric_type: gauge
+  title: synthetics.run.duration.time.ms
+
+synthetics.run.uptime.percent:
+  brief: The percentage of non-failed test runs.
+  description: |
+    The percentage of non-failed test runs. Uptime is calculated by taking the average score of all runs in the selected time frame, where a successful run receives a score of 100 and a failure receives a score of 0.
+  metric_type: gauge
+  title: synthetics.run.uptime.percent
+
+synthetics.run.count:
+  brief: Total number of runs for the test.
+  description: |
+    Total number of runs for the test. This metric contains dimensions such as success: true and failed: false to indicate whether the run succeeded or failed.
+  metric_type: counter
+  title: synthetics.run.count
+
+synthetics.run.downtime.percent:
+  brief: The percentage of failed runs within the selected time frame.
+  description: |
+    The percentage of failed runs within the selected time frame. Downtime is calculated by taking the average score of all runs in the selected time frame, where a failed run receives a score of 100 and a successful run receives a score of 0.
+  metric_type: gauge
+  title: synthetics.run.downtime.percent
+
+synthetics.duration.time.ms:
+  brief: Total time spent on the page, transaction, or request.
+  description: |
+    Depending on the test type, this is the time spent on the page or transaction (browser), or the request (api, http, port). When not segmented by the page, transaction, or request, the metric value is aggregated.
+  metric_type: gauge
+  title: synthetics.duration.time.ms
+
+synthetics.ttfb.time.ms:
+  brief: Time from the start of the first request until receiving the first byte of the first non-redirect request.
+  description: |
+    Time from the start of the first request until receiving the first byte of the first non-redirect request. 3xx redirects increase the duration of this time.
+  metric_type: gauge
+  title: synthetics.ttfb.time.ms
+
+synthetics.start_render.time.ms:
+  brief: Time until the first pixel of content is drawn.
+  description: |
+    Time until the first pixel of content is drawn.
+  metric_type: gauge
+  title: synthetics.start_render.time.ms
+
+synthetics.dns.time.ms:
+  brief: Time required to resolve a host name from the DNS server.
+  description: |
+    Time required to resolve a host name from the DNS server. Available for api and http tests.
+  metric_type: gauge
+  title: synthetics.dns.time.ms
+
+synthetics.dom_complete.time.ms:
+  brief: Time until the Document Object Model (DOM) and all of its subresources are ready.
+  description: |
+    Time until the Document Object Model (DOM) and all of its subresources are ready.
+  metric_type: gauge
+  title: synthetics.dom_complete.time.ms
+
+synthetics.dom_interactive.time.ms:
+  brief: Time until the Document Object Model (DOM) is fully loaded and processed.
+  description: |
+    Time until the Document Object Model (DOM) is fully loaded and processed.
+  metric_type: gauge
+  title: synthetics.dom_interactive.time.ms
+
+synthetics.dom_load.time.ms:
+  brief: Time until the Document Object Model (DOM) has loaded, and the initial markup has been parsed.
+  description: |
+    Time until the Document Object Model (DOM) has loaded, and the initial markup has been parsed. This metric corresponds to the browser DOMContentLoaded event.
+  metric_type: gauge
+  title: synthetics.dom_load.time.ms
+
+synthetics.first_contentful_paint.time.ms:
+  brief: Time until the browser first renders any content.
+  description: |
+    Time until the browser first renders any content.
+  metric_type: gauge
+  title: synthetics.first_contentful_paint.time.ms
+
+synthetics.first_cpu_idle.time.ms:
+  brief: Time until the page is minimally interactive and will respond to user input in a reasonable amount of time.
+  description: |
+    Time until the page is minimally interactive and will respond to user input in a reasonable amount of time.
+  metric_type: gauge
+  title: synthetics.first_cpu_idle.time.ms
+
+synthetics.first_meaningful_paint.time.ms:
+  brief: Time until the biggest above-the-fold layout change has happened and web fonts have loaded.
+  description: |
+    Time until the biggest above-the-fold layout change has happened and web fonts have loaded.
+  metric_type: gauge
+  title: synthetics.first_meaningful_paint.time.ms
+
+synthetics.first_paint.time.ms:
+  brief: Time until the browser renders anything other than the default background.
+  description: |
+    Time until the browser renders anything other than the default background.
+  metric_type: gauge
+  title: synthetics.first_paint.time.ms
+
+synthetics.onload.time.ms:
+  brief: Time until the page has loaded.
+  description: |
+    Time until the page has loaded. This corresponds to the browser load event.
+  metric_type: gauge
+  title: synthetics.onload.time.ms
+
+synthetics.tti.time.ms:
+  brief: Time until the page is first expected to be usable and will respond to user input quickly.
+  description: |
+    Time until the page is first expected to be usable and will respond to user input quickly.
+  metric_type: gauge
+  title: synthetics.tti.time.ms
+
+synthetics.speed_index.time.ms:
+  brief: A calculated metric that represents how quickly the page renders above-the-fold content.
+  description: |
+    A calculated metric that represents how quickly the page renders above-the-fold content.
+  metric_type: gauge
+  title: synthetics.speed_index.time.ms
+
+synthetics.visually_complete.time.ms:
+  brief: Time until all above-the-fold content has finished rendering.
+  description: |
+    Time until all above-the-fold content has finished rendering.
+  metric_type: gauge
+  title: synthetics.visually_complete.time.ms
+
+synthetics.webvitals_cls.score:
+  brief: Measures page stability based on layout shifts.
+  description: |
+    Measures page stability. CLS is based on a formula that tallies up how many times the components on the page move or "shift" around while the page is loading. Fewer shifts are better.
+  metric_type: gauge
+  title: synthetics.webvitals_cls.score
+
+synthetics.webvitals_lcp.time.ms:
+  brief: Measures page loading times as perceived by users.
+  description: |
+    Measures page loading times as perceived by users. The LCP metric reports the render time of the largest content element visible within the viewport.
+  metric_type: gauge
+  title: synthetics.webvitals_lcp.time.ms
+
+synthetics.webvitals_tbt.time.ms:
+  brief: Captures issues that affect interactivity. TBT is a synthetic alternative for Interaction to Next Paint (INP).
+  description: |
+    Captures issues that affect interactivity. TBT is a synthetic alternative for Interaction to Next Paint (INP), which measures page responsiveness to user input. Optimizations that improve TBT in the lab can also help improve INP for your users.
+  metric_type: gauge
+  title: synthetics.webvitals_tbt.time.ms
+
+synthetics.lighthouse.score:
+  brief: A weighted aggregation of several Browser test metric values calculated using v10 of the Lighthouse scoring algorithm.
+  description: |
+    A weighted aggregation of several Browser test metric values calculated using v10 of the Lighthouse scoring algorithm.
+  metric_type: gauge
+  title: synthetics.lighthouse.score
+
+synthetics.first_request.connect.time.ms:
+  brief: Time it takes to create a TCP connection.
+  description: |
+    Time it takes to create a TCP connection.
+  metric_type: gauge
+  title: synthetics.first_request.connect.time.ms
+
+synthetics.first_request.dns.time.ms:
+  brief: Time required to resolve a host name from the DNS server.
+  description: |
+    Time required to resolve a host name from the DNS server.
+  metric_type: gauge
+  title: synthetics.first_request.dns.time.ms
+
+synthetics.first_request.receive.time.ms:
+  brief: Time required to read the entire response from the server.
+  description: |
+    Time required to read the entire response from the server.
+  metric_type: gauge
+  title: synthetics.first_request.receive.time.ms
+
+synthetics.first_request.send.time.ms:
+  brief: Time required to send HTTP data to the server.
+  description: |
+    Time required to send HTTP data to the server.
+  metric_type: gauge
+  title: synthetics.first_request.send.time.ms
+
+synthetics.first_request.tls.time.ms:
+  brief: Time required for TLS/SSL negotiation.
+  description: |
+    Time required for TLS/SSL negotiation.
+  metric_type: gauge
+  title: synthetics.first_request.tls.time.ms
+
+synthetics.first_request.wait.time.ms:
+  brief: Time from when a request is finished until the time the first byte of the response is received for the first request in a page.
+  description: |
+    Time from when a request is finished until the time the first byte of the response is received for the first request in a page.
+  metric_type: gauge
+  title: synthetics.first_request.wait.time.ms
+
+synthetics.resource_request.error.count:
+  brief: Number of client, connection, and server error responses. The error type is indicated in the http.status_code_type dimension.
+  description: |
+    Number of client responses with a status code between 400 and 499, connection responses where the status code is 504 or 0, and server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the http.status_code_type dimension.
+  metric_type: counter
+  title: synthetics.resource_request.error.count
+
+synthetics.resource_request.count:
+  brief: Number of requests made by content type (css, font, html, image, javascript, video, and other). Indicated in the content_type dimension.
+  description: |
+    Number of requests made by content type including CSS, font, HTML, image, JavaScript, video, and other resources. The content type is indicated in the content_type dimension.
+  metric_type: counter
+  title: synthetics.resource_request.count
+
+synthetics.resource_request.size.bytes:
+  brief: The total size of content loaded by type indicated in the content_type dimension. For an API test, this is the total number of bytes in the http response.
+  description: |
+    For browser tests, this is the total size (in bytes) of content loaded by type including CSS, font, HTML, image, JavaScript, video, and other resources indicated by the content_type dimension. For API tests, this is the total number of bytes in the http response.
+  metric_type: gauge
+  title: synthetics.resource_request.size.bytes
+
+synthetics.connect.time.ms:
+  brief: Time it takes to connect to the remote host or proxy.
+  description: |
+    Time it takes to connect to the remote host or proxy.
+  metric_type: gauge
+  title: synthetics.connect.time.ms
+
+synthetics.receive.time.ms:
+  brief: Total time it takes to receive the previous transfer, for example name resolving.
+  description: |
+    Total time it takes to receive the previous transfer, for example name resolving.
+  metric_type: gauge
+  title: synthetics.receive.time.ms
+
+synthetics.tls.time.ms:
+  brief: Time from start to finish of the SSL/SSH handshake.
+  description: |
+    Time from start to finish of the SSL/SSH handshake.
+  metric_type: gauge
+  title: synthetics.tls.time.ms
+
+synthetics.wait.time.ms:
+  brief: Time elapsed from the start of the transfer until libcurl receives the first byte.
+  description: |
+    Time elapsed from the start of the transfer until libcurl receives the first byte.
+  metric_type: gauge
+  title: synthetics.wait.time.ms
