@@ -167,7 +167,7 @@ def do_build():
     symlink_images(tmp_dir)
 
     shutil.rmtree(OUT_DIR, ignore_errors=True)
-    tmp_dir.replace(OUT_DIR)
+    shutil.move(str(tmp_dir), OUT_DIR)
 
 
 do_build()
