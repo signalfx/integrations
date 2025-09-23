@@ -216,3 +216,30 @@ module.exports = {
 ```
 
 Run your local SignalView instance to preview the latest build of this repository.
+
+## Deploying Metrics Finder UI (Lab/RC)
+
+The O11y frontend uses the `integrations-docs.js` output file from the `./build` script to show metric information in the Metrics Finder UI. This includes some metric metadata and default metric definitions.
+
+You release to Lab/RC with the job [integrations-doc-lab-release](https://ci-qe.corp.signalfx.com/job/integrations-doc-lab-release/) as a manual trigger in Jenkins. It clones this repo and runs the `./build` script to build the latest version of `integrations-docs.js` and promote it to s3. As of now, there is no promotion to prod as the old trigger was lost and the new trigger will be added in the future.
+
+### Notes
+
+This process assumes that all changes are going into `main` first. The `main` branch is already the source of truth for the [organizational metrics docs](https://help.splunk.com/en/splunk-observability-cloud/administer/view-organization-metrics#view-organization-metrics-for-splunk-observability-cloud).
+
+
+**Do not create PRs to `release` branch.** All changes are reviewed first in `main` by maintainers.
+
+For additional information on ownership, process and recommendations, read [here](https://splunk.atlassian.net/wiki/spaces/PROD/pages/1078211401643/Maintaining+signalfx-org-metrics+metrics.yaml).
+
+
+### Steps
+
+1. When you want to deploy a new version, create a PR from `main`to the `release` branch. The `release` branch is what is used in the Jenkins pipeline to build and promote the latest version of `integrations-docs.js` to s3.
+2. Merge the PR to the `release` branch.
+3. Go to the [release Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-lab-release/) and run it by clicking "Build Now". The job will first copy the existing file to a temporary bucket in order to have a copy of the current version in case there is need to rollback.
+4. The job will then build the new version of `integrations-docs.js` and promote it to s3.
+
+#### Rollback
+
+In case you do need to rollback, you can do so by running the [rollback Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-lab-rollback/) which places the previous version of `integrations-docs.js` back in the read bucket.
