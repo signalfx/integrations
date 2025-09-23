@@ -221,7 +221,7 @@ Run your local SignalView instance to preview the latest build of this repositor
 
 The O11y frontend uses the `integrations-docs.js` output file from the `./build` script to show metric information in the Metrics Finder UI. This includes some metric metadata and default metric definitions.
 
-Releasing to Lab/RC occurs [here](https://ci-qe.corp.signalfx.com/job/integrations-doc-lab-release/) as a manual trigger in Jenkins. It clones this repo and runs the `./build` script to build the latest version of `integrations-docs.js` and promote it to s3. As of now, there is no promotion to prod as the old trigger was lost and the new trigger will be added in the future.
+You release to Lab/RC with the job [integrations-doc-lab-release](https://ci-qe.corp.signalfx.com/job/integrations-doc-lab-release/) as a manual trigger in Jenkins. It clones this repo and runs the `./build` script to build the latest version of `integrations-docs.js` and promote it to s3. As of now, there is no promotion to prod as the old trigger was lost and the new trigger will be added in the future.
 
 ### Steps
 
