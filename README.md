@@ -243,3 +243,19 @@ For additional information on ownership, process and recommendations, read [here
 #### Rollback
 
 In case you do need to rollback, you can do so by running the [rollback Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-lab-rollback/) which places the previous version of `integrations-docs.js` back in the read bucket.
+
+## Deploying Metrics Finder UI (PROD)
+
+**_NOTE: deploying to prod requires you have deployed to lab/rc first_**
+
+The following steps use the deployment from above to promote to prod.
+
+### Steps
+
+1. When you are ready to promote to production use the [prod release Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-prod-release/) and run it by clicking "Build Now". The job will first copy the existing file to a rollback bucket in order to have a copy of the current version in case there is need to rollback.
+2. The job will then copy the current file used in lab into the prod bucket.
+3. The job will make sure to invalidate the cdn so the new file is served.
+
+#### Rollback
+
+In case you do need to rollback, you can do so by running the [prod rollback Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-prod-rollback/) which places the previous version of `integrations-docs.js` back in the read bucket.
