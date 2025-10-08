@@ -253,7 +253,7 @@ The following steps use the deployment from above to promote to prod.
 ### Steps
 
 When you are ready to promote to production use the [prod release Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-prod-release/) and run it by clicking **Build Now**. The job will first copy the existing file to a rollback bucket in order to have a copy of the current version in case there is need to rollback.
-2. The job will then copy the current file used in lab into the prod bucket.
+The job will then copy the current file used in lab into the prod bucket and invalidate the cdn so the new file is served.
 3. The job will make sure to invalidate the cdn so the new file is served.
 
 #### Rollback
