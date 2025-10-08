@@ -257,4 +257,4 @@ The job will then copy the current file used in lab into the prod bucket and inv
 
 #### Rollback
 
-In case you do need to rollback, you can do so by running the [prod rollback Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-prod-rollback/) which places the previous version of `integrations-docs.js` back in the read bucket.
+If you need to rollback, run the [prod rollback Jenkins job](https://ci-qe.corp.signalfx.com/job/integrations-doc-prod-rollback/), which places the previous version of `integrations-docs.js` back in the read bucket.
