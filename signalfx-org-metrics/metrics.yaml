@@ -1278,7 +1278,7 @@ sf.org.numBadMetricMetricTimeSeriesCreateCallsByToken:
 sf.org.numCustomMetrics:
   brief: Number of custom metrics monitored
   description: |
-    Number of custom metrics monitored by Infrastructure Monitoring. For billing purposes, 10 archived metrics are converted to 1 real-time metric, and 1 histogram metric is converted to 8 real-time metrics.
+    Number of custom metrics monitored by Infrastructure Monitoring. For billing purposes, 10 archived metrics are converted to 1 real-time metric, and 1 histogram metric is converted to 8 real-time metrics. Following the logic, 1 archived histogram metric is 8/10 of real-time metric.
 
       * Dimension(s):  `orgId`
       * Data resolution: 10 minutes
@@ -1327,7 +1327,7 @@ sf.org.numComputationsThrottledByToken:
 sf.org.numCustomMetricsByToken:
   brief: Per token number of custom metrics monitored
   description: |
-    One value per token; number of custom metrics monitored by Splunk Observability Cloud. For billing purposes, 10 archived metrics are converted to 1 real-time metric, and 1 histogram metric is converted to 8 real-time metrics.
+    One value per token; number of custom metrics monitored by Splunk Observability Cloud. For billing purposes, 10 archived metrics are converted to 1 real-time metric, and 1 histogram metric is converted to 8 real-time metrics. Following the logic, 1 archived histogram metric is 8/10 of real-time metric.
     
     The sum of all the values might be less than the value of `sf.org.numCustomMetrics`.
     To learn more, see [Metrics for values by token](#metrics-for-values-by-token).
@@ -2285,7 +2285,7 @@ sf.org.numArchivedCustomMetrics:
 sf.org.numArchivedCustomMetricsByToken:
   brief: The number of archived custom metrics stored per token
   description: |
-    One value per token; number of archived custom metrics stored in Splunk Observability Cloud.
+    One value per token; the raw number of custom metrics that are stored in the archival route.
     The sum of all the values might be less than the value of `sf.org.numArchivedCustomMetrics`.
 
       * Dimension(s):  `orgId`, `tokenId`
@@ -2331,13 +2331,55 @@ sf.org.numHistogramCustomMetrics:
 sf.org.numHistogramCustomMetricsByToken:
   brief: The number of histogram custom metrics received per token
   description: |
-    One value per token; the number of histogram custom metrics received by Splunk Infrastructure Monitoring.
+    One value per token; the raw number of histogram custom metrics received by Splunk Infrastructure Monitoring.
     The sum of all the values might be less than the value of `sf.org.numHistogramCustomMetrics`.
 
     * Dimension(s): `orgId`, `tokenId`
     * Data resolution: 10 minutes
   metric_type: counter
   title: sf.org.numHistogramCustomMetricsByToken
+
+sf.org.numArchivedHistogramCustomMetrics:
+  brief: The number of histogram custom metrics stored as archived metrics
+  description: |
+    The raw number of histogram custom metrics that are stored in the archival route. To learn more about archived metrics, see Archived metrics in the Splunk documentation.
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numArchivedHistogramCustomMetrics
+
+sf.org.numArchivedHistogramCustomMetricsByToken:
+  brief: The number of archived histogram custom metrics stored per token
+  description: |
+    One value per token; the raw number of histogram custom metrics that are stored in the archival route.
+    The sum of all the values might be less than the value of `sf.org.numArchivedHistogramCustomMetrics`.
+
+    * Dimension(s): `orgId`, `tokenId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numArchivedHistogramCustomMetricsByToken
+
+sf.org.numBillableArchivedHistogramCustomMetrics:
+  brief: The number of billable archived histogram custom metrics
+  description: |
+    The number of billable histogram custom metrics stored in the archival route. 1 archived histogram custom metric counts as 8/10 real-time custom metric (as for billing purposes, 10 archived metrics are converted to 1 real-time metric, 1 histogram metric is converted to 8 real-time metrics).
+
+    * Dimension(s): `orgId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numBillableArchivedHistogramCustomMetrics
+
+sf.org.numBillableArchivedHistogramCustomMetricsByToken:
+  brief: The number of billable archived histogram custom metrics stored per token
+  description: |
+    One value per token; the number of billable histogram custom metrics stored in the archival route. 1 archived histogram custom metric counts as 8/10 real-time custom metric (as for billing purposes, 10 archived metrics are converted to 1 real-time metric, 1 histogram metric is converted to 8 real-time metrics).
+    The sum of all the values might be less than the value of `sf.org.numBillableArchivedHistogramCustomMetrics`.
+
+    * Dimension(s): `orgId`, `tokenId`
+    * Data resolution: 10 minutes
+  metric_type: counter
+  title: sf.org.numBillableArchivedHistogramCustomMetricsByToken
 
 sf.org.numArchivedDatapointsReceived:
   brief: The number of data points received on the archival route
