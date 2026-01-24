@@ -81,6 +81,11 @@ def tabulate_metrics(metrics):
 
 
 def copy_image(src_path, dest_path):
+    abs_dest = os.path.abspath(dest_path)
+    abs_base = os.path.abspath(OUTPUT_IMAGE_PATH)
+
+    if not abs_dest.startswith(abs_base):
+        raise ValueError(f"Security Alert: Attempted path traversal to {abs_dest}")
     try:
         shutil.copyfile(src_path, dest_path)
     except OSError:
@@ -93,7 +98,7 @@ def process_images(src_path, monitor, contents):
     contents = image_inline_pattern.sub(repl="![](\\1)", string=contents)
 
     for p in re.finditer(image_pattern, contents):
-        image_filename = p.group(1)
+        image_filename = os.path.basename(p.group(1))
         is_integrations_github = re.match(
             r"https:\/\/github\.com\/signalfx\/integrations\/blob\/master\/(.*\/img\/([^\/]*))$", image_filename
         )
