@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 import yaml
-from jinja2 import Environment, FileSystemLoader, Template
+from jinja2 import Environment, FileSystemLoader, Template, select_autoescape
 
 from helpers.patterns import check_sfx_link, image_inline_pattern
 
@@ -31,7 +31,15 @@ def process_links(content):
 
 
 def render_template(template, integration_dir, extra_context=None):
-    env = Environment(loader=FileSystemLoader(Path(__file__).parent.parent), lstrip_blocks=True)
+    env = Environment(
+        loader=FileSystemLoader(Path(__file__).parent.parent), 
+        lstrip_blocks=True,
+        autoescape=select_autoescape(
+            enabled_extensions=('html', 'xml'),
+            default_for_string=True, 
+            default=True
+        )
+    )
 
     context = {}
 
