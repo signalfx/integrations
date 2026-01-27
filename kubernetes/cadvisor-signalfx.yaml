@@ -15,6 +15,11 @@ spec:
       containers:
       - name: "cadvisor-signalfx"
         image: "quay.io/signalfx/cadvisor-integration:latest"
+        # Security context added to prevent writing to the root filesystem
+        securityContext:
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
         env:
         - name: SFX_SCRAPPER_API_TOKEN
           value: <API TOKEN>
@@ -22,3 +27,10 @@ spec:
           value: <CLUSTER NAME>
         - name: SFX_SCRAPPER_SEND_RATE
           value: 5s
+        # Mount a temporary volume for applications that need to write to /tmp
+        volumeMounts:
+        - name: tmp-storage
+          mountPath: /tmp
+      volumes:
+      - name: tmp-storage
+        emptyDir: {}
