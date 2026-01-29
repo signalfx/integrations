@@ -16,7 +16,10 @@ spec:
       - name: "cadvisor-signalfx"
         image: "quay.io/signalfx/cadvisor-integration:latest"
         securityContext:
-          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true  
+          runAsNonRoot: true            
+          runAsUser: 1001               
+          allowPrivilegeEscalation: false 
         env:
         - name: SFX_SCRAPPER_API_TOKEN
           value: <API TOKEN>
@@ -24,3 +27,9 @@ spec:
           value: <CLUSTER NAME>
         - name: SFX_SCRAPPER_SEND_RATE
           value: 5s
+        volumeMounts:
+        - name: tmp-storage
+          mountPath: /tmp
+      volumes:
+      - name: tmp-storage
+        emptyDir: {}
