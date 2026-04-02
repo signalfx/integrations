@@ -41,16 +41,6 @@ sf.org.apm.grossSpansReceived:
      * Data resolution: 1 second
   metric_type: counter
   title: sf.org.apm.grossSpansReceived  
-  
-sf.org.apm.ingestLatency.duration.ns.min:
-  brief: The minimum duration of the ingest latency in Splunk APM.
-  description: |
-    The minimum duration of the ingest latency in Splunk APM.
-
-     * Dimension(s): `orgId`
-     * Data resolution: 10 seconds
-  metric_type: gauge
-  title: sf.org.apm.ingestLatency.duration.ns.min
 
 sf.org.apm.limit.monitoringMetricSets:
   brief: The ingested Metric Set data limit in Splunk APM.
