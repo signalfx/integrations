@@ -1,5 +1,5 @@
 requests==2.32.4
-pytest==4.6.2
+pytest==9.0.3
 mistletoe==0.7.2
 tabulate==0.8.3
 beautifulsoup4==4.8.0
