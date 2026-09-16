@@ -1,4 +1,4 @@
-requests==2.32.4
+requests==2.33.0
 pytest==4.6.2
 mistletoe==0.7.2
 tabulate==0.8.3
